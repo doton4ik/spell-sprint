@@ -6,6 +6,7 @@ export const defaultPracticeSettings: PracticeSettings = {
   allowSkip: true,
   showRuleAfterMistake: true,
   repeatDifficultItemLater: true,
+  speechLocale: 'en-US',
 }
 
 export const mixedPracticeTasks: PracticeTask[] = [

@@ -27,6 +27,7 @@ const paths: Record<IconName, ReactNode> = {
   skip: <><path d="m5 5 9 7-9 7Z" /><path d="M18 5v14" /></>,
   refresh: <><path d="M20 12a8 8 0 1 1-2.3-5.7" /><path d="M20 4v5h-5" /></>,
   sliders: <><path d="M4 7h9m3 0h4M4 17h4m3 0h9" /><circle cx="14" cy="7" r="2" /><circle cx="9" cy="17" r="2" /></>,
+  volume: <><path d="M4 10v4h4l5 4V6L8 10Z" /><path d="M16 9.2a4 4 0 0 1 0 5.6m2.5-8.1a7.5 7.5 0 0 1 0 10.6" /></>,
 }
 
 export function Icon({ name, size = 20, strokeWidth = 1.8 }: IconProps) {

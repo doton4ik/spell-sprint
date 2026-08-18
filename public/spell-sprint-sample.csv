@@ -1,0 +1,3 @@
+word_id,word,translation,topic_id,topic,subtopic,difficulty,risk,rule,example,definition,part_of_speech,library,source
+transport-001,freight,груз,transport-and-trade,Transport and Trade,Road transport,medium,4,Freight is goods transported in bulk.,The freight arrived this morning.,Goods carried by a vehicle,noun,Transport Starter,example CSV
+transport-002,consignment,партия груза,transport-and-trade,Transport and Trade,Road transport,hard,5,A consignment is a shipment sent to someone.,The consignment is ready for dispatch.,A batch of goods sent to a recipient,noun,Transport Starter,example CSV

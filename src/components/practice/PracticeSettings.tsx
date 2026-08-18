@@ -6,7 +6,7 @@ type PracticeSettingsProps = {
   onChange: (settings: PracticeSettingsType) => void
 }
 
-const settingLabels: Array<{ key: keyof PracticeSettingsType; label: string; detail: string }> = [
+const settingLabels: Array<{ key: 'showHints' | 'writeUntilCorrect' | 'allowSkip' | 'showRuleAfterMistake' | 'repeatDifficultItemLater'; label: string; detail: string }> = [
   { key: 'showHints', label: 'Show hints', detail: 'Reveal a short cue below each task.' },
   { key: 'writeUntilCorrect', label: 'Write until correct', detail: 'Stay on a task until your answer is correct.' },
   { key: 'allowSkip', label: 'Allow skip', detail: 'Let yourself move on without an answer.' },

@@ -2,134 +2,81 @@ import { builtInLibraries } from '../data/libraries'
 import type { ImportReport, LibraryDifficulty, LibraryWord, WordLibrary } from '../types/library'
 
 const CUSTOM_LIBRARIES_KEY = 'spell-sprint.custom-libraries'
-const requiredCsvFields = ['word', 'translation', 'topic', 'difficulty', 'risk']
+const csvHeaders = ['word_id', 'word', 'translation', 'topic_id', 'topic', 'subtopic', 'difficulty', 'risk', 'rule', 'example', 'definition', 'part_of_speech', 'library', 'source']
+const requiredValues = ['word', 'translation', 'topic_id', 'topic', 'difficulty', 'risk', 'library', 'source']
+export const initialTopics = ['General English', 'Everyday Life', 'Logistics', 'Warehouse Operations', 'Transport and Trade', 'Business and Office', 'Travel and Culture', 'Study and Career', 'Sport and Fitness']
 
-function read<T>(key: string, fallback: T): T {
-  try {
-    const value = window.localStorage.getItem(key)
-    return value ? (JSON.parse(value) as T) : fallback
-  } catch {
-    return fallback
-  }
-}
-
+function read<T>(key: string, fallback: T): T { try { const value = window.localStorage.getItem(key); return value ? JSON.parse(value) as T : fallback } catch { return fallback } }
 function normalise(value: string) { return value.trim().toLocaleLowerCase() }
-
-function validDifficulty(value: string): value is LibraryDifficulty {
-  return ['easy', 'medium', 'hard'].includes(normalise(value))
-}
+function safeId(value: string) { return value.trim().toLocaleLowerCase().replaceAll(/[^\p{L}\p{N}]+/gu, '-').replaceAll(/(^-|-$)/g, '') }
+function validDifficulty(value: string): value is LibraryDifficulty { return ['easy', 'medium', 'hard'].includes(normalise(value)) }
 
 function parseCsv(text: string) {
-  const rows: string[][] = []
-  let row: string[] = []
-  let field = ''
-  let quoted = false
-
+  const rows: string[][] = []; let row: string[] = []; let field = ''; let quoted = false
   for (let index = 0; index < text.length; index += 1) {
     const character = text[index]
-    if (character === '"') {
-      if (quoted && text[index + 1] === '"') { field += '"'; index += 1 } else quoted = !quoted
-    } else if (character === ',' && !quoted) {
-      row.push(field.trim()); field = ''
-    } else if ((character === '\n' || character === '\r') && !quoted) {
-      if (character === '\r' && text[index + 1] === '\n') index += 1
-      row.push(field.trim()); field = ''
-      if (row.some(Boolean)) rows.push(row)
-      row = []
-    } else field += character
+    if (character === '"') { if (quoted && text[index + 1] === '"') { field += '"'; index += 1 } else quoted = !quoted }
+    else if (character === ',' && !quoted) { row.push(field.trim()); field = '' }
+    else if ((character === '\n' || character === '\r') && !quoted) { if (character === '\r' && text[index + 1] === '\n') index += 1; row.push(field.trim()); field = ''; if (row.some(Boolean)) rows.push(row); row = [] }
+    else field += character
   }
-  row.push(field.trim())
-  if (row.some(Boolean)) rows.push(row)
-  return rows
+  row.push(field.trim()); if (row.some(Boolean)) rows.push(row); return rows
 }
 
-function libraryWord(values: Omit<LibraryWord, 'id'>): LibraryWord {
-  return { ...values, id: crypto.randomUUID() }
+function migrateLibrary(library: WordLibrary): WordLibrary {
+  return { ...library, words: library.words.map((legacy) => {
+    const word = legacy as LibraryWord & Partial<LibraryWord>
+    const wordId = word.wordId || word.id || `${safeId(word.word)}-${safeId(word.translation)}-${safeId(word.partOfSpeech ?? '')}`
+    return { ...word, id: word.id || wordId, wordId, topicId: word.topicId || safeId(word.topic), subtopic: word.subtopic ?? '', partOfSpeech: word.partOfSpeech ?? '', library: word.library || library.name, source: word.source || library.source }
+  }) }
 }
 
-export function getLibraries(): WordLibrary[] {
-  return [...builtInLibraries, ...read<WordLibrary[]>(CUSTOM_LIBRARIES_KEY, [])]
+export function getImportedLibraries(): WordLibrary[] { return read<WordLibrary[]>(CUSTOM_LIBRARIES_KEY, []).map(migrateLibrary) }
+export function getLibraries(): WordLibrary[] { return [...builtInLibraries, ...getImportedLibraries()] }
+export function getAllWords() { return getLibraries().flatMap((library) => library.words) }
+export function getTopicNames() { return [...new Set([...initialTopics, ...getAllWords().map((word) => word.topic)])] }
+export function deleteImportedLibrary(id: string) { window.localStorage.setItem(CUSTOM_LIBRARIES_KEY, JSON.stringify(getImportedLibraries().filter((library) => library.id !== id))) }
+
+function duplicateKey(word: Pick<LibraryWord, 'wordId' | 'word' | 'translation' | 'partOfSpeech'>) {
+  return word.wordId ? `id:${normalise(word.wordId)}` : `fallback:${normalise(word.word)}::${normalise(word.translation)}::${normalise(word.partOfSpeech)}`
 }
 
-export function getImportedLibraries(): WordLibrary[] {
-  return read<WordLibrary[]>(CUSTOM_LIBRARIES_KEY, [])
-}
-
-function duplicateKeys() {
-  return new Set(getLibraries().flatMap((library) => library.words.map((word) => `${normalise(word.word)}::${normalise(word.topic)}`)))
-}
-
-function saveLibrary(library: WordLibrary) {
-  const imported = read<WordLibrary[]>(CUSTOM_LIBRARIES_KEY, [])
-  window.localStorage.setItem(CUSTOM_LIBRARIES_KEY, JSON.stringify([...imported, library]))
-}
-
-function createReport(name: string, topic: string, words: LibraryWord[], skipped: number, errors: string[]): ImportReport {
-  const keys = duplicateKeys()
-  const accepted: LibraryWord[] = []
-  let duplicates = 0
-  for (const word of words) {
-    const key = `${normalise(word.word)}::${normalise(word.topic)}`
-    if (keys.has(key)) { duplicates += 1; continue }
-    keys.add(key); accepted.push(word)
-  }
-  if (accepted.length) saveLibrary({ id: crypto.randomUUID(), name, topic, words: accepted, source: 'imported', createdAt: new Date().toISOString() })
-  if (duplicates) errors.push(`${duplicates} duplicate ${duplicates === 1 ? 'word was' : 'words were'} skipped.`)
-  return { libraryName: name, topic, imported: accepted.length, skipped: skipped + duplicates, errors }
+function report(libraryName: string, topic: string, imported: number, skipped: number, duplicateCount: number, errors: string[]): ImportReport {
+  return { libraryName, topic, imported, skipped, duplicateCount, errorCount: errors.length, errors: errors.slice(0, 5) }
 }
 
 export function importCsvLibrary(text: string, fileName = 'Imported library'): ImportReport {
   const rows = parseCsv(text)
-  if (rows.length < 2) return { libraryName: fileName, topic: 'Imported', imported: 0, skipped: 0, errors: ['The CSV needs a header and at least one data row.'] }
+  if (rows.length < 2) return report(fileName, 'Imported', 0, 0, 0, ['CSV needs a header and at least one data row.'])
   const headers = rows[0].map(normalise)
-  const missing = requiredCsvFields.filter((field) => !headers.includes(field))
-  if (missing.length) return { libraryName: fileName, topic: 'Imported', imported: 0, skipped: rows.length - 1, errors: [`Missing required columns: ${missing.join(', ')}.`] }
-  const index = (name: string) => headers.indexOf(name)
-  const errors: string[] = []
-  const words: LibraryWord[] = []
-  let skipped = 0
-
-  rows.slice(1).forEach((row, offset) => {
-    const word = row[index('word')]?.trim()
-    const translation = row[index('translation')]?.trim()
-    const topic = row[index('topic')]?.trim()
-    const difficulty = row[index('difficulty')]?.trim()
-    const risk = Number(row[index('risk')]?.trim())
-    if (!word || !translation || !topic || !difficulty || !Number.isInteger(risk) || risk < 1 || risk > 5 || !validDifficulty(difficulty)) {
-      skipped += 1
-      errors.push(`Row ${offset + 2}: use word, translation, topic, difficulty (easy/medium/hard), and risk (1–5).`)
-      return
+  const missingHeaders = csvHeaders.filter((header) => !headers.includes(header))
+  if (missingHeaders.length) return report(fileName, 'Imported', 0, rows.length - 1, 0, [`Missing CSV columns: ${missingHeaders.join(', ')}.`])
+  const column = (name: string) => headers.indexOf(name)
+  const errors: string[] = []; const words: LibraryWord[] = []; let invalid = 0
+  rows.slice(1).forEach((row, index) => {
+    const value = (name: string) => row[column(name)]?.trim() ?? ''
+    const absent = requiredValues.filter((name) => !value(name))
+    const difficulty = value('difficulty'); const risk = Number(value('risk'))
+    if (absent.length || !validDifficulty(difficulty) || !Number.isInteger(risk) || risk < 1 || risk > 5) {
+      invalid += 1; errors.push(`Row ${index + 2}: ${absent.length ? `missing ${absent.join(', ')}` : 'difficulty must be easy, medium, or hard; risk must be 1–5'}.`); return
     }
-    words.push(libraryWord({ word, translation, topic, difficulty: normalise(difficulty) as LibraryDifficulty, risk, rule: row[index('rule')]?.trim(), example: row[index('example')]?.trim(), partOfSpeech: row[index('part_of_speech')]?.trim() }))
+    const fallback = `${safeId(value('word'))}-${safeId(value('translation'))}-${safeId(value('part_of_speech'))}`
+    words.push({ id: value('word_id') || fallback, wordId: value('word_id'), word: value('word'), translation: value('translation'), topicId: value('topic_id'), topic: value('topic'), subtopic: value('subtopic'), difficulty: normalise(difficulty) as LibraryDifficulty, risk, rule: value('rule') || undefined, example: value('example') || undefined, definition: value('definition') || undefined, partOfSpeech: value('part_of_speech'), library: value('library'), source: value('source') })
   })
-  const topic = words[0]?.topic ?? 'Imported'
-  return createReport(fileName.replace(/\.[^.]+$/, ''), topic, words, skipped, errors.slice(0, 4))
+  const keys = new Set(getAllWords().map(duplicateKey)); const accepted: LibraryWord[] = []; let duplicates = 0
+  for (const word of words) { const key = duplicateKey(word); if (keys.has(key)) { duplicates += 1; continue }; keys.add(key); accepted.push(word) }
+  const byLibrary = new Map<string, LibraryWord[]>()
+  accepted.forEach((word) => byLibrary.set(word.library, [...(byLibrary.get(word.library) ?? []), word]))
+  const imported = getImportedLibraries()
+  const updated = [...byLibrary.entries()].reduce<WordLibrary[]>((current, [name, libraryWords]) => {
+    const existingIndex = current.findIndex((library) => library.name === name)
+    if (existingIndex < 0) return [...current, { id: crypto.randomUUID(), name, topic: libraryWords[0].topic, words: libraryWords, source: 'imported', createdAt: new Date().toISOString() }]
+    const existing = current[existingIndex]
+    const next = { ...existing, words: [...existing.words, ...libraryWords] }
+    return current.map((library, index) => index === existingIndex ? next : library)
+  }, imported)
+  if (byLibrary.size) window.localStorage.setItem(CUSTOM_LIBRARIES_KEY, JSON.stringify(updated))
+  return report([...byLibrary.keys()].join(', ') || fileName.replace(/\.[^.]+$/, ''), accepted[0]?.topic ?? 'Imported', accepted.length, invalid + duplicates, duplicates, errors)
 }
 
-export function importJsonLibrary(text: string): ImportReport {
-  try {
-    const source = JSON.parse(text) as { name?: unknown; topic?: unknown; words?: unknown }
-    if (typeof source.name !== 'string' || typeof source.topic !== 'string' || !Array.isArray(source.words)) {
-      return { libraryName: 'Imported library', topic: 'Imported', imported: 0, skipped: 0, errors: ['JSON must include name, topic, and a words array.'] }
-    }
-    const errors: string[] = []
-    const words: LibraryWord[] = []
-    let skipped = 0
-    source.words.forEach((item, index) => {
-      const word = item as Record<string, unknown>
-      const en = typeof word.en === 'string' ? word.en.trim() : ''
-      const ru = typeof word.ru === 'string' ? word.ru.trim() : ''
-      const level = typeof word.level === 'string' ? normalise(word.level) : 'medium'
-      const risk = typeof word.risk === 'number' ? word.risk : Number(word.risk)
-      if (!en || !ru || !validDifficulty(level) || !Number.isInteger(risk) || risk < 1 || risk > 5) {
-        skipped += 1; errors.push(`Word ${index + 1}: en, ru, level (easy/medium/hard), and risk (1–5) are required.`); return
-      }
-      words.push(libraryWord({ word: en, translation: ru, topic: source.topic as string, difficulty: level, risk, rule: typeof word.rule === 'string' ? word.rule : undefined, example: typeof word.example === 'string' ? word.example : undefined }))
-    })
-    return createReport(source.name, source.topic, words, skipped, errors.slice(0, 4))
-  } catch {
-    return { libraryName: 'Imported library', topic: 'Imported', imported: 0, skipped: 0, errors: ['This JSON could not be read. Check commas, quotes, and brackets.'] }
-  }
-}
-
-export const csvTemplate = `word,translation,topic,difficulty,risk,rule,example,part_of_speech\nwarehouse,склад,logistics,easy,3,"A building where goods are stored","The goods are in the warehouse.",noun\n`
+export const csvTemplate = `word_id,word,translation,topic_id,topic,subtopic,difficulty,risk,rule,example,definition,part_of_speech,library,source\nwarehouse-001,warehouse,склад,warehouse-operations,Warehouse Operations,Storage,easy,3,Use for a building where goods are stored,The goods are in the warehouse.,A building for storing goods,noun,Warehouse Starter,manual\n`

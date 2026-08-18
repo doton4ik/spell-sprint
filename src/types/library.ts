@@ -2,14 +2,20 @@ export type LibraryDifficulty = 'easy' | 'medium' | 'hard'
 
 export type LibraryWord = {
   id: string
+  wordId: string
   word: string
   translation: string
+  topicId: string
   topic: string
+  subtopic: string
   difficulty: LibraryDifficulty
   risk: number
   rule?: string
   example?: string
-  partOfSpeech?: string
+  definition?: string
+  partOfSpeech: string
+  library: string
+  source: string
 }
 
 export type WordLibrary = {
@@ -26,5 +32,7 @@ export type ImportReport = {
   topic: string
   imported: number
   skipped: number
+  duplicateCount: number
+  errorCount: number
   errors: string[]
 }

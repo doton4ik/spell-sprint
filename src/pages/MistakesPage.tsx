@@ -47,8 +47,8 @@ export function MistakesPage() {
             <div className="mistakes-table__head" role="row"><span>Answer pattern</span><span>Category</span><span>Progress</span><span>Review</span></div>
             {visibleEntries.map((entry) => (
               <div className="mistakes-table__row" role="row" key={entry.taskId}>
-                <div className="mistake-answer"><span className="mistake-answer__type">{entry.source === 'personal-baseline' ? 'Personal baseline' : entry.family}</span><p><s>{entry.lastUserVersion}</s><Icon name="arrow" size={14} /><strong>{entry.correctAnswer}</strong></p><small>{entry.topic} · first seen {formatDate(entry.firstSeen)}{entry.memoryCue ? ` · cue: ${entry.memoryCue}` : ''}</small></div>
-                <div><span className="category-pill">{entry.errorCategory}</span></div>
+                <div className="mistake-answer"><span className="mistake-answer__type">{entry.source === 'personal-baseline' ? 'Personal baseline' : entry.family}</span><p><s>{entry.lastUserVersion}</s><Icon name="arrow" size={14} /><strong>{entry.correctAnswer}</strong></p><small>{entry.topic}{entry.subtopic ? ` · ${entry.subtopic}` : ''}{entry.library ? ` · ${entry.library}` : ''} · first seen {formatDate(entry.firstSeen)}{entry.memoryCue ? ` · cue: ${entry.memoryCue}` : ''}</small></div>
+                <div><span className="category-pill">{entry.errorType ?? entry.errorCategory}</span></div>
                 <div className="mistake-progress"><Status status={entry.status} /><small>{entry.numberOfErrors} error{entry.numberOfErrors === 1 ? '' : 's'} · {entry.numberOfCorrectAnswers} correct</small></div>
                 <div className="review-date"><strong>{formatDate(entry.nextReviewAt)}</strong><a href="#review">Open queue <Icon name="chevron" size={15} /></a></div>
               </div>

@@ -25,6 +25,7 @@ export type IconName =
   | 'skip'
   | 'refresh'
   | 'sliders'
+  | 'volume'
 
 export type Metric = {
   label: string

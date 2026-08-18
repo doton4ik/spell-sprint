@@ -1,3 +1,5 @@
+import type { ErrorType } from './practice'
+
 export type ErrorFamily = 'Spelling' | 'Grammar' | 'Vocabulary'
 export type LearningStatus = 'new' | 'learning' | 'review' | 'difficult' | 'mastered'
 
@@ -8,6 +10,11 @@ export type MistakeEntry = {
   errorCategory: string
   family: ErrorFamily
   topic: string
+  topicId?: string
+  subtopic?: string
+  wordId?: string
+  library?: string
+  errorType?: ErrorType
   numberOfAttempts: number
   numberOfErrors: number
   numberOfCorrectAnswers: number
