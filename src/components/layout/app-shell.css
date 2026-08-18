@@ -1,0 +1,25 @@
+.app-shell { min-height: 100vh; }
+
+.sidebar { background: #fbfcfa; border-right: 1px solid var(--line); display: flex; flex-direction: column; height: 100vh; left: 0; padding: 29px 16px 18px; position: fixed; top: 0; width: 244px; z-index: 5; }
+.brand { align-items: center; color: #183d37; display: inline-flex; font-size: 20px; font-weight: 750; gap: 10px; letter-spacing: -.65px; margin: 0 10px 37px; width: fit-content; }
+.brand > span:last-child span { color: var(--teal); }
+.brand-mark { align-items: center; background: var(--teal); border-radius: 9px; color: white; display: inline-flex; height: 31px; justify-content: center; width: 31px; }
+.main-nav { display: grid; gap: 4px; }
+.nav-link { align-items: center; border-radius: 10px; color: #6b7a76; display: flex; font-size: 14px; font-weight: 540; gap: 13px; min-height: 43px; padding: 0 12px; transition: background .18s ease, color .18s ease; }
+.nav-link:hover { background: #f0f5f2; color: var(--teal-dark); }
+.nav-link--active { background: var(--teal-soft); color: #0c6e62; font-weight: 680; }
+.nav-badge { background: #d6e9e4; border-radius: 12px; font-size: 11px; font-weight: 700; margin-left: auto; padding: 3px 7px; }
+.sidebar-bottom { margin-top: auto; }
+.profile-mini { align-items: center; border-top: 1px solid var(--line); display: flex; gap: 10px; margin-top: 13px; padding: 19px 8px 0; }
+.profile-avatar { align-items: center; background: #d9e8e2; border-radius: 50%; color: #236b60; display: flex; font-size: 13px; font-weight: 700; height: 33px; justify-content: center; width: 33px; }
+.profile-mini div:nth-child(2) { display: grid; gap: 2px; flex: 1; }
+.profile-mini strong { color: var(--ink); font-size: 13px; }.profile-mini span { color: var(--ink-muted); font-size: 10px; }.profile-mini > svg { color: var(--ink-faint); }
+.page-content { margin-left: 244px; min-height: 100vh; }
+.mobile-nav { display: none; }
+
+@media (max-width: 800px) {
+  .sidebar { display: none; }
+  .page-content { margin-left: 0; padding-bottom: 82px; }
+  .mobile-nav { align-items: center; background: rgba(255,255,255,.96); border-top: 1px solid var(--line); bottom: 0; display: flex; height: 70px; justify-content: space-around; left: 0; padding: 7px 8px max(7px, env(safe-area-inset-bottom)); position: fixed; right: 0; z-index: 10; backdrop-filter: blur(14px); }
+  .mobile-nav__link { align-items: center; color: var(--ink-faint); display: grid; font-size: 9px; gap: 3px; justify-items: center; min-width: 48px; }.mobile-nav__link--active { color: var(--teal); font-weight: 700; }
+}

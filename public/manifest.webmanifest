@@ -1,0 +1,12 @@
+{
+  "name": "Spell Sprint — English learning workspace",
+  "short_name": "Spell Sprint",
+  "description": "A focused workspace for spelling, vocabulary, grammar, and professional English.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f8f5",
+  "theme_color": "#176f65",
+  "lang": "en",
+  "icons": [{ "src": "/icons/spell-sprint-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
