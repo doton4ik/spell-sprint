@@ -1,7 +1,7 @@
 import { mixedPracticeTasks } from '../data/practice'
 import type { LibraryWord } from '../types/library'
 import type { PracticeMode, PracticeTask } from '../types/practice'
-import { getAllWords } from './libraryStorage'
+import { getAllWords, getLibraries } from './libraryStorage'
 import { getReviewEntries } from './learningData'
 import { getPracticeAttempts } from './practiceStorage'
 
@@ -23,15 +23,15 @@ function tasksForWord(word: LibraryWord): PracticeTask[] {
 }
 
 export function getPracticeOptions() {
-  const words = getAllWords()
-  return { libraries: [...new Set(words.map((word) => word.library))].sort(), topics: [...new Set(words.map((word) => word.topic))].sort(), subtopics: [...new Set(words.map((word) => word.subtopic).filter(Boolean))].sort() }
+  const libraries = getLibraries(); const words = libraries.flatMap((library) => library.words)
+  return { libraries: libraries.map((library) => library.name).sort(), topics: [...new Set(words.map((word) => word.topic))].sort(), subtopics: [...new Set(words.map((word) => word.subtopic).filter(Boolean))].sort() }
 }
 
 function modeForLegacyTask(task: PracticeTask): PracticeMode { return task.type === 'translate-ru-en' ? 'write-en' : task.type === 'translate-en-ru' ? 'translate-ru' : 'choose-spelling' }
 
 export function getTasksForSelection(selection: PracticeSelection, mode: PracticeMode = 'write-en'): PracticeTask[] {
   const words = getAllWords(); let selected = words
-  if (selection.scope === 'library') selected = words.filter((word) => word.library === selection.library)
+  if (selection.scope === 'library') selected = getLibraries().find((library) => library.name === selection.library)?.words ?? []
   if (selection.scope === 'topic') selected = words.filter((word) => word.topic === selection.topic)
   if (selection.scope === 'subtopic') selected = words.filter((word) => word.subtopic === selection.subtopic)
   if (selection.scope === 'mistakes' || selection.scope === 'review') {

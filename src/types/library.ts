@@ -1,4 +1,5 @@
 export type LibraryDifficulty = 'easy' | 'medium' | 'hard'
+export type LibraryKind = 'core' | 'topic' | 'shared'
 
 export type LibraryWord = {
   id: string
@@ -24,6 +25,8 @@ export type WordLibrary = {
   topic: string
   words: LibraryWord[]
   source: 'built-in' | 'imported'
+  kind: LibraryKind
+  includes?: string[]
   createdAt?: string
 }
 

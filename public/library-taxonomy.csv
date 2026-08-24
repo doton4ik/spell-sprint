@@ -1,0 +1,15 @@
+record_type,id,name,parent_id,rule
+topic,general-english,General English,,Use for broad language and cross-topic active vocabulary.
+topic,everyday-life,Everyday Life,,Use for daily routines home and services.
+topic,logistics,Logistics,,Use for supply-chain terminology not tied to one software system.
+topic,warehouse-operations,Warehouse Operations,,Use for receiving storage inventory and warehouse processes.
+topic,transport-and-trade,Transport and Trade,,Use for freight carriers customs and trade documents.
+topic,business-and-office,Business and Office,,Use for finance planning meetings and negotiation.
+topic,travel-and-culture,Travel and Culture,,Use for travel planning and destination vocabulary.
+topic,study-and-career,Study and Career,,Use for learning research and career development.
+topic,sport-and-fitness,Sport and Fitness,,Use for training competition health and recovery.
+library_kind,core,Core library,,Large foundation library; use Name Core naming.
+library_kind,topic,Topic library,,Focused library; use Topic — Focus naming.
+library_kind,shared,Shared library,,Reusable 5-10 word set; use Shared — Name naming and include by library id in code.
+word_id,topic-id-subtopic-slug-word-slug,Stable word ID,,Keep unchanged after publication; use the canonical topic_id and a short subtopic slug.
+dedupe,word_id,Primary duplicate key,,Same word_id means the same record; same word may exist in a different topic when meaning differs.
