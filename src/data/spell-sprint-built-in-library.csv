@@ -1,0 +1,80 @@
+word_id,word,translation,topic_id,topic,subtopic,difficulty,risk,rule,example,definition,part_of_speech,library,source
+logistics-inventory-control-inventory,inventory,запасы,logistics,Logistics,Inventory Control,medium,4,,,,noun,Shared — Inventory Fundamentals,built-in
+logistics-inventory-control-stock,stock,товарный запас,logistics,Logistics,Inventory Control,easy,3,,,,noun,Shared — Inventory Fundamentals,built-in
+logistics-inventory-control-replenishment,replenishment,пополнение запасов,logistics,Logistics,Inventory Control,hard,5,,,,noun,Shared — Inventory Fundamentals,built-in
+logistics-inventory-control-safety-stock,safety stock,страховой запас,logistics,Logistics,Inventory Control,hard,5,,,,noun,Shared — Inventory Fundamentals,built-in
+logistics-inventory-control-demand-planning,demand planning,планирование спроса,logistics,Logistics,Inventory Control,hard,5,,,,noun,Shared — Inventory Fundamentals,built-in
+logistics-inventory-control-inventory-accuracy,inventory accuracy,точность учёта запасов,logistics,Logistics,Inventory Control,hard,5,,,,noun,Shared — Inventory Fundamentals,built-in
+logistics-receiving-and-storage-storage-location,storage location,место хранения,logistics,Logistics,Receiving and Storage,medium,4,,,,noun,Shared — Inventory Fundamentals,built-in
+general-english-professional-communication-deadline,deadline,крайний срок,general-english,General English,Professional Communication,easy,3,,,,noun,Shared — Professional Essentials,built-in
+general-english-professional-communication-research,research,исследование,general-english,General English,Professional Communication,medium,3,,,,noun,Shared — Professional Essentials,built-in
+general-english-professional-communication-responsibility,responsibility,ответственность,general-english,General English,Professional Communication,medium,3,,,,noun,Shared — Professional Essentials,built-in
+general-english-professional-communication-achievement,achievement,достижение,general-english,General English,Professional Communication,medium,3,,,,noun,Shared — Professional Essentials,built-in
+general-english-professional-communication-presentation,presentation,презентация,general-english,General English,Professional Communication,easy,2,,,,noun,Shared — Professional Essentials,built-in
+general-english-professional-communication-communication,communication,общение,general-english,General English,Professional Communication,medium,3,,,,noun,Shared — Professional Essentials,built-in
+logistics-supply-chain-supplier,supplier,поставщик,logistics,Logistics,Supply Chain,easy,3,,,,noun,Supply Chain Core,built-in
+logistics-supply-chain-shipment,shipment,поставка / отгрузка,logistics,Logistics,Supply Chain,medium,4,,,,noun,Supply Chain Core,built-in
+logistics-supply-chain-delivery,delivery,доставка,logistics,Logistics,Supply Chain,easy,3,,,,noun,Supply Chain Core,built-in
+logistics-receiving-and-storage-goods-receipt,goods receipt,приёмка товара,logistics,Logistics,Receiving and Storage,medium,4,,,,noun,Supply Chain Core,built-in
+logistics-order-fulfilment-order-picking,order picking,комплектация заказа,logistics,Logistics,Order Fulfilment,medium,4,,,,noun,Supply Chain Core,built-in
+logistics-receiving-and-storage-warehouse-layout,warehouse layout,планировка склада,logistics,Logistics,Receiving and Storage,hard,4,,,,noun,Supply Chain Core,built-in
+logistics-supply-chain-distribution-center,distribution center,распределительный центр,logistics,Logistics,Supply Chain,hard,4,,,,noun,Supply Chain Core,built-in
+logistics-supply-chain-lead-time,lead time,срок поставки,logistics,Logistics,Supply Chain,medium,4,,,,noun,Supply Chain Core,built-in
+logistics-supply-chain-transportation-cost,transportation cost,транспортные расходы,logistics,Logistics,Supply Chain,hard,4,,,,noun,Supply Chain Core,built-in
+warehouse-operations-sap-warehouse-processes-material,material,материал,warehouse-operations,Warehouse Operations,SAP Warehouse Processes,easy,3,,,,noun,Warehouse Operations — SAP,built-in
+warehouse-operations-sap-warehouse-processes-purchase-order,purchase order,заказ на поставку,warehouse-operations,Warehouse Operations,SAP Warehouse Processes,medium,4,,,,noun,Warehouse Operations — SAP,built-in
+warehouse-operations-sap-warehouse-processes-goods-movement,goods movement,движение товара,warehouse-operations,Warehouse Operations,SAP Warehouse Processes,hard,5,,,,noun,Warehouse Operations — SAP,built-in
+warehouse-operations-sap-warehouse-processes-warehouse-task,warehouse task,складская задача,warehouse-operations,Warehouse Operations,SAP Warehouse Processes,hard,5,,,,noun,Warehouse Operations — SAP,built-in
+warehouse-operations-sap-warehouse-processes-inbound-processing,inbound processing,входящая обработка,warehouse-operations,Warehouse Operations,SAP Warehouse Processes,hard,5,,,,noun,Warehouse Operations — SAP,built-in
+warehouse-operations-sap-warehouse-processes-outbound-processing,outbound processing,исходящая обработка,warehouse-operations,Warehouse Operations,SAP Warehouse Processes,hard,5,,,,noun,Warehouse Operations — SAP,built-in
+warehouse-operations-inventory-control-physical-inventory,physical inventory,физическая инвентаризация,warehouse-operations,Warehouse Operations,Inventory Control,hard,5,,,,noun,Warehouse Operations — SAP,built-in
+warehouse-operations-sap-warehouse-processes-material-document,material document,документ материала,warehouse-operations,Warehouse Operations,SAP Warehouse Processes,hard,5,,,,noun,Warehouse Operations — SAP,built-in
+business-and-office-finance-and-planning-revenue,revenue,выручка,business-and-office,Business and Office,Finance and Planning,medium,4,,,,noun,Business and Office Core,built-in
+business-and-office-finance-and-planning-expenses,expenses,расходы,business-and-office,Business and Office,Finance and Planning,medium,4,,,,noun,Business and Office Core,built-in
+business-and-office-finance-and-planning-profit,profit,прибыль,business-and-office,Business and Office,Finance and Planning,medium,3,,,,noun,Business and Office Core,built-in
+business-and-office-finance-and-planning-profit-margin,profit margin,маржа прибыли,business-and-office,Business and Office,Finance and Planning,hard,5,,,,noun,Business and Office Core,built-in
+business-and-office-finance-and-planning-invoice,invoice,счёт-фактура,business-and-office,Business and Office,Finance and Planning,medium,4,,,,noun,Business and Office Core,built-in
+business-and-office-meetings-and-negotiation-negotiation,negotiation,переговоры,business-and-office,Business and Office,Meetings and Negotiation,medium,4,,,,noun,Business and Office Core,built-in
+business-and-office-meetings-and-negotiation-agreement,agreement,соглашение,business-and-office,Business and Office,Meetings and Negotiation,easy,3,,,,noun,Business and Office Core,built-in
+business-and-office-meetings-and-negotiation-recruitment,recruitment,подбор персонала,business-and-office,Business and Office,Meetings and Negotiation,hard,4,,,,noun,Business and Office Core,built-in
+business-and-office-finance-and-planning-target,target,цель,business-and-office,Business and Office,Finance and Planning,easy,3,,,,noun,Business and Office Core,built-in
+business-and-office-meetings-and-negotiation-customer-satisfaction,customer satisfaction,удовлетворённость клиентов,business-and-office,Business and Office,Meetings and Negotiation,hard,4,,,,noun,Business and Office Core,built-in
+business-and-office-finance-and-planning-market-demand,market demand,рыночный спрос,business-and-office,Business and Office,Finance and Planning,hard,4,,,,noun,Business and Office Core,built-in
+business-and-office-finance-and-planning-cash-flow,cash flow,денежный поток,business-and-office,Business and Office,Finance and Planning,hard,5,,,,noun,Business and Office Core,built-in
+business-and-office-meetings-and-negotiation-complaint,complaint,жалоба,business-and-office,Business and Office,Meetings and Negotiation,medium,3,,,,noun,Business and Office Core,built-in
+general-english-active-vocabulary-environment,environment,окружающая среда,general-english,General English,Active Vocabulary,medium,4,,,,noun,General English — Active Vocabulary,built-in
+general-english-active-vocabulary-opportunity,opportunity,возможность,general-english,General English,Active Vocabulary,medium,4,,,,noun,General English — Active Vocabulary,built-in
+general-english-active-vocabulary-society,society,общество,general-english,General English,Active Vocabulary,medium,3,,,,noun,General English — Active Vocabulary,built-in
+general-english-active-vocabulary-technology,technology,технология,general-english,General English,Active Vocabulary,easy,2,,,,noun,General English — Active Vocabulary,built-in
+general-english-active-vocabulary-culture,culture,культура,general-english,General English,Active Vocabulary,easy,2,,,,noun,General English — Active Vocabulary,built-in
+study-and-career-learning-and-research-assignment,assignment,задание,study-and-career,Study and Career,Learning and Research,medium,3,,,,noun,Study and Career Core,built-in
+study-and-career-career-development-interview,interview,собеседование,study-and-career,Study and Career,Career Development,medium,3,,,,noun,Study and Career Core,built-in
+study-and-career-career-development-qualification,qualification,квалификация,study-and-career,Study and Career,Career Development,hard,4,,,,noun,Study and Career Core,built-in
+study-and-career-career-development-experience,experience,опыт,study-and-career,Study and Career,Career Development,easy,2,,,,noun,Study and Career Core,built-in
+travel-and-culture-travel-planning-luggage,luggage,багаж,travel-and-culture,Travel and Culture,Travel Planning,medium,3,,,,noun,Travel and Culture Core,built-in
+travel-and-culture-travel-planning-departure,departure,отправление,travel-and-culture,Travel and Culture,Travel Planning,medium,3,,,,noun,Travel and Culture Core,built-in
+travel-and-culture-travel-planning-arrival,arrival,прибытие,travel-and-culture,Travel and Culture,Travel Planning,medium,3,,,,noun,Travel and Culture Core,built-in
+travel-and-culture-at-the-destination-accommodation,accommodation,проживание,travel-and-culture,Travel and Culture,At the Destination,hard,4,,,,noun,Travel and Culture Core,built-in
+travel-and-culture-at-the-destination-directions,directions,направления,travel-and-culture,Travel and Culture,At the Destination,medium,4,,,,noun,Travel and Culture Core,built-in
+travel-and-culture-travel-planning-ticket,ticket,билет,travel-and-culture,Travel and Culture,Travel Planning,easy,2,,,,noun,Travel and Culture Core,built-in
+travel-and-culture-travel-planning-reservation,reservation,бронирование,travel-and-culture,Travel and Culture,Travel Planning,medium,3,,,,noun,Travel and Culture Core,built-in
+travel-and-culture-travel-planning-delay,delay,задержка,travel-and-culture,Travel and Culture,Travel Planning,easy,2,,,,noun,Travel and Culture Core,built-in
+travel-and-culture-travel-planning-border,border,граница,travel-and-culture,Travel and Culture,Travel Planning,easy,2,,,,noun,Travel and Culture Core,built-in
+travel-and-culture-at-the-destination-sightseeing,sightseeing,осмотр достопримечательностей,travel-and-culture,Travel and Culture,At the Destination,hard,4,,,,noun,Travel and Culture Core,built-in
+sport-and-fitness-training-and-competition-training,training,тренировка,sport-and-fitness,Sport and Fitness,Training and Competition,easy,2,,,,noun,Sport and Fitness Core,built-in
+sport-and-fitness-training-and-competition-match,match,матч,sport-and-fitness,Sport and Fitness,Training and Competition,easy,2,,,,noun,Sport and Fitness Core,built-in
+sport-and-fitness-training-and-competition-tournament,tournament,турнир,sport-and-fitness,Sport and Fitness,Training and Competition,medium,3,,,,noun,Sport and Fitness Core,built-in
+sport-and-fitness-training-and-competition-goalkeeper,goalkeeper,вратарь,sport-and-fitness,Sport and Fitness,Training and Competition,medium,3,,,,noun,Sport and Fitness Core,built-in
+sport-and-fitness-training-and-competition-defender,defender,защитник,sport-and-fitness,Sport and Fitness,Training and Competition,medium,3,,,,noun,Sport and Fitness Core,built-in
+sport-and-fitness-training-and-competition-score,score,счёт,sport-and-fitness,Sport and Fitness,Training and Competition,easy,2,,,,noun,Sport and Fitness Core,built-in
+sport-and-fitness-health-and-recovery-injury,injury,травма,sport-and-fitness,Sport and Fitness,Health and Recovery,medium,3,,,,noun,Sport and Fitness Core,built-in
+everyday-life-daily-routines-breakfast,breakfast,завтрак,everyday-life,Everyday Life,Daily Routines,easy,2,,,,noun,Everyday Life — Daily Routines,built-in
+everyday-life-daily-routines-commute,commute,дорога на работу,everyday-life,Everyday Life,Daily Routines,medium,3,,,,verb,Everyday Life — Daily Routines,built-in
+everyday-life-daily-routines-household-chores,household chores,домашние дела,everyday-life,Everyday Life,Daily Routines,medium,3,,,,noun,Everyday Life — Daily Routines,built-in
+everyday-life-home-and-services-appointment,appointment,запланированная встреча,everyday-life,Everyday Life,Home and Services,medium,3,,,,noun,Everyday Life — Daily Routines,built-in
+everyday-life-home-and-services-receipt,receipt,чек,everyday-life,Everyday Life,Home and Services,easy,2,,,,noun,Everyday Life — Daily Routines,built-in
+transport-and-trade-road-freight-freight,freight,груз,transport-and-trade,Transport and Trade,Road Freight,medium,4,,,,noun,Transport and Trade — Road Freight,built-in
+transport-and-trade-road-freight-consignment,consignment,партия груза,transport-and-trade,Transport and Trade,Road Freight,hard,5,,,,noun,Transport and Trade — Road Freight,built-in
+transport-and-trade-road-freight-carrier,carrier,перевозчик,transport-and-trade,Transport and Trade,Road Freight,medium,4,,,,noun,Transport and Trade — Road Freight,built-in
+transport-and-trade-customs-and-trade-customs-clearance,customs clearance,таможенное оформление,transport-and-trade,Transport and Trade,Customs and Trade,hard,5,,,,noun,Transport and Trade — Road Freight,built-in
+transport-and-trade-customs-and-trade-bill-of-lading,bill of lading,коносамент,transport-and-trade,Transport and Trade,Customs and Trade,hard,5,,,,noun,Transport and Trade — Road Freight,built-in
