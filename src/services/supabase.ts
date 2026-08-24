@@ -23,6 +23,19 @@ export function getCloudSession(): SupabaseSession | null {
   try { const value = window.localStorage.getItem(SESSION_KEY); return value ? JSON.parse(value) as SupabaseSession : null } catch { return null }
 }
 
+export async function getActiveCloudSession(): Promise<SupabaseSession | null> {
+  const session = getCloudSession()
+  if (!session || !isSupabaseConfigured()) return null
+  try {
+    const user = await request('/auth/v1/user', { headers: headers(session.access_token) }) as SupabaseUser
+    if (user.id !== session.user.id) throw new Error('Session user mismatch.')
+    return session
+  } catch {
+    storeSession(null)
+    return null
+  }
+}
+
 function storeSession(session: SupabaseSession | null) {
   if (session) window.localStorage.setItem(SESSION_KEY, JSON.stringify(session))
   else window.localStorage.removeItem(SESSION_KEY)
@@ -47,7 +60,7 @@ export async function signOut() {
 }
 
 export async function saveCloudSnapshot(payload: unknown) {
-  const session = getCloudSession()
+  const session = await getActiveCloudSession()
   if (!session) throw new Error('Sign in before synchronising your learning data.')
   await request('/rest/v1/learning_snapshots?on_conflict=user_id', {
     method: 'POST', headers: { ...headers(session.access_token), Prefer: 'resolution=merge-duplicates,return=minimal' },
