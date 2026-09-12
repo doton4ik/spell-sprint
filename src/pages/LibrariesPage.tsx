@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { ImportLibraryPanel } from '../components/libraries/ImportLibraryPanel'
 import { LibraryCard } from '../components/libraries/LibraryCard'
 import { deleteImportedLibrary, getLibraries, getTopicNames } from '../services/libraryStorage'
+import { partOfSpeechOptions } from '../types/library'
 import './libraries.css'
 
 export function LibrariesPage() {
@@ -23,7 +24,7 @@ export function LibrariesPage() {
       {select('Topic', topic, setTopic, ['All', ...getTopicNames()])}
       {select('Subtopic', subtopic, setSubtopic, options(words.map((word) => word.subtopic)))}
       {select('Difficulty', difficulty, setDifficulty, ['All', 'easy', 'medium', 'hard'])}
-      {select('Part of speech', partOfSpeech, setPartOfSpeech, options(words.map((word) => word.partOfSpeech)))}
+      {select('Part of speech', partOfSpeech, setPartOfSpeech, ['All', ...partOfSpeechOptions])}
     </div>
     <section className="libraries-grid" aria-label="Word libraries">{visibleLibraries.map((item) => <LibraryCard library={item} onDelete={removeLibrary} key={item.id} />)}</section>
   </div>

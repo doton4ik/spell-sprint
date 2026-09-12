@@ -1,6 +1,7 @@
 import { builtInLibraries } from '../data/libraries'
 import { canonicalTopic, canonicalTopics, libraryKindForName, stableWordId } from '../data/libraryTaxonomy'
-import type { ImportReport, LibraryDifficulty, LibraryWord, WordLibrary } from '../types/library'
+import { parseCsvRows } from './csv'
+import { normalisePartOfSpeech, type ImportReport, type LibraryDifficulty, type LibraryWord, type WordLibrary } from '../types/library'
 
 const CUSTOM_LIBRARIES_KEY = 'spell-sprint.custom-libraries'
 const csvHeaders = ['word_id', 'word', 'translation', 'topic_id', 'topic', 'subtopic', 'difficulty', 'risk', 'rule', 'example', 'definition', 'part_of_speech', 'library', 'source']
@@ -12,24 +13,12 @@ function normalise(value: string) { return value.trim().toLocaleLowerCase() }
 function validDifficulty(value: string): value is LibraryDifficulty { return ['easy', 'medium', 'hard'].includes(normalise(value)) }
 function uniqueWords(words: LibraryWord[]) { const seen = new Set<string>(); return words.filter((word) => { const key = word.wordId || `${word.topicId}:${normalise(word.word)}:${normalise(word.partOfSpeech)}`; if (seen.has(key)) return false; seen.add(key); return true }) }
 
-function parseCsv(text: string) {
-  const rows: string[][] = []; let row: string[] = []; let field = ''; let quoted = false
-  for (let index = 0; index < text.length; index += 1) {
-    const character = text[index]
-    if (character === '"') { if (quoted && text[index + 1] === '"') { field += '"'; index += 1 } else quoted = !quoted }
-    else if (character === ',' && !quoted) { row.push(field.trim()); field = '' }
-    else if ((character === '\n' || character === '\r') && !quoted) { if (character === '\r' && text[index + 1] === '\n') index += 1; row.push(field.trim()); field = ''; if (row.some(Boolean)) rows.push(row); row = [] }
-    else field += character
-  }
-  row.push(field.trim()); if (row.some(Boolean)) rows.push(row); return rows
-}
-
 function migrateLibrary(library: WordLibrary): WordLibrary {
   return { ...library, kind: library.kind ?? libraryKindForName(library.name), includes: library.includes ?? [], words: library.words.map((legacy) => {
     const word = legacy as LibraryWord & Partial<LibraryWord>
     const canonical = canonicalTopic(word.topicId ?? '', word.topic); const subtopic = word.subtopic ?? ''
     const wordId = word.wordId || word.id || stableWordId(canonical.topicId, subtopic, word.word)
-    return { ...word, id: word.id || wordId, wordId, topicId: canonical.topicId, topic: canonical.topic, subtopic, partOfSpeech: word.partOfSpeech ?? '', library: word.library || library.name, source: word.source || library.source }
+    return { ...word, id: word.id || wordId, wordId, topicId: canonical.topicId, topic: canonical.topic, subtopic, partOfSpeech: normalisePartOfSpeech(word.partOfSpeech), library: word.library || library.name, source: word.source || library.source }
   }) }
 }
 
@@ -54,7 +43,7 @@ function duplicateKey(word: Pick<LibraryWord, 'wordId' | 'word' | 'translation' 
 function report(libraryName: string, topic: string, imported: number, skipped: number, duplicateCount: number, errors: string[]): ImportReport { return { libraryName, topic, imported, skipped, duplicateCount, errorCount: errors.length, errors: errors.slice(0, 5) } }
 
 export function importCsvLibrary(text: string, fileName = 'Imported library'): ImportReport {
-  const rows = parseCsv(text)
+  const rows = parseCsvRows(text)
   if (rows.length < 2) return report(fileName, 'Imported', 0, 0, 0, ['CSV needs a header and at least one data row.'])
   const headers = rows[0].map(normalise); const missingHeaders = csvHeaders.filter((header) => !headers.includes(header))
   if (missingHeaders.length) return report(fileName, 'Imported', 0, rows.length - 1, 0, [`Missing CSV columns: ${missingHeaders.join(', ')}.`])
@@ -63,7 +52,7 @@ export function importCsvLibrary(text: string, fileName = 'Imported library'): I
     const value = (name: string) => row[column(name)]?.trim() ?? ''; const absent = requiredValues.filter((name) => !value(name)); const difficulty = value('difficulty'); const risk = Number(value('risk'))
     if (absent.length || !validDifficulty(difficulty) || !Number.isInteger(risk) || risk < 1 || risk > 5) { invalid += 1; errors.push(`Row ${index + 2}: ${absent.length ? `missing ${absent.join(', ')}` : 'difficulty must be easy, medium, or hard; risk must be 1–5'}.`); return }
     const canonical = canonicalTopic(value('topic_id'), value('topic')); const wordId = value('word_id') || stableWordId(canonical.topicId, value('subtopic'), value('word'))
-    words.push({ id: wordId, wordId, word: value('word'), translation: value('translation'), topicId: canonical.topicId, topic: canonical.topic, subtopic: value('subtopic'), difficulty: normalise(difficulty) as LibraryDifficulty, risk, rule: value('rule') || undefined, example: value('example') || undefined, definition: value('definition') || undefined, partOfSpeech: value('part_of_speech'), library: value('library'), source: value('source') })
+    words.push({ id: wordId, wordId, word: value('word'), translation: value('translation'), topicId: canonical.topicId, topic: canonical.topic, subtopic: value('subtopic'), difficulty: normalise(difficulty) as LibraryDifficulty, risk, rule: value('rule') || undefined, example: value('example') || undefined, definition: value('definition') || undefined, partOfSpeech: normalisePartOfSpeech(value('part_of_speech')), library: value('library'), source: value('source') })
   })
   const keys = new Set(getAllWords().map(duplicateKey)); const accepted: LibraryWord[] = []; let duplicates = 0
   for (const word of words) { const key = duplicateKey(word); if (keys.has(key)) { duplicates += 1; continue }; keys.add(key); accepted.push(word) }

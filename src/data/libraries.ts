@@ -1,6 +1,7 @@
 import builtInCsv from './spell-sprint-built-in-library.csv?raw'
 import { canonicalTopic, libraryKindForName } from './libraryTaxonomy'
-import type { LibraryDifficulty, LibraryWord, WordLibrary } from '../types/library'
+import { parseCsvRows } from '../services/csv'
+import { normalisePartOfSpeech, type LibraryDifficulty, type LibraryWord, type WordLibrary } from '../types/library'
 
 const includesByLibrary: Record<string, string[]> = {
   'Supply Chain Core': ['shared-inventory-fundamentals'],
@@ -11,8 +12,8 @@ const includesByLibrary: Record<string, string[]> = {
 }
 
 function parseRows(text: string) {
-  const lines = text.trim().split(/\r?\n/); const headers = lines[0].split(',')
-  return lines.slice(1).map((line) => Object.fromEntries(line.split(',').map((value, index) => [headers[index], value.trim()])))
+  const rows = parseCsvRows(text); const headers = rows[0]
+  return rows.slice(1).map((row) => Object.fromEntries(row.map((value, index) => [headers[index], value])))
 }
 
 function builtInWord(row: Record<string, string>): LibraryWord {
@@ -20,7 +21,7 @@ function builtInWord(row: Record<string, string>): LibraryWord {
   return {
     id: row.word_id, wordId: row.word_id, word: row.word, translation: row.translation, topicId: topic.topicId, topic: topic.topic, subtopic: row.subtopic || 'General',
     difficulty: row.difficulty as LibraryDifficulty, risk: Number(row.risk), rule: row.rule || undefined, example: row.example || undefined, definition: row.definition || undefined,
-    partOfSpeech: row.part_of_speech || '', library: row.library, source: row.source || 'legacy-migrated',
+    partOfSpeech: normalisePartOfSpeech(row.part_of_speech), library: row.library, source: row.source || 'legacy-migrated',
   }
 }
 
