@@ -1,9 +1,18 @@
-export function registerServiceWorker() {
-  if (!('serviceWorker' in navigator) || !import.meta.env.PROD) return
+const serviceWorkerCacheName = /workbox|vite[- ]pwa|vite-plugin-pwa|spell[- ]sprint/i
 
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch((error: unknown) => {
-      console.warn('Spell Sprint offline mode could not be registered.', error)
-    })
-  })
+/** Removes obsolete offline assets without touching application data storage. */
+export async function clearLegacyServiceWorkers() {
+  if (!('serviceWorker' in navigator)) return
+
+  try {
+    const registrations = await navigator.serviceWorker.getRegistrations()
+    await Promise.all(registrations.map((registration) => registration.unregister()))
+
+    if ('caches' in window) {
+      const cacheNames = await window.caches.keys()
+      await Promise.all(cacheNames.filter((name) => serviceWorkerCacheName.test(name)).map((name) => window.caches.delete(name)))
+    }
+  } catch {
+    // A failed cleanup must never prevent the application from rendering.
+  }
 }

@@ -62,4 +62,4 @@ export type PracticeAttempt = {
 
 export type CheckResult = 'idle' | 'correct' | 'incorrect'
 
-export type ErrorType = 'missing_letter' | 'extra_letter' | 'letter_order' | 'vowel_confusion' | 'double_consonant' | 'phrase_spacing' | 'unknown'
+export type ErrorType = 'missing_letter' | 'missing_vowel' | 'extra_letter' | 'letter_order' | 'vowel_confusion' | 'double_consonant' | 'phrase_spacing' | 'unknown'

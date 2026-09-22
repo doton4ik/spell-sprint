@@ -34,6 +34,12 @@ function resolveLibraries(libraries: WordLibrary[]) {
 }
 
 export function getImportedLibraries(): WordLibrary[] { return read<WordLibrary[]>(CUSTOM_LIBRARIES_KEY, []).map(migrateLibrary) }
+export function mergeImportedLibraries(incoming: WordLibrary[]) {
+  const local = getImportedLibraries(); const known = new Set(local.map((library) => library.id))
+  const fresh = incoming.filter((library) => library && typeof library.id === 'string' && Array.isArray(library.words) && !known.has(library.id))
+  if (fresh.length) window.localStorage.setItem(CUSTOM_LIBRARIES_KEY, JSON.stringify([...local, ...fresh]))
+  return fresh.length
+}
 export function getLibraries(): WordLibrary[] { return resolveLibraries([...builtInLibraries, ...getImportedLibraries()]) }
 export function getAllWords() { return uniqueWords(getLibraries().flatMap((library) => library.words)) }
 export function getTopicNames() { return [...new Set([...initialTopics, ...getAllWords().map((word) => word.topic)])] }

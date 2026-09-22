@@ -13,6 +13,7 @@ export type MistakeEntry = {
   topicId?: string
   subtopic?: string
   wordId?: string
+  translation?: string
   library?: string
   errorType?: ErrorType
   numberOfAttempts: number

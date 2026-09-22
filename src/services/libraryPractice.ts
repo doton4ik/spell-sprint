@@ -41,7 +41,18 @@ export function getTasksForSelection(selection: PracticeSelection, mode: Practic
   }
   const generated = selected.flatMap(tasksForWord).filter((task) => task.mode === mode)
   const legacy = mixedPracticeTasks.filter((task) => mode !== 'choose-spelling' && modeForLegacyTask(task) === mode)
-  return selection.scope === 'all' ? [...legacy, ...generated].slice(0, 24) : generated.slice(0, 24)
+  return selection.scope === 'all' ? [...legacy, ...generated] : generated
 }
 
 export function getTaskById(taskId: string) { return [...mixedPracticeTasks, ...getAllWords().flatMap(tasksForWord)].find((task) => task.id === taskId) }
+
+const PENDING_SELECTION_KEY = 'spell-sprint.pending-practice-selection'
+export type PendingPracticeSelection = { wordIds: string[]; label: string }
+export function setPendingPracticeSelection(selection: PendingPracticeSelection) { window.sessionStorage.setItem(PENDING_SELECTION_KEY, JSON.stringify(selection)) }
+export function consumePendingPracticeSelection(): PendingPracticeSelection | null {
+  try { const value = window.sessionStorage.getItem(PENDING_SELECTION_KEY); window.sessionStorage.removeItem(PENDING_SELECTION_KEY); return value ? JSON.parse(value) as PendingPracticeSelection : null } catch { return null }
+}
+export function getTasksForWordIds(wordIds: string[], mode: PracticeMode = 'write-en') {
+  const wanted = new Set(wordIds)
+  return getAllWords().filter((word) => wanted.has(word.wordId)).flatMap(tasksForWord).filter((task) => task.mode === mode)
+}

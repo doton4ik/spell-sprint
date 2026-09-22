@@ -1,16 +1,19 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
 import { MetricCard } from '../components/ui/MetricCard'
 import { SectionHeader } from '../components/ui/SectionHeader'
 import { getLearningAnalytics } from '../services/learningAnalytics'
+import { subscribeToLearningData } from '../services/learningData'
 import './dashboard.css'
 
 export function DashboardPage() {
-  const analytics = useMemo(() => getLearningAnalytics(), [])
+  const [revision, setRevision] = useState(0)
+  useEffect(() => subscribeToLearningData(() => setRevision((value) => value + 1)), [])
+  const analytics = useMemo(getLearningAnalytics, [revision])
   const metrics = [
     { label: 'Accuracy', value: `${analytics.accuracy}%`, note: analytics.hasLiveData ? 'Based on your saved answers' : 'Starting baseline', tone: 'teal' as const, icon: 'dashboard' as const },
     { label: 'Repeat later', value: String(analytics.repeatLater), note: 'Items waiting for review', tone: 'amber' as const, icon: 'calendar' as const },
-    { label: 'Errors tracked', value: String(analytics.mistakes), note: `Main pattern: ${analytics.mainCategory}`, tone: 'violet' as const, icon: 'mistakes' as const },
+    { label: 'Errors tracked', value: String(analytics.mistakes), note: `${analytics.difficultWords} difficult words · ${analytics.mainCategory}`, tone: 'violet' as const, icon: 'mistakes' as const },
     { label: 'Completed tasks', value: String(analytics.totalAttempts), note: analytics.hasLiveData ? 'Practice and diagnostic answers' : 'Starting progress', tone: 'blue' as const, icon: 'practice' as const },
   ]
   const date = new Intl.DateTimeFormat('en', { weekday: 'long', month: 'long', day: 'numeric' }).format(new Date())
@@ -86,7 +89,7 @@ export function DashboardPage() {
           <SectionHeader eyebrow="Last activity" title="Recent mistakes" action="Open mistakes" />
           <div className="mistake-list">
             {analytics.recent.map((mistake) => (
-              <div className="mistake-row" key={`${mistake.submitted}-${mistake.correct}`}>
+                <div className="mistake-row" key={`${mistake.submitted}-${mistake.correct}-${mistake.when}`}>
                 <div className="mistake-row__letter">Aa</div>
                 <div className="mistake-row__content"><p><s>{mistake.submitted}</s><Icon name="arrow" size={14} /> <strong>{mistake.correct}</strong></p><span>{mistake.category} · {mistake.when}</span></div>
                 <a href="#mistakes" aria-label={`Review ${mistake.correct}`}><Icon name="chevron" size={18} /></a>

@@ -17,11 +17,18 @@ function errorType(answer: string, correct: string): ErrorType {
   const value = comparison(answer); const target = comparison(correct)
   if (!value || value === target) return 'unknown'
   if (normalize(answer).replaceAll('-', ' ') === normalize(correct).replaceAll('-', ' ') && normalize(answer) !== normalize(correct)) return 'phrase_spacing'
-  if (value.length < target.length) return /([bcdfghjklmnpqrstvwxyz])\1/i.test(target) && !/([bcdfghjklmnpqrstvwxyz])\1/i.test(value) ? 'double_consonant' : 'missing_letter'
+  if (value.length < target.length) {
+    if ([...target].some((letter, index) => /[aeiou]/i.test(letter) && `${target.slice(0, index)}${target.slice(index + 1)}` === value)) return 'missing_vowel'
+    return /([bcdfghjklmnpqrstvwxyz])\1/i.test(target) && !/([bcdfghjklmnpqrstvwxyz])\1/i.test(value) ? 'double_consonant' : 'missing_letter'
+  }
   if (value.length > target.length) return 'extra_letter'
   if ([...value].sort().join('') === [...target].sort().join('')) return 'letter_order'
   if (value.replace(/[aeiou]/gi, '') === target.replace(/[aeiou]/gi, '')) return 'vowel_confusion'
   return 'unknown'
+}
+function categoryForError(type: ErrorType) {
+  const labels: Record<ErrorType, string> = { missing_letter: 'Missing letters', missing_vowel: 'Missing vowel', extra_letter: 'Extra letters', letter_order: 'Letter order', vowel_confusion: 'Vowel confusion', double_consonant: 'Missing letters', phrase_spacing: 'Letter order', unknown: 'General spelling' }
+  return labels[type]
 }
 function dateAfter(days: number) { const date = new Date(); date.setDate(date.getDate() + days); return date.toISOString() }
 function shuffle<T>(array: T[]): T[] {
@@ -33,8 +40,9 @@ function shuffle<T>(array: T[]): T[] {
   return result
 }
 
-export function usePracticeSession(tasks: PracticeTask[]) {
-  const [shuffledTasks, setShuffledTasks] = useState<PracticeTask[]>(() => shuffle(tasks))
+export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'all' = 'all') {
+  const buildSession = () => shuffle(uniqueTasks(tasks)).slice(0, taskLimit === 'all' ? undefined : taskLimit)
+  const [shuffledTasks, setShuffledTasks] = useState<PracticeTask[]>(buildSession)
   const [taskIndex, setTaskIndex] = useState(0)
   const [answer, setAnswer] = useState('')
   const [result, setResult] = useState<CheckResult>('idle')
@@ -49,8 +57,8 @@ export function usePracticeSession(tasks: PracticeTask[]) {
 
   useEffect(() => { savePracticeSettings(settings) }, [settings])
   useEffect(() => {
-    setShuffledTasks(shuffle(tasks)); setTaskIndex(0); setAnswer(''); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0); setCompleted(false)
-  }, [tasks])
+    setShuffledTasks(buildSession()); setTaskIndex(0); setAnswer(''); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0); setCompleted(false)
+  }, [tasks, taskLimit])
 
   useEffect(() => {
     if (result !== 'correct' || !settings.writeUntilCorrect) return
@@ -66,7 +74,7 @@ export function usePracticeSession(tasks: PracticeTask[]) {
     const nextReviewAt = !correct ? dateAfter(0) : hintStep ? dateAfter(1) : dateAfter(confidence === 1 ? 2 : confidence === 2 ? 7 : 21)
     savePracticeAttempt({
       id: crypto.randomUUID(), taskId: currentTask.id, taskType: currentTask.type, topic: currentTask.topic, topicId: currentTask.topicId, subtopic: currentTask.subtopic, wordId: currentTask.wordId, library: currentTask.library,
-      userAnswer: answer, correctAnswer: currentTask.answer, errorCategory: currentTask.errorCategory,
+      userAnswer: answer, correctAnswer: currentTask.answer, errorCategory: correct ? currentTask.errorCategory : categoryForError(errorType(answer, currentTask.answer)),
       hintUsed: Boolean(hintStep), attemptMode: currentTask.mode ?? (currentTask.type === 'translate-en-ru' ? 'translate-ru' : currentTask.type === 'translate-ru-en' ? 'write-en' : 'choose-spelling'), errorType: correct ? 'unknown' : errorType(answer, currentTask.answer), confidence, nextReviewAt, needsReview: needsReview && settings.repeatDifficultItemLater, createdAt: new Date().toISOString(), ...overrides,
     })
   }
@@ -95,7 +103,12 @@ export function usePracticeSession(tasks: PracticeTask[]) {
   function skip() { recordAttempt({ isCorrect: false, wasSkipped: true, wasAnswerRevealed: answerRevealed }); advance() }
   function useHint() { setHintStep((step) => Math.min(step + 1, 5)) }
   function markForReview() { recordAttempt({ isCorrect: result === 'correct', wasSkipped: false, wasAnswerRevealed: answerRevealed, wasMarkedForReview: true }) }
-  function restart() { setShuffledTasks(shuffle(tasks)); setTaskIndex(0); setAnswer(''); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0); setCompleted(false) }
+  function restart() { setShuffledTasks(buildSession()); setTaskIndex(0); setAnswer(''); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0); setCompleted(false) }
 
   return { currentTask, taskIndex, progress, answer, setAnswer, result, attemptsOnTask, answerRevealed, hintStep, completed, settings, setSettings, checkAnswer, revealAnswer, useHint, markForReview, advance, skip, restart, totalTasks: shuffledTasks.length }
+}
+
+function uniqueTasks(tasks: PracticeTask[]) {
+  const seen = new Set<string>()
+  return tasks.filter((task) => { const key = task.wordId ?? task.id; if (seen.has(key)) return false; seen.add(key); return true })
 }

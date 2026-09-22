@@ -15,8 +15,26 @@ async function request(path: string, init: RequestInit = {}) {
   if (!isSupabaseConfigured()) throw new Error('Supabase is not configured. Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY to .env.local.')
   const response = await fetch(`${url}${path}`, { ...init, headers: { ...headers(), ...init.headers } })
   const data = await response.json().catch(() => ({}))
-  if (!response.ok) throw new Error(data.msg ?? data.message ?? 'Supabase request failed.')
+  if (!response.ok) throw Object.assign(new Error(data.msg ?? data.message ?? 'Supabase request failed.'), { status: response.status })
   return data
+}
+
+// Only a clear "no" from Supabase means the login is invalid; a network hiccup should not sign the user out.
+function isAuthRejection(error: unknown) {
+  const status = (error as { status?: number }).status
+  return status === 400 || status === 401 || status === 403
+}
+
+async function refreshSession(session: SupabaseSession): Promise<SupabaseSession | null> {
+  try {
+    const data = await request('/auth/v1/token?grant_type=refresh_token', { method: 'POST', body: JSON.stringify({ refresh_token: session.refresh_token }) }) as SupabaseSession
+    if (!data.access_token || !data.refresh_token || data.user?.id !== session.user.id) throw Object.assign(new Error('Session user mismatch.'), { status: 401 })
+    storeSession(data)
+    return data
+  } catch (error) {
+    if (isAuthRejection(error)) storeSession(null)
+    return null
+  }
 }
 
 export function getCloudSession(): SupabaseSession | null {
@@ -28,11 +46,11 @@ export async function getActiveCloudSession(): Promise<SupabaseSession | null> {
   if (!session || !isSupabaseConfigured()) return null
   try {
     const user = await request('/auth/v1/user', { headers: headers(session.access_token) }) as SupabaseUser
-    if (user.id !== session.user.id) throw new Error('Session user mismatch.')
+    if (user.id !== session.user.id) throw Object.assign(new Error('Session user mismatch.'), { status: 401 })
     return session
-  } catch {
-    storeSession(null)
-    return null
+  } catch (error) {
+    if (!isAuthRejection(error)) return null
+    return refreshSession(session)
   }
 }
 
@@ -57,6 +75,14 @@ export async function signOut() {
   const session = getCloudSession()
   if (session && isSupabaseConfigured()) await request('/auth/v1/logout', { method: 'POST', headers: { ...headers(session.access_token) } }).catch(() => undefined)
   storeSession(null)
+}
+
+export async function loadCloudSnapshot(): Promise<{ payload: unknown; updatedAt: string } | null> {
+  const session = await getActiveCloudSession()
+  if (!session) throw new Error('Sign in before restoring your learning data.')
+  const rows = await request(`/rest/v1/learning_snapshots?select=payload,updated_at&user_id=eq.${encodeURIComponent(session.user.id)}`, { headers: headers(session.access_token) })
+  const row = Array.isArray(rows) ? rows[0] : null
+  return row ? { payload: row.payload, updatedAt: row.updated_at } : null
 }
 
 export async function saveCloudSnapshot(payload: unknown) {

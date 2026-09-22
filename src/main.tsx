@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App'
-import { registerServiceWorker } from './pwa/registerServiceWorker'
+import { clearLegacyServiceWorkers } from './pwa/registerServiceWorker'
 import './styles/global.css'
 
 createRoot(document.getElementById('root')!).render(
@@ -10,4 +10,4 @@ createRoot(document.getElementById('root')!).render(
   </StrictMode>,
 )
 
-registerServiceWorker()
+void clearLegacyServiceWorkers()
