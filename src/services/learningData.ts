@@ -1,4 +1,5 @@
-import type { ErrorFamily, LearningStatus, MistakeEntry, ReviewState } from '../types/learning'
+import { familyFor } from '../data/errorFamilies'
+import type { LearningStatus, MistakeEntry, ReviewState } from '../types/learning'
 import { getPracticeAttempts, subscribeToPracticeAttempts } from './practiceStorage'
 import { getTaskById } from './libraryPractice'
 import { getAllWords } from './libraryStorage'
@@ -20,14 +21,6 @@ function read<T>(key: string, fallback: T): T {
   } catch {
     return fallback
   }
-}
-
-function familyFor(category: string): ErrorFamily {
-  const grammar = ['Subject–verb agreement', 'Verb form', 'Tense', 'Articles', 'Prepositions', 'Word order']
-  const vocabulary = ['Wrong translation', 'Inactive vocabulary', 'Unknown word', 'Professional definition weakness', 'Word family confusion']
-  if (grammar.includes(category)) return 'Grammar'
-  if (vocabulary.includes(category)) return 'Vocabulary'
-  return 'Spelling'
 }
 
 export function getReviewStates() {

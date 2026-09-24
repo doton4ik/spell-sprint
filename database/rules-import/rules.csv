@@ -1,0 +1,7 @@
+slug,title,category,rule_type,short_explanation,tts_text,mnemonic,source,visibility,is_active
+double-consonants,Double consonants,double_consonants,language_rule,"Some common words need doubled letters. Learn the whole visual pattern instead of relying only on sound.",Double consonants,"Tomorrow has a double r; useful has one l.",built-in,public,true
+vowel-order-ei-ie,Vowel order: i and e,vowels_and_letter_patterns,exception,"The order of i and e changes the spelling of a word. After c, most words use ei.",Vowel order i and e,"After c, use ei: receive.",built-in,public,true
+lose-vs-loose,Lose vs loose,confusing_words,confusing_words,"Lose is a verb meaning to not have something anymore. Loose is an adjective meaning not tight.",Lose versus loose,"One O in lose, like losing one letter.",built-in,public,true
+plural-y-to-ies,Plural: y becomes ies,plural_forms,language_rule,"When a noun ends in a consonant plus y, change y to i and add es to form the plural.",Plural y to ies,"Company to companies; one lonely y turns into two i's.",built-in,public,true
+irregular-past-go,Irregular past: go / went,irregular_forms_and_exceptions,exception,"Go does not take -ed in the past tense. Its past form is the irregular word went.",Irregular past of go,"Go, went, gone — learn the whole set together.",built-in,public,true
+my-warehouse-shortcut,My warehouse shortcut,personal_note,personal_note,"Personal reminder about a word I keep getting wrong at work.",,,personal,private,true

@@ -1,0 +1,7 @@
+rule_slug,word_id,relation,note
+vowel-order-ei-ie,general-english-active-vocabulary-receive,primary,Core example word for this rule
+double-consonants,general-english-active-vocabulary-recommended,primary,Contains the doubled consonant pattern
+plural-y-to-ies,warehouse-operations-inventory-control-company,primary,Plural pattern example
+irregular-past-go,general-english-active-vocabulary-go,primary,Irregular verb itself
+lose-vs-loose,general-english-active-vocabulary-lose,primary,One of the two confusable words
+lose-vs-loose,general-english-active-vocabulary-loose,related,The other confusable word

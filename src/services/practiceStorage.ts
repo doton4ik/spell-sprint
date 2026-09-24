@@ -1,4 +1,5 @@
 import type { PracticeAttempt, PracticeSettings } from '../types/practice'
+import { recordMistake } from './mistakeService'
 
 const SETTINGS_KEY = 'spell-sprint.practice-settings'
 const ATTEMPTS_KEY = 'spell-sprint.practice-attempts'
@@ -26,6 +27,9 @@ export function savePracticeAttempt(attempt: PracticeAttempt) {
   const attempts = read<PracticeAttempt[]>(ATTEMPTS_KEY, [])
   window.localStorage.setItem(ATTEMPTS_KEY, JSON.stringify([attempt, ...attempts].slice(0, MAX_ATTEMPTS)))
   window.dispatchEvent(new Event(PRACTICE_UPDATED_EVENT))
+  // Fire-and-forget: the rules module is an additional layer on top of local practice history,
+  // so a slow network or a signed-out user must never block or break saving the attempt itself.
+  if (!attempt.isCorrect) void recordMistake(attempt)
 }
 
 // Adds attempts that are not stored locally yet (matched by id); never removes anything.

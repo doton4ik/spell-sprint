@@ -1,4 +1,7 @@
 :root {
+  /* Text size multiplier, set from Settings (see services/appearanceStorage.ts).
+     Write every font size as calc(Npx * var(--fs)) so it follows the setting. */
+  --fs: 1;
   --canvas: #f5f7f4;
   --surface: #ffffff;
   --surface-soft: #fbfcfa;

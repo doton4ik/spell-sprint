@@ -40,6 +40,8 @@ function shuffle<T>(array: T[]): T[] {
   return result
 }
 
+export type TaskOutcome = 'correct' | 'incorrect' | 'skipped'
+
 export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'all' = 'all') {
   const buildSession = () => shuffle(uniqueTasks(tasks)).slice(0, taskLimit === 'all' ? undefined : taskLimit)
   const [shuffledTasks, setShuffledTasks] = useState<PracticeTask[]>(buildSession)
@@ -50,6 +52,8 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
   const [answerRevealed, setAnswerRevealed] = useState(false)
   const [hintStep, setHintStep] = useState(0)
   const [completed, setCompleted] = useState(false)
+  // First result per task in this session (a later retry does not overwrite it), for the live stats panel.
+  const [outcomes, setOutcomes] = useState<Record<string, TaskOutcome>>({})
   const [settings, setSettings] = useState<PracticeSettings>(() => loadPracticeSettings(defaultPracticeSettings))
 
   const currentTask = shuffledTasks[taskIndex]
@@ -57,7 +61,7 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
 
   useEffect(() => { savePracticeSettings(settings) }, [settings])
   useEffect(() => {
-    setShuffledTasks(buildSession()); setTaskIndex(0); setAnswer(''); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0); setCompleted(false)
+    setShuffledTasks(buildSession()); setTaskIndex(0); setAnswer(''); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0); setCompleted(false); setOutcomes({})
   }, [tasks, taskLimit])
 
   useEffect(() => {
@@ -65,6 +69,10 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
     const timeout = window.setTimeout(() => advance(), 850)
     return () => window.clearTimeout(timeout)
   }, [result, settings.writeUntilCorrect])
+
+  function markOutcome(outcome: TaskOutcome) {
+    setOutcomes((previous) => previous[currentTask.id] ? previous : { ...previous, [currentTask.id]: outcome })
+  }
 
   function recordAttempt(overrides: Pick<PracticeAttempt, 'isCorrect' | 'wasSkipped' | 'wasAnswerRevealed'> & { wasMarkedForReview?: boolean }) {
     const correct = overrides.isCorrect
@@ -84,11 +92,13 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
     const correct = isAnswerCorrect(answer, currentTask)
     setAttemptsOnTask((value) => value + 1)
     setResult(correct ? 'correct' : 'incorrect')
+    markOutcome(correct ? 'correct' : 'incorrect')
     recordAttempt({ isCorrect: correct, wasSkipped: false, wasAnswerRevealed: answerRevealed })
   }
 
   function revealAnswer() {
     if (!answerRevealed) {
+      markOutcome('incorrect')
       recordAttempt({ isCorrect: false, wasSkipped: false, wasAnswerRevealed: true })
       setAnswerRevealed(true)
     }
@@ -100,12 +110,12 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
     setAnswer(''); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0)
   }
 
-  function skip() { recordAttempt({ isCorrect: false, wasSkipped: true, wasAnswerRevealed: answerRevealed }); advance() }
+  function skip() { markOutcome('skipped'); recordAttempt({ isCorrect: false, wasSkipped: true, wasAnswerRevealed: answerRevealed }); advance() }
   function useHint() { setHintStep((step) => Math.min(step + 1, 5)) }
   function markForReview() { recordAttempt({ isCorrect: result === 'correct', wasSkipped: false, wasAnswerRevealed: answerRevealed, wasMarkedForReview: true }) }
-  function restart() { setShuffledTasks(buildSession()); setTaskIndex(0); setAnswer(''); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0); setCompleted(false) }
+  function restart() { setShuffledTasks(buildSession()); setTaskIndex(0); setAnswer(''); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0); setCompleted(false); setOutcomes({}) }
 
-  return { currentTask, taskIndex, progress, answer, setAnswer, result, attemptsOnTask, answerRevealed, hintStep, completed, settings, setSettings, checkAnswer, revealAnswer, useHint, markForReview, advance, skip, restart, totalTasks: shuffledTasks.length }
+  return { sessionTasks: shuffledTasks, outcomes, currentTask, taskIndex, progress, answer, setAnswer, result, attemptsOnTask, answerRevealed, hintStep, completed, settings, setSettings, checkAnswer, revealAnswer, useHint, markForReview, advance, skip, restart, totalTasks: shuffledTasks.length }
 }
 
 function uniqueTasks(tasks: PracticeTask[]) {

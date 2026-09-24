@@ -77,6 +77,24 @@ export async function signOut() {
   storeSession(null)
 }
 
+// Read-only access to public data (e.g. built-in rules); works even when signed out.
+export async function supabasePublicRequest(path: string, init: RequestInit = {}) {
+  return request(path, init)
+}
+
+// Access to the signed-in user's own rows (RLS-protected tables). Throws if not signed in.
+export async function supabaseUserRequest(path: string, init: RequestInit = {}) {
+  const session = await getActiveCloudSession()
+  if (!session) throw new Error('Sign in required for this action.')
+  return { session, data: await supabaseAuthedFetch(session, path, init) }
+}
+
+// Same as supabaseUserRequest, but reuses an already-verified session so a multi-step
+// operation (e.g. recording one mistake against several rules) does not re-verify per call.
+export async function supabaseAuthedFetch(session: SupabaseSession, path: string, init: RequestInit = {}) {
+  return request(path, { ...init, headers: { ...headers(session.access_token), ...init.headers } })
+}
+
 export async function loadCloudSnapshot(): Promise<{ payload: unknown; updatedAt: string } | null> {
   const session = await getActiveCloudSession()
   if (!session) throw new Error('Sign in before restoring your learning data.')

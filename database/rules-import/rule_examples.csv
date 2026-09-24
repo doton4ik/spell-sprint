@@ -1,0 +1,13 @@
+rule_slug,example_type,text,correction,note
+double-consonants,incorrect,tomorow,tomorrow,Missing the second r
+double-consonants,correct,beginning,,Double n before -ing
+double-consonants,correct,recommended,,Double m
+vowel-order-ei-ie,incorrect,recieve,receive,ei after c
+vowel-order-ei-ie,correct,believe,,ie after b, not after c
+vowel-order-ei-ie,exception,seize,,Common exception: ei even though not after c
+lose-vs-loose,incorrect,I don't want to loose my keys.,I don't want to lose my keys.,loose used instead of lose
+lose-vs-loose,correct,These jeans are too loose.,,loose is the adjective
+plural-y-to-ies,incorrect,companys,companies,y kept instead of changing to ies
+plural-y-to-ies,correct,delivery -> deliveries,,Standard pattern
+irregular-past-go,incorrect,We goed to the warehouse.,We went to the warehouse.,Regular -ed added to an irregular verb
+irregular-past-go,correct,She went to the meeting.,,Correct irregular past form

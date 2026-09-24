@@ -78,3 +78,215 @@ transport-and-trade-road-freight-consignment,consignment,партия груза
 transport-and-trade-road-freight-carrier,carrier,перевозчик,transport-and-trade,Transport and Trade,Road Freight,medium,4,,,,noun,Transport and Trade — Road Freight,built-in
 transport-and-trade-customs-and-trade-customs-clearance,customs clearance,таможенное оформление,transport-and-trade,Transport and Trade,Customs and Trade,hard,5,,,,noun,Transport and Trade — Road Freight,built-in
 transport-and-trade-customs-and-trade-bill-of-lading,bill of lading,коносамент,transport-and-trade,Transport and Trade,Customs and Trade,hard,5,,,,noun,Transport and Trade — Road Freight,built-in
+food-and-drinks-meals-and-cooking-breakfast,breakfast,завтрак,food-and-drinks,Food and Drinks,Meals and Cooking,easy,2,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-meals-and-cooking-lunch,lunch,обед,food-and-drinks,Food and Drinks,Meals and Cooking,easy,2,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-meals-and-cooking-dinner,dinner,ужин,food-and-drinks,Food and Drinks,Meals and Cooking,easy,2,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-meals-and-cooking-ingredient,ingredient,ингредиент,food-and-drinks,Food and Drinks,Meals and Cooking,medium,3,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-meals-and-cooking-recipe,recipe,рецепт,food-and-drinks,Food and Drinks,Meals and Cooking,medium,3,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-meals-and-cooking-vegetable,vegetable,овощ,food-and-drinks,Food and Drinks,Meals and Cooking,hard,5,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-meals-and-cooking-fruit,fruit,фрукт,food-and-drinks,Food and Drinks,Meals and Cooking,easy,2,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-meals-and-cooking-delicious,delicious,вкусный,food-and-drinks,Food and Drinks,Meals and Cooking,hard,5,,,,adjective,Food and Drinks Core,built-in
+food-and-drinks-meals-and-cooking-bake,bake,"печь, выпекать",food-and-drinks,Food and Drinks,Meals and Cooking,easy,2,,,,verb,Food and Drinks Core,built-in
+food-and-drinks-meals-and-cooking-boil,boil,"варить, кипятить",food-and-drinks,Food and Drinks,Meals and Cooking,medium,3,,,,verb,Food and Drinks Core,built-in
+food-and-drinks-meals-and-cooking-chop,chop,нарезать,food-and-drinks,Food and Drinks,Meals and Cooking,medium,3,,,,verb,Food and Drinks Core,built-in
+food-and-drinks-meals-and-cooking-fry,fry,жарить,food-and-drinks,Food and Drinks,Meals and Cooking,easy,2,,,,verb,Food and Drinks Core,built-in
+food-and-drinks-meals-and-cooking-seasoning,seasoning,приправа,food-and-drinks,Food and Drinks,Meals and Cooking,hard,5,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-meals-and-cooking-dessert,dessert,десерт,food-and-drinks,Food and Drinks,Meals and Cooking,hard,5,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-caf-and-restaurant-menu,menu,меню,food-and-drinks,Food and Drinks,Café and Restaurant,easy,2,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-caf-and-restaurant-order,order,заказывать; заказ,food-and-drinks,Food and Drinks,Café and Restaurant,easy,2,,,,verb,Food and Drinks Core,built-in
+food-and-drinks-caf-and-restaurant-bill,bill,счёт,food-and-drinks,Food and Drinks,Café and Restaurant,easy,2,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-caf-and-restaurant-tip,tip,чаевые,food-and-drinks,Food and Drinks,Café and Restaurant,easy,2,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-caf-and-restaurant-waiter,waiter,официант,food-and-drinks,Food and Drinks,Café and Restaurant,medium,3,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-caf-and-restaurant-reservation,reservation,"бронь, резервация",food-and-drinks,Food and Drinks,Café and Restaurant,hard,5,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-caf-and-restaurant-beverage,beverage,напиток,food-and-drinks,Food and Drinks,Café and Restaurant,hard,5,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-caf-and-restaurant-sparkling-water,sparkling water,газированная вода,food-and-drinks,Food and Drinks,Café and Restaurant,medium,3,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-caf-and-restaurant-allergic,allergic,аллергический,food-and-drinks,Food and Drinks,Café and Restaurant,hard,5,,,,adjective,Food and Drinks Core,built-in
+food-and-drinks-caf-and-restaurant-vegetarian,vegetarian,вегетарианец,food-and-drinks,Food and Drinks,Café and Restaurant,hard,5,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-caf-and-restaurant-takeaway,takeaway,еда навынос,food-and-drinks,Food and Drinks,Café and Restaurant,medium,3,,,,noun,Food and Drinks Core,built-in
+food-and-drinks-caf-and-restaurant-portion,portion,порция,food-and-drinks,Food and Drinks,Café and Restaurant,medium,3,,,,noun,Food and Drinks Core,built-in
+people-and-family-family-and-friends-relative,relative,родственник,people-and-family,People and Family,Family and Friends,medium,3,,,,noun,People and Feelings Core,built-in
+people-and-family-family-and-friends-neighbour,neighbour,сосед,people-and-family,People and Family,Family and Friends,hard,5,,,,noun,People and Feelings Core,built-in
+people-and-family-family-and-friends-colleague,colleague,коллега,people-and-family,People and Family,Family and Friends,hard,5,,,,noun,People and Feelings Core,built-in
+people-and-family-family-and-friends-friendship,friendship,дружба,people-and-family,People and Family,Family and Friends,hard,5,,,,noun,People and Feelings Core,built-in
+people-and-family-family-and-friends-grandparents,grandparents,бабушка и дедушка,people-and-family,People and Family,Family and Friends,medium,3,,,,noun,People and Feelings Core,built-in
+people-and-family-family-and-friends-sibling,sibling,брат или сестра,people-and-family,People and Family,Family and Friends,hard,5,,,,noun,People and Feelings Core,built-in
+people-and-family-family-and-friends-stranger,stranger,незнакомец,people-and-family,People and Family,Family and Friends,medium,3,,,,noun,People and Feelings Core,built-in
+people-and-family-family-and-friends-guest,guest,гость,people-and-family,People and Family,Family and Friends,easy,2,,,,noun,People and Feelings Core,built-in
+people-and-family-family-and-friends-generation,generation,поколение,people-and-family,People and Family,Family and Friends,hard,5,,,,noun,People and Feelings Core,built-in
+people-and-family-family-and-friends-marriage,marriage,брак,people-and-family,People and Family,Family and Friends,medium,3,,,,noun,People and Feelings Core,built-in
+feelings-feelings-happy,happy,счастливый,feelings,Feelings,Feelings,easy,2,,,,adjective,People and Feelings Core,built-in
+feelings-feelings-anxious,anxious,тревожный,feelings,Feelings,Feelings,hard,5,,,,adjective,People and Feelings Core,built-in
+feelings-feelings-embarrassed,embarrassed,смущённый,feelings,Feelings,Feelings,hard,5,,,,adjective,People and Feelings Core,built-in
+feelings-feelings-jealous,jealous,"ревнивый, завистливый",feelings,Feelings,Feelings,hard,5,,,,adjective,People and Feelings Core,built-in
+feelings-feelings-grateful,grateful,благодарный,feelings,Feelings,Feelings,medium,3,,,,adjective,People and Feelings Core,built-in
+feelings-feelings-disappointed,disappointed,разочарованный,feelings,Feelings,Feelings,hard,5,,,,adjective,People and Feelings Core,built-in
+feelings-feelings-confident,confident,уверенный,feelings,Feelings,Feelings,medium,3,,,,adjective,People and Feelings Core,built-in
+feelings-feelings-exhausted,exhausted,измотанный,feelings,Feelings,Feelings,hard,5,,,,adjective,People and Feelings Core,built-in
+feelings-feelings-curious,curious,любопытный,feelings,Feelings,Feelings,medium,3,,,,adjective,People and Feelings Core,built-in
+feelings-feelings-proud,proud,гордый,feelings,Feelings,Feelings,easy,2,,,,adjective,People and Feelings Core,built-in
+feelings-feelings-lonely,lonely,одинокий,feelings,Feelings,Feelings,medium,3,,,,adjective,People and Feelings Core,built-in
+feelings-feelings-relieved,relieved,испытывающий облегчение,feelings,Feelings,Feelings,hard,5,,,,adjective,People and Feelings Core,built-in
+feelings-feelings-frustrated,frustrated,раздосадованный,feelings,Feelings,Feelings,hard,5,,,,adjective,People and Feelings Core,built-in
+feelings-feelings-excited,excited,"взволнованный, радостный",feelings,Feelings,Feelings,medium,3,,,,adjective,People and Feelings Core,built-in
+home-around-the-house-kitchen,kitchen,кухня,home,Home,Around the House,easy,2,,,,noun,Home and Town Core,built-in
+home-around-the-house-bedroom,bedroom,спальня,home,Home,Around the House,medium,3,,,,noun,Home and Town Core,built-in
+home-around-the-house-bathroom,bathroom,ванная,home,Home,Around the House,medium,3,,,,noun,Home and Town Core,built-in
+home-around-the-house-furniture,furniture,мебель,home,Home,Around the House,hard,5,,,,noun,Home and Town Core,built-in
+home-around-the-house-curtain,curtain,штора,home,Home,Around the House,medium,3,,,,noun,Home and Town Core,built-in
+home-around-the-house-staircase,staircase,лестница,home,Home,Around the House,hard,5,,,,noun,Home and Town Core,built-in
+home-around-the-house-neighbourhood,neighbourhood,район,home,Home,Around the House,hard,5,,,,noun,Home and Town Core,built-in
+home-around-the-house-rent,rent,аренда; арендовать,home,Home,Around the House,easy,2,,,,noun,Home and Town Core,built-in
+home-around-the-house-landlord,landlord,арендодатель,home,Home,Around the House,hard,5,,,,noun,Home and Town Core,built-in
+home-around-the-house-appliance,appliance,бытовой прибор,home,Home,Around the House,hard,5,,,,noun,Home and Town Core,built-in
+home-around-the-house-laundry,laundry,"стирка, бельё",home,Home,Around the House,hard,5,,,,noun,Home and Town Core,built-in
+home-around-the-house-cupboard,cupboard,"шкаф, буфет",home,Home,Around the House,hard,5,,,,noun,Home and Town Core,built-in
+places-in-town-places-in-town-pharmacy,pharmacy,аптека,places-in-town,Places in Town,Places in Town,hard,5,,,,noun,Home and Town Core,built-in
+places-in-town-places-in-town-library,library,библиотека,places-in-town,Places in Town,Places in Town,medium,3,,,,noun,Home and Town Core,built-in
+places-in-town-places-in-town-post-office,post office,почта,places-in-town,Places in Town,Places in Town,easy,2,,,,noun,Home and Town Core,built-in
+places-in-town-places-in-town-bakery,bakery,пекарня,places-in-town,Places in Town,Places in Town,medium,3,,,,noun,Home and Town Core,built-in
+places-in-town-places-in-town-crossroads,crossroads,перекрёсток,places-in-town,Places in Town,Places in Town,hard,5,,,,noun,Home and Town Core,built-in
+places-in-town-places-in-town-pavement,pavement,тротуар,places-in-town,Places in Town,Places in Town,hard,5,,,,noun,Home and Town Core,built-in
+places-in-town-places-in-town-bridge,bridge,мост,places-in-town,Places in Town,Places in Town,easy,2,,,,noun,Home and Town Core,built-in
+places-in-town-places-in-town-square,square,площадь,places-in-town,Places in Town,Places in Town,easy,2,,,,noun,Home and Town Core,built-in
+places-in-town-places-in-town-supermarket,supermarket,супермаркет,places-in-town,Places in Town,Places in Town,medium,3,,,,noun,Home and Town Core,built-in
+places-in-town-places-in-town-station,station,"вокзал, станция",places-in-town,Places in Town,Places in Town,medium,3,,,,noun,Home and Town Core,built-in
+shopping-shopping-receipt,receipt,чек,shopping,Shopping,Shopping,hard,5,,,,noun,Home and Town Core,built-in
+shopping-shopping-refund,refund,возврат денег,shopping,Shopping,Shopping,hard,5,,,,noun,Home and Town Core,built-in
+shopping-shopping-discount,discount,скидка,shopping,Shopping,Shopping,medium,3,,,,noun,Home and Town Core,built-in
+shopping-shopping-cashier,cashier,кассир,shopping,Shopping,Shopping,hard,5,,,,noun,Home and Town Core,built-in
+shopping-shopping-customer,customer,покупатель,shopping,Shopping,Shopping,medium,3,,,,noun,Home and Town Core,built-in
+shopping-shopping-bargain,bargain,выгодная покупка,shopping,Shopping,Shopping,hard,5,,,,noun,Home and Town Core,built-in
+shopping-shopping-afford,afford,позволить себе,shopping,Shopping,Shopping,hard,5,,,,verb,Home and Town Core,built-in
+shopping-shopping-exchange,exchange,обменять,shopping,Shopping,Shopping,medium,3,,,,verb,Home and Town Core,built-in
+shopping-shopping-fitting-room,fitting room,примерочная,shopping,Shopping,Shopping,medium,3,,,,noun,Home and Town Core,built-in
+shopping-shopping-sold-out,sold out,распродано,shopping,Shopping,Shopping,easy,2,,,,phrase,Home and Town Core,built-in
+health-and-body-body-and-symptoms-stomach,stomach,"живот, желудок",health-and-body,Health and Body,Body and Symptoms,hard,5,,,,noun,Health and Body Core,built-in
+health-and-body-body-and-symptoms-throat,throat,горло,health-and-body,Health and Body,Body and Symptoms,medium,3,,,,noun,Health and Body Core,built-in
+health-and-body-body-and-symptoms-shoulder,shoulder,плечо,health-and-body,Health and Body,Body and Symptoms,medium,3,,,,noun,Health and Body Core,built-in
+health-and-body-body-and-symptoms-knee,knee,колено,health-and-body,Health and Body,Body and Symptoms,medium,3,,,,noun,Health and Body Core,built-in
+health-and-body-body-and-symptoms-headache,headache,головная боль,health-and-body,Health and Body,Body and Symptoms,medium,3,,,,noun,Health and Body Core,built-in
+health-and-body-body-and-symptoms-fever,fever,"температура, жар",health-and-body,Health and Body,Body and Symptoms,medium,3,,,,noun,Health and Body Core,built-in
+health-and-body-body-and-symptoms-cough,cough,кашель; кашлять,health-and-body,Health and Body,Body and Symptoms,hard,5,,,,noun,Health and Body Core,built-in
+health-and-body-body-and-symptoms-sneeze,sneeze,чихать,health-and-body,Health and Body,Body and Symptoms,hard,5,,,,verb,Health and Body Core,built-in
+health-and-body-body-and-symptoms-dizzy,dizzy,головокружительный,health-and-body,Health and Body,Body and Symptoms,hard,5,,,,adjective,Health and Body Core,built-in
+health-and-body-body-and-symptoms-sore,sore,болезненный,health-and-body,Health and Body,Body and Symptoms,medium,3,,,,adjective,Health and Body Core,built-in
+health-and-body-body-and-symptoms-bruise,bruise,синяк,health-and-body,Health and Body,Body and Symptoms,hard,5,,,,noun,Health and Body Core,built-in
+health-and-body-body-and-symptoms-injury,injury,травма,health-and-body,Health and Body,Body and Symptoms,medium,3,,,,noun,Health and Body Core,built-in
+health-and-body-at-the-doctor-appointment,appointment,"приём, запись",health-and-body,Health and Body,At the Doctor,hard,5,,,,noun,Health and Body Core,built-in
+health-and-body-at-the-doctor-prescription,prescription,рецепт (врача),health-and-body,Health and Body,At the Doctor,hard,5,,,,noun,Health and Body Core,built-in
+health-and-body-at-the-doctor-symptom,symptom,симптом,health-and-body,Health and Body,At the Doctor,hard,5,,,,noun,Health and Body Core,built-in
+health-and-body-at-the-doctor-treatment,treatment,лечение,health-and-body,Health and Body,At the Doctor,medium,3,,,,noun,Health and Body Core,built-in
+health-and-body-at-the-doctor-recover,recover,выздоравливать,health-and-body,Health and Body,At the Doctor,medium,3,,,,verb,Health and Body Core,built-in
+health-and-body-at-the-doctor-vaccine,vaccine,вакцина,health-and-body,Health and Body,At the Doctor,hard,5,,,,noun,Health and Body Core,built-in
+health-and-body-at-the-doctor-dentist,dentist,стоматолог,health-and-body,Health and Body,At the Doctor,medium,3,,,,noun,Health and Body Core,built-in
+health-and-body-at-the-doctor-ambulance,ambulance,скорая помощь,health-and-body,Health and Body,At the Doctor,hard,5,,,,noun,Health and Body Core,built-in
+health-and-body-at-the-doctor-painkiller,painkiller,обезболивающее,health-and-body,Health and Body,At the Doctor,hard,5,,,,noun,Health and Body Core,built-in
+health-and-body-at-the-doctor-check-up,check-up,медосмотр,health-and-body,Health and Body,At the Doctor,medium,3,,,,noun,Health and Body Core,built-in
+health-and-body-at-the-doctor-allergy,allergy,аллергия,health-and-body,Health and Body,At the Doctor,hard,5,,,,noun,Health and Body Core,built-in
+health-and-body-at-the-doctor-insurance,insurance,страховка,health-and-body,Health and Body,At the Doctor,hard,5,,,,noun,Health and Body Core,built-in
+technology-devices-and-software-device,device,устройство,technology,Technology,Devices and Software,medium,3,,,,noun,Technology and Internet Core,built-in
+technology-devices-and-software-screen,screen,экран,technology,Technology,Devices and Software,easy,2,,,,noun,Technology and Internet Core,built-in
+technology-devices-and-software-keyboard,keyboard,клавиатура,technology,Technology,Devices and Software,medium,3,,,,noun,Technology and Internet Core,built-in
+technology-devices-and-software-battery,battery,батарея,technology,Technology,Devices and Software,medium,3,,,,noun,Technology and Internet Core,built-in
+technology-devices-and-software-charger,charger,зарядка,technology,Technology,Devices and Software,medium,3,,,,noun,Technology and Internet Core,built-in
+technology-devices-and-software-software,software,программное обеспечение,technology,Technology,Devices and Software,medium,3,,,,noun,Technology and Internet Core,built-in
+technology-devices-and-software-update,update,обновление; обновлять,technology,Technology,Devices and Software,medium,3,,,,noun,Technology and Internet Core,built-in
+technology-devices-and-software-install,install,установить,technology,Technology,Devices and Software,medium,3,,,,verb,Technology and Internet Core,built-in
+technology-devices-and-software-download,download,скачивать,technology,Technology,Devices and Software,easy,2,,,,verb,Technology and Internet Core,built-in
+technology-devices-and-software-password,password,пароль,technology,Technology,Devices and Software,medium,3,,,,noun,Technology and Internet Core,built-in
+technology-devices-and-software-storage,storage,хранилище,technology,Technology,Devices and Software,medium,3,,,,noun,Technology and Internet Core,built-in
+technology-devices-and-software-wireless,wireless,беспроводной,technology,Technology,Devices and Software,hard,5,,,,adjective,Technology and Internet Core,built-in
+technology-online-life-website,website,сайт,technology,Technology,Online Life,medium,3,,,,noun,Technology and Internet Core,built-in
+technology-online-life-browser,browser,браузер,technology,Technology,Online Life,medium,3,,,,noun,Technology and Internet Core,built-in
+technology-online-life-attachment,attachment,вложение,technology,Technology,Online Life,hard,5,,,,noun,Technology and Internet Core,built-in
+technology-online-life-username,username,имя пользователя,technology,Technology,Online Life,medium,3,,,,noun,Technology and Internet Core,built-in
+technology-online-life-notification,notification,уведомление,technology,Technology,Online Life,hard,5,,,,noun,Technology and Internet Core,built-in
+technology-online-life-subscribe,subscribe,подписаться,technology,Technology,Online Life,medium,3,,,,verb,Technology and Internet Core,built-in
+technology-online-life-account,account,"аккаунт, учётная запись",technology,Technology,Online Life,medium,3,,,,noun,Technology and Internet Core,built-in
+technology-online-life-privacy,privacy,конфиденциальность,technology,Technology,Online Life,hard,5,,,,noun,Technology and Internet Core,built-in
+technology-online-life-search-engine,search engine,поисковая система,technology,Technology,Online Life,medium,3,,,,noun,Technology and Internet Core,built-in
+technology-online-life-social-media,social media,соцсети,technology,Technology,Online Life,easy,2,,,,noun,Technology and Internet Core,built-in
+technology-online-life-delete,delete,удалить,technology,Technology,Online Life,medium,3,,,,verb,Technology and Internet Core,built-in
+technology-online-life-backup,backup,резервная копия,technology,Technology,Online Life,medium,3,,,,noun,Technology and Internet Core,built-in
+nature-and-animals-nature-and-animals-forest,forest,лес,nature-and-animals,Nature and Animals,Nature and Animals,medium,3,,,,noun,Nature and Weather Core,built-in
+nature-and-animals-nature-and-animals-mountain,mountain,гора,nature-and-animals,Nature and Animals,Nature and Animals,medium,3,,,,noun,Nature and Weather Core,built-in
+nature-and-animals-nature-and-animals-valley,valley,долина,nature-and-animals,Nature and Animals,Nature and Animals,medium,3,,,,noun,Nature and Weather Core,built-in
+nature-and-animals-nature-and-animals-island,island,остров,nature-and-animals,Nature and Animals,Nature and Animals,hard,5,,,,noun,Nature and Weather Core,built-in
+nature-and-animals-nature-and-animals-wildlife,wildlife,дикая природа,nature-and-animals,Nature and Animals,Nature and Animals,medium,3,,,,noun,Nature and Weather Core,built-in
+nature-and-animals-nature-and-animals-insect,insect,насекомое,nature-and-animals,Nature and Animals,Nature and Animals,medium,3,,,,noun,Nature and Weather Core,built-in
+nature-and-animals-nature-and-animals-butterfly,butterfly,бабочка,nature-and-animals,Nature and Animals,Nature and Animals,hard,5,,,,noun,Nature and Weather Core,built-in
+nature-and-animals-nature-and-animals-squirrel,squirrel,белка,nature-and-animals,Nature and Animals,Nature and Animals,hard,5,,,,noun,Nature and Weather Core,built-in
+nature-and-animals-nature-and-animals-eagle,eagle,орёл,nature-and-animals,Nature and Animals,Nature and Animals,medium,3,,,,noun,Nature and Weather Core,built-in
+nature-and-animals-nature-and-animals-environment,environment,окружающая среда,nature-and-animals,Nature and Animals,Nature and Animals,hard,5,,,,noun,Nature and Weather Core,built-in
+nature-and-animals-nature-and-animals-pollution,pollution,загрязнение,nature-and-animals,Nature and Animals,Nature and Animals,hard,5,,,,noun,Nature and Weather Core,built-in
+nature-and-animals-nature-and-animals-recycle,recycle,перерабатывать,nature-and-animals,Nature and Animals,Nature and Animals,medium,3,,,,verb,Nature and Weather Core,built-in
+weather-and-seasons-weather-and-seasons-weather,weather,погода,weather-and-seasons,Weather and Seasons,Weather and Seasons,medium,3,,,,noun,Nature and Weather Core,built-in
+weather-and-seasons-weather-and-seasons-temperature,temperature,температура,weather-and-seasons,Weather and Seasons,Weather and Seasons,hard,5,,,,noun,Nature and Weather Core,built-in
+weather-and-seasons-weather-and-seasons-forecast,forecast,прогноз,weather-and-seasons,Weather and Seasons,Weather and Seasons,hard,5,,,,noun,Nature and Weather Core,built-in
+weather-and-seasons-weather-and-seasons-thunderstorm,thunderstorm,гроза,weather-and-seasons,Weather and Seasons,Weather and Seasons,hard,5,,,,noun,Nature and Weather Core,built-in
+weather-and-seasons-weather-and-seasons-breeze,breeze,лёгкий ветер,weather-and-seasons,Weather and Seasons,Weather and Seasons,medium,3,,,,noun,Nature and Weather Core,built-in
+weather-and-seasons-weather-and-seasons-drizzle,drizzle,морось,weather-and-seasons,Weather and Seasons,Weather and Seasons,hard,5,,,,noun,Nature and Weather Core,built-in
+weather-and-seasons-weather-and-seasons-humid,humid,влажный,weather-and-seasons,Weather and Seasons,Weather and Seasons,hard,5,,,,adjective,Nature and Weather Core,built-in
+weather-and-seasons-weather-and-seasons-freezing,freezing,ледяной,weather-and-seasons,Weather and Seasons,Weather and Seasons,medium,3,,,,adjective,Nature and Weather Core,built-in
+weather-and-seasons-weather-and-seasons-autumn,autumn,осень,weather-and-seasons,Weather and Seasons,Weather and Seasons,medium,3,,,,noun,Nature and Weather Core,built-in
+weather-and-seasons-weather-and-seasons-spring,spring,весна,weather-and-seasons,Weather and Seasons,Weather and Seasons,easy,2,,,,noun,Nature and Weather Core,built-in
+weather-and-seasons-weather-and-seasons-flood,flood,наводнение,weather-and-seasons,Weather and Seasons,Weather and Seasons,medium,3,,,,noun,Nature and Weather Core,built-in
+weather-and-seasons-weather-and-seasons-drought,drought,засуха,weather-and-seasons,Weather and Seasons,Weather and Seasons,hard,5,,,,noun,Nature and Weather Core,built-in
+general-english-commonly-misspelled-accommodation,accommodation,"жильё, размещение",general-english,General English,Commonly Misspelled,hard,5,,,,noun,Spelling Traps Core,built-in
+general-english-commonly-misspelled-receive,receive,получать,general-english,General English,Commonly Misspelled,hard,5,,,,verb,Spelling Traps Core,built-in
+general-english-commonly-misspelled-separate,separate,отдельный; разделять,general-english,General English,Commonly Misspelled,hard,5,,,,adjective,Spelling Traps Core,built-in
+general-english-commonly-misspelled-definitely,definitely,определённо,general-english,General English,Commonly Misspelled,hard,5,,,,adverb,Spelling Traps Core,built-in
+general-english-commonly-misspelled-occasionally,occasionally,время от времени,general-english,General English,Commonly Misspelled,hard,5,,,,adverb,Spelling Traps Core,built-in
+general-english-commonly-misspelled-necessary,necessary,необходимый,general-english,General English,Commonly Misspelled,hard,5,,,,adjective,Spelling Traps Core,built-in
+general-english-commonly-misspelled-embarrass,embarrass,смущать,general-english,General English,Commonly Misspelled,hard,5,,,,verb,Spelling Traps Core,built-in
+general-english-commonly-misspelled-environment,environment,окружающая среда,general-english,General English,Commonly Misspelled,hard,5,,,,noun,Spelling Traps Core,built-in
+general-english-commonly-misspelled-government,government,правительство,general-english,General English,Commonly Misspelled,hard,5,,,,noun,Spelling Traps Core,built-in
+general-english-commonly-misspelled-restaurant,restaurant,ресторан,general-english,General English,Commonly Misspelled,hard,5,,,,noun,Spelling Traps Core,built-in
+general-english-commonly-misspelled-calendar,calendar,календарь,general-english,General English,Commonly Misspelled,hard,5,,,,noun,Spelling Traps Core,built-in
+general-english-commonly-misspelled-library,library,библиотека,general-english,General English,Commonly Misspelled,hard,5,,,,noun,Spelling Traps Core,built-in
+general-english-commonly-misspelled-february,February,февраль,general-english,General English,Commonly Misspelled,hard,5,,,,noun,Spelling Traps Core,built-in
+general-english-commonly-misspelled-wednesday,Wednesday,среда,general-english,General English,Commonly Misspelled,hard,5,,,,noun,Spelling Traps Core,built-in
+general-english-commonly-misspelled-knowledge,knowledge,знание,general-english,General English,Commonly Misspelled,hard,5,,,,noun,Spelling Traps Core,built-in
+general-english-commonly-misspelled-achieve,achieve,достигать,general-english,General English,Commonly Misspelled,hard,5,,,,verb,Spelling Traps Core,built-in
+general-english-commonly-misspelled-believe,believe,верить,general-english,General English,Commonly Misspelled,medium,3,,,,verb,Spelling Traps Core,built-in
+general-english-commonly-misspelled-foreign,Foreign,иностранный,general-english,General English,Commonly Misspelled,hard,5,,,,adjective,Spelling Traps Core,built-in
+general-english-commonly-misspelled-weird,weird,странный,general-english,General English,Commonly Misspelled,hard,5,,,,adjective,Spelling Traps Core,built-in
+general-english-commonly-misspelled-neighbour,neighbour,сосед,general-english,General English,Commonly Misspelled,hard,5,,,,noun,Spelling Traps Core,built-in
+general-english-commonly-misspelled-privilege,privilege,привилегия,general-english,General English,Commonly Misspelled,hard,5,,,,noun,Spelling Traps Core,built-in
+general-english-commonly-misspelled-conscience,conscience,совесть,general-english,General English,Commonly Misspelled,hard,5,,,,noun,Spelling Traps Core,built-in
+general-english-commonly-misspelled-rhythm,rhythm,ритм,general-english,General English,Commonly Misspelled,hard,5,,,,noun,Spelling Traps Core,built-in
+general-english-commonly-misspelled-answer,answer,ответ,general-english,General English,Commonly Misspelled,medium,3,,,,noun,Spelling Traps Core,built-in
+general-english-confusable-words-their,their,их (притяжательное),general-english,General English,Confusable Words,medium,3,,,,adjective,Spelling Traps Core,built-in
+general-english-confusable-words-there,there,там,general-english,General English,Confusable Words,medium,3,,,,adverb,Spelling Traps Core,built-in
+general-english-confusable-words-affect,affect,влиять,general-english,General English,Confusable Words,hard,5,,,,verb,Spelling Traps Core,built-in
+general-english-confusable-words-effect,effect,"эффект, результат",general-english,General English,Confusable Words,hard,5,,,,noun,Spelling Traps Core,built-in
+general-english-confusable-words-principal,principal,главный; директор,general-english,General English,Confusable Words,hard,5,,,,adjective,Spelling Traps Core,built-in
+general-english-confusable-words-principle,principle,принцип,general-english,General English,Confusable Words,hard,5,,,,noun,Spelling Traps Core,built-in
+general-english-confusable-words-stationary,stationary,неподвижный,general-english,General English,Confusable Words,hard,5,,,,adjective,Spelling Traps Core,built-in
+general-english-confusable-words-stationery,stationery,канцтовары,general-english,General English,Confusable Words,hard,5,,,,noun,Spelling Traps Core,built-in
+general-english-confusable-words-advice,advice,совет,general-english,General English,Confusable Words,medium,3,,,,noun,Spelling Traps Core,built-in
+general-english-confusable-words-advise,advise,советовать,general-english,General English,Confusable Words,medium,3,,,,verb,Spelling Traps Core,built-in
+general-english-confusable-words-loose,loose,"свободный, слабый",general-english,General English,Confusable Words,medium,3,,,,adjective,Spelling Traps Core,built-in
+general-english-confusable-words-lose,lose,терять,general-english,General English,Confusable Words,medium,3,,,,verb,Spelling Traps Core,built-in
+general-english-confusable-words-quiet,quiet,тихий,general-english,General English,Confusable Words,medium,3,,,,adjective,Spelling Traps Core,built-in
+general-english-confusable-words-quite,quite,довольно,general-english,General English,Confusable Words,medium,3,,,,adverb,Spelling Traps Core,built-in
+general-english-confusable-words-weather,weather,погода,general-english,General English,Confusable Words,medium,3,,,,noun,Spelling Traps Core,built-in
+general-english-confusable-words-whether,whether,ли (вводит вопрос),general-english,General English,Confusable Words,medium,3,,,,conjunction,Spelling Traps Core,built-in
+common-actions-everyday-phrasal-verbs-look-up,look up,искать (в словаре),common-actions,Common Actions,Everyday Phrasal Verbs,easy,2,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-give-up,give up,сдаваться,common-actions,Common Actions,Everyday Phrasal Verbs,easy,2,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-turn-on,turn on,включить,common-actions,Common Actions,Everyday Phrasal Verbs,easy,2,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-turn-off,turn off,выключить,common-actions,Common Actions,Everyday Phrasal Verbs,easy,2,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-find-out,find out,выяснить,common-actions,Common Actions,Everyday Phrasal Verbs,medium,3,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-figure-out,figure out,разобраться,common-actions,Common Actions,Everyday Phrasal Verbs,medium,3,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-carry-on,carry on,продолжать,common-actions,Common Actions,Everyday Phrasal Verbs,medium,3,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-break-down,break down,сломаться,common-actions,Common Actions,Everyday Phrasal Verbs,medium,3,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-run-out-of,run out of,закончиться (о запасах),common-actions,Common Actions,Everyday Phrasal Verbs,medium,3,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-put-off,put off,откладывать,common-actions,Common Actions,Everyday Phrasal Verbs,hard,5,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-set-up,set up,"настроить, основать",common-actions,Common Actions,Everyday Phrasal Verbs,medium,3,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-take-off,take off,"взлетать, снимать",common-actions,Common Actions,Everyday Phrasal Verbs,medium,3,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-get-along-with,get along with,ладить с,common-actions,Common Actions,Everyday Phrasal Verbs,hard,5,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-come-across,come across,наткнуться на,common-actions,Common Actions,Everyday Phrasal Verbs,hard,5,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-work-out,work out,решить; тренироваться,common-actions,Common Actions,Everyday Phrasal Verbs,hard,5,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-show-up,show up,появиться,common-actions,Common Actions,Everyday Phrasal Verbs,medium,3,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-call-off,call off,отменить,common-actions,Common Actions,Everyday Phrasal Verbs,hard,5,,,,phrase,Phrasal Verbs Core,built-in
+common-actions-everyday-phrasal-verbs-look-forward-to,look forward to,ждать с нетерпением,common-actions,Common Actions,Everyday Phrasal Verbs,hard,5,,,,phrase,Phrasal Verbs Core,built-in
