@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Icon } from '../icons/Icon'
+import { AnswerDiff } from '../practice/AnswerDiff'
 import { recordRulePracticeAttempt } from '../../services/rulePracticeService'
 import type { RuleExercise, RuleExerciseType, UserRuleProgress } from '../../types/rules'
 
@@ -68,7 +69,7 @@ export function RuleExerciseRunner({ items, loop, showRuleTitle, onProgress, onF
 
       {feedback ? (
         <div className={`rule-runner__feedback rule-runner__feedback--${feedback}`} role="status">
-          <span>{feedback === 'correct' ? 'Correct!' : <>Not quite — correct answer: <strong>{exercise.answer}</strong></>}</span>
+          <span>{feedback === 'correct' ? 'Correct!' : <>Not quite: <AnswerDiff expected={exercise.answer} submitted={answer} /></>}</span>
           {feedback === 'incorrect' ? <button className="next-button" type="button" onClick={next} autoFocus>Next <Icon name="arrow" size={15} /></button> : null}
         </div>
       ) : choices?.length ? (

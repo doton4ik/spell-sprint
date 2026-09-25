@@ -3,38 +3,9 @@ import { errorPatternLabel } from '../../data/errorPatternLabels'
 import { loadErrorCatalog, ruleIdsFromClassification } from '../../services/errorPatternService'
 import { classifyMistake, type Classification } from '../../services/mistakeClassifier'
 import { getRuleIdsForWord, getVisibleRules, setPendingRuleFocus } from '../../services/rulesService'
-import type { EditOp } from '../../services/spellDiff'
 import type { Rule } from '../../types/rules'
 import { Icon } from '../icons/Icon'
-
-type Segment = { char: string; kind: 'same' | 'bad' | 'fix' | 'swap' | 'gap' }
-
-// Turns the edit operations into two coloured letter rows: what the learner wrote, and the correct word.
-function buildSegments(expected: string, submitted: string, ops: EditOp[]) {
-  const expectedKinds = new Map<number, Segment['kind']>()
-  const submittedKinds = new Map<number, Segment['kind']>()
-  const gapsBefore = new Map<number, number>()
-  for (const op of ops) {
-    if (op.type === 'delete') { expectedKinds.set(op.expectedIndex, 'fix'); gapsBefore.set(op.submittedIndex, (gapsBefore.get(op.submittedIndex) ?? 0) + 1) }
-    if (op.type === 'insert') submittedKinds.set(op.submittedIndex, 'bad')
-    if (op.type === 'substitute') { expectedKinds.set(op.expectedIndex, 'fix'); submittedKinds.set(op.submittedIndex, 'bad') }
-    if (op.type === 'transpose') {
-      for (const offset of [0, 1]) { expectedKinds.set(op.expectedIndex + offset, 'swap'); submittedKinds.set(op.submittedIndex + offset, 'swap') }
-    }
-  }
-  const expectedChars = Array.from(expected).map((char, index): Segment => ({ char, kind: expectedKinds.get(index) ?? 'same' }))
-  const submittedChars: Segment[] = []
-  Array.from(submitted).forEach((char, index) => {
-    for (let gap = 0; gap < (gapsBefore.get(index) ?? 0); gap += 1) submittedChars.push({ char: '_', kind: 'gap' })
-    submittedChars.push({ char, kind: submittedKinds.get(index) ?? 'same' })
-  })
-  for (let gap = 0; gap < (gapsBefore.get(Array.from(submitted).length) ?? 0); gap += 1) submittedChars.push({ char: '_', kind: 'gap' })
-  return { expectedChars, submittedChars }
-}
-
-function Letters({ segments }: { segments: Segment[] }) {
-  return <span className="diff-word">{segments.map((segment, index) => <span className={`diff-char diff-char--${segment.kind}`} key={index}>{segment.char === ' ' ? ' ' : segment.char}</span>)}</span>
-}
+import { buildSegments, Letters } from './AnswerDiff'
 
 type MistakeBreakdownProps = { expected: string; submitted: string; taskType: string; wordId?: string; showRules: boolean }
 

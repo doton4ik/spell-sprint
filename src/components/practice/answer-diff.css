@@ -1,0 +1,9 @@
+.diff-word { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: calc(21px * var(--fs)); letter-spacing: .04em; overflow-wrap: anywhere; white-space: pre-wrap; }
+.diff-word--small { font-size: calc(15px * var(--fs)); letter-spacing: .02em; }
+.diff-char { border-radius: 4px; padding: 0 1px; }
+.diff-char--same { color: #3b4f4a; }
+.diff-char--bad, .diff-char--gap { background: #f7d9d3; color: #b0473b; font-weight: 700; }
+.diff-char--fix { background: #d3ece5; color: #14705f; font-weight: 700; }
+.diff-char--swap { background: #f6e7bf; color: #8d6413; font-weight: 700; }
+.answer-diff { align-items: baseline; display: inline-flex; flex-wrap: wrap; gap: 4px 8px; }
+.answer-diff__arrow { color: #8b9895; }

@@ -28,6 +28,7 @@ export type IconName =
   | 'volume'
   | 'plus'
   | 'search'
+  | 'more'
 
 export type Metric = {
   label: string
