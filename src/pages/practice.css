@@ -193,3 +193,16 @@
 .rule-challenge__result--retry { background: #fcefe9; }
 .rule-challenge__result strong { color: #24403a; font-size: calc(15px * var(--fs)); }
 .rule-challenge__result p { color: #56706a; font-size: calc(14px * var(--fs)); margin: 4px 0 8px; }
+
+/* Why this word is in the session. */
+.task-card__labels { align-items: center; display: inline-flex; flex-wrap: wrap; gap: 6px; }
+.task-reason { border-radius: 8px; font-size: calc(12px * var(--fs)); font-weight: 700; padding: 4px 8px; }
+.task-reason--new { background: #eaf1f7; color: #4a718b; }
+.task-reason--missed { background: #fbe3de; color: #a4473a; }
+.task-reason--due { background: var(--amber-soft); color: #9b6417; }
+.task-reason--weak { background: #fbe3de; color: #a4473a; }
+.task-reason--practice { background: #eef2f0; color: #6b7b77; }
+.mistake-breakdown__explain { background: #fff; border: 1px solid #e3ece8; border-radius: 10px; padding: 10px 12px; }
+.mistake-breakdown__explain strong { color: #24403a; font-size: calc(14px * var(--fs)); }
+.mistake-breakdown__explain p { color: #56706a; font-size: calc(14px * var(--fs)); line-height: 1.5; margin: 4px 0 0; }
+.mistake-breakdown__explain .mistake-breakdown__cue { align-items: center; color: #8a5d0c; display: flex; gap: 6px; }

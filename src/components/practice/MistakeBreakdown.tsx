@@ -44,10 +44,18 @@ export function MistakeBreakdown({ expected, submitted, taskType, wordId, showRu
       ) : null}
       {shown.length ? <div className="mistake-breakdown__tags">{shown.map((tag) => <span className="mistake-tag" title={errorPatternLabel(tag.slug).hint} key={tag.slug}>{errorPatternLabel(tag.slug).label}</span>)}</div> : null}
       {rules.length ? (
+        <>
+        {/* Mistake Lab: the rule itself, right where the mistake is, before any click. */}
+        <div className="mistake-breakdown__explain">
+          <strong>{rules[0].title}</strong>
+          <p>{rules[0].shortExplanation}</p>
+          {rules[0].mnemonic ? <p className="mistake-breakdown__cue"><Icon name="lightbulb" size={15} /> {rules[0].mnemonic}</p> : null}
+        </div>
         <div className="mistake-breakdown__rules">
           {rules.map((rule) => <button type="button" className="mistake-rule-link" onClick={() => { setPendingRuleFocus(rule.id); window.location.hash = 'rules' }} key={rule.id}><Icon name="rules" size={15} /> Rule: {rule.title} <Icon name="arrow" size={14} /></button>)}
           {onChallenge ? <button type="button" className="mistake-rule-link mistake-rule-link--challenge" onClick={() => onChallenge(rules)}><Icon name="bolt" size={15} /> Try the rule on a new word</button> : null}
         </div>
+        </>
       ) : null}
     </div>
   )

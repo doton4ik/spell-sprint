@@ -6,3 +6,26 @@
 @media (max-width: 1060px) { .learning-page { padding: 41px 34px; }.mistakes-table__head { display: none; }.mistakes-table__row { grid-template-columns: minmax(180px, 1.2fr) minmax(130px, .8fr) 120px; }.mistakes-table__row > div:nth-child(2) { display: none; }.review-item { grid-template-columns: 100px 1fr; }.review-item__actions { grid-column: 2; }.rules-grid { grid-template-columns: 1fr; } }
 @media (max-width: 800px) { .learning-page { padding: 30px 18px 40px; }.learning-header { margin-bottom: 23px; }.learning-summary, .review-overview { gap: 9px; }.learning-summary > div, .review-overview > div { min-height: 105px; padding: 14px; }.learning-summary strong, .review-overview strong { font-size: calc(24px * var(--fs)); }.learning-panel__top { display: block; }.filter-tabs { margin-top: 14px; }.rules-saved { padding: 10px; }.rules-saved span { display: none; } }
 @media (max-width: 570px) { .learning-page { padding: 24px 14px 35px; }.learning-header { align-items: flex-start; }.learning-header > div > p:last-child { font-size: calc(13px * var(--fs)); }.outline-action { font-size: 0; gap: 0; padding: 10px; }.outline-action svg { height: 19px; width: 19px; }.learning-summary, .review-overview { grid-template-columns: 1fr; }.learning-summary > div, .review-overview > div { min-height: 78px; grid-template-columns: 1fr auto; }.learning-summary small, .review-overview small { grid-column: 1 / -1; }.learning-summary strong, .review-overview strong { grid-column: 2; grid-row: 1 / span 2; margin: 0; }.mistakes-table__row { display: grid; gap: 11px; grid-template-columns: 1fr; padding: 16px; }.mistakes-table__row > div:nth-child(3) { display: flex; gap: 10px; align-items: center; }.review-date { grid-template-columns: auto 1fr; }.review-date a { justify-self: end; }.rule-card { padding: 18px; }.rule-summary { min-height: 0; }.review-item { gap: 9px; grid-template-columns: 1fr; padding: 16px; }.review-item__actions { grid-column: auto; justify-content: space-between; }.review-list__heading { padding: 20px 16px; }.wrong-right { gap: 5px; grid-template-columns: 1fr auto 1fr; padding: 9px; } }
+
+/* My Mistakes: Words / Patterns switch and the Patterns view. */
+.mistakes-view-switch { background: #eef3f1; border-radius: 11px; display: inline-flex; gap: 3px; margin: 0 0 14px; padding: 3px; }
+.mistakes-view-switch button { background: transparent; border: 0; border-radius: 9px; color: #5f7671; cursor: pointer; font-family: inherit; font-size: calc(14px * var(--fs)); font-weight: 700; padding: 8px 16px; }
+.mistakes-view-switch .mistakes-view-switch__active { background: var(--surface); box-shadow: var(--shadow-sm); color: var(--teal-dark); }
+.patterns-intro, .patterns-empty { color: var(--ink-muted); font-size: calc(14px * var(--fs)); line-height: 1.55; margin: 0 2px 12px; }
+.patterns-list { display: grid; gap: 12px; }
+.pattern-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: grid; gap: 12px; padding: 18px 20px; }
+.pattern-card--habit { border-left: 4px solid #e0a23a; }
+.pattern-card__head { align-items: flex-start; display: flex; gap: 12px; justify-content: space-between; }
+.pattern-card h3 { color: #24403a; font-size: calc(17px * var(--fs)); margin: 0; }
+.pattern-card__head p { color: var(--ink-muted); font-size: calc(13.5px * var(--fs)); line-height: 1.5; margin: 4px 0 0; }
+.pattern-badge { background: #eef2f0; border-radius: 8px; color: #6b7b77; flex-shrink: 0; font-size: calc(12px * var(--fs)); font-weight: 700; padding: 4px 8px; }
+.pattern-badge--habit { background: var(--amber-soft); color: #9b6417; }
+.pattern-card__stats { display: grid; gap: 8px; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; }
+.pattern-card__stats dt { color: var(--ink-muted); font-size: calc(12px * var(--fs)); font-weight: 650; }
+.pattern-card__stats dd { color: #2f4944; font-size: calc(16px * var(--fs)); font-weight: 750; margin: 3px 0 0; }
+.pattern-trend { color: #6b7b77; font-size: calc(13px * var(--fs)); font-weight: 600; }
+.pattern-trend--better { color: #13705f; }
+.pattern-trend--worse { color: #a4473a; }
+.pattern-card__examples { display: flex; flex-wrap: wrap; gap: 8px 18px; list-style: none; margin: 0; padding: 0; }
+.pattern-card__actions { align-items: center; display: flex; flex-wrap: wrap; gap: 8px; }
+@media (max-width: 570px) { .pattern-card__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .pattern-card { padding: 16px; } }

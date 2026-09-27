@@ -3,6 +3,7 @@ import { Icon } from '../components/icons/Icon'
 import { AnswerDiff } from '../components/practice/AnswerDiff'
 import { getMistakeEntries, subscribeToLearningData } from '../services/learningData'
 import type { ErrorFamily, LearningStatus } from '../types/learning'
+import { MistakePatternsView } from '../components/mistakes/MistakePatternsView'
 import './learning.css'
 
 const filters: Array<'All' | ErrorFamily> = ['All', 'Spelling', 'Grammar', 'Vocabulary']
@@ -17,6 +18,7 @@ function Status({ status }: { status: LearningStatus }) {
 
 export function MistakesPage() {
   const [filter, setFilter] = useState<(typeof filters)[number]>('All')
+  const [view, setView] = useState<'words' | 'patterns'>('words')
   const [revision, setRevision] = useState(0)
   useEffect(() => subscribeToLearningData(() => setRevision((value) => value + 1)), [])
   const entries = useMemo(getMistakeEntries, [revision])
@@ -43,9 +45,14 @@ export function MistakesPage() {
           <p>Complete a practice task with an incorrect answer and it will appear here with its category, rule, and review date.</p>
           <a className="check-button" href="#practice"><Icon name="shuffle" size={17} /> Start mixed practice</a>
         </section>
-      ) : (
+      ) : (<>
+        <nav className="mistakes-view-switch" aria-label="View">
+          <button type="button" className={view === 'words' ? 'mistakes-view-switch__active' : ''} onClick={() => setView('words')}>Words</button>
+          <button type="button" className={view === 'patterns' ? 'mistakes-view-switch__active' : ''} onClick={() => setView('patterns')}>Patterns</button>
+        </nav>
+        {view === 'patterns' ? <MistakePatternsView revision={revision} /> : (
         <section className="learning-panel">
-          <div className="learning-panel__top"><div><h2>Patterns to revisit</h2><p>Errors are grouped by task and updated after every attempt.</p></div><div className="filter-tabs">{filters.map((item) => <button type="button" className={filter === item ? 'filter-tabs__active' : ''} onClick={() => setFilter(item)} key={item}>{item}</button>)}</div></div>
+          <div className="learning-panel__top"><div><h2>Words to revisit</h2><p>Every word you got wrong, with your latest answer and its next review.</p></div><div className="filter-tabs">{filters.map((item) => <button type="button" className={filter === item ? 'filter-tabs__active' : ''} onClick={() => setFilter(item)} key={item}>{item}</button>)}</div></div>
           <div className="mistakes-table" role="table">
             <div className="mistakes-table__head" role="row"><span>Answer pattern</span><span>Category</span><span>Progress</span><span>Review</span></div>
             {visibleEntries.map((entry) => (
@@ -58,7 +65,8 @@ export function MistakesPage() {
             ))}
           </div>
         </section>
-      )}
+        )}
+      </>)}
     </div>
   )
 }

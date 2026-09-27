@@ -99,3 +99,16 @@ export function buildDailyPlan(size = PLAN_SIZE): DailyPlan {
   ]
   return { items, due: pickedDue.length, weak: pickedWeak.length, fresh: pickedFresh.length, dueTotal: due.length }
 }
+
+// Why this word is in the session, in the learner's terms. Worked out when the session starts, so
+// answering does not change the label under the learner's eyes.
+export type WordReason = { kind: 'new' | 'missed' | 'due' | 'weak' | 'practice'; text: string }
+export function reasonForWord(entry: WordProgress | undefined): WordReason {
+  if (!entry) return { kind: 'new', text: 'New word' }
+  const days = Math.floor((Date.now() - new Date(entry.latest.createdAt).getTime()) / 86400000)
+  const ago = days <= 0 ? 'today' : days === 1 ? 'yesterday' : `${days} days ago`
+  if (entry.due && !entry.latest.isCorrect) return { kind: 'missed', text: `Missed ${ago} — repeat` }
+  if (entry.due) return { kind: 'due', text: `Review due · last seen ${ago}` }
+  if (entry.errors > entry.correct) return { kind: 'weak', text: `Keeps slipping · ${entry.errors} mistakes` }
+  return { kind: 'practice', text: `Extra practice · last seen ${ago}` }
+}
