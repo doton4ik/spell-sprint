@@ -1,5 +1,6 @@
 import { grammar, spelling, vocabulary } from './diagnostic'
 import type { LibraryWord } from '../types/library'
+import { extraLevelItems } from './levelCheckExtra'
 
 // Question bank for the adaptive level check. Levels: 1 = A2, 2 = B1, 3 = B2, 4 = C1.
 export type Skill = 'spelling' | 'vocabulary' | 'grammar'
@@ -53,5 +54,10 @@ export function buildLevelBank(words: LibraryWord[]): LevelItem[] {
     vocabularyItems.push({ id: `lc-word-${word.wordId}`, skill: 'vocabulary', level: difficultyLevel[word.difficulty] ?? 2, prompt: word.translation, answer: word.word, wordId: word.wordId, translation: word.translation })
   }
   const grammarItems: LevelItem[] = grammar.map(([prompt, answer], index) => ({ id: `lc-grammar-${index + 1}`, skill: 'grammar' as const, level: grammarLevels[index] ?? 2, prompt, answer }))
-  return [...spellingItems, ...vocabularyItems, ...grammarItems]
+  // Extra questions from levelCheckExtra.ts; an id clash with the built-in bank keeps the built-in item.
+  const known = new Set([...spellingItems, ...vocabularyItems, ...grammarItems].map((item) => item.id))
+  const extra = extraLevelItems
+    .map(([skill, level, prompt, answer], index): LevelItem => ({ id: `lc-extra-${skill}-${answer.toLocaleLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 40)}-${index}`, skill, level, prompt, answer }))
+    .filter((item) => item.prompt.trim() && item.answer.trim() && !known.has(item.id))
+  return [...spellingItems, ...vocabularyItems, ...grammarItems, ...extra]
 }
