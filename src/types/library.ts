@@ -37,12 +37,3 @@ export type WordLibrary = {
   createdAt?: string
 }
 
-export type ImportReport = {
-  libraryName: string
-  topic: string
-  imported: number
-  skipped: number
-  duplicateCount: number
-  errorCount: number
-  errors: string[]
-}
