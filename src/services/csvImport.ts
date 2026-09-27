@@ -1,5 +1,5 @@
 import { canonicalTopic, libraryKindForName, stableWordId } from '../data/libraryTaxonomy'
-import { normalisePartOfSpeech, type LibraryDifficulty, type LibraryWord, type WordLibrary } from '../types/library'
+import { normalisePartOfSpeech, partOfSpeechOptions, type LibraryDifficulty, type LibraryWord, type WordLibrary } from '../types/library'
 import { parseCsvRows } from './csv'
 import { getAllWords, getImportedLibraries, saveImportedLibraries } from './libraryStorage'
 
@@ -29,6 +29,7 @@ const norm = (value: string) => value.trim().toLocaleLowerCase()
 // Same English word with the same translation = the same entry, whatever part of speech a file claims.
 const duplicateKey = (word: Pick<LibraryWord, 'word' | 'translation'>) => `${norm(word.word)}::${norm(word.translation)}`
 const hasCyrillic = (value: string) => /[Ѐ-ӿ]/.test(value)
+const partOfSpeechNames = new Set<string>(partOfSpeechOptions)
 
 export function analyseCsv(text: string, fileName: string): CsvPreview {
   const baseName = fileName.replace(/\.[^.]+$/, '').trim() || 'Imported library'
@@ -58,6 +59,9 @@ export function analyseCsv(text: string, fileName: string): CsvPreview {
     if (!word) issues.push('word is empty')
     if (!translation) issues.push('translation is empty')
     if (word && hasCyrillic(word)) issues.push('the English word contains Russian letters')
+    // A part of speech in the library column means the columns slipped — almost always a comma inside
+    // an unquoted example. Importing it would create a library called "noun".
+    if (partOfSpeechNames.has(norm(value('library')))) issues.push(`the columns look shifted (library is “${value('library')}”) — put text with commas in "double quotes"`)
     if (issues.length) return { line, word, translation, status: 'invalid', issues, warnings }
 
     const rawDifficulty = norm(value('difficulty'))

@@ -1,6 +1,6 @@
 import { builtInLibraries } from '../data/libraries'
 import { canonicalTopic, canonicalTopics, libraryKindForName, stableWordId } from '../data/libraryTaxonomy'
-import { normalisePartOfSpeech, type LibraryWord, type WordLibrary } from '../types/library'
+import { normalisePartOfSpeech, partOfSpeechOptions, type LibraryWord, type WordLibrary } from '../types/library'
 
 const CUSTOM_LIBRARIES_KEY = 'spell-sprint.custom-libraries'
 export const initialTopics = canonicalTopics.map((item) => item.name)
@@ -29,12 +29,56 @@ function resolveLibraries(libraries: WordLibrary[]) {
   return libraries.map((library) => ({ ...library, words: resolve(library) }))
 }
 
-export function getImportedLibraries(): WordLibrary[] { return read<WordLibrary[]>(CUSTOM_LIBRARIES_KEY, []).map(migrateLibrary) }
+// Repairs two kinds of damage in imported libraries, both from older versions of the app:
+//  1. the same library twice (same name, different id — typically a copy that arrived from another
+//     device through cloud sync): merged into one, words de-duplicated;
+//  2. a library called "noun", "adjective" … — rows of an old CSV import whose unquoted comma shifted
+//     the columns, so the part of speech landed in the library column. Those words are moved back to
+//     the library imported at the same time (or to "Imported words" when there is none).
+const partOfSpeechNames = new Set<string>(partOfSpeechOptions)
+const wordKey = (word: LibraryWord) => word.wordId || `${normalise(word.word)}::${normalise(word.translation)}`
+const createdTime = (library: WordLibrary) => (library.createdAt ? new Date(library.createdAt).getTime() : 0)
+
+export function repairImportedLibraries(libraries: WordLibrary[]): WordLibrary[] {
+  const byName = new Map<string, WordLibrary>()
+  const misfiled: WordLibrary[] = []
+  for (const library of [...libraries].sort((a, b) => createdTime(a) - createdTime(b))) {
+    if (partOfSpeechNames.has(normalise(library.name))) { misfiled.push(library); continue }
+    const existing = byName.get(normalise(library.name))
+    if (existing) existing.words = [...existing.words, ...library.words]
+    else byName.set(normalise(library.name), { ...library, words: [...library.words] })
+  }
+  const kept = [...byName.values()]
+  for (const library of misfiled) {
+    const sameImport = kept.filter((candidate) => Math.abs(createdTime(candidate) - createdTime(library)) <= 2 * 86400000)
+      .sort((a, b) => Math.abs(createdTime(a) - createdTime(library)) - Math.abs(createdTime(b) - createdTime(library)))[0]
+    let target = sameImport ?? kept.find((candidate) => candidate.name === 'Imported words')
+    if (!target) { target = { ...library, name: 'Imported words', words: [], kind: libraryKindForName('Imported words') }; kept.push(target) }
+    target.words = [...target.words, ...library.words]
+  }
+  return kept.map((library) => {
+    const seen = new Set<string>()
+    const words = library.words.filter((word) => { const key = wordKey(word); if (seen.has(key)) return false; seen.add(key); return true }).map((word) => ({ ...word, library: library.name }))
+    return { ...library, words }
+  }).filter((library) => library.words.length)
+}
+
+export function getImportedLibraries(): WordLibrary[] {
+  const stored = read<WordLibrary[]>(CUSTOM_LIBRARIES_KEY, []).map(migrateLibrary)
+  const repaired = repairImportedLibraries(stored)
+  // Save the repair once, so other screens and the next cloud sync see the clean list.
+  if (JSON.stringify(repaired) !== JSON.stringify(stored)) { try { window.localStorage.setItem(CUSTOM_LIBRARIES_KEY, JSON.stringify(repaired)) } catch { /* keep using the repaired copy in memory */ } }
+  return repaired
+}
+// Cloud restore: libraries from another device are merged by name, so a synced copy never shows up twice.
 export function mergeImportedLibraries(incoming: WordLibrary[]) {
-  const local = getImportedLibraries(); const known = new Set(local.map((library) => library.id))
-  const fresh = incoming.filter((library) => library && typeof library.id === 'string' && Array.isArray(library.words) && !known.has(library.id))
-  if (fresh.length) window.localStorage.setItem(CUSTOM_LIBRARIES_KEY, JSON.stringify([...local, ...fresh]))
-  return fresh.length
+  const local = getImportedLibraries()
+  const valid = incoming.filter((library) => library && typeof library.id === 'string' && typeof library.name === 'string' && Array.isArray(library.words)).map(migrateLibrary)
+  const merged = repairImportedLibraries([...local, ...valid])
+  const before = local.reduce((sum, library) => sum + library.words.length, 0)
+  const after = merged.reduce((sum, library) => sum + library.words.length, 0)
+  if (JSON.stringify(merged) !== JSON.stringify(local)) window.localStorage.setItem(CUSTOM_LIBRARIES_KEY, JSON.stringify(merged))
+  return after - before
 }
 export function getLibraries(): WordLibrary[] { return resolveLibraries([...builtInLibraries, ...getImportedLibraries()]) }
 export function getAllWords() { return uniqueWords(getLibraries().flatMap((library) => library.words)) }
