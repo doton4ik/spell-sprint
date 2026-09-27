@@ -1,5 +1,7 @@
 import { useEffect, useState, type PropsWithChildren } from 'react'
 import { navigationItems } from '../../data/dashboard'
+import { getMistakeEntries, subscribeToLearningData } from '../../services/learningData'
+import { getProfile, subscribeToProfile } from '../../services/profileStorage'
 import type { IconName } from '../../types/dashboard'
 import { Icon } from '../icons/Icon'
 import './app-shell.css'
@@ -8,8 +10,9 @@ type AppShellProps = PropsWithChildren<{
   activePage: string
 }>
 
+const countOpenMistakes = () => getMistakeEntries().filter((entry) => entry.status !== 'mastered').length
 const pageId = (label: string) => label.toLowerCase().replaceAll(' ', '-')
-const shortLabel = (label: string) => label === 'My Mistakes' ? 'Mistakes' : label === 'Test Analysis' ? 'Analysis' : label
+const shortLabel = (label: string) => label === 'My Mistakes' ? 'Mistakes' : label === 'Level Check' ? 'Level' : label
 
 // The phone bar has room for four pages; everything else (Libraries, Settings, …) sits behind "More".
 const mobileMainPages = ['Dashboard', 'Practice', 'My Mistakes', 'Rules']
@@ -24,6 +27,13 @@ export function AppShell({ children, activePage }: AppShellProps) {
 
   useEffect(() => { setMoreOpen(false) }, [activePage])
 
+  // Live numbers for the menu: open mistakes (not yet mastered) and the learner's own name.
+  const [openMistakes, setOpenMistakes] = useState(countOpenMistakes)
+  const [profile, setProfile] = useState(getProfile)
+  useEffect(() => subscribeToLearningData(() => setOpenMistakes(countOpenMistakes())), [])
+  useEffect(() => subscribeToProfile(() => setProfile(getProfile())), [])
+  const badgeFor = (label: string) => label === 'My Mistakes' && openMistakes ? openMistakes : null
+
   return (
     <div className="app-shell">
       <aside className="sidebar" aria-label="Main navigation">
@@ -37,18 +47,18 @@ export function AppShell({ children, activePage }: AppShellProps) {
             <a className={`nav-link${pageId(item.label) === activePage ? ' nav-link--active' : ''}`} href={`#${pageId(item.label)}`} key={item.label}>
               <Icon name={item.icon} size={19} />
               <span>{item.label}</span>
-              {item.badge ? <span className="nav-badge">{item.badge}</span> : null}
+              {badgeFor(item.label) ? <span className="nav-badge">{badgeFor(item.label)}</span> : null}
             </a>
           ))}
         </nav>
 
         <div className="sidebar-bottom">
           <a className="nav-link" href="#settings"><Icon name="settings" size={19} /><span>Settings</span></a>
-          <div className="profile-mini">
-            <div className="profile-avatar">M</div>
-            <div><strong>Max</strong><span>B1 learning path</span></div>
+          <a className="profile-mini" href="#settings">
+            <div className="profile-avatar">{(profile.name.trim()[0] ?? 'S').toLocaleUpperCase()}</div>
+            <div><strong>{profile.name.trim() || 'Your profile'}</strong><span>Goal: {profile.dailyGoal} tasks a day</span></div>
             <Icon name="chevron" size={17} />
-          </div>
+          </a>
         </div>
       </aside>
 

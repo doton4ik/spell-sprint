@@ -11,3 +11,6 @@
 .font-scale-preview span { color: var(--teal-dark); font-size: calc(15px * var(--fs)); }
 .settings-card .font-scale-preview small { color: #74847f; font-size: calc(13px * var(--fs)); margin-top: 4px; }
 @media (max-width: 570px) { .font-scale-options { grid-template-columns: repeat(2, 1fr); } }
+.settings-field-label { color: #627771; display: block; font-size: calc(11.5px * var(--fs)); font-weight: 700; margin: 14px 0 7px; }
+.font-scale-options--goal { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 570px) { .font-scale-options--goal { grid-template-columns: repeat(5, 1fr); } }

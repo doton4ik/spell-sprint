@@ -109,6 +109,24 @@ export async function getExercisesForRules(ruleIds: string[]): Promise<RuleExerc
   }
 }
 
+// Rule challenge: after a mistake, check the RULE on a different word — fixing the one word you
+// just saw proves memory, getting a new word right proves understanding. Uses exercises tagged
+// metadata.set = "challenge-v1" (database/rules-seed-challenge.sql), never the word just missed.
+export const CHALLENGE_SET = 'challenge-v1'
+const challengeTypeOrder: RuleExerciseType[] = ['correct_word', 'spell', 'fill_gap', 'multiple_choice']
+
+export async function getRuleChallenge(ruleIds: string[], avoidWord: string): Promise<RuleExercise[]> {
+  const avoid = avoidWord.trim().toLocaleLowerCase()
+  const exercises = (await getExercisesForRules(ruleIds)).filter((exercise) => exercise.metadata.set === CHALLENGE_SET && exercise.answer.toLocaleLowerCase() !== avoid && String(exercise.metadata.word ?? '').toLocaleLowerCase() !== avoid)
+  // One per rule (the first rule is the most specific), a writing task before a multiple choice.
+  return ruleIds.flatMap((ruleId) => {
+    const options = exercises.filter((exercise) => exercise.ruleId === ruleId)
+    const bestType = challengeTypeOrder.find((type) => options.some((exercise) => exercise.exerciseType === type))
+    const pool = options.filter((exercise) => exercise.exerciseType === bestType)
+    return pool.length ? [pool[Math.floor(Math.random() * pool.length)]] : []
+  })
+}
+
 export type RuleQueueItem = { exercise: RuleExercise; ruleTitle: string }
 export type RulePracticeQueue = { items: RuleQueueItem[]; source: 'weak' | 'all'; ruleCount: number }
 

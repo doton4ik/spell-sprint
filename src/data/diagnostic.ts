@@ -9,7 +9,7 @@ export const diagnosticBlocks: DiagnosticBlock[] = [
   { id: 'production', label: 'F · Short production', description: 'Write 10 short professional sentences.', total: 10 },
 ]
 
-const spelling = [
+export const spelling = [
   ['accomodation', 'accommodation'], ['separate', 'separate'], ['definately', 'definitely'], ['goverment', 'government'],
   ['knowledge', 'knowledge'], ['occurence', 'occurrence'], ['developement', 'development'], ['maintainance', 'maintenance'],
   ['successfull', 'successful'], ['priviledge', 'privilege'], ['immediatly', 'immediately'], ['embarass', 'embarrass'],
@@ -17,7 +17,7 @@ const spelling = [
   ['commited', 'committed'], ['begining', 'beginning'], ['availible', 'available'], ['collegue', 'colleague'],
 ]
 
-const vocabulary = [
+export const vocabulary = [
   ['достижение', 'achievement'], ['влиять', 'influence'], ['окружающая среда', 'environment'], ['возможность', 'opportunity'],
   ['исследование', 'research'], ['поведение', 'behaviour'], ['улучшать', 'improve'], ['преимущество', 'advantage'],
   ['ответственность', 'responsibility'], ['решение', 'solution'], ['объяснять', 'explain'], ['сравнивать', 'compare'],
@@ -25,7 +25,7 @@ const vocabulary = [
   ['доступный', 'available'], ['развивать', 'develop'], ['общение', 'communication'], ['предлагать', 'suggest'],
 ]
 
-const grammar = [
+export const grammar = [
   ['She don’t have enough time.', 'She doesn’t have enough time.'], ['I have went to the meeting.', 'I have gone to the meeting.'],
   ['There is many reasons.', 'There are many reasons.'], ['He is responsible on the report.', 'He is responsible for the report.'],
   ['We discussed about the issue.', 'We discussed the issue.'], ['Did you sent the invoice?', 'Did you send the invoice?'],

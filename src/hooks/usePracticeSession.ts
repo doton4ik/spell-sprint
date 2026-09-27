@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { defaultPracticeSettings } from '../data/practice'
-import { getPracticeAttempts, loadPracticeSettings, savePracticeAttempt, savePracticeSettings } from '../services/practiceStorage'
+import { loadPracticeSettings, savePracticeAttempt, savePracticeSettings } from '../services/practiceStorage'
+import { scheduleAfterAnswer } from '../services/reviewSchedule'
 import type { CheckResult, ErrorType, PracticeAttempt, PracticeSettings, PracticeTask } from '../types/practice'
 
 function normalize(value: string) {
@@ -30,7 +31,6 @@ function categoryForError(type: ErrorType) {
   const labels: Record<ErrorType, string> = { missing_letter: 'Missing letters', missing_vowel: 'Missing vowel', extra_letter: 'Extra letters', letter_order: 'Letter order', vowel_confusion: 'Vowel confusion', double_consonant: 'Missing letters', phrase_spacing: 'Letter order', unknown: 'General spelling' }
   return labels[type]
 }
-function dateAfter(days: number) { const date = new Date(); date.setDate(date.getDate() + days); return date.toISOString() }
 function shuffle<T>(array: T[]): T[] {
   const result = [...array]
   for (let index = result.length - 1; index > 0; index -= 1) {
@@ -76,10 +76,8 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
 
   function recordAttempt(overrides: Pick<PracticeAttempt, 'isCorrect' | 'wasSkipped' | 'wasAnswerRevealed'> & { wasMarkedForReview?: boolean }) {
     const correct = overrides.isCorrect
-    const previousConfidence = getPracticeAttempts().filter((attempt) => attempt.taskId === currentTask.id && attempt.isCorrect && !attempt.hintUsed).reduce((highest, attempt) => Math.max(highest, attempt.confidence ?? 0), 0)
-    const confidence = correct && !hintStep ? Math.min(previousConfidence + 1, 3) : 0
+    const { confidence, nextReviewAt } = scheduleAfterAnswer({ wordId: currentTask.wordId, taskId: currentTask.id }, correct, Boolean(hintStep))
     const needsReview = Boolean(overrides.wasMarkedForReview) || !correct || Boolean(hintStep)
-    const nextReviewAt = !correct ? dateAfter(0) : hintStep ? dateAfter(1) : dateAfter(confidence === 1 ? 2 : confidence === 2 ? 7 : 21)
     savePracticeAttempt({
       id: crypto.randomUUID(), taskId: currentTask.id, taskType: currentTask.type, topic: currentTask.topic, topicId: currentTask.topicId, subtopic: currentTask.subtopic, wordId: currentTask.wordId, library: currentTask.library,
       userAnswer: answer, correctAnswer: currentTask.answer, errorCategory: correct ? currentTask.errorCategory : categoryForError(errorType(answer, currentTask.answer)),

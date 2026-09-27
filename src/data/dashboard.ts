@@ -9,10 +9,10 @@ import type {
 export const navigationItems: NavigationItem[] = [
   { label: 'Dashboard', icon: 'dashboard', isActive: true },
   { label: 'Practice', icon: 'practice' },
-  { label: 'My Mistakes', icon: 'mistakes', badge: 28 },
+  { label: 'My Mistakes', icon: 'mistakes' },
   { label: 'Rules', icon: 'rules' },
   { label: 'Topics', icon: 'topics' },
-  { label: 'Test Analysis', icon: 'analysis' },
+  { label: 'Level Check', icon: 'analysis' },
   { label: 'Libraries', icon: 'library' },
 ]
 

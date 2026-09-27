@@ -7,9 +7,9 @@ import type { Rule } from '../../types/rules'
 import { Icon } from '../icons/Icon'
 import { buildSegments, Letters } from './AnswerDiff'
 
-type MistakeBreakdownProps = { expected: string; submitted: string; taskType: string; wordId?: string; showRules: boolean }
+type MistakeBreakdownProps = { expected: string; submitted: string; taskType: string; wordId?: string; showRules: boolean; onChallenge?: (rules: Rule[]) => void }
 
-export function MistakeBreakdown({ expected, submitted, taskType, wordId, showRules }: MistakeBreakdownProps) {
+export function MistakeBreakdown({ expected, submitted, taskType, wordId, showRules, onChallenge }: MistakeBreakdownProps) {
   const local = useMemo(() => classifyMistake(expected, submitted, { taskType }), [expected, submitted, taskType])
   const [classification, setClassification] = useState<Classification>(local)
   const [rules, setRules] = useState<Rule[]>([])
@@ -46,6 +46,7 @@ export function MistakeBreakdown({ expected, submitted, taskType, wordId, showRu
       {rules.length ? (
         <div className="mistake-breakdown__rules">
           {rules.map((rule) => <button type="button" className="mistake-rule-link" onClick={() => { setPendingRuleFocus(rule.id); window.location.hash = 'rules' }} key={rule.id}><Icon name="rules" size={15} /> Rule: {rule.title} <Icon name="arrow" size={14} /></button>)}
+          {onChallenge ? <button type="button" className="mistake-rule-link mistake-rule-link--challenge" onClick={() => onChallenge(rules)}><Icon name="bolt" size={15} /> Try the rule on a new word</button> : null}
         </div>
       ) : null}
     </div>

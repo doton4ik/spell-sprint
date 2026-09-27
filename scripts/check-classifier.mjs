@@ -28,13 +28,13 @@ const confusableSets = [{ ruleId: 'there-their', words: ['there', 'their', "they
 // [expected, submitted, context, technical tags that must be present, technical tags that must be absent, learning tags (exact set)]
 const cases = [
   ['accommodation', 'acomodation', {}, ['missing_letter', 'multiple_edits'], ['letter_substitution'], ['missing_double_consonant']],
-  ['planning', 'planing', {}, ['missing_letter'], ['multiple_edits'], ['missing_double_consonant', 'verb_ending_error']],
+  ['planning', 'planing', {}, ['missing_letter'], ['multiple_edits'], ['verb_ending_error', 'doubling_before_suffix']],
   ['receive', 'recieve', {}, ['letter_transposition'], ['missing_letter', 'extra_letter'], ['vowel_order']],
   ['knowledge', 'knowlege', {}, ['missing_letter'], ['multiple_edits'], ['phonetic_spelling']],
   ['companies', 'companys', {}, ['letter_substitution', 'missing_letter', 'multiple_edits'], [], ['plural_ending_error']],
   ['there', 'their', { confusableSets }, ['letter_substitution', 'multiple_edits'], ['missing_letter'], ['confusing_words_error']],
   // extra coverage
-  ['occurred', 'occured', {}, ['missing_letter'], [], ['missing_double_consonant', 'verb_ending_error']],
+  ['occurred', 'occured', {}, ['missing_letter'], [], ['verb_ending_error', 'doubling_before_suffix']],
   ['tomorrow', 'tomorow', {}, ['missing_letter'], [], ['missing_double_consonant']],
   ['recommend', 'reccommend', {}, ['extra_letter'], [], ['extra_double_consonant']],
   ['definitely', 'definately', {}, ['letter_substitution'], ['missing_letter'], ['vowel_substitution']],
@@ -42,7 +42,16 @@ const cases = [
   ['knowledge', 'nowledge', {}, ['missing_letter'], [], ['silent_letter']],
   ['unnecessary', 'unecessary', {}, ['missing_letter'], [], ['missing_double_consonant', 'prefix_error']],
   ['lose', 'loose', { confusableSets }, ['extra_letter'], [], ['confusing_words_error']],
-  ['stopped', 'stoped', {}, ['missing_letter'], [], ['missing_double_consonant', 'verb_ending_error']],
+  ['stopped', 'stoped', {}, ['missing_letter'], [], ['verb_ending_error', 'doubling_before_suffix']],
+  // Specific ending rules: each mistake must point to exactly one of them.
+  ['making', 'makeing', {}, ['extra_letter'], [], ['silent_e_before_suffix', 'verb_ending_error']],
+  ['hugging', 'huging', {}, ['missing_letter'], [], ['doubling_before_suffix', 'verb_ending_error']],
+  ['opening', 'openning', {}, ['extra_letter'], [], ['doubling_before_suffix', 'verb_ending_error']],
+  ['useful', 'usefull', {}, ['extra_letter'], [], ['ful_suffix', 'suffix_error']],
+  ['happily', 'happyly', {}, ['letter_substitution'], [], ['ly_suffix']],
+  ['finally', 'finaly', {}, ['missing_letter'], [], ['ly_suffix']],
+  ['available', 'availible', {}, ['letter_substitution'], [], ['able_ible', 'suffix_error']],
+  ['doubt', 'dout', {}, ['missing_letter'], [], ['silent_letter']],
   ['warehouse', '', {}, ['blank_answer'], [], ['unclassified']],
   ['warehouse', 'table', {}, ['wrong_word'], ['missing_letter'], ['unclassified']],
   ['склад', 'склат', {}, ['wrong_word'], [], ['unclassified']],

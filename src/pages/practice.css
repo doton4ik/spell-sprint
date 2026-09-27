@@ -172,3 +172,24 @@
   .revealed-answer { align-items: flex-start; flex-wrap: wrap; }
   .revealed-answer small { margin: 0; width: 100%; }
 }
+
+/* Dictation: a large replay button in place of the written prompt. */
+.dictation-play { align-items: center; background: #fff; border: 1px solid #d9e7e2; border-radius: 12px; color: var(--teal); cursor: pointer; display: flex; font-family: inherit; gap: 14px; margin-top: 6px; padding: 12px 16px; text-align: left; transition: background .15s ease; width: 100%; }
+.dictation-play:hover { background: #f1f8f5; }
+.dictation-play > svg { background: #e3f2ed; border-radius: 50%; box-sizing: content-box; flex-shrink: 0; padding: 10px; }
+.dictation-play strong { color: #24403a; display: block; font-size: calc(16px * var(--fs)); }
+.dictation-play small { color: #72857f; display: block; font-size: calc(13px * var(--fs)); margin-top: 2px; }
+
+/* Rule challenge: the same rule on a new word, shown under the task after a linked mistake. */
+.mistake-rule-link--challenge { background: #fff6e2; border-color: #f0dca8; color: #8a5d0c; }
+.rule-challenge { background: #fffdf7; border: 1px solid #f0e2bd; border-radius: 14px; display: grid; gap: 10px; margin-top: 14px; padding: 14px 16px; }
+.rule-challenge__head { align-items: center; display: flex; justify-content: space-between; }
+.rule-challenge__head > span { align-items: center; color: #8a5d0c; display: inline-flex; font-size: calc(13px * var(--fs)); font-weight: 750; gap: 6px; letter-spacing: .03em; text-transform: uppercase; }
+.rule-challenge__head .quiet-action { background: transparent; border: 0; cursor: pointer; font-family: inherit; }
+.rule-challenge__text { color: #6c7a76; font-size: calc(14px * var(--fs)); line-height: 1.5; margin: 0; }
+.rule-challenge__link { align-items: center; background: transparent; border: 0; color: var(--teal); cursor: pointer; display: inline-flex; font-family: inherit; font-size: calc(14px * var(--fs)); font-weight: 700; gap: 4px; padding: 0; }
+.rule-challenge__result { border-radius: 10px; padding: 12px 14px; }
+.rule-challenge__result--good { background: #e3f3ed; }
+.rule-challenge__result--retry { background: #fcefe9; }
+.rule-challenge__result strong { color: #24403a; font-size: calc(15px * var(--fs)); }
+.rule-challenge__result p { color: #56706a; font-size: calc(14px * var(--fs)); margin: 4px 0 8px; }

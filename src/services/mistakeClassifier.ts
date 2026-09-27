@@ -128,8 +128,60 @@ const detectConfusableWords: Detector = ({ expected, submitted, ctx }) => {
     .map((set) => hit('confusing_words_error', 1, `${expected}↔${submitted}`, set.ruleId))
 }
 
+// --- Specific ending rules -----------------------------------------------------------------
+// The general tags above (suffix_error, verb_ending_error) say WHERE the mistake is; these say WHICH
+// rule was broken, so each rule is linked to exactly its own mistakes (usefull → -ful, not -ly/-ible).
+
+const verbEnding = (word: string) => word.endsWith('ing') && word.length >= 5 ? 'ing' : word.endsWith('ed') && word.length >= 4 ? 'ed' : ''
+
+// making → makeing, hoped → hopeed: the silent e was kept before -ing / -ed.
+const detectSilentEBeforeSuffix: Detector = ({ expected, submitted }) => {
+  const ending = verbEnding(expected)
+  if (!ending) return []
+  const stem = expected.slice(0, -ending.length)
+  return submitted === `${stem}e${ending}` ? [hit('silent_e_before_suffix', 1, `keep e: ${stem}e + ${ending}`)] : []
+}
+
+// planning → planing, stopped → stoped (doubling missed); opening → openning (doubled by mistake).
+const detectDoublingBeforeSuffix: Detector = ({ expected, submitted }) => {
+  const ending = verbEnding(expected)
+  if (!ending) return []
+  const stem = expected.slice(0, -ending.length)
+  const last = stem.at(-1) ?? ''
+  if (!isConsonant(last)) return []
+  if (stem.at(-2) === last && submitted === `${stem.slice(0, -1)}${ending}`) return [hit('doubling_before_suffix', 1, `${last}${last} before -${ending}`)]
+  if (stem.at(-2) !== last && submitted === `${stem}${last}${ending}`) return [hit('doubling_before_suffix', 1, `no double ${last} before -${ending}`)]
+  return []
+}
+
+// useful → usefull, careful → carefull: the suffix -ful has one l.
+const detectFulSuffix: Detector = ({ expected, submitted }) => (expected.endsWith('ful') && submitted === `${expected}l` ? [hit('ful_suffix', 1, '-ful has one l')] : [])
+
+// happily → happyly (y → i), finally → finaly (-al + ly keeps both l), gently → gentlely (-le → -ly).
+const detectLySuffix: Detector = ({ expected, submitted }) => {
+  if (!expected.endsWith('ly') || expected.length < 5) return []
+  if (expected.endsWith('ily') && submitted === `${expected.slice(0, -3)}yly`) return [hit('ly_suffix', 1, 'y → i before -ly')]
+  if (expected.endsWith('lly') && submitted === `${expected.slice(0, -3)}ly`) return [hit('ly_suffix', 1, 'keep both l in -lly')]
+  if (/[^l]ly$/.test(expected) && expected.at(-3) !== 'l' && submitted === `${expected.slice(0, -2)}lely`) return [hit('ly_suffix', 1, '-le becomes -ly')]
+  return []
+}
+
+// available ↔ availible, possible ↔ possable: the right word, the wrong ending.
+const detectAbleIble: Detector = ({ expected, submitted }) => {
+  const match = /(able|ible)$/.exec(expected)
+  if (!match || expected.length < 6) return []
+  const other = match[1] === 'able' ? 'ible' : 'able'
+  return submitted === `${expected.slice(0, -4)}${other}` ? [hit('able_ible', 1, `-${match[1]}, not -${other}`)] : []
+}
+
+const specificEndingTags = new Set(['silent_e_before_suffix', 'doubling_before_suffix', 'ful_suffix', 'ly_suffix', 'able_ible'])
+const letterLevelTags = new Set(['missing_double_consonant', 'extra_double_consonant', 'missing_vowel', 'extra_vowel', 'vowel_substitution'])
+
 // More specific detectors first; general ones after. Add a new pattern by adding one function here.
-const learningDetectors: Detector[] = [detectDoubleConsonants, detectVowelPatterns, detectSilentLetters, detectAffixes, detectVerbEndings, detectPluralOrThirdPerson]
+const learningDetectors: Detector[] = [
+  detectSilentEBeforeSuffix, detectDoublingBeforeSuffix, detectFulSuffix, detectLySuffix, detectAbleIble,
+  detectDoubleConsonants, detectVowelPatterns, detectSilentLetters, detectAffixes, detectVerbEndings, detectPluralOrThirdPerson,
+]
 
 // --- Classifier ----------------------------------------------------------------------------
 
@@ -162,6 +214,9 @@ export function classifyMistake(expectedRaw: string, submittedRaw: string, ctx: 
   // so the letter-level detectors would only add noise.
   let learning = confusable.length ? confusable : detectYToIes(input)
   if (!learning.length) learning = mergeHits(learningDetectors.flatMap((detector) => detector(input)))
+  // A specific ending rule explains the letter slip completely (usefull is a -ful mistake, not a
+  // "doubled consonant" one), so drop the letter-level tags that would link a second, unrelated rule.
+  if (learning.some((tag) => specificEndingTags.has(tag.slug))) learning = learning.filter((tag) => !letterLevelTags.has(tag.slug))
 
   // Weak fallback: a consonant dropped or changed in a longer word usually means "spelled by ear".
   if (!learning.length && expected.length >= 6 && ops.length <= 2 && technical.some((tag) => tag.slug === 'missing_letter' || tag.slug === 'letter_substitution')) {

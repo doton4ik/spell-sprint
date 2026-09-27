@@ -47,7 +47,7 @@ export function getTasksForSelection(selection: PracticeSelection, mode: Practic
 export function getTaskById(taskId: string) { return [...mixedPracticeTasks, ...getAllWords().flatMap(tasksForWord)].find((task) => task.id === taskId) }
 
 const PENDING_SELECTION_KEY = 'spell-sprint.pending-practice-selection'
-export type PendingPracticeSelection = { wordIds: string[]; label: string }
+export type PendingPracticeSelection = { wordIds: string[]; label: string; mode?: PracticeMode }
 export function setPendingPracticeSelection(selection: PendingPracticeSelection) { window.sessionStorage.setItem(PENDING_SELECTION_KEY, JSON.stringify(selection)) }
 export function consumePendingPracticeSelection(): PendingPracticeSelection | null {
   try { const value = window.sessionStorage.getItem(PENDING_SELECTION_KEY); window.sessionStorage.removeItem(PENDING_SELECTION_KEY); return value ? JSON.parse(value) as PendingPracticeSelection : null } catch { return null }

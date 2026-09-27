@@ -8,6 +8,7 @@ import { PracticePage } from './pages/PracticePage'
 import { ReviewPage } from './pages/ReviewPage'
 import { RulesPage } from './pages/RulesPage'
 import { SettingsPage } from './pages/SettingsPage'
+import { TopicsPage } from './pages/TopicsPage'
 
 function getRoute() {
   return window.location.hash.replace('#', '') || 'dashboard'
@@ -29,9 +30,10 @@ function App() {
       {route === 'rules' ? <RulesPage /> : null}
       {route === 'libraries' ? <LibrariesPage /> : null}
       {route === 'review' ? <ReviewPage /> : null}
-      {route === 'test-analysis' ? <DiagnosticPage /> : null}
+      {route === 'level-check' || route === 'test-analysis' ? <DiagnosticPage /> : null}
       {route === 'settings' ? <SettingsPage /> : null}
-      {!['practice', 'my-mistakes', 'rules', 'libraries', 'review', 'test-analysis', 'settings'].includes(route) ? <DashboardPage /> : null}
+      {route === 'topics' ? <TopicsPage /> : null}
+      {!['practice', 'my-mistakes', 'rules', 'libraries', 'review', 'level-check', 'test-analysis', 'settings', 'topics'].includes(route) ? <DashboardPage /> : null}
     </AppShell>
   )
 }

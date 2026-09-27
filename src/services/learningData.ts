@@ -3,6 +3,7 @@ import type { LearningStatus, MistakeEntry, ReviewState } from '../types/learnin
 import { getPracticeAttempts, subscribeToPracticeAttempts } from './practiceStorage'
 import { getTaskById } from './libraryPractice'
 import { getAllWords } from './libraryStorage'
+import { MASTERED_DAYS } from './reviewSchedule'
 
 const REVIEW_STATES_KEY = 'spell-sprint.review-states'
 const RULE_REVIEW_KEY = 'spell-sprint.rule-review'
@@ -46,8 +47,9 @@ export function getMistakeEntries(): MistakeEntry[] {
       const chronological = [...attempts].sort((a, b) => a.createdAt.localeCompare(b.createdAt))
       const lastFailure = [...failed].sort((a, b) => b.createdAt.localeCompare(a.createdAt))[0]
       const state = states[entryId]
-      const confidence = attempts.reduce((highest, attempt) => Math.max(highest, attempt.confidence ?? 0), 0)
-      const status: LearningStatus = confidence >= 3 || state?.completedReviews && state.completedReviews >= 3
+      // Successful review days since the last mistake, as stored on the newest answer (see reviewSchedule.ts).
+      const confidence = chronological.at(-1)?.confidence ?? 0
+      const status: LearningStatus = confidence >= MASTERED_DAYS || state?.completedReviews && state.completedReviews >= 3
         ? 'mastered'
         : failed.length >= 3
           ? 'difficult'
