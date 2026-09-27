@@ -174,12 +174,76 @@ const detectAbleIble: Detector = ({ expected, submitted }) => {
   return submitted === `${expected.slice(0, -4)}${other}` ? [hit('able_ible', 1, `-${match[1]}, not -${other}`)] : []
 }
 
-const specificEndingTags = new Set(['silent_e_before_suffix', 'doubling_before_suffix', 'ful_suffix', 'ly_suffix', 'able_ible'])
-const letterLevelTags = new Set(['missing_double_consonant', 'extra_double_consonant', 'missing_vowel', 'extra_vowel', 'vowel_substitution'])
+// boxes → boxs, watches → watchs: -es after s, x, z, ch, sh.
+const detectPluralEs: Detector = ({ expected, submitted }) => (/(s|x|z|ch|sh)es$/.test(expected) && submitted === `${expected.slice(0, -2)}s` ? [hit('plural_es', 1, '-es after s, x, z, ch, sh')] : [])
+
+// knives → knifes / knifs, shelves → shelfs: f or fe becomes ves.
+const detectFToVes: Detector = ({ expected, submitted }) => {
+  if (!expected.endsWith('ves')) return []
+  const stem = expected.slice(0, -3)
+  return submitted === `${stem}fs` || submitted === `${stem}fes` ? [hit('f_to_ves', 1, 'f → ves')] : []
+}
+
+// happier → happyer, hotter → hoter, nicer → niceer: spelling changes before -er / -est.
+const detectComparative: Detector = ({ expected, submitted }) => {
+  const ending = expected.endsWith('est') ? 'est' : expected.endsWith('er') ? 'er' : ''
+  if (!ending || expected.length < 5) return []
+  const stem = expected.slice(0, -ending.length)
+  if (stem.endsWith('i') && submitted === `${stem.slice(0, -1)}y${ending}`) return [hit('comparative_spelling', 1, 'y → i before -er/-est')]
+  if (stem.at(-1) === stem.at(-2) && isConsonant(stem.at(-1) ?? '') && submitted === `${stem.slice(0, -1)}${ending}`) return [hit('comparative_spelling', 1, 'double the last consonant')]
+  if (submitted === `${stem}e${ending}`) return [hit('comparative_spelling', 1, 'no extra e before -er/-est')]
+  return []
+}
+
+// information ↔ informasion, decision ↔ decition; appearance ↔ appearence.
+const detectTionSion: Detector = ({ expected, submitted }) => {
+  const match = /(tion|sion)$/.exec(expected)
+  if (!match || expected.length < 6) return []
+  return submitted === `${expected.slice(0, -4)}${match[1] === 'tion' ? 'sion' : 'tion'}` ? [hit('tion_sion', 1, `-${match[1]}`)] : []
+}
+const detectAnceEnce: Detector = ({ expected, submitted }) => {
+  const match = /(ance|ence|ant|ent)$/.exec(expected)
+  if (!match || expected.length < 6) return []
+  const swap: Record<string, string> = { ance: 'ence', ence: 'ance', ant: 'ent', ent: 'ant' }
+  return submitted === `${expected.slice(0, -match[1].length)}${swap[match[1]]}` ? [hit('ance_ence', 1, `-${match[1]}`)] : []
+}
+
+// noticeable → noticable, courageous → couragous: the e stays to keep c / g soft.
+const detectSoftCG: Detector = ({ expected, submitted }) => {
+  const match = /[cg]e(able|ous)$/.exec(expected)
+  if (!match) return []
+  const at = expected.length - match[1].length - 1 // index of the kept e
+  return submitted === expected.slice(0, at) + expected.slice(at + 1) ? [hit('soft_c_g', 1, 'keep e after soft c / g')] : []
+}
+
+// A regular ending on an irregular word: mans → men, thinked → thought, goed → went. Uses a list of
+// common irregular forms, and runs before the "completely different word" cut-off because these
+// forms differ a lot letter by letter.
+const irregularPlurals: Record<string, string> = { men: 'man', women: 'woman', children: 'child', teeth: 'tooth', feet: 'foot', mice: 'mouse', geese: 'goose', people: 'person', sheep: 'sheep', fish: 'fish' }
+const irregularPast: Record<string, string> = {
+  went: 'go', gone: 'go', thought: 'think', brought: 'bring', caught: 'catch', bought: 'buy', taught: 'teach', sold: 'sell', told: 'tell', wrote: 'write',
+  felt: 'feel', kept: 'keep', slept: 'sleep', left: 'leave', made: 'make', said: 'say', ran: 'run', came: 'come', saw: 'see', took: 'take',
+  gave: 'give', found: 'find', got: 'get', knew: 'know', spoke: 'speak', drove: 'drive', ate: 'eat', drank: 'drink', began: 'begin', swam: 'swim',
+  paid: 'pay', met: 'meet', sent: 'send', spent: 'spend', built: 'build', lost: 'lose', won: 'win', sat: 'sit', stood: 'stand', understood: 'understand',
+}
+function detectIrregular(expected: string, submitted: string): PatternHit[] {
+  const plural = irregularPlurals[expected]
+  if (plural && [`${plural}s`, `${plural}es`, `${expected}s`].includes(submitted)) return [hit('irregular_plural', 1, `${plural} → ${expected}`)]
+  const base = irregularPast[expected]
+  if (base) {
+    const regular = base.endsWith('e') ? [`${base}d`] : [`${base}ed`, `${base}${base.at(-1)}ed`, `${base.replace(/y$/, 'i')}ed`]
+    if (regular.includes(submitted)) return [hit('irregular_past', 1, `${base} → ${expected}`)]
+  }
+  return []
+}
+
+const specificEndingTags = new Set(['silent_e_before_suffix', 'doubling_before_suffix', 'ful_suffix', 'ly_suffix', 'able_ible', 'plural_es', 'f_to_ves', 'comparative_spelling', 'tion_sion', 'ance_ence', 'soft_c_g'])
+const letterLevelTags = new Set(['missing_double_consonant', 'extra_double_consonant', 'missing_vowel', 'extra_vowel', 'vowel_substitution', 'plural_ending_error'])
 
 // More specific detectors first; general ones after. Add a new pattern by adding one function here.
 const learningDetectors: Detector[] = [
   detectSilentEBeforeSuffix, detectDoublingBeforeSuffix, detectFulSuffix, detectLySuffix, detectAbleIble,
+  detectPluralEs, detectFToVes, detectComparative, detectTionSion, detectAnceEnce, detectSoftCG,
   detectDoubleConsonants, detectVowelPatterns, detectSilentLetters, detectAffixes, detectVerbEndings, detectPluralOrThirdPerson,
 ]
 
@@ -201,7 +265,8 @@ export function classifyMistake(expectedRaw: string, submittedRaw: string, ctx: 
 
   const input: DetectorInput = { expected, submitted, ops, ctx }
   const confusable = detectConfusableWords(input)
-  if (expected.length > 3 && distance / expected.length > 0.5) return result([hit('wrong_word')], confusable.length ? confusable : [hit('unclassified')], distance, ops)
+  const irregular = confusable.length ? [] : detectIrregular(expected, submitted)
+  if (!irregular.length && expected.length > 3 && distance / expected.length > 0.5) return result([hit('wrong_word')], confusable.length ? confusable : [hit('unclassified')], distance, ops)
 
   const technical: PatternHit[] = []
   if (ops.some((op) => op.type === 'delete')) technical.push(hit('missing_letter'))
@@ -212,7 +277,7 @@ export function classifyMistake(expectedRaw: string, submittedRaw: string, ctx: 
 
   // Whole-mistake explanations win: a confusable pair or a y→ies slip is the reason for the edits,
   // so the letter-level detectors would only add noise.
-  let learning = confusable.length ? confusable : detectYToIes(input)
+  let learning = confusable.length ? confusable : irregular.length ? irregular : detectYToIes(input)
   if (!learning.length) learning = mergeHits(learningDetectors.flatMap((detector) => detector(input)))
   // A specific ending rule explains the letter slip completely (usefull is a -ful mistake, not a
   // "doubled consonant" one), so drop the letter-level tags that would link a second, unrelated rule.
