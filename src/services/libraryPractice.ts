@@ -56,3 +56,17 @@ export function getTasksForWordIds(wordIds: string[], mode: PracticeMode = 'writ
   const wanted = new Set(wordIds)
   return getAllWords().filter((word) => wanted.has(word.wordId)).flatMap(tasksForWord).filter((task) => task.mode === mode)
 }
+
+// "среда" → environment: the answer is a real library word that also fits the Russian prompt (a
+// different meaning of the same Russian word). That is not a spelling mistake, so practice shows a
+// hint and lets the learner try again instead of recording an error.
+const meanings = (russian: string) => russian.toLocaleLowerCase().split(/[,;]/).map((part) => part.replace(/\(.*?\)/g, '').trim()).filter(Boolean)
+export function findOtherMeaning(answer: string, task: PracticeTask): { word: string; translation: string } | null {
+  // Only when the Russian word is on screen (not in dictation, where the learner hears the English word).
+  if (task.type !== 'translate-ru-en' || task.mode === 'listen-write' || !answer.trim()) return null
+  const typed = answer.trim().toLocaleLowerCase()
+  const promptMeanings = meanings(task.prompt)
+  const match = getAllWords().find((word) => word.word.toLocaleLowerCase() === typed && word.wordId !== task.wordId && word.word.toLocaleLowerCase() !== task.answer.toLocaleLowerCase()
+    && meanings(word.translation).some((meaning) => promptMeanings.some((prompt) => meaning === prompt || meaning.split(/\s+/).includes(prompt) || prompt.split(/\s+/).includes(meaning))))
+  return match ? { word: match.word, translation: match.translation } : null
+}

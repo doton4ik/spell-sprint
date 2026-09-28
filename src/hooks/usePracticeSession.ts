@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { defaultPracticeSettings } from '../data/practice'
 import { loadPracticeSettings, savePracticeAttempt, savePracticeSettings } from '../services/practiceStorage'
 import { scheduleAfterAnswer } from '../services/reviewSchedule'
+import { findOtherMeaning } from '../services/libraryPractice'
 import type { CheckResult, ErrorType, PracticeAttempt, PracticeSettings, PracticeTask } from '../types/practice'
 
 function normalize(value: string) {
@@ -54,6 +55,7 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
   const [completed, setCompleted] = useState(false)
   // First result per task in this session (a later retry does not overwrite it), for the live stats panel.
   const [outcomes, setOutcomes] = useState<Record<string, TaskOutcome>>({})
+  const [otherMeaning, setOtherMeaning] = useState<{ word: string; translation: string } | null>(null)
   const [settings, setSettings] = useState<PracticeSettings>(() => loadPracticeSettings(defaultPracticeSettings))
 
   const currentTask = shuffledTasks[taskIndex]
@@ -61,7 +63,7 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
 
   useEffect(() => { savePracticeSettings(settings) }, [settings])
   useEffect(() => {
-    setShuffledTasks(buildSession()); setTaskIndex(0); setAnswer(''); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0); setCompleted(false); setOutcomes({})
+    setShuffledTasks(buildSession()); setTaskIndex(0); setAnswer(''); setOtherMeaning(null); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0); setCompleted(false); setOutcomes({})
   }, [tasks, taskLimit])
 
   useEffect(() => {
@@ -88,6 +90,10 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
   function checkAnswer() {
     if (!answer.trim() || result === 'correct') return
     const correct = isAnswerCorrect(answer, currentTask)
+    // A real word for another meaning of the same Russian prompt is not a mistake: hint, then try again.
+    const other = correct ? null : findOtherMeaning(answer, currentTask)
+    if (other) { setOtherMeaning(other); return }
+    setOtherMeaning(null)
     setAttemptsOnTask((value) => value + 1)
     setResult(correct ? 'correct' : 'incorrect')
     markOutcome(correct ? 'correct' : 'incorrect')
@@ -105,15 +111,15 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
   function advance() {
     if (taskIndex >= shuffledTasks.length - 1) { setCompleted(true); return }
     setTaskIndex((value) => value + 1)
-    setAnswer(''); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0)
+    setAnswer(''); setOtherMeaning(null); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0)
   }
 
   function skip() { markOutcome('skipped'); recordAttempt({ isCorrect: false, wasSkipped: true, wasAnswerRevealed: answerRevealed }); advance() }
   function useHint() { setHintStep((step) => Math.min(step + 1, 5)) }
   function markForReview() { recordAttempt({ isCorrect: result === 'correct', wasSkipped: false, wasAnswerRevealed: answerRevealed, wasMarkedForReview: true }) }
-  function restart() { setShuffledTasks(buildSession()); setTaskIndex(0); setAnswer(''); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0); setCompleted(false); setOutcomes({}) }
+  function restart() { setShuffledTasks(buildSession()); setTaskIndex(0); setAnswer(''); setOtherMeaning(null); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0); setCompleted(false); setOutcomes({}) }
 
-  return { sessionTasks: shuffledTasks, outcomes, currentTask, taskIndex, progress, answer, setAnswer, result, attemptsOnTask, answerRevealed, hintStep, completed, settings, setSettings, checkAnswer, revealAnswer, useHint, markForReview, advance, skip, restart, totalTasks: shuffledTasks.length }
+  return { otherMeaning, sessionTasks: shuffledTasks, outcomes, currentTask, taskIndex, progress, answer, setAnswer, result, attemptsOnTask, answerRevealed, hintStep, completed, settings, setSettings, checkAnswer, revealAnswer, useHint, markForReview, advance, skip, restart, totalTasks: shuffledTasks.length }
 }
 
 function uniqueTasks(tasks: PracticeTask[]) {

@@ -8,7 +8,7 @@ import type { WordReason } from '../../services/dailyPlan'
 
 type TaskCardProps = {
   task: PracticeTask; answer: string; result: CheckResult; attemptsOnTask: number; answerRevealed: boolean; hintStep: number; allowSkip: boolean; showRuleAfterMistake: boolean
-  onAnswerChange: (value: string) => void; onCheck: () => void; onShowAnswer: () => void; onHint: () => void; onPlayAudio: () => void; onSkip: () => void; onNext: () => void; onRepeatLater: () => void; audioMessage?: string; reason?: WordReason
+  onAnswerChange: (value: string) => void; onCheck: () => void; onShowAnswer: () => void; onHint: () => void; onPlayAudio: () => void; onSkip: () => void; onNext: () => void; onRepeatLater: () => void; audioMessage?: string; reason?: WordReason; otherMeaning?: { word: string; translation: string } | null
 }
 
 const labels = { 'write-en': 'Write in English', 'listen-write': 'Listen and write', 'translate-ru': 'Translate to Russian', 'choose-spelling': 'Choose correct spelling' }
@@ -21,7 +21,7 @@ function hintFor(answer: string, step: number) {
   return `Answer: ${answer}`
 }
 
-export function TaskCard({ task, answer, result, attemptsOnTask, answerRevealed, hintStep, allowSkip, showRuleAfterMistake, onAnswerChange, onCheck, onShowAnswer, onHint, onPlayAudio, onSkip, onNext, onRepeatLater, audioMessage, reason }: TaskCardProps) {
+export function TaskCard({ task, answer, result, attemptsOnTask, answerRevealed, hintStep, allowSkip, showRuleAfterMistake, onAnswerChange, onCheck, onShowAnswer, onHint, onPlayAudio, onSkip, onNext, onRepeatLater, audioMessage, reason, otherMeaning }: TaskCardProps) {
   const mode = task.mode ?? (task.type === 'translate-en-ru' ? 'translate-ru' : task.type === 'translate-ru-en' ? 'write-en' : 'choose-spelling')
   const revealed = answerRevealed || result !== 'idle' || hintStep >= 5
   const correct = result === 'correct'
@@ -40,6 +40,7 @@ export function TaskCard({ task, answer, result, attemptsOnTask, answerRevealed,
     {hintStep ? <div className="hint-box"><Icon name="lightbulb" size={17} /><span><strong>Hint {hintStep}/5</strong>{hintFor(task.answer, hintStep)}</span></div> : null}
     <form onSubmit={submit}>
       {mode === 'choose-spelling' ? <div className="spelling-choices">{(task.choices ?? [task.answer]).map((choice) => <button type="button" className={answer === choice ? 'spelling-choice spelling-choice--selected' : 'spelling-choice'} onClick={() => onAnswerChange(choice)} key={choice}>{choice}</button>)}</div> : <><label className="answer-label" htmlFor="practice-answer">Your answer</label><input id="practice-answer" autoFocus value={answer} onChange={(event) => onAnswerChange(event.target.value)} placeholder={mode === 'translate-ru' ? 'Введите перевод…' : 'Type your answer…'} autoComplete="off" disabled={correct} /></>}
+      {otherMeaning && result === 'idle' ? <div className="other-meaning" role="status"><Icon name="lightbulb" size={17} /><span><strong>“{otherMeaning.word}” is also “{otherMeaning.translation}” — a different meaning.</strong><small>Here we need another word for “{task.prompt}”. Not counted as a mistake — try again.</small></span></div> : null}
       {result !== 'idle' ? <div className={`task-feedback task-feedback--${correct ? 'correct' : 'incorrect'}`} role="status"><Icon name={correct ? 'check' : 'refresh'} size={17} /><span><strong>{correct ? 'Correct!' : 'Not quite.'}</strong>{!correct && <small>Your answer: {checkedAnswer || 'Skipped'}</small>}<small>Correct answer: {task.answer} — {mode === 'translate-ru' ? task.prompt : task.prompt}</small>{task.example && <small>Example: {task.example}</small>}</span></div> : null}
       {result === 'incorrect' && spellingTask && checkedAnswer.trim() ? <MistakeBreakdown expected={task.answer} submitted={checkedAnswer} taskType={task.type} wordId={task.wordId} showRules={showRuleAfterMistake} onChallenge={setChallengeRules} /> : null}
       {result === 'incorrect' && showRuleAfterMistake && task.rule && !isDefaultRule ? <p className="related-rule"><Icon name="lightbulb" size={16} /> {task.rule}</p> : null}

@@ -206,3 +206,9 @@
 .mistake-breakdown__explain strong { color: #24403a; font-size: calc(14px * var(--fs)); }
 .mistake-breakdown__explain p { color: #56706a; font-size: calc(14px * var(--fs)); line-height: 1.5; margin: 4px 0 0; }
 .mistake-breakdown__explain .mistake-breakdown__cue { align-items: center; color: #8a5d0c; display: flex; gap: 6px; }
+
+/* Answer is a real word for another meaning of the Russian prompt (среда → environment). */
+.other-meaning { align-items: flex-start; background: #eaf1f7; border-radius: 12px; color: #3f6680; display: flex; gap: 10px; margin-top: 12px; padding: 12px 14px; }
+.other-meaning > svg { flex-shrink: 0; margin-top: 2px; }
+.other-meaning strong { display: block; font-size: calc(14.5px * var(--fs)); }
+.other-meaning small { color: #56718a; display: block; font-size: calc(13.5px * var(--fs)); margin-top: 3px; }
