@@ -91,3 +91,5 @@
   .proof-score strong { font-size: calc(20px * var(--fs)); }
   .proof-editor { display: flex; margin: 4px 0; }
 }
+.proof-card__size { align-items: center; color: var(--ink-faint); display: flex; flex-wrap: wrap; font-size: calc(12.5px * var(--fs)); gap: 6px; }
+.proof-card__size b { background: #eaf1f7; border-radius: 6px; color: #4a718b; font-size: calc(11.5px * var(--fs)); padding: 2px 6px; }

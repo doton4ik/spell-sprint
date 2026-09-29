@@ -27,10 +27,11 @@ for (const text of proofreadingTexts) {
   problems.forEach((problem) => fail(`${text.id}: ${problem}`))
   const places = segments.filter((segment) => segment.kind === 'place').length
   if (places < 8) fail(`${text.id}: only ${places} marked places`)
+  if (places < engine.mistakeCountFor(text) * 2) fail(`${text.id}: ${places} places for ${engine.mistakeCountFor(text)} mistakes — needs at least twice as many for variety`)
 
   for (let seed = 1; seed <= 150; seed += 1) {
     const exercise = engine.buildExercise(text, seed)
-    const expected = engine.errorCountFor(text.level)
+    const expected = engine.mistakeCountFor(text)
     if (exercise.slots.length !== expected) fail(`${text.id} seed ${seed}: ${exercise.slots.length} mistakes, expected ${expected}`)
 
     const none = engine.checkExercise(exercise, new Map())

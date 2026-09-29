@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react'
 import { Icon } from '../components/icons/Icon'
 import type { ProofreadingLevel, ProofreadingText } from '../data/proofreadingTexts'
 import { getLevelChecks } from '../services/levelCheck'
-import { buildExercise, checkExercise, proofreadingTexts, proofreadingTypes, recordProofreading, typeWeights, type Exercise, type ProofreadingResult, type Token } from '../services/proofreading'
+import { buildExercise, checkExercise, mistakeCountFor, proofreadingTexts, proofreadingTypes, recordProofreading, typeWeights, wordCount, type Exercise, type ProofreadingResult, type Token } from '../services/proofreading'
 import './proofreading.css'
 
 const levels: ProofreadingLevel[] = ['A2', 'B1', 'B2', 'C1']
@@ -68,6 +68,7 @@ export function ProofreadingPage() {
               <button className="proof-card" type="button" onClick={() => start(text)} key={text.id}>
                 <span className="proof-card__meta">{formatLabels[text.format] ?? text.format} · {text.topic}</span>
                 <strong>{text.title}</strong>
+                <span className="proof-card__size">{wordCount(text)} words · {mistakeCountFor(text)} mistakes{wordCount(text) > 200 ? <b>Long read</b> : null}</span>
                 <span className="proof-card__go">Start <Icon name="arrow" size={14} /></span>
               </button>
             ))}

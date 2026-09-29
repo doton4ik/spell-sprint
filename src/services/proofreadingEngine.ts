@@ -78,20 +78,32 @@ const spellingSlips: Array<(word: string) => string | null> = [
 
 export const errorCountFor = (level: ProofreadingLevel) => ({ A2: 4, B1: 5, B2: 6, C1: 7 })[level]
 
+// Length of the clean text, and how many mistakes it gets: a short text (up to ~200 words) the level's
+// base number, longer texts proportionally more (a 3× longer text → 3× the mistakes, at most 3×).
+export function wordCount(text: ProofreadingText) {
+  const clean = text.text.replace(PLACE, (_match, correct: string) => variants(correct)[0])
+  return clean.split(/s+/).filter((word) => /[A-Za-z]/.test(word)).length
+}
+const shortLength = { A2: 100, B1: 120, B2: 145, C1: 165 }
+export function mistakeCountFor(text: ProofreadingText) {
+  return Math.round(errorCountFor(text.level) * Math.min(3, Math.max(1, wordCount(text) / shortLength[text.level])))
+}
+
 // Some texts have few words a spelling slip fits into; then the missing slips become extra grammar
 // mistakes, so every exercise has the same number of mistakes for its level.
 export function buildExercise(text: ProofreadingText, seed = Date.now(), weights: Record<string, number> = {}): Exercise {
-  const wanted = text.level === 'A2' ? 1 : 2
+  const total = mistakeCountFor(text)
+  const wanted = Math.max(1, Math.round(total / (text.level === 'A2' ? 4 : 3)))
   let exercise = buildOnce(text, seed, weights, wanted)
-  for (let spelling = wanted - 1; exercise.slots.length < errorCountFor(text.level) && spelling >= 0; spelling -= 1) exercise = buildOnce(text, seed, weights, spelling)
+  for (let spelling = wanted - 1; exercise.slots.length < total && spelling >= 0; spelling -= 1) exercise = buildOnce(text, seed, weights, spelling)
   return exercise
 }
 
-function buildOnce(text: ProofreadingText, seed: number, weights: Record<string, number>, spellingCount: number): Exercise {
+function buildOnce(text: ProofreadingText, seed: number, weights: Record<string, number>, spellingCount: number, total = mistakeCountFor(text)): Exercise {
   const next = random(seed)
   const { segments } = parseProofreadingText(text.text)
   const places = segments.flatMap((segment) => (segment.kind === 'place' ? [segment.place] : []))
-  const grammarCount = Math.min(places.length, errorCountFor(text.level) - spellingCount)
+  const grammarCount = Math.min(places.length, total - spellingCount)
 
   // Weighted choice without replacement.
   const pool = [...places]; const chosen = new Set<number>()
