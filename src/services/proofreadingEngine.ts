@@ -82,7 +82,7 @@ export const errorCountFor = (level: ProofreadingLevel) => ({ A2: 4, B1: 5, B2: 
 // base number, longer texts proportionally more (a 3× longer text → 3× the mistakes, at most 3×).
 export function wordCount(text: ProofreadingText) {
   const clean = text.text.replace(PLACE, (_match, correct: string) => variants(correct)[0])
-  return clean.split(/s+/).filter((word) => /[A-Za-z]/.test(word)).length
+  return clean.split(/\s+/).filter((word) => /[A-Za-z]/.test(word)).length
 }
 const shortLength = { A2: 100, B1: 120, B2: 145, C1: 165 }
 export function mistakeCountFor(text: ProofreadingText) {
