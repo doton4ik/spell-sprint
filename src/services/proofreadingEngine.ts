@@ -78,11 +78,19 @@ const spellingSlips: Array<(word: string) => string | null> = [
 
 export const errorCountFor = (level: ProofreadingLevel) => ({ A2: 4, B1: 5, B2: 6, C1: 7 })[level]
 
+// Some texts have few words a spelling slip fits into; then the missing slips become extra grammar
+// mistakes, so every exercise has the same number of mistakes for its level.
 export function buildExercise(text: ProofreadingText, seed = Date.now(), weights: Record<string, number> = {}): Exercise {
+  const wanted = text.level === 'A2' ? 1 : 2
+  let exercise = buildOnce(text, seed, weights, wanted)
+  for (let spelling = wanted - 1; exercise.slots.length < errorCountFor(text.level) && spelling >= 0; spelling -= 1) exercise = buildOnce(text, seed, weights, spelling)
+  return exercise
+}
+
+function buildOnce(text: ProofreadingText, seed: number, weights: Record<string, number>, spellingCount: number): Exercise {
   const next = random(seed)
   const { segments } = parseProofreadingText(text.text)
   const places = segments.flatMap((segment) => (segment.kind === 'place' ? [segment.place] : []))
-  const spellingCount = text.level === 'A2' ? 1 : 2
   const grammarCount = Math.min(places.length, errorCountFor(text.level) - spellingCount)
 
   // Weighted choice without replacement.
