@@ -5,6 +5,7 @@ import { DiagnosticPage } from './pages/DiagnosticPage'
 import { LibrariesPage } from './pages/LibrariesPage'
 import { MistakesPage } from './pages/MistakesPage'
 import { PracticePage } from './pages/PracticePage'
+import { ProofreadingPage } from './pages/ProofreadingPage'
 import { ReviewPage } from './pages/ReviewPage'
 import { RulesPage } from './pages/RulesPage'
 import { SettingsPage } from './pages/SettingsPage'
@@ -33,7 +34,8 @@ function App() {
       {route === 'level-check' || route === 'test-analysis' ? <DiagnosticPage /> : null}
       {route === 'settings' ? <SettingsPage /> : null}
       {route === 'topics' ? <TopicsPage /> : null}
-      {!['practice', 'my-mistakes', 'rules', 'libraries', 'review', 'level-check', 'test-analysis', 'settings', 'topics'].includes(route) ? <DashboardPage /> : null}
+      {route === 'proofreading' ? <ProofreadingPage /> : null}
+      {!['practice', 'my-mistakes', 'rules', 'libraries', 'review', 'level-check', 'test-analysis', 'settings', 'topics', 'proofreading'].includes(route) ? <DashboardPage /> : null}
     </AppShell>
   )
 }

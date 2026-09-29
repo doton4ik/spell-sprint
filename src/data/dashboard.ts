@@ -13,6 +13,7 @@ export const navigationItems: NavigationItem[] = [
   { label: 'Rules', icon: 'rules' },
   { label: 'Topics', icon: 'topics' },
   { label: 'Level Check', icon: 'analysis' },
+  { label: 'Proofreading', icon: 'eye' },
   { label: 'Libraries', icon: 'library' },
 ]
 

@@ -3,6 +3,7 @@ import type { PracticeAttempt } from '../types/practice'
 import { classifyMistake, type ConfusableSet } from './mistakeClassifier'
 import { shouldClassify } from './mistakeOutbox'
 import { getPracticeAttempts } from './practiceStorage'
+import { proofreadingTypes } from './proofreadingEngine'
 
 // "Patterns" view of My Mistakes: the same wrong answers, grouped by WHY they were wrong
 // (vowel order, doubling before -ing …) instead of by word, so a one-off typo can be told
@@ -36,16 +37,25 @@ export function getMistakePatterns(confusableSets: ConfusableSet[] = []): { patt
   const buckets = new Map<string, MistakePattern & { wordSet: Set<string>; idSet: Set<string>; itemKeys: Set<string> }>()
   let unclassified = 0
 
-  for (const attempt of attempts.filter(shouldClassify)) {
-    const { learning } = classifyMistake(attempt.correctAnswer, attempt.userAnswer, { taskType: attempt.taskType, errorCategory: attempt.errorCategory, confusableSets })
-    const meaningful = learning.filter((tag) => tag.slug !== 'unclassified' && tag.confidence >= 0.5)
-    const specific = meaningful.filter((tag) => !locationOnly.has(tag.slug))
-    const tags = specific.length ? specific : meaningful
+  // Grammar mistakes from Proofreading already know their type ("Grammar · Articles"); spelling
+  // mistakes are classified letter by letter.
+  const grammarType = (attempt: PracticeAttempt) => /^Grammar · (.+)$/.exec(attempt.errorCategory)?.[1]
+  for (const attempt of attempts.filter((item) => !item.isCorrect && (shouldClassify(item) || grammarType(item)))) {
+    const grammar = grammarType(attempt)
+    let tags: Array<{ slug: string }>
+    if (grammar) tags = [{ slug: `grammar:${grammar}` }]
+    else {
+      const { learning } = classifyMistake(attempt.correctAnswer, attempt.userAnswer, { taskType: attempt.taskType, errorCategory: attempt.errorCategory, confusableSets })
+      const meaningful = learning.filter((tag) => tag.slug !== 'unclassified' && tag.confidence >= 0.5)
+      const specific = meaningful.filter((tag) => !locationOnly.has(tag.slug))
+      tags = specific.length ? specific : meaningful
+    }
     if (!tags.length) { unclassified += 1; continue }
 
     const age = now - new Date(attempt.createdAt).getTime()
     for (const tag of tags) {
-      const info = errorPatternLabel(tag.slug)
+      const grammarInfo = tag.slug.startsWith('grammar:') ? Object.values(proofreadingTypes).find((type) => type.label === tag.slug.slice(8)) : undefined
+      const info = grammarInfo ?? errorPatternLabel(tag.slug)
       const bucket = buckets.get(tag.slug) ?? { slug: tag.slug, label: info.label, hint: info.hint, errors: 0, words: [], wordIds: [], recovered: 0, last30: 0, previous30: 0, lastSeen: attempt.createdAt, examples: [], wordSet: new Set(), idSet: new Set(), itemKeys: new Set() }
       bucket.errors += 1
       if (age < 30 * DAY) bucket.last30 += 1
