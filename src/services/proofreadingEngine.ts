@@ -162,8 +162,14 @@ export function checkExercise(exercise: Exercise, edits: Map<number, string>): P
     let end = start
     while (end + 1 < ordered.length && (position.get(ordered[end + 1].tokenIds[0]) ?? -2) === (position.get(ordered[end].tokenIds.at(-1)!) ?? -9) + 1) end += 1
     if (end > start) {
-      const run = ordered.slice(start, end + 1)
-      if (normalise(read(run.flatMap((slot) => slot.tokenIds), true)) === normalise(run.map((slot) => slot.correct[0]).join(' '))) run.forEach((slot) => fixedTogether.add(slot.id))
+      // Any stretch of two or more neighbours that now reads correctly counts, even if a mistake
+      // elsewhere in the same chain is still wrong ("fallen across the main path" with a slip left).
+      for (let from = start; from < end; from += 1) {
+        for (let to = from + 1; to <= end; to += 1) {
+          const run = ordered.slice(from, to + 1)
+          if (normalise(read(run.flatMap((slot) => slot.tokenIds), true)) === normalise(run.map((slot) => slot.correct[0]).join(' '))) run.forEach((slot) => fixedTogether.add(slot.id))
+        }
+      }
       start = end
     }
   }

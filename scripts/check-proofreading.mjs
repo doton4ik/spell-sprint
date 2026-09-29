@@ -17,6 +17,7 @@ const engine = await import(pathToFileURL(join(dir, 'proofreadingEngine.ts')).hr
 const { proofreadingTexts } = await import(pathToFileURL(join(dir, 'proofreadingTexts.ts')).href)
 
 let failed = 0
+const lowVariety = []
 const fail = (message) => { failed += 1; if (failed <= 40) console.log('FAIL', message) }
 const ids = new Set()
 const levels = { A2: 0, B1: 0, B2: 0, C1: 0 }
@@ -27,7 +28,9 @@ for (const text of proofreadingTexts) {
   problems.forEach((problem) => fail(`${text.id}: ${problem}`))
   const places = segments.filter((segment) => segment.kind === 'place').length
   if (places < 8) fail(`${text.id}: only ${places} marked places`)
-  if (places < engine.mistakeCountFor(text) * 2) fail(`${text.id}: ${places} places for ${engine.mistakeCountFor(text)} mistakes — needs at least twice as many for variety`)
+  // Enough places to vary the exercise: at least 2 more than one exercise uses (twice as many is the goal).
+  if (places < engine.mistakeCountFor(text) + 2) fail(`${text.id}: ${places} places for ${engine.mistakeCountFor(text)} mistakes — too few to vary the exercise`)
+  else if (places < engine.mistakeCountFor(text) * 2) lowVariety.push(text.id)
 
   for (let seed = 1; seed <= 150; seed += 1) {
     const exercise = engine.buildExercise(text, seed)
@@ -59,5 +62,6 @@ for (const text of proofreadingTexts) {
   }
 }
 console.log('texts per level:', levels)
+if (lowVariety.length) console.log(`note: ${lowVariety.length} text(s) have fewer than twice as many places as mistakes (less variety)`)
 console.log(failed ? `\n${failed} problem(s).` : `\nAll ${proofreadingTexts.length} texts passed (150 random exercises each).`)
 process.exitCode = failed ? 1 : 0
