@@ -12,7 +12,7 @@
 .level-hero__meta span { align-items: center; background: #eef5f2; border-radius: 20px; color: #4f6a64; display: inline-flex; font-size: calc(13px * var(--fs)); font-weight: 600; gap: 6px; padding: 5px 11px; }
 .level-hero__start { margin-top: 22px; min-height: 46px; padding: 0 22px; }
 .level-hero__next { color: #8a6a1f; font-size: calc(13.5px * var(--fs)); margin: 12px 0 0; }
-.level-hero__last { align-content: start; background: linear-gradient(140deg, #176f65, #1b8d7d); border: 0; border-radius: var(--radius-lg); color: #fff; cursor: pointer; display: grid; font-family: inherit; gap: 6px; min-width: 230px; padding: 20px 22px; text-align: left; }
+.level-hero__last { align-content: start; background: linear-gradient(140deg, #0e6a5c, #1b8d7d); border: 0; border-radius: var(--radius-lg); color: #fff; cursor: pointer; display: grid; font-family: inherit; gap: 6px; min-width: 230px; padding: 20px 22px; text-align: left; }
 .level-hero__last > span { color: rgba(255, 255, 255, .78); font-size: calc(12.5px * var(--fs)); font-weight: 650; }
 .level-hero__last > strong { font-size: calc(46px * var(--fs)); letter-spacing: -1px; line-height: 1.05; }
 .level-hero__last > div { display: grid; gap: 3px; }
@@ -82,7 +82,7 @@
 .level-back svg { transform: rotate(180deg); }
 .level-result-hero { align-items: center; display: flex; gap: 20px; justify-content: space-between; }
 .level-result-hero p:not(.eyebrow) { color: var(--ink-muted); font-size: calc(15px * var(--fs)); line-height: 1.55; margin: 10px 0 0; }
-.level-result-hero__badge { align-items: center; background: linear-gradient(140deg, #176f65, #1b8d7d); border-radius: 22px; color: #fff; display: flex; flex-shrink: 0; font-size: calc(40px * var(--fs)); height: 96px; justify-content: center; width: 96px; }
+.level-result-hero__badge { align-items: center; background: linear-gradient(140deg, #0e6a5c, #1b8d7d); border-radius: 22px; color: #fff; display: flex; flex-shrink: 0; font-size: calc(40px * var(--fs)); height: 96px; justify-content: center; width: 96px; }
 .level-skills { display: grid; gap: 14px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 24px; }
 .level-skill { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow-sm); display: grid; gap: 8px; padding: 18px; }
 .level-skill__head { align-items: center; display: flex; justify-content: space-between; }

@@ -3,7 +3,7 @@
 .sidebar { background: #fbfcfa; border-right: 1px solid var(--line); display: flex; flex-direction: column; height: 100vh; left: 0; padding: 29px 16px 18px; position: fixed; top: 0; width: 244px; z-index: 5; }
 .brand { align-items: center; color: #183d37; display: inline-flex; font-size: calc(20px * var(--fs)); font-weight: 750; gap: 10px; letter-spacing: -.65px; margin: 0 10px 37px; width: fit-content; }
 .brand > span:last-child span { color: var(--teal); }
-.brand-mark { align-items: center; background: var(--teal); border-radius: 9px; color: white; display: inline-flex; height: 31px; justify-content: center; width: 31px; }
+.brand-mark { flex: 0 0 auto; }
 .main-nav { display: grid; gap: 4px; }
 .nav-link { align-items: center; border-radius: 10px; color: #6b7a76; display: flex; font-size: calc(15px * var(--fs)); font-weight: 540; gap: 13px; min-height: 43px; padding: 0 12px; transition: background .18s ease, color .18s ease; }
 .nav-link:hover { background: #f0f5f2; color: var(--teal-dark); }

@@ -4,6 +4,7 @@ import { getMistakeEntries, subscribeToLearningData } from '../../services/learn
 import { getProfile, subscribeToProfile } from '../../services/profileStorage'
 import type { IconName } from '../../types/dashboard'
 import { Icon } from '../icons/Icon'
+import { BrandMark } from './BrandMark'
 import './app-shell.css'
 
 type AppShellProps = PropsWithChildren<{
@@ -38,7 +39,7 @@ export function AppShell({ children, activePage }: AppShellProps) {
     <div className="app-shell">
       <aside className="sidebar" aria-label="Main navigation">
         <a className="brand" href="#dashboard" aria-label="Spell Sprint dashboard">
-          <span className="brand-mark"><Icon name="bolt" size={19} strokeWidth={2.2} /></span>
+          <BrandMark />
           <span>Spell<span>Sprint</span></span>
         </a>
 
