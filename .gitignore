@@ -11,3 +11,6 @@ dist
 # Arena skill: tournament runs and a stray clone of the skill repository
 .arena/
 arena-skill/
+
+# Local Claude Code settings (launch config, installed skills)
+.claude/
