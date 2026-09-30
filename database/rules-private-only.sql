@@ -14,6 +14,9 @@ begin;
 
 drop policy if exists "Create own rules" on public.rules;
 drop policy if exists "Update own rules" on public.rules;
+-- The new names too, so running this file a second time is harmless.
+drop policy if exists "Create own private rules" on public.rules;
+drop policy if exists "Update own private rules" on public.rules;
 
 create policy "Create own private rules" on public.rules
   for insert with check (created_by = auth.uid() and visibility = 'private');
