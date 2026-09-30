@@ -5,8 +5,9 @@
 // automatically and are not marked. Full format: see the content brief.
 
 export type ProofreadingLevel = 'A2' | 'B1' | 'B2' | 'C1'
-export type ProofreadingFormat = 'email' | 'message' | 'story' | 'notice' | 'article' | 'dialogue' | 'review' | 'diary' | 'instructions' | 'report'
-export type ProofreadingText = { id: string; title: string; level: ProofreadingLevel; format: ProofreadingFormat; topic: string; text: string }
+export type ProofreadingFormat = 'email' | 'message' | 'story' | 'notice' | 'article' | 'dialogue' | 'review' | 'diary' | 'instructions' | 'report' | 'post' | 'blog' | 'interview' | 'chat' | 'column' | 'application' | 'speech'
+// situation: who wrote the text and why the learner is checking it ("Your friend wants to post this review…").
+export type ProofreadingText = { id: string; title: string; level: ProofreadingLevel; format: ProofreadingFormat; topic: string; text: string; situation?: string }
 
 export const proofreadingTexts: ProofreadingText[] = [
   {

@@ -93,3 +93,5 @@
 }
 .proof-card__size { align-items: center; color: var(--ink-faint); display: flex; flex-wrap: wrap; font-size: calc(12.5px * var(--fs)); gap: 6px; }
 .proof-card__size b { background: #eaf1f7; border-radius: 6px; color: #4a718b; font-size: calc(11.5px * var(--fs)); padding: 2px 6px; }
+.proof-card__situation { color: #71837e; display: block; font-size: calc(12px * var(--fs)); font-style: italic; line-height: 1.4; margin-top: 4px; }
+.proof-situation { background: #f7f3e8; border-left: 3px solid #d9c38c; border-radius: 6px; color: #6f5f39; font-size: calc(13.5px * var(--fs)); line-height: 1.5; margin: 0 0 10px; padding: 9px 12px; }

@@ -8,7 +8,7 @@ import './proofreading.css'
 const levels: ProofreadingLevel[] = ['A2', 'B1', 'B2', 'C1']
 const SHOW_COUNT_KEY = 'spell-sprint.proofreading-show-count'
 const readShowCount = () => { try { return window.localStorage.getItem(SHOW_COUNT_KEY) !== 'false' } catch { return true } }
-const formatLabels: Record<string, string> = { email: 'Email', message: 'Message', story: 'Story', notice: 'Notice', article: 'Article', dialogue: 'Dialogue', review: 'Review', diary: 'Diary', instructions: 'Instructions', report: 'Report' }
+const formatLabels: Record<string, string> = { email: 'Email', message: 'Message', story: 'Story', notice: 'Notice', article: 'Article', dialogue: 'Dialogue', review: 'Review', diary: 'Diary', instructions: 'Instructions', report: 'Report', post: 'Forum post', blog: 'Blog', interview: 'Interview', chat: 'Group chat', column: 'Column', application: 'Application', speech: 'Speech' }
 
 // The level of the last Level Check, so the first text is pitched right.
 function defaultLevel(): ProofreadingLevel {
@@ -67,7 +67,7 @@ export function ProofreadingPage() {
             {texts.map((text) => (
               <button className="proof-card" type="button" onClick={() => start(text)} key={text.id}>
                 <span className="proof-card__meta">{formatLabels[text.format] ?? text.format} · {text.topic}</span>
-                <strong>{text.title}</strong>
+                <strong>{text.title}</strong>{text.situation ? <small className="proof-card__situation">{text.situation}</small> : null}
                 <span className="proof-card__size">{wordCount(text)} words · {mistakeCountFor(text)} mistakes{wordCount(text) > 200 ? <b>Long read</b> : null}</span>
                 <span className="proof-card__go">Start <Icon name="arrow" size={14} /></span>
               </button>
@@ -107,6 +107,7 @@ function Reader({ text, exercise, showCount, onBack, onCheck }: { text: Proofrea
         <div><span className="proof-card__meta">{text.level} · {formatLabels[text.format] ?? text.format} · {text.topic}</span><h1>{text.title}</h1></div>
         <div className="proof-counter"><strong>{edits.size}</strong><span>{showCount ? `of ${exercise.slots.length} mistakes marked` : 'words changed'}</span></div>
       </header>
+      {text.situation ? <p className="proof-situation">{text.situation}</p> : null}
       <p className="proof-instructions">{showCount ? `There are ${exercise.slots.length} mistakes.` : 'Find all the mistakes.'} Tap a word to correct it. To add a missing word, tap the word next to the gap and type both (car → a car). To remove a word, delete it.</p>
 
       <article className="proof-text">
