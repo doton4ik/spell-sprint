@@ -72,3 +72,4 @@
 .hidden-word strong { color: #3d544e; }
 .hidden-word button { background: #fff; border: 1px solid #d6e3de; border-radius: 6px; color: var(--teal); font-size: calc(12px * var(--fs)); font-weight: 700; min-height: 30px; padding: 0 8px; }
 @media (max-width: 800px) { .pack-card { grid-template-columns: 1fr; } .pack-card__actions button { flex: 1; } }
+.word-row small.word-note-line { color: #7a6320; }

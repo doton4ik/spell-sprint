@@ -8,9 +8,18 @@ type Flag = { on: boolean; at: string }
 // removed: things the learner deleted — imported libraries ("lib:<name>"), imported words ("word:<wordId>")
 // and saved rules ("rule:<id>").
 // Sync only ever adds, so without these marks a deleted library would come back from the cloud.
-export type LibraryPrefs = { hidden: Record<string, Flag>; packs: Record<string, Flag>; removed: Record<string, Flag>; packsInitialised?: boolean }
+// notes: the learner's own memory tip per word ("acco-MM-odation: two cots, two mattresses").
+// An empty text is a deleted note; it stays as a mark so an older copy cannot bring it back.
+type Note = { text: string; at: string }
+export type LibraryPrefs = { hidden: Record<string, Flag>; packs: Record<string, Flag>; removed: Record<string, Flag>; notes: Record<string, Note>; packsInitialised?: boolean }
+export const NOTE_LIMIT = 140
 
-const empty = (): LibraryPrefs => ({ hidden: {}, packs: {}, removed: {} })
+const empty = (): LibraryPrefs => ({ hidden: {}, packs: {}, removed: {}, notes: {} })
+
+function isNoteMap(value: unknown): value is Record<string, Note> {
+  return Boolean(value) && typeof value === 'object' && !Array.isArray(value)
+    && Object.values(value as object).every((note) => note && typeof (note as Note).text === 'string' && typeof (note as Note).at === 'string')
+}
 
 function isFlagMap(value: unknown): value is Record<string, Flag> {
   return Boolean(value) && typeof value === 'object' && !Array.isArray(value)
@@ -21,7 +30,7 @@ export function getLibraryPrefs(): LibraryPrefs {
   try {
     const stored = JSON.parse(window.localStorage.getItem(PREFS_KEY) ?? 'null') as Partial<LibraryPrefs> | null
     if (!stored) return empty()
-    return { hidden: isFlagMap(stored.hidden) ? stored.hidden : {}, packs: isFlagMap(stored.packs) ? stored.packs : {}, removed: isFlagMap(stored.removed) ? stored.removed : {}, packsInitialised: stored.packsInitialised === true }
+    return { hidden: isFlagMap(stored.hidden) ? stored.hidden : {}, packs: isFlagMap(stored.packs) ? stored.packs : {}, removed: isFlagMap(stored.removed) ? stored.removed : {}, notes: isNoteMap(stored.notes) ? stored.notes : {}, packsInitialised: stored.packsInitialised === true }
   } catch { return empty() }
 }
 
@@ -39,6 +48,14 @@ export function getHiddenWordIds() {
 export function setWordHidden(wordId: string, hidden: boolean) {
   const prefs = getLibraryPrefs()
   prefs.hidden[wordId] = { on: hidden, at: now() }
+  save(prefs)
+}
+
+export function getWordNote(wordId: string) { return getLibraryPrefs().notes[wordId]?.text ?? '' }
+
+export function setWordNote(wordId: string, text: string) {
+  const prefs = getLibraryPrefs()
+  prefs.notes[wordId] = { text: text.trim().slice(0, NOTE_LIMIT), at: now() }
   save(prefs)
 }
 
@@ -77,12 +94,12 @@ export function mergeLibraryPrefs(incoming: unknown) {
   if (!incoming || typeof incoming !== 'object') return
   const remote = incoming as Partial<LibraryPrefs>
   const local = getLibraryPrefs()
-  const merge = (mine: Record<string, Flag>, theirs: unknown) => {
-    if (!isFlagMap(theirs)) return mine
+  const merge = <T extends { at: string }>(mine: Record<string, T>, theirs: unknown, valid: (value: unknown) => value is Record<string, T>) => {
+    if (!valid(theirs)) return mine
     const result = { ...mine }
     for (const [id, flag] of Object.entries(theirs)) if (!result[id] || flag.at > result[id].at) result[id] = flag
     return result
   }
-  const next: LibraryPrefs = { hidden: merge(local.hidden, remote.hidden), packs: merge(local.packs, remote.packs), removed: merge(local.removed, remote.removed), packsInitialised: local.packsInitialised || remote.packsInitialised === true }
+  const next: LibraryPrefs = { hidden: merge(local.hidden, remote.hidden, isFlagMap), packs: merge(local.packs, remote.packs, isFlagMap), removed: merge(local.removed, remote.removed, isFlagMap), notes: merge(local.notes, remote.notes, isNoteMap), packsInitialised: local.packsInitialised || remote.packsInitialised === true }
   if (JSON.stringify(next) !== JSON.stringify(local)) save(next)
 }

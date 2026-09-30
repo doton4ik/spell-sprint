@@ -2,6 +2,7 @@ import { useEffect, useState, type FormEvent } from 'react'
 import type { CheckResult, PracticeTask } from '../../types/practice'
 import { Icon } from '../icons/Icon'
 import { MistakeBreakdown } from './MistakeBreakdown'
+import { WordTip } from './WordTip'
 import { RuleChallenge } from '../rules/RuleChallenge'
 import type { Rule } from '../../types/rules'
 import type { WordReason } from '../../services/dailyPlan'
@@ -42,6 +43,7 @@ export function TaskCard({ task, answer, result, attemptsOnTask, answerRevealed,
       {mode === 'choose-spelling' ? <div className="spelling-choices">{(task.choices ?? [task.answer]).map((choice) => <button type="button" className={answer === choice ? 'spelling-choice spelling-choice--selected' : 'spelling-choice'} onClick={() => onAnswerChange(choice)} key={choice}>{choice}</button>)}</div> : <><label className="answer-label" htmlFor="practice-answer">Your answer</label><input id="practice-answer" autoFocus value={answer} onChange={(event) => onAnswerChange(event.target.value)} placeholder={mode === 'translate-ru' ? 'Введите перевод…' : 'Type your answer…'} autoComplete="off" disabled={correct} /></>}
       {otherMeaning && result === 'idle' ? <div className="other-meaning" role="status"><Icon name="lightbulb" size={17} /><span><strong>“{otherMeaning.word}” is also “{otherMeaning.translation}” — a different meaning.</strong><small>Here we need another word for “{task.prompt}”. Not counted as a mistake — try again.</small></span></div> : null}
       {result !== 'idle' ? <div className={`task-feedback task-feedback--${correct ? 'correct' : 'incorrect'}`} role="status"><Icon name={correct ? 'check' : 'refresh'} size={17} /><span><strong>{correct ? 'Correct!' : 'Not quite.'}</strong>{!correct && <small>Your answer: {checkedAnswer || 'Skipped'}</small>}<small>Correct answer: {task.answer} — {mode === 'translate-ru' ? task.prompt : task.prompt}</small>{task.example && <small>Example: {task.example}</small>}</span></div> : null}
+      {result !== 'idle' && task.wordId ? <WordTip wordId={task.wordId} wrong={!correct} key={task.wordId} /> : null}
       {result === 'incorrect' && spellingTask && checkedAnswer.trim() ? <MistakeBreakdown expected={task.answer} submitted={checkedAnswer} taskType={task.type} wordId={task.wordId} showRules={showRuleAfterMistake} onChallenge={setChallengeRules} /> : null}
       {result === 'incorrect' && showRuleAfterMistake && task.rule && !isDefaultRule ? <p className="related-rule"><Icon name="lightbulb" size={16} /> {task.rule}</p> : null}
       {revealed && result === 'idle' ? <div className="revealed-answer"><span>Answer</span><strong>{task.answer}</strong></div> : null}

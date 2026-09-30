@@ -212,3 +212,15 @@
 .other-meaning > svg { flex-shrink: 0; margin-top: 2px; }
 .other-meaning strong { display: block; font-size: calc(14.5px * var(--fs)); }
 .other-meaning small { color: #56718a; display: block; font-size: calc(13.5px * var(--fs)); margin-top: 3px; }
+/* The learner's own memory tip */
+.word-tip { align-items: flex-start; background: #fbf6e6; border: 1px solid #efe1b5; border-radius: 10px; color: #6b5a2d; display: flex; font-size: calc(13px * var(--fs)); gap: 8px; line-height: 1.45; margin: 10px 0 0; padding: 9px 12px; }
+.word-tip svg { flex: 0 0 auto; margin-top: 2px; }
+.word-tip span { flex: 1; }
+.word-tip button { background: transparent; border: 0; color: #8a6d1f; font-weight: 700; padding: 0 2px; }
+.word-tip--editing { display: grid; gap: 8px; }
+.word-tip--editing label { display: grid; font-weight: 700; gap: 5px; }
+.word-tip--editing input { background: #fff; border: 1px solid #e3d3a3; border-radius: 8px; font-size: max(16px, calc(14px * var(--fs))); padding: 8px 10px; }
+.word-tip--editing div { align-items: center; display: flex; flex-wrap: wrap; gap: 8px; }
+.word-tip--editing small { color: #9a8a5e; margin-left: auto; }
+.word-tip-add { align-items: center; background: transparent; border: 0; color: #8a7a4f; display: inline-flex; font-size: calc(12.5px * var(--fs)); font-weight: 700; gap: 5px; margin-top: 8px; padding: 4px 0; }
+.word-tip-add--wrong { background: #fbf6e6; border: 1px dashed #e3d3a3; border-radius: 8px; color: #7a6320; padding: 7px 11px; }
