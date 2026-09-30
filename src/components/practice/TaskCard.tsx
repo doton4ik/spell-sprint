@@ -8,7 +8,7 @@ import type { WordReason } from '../../services/dailyPlan'
 
 type TaskCardProps = {
   task: PracticeTask; answer: string; result: CheckResult; attemptsOnTask: number; answerRevealed: boolean; hintStep: number; allowSkip: boolean; showRuleAfterMistake: boolean
-  onAnswerChange: (value: string) => void; onCheck: () => void; onShowAnswer: () => void; onHint: () => void; onPlayAudio: () => void; onSkip: () => void; onNext: () => void; onRepeatLater: () => void; audioMessage?: string; reason?: WordReason; otherMeaning?: { word: string; translation: string } | null
+  onAnswerChange: (value: string) => void; onCheck: () => void; onShowAnswer: () => void; onHint: () => void; onPlayAudio: () => void; onSkip: () => void; onNext: () => void; onRepeatLater: () => void; audioMessage?: string; reason?: WordReason; otherMeaning?: { word: string; translation: string } | null; onHideWord?: () => void
 }
 
 const labels = { 'write-en': 'Write in English', 'listen-write': 'Listen and write', 'translate-ru': 'Translate to Russian', 'choose-spelling': 'Choose correct spelling' }
@@ -21,7 +21,7 @@ function hintFor(answer: string, step: number) {
   return `Answer: ${answer}`
 }
 
-export function TaskCard({ task, answer, result, attemptsOnTask, answerRevealed, hintStep, allowSkip, showRuleAfterMistake, onAnswerChange, onCheck, onShowAnswer, onHint, onPlayAudio, onSkip, onNext, onRepeatLater, audioMessage, reason, otherMeaning }: TaskCardProps) {
+export function TaskCard({ task, answer, result, attemptsOnTask, answerRevealed, hintStep, allowSkip, showRuleAfterMistake, onAnswerChange, onCheck, onShowAnswer, onHint, onPlayAudio, onSkip, onNext, onRepeatLater, audioMessage, reason, otherMeaning, onHideWord }: TaskCardProps) {
   const mode = task.mode ?? (task.type === 'translate-en-ru' ? 'translate-ru' : task.type === 'translate-ru-en' ? 'write-en' : 'choose-spelling')
   const revealed = answerRevealed || result !== 'idle' || hintStep >= 5
   const correct = result === 'correct'
@@ -45,7 +45,7 @@ export function TaskCard({ task, answer, result, attemptsOnTask, answerRevealed,
       {result === 'incorrect' && spellingTask && checkedAnswer.trim() ? <MistakeBreakdown expected={task.answer} submitted={checkedAnswer} taskType={task.type} wordId={task.wordId} showRules={showRuleAfterMistake} onChallenge={setChallengeRules} /> : null}
       {result === 'incorrect' && showRuleAfterMistake && task.rule && !isDefaultRule ? <p className="related-rule"><Icon name="lightbulb" size={16} /> {task.rule}</p> : null}
       {revealed && result === 'idle' ? <div className="revealed-answer"><span>Answer</span><strong>{task.answer}</strong></div> : null}
-      <div className="task-actions"><button className="check-button" type="submit" disabled={!answer.trim() || correct}><Icon name="check" size={18} /> Check</button>{result !== 'idle' ? <button className="next-button" type="button" onClick={onNext}>Next <Icon name="arrow" size={17} /></button> : null}<div className="task-actions__secondary"><button className="quiet-button" type="button" onClick={onHint} disabled={hintStep >= 5}><Icon name="lightbulb" size={17} /> Hint</button><button className="quiet-button" type="button" onClick={onPlayAudio}><Icon name="volume" size={17} /> Listen</button><button className="quiet-button" type="button" onClick={onShowAnswer} disabled={revealed}><Icon name="eye" size={17} /> Show answer</button>{allowSkip ? <button className="quiet-button" type="button" onClick={onSkip}><Icon name="skip" size={17} /> Skip</button> : null}</div></div>
+      <div className="task-actions"><button className="check-button" type="submit" disabled={!answer.trim() || correct}><Icon name="check" size={18} /> Check</button>{result !== 'idle' ? <button className="next-button" type="button" onClick={onNext}>Next <Icon name="arrow" size={17} /></button> : null}<div className="task-actions__secondary"><button className="quiet-button" type="button" onClick={onHint} disabled={hintStep >= 5}><Icon name="lightbulb" size={17} /> Hint</button><button className="quiet-button" type="button" onClick={onPlayAudio}><Icon name="volume" size={17} /> Listen</button><button className="quiet-button" type="button" onClick={onShowAnswer} disabled={revealed}><Icon name="eye" size={17} /> Show answer</button>{allowSkip ? <button className="quiet-button" type="button" onClick={onSkip}><Icon name="skip" size={17} /> Skip</button> : null}{onHideWord ? <button className="quiet-button" type="button" onClick={onHideWord} title="Do not show this word again. Restore it in Libraries → My Libraries."><Icon name="eye" size={17} /> Hide word</button> : null}</div></div>
       {audioMessage ? <p className="related-rule">{audioMessage}</p> : null}{result !== 'idle' || revealed ? <button className="quiet-button" type="button" onClick={onRepeatLater}>Repeat this word later</button> : null}
     </form>
     {challengeRules ? <RuleChallenge rules={challengeRules} avoidWord={task.answer} onClose={() => setChallengeRules(null)} key={task.id} /> : null}

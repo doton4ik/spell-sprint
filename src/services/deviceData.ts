@@ -9,6 +9,7 @@ const PERSONAL_KEYS = [
   'spell-sprint.rule-review',
   'spell-sprint.level-checks',
   'spell-sprint.custom-libraries',
+  'spell-sprint.library-prefs',
   'spell-sprint.mistake-outbox',
   'spell-sprint.diagnostic-result',
   'spell-sprint.profile',

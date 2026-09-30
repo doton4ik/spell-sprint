@@ -1,4 +1,6 @@
 import { builtInLibraries } from '../data/libraries'
+import { libraryPacks, packForLibrary } from '../data/libraryPacks'
+import { getHiddenWordIds, getLibraryPrefs, initialisePacks } from './libraryPrefs'
 import { canonicalTopic, canonicalTopics, libraryKindForName, stableWordId } from '../data/libraryTaxonomy'
 import { normalisePartOfSpeech, partOfSpeechOptions, type LibraryWord, type WordLibrary } from '../types/library'
 
@@ -80,7 +82,33 @@ export function mergeImportedLibraries(incoming: WordLibrary[]) {
   if (JSON.stringify(merged) !== JSON.stringify(local)) window.localStorage.setItem(CUSTOM_LIBRARIES_KEY, JSON.stringify(merged))
   return after - before
 }
-export function getLibraries(): WordLibrary[] { return resolveLibraries([...builtInLibraries, ...getImportedLibraries()]) }
+// Every library and word, including switched-off packs and hidden words. Use it to look things up
+// (history, past mistakes), never to choose what the learner practises.
+export function getEveryLibrary(): WordLibrary[] { return resolveLibraries([...builtInLibraries, ...getImportedLibraries()]) }
+export function getEveryWord() { return uniqueWords(getEveryLibrary().flatMap((library) => library.words)) }
+
+// Before packs existed everything was on. Packs the learner has already practised stay on.
+function packsInUse() {
+  try {
+    const attempts = JSON.parse(window.localStorage.getItem('spell-sprint.practice-attempts') ?? '[]') as Array<{ library?: string }>
+    const used = new Set(attempts.map((attempt) => attempt.library).filter(Boolean))
+    return libraryPacks.filter((pack) => pack.libraries.some((name) => used.has(name))).map((pack) => pack.id)
+  } catch { return [] }
+}
+
+export function isLibraryActive(library: WordLibrary) {
+  if (library.source !== 'built-in') return true
+  const pack = packForLibrary(library.name)
+  return !pack || getLibraryPrefs().packs[pack.id]?.on === true
+}
+
+// What the learner studies: the base library, the packs they switched on and their own imports,
+// without the words they hid.
+export function getLibraries(): WordLibrary[] {
+  if (!getLibraryPrefs().packsInitialised) initialisePacks(packsInUse())
+  const hidden = getHiddenWordIds()
+  return getEveryLibrary().filter(isLibraryActive).map((library) => ({ ...library, words: library.words.filter((word) => !hidden.has(word.wordId)) })).filter((library) => library.words.length)
+}
 export function getAllWords() { return uniqueWords(getLibraries().flatMap((library) => library.words)) }
 export function getTopicNames() { return [...new Set([...initialTopics, ...getAllWords().map((word) => word.topic)])] }
 const LIBRARIES_UPDATED_EVENT = 'spell-sprint:learning-updated'

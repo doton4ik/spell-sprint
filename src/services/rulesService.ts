@@ -1,5 +1,5 @@
 import { getActiveCloudSession, supabaseAuthedFetch, supabasePublicRequest, supabaseUserRequest, isSupabaseConfigured } from './supabase'
-import { getAllWords } from './libraryStorage'
+import { getEveryWord } from './libraryStorage'
 import { getProgressRow, nextProgressAfterMistake, upsertProgressRow } from './ruleProgressStore'
 import type { MistakeEvent, Rule, RuleExample, RuleRelationship, RuleType, RuleWordLink } from '../types/rules'
 
@@ -118,7 +118,7 @@ export async function getRuleLinkedWords(ruleId: string): Promise<Array<{ wordId
   if (!isSupabaseConfigured()) return []
   try {
     const rows = await supabasePublicRequest(`/rest/v1/rule_word_links?rule_id=eq.${encodeURIComponent(ruleId)}&select=word_id,relation`) as Array<{ word_id: string; relation: RuleWordLink['relation'] }>
-    const words = getAllWords()
+    const words = getEveryWord()
     return rows.map((row) => {
       const match = words.find((word) => word.wordId === row.word_id)
       return { wordId: row.word_id, relation: row.relation, word: match?.word, translation: match?.translation }

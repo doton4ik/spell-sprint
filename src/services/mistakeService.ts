@@ -1,5 +1,5 @@
 import { supabaseAuthedFetch, type SupabaseSession } from './supabase'
-import { getAllWords } from './libraryStorage'
+import { getEveryWord } from './libraryStorage'
 import { getRuleIdsForErrorType, getRuleIdsForWord } from './rulesService'
 import { getProgressRow, nextProgressAfterMistake, upsertProgressRow } from './ruleProgressStore'
 import { classifyMistake } from './mistakeClassifier'
@@ -22,7 +22,7 @@ import type { MistakeRecordOutcome } from '../types/rules'
 // mistake_events, since v1 only links rules to errors made in Spell Sprint tests.
 export async function sendMistake(attempt: PracticeAttempt, session: SupabaseSession): Promise<MistakeRecordOutcome> {
   const catalog = await loadErrorCatalog()
-  const word = attempt.wordId ? getAllWords().find((item) => item.wordId === attempt.wordId) : undefined
+  const word = attempt.wordId ? getEveryWord().find((item) => item.wordId === attempt.wordId) : undefined
   const classification = classifyMistake(attempt.correctAnswer, attempt.userAnswer, {
     taskType: attempt.taskType, errorCategory: attempt.errorCategory, partOfSpeech: word?.partOfSpeech, confusableSets: catalog.confusableSets,
   })

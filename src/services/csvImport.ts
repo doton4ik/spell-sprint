@@ -1,7 +1,7 @@
 import { canonicalTopic, libraryKindForName, stableWordId } from '../data/libraryTaxonomy'
 import { normalisePartOfSpeech, partOfSpeechOptions, type LibraryDifficulty, type LibraryWord, type WordLibrary } from '../types/library'
 import { parseCsvRows } from './csv'
-import { getAllWords, getImportedLibraries, saveImportedLibraries } from './libraryStorage'
+import { getEveryWord, getImportedLibraries, saveImportedLibraries } from './libraryStorage'
 
 // CSV import in two steps: analyse (nothing is saved) → the learner sees what will happen → commit.
 // Only `word` and `translation` are required; every other column has a sensible default, and each
@@ -43,7 +43,7 @@ export function analyseCsv(text: string, fileName: string): CsvPreview {
   const missing = requiredColumns.filter((column) => !headers.includes(column))
   if (missing.length) return fail(`Missing required column${missing.length === 1 ? '' : 's'}: ${missing.join(', ')}. The first row must be the header (download the template to see it).`)
 
-  const existing = getAllWords()
+  const existing = getEveryWord()
   const existingKeys = new Set(existing.map(duplicateKey))
   const existingById = new Map(existing.map((word) => [norm(word.wordId), word]))
   const existingTopics = new Set(existing.map((word) => word.topic))

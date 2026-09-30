@@ -1,7 +1,7 @@
 import { mixedPracticeTasks } from '../data/practice'
 import type { LibraryWord } from '../types/library'
 import type { PracticeMode, PracticeTask } from '../types/practice'
-import { getAllWords, getLibraries } from './libraryStorage'
+import { getAllWords, getEveryWord, getLibraries } from './libraryStorage'
 import { getReviewEntries } from './learningData'
 import { getPracticeAttempts } from './practiceStorage'
 
@@ -44,7 +44,7 @@ export function getTasksForSelection(selection: PracticeSelection, mode: Practic
   return selection.scope === 'all' ? [...legacy, ...generated] : generated
 }
 
-export function getTaskById(taskId: string) { return [...mixedPracticeTasks, ...getAllWords().flatMap(tasksForWord)].find((task) => task.id === taskId) }
+export function getTaskById(taskId: string) { return [...mixedPracticeTasks, ...getEveryWord().flatMap(tasksForWord)].find((task) => task.id === taskId) }
 
 const PENDING_SELECTION_KEY = 'spell-sprint.pending-practice-selection'
 export type PendingPracticeSelection = { wordIds: string[]; label: string; mode?: PracticeMode }
