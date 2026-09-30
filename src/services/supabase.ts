@@ -1,3 +1,5 @@
+import { claimDeviceData } from './deviceData'
+
 type SupabaseUser = { id: string; email?: string }
 export type SupabaseSession = { access_token: string; refresh_token: string; user: SupabaseUser }
 
@@ -55,6 +57,7 @@ export async function getActiveCloudSession(): Promise<SupabaseSession | null> {
 }
 
 function storeSession(session: SupabaseSession | null) {
+  if (session) claimDeviceData(session.user.id)
   if (session) window.localStorage.setItem(SESSION_KEY, JSON.stringify(session))
   else window.localStorage.removeItem(SESSION_KEY)
 }
@@ -65,11 +68,52 @@ export async function signIn(email: string, password: string) {
   return data
 }
 
+// Links in Supabase emails (confirm the address, reset the password) return here. The address must be
+// listed under Authentication → URL Configuration → Redirect URLs, otherwise Supabase uses the Site URL.
+function redirectTo() { return encodeURIComponent(`${window.location.origin}${window.location.pathname}`) }
+
 export async function signUp(email: string, password: string) {
-  const data = await request('/auth/v1/signup', { method: 'POST', body: JSON.stringify({ email, password }) }) as Partial<SupabaseSession>
+  const data = await request(`/auth/v1/signup?redirect_to=${redirectTo()}`, { method: 'POST', body: JSON.stringify({ email, password }) }) as Partial<SupabaseSession>
   if (data.access_token && data.refresh_token && data.user) storeSession(data as SupabaseSession)
   return data
 }
+
+export async function requestPasswordReset(email: string) {
+  await request(`/auth/v1/recover?redirect_to=${redirectTo()}`, { method: 'POST', body: JSON.stringify({ email }) })
+}
+
+export async function updatePassword(password: string) {
+  const session = await getActiveCloudSession()
+  if (!session) throw new Error('The reset link has expired. Request a new one.')
+  await request('/auth/v1/user', { method: 'PUT', headers: headers(session.access_token), body: JSON.stringify({ password }) })
+}
+
+// A link from an email opens the app as #access_token=…&refresh_token=…&type=signup|recovery (or #error=…).
+// That hash is not a page, so it is read and replaced with #settings before the app renders.
+export type AuthRedirect = { kind: 'signed-in' | 'recovery' } | { kind: 'error'; message: string }
+let pendingRedirect: Promise<AuthRedirect> | null = null
+
+export function captureAuthRedirect() {
+  const params = new URLSearchParams(window.location.hash.slice(1))
+  const accessToken = params.get('access_token')
+  const refreshToken = params.get('refresh_token')
+  const error = params.get('error_description') ?? params.get('error')
+  if (!accessToken && !error) return
+  window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}#settings`)
+  pendingRedirect = (async (): Promise<AuthRedirect> => {
+    if (error || !accessToken || !refreshToken) return { kind: 'error', message: error ?? 'The link is incomplete. Request a new one.' }
+    try {
+      const user = await request('/auth/v1/user', { headers: headers(accessToken) }) as SupabaseUser
+      storeSession({ access_token: accessToken, refresh_token: refreshToken, user })
+      return { kind: params.get('type') === 'recovery' ? 'recovery' : 'signed-in' }
+    } catch {
+      return { kind: 'error', message: 'This link has expired or was already used. Request a new one.' }
+    }
+  })()
+}
+
+// Returns the result once; later calls get null.
+export function takeAuthRedirect() { const result = pendingRedirect; pendingRedirect = null; return result }
 
 export async function signOut() {
   const session = getCloudSession()

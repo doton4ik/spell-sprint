@@ -3,10 +3,12 @@ import { loadDiagnosticResult, saveDiagnosticResult } from './diagnosticStorage'
 import { getReviewStates, getRuleReviewIds, mergeReviewData } from './learningData'
 import { getPracticeAttempts, mergePracticeAttempts } from './practiceStorage'
 import { getLevelChecks, mergeLevelChecks } from './levelCheck'
-import { flushMistakeOutbox } from './mistakeOutbox'
-import { getActiveCloudSession, getCloudSession, loadCloudSnapshot, saveCloudSnapshot } from './supabase'
+import { flushMistakeOutbox, getOutboxSize } from './mistakeOutbox'
+import { getProfile, saveProfile } from './profileStorage'
+import { clearPersonalData } from './deviceData'
+import { getActiveCloudSession, getCloudSession, loadCloudSnapshot, saveCloudSnapshot, signOut } from './supabase'
 
-type Snapshot = { practiceAttempts?: unknown; diagnosticResult?: unknown; reviewStates?: unknown; savedRuleIds?: unknown; importedLibraries?: unknown; levelChecks?: unknown }
+type Snapshot = { practiceAttempts?: unknown; diagnosticResult?: unknown; reviewStates?: unknown; savedRuleIds?: unknown; importedLibraries?: unknown; levelChecks?: unknown; profile?: unknown }
 
 // Merges the cloud copy into this device. It only adds missing data and never deletes local data.
 export async function restoreLearningData() {
@@ -18,6 +20,8 @@ export async function restoreLearningData() {
   mergeReviewData(reviewStates, Array.isArray(data.savedRuleIds) ? data.savedRuleIds.filter((id): id is string => typeof id === 'string') : [])
   mergeImportedLibraries(Array.isArray(data.importedLibraries) ? data.importedLibraries : [])
   mergeLevelChecks(data.levelChecks)
+  const profile = data.profile as { name?: unknown; dailyGoal?: unknown } | undefined
+  if (profile && !getProfile().name && typeof profile.name === 'string' && profile.name) saveProfile({ name: profile.name, ...(typeof profile.dailyGoal === 'number' ? { dailyGoal: profile.dailyGoal } : {}) })
   if (!loadDiagnosticResult() && data.diagnosticResult && typeof data.diagnosticResult === 'object') saveDiagnosticResult(data.diagnosticResult as Parameters<typeof saveDiagnosticResult>[0])
   return { found: true, attempts }
 }
@@ -35,6 +39,7 @@ export async function syncLearningData() {
     savedRuleIds: getRuleReviewIds(),
     importedLibraries: getImportedLibraries(),
     levelChecks: getLevelChecks(),
+    profile: getProfile(),
   })
 }
 
@@ -104,4 +109,18 @@ export function startAutoSync() {
   })
   window.addEventListener('online', () => { void syncIfSignedIn() })
   void syncIfSignedIn()
+}
+
+// Signing out removes this learner's data from the device (it may be shared), after a last backup.
+// Returns false when the backup did not complete, so the page can ask before anything is lost.
+export async function backUpBeforeSignOut() {
+  await syncNow()
+  await flushMistakeOutbox()
+  return !lastError && getOutboxSize() === 0
+}
+
+export async function signOutAndClearDevice() {
+  window.clearTimeout(timer)
+  await signOut()
+  clearPersonalData()
 }
