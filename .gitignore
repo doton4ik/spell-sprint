@@ -7,3 +7,7 @@ dist
 
 # Local Netlify folder
 .netlify
+
+# Arena skill: tournament runs and a stray clone of the skill repository
+.arena/
+arena-skill/
