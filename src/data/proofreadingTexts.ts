@@ -360,4 +360,92 @@ export const proofreadingTexts: ProofreadingText[] = [
     id: 'b2-dialogue-weekend-chores', title: 'Sharing the chores', level: 'B2', format: 'dialogue', topic: 'Everyday Life',
     text: 'Maya: Have you seen {the cleaning schedule|article-missing|cleaning schedule} for this weekend?\nTheo: Yes, it {was posted|passive|was post} on the fridge yesterday.\nMaya: Do you know why {the tasks were changed|word-order|were the tasks changed}?\nTheo: Someone is away, so we need to share their jobs.\nMaya: I have {less|quantifier|fewer} time on Saturday than I expected.\nTheo: I do not mind {doing|gerund-infinitive|to do} the kitchen in the morning.\nMaya: Thanks. I can clean the hallway after lunch.\nTheo: Our neighbour said she would bring the supplies on Friday.\nMaya: If she {forgot|conditional|would forget}, we could use what is in the cupboard.\nTheo: Good point. I will check {the cupboard|article-missing|cupboard} tonight.\nMaya: Please write {a clear note|article-missing|clear note} if anything is missing.\nTheo: I will. Then everyone can see what still needs to be bought.',
   },
+  // ───────────── Long reads (assistant batch 1, reviewed) ─────────────
+  {
+    id: 'b1-post-drums-at-3am',
+    title: 'Drums at 3 a.m.',
+    level: 'B1',
+    format: 'post',
+    topic: 'Home and Neighbours',
+    situation: 'Your flatmate wrote this post for a local forum and asked you to check it before posting.',
+    text: `Hi everyone. I {have lived|tense|live} in this building {for|since-for|since} three months, and until last week I {thought|past-irregular|thinked} it was the quietest place in the city. Then, last Tuesday, my new neighbour {moved|tense|has moved} in upstairs. {He|pronoun|Him} seems friendly, but he has one very {unusual|word-form|unusually} habit.
+  
+  At 3 a.m. on Wednesday I {woke|past-irregular|waked} up because someone was playing the drums. It was not {a gentle|article|an gentle} rhythm. It was a rock solo, and my bed was shaking {like|confusable|as} a washing machine. The noise was {louder|comparative|more loud} than a thunderstorm. My cat {was|agreement|were} hiding {under|preposition|at} the sofa, and I {lay|past-irregular|layed} awake, wondering what {to do|gerund-infinitive|doing}.
+  
+  On Thursday I {took|past-irregular|taked} a deep breath and knocked on his door. He was wearing pyjamas and holding {a pair of|article-missing|pair of} drumsticks, and he was so {friendly|word-form|friend} that I found it hard to be angry. He {told|confusable|said} me that his band has a concert {on|preposition|in} Saturday. I asked him {to practise|gerund-infinitive|practising} earlier in the day, and he promised to try.
+  
+  For two nights everything was {quiet|word-form|quietly}. Then, last night at 3 a.m., the drums started again! This time I {ran|past-irregular|runned} upstairs and banged on his door, which slowly opened. The flat was empty. On the floor was a speaker playing a recording of drums, with {a note|article-missing|note} next to it: "Sorry! My timer {is|agreement|are} wrong." Meanwhile, the old lady {who|pronoun|which} lives next door came out in her dressing gown and said she had been enjoying the "concerts" for a week.
+  
+  I have not slept properly {since|since-for|for} Wednesday, so I need {some advice|plural-uncountable|some advices}. If I {tell|conditional|will tell} him the truth, he will probably laugh. But he {should|modal|should to} know that {his|pronoun|him} speaker is ruining my nights, and I have already spent {much|quantifier|many} money on earplugs. Is it {better|comparative|more good} to wait until after his concert? What would you do?`,
+  },
+  {
+    id: 'b1-chat-secret-party',
+    title: 'Operation Dana',
+    level: 'B1',
+    format: 'chat',
+    topic: 'Friends and Celebrations',
+    situation: 'Your friend Mia sent you this group chat to check before she shows it to the whole class as a funny story.',
+    text: `Mia: Okay team, listen carefully! Dana's birthday is {on|preposition|in} Saturday, and we {must|modal|must to} keep it a total secret.
+  Tom: I {bought|past-irregular|buyed} the balloons yesterday. I {spent|past-irregular|spended} twenty pounds, so please be {grateful|word-form|gratefully}.
+  Leo: Twenty pounds for air? Fine. I'll bring the music. I have {many|quantifier|much} good playlists, but Dana {hates|agreement|hate} loud songs.
+  
+  Anya: I ordered a chocolate cake from the bakery near the station. The lady {who|pronoun|which} works there asked what to write on it.
+  Sam: Can someone tell me {where the party is|word-order|where is the party}? And what {time do we|word-order|time we do} meet?
+  Mia: At my flat, of course! Please avoid {talking|gerund-infinitive|to talk} about it on the phone, everyone.
+  Tom: I'll arrive from {Leeds|article-extra|the Leeds} at five, and I {might|modal|might to} be late.
+  Mia: Please don't be late, Tom. The cake must be on the table at seven o'clock exactly!
+  Leo: Don't worry, we will all be there before she arrives, and nobody will say a word.
+  
+  Leo: I {met|past-irregular|meeted} Dana in town today. She asked why I was smiling so {much|quantifier|many}.
+  Sam: Bad news. I {left|past-irregular|leaved} my phone in Dana's car, and she {saw|past-irregular|seen} the cake photo.
+  Mia: What?! What {did you tell|word-order|you told} her?
+  Sam: I said it was {a present|article-missing|present} for my aunt. She believed me, {luckily|word-form|lucky}.
+  Tom: Guys, another problem. Dana's mum called me. She wants {to bring|gerund-infinitive|bringing} a second cake!
+  Leo: Two cakes? That's {more|comparative|most} than we need.
+  Anya: Don't panic. If she {brings|conditional|will bring} another cake, we'll just eat both. I have some {information|plural-uncountable|informations} too: ours looks {amazing|word-form|amazingly}.
+  
+  Mia: Perfect! You are {the best|article-missing|best} team ever. Now, who will keep Dana busy {during|confusable|while} the afternoon?
+  Sam: I can take her shopping. She never says no {to|preposition|for} shopping.
+  Dana: Hi everyone! I {have been|tense|am} in this chat {since|since-for|for} Monday. Someone added me by mistake, and I love {your|pronoun|you} playlists.
+  Dana: Don't worry, I'll act {surprised|word-form|surprising} on Saturday. Just one question: who is going to tell my mum that we already have a cake?`,
+  },
+  {
+    id: 'b2-blog-leaning-cake',
+    title: 'The Leaning Wedding Cake',
+    level: 'B2',
+    format: 'blog',
+    topic: 'Family and Celebrations',
+    situation: 'Your friend Ola wrote this blog post about her sister\'s wedding and asked you to check it before publishing.',
+    text: `Three months ago my sister asked me {to make|gerund-infinitive|making} her wedding cake. It was {an honour|article|a honour} to be asked, but suddenly I was {responsible for|preposition|responsible of} the most important dessert of her life. I had never baked anything {more difficult|comparative|difficulter} than a banana loaf, but I {said|past-irregular|sayed} yes anyway. I watched {dozens|quantifier|dozen} of videos, bought a professional mixer, and {told|confusable|said} everyone that I was {confident|word-form|confidence}.
+  
+  Everything went wrong from the start. During the first weekend, my oven {broke|past-irregular|breaked} down halfway through the baking. My second attempt {was ruined|passive|ruined} when the dog jumped onto the table and {ate|past-irregular|eated} an entire layer. If I {had known|conditional|knew} how hard it would be, I would have ordered a cake from a shop. By Thursday I had {no|quantifier|none} time to start again, and I even considered {calling|gerund-infinitive|to call} a bakery. Instead, I {spent|past-irregular|spended} every evening that week {trying|gerund-infinitive|to try} to save my sister's wedding, working with {increasing|word-form|increase} panic.
+  
+  On Friday night I finally produced a four-layer tower. By midnight the tower {had been decorated|passive|had decorated} with sugar flowers. It leaned {slightly|word-form|slight}, though definitely {to the left|preposition|at the left}, like a very tired sandwich, and it was {edible|word-form|edibly}. Then I carried it to my car, {which|pronoun|what} was parked outside, and {drove|past-irregular|drived} at ten miles an hour. I {must have|modal|must had} been crazy to take a leaning tower across the city! The next morning my sister asked me {whether I had finished|word-order|whether had I finished} the decorations, and I said everything was under control.
+  
+  The wedding itself was beautiful, and the cake looked {surprisingly|word-form|surprising} good under the lights. At nine o'clock the guests {were served|passive|served} big slices, and everybody agreed it was delicious. Then {its|confusable|it's} top layer slowly slid off and landed in my uncle's lap. My uncle, who {was covered|passive|covered} in cream, said nothing, and for a second nobody moved. Then everybody {was|agreement|were} laughing, and later my sister and {I|pronoun|me} cried with laughter, while the photographer took {the best|article-missing|best} photo of the evening.
+  
+  My sister {has been telling|tense|is telling} this story {for|since-for|since} a month, and every time the cake gets taller. I have also received lots of {advice|plural-uncountable|advices} from readers about baking. If you {were|conditional|would be} me, would you ever try again?`,
+  },
+  {
+    id: 'b2-interview-balloon-pilot',
+    title: 'Landing Among Cows',
+    level: 'B2',
+    format: 'interview',
+    topic: 'Jobs and Adventures',
+    situation: 'You work for a student magazine and must check this interview with a balloon pilot before it is published.',
+    text: `Interviewer: Ana, you {have been flying|tense|are flying} balloons {for|since-for|since} twelve years. How did it all begin?
+  Ana: By accident, honestly. I {went|past-irregular|goed} to a village festival, {won|past-irregular|winned} a free flight in a raffle, and {fell|past-irregular|falled} in love with the silence up there. Before that, I worked in {an|article|a} office and hated every Monday. My friends {were|agreement|was} worried, and my mother asked {me|pronoun|I} whether I had lost my mind.
+  
+  Interviewer: What is the hardest part of {being|gerund-infinitive|be} a pilot?
+  Ana: The weather, definitely. A balloon cannot be steered like a car. You choose the height, and the wind does the rest. That is why a pilot {is not allowed|passive|not allowed} to take off in strong wind, even when the passengers are {disappointed|word-form|disappoint}. I am responsible {for|preposition|of} everybody's safety, and it is {better|comparative|more good} to be safe on {the ground|article|a ground} than sorry in a tree.
+  
+  Interviewer: What was your scariest flight?
+  Ana: Last summer the wind suddenly {became|past-irregular|becomed} much {stronger|comparative|more strong} than the forecast, and we {were forced|passive|forced} to land in a field full of cows. A farmer came running out of {his|pronoun|him} house. He asked us {what we were doing|word-order|what were we doing} on his land, and he wanted to know {why we had landed|word-order|why had we landed}. I expected him {to shout|gerund-infinitive|shouting}, but he laughed and invited us for breakfast. We ate eggs and toast while twenty cows stared {at|preposition|to} us. If we {hadn't landed|conditional|didn't land} there, we would never have become friends. Now he comes to every festival with {a basket|article-missing|basket} of apples.
+  
+  Interviewer: Do you ever feel afraid up there?
+  Ana: Of course, but fear is {useful|word-form|use}. It reminds me {to check|gerund-infinitive|checking} the equipment twice. I have felt nervous {since|since-for|for} my very first flight, and nothing serious has ever {gone|past-irregular|went} wrong. I {must|modal|must to} respect the wind, because it never respects {me|pronoun|I}.
+  
+  Interviewer: Last question. If you {could|conditional|can} take anyone on a flight, who would you choose?
+  Ana: My grandmother. She always {told|confusable|said} me that people were not made for the sky, and she has never {flown|past-irregular|flied}. If she ever {agrees|conditional|will agree}, the whole village will be {told|passive|telling} about it. Maybe next year I will finally {convince|word-form|convinced} her.`,
+  },
 ]
