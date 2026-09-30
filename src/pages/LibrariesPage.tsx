@@ -74,7 +74,7 @@ export function LibrariesPage() {
   const openLibrary = (library: WordLibrary) => setDetails({ title: library.name, description: library.source === 'imported' ? 'Your imported vocabulary library.' : 'Built-in vocabulary library.', words: library.words, library })
   const beginPractice = (words: LibraryWord[], label: string) => { setPendingPracticeSelection({ wordIds: uniqueWords(words).map((word) => word.wordId), label }); window.location.hash = 'practice' }
   const downloadTemplate = () => { const url = URL.createObjectURL(new Blob([csvTemplate], { type: 'text/csv;charset=utf-8' })); const link = document.createElement('a'); link.href = url; link.download = 'spell-sprint-library-template.csv'; link.click(); URL.revokeObjectURL(url) }
-  const remove = (library: WordLibrary) => { if (window.confirm(`Delete “${library.name}”? This removes only this imported library from this device.`)) { deleteImportedLibrary(library.id); refresh(); setDetails(null) } }
+  const remove = (library: WordLibrary) => { if (window.confirm(`Delete “${library.name}”? This removes this imported library from all your devices. Built-in words are not affected.`)) { deleteImportedLibrary(library.id); refresh(); setDetails(null) } }
   const openWordsLibrary = (word: LibraryWord) => { const library = libraries.find((item) => item.name === word.library); if (library) openLibrary(library) }
 
   const trimmedQuery = query.trim().toLocaleLowerCase()

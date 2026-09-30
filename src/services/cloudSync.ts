@@ -7,7 +7,7 @@ import { flushMistakeOutbox, getOutboxSize } from './mistakeOutbox'
 import { getProfile, saveProfile } from './profileStorage'
 import { getLibraryPrefs, mergeLibraryPrefs } from './libraryPrefs'
 import { clearPersonalData } from './deviceData'
-import { getActiveCloudSession, getCloudSession, loadCloudSnapshot, saveCloudSnapshot, signOut } from './supabase'
+import { getActiveCloudSession, getCloudSession, loadCloudSnapshot, loadCloudSnapshotVersion, saveCloudSnapshot, signOut } from './supabase'
 
 type Snapshot = { practiceAttempts?: unknown; diagnosticResult?: unknown; reviewStates?: unknown; savedRuleIds?: unknown; importedLibraries?: unknown; levelChecks?: unknown; profile?: unknown; libraryPrefs?: unknown }
 
@@ -15,6 +15,7 @@ type Snapshot = { practiceAttempts?: unknown; diagnosticResult?: unknown; review
 export async function restoreLearningData() {
   const snapshot = await loadCloudSnapshot()
   if (!snapshot) return { found: false, attempts: 0 }
+  writeSyncState({ ...readSyncState(), version: snapshot.updatedAt })
   const data = (snapshot.payload ?? {}) as Snapshot
   // Deletion marks first, so a library or saved rule removed on another device is not merged back in.
   mergeLibraryPrefs(data.libraryPrefs)
@@ -29,13 +30,23 @@ export async function restoreLearningData() {
   return { found: true, attempts }
 }
 
+// The backup holds the whole history (up to a few MB), so a sync downloads it only when another
+// device has changed it, and uploads it only when this device has something new.
+// Both are kept in storage, so reopening the app does not re-download or re-upload an unchanged backup.
+const SYNC_STATE_KEY = 'spell-sprint.sync-state'
+type SyncState = { version: string | null; uploaded: string }
+function readSyncState(): SyncState { try { const value = JSON.parse(window.localStorage.getItem(SYNC_STATE_KEY) ?? 'null') as SyncState | null; return value && typeof value.uploaded === 'string' ? value : { version: null, uploaded: '' } } catch { return { version: null, uploaded: '' } } }
+function writeSyncState(state: SyncState) { try { window.localStorage.setItem(SYNC_STATE_KEY, JSON.stringify(state)) } catch { /* next sync just does a full exchange */ } }
+// A short fingerprint of the uploaded data (FNV-1a), not the data itself.
+function fingerprint(text: string) { let hash = 0x811c9dc5; for (let i = 0; i < text.length; i += 1) { hash ^= text.charCodeAt(i); hash = Math.imul(hash, 0x01000193) } return `${text.length}:${(hash >>> 0).toString(36)}` }
+
 export async function syncLearningData() {
   if (!await getActiveCloudSession()) throw new Error('Sign in before synchronising your learning data.')
   // Pull first, so a fresh device can never overwrite an existing cloud backup with empty data.
-  await restoreLearningData()
-  await saveCloudSnapshot({
+  const remoteVersion = await loadCloudSnapshotVersion()
+  if (remoteVersion === null || remoteVersion !== readSyncState().version) await restoreLearningData()
+  const payload = {
     version: 1,
-    syncedAt: new Date().toISOString(),
     practiceAttempts: getPracticeAttempts(),
     diagnosticResult: loadDiagnosticResult(),
     reviewStates: getReviewStates(),
@@ -44,15 +55,21 @@ export async function syncLearningData() {
     levelChecks: getLevelChecks(),
     profile: getProfile(),
     libraryPrefs: getLibraryPrefs(),
-  })
+  }
+  const uploaded = fingerprint(JSON.stringify(payload))
+  const state = readSyncState()
+  if (remoteVersion !== null && remoteVersion === state.version && uploaded === state.uploaded) return
+  const version = await saveCloudSnapshot({ ...payload, syncedAt: new Date().toISOString() })
+  writeSyncState({ version, uploaded })
 }
 
 // ---- Automatic sync ---------------------------------------------------------------------------
 // Signed-in devices keep themselves in step without pressing "Sync now": pull + push when the app
-// opens, a few seconds after new answers, and when the tab is hidden (phone locked, app switched).
+// opens, shortly after new answers, and when the tab is hidden (phone locked, app switched).
 // Every run is "pull first, then push", and merging only ever adds, so two devices cannot erase
 // each other's history.
-const AUTO_SYNC_DELAY_MS = 4000
+// After new answers. Leaving the app (tab hidden, phone locked) still syncs at once.
+const AUTO_SYNC_DELAY_MS = 20000
 const SYNC_STATUS_EVENT = 'spell-sprint:sync-status'
 let running: Promise<void> | null = null
 let again = false

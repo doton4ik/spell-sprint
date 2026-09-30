@@ -27,7 +27,15 @@ function isAuthRejection(error: unknown) {
   return status === 400 || status === 401 || status === 403
 }
 
-async function refreshSession(session: SupabaseSession): Promise<SupabaseSession | null> {
+// Sync and the mistake outbox may both find an expired token at the same moment; they share one
+// refresh, so the refresh token is used once and neither request signs the learner out.
+let refreshing: Promise<SupabaseSession | null> | null = null
+function refreshSession(session: SupabaseSession) {
+  refreshing ??= refreshOnce(session).finally(() => { refreshing = null })
+  return refreshing
+}
+
+async function refreshOnce(session: SupabaseSession): Promise<SupabaseSession | null> {
   try {
     const data = await request('/auth/v1/token?grant_type=refresh_token', { method: 'POST', body: JSON.stringify({ refresh_token: session.refresh_token }) }) as SupabaseSession
     if (!data.access_token || !data.refresh_token || data.user?.id !== session.user.id) throw Object.assign(new Error('Session user mismatch.'), { status: 401 })
@@ -147,11 +155,21 @@ export async function loadCloudSnapshot(): Promise<{ payload: unknown; updatedAt
   return row ? { payload: row.payload, updatedAt: row.updated_at } : null
 }
 
+// Only the time of the last change: a few bytes, so a sync can skip downloading an unchanged backup.
+export async function loadCloudSnapshotVersion(): Promise<string | null> {
+  const session = await getActiveCloudSession()
+  if (!session) throw new Error('Sign in before synchronising your learning data.')
+  const rows = await request(`/rest/v1/learning_snapshots?select=updated_at&user_id=eq.${encodeURIComponent(session.user.id)}`, { headers: headers(session.access_token) })
+  return Array.isArray(rows) && rows[0] ? rows[0].updated_at as string : null
+}
+
+// Returns the new version (updated_at) of the backup.
 export async function saveCloudSnapshot(payload: unknown) {
   const session = await getActiveCloudSession()
   if (!session) throw new Error('Sign in before synchronising your learning data.')
-  await request('/rest/v1/learning_snapshots?on_conflict=user_id', {
-    method: 'POST', headers: { ...headers(session.access_token), Prefer: 'resolution=merge-duplicates,return=minimal' },
+  const rows = await request('/rest/v1/learning_snapshots?on_conflict=user_id&select=updated_at', {
+    method: 'POST', headers: { ...headers(session.access_token), Prefer: 'resolution=merge-duplicates,return=representation' },
     body: JSON.stringify({ user_id: session.user.id, payload, updated_at: new Date().toISOString() }),
   })
+  return Array.isArray(rows) && rows[0] ? rows[0].updated_at as string : null
 }
