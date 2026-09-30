@@ -16,11 +16,11 @@ export async function restoreLearningData() {
   const snapshot = await loadCloudSnapshot()
   if (!snapshot) return { found: false, attempts: 0 }
   const data = (snapshot.payload ?? {}) as Snapshot
+  // Deletion marks first, so a library or saved rule removed on another device is not merged back in.
+  mergeLibraryPrefs(data.libraryPrefs)
   const attempts = mergePracticeAttempts(Array.isArray(data.practiceAttempts) ? data.practiceAttempts : [])
   const reviewStates = data.reviewStates && typeof data.reviewStates === 'object' && !Array.isArray(data.reviewStates) ? data.reviewStates as Parameters<typeof mergeReviewData>[0] : {}
   mergeReviewData(reviewStates, Array.isArray(data.savedRuleIds) ? data.savedRuleIds.filter((id): id is string => typeof id === 'string') : [])
-  // Deletion marks first, so a library deleted on another device is not merged back in.
-  mergeLibraryPrefs(data.libraryPrefs)
   mergeImportedLibraries(Array.isArray(data.importedLibraries) ? data.importedLibraries : [])
   mergeLevelChecks(data.levelChecks)
   const profile = data.profile as { name?: unknown; dailyGoal?: unknown } | undefined

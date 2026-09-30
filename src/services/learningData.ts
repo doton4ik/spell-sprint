@@ -4,6 +4,7 @@ import { getPracticeAttempts, subscribeToPracticeAttempts } from './practiceStor
 import { getTaskById } from './libraryPractice'
 import { getEveryWord } from './libraryStorage'
 import { MASTERED_DAYS } from './reviewSchedule'
+import { getRemovedKeys, setRemoved } from './libraryPrefs'
 
 const REVIEW_STATES_KEY = 'spell-sprint.review-states'
 const RULE_REVIEW_KEY = 'spell-sprint.rule-review'
@@ -106,7 +107,9 @@ export function mergeReviewData(states: Record<string, ReviewState>, ruleIds: st
     if (state && typeof state.completedReviews === 'number' && (!merged[taskId] || state.completedReviews > merged[taskId].completedReviews)) merged[taskId] = state
   }
   window.localStorage.setItem(REVIEW_STATES_KEY, JSON.stringify(merged))
-  window.localStorage.setItem(RULE_REVIEW_KEY, JSON.stringify([...new Set([...getRuleReviewIds(), ...ruleIds])]))
+  // A rule unsaved on any device stays unsaved (the mark is synced with the library preferences).
+  const removed = getRemovedKeys()
+  window.localStorage.setItem(RULE_REVIEW_KEY, JSON.stringify([...new Set([...getRuleReviewIds(), ...ruleIds])].filter((id) => !removed.has(`rule:${id}`))))
   window.dispatchEvent(new Event(LEARNING_UPDATED_EVENT))
 }
 
@@ -130,7 +133,9 @@ export function getRuleReviewIds() {
 
 export function toggleRuleReview(ruleId: string) {
   const existing = getRuleReviewIds()
-  const next = existing.includes(ruleId) ? existing.filter((id) => id !== ruleId) : [...existing, ruleId]
+  const removing = existing.includes(ruleId)
+  const next = removing ? existing.filter((id) => id !== ruleId) : [...existing, ruleId]
+  setRemoved([`rule:${ruleId}`], removing)
   window.localStorage.setItem(RULE_REVIEW_KEY, JSON.stringify(next))
   window.dispatchEvent(new Event(LEARNING_UPDATED_EVENT))
   return next

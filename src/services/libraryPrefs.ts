@@ -5,7 +5,8 @@ const PREFS_KEY = 'spell-sprint.library-prefs'
 const UPDATED_EVENT = 'spell-sprint:learning-updated'
 
 type Flag = { on: boolean; at: string }
-// removed: imported libraries and words the learner deleted (keys "lib:<name>" / "word:<wordId>").
+// removed: things the learner deleted — imported libraries ("lib:<name>"), imported words ("word:<wordId>")
+// and saved rules ("rule:<id>").
 // Sync only ever adds, so without these marks a deleted library would come back from the cloud.
 export type LibraryPrefs = { hidden: Record<string, Flag>; packs: Record<string, Flag>; removed: Record<string, Flag>; packsInitialised?: boolean }
 
