@@ -73,3 +73,32 @@
 .hidden-word button { background: #fff; border: 1px solid #d6e3de; border-radius: 6px; color: var(--teal); font-size: calc(12px * var(--fs)); font-weight: 700; min-height: 30px; padding: 0 8px; }
 @media (max-width: 800px) { .pack-card { grid-template-columns: 1fr; } .pack-card__actions button { flex: 1; } }
 .word-row small.word-note-line { color: #7a6320; }
+/* Add a word from the dictionary */
+.add-word { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); margin-bottom: 18px; padding: 22px 24px; }
+.add-word__head > span { align-items: center; color: var(--teal); display: flex; font-size: calc(11.5px * var(--fs)); font-weight: 750; gap: 6px; letter-spacing: .05em; text-transform: uppercase; }
+.add-word__head h2 { color: #304640; font-size: calc(19px * var(--fs)); margin: 7px 0 4px; }
+.add-word__head p { color: var(--ink-muted); font-size: calc(13.5px * var(--fs)); line-height: 1.5; margin: 0; }
+.add-word__search { display: flex; gap: 8px; margin-top: 14px; }
+.add-word__search input, .add-word__form input, .add-word__form select { background: #fbfcfb; border: 1px solid #dce5e1; border-radius: 9px; color: #344c46; font-size: max(16px, calc(15px * var(--fs))); min-height: 44px; outline: none; padding: 8px 11px; width: 100%; }
+.add-word__search input:focus, .add-word__form input:focus { border-color: #67aa9e; box-shadow: 0 0 0 3px rgba(29,133,119,.1); }
+.add-word__search .check-button { flex: 0 0 auto; min-height: 44px; }
+.add-word__note, .add-word__missing p { color: #7a6a3a; font-size: calc(13px * var(--fs)); line-height: 1.5; margin: 10px 0 0; }
+.add-word__saved { align-items: center; background: #e1f1eb; border-radius: 9px; color: #2a6f64; display: flex; flex-wrap: wrap; font-size: calc(13px * var(--fs)); gap: 6px; margin: 12px 0 0; padding: 9px 12px; }
+.add-word__saved button { background: transparent; border: 0; color: var(--teal-dark); font-weight: 750; margin-left: auto; }
+.add-word__senses { display: grid; gap: 8px; margin-top: 14px; }
+.add-word__label { color: #4f6660; font-size: calc(13px * var(--fs)); font-weight: 700; margin: 0; }
+.add-word__sense { background: #fbfcfb; border: 1px solid #dce5e1; border-radius: 10px; display: grid; gap: 3px; padding: 11px 13px; text-align: left; }
+.add-word__sense:hover { background: #f2f9f6; border-color: #9cc9c1; }
+.add-word__sense small { color: #82928e; font-size: calc(11.5px * var(--fs)); font-weight: 700; text-transform: uppercase; }
+.add-word__sense strong { color: var(--teal-dark); font-size: calc(15.5px * var(--fs)); }
+.add-word__sense span { color: #687d77; font-size: calc(12.5px * var(--fs)); line-height: 1.4; }
+.add-word__manual { background: transparent; border: 1px dashed #c9d8d2; border-radius: 10px; color: #5c736d; font-weight: 700; padding: 10px; }
+.add-word__credit { color: #93a29e; font-size: calc(11px * var(--fs)); margin: 2px 0 0; }
+.add-word__form { display: grid; gap: 10px; margin-top: 14px; }
+.add-word__form label { color: #627771; display: grid; font-size: calc(12px * var(--fs)); font-weight: 700; gap: 5px; }
+.add-word__actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.add-word__actions button { min-height: 44px; }
+.libraries-page .add-word__text-button { font-size: calc(13px * var(--fs)); gap: 8px; margin-top: 10px; padding: 10px 13px; }
+@media (max-width: 640px) { .add-word { padding: 18px 16px; } }
+.add-word__search input { flex: 1; min-width: 0; }
+.add-word .add-word__search .check-button { flex: 0 0 auto; padding: 0 16px; width: auto; }

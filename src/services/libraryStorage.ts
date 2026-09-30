@@ -136,3 +136,28 @@ export function deleteImportedLibrary(id: string) {
 }
 
 export const csvTemplate = `word_id,word,translation,topic_id,topic,subtopic,difficulty,risk,rule,example,definition,part_of_speech,library,source\nwarehouse-operations-receiving-putaway,putaway,размещение товара на хранение,warehouse-operations,Warehouse Operations,Receiving and Storage,medium,4,Putaway moves received goods to storage,Putaway starts after goods receipt.,The process of moving goods into storage,noun,Warehouse Operations — SAP,manual\n`
+
+// ---- Words the learner adds one by one (Libraries → Add a word) ----------------------------------
+export const MY_WORDS = 'My words'
+export type MyWordFields = { word: string; translation: string; partOfSpeech: string; definition: string; example: string; difficulty: LibraryWord['difficulty']; risk: number }
+
+export function myWordId(word: string) { return stableWordId('my-words', 'Added words', word) }
+
+// Adds the word to "My words" (created on first use), or updates it if it is already there.
+export function addMyWord(fields: MyWordFields) {
+  const libraries = getImportedLibraries()
+  const wordId = myWordId(fields.word)
+  const entry: LibraryWord = {
+    id: wordId, wordId, word: fields.word.trim(), translation: fields.translation.trim(), topicId: 'my-words', topic: MY_WORDS, subtopic: 'Added words',
+    difficulty: fields.difficulty, risk: fields.risk, example: fields.example.trim() || undefined, definition: fields.definition.trim() || undefined,
+    partOfSpeech: normalisePartOfSpeech(fields.partOfSpeech), library: MY_WORDS, source: 'dictionary',
+  }
+  let library = libraries.find((item) => item.name === MY_WORDS)
+  if (!library) { library = { id: crypto.randomUUID(), name: MY_WORDS, topic: MY_WORDS, words: [], source: 'imported', kind: 'topic', includes: [], createdAt: new Date().toISOString() }; libraries.push(library) }
+  const updated = library.words.some((word) => word.wordId === wordId)
+  library.words = [...library.words.filter((word) => word.wordId !== wordId), entry]
+  // A word or library deleted earlier and added again must not be dropped by the next sync.
+  setRemoved([removalKey.word(wordId), removalKey.library(MY_WORDS)], false)
+  saveImportedLibraries(libraries)
+  return { wordId, updated }
+}

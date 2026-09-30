@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { ImportLibraryPanel } from '../components/libraries/ImportLibraryPanel'
+import { AddWordPanel } from '../components/libraries/AddWordPanel'
 import { Icon } from '../components/icons/Icon'
 import { libraryGroups, wordsForGroup, type LibraryGroup } from '../services/libraryGroups'
 import { csvTemplate, deleteImportedLibrary, getEveryLibrary, getEveryWord, getLibraries } from '../services/libraryStorage'
@@ -106,9 +107,9 @@ export function LibrariesPage() {
       </section>
     ) : (
       <>
-        <div className="libraries-actions"><button className="check-button" type="button" onClick={() => beginPractice(allWords, 'All libraries')}><Icon name="practice" size={17} /> Practice all words</button><button className="template-button" type="button" onClick={() => setActiveGroup('my-libraries')}>Import CSV</button><button className="template-button" type="button" onClick={downloadTemplate}>CSV template</button></div>
+        <div className="libraries-actions"><button className="check-button" type="button" onClick={() => beginPractice(allWords, 'All libraries')}><Icon name="practice" size={17} /> Practice all words</button><button className="template-button" type="button" onClick={() => setActiveGroup('my-libraries')}>Add a word</button><button className="template-button" type="button" onClick={() => setActiveGroup('my-libraries')}>Import CSV</button><button className="template-button" type="button" onClick={downloadTemplate}>CSV template</button></div>
         <nav className="library-tabs" aria-label="Library groups">{libraryGroups.map((group) => <button type="button" className={activeGroup === group.id ? 'library-tabs__active' : ''} onClick={() => setActiveGroup(group.id)} key={group.id}>{group.name}</button>)}<button type="button" className={activeGroup === 'packs' ? 'library-tabs__active' : ''} onClick={() => setActiveGroup('packs')}>Add-on packs</button></nav>
-        {activeGroup === 'packs' ? <PackList libraries={libraries} onToggle={togglePack} onPreview={previewPack} /> : activeGroup === 'my-libraries' ? <><MyLibraries libraries={libraries.filter((library) => library.source === 'imported')} onOpen={openLibrary} onPractice={beginPractice} onDelete={remove} onImported={refresh} /><HiddenWords libraries={libraries} onRestore={(word) => { setWordHidden(word.wordId, false); refresh() }} /></> : <section className="library-groups">{cards.map((group) => <GroupCard group={group} libraries={libraries} onOpen={openGroup} onPractice={beginPractice} key={group.id} />)}</section>}
+        {activeGroup === 'packs' ? <PackList libraries={libraries} onToggle={togglePack} onPreview={previewPack} /> : activeGroup === 'my-libraries' ? <><AddWordPanel onAdded={refresh} onPractise={(wordId, word) => { setPendingPracticeSelection({ wordIds: [wordId], label: word }); window.location.hash = 'practice' }} /><MyLibraries libraries={libraries.filter((library) => library.source === 'imported')} onOpen={openLibrary} onPractice={beginPractice} onDelete={remove} onImported={refresh} /><HiddenWords libraries={libraries} onRestore={(word) => { setWordHidden(word.wordId, false); refresh() }} /></> : <section className="library-groups">{cards.map((group) => <GroupCard group={group} libraries={libraries} onOpen={openGroup} onPractice={beginPractice} key={group.id} />)}</section>}
       </>
     )}
   </div>
