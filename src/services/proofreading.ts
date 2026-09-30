@@ -26,7 +26,7 @@ export function recordProofreading(text: ProofreadingText, result: ProofreadingR
     const spelling = slot.type === 'spelling' || slot.type === 'typo'
     const taskId = `proof-${text.id}-${slot.type}-${normalise(slot.correct[0]).replace(/\s+/g, '-')}`
     const correct = status === 'fixed'
-    const { confidence, nextReviewAt } = scheduleAfterAnswer({ taskId }, correct, false)
+    const { confidence, nextReviewAt } = scheduleAfterAnswer({ taskId }, correct, false, 'write-en')
     const attempt: PracticeAttempt = {
       id: crypto.randomUUID(), taskId, taskType: spelling ? 'correct-spelling' : 'correct-sentence', topic: text.topic, library: 'Proofreading',
       userAnswer: status === 'missed' ? slot.shown : learnerText, correctAnswer: slot.correct[0], isCorrect: correct, wasSkipped: false, wasAnswerRevealed: false, hintUsed: false,

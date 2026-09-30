@@ -78,12 +78,13 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
 
   function recordAttempt(overrides: Pick<PracticeAttempt, 'isCorrect' | 'wasSkipped' | 'wasAnswerRevealed'> & { wasMarkedForReview?: boolean }) {
     const correct = overrides.isCorrect
-    const { confidence, nextReviewAt } = scheduleAfterAnswer({ wordId: currentTask.wordId, taskId: currentTask.id }, correct, Boolean(hintStep))
+    const attemptMode = currentTask.mode ?? (currentTask.type === 'translate-en-ru' ? 'translate-ru' : currentTask.type === 'translate-ru-en' ? 'write-en' : 'choose-spelling')
+    const { confidence, nextReviewAt } = scheduleAfterAnswer({ wordId: currentTask.wordId, taskId: currentTask.id }, correct, Boolean(hintStep), attemptMode)
     const needsReview = Boolean(overrides.wasMarkedForReview) || !correct || Boolean(hintStep)
     savePracticeAttempt({
       id: crypto.randomUUID(), taskId: currentTask.id, taskType: currentTask.type, topic: currentTask.topic, topicId: currentTask.topicId, subtopic: currentTask.subtopic, wordId: currentTask.wordId, library: currentTask.library,
       userAnswer: answer, correctAnswer: currentTask.answer, errorCategory: correct ? currentTask.errorCategory : categoryForError(errorType(answer, currentTask.answer)),
-      hintUsed: Boolean(hintStep), attemptMode: currentTask.mode ?? (currentTask.type === 'translate-en-ru' ? 'translate-ru' : currentTask.type === 'translate-ru-en' ? 'write-en' : 'choose-spelling'), errorType: correct ? 'unknown' : errorType(answer, currentTask.answer), confidence, nextReviewAt, needsReview: needsReview && settings.repeatDifficultItemLater, createdAt: new Date().toISOString(), ...overrides,
+      hintUsed: Boolean(hintStep), attemptMode, errorType: correct ? 'unknown' : errorType(answer, currentTask.answer), confidence, nextReviewAt, needsReview: needsReview && settings.repeatDifficultItemLater, createdAt: new Date().toISOString(), ...overrides,
     })
   }
 

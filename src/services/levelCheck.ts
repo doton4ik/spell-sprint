@@ -76,7 +76,7 @@ export function finishCheck(answers: CheckAnswer[]): LevelCheckResult {
 // spelling mistakes get classified and linked to rules, and library words update their progress.
 export function recordCheckAnswer(item: LevelItem, answer: string, correct: boolean) {
   const taskId = item.wordId ? `library-${item.wordId}-write-en` : item.id
-  const { confidence, nextReviewAt } = scheduleAfterAnswer({ wordId: item.wordId, taskId }, correct, false)
+  const { confidence, nextReviewAt } = scheduleAfterAnswer({ wordId: item.wordId, taskId }, correct, false, 'write-en')
   const attempt: PracticeAttempt = {
     id: crypto.randomUUID(), taskId,
     taskType: item.skill === 'grammar' ? 'correct-sentence' : item.skill === 'spelling' ? 'correct-spelling' : 'translate-ru-en',
