@@ -1,6 +1,6 @@
 import { builtInLibraries } from '../data/libraries'
 import { libraryPacks, packForLibrary } from '../data/libraryPacks'
-import { getHiddenWordIds, getLibraryPrefs, initialisePacks } from './libraryPrefs'
+import { getHiddenWordIds, getLibraryPrefs, getRemovedKeys, initialisePacks, setRemoved } from './libraryPrefs'
 import { canonicalTopic, canonicalTopics, libraryKindForName, stableWordId } from '../data/libraryTaxonomy'
 import { normalisePartOfSpeech, partOfSpeechOptions, type LibraryWord, type WordLibrary } from '../types/library'
 
@@ -72,11 +72,22 @@ export function getImportedLibraries(): WordLibrary[] {
   if (JSON.stringify(repaired) !== JSON.stringify(stored)) { try { window.localStorage.setItem(CUSTOM_LIBRARIES_KEY, JSON.stringify(repaired)) } catch { /* keep using the repaired copy in memory */ } }
   return repaired
 }
+export const removalKey = { library: (name: string) => `lib:${normalise(name)}`, word: (wordId: string) => `word:${wordId}` }
+
+// Drops what the learner deleted on any device (see "removed" in libraryPrefs).
+function withoutRemoved(libraries: WordLibrary[]) {
+  const removed = getRemovedKeys()
+  if (!removed.size) return libraries
+  return libraries.filter((library) => !removed.has(removalKey.library(library.name)))
+    .map((library) => ({ ...library, words: library.words.filter((word) => !removed.has(removalKey.word(word.wordId))) }))
+    .filter((library) => library.words.length)
+}
+
 // Cloud restore: libraries from another device are merged by name, so a synced copy never shows up twice.
 export function mergeImportedLibraries(incoming: WordLibrary[]) {
   const local = getImportedLibraries()
   const valid = incoming.filter((library) => library && typeof library.id === 'string' && typeof library.name === 'string' && Array.isArray(library.words)).map(migrateLibrary)
-  const merged = repairImportedLibraries([...local, ...valid])
+  const merged = withoutRemoved(repairImportedLibraries([...local, ...valid]))
   const before = local.reduce((sum, library) => sum + library.words.length, 0)
   const after = merged.reduce((sum, library) => sum + library.words.length, 0)
   if (JSON.stringify(merged) !== JSON.stringify(local)) window.localStorage.setItem(CUSTOM_LIBRARIES_KEY, JSON.stringify(merged))
@@ -117,6 +128,11 @@ export function saveImportedLibraries(libraries: WordLibrary[]) {
   window.localStorage.setItem(CUSTOM_LIBRARIES_KEY, JSON.stringify(libraries))
   window.dispatchEvent(new Event(LIBRARIES_UPDATED_EVENT))
 }
-export function deleteImportedLibrary(id: string) { window.localStorage.setItem(CUSTOM_LIBRARIES_KEY, JSON.stringify(getImportedLibraries().filter((library) => library.id !== id))) }
+export function deleteImportedLibrary(id: string) {
+  const libraries = getImportedLibraries()
+  const library = libraries.find((item) => item.id === id)
+  if (library) setRemoved([removalKey.library(library.name)], true)
+  saveImportedLibraries(libraries.filter((item) => item.id !== id))
+}
 
 export const csvTemplate = `word_id,word,translation,topic_id,topic,subtopic,difficulty,risk,rule,example,definition,part_of_speech,library,source\nwarehouse-operations-receiving-putaway,putaway,размещение товара на хранение,warehouse-operations,Warehouse Operations,Receiving and Storage,medium,4,Putaway moves received goods to storage,Putaway starts after goods receipt.,The process of moving goods into storage,noun,Warehouse Operations — SAP,manual\n`

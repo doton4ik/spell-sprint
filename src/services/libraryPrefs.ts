@@ -5,9 +5,11 @@ const PREFS_KEY = 'spell-sprint.library-prefs'
 const UPDATED_EVENT = 'spell-sprint:learning-updated'
 
 type Flag = { on: boolean; at: string }
-export type LibraryPrefs = { hidden: Record<string, Flag>; packs: Record<string, Flag>; packsInitialised?: boolean }
+// removed: imported libraries and words the learner deleted (keys "lib:<name>" / "word:<wordId>").
+// Sync only ever adds, so without these marks a deleted library would come back from the cloud.
+export type LibraryPrefs = { hidden: Record<string, Flag>; packs: Record<string, Flag>; removed: Record<string, Flag>; packsInitialised?: boolean }
 
-const empty = (): LibraryPrefs => ({ hidden: {}, packs: {} })
+const empty = (): LibraryPrefs => ({ hidden: {}, packs: {}, removed: {} })
 
 function isFlagMap(value: unknown): value is Record<string, Flag> {
   return Boolean(value) && typeof value === 'object' && !Array.isArray(value)
@@ -18,7 +20,7 @@ export function getLibraryPrefs(): LibraryPrefs {
   try {
     const stored = JSON.parse(window.localStorage.getItem(PREFS_KEY) ?? 'null') as Partial<LibraryPrefs> | null
     if (!stored) return empty()
-    return { hidden: isFlagMap(stored.hidden) ? stored.hidden : {}, packs: isFlagMap(stored.packs) ? stored.packs : {}, packsInitialised: stored.packsInitialised === true }
+    return { hidden: isFlagMap(stored.hidden) ? stored.hidden : {}, packs: isFlagMap(stored.packs) ? stored.packs : {}, removed: isFlagMap(stored.removed) ? stored.removed : {}, packsInitialised: stored.packsInitialised === true }
   } catch { return empty() }
 }
 
@@ -36,6 +38,18 @@ export function getHiddenWordIds() {
 export function setWordHidden(wordId: string, hidden: boolean) {
   const prefs = getLibraryPrefs()
   prefs.hidden[wordId] = { on: hidden, at: now() }
+  save(prefs)
+}
+
+export function getRemovedKeys() {
+  return new Set(Object.entries(getLibraryPrefs().removed).filter(([, flag]) => flag.on).map(([key]) => key))
+}
+
+export function setRemoved(keys: string[], removed: boolean) {
+  if (!keys.length) return
+  const prefs = getLibraryPrefs()
+  const at = now()
+  for (const key of keys) prefs.removed[key] = { on: removed, at }
   save(prefs)
 }
 
@@ -68,6 +82,6 @@ export function mergeLibraryPrefs(incoming: unknown) {
     for (const [id, flag] of Object.entries(theirs)) if (!result[id] || flag.at > result[id].at) result[id] = flag
     return result
   }
-  const next: LibraryPrefs = { hidden: merge(local.hidden, remote.hidden), packs: merge(local.packs, remote.packs), packsInitialised: local.packsInitialised || remote.packsInitialised === true }
+  const next: LibraryPrefs = { hidden: merge(local.hidden, remote.hidden), packs: merge(local.packs, remote.packs), removed: merge(local.removed, remote.removed), packsInitialised: local.packsInitialised || remote.packsInitialised === true }
   if (JSON.stringify(next) !== JSON.stringify(local)) save(next)
 }

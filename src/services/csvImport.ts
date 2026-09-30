@@ -1,7 +1,8 @@
 import { canonicalTopic, libraryKindForName, stableWordId } from '../data/libraryTaxonomy'
 import { normalisePartOfSpeech, partOfSpeechOptions, type LibraryDifficulty, type LibraryWord, type WordLibrary } from '../types/library'
 import { parseCsvRows } from './csv'
-import { getEveryWord, getImportedLibraries, saveImportedLibraries } from './libraryStorage'
+import { getEveryWord, getImportedLibraries, removalKey, saveImportedLibraries } from './libraryStorage'
+import { setRemoved } from './libraryPrefs'
 
 // CSV import in two steps: analyse (nothing is saved) → the learner sees what will happen → commit.
 // Only `word` and `translation` are required; every other column has a sensible default, and each
@@ -118,6 +119,8 @@ export function commitCsvImport(preview: CsvPreview): ImportBatch {
     const created: WordLibrary = { id: crypto.randomUUID(), name: entry.library, topic: entry.topic, words: [entry], source: 'imported', kind: libraryKindForName(entry.library), includes: [], createdAt: new Date().toISOString() }
     libraries.push(created); createdLibraryIds.push(created.id)
   }
+  // Importing again what was deleted earlier clears the deletion marks, or the next sync would drop it.
+  setRemoved([...ready.map((entry) => removalKey.word(entry.wordId)), ...new Set(ready.map((entry) => removalKey.library(entry.library)))], false)
   if (ready.length) saveImportedLibraries(libraries)
   return { wordIds: ready.map((entry) => entry.wordId), createdLibraryIds, libraries: [...new Set(ready.map((entry) => entry.library))], imported: ready.length }
 }
@@ -126,8 +129,11 @@ export function commitCsvImport(preview: CsvPreview): ImportBatch {
 export function undoCsvImport(batch: ImportBatch) {
   const ids = new Set(batch.wordIds)
   const created = new Set(batch.createdLibraryIds)
-  const libraries = getImportedLibraries()
+  const before = getImportedLibraries()
+  const libraries = before
     .map((library) => ({ ...library, words: library.words.filter((word) => !ids.has(word.wordId)) }))
     .filter((library) => !(created.has(library.id) && library.words.length === 0))
+  const removedLibraries = before.filter((library) => !libraries.some((kept) => kept.id === library.id)).map((library) => removalKey.library(library.name))
+  setRemoved([...batch.wordIds.map(removalKey.word), ...removedLibraries], true)
   saveImportedLibraries(libraries)
 }

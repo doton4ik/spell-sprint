@@ -19,9 +19,10 @@ export async function restoreLearningData() {
   const attempts = mergePracticeAttempts(Array.isArray(data.practiceAttempts) ? data.practiceAttempts : [])
   const reviewStates = data.reviewStates && typeof data.reviewStates === 'object' && !Array.isArray(data.reviewStates) ? data.reviewStates as Parameters<typeof mergeReviewData>[0] : {}
   mergeReviewData(reviewStates, Array.isArray(data.savedRuleIds) ? data.savedRuleIds.filter((id): id is string => typeof id === 'string') : [])
+  // Deletion marks first, so a library deleted on another device is not merged back in.
+  mergeLibraryPrefs(data.libraryPrefs)
   mergeImportedLibraries(Array.isArray(data.importedLibraries) ? data.importedLibraries : [])
   mergeLevelChecks(data.levelChecks)
-  mergeLibraryPrefs(data.libraryPrefs)
   const profile = data.profile as { name?: unknown; dailyGoal?: unknown } | undefined
   if (profile && !getProfile().name && typeof profile.name === 'string' && profile.name) saveProfile({ name: profile.name, ...(typeof profile.dailyGoal === 'number' ? { dailyGoal: profile.dailyGoal } : {}) })
   if (!loadDiagnosticResult() && data.diagnosticResult && typeof data.diagnosticResult === 'object') saveDiagnosticResult(data.diagnosticResult as Parameters<typeof saveDiagnosticResult>[0])
