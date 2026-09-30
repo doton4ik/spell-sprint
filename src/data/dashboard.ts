@@ -14,6 +14,7 @@ export const navigationItems: NavigationItem[] = [
   { label: 'Topics', icon: 'topics' },
   { label: 'Level Check', icon: 'analysis' },
   { label: 'Proofreading', icon: 'eye' },
+  { label: 'Sprint', icon: 'bolt' },
   { label: 'Libraries', icon: 'library' },
 ]
 

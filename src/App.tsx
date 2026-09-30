@@ -9,6 +9,7 @@ import { ProofreadingPage } from './pages/ProofreadingPage'
 import { ReviewPage } from './pages/ReviewPage'
 import { RulesPage } from './pages/RulesPage'
 import { SettingsPage } from './pages/SettingsPage'
+import { SprintPage } from './pages/SprintPage'
 import { TopicsPage } from './pages/TopicsPage'
 
 function getRoute() {
@@ -35,7 +36,8 @@ function App() {
       {route === 'settings' ? <SettingsPage /> : null}
       {route === 'topics' ? <TopicsPage /> : null}
       {route === 'proofreading' ? <ProofreadingPage /> : null}
-      {!['practice', 'my-mistakes', 'rules', 'libraries', 'review', 'level-check', 'test-analysis', 'settings', 'topics', 'proofreading'].includes(route) ? <DashboardPage /> : null}
+      {route === 'sprint' ? <SprintPage /> : null}
+      {!['practice', 'my-mistakes', 'rules', 'libraries', 'review', 'level-check', 'test-analysis', 'settings', 'topics', 'proofreading', 'sprint'].includes(route) ? <DashboardPage /> : null}
     </AppShell>
   )
 }

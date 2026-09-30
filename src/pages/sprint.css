@@ -1,0 +1,34 @@
+.sprint-page { margin: 0 auto; max-width: 760px; padding: 49px 56px 70px; }
+.sprint-header h1 { color: #1d312d; font-size: calc(clamp(26px, 3vw, 34px) * var(--fs)); letter-spacing: -1.1px; line-height: 1.15; margin: 0; }
+.sprint-header p:last-child { color: var(--ink-muted); font-size: calc(14.5px * var(--fs)); line-height: 1.55; margin: 10px 0 0; }
+.sprint-intro, .sprint-summary, .sprint-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); margin-top: 24px; padding: 24px; }
+.sprint-stats { display: flex; gap: 32px; }
+.sprint-stats strong { color: var(--teal-dark); font-size: calc(28px * var(--fs)); }
+.sprint-stats small { color: #82928e; display: block; font-size: calc(12px * var(--fs)); font-weight: 600; }
+.sprint-note, .sprint-hint { color: var(--ink-muted); font-size: calc(13px * var(--fs)); line-height: 1.5; margin: 16px 0; }
+.sprint-start { min-height: 48px; }
+.sprint-bar { align-items: center; display: flex; gap: 12px; }
+.sprint-clock { color: var(--teal-dark); font-size: calc(30px * var(--fs)); font-variant-numeric: tabular-nums; font-weight: 800; min-width: 72px; }
+.sprint-clock--low { color: #b2553f; }
+.sprint-score { align-items: center; background: var(--teal-soft); border-radius: 999px; color: var(--teal-dark); display: inline-flex; font-weight: 750; gap: 5px; margin-right: auto; padding: 5px 11px; }
+.sprint-progress { background: #e7eeeb; border-radius: 999px; height: 6px; margin-top: 10px; overflow: hidden; }
+.sprint-progress span { background: var(--teal); display: block; height: 100%; transition: width .1s linear; }
+.sprint-card { display: grid; gap: 14px; justify-items: center; text-align: center; }
+.sprint-pos { color: #82928e; font-size: calc(12px * var(--fs)); font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+.sprint-card h2 { color: #2d433d; font-size: calc(28px * var(--fs)); margin: 0; }
+.sprint-card input { background: #fbfcfb; border: 1px solid #cfdcd7; border-radius: 10px; color: #253b35; font-size: max(18px, calc(20px * var(--fs))); max-width: 420px; min-height: 52px; outline: none; padding: 10px 14px; text-align: center; width: 100%; }
+.sprint-card input:focus { border-color: #67aa9e; box-shadow: 0 0 0 3px rgba(29,133,119,.12); }
+.sprint-card .check-button { min-height: 46px; }
+.sprint-miss { color: #b2553f; font-size: calc(18px * var(--fs)); margin: 0; min-height: 46px; }
+.sprint-miss strong { color: #2d433d; }
+.sprint-paused { color: var(--ink-muted); margin: 0; }
+.sprint-list { border-top: 1px solid #edf1ef; margin-top: 18px; padding-top: 14px; }
+.sprint-list h2 { color: #304640; font-size: calc(16px * var(--fs)); margin: 0 0 8px; }
+.sprint-list p { color: #4f6660; margin: 4px 0; }
+.sprint-list s { color: #b2553f; }
+.sprint-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.sprint-chips span { background: #f2f7f5; border-radius: 6px; color: #55716a; padding: 5px 8px; }
+.sprint-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.sprint-actions button { min-height: 46px; }
+.sprint-page .sprint-text-button { font-size: calc(13px * var(--fs)); gap: 8px; padding: 11px 13px; }
+@media (max-width: 800px) { .sprint-page { padding: 24px 16px 40px; } .sprint-card h2 { font-size: calc(24px * var(--fs)); } }
