@@ -60,8 +60,19 @@ for (const text of proofreadingTexts) {
       if (result.slots.find((item) => item.slot.id === slot.id).status !== 'fixed' || result.falseAlarms.length) fail(`${text.id} seed ${seed}: neighbour fix for "${slot.correct[0]}" not accepted`)
     }
   }
+  // Spelling hunt: every slip is a real change, the text gets (nearly) its full number, and fixing
+  // each slip is accepted with no false alarms.
+  for (let seed = 1; seed <= 150; seed += 1) {
+    const hunt = engine.buildSpellingHunt(text, seed)
+    const wanted = engine.huntCountFor(text)
+    if (hunt.slots.length < wanted * 0.8) fail(`${text.id} hunt seed ${seed}: ${hunt.slots.length} slips, wanted ${wanted}`)
+    if (hunt.slots.some((slot) => slot.shown === slot.correct[0])) fail(`${text.id} hunt seed ${seed}: a slip equals the word`)
+    const perfect = new Map(hunt.slots.map((slot) => [slot.tokenIds[0], slot.correct[0]]))
+    const good = engine.checkExercise(hunt, perfect)
+    if (good.fixed !== hunt.slots.length || good.falseAlarms.length) fail(`${text.id} hunt seed ${seed}: perfect edits → fixed ${good.fixed}/${hunt.slots.length}`)
+  }
 }
 console.log('texts per level:', levels)
 if (lowVariety.length) console.log(`note: ${lowVariety.length} text(s) have fewer than twice as many places as mistakes (less variety)`)
-console.log(failed ? `\n${failed} problem(s).` : `\nAll ${proofreadingTexts.length} texts passed (150 random exercises each).`)
+console.log(failed ? `\n${failed} problem(s).` : `\nAll ${proofreadingTexts.length} texts passed (150 random exercises of each mode).`)
 process.exitCode = failed ? 1 : 0

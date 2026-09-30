@@ -12,7 +12,8 @@ const OUTBOX_EVENT = 'spell-sprint:mistake-outbox'
 // Only letter-level answers go to the spelling classifier. Grammar sentences and Russian translations
 // would only fill "Unclassified" with noise, and a blank answer carries no spelling information.
 export function shouldClassify(attempt: PracticeAttempt) {
-  return !attempt.isCorrect && Boolean(attempt.userAnswer.trim()) && attempt.taskType !== 'correct-sentence' && attempt.taskType !== 'translate-en-ru'
+  // An attention slip (a letter lost while reading fast) has no spelling rule behind it.
+  return !attempt.isCorrect && Boolean(attempt.userAnswer.trim()) && attempt.taskType !== 'correct-sentence' && attempt.taskType !== 'translate-en-ru' && attempt.errorCategory !== 'Attention slip'
 }
 
 function read(): PracticeAttempt[] {

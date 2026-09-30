@@ -2,13 +2,17 @@ import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react'
 import { Icon } from '../components/icons/Icon'
 import type { ProofreadingLevel, ProofreadingText } from '../data/proofreadingTexts'
 import { getLevelChecks } from '../services/levelCheck'
-import { buildExercise, checkExercise, mistakeCountFor, proofreadingTexts, proofreadingTypes, recordProofreading, typeWeights, wordCount, type Exercise, type ProofreadingResult, type Token } from '../services/proofreading'
+import { buildExercise, buildSpellingHunt, checkExercise, huntCountFor, huntOptions, mistakeCountFor, proofreadingTexts, proofreadingTypes, recordProofreading, typeWeights, wordCount, type Exercise, type ProofreadingResult, type Token } from '../services/proofreading'
 import './proofreading.css'
 
 const levels: ProofreadingLevel[] = ['A2', 'B1', 'B2', 'C1']
 const SHOW_COUNT_KEY = 'spell-sprint.proofreading-show-count'
 const readShowCount = () => { try { return window.localStorage.getItem(SHOW_COUNT_KEY) !== 'false' } catch { return true } }
 const formatLabels: Record<string, string> = { email: 'Email', message: 'Message', story: 'Story', notice: 'Notice', article: 'Article', dialogue: 'Dialogue', review: 'Review', diary: 'Diary', instructions: 'Instructions', report: 'Report', post: 'Forum post', blog: 'Blog', interview: 'Interview', chat: 'Group chat', column: 'Column', application: 'Application', speech: 'Speech' }
+// Grammar and spelling (marked places + a few slips) or a spelling hunt (slips only).
+type Mode = 'mixed' | 'spelling'
+const MODE_KEY = 'spell-sprint.proofreading-mode'
+function readMode(): Mode { try { return window.localStorage.getItem(MODE_KEY) === 'spelling' ? 'spelling' : 'mixed' } catch { return 'mixed' } }
 
 // The level of the last Level Check, so the first text is pitched right.
 function defaultLevel(): ProofreadingLevel {
@@ -22,13 +26,19 @@ export function ProofreadingPage() {
   const [level, setLevel] = useState<ProofreadingLevel>(defaultLevel)
   const [showCount, setShowCount] = useState(readShowCount)
   const [phase, setPhase] = useState<Phase>({ kind: 'setup' })
+  const [mode, setModeState] = useState<Mode>(readMode)
+  function setMode(next: Mode) { setModeState(next); try { window.localStorage.setItem(MODE_KEY, next) } catch { /* a convenience only */ } }
+  const countFor = (text: ProofreadingText) => (mode === 'spelling' ? huntCountFor(text) : mistakeCountFor(text))
 
   function toggleShowCount() {
     const next = !showCount
     setShowCount(next)
     try { window.localStorage.setItem(SHOW_COUNT_KEY, String(next)) } catch { /* a convenience only */ }
   }
-  function start(text: ProofreadingText) { setPhase({ kind: 'reading', text, exercise: buildExercise(text, Date.now(), typeWeights()) }); window.scrollTo({ top: 0 }) }
+  function start(text: ProofreadingText) {
+    const exercise = mode === 'spelling' ? buildSpellingHunt(text, Date.now(), huntOptions()) : buildExercise(text, Date.now(), typeWeights())
+    setPhase({ kind: 'reading', text, exercise }); window.scrollTo({ top: 0 })
+  }
   function randomText(except?: string) {
     const pool = proofreadingTexts.filter((text) => text.level === level && text.id !== except)
     const list = pool.length ? pool : proofreadingTexts.filter((text) => text.level === level)
@@ -52,8 +62,13 @@ export function ProofreadingPage() {
       <header className="proof-header">
         <p className="eyebrow">Proofreading</p>
         <h1>Find the mistakes</h1>
-        <p>Read a short text, tap every word that looks wrong and write the correction. Each time you open a text it gets a new set of mistakes — grammar and spelling — with more of the kinds you tend to miss.</p>
+        <p>Read a text, tap every word that looks wrong and write the correction. Each time you open a text it gets a new set of mistakes, with more of the kinds you tend to miss.</p>
       </header>
+
+      <div className="proof-modes" role="radiogroup" aria-label="Kind of mistakes">
+        <button type="button" role="radio" aria-checked={mode === 'mixed'} className={mode === 'mixed' ? 'proof-mode proof-mode--active' : 'proof-mode'} onClick={() => setMode('mixed')}><strong>Grammar and spelling</strong><span>Articles, tenses, prepositions and a few spelling slips.</span></button>
+        <button type="button" role="radio" aria-checked={mode === 'spelling'} className={mode === 'spelling' ? 'proof-mode proof-mode--active' : 'proof-mode'} onClick={() => setMode('spelling')}><strong>Spelling hunt</strong><span>Only spelling — about one slip in every eight words. Tests how carefully you read.</span></button>
+      </div>
 
       <div className="proof-controls">
         <nav className="proof-levels" aria-label="Level">{levels.map((item) => <button type="button" className={item === level ? 'proof-levels__active' : ''} onClick={() => setLevel(item)} key={item}>{item}<small>{proofreadingTexts.filter((text) => text.level === item).length}</small></button>)}</nav>
@@ -68,7 +83,7 @@ export function ProofreadingPage() {
               <button className="proof-card" type="button" onClick={() => start(text)} key={text.id}>
                 <span className="proof-card__meta">{formatLabels[text.format] ?? text.format} · {text.topic}</span>
                 <strong>{text.title}</strong>{text.situation ? <small className="proof-card__situation">{text.situation}</small> : null}
-                <span className="proof-card__size">{wordCount(text)} words · {mistakeCountFor(text)} mistakes{wordCount(text) > 200 ? <b>Long read</b> : null}</span>
+                <span className="proof-card__size">{wordCount(text)} words · {countFor(text)} mistakes{wordCount(text) > 200 ? <b>Long read</b> : null}</span>
                 <span className="proof-card__go">Start <Icon name="arrow" size={14} /></span>
               </button>
             ))}

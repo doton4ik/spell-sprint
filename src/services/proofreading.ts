@@ -1,6 +1,7 @@
 import { proofreadingTexts, type ProofreadingLevel, type ProofreadingText } from '../data/proofreadingTexts'
 import type { PracticeAttempt } from '../types/practice'
 import { getPracticeAttempts, savePracticeAttempt } from './practiceStorage'
+import { getAllWords, getEveryWord } from './libraryStorage'
 import { normalise, proofreadingTypes, type ProofreadingResult } from './proofreadingEngine'
 import { scheduleAfterAnswer } from './reviewSchedule'
 
@@ -22,7 +23,7 @@ export function typeWeights(): Record<string, number> {
 // Patterns and the review schedule. Spelling slips go through the spelling classifier and rules.
 export function recordProofreading(text: ProofreadingText, result: ProofreadingResult) {
   for (const { slot, status, learnerText } of result.slots) {
-    const spelling = slot.type === 'spelling'
+    const spelling = slot.type === 'spelling' || slot.type === 'typo'
     const taskId = `proof-${text.id}-${slot.type}-${normalise(slot.correct[0]).replace(/\s+/g, '-')}`
     const correct = status === 'fixed'
     const { confidence, nextReviewAt } = scheduleAfterAnswer({ taskId }, correct, false)
@@ -30,10 +31,21 @@ export function recordProofreading(text: ProofreadingText, result: ProofreadingR
       id: crypto.randomUUID(), taskId, taskType: spelling ? 'correct-spelling' : 'correct-sentence', topic: text.topic, library: 'Proofreading',
       userAnswer: status === 'missed' ? slot.shown : learnerText, correctAnswer: slot.correct[0], isCorrect: correct, wasSkipped: false, wasAnswerRevealed: false, hintUsed: false,
       attemptMode: 'write-en', errorType: 'unknown', confidence, nextReviewAt, needsReview: !correct,
-      errorCategory: spelling ? 'General spelling' : `Grammar · ${proofreadingTypes[slot.type]?.label ?? slot.type}`, createdAt: new Date().toISOString(),
+      errorCategory: slot.type === 'typo' ? 'Attention slip' : spelling ? 'General spelling' : `Grammar · ${proofreadingTypes[slot.type]?.label ?? slot.type}`, createdAt: new Date().toISOString(),
     }
     savePracticeAttempt(attempt)
   }
+}
+
+// Spelling hunt: slips go first into words the learner studies or has got wrong; library words
+// also tell the engine which letter strings are real words, so a slip never makes another real word.
+export function huntOptions() {
+  const preferred = new Set([
+    ...getAllWords().map((word) => word.word.toLocaleLowerCase()),
+    ...getPracticeAttempts().filter((attempt) => !attempt.isCorrect).map((attempt) => attempt.correctAnswer.toLocaleLowerCase()),
+  ])
+  const known = new Set(getEveryWord().map((word) => word.word.toLocaleLowerCase()))
+  return { preferred, known }
 }
 
 export function textsForLevel(level: ProofreadingLevel) { return proofreadingTexts.filter((text) => text.level === level) }

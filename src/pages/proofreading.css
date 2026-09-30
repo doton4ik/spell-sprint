@@ -95,3 +95,9 @@
 .proof-card__size b { background: #eaf1f7; border-radius: 6px; color: #4a718b; font-size: calc(11.5px * var(--fs)); padding: 2px 6px; }
 .proof-card__situation { color: #71837e; display: block; font-size: calc(12px * var(--fs)); font-style: italic; line-height: 1.4; margin-top: 4px; }
 .proof-situation { background: #f7f3e8; border-left: 3px solid #d9c38c; border-radius: 6px; color: #6f5f39; font-size: calc(13.5px * var(--fs)); line-height: 1.5; margin: 0 0 10px; padding: 9px 12px; }
+.proof-modes { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; margin: 18px 0 4px; }
+.proof-mode { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; color: #4f6660; display: grid; gap: 4px; padding: 13px 15px; text-align: left; }
+.proof-mode strong { color: #304640; font-size: calc(14.5px * var(--fs)); }
+.proof-mode span { font-size: calc(12.5px * var(--fs)); line-height: 1.45; }
+.proof-mode--active { background: var(--teal-soft); border-color: #9cc9c1; box-shadow: 0 0 0 2px rgba(29,133,119,.12); }
+@media (max-width: 640px) { .proof-modes { grid-template-columns: 1fr; } }

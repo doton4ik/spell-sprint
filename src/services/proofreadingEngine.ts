@@ -26,7 +26,8 @@ export const proofreadingTypes: Record<string, { label: string; hint: string }> 
   passive: { label: 'Passive voice', hint: 'be + past participle: was built, is made.' },
   'reported-speech': { label: 'Reported speech', hint: 'After a past reporting verb, tenses usually move back: will → would.' },
   confusable: { label: 'Confusable words', hint: 'Words that sound alike: their/there, its/it\'s, then/than.' },
-  spelling: { label: 'Spelling', hint: 'A spelling slip — check double letters, ie/ei and endings.' },
+  spelling: { label: 'Spelling', hint: 'A spelling slip — check double letters, ie/ei, silent letters and endings.' },
+  typo: { label: 'Attention slip', hint: 'A letter is missing, extra or swapped. Read every word to its last letter.' },
 }
 
 // ---- Parsing ------------------------------------------------------------------------------------
@@ -74,6 +75,43 @@ const spellingSlips: Array<(word: string) => string | null> = [
   (word) => (/tion$/.test(word) && word.length > 6 ? word.replace(/tion$/, 'sion') : null),
   (word) => (/^kn|^wr/.test(word) ? word.slice(1) : null),
   (word) => (/ence$/.test(word) ? word.replace(/ence$/, 'ance') : /ance$/.test(word) ? word.replace(/ance$/, 'ence') : null),
+  // The ones in learners' own writing: an unclear vowel (breakfest, viseted), a swallowed syllable
+  // (intresting, diffrent), an extra double letter (travell, comming), -ly → -ley (earley), silent b / h.
+  (word) => {
+    // The last a or i of the stem, never inside the ending: breakfast → breakfest, visited → viseted.
+    const ending = /(ed|ing|s)$/.exec(word)?.[0] ?? ''
+    const match = /^(.{2,}[^aeiou])([ai])([^aeiou]{1,2})$/.exec(word.slice(0, word.length - ending.length))
+    return match ? `${match[1]}e${match[3]}${ending}` : null
+  },
+  (word) => { const match = /^(.+[^aeiou])e(r[aeiou].*)$/.exec(word); return match && word.length >= 7 ? match[1] + match[2] : null }, // interesting → intresting
+  (word) => (/[^l]l$/.test(word) && word.length >= 5 ? `${word}l` : null),
+  (word) => { const match = /^(.*[^aeiou][aeiou])([mnpt])(ing|ed)$/.exec(word); return match ? match[1] + match[2] + match[2] + match[3] : null },
+  (word) => (/[^e]ly$/.test(word) && word.length >= 5 ? word.replace(/ly$/, 'ley') : null),
+  (word) => (/mb$/.test(word) ? word.slice(0, -1) : /^wh/.test(word) ? `w${word.slice(2)}` : null),
+]
+
+// Real misspellings learners make in common words; used first when the word turns up in a text.
+const commonMisspellings: Record<string, string[]> = {
+  always: ['allways'], people: ['peple', 'poeple'], favourite: ['favorite', 'favrite'], different: ['diferent', 'diffrent'], receive: ['recieve'],
+  address: ['adress'], surprise: ['suprise'], until: ['untill'], believe: ['beleive'], because: ['becouse', 'becuse'], beautiful: ['beatiful', 'beautifull'],
+  friend: ['freind', 'frend'], friends: ['freinds'], interesting: ['intresting', 'interisting'], tomorrow: ['tommorow', 'tomorow'], really: ['realy'],
+  finally: ['finaly'], necessary: ['neccessary', 'necesary'], separate: ['seperate'], definitely: ['definately'], which: ['wich'], business: ['buisness'],
+  government: ['goverment'], environment: ['enviroment'], beginning: ['begining'], writing: ['writting'], coming: ['comming'], stopped: ['stoped'],
+  running: ['runing'], recommend: ['recomend', 'reccomend'], occasion: ['occassion'], weird: ['wierd'], accommodation: ['accomodation'],
+  embarrassed: ['embarased'], unfortunately: ['unfortunatly'], immediately: ['immediatly'], probably: ['probaly', 'propably'], restaurant: ['restaraunt'],
+  breakfast: ['breakfest'], library: ['libary'], February: ['Febuary'], Wednesday: ['Wensday'], knowledge: ['knowlege'], answer: ['anser'],
+  successful: ['sucessful', 'successfull'], tired: ['tierd'], thought: ['thougt'], through: ['throught', 'thru'], though: ['tho'], quiet: ['quite'],
+  village: ['vilage'], early: ['earley'], travelled: ['traveled'], visited: ['visitted'], neighbour: ['neighbor', 'neigbour'], island: ['iland'],
+  exercise: ['excercise'], experience: ['experiance'], similar: ['similiar'], disappear: ['dissapear'], disappointed: ['dissapointed'],
+}
+
+// Attention slips: no rule behind them, just a word read too fast (villag, showd, cludy, morining).
+const attentionSlips: Array<(word: string) => string | null> = [
+  (word) => (/[^aeiou]e$/.test(word) && word.length >= 5 ? word.slice(0, -1) : null), // village → villag (never birds → bird)
+  (word) => (/e[sdn]$/.test(word) && word.length >= 5 ? word.slice(0, -2) + word.slice(-1) : null),
+  (word) => { const match = /^(.+?)([aeiou])([aeiou])(.+)$/.exec(word); return match ? match[1] + match[3] + match[4] : null },
+  (word) => { const at = Math.floor(word.length / 2); return word.length >= 6 && word[at] !== word[at - 1] ? word.slice(0, at - 1) + word[at] + word[at - 1] + word.slice(at + 1) : null },
+  (word) => { const match = /^(.+?[aeiou])([bdfgmnprst])([aeiou].*)$/.exec(word); return match ? match[1] + match[2] + match[2] + match[3] : null }, // forest → forrest
 ]
 
 export const errorCountFor = (level: ProofreadingLevel) => ({ A2: 4, B1: 5, B2: 6, C1: 7 })[level]
@@ -136,6 +174,48 @@ function buildOnce(text: ProofreadingText, seed: number, weights: Record<string,
     if (!slip.length) continue
     const slot: Slot = { id: slots.length, type: 'spelling', correct: [token.text], shown: slip[Math.floor(next() * slip.length)], tokenIds: [token.id] }
     token.text = slot.shown; token.slotId = slot.id
+    slots.push(slot)
+  }
+  return { textId: text.id, seed, tokens, slots }
+}
+
+// ---- Spelling hunt ------------------------------------------------------------------------------------
+// Only spelling: about one slip in every 8 words, half of them with a rule behind them and half
+// attention slips. Works on any text (the grammar mark-up is resolved to its correct form first).
+export function huntCountFor(text: ProofreadingText) {
+  return Math.max(5, Math.min(40, Math.round(wordCount(text) / 8)))
+}
+
+// preferred: words the learner practises or gets wrong — they are picked first.
+// known: real words, so a slip never turns one real word into another (planet → plane).
+export function buildSpellingHunt(text: ProofreadingText, seed = Date.now(), options: { preferred?: Set<string>; known?: Set<string> } = {}): Exercise {
+  const next = random(seed)
+  const clean = text.text.replace(PLACE, (_match, correct: string) => variants(correct)[0])
+  const tokens: Token[] = tokenize(clean).map((part, id) => ({ id, text: part, isWord: WORD.test(part) }))
+  const inText = new Set(tokens.filter((token) => token.isWord).map((token) => token.text.toLocaleLowerCase()))
+  const isReal = (value: string) => inText.has(value.toLocaleLowerCase()) || Boolean(options.known?.has(value.toLocaleLowerCase()))
+  const total = huntCountFor(text)
+  const slots: Slot[] = []
+  const pool = tokens.filter((token) => token.isWord && token.text.length >= 5 && (token.text === token.text.toLocaleLowerCase() || commonMisspellings[token.text]))
+  const weight = (token: Token) => (commonMisspellings[token.text] ? 3 : 1) * (options.preferred?.has(token.text.toLocaleLowerCase()) ? 3 : 1)
+  let usedLast = -3
+  while (slots.length < total && pool.length) {
+    const sum = pool.reduce((acc, token) => acc + weight(token), 0)
+    let roll = next() * sum
+    const index = Math.max(0, pool.findIndex((token) => (roll -= weight(token)) <= 0))
+    const token = pool.splice(index, 1)[0]
+    if (Math.abs(token.id - usedLast) < 3 && pool.length > total) continue // keep slips apart a little
+    const usable = (values: Array<string | null>) => values.filter((value): value is string => value !== null && value !== token.text && !isReal(value))
+    // A real misspelling of this very word beats a generated one.
+    const common = usable(commonMisspellings[token.text] ?? [])
+    const ruleSlips = common.length ? common : usable(spellingSlips.map((make) => make(token.text)))
+    const typos = usable(attentionSlips.map((make) => make(token.text)))
+    // About half attention slips; when the word allows only one kind, use that kind.
+    const attention = typos.length > 0 && (next() < 0.45 || !ruleSlips.length)
+    const choices = attention ? typos : ruleSlips
+    if (!choices.length) continue
+    const slot: Slot = { id: slots.length, type: attention ? 'typo' : 'spelling', correct: [token.text], shown: choices[Math.floor(next() * choices.length)], tokenIds: [token.id] }
+    token.text = slot.shown; token.slotId = slot.id; usedLast = token.id
     slots.push(slot)
   }
   return { textId: text.id, seed, tokens, slots }
