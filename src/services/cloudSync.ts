@@ -6,10 +6,11 @@ import { getLevelChecks, mergeLevelChecks } from './levelCheck'
 import { flushMistakeOutbox, getOutboxSize } from './mistakeOutbox'
 import { getProfile, saveProfile } from './profileStorage'
 import { getLibraryPrefs, mergeLibraryPrefs } from './libraryPrefs'
+import { getPairAttempts, mergePairAttempts } from './pairs'
 import { clearPersonalData } from './deviceData'
 import { getActiveCloudSession, getCloudSession, loadCloudSnapshot, loadCloudSnapshotVersion, saveCloudSnapshot, signOut } from './supabase'
 
-type Snapshot = { practiceAttempts?: unknown; diagnosticResult?: unknown; reviewStates?: unknown; savedRuleIds?: unknown; importedLibraries?: unknown; levelChecks?: unknown; profile?: unknown; libraryPrefs?: unknown }
+type Snapshot = { practiceAttempts?: unknown; diagnosticResult?: unknown; reviewStates?: unknown; savedRuleIds?: unknown; importedLibraries?: unknown; levelChecks?: unknown; profile?: unknown; libraryPrefs?: unknown; pairAttempts?: unknown }
 
 // Merges the cloud copy into this device. It only adds missing data and never deletes local data.
 export async function restoreLearningData() {
@@ -24,6 +25,7 @@ export async function restoreLearningData() {
   mergeReviewData(reviewStates, Array.isArray(data.savedRuleIds) ? data.savedRuleIds.filter((id): id is string => typeof id === 'string') : [])
   mergeImportedLibraries(Array.isArray(data.importedLibraries) ? data.importedLibraries : [])
   mergeLevelChecks(data.levelChecks)
+  mergePairAttempts(data.pairAttempts)
   const profile = data.profile as { name?: unknown; dailyGoal?: unknown } | undefined
   if (profile && !getProfile().name && typeof profile.name === 'string' && profile.name) saveProfile({ name: profile.name, ...(typeof profile.dailyGoal === 'number' ? { dailyGoal: profile.dailyGoal } : {}) })
   if (!loadDiagnosticResult() && data.diagnosticResult && typeof data.diagnosticResult === 'object') saveDiagnosticResult(data.diagnosticResult as Parameters<typeof saveDiagnosticResult>[0])
@@ -55,6 +57,7 @@ export async function syncLearningData() {
     levelChecks: getLevelChecks(),
     profile: getProfile(),
     libraryPrefs: getLibraryPrefs(),
+    pairAttempts: getPairAttempts(),
   }
   const uploaded = fingerprint(JSON.stringify(payload))
   const state = readSyncState()

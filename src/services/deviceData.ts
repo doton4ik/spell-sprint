@@ -12,6 +12,7 @@ const PERSONAL_KEYS = [
   'spell-sprint.library-prefs',
   'spell-sprint.sync-state',
   'spell-sprint.sprint-rounds',
+  'spell-sprint.pair-attempts',
   'spell-sprint.mistake-outbox',
   'spell-sprint.diagnostic-result',
   'spell-sprint.profile',
