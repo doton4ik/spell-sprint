@@ -817,4 +817,167 @@ export const proofreadingTexts: ProofreadingText[] = [
   
   "He found me anyway," she said. "Three years later, in a bookshop." She folded the letter {carefully|word-form|careful} and asked me {to stay|gerund-infinitive|staying} for tea.`,
   },
+  // ───────────── Batch 5: C1, written and reviewed in the project ─────────────
+  {
+    id: 'c1-article-first-and-last',
+    title: 'Why the middle disappears',
+    level: 'C1',
+    format: 'article',
+    topic: 'Science and Learning',
+    situation: 'Your friend writes for a popular-science website and asked you to proofread this article before it is published.',
+    text: `Ask people {to remember|gerund-infinitive|remembering} a list of twenty words, and something {curious|word-form|curiously} happens. Most of them {recall|agreement|recalls} the first few items and the last few, while the words in the middle simply {vanish|agreement|vanishes}. Psychologists {have known|tense|know} about this pattern, {called|passive|calling} the serial position effect, since the 1880s, when it {was first described|passive|first described} by the German researcher Hermann Ebbinghaus.
+  
+  The explanation is {surprisingly|word-form|surprising} simple. The first items {are rehearsed|passive|rehearse} more often, so they are more likely {to be stored|gerund-infinitive|being stored} in long-term memory. The last items, on the other hand, {are|agreement|is} still in our short-term memory when we are asked to recall them. The middle of the list {receives|agreement|receive} neither advantage.
+  
+  What makes the effect interesting is how far it {extends|agreement|extend} beyond the laboratory. Job candidates who {are interviewed|passive|interview} first or last are often rated more {highly|word-form|high} than those seen in the middle of the day. {Had the order been different|conditional|If the order was different}, some of them might {have been offered|passive|have offered} the job. Similarly, the songs that open and close a concert tend {to be|gerund-infinitive|being} the ones people talk about afterwards.
+  
+  {Not only does this have|word-order|Not only this has} consequences for interviewers and musicians; it also matters to anyone who {is trying|agreement|are trying} to learn something. If you {study|conditional|will study} for three hours without {a break|article-missing|break}, you create one long "middle", {in which|pronoun|in what} much of the material is forgotten. By {dividing|gerund-infinitive|divide} the same time into shorter sessions, you give yourself {many more|quantifier|much more} beginnings and endings.
+  
+  So the next time you plan a revision session, a presentation or even a dinner party, think {carefully|word-form|careful} about what comes first and what comes last. The middle, it seems, is where good ideas go {to be forgotten|passive|to forget}.`,
+  },
+  {
+    id: 'c1-email-six-weeks-of-mould',
+    title: 'Six weeks of mould',
+    level: 'C1',
+    format: 'email',
+    topic: 'Home and Housing',
+    situation: 'Your flatmate is sending a formal complaint to the landlord and asked you to proofread it first.',
+    text: `Dear Mr Hartley,
+  
+  I am writing to follow up {on|preposition|for} my email of 3 November {regarding|word-form|regarded} the damp in the bedroom of Flat 2B, to which I {have not yet received|tense|did not yet receive} a reply.
+  
+  As I {explained|tense|have explained} at the time, black mould has appeared on the wall behind the wardrobe, and it has now {spread|past-irregular|spreaded} to the ceiling. Despite {opening|gerund-infinitive|to open} the windows every morning and {running|gerund-infinitive|run} a dehumidifier, which I {bought|past-irregular|buyed} at my own expense, the problem has continued {to get ; getting|gerund-infinitive|get} worse. Several of my clothes {have been damaged|passive|have damaged} beyond {repair|plural-uncountable|repairs}, and I {have been advised|passive|have advised} by my doctor to sleep in the living room until the issue {is resolved|conditional|will be resolved}.
+  
+  I appreciate that repairs of this kind cannot always {be carried out|passive|carry out} immediately. However, under the terms {of|preposition|in} my tenancy agreement, you are responsible {for keeping|gerund-infinitive|to keep} the property {in good condition|article-extra|in a good condition}, and it has now been six weeks {since|since-for|for} I first reported the problem.
+  
+  I would therefore be grateful if you {could|modal|can} arrange for a surveyor to inspect the flat within the next fourteen days. {Should this not be possible|word-order|Should not this be possible}, I will have no choice but {to contact|gerund-infinitive|contacting} the council's housing department, which I would much rather avoid. I have attached photographs {taken|passive|taking} on three separate dates, which clearly show how {quickly|word-form|quick} the mould has spread.
+  
+  I have always {paid|past-irregular|payed} my rent on time and have enjoyed living in the flat, so I hope we can resolve this matter {promptly|word-form|prompt}. I am available {most|quantifier|the most} weekday afternoons and would be happy to give access {at short notice|article-extra|at a short notice}.
+  
+  I look forward {to hearing|gerund-infinitive|to hear} from you.
+  
+  Yours sincerely,
+  Priya Nair`,
+  },
+  {
+    id: 'c1-speech-failing-well',
+    title: 'On failing well',
+    level: 'C1',
+    format: 'speech',
+    topic: 'Education and Life',
+    situation: 'A former student of your school is giving the graduation speech and asked you to check it the night before.',
+    text: `Thank you, and good afternoon. When the principal {asked|tense|has asked} me {to speak|gerund-infinitive|speaking} today, I assumed she {had confused|tense|has confused} me with someone {more successful|comparative|successfuller}. Twenty years ago I {sat|past-irregular|sitted} where you {are sitting|agreement|is sitting} now, and I had absolutely no idea what I {wanted|tense|want} to do. I {had failed|tense|have failed} two of my final exams, and I was convinced that my life {was|tense|is} over before it had {properly|word-form|proper} begun.
+  
+  It wasn't, of course. But I have spent {a great deal of|quantifier|a great many} time since then {thinking|gerund-infinitive|to think} about failure, and I would like {to share|gerund-infinitive|sharing} three things I have learnt.
+  
+  The first is that failure is {far|comparative|farther} more common than anyone {admits|agreement|admit}. Every successful person you admire {has|agreement|have} {a drawer|article-missing|drawer} full of {rejected|word-form|rejecting} applications, abandoned projects and plans that never worked. You simply don't see them, because people rarely {post|agreement|posts} their disappointments online.
+  
+  The second is that failing at something is not the same as {being|gerund-infinitive|be} a failure. {Had I passed|conditional|If I passed} those exams, I would probably {have become|conditional|become} an accountant, as my father wanted. Instead, I {took|past-irregular|taked} a year off, worked in a bakery, and discovered that I loved {explaining ; to explain|gerund-infinitive|explain} things to people. That is how I {became|past-irregular|becomed} a teacher.
+  
+  The third, and most important, is that you learn far more {from|preposition|of} what goes wrong than from what goes right. When something {succeeds|agreement|succeed}, we rarely ask why. When it fails, we are forced {to look|gerund-infinitive|looking} closely at every decision we made.
+  
+  So here is my advice. Apply for the job you are not quite {qualified|word-form|qualifying} for. {Never let|word-order|Let never} the fear of looking foolish stop you {from starting ; starting|preposition|to start} something new. And when things do go wrong, as they {certainly|word-form|certain} will, be as kind to yourself as you would be {to|preposition|for} a friend.
+  
+  Congratulations, all of you. I can't wait {to see|gerund-infinitive|seeing} what you fail at next.`,
+  },
+  {
+    id: 'c1-application-conservation',
+    title: 'Three centuries of dirt',
+    level: 'C1',
+    format: 'application',
+    topic: 'Study and Careers',
+    situation: 'Your cousin is applying for a scholarship and asked you to proofread her personal statement before the deadline.',
+    text: `I am applying for the Hartwell Scholarship in order to complete {a master's degree|article-missing|master's degree} in conservation science, a field I first {became|past-irregular|becomed} interested in {at|preposition|in} the age of fourteen, when I watched a restorer {remove ; removing|gerund-infinitive|to remove} three centuries of dirt from a painting in our local church.
+  
+  Since then, my interest {has|agreement|have} only grown. During my undergraduate studies in chemistry, I {chose|past-irregular|choosed} every option connected {with ; to|preposition|at} materials and heritage, and my final-year project, which examined how humidity {affects|confusable|effects} medieval parchment, {was awarded|passive|awarded} the department's prize for research. I have also spent two summers {working|gerund-infinitive|to work} as a volunteer at the city archive, where I {was trusted|passive|trusted} to clean and catalogue documents from the sixteenth century.
+  
+  What draws me {to|preposition|for} conservation is the combination of science and responsibility. Every decision a conservator makes {is|agreement|are}, in a sense, permanent: a cleaning method that is too {aggressive|word-form|aggressively} cannot {be undone|passive|undo}. I find that responsibility {motivating|word-form|motivated} rather {than|confusable|then} frightening, and I believe it has made me {a more careful|article-missing|more careful} and patient scientist.
+  
+  My family is not in {a position|article-missing|position} {to support|gerund-infinitive|supporting} me financially, and without a scholarship I would have to postpone my studies for several years. {Were I to receive|conditional|Was I to receive} the Hartwell Scholarship, I would be able to devote myself fully to the programme and to the internship at the National Museum, {which forms|agreement|which form} part of the course.
+  
+  In the long term, I hope {to specialise|gerund-infinitive|specialising} in the conservation of paper and books. So much of our history {survives|agreement|survive} only because someone, at some point, decided it was worth {saving|gerund-infinitive|to save}. I would like to be one of those people.
+  
+  Thank you for {considering|gerund-infinitive|consider} my application.`,
+  },
+  {
+    id: 'c1-interview-water-sommelier',
+    title: 'The woman who tastes water',
+    level: 'C1',
+    format: 'interview',
+    topic: 'Food and Unusual Jobs',
+    situation: 'You are proofreading interviews for a food magazine; this one goes to print tomorrow.',
+    text: `Interviewer: You describe {yourself|pronoun|you} as a water sommelier. What exactly {does that involve|word-order|that involves}?
+  Martina: Essentially, I help restaurants {choose ; to choose|gerund-infinitive|choosing} which waters to serve with which dishes. Most people {assume|agreement|assumes} that water has no taste, but that is {simply|word-form|simple} not true. Depending {on|preposition|from} where it comes from, water can {taste|modal|tastes} slightly salty, sweet, bitter or even metallic.
+  
+  Interviewer: How did you {become|tense|became} interested in it?
+  Martina: By accident. I was working as a wine waiter {in|preposition|at} Milan when a customer asked me {to recommend|gerund-infinitive|recommending} a mineral water. I {realised|tense|have realised} I had no idea what to say. That evening I {bought|past-irregular|buyed} twelve different bottles and {tasted|tense|taste} them one after another. I {have been|tense|am} fascinated ever since.
+  
+  Interviewer: Can you really tell the difference?
+  Martina: Usually, yes. The key is the mineral content. A water that has spent thousands of years {passing|gerund-infinitive|to pass} through volcanic rock will taste completely different {from ; to|preposition|of} one that {has been collected|passive|has collected} from melted snow. If you {compare|conditional|will compare} them side by side, even beginners {notice|agreement|notices} the difference.
+  
+  Interviewer: Some people would say this is just a clever way {of selling|gerund-infinitive|of sell} expensive water.
+  Martina: I understand that criticism, and I {share|tense|am sharing} some of it. I would never suggest that people {stop ; should stop|agreement|stops} drinking tap water, which in most European cities {is|agreement|are} excellent. What I do say is that water deserves {the same attention|article|a same attention} we give to coffee or tea. {Had I not started|conditional|If I didn't start} paying attention, I would never {have discovered|conditional|discover} how much variety there {is|agreement|are}.
+  
+  Interviewer: What is the strangest request you have had?
+  Martina: A client once asked me {to find|gerund-infinitive|finding} a water that tasted like the river near his childhood home. It took me four months, but I {found|past-irregular|finded} one. When he tasted it, he could {hardly|word-form|hard} speak.`,
+  },
+  {
+    id: 'c1-blog-japanese-at-sixty',
+    title: 'Japanese at sixty',
+    level: 'C1',
+    format: 'blog',
+    topic: 'Languages and Learning',
+    situation: 'Your uncle started a blog about learning Japanese and asked you to proofread his anniversary post.',
+    text: `On my sixtieth birthday, my daughter {gave|past-irregular|gived} me a Japanese textbook and a card that said, "You always said you would. So do it." I {had talked|tense|have talked} about {learning|gerund-infinitive|to learn} Japanese for decades, ever since {a business trip|article-missing|business trip} to Osaka in 1989, but I had always {found|past-irregular|finded} a reason {to postpone|gerund-infinitive|postponing} it.
+  
+  A year later, I can {hold|modal|to hold} a basic conversation, read most of the menu in my favourite ramen bar and write about five hundred characters, although my handwriting would {embarrass|modal|embarrasses} a seven-year-old. Here is what I {have learnt|tense|learn} along the way.
+  
+  First, age is {less|comparative|fewer} of an obstacle than I had {feared|tense|fear}. My memory is certainly {slower|comparative|more slow} than it was, but I have something my younger classmates {lack|agreement|lacks}: patience. I no longer expect {to be|gerund-infinitive|being} perfect immediately, and I am far less afraid of mistakes than I was {at|preposition|in} twenty.
+  
+  Second, little and often works better than long and rare. I study {for|since-for|since} twenty minutes every morning with my coffee, and on the days I skip, I can {feel|modal|feeling} the difference. {Had I tried|conditional|If I tried} to cram everything into one long session at the weekend, I would {have given up|conditional|give up} within {a month|article-missing|month}.
+  
+  Third, find a reason to speak. My teacher, who {is|agreement|are} younger than my own children, insisted from the very first lesson that we {spend ; should spend|agreement|spends} {at least|confusable|at last} half the time talking. It was {terrifying|word-form|terrified}, but it worked.
+  
+  Finally, be prepared {to look|gerund-infinitive|looking} silly. Last month I {confidently|word-form|confident} told a waiter that I wanted to eat my umbrella. He laughed, I laughed, and I will never {confuse|modal|confused} those two words again.
+  
+  Next spring I am going back to Osaka {for|preposition|at} the first time in thirty-five years. This time, I intend {to understand|gerund-infinitive|understanding} what people {are saying|word-order|are they saying}.`,
+  },
+  {
+    id: 'c1-post-friends-cafe',
+    title: 'My best friend\'s cat café',
+    level: 'C1',
+    format: 'post',
+    topic: 'Friends and Money',
+    situation: 'Your friend wants to post this on an advice forum and asked you to check it first.',
+    text: `I need some honest advice, because I genuinely don't know what {to do|gerund-infinitive|doing}.
+  
+  My best friend, {whom ; who|pronoun|which} I {have known|tense|know} since primary school, {has decided|agreement|have decided} to quit her well-paid job and open a cat café. She has already {found|past-irregular|finded} premises, {spoken|past-irregular|spoke} to the bank {about|preposition|for} a loan and {told|past-irregular|telled} everyone at work that she is leaving. Last night she {showed|tense|has showed} me her business plan and asked for my opinion.
+  
+  The trouble is that I work {in|preposition|at} finance, and the plan {worries|agreement|worry} me. Her rent {alone|word-form|lonely} would take up {nearly half|article|a nearly half} of her expected income, and she {has assumed|agreement|have assumed} that the café will be full every day from the moment it {opens|conditional|will open}. She has no savings {to fall back on|gerund-infinitive|falling back on} if things {go|conditional|will go} wrong, and she would be {risking|gerund-infinitive|risk} her flat, which is the security for the loan.
+  
+  I hate the idea {of discouraging|gerund-infinitive|to discourage} her. She {has been|tense|is} unhappy in her job for years, and I have never {seen|past-irregular|saw} her as excited as she was last night. On the other hand, if I say nothing and the business {fails|agreement|fail}, I am not sure I would forgive myself.
+  
+  I have thought about {suggesting|gerund-infinitive|to suggest} that she {start ; starts ; should start|tense|started} smaller, perhaps with {a stall|article-missing|stall} at weekend markets, but I am worried that she will hear only criticism. {Has anyone been|word-order|Anyone has been} in a similar situation? Did you {tell|tense|told} your friend the truth, and if so, how did you do it without {damaging|gerund-infinitive|damage} the friendship?
+  
+  {Any advice|plural-uncountable|Any advices} would be {greatly|word-form|great} appreciated.`,
+  },
+  {
+    id: 'c1-story-platform-four',
+    title: 'The violinist on platform 4',
+    level: 'C1',
+    format: 'story',
+    topic: 'People and Music',
+    situation: 'Your friend wrote this story for a writing competition and asked you to proofread it.',
+    text: `Every weekday for eleven years, Tomas {had caught|tense|has caught} the 7.42 to the city, and every weekday for the last three of those years, an elderly man {had been playing|tense|has been playing} the violin at the end of platform 4. He played the same few pieces, mostly Bach, and he played them {beautifully|word-form|beautiful}. {Hardly anyone|quantifier|Hardly nobody} stopped {to listen|gerund-infinitive|listen}; the case at his feet rarely contained more than a few coins.
+  
+  Tomas had never {spoken|past-irregular|spoke} to him. He had, however, developed the habit {of dropping|gerund-infinitive|to drop} {a pound|article-missing|pound} into the case on Fridays, and the old man always {nodded|tense|nods} without {missing|gerund-infinitive|to miss} a note.
+  
+  One Monday in November, the violinist was not there. {Nor was he there|word-order|Nor he was there} on Tuesday, or for the rest of the week. Tomas was surprised {by|preposition|of} how much the silence {bothered|tense|bothers} him. The platform, {which|pronoun|what} had always seemed {a little warmer|comparative|a little more warm} when the music was playing, now felt like {any|quantifier|some} other cold, grey station.
+  
+  On the following Monday he asked the man at the ticket office {whether anything had happened|word-order|whether had anything happened}. The clerk looked at him for a moment, then reached under the counter and handed him an envelope with "For the man in the blue coat" {written|passive|writing} across it.
+  
+  Inside {was|agreement|were} a short note in shaky handwriting. The violinist explained that he {had been taken|passive|had taken} into hospital and would not be coming back. He thanked Tomas {for|preposition|about} the Friday coins, which he said {had paid|tense|has paid} for his strings for three years, and asked him {to accept|gerund-infinitive|accepting} the violin, which {was waiting|tense|is waiting} at the lost property office.
+  
+  Tomas had not played {since|since-for|for} he was a teenager. But that evening he took the violin home, tuned it {carefully|word-form|careful} and, {after several|quantifier|after much} painful attempts, managed a slow, uncertain version of the first piece he {had heard|tense|has heard} on platform 4.`,
+  },
 ]
