@@ -575,4 +575,134 @@ export const proofreadingTexts: ProofreadingText[] = [
   
   Had the power not failed that evening, I {would never have learnt|conditional|would never learn} that the most interesting thing in a museum is not always behind glass.`,
   },
+  // ───────────── Batch 3: written and reviewed in the project ─────────────
+  {
+    id: 'a2-diary-wrong-class',
+    title: 'The wrong class',
+    level: 'A2',
+    format: 'diary',
+    topic: 'Sport and Free Time',
+    situation: 'Your friend keeps an English diary for practice and asked you to check today\'s page.',
+    text: `Monday, 6 October
+  
+  Today I {went|past-irregular|goed} to the new gym {near|preposition|near of} my office {for|preposition|at} the first time. I {wanted|tense|want} to lift weights, because my doctor says I {need|agreement|needs} more exercise. The woman at the desk {gave|past-irregular|gived} me a card and said, "Room 3, at seven o'clock."
+  
+  I {was|agreement|were} a bit nervous, so I arrived early. The room was big and {bright|word-form|brightly}, with mirrors {on|preposition|in} every wall, but there {were|agreement|was} no weights. Then twenty women in colourful clothes came in, and a young man {turned|tense|turns} on loud music. It was {a dance class|article-missing|dance class}!
+  
+  I wanted to leave, but the teacher smiled {at|preposition|to} me and {said|confusable|told}, "Welcome! Don't be shy." For an hour I jumped, turned and {fell|past-irregular|falled} over twice. Everybody {laughed|tense|laughs}, but in a friendly way. At the end, an old lady {told|confusable|said} me that I was {better|comparative|more good} than her husband.
+  
+  Now my legs hurt and I can't {walk|modal|to walk} properly. But I {have|tense|am having} a new plan. I {am going|tense|go} back on Wednesday, and this time I will bring {my|pronoun|me} sister. She loves dancing, and she says I will be the star of the class!`,
+  },
+  {
+    id: 'a2-chat-pizza-for-twelve',
+    title: 'Pizza for twelve',
+    level: 'A2',
+    format: 'chat',
+    topic: 'Family and Food',
+    situation: 'Your friend Ella wants to share her family\'s funny group chat in English class and asked you to check it first.',
+    text: `Mum: Hi everyone! Dad {is|agreement|are} ordering pizza tonight. What do you {want|agreement|wants}?
+  Tom: Pepperoni, please! And {some|quantifier|any} garlic bread.
+  Ella: I {don't|agreement|doesn't} eat meat, remember? Can I have {the one|article|a one} with mushrooms?
+  Grandma: I {would like|modal|would liked} a small one with tomatoes, please.
+  Dad: OK. I {wrote|past-irregular|writed} everything down. The pizzas will arrive {at|preposition|in} seven.
+  
+  Tom: Dad, why {are there|word-order|there are} twelve boxes at the door??
+  Dad: What? I {ordered|tense|order} four!
+  Mum: You pressed "12", not "4". The driver {is|agreement|are} still {here|confusable|hear}. He {thinks|agreement|think} we are having a party.
+  Ella: Well, we can {have|modal|having} one! Let's {invite|gerund-infinitive|inviting} the neighbours.
+  Grandma: I can't eat three pizzas, but I {know|agreement|knows} who can.
+  Tom: My friends {are coming|tense|come} in ten minutes.
+  Mum: Good. And next time, Dad, please {read|agreement|reads} the order before you pay.
+  Dad: Sorry! The good news is that we {got|past-irregular|getted} one pizza for free.
+  Ella: That's {the best|comparative|the most good} mistake of the year!`,
+  },
+  {
+    id: 'b1-application-festival',
+    title: 'Forty cups of tea',
+    level: 'B1',
+    format: 'application',
+    topic: 'Work and Volunteering',
+    situation: 'Your friend Maya is applying to volunteer at a music festival and asked you to check her letter before she sends it.',
+    text: `Dear Festival Team,
+  
+  I {am writing|tense|write} to apply for a volunteer place at this year's Green Fields Music Festival. I {saw|past-irregular|seen} your advertisement online last week, and I {have wanted|tense|want} to work at a festival {since|since-for|for} I was fifteen.
+  
+  I am twenty, and I study {music|article-extra|the music} at college. Last summer I worked in a busy café, so I am used {to talking|gerund-infinitive|to talk} to lots of people at once. I am also good {at|preposition|in} solving problems. Once, during a power cut, I {made|past-irregular|maked} forty cups of tea with one camping stove!
+  
+  I must be honest {about|preposition|for} one thing: I have never camped before. My parents {think|agreement|thinks} I will hate the mud. To prepare, I {spent|past-irregular|spended} a whole night in a tent in our garden. It {rained|tense|rains} all night, but I stayed completely dry.
+  
+  I would be happy {to help|gerund-infinitive|helping} at the information tent or in the recycling area. I don't mind {working|gerund-infinitive|to work} early in the morning or late at night, and I can work {an extra hour|article|a extra hour} every day if necessary. I speak English, Spanish and {a little|quantifier|a few} French.
+  
+  If you {need|conditional|will need} someone for the children's area, I {have|tense|am having} some experience. Last summer I {looked after|tense|look after} my three young cousins for two weeks, and they all survived.
+  
+  Please find my CV {attached|word-form|attaching}. Thank you {for|preposition|to} reading my application. I {look|agreement|looks} forward to hearing from you.
+  
+  Yours sincerely,
+  Maya Lopez`,
+  },
+  {
+    id: 'b2-speech-farewell-helen',
+    title: 'Nine years next to Helen',
+    level: 'B2',
+    format: 'speech',
+    topic: 'Work',
+    situation: 'Your colleague Sam is giving a farewell speech tomorrow and asked you to check it tonight.',
+    text: `Good evening, everyone. For those who {don't|agreement|doesn't} know me, I'm Sam, and I {have had|tense|had} the pleasure of {sitting|gerund-infinitive|sit} next to Helen for the last nine years. When I {was asked|passive|asked} to give this speech, I said yes {immediately|word-form|immediate} — and then I {panicked|tense|panic}.
+  
+  How do you sum up nine years in five minutes? Helen {joined|tense|has joined} the company {in|preposition|on} 2016, when we {were|agreement|was} still a team of six people in a room above a bakery. The smell of fresh bread {made|tense|makes} it almost impossible to concentrate, but Helen somehow {managed|tense|manages} to finish every project before the deadline. She {taught|past-irregular|teached} more than thirty new colleagues, including me.
+  
+  On my first day, I {accidentally|word-form|accidental} deleted the client database. Instead of {shouting|gerund-infinitive|shout} at me, she made two cups of tea and said, "Right. Let's fix it." If she {hadn't helped|conditional|didn't help} me that day, I would have been fired within a week.
+  
+  Helen is the most {patient|word-form|patience} person I have ever worked with, but she is also {surprisingly|word-form|surprising} competitive. Anyone who has played table tennis with her at the Christmas party knows exactly what I {mean|agreement|means}.
+  
+  Next month Helen and her husband are moving to Portugal, where they {are going to|tense|are going} open a small guesthouse by the sea. She {has been learning|tense|is learning} Portuguese {for|since-for|since} two years, and she tells me she can already order coffee without {pointing|gerund-infinitive|to point}.
+  
+  We will miss {her|pronoun|she} calm voice, her terrible jokes and {the|article|a} chocolate biscuits she hides in her top drawer. The office will not be {the same|article|same} without you, Helen.
+  
+  So please raise your glasses. To Helen — {may|modal|might} the guesthouse always be full, and may the guests never {find|agreement|finds} the chocolate!`,
+  },
+  {
+    id: 'c1-column-five-stars',
+    title: 'The tyranny of five stars',
+    level: 'C1',
+    format: 'column',
+    topic: 'Society and Technology',
+    situation: 'A journalist friend asked you to proofread her weekly column before it goes to print.',
+    text: `Last week I {spent|past-irregular|spended} forty minutes {choosing|gerund-infinitive|to choose} a toaster. Not because toasters are {complicated|word-form|complicating}, but because I made the mistake of {reading|gerund-infinitive|to read} the reviews. {Seldom have I seen|word-order|Seldom I have seen} such passion {devoted|word-form|devoting} to a kitchen appliance. One customer described it as "life-changing"; another, {whose|pronoun|who's} toast had apparently {caught|past-irregular|catched} fire, {gave|past-irregular|gived} it {a single star|article-missing|single star} and a paragraph of capital letters.
+  
+  We have become a society of reviewers. Every taxi ride, hotel room and dental appointment {is|agreement|are} now followed by a polite request to rate our experience, and many of us feel strangely {guilty|word-form|guiltily} if we {ignore|conditional|will ignore} it. Restaurants {are judged|passive|judge} not only by the food they serve but by how many stars they {can|modal|can to} collect, and a single angry review, {written|passive|writing} in thirty seconds, can {cost|modal|costs} a small business months {of|preposition|for} income.
+  
+  The problem is not that reviews {exist|agreement|exists}. They are, without {doubt|plural-uncountable|doubts}, useful. The problem is that they have quietly replaced {our own|pronoun|ours own} judgement. Had I trusted my instincts, I {would have bought|conditional|would buy} the {cheapest|comparative|most cheap} toaster in the shop and {been|tense|be} perfectly happy. Instead, I read two hundred opinions by strangers whose expectations I knew {nothing|quantifier|anything} about.
+  
+  There is also something {odd|word-form|oddly} about the scale itself. On most platforms, anything below four stars {is seen|passive|sees} as a failure, which means that a perfectly decent meal {is described|passive|describes} as "disappointing" by people who simply {forgot|past-irregular|forgetted} to award the fifth star. If ratings {were treated|conditional|would be treated} as honest information rather than as tips, they would be far {more useful|comparative|usefuller}.
+  
+  So I {have decided|tense|am deciding} on an experiment. For one month, I will not read {a single review|article-missing|single review} before buying anything, booking anywhere or eating anywhere. {Not only will I save|word-order|Not only I will save} time; I suspect I will also make {a few|quantifier|a little} interesting mistakes. My friends {have warned|agreement|has warned} me that I will end up in terrible restaurants, and they may well be right.
+  
+  But if the worst that can happen {is|agreement|are} a slightly burnt slice of toast, I am prepared {to take|gerund-infinitive|taking} the risk.`,
+  },
+  {
+    id: 'c1-interview-lighthouse-keeper',
+    title: 'The last keeper',
+    level: 'C1',
+    format: 'interview',
+    topic: 'Jobs and History',
+    situation: 'You help edit a local history magazine and must proofread this interview before it is printed.',
+    text: `Interviewer: Mr Hale, you {were|agreement|was} the last keeper of the North Point lighthouse. How long {did you live|word-order|you lived} there?
+  Hale: Twenty-two years. I arrived {in|preposition|at} 1984, a year after my father {had retired|tense|has retired} from the same job, and I stayed until the light {was automated|passive|automated} in 2006. People often ask {whether I was|word-order|whether was I} lonely. Honestly, I was too busy {to be|gerund-infinitive|being} lonely.
+  
+  Interviewer: What did a typical day {look|tense|looked} like?
+  Hale: There was no such thing as {a typical day|article-missing|typical day}. In calm weather I painted, {repaired|tense|have repaired} the generator and cleaned the lens, {which|pronoun|what} had to {be polished|passive|polish} every single morning. In a storm, I {hardly|word-form|hard} slept at all. {Rarely did a winter pass|word-order|Rarely a winter passed} without at least one ship {asking|gerund-infinitive|asks} for help on the radio.
+  
+  Interviewer: Were you ever afraid?
+  Hale: Only once. In 1991 a wave {broke|past-irregular|breaked} a window {on|preposition|at} the second floor, and the whole tower seemed {to shake|gerund-infinitive|shake}. I remember {thinking|gerund-infinitive|to think} that if the glass at the top {had cracked|conditional|cracked}, the light would have gone out, and nobody would {have been warned|passive|have warned} about the rocks. I {spent|past-irregular|spended} the night {holding|gerund-infinitive|to hold} a torch in the lantern room, just in case.
+  
+  Interviewer: How did you feel when the lighthouse was automated?
+  Hale: Relieved and heartbroken {at|preposition|in} the same time. The engineers who installed the new system told me it would need {checking|gerund-infinitive|to check} only twice a year, and they were right. A machine {does|agreement|do} the job perfectly well. But a machine doesn't {notice|agreement|notices} that a fishing boat is late, or that the birds have gone quiet before a storm.
+  
+  Interviewer: Do you still visit?
+  Hale: Every summer. The building {has been turned|passive|has turned} into a small museum, and I am occasionally {asked|passive|asking} to give tours. Children always {want|agreement|wants} to know where {I slept|word-order|did I sleep} and what I ate. Visitors are rarely {interested|word-form|interesting} in the lens, which is a pity, because it is {the most beautiful|comparative|the beautifullest} object I have ever looked after.
+  
+  Interviewer: Would you do it all again?
+  Hale: Without {hesitation|plural-uncountable|hesitations}. {Had I been offered|passive|Had I offered} a quieter life, I would {have refused|conditional|refuse} it.`,
+  },
 ]
