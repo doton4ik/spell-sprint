@@ -705,4 +705,116 @@ export const proofreadingTexts: ProofreadingText[] = [
   Interviewer: Would you do it all again?
   Hale: Without {hesitation|plural-uncountable|hesitations}. {Had I been offered|passive|Had I offered} a quieter life, I would {have refused|conditional|refuse} it.`,
   },
+  // ───────────── Batch 4: A2 and C1, written and reviewed in the project ─────────────
+  {
+    id: 'a2-email-found-dog',
+    title: 'Is this your dog?',
+    level: 'A2',
+    format: 'email',
+    topic: 'Home and Neighbours',
+    situation: 'Your neighbour Sarah found a lost dog and asked you to check her email to the owner.',
+    text: `Dear Mr Patel,
+  
+  I {found|past-irregular|finded} your phone number on the collar of a small brown dog. He {was|agreement|were} in our garden this morning, sitting under the apple tree. I think {his|pronoun|him} name is Biscuit, because he {comes|agreement|come} when I say it.
+  
+  He is very {friendly|word-form|friend}, and he is not hurt. He {ate|past-irregular|eated} a {whole|word-form|wholly} bowl of chicken and then {slept|past-irregular|sleeped} on my sofa for two hours. My cat is not very happy {about|preposition|of} this!
+  
+  I {called|tense|call} you twice today, but nobody {answered|tense|answers}. Maybe you {are|agreement|is} at work. We live {at|preposition|in} 14 Mill Lane, near {the old church|article-missing|old church}. I am at home {every|quantifier|all} evening, so you can {come|modal|to come} any time after six.
+  
+  If you {don't|agreement|doesn't} have a car, I can bring Biscuit to you. My son wants {to keep|gerund-infinitive|keeping} him, but I {told|confusable|said} him that Biscuit already has a family.
+  
+  Please call me on this number: 07700 900123.
+  
+  Best wishes,
+  Sarah Jones
+  
+  P.S. He {doesn't|agreement|don't} like the rain!`,
+  },
+  {
+    id: 'a2-review-seven-floors',
+    title: 'Seven floors and no lift',
+    level: 'A2',
+    format: 'review',
+    topic: 'Travel',
+    situation: 'Your aunt wrote this hotel review in English and asked you to check it before she posts it.',
+    text: `We {stayed|tense|stay} at the Sea View Hotel for three nights {in|preposition|on} August. The hotel {is|agreement|are} right next {to|preposition|of} the beach, and the view from our room was {beautiful|word-form|beautifully}.
+  
+  But there was one big problem. Our room {was|agreement|were} on the seventh floor, and the lift {didn't|tense|doesn't} work for the whole week. Every day we {carried|tense|carry} our bags, our beach chairs and {a big umbrella|article-missing|big umbrella} up 140 stairs. My husband said it was {better|comparative|more good} than the gym.
+  
+  The breakfast was {delicious|word-form|deliciously}, with fresh bread, eggs and {lots of|quantifier|many of} fruit. The young man at reception {was|agreement|were} very kind. He {brought|past-irregular|bringed} us cold water every evening and {said|confusable|told} sorry many times.
+  
+  On our last day, the lift {started|tense|starts} working again. We were so {happy|word-form|happily} that we rode up and down three times!
+  
+  Would I go back? Yes, but I {would ask|modal|would asked} for a room on the first floor. If you {have|conditional|will have} bad knees, please check the lift before you book. Four stars, because the view {is|agreement|are} worth every step.`,
+  },
+  {
+    id: 'a2-post-missing-bike',
+    title: 'Who took my bike?',
+    level: 'A2',
+    format: 'post',
+    topic: 'Town and Neighbours',
+    situation: 'Your brother wrote this post for the local neighbours\' group and asked you to check it.',
+    text: `Help! Somebody {stole|past-irregular|stealed} my bike yesterday.
+  
+  It is {a red bike|article-missing|red bike} with a black basket and a small bell. I {left|past-irregular|leaved} it outside the supermarket on Station Road {at|preposition|in} about five o'clock. I {went|past-irregular|goed} inside for ten minutes, and when I came out, it {wasn't|tense|isn't} there.
+  
+  I {have had|tense|have} this bike for six years. My grandfather {gave|past-irregular|gived} it to me, so it is very {special|word-form|specially} to me. I {looked|tense|look} everywhere: in the park, behind the bus station and near the school. I also {asked|tense|ask} the people in the supermarket, but nobody {saw|past-irregular|seen} anything.
+  
+  If you {see|conditional|will see} it, please send me a message. I will give {you|pronoun|your} a box of chocolates!
+  
+  UPDATE: I {found|past-irregular|finded} my bike! It was outside the other supermarket, the one on Park Street. I {am|agreement|is} so sorry, everyone. I forgot that I {went|tense|go} to the other shop first. Thank you all for {your|pronoun|you} help — and the chocolates {are|agreement|is} for me now!`,
+  },
+  {
+    id: 'c1-report-four-day-week',
+    title: 'The four-day week: three months on',
+    level: 'C1',
+    format: 'report',
+    topic: 'Work',
+    situation: 'Your manager wrote this report for the board and asked you to proofread it before the meeting.',
+    text: `In March our company began {a three-month trial|article-missing|three-month trial} of a four-day working week. Employees continued {to receive ; receiving|gerund-infinitive|receive} their full salary but {were expected|passive|expected} to complete their work in thirty-two hours rather than forty. This report {summarises|agreement|summarise} the results and {makes|agreement|make} a recommendation.
+  
+  Productivity. Contrary {to|preposition|with} what many managers {had predicted|tense|have predicted}, output did not {fall|tense|fell}. In fact, the number of customer requests handled per week {rose|past-irregular|rised} slightly, and the sales team closed {more|comparative|most} contracts in May than in {any|quantifier|some} previous month. Several employees reported that meetings had become {noticeably|word-form|noticeable} shorter, as nobody wanted {to waste|gerund-infinitive|wasting} the limited time available.
+  
+  Wellbeing. Of the 140 employees who completed our survey, 82 per cent said they felt {less|comparative|fewer} tired, and sick leave {fell|past-irregular|fallen} by almost a third. However, not everyone {benefited|agreement|benefit} equally. {A number of|quantifier|An amount of} parents pointed out that their children's schools {were|agreement|was} still open on Fridays, which meant that the extra day off {was spent|passive|spent} on housework rather than rest.
+  
+  Problems. The customer service department found the change {the hardest|comparative|the most hard}. Since customers {expect|agreement|expects} help five days a week, the team had to {be divided|passive|divide} into two groups, and some clients complained that they could not reach the person they usually {dealt|past-irregular|dealed} with. {Had we planned|conditional|If we would have planned} the rota more carefully from the start, most of these complaints {could have been avoided|passive|could have avoided}.
+  
+  Recommendation. On balance, the trial {has been|tense|was being} a success. We therefore recommend that the four-day week {be made ; is made|passive|make} permanent, on two conditions: that each department designs its own schedule, and that the results {are reviewed ; be reviewed|passive|review} again in twelve months. {Under no circumstances should employees|word-order|Under no circumstances employees should} be expected {to work|gerund-infinitive|working} longer days to make up {for|preposition|of} the lost time, as this would {undermine|modal|undermines} the purpose of the scheme.`,
+  },
+  {
+    id: 'c1-review-novel-backwards',
+    title: 'A life told backwards',
+    level: 'C1',
+    format: 'review',
+    topic: 'Books and Culture',
+    situation: 'A friend writes book reviews for a student magazine and asked you to proofread this one.',
+    text: `{Few|quantifier|A few} debut novels {have divided|agreement|has divided} readers as sharply as Clara Venn's The Hours Before. {Told|passive|Telling} entirely in reverse, it begins with {its|confusable|it's} narrator's funeral and ends, three hundred pages later, {on|preposition|in} the morning of her birth. It is {an ambitious idea|article|a ambitious idea}, and for the first hundred pages it works {remarkably|word-form|remarkable} well.
+  
+  Venn writes with a precision that {is|agreement|are} rare in first novels. Each chapter {is set|passive|sets} a few months {earlier|comparative|more early} than the one before, so the reader constantly learns why things happened only after {seeing|gerund-infinitive|to see} their consequences. A broken friendship in chapter two {is explained|passive|explains} in chapter nine; a mysterious scar is finally {accounted for|preposition|accounted} in the book's last pages. {Rarely has a plot device been used|word-order|Rarely a plot device has been used} so effectively to create suspense.
+  
+  The problem is that the technique gradually {becomes|agreement|become} exhausting. By the middle of the novel, I found myself {checking|gerund-infinitive|to check} dates at the top of each chapter rather than paying attention to the characters. Some of the minor figures, who {appear|agreement|appears} only once or twice, are so {thinly|word-form|thin} drawn that it is hard to care what happens {to|preposition|with} them.
+  
+  The prose, however, {deserves|agreement|deserve} nothing but praise. Venn has an {extraordinary|word-form|extraordinarily} ear for dialogue, particularly in the scenes {between|preposition|among} the narrator and her elderly father, {whose|pronoun|who's} memory is failing. {Had the whole book been written|passive|Had the whole book written} with the same tenderness, it {would have been|conditional|would be} a masterpiece.
+  
+  Should you read it? If you {enjoy|conditional|will enjoy} puzzles and are prepared {to work|gerund-infinitive|working} hard, almost certainly. If, on the other hand, you want a story that simply {carries|agreement|carry} you along, you may find it more frustrating {than|confusable|then} rewarding. Either way, Venn is a writer {to watch|gerund-infinitive|watching}, and I suspect her second novel will be {considerably|word-form|considerable} more confident.`,
+  },
+  {
+    id: 'c1-story-late-letter',
+    title: 'Forty-three years late',
+    level: 'C1',
+    format: 'story',
+    topic: 'People and Memories',
+    situation: 'Your friend wants to send this true story to a magazine and asked you to proofread it.',
+    text: `The envelope {was|agreement|were} yellow with age, and the stamp showed a queen who had not been on a stamp for decades. It arrived {on|preposition|in} a Tuesday, wedged {between|preposition|among} a gas bill and a pizza menu, {addressed|passive|addressing} to someone called Margaret Ellis at our flat.
+  
+  I would probably {have thrown|conditional|throw} it away {had my neighbour not stopped|conditional|if my neighbour did not stop} me on the stairs. Mrs Okafor, who {has lived|tense|lives} in the building since 1979, recognised the name at once. Margaret, she told me, {had rented|tense|has rented} my flat when she was {a young nurse|article-missing|young nurse}, and had left {suddenly|word-form|sudden} one winter without {telling|gerund-infinitive|to tell} anyone where she was going.
+  
+  {Curiosity|article-extra|The curiosity} got the better of me. Although I knew I should not {open|modal|to open} other people's post, I persuaded myself that, after forty-three years, nobody would mind. Inside {was|agreement|were} a single page in neat blue {handwriting|plural-uncountable|handwritings}. It was from a man called Daniel, who {apologised|tense|apologises} for {missing|gerund-infinitive|to miss} their meeting at the station and begged Margaret {to give|gerund-infinitive|giving} him one more chance. He {would be|reported-speech|will be} waiting, he wrote, under the clock at noon on the following Saturday.
+  
+  {Not until I had read it three times did I notice|word-order|Not until I had read it three times I noticed} the date: 12 February 1981. The letter had clearly {been lost|passive|lost} somewhere in the postal system, and Margaret had never {received|tense|receive} it. {Had it arrived|conditional|If it arrived} on time, her whole life {might have been|modal|might be} different.
+  
+  It took me two months {to find|gerund-infinitive|finding} her. Thanks {to|preposition|for} a hospital newsletter and {a great deal of|quantifier|a great many} patience, I eventually {traced|tense|have traced} her to a care home {on|preposition|in} the coast. When I {handed|tense|hand} her the envelope, she read it in silence, then laughed until she {had to|modal|must} wipe her eyes.
+  
+  "He found me anyway," she said. "Three years later, in a bookshop." She folded the letter {carefully|word-form|careful} and asked me {to stay|gerund-infinitive|staying} for tea.`,
+  },
 ]
