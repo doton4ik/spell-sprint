@@ -448,4 +448,131 @@ export const proofreadingTexts: ProofreadingText[] = [
   Interviewer: Last question. If you {could|conditional|can} take anyone on a flight, who would you choose?
   Ana: My grandmother. She always {told|confusable|said} me that people were not made for the sky, and she has never {flown|past-irregular|flied}. If she ever {agrees|conditional|will agree}, the whole village will be {told|passive|telling} about it. Maybe next year I will finally {convince|word-form|convinced} her.`,
   },
+  // ───────────── Long reads (batch 2: written and reviewed in the project) ─────────────
+  {
+    id: 'a2-message-neighbours-cat',
+    title: 'The cat upstairs',
+    level: 'A2',
+    format: 'message',
+    topic: 'Home and Neighbours',
+    situation: 'Your friend Lena wrote this note to her new neighbour and asked you to check it before she puts it under the door.',
+    text: `Hi Mrs Green,
+  
+  My name {is|agreement|are} Lena, and I live in the flat above yours. I {moved|tense|move} here two weeks ago, and I want to say sorry about something strange.
+  
+  Every evening {a grey cat|article-missing|grey cat} comes {to|preposition|at} my balcony. He is very {friendly|word-form|friend}, so I {gave|past-irregular|gived} him some milk and a little fish. Yesterday I {bought|past-irregular|buyed} a bag of cat food {for|preposition|to} him, because I {thought|past-irregular|thinked} he was {hungry|word-form|hunger} and alone.
+  
+  This morning I saw {the same|article|a same} cat in your window. Then I noticed {his|pronoun|him} blue collar with {a small bell|article-missing|small bell}. He is your cat! Now I understand why he {is|agreement|are} getting so fat. I am really sorry. I {didn't|tense|don't} know that he had a home.
+  
+  I have got a big bag of cat food and {nobody|quantifier|anybody} to give it to. Would you like {to have|gerund-infinitive|having} it? I can {bring|modal|to bring} it to your door this afternoon. If you {don't want|conditional|won't want} it, I will take it to the animal shelter {next to|preposition|next} the park.
+  
+  Also, I {would love|modal|would loved} to meet you properly. Do you {drink|agreement|drinks} coffee? My kitchen is small, but it is very {sunny|word-form|sun}, and your cat already {knows|agreement|know} the way!
+  
+  Best wishes,
+  Lena (flat 6)`,
+  },
+  {
+    id: 'b1-review-escape-room',
+    title: 'The room we never left',
+    level: 'B1',
+    format: 'review',
+    topic: 'Free Time',
+    situation: 'Your classmate wrote this review for a booking website and asked you to check it before posting.',
+    text: `Last Saturday my friends and I {went|past-irregular|goed} to "The Locked Library", a new escape room in the city centre. We {had booked|tense|have booked} a sixty-minute game, and the website promised {an exciting|article|a exciting} adventure "for clever readers only". We are all students of literature, so we {thought|past-irregular|thinked} it would be easy.
+  
+  The room looked amazing. There {were|agreement|was} old books everywhere, a huge wooden desk and a clock that ticked very loudly. Our task was to find a secret key before the librarian "came back". In the first ten minutes we {solved|tense|have solved} two puzzles and felt very proud of ourselves.
+  
+  Then everything changed. The third puzzle was a poem with {no|quantifier|any} clues at all. We read it again and again, but nobody {understood|past-irregular|understanded} it. Marco kept {reading|gerund-infinitive|to read} it aloud in a funny voice, and the clock seemed {louder|comparative|more loud} than before. Anna {was|agreement|were} sure that the answer was hidden in the first letters of each line, but it {wasn't|tense|isn't}.
+  
+  With five minutes left, we asked for {a hint|article-missing|hint}. A voice from the speaker told us {to look|gerund-infinitive|looking} under the desk. We {found|past-irregular|finded} a key there, but it did not open the door. It opened a small box with {another|article|an other} poem inside!
+  
+  In the end we did not escape. When the time was up, the manager came in and {told|confusable|said} us something terrible: the door had been unlocked {since|since-for|for} the beginning. We could {have walked|modal|walked} out at any moment, and nobody had even {tried|tense|try} the handle.
+  
+  Would I recommend it? Yes, {definitely|word-form|definite}. The puzzles are {more difficult|comparative|difficulter} than in other escape rooms, the decoration is beautiful, and the price is {reasonable|word-form|reason}. My only advice is this: if you {go|conditional|will go}, read every poem slowly, work as a team, and check the door first!`,
+  },
+  {
+    id: 'b1-email-wrong-suitcase',
+    title: 'Not my suitcase',
+    level: 'B1',
+    format: 'email',
+    topic: 'Travel',
+    situation: 'Your cousin wrote this email to an airline after a holiday and asked you to check it before sending.',
+    text: `Dear Customer Service,
+  
+  I am writing about a problem {with|preposition|of} my luggage. On 14 July I {flew|past-irregular|flied} from Rome to Manchester on flight BA 2591, and I {picked up|tense|pick up} a black suitcase from the carousel. It looked {exactly|word-form|exact} like mine, so I {didn't|tense|don't} check the name tag.
+  
+  When I {got|past-irregular|getted} home and opened it, I had a big surprise. Instead {of|preposition|from} my clothes, there {were|agreement|was} twelve jars of honey, a pair of {enormous|word-form|enormously} boots and a very old camera. There was also {a letter|article-missing|letter} in Italian. I could understand only one sentence: "Please give this to my grandson."
+  
+  I feel {terrible|word-form|terribly} about this, because somebody {is|agreement|are} probably waiting for these things. I have not opened the jars, and everything {is|agreement|are} still in the suitcase. The owner's name on the tag is G. Rossi, and {there is|agreement|there are} a phone number, but nobody {answers|agreement|answer} it.
+  
+  I also need my own suitcase back as soon as {possible|word-form|possibly}. It is black with {a red ribbon|article-missing|red ribbon} on the handle, and inside there are my glasses, my work laptop and some important documents. I have to go back to work {on|preposition|in} Monday, so it is {quite|confusable|quiet} urgent.
+  
+  Could you please {tell|confusable|say} me what I should do? I would be happy {to bring|gerund-infinitive|bringing} the suitcase to the airport, or a driver could {collect|modal|to collect} it from my house. I am at home every afternoon this week.
+  
+  If Mr Rossi {has|conditional|will have} my suitcase, perhaps he is just as confused as I am. Please give him my phone number {too|confusable|to}. I am sure we can sort this out quickly.
+  
+  Thank you for your help. I look forward {to hearing|gerund-infinitive|to hear} from you.
+  
+  Yours faithfully,
+  Daniel Brooks`,
+  },
+  {
+    id: 'b2-column-month-without-car',
+    title: 'Thirty days on two wheels',
+    level: 'B2',
+    format: 'column',
+    topic: 'City Life',
+    situation: 'Your friend writes a column for the local newspaper and asked you to check this week\'s piece before the editor sees it.',
+    text: `When my car {broke|past-irregular|breaked} down in March, the mechanic told me it {would take|reported-speech|will take} a month to get the parts. My first reaction {was|agreement|were} panic. I {had been driving|tense|have been driving} to work every day for eleven years, and the idea of {taking|gerund-infinitive|take} the bus seemed impossible. My neighbour, who {cycles|agreement|cycle} everywhere, simply laughed and {lent|past-irregular|lended} me her old bike.
+  
+  The first week was a disaster. I arrived {at|preposition|to} the office wet, {exhausted|word-form|exhausting} and twenty minutes late, and my colleagues could hardly hide their smiles. If I {had checked|conditional|checked} the weather forecast, I would have taken a raincoat. I also {discovered|tense|have discovered} that our city {was designed|passive|designed} for cars, not people: the cycle lanes {suddenly|word-form|sudden} end in the middle of busy roads.
+  
+  By the second week, however, something {had changed|tense|has changed}. I noticed things I had never seen from behind the wheel: {a bakery|article-missing|bakery} that opens at six, a tiny park full of cherry trees, and an old man who {feeds|agreement|feed} the pigeons at exactly the same time {every|quantifier|all} morning. I was spending {less|quantifier|fewer} money on petrol and more on coffee and croissants.
+  
+  By the end of the month I was fitter than I {had been|tense|was being} for years, and I slept {better|comparative|more better} too. My doctor, who {had warned|tense|has warned} me {about|preposition|for} my blood pressure last winter, was {impressed|word-form|impressing} by the results.
+  
+  Last Friday the mechanic called to say that my car was ready. I was asked to pick it up before the weekend, but I have not {done|past-irregular|did} it yet. I am not sure I {want|agreement|wants} it back. Of course, cycling is not always {practical|word-form|practically}, especially with two children and {a weekly shop|article-missing|weekly shop} to carry.
+  
+  So here is my suggestion. If our council {built|conditional|would build} safer cycle lanes, many more people would leave {their|confusable|there} cars at home. Until then, I am going to keep riding — and I will buy a better raincoat.`,
+  },
+  {
+    id: 'c1-blog-getting-lost',
+    title: 'In praise of getting lost',
+    level: 'C1',
+    format: 'blog',
+    topic: 'Travel and Technology',
+    situation: 'A travel blogger you know asked you to proofread this post before it goes online.',
+    text: `Last spring, on a trip to Lisbon, my phone {died|word-form|dead} on the very first morning. My charger {had been left|passive|had left} in a café at the airport, and every shop I tried {was|agreement|were} closed for a public holiday. {Never had I felt|word-order|Never I had felt} so helpless in a city: no map, no reviews, no blue dot {telling|gerund-infinitive|tells} me where I was.
+  
+  What followed, however, turned out to be the most {memorable|word-form|memorably} day of the whole holiday. Without directions, I had no choice but to wander. I climbed streets I would never {have chosen|modal|had chosen}, stopped in a square simply because I {heard|past-irregular|heared} music, and ended up {having|gerund-infinitive|to have} lunch in {a tiny restaurant|article-missing|tiny restaurant} with no sign on the door. The owner, {whose|pronoun|who's} English was even {worse|comparative|worser} than my Portuguese, cooked whatever she {had bought|tense|has bought} at the market that morning.
+  
+  Had I been {following|gerund-infinitive|follow} my phone, I would have eaten at one of the five "top-rated" places near the cathedral, along with a hundred other tourists {reading|gerund-infinitive|read} the same list. Navigation apps are {undeniably|word-form|undeniable} useful, but they are designed {to take|gerund-infinitive|taking} us to the places that other people have already approved. The more we {rely|agreement|relies} on them, the fewer surprises we allow ourselves.
+  
+  {Not only did I|word-order|Not only I did} find {the best|article|a best} grilled sardines of my life; I also had my first proper conversation in Portuguese. When I asked the owner for directions back to the hotel, she drew a map {on|preposition|in} a paper napkin and told me that the tram {would be|reported-speech|will be} packed by the time I reached the stop. It was. I {had to|modal|must} stand for forty minutes, squeezed {between|preposition|among} a cello and a basket of oranges.
+  
+  I am not suggesting that we {abandon|tense|will abandon} technology altogether. Yesterday I {was reminded|passive|reminded} how useful a map {can|modal|can to} be when my train {was cancelled|passive|cancelled} in the middle {of|preposition|from} nowhere. But I now leave my phone {in|preposition|at} my pocket for at least one afternoon on every trip. It is worth {getting|gerund-infinitive|to get} lost, as long as you are prepared to ask for help.
+  
+  If I {had not lost|conditional|did not lose} my charger that morning, I would have seen Lisbon — but I would never have met it.`,
+  },
+  {
+    id: 'c1-story-museum-dark',
+    title: 'The night the museum went dark',
+    level: 'C1',
+    format: 'story',
+    topic: 'Culture',
+    situation: 'Your friend entered a short-story competition and asked you to proofread the story before the deadline.',
+    text: `The power {went|past-irregular|goed} off at exactly ten past nine, just as the last group of visitors {was being led|passive|was leading} through the Egyptian gallery. For a few seconds {nobody|quantifier|anybody} moved. Then a child {began|past-irregular|begun} to cry, and somewhere in the darkness a phone torch came on, {lighting|gerund-infinitive|lit} up a golden mask that seemed {to be staring|gerund-infinitive|be staring} straight at us.
+  
+  The guard, a tall man {whose|pronoun|which} name badge said Felix, calmly asked us {to stay|gerund-infinitive|staying} where we were. He explained that the emergency lights {should have switched|modal|should switched} on automatically and that he could not understand why they {had not|tense|have not}. Hardly {had he finished|word-order|he had finished} speaking when we heard a long, slow scratching sound coming {from|preposition|of} the far end of the room.
+  
+  {Nobody|quantifier|Anybody} said a word. My sister, who {is|agreement|are} usually the bravest person I know, grabbed my arm {so|confusable|such} hard that it {hurt|past-irregular|hurted}. The sound stopped, started again, and then {was followed|passive|followed} by a soft thud. Felix walked towards it with his torch, and we {reluctantly|word-form|reluctant} followed him, partly because nobody wanted {to be left|passive|to leave} alone in the dark.
+  
+  Behind a glass case we found the cause {of|preposition|for} the noise: a very small, very embarrassed cat, trying to climb into a basket of ancient bread. According to Felix, it {had been living|tense|has been living} in the museum's storeroom for weeks, and the staff had been trying to catch it since February. "We call her Cleopatra," he said. "She has {better|comparative|more better} taste than most of our visitors."
+  
+  When the lights finally came back on, the gallery looked {surprisingly|word-form|surprising} ordinary. The golden mask was just a mask again. Before we left, Felix told us that a team from the animal shelter {would come|reported-speech|will come} the following morning, and he asked us not {to mention|gerund-infinitive|mentioning} the cat on social media.
+  
+  I {kept|past-irregular|keeped} my promise for {a whole year|article-missing|whole year}. Then, last month, I {received|tense|have received} a postcard from the museum. On the front {was|agreement|were} a photograph of the Egyptian gallery, and in the corner, if you {look|conditional|will look} carefully, you can see a small grey shape sitting proudly on the edge of a sarcophagus. On the back, someone {had written|tense|has written} just three words: "She stayed. Felix."
+  
+  Had the power not failed that evening, I {would never have learnt|conditional|would never learn} that the most interesting thing in a museum is not always behind glass.`,
+  },
 ]
