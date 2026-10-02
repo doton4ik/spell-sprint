@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react'
 import { Icon } from '../components/icons/Icon'
+import { AddWordPanel } from '../components/libraries/AddWordPanel'
 import type { ProofreadingLevel, ProofreadingText } from '../data/proofreadingTexts'
 import { getLevelChecks } from '../services/levelCheck'
 import { buildExercise, buildSpellingHunt, checkExercise, huntCountFor, huntOptions, mistakeCountFor, proofreadingTexts, proofreadingTypes, recordProofreading, typeWeights, wordCount, type Exercise, type ProofreadingResult, type Token } from '../services/proofreading'
@@ -99,6 +100,7 @@ function Reader({ text, exercise, showCount, onBack, onCheck }: { text: Proofrea
   const [edits, setEdits] = useState<Map<number, string>>(new Map())
   const [editing, setEditing] = useState<number | null>(null)
   const [draft, setDraft] = useState('')
+  const [adding, setAdding] = useState<string | null>(null) // a word going to "My words"
   const inputRef = useRef<HTMLInputElement>(null)
   useEffect(() => { if (editing !== null) inputRef.current?.focus() }, [editing])
 
@@ -114,6 +116,18 @@ function Reader({ text, exercise, showCount, onBack, onCheck }: { text: Proofrea
     if (event.key === 'Enter') { event.preventDefault(); save(draft) }
     if (event.key === 'Escape') setEditing(null)
   }
+  // Save an unknown word for practice without leaving the text. Uses what is in the box, so a slip
+  // can be corrected first.
+  function addToMyWords() {
+    const word = draft.trim().replace(/^[^\p{L}]+|[^\p{L}'-]+$/gu, '').toLocaleLowerCase()
+    if (word) { setAdding(word); setEditing(null) }
+  }
+  useEffect(() => {
+    if (adding === null) return
+    const close = (event: globalThis.KeyboardEvent) => { if (event.key === 'Escape') setAdding(null) }
+    window.addEventListener('keydown', close)
+    return () => window.removeEventListener('keydown', close)
+  }, [adding])
 
   return (
     <div className="proof-page" id="proofreading">
@@ -138,6 +152,7 @@ function Reader({ text, exercise, showCount, onBack, onCheck }: { text: Proofrea
                   <button type="button" onClick={() => save('')}>Delete word</button>
                   {edits.has(token.id) ? <button type="button" onClick={() => undo(token.id)}>Undo</button> : null}
                   <button type="button" onClick={() => setEditing(null)}>Cancel</button>
+                  <button type="button" className="proof-editor__add" onClick={addToMyWords} title="Look the word up and add it to My words"><Icon name="plus" size={13} /> My words</button>
                 </span>
               </span>
             )
@@ -150,6 +165,9 @@ function Reader({ text, exercise, showCount, onBack, onCheck }: { text: Proofrea
         })}
       </article>
 
+      {adding !== null ? <div className="proof-add-word" role="dialog" aria-modal="true" aria-label="Add a word to My words" onClick={(event) => { if (event.target === event.currentTarget) setAdding(null) }}>
+        <AddWordPanel initialWord={adding} onAdded={() => undefined} onClose={() => setAdding(null)} key={adding} />
+      </div> : null}
       <div className="proof-actions">
         <button className="check-button" type="button" onClick={() => onCheck(edits)}><Icon name="check" size={16} /> Check</button>
         <span>{edits.size ? `${edits.size} change${edits.size === 1 ? '' : 's'}` : 'No changes yet'}</span>

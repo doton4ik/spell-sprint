@@ -102,3 +102,5 @@
 @media (max-width: 640px) { .add-word { padding: 18px 16px; } }
 .add-word__search input { flex: 1; min-width: 0; }
 .add-word .add-word__search .check-button { flex: 0 0 auto; padding: 0 16px; width: auto; }
+
+.add-word__close { background: none; border: 0; color: var(--muted, #5b6f6a); cursor: pointer; font-size: 18px; line-height: 1; padding: 6px; position: absolute; right: 12px; top: 12px; }

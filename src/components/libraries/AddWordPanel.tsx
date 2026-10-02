@@ -1,8 +1,9 @@
-import { useState, type FormEvent } from 'react'
+import { useEffect, useState, type FormEvent } from 'react'
 import { Icon } from '../icons/Icon'
 import { addMyWord, getEveryWord, getAllWords, MY_WORDS, myWordId } from '../../services/libraryStorage'
 import { guessDifficulty, lookupWord, type LookupSense } from '../../services/wordLookup'
 import { partOfSpeechOptions } from '../../types/library'
+import '../../pages/libraries.css'
 
 type Step =
   | { kind: 'idle' }
@@ -14,14 +15,17 @@ type Draft = { word: string; translation: string; partOfSpeech: string; definiti
 // Type a word → pick the meaning you want → check the translation and example → it joins "My words".
 // The learner always chooses the meaning: "fortune" is luck, fate or wealth, and practice shows the
 // Russian word, so a silently chosen meaning would teach the wrong thing.
-export function AddWordPanel({ onAdded, onPractise }: { onAdded: () => void; onPractise: (wordId: string, word: string) => void }) {
-  const [query, setQuery] = useState('')
+// With `initialWord` (a word tapped while reading) the panel looks it up straight away.
+export function AddWordPanel({ onAdded, onPractise, initialWord, onClose }: { onAdded: () => void; onPractise?: (wordId: string, word: string) => void; initialWord?: string; onClose?: () => void }) {
+  const [query, setQuery] = useState(initialWord ?? '')
   const [step, setStep] = useState<Step>({ kind: 'idle' })
   const [draft, setDraft] = useState<Draft | null>(null)
   const [saved, setSaved] = useState<{ wordId: string; word: string; updated: boolean } | null>(null)
 
-  async function search(event: FormEvent) {
-    event.preventDefault()
+  useEffect(() => { if (initialWord?.trim()) void search() }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
+  async function search(event?: FormEvent) {
+    event?.preventDefault()
     const word = query.trim()
     if (!word) return
     setDraft(null); setSaved(null); setStep({ kind: 'loading' })
@@ -50,13 +54,13 @@ export function AddWordPanel({ onAdded, onPractise }: { onAdded: () => void; onP
   const elsewhereActive = elsewhere ? getAllWords().some((word) => word.wordId === elsewhere.wordId) : false
 
   return <section className="add-word">
-    <div className="add-word__head"><span><Icon name="search" size={15} /> Add a word</span><h2>Learn any English word</h2><p>Type a word — the dictionary suggests its meanings with Russian translations. Pick the one you need; it goes to “{MY_WORDS}” and into practice.</p></div>
+    <div className="add-word__head"><span><Icon name="search" size={15} /> Add a word</span>{onClose ? <button className="add-word__close" type="button" onClick={onClose} aria-label="Close">✕</button> : null}<h2>{initialWord ? 'Add to my words' : 'Learn any English word'}</h2><p>{initialWord ? `Pick the meaning you need — the word goes to “${MY_WORDS}” and into practice. Check the spelling first: the text may have a mistake in it.` : `Type a word — the dictionary suggests its meanings with Russian translations. Pick the one you need; it goes to “${MY_WORDS}” and into practice.`}</p></div>
     <form className="add-word__search" onSubmit={search}>
       <input value={query} onChange={(event) => { setQuery(event.target.value); if (step.kind !== 'loading') setStep({ kind: 'idle' }); setDraft(null) }} placeholder="e.g. fortune" autoCapitalize="off" autoCorrect="off" spellCheck={false} aria-label="English word" />
       <button className="check-button" type="submit" disabled={!query.trim() || step.kind === 'loading'}>{step.kind === 'loading' ? 'Looking up…' : 'Look up'}</button>
     </form>
     {elsewhere && step.kind !== 'loading' ? <p className="add-word__note">“{elsewhere.word}” is already in {elsewhere.library}{elsewhereActive ? '' : ' (hidden or in a pack that is switched off)'} as “{elsewhere.translation}”. You can still add your own meaning.</p> : null}
-    {saved ? <p className="add-word__saved" role="status"><Icon name="check" size={15} /> “{saved.word}” {saved.updated ? 'updated' : 'added'} in {MY_WORDS}. It will appear in practice and in your daily plan.<button type="button" onClick={() => onPractise(saved.wordId, saved.word)}>Practise it now</button></p> : null}
+    {saved ? <p className="add-word__saved" role="status"><Icon name="check" size={15} /> “{saved.word}” {saved.updated ? 'updated' : 'added'} in {MY_WORDS}. It will appear in practice and in your daily plan.{onPractise ? <button type="button" onClick={() => onPractise(saved.wordId, saved.word)}>Practise it now</button> : onClose ? <button type="button" onClick={onClose}>Back to the text</button> : null}</p> : null}
 
     {step.kind === 'senses' && !draft ? <div className="add-word__senses">
       <p className="add-word__label">Which meaning do you want to learn?</p>
