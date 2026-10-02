@@ -4,6 +4,15 @@ import type { PracticeMode, PracticeTask } from '../types/practice'
 import { getAllWords, getEveryWord, getLibraries } from './libraryStorage'
 import { getReviewEntries } from './learningData'
 import { getPracticeAttempts } from './practiceStorage'
+import { spellingDistractors } from './spellingDistractors'
+import { isRealOrRude } from './proofreadingEngine'
+
+// Real words from the libraries and their examples: a wrong option must never be a real word.
+let knownCache: Set<string> | null = null
+function knownWords() {
+  knownCache ??= new Set(getEveryWord().flatMap((word) => `${word.word} ${word.example ?? ''}`.toLocaleLowerCase().match(/[a-z']+/g) ?? []))
+  return knownCache
+}
 
 export type PracticeScope = 'all' | 'library' | 'topic' | 'subtopic' | 'mistakes' | 'review'
 export type PracticeSelection = { scope: PracticeScope; library: string; topic: string; subtopic: string }
@@ -12,13 +21,14 @@ function levelFor(difficulty: LibraryWord['difficulty']): PracticeTask['level'] 
 function taskBase(word: LibraryWord) { return { topic: word.topic, topicId: word.topicId, subtopic: word.subtopic, wordId: word.wordId || word.id, library: word.library, level: levelFor(word.difficulty), hint: word.definition || word.example || `Focus on ${word.partOfSpeech || 'this word'}.`, example: word.example, rule: word.rule || `Review ${word.word} in the ${word.topic} topic.`, errorCategory: 'Inactive vocabulary' } }
 function tasksForWord(word: LibraryWord): PracticeTask[] {
   const base = taskBase(word); const id = word.wordId || word.id
-  const spellingChoices = [word.word, `${word.word[0]}${word.word[0]}${word.word.slice(1)}`, word.word.length > 3 ? word.word.slice(0, -1) : `${word.word}e`, word.word.replace(/[aeiou]/i, 'e'), `${word.word}e`]
-    .filter((choice, index, values) => choice !== word.word || index === 0).filter((choice, index, values) => values.indexOf(choice) === index).slice(0, 4)
+  // The order is shuffled when the task is shown (TaskCard), so the right answer is not always first.
+  const spellingChoices = [word.word, ...spellingDistractors(word.word, (value) => knownWords().has(value) || isRealOrRude(value))]
   return [
     { ...base, id: `library-${id}-write-en`, type: 'translate-ru-en', mode: 'write-en', prompt: word.translation, answer: word.word, acceptedAnswers: word.alternatives?.length ? word.alternatives : undefined },
     { ...base, id: `library-${id}-listen`, type: 'translate-ru-en', mode: 'listen-write', prompt: word.translation, answer: word.word },
     { ...base, id: `library-${id}-translate-ru`, type: 'translate-en-ru', mode: 'translate-ru', prompt: word.word, answer: word.translation },
-    { ...base, id: `library-${id}-spelling`, type: 'correct-spelling', mode: 'choose-spelling', prompt: word.translation, answer: word.word, choices: spellingChoices, errorCategory: 'Spelling' },
+    // No believable wrong spelling (go on, queue up): no choice task for this word.
+    ...(spellingChoices.length > 1 ? [{ ...base, id: `library-${id}-spelling`, type: 'correct-spelling' as const, mode: 'choose-spelling' as const, prompt: word.translation, answer: word.word, choices: spellingChoices, errorCategory: 'Spelling' }] : []),
   ]
 }
 

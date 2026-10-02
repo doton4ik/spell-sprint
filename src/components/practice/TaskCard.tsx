@@ -1,9 +1,10 @@
-import { useEffect, useState, type FormEvent } from 'react'
+import { useEffect, useMemo, useState, type FormEvent } from 'react'
 import type { CheckResult, PracticeTask } from '../../types/practice'
 import { Icon } from '../icons/Icon'
 import { MistakeBreakdown } from './MistakeBreakdown'
 import { WordTip } from './WordTip'
 import { acceptedAnswers, closestAnswer, comparable } from '../../services/answerMatch'
+import { shuffled } from '../../services/spellingDistractors'
 import { RuleChallenge } from '../rules/RuleChallenge'
 import type { Rule } from '../../types/rules'
 import type { WordReason } from '../../services/dailyPlan'
@@ -34,6 +35,8 @@ export function TaskCard({ task, answer, result, attemptsOnTask, answerRevealed,
   useEffect(() => { setChallengeRules(null) }, [task.id])
   const isDefaultRule = /^Review .+ in the .+ topic.$/.test(task.rule)
   const spellingTask = mode !== 'translate-ru' && task.type !== 'correct-sentence'
+  // A new random order for every task, kept while the task is on screen.
+  const choices = useMemo(() => shuffled(task.choices ?? [task.answer]), [task.id]) // eslint-disable-line react-hooks/exhaustive-deps
   function submit(event: FormEvent<HTMLFormElement>) { event.preventDefault(); setCheckedAnswer(answer); onCheck() }
   // Several answers can be right: show the one the learner aimed at, and the others as "Also correct".
   const target = checkedAnswer.trim() ? closestAnswer(checkedAnswer, task) : task.answer
@@ -44,7 +47,7 @@ export function TaskCard({ task, answer, result, attemptsOnTask, answerRevealed,
     {mode === 'listen-write' ? <div className="task-prompt"><span className="prompt-label">Listen</span><button className="dictation-play" type="button" onClick={onPlayAudio}><Icon name="volume" size={22} /><span><strong>Play the word again</strong><small>Listen, then type what you hear.</small></span></button></div> : <div className={`task-prompt task-prompt--${mode}`}><span className="prompt-label">{mode === 'translate-ru' ? 'English' : 'Russian'}</span><p>{task.prompt}</p></div>}
     {hintStep ? <div className="hint-box"><Icon name="lightbulb" size={17} /><span><strong>Hint {hintStep}/5</strong>{hintFor(task.answer, hintStep)}</span></div> : null}
     <form onSubmit={submit}>
-      {mode === 'choose-spelling' ? <div className="spelling-choices">{(task.choices ?? [task.answer]).map((choice) => <button type="button" className={answer === choice ? 'spelling-choice spelling-choice--selected' : 'spelling-choice'} onClick={() => onAnswerChange(choice)} key={choice}>{choice}</button>)}</div> : <><label className="answer-label" htmlFor="practice-answer">Your answer</label><input id="practice-answer" autoFocus value={answer} onChange={(event) => onAnswerChange(event.target.value)} placeholder={mode === 'translate-ru' ? 'Введите перевод…' : 'Type your answer…'} autoComplete="off" disabled={correct} /></>}
+      {mode === 'choose-spelling' ? <div className="spelling-choices">{choices.map((choice) => <button type="button" className={answer === choice ? 'spelling-choice spelling-choice--selected' : 'spelling-choice'} onClick={() => onAnswerChange(choice)} key={choice}>{choice}</button>)}</div> : <><label className="answer-label" htmlFor="practice-answer">Your answer</label><input id="practice-answer" autoFocus value={answer} onChange={(event) => onAnswerChange(event.target.value)} placeholder={mode === 'translate-ru' ? 'Введите перевод…' : 'Type your answer…'} autoComplete="off" disabled={correct} /></>}
       {otherMeaning && result === 'idle' ? <div className="other-meaning" role="status"><Icon name="lightbulb" size={17} /><span><strong>“{otherMeaning.word}” is also “{otherMeaning.translation}” — a different meaning.</strong><small>Here we need another word for “{task.prompt}”. Not counted as a mistake — try again.</small></span></div> : null}
       {result !== 'idle' ? <div className={`task-feedback task-feedback--${correct ? 'correct' : 'incorrect'}`} role="status"><Icon name={correct ? 'check' : 'refresh'} size={17} /><span><strong>{correct ? 'Correct!' : 'Not quite.'}</strong>{!correct && <small>Your answer: {checkedAnswer || 'Skipped'}</small>}<small>Correct answer: {target} — {task.prompt}</small>{others.length ? <small>Also correct: {others.join(', ')}</small> : null}{task.example && <small>Example: {task.example}</small>}</span></div> : null}
       {result !== 'idle' && task.wordId ? <WordTip wordId={task.wordId} wrong={!correct} key={task.wordId} /> : null}
