@@ -8,7 +8,7 @@ import { setRemoved } from './libraryPrefs'
 // Only `word` and `translation` are required; every other column has a sensible default, and each
 // default or oddity is reported as a warning instead of silently rejecting the whole file.
 
-const knownColumns = ['word_id', 'word', 'translation', 'topic_id', 'topic', 'subtopic', 'difficulty', 'risk', 'rule', 'example', 'definition', 'part_of_speech', 'library', 'source']
+const knownColumns = ['word_id', 'word', 'translation', 'topic_id', 'topic', 'subtopic', 'difficulty', 'risk', 'rule', 'example', 'definition', 'part_of_speech', 'library', 'source', 'alternatives']
 const requiredColumns = ['word', 'translation']
 
 export type RowStatus = 'ready' | 'duplicate' | 'duplicate-in-file' | 'conflict' | 'invalid'
@@ -81,6 +81,7 @@ export function analyseCsv(text: string, fileName: string): CsvPreview {
     const entry: LibraryWord = {
       id: wordId, wordId, word, translation, topicId: canonical.topicId, topic: canonical.topic, subtopic, difficulty, risk,
       rule: value('rule') || undefined, example: example || undefined, definition: value('definition') || undefined,
+      alternatives: value('alternatives').split(';').map((item) => item.trim()).filter(Boolean),
       partOfSpeech: normalisePartOfSpeech(value('part_of_speech')), library: value('library') || baseName, source: value('source') || 'imported',
     }
 

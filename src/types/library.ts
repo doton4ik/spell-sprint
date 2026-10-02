@@ -21,6 +21,7 @@ export type LibraryWord = {
   rule?: string
   example?: string
   definition?: string
+  alternatives?: string[] // other correct English answers for the same Russian prompt (rubbish → trash, garbage)
   partOfSpeech: PartOfSpeech
   library: string
   source: string

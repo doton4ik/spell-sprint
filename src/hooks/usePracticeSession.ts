@@ -4,15 +4,13 @@ import { loadPracticeSettings, savePracticeAttempt, savePracticeSettings } from 
 import { scheduleAfterAnswer } from '../services/reviewSchedule'
 import { findOtherMeaning } from '../services/libraryPractice'
 import type { CheckResult, ErrorType, PracticeAttempt, PracticeSettings, PracticeTask } from '../types/practice'
+import { closestAnswer, isAcceptedAnswer } from '../services/answerMatch'
 
 function normalize(value: string) {
   return value.trim().toLocaleLowerCase().replace(/[’']/g, "'").replace(/[.,!?]+$/g, '').replace(/\s+/g, ' ')
 }
 
-function isAnswerCorrect(answer: string, task: PracticeTask) {
-  const candidates = [task.answer, ...(task.acceptedAnswers ?? [])].map(comparison)
-  return candidates.includes(comparison(answer))
-}
+const isAnswerCorrect = isAcceptedAnswer
 
 function comparison(value: string) { return normalize(value).replaceAll(/[-\s]/g, '') }
 function errorType(answer: string, correct: string): ErrorType {
@@ -78,13 +76,15 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
 
   function recordAttempt(overrides: Pick<PracticeAttempt, 'isCorrect' | 'wasSkipped' | 'wasAnswerRevealed'> & { wasMarkedForReview?: boolean }) {
     const correct = overrides.isCorrect
+    // With several right answers, a mistake is measured against the one the learner was aiming at.
+    const target = answer.trim() ? closestAnswer(answer, currentTask) : currentTask.answer
     const attemptMode = currentTask.mode ?? (currentTask.type === 'translate-en-ru' ? 'translate-ru' : currentTask.type === 'translate-ru-en' ? 'write-en' : 'choose-spelling')
     const { confidence, nextReviewAt } = scheduleAfterAnswer({ wordId: currentTask.wordId, taskId: currentTask.id }, correct, Boolean(hintStep), attemptMode)
     const needsReview = Boolean(overrides.wasMarkedForReview) || !correct || Boolean(hintStep)
     savePracticeAttempt({
       id: crypto.randomUUID(), taskId: currentTask.id, taskType: currentTask.type, topic: currentTask.topic, topicId: currentTask.topicId, subtopic: currentTask.subtopic, wordId: currentTask.wordId, library: currentTask.library,
-      userAnswer: answer, correctAnswer: currentTask.answer, errorCategory: correct ? currentTask.errorCategory : categoryForError(errorType(answer, currentTask.answer)),
-      hintUsed: Boolean(hintStep), attemptMode, errorType: correct ? 'unknown' : errorType(answer, currentTask.answer), confidence, nextReviewAt, needsReview: needsReview && settings.repeatDifficultItemLater, createdAt: new Date().toISOString(), ...overrides,
+      userAnswer: answer, correctAnswer: target, errorCategory: correct ? currentTask.errorCategory : categoryForError(errorType(answer, target)),
+      hintUsed: Boolean(hintStep), attemptMode, errorType: correct ? 'unknown' : errorType(answer, target), confidence, nextReviewAt, needsReview: needsReview && settings.repeatDifficultItemLater, createdAt: new Date().toISOString(), ...overrides,
     })
   }
 

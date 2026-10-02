@@ -15,7 +15,7 @@ function tasksForWord(word: LibraryWord): PracticeTask[] {
   const spellingChoices = [word.word, `${word.word[0]}${word.word[0]}${word.word.slice(1)}`, word.word.length > 3 ? word.word.slice(0, -1) : `${word.word}e`, word.word.replace(/[aeiou]/i, 'e'), `${word.word}e`]
     .filter((choice, index, values) => choice !== word.word || index === 0).filter((choice, index, values) => values.indexOf(choice) === index).slice(0, 4)
   return [
-    { ...base, id: `library-${id}-write-en`, type: 'translate-ru-en', mode: 'write-en', prompt: word.translation, answer: word.word },
+    { ...base, id: `library-${id}-write-en`, type: 'translate-ru-en', mode: 'write-en', prompt: word.translation, answer: word.word, acceptedAnswers: word.alternatives?.length ? word.alternatives : undefined },
     { ...base, id: `library-${id}-listen`, type: 'translate-ru-en', mode: 'listen-write', prompt: word.translation, answer: word.word },
     { ...base, id: `library-${id}-translate-ru`, type: 'translate-en-ru', mode: 'translate-ru', prompt: word.word, answer: word.translation },
     { ...base, id: `library-${id}-spelling`, type: 'correct-spelling', mode: 'choose-spelling', prompt: word.translation, answer: word.word, choices: spellingChoices, errorCategory: 'Spelling' },
