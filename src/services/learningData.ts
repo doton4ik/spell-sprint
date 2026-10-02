@@ -49,16 +49,15 @@ export function getMistakeEntries(): MistakeEntry[] {
       const lastFailure = [...failed].sort((a, b) => b.createdAt.localeCompare(a.createdAt))[0]
       const state = states[entryId]
       // Successful review days since the last mistake, as stored on the newest answer (see reviewSchedule.ts).
-      const confidence = chronological.at(-1)?.confidence ?? 0
-      const status: LearningStatus = confidence >= MASTERED_DAYS || state?.completedReviews && state.completedReviews >= 3
+      const latest = chronological.at(-1)!
+      const confidence = latest.isCorrect ? latest.confidence ?? 0 : 0
+      // The level follows the latest answers: one right answer lifts the word out of "new"/"difficult",
+      // and each successful day moves it further. "Difficult" is only for a word that is wrong right now.
+      const status: LearningStatus = confidence >= MASTERED_DAYS || (state?.completedReviews ?? 0) >= 3
         ? 'mastered'
-        : failed.length >= 3
-          ? 'difficult'
-          : state?.completedReviews
-            ? 'review'
-            : attempts.some((attempt) => attempt.isCorrect)
-              ? 'learning'
-              : 'new'
+        : !latest.isCorrect
+          ? failed.length >= 3 ? 'difficult' : 'new'
+          : confidence >= 3 ? 'review' : 'learning'
 
       return {
         taskId: entryId,
@@ -78,8 +77,10 @@ export function getMistakeEntries(): MistakeEntry[] {
         numberOfCorrectAnswers: attempts.filter((attempt) => attempt.isCorrect).length,
         firstSeen: chronological[0].createdAt,
         lastSeen: chronological.at(-1)!.createdAt,
-        nextReviewAt: state?.nextReviewAt ?? lastFailure.nextReviewAt ?? addDays(new Date(chronological[0].createdAt), 1),
+        // The latest answer sets the next review; "Mark reviewed" counts only if it is newer.
+        nextReviewAt: state?.nextReviewAt && state.nextReviewAt > (latest.nextReviewAt ?? '') && (state.lastReviewedAt ?? '') > latest.createdAt ? state.nextReviewAt : latest.nextReviewAt ?? addDays(new Date(latest.createdAt), 1),
         status,
+        goodDays: Math.min(confidence, MASTERED_DAYS),
       } as MistakeEntry
     })
     .filter((entry): entry is MistakeEntry => entry !== null)

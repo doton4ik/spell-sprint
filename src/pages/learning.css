@@ -29,3 +29,8 @@
 .pattern-card__examples { display: flex; flex-wrap: wrap; gap: 8px 18px; list-style: none; margin: 0; padding: 0; }
 .pattern-card__actions { align-items: center; display: flex; flex-wrap: wrap; gap: 8px; }
 @media (max-width: 570px) { .pattern-card__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .pattern-card { padding: 16px; } }
+
+/* Progress towards "mastered": one dot per successful day since the last mistake. */
+.good-days { display: inline-flex; gap: 3px; margin: 6px 0 2px; }
+.good-days i { background: #e2e9e6; border-radius: 50%; display: block; height: 7px; width: 7px; }
+.good-days i.good-days__on { background: var(--teal); }

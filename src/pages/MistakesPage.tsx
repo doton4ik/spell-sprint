@@ -12,8 +12,9 @@ function formatDate(value: string) {
   return new Intl.DateTimeFormat('en', { month: 'short', day: 'numeric' }).format(new Date(value))
 }
 
+const statusLabels: Record<LearningStatus, string> = { new: 'To practise', difficult: 'Needs focus', learning: 'Learning', review: 'Almost there', mastered: 'Mastered' }
 function Status({ status }: { status: LearningStatus }) {
-  return <span className={`learning-status learning-status--${status}`}>{status}</span>
+  return <span className={`learning-status learning-status--${status}`}>{statusLabels[status]}</span>
 }
 
 export function MistakesPage() {
@@ -35,7 +36,7 @@ export function MistakesPage() {
 
       <section className="learning-summary" aria-label="Mistakes summary">
         <div><span>Tracked items</span><strong>{entries.length}</strong><small>Unique tasks with mistakes</small></div>
-        <div><span>Need focus</span><strong>{difficult}</strong><small>Items with 3+ errors</small></div>
+        <div><span>Need focus</span><strong>{difficult}</strong><small>Wrong now, 3+ mistakes</small></div>
         <div><span>Review queue</span><strong>{review}</strong><small>Ready for spaced review</small></div>
       </section>
 
@@ -59,7 +60,7 @@ export function MistakesPage() {
               <div className="mistakes-table__row" role="row" key={entry.taskId}>
                 <div className="mistake-answer"><span className="mistake-answer__type">{entry.source === 'personal-baseline' ? 'Personal baseline' : entry.family}</span><p><AnswerDiff expected={entry.correctAnswer} submitted={entry.lastUserVersion} /></p>{entry.translation && entry.translation !== entry.correctAnswer ? <p className="mistake-answer__translation">{entry.translation}</p> : null}<small>{entry.topic}{entry.subtopic ? ` · ${entry.subtopic}` : ''}{entry.library ? ` · ${entry.library}` : ''} · first seen {formatDate(entry.firstSeen)}{entry.memoryCue ? ` · cue: ${entry.memoryCue}` : ''}</small></div>
                 <div><span className="category-pill">{entry.errorCategory}</span></div>
-                <div className="mistake-progress"><Status status={entry.status} /><small>{entry.numberOfErrors} error{entry.numberOfErrors === 1 ? '' : 's'} · {entry.numberOfCorrectAnswers} correct</small></div>
+                <div className="mistake-progress"><Status status={entry.status} /><span className="good-days" title="Successful days in a row (5 = mastered)" aria-label={`${entry.goodDays ?? 0} of 5 successful days`}>{[0, 1, 2, 3, 4].map((day) => <i className={day < (entry.goodDays ?? 0) ? 'good-days__on' : ''} key={day} />)}</span><small>{entry.numberOfErrors} error{entry.numberOfErrors === 1 ? '' : 's'} · {entry.numberOfCorrectAnswers} correct</small></div>
                 <div className="review-date"><strong>{formatDate(entry.nextReviewAt)}</strong><a href="#review">Open queue <Icon name="chevron" size={15} /></a></div>
               </div>
             ))}

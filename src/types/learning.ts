@@ -23,6 +23,7 @@ export type MistakeEntry = {
   lastSeen: string
   nextReviewAt: string
   status: LearningStatus
+  goodDays?: number // successful review days since the last mistake (0–5), see reviewSchedule.ts
   memoryCue?: string
   riskLevel?: 'low' | 'medium' | 'high'
   source?: 'practice' | 'personal-baseline'
