@@ -99,6 +99,14 @@ export function RulesPage() {
   }
   const visibleRules = (category === 'All' ? rules : rules.filter((rule) => rule.category === category)).slice().sort((a, b) => attention(a) - attention(b) || a.title.localeCompare(b.title))
   const needRepeating = rules.filter((rule) => attention(rule) < 3).length
+  const repeatCount = (slug: string) => rules.filter((rule) => rule.category === slug && attention(rule) < 3).length
+  // Three plain groups instead of one long list: what to repeat, what is new, what is done.
+  const isDone = (rule: Rule) => { const status = progressByRule.get(rule.id)?.status; return status === 'mastered' || status === 'archived' }
+  const groups = [
+    { id: 'repeat', title: 'To repeat', note: 'Rules you got wrong — the most urgent first.', rules: visibleRules.filter((rule) => attention(rule) < 3) },
+    { id: 'new', title: 'Not started', note: 'Open a rule to read it and try its exercises.', rules: visibleRules.filter((rule) => attention(rule) === 3 && !isDone(rule)) },
+    { id: 'done', title: 'Mastered', note: 'Five good days — they come back only if you slip.', rules: visibleRules.filter(isDone) },
+  ].filter((group) => group.rules.length)
 
   function openCreateForm(fromMistake?: MistakeEvent) {
     setLinkingMistake(fromMistake ?? null)
@@ -125,18 +133,23 @@ export function RulesPage() {
   return (
     <div className="learning-page" id="rules">
       <header className="learning-header">
-        <div><p className="eyebrow">Reference library</p><h1>Rules that stick</h1><p>{needRepeating ? `${needRepeating} rule${needRepeating === 1 ? '' : 's'} to repeat. ` : ''}Practice below, or open a rule to study it.</p></div>
-        <button className="outline-action" type="button" onClick={() => openCreateForm()}><Icon name="plus" size={17} /> New personal rule</button>
+        <div><p className="eyebrow">Rules</p><h1>Rules that stick</h1><p>{rules.length} rules{needRepeating ? ` · ${needRepeating} to repeat` : ''}. Start with the practice, or open a rule to study it.</p></div>
+        <button className="outline-action" type="button" onClick={() => openCreateForm()}><Icon name="plus" size={17} /> New rule</button>
       </header>
 
-      <RulePracticePanel onProgress={updateProgress} />
-
-      <div className="rule-filter filter-tabs">
-        <button type="button" className={category === 'All' ? 'filter-tabs__active' : ''} onClick={() => setCategory('All')}>All ({rules.length})</button>
+      <div className="rules-layout">
+      <nav className="rules-nav" aria-label="Rule categories">
+        <span className="rules-nav__title">Categories</span>
+        <button type="button" className={category === 'All' ? 'rules-nav__item rules-nav__item--active' : 'rules-nav__item'} onClick={() => setCategory('All')}><span>All rules</span><small>{rules.length}</small></button>
         {usedCategories.map((item) => (
-          <button type="button" key={item.slug} className={category === item.slug ? 'filter-tabs__active' : ''} onClick={() => setCategory(item.slug)}>{item.label} ({categoryCount(item.slug)})</button>
+          <button type="button" key={item.slug} className={category === item.slug ? 'rules-nav__item rules-nav__item--active' : 'rules-nav__item'} onClick={() => setCategory(item.slug)}>
+            <span>{item.label}</span>{repeatCount(item.slug) ? <b title="To repeat">{repeatCount(item.slug)}</b> : null}<small>{categoryCount(item.slug)}</small>
+          </button>
         ))}
-      </div>
+      </nav>
+
+      <div className="rules-main">
+      <RulePracticePanel onProgress={updateProgress} />
 
       {showForm ? (
         <section className="rule-create-form">
@@ -162,20 +175,6 @@ export function RulesPage() {
         </section>
       ) : null}
 
-      {unclassified.length ? (
-        <section className="rule-unclassified">
-          <button className="rule-unclassified__toggle" type="button" onClick={() => setShowUnclassified(!showUnclassified)} aria-expanded={showUnclassified}>
-            <span><strong>{unclassified.length} unclassified mistake{unclassified.length === 1 ? '' : 's'}</strong> — saved, but no rule matches yet</span>
-            <span className={showUnclassified ? 'rule-unclassified__chevron rule-unclassified__chevron--open' : 'rule-unclassified__chevron'}><Icon name="chevron" size={16} /></span>
-          </button>
-          {showUnclassified ? (
-            <div className="rule-unclassified__list">
-              {unclassified.slice(0, 6).map((mistake) => <UnclassifiedItem mistake={mistake} rules={rules} onCreate={openCreateForm} onLinked={async () => { await refresh() }} key={mistake.id} />)}
-            </div>
-          ) : null}
-        </section>
-      ) : null}
-
       {loading ? null : visibleRules.length === 0 ? (
         <section className="empty-learning-state">
           <span><Icon name="rules" size={25} /></span><h2>No rules here yet.</h2>
@@ -183,13 +182,35 @@ export function RulesPage() {
           <button className="check-button" type="button" onClick={() => openCreateForm()}><Icon name="plus" size={17} /> New personal rule</button>
         </section>
       ) : (
-        <section className="rules-grid rules-grid--compact">
-          {visibleRules.map((rule) => (
-            <RuleCard rule={rule} rulesById={rulesById} progress={progressByRule.get(rule.id) ?? null} expanded={openRuleId === rule.id} focused={rule.id === focusedRuleId}
-              onToggle={() => setOpenRuleId(openRuleId === rule.id ? null : rule.id)} onProgressChange={updateProgress} key={rule.id} />
-          ))}
-        </section>
+        groups.map((group) => (
+          <section className="rules-group" key={group.id} aria-labelledby={`rules-group-${group.id}`}>
+            <header className="rules-group__head"><h2 id={`rules-group-${group.id}`}>{group.title} <small>{group.rules.length}</small></h2><p>{group.note}</p></header>
+            <div className="rules-grid rules-grid--compact">
+              {group.rules.map((rule) => (
+                <RuleCard rule={rule} rulesById={rulesById} progress={progressByRule.get(rule.id) ?? null} expanded={openRuleId === rule.id} focused={rule.id === focusedRuleId}
+                  onToggle={() => setOpenRuleId(openRuleId === rule.id ? null : rule.id)} onProgressChange={updateProgress} key={rule.id} />
+              ))}
+            </div>
+          </section>
+        ))
       )}
+
+      {unclassified.length ? (
+        <section className="rule-unclassified">
+          <button className="rule-unclassified__toggle" type="button" onClick={() => setShowUnclassified(!showUnclassified)} aria-expanded={showUnclassified}>
+            <span><strong>Mistakes without a rule · {unclassified.length}</strong> — link one to a rule, or make a new rule from it</span>
+            <span className={showUnclassified ? 'rule-unclassified__chevron rule-unclassified__chevron--open' : 'rule-unclassified__chevron'}><Icon name="chevron" size={16} /></span>
+          </button>
+          {showUnclassified ? (
+            <div className="rule-unclassified__list">
+              <p className="rule-unclassified__note">For an explanation of your mistakes, see <a href="#my-mistakes">My Mistakes → Problems &amp; rules</a>.</p>
+              {unclassified.slice(0, 6).map((mistake) => <UnclassifiedItem mistake={mistake} rules={rules} onCreate={openCreateForm} onLinked={async () => { await refresh() }} key={mistake.id} />)}
+            </div>
+          ) : null}
+        </section>
+      ) : null}
+      </div>
+      </div>
     </div>
   )
 }
