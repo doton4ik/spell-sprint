@@ -49,7 +49,7 @@ export function MistakesPage() {
       ) : (<>
         <nav className="mistakes-view-switch" aria-label="View">
           <button type="button" className={view === 'words' ? 'mistakes-view-switch__active' : ''} onClick={() => setView('words')}>Words</button>
-          <button type="button" className={view === 'patterns' ? 'mistakes-view-switch__active' : ''} onClick={() => setView('patterns')}>Patterns</button>
+          <button type="button" className={view === 'patterns' ? 'mistakes-view-switch__active' : ''} onClick={() => setView('patterns')}>Problems &amp; rules</button>
         </nav>
         {view === 'patterns' ? <MistakePatternsView revision={revision} /> : (
         <section className="learning-panel">

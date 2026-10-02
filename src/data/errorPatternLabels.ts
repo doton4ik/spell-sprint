@@ -5,7 +5,7 @@ export const errorPatternLabels: Record<string, { label: string; hint: string }>
   letter_substitution: { label: 'Wrong letter', hint: 'One letter was written instead of another.' },
   letter_transposition: { label: 'Swapped letters', hint: 'Two neighbouring letters are in the wrong order.' },
   multiple_edits: { label: 'Several changes', hint: 'More than one letter needs fixing.' },
-  wrong_word: { label: 'Different word', hint: 'The answer is a different word altogether.' },
+  wrong_word: { label: 'Wrong word for the meaning', hint: 'A different word, not a spelling slip.' },
   blank_answer: { label: 'No answer', hint: 'Nothing was typed.' },
   missing_double_consonant: { label: 'Double consonant', hint: 'This word has a doubled consonant.' },
   extra_double_consonant: { label: 'Only one consonant', hint: 'This consonant is not doubled in the correct word.' },

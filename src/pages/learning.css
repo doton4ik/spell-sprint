@@ -34,3 +34,38 @@
 .good-days { display: inline-flex; gap: 3px; margin: 6px 0 2px; }
 .good-days i { background: #e2e9e6; border-radius: 50%; display: block; height: 7px; width: 7px; }
 .good-days i.good-days__on { background: var(--teal); }
+
+/* ---- Problems & rules (My Mistakes) ---- */
+.report { display: grid; gap: 14px; }
+.report-step { color: var(--teal); font-size: calc(11.5px * var(--fs)); font-weight: 750; letter-spacing: .05em; text-transform: uppercase; }
+.report-sheet { background: linear-gradient(180deg, #f2faf7, var(--surface)); border: 1px solid #cfe5de; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: 20px 22px; }
+.report-sheet h2, .report-head h2 { color: #24403a; font-size: calc(20px * var(--fs)); margin: 4px 0 4px; }
+.report-sheet > p, .report-head p { color: var(--ink-muted); font-size: calc(13.5px * var(--fs)); line-height: 1.5; margin: 0; }
+.report-sheet ol { counter-reset: rule; display: grid; gap: 10px; list-style: none; margin: 14px 0 0; padding: 0; }
+.report-sheet li { align-items: start; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; counter-increment: rule; display: grid; gap: 3px 12px; grid-template-columns: 28px 1fr auto; padding: 12px 14px; }
+.report-sheet li::before { align-items: center; background: var(--teal); border-radius: 50%; color: #fff; content: counter(rule); display: flex; font-size: calc(13px * var(--fs)); font-weight: 750; grid-row: span 2; height: 26px; justify-content: center; width: 26px; }
+.report-sheet li strong { color: #23403a; font-size: calc(14.5px * var(--fs)); line-height: 1.45; }
+.report-sheet li span { color: var(--ink-muted); font-size: calc(12.5px * var(--fs)); grid-column: 2; }
+.report-sheet__more { align-items: center; background: none; border: 0; color: var(--teal-dark); cursor: pointer; display: inline-flex; font-family: inherit; font-size: calc(13px * var(--fs)); font-weight: 700; gap: 2px; grid-column: 3; grid-row: 1 / span 2; padding: 2px 0; white-space: nowrap; }
+.report-head { margin: 10px 2px 0; }
+.problem-summary { color: var(--ink-muted); font-size: calc(13.5px * var(--fs)); line-height: 1.5; margin: 4px 0 0; }
+.problem-summary b { background: #fff3df; border-radius: 6px; color: #8a5a12; font-weight: 700; margin-left: 5px; padding: 1px 6px; white-space: nowrap; }
+.problem-rule { background: #eef7f4; border-left: 3px solid var(--teal); border-radius: 8px; padding: 10px 12px; }
+.problem-rule span, .problem-words > span { color: var(--teal-dark); display: block; font-size: calc(11.5px * var(--fs)); font-weight: 750; letter-spacing: .04em; margin-bottom: 4px; text-transform: uppercase; }
+.problem-words > span { color: #6b7b77; }
+.problem-rule p { color: #1f3b35; font-size: calc(14.5px * var(--fs)); font-weight: 650; line-height: 1.5; margin: 0; }
+.problem-explain { border: 1px solid var(--line); border-radius: 10px; padding: 0 12px; }
+.problem-explain summary, .report-slips summary { color: var(--teal-dark); cursor: pointer; font-size: calc(13.5px * var(--fs)); font-weight: 700; padding: 10px 0; }
+.problem-explain dl { display: grid; gap: 10px; margin: 0 0 12px; }
+.problem-explain dt { color: #4c625d; font-size: calc(12.5px * var(--fs)); font-weight: 750; }
+.problem-explain dd { color: #2f4944; font-size: calc(14px * var(--fs)); line-height: 1.55; margin: 2px 0 0; }
+.problem-explain__examples { display: flex; flex-wrap: wrap; gap: 6px; }
+.problem-explain__examples span { background: #f1f5f4; border-radius: 6px; padding: 2px 8px; }
+.report-slips { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 4px 16px 14px; }
+.report-slips summary small { color: var(--ink-muted); font-weight: 500; margin-left: 6px; }
+.report-slips .patterns-list { margin-top: 6px; }
+@media (max-width: 570px) {
+  .report-sheet { padding: 16px; }
+  .report-sheet li { grid-template-columns: 26px 1fr; }
+  .report-sheet__more { grid-column: 2; grid-row: auto; justify-self: start; }
+}
