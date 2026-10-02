@@ -4,6 +4,7 @@ import { getReviewStates, getRuleReviewIds, mergeReviewData } from './learningDa
 import { getPracticeAttempts, mergePracticeAttempts } from './practiceStorage'
 import { getLevelChecks, mergeLevelChecks } from './levelCheck'
 import { flushMistakeOutbox, getOutboxSize } from './mistakeOutbox'
+import { flushWordReports } from './wordReports'
 import { getProfile, saveProfile } from './profileStorage'
 import { getLibraryPrefs, mergeLibraryPrefs } from './libraryPrefs'
 import { getPairAttempts, mergePairAttempts } from './pairs'
@@ -94,6 +95,7 @@ export function syncNow(): Promise<void> {
     announce()
     try {
       void flushMistakeOutbox() // mistakes made offline or before signing in reach the rules module now
+      void flushWordReports()
       applyingRemote = true // the merge fires "data changed" events; they must not schedule another sync
       await syncLearningData()
       lastSyncedAt = new Date().toISOString(); lastError = null

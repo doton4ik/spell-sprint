@@ -29,6 +29,7 @@ export type IconName =
   | 'plus'
   | 'search'
   | 'more'
+  | 'flag'
 
 export type Metric = {
   label: string

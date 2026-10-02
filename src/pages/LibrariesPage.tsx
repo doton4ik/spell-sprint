@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { ImportLibraryPanel } from '../components/libraries/ImportLibraryPanel'
 import { AddWordPanel } from '../components/libraries/AddWordPanel'
+import { WordReportPanel } from '../components/WordReportPanel'
 import { Icon } from '../components/icons/Icon'
 import { libraryGroups, wordsForGroup, type LibraryGroup } from '../services/libraryGroups'
 import { csvTemplate, deleteImportedLibrary, getEveryLibrary, getEveryWord, getLibraries } from '../services/libraryStorage'
@@ -16,7 +17,12 @@ type Details = { title: string; description: string; words: LibraryWord[]; libra
 type Tab = LibraryGroup['id'] | 'packs'
 
 function HideButton({ word, onHide }: { word: LibraryWord; onHide: (word: LibraryWord) => void }) {
-  return <button className="quiet-action word-hide" type="button" onClick={() => onHide(word)} title="Remove this word from your practice. You can restore it in My Libraries."><Icon name="eye" size={13} /> Hide</button>
+  const [reporting, setReporting] = useState(false)
+  return <>
+    <button className="quiet-action word-hide" type="button" onClick={() => onHide(word)} title="Remove this word from your practice. You can restore it in My Libraries."><Icon name="eye" size={13} /> Hide</button>
+    {word.source === 'built-in' ? <button className="quiet-action word-hide" type="button" onClick={() => setReporting(!reporting)} aria-expanded={reporting} title="Tell us this word is strange, not worth learning or wrong"><Icon name="flag" size={13} /> Report</button> : null}
+    {reporting ? <div className="word-report-overlay" role="dialog" aria-modal="true" aria-label={`Report “${word.word}”`} onClick={(event) => { if (event.target === event.currentTarget) setReporting(false) }}><WordReportPanel word={{ wordId: word.wordId, word: word.word, translation: word.translation, library: word.library }} onCancel={() => setReporting(false)} onDone={(hide) => { setReporting(false); if (hide) onHide(word) }} /></div> : null}
+  </>
 }
 
 // Every word's linked rules, keyed by wordId — loaded once so neither the search box nor the
