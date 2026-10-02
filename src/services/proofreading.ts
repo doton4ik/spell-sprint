@@ -2,7 +2,7 @@ import { proofreadingTexts, type ProofreadingLevel, type ProofreadingText } from
 import type { PracticeAttempt } from '../types/practice'
 import { getPracticeAttempts, savePracticeAttempt } from './practiceStorage'
 import { getAllWords, getEveryWord } from './libraryStorage'
-import { normalise, proofreadingTypes, type ProofreadingResult } from './proofreadingEngine'
+import { cleanText, normalise, proofreadingTypes, type ProofreadingResult } from './proofreadingEngine'
 import { scheduleAfterAnswer } from './reviewSchedule'
 
 export * from './proofreadingEngine'
@@ -39,13 +39,25 @@ export function recordProofreading(text: ProofreadingText, result: ProofreadingR
 
 // Spelling hunt: slips go first into words the learner studies or has got wrong; library words
 // also tell the engine which letter strings are real words, so a slip never makes another real word.
+// Every word the app knows to be real: library words, their examples and definitions, and every
+// proofreading text. A slip that lands on one of these ("cheap" → "chap") is not used.
+let knownCache: Set<string> | null = null
+function knownWords() {
+  if (knownCache) return knownCache
+  const words = (value: string | undefined) => (value ?? '').toLocaleLowerCase().match(/[a-z]+/g) ?? []
+  knownCache = new Set([
+    ...getEveryWord().flatMap((word) => [...words(word.word), ...words(word.example), ...words(word.definition)]),
+    ...proofreadingTexts.flatMap((text) => words(cleanText(text))),
+  ])
+  return knownCache
+}
+
 export function huntOptions() {
   const preferred = new Set([
     ...getAllWords().map((word) => word.word.toLocaleLowerCase()),
     ...getPracticeAttempts().filter((attempt) => !attempt.isCorrect).map((attempt) => attempt.correctAnswer.toLocaleLowerCase()),
   ])
-  const known = new Set(getEveryWord().map((word) => word.word.toLocaleLowerCase()))
-  return { preferred, known }
+  return { preferred, known: knownWords() }
 }
 
 export function textsForLevel(level: ProofreadingLevel) { return proofreadingTexts.filter((text) => text.level === level) }

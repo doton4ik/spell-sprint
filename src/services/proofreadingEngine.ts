@@ -63,6 +63,25 @@ function random(seed: number) {
   return () => { state = (state + 0x6d2b79f5) >>> 0; let t = state; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296 }
 }
 const WORD = /^[A-Za-zÀ-ÿ'’-]+$/
+
+// A slip must not be a real word ("cheap" → "chap" is not a mistake a reader can spot), and must
+// never be rude. The texts and the libraries cover most words; these are the real words that the
+// slip makers below produce from common words and that are not in them.
+const realWordTraps = new Set(`chap brad bred hart bach pace bard cast bast tars bars sats bats gals curt sits vice pint dram cram clan
+shot wight lad lads cats abut mat mats pant plan plans bran cot cots rods prod hose cost hers sets bets hops taps wins rats hats bits
+fats tubs pins find mind wind bond cons diner later hoping planed filing coma super cuter striped mated taping staring biter robed
+pining holy better letter night rite rote rest ring rap wrap nit fiend lose loose dose sole pole hole role tale male bale vale
+dinner latter hopping planned filling comma supper cutter stripped matted tapping starring bitter robbed pinning wining wining
+thing thin shin spit star scar strip bath cloth breath plane stare scare spite shine bathe clothe stripe dine fined lined mined
+boned hoped hated rated dated noted voted moped coped duped taped piped wiped wades fades made mad bad dad sad pad lid hid bid rid
+peal real seal meal deal heal veal steal bead lead read mead weed feed need deed seed reed heed beet feet meet rites starred tars rote rots shad wast fiend wights`.split(/\s+/))
+const rude = /cunt|fuck|shit|dick|cock|piss|slut|twat|wank|nigg|fag/
+export const isRealOrRude = (value: string, known?: Set<string>) => {
+  const word = value.toLocaleLowerCase()
+  return realWordTraps.has(word) || rude.test(word) || Boolean(known?.has(word))
+}
+// The text with its grammar mark-up resolved to the correct form.
+export const cleanText = (text: ProofreadingText) => text.text.replace(PLACE, (_match, correct: string) => variants(correct)[0])
 const tokenize = (value: string) => value.match(/[A-Za-zÀ-ÿ'’-]+|\s+|[^A-Za-zÀ-ÿ'’\s-]+/g) ?? []
 export const normalise = (value: string) => value.toLocaleLowerCase().replace(/[’‘`]/g, "'").replace(/[.,!?;:"()]/g, '').replace(/\s+/g, ' ').trim()
 
@@ -170,7 +189,9 @@ function buildOnce(text: ProofreadingText, seed: number, weights: Record<string,
   const candidates = tokens.filter((token) => token.isWord && token.slotId === undefined && token.text.length >= 5 && token.text === token.text.toLocaleLowerCase())
   for (let tries = 0; tries < 40 && slots.filter((slot) => slot.type === 'spelling').length < spellingCount && candidates.length; tries += 1) {
     const token = candidates.splice(Math.floor(next() * candidates.length), 1)[0]
-    const slip = spellingSlips.map((make) => make(token.text)).filter((value): value is string => Boolean(value) && value !== token.text)
+    for (let at = candidates.length - 1; at >= 0; at -= 1) if (candidates[at].text.toLocaleLowerCase() === token.text.toLocaleLowerCase()) candidates.splice(at, 1) // one slip per word
+    const inText = new Set(tokens.filter((item) => item.isWord).map((item) => item.text.toLocaleLowerCase()))
+    const slip = spellingSlips.map((make) => make(token.text)).filter((value): value is string => Boolean(value) && value !== token.text && !isRealOrRude(value!, inText))
     if (!slip.length) continue
     const slot: Slot = { id: slots.length, type: 'spelling', correct: [token.text], shown: slip[Math.floor(next() * slip.length)], tokenIds: [token.id] }
     token.text = slot.shown; token.slotId = slot.id
@@ -193,7 +214,7 @@ export function buildSpellingHunt(text: ProofreadingText, seed = Date.now(), opt
   const clean = text.text.replace(PLACE, (_match, correct: string) => variants(correct)[0])
   const tokens: Token[] = tokenize(clean).map((part, id) => ({ id, text: part, isWord: WORD.test(part) }))
   const inText = new Set(tokens.filter((token) => token.isWord).map((token) => token.text.toLocaleLowerCase()))
-  const isReal = (value: string) => inText.has(value.toLocaleLowerCase()) || Boolean(options.known?.has(value.toLocaleLowerCase()))
+  const isReal = (value: string) => inText.has(value.toLocaleLowerCase()) || isRealOrRude(value, options.known)
   const total = huntCountFor(text)
   const slots: Slot[] = []
   const pool = tokens.filter((token) => token.isWord && token.text.length >= 5 && (token.text === token.text.toLocaleLowerCase() || commonMisspellings[token.text]))
@@ -204,6 +225,8 @@ export function buildSpellingHunt(text: ProofreadingText, seed = Date.now(), opt
     let roll = next() * sum
     const index = Math.max(0, pool.findIndex((token) => (roll -= weight(token)) <= 0))
     const token = pool.splice(index, 1)[0]
+    // One slip per word: "monney" three times in one text is absurd and easy to spot.
+    for (let at = pool.length - 1; at >= 0; at -= 1) if (pool[at].text.toLocaleLowerCase() === token.text.toLocaleLowerCase()) pool.splice(at, 1)
     if (Math.abs(token.id - usedLast) < 3 && pool.length > total) continue // keep slips apart a little
     const usable = (values: Array<string | null>) => values.filter((value): value is string => value !== null && value !== token.text && !isReal(value))
     // A real misspelling of this very word beats a generated one.
