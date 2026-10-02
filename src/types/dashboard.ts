@@ -35,6 +35,7 @@ export type Metric = {
   label: string
   value: string
   note: string
+  short?: string // the note on a phone, where the long one does not fit
   tone: 'teal' | 'blue' | 'amber' | 'violet'
   icon: IconName
 }

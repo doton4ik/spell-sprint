@@ -9,7 +9,8 @@ export function MetricCard({ metric }: { metric: Metric }) {
         <span className="metric-card__icon"><Icon name={metric.icon} size={18} /></span>
       </div>
       <strong className="metric-card__value">{metric.value}</strong>
-      <p>{metric.note}</p>
+      <p className="metric-card__note">{metric.note}</p>
+      {metric.short ? <p className="metric-card__short">{metric.short}</p> : null}
     </article>
   )
 }

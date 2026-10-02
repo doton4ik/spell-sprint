@@ -63,3 +63,32 @@
 .level-nudge__icon { align-items: center; background: var(--teal-soft); border-radius: 9px; color: var(--teal); display: inline-flex; height: 34px; justify-content: center; width: 34px; }
 .status--preliminary { background: #eef2f0; color: #6b7b77; }
 .topic-row__count { color: var(--ink-faint); font-size: calc(11.5px * var(--fs)); font-weight: 600; }
+
+.metric-card__short { display: none; }
+/* Phone: the main action first, the numbers as small tiles, the streak as a chip next to the date. */
+@media (max-width: 570px) {
+  .dashboard { display: flex; flex-direction: column; gap: 14px; padding: 18px 14px 24px; }
+  .dashboard > * { margin: 0 !important; }
+  .dashboard .page-header { order: 0; position: relative; }
+  .dashboard .today-card { order: 1; }
+  .dashboard .level-nudge { order: 2; }
+  .dashboard .metrics-grid { order: 3; }
+  .dashboard .dashboard-columns { order: 4; }
+  .page-header h1 { font-size: calc(25px * var(--fs)); letter-spacing: -.8px; }
+  .page-subtitle { font-size: calc(13.5px * var(--fs)); margin-top: 6px; }
+  .date-line { margin-bottom: 6px; }
+  .header-streak { border-radius: 999px; column-gap: 6px; grid-template-columns: auto auto auto; margin: 0; padding: 3px 10px 3px 3px; position: absolute; right: 0; top: -4px; }
+  .header-streak span { grid-row: auto; height: 24px; width: 24px; }
+  .header-streak span svg { height: 14px; width: 14px; }
+  .header-streak strong { align-self: center; font-size: calc(14px * var(--fs)); line-height: 1; }
+  .header-streak small { align-self: center; font-size: calc(11.5px * var(--fs)); }
+  .metrics-grid { gap: 8px; }
+  .metric-card { min-height: 0; padding: 12px 13px; }
+  .metric-card__top { font-size: calc(12px * var(--fs)); }
+  .metric-card__icon { height: 24px; width: 24px; }
+  .metric-card__icon svg { height: 15px; width: 15px; }
+  .metric-card__value { font-size: calc(22px * var(--fs)); margin: 8px 0 3px; }
+  .metric-card__note { display: none; }
+  .metric-card__short { color: var(--ink-muted); display: block; font-size: calc(11.5px * var(--fs)); margin: 0; }
+  .dashboard-columns { gap: 14px; }
+}

@@ -17,16 +17,31 @@ const shortLabel = (label: string) => label === 'My Mistakes' ? 'Mistakes' : lab
 
 // The phone bar has room for four pages; everything else (Libraries, Settings, …) sits behind "More".
 const mobileMainPages = ['Dashboard', 'Practice', 'My Mistakes', 'Rules']
-const mobileMoreItems: Array<{ label: string; icon: IconName }> = [
-  ...navigationItems.filter((item) => !mobileMainPages.includes(item.label)),
-  { label: 'Settings', icon: 'settings' },
+const moreGroups: Array<{ title: string; items: Array<{ label: string; icon: IconName; note: string }> }> = [
+  { title: 'Train', items: [
+    { label: 'Sprint', icon: 'bolt', note: '60-second speed round' },
+    { label: 'Pairs', icon: 'shuffle', note: 'Words people mix up' },
+    { label: 'Proofreading', icon: 'eye', note: 'Find mistakes in a text' },
+    { label: 'Level Check', icon: 'analysis', note: 'Find your level' },
+  ] },
+  { title: 'Words', items: [
+    { label: 'Libraries', icon: 'library', note: 'Word lists and packs' },
+    { label: 'Topics', icon: 'topics', note: 'Progress by topic' },
+  ] },
 ]
+const mobileMoreItems = [...moreGroups.flatMap((group) => group.items), { label: 'Settings' }]
 
 export function AppShell({ children, activePage }: AppShellProps) {
   const [moreOpen, setMoreOpen] = useState(false)
   const moreActive = mobileMoreItems.some((item) => pageId(item.label) === activePage)
 
   useEffect(() => { setMoreOpen(false) }, [activePage])
+  useEffect(() => {
+    if (!moreOpen) return
+    const close = (event: KeyboardEvent) => { if (event.key === 'Escape') setMoreOpen(false) }
+    window.addEventListener('keydown', close)
+    return () => window.removeEventListener('keydown', close)
+  }, [moreOpen])
 
   // Live numbers for the menu: open mistakes (not yet mastered) and the learner's own name.
   const [openMistakes, setOpenMistakes] = useState(countOpenMistakes)
@@ -69,11 +84,24 @@ export function AppShell({ children, activePage }: AppShellProps) {
         <>
           <button className="mobile-more__backdrop" type="button" aria-label="Close menu" onClick={() => setMoreOpen(false)} />
           <nav className="mobile-more" aria-label="More pages">
-            {mobileMoreItems.map((item) => (
-              <a className={`mobile-more__link${pageId(item.label) === activePage ? ' mobile-more__link--active' : ''}`} href={`#${pageId(item.label)}`} key={item.label} onClick={() => setMoreOpen(false)}>
-                <Icon name={item.icon} size={20} />
-                <span>{item.label}</span>
-              </a>
+            <span className="mobile-more__handle" aria-hidden="true" />
+            <a className={`mobile-more__profile${activePage === 'settings' ? ' mobile-more__profile--active' : ''}`} href="#settings" onClick={() => setMoreOpen(false)}>
+              <span className="profile-avatar">{(profile.name.trim()[0] ?? 'S').toLocaleUpperCase()}</span>
+              <span><strong>{profile.name.trim() || 'Your profile'}</strong><small>Goal: {profile.dailyGoal} tasks a day · Settings</small></span>
+              <Icon name="settings" size={19} />
+            </a>
+            {moreGroups.map((group) => (
+              <section className="mobile-more__group" key={group.title}>
+                <h2>{group.title}</h2>
+                <div>
+                  {group.items.map((item) => (
+                    <a className={`mobile-more__link${pageId(item.label) === activePage ? ' mobile-more__link--active' : ''}`} href={`#${pageId(item.label)}`} key={item.label} onClick={() => setMoreOpen(false)}>
+                      <span className="mobile-more__icon"><Icon name={item.icon} size={19} /></span>
+                      <span><strong>{item.label}</strong><small>{item.note}</small></span>
+                    </a>
+                  ))}
+                </div>
+              </section>
             ))}
           </nav>
         </>
@@ -82,12 +110,13 @@ export function AppShell({ children, activePage }: AppShellProps) {
       <nav className="mobile-nav" aria-label="Mobile navigation">
         {navigationItems.filter((item) => mobileMainPages.includes(item.label)).map((item) => (
           <a className={`mobile-nav__link${pageId(item.label) === activePage ? ' mobile-nav__link--active' : ''}`} href={`#${pageId(item.label)}`} key={item.label}>
-            <Icon name={item.icon} size={20} />
+            <span className="mobile-nav__icon"><Icon name={item.icon} size={20} /></span>
             <span>{shortLabel(item.label)}</span>
+            {badgeFor(item.label) ? <span className="mobile-nav__badge">{badgeFor(item.label)! > 99 ? '99+' : badgeFor(item.label)}</span> : null}
           </a>
         ))}
         <button className={`mobile-nav__link${moreActive || moreOpen ? ' mobile-nav__link--active' : ''}`} type="button" aria-expanded={moreOpen} onClick={() => setMoreOpen((open) => !open)}>
-          <Icon name="more" size={20} />
+          <span className="mobile-nav__icon"><Icon name="more" size={20} /></span>
           <span>More</span>
         </button>
       </nav>

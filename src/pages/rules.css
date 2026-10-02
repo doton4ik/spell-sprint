@@ -146,3 +146,4 @@
   .rules-nav__title { display: none; }
   .rules-nav__item { background: #eef3f1; flex: 0 0 auto; white-space: nowrap; }
 }
+@media (max-width: 570px) { .rules-nav { margin: 0 -14px 14px; padding: 2px 14px 6px; } }

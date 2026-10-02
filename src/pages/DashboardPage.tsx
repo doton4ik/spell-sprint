@@ -42,10 +42,10 @@ export function DashboardPage() {
     : !accuracy.enoughData ? `Preliminary: only ${accuracy.total} answer${accuracy.total === 1 ? '' : 's'} in 30 days`
     : `${accuracy.correct} of ${accuracy.total} right · last 30 days${accuracyDelta !== null ? ` · ${accuracyDelta >= 0 ? '+' : ''}${accuracyDelta}% vs previous` : ''}`
   const metrics = [
-    { label: 'Accuracy', value: accuracy.percent === null ? '—' : `${accuracy.percent}%`, note: accuracyNote, tone: 'teal' as const, icon: 'dashboard' as const },
-    { label: 'Due for review', value: String(plan.dueTotal), note: 'Words whose review date has come', tone: 'amber' as const, icon: 'calendar' as const },
-    { label: 'Open mistakes', value: String(analytics.openMistakes), note: `Words not mastered yet · ${analytics.mistakes} wrong answer${analytics.mistakes === 1 ? '' : 's'} in total`, tone: 'violet' as const, icon: 'mistakes' as const },
-    { label: 'Answers', value: String(analytics.totalAttempts), note: 'All practice, review and level-check answers', tone: 'blue' as const, icon: 'practice' as const },
+    { label: 'Accuracy', value: accuracy.percent === null ? '—' : `${accuracy.percent}%`, note: accuracyNote, short: accuracy.total ? `${accuracy.correct} of ${accuracy.total} · 30 days` : 'no answers yet', tone: 'teal' as const, icon: 'dashboard' as const },
+    { label: 'Due for review', value: String(plan.dueTotal), note: 'Words whose review date has come', short: 'words to review', tone: 'amber' as const, icon: 'calendar' as const },
+    { label: 'Open mistakes', value: String(analytics.openMistakes), note: `Words not mastered yet · ${analytics.mistakes} wrong answer${analytics.mistakes === 1 ? '' : 's'} in total`, short: 'not mastered yet', tone: 'violet' as const, icon: 'mistakes' as const },
+    { label: 'Answers', value: String(analytics.totalAttempts), note: 'All practice, review and level-check answers', short: 'answers in total', tone: 'blue' as const, icon: 'practice' as const },
   ]
   const date = new Intl.DateTimeFormat('en', { weekday: 'long', month: 'long', day: 'numeric' }).format(new Date())
   const subtitle = goalReached ? 'Daily goal reached. Anything extra today is a bonus.' : practisedToday ? `${profile.dailyGoal - todayCount} more tasks to reach today's goal.` : streak ? `Practise today to keep your ${streak}-day streak going.` : 'A short focused session is the best way to start.'
