@@ -69,3 +69,25 @@
   .report-sheet li { grid-template-columns: 26px 1fr; }
   .report-sheet__more { grid-column: 2; grid-row: auto; justify-self: start; }
 }
+
+/* ---- My Mistakes: word list grouped by what to do ---- */
+.mistakes-view-switch small { color: #98a6a2; font-size: calc(12px * var(--fs)); margin-left: 4px; }
+.mistakes-group__head { align-items: flex-end; display: flex; gap: 12px; justify-content: space-between; }
+.mistakes-group__head .check-button { flex: 0 0 auto; font-size: calc(13.5px * var(--fs)); padding: 9px 14px; width: auto; }
+.mistake-list { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); overflow: hidden; }
+.mistake-row { align-items: center; border-bottom: 1px solid #edf1ef; display: grid; gap: 18px; grid-template-columns: minmax(0, 1.6fr) minmax(130px, .8fr) 110px; padding: 14px 20px; }
+.mistake-row:last-child { border-bottom: 0; }
+.mistake-when { display: grid; gap: 3px; justify-items: end; }
+.mistake-when span { color: #98a6a2; font-size: calc(11px * var(--fs)); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.mistake-when strong { color: #3f5853; font-size: calc(13.5px * var(--fs)); }
+.mistakes-more { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 2px 16px 14px; }
+.mistakes-more summary { color: var(--teal-dark); cursor: pointer; font-size: calc(13.5px * var(--fs)); font-weight: 700; padding: 10px 0; }
+.mistakes-more .mistake-list { border: 0; box-shadow: none; }
+@media (max-width: 570px) {
+  .mistakes-group__head { align-items: stretch; flex-direction: column; }
+  .mistake-row { gap: 10px; grid-template-columns: 1fr auto; padding: 14px 16px; }
+  .mistake-row .mistake-answer { grid-column: 1 / -1; }
+  .mistake-row .mistake-progress { align-items: center; display: flex; flex-wrap: wrap; gap: 8px; }
+  .mistake-row .good-days { margin: 0; }
+}
+.mistake-row .learning-status { text-transform: none; }
