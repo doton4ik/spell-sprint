@@ -225,3 +225,8 @@
 .word-tip--editing small { color: #9a8a5e; margin-left: auto; }
 .word-tip-add { align-items: center; background: transparent; border: 0; color: #8a7a4f; display: inline-flex; font-size: calc(12.5px * var(--fs)); font-weight: 700; gap: 5px; margin-top: 8px; padding: 4px 0; }
 .word-tip-add--wrong { background: #fbf6e6; border: 1px dashed #e3d3a3; border-radius: 8px; color: #7a6320; padding: 7px 11px; }
+
+/* A word from an add-on pack says so, with a one-tap way to switch the pack off. */
+.task-pack { background: #f4f7f6; border-radius: 10px; color: #5b6f6a; font-size: calc(13px * var(--fs)); line-height: 1.45; margin: 0 0 14px; padding: 8px 12px; }
+.task-pack strong { color: #304640; }
+.task-pack button { background: none; border: 0; color: var(--teal-dark); cursor: pointer; font-family: inherit; font-size: inherit; font-weight: 700; padding: 0; text-decoration: underline; }

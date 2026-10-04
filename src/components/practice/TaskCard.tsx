@@ -12,7 +12,7 @@ import type { WordReason } from '../../services/dailyPlan'
 
 type TaskCardProps = {
   task: PracticeTask; answer: string; result: CheckResult; attemptsOnTask: number; answerRevealed: boolean; hintStep: number; allowSkip: boolean; showRuleAfterMistake: boolean
-  onAnswerChange: (value: string) => void; onCheck: () => void; onShowAnswer: () => void; onHint: () => void; onPlayAudio: () => void; onSkip: () => void; onNext: () => void; onRepeatLater: () => void; audioMessage?: string; reason?: WordReason; otherMeaning?: { word: string; translation: string } | null; onHideWord?: () => void; reportable?: { wordId: string; word: string; translation?: string; library?: string } | null; onReported?: (hide: boolean) => void
+  onAnswerChange: (value: string) => void; onCheck: () => void; onShowAnswer: () => void; onHint: () => void; onPlayAudio: () => void; onSkip: () => void; onNext: () => void; onRepeatLater: () => void; audioMessage?: string; reason?: WordReason; otherMeaning?: { word: string; translation: string } | null; onHideWord?: () => void; reportable?: { wordId: string; word: string; translation?: string; library?: string } | null; onReported?: (hide: boolean) => void; pack?: { name: string; onTurnOff: () => void } | null
 }
 
 const labels = { 'write-en': 'Write in English', 'listen-write': 'Listen and write', 'translate-ru': 'Translate to Russian', 'choose-spelling': 'Choose correct spelling' }
@@ -25,7 +25,7 @@ function hintFor(answer: string, step: number) {
   return `Answer: ${answer}`
 }
 
-export function TaskCard({ task, answer, result, attemptsOnTask, answerRevealed, hintStep, allowSkip, showRuleAfterMistake, onAnswerChange, onCheck, onShowAnswer, onHint, onPlayAudio, onSkip, onNext, onRepeatLater, audioMessage, reason, otherMeaning, onHideWord, reportable, onReported }: TaskCardProps) {
+export function TaskCard({ task, answer, result, attemptsOnTask, answerRevealed, hintStep, allowSkip, showRuleAfterMistake, onAnswerChange, onCheck, onShowAnswer, onHint, onPlayAudio, onSkip, onNext, onRepeatLater, audioMessage, reason, otherMeaning, onHideWord, reportable, onReported, pack }: TaskCardProps) {
   const mode = task.mode ?? (task.type === 'translate-en-ru' ? 'translate-ru' : task.type === 'translate-ru-en' ? 'write-en' : 'choose-spelling')
   const revealed = answerRevealed || result !== 'idle' || hintStep >= 5
   const correct = result === 'correct'
@@ -44,6 +44,7 @@ export function TaskCard({ task, answer, result, attemptsOnTask, answerRevealed,
   const target = checkedAnswer.trim() ? closestAnswer(checkedAnswer, task) : task.answer
   const others = acceptedAnswers(task).filter((option) => comparable(option) !== comparable(target))
   return <article className="task-card">
+    {pack ? <p className="task-pack">From the add-on pack <strong>{pack.name}</strong>. Not for you? <button type="button" onClick={pack.onTurnOff}>Turn off this pack</button></p> : null}
     <div className="task-card__meta"><span className="task-card__labels"><span className="task-type"><Icon name="shuffle" size={14} /> {labels[mode]}</span>{reason ? <span className={`task-reason task-reason--${reason.kind}`} title="Why this word is in your session">{reason.text}</span> : null}</span><span>{task.topic}{task.subtopic ? ` · ${task.subtopic}` : ''} <i /> {task.level}</span></div>
     <h2>{mode === 'translate-ru' ? 'Translate to Russian.' : mode === 'choose-spelling' ? 'Choose the correct English spelling.' : 'Write the English word or expression.'}</h2>
     {mode === 'listen-write' ? <div className="task-prompt"><span className="prompt-label">Listen</span><button className="dictation-play" type="button" onClick={onPlayAudio}><Icon name="volume" size={22} /><span><strong>Play the word again</strong><small>Listen, then type what you hear.</small></span></button></div> : <div className={`task-prompt task-prompt--${mode}`}><span className="prompt-label">{mode === 'translate-ru' ? 'English' : 'Russian'}</span><p>{task.prompt}</p></div>}
