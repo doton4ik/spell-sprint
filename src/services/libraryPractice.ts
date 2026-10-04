@@ -2,7 +2,7 @@ import { mixedPracticeTasks } from '../data/practice'
 import type { LibraryWord } from '../types/library'
 import type { PracticeMode, PracticeTask } from '../types/practice'
 import { getAllWords, getEveryWord, getLibraries } from './libraryStorage'
-import { getReviewEntries } from './learningData'
+import { getMistakeEntries, getReviewEntries } from './learningData'
 import { getPracticeAttempts } from './practiceStorage'
 import { spellingDistractors } from './spellingDistractors'
 import { isRealOrRude } from './proofreadingEngine'
@@ -45,9 +45,13 @@ export function getTasksForSelection(selection: PracticeSelection, mode: Practic
   if (selection.scope === 'topic') selected = words.filter((word) => word.topic === selection.topic)
   if (selection.scope === 'subtopic') selected = words.filter((word) => word.subtopic === selection.subtopic)
   if (selection.scope === 'mistakes' || selection.scope === 'review') {
-    const wanted = new Set((selection.scope === 'review' ? getReviewEntries() : getPracticeAttempts().filter((attempt) => !attempt.isCorrect)).map((entry) => entry.taskId))
-    const saved = [...mixedPracticeTasks, ...words.flatMap(tasksForWord)].filter((task) => wanted.has(task.id) && (task.mode ?? modeForLegacyTask(task)) === mode)
-    return saved.length ? saved : [...mixedPracticeTasks, ...words.flatMap(tasksForWord)].filter((task) => (task.mode ?? modeForLegacyTask(task)) === mode)
+    // Only the learner's own words, never the whole library: the exact tasks they missed, plus the same
+    // words in the chosen mode (a word missed in dictation can be practised in "Write in English").
+    // Mastered words are left out. Nothing to repeat → an empty list, and the page says so.
+    const entries = selection.scope === 'review' ? getReviewEntries() : getMistakeEntries().filter((entry) => entry.status !== 'mastered')
+    const taskIds = new Set(entries.map((entry) => entry.taskId))
+    const wordIds = new Set(entries.map((entry) => entry.wordId).filter(Boolean))
+    return [...mixedPracticeTasks, ...words.flatMap(tasksForWord)].filter((task) => (task.mode ?? modeForLegacyTask(task)) === mode && (taskIds.has(task.id) || (task.wordId !== undefined && wordIds.has(task.wordId))))
   }
   const generated = selected.flatMap(tasksForWord).filter((task) => task.mode === mode)
   const legacy = mixedPracticeTasks.filter((task) => mode !== 'choose-spelling' && modeForLegacyTask(task) === mode)
@@ -60,7 +64,10 @@ const PENDING_SELECTION_KEY = 'spell-sprint.pending-practice-selection'
 export type PendingPracticeSelection = { wordIds: string[]; label: string; mode?: PracticeMode }
 export function setPendingPracticeSelection(selection: PendingPracticeSelection) { window.sessionStorage.setItem(PENDING_SELECTION_KEY, JSON.stringify(selection)) }
 export function consumePendingPracticeSelection(): PendingPracticeSelection | null {
-  try { const value = window.sessionStorage.getItem(PENDING_SELECTION_KEY); window.sessionStorage.removeItem(PENDING_SELECTION_KEY); return value ? JSON.parse(value) as PendingPracticeSelection : null } catch { return null }
+  try { const value = window.sessionStorage.getItem(PENDING_SELECTION_KEY); return value ? JSON.parse(value) as PendingPracticeSelection : null } catch { return null }
+}
+export function clearPendingPracticeSelection() {
+  try { window.sessionStorage.removeItem(PENDING_SELECTION_KEY) } catch { /* nothing stored */ }
 }
 export function getTasksForWordIds(wordIds: string[], mode: PracticeMode = 'write-en') {
   const wanted = new Set(wordIds)
