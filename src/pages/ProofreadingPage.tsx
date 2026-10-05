@@ -152,6 +152,7 @@ function Reader({ text, exercise, showCount, onBack, onCheck }: { text: Proofrea
         <div className="proof-counter"><strong>{edits.size}</strong><span>{showCount ? `of ${exercise.slots.length} mistakes marked` : 'words changed'}</span></div>
       </header>
       {text.situation ? <p className="proof-situation">{text.situation}</p> : null}
+      {text.source ? <p className="proof-source">Adapted from <a href={text.source.url} target="_blank" rel="noreferrer">{text.source.name}</a> · {text.source.licence}</p> : null}
       <p className="proof-instructions">{showCount ? `There are ${exercise.slots.length} mistakes.` : 'Find all the mistakes.'} Tap a word to correct it. To add a missing word, tap the word next to the gap and type both (car → a car). To remove a word, delete it.</p>
 
       <article className="proof-text">

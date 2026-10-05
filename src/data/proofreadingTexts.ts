@@ -7,7 +7,8 @@
 export type ProofreadingLevel = 'A2' | 'B1' | 'B2' | 'C1'
 export type ProofreadingFormat = 'email' | 'message' | 'story' | 'notice' | 'article' | 'dialogue' | 'review' | 'diary' | 'instructions' | 'report' | 'post' | 'blog' | 'interview' | 'chat' | 'column' | 'application' | 'speech' | 'sentences'
 // situation: who wrote the text and why the learner is checking it ("Your friend wants to post this review…").
-export type ProofreadingText = { id: string; title: string; level: ProofreadingLevel; format: ProofreadingFormat; topic: string; text: string; situation?: string }
+// source: for texts adapted from open-licence articles (shown under the text, as the licence requires).
+export type ProofreadingText = { id: string; title: string; level: ProofreadingLevel; format: ProofreadingFormat; topic: string; text: string; situation?: string; source?: { name: string; url: string; licence: string } }
 
 export const proofreadingTexts: ProofreadingText[] = [
   {
@@ -1016,5 +1017,56 @@ export const proofreadingTexts: ProofreadingText[] = [
     topic: 'Work and Study',
     situation: 'This column will appear in a company newsletter. The author asked you for a final check.',
     text: '{It is|dummy-it|Is} strange how long it takes to notice your own habits. {I have worked|present-perfect|I work} in the same office {for|since-for|since} six years, and until last spring {I almost never refused|adverb-position|I refused almost never} a request. If a colleague needed help, I {did not ask any questions|double-negative|did not ask no questions}; I simply said yes.\n\nThe change came after a conversation {with|preposition|to} my manager. She pointed out that {there were|there-is|were} three projects on my desk that nobody had asked me to take on. {I was|be-missing|I} embarrassed, but she was right.\n\nThese days, before I {agree|time-clause|will agree} to anything new, I ask myself one question: what will I stop doing to make room for it? {I really appreciate|adverb-position|I very appreciate} the extra hours this gives me. Saying no {is|agreement|are} uncomfortable at first, yet the people around me {have|agreement|has} accepted it far more easily than I feared, and nobody has said {anything|double-negative|nothing} unkind.',
+  },
+  // ───── Adapted from Wikinews (CC BY 2.5 / 4.0) ─────
+  {
+    id: 'b1-article-chess-champion',
+    title: 'The youngest world chess champion',
+    level: 'B1',
+    format: 'article',
+    topic: 'Hobbies and Free Time',
+    situation: 'A classmate wrote this short news story for the school website. Check it before it goes online.',
+    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Indian_chess_grandmaster_Gukesh_Dommaraju%2C_18%2C_becomes_youngest_world_chess_champion_of_all_time', licence: 'CC BY 4.0' },
+    text: 'In December 2024, Gukesh Dommaraju, an eighteen-year-old player from India, {won|past-irregular|winned} the World Chess Championship in Singapore. With this victory, he {became|past-irregular|becomed} the youngest world champion in {history|article-extra|the history}.\n\nHis opponent was Ding Liren from China. The match was very close, and for a long time it {looked|tense|looks} as if it would end in a draw. Both players {made|past-irregular|maked} very few mistakes. But late in the last game, Ding made a serious error, and Gukesh did not miss {his|pronoun|him} chance. After the game, Ding said that he {was|reported-speech|is} "totally in shock".\n\nBefore Gukesh, the youngest champion {was|agreement|were} Garry Kasparov from Russia, who won the title in 1985 {at|preposition|in} the age of twenty-two. Gukesh {started|tense|has started} playing chess when he was seven, and now he is {one of the most famous|comparative|one of the famousest} young sportsmen in India. Many children in his country {are|agreement|is} already {interested in|preposition|interested about} the game because of him. {It is|dummy-it|Is} amazing what he has done at such {a young age|article-missing|young age}.',
+  },
+  {
+    id: 'b2-article-colossal-squid',
+    title: 'A giant of the deep, filmed at last',
+    level: 'B2',
+    format: 'article',
+    topic: 'Nature and Animals',
+    situation: 'This article is for a science club newsletter. The editor asked you to proofread it.',
+    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Researchers_film_colossal_squid_in_its_natural_habitat_for_the_first_time', licence: 'CC BY 4.0' },
+    text: 'In April 2025, the University of Essex {announced|present-perfect|has announced} that researchers had filmed {a colossal squid|article-missing|colossal squid} living in the deep sea for the first time. The young squid, about thirty centimetres long, {was seen|passive|was see} on 9 March near the South Sandwich Islands, {a British territory|article-missing|British territory} in {the South Atlantic|article-missing|South Atlantic}. It was swimming roughly six hundred metres below the surface.\n\nThe animal {was recorded|passive|recorded} by an underwater robot called SuBastian, which {was launched|passive|was launch} from the research ship Falkor (too). The ship was on a 35-day expedition {searching|gerund-infinitive|to searching} for new marine species. Interestingly, the discovery came exactly one hundred years after scientists first described and named the colossal squid.\n\nDr Kat Bolstad, a deep-sea biologist {who|pronoun|which} did not take part in the trip, helped to identify the animal. She and her colleagues had studied the species {for|since-for|since} decades without ever {seeing|gerund-infinitive|to see} one alive. "We are finally seeing confirmed footage of this animal," she said. Scientists hope that {the new images|article|a new images} will help them learn {much|quantifier|many} more about how these giants live.',
+  },
+  {
+    id: 'b2-article-saturn-eclipse',
+    title: 'An eclipse on Saturn',
+    level: 'B2',
+    format: 'article',
+    topic: 'Technology and Internet',
+    situation: 'Your friend is writing about space for a student magazine. Check the article before it is printed.',
+    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/20-year-old_astrophotographer_captures_rare_solar_eclipse_on_Saturn', licence: 'CC BY 4.0' },
+    text: 'A twenty-year-old astrophotographer from Shoreline, near Seattle, {has photographed|agreement|have photographed} a rare solar eclipse on Saturn, an event that {will not be|tense|is not} seen again until 2038. Adam Smadi planned the picture several days {in|preposition|on} advance. He used {a computer program|article-missing|computer program} to work out exactly when Titan, Saturn\'s largest moon, would cast its shadow {on|preposition|at} the planet.\n\nOn the night of 1 June, he set up his telescope at about 1 a.m. so that its glass {could cool|modal|could to cool ; could cooled} down to the outdoor temperature. This simple step stops warm air {from moving|gerund-infinitive|from move} inside the tube and blurring the image. By half past three, Saturn {was|agreement|were} high enough above the horizon, and he {began|past-irregular|beginned} filming.\n\nInstead of {taking|gerund-infinitive|to take} single photos, he recorded short videos and then used software to choose thousands of {the sharpest|comparative|the most sharp} frames and combine them into one picture. The final image shows Titan\'s small dark shadow crossing Saturn\'s pale surface, while three other moons appear as tiny dots near the rings. When Smadi shared the photo online, many people praised it for {its|confusable|it\'s} clarity.',
+  },
+  {
+    id: 'b2-article-speedrun-cheaters',
+    title: 'The teenager who caught the cheaters',
+    level: 'B2',
+    format: 'article',
+    topic: 'Technology and Internet',
+    situation: 'A friend wrote this for a gaming blog. He wants it to be correct before he posts it.',
+    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Roblox_player_uncovers_cheating%2C_awarded_Guinness_World_Record', licence: 'CC BY 4.0' },
+    text: 'In January 2026, eighteen-year-old Quinten Delaere {was given|passive|was give} {an official|article|a official} Guinness World Record after he exposed cheating {in|preposition|on} an online game.\n\nDelaere was taking part in a speed-running event for the Roblox game Ultimate Easy Obby, in which players {have|agreement|has} to finish an obstacle course as fast as possible. After weeks of {practice|plural-uncountable|practices}, he {set|past-irregular|setted} a time of 5 minutes 48 seconds. Shortly before the competition closed, however, three unknown accounts posted times of around 5 minutes 42 seconds. Delaere {did not believe|tense|was not believing} that {anyone|double-negative|no one} could play that fast.\n\nHe decided {to study|gerund-infinitive|studying} the data himself. He discovered that the rival players had collected their in-game badges in the wrong order, as if they had jumped from one part of the course to another. Their accounts were also missing {a special item|article-missing|special item} that every player automatically receives at the finish line. Finally, Delaere filmed his own best run and calculated the fastest time that {is|agreement|are} theoretically possible. Even a perfect run, he showed, could not be {as fast as|comparative|so fast like} the times the cheaters had posted.\n\nAfter {checking|gerund-infinitive|to check} his report, Guinness World Records disqualified the other accounts and {gave|past-irregular|gived} him the record.',
+  },
+  {
+    id: 'c1-article-plastic-sea',
+    title: 'A plastic the sea can digest',
+    level: 'C1',
+    format: 'article',
+    topic: 'Nature and Animals',
+    situation: 'This piece is going into an environmental newsletter. You are the last person to check it.',
+    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Polyurethane_plastic_substitute_can_biodegrade_in_seawater%2C_say_scientists', licence: 'CC BY 4.0' },
+    text: 'In September 2022, researchers at the University of California San Diego reported that a type of polyurethane, already {used|passive|using} in some biodegradable products on land, can also break down {in|preposition|at} seawater. The material is used instead of conventional plastic in foams and in shoes {such as|preposition|such like} flip-flops, which make up a large share of the world\'s plastic waste.\n\nFor their experiment, the team cut the polyurethane into small cubes and left them in the sea {for|preposition|during} several weeks. When they checked the samples after a month, they {found|past-irregular|finded} that several kinds of marine bacteria and fungi {had attached|tense|attach} themselves to the cubes and {were breaking|tense|break} them down into simple chemicals, which the microbes then used as food.\n\n"Plastic {that is|be-missing|that} thrown into the ocean breaks down into microplastics and has become an enormous environmental problem," said one of the authors, Stephen Mayfield. "We have shown that {it is|dummy-it|is} absolutely possible to make high-performance plastic products that can also degrade in the ocean."\n\nEvery year, people dump roughly eight billion kilograms of plastic into the sea, {where|pronoun|which} fish and birds can mistake it for food. Although {much|quantifier|many} of the Great Pacific Garbage Patch consists of old fishing nets, {reducing|gerund-infinitive|to reducing} everyday plastic waste would still make {a real difference|article-missing|real difference}.',
   },
 ]

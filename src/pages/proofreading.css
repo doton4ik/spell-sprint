@@ -113,3 +113,6 @@
 .proof-sentences-start .check-button { width: auto; }
 .proof-sentences-start small { color: var(--ink-muted); font-size: calc(12px * var(--fs)); }
 .proof-sentences-start__error { color: var(--danger) !important; }
+
+.proof-source { color: var(--ink-muted); font-size: calc(12.5px * var(--fs)); margin: -4px 0 12px; }
+.proof-source a { color: inherit; text-decoration: underline; }
