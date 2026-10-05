@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+food-and-drinks-meals-and-cooking-dinner,dinner,ужин,noun,Food and Drinks,My family usually has dinner at seven.
+food-and-drinks-meals-and-cooking-ingredient,ingredient,ингредиент,noun,Food and Drinks,Fresh garlic is my favourite ingredient for soup.
+food-and-drinks-meals-and-cooking-recipe,recipe,рецепт (блюда),noun,Food and Drinks,This recipe is simple enough for beginners.
+food-and-drinks-meals-and-cooking-vegetable,vegetable,овощ,noun,Food and Drinks,Every healthy meal should include at least one vegetable.
+food-and-drinks-meals-and-cooking-fruit,fruit,фрукт,noun,Food and Drinks,I take a piece of fruit to work each day.
+food-and-drinks-meals-and-cooking-delicious,delicious,вкусный,adjective,Food and Drinks,The homemade soup was delicious and easy to prepare.
+food-and-drinks-meals-and-cooking-bake,bake,"печь, выпекать",verb,Food and Drinks,We bake fresh bread at home on Sundays.
+food-and-drinks-meals-and-cooking-boil,boil,"варить, кипятить",verb,Food and Drinks,Boil the vegetables for five minutes before serving.
+food-and-drinks-meals-and-cooking-chop,chop,нарезать,verb,Food and Drinks,Please chop the onions before heating the pan.
+food-and-drinks-meals-and-cooking-fry,fry,жарить,verb,Food and Drinks,We fry the potatoes in a little oil.
+food-and-drinks-meals-and-cooking-seasoning,seasoning,приправа,noun,Food and Drinks,This seasoning gives the soup a stronger flavour.
+food-and-drinks-meals-and-cooking-dessert,dessert,десерт,noun,Food and Drinks,We shared a light dessert after dinner.
+food-and-drinks-caf-and-restaurant-menu,menu,меню,noun,Food and Drinks,The restaurant menu includes several vegetarian dishes.
+food-and-drinks-caf-and-restaurant-order,order,заказывать; заказ,verb,Food and Drinks,We decided to order soup and sparkling water.
+food-and-drinks-caf-and-restaurant-bill,bill,"счёт (в кафе, ресторане)",noun,Food and Drinks,The waiter brought the bill after our coffee.
+food-and-drinks-caf-and-restaurant-tip,tip,чаевые,noun,Food and Drinks,We left a small tip for the helpful waiter.
+food-and-drinks-caf-and-restaurant-waiter,waiter,официант,noun,Food and Drinks,The waiter explained the daily special politely.
+food-and-drinks-caf-and-restaurant-reservation,reservation,"бронь, резервация",noun,Food and Drinks,We made a reservation at the restaurant for Friday.
+food-and-drinks-caf-and-restaurant-beverage,beverage,напиток,noun,Food and Drinks,Water is the healthiest beverage after exercise.
+food-and-drinks-caf-and-restaurant-sparkling-water,sparkling water,газированная вода,noun,Food and Drinks,She ordered sparkling water with lemon.
+food-and-drinks-caf-and-restaurant-allergic,allergic,аллергический,adjective,Food and Drinks,My sister is allergic to peanuts.
+food-and-drinks-caf-and-restaurant-vegetarian,vegetarian,вегетарианец,noun,Food and Drinks,The vegetarian asked about the ingredients in the soup.
+food-and-drinks-caf-and-restaurant-takeaway,takeaway,еда навынос,noun,Food and Drinks,We bought takeaway because we had no time to cook.
+food-and-drinks-caf-and-restaurant-portion,portion,порция,noun,Food and Drinks,The restaurant served a large portion of pasta.
+people-and-family-family-and-friends-relative,relative,родственник,noun,People and Family,A relative visited us during the holiday.
+people-and-family-family-and-friends-neighbour,neighbour,сосед,noun,People and Family,Our neighbour helped carry the heavy boxes.
+people-and-family-family-and-friends-colleague,colleague,коллега,noun,People and Family,A colleague showed me how to use the new system.
+people-and-family-family-and-friends-friendship,friendship,дружба,noun,People and Family,Their friendship became stronger after many shared experiences.
+people-and-family-family-and-friends-grandparents,grandparents,бабушка и дедушка,noun,People and Family,My grandparents live in a quiet village.
+people-and-family-family-and-friends-sibling,sibling,брат или сестра,noun,People and Family,My sibling and I often cook together.
+people-and-family-family-and-friends-stranger,stranger,незнакомец,noun,People and Family,A stranger showed us the way to the station.
+people-and-family-family-and-friends-guest,guest,гость,noun,People and Family,Every guest received a welcome drink.
+people-and-family-family-and-friends-generation,generation,поколение,noun,People and Family,Each generation faces different challenges at work.
+people-and-family-family-and-friends-marriage,marriage,брак,noun,People and Family,Their marriage has lasted for more than twenty years.
+feelings-feelings-happy,happy,счастливый,adjective,Feelings,I feel happy when I finish my work early.
+feelings-feelings-anxious,anxious,тревожный,adjective,Feelings,He felt anxious before the important interview.
+feelings-feelings-embarrassed,embarrassed,смущённый,adjective,Feelings,She felt embarrassed after forgetting the person’s name.
+feelings-feelings-jealous,jealous,"ревнивый, завистливый",adjective,Feelings,He became jealous when his friend received praise.
+feelings-feelings-grateful,grateful,благодарный,adjective,Feelings,I am grateful for your help with this project.
+feelings-feelings-disappointed,disappointed,разочарованный,adjective,Feelings,She was disappointed when the event was cancelled.

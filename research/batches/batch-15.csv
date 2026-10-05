@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+describing-things-quality-and-colour-grey,grey,серый,adjective,Describing Things,The sky was grey and it started to rain.
+describing-things-quality-and-colour-excellent,excellent,отличный,adjective,Describing Things,"Your English is excellent, and you speak very clearly."
+describing-things-quality-and-colour-terrible,terrible,ужасный,adjective,Describing Things,I had a terrible headache and stayed in bed all day.
+describing-things-quality-and-colour-ordinary,ordinary,обычный,adjective,Describing Things,"It was an ordinary day, and nothing special happened."
+describing-things-quality-and-colour-unusual,unusual,необычный,adjective,Describing Things,It is unusual for him to be late for work.
+describing-things-quality-and-colour-carefully,carefully,"осторожно, внимательно",adverb,Describing Things,Please read the instructions carefully before you start.
+describing-things-quality-and-colour-extremely,extremely,"крайне, чрезвычайно",adverb,Describing Things,"The water was extremely cold, so we did not swim."
+phone-and-messages-phone-basics-signal,signal,сигнал,noun,Phone and Messages,"There is no signal in the mountains, so I cannot call."
+phone-and-messages-phone-basics-switch-off,switch off,выключать,phrase,Phone and Messages,Please switch off your phone before the film begins.
+phone-and-messages-phone-basics-silent,silent,беззвучный,adjective,Phone and Messages,"Put your phone on silent during the lesson, please."
+phone-and-messages-calls-call-back,call back,перезвонить,phrase,Phone and Messages,"I am busy now, so can I call back later?"
+phone-and-messages-calls-hang-up,hang up,положить трубку,phrase,Phone and Messages,She was angry and decided to hang up on him.
+phone-and-messages-calls-voicemail,voicemail,голосовая почта,noun,Phone and Messages,"Nobody answered, so I left a voicemail for her."
+phone-and-messages-calls-ring,ring,звонить,verb,Phone and Messages,My phone started to ring in the middle of the lesson.
+phone-and-messages-calls-reception,reception,приём (сигнала),noun,Phone and Messages,I can't hear you because the reception is very bad here.
+phone-and-messages-calls-ringtone,ringtone,"рингтон, мелодия звонка",noun,Phone and Messages,I changed my ringtone to a funny song.
+phone-and-messages-calls-conversation,conversation,разговор,noun,Phone and Messages,We had a long conversation on the phone last night.
+phone-and-messages-calls-mobile,mobile,мобильный телефон,noun,Phone and Messages,I left my mobile on the bus this morning.
+phone-and-messages-texting-and-online-message,message,сообщение,noun,Phone and Messages,"I sent you a message, but you did not reply."
+phone-and-messages-texting-and-online-text,text,"писать сообщение, отправлять смс",verb,Phone and Messages,I will text you when I get to the station.
+phone-and-messages-texting-and-online-reply,reply,отвечать (на сообщение),verb,Phone and Messages,Please reply to my email as soon as you can.
+phone-and-messages-texting-and-online-forward,forward,пересылать,verb,Phone and Messages,Can you forward this email to the whole team?
+phone-and-messages-texting-and-online-screenshot,screenshot,скриншот,noun,Phone and Messages,I took a screenshot of the map and sent it to him.
+phone-and-messages-texting-and-online-log-in,log in,входить (в аккаунт),phrase,Phone and Messages,You need to log in with your email and password.
+phone-and-messages-texting-and-online-online,online,"онлайн, в сети",adjective,Phone and Messages,I like to shop online because it saves so much time.
+general-english-active-vocabulary-avoid,avoid,избегать,verb,General English,Try to avoid the city centre at rush hour.
+general-english-active-vocabulary-consider,consider,"рассматривать, обдумывать",verb,General English,We should consider all the options first.
+general-english-active-vocabulary-decide,decide,принимать решение,verb,General English,I can't decide which film to watch.
+general-english-active-vocabulary-describe,describe,описывать,verb,General English,Can you describe the man you saw?
+general-english-active-vocabulary-explain,explain,объяснять,verb,General English,Please explain the rules again.
+general-english-active-vocabulary-improve,improve,улучшать,verb,General English,Reading every day will improve your English.
+general-english-active-vocabulary-include,include,включать (в состав),verb,General English,The price does not include breakfast.
+general-english-active-vocabulary-increase,increase,увеличивать(ся),verb,General English,Prices increase every year.
+general-english-active-vocabulary-reduce,reduce,"уменьшать, сокращать",verb,General English,We need to reduce the noise in the office.
+general-english-active-vocabulary-prefer,prefer,предпочитать,verb,General English,I prefer tea to coffee.
+general-english-active-vocabulary-provide,provide,"предоставлять, обеспечивать",verb,General English,The school will provide all the books.
+general-english-active-vocabulary-suggest,suggest,предлагать (идею),verb,General English,I suggest that we leave early.
+general-english-active-vocabulary-solve,solve,"решать задачу, находить решение",verb,General English,It took me an hour to solve the puzzle.
+general-english-active-vocabulary-compare,compare,сравнивать,verb,General English,Compare the two prices before you buy.
+general-english-active-vocabulary-require,require,требовать(ся),verb,General English,This job will require a lot of patience.

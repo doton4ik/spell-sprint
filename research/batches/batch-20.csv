@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+general-english-commonly-misspelled-sincerely,sincerely,искренне,adverb,General English,I sincerely hope you feel better soon.
+general-english-commonly-misspelled-cemetery,cemetery,кладбище,noun,General English,The old cemetery is behind the church.
+general-english-commonly-misspelled-exaggerate,exaggerate,преувеличивать,verb,General English,"Don't exaggerate, it wasn't that bad."
+general-english-commonly-misspelled-grammar,grammar,грамматика,noun,General English,English grammar is not as hard as people think.
+general-english-commonly-misspelled-guarantee,guarantee,гарантия,noun,General English,The phone comes with a two-year guarantee.
+phone-and-messages-phone-basics-contact,contact,контакт (в телефоне),noun,Phone and Messages,Save her number as a new contact.
+phone-and-messages-phone-basics-settings,settings,настройки,noun,Phone and Messages,You can change the language in the settings.
+phone-and-messages-phone-basics-speaker,speaker,динамик,noun,Phone and Messages,Put the call on speaker so we can all hear.
+phone-and-messages-phone-basics-headphones,headphones,наушники,noun,Phone and Messages,I always wear headphones on the train.
+phone-and-messages-phone-basics-passcode,passcode,код-пароль (для экрана),noun,Phone and Messages,Enter your passcode to unlock the phone.
+phone-and-messages-phone-basics-unlock,unlock,разблокировать,verb,Phone and Messages,Use your fingerprint to unlock the screen.
+phone-and-messages-calls-dial,dial,набирать (номер),verb,Phone and Messages,Dial the number slowly and carefully.
+phone-and-messages-calls-caller,caller,звонящий,noun,Phone and Messages,The caller did not leave a message.
+phone-and-messages-texting-and-online-emoji,emoji,"эмодзи, смайлик",noun,Phone and Messages,She replied with a laughing emoji.
+phone-and-messages-texting-and-online-unread,unread,непрочитанный,adjective,Phone and Messages,I have twenty unread messages.
+phone-and-messages-texting-and-online-mute,mute,отключать звук,verb,Phone and Messages,Please mute your microphone during the meeting.
+phone-and-messages-texting-and-online-block,block,блокировать,verb,Phone and Messages,You can block people who send spam.
+phone-and-messages-texting-and-online-selfie,selfie,селфи,noun,Phone and Messages,We took a selfie in front of the castle.
+phone-and-messages-texting-and-online-upload,upload,загружать (в сеть),verb,Phone and Messages,I will upload the photos tonight.
+phone-and-messages-texting-and-online-follower,follower,подписчик,noun,Phone and Messages,She has a thousand followers online.
+travel-and-culture-at-the-airport-suitcase,suitcase,чемодан,noun,Travel and Culture,My suitcase is too heavy.
+travel-and-culture-at-the-airport-trolley,trolley,тележка,noun,Travel and Culture,Put your bags on a trolley.
+travel-and-culture-at-the-airport-airline,airline,авиакомпания,noun,Travel and Culture,Which airline are you flying with?
+travel-and-culture-on-the-plane-pilot,pilot,пилот,noun,Travel and Culture,The pilot said we would land soon.
+travel-and-culture-on-the-plane-landing,landing,приземление,noun,Travel and Culture,The landing was very smooth.
+travel-and-culture-on-the-plane-cockpit,cockpit,кабина пилота,noun,Travel and Culture,The children were allowed to visit the cockpit.
+travel-and-culture-at-the-airport-layover,layover,пересадка (ожидание между рейсами),noun,Travel and Culture,We had a four-hour layover in Dubai.
+travel-and-culture-on-the-plane-lifejacket,lifejacket,спасательный жилет,noun,Travel and Culture,There is a lifejacket under your seat.
+travel-and-culture-on-the-plane-jet,jet,реактивный самолёт,noun,Travel and Culture,A jet flew low over the city.
+travel-and-culture-on-the-plane-crew,crew,экипаж,noun,Travel and Culture,The crew welcomed us on board.
+travel-and-culture-at-the-airport-flight,flight,"рейс, полёт",noun,Travel and Culture,Our flight was cancelled because of fog.
+travel-and-culture-at-the-airport-boarding,boarding,посадка на борт,noun,Travel and Culture,Boarding starts thirty minutes before take-off.
+travel-and-culture-at-the-airport-passport,passport,паспорт (заграничный),noun,Travel and Culture,Don't forget your passport!
+travel-and-culture-at-the-airport-carousel,carousel,багажная лента,noun,Travel and Culture,Our bags came out on carousel three.
+travel-and-culture-at-the-airport-scanner,scanner,"сканер, рамка досмотра",noun,Travel and Culture,Put your bag through the scanner.
+jobs-and-career-job-interview-candidate,candidate,кандидат,noun,Jobs and Career,There are five candidates for the job.
+jobs-and-career-job-interview-applicant,applicant,соискатель,noun,Jobs and Career,Every applicant must send a CV.
+jobs-and-career-job-interview-vacancy,vacancy,вакансия,noun,Jobs and Career,There is a vacancy for a receptionist.
+jobs-and-career-job-interview-interviewer,interviewer,"интервьюер, собеседующий",noun,Jobs and Career,The interviewer asked about my experience.
+jobs-and-career-job-interview-hire,hire,нанимать,verb,Jobs and Career,The café wants to hire two new waiters.

@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+food-and-drinks-meals-and-cooking-sausage,sausage,"сосиска, колбаса",noun,Food and Drinks,He had a sausage and chips for lunch.
+food-and-drinks-caf-and-restaurant-biscuit,biscuit,печенье,noun,Food and Drinks,Would you like a biscuit with your tea?
+food-and-drinks-caf-and-restaurant-spicy,spicy,острый (о еде),adjective,Food and Drinks,This curry is too spicy for me.
+food-and-drinks-meals-and-cooking-yoghurt,yoghurt,йогурт,noun,Food and Drinks,I have yoghurt and fruit for breakfast.
+hobbies-and-free-time-relaxing-and-going-out-chess,chess,шахматы,noun,Hobbies and Free Time,My grandfather taught me to play chess.
+hobbies-and-free-time-relaxing-and-going-out-puzzle,puzzle,"головоломка, пазл",noun,Hobbies and Free Time,We finished a thousand-piece puzzle.
+hobbies-and-free-time-relaxing-and-going-out-novel,novel,роман (книга),noun,Hobbies and Free Time,I'm reading a novel about a detective.
+hobbies-and-free-time-creative-hobbies-poetry,poetry,поэзия,noun,Hobbies and Free Time,She writes poetry in her free time.
+hobbies-and-free-time-creative-hobbies-pottery,pottery,гончарное дело,noun,Hobbies and Free Time,I take a pottery class on Thursdays.
+hobbies-and-free-time-creative-hobbies-sketch,sketch,"набросок, эскиз",noun,Hobbies and Free Time,He drew a quick sketch of the bridge.
+hobbies-and-free-time-sport-and-exercise-hiking,hiking,пеший туризм,noun,Hobbies and Free Time,We go hiking in the mountains every summer.
+hobbies-and-free-time-sport-and-exercise-cycling,cycling,езда на велосипеде,noun,Hobbies and Free Time,Cycling is a great way to keep fit.
+hobbies-and-free-time-relaxing-and-going-out-fishing,fishing,рыбалка,noun,Hobbies and Free Time,My dad loves fishing on the lake.
+hobbies-and-free-time-creative-hobbies-rehearsal,rehearsal,репетиция,noun,Hobbies and Free Time,The band has a rehearsal tonight.
+clothes-and-appearance-clothing-items-jumper,jumper,джемпер,noun,Clothes and Appearance,"Take a jumper, it might get cold."
+clothes-and-appearance-clothing-items-blouse,blouse,блузка,noun,Clothes and Appearance,She wore a white blouse to the office.
+clothes-and-appearance-clothing-items-skirt,skirt,юбка,noun,Clothes and Appearance,Her skirt is too long.
+clothes-and-appearance-clothing-items-trainers,trainers,кроссовки,noun,Clothes and Appearance,I bought new trainers for running.
+clothes-and-appearance-clothing-items-slippers,slippers,тапочки,noun,Clothes and Appearance,"Put on your slippers, the floor is cold."
+clothes-and-appearance-clothing-items-pyjamas,pyjamas,пижама,noun,Clothes and Appearance,The children are already in their pyjamas.
+clothes-and-appearance-clothing-items-sandals,sandals,сандалии,noun,Clothes and Appearance,I wear sandals on the beach.
+clothes-and-appearance-accessories-belt,belt,"ремень, пояс",noun,Clothes and Appearance,These trousers need a belt.
+clothes-and-appearance-accessories-earrings,earrings,серьги,noun,Clothes and Appearance,She has a pair of silver earrings.
+clothes-and-appearance-accessories-zip,zip,застёжка-молния,noun,Clothes and Appearance,The zip on my jacket is broken.
+animals-wild-animals-hedgehog,hedgehog,ёж,noun,Animals,A hedgehog lives under our shed.
+animals-wild-animals-owl,owl,сова,noun,Animals,We heard an owl at night.
+animals-pets-and-farm-animals-parrot,parrot,попугай,noun,Animals,Our parrot can say hello.
+animals-pets-and-farm-animals-tortoise,tortoise,черепаха (сухопутная),noun,Animals,The tortoise is eating lettuce.
+animals-wild-animals-frog,frog,лягушка,noun,Animals,A frog jumped into the pond.
+animals-wild-animals-wasp,wasp,оса,noun,Animals,A wasp landed on my sandwich.
+animals-wild-animals-mosquito,mosquito,комар,noun,Animals,I was bitten by a mosquito.
+animals-wild-animals-whale,whale,кит,noun,Animals,We saw a whale from the boat.
+animals-wild-animals-shark,shark,акула,noun,Animals,The shark swam close to the boat.
+animals-wild-animals-deer,deer,олень,noun,Animals,A deer crossed the road in front of us.
+describing-things-size-and-shape-heavy,heavy,тяжёлый,adjective,Describing Things,This box is too heavy to lift.
+describing-things-size-and-shape-wide,wide,широкий,adjective,Describing Things,The river is very wide here.
+describing-things-size-and-shape-deep,deep,глубокий,adjective,Describing Things,"Be careful, the water is deep."
+describing-things-size-and-shape-oval,oval,овальный,adjective,Describing Things,We have an oval mirror in the hall.
+describing-things-size-and-shape-curved,curved,изогнутый,adjective,Describing Things,The road is curved near the lake.
+describing-things-quality-and-colour-pale,pale,бледный,adjective,Describing Things,She painted the room pale blue.

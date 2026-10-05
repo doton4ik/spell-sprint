@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+study-and-career-career-development-employee,employee,сотрудник,noun,Study and Career,The company has two hundred employees.
+study-and-career-career-development-resign,resign,уволиться (по собственному желанию),verb,Study and Career,He decided to resign and start his own business.
+study-and-career-career-development-skill,skill,навык,noun,Study and Career,Speaking in public is a useful skill.
+study-and-career-career-development-apprentice,apprentice,"ученик (на производстве), подмастерье",noun,Study and Career,He works as an apprentice in a car repair shop.
+study-and-career-career-development-part-time,part-time,неполный рабочий день,adjective,Study and Career,She has a part-time job in a café.
+study-and-career-learning-and-research-campus,campus,"кампус, территория университета",noun,Study and Career,The library is in the middle of the campus.
+study-and-career-learning-and-research-enrol,enrol,записываться (на курс),verb,Study and Career,You can enrol on the course online.
+study-and-career-learning-and-research-tuition,tuition,плата за обучение,noun,Study and Career,Tuition is free for students under eighteen.
+study-and-career-learning-and-research-professor,professor,профессор,noun,Study and Career,Our professor wrote a book about memory.
+study-and-career-career-development-retire,retire,уходить на пенсию,verb,Study and Career,My father wants to retire at sixty.
+everyday-life-daily-routines-alarm,alarm,будильник,noun,Everyday Life,My alarm goes off at seven every morning.
+everyday-life-daily-routines-shower,shower,душ,noun,Everyday Life,I take a quick shower before work.
+everyday-life-daily-routines-toothbrush,toothbrush,зубная щётка,noun,Everyday Life,Don't forget to pack your toothbrush.
+everyday-life-daily-routines-toothpaste,toothpaste,зубная паста,noun,Everyday Life,We need to buy more toothpaste.
+everyday-life-daily-routines-towel,towel,полотенце,noun,Everyday Life,Can you pass me a clean towel?
+everyday-life-daily-routines-nap,nap,короткий дневной сон,noun,Everyday Life,My grandfather has a nap after lunch.
+everyday-life-daily-routines-routine,routine,"распорядок, рутина",noun,Everyday Life,Exercise is part of my morning routine.
+everyday-life-daily-routines-habit,habit,привычка,noun,Everyday Life,Biting your nails is a bad habit.
+everyday-life-daily-routines-oversleep,oversleep,проспать,verb,Everyday Life,Set two alarms so that you don't oversleep.
+everyday-life-home-and-services-rubbish,rubbish,мусор,noun,Everyday Life,Please put the rubbish in the bin.
+everyday-life-home-and-services-recycling,recycling,переработка (отходов),noun,Everyday Life,Paper and glass go in the recycling.
+everyday-life-home-and-services-plumber,plumber,сантехник,noun,Everyday Life,We called a plumber to fix the leak.
+everyday-life-home-and-services-electrician,electrician,электрик,noun,Everyday Life,An electrician came to repair the lights.
+everyday-life-home-and-services-tenant,tenant,"жилец, арендатор",noun,Everyday Life,The new tenants moved in last week.
+everyday-life-home-and-services-repair,repair,"ремонтировать, чинить",verb,Everyday Life,Can you repair my bike by Friday?
+everyday-life-home-and-services-leak,leak,протечка,noun,Everyday Life,There is a leak under the kitchen sink.
+everyday-life-home-and-services-heating,heating,отопление,noun,Everyday Life,The heating is not working today.
+everyday-life-home-and-services-electricity,electricity,электричество,noun,Everyday Life,The storm cut off the electricity.
+everyday-life-home-and-services-dishwasher,dishwasher,посудомоечная машина,noun,Everyday Life,Put the plates in the dishwasher.
+everyday-life-home-and-services-washing-machine,washing machine,стиральная машина,noun,Everyday Life,The washing machine is making a strange noise.
+everyday-life-home-and-services-broom,broom,метла,noun,Everyday Life,The broom is in the cupboard.
+everyday-life-home-and-services-bucket,bucket,ведро,noun,Everyday Life,Fill the bucket with warm water.
+everyday-life-home-and-services-doorbell,doorbell,дверной звонок,noun,Everyday Life,The doorbell rang while I was cooking.
+everyday-life-home-and-services-key,key,ключ,noun,Everyday Life,I can't find my key anywhere.
+everyday-life-daily-routines-pillow,pillow,подушка,noun,Everyday Life,I like a soft pillow.
+everyday-life-daily-routines-blanket,blanket,"одеяло, плед",noun,Everyday Life,"It's cold, so take an extra blanket."
+everyday-life-home-and-services-kettle,kettle,чайник (электрический),noun,Everyday Life,"Put the kettle on, I'll make some tea."
+everyday-life-home-and-services-microwave,microwave,микроволновка,noun,Everyday Life,Heat the soup in the microwave.
+everyday-life-daily-routines-mirror,mirror,зеркало,noun,Everyday Life,She looked in the mirror before leaving.
+everyday-life-home-and-services-sink,sink,раковина,noun,Everyday Life,The dirty cups are in the sink.

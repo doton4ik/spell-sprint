@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+jobs-and-career-at-work-overtime,overtime,сверхурочная работа,noun,Jobs and Career,He worked overtime to finish the project on time.
+jobs-and-career-at-work-promotion,promotion,повышение по службе,noun,Jobs and Career,She received a promotion after two years.
+jobs-and-career-at-work-resignation,resignation,заявление об увольнении,noun,Jobs and Career,He handed in his resignation last Monday.
+jobs-and-career-at-work-teamwork,teamwork,командная работа,noun,Jobs and Career,Good teamwork helped us finish the project early.
+jobs-and-career-at-work-punctual,punctual,пунктуальный,adjective,Jobs and Career,Being punctual is important for every meeting.
+jobs-and-career-at-work-workplace,workplace,рабочее место,noun,Jobs and Career,Our workplace introduced flexible working hours.
+jobs-and-career-at-work-annual-leave,annual leave,ежегодный отпуск,noun,Jobs and Career,I have ten days of annual leave left this year.
+jobs-and-career-at-work-sick-leave,sick leave,больничный отпуск,noun,Jobs and Career,She took two days of sick leave last week.
+time-and-dates-days-and-months-monday,Monday,понедельник,noun,Time and Dates,The meeting is scheduled for Monday morning.
+time-and-dates-days-and-months-tuesday,Tuesday,вторник,noun,Time and Dates,We usually go to the gym on Tuesday.
+time-and-dates-days-and-months-thursday,Thursday,четверг,noun,Time and Dates,The report is due on Thursday afternoon.
+time-and-dates-days-and-months-friday,Friday,пятница,noun,Time and Dates,Most people finish work early on Friday.
+time-and-dates-days-and-months-saturday,Saturday,суббота,noun,Time and Dates,We do the shopping every Saturday morning.
+time-and-dates-days-and-months-sunday,Sunday,воскресенье,noun,Time and Dates,The shop is closed on Sunday.
+time-and-dates-days-and-months-january,January,январь,noun,Time and Dates,The course starts in January every year.
+time-and-dates-days-and-months-march,March,март,noun,Time and Dates,Spring usually begins in late March.
+time-and-dates-days-and-months-april,April,апрель,noun,Time and Dates,It often rains a lot in April.
+time-and-dates-days-and-months-june,June,июнь,noun,Time and Dates,The summer holidays usually start in June.
+time-and-dates-days-and-months-august,August,август,noun,Time and Dates,Many families go on holiday in August.
+time-and-dates-days-and-months-september,September,сентябрь,noun,Time and Dates,The new term begins in September.
+time-and-dates-days-and-months-december,December,декабрь,noun,Time and Dates,The office closes for a week in December.
+time-and-dates-planning-time-schedule,schedule,"расписание, график (дел)",noun,Time and Dates,Please check the schedule before you arrive.
+time-and-dates-planning-time-timetable,timetable,расписание занятий,noun,Time and Dates,The new timetable starts next Monday.
+time-and-dates-planning-time-postpone,postpone,"отложить, перенести",verb,Time and Dates,We had to postpone the meeting until Friday.
+time-and-dates-planning-time-in-advance,in advance,заранее,phrase,Time and Dates,Please book your tickets in advance.
+time-and-dates-planning-time-on-time,on time,вовремя,phrase,Time and Dates,The train arrived exactly on time.
+time-and-dates-planning-time-punctuality,punctuality,пунктуальность,noun,Time and Dates,Punctuality is expected at every business meeting.
+time-and-dates-planning-time-reminder,reminder,напоминание,noun,Time and Dates,I set a reminder for the dentist appointment.
+time-and-dates-planning-time-duration,duration,продолжительность,noun,Time and Dates,The duration of the flight is about three hours.
+time-and-dates-planning-time-beforehand,beforehand,заблаговременно,adverb,Time and Dates,We booked a table at the restaurant beforehand.
+time-and-dates-planning-time-nowadays,nowadays,в наши дни,adverb,Time and Dates,"Nowadays, most people work with computers."
+time-and-dates-planning-time-fortnight,fortnight,две недели,noun,Time and Dates,We are going on holiday for a fortnight.
+time-and-dates-planning-time-weekday,weekday,будний день,noun,Time and Dates,The office is only open on a weekday.
+shopping-paying-cash,cash,наличные,noun,Shopping,I always keep some cash for small shops.
+shopping-paying-credit-card,credit card,кредитная карта,noun,Shopping,She paid for the tickets with a credit card.
+shopping-paying-debit-card,debit card,дебетовая карта,noun,Shopping,I used my debit card at the supermarket.
+shopping-paying-contactless-payment,contactless payment,бесконтактный платёж,noun,Shopping,Contactless payment made the queue move faster.
+shopping-paying-change,change,сдача,noun,Shopping,The cashier gave me the wrong change.
+shopping-paying-price-tag,price tag,ценник,noun,Shopping,I checked the price tag before choosing the jacket.
+shopping-paying-instalment,instalment,платёж в рассрочку,noun,Shopping,We paid for the sofa in monthly instalments.

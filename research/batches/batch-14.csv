@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+animals-wild-animals-giraffe,giraffe,жираф,noun,Animals,A giraffe can reach leaves at the top of tall trees.
+animals-wild-animals-crocodile,crocodile,крокодил,noun,Animals,A crocodile was lying still on the river bank.
+animals-wild-animals-monkey,monkey,обезьяна,noun,Animals,The monkey jumped from tree to tree very quickly.
+animals-wild-animals-dolphin,dolphin,дельфин,noun,Animals,We saw a dolphin jump out of the water from the boat.
+animals-wild-animals-penguin,penguin,пингвин,noun,Animals,The penguin slid across the ice on its stomach.
+animals-wild-animals-chase,chase,"гнаться за, преследовать",verb,Animals,Dogs like to chase balls and sticks in the park.
+animals-wild-animals-scary,scary,страшный,adjective,Animals,The film about the giant snake was too scary for me.
+animals-wild-animals-fierce,fierce,свирепый,adjective,Animals,The lion looked fierce as it showed its sharp teeth.
+animals-animal-life-tail,tail,хвост,noun,Animals,The dog wagged its tail when it saw me.
+animals-animal-life-feather,feather,перо,noun,Animals,She found a beautiful blue feather on the ground.
+animals-animal-life-fur,fur,"мех, шерсть",noun,Animals,The cat's soft fur was covered in snow.
+animals-animal-life-paw,paw,лапа,noun,Animals,The dog hurt its paw while running on the stones.
+animals-animal-life-hunt,hunt,охотиться,verb,Animals,Lions hunt at night when it is cooler.
+animals-animal-life-bite,bite,кусать,verb,Animals,"Be careful, that dog might bite you if you touch it."
+animals-animal-life-migrate,migrate,"мигрировать, перелетать",verb,Animals,Many birds migrate to warmer countries before the winter starts.
+animals-animal-life-wild,wild,дикий,adjective,Animals,Wild horses still live freely in some parts of the mountains.
+animals-animal-life-extinct,extinct,вымерший,adjective,Animals,Dinosaurs became extinct millions of years before humans appeared on Earth.
+animals-animal-life-endangered,endangered,находящийся под угрозой исчезновения,adjective,Animals,The tiger is an endangered animal because people hunt it.
+describing-things-size-and-shape-enormous,enormous,огромный,adjective,Describing Things,They live in an enormous house with twelve bedrooms.
+describing-things-size-and-shape-tiny,tiny,крошечный,adjective,Describing Things,There was a tiny spider on the kitchen wall.
+describing-things-size-and-shape-narrow,narrow,узкий,adjective,Describing Things,The road was so narrow that two cars could not pass.
+describing-things-size-and-shape-rectangular,rectangular,прямоугольный,adjective,Describing Things,"Our dining table is rectangular, so eight people can sit round it."
+describing-things-size-and-shape-circular,circular,круглый,adjective,Describing Things,We had dinner at a small circular table by the window.
+describing-things-size-and-shape-straight,straight,прямой,adjective,Describing Things,Draw a straight line from this point to the edge.
+describing-things-size-and-shape-flat,flat,плоский,adjective,Describing Things,I prefer flat shoes because high heels hurt my feet.
+describing-things-size-and-shape-thick,thick,толстый (о предмете),adjective,Describing Things,She was reading a very thick book about history.
+describing-things-size-and-shape-shallow,shallow,мелкий,adjective,Describing Things,"The water is shallow here, so small children can play safely."
+describing-things-size-and-shape-slightly,slightly,"слегка, немного",adverb,Describing Things,The soup is slightly too salty for my taste.
+describing-things-material-and-texture-wooden,wooden,деревянный,adjective,Describing Things,We sat on a wooden bench near the lake.
+describing-things-material-and-texture-leather,leather,кожа (материал),noun,Describing Things,My new bag is made of soft brown leather.
+describing-things-material-and-texture-cotton,cotton,хлопок,noun,Describing Things,Cotton T-shirts are more comfortable than wool in hot weather.
+describing-things-material-and-texture-plastic,plastic,пластмассовый,adjective,Describing Things,The children drank juice from small plastic cups.
+describing-things-material-and-texture-smooth,smooth,гладкий,adjective,Describing Things,The stone felt cool and smooth in my hand.
+describing-things-material-and-texture-rough,rough,"шероховатый, грубый",adjective,Describing Things,His hands were rough after years of work on the farm.
+describing-things-material-and-texture-sticky,sticky,липкий,adjective,Describing Things,My fingers are sticky because I ate a lot of honey.
+describing-things-material-and-texture-shiny,shiny,блестящий,adjective,Describing Things,She polished her shoes until they were clean and shiny.
+describing-things-material-and-texture-transparent,transparent,прозрачный,adjective,Describing Things,"The bottle is transparent, so you can see the liquid inside."
+describing-things-material-and-texture-fragile,fragile,хрупкий,adjective,Describing Things,Be careful with that box; the glasses inside are fragile.
+describing-things-quality-and-colour-beige,beige,бежевый,adjective,Describing Things,She wore a beige coat and brown boots.
+describing-things-quality-and-colour-turquoise,turquoise,бирюзовый,adjective,Describing Things,The sea near the island was a bright turquoise colour.

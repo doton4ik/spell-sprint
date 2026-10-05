@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+city-and-transport-getting-around-fare,fare,стоимость проезда,noun,City and Transport,The bus fare went up again.
+city-and-transport-getting-around-route,route,маршрут,noun,City and Transport,Which route does this bus take?
+city-and-transport-getting-around-taxi,taxi,такси,noun,City and Transport,We took a taxi to the station.
+city-and-transport-getting-around-cyclist,cyclist,велосипедист,noun,City and Transport,The road has a lane for cyclists.
+city-and-transport-getting-around-motorway,motorway,автомагистраль,noun,City and Transport,It is faster to drive on the motorway.
+city-and-transport-places-in-the-city-district,district,"округ, район города",noun,City and Transport,This district is full of restaurants.
+city-and-transport-places-in-the-city-avenue,avenue,проспект,noun,City and Transport,The hotel is on Park Avenue.
+city-and-transport-places-in-the-city-fountain,fountain,фонтан,noun,City and Transport,Children played near the fountain.
+city-and-transport-places-in-the-city-statue,statue,статуя,noun,City and Transport,There is a statue of a horse in the park.
+city-and-transport-places-in-the-city-bench,bench,скамейка,noun,City and Transport,We sat on a bench and ate ice cream.
+city-and-transport-traffic-and-directions-signpost,signpost,дорожный указатель,noun,City and Transport,Follow the signpost to the beach.
+city-and-transport-traffic-and-directions-lane,lane,полоса (дороги); переулок,noun,City and Transport,Stay in the left lane.
+city-and-transport-traffic-and-directions-parking,parking,парковка,noun,City and Transport,Parking is free after six.
+city-and-transport-traffic-and-directions-subway,subway,подземный переход,noun,City and Transport,Use the subway to cross the main road.
+people-and-family-feelings-upset,upset,расстроенный,adjective,People and Family,He was upset about the bad news.
+people-and-family-feelings-confused,confused,сбитый с толку,adjective,People and Family,I was confused by the instructions.
+people-and-family-family-and-friends-generous,generous,щедрый,adjective,People and Family,My aunt is very generous with presents.
+people-and-family-family-and-friends-honest,honest,честный,adjective,People and Family,Please give me an honest answer.
+people-and-family-family-and-friends-polite,polite,вежливый,adjective,People and Family,It is polite to say thank you.
+people-and-family-family-and-friends-rude,rude,"невежливый, хамский",adjective,People and Family,Don't be rude to the waiter.
+people-and-family-family-and-friends-shy,shy,застенчивый,adjective,People and Family,He was too shy to speak in class.
+people-and-family-feelings-furious,furious,взбешённый,adjective,People and Family,She was furious when she saw the mess.
+people-and-family-feelings-cheerful,cheerful,"весёлый, жизнерадостный",adjective,People and Family,She is always cheerful in the morning.
+people-and-family-family-and-friends-stubborn,stubborn,упрямый,adjective,People and Family,My brother is too stubborn to say sorry.
+health-and-body-body-and-symptoms-ankle,ankle,лодыжка,noun,Health and Body,I twisted my ankle playing football.
+health-and-body-body-and-symptoms-wrist,wrist,запястье,noun,Health and Body,She wears a watch on her left wrist.
+health-and-body-body-and-symptoms-elbow,elbow,локоть,noun,Health and Body,He hit his elbow on the door.
+health-and-body-body-and-symptoms-rash,rash,сыпь,noun,Health and Body,The cream gave me a red rash.
+health-and-body-at-the-doctor-bandage,bandage,"бинт, повязка",noun,Health and Body,The nurse put a bandage on my hand.
+health-and-body-body-and-symptoms-chest,chest,"грудь, грудная клетка",noun,Health and Body,He felt a pain in his chest.
+health-and-body-at-the-doctor-pill,pill,таблетка,noun,Health and Body,Take one pill after every meal.
+health-and-body-at-the-doctor-nurse,nurse,медсестра,noun,Health and Body,The nurse took my blood pressure.
+health-and-body-at-the-doctor-thermometer,thermometer,градусник,noun,Health and Body,Put the thermometer under your arm.
+health-and-body-body-and-symptoms-wound,wound,рана,noun,Health and Body,The nurse cleaned the wound.
+technology-devices-and-software-laptop,laptop,ноутбук,noun,Technology,I do my homework on a laptop.
+technology-devices-and-software-printer,printer,принтер,noun,Technology,The printer has run out of paper.
+technology-devices-and-software-router,router,роутер,noun,Technology,Restart the router if the internet is slow.
+technology-devices-and-software-virus,virus,вирус (компьютерный),noun,Technology,A virus deleted all my files.
+technology-devices-and-software-folder,folder,папка,noun,Technology,Save the document in this folder.
+technology-devices-and-software-cursor,cursor,курсор,noun,Technology,Move the cursor to the top of the page.

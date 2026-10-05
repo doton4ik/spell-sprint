@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+technology-devices-and-software-tablet,tablet,планшет,noun,Technology,My son watches cartoons on his tablet.
+technology-devices-and-software-cable,cable,"кабель, провод",noun,Technology,Connect the cable to the back of the TV.
+technology-devices-and-software-icon,icon,"значок, иконка",noun,Technology,Tap the camera icon to take a photo.
+technology-online-life-spam,spam,спам,noun,Technology,My inbox is full of spam.
+nature-and-animals-weather-and-seasons-thunder,thunder,гром,noun,Nature and Animals,The thunder woke the baby.
+nature-and-animals-weather-and-seasons-fog,fog,туман,noun,Nature and Animals,The fog was so thick we couldn't see.
+nature-and-animals-weather-and-seasons-hail,hail,град,noun,Nature and Animals,Hail damaged the cars in the street.
+nature-and-animals-weather-and-seasons-frost,frost,"иней, заморозок",noun,Nature and Animals,There was frost on the grass this morning.
+nature-and-animals-weather-and-seasons-rainbow,rainbow,радуга,noun,Nature and Animals,"Look, there is a rainbow over the hills!"
+nature-and-animals-nature-and-animals-cliff,cliff,"утёс, скала",noun,Nature and Animals,The castle stands on a high cliff.
+nature-and-animals-nature-and-animals-volcano,volcano,вулкан,noun,Nature and Animals,The volcano has not erupted for years.
+nature-and-animals-nature-and-animals-earthquake,earthquake,землетрясение,noun,Nature and Animals,The earthquake shook the whole city.
+nature-and-animals-nature-and-animals-ocean,ocean,океан,noun,Nature and Animals,The ocean was calm this morning.
+nature-and-animals-nature-and-animals-meadow,meadow,луг,noun,Nature and Animals,Cows were eating grass in the meadow.
+time-and-dates-days-and-months-decade,decade,десятилетие,noun,Time and Dates,Prices have doubled in a decade.
+time-and-dates-days-and-months-century,century,"век, столетие",noun,Time and Dates,The church was built in the twelfth century.
+time-and-dates-days-and-months-midnight,midnight,полночь,noun,Time and Dates,The party ended at midnight.
+time-and-dates-days-and-months-noon,noon,полдень,noun,Time and Dates,The shop closes at noon on Saturdays.
+time-and-dates-days-and-months-dawn,dawn,рассвет,noun,Time and Dates,We left at dawn to see the sunrise.
+time-and-dates-planning-time-annual,annual,ежегодный,adjective,Time and Dates,The annual festival takes place in May.
+time-and-dates-days-and-months-era,era,эпоха,noun,Time and Dates,It was the end of an era.
+time-and-dates-planning-time-weekly,weekly,еженедельный,adjective,Time and Dates,We have a weekly team meeting.
+time-and-dates-planning-time-meanwhile,meanwhile,тем временем,adverb,Time and Dates,"Meanwhile, the soup was getting cold."
+time-and-dates-planning-time-afterwards,afterwards,"потом, впоследствии",adverb,Time and Dates,We had dinner and went for a walk afterwards.
+shopping-paying-coin,coin,монета,noun,Shopping,I found a coin under the sofa.
+shopping-banking-budget,budget,бюджет,noun,Shopping,We need to plan our budget for the trip.
+shopping-banking-debt,debt,долг,noun,Shopping,He is trying to pay off his debt.
+shopping-banking-tax,tax,налог,noun,Shopping,The price includes tax.
+shopping-paying-purse,purse,дамский кошелёк,noun,Shopping,She put the change in her purse.
+shopping-paying-expensive,expensive,дорогой (по цене),adjective,Shopping,This restaurant is too expensive for us.
+shopping-paying-cheap,cheap,дешёвый,adjective,Shopping,The bus is cheap but slow.
+shopping-banking-wage,wage,"зарплата (почасовая, недельная)",noun,Shopping,He earns a good wage as a builder.
+shopping-banking-savings,savings,сбережения,noun,Shopping,She spent all her savings on a car.
+shopping-paying-shopkeeper,shopkeeper,владелец магазина,noun,Shopping,The shopkeeper gave me a free apple.
+food-and-drinks-meals-and-cooking-flour,flour,мука,noun,Food and Drinks,Mix the flour with two eggs.
+food-and-drinks-meals-and-cooking-cucumber,cucumber,огурец,noun,Food and Drinks,Slice the cucumber for the salad.
+food-and-drinks-meals-and-cooking-cabbage,cabbage,капуста,noun,Food and Drinks,My grandmother makes soup with cabbage.
+food-and-drinks-meals-and-cooking-mushroom,mushroom,гриб,noun,Food and Drinks,"I'd like a mushroom pizza, please."
+food-and-drinks-meals-and-cooking-garlic,garlic,чеснок,noun,Food and Drinks,Add some garlic to the sauce.
+food-and-drinks-meals-and-cooking-lettuce,lettuce,салат-латук,noun,Food and Drinks,Wash the lettuce before you eat it.

@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+general-english-active-vocabulary-depend,depend,зависеть,verb,General English,Our plans depend on the weather.
+general-english-active-vocabulary-mention,mention,упоминать,verb,General English,She did not mention the party.
+general-english-active-vocabulary-notice,notice,замечать,verb,General English,Did you notice his new haircut?
+general-english-active-vocabulary-opinion,opinion,мнение,noun,General English,"In my opinion, the book is better than the film."
+general-english-active-vocabulary-reason,reason,причина,noun,General English,What is the reason for the delay?
+general-english-active-vocabulary-choice,choice,выбор,noun,General English,You have a choice of three desserts.
+general-english-active-vocabulary-purpose,purpose,"назначение, смысл (зачем)",noun,General English,What is the purpose of your visit?
+general-english-active-vocabulary-chance,chance,шанс,noun,General English,This is your last chance to buy tickets.
+general-english-active-vocabulary-amount,amount,"количество, сумма",noun,General English,He spent a large amount of money on books.
+general-english-active-vocabulary-situation,situation,ситуация,noun,General English,The situation is better than last week.
+general-english-active-vocabulary-decision,decision,решение,noun,General English,Moving abroad was a difficult decision.
+general-english-active-vocabulary-difference,difference,"разница, отличие",noun,General English,Can you see the difference between the photos?
+general-english-active-vocabulary-condition,condition,состояние; условие,noun,General English,The car is in good condition.
+general-english-active-vocabulary-possible,possible,возможный,adjective,General English,Is it possible to change my ticket?
+general-english-active-vocabulary-available,available,"доступный, имеющийся",adjective,General English,Are there any rooms available tonight?
+general-english-active-vocabulary-similar,similar,похожий,adjective,General English,My sister and I have similar voices.
+general-english-active-vocabulary-recent,recent,недавний,adjective,General English,Have you read his recent article?
+general-english-active-vocabulary-certain,certain,определённый; точно известный,adjective,General English,Are you certain that the shop is open?
+general-english-active-vocabulary-especially,especially,особенно,adverb,General English,"I love fruit, especially apples."
+general-english-active-vocabulary-actually,actually,на самом деле,adverb,General English,"I thought he was French, but actually he is Swiss."
+study-and-career-learning-and-research-essay,essay,"эссе, сочинение",noun,Study and Career,Write an essay of about three hundred words.
+study-and-career-learning-and-research-thesis,thesis,"диссертация, дипломная работа",noun,Study and Career,She wrote her thesis on climate change.
+study-and-career-learning-and-research-degree,degree,"учёная степень, диплом",noun,Study and Career,He has a degree in economics.
+study-and-career-learning-and-research-graduate,graduate,выпускаться (из вуза),verb,Study and Career,She will graduate from university next year.
+study-and-career-learning-and-research-scholarship,scholarship,стипендия (грант на учёбу),noun,Study and Career,He won a scholarship to study in London.
+study-and-career-learning-and-research-semester,semester,семестр,noun,Study and Career,The new semester begins in September.
+study-and-career-learning-and-research-tutor,tutor,"репетитор, преподаватель",noun,Study and Career,My tutor helps me with my writing.
+study-and-career-learning-and-research-revise,revise,повторять (к экзамену),verb,Study and Career,I need to revise for my history exam.
+study-and-career-learning-and-research-summary,summary,краткое изложение,noun,Study and Career,Write a short summary of the article.
+study-and-career-learning-and-research-source,source,источник,noun,Study and Career,Always check the source of your information.
+study-and-career-learning-and-research-experiment,experiment,эксперимент,noun,Study and Career,We did an experiment with water and salt.
+study-and-career-learning-and-research-analysis,analysis,анализ,noun,Study and Career,The analysis of the results took two weeks.
+study-and-career-learning-and-research-evidence,evidence,доказательства,noun,Study and Career,There is no evidence that he was there.
+study-and-career-learning-and-research-conclusion,conclusion,"вывод, заключение",noun,Study and Career,What conclusion did you reach?
+study-and-career-learning-and-research-handout,handout,раздаточный материал,noun,Study and Career,The teacher gave us a handout with the main rules.
+study-and-career-career-development-internship,internship,стажировка,noun,Study and Career,She did an internship at a design studio.
+study-and-career-career-development-mentor,mentor,наставник,noun,Study and Career,My mentor gave me great advice about my career.
+study-and-career-career-development-workshop,workshop,"мастер-класс, семинар",noun,Study and Career,I went to a writing workshop on Saturday.
+study-and-career-career-development-ambition,ambition,"амбиция, стремление",noun,Study and Career,Her ambition is to become a doctor.
+study-and-career-career-development-employer,employer,работодатель,noun,Study and Career,My employer pays for my English classes.

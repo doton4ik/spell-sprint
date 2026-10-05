@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+family-and-relationships-relatives-cousin,cousin,двоюродный брат (сестра),noun,Family and Relationships,My cousin is coming to stay with us next week.
+family-and-relationships-relatives-nephew,nephew,племянник,noun,Family and Relationships,My nephew is five years old and loves football.
+family-and-relationships-relatives-niece,niece,племянница,noun,Family and Relationships,My niece gave me a picture she painted herself.
+family-and-relationships-relatives-aunt,aunt,тётя,noun,Family and Relationships,My aunt always sends me a card on my birthday.
+family-and-relationships-relatives-uncle,uncle,дядя,noun,Family and Relationships,My uncle works as a driver in a big company.
+family-and-relationships-relatives-twins,twins,близнецы,noun,Family and Relationships,The twins look so alike that nobody can tell them apart.
+family-and-relationships-relatives-elderly,elderly,пожилой,adjective,Family and Relationships,Please give your seat to an elderly person on the bus.
+family-and-relationships-friends-and-partners-flatmate,flatmate,сосед по квартире,noun,Family and Relationships,My flatmate cooks dinner on Monday and I cook on Tuesday.
+family-and-relationships-friends-and-partners-acquaintance,acquaintance,знакомый,noun,Family and Relationships,"He is not a close friend, only an acquaintance from university."
+family-and-relationships-friends-and-partners-engaged,engaged,помолвленный,adjective,Family and Relationships,They got engaged last summer and will marry next year.
+family-and-relationships-friends-and-partners-trust,trust,доверять,verb,Family and Relationships,I trust my best friend with all my secrets.
+family-and-relationships-friends-and-partners-argue,argue,"спорить, ссориться",verb,Family and Relationships,My brother and I often argue about what to watch.
+family-and-relationships-friends-and-partners-fall-out-with,fall out with,поссориться с,phrase,Family and Relationships,I never want to fall out with my best friend.
+family-and-relationships-life-events-wedding,wedding,свадьба,noun,Family and Relationships,We are going to a wedding in the mountains next Saturday.
+family-and-relationships-life-events-divorce,divorce,развод,noun,Family and Relationships,"After the divorce, the children lived with their mother."
+family-and-relationships-life-events-anniversary,anniversary,годовщина,noun,Family and Relationships,"It is our wedding anniversary, so we are going out for dinner."
+family-and-relationships-life-events-funeral,funeral,похороны,noun,Family and Relationships,Many people came to the funeral to say goodbye.
+family-and-relationships-life-events-celebrate,celebrate,"праздновать, отмечать",verb,Family and Relationships,We always celebrate the New Year with our whole family.
+family-and-relationships-life-events-adopt,adopt,усыновлять,verb,Family and Relationships,They decided to adopt a little girl from another country.
+family-and-relationships-life-events-bring-up,bring up,воспитывать,phrase,Family and Relationships,She had to bring up three children on her own.
+family-and-relationships-life-events-look-after,look after,"заботиться о, присматривать за",phrase,Family and Relationships,Can you look after my cat while I am on holiday?
+hobbies-and-free-time-sport-and-exercise-gym,gym,спортзал,noun,Hobbies and Free Time,I go to the gym three times a week after work.
+hobbies-and-free-time-sport-and-exercise-jog,jog,бегать трусцой,verb,Hobbies and Free Time,I like to jog in the park before breakfast.
+hobbies-and-free-time-sport-and-exercise-exercise,exercise,"делать упражнения, заниматься спортом",verb,Hobbies and Free Time,Doctors say we should exercise for at least thirty minutes daily.
+hobbies-and-free-time-sport-and-exercise-equipment,equipment,"оборудование, снаряжение",noun,Hobbies and Free Time,The club buys all the sports equipment for the children.
+hobbies-and-free-time-sport-and-exercise-competition,competition,"соревнование, конкурс",noun,Hobbies and Free Time,She won first prize in the swimming competition last month.
+hobbies-and-free-time-sport-and-exercise-champion,champion,чемпион,noun,Hobbies and Free Time,The young champion held up the cup and smiled.
+hobbies-and-free-time-sport-and-exercise-referee,referee,судья (в спорте),noun,Hobbies and Free Time,The referee stopped the match when the player fell down.
+hobbies-and-free-time-sport-and-exercise-stadium,stadium,стадион,noun,Hobbies and Free Time,Thousands of fans filled the stadium for the final.
+hobbies-and-free-time-sport-and-exercise-take-part-in,take part in,участвовать в,phrase,Hobbies and Free Time,Everyone in our class wants to take part in the race.
+hobbies-and-free-time-creative-hobbies-paint,paint,рисовать красками,verb,Hobbies and Free Time,My sister likes to paint pictures of flowers and trees.
+hobbies-and-free-time-creative-hobbies-knit,knit,вязать,verb,Hobbies and Free Time,My grandmother taught me how to knit a warm scarf.
+hobbies-and-free-time-creative-hobbies-sew,sew,шить,verb,Hobbies and Free Time,"Can you sew this button back onto my shirt, please?"
+hobbies-and-free-time-creative-hobbies-hobby,hobby,"хобби, увлечение",noun,Hobbies and Free Time,Photography is not just a hobby for me; it is my passion.
+hobbies-and-free-time-creative-hobbies-photography,photography,"фотография, фотосъёмка",noun,Hobbies and Free Time,She is studying photography because she wants to work for a magazine.
+hobbies-and-free-time-creative-hobbies-guitar,guitar,гитара,noun,Hobbies and Free Time,He plays the guitar in a small band at weekends.
+hobbies-and-free-time-creative-hobbies-instrument,instrument,(музыкальный) инструмент,noun,Hobbies and Free Time,Which musical instrument would you like to learn to play?
+hobbies-and-free-time-creative-hobbies-gardening,gardening,садоводство,noun,Hobbies and Free Time,"Gardening is a relaxing hobby, especially on warm sunny days."
+hobbies-and-free-time-creative-hobbies-collect,collect,"коллекционировать, собирать",verb,Hobbies and Free Time,My brother likes to collect old coins and stamps.
+hobbies-and-free-time-creative-hobbies-craft,craft,"ремесло, рукоделие",noun,Hobbies and Free Time,We made a paper bird in the craft lesson at school.

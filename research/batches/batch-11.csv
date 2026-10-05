@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+common-actions-at-home-vacuum,vacuum,пылесосить,verb,Common Actions,I usually vacuum the carpet on Saturday morning.
+common-actions-at-home-iron,iron,гладить одежду,verb,Common Actions,I need to iron this shirt before work.
+common-actions-at-home-put-away,put away,убирать на место,phrase,Common Actions,Please put away your toys before bedtime.
+common-actions-at-home-plug-in,plug in,включать в розетку,phrase,Common Actions,Remember to plug in the laptop overnight.
+common-actions-at-home-unplug,unplug,отключать от розетки,verb,Common Actions,Always unplug the iron after using it.
+common-actions-out-and-about-queue-up,queue up,стоять в очереди,phrase,Common Actions,We had to queue up outside the cinema.
+common-actions-out-and-about-run-errands,run errands,выполнять поручения,phrase,Common Actions,I need to run errands before the shops close.
+common-actions-out-and-about-drop-by,drop by,зайти ненадолго,phrase,Common Actions,Feel free to drop by whenever you are free.
+common-actions-out-and-about-hang-out,hang out,проводить время с друзьями,phrase,Common Actions,We usually hang out at the park after school.
+common-actions-out-and-about-catch-up-with,catch up with,наверстать упущенное,phrase,Common Actions,Let's meet soon to catch up with each other.
+common-actions-out-and-about-get-lost,get lost,заблудиться,phrase,Common Actions,Tourists sometimes get lost in the old part of town.
+common-actions-out-and-about-rush-hour,rush hour,час пик,noun,Common Actions,The roads are very busy during rush hour.
+clothes-and-appearance-clothing-items-trousers,trousers,брюки,noun,Clothes and Appearance,He bought a new pair of trousers for the job interview.
+clothes-and-appearance-clothing-items-sweater,sweater,свитер,noun,Clothes and Appearance,I wear a warm sweater when it gets cold in the evening.
+clothes-and-appearance-clothing-items-underwear,underwear,нижнее бельё,noun,Clothes and Appearance,She packed socks and clean underwear for the weekend trip.
+clothes-and-appearance-clothing-items-sleeve,sleeve,рукав,noun,Clothes and Appearance,The sleeve of my shirt got wet in the rain.
+clothes-and-appearance-clothing-items-collar,collar,воротник,noun,Clothes and Appearance,He turned up his collar because the wind was so cold.
+clothes-and-appearance-clothing-items-pocket,pocket,карман,noun,Clothes and Appearance,I found some coins in the pocket of my old jeans.
+clothes-and-appearance-clothing-items-button,button,пуговица,noun,Clothes and Appearance,One button on my coat came off yesterday.
+clothes-and-appearance-clothing-items-wear,wear,носить,verb,Clothes and Appearance,You should wear a hat when the sun is strong.
+clothes-and-appearance-clothing-items-fit,fit,"подходить по размеру, сидеть (об одежде)",verb,Clothes and Appearance,These shoes are too small and they do not fit me.
+clothes-and-appearance-clothing-items-try-on,try on,примерять,phrase,Clothes and Appearance,"Can I try on this jacket in the changing room, please?"
+clothes-and-appearance-accessories-scarf,scarf,шарф,noun,Clothes and Appearance,She wrapped a long woollen scarf around her neck.
+clothes-and-appearance-accessories-gloves,gloves,перчатки,noun,Clothes and Appearance,Don't forget your gloves because it is freezing outside.
+clothes-and-appearance-accessories-necklace,necklace,"ожерелье, колье",noun,Clothes and Appearance,My grandmother gave me a silver necklace for my birthday.
+clothes-and-appearance-accessories-bracelet,bracelet,браслет,noun,Clothes and Appearance,She lost her gold bracelet at the beach last summer.
+clothes-and-appearance-accessories-sunglasses,sunglasses,солнцезащитные очки,noun,Clothes and Appearance,It was so bright that I had to wear my sunglasses.
+clothes-and-appearance-accessories-umbrella,umbrella,зонт,noun,Clothes and Appearance,Take an umbrella with you because it might rain later.
+clothes-and-appearance-accessories-wallet,wallet,кошелёк,noun,Clothes and Appearance,He took some money out of his wallet and paid.
+clothes-and-appearance-accessories-put-on,put on,надевать,phrase,Clothes and Appearance,"Put on your coat before you go out, please."
+clothes-and-appearance-looks-and-grooming-hairstyle,hairstyle,причёска,noun,Clothes and Appearance,She changed her hairstyle and now she looks much younger.
+clothes-and-appearance-looks-and-grooming-beard,beard,борода,noun,Clothes and Appearance,My uncle grew a long beard during the winter.
+clothes-and-appearance-looks-and-grooming-moustache,moustache,усы,noun,Clothes and Appearance,The old waiter had a thick grey moustache.
+clothes-and-appearance-looks-and-grooming-perfume,perfume,духи,noun,Clothes and Appearance,She put on a little perfume before the party.
+clothes-and-appearance-looks-and-grooming-shave,shave,брить(ся),verb,Clothes and Appearance,My dad likes to shave every morning before breakfast.
+clothes-and-appearance-looks-and-grooming-comb,comb,расчёсывать,verb,Clothes and Appearance,Please comb your hair before we take the photo.
+clothes-and-appearance-looks-and-grooming-fashionable,fashionable,модный,adjective,Clothes and Appearance,Long coats are very fashionable in cities this autumn.
+clothes-and-appearance-looks-and-grooming-elegant,elegant,"элегантный, изящный",adjective,Clothes and Appearance,She looked elegant in her long black dress.
+clothes-and-appearance-looks-and-grooming-casual,casual,повседневный,adjective,Clothes and Appearance,I prefer casual clothes to formal ones at weekends.
+clothes-and-appearance-looks-and-grooming-scruffy,scruffy,"неопрятный, потрёпанный",adjective,Clothes and Appearance,His scruffy jacket had a big hole in the elbow.

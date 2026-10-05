@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+logistics-inventory-control-inventory,inventory,запасы,noun,Logistics,The inventory report showed fewer items than expected.
+logistics-inventory-control-stock,stock,товарный запас,noun,Logistics,The store keeps extra stock for busy weekends.
+logistics-inventory-control-replenishment,replenishment,пополнение запасов,noun,Logistics,The manager planned replenishment before the shelves became empty.
+logistics-inventory-control-safety-stock,safety stock,страховой запас,noun,Logistics,Safety stock protects the warehouse from unexpected demand.
+logistics-inventory-control-demand-planning,demand planning,планирование спроса,noun,Logistics,Good demand planning helps the company order materials early.
+logistics-inventory-control-inventory-accuracy,inventory accuracy,точность учёта запасов,noun,Logistics,Inventory accuracy improved after the team checked every shelf.
+logistics-receiving-and-storage-storage-location,storage location,место хранения,noun,Logistics,Each box has a clear storage location in the warehouse.
+general-english-professional-communication-deadline,deadline,крайний срок,noun,General English,I finished the report before the deadline.
+general-english-professional-communication-research,research,исследование,noun,General English,Her research helped the team understand customer needs.
+general-english-professional-communication-responsibility,responsibility,ответственность,noun,General English,Checking the order is my responsibility today.
+general-english-professional-communication-achievement,achievement,достижение,noun,General English,Passing the difficult exam was a proud achievement.
+general-english-professional-communication-presentation,presentation,презентация,noun,General English,His presentation explained the new process clearly.
+general-english-professional-communication-communication,communication,общение,noun,General English,Clear communication prevents many problems at work.
+logistics-supply-chain-supplier,supplier,поставщик,noun,Logistics,The supplier delivered the materials on time.
+logistics-supply-chain-shipment,shipment,поставка / отгрузка,noun,Logistics,The shipment arrived at the warehouse this morning.
+logistics-supply-chain-delivery,delivery,доставка,noun,Logistics,The delivery reached our office before lunch.
+logistics-receiving-and-storage-goods-receipt,goods receipt,приёмка товара,noun,Logistics,The clerk recorded the goods receipt in the system.
+logistics-order-fulfilment-order-picking,order picking,комплектация заказа,noun,Logistics,Order picking becomes faster when products are well labelled.
+logistics-receiving-and-storage-warehouse-layout,warehouse layout,планировка склада,noun,Logistics,The new warehouse layout saves space and walking time.
+logistics-supply-chain-distribution-center,distribution center,распределительный центр,noun,Logistics,The distribution center sends products across the region.
+logistics-supply-chain-lead-time,lead time,срок поставки,noun,Logistics,The supplier reduced the lead time by two days.
+logistics-supply-chain-transportation-cost,transportation cost,транспортные расходы,noun,Logistics,Fuel prices increased the transportation cost this month.
+warehouse-operations-sap-warehouse-processes-material,material,материал,noun,Warehouse Operations,The worker moved the material to another shelf.
+warehouse-operations-sap-warehouse-processes-purchase-order,purchase order,заказ на поставку,noun,Warehouse Operations,The buyer sent a purchase order to the supplier.
+warehouse-operations-sap-warehouse-processes-goods-movement,goods movement,движение товара,noun,Warehouse Operations,The system records every goods movement automatically.
+warehouse-operations-sap-warehouse-processes-warehouse-task,warehouse task,складская задача,noun,Warehouse Operations,The worker completed the warehouse task before noon.
+warehouse-operations-sap-warehouse-processes-inbound-processing,inbound processing,входящая обработка,noun,Warehouse Operations,Inbound processing begins when the truck reaches the dock.
+warehouse-operations-sap-warehouse-processes-outbound-processing,outbound processing,исходящая обработка,noun,Warehouse Operations,Outbound processing prepares customer orders for dispatch.
+warehouse-operations-inventory-control-physical-inventory,physical inventory,физическая инвентаризация,noun,Warehouse Operations,The team counted the physical inventory on Friday.
+warehouse-operations-sap-warehouse-processes-material-document,material document,документ материала,noun,Warehouse Operations,The system created a material document after the movement.
+business-and-office-finance-and-planning-revenue,revenue,выручка,noun,Business and Office,The company increased its revenue during the summer.
+business-and-office-finance-and-planning-expenses,expenses,расходы,noun,Business and Office,We reviewed our monthly expenses before planning the budget.
+business-and-office-finance-and-planning-profit,profit,прибыль,noun,Business and Office,The business made a small profit last quarter.
+business-and-office-finance-and-planning-profit-margin,profit margin,маржа прибыли,noun,Business and Office,The higher profit margin supported the company’s growth.
+business-and-office-finance-and-planning-invoice,invoice,счёт-фактура,noun,Business and Office,Please check the invoice before sending the payment.
+business-and-office-meetings-and-negotiation-negotiation,negotiation,переговоры,noun,Business and Office,The negotiation ended with a fair agreement.
+business-and-office-meetings-and-negotiation-agreement,agreement,соглашение,noun,Business and Office,Both companies signed the agreement after the meeting.
+business-and-office-meetings-and-negotiation-recruitment,recruitment,подбор персонала,noun,Business and Office,The recruitment process starts with an online application.
+business-and-office-finance-and-planning-target,target,цель,noun,Business and Office,Our team reached the monthly target in September.
+business-and-office-meetings-and-negotiation-customer-satisfaction,customer satisfaction,удовлетворённость клиентов,noun,Business and Office,Customer satisfaction improved after delivery became faster.

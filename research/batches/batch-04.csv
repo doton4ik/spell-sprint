@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+feelings-feelings-confident,confident,уверенный,adjective,Feelings,I feel more confident after practising every day.
+feelings-feelings-exhausted,exhausted,измотанный,adjective,Feelings,We were exhausted after moving all the furniture.
+feelings-feelings-curious,curious,любопытный,adjective,Feelings,The child was curious about the unusual machine.
+feelings-feelings-proud,proud,гордый,adjective,Feelings,My parents were proud of my exam result.
+feelings-feelings-lonely,lonely,одинокий,adjective,Feelings,He felt lonely after moving to a new city.
+feelings-feelings-relieved,relieved,испытывающий облегчение,adjective,Feelings,I felt relieved when the test finally ended.
+feelings-feelings-frustrated,frustrated,раздосадованный,adjective,Feelings,She became frustrated when the computer stopped working.
+feelings-feelings-excited,excited,"взволнованный, радостный",adjective,Feelings,The students were excited about their first trip.
+home-around-the-house-kitchen,kitchen,кухня,noun,Home,We cleaned the kitchen after preparing dinner.
+home-around-the-house-bedroom,bedroom,спальня,noun,Home,The bedroom became warmer after we closed the window.
+home-around-the-house-bathroom,bathroom,ванная,noun,Home,The hotel bathroom was small but very clean.
+home-around-the-house-furniture,furniture,мебель,noun,Home,We moved the furniture before painting the room.
+home-around-the-house-curtain,curtain,штора,noun,Home,Please close the curtain before the sun gets stronger.
+home-around-the-house-staircase,staircase,лестница,noun,Home,The old staircase leads to the second floor.
+home-around-the-house-neighbourhood,neighbourhood,район,noun,Home,Our neighbourhood has a quiet park nearby.
+home-around-the-house-rent,rent,аренда; арендовать,noun,Home,I pay the rent on the first day of each month.
+home-around-the-house-landlord,landlord,арендодатель,noun,Home,The landlord repaired the broken window quickly.
+home-around-the-house-appliance,appliance,бытовой прибор,noun,Home,This kitchen appliance uses very little electricity.
+home-around-the-house-laundry,laundry,"стирка, бельё",noun,Home,I usually do the laundry on Saturday morning.
+home-around-the-house-cupboard,cupboard,"шкаф, буфет",noun,Home,The clean plates are in the kitchen cupboard.
+places-in-town-places-in-town-pharmacy,pharmacy,аптека,noun,Places in Town,The pharmacy closes at eight o’clock tonight.
+places-in-town-places-in-town-library,library,библиотека,noun,Places in Town,I borrowed an English dictionary from the library.
+places-in-town-places-in-town-post-office,post office,почта,noun,Places in Town,The post office is next to the supermarket.
+places-in-town-places-in-town-bakery,bakery,пекарня,noun,Places in Town,The bakery sells warm bread every morning.
+places-in-town-places-in-town-crossroads,crossroads,перекрёсток,noun,Places in Town,Turn left at the crossroads after the bridge.
+places-in-town-places-in-town-pavement,pavement,тротуар,noun,Places in Town,Please walk carefully on the wet pavement.
+places-in-town-places-in-town-bridge,bridge,мост,noun,Places in Town,We crossed the bridge before sunset.
+places-in-town-places-in-town-square,square,площадь,noun,Places in Town,People gathered in the square for the concert.
+places-in-town-places-in-town-supermarket,supermarket,супермаркет,noun,Places in Town,I bought fresh vegetables at the supermarket.
+places-in-town-places-in-town-station,station,"вокзал, станция",noun,Places in Town,The bus station is five minutes from here.
+shopping-shopping-receipt,receipt,чек,noun,Shopping,Keep the receipt in case you need a refund.
+shopping-shopping-refund,refund,возврат денег,noun,Shopping,The shop offered a refund for the damaged item.
+shopping-shopping-discount,discount,скидка,noun,Shopping,Students receive a discount with a valid card.
+shopping-shopping-cashier,cashier,кассир,noun,Shopping,The cashier scanned the items very quickly.
+shopping-shopping-customer,customer,покупатель,noun,Shopping,The customer asked for help finding the right size.
+shopping-shopping-bargain,bargain,выгодная покупка,noun,Shopping,This jacket was a real bargain during the sale.
+shopping-shopping-afford,afford,позволить себе,verb,Shopping,I cannot afford a new laptop this month.
+shopping-shopping-exchange,exchange,обменять,verb,Shopping,The store allowed me to exchange the damaged shirt.
+shopping-shopping-fitting-room,fitting room,примерочная,noun,Shopping,"The fitting room was empty, so I tried the jacket."
+shopping-shopping-sold-out,sold out,распродано,phrase,Shopping,The popular tickets were sold out by noon.

@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+general-english-commonly-misspelled-government,government,правительство,noun,General English,The government announced new support for small businesses.
+general-english-commonly-misspelled-restaurant,restaurant,ресторан,noun,General English,We chose a quiet restaurant near the station.
+general-english-commonly-misspelled-calendar,calendar,календарь,noun,General English,I marked the appointment on my calendar.
+general-english-commonly-misspelled-library,library,библиотека,noun,General English,I borrowed an English dictionary from the library.
+general-english-commonly-misspelled-february,February,февраль,noun,General English,"My sister was born in February, the shortest month."
+general-english-commonly-misspelled-wednesday,Wednesday,среда (день недели),noun,General English,Our English lesson moves to Wednesday this week.
+general-english-commonly-misspelled-knowledge,knowledge,знание,noun,General English,Her knowledge of computers helped the whole team.
+general-english-commonly-misspelled-achieve,achieve,достигать,verb,General English,Daily practice can help you achieve your goals.
+general-english-commonly-misspelled-believe,believe,верить,verb,General English,I believe this plan will save us time.
+general-english-commonly-misspelled-foreign,foreign,иностранный,adjective,General English,Learning a foreign language takes patience and practice.
+general-english-commonly-misspelled-weird,weird,странный,adjective,General English,That weird sound came from the old machine.
+general-english-commonly-misspelled-neighbour,neighbour,сосед,noun,General English,Our neighbour helped carry the heavy boxes.
+general-english-commonly-misspelled-privilege,privilege,привилегия,noun,General English,It is a privilege to learn from experienced colleagues.
+general-english-commonly-misspelled-conscience,conscience,совесть,noun,General English,His conscience told him to return the lost wallet.
+general-english-commonly-misspelled-rhythm,rhythm,ритм,noun,General English,The drummer kept a steady rhythm during the song.
+general-english-commonly-misspelled-answer,answer,ответ,noun,General English,Please write your answer in the correct box.
+general-english-confusable-words-their,their,их (притяжательное),adjective,General English,The students put their books on the desk.
+general-english-confusable-words-there,there,там,adverb,General English,Your keys are over there beside the phone.
+general-english-confusable-words-affect,affect,влиять,verb,General English,Lack of sleep can affect your concentration.
+general-english-confusable-words-effect,effect,"эффект, результат",noun,General English,The new rule had a positive effect on safety.
+general-english-confusable-words-principal,principal,главный; директор,adjective,General English,The principal welcomed the students at the entrance.
+general-english-confusable-words-principle,principle,принцип,noun,General English,Fairness is an important principle at work.
+general-english-confusable-words-stationary,stationary,неподвижный,adjective,General English,The bicycle remained stationary near the wall.
+general-english-confusable-words-stationery,stationery,канцтовары,noun,General English,The office ordered new stationery for the team.
+general-english-confusable-words-advice,advice,совет,noun,General English,My teacher gave me useful advice about pronunciation.
+general-english-confusable-words-advise,advise,советовать,verb,General English,I advise you to check the address twice.
+general-english-confusable-words-loose,loose,"свободный, слабый",adjective,General English,The loose handle needs to be repaired.
+general-english-confusable-words-lose,lose,терять,verb,General English,Try not to lose your ticket during the journey.
+general-english-confusable-words-quiet,quiet,тихий,adjective,General English,The library is quiet in the afternoon.
+general-english-confusable-words-quite,quite,довольно,adverb,General English,The new exercise was quite difficult for me.
+general-english-confusable-words-weather,weather,погода,noun,General English,The weather changed suddenly before the walk.
+general-english-confusable-words-whether,whether,ли (вводит вопрос),conjunction,General English,I do not know whether the shop is open.
+common-actions-everyday-phrasal-verbs-look-up,look up,искать (в словаре),phrase,Common Actions,I used a dictionary to look up the new word.
+common-actions-everyday-phrasal-verbs-give-up,give up,сдаваться,phrase,Common Actions,Do not give up when the exercise becomes difficult.
+common-actions-everyday-phrasal-verbs-turn-on,turn on,включить,phrase,Common Actions,Please turn on the light before you read.
+common-actions-everyday-phrasal-verbs-turn-off,turn off,выключить,phrase,Common Actions,Remember to turn off the computer after work.
+common-actions-everyday-phrasal-verbs-find-out,find out,выяснить,phrase,Common Actions,I called the office to find out the opening time.
+common-actions-everyday-phrasal-verbs-figure-out,figure out,разобраться,phrase,Common Actions,We worked together to figure out the problem.
+common-actions-everyday-phrasal-verbs-carry-on,carry on,продолжать,phrase,Common Actions,Please carry on with the task while I am away.
+common-actions-everyday-phrasal-verbs-break-down,break down,сломаться,phrase,Common Actions,The old car may break down during the journey.

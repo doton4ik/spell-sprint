@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+business-and-office-finance-and-planning-market-demand,market demand,рыночный спрос,noun,Business and Office,Market demand changes when prices or seasons change.
+business-and-office-finance-and-planning-cash-flow,cash flow,денежный поток,noun,Business and Office,Good cash flow helps a small business pay bills.
+business-and-office-meetings-and-negotiation-complaint,complaint,жалоба,noun,Business and Office,The manager answered the customer’s complaint politely.
+general-english-active-vocabulary-environment,environment,окружающая среда,noun,General English,We should protect the environment by wasting less water.
+general-english-active-vocabulary-opportunity,opportunity,возможность,noun,General English,This course gave me an opportunity to improve my skills.
+general-english-active-vocabulary-society,society,общество,noun,General English,Education can create positive changes in society.
+general-english-active-vocabulary-technology,technology,технология,noun,General English,Modern technology makes communication much easier.
+general-english-active-vocabulary-culture,culture,культура,noun,General English,Learning about another culture can change your perspective.
+study-and-career-learning-and-research-assignment,assignment,задание,noun,Study and Career,I completed the assignment before the evening class.
+study-and-career-career-development-interview,interview,собеседование,noun,Study and Career,She prepared carefully for her job interview.
+study-and-career-career-development-qualification,qualification,квалификация,noun,Study and Career,This qualification can help me find better work.
+study-and-career-career-development-experience,experience,опыт,noun,Study and Career,Do you have any experience of working with children?
+travel-and-culture-travel-planning-luggage,luggage,багаж,noun,Travel and Culture,Please keep your luggage near your seat.
+travel-and-culture-travel-planning-departure,departure,отправление,noun,Travel and Culture,The departure was delayed because of heavy rain.
+travel-and-culture-travel-planning-arrival,arrival,прибытие,noun,Travel and Culture,We checked the train time before our arrival.
+travel-and-culture-at-the-destination-accommodation,accommodation,проживание,noun,Travel and Culture,Our accommodation was clean and close to public transport.
+travel-and-culture-at-the-destination-directions,directions,направления,noun,Travel and Culture,The receptionist gave us clear directions to the station.
+travel-and-culture-travel-planning-ticket,ticket,билет,noun,Travel and Culture,I bought a train ticket online yesterday.
+travel-and-culture-travel-planning-reservation,reservation,бронирование,noun,Travel and Culture,Our hotel reservation includes breakfast and free Wi-Fi.
+travel-and-culture-travel-planning-delay,delay,задержка,noun,Travel and Culture,The flight had a short delay because of fog.
+travel-and-culture-travel-planning-border,border,граница,noun,Travel and Culture,The truck waited at the border for inspection.
+travel-and-culture-at-the-destination-sightseeing,sightseeing,осмотр достопримечательностей,noun,Travel and Culture,We spent the afternoon sightseeing in the old town.
+sport-and-fitness-training-and-competition-training,training,тренировка,noun,Sport and Fitness,Regular training helps athletes improve their technique.
+sport-and-fitness-training-and-competition-match,match,матч,noun,Sport and Fitness,The team won the match by one goal.
+sport-and-fitness-training-and-competition-tournament,tournament,турнир,noun,Sport and Fitness,Our club organized a small tournament last weekend.
+sport-and-fitness-training-and-competition-goalkeeper,goalkeeper,вратарь,noun,Sport and Fitness,The goalkeeper stopped the ball near the final whistle.
+sport-and-fitness-training-and-competition-defender,defender,защитник,noun,Sport and Fitness,The defender blocked the shot near the goal.
+sport-and-fitness-training-and-competition-score,score,счёт (в игре),noun,Sport and Fitness,The final score was three goals to one.
+sport-and-fitness-health-and-recovery-injury,injury,травма,noun,Sport and Fitness,He returned to training after a minor injury.
+everyday-life-daily-routines-breakfast,breakfast,завтрак,noun,Everyday Life,I usually eat breakfast before leaving home.
+everyday-life-daily-routines-commute,commute,дорога на работу,verb,Everyday Life,I commute by bus when the weather is cold.
+everyday-life-home-and-services-appointment,appointment,запланированная встреча,noun,Everyday Life,I have a dentist appointment tomorrow afternoon.
+everyday-life-home-and-services-receipt,receipt,чек,noun,Everyday Life,Keep the receipt in case you need a refund.
+transport-and-trade-road-freight-freight,freight,груз,noun,Transport and Trade,The company transports freight between several European cities.
+transport-and-trade-road-freight-consignment,consignment,партия груза,noun,Transport and Trade,The carrier delivered the consignment without any damage.
+transport-and-trade-road-freight-carrier,carrier,перевозчик,noun,Transport and Trade,The carrier called before arriving at the warehouse.
+transport-and-trade-customs-and-trade-customs-clearance,customs clearance,таможенное оформление,noun,Transport and Trade,Customs clearance took longer because one document was missing.
+transport-and-trade-customs-and-trade-bill-of-lading,bill of lading,коносамент,noun,Transport and Trade,The driver checked the bill of lading before departure.
+food-and-drinks-meals-and-cooking-breakfast,breakfast,завтрак,noun,Food and Drinks,I usually eat breakfast before leaving home.
+food-and-drinks-meals-and-cooking-lunch,lunch,обед,noun,Food and Drinks,We ate a quick lunch after the morning meeting.

@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+technology-online-life-notification,notification,уведомление,noun,Technology,The app sent a notification about the new message.
+technology-online-life-subscribe,subscribe,подписаться,verb,Technology,You can subscribe to the newsletter for weekly updates.
+technology-online-life-account,account,"аккаунт, учётная запись",noun,Technology,I created an account to save my progress.
+technology-online-life-privacy,privacy,конфиденциальность,noun,Technology,The application settings include a privacy section.
+technology-online-life-search-engine,search engine,поисковая система,noun,Technology,I used a search engine to find the address.
+technology-online-life-social-media,social media,соцсети,noun,Technology,Many people use social media to share news.
+technology-online-life-delete,delete,удалить,verb,Technology,Please delete the old files after checking them.
+technology-online-life-backup,backup,резервная копия,noun,Technology,I made a backup before updating the computer.
+nature-and-animals-nature-and-animals-forest,forest,лес,noun,Nature and Animals,We walked through the forest on a cool morning.
+nature-and-animals-nature-and-animals-mountain,mountain,гора,noun,Nature and Animals,The mountain was covered with snow in winter.
+nature-and-animals-nature-and-animals-valley,valley,долина,noun,Nature and Animals,A small river runs through the green valley.
+nature-and-animals-nature-and-animals-island,island,остров,noun,Nature and Animals,They visited a quiet island during their holiday.
+nature-and-animals-nature-and-animals-wildlife,wildlife,дикая природа,noun,Nature and Animals,The national park protects local wildlife.
+nature-and-animals-nature-and-animals-insect,insect,насекомое,noun,Nature and Animals,A small insect landed on the window.
+nature-and-animals-nature-and-animals-butterfly,butterfly,бабочка,noun,Nature and Animals,A colourful butterfly rested on the flower.
+nature-and-animals-nature-and-animals-squirrel,squirrel,белка,noun,Nature and Animals,A squirrel quickly climbed the tree.
+nature-and-animals-nature-and-animals-eagle,eagle,орёл,noun,Nature and Animals,We saw an eagle flying above the valley.
+nature-and-animals-nature-and-animals-environment,environment,окружающая среда,noun,Nature and Animals,We should protect the environment by wasting less water.
+nature-and-animals-nature-and-animals-pollution,pollution,загрязнение,noun,Nature and Animals,Public transport can help reduce air pollution.
+nature-and-animals-nature-and-animals-recycle,recycle,перерабатывать,verb,Nature and Animals,We recycle paper and plastic at home.
+weather-and-seasons-weather-and-seasons-weather,weather,погода,noun,Weather and Seasons,The weather changed suddenly before the walk.
+weather-and-seasons-weather-and-seasons-temperature,temperature,температура (сколько градусов),noun,Weather and Seasons,The temperature dropped during the night.
+weather-and-seasons-weather-and-seasons-forecast,forecast,прогноз,noun,Weather and Seasons,The weather forecast predicts rain tomorrow.
+weather-and-seasons-weather-and-seasons-thunderstorm,thunderstorm,гроза,noun,Weather and Seasons,A thunderstorm interrupted our evening walk.
+weather-and-seasons-weather-and-seasons-breeze,breeze,лёгкий ветер,noun,Weather and Seasons,A cool breeze came through the open window.
+weather-and-seasons-weather-and-seasons-drizzle,drizzle,морось,noun,Weather and Seasons,Light drizzle continued throughout the morning.
+weather-and-seasons-weather-and-seasons-humid,humid,влажный,adjective,Weather and Seasons,The room felt humid after the heavy rain.
+weather-and-seasons-weather-and-seasons-freezing,freezing,ледяной,adjective,Weather and Seasons,"It was freezing outside, so I wore two coats."
+weather-and-seasons-weather-and-seasons-autumn,autumn,осень,noun,Weather and Seasons,The trees become colourful in autumn.
+weather-and-seasons-weather-and-seasons-spring,spring,весна,noun,Weather and Seasons,Flowers begin to grow in spring.
+weather-and-seasons-weather-and-seasons-flood,flood,наводнение,noun,Weather and Seasons,The heavy rain caused a flood near the river.
+weather-and-seasons-weather-and-seasons-drought,drought,засуха,noun,Weather and Seasons,The long drought damaged many local farms.
+general-english-commonly-misspelled-accommodation,accommodation,"жильё, размещение",noun,General English,Our accommodation was clean and close to public transport.
+general-english-commonly-misspelled-receive,receive,получать,verb,General English,I expect to receive the package tomorrow morning.
+general-english-commonly-misspelled-separate,separate,отдельный; разделять,adjective,General English,Please keep the clean and dirty clothes separate.
+general-english-commonly-misspelled-definitely,definitely,определённо,adverb,General English,I will definitely call you after the meeting.
+general-english-commonly-misspelled-occasionally,occasionally,время от времени,adverb,General English,We occasionally eat dinner at a small restaurant.
+general-english-commonly-misspelled-necessary,necessary,необходимый,adjective,General English,A valid passport is necessary for this journey.
+general-english-commonly-misspelled-embarrass,embarrass,смущать,verb,General English,I did not want to embarrass my colleague.
+general-english-commonly-misspelled-environment,environment,окружающая среда,noun,General English,We should protect the environment by wasting less water.

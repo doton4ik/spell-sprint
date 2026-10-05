@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+health-and-body-body-and-symptoms-stomach,stomach,"живот, желудок",noun,Health and Body,My stomach hurt after I ate too quickly.
+health-and-body-body-and-symptoms-throat,throat,горло,noun,Health and Body,My throat felt sore after speaking all day.
+health-and-body-body-and-symptoms-shoulder,shoulder,плечо,noun,Health and Body,He carried the bag over one shoulder.
+health-and-body-body-and-symptoms-knee,knee,колено,noun,Health and Body,My knee hurt after the long walk.
+health-and-body-body-and-symptoms-headache,headache,головная боль,noun,Health and Body,I stayed home because I had a headache.
+health-and-body-body-and-symptoms-fever,fever,"жар, высокая температура",noun,Health and Body,The child had a high fever during the night.
+health-and-body-body-and-symptoms-cough,cough,кашель; кашлять,noun,Health and Body,Her cough became better after a few days.
+health-and-body-body-and-symptoms-sneeze,sneeze,чихать,verb,Health and Body,I always sneeze when the room is dusty.
+health-and-body-body-and-symptoms-dizzy,dizzy,чувствующий головокружение (голова кружится),adjective,Health and Body,I felt dizzy after standing up too quickly.
+health-and-body-body-and-symptoms-sore,sore,"больной, ноющий (о горле, мышцах)",adjective,Health and Body,My muscles were sore after the first workout.
+health-and-body-body-and-symptoms-bruise,bruise,синяк,noun,Health and Body,The fall left a dark bruise on his arm.
+health-and-body-body-and-symptoms-injury,injury,травма,noun,Health and Body,He returned to training after a minor injury.
+health-and-body-at-the-doctor-appointment,appointment,"приём, запись",noun,Health and Body,I have a dentist appointment tomorrow afternoon.
+health-and-body-at-the-doctor-prescription,prescription,рецепт (врача),noun,Health and Body,The doctor gave me a prescription for medicine.
+health-and-body-at-the-doctor-symptom,symptom,симптом,noun,Health and Body,A sore throat can be a common cold symptom.
+health-and-body-at-the-doctor-treatment,treatment,лечение,noun,Health and Body,The treatment helped reduce his back pain.
+health-and-body-at-the-doctor-recover,recover,выздоравливать,verb,Health and Body,It took him two weeks to recover fully.
+health-and-body-at-the-doctor-vaccine,vaccine,вакцина,noun,Health and Body,The nurse explained how the vaccine protects people.
+health-and-body-at-the-doctor-dentist,dentist,стоматолог,noun,Health and Body,I have an appointment with the dentist next week.
+health-and-body-at-the-doctor-ambulance,ambulance,скорая помощь,noun,Health and Body,The ambulance arrived within a few minutes.
+health-and-body-at-the-doctor-painkiller,painkiller,обезболивающее,noun,Health and Body,The doctor recommended a painkiller for the headache.
+health-and-body-at-the-doctor-check-up,check-up,медосмотр,noun,Health and Body,I visit the doctor for a yearly check-up.
+health-and-body-at-the-doctor-allergy,allergy,аллергия,noun,Health and Body,The nurse asked whether I had any allergy.
+health-and-body-at-the-doctor-insurance,insurance,страховка,noun,Health and Body,Health insurance can cover part of the treatment.
+technology-devices-and-software-device,device,устройство,noun,Technology,This device measures temperature very accurately.
+technology-devices-and-software-screen,screen,экран,noun,Technology,The phone screen became difficult to read in sunlight.
+technology-devices-and-software-keyboard,keyboard,клавиатура,noun,Technology,I cleaned the keyboard before starting work.
+technology-devices-and-software-battery,battery,батарея,noun,Technology,The battery lasted through the entire journey.
+technology-devices-and-software-charger,charger,зарядка,noun,Technology,I packed my charger before leaving the apartment.
+technology-devices-and-software-software,software,программное обеспечение,noun,Technology,The new software makes our daily tasks easier.
+technology-devices-and-software-update,update,обновление; обновлять,noun,Technology,The latest update fixed several small problems.
+technology-devices-and-software-install,install,установить,verb,Technology,Please install the application before the lesson.
+technology-devices-and-software-download,download,скачивать,verb,Technology,You can download the document from the website.
+technology-devices-and-software-password,password,пароль,noun,Technology,Never share your password with another person.
+technology-devices-and-software-storage,storage,хранилище,noun,Technology,The phone has enough storage for many photos.
+technology-devices-and-software-wireless,wireless,беспроводной,adjective,Technology,The office has a wireless internet connection.
+technology-online-life-website,website,сайт,noun,Technology,The company website provides useful information.
+technology-online-life-browser,browser,браузер,noun,Technology,I opened the website in a different browser.
+technology-online-life-attachment,attachment,вложение,noun,Technology,The email included an attachment with the schedule.
+technology-online-life-username,username,имя пользователя,noun,Technology,Choose a username that is easy to remember.

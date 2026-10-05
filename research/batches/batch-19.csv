@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+common-actions-out-and-about-waste,waste,тратить впустую,verb,Common Actions,Don't waste your money on that.
+common-actions-at-home-sweep,sweep,подметать,verb,Common Actions,Sweep the kitchen floor after dinner.
+common-actions-at-home-unpack,unpack,распаковывать,verb,Common Actions,I still need to unpack my suitcase.
+common-actions-at-home-scrub,scrub,"тереть, отчищать",verb,Common Actions,Scrub the pan with hot water.
+common-actions-at-home-dust,dust,вытирать пыль,verb,Common Actions,I dust the shelves once a week.
+common-actions-everyday-phrasal-verbs-pick-up,pick up,"подобрать, забрать",phrase,Common Actions,Can you pick up the kids at five?
+common-actions-everyday-phrasal-verbs-put-up-with,put up with,"терпеть, мириться с",phrase,Common Actions,I can't put up with this noise any longer.
+common-actions-everyday-phrasal-verbs-look-for,look for,"разыскивать, пытаться найти",phrase,Common Actions,Can you help me look for my glasses?
+common-actions-everyday-phrasal-verbs-get-up,get up,вставать (с постели),phrase,Common Actions,I get up at seven on weekdays.
+common-actions-everyday-phrasal-verbs-fill-in,fill in,заполнять (форму),phrase,Common Actions,Please fill in this form.
+common-actions-everyday-phrasal-verbs-check-in,check in,"регистрироваться (в отеле, аэропорту)",phrase,Common Actions,We can check in after two o'clock.
+common-actions-everyday-phrasal-verbs-check-out,check out,выписываться (из отеля),phrase,Common Actions,We have to check out by eleven.
+common-actions-everyday-phrasal-verbs-run-into,run into,случайно встретить,phrase,Common Actions,You might run into old friends at the market.
+common-actions-everyday-phrasal-verbs-turn-down,turn down,отклонять; убавлять,phrase,Common Actions,Why did she turn down the job offer?
+common-actions-everyday-phrasal-verbs-turn-up,turn up,прибавлять (громкость),phrase,Common Actions,Can you turn up the radio?
+common-actions-everyday-phrasal-verbs-give-back,give back,возвращать (отдавать),phrase,Common Actions,I'll give back your book tomorrow.
+common-actions-everyday-phrasal-verbs-take-after,take after,быть похожим на (родственника),phrase,Common Actions,Does she take after her mother or her father?
+common-actions-everyday-phrasal-verbs-look-into,look into,"изучить, разобраться в",phrase,Common Actions,The manager promised to look into the problem.
+common-actions-everyday-phrasal-verbs-set-off,set off,отправляться (в путь),phrase,Common Actions,We set off early to avoid the traffic.
+common-actions-everyday-phrasal-verbs-get-over,get over,"оправиться, пережить",phrase,Common Actions,It took him weeks to get over the flu.
+common-actions-everyday-phrasal-verbs-hold-on,hold on,подождать (минутку),phrase,Common Actions,"Hold on, I'll get a pen."
+common-actions-everyday-phrasal-verbs-go-on,go on,"продолжаться, происходить",phrase,Common Actions,"Please go on, I'm listening."
+common-actions-everyday-phrasal-verbs-come-back,come back,возвращаться,phrase,Common Actions,When will you come back from holiday?
+common-actions-everyday-phrasal-verbs-wake-up,wake up,просыпаться,phrase,Common Actions,I usually wake up before my alarm.
+common-actions-everyday-phrasal-verbs-sort-out,sort out,"уладить, разобраться с",phrase,Common Actions,"Don't worry, we'll sort out the problem."
+general-english-commonly-misspelled-occurrence,occurrence,"случай, происшествие",noun,General English,Snow in April is a rare occurrence here.
+general-english-commonly-misspelled-maintenance,maintenance,техническое обслуживание,noun,General English,The lift is closed for maintenance.
+general-english-commonly-misspelled-noticeable,noticeable,заметный,adjective,General English,There was a noticeable change in the weather.
+general-english-commonly-misspelled-possession,possession,"владение, имущество",noun,General English,The painting is in his possession.
+general-english-commonly-misspelled-questionnaire,questionnaire,"анкета, опросник",noun,General English,Please complete the questionnaire.
+general-english-commonly-misspelled-millennium,millennium,тысячелетие,noun,General English,The bridge was built at the start of the millennium.
+general-english-commonly-misspelled-pronunciation,pronunciation,произношение,noun,General English,Her pronunciation is very clear.
+general-english-commonly-misspelled-independent,independent,независимый,adjective,General English,She is an independent young woman.
+general-english-commonly-misspelled-immediately,immediately,немедленно,adverb,General English,Call me immediately if anything changes.
+general-english-commonly-misspelled-existence,existence,существование,noun,General English,Do you believe in the existence of ghosts?
+general-english-commonly-misspelled-height,height,"рост, высота",noun,General English,What is the height of that tower?
+general-english-commonly-misspelled-humorous,humorous,"юмористический, смешной",adjective,General English,He wrote a humorous story about his cat.
+general-english-commonly-misspelled-lightning,lightning,молния,noun,General English,The tree was hit by lightning.
+general-english-commonly-misspelled-misspell,misspell,писать с ошибкой,verb,General English,It is easy to misspell this word.
+general-english-commonly-misspelled-tongue,tongue,язык (орган),noun,General English,I burnt my tongue on the hot tea.

@@ -1,0 +1,41 @@
+word_id,word,translation,part_of_speech,topic,current_example
+hobbies-and-free-time-relaxing-and-going-out-cinema,cinema,кинотеатр,noun,Hobbies and Free Time,We usually go to the cinema on Friday evening.
+hobbies-and-free-time-relaxing-and-going-out-concert,concert,концерт,noun,Hobbies and Free Time,"The concert starts at eight, so we must leave early."
+hobbies-and-free-time-relaxing-and-going-out-audience,audience,"публика, зрители",noun,Hobbies and Free Time,The audience clapped loudly at the end of the show.
+hobbies-and-free-time-relaxing-and-going-out-festival,festival,фестиваль,noun,Hobbies and Free Time,Thousands of young people travel to the music festival every summer.
+hobbies-and-free-time-relaxing-and-going-out-board-game,board game,настольная игра,phrase,Hobbies and Free Time,On rainy days we play a board game together as a family.
+hobbies-and-free-time-relaxing-and-going-out-relax,relax,расслабляться,verb,Hobbies and Free Time,I like to relax with a good book after dinner.
+hobbies-and-free-time-relaxing-and-going-out-enjoyable,enjoyable,"приятный, увлекательный",adjective,Hobbies and Free Time,The trip to the mountains was really enjoyable for everyone.
+hobbies-and-free-time-relaxing-and-going-out-exciting,exciting,"захватывающий, волнующий",adjective,Hobbies and Free Time,The last ten minutes of the match were really exciting.
+city-and-transport-places-in-the-city-skyscraper,skyscraper,небоскрёб,noun,City and Transport,From the top of the skyscraper you can see the whole city.
+city-and-transport-places-in-the-city-suburb,suburb,пригород,noun,City and Transport,We live in a quiet suburb about ten kilometres from the centre.
+city-and-transport-places-in-the-city-crowded,crowded,"многолюдный, переполненный",adjective,City and Transport,The train was so crowded that I had to stand.
+city-and-transport-getting-around-platform,platform,"платформа, перрон",noun,City and Transport,Your train leaves from platform three in five minutes.
+city-and-transport-getting-around-passenger,passenger,пассажир,noun,City and Transport,Every passenger must show a ticket before getting on the bus.
+city-and-transport-getting-around-underground,underground,"метро, подземка",noun,City and Transport,In London it is faster to take the underground than a taxi.
+city-and-transport-getting-around-journey,journey,"поездка, путешествие",noun,City and Transport,The journey to my grandparents' house takes about three hours.
+city-and-transport-getting-around-catch,catch,"ловить, успеть на (транспорт)",verb,City and Transport,We have to run if we want to catch the last bus.
+city-and-transport-getting-around-miss,miss,"опоздать на, пропустить",verb,City and Transport,"Hurry up, or we will miss the train!"
+city-and-transport-getting-around-get-off,get off,выходить (из транспорта),phrase,City and Transport,You need to get off at the next stop.
+city-and-transport-getting-around-bus-stop,bus stop,автобусная остановка,phrase,City and Transport,There is a bus stop right outside my school.
+city-and-transport-traffic-and-directions-traffic,traffic,дорожное движение,noun,City and Transport,The traffic was terrible this morning because of the roadworks.
+city-and-transport-traffic-and-directions-roundabout,roundabout,круговое движение,noun,City and Transport,Take the second exit at the roundabout and keep going.
+city-and-transport-traffic-and-directions-junction,junction,"перекрёсток, развязка",noun,City and Transport,Turn left at the next junction and you will see the bank.
+city-and-transport-traffic-and-directions-pedestrian,pedestrian,пешеход,noun,City and Transport,A pedestrian must use the crossing to get over the road safely.
+city-and-transport-traffic-and-directions-traffic-lights,traffic lights,светофор,phrase,City and Transport,Stop at the traffic lights when they turn red.
+city-and-transport-traffic-and-directions-straight-on,straight on,прямо,phrase,City and Transport,Go straight on until you see the big white church.
+city-and-transport-traffic-and-directions-opposite,opposite,напротив,preposition,City and Transport,"The bank is opposite the supermarket, next to the bus stop."
+city-and-transport-traffic-and-directions-cross,cross,переходить (через дорогу),verb,City and Transport,Look both ways before you cross the road.
+city-and-transport-traffic-and-directions-park,park,парковать(ся),verb,City and Transport,You cannot park here because there is a sign.
+city-and-transport-traffic-and-directions-lost,lost,"заблудившийся, потерянный",adjective,City and Transport,We got lost in the old town and asked a policeman.
+animals-pets-and-farm-animals-rabbit,rabbit,кролик,noun,Animals,The rabbit ate a carrot and then ran away.
+animals-pets-and-farm-animals-hamster,hamster,хомяк,noun,Animals,My hamster runs on its wheel every night.
+animals-pets-and-farm-animals-puppy,puppy,щенок,noun,Animals,We bought a puppy for our children last week.
+animals-pets-and-farm-animals-kitten,kitten,котёнок,noun,Animals,The little kitten fell asleep on the warm sofa.
+animals-pets-and-farm-animals-sheep,sheep,"овца, овцы",noun,Animals,One sheep escaped from the farm and walked down the road.
+animals-pets-and-farm-animals-chicken,chicken,"курица, цыплёнок",noun,Animals,We keep a chicken in the garden that lays eggs.
+animals-pets-and-farm-animals-cage,cage,клетка,noun,Animals,Please close the cage door so the bird cannot escape.
+animals-pets-and-farm-animals-lead,lead,поводок,noun,Animals,Keep your dog on a lead near the busy road.
+animals-pets-and-farm-animals-feed,feed,кормить,verb,Animals,Please feed the fish twice a day while I am away.
+animals-pets-and-farm-animals-stroke,stroke,гладить,verb,Animals,The cat loves it when you stroke its head.
+animals-wild-animals-elephant,elephant,слон,noun,Animals,The elephant used its long trunk to drink water.

@@ -1,0 +1,14 @@
+word_id,word,translation,part_of_speech,topic,current_example
+describing-things-quality-and-colour-colourful,colourful,"красочный, яркий",adjective,Describing Things,The market is full of colourful fruit.
+describing-things-quality-and-colour-ancient,ancient,древний,adjective,Describing Things,We visited an ancient temple.
+describing-things-quality-and-colour-modern,modern,современный,adjective,Describing Things,They live in a modern flat.
+describing-things-quality-and-colour-comfortable,comfortable,удобный,adjective,Describing Things,This chair is very comfortable.
+home-around-the-house-attic,attic,чердак,noun,Home,Old toys are stored in the attic.
+home-around-the-house-basement,basement,подвал,noun,Home,The washing machine is in the basement.
+home-around-the-house-balcony,balcony,балкон,noun,Home,We had breakfast on the balcony.
+home-around-the-house-garage,garage,гараж,noun,Home,Park the car in the garage.
+home-around-the-house-ceiling,ceiling,потолок,noun,Home,There is a crack in the ceiling.
+home-around-the-house-chimney,chimney,"дымоход, труба",noun,Home,Smoke came out of the chimney.
+home-around-the-house-fence,fence,забор,noun,Home,The dog jumped over the fence.
+home-around-the-house-hallway,hallway,"прихожая, коридор",noun,Home,Leave your shoes in the hallway.
+health-and-body-body-and-symptoms-painful,painful,болезненный,adjective,Health and Body,The injection was quick but painful.
