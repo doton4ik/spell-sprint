@@ -1,0 +1,117 @@
+You are helping to improve the word data of "Spell Sprint", a spelling and vocabulary trainer
+for Russian-speaking learners of English (levels A2–C1). The app uses each word in several tasks:
+- the learner sees the Russian translation and types the English word;
+- dictation (the learner hears the word);
+- choosing the correct spelling among misspellings;
+- after answering, the learner sees an example sentence and a short English definition;
+- a hint about the spelling trap of the word.
+
+Below is a batch of words (CSV). For EACH row, research how the word is really used and return
+improved data. Use your research tools: learner dictionaries, corpora and word lists, to check
+meaning, typical collocations, CEFR level and spelling difficulty.
+
+=== SOURCES AND COPYRIGHT (important) ===
+- Use dictionaries and corpora as EVIDENCE only (Cambridge, Oxford Learner's, Longman, Collins,
+  Macmillan, English Vocabulary Profile, BNC, COCA, SkELL, Ludwig, Google Ngram).
+- Do NOT copy their example sentences or definitions word for word: they are copyrighted.
+  Write ORIGINAL sentences and definitions that follow the typical usage you found.
+- You MAY copy sentences from openly licensed sources (Tatoeba – CC BY 2.0 FR; Wiktionary –
+  CC BY-SA) — then put the exact URL in "source".
+- Never invent statistics or levels. If you are not sure, leave the field empty and explain in "notes".
+
+=== RULES FOR EACH FIELD ===
+translation_check:
+  "ok" if the Russian translation matches the main everyday meaning; otherwise a better Russian
+  translation (several meanings separated by ", "; a clarification in brackets, e.g.
+  "больной, ноющий (о горле, мышцах)"). Watch for false friends and for a translation that
+  belongs to another English word (e.g. "болезненный" is "painful", not "sore").
+example:
+  ONE natural sentence, 8–16 words, everyday situation (home, study, work, travel, friends).
+  - uses the word exactly in the meaning of the Russian translation;
+  - contains the word in the given form (a verb may change form: go → went is fine);
+  - British spelling and vocabulary (colour, organise, flat, mobile);
+  - no real people, brands, politics, religion, violence, alcohol or adult topics;
+  - not about logistics or warehouses unless the topic column says so;
+  - the sentence must make the meaning clear even without the translation
+    ("She paid the bill" is weak; "After dinner, the waiter brought us the bill" is good).
+example_2, example_3:
+  Two more sentences of the same quality in different situations (for future gap-fill and
+  proofreading tasks). A different collocation in each, if possible.
+definition:
+  Learner-friendly English definition, max 15 words, using only words easier than the headword.
+  Do not start with the headword. Nouns: "a/an …", verbs: "to …".
+cefr:
+  A1/A2/B1/B2/C1/C2 — the level of THIS meaning, from English Vocabulary Profile or Oxford 3000/5000.
+  Empty if not found.
+collocations:
+  3–5 most frequent collocations or phrases with this meaning, separated by "; "
+  (e.g. "pay the bill; split the bill; the bill came to").
+spelling_trap:
+  Short hint (max 60 characters) about WHY the word is hard to spell for a Russian speaker,
+  e.g. "double c, double m", "silent b at the end", "-ence, not -ance",
+  "ei after c". Empty if the word has no real trap.
+common_misspellings:
+  2–4 real misspellings that learners actually produce (search learner-error data, spelling
+  lists, "commonly misspelled words" lists, Ludwig/Google results). Separated by "; ".
+  Every item must be a non-word (never a real English word).
+alternatives:
+  Other English words or spellings that are ALSO a correct answer for the same Russian prompt
+  and should be accepted (e.g. rubbish → "trash; garbage"; mobile phone → "mobile; cell phone").
+  Only true equivalents, separated by "; ". Empty if none.
+source:
+  URL(s) used as evidence for the meaning / level (and the licence URL if a sentence was copied).
+notes:
+  Anything the editor should know: the word is too rare or too specialised for its level, the
+  translation is ambiguous, the word should rather be removed, etc. Otherwise empty.
+
+=== OUTPUT FORMAT ===
+Return ONLY one CSV code block, UTF-8, comma-separated, every field in double quotes, a header
+row and exactly one row per input row, in the same order, with these columns:
+
+"word_id","word","translation_check","example","example_2","example_3","definition","cefr","collocations","spelling_trap","common_misspellings","alternatives","source","notes"
+
+Keep word_id and word exactly as in the input. Do not skip rows. Do not add commentary
+outside the code block.
+
+=== INPUT BATCH ===
+word_id,word,translation,part_of_speech,topic,current_example
+food-and-drinks-meals-and-cooking-sausage,sausage,"сосиска, колбаса",noun,Food and Drinks,He had a sausage and chips for lunch.
+food-and-drinks-caf-and-restaurant-biscuit,biscuit,печенье,noun,Food and Drinks,Would you like a biscuit with your tea?
+food-and-drinks-caf-and-restaurant-spicy,spicy,острый (о еде),adjective,Food and Drinks,This curry is too spicy for me.
+food-and-drinks-meals-and-cooking-yoghurt,yoghurt,йогурт,noun,Food and Drinks,I have yoghurt and fruit for breakfast.
+hobbies-and-free-time-relaxing-and-going-out-chess,chess,шахматы,noun,Hobbies and Free Time,My grandfather taught me to play chess.
+hobbies-and-free-time-relaxing-and-going-out-puzzle,puzzle,"головоломка, пазл",noun,Hobbies and Free Time,We finished a thousand-piece puzzle.
+hobbies-and-free-time-relaxing-and-going-out-novel,novel,роман (книга),noun,Hobbies and Free Time,I'm reading a novel about a detective.
+hobbies-and-free-time-creative-hobbies-poetry,poetry,поэзия,noun,Hobbies and Free Time,She writes poetry in her free time.
+hobbies-and-free-time-creative-hobbies-pottery,pottery,гончарное дело,noun,Hobbies and Free Time,I take a pottery class on Thursdays.
+hobbies-and-free-time-creative-hobbies-sketch,sketch,"набросок, эскиз",noun,Hobbies and Free Time,He drew a quick sketch of the bridge.
+hobbies-and-free-time-sport-and-exercise-hiking,hiking,пеший туризм,noun,Hobbies and Free Time,We go hiking in the mountains every summer.
+hobbies-and-free-time-sport-and-exercise-cycling,cycling,езда на велосипеде,noun,Hobbies and Free Time,Cycling is a great way to keep fit.
+hobbies-and-free-time-relaxing-and-going-out-fishing,fishing,рыбалка,noun,Hobbies and Free Time,My dad loves fishing on the lake.
+hobbies-and-free-time-creative-hobbies-rehearsal,rehearsal,репетиция,noun,Hobbies and Free Time,The band has a rehearsal tonight.
+clothes-and-appearance-clothing-items-jumper,jumper,джемпер,noun,Clothes and Appearance,"Take a jumper, it might get cold."
+clothes-and-appearance-clothing-items-blouse,blouse,блузка,noun,Clothes and Appearance,She wore a white blouse to the office.
+clothes-and-appearance-clothing-items-skirt,skirt,юбка,noun,Clothes and Appearance,Her skirt is too long.
+clothes-and-appearance-clothing-items-trainers,trainers,кроссовки,noun,Clothes and Appearance,I bought new trainers for running.
+clothes-and-appearance-clothing-items-slippers,slippers,тапочки,noun,Clothes and Appearance,"Put on your slippers, the floor is cold."
+clothes-and-appearance-clothing-items-pyjamas,pyjamas,пижама,noun,Clothes and Appearance,The children are already in their pyjamas.
+clothes-and-appearance-clothing-items-sandals,sandals,сандалии,noun,Clothes and Appearance,I wear sandals on the beach.
+clothes-and-appearance-accessories-belt,belt,"ремень, пояс",noun,Clothes and Appearance,These trousers need a belt.
+clothes-and-appearance-accessories-earrings,earrings,серьги,noun,Clothes and Appearance,She has a pair of silver earrings.
+clothes-and-appearance-accessories-zip,zip,застёжка-молния,noun,Clothes and Appearance,The zip on my jacket is broken.
+animals-wild-animals-hedgehog,hedgehog,ёж,noun,Animals,A hedgehog lives under our shed.
+animals-wild-animals-owl,owl,сова,noun,Animals,We heard an owl at night.
+animals-pets-and-farm-animals-parrot,parrot,попугай,noun,Animals,Our parrot can say hello.
+animals-pets-and-farm-animals-tortoise,tortoise,черепаха (сухопутная),noun,Animals,The tortoise is eating lettuce.
+animals-wild-animals-frog,frog,лягушка,noun,Animals,A frog jumped into the pond.
+animals-wild-animals-wasp,wasp,оса,noun,Animals,A wasp landed on my sandwich.
+animals-wild-animals-mosquito,mosquito,комар,noun,Animals,I was bitten by a mosquito.
+animals-wild-animals-whale,whale,кит,noun,Animals,We saw a whale from the boat.
+animals-wild-animals-shark,shark,акула,noun,Animals,The shark swam close to the boat.
+animals-wild-animals-deer,deer,олень,noun,Animals,A deer crossed the road in front of us.
+describing-things-size-and-shape-heavy,heavy,тяжёлый,adjective,Describing Things,This box is too heavy to lift.
+describing-things-size-and-shape-wide,wide,широкий,adjective,Describing Things,The river is very wide here.
+describing-things-size-and-shape-deep,deep,глубокий,adjective,Describing Things,"Be careful, the water is deep."
+describing-things-size-and-shape-oval,oval,овальный,adjective,Describing Things,We have an oval mirror in the hall.
+describing-things-size-and-shape-curved,curved,изогнутый,adjective,Describing Things,The road is curved near the lake.
+describing-things-quality-and-colour-pale,pale,бледный,adjective,Describing Things,She painted the room pale blue.

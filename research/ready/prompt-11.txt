@@ -1,0 +1,117 @@
+You are helping to improve the word data of "Spell Sprint", a spelling and vocabulary trainer
+for Russian-speaking learners of English (levels A2–C1). The app uses each word in several tasks:
+- the learner sees the Russian translation and types the English word;
+- dictation (the learner hears the word);
+- choosing the correct spelling among misspellings;
+- after answering, the learner sees an example sentence and a short English definition;
+- a hint about the spelling trap of the word.
+
+Below is a batch of words (CSV). For EACH row, research how the word is really used and return
+improved data. Use your research tools: learner dictionaries, corpora and word lists, to check
+meaning, typical collocations, CEFR level and spelling difficulty.
+
+=== SOURCES AND COPYRIGHT (important) ===
+- Use dictionaries and corpora as EVIDENCE only (Cambridge, Oxford Learner's, Longman, Collins,
+  Macmillan, English Vocabulary Profile, BNC, COCA, SkELL, Ludwig, Google Ngram).
+- Do NOT copy their example sentences or definitions word for word: they are copyrighted.
+  Write ORIGINAL sentences and definitions that follow the typical usage you found.
+- You MAY copy sentences from openly licensed sources (Tatoeba – CC BY 2.0 FR; Wiktionary –
+  CC BY-SA) — then put the exact URL in "source".
+- Never invent statistics or levels. If you are not sure, leave the field empty and explain in "notes".
+
+=== RULES FOR EACH FIELD ===
+translation_check:
+  "ok" if the Russian translation matches the main everyday meaning; otherwise a better Russian
+  translation (several meanings separated by ", "; a clarification in brackets, e.g.
+  "больной, ноющий (о горле, мышцах)"). Watch for false friends and for a translation that
+  belongs to another English word (e.g. "болезненный" is "painful", not "sore").
+example:
+  ONE natural sentence, 8–16 words, everyday situation (home, study, work, travel, friends).
+  - uses the word exactly in the meaning of the Russian translation;
+  - contains the word in the given form (a verb may change form: go → went is fine);
+  - British spelling and vocabulary (colour, organise, flat, mobile);
+  - no real people, brands, politics, religion, violence, alcohol or adult topics;
+  - not about logistics or warehouses unless the topic column says so;
+  - the sentence must make the meaning clear even without the translation
+    ("She paid the bill" is weak; "After dinner, the waiter brought us the bill" is good).
+example_2, example_3:
+  Two more sentences of the same quality in different situations (for future gap-fill and
+  proofreading tasks). A different collocation in each, if possible.
+definition:
+  Learner-friendly English definition, max 15 words, using only words easier than the headword.
+  Do not start with the headword. Nouns: "a/an …", verbs: "to …".
+cefr:
+  A1/A2/B1/B2/C1/C2 — the level of THIS meaning, from English Vocabulary Profile or Oxford 3000/5000.
+  Empty if not found.
+collocations:
+  3–5 most frequent collocations or phrases with this meaning, separated by "; "
+  (e.g. "pay the bill; split the bill; the bill came to").
+spelling_trap:
+  Short hint (max 60 characters) about WHY the word is hard to spell for a Russian speaker,
+  e.g. "double c, double m", "silent b at the end", "-ence, not -ance",
+  "ei after c". Empty if the word has no real trap.
+common_misspellings:
+  2–4 real misspellings that learners actually produce (search learner-error data, spelling
+  lists, "commonly misspelled words" lists, Ludwig/Google results). Separated by "; ".
+  Every item must be a non-word (never a real English word).
+alternatives:
+  Other English words or spellings that are ALSO a correct answer for the same Russian prompt
+  and should be accepted (e.g. rubbish → "trash; garbage"; mobile phone → "mobile; cell phone").
+  Only true equivalents, separated by "; ". Empty if none.
+source:
+  URL(s) used as evidence for the meaning / level (and the licence URL if a sentence was copied).
+notes:
+  Anything the editor should know: the word is too rare or too specialised for its level, the
+  translation is ambiguous, the word should rather be removed, etc. Otherwise empty.
+
+=== OUTPUT FORMAT ===
+Return ONLY one CSV code block, UTF-8, comma-separated, every field in double quotes, a header
+row and exactly one row per input row, in the same order, with these columns:
+
+"word_id","word","translation_check","example","example_2","example_3","definition","cefr","collocations","spelling_trap","common_misspellings","alternatives","source","notes"
+
+Keep word_id and word exactly as in the input. Do not skip rows. Do not add commentary
+outside the code block.
+
+=== INPUT BATCH ===
+word_id,word,translation,part_of_speech,topic,current_example
+common-actions-at-home-vacuum,vacuum,пылесосить,verb,Common Actions,I usually vacuum the carpet on Saturday morning.
+common-actions-at-home-iron,iron,гладить одежду,verb,Common Actions,I need to iron this shirt before work.
+common-actions-at-home-put-away,put away,убирать на место,phrase,Common Actions,Please put away your toys before bedtime.
+common-actions-at-home-plug-in,plug in,включать в розетку,phrase,Common Actions,Remember to plug in the laptop overnight.
+common-actions-at-home-unplug,unplug,отключать от розетки,verb,Common Actions,Always unplug the iron after using it.
+common-actions-out-and-about-queue-up,queue up,стоять в очереди,phrase,Common Actions,We had to queue up outside the cinema.
+common-actions-out-and-about-run-errands,run errands,выполнять поручения,phrase,Common Actions,I need to run errands before the shops close.
+common-actions-out-and-about-drop-by,drop by,зайти ненадолго,phrase,Common Actions,Feel free to drop by whenever you are free.
+common-actions-out-and-about-hang-out,hang out,проводить время с друзьями,phrase,Common Actions,We usually hang out at the park after school.
+common-actions-out-and-about-catch-up-with,catch up with,наверстать упущенное,phrase,Common Actions,Let's meet soon to catch up with each other.
+common-actions-out-and-about-get-lost,get lost,заблудиться,phrase,Common Actions,Tourists sometimes get lost in the old part of town.
+common-actions-out-and-about-rush-hour,rush hour,час пик,noun,Common Actions,The roads are very busy during rush hour.
+clothes-and-appearance-clothing-items-trousers,trousers,брюки,noun,Clothes and Appearance,He bought a new pair of trousers for the job interview.
+clothes-and-appearance-clothing-items-sweater,sweater,свитер,noun,Clothes and Appearance,I wear a warm sweater when it gets cold in the evening.
+clothes-and-appearance-clothing-items-underwear,underwear,нижнее бельё,noun,Clothes and Appearance,She packed socks and clean underwear for the weekend trip.
+clothes-and-appearance-clothing-items-sleeve,sleeve,рукав,noun,Clothes and Appearance,The sleeve of my shirt got wet in the rain.
+clothes-and-appearance-clothing-items-collar,collar,воротник,noun,Clothes and Appearance,He turned up his collar because the wind was so cold.
+clothes-and-appearance-clothing-items-pocket,pocket,карман,noun,Clothes and Appearance,I found some coins in the pocket of my old jeans.
+clothes-and-appearance-clothing-items-button,button,пуговица,noun,Clothes and Appearance,One button on my coat came off yesterday.
+clothes-and-appearance-clothing-items-wear,wear,носить,verb,Clothes and Appearance,You should wear a hat when the sun is strong.
+clothes-and-appearance-clothing-items-fit,fit,"подходить по размеру, сидеть (об одежде)",verb,Clothes and Appearance,These shoes are too small and they do not fit me.
+clothes-and-appearance-clothing-items-try-on,try on,примерять,phrase,Clothes and Appearance,"Can I try on this jacket in the changing room, please?"
+clothes-and-appearance-accessories-scarf,scarf,шарф,noun,Clothes and Appearance,She wrapped a long woollen scarf around her neck.
+clothes-and-appearance-accessories-gloves,gloves,перчатки,noun,Clothes and Appearance,Don't forget your gloves because it is freezing outside.
+clothes-and-appearance-accessories-necklace,necklace,"ожерелье, колье",noun,Clothes and Appearance,My grandmother gave me a silver necklace for my birthday.
+clothes-and-appearance-accessories-bracelet,bracelet,браслет,noun,Clothes and Appearance,She lost her gold bracelet at the beach last summer.
+clothes-and-appearance-accessories-sunglasses,sunglasses,солнцезащитные очки,noun,Clothes and Appearance,It was so bright that I had to wear my sunglasses.
+clothes-and-appearance-accessories-umbrella,umbrella,зонт,noun,Clothes and Appearance,Take an umbrella with you because it might rain later.
+clothes-and-appearance-accessories-wallet,wallet,кошелёк,noun,Clothes and Appearance,He took some money out of his wallet and paid.
+clothes-and-appearance-accessories-put-on,put on,надевать,phrase,Clothes and Appearance,"Put on your coat before you go out, please."
+clothes-and-appearance-looks-and-grooming-hairstyle,hairstyle,причёска,noun,Clothes and Appearance,She changed her hairstyle and now she looks much younger.
+clothes-and-appearance-looks-and-grooming-beard,beard,борода,noun,Clothes and Appearance,My uncle grew a long beard during the winter.
+clothes-and-appearance-looks-and-grooming-moustache,moustache,усы,noun,Clothes and Appearance,The old waiter had a thick grey moustache.
+clothes-and-appearance-looks-and-grooming-perfume,perfume,духи,noun,Clothes and Appearance,She put on a little perfume before the party.
+clothes-and-appearance-looks-and-grooming-shave,shave,брить(ся),verb,Clothes and Appearance,My dad likes to shave every morning before breakfast.
+clothes-and-appearance-looks-and-grooming-comb,comb,расчёсывать,verb,Clothes and Appearance,Please comb your hair before we take the photo.
+clothes-and-appearance-looks-and-grooming-fashionable,fashionable,модный,adjective,Clothes and Appearance,Long coats are very fashionable in cities this autumn.
+clothes-and-appearance-looks-and-grooming-elegant,elegant,"элегантный, изящный",adjective,Clothes and Appearance,She looked elegant in her long black dress.
+clothes-and-appearance-looks-and-grooming-casual,casual,повседневный,adjective,Clothes and Appearance,I prefer casual clothes to formal ones at weekends.
+clothes-and-appearance-looks-and-grooming-scruffy,scruffy,"неопрятный, потрёпанный",adjective,Clothes and Appearance,His scruffy jacket had a big hole in the elbow.

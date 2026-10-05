@@ -1,0 +1,117 @@
+You are helping to improve the word data of "Spell Sprint", a spelling and vocabulary trainer
+for Russian-speaking learners of English (levels A2–C1). The app uses each word in several tasks:
+- the learner sees the Russian translation and types the English word;
+- dictation (the learner hears the word);
+- choosing the correct spelling among misspellings;
+- after answering, the learner sees an example sentence and a short English definition;
+- a hint about the spelling trap of the word.
+
+Below is a batch of words (CSV). For EACH row, research how the word is really used and return
+improved data. Use your research tools: learner dictionaries, corpora and word lists, to check
+meaning, typical collocations, CEFR level and spelling difficulty.
+
+=== SOURCES AND COPYRIGHT (important) ===
+- Use dictionaries and corpora as EVIDENCE only (Cambridge, Oxford Learner's, Longman, Collins,
+  Macmillan, English Vocabulary Profile, BNC, COCA, SkELL, Ludwig, Google Ngram).
+- Do NOT copy their example sentences or definitions word for word: they are copyrighted.
+  Write ORIGINAL sentences and definitions that follow the typical usage you found.
+- You MAY copy sentences from openly licensed sources (Tatoeba – CC BY 2.0 FR; Wiktionary –
+  CC BY-SA) — then put the exact URL in "source".
+- Never invent statistics or levels. If you are not sure, leave the field empty and explain in "notes".
+
+=== RULES FOR EACH FIELD ===
+translation_check:
+  "ok" if the Russian translation matches the main everyday meaning; otherwise a better Russian
+  translation (several meanings separated by ", "; a clarification in brackets, e.g.
+  "больной, ноющий (о горле, мышцах)"). Watch for false friends and for a translation that
+  belongs to another English word (e.g. "болезненный" is "painful", not "sore").
+example:
+  ONE natural sentence, 8–16 words, everyday situation (home, study, work, travel, friends).
+  - uses the word exactly in the meaning of the Russian translation;
+  - contains the word in the given form (a verb may change form: go → went is fine);
+  - British spelling and vocabulary (colour, organise, flat, mobile);
+  - no real people, brands, politics, religion, violence, alcohol or adult topics;
+  - not about logistics or warehouses unless the topic column says so;
+  - the sentence must make the meaning clear even without the translation
+    ("She paid the bill" is weak; "After dinner, the waiter brought us the bill" is good).
+example_2, example_3:
+  Two more sentences of the same quality in different situations (for future gap-fill and
+  proofreading tasks). A different collocation in each, if possible.
+definition:
+  Learner-friendly English definition, max 15 words, using only words easier than the headword.
+  Do not start with the headword. Nouns: "a/an …", verbs: "to …".
+cefr:
+  A1/A2/B1/B2/C1/C2 — the level of THIS meaning, from English Vocabulary Profile or Oxford 3000/5000.
+  Empty if not found.
+collocations:
+  3–5 most frequent collocations or phrases with this meaning, separated by "; "
+  (e.g. "pay the bill; split the bill; the bill came to").
+spelling_trap:
+  Short hint (max 60 characters) about WHY the word is hard to spell for a Russian speaker,
+  e.g. "double c, double m", "silent b at the end", "-ence, not -ance",
+  "ei after c". Empty if the word has no real trap.
+common_misspellings:
+  2–4 real misspellings that learners actually produce (search learner-error data, spelling
+  lists, "commonly misspelled words" lists, Ludwig/Google results). Separated by "; ".
+  Every item must be a non-word (never a real English word).
+alternatives:
+  Other English words or spellings that are ALSO a correct answer for the same Russian prompt
+  and should be accepted (e.g. rubbish → "trash; garbage"; mobile phone → "mobile; cell phone").
+  Only true equivalents, separated by "; ". Empty if none.
+source:
+  URL(s) used as evidence for the meaning / level (and the licence URL if a sentence was copied).
+notes:
+  Anything the editor should know: the word is too rare or too specialised for its level, the
+  translation is ambiguous, the word should rather be removed, etc. Otherwise empty.
+
+=== OUTPUT FORMAT ===
+Return ONLY one CSV code block, UTF-8, comma-separated, every field in double quotes, a header
+row and exactly one row per input row, in the same order, with these columns:
+
+"word_id","word","translation_check","example","example_2","example_3","definition","cefr","collocations","spelling_trap","common_misspellings","alternatives","source","notes"
+
+Keep word_id and word exactly as in the input. Do not skip rows. Do not add commentary
+outside the code block.
+
+=== INPUT BATCH ===
+word_id,word,translation,part_of_speech,topic,current_example
+technology-devices-and-software-tablet,tablet,планшет,noun,Technology,My son watches cartoons on his tablet.
+technology-devices-and-software-cable,cable,"кабель, провод",noun,Technology,Connect the cable to the back of the TV.
+technology-devices-and-software-icon,icon,"значок, иконка",noun,Technology,Tap the camera icon to take a photo.
+technology-online-life-spam,spam,спам,noun,Technology,My inbox is full of spam.
+nature-and-animals-weather-and-seasons-thunder,thunder,гром,noun,Nature and Animals,The thunder woke the baby.
+nature-and-animals-weather-and-seasons-fog,fog,туман,noun,Nature and Animals,The fog was so thick we couldn't see.
+nature-and-animals-weather-and-seasons-hail,hail,град,noun,Nature and Animals,Hail damaged the cars in the street.
+nature-and-animals-weather-and-seasons-frost,frost,"иней, заморозок",noun,Nature and Animals,There was frost on the grass this morning.
+nature-and-animals-weather-and-seasons-rainbow,rainbow,радуга,noun,Nature and Animals,"Look, there is a rainbow over the hills!"
+nature-and-animals-nature-and-animals-cliff,cliff,"утёс, скала",noun,Nature and Animals,The castle stands on a high cliff.
+nature-and-animals-nature-and-animals-volcano,volcano,вулкан,noun,Nature and Animals,The volcano has not erupted for years.
+nature-and-animals-nature-and-animals-earthquake,earthquake,землетрясение,noun,Nature and Animals,The earthquake shook the whole city.
+nature-and-animals-nature-and-animals-ocean,ocean,океан,noun,Nature and Animals,The ocean was calm this morning.
+nature-and-animals-nature-and-animals-meadow,meadow,луг,noun,Nature and Animals,Cows were eating grass in the meadow.
+time-and-dates-days-and-months-decade,decade,десятилетие,noun,Time and Dates,Prices have doubled in a decade.
+time-and-dates-days-and-months-century,century,"век, столетие",noun,Time and Dates,The church was built in the twelfth century.
+time-and-dates-days-and-months-midnight,midnight,полночь,noun,Time and Dates,The party ended at midnight.
+time-and-dates-days-and-months-noon,noon,полдень,noun,Time and Dates,The shop closes at noon on Saturdays.
+time-and-dates-days-and-months-dawn,dawn,рассвет,noun,Time and Dates,We left at dawn to see the sunrise.
+time-and-dates-planning-time-annual,annual,ежегодный,adjective,Time and Dates,The annual festival takes place in May.
+time-and-dates-days-and-months-era,era,эпоха,noun,Time and Dates,It was the end of an era.
+time-and-dates-planning-time-weekly,weekly,еженедельный,adjective,Time and Dates,We have a weekly team meeting.
+time-and-dates-planning-time-meanwhile,meanwhile,тем временем,adverb,Time and Dates,"Meanwhile, the soup was getting cold."
+time-and-dates-planning-time-afterwards,afterwards,"потом, впоследствии",adverb,Time and Dates,We had dinner and went for a walk afterwards.
+shopping-paying-coin,coin,монета,noun,Shopping,I found a coin under the sofa.
+shopping-banking-budget,budget,бюджет,noun,Shopping,We need to plan our budget for the trip.
+shopping-banking-debt,debt,долг,noun,Shopping,He is trying to pay off his debt.
+shopping-banking-tax,tax,налог,noun,Shopping,The price includes tax.
+shopping-paying-purse,purse,дамский кошелёк,noun,Shopping,She put the change in her purse.
+shopping-paying-expensive,expensive,дорогой (по цене),adjective,Shopping,This restaurant is too expensive for us.
+shopping-paying-cheap,cheap,дешёвый,adjective,Shopping,The bus is cheap but slow.
+shopping-banking-wage,wage,"зарплата (почасовая, недельная)",noun,Shopping,He earns a good wage as a builder.
+shopping-banking-savings,savings,сбережения,noun,Shopping,She spent all her savings on a car.
+shopping-paying-shopkeeper,shopkeeper,владелец магазина,noun,Shopping,The shopkeeper gave me a free apple.
+food-and-drinks-meals-and-cooking-flour,flour,мука,noun,Food and Drinks,Mix the flour with two eggs.
+food-and-drinks-meals-and-cooking-cucumber,cucumber,огурец,noun,Food and Drinks,Slice the cucumber for the salad.
+food-and-drinks-meals-and-cooking-cabbage,cabbage,капуста,noun,Food and Drinks,My grandmother makes soup with cabbage.
+food-and-drinks-meals-and-cooking-mushroom,mushroom,гриб,noun,Food and Drinks,"I'd like a mushroom pizza, please."
+food-and-drinks-meals-and-cooking-garlic,garlic,чеснок,noun,Food and Drinks,Add some garlic to the sauce.
+food-and-drinks-meals-and-cooking-lettuce,lettuce,салат-латук,noun,Food and Drinks,Wash the lettuce before you eat it.

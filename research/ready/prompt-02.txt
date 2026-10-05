@@ -1,0 +1,117 @@
+You are helping to improve the word data of "Spell Sprint", a spelling and vocabulary trainer
+for Russian-speaking learners of English (levels A2–C1). The app uses each word in several tasks:
+- the learner sees the Russian translation and types the English word;
+- dictation (the learner hears the word);
+- choosing the correct spelling among misspellings;
+- after answering, the learner sees an example sentence and a short English definition;
+- a hint about the spelling trap of the word.
+
+Below is a batch of words (CSV). For EACH row, research how the word is really used and return
+improved data. Use your research tools: learner dictionaries, corpora and word lists, to check
+meaning, typical collocations, CEFR level and spelling difficulty.
+
+=== SOURCES AND COPYRIGHT (important) ===
+- Use dictionaries and corpora as EVIDENCE only (Cambridge, Oxford Learner's, Longman, Collins,
+  Macmillan, English Vocabulary Profile, BNC, COCA, SkELL, Ludwig, Google Ngram).
+- Do NOT copy their example sentences or definitions word for word: they are copyrighted.
+  Write ORIGINAL sentences and definitions that follow the typical usage you found.
+- You MAY copy sentences from openly licensed sources (Tatoeba – CC BY 2.0 FR; Wiktionary –
+  CC BY-SA) — then put the exact URL in "source".
+- Never invent statistics or levels. If you are not sure, leave the field empty and explain in "notes".
+
+=== RULES FOR EACH FIELD ===
+translation_check:
+  "ok" if the Russian translation matches the main everyday meaning; otherwise a better Russian
+  translation (several meanings separated by ", "; a clarification in brackets, e.g.
+  "больной, ноющий (о горле, мышцах)"). Watch for false friends and for a translation that
+  belongs to another English word (e.g. "болезненный" is "painful", not "sore").
+example:
+  ONE natural sentence, 8–16 words, everyday situation (home, study, work, travel, friends).
+  - uses the word exactly in the meaning of the Russian translation;
+  - contains the word in the given form (a verb may change form: go → went is fine);
+  - British spelling and vocabulary (colour, organise, flat, mobile);
+  - no real people, brands, politics, religion, violence, alcohol or adult topics;
+  - not about logistics or warehouses unless the topic column says so;
+  - the sentence must make the meaning clear even without the translation
+    ("She paid the bill" is weak; "After dinner, the waiter brought us the bill" is good).
+example_2, example_3:
+  Two more sentences of the same quality in different situations (for future gap-fill and
+  proofreading tasks). A different collocation in each, if possible.
+definition:
+  Learner-friendly English definition, max 15 words, using only words easier than the headword.
+  Do not start with the headword. Nouns: "a/an …", verbs: "to …".
+cefr:
+  A1/A2/B1/B2/C1/C2 — the level of THIS meaning, from English Vocabulary Profile or Oxford 3000/5000.
+  Empty if not found.
+collocations:
+  3–5 most frequent collocations or phrases with this meaning, separated by "; "
+  (e.g. "pay the bill; split the bill; the bill came to").
+spelling_trap:
+  Short hint (max 60 characters) about WHY the word is hard to spell for a Russian speaker,
+  e.g. "double c, double m", "silent b at the end", "-ence, not -ance",
+  "ei after c". Empty if the word has no real trap.
+common_misspellings:
+  2–4 real misspellings that learners actually produce (search learner-error data, spelling
+  lists, "commonly misspelled words" lists, Ludwig/Google results). Separated by "; ".
+  Every item must be a non-word (never a real English word).
+alternatives:
+  Other English words or spellings that are ALSO a correct answer for the same Russian prompt
+  and should be accepted (e.g. rubbish → "trash; garbage"; mobile phone → "mobile; cell phone").
+  Only true equivalents, separated by "; ". Empty if none.
+source:
+  URL(s) used as evidence for the meaning / level (and the licence URL if a sentence was copied).
+notes:
+  Anything the editor should know: the word is too rare or too specialised for its level, the
+  translation is ambiguous, the word should rather be removed, etc. Otherwise empty.
+
+=== OUTPUT FORMAT ===
+Return ONLY one CSV code block, UTF-8, comma-separated, every field in double quotes, a header
+row and exactly one row per input row, in the same order, with these columns:
+
+"word_id","word","translation_check","example","example_2","example_3","definition","cefr","collocations","spelling_trap","common_misspellings","alternatives","source","notes"
+
+Keep word_id and word exactly as in the input. Do not skip rows. Do not add commentary
+outside the code block.
+
+=== INPUT BATCH ===
+word_id,word,translation,part_of_speech,topic,current_example
+business-and-office-finance-and-planning-market-demand,market demand,рыночный спрос,noun,Business and Office,Market demand changes when prices or seasons change.
+business-and-office-finance-and-planning-cash-flow,cash flow,денежный поток,noun,Business and Office,Good cash flow helps a small business pay bills.
+business-and-office-meetings-and-negotiation-complaint,complaint,жалоба,noun,Business and Office,The manager answered the customer’s complaint politely.
+general-english-active-vocabulary-environment,environment,окружающая среда,noun,General English,We should protect the environment by wasting less water.
+general-english-active-vocabulary-opportunity,opportunity,возможность,noun,General English,This course gave me an opportunity to improve my skills.
+general-english-active-vocabulary-society,society,общество,noun,General English,Education can create positive changes in society.
+general-english-active-vocabulary-technology,technology,технология,noun,General English,Modern technology makes communication much easier.
+general-english-active-vocabulary-culture,culture,культура,noun,General English,Learning about another culture can change your perspective.
+study-and-career-learning-and-research-assignment,assignment,задание,noun,Study and Career,I completed the assignment before the evening class.
+study-and-career-career-development-interview,interview,собеседование,noun,Study and Career,She prepared carefully for her job interview.
+study-and-career-career-development-qualification,qualification,квалификация,noun,Study and Career,This qualification can help me find better work.
+study-and-career-career-development-experience,experience,опыт,noun,Study and Career,Do you have any experience of working with children?
+travel-and-culture-travel-planning-luggage,luggage,багаж,noun,Travel and Culture,Please keep your luggage near your seat.
+travel-and-culture-travel-planning-departure,departure,отправление,noun,Travel and Culture,The departure was delayed because of heavy rain.
+travel-and-culture-travel-planning-arrival,arrival,прибытие,noun,Travel and Culture,We checked the train time before our arrival.
+travel-and-culture-at-the-destination-accommodation,accommodation,проживание,noun,Travel and Culture,Our accommodation was clean and close to public transport.
+travel-and-culture-at-the-destination-directions,directions,направления,noun,Travel and Culture,The receptionist gave us clear directions to the station.
+travel-and-culture-travel-planning-ticket,ticket,билет,noun,Travel and Culture,I bought a train ticket online yesterday.
+travel-and-culture-travel-planning-reservation,reservation,бронирование,noun,Travel and Culture,Our hotel reservation includes breakfast and free Wi-Fi.
+travel-and-culture-travel-planning-delay,delay,задержка,noun,Travel and Culture,The flight had a short delay because of fog.
+travel-and-culture-travel-planning-border,border,граница,noun,Travel and Culture,The truck waited at the border for inspection.
+travel-and-culture-at-the-destination-sightseeing,sightseeing,осмотр достопримечательностей,noun,Travel and Culture,We spent the afternoon sightseeing in the old town.
+sport-and-fitness-training-and-competition-training,training,тренировка,noun,Sport and Fitness,Regular training helps athletes improve their technique.
+sport-and-fitness-training-and-competition-match,match,матч,noun,Sport and Fitness,The team won the match by one goal.
+sport-and-fitness-training-and-competition-tournament,tournament,турнир,noun,Sport and Fitness,Our club organized a small tournament last weekend.
+sport-and-fitness-training-and-competition-goalkeeper,goalkeeper,вратарь,noun,Sport and Fitness,The goalkeeper stopped the ball near the final whistle.
+sport-and-fitness-training-and-competition-defender,defender,защитник,noun,Sport and Fitness,The defender blocked the shot near the goal.
+sport-and-fitness-training-and-competition-score,score,счёт (в игре),noun,Sport and Fitness,The final score was three goals to one.
+sport-and-fitness-health-and-recovery-injury,injury,травма,noun,Sport and Fitness,He returned to training after a minor injury.
+everyday-life-daily-routines-breakfast,breakfast,завтрак,noun,Everyday Life,I usually eat breakfast before leaving home.
+everyday-life-daily-routines-commute,commute,дорога на работу,verb,Everyday Life,I commute by bus when the weather is cold.
+everyday-life-home-and-services-appointment,appointment,запланированная встреча,noun,Everyday Life,I have a dentist appointment tomorrow afternoon.
+everyday-life-home-and-services-receipt,receipt,чек,noun,Everyday Life,Keep the receipt in case you need a refund.
+transport-and-trade-road-freight-freight,freight,груз,noun,Transport and Trade,The company transports freight between several European cities.
+transport-and-trade-road-freight-consignment,consignment,партия груза,noun,Transport and Trade,The carrier delivered the consignment without any damage.
+transport-and-trade-road-freight-carrier,carrier,перевозчик,noun,Transport and Trade,The carrier called before arriving at the warehouse.
+transport-and-trade-customs-and-trade-customs-clearance,customs clearance,таможенное оформление,noun,Transport and Trade,Customs clearance took longer because one document was missing.
+transport-and-trade-customs-and-trade-bill-of-lading,bill of lading,коносамент,noun,Transport and Trade,The driver checked the bill of lading before departure.
+food-and-drinks-meals-and-cooking-breakfast,breakfast,завтрак,noun,Food and Drinks,I usually eat breakfast before leaving home.
+food-and-drinks-meals-and-cooking-lunch,lunch,обед,noun,Food and Drinks,We ate a quick lunch after the morning meeting.

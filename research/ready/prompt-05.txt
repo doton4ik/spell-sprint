@@ -1,0 +1,117 @@
+You are helping to improve the word data of "Spell Sprint", a spelling and vocabulary trainer
+for Russian-speaking learners of English (levels A2–C1). The app uses each word in several tasks:
+- the learner sees the Russian translation and types the English word;
+- dictation (the learner hears the word);
+- choosing the correct spelling among misspellings;
+- after answering, the learner sees an example sentence and a short English definition;
+- a hint about the spelling trap of the word.
+
+Below is a batch of words (CSV). For EACH row, research how the word is really used and return
+improved data. Use your research tools: learner dictionaries, corpora and word lists, to check
+meaning, typical collocations, CEFR level and spelling difficulty.
+
+=== SOURCES AND COPYRIGHT (important) ===
+- Use dictionaries and corpora as EVIDENCE only (Cambridge, Oxford Learner's, Longman, Collins,
+  Macmillan, English Vocabulary Profile, BNC, COCA, SkELL, Ludwig, Google Ngram).
+- Do NOT copy their example sentences or definitions word for word: they are copyrighted.
+  Write ORIGINAL sentences and definitions that follow the typical usage you found.
+- You MAY copy sentences from openly licensed sources (Tatoeba – CC BY 2.0 FR; Wiktionary –
+  CC BY-SA) — then put the exact URL in "source".
+- Never invent statistics or levels. If you are not sure, leave the field empty and explain in "notes".
+
+=== RULES FOR EACH FIELD ===
+translation_check:
+  "ok" if the Russian translation matches the main everyday meaning; otherwise a better Russian
+  translation (several meanings separated by ", "; a clarification in brackets, e.g.
+  "больной, ноющий (о горле, мышцах)"). Watch for false friends and for a translation that
+  belongs to another English word (e.g. "болезненный" is "painful", not "sore").
+example:
+  ONE natural sentence, 8–16 words, everyday situation (home, study, work, travel, friends).
+  - uses the word exactly in the meaning of the Russian translation;
+  - contains the word in the given form (a verb may change form: go → went is fine);
+  - British spelling and vocabulary (colour, organise, flat, mobile);
+  - no real people, brands, politics, religion, violence, alcohol or adult topics;
+  - not about logistics or warehouses unless the topic column says so;
+  - the sentence must make the meaning clear even without the translation
+    ("She paid the bill" is weak; "After dinner, the waiter brought us the bill" is good).
+example_2, example_3:
+  Two more sentences of the same quality in different situations (for future gap-fill and
+  proofreading tasks). A different collocation in each, if possible.
+definition:
+  Learner-friendly English definition, max 15 words, using only words easier than the headword.
+  Do not start with the headword. Nouns: "a/an …", verbs: "to …".
+cefr:
+  A1/A2/B1/B2/C1/C2 — the level of THIS meaning, from English Vocabulary Profile or Oxford 3000/5000.
+  Empty if not found.
+collocations:
+  3–5 most frequent collocations or phrases with this meaning, separated by "; "
+  (e.g. "pay the bill; split the bill; the bill came to").
+spelling_trap:
+  Short hint (max 60 characters) about WHY the word is hard to spell for a Russian speaker,
+  e.g. "double c, double m", "silent b at the end", "-ence, not -ance",
+  "ei after c". Empty if the word has no real trap.
+common_misspellings:
+  2–4 real misspellings that learners actually produce (search learner-error data, spelling
+  lists, "commonly misspelled words" lists, Ludwig/Google results). Separated by "; ".
+  Every item must be a non-word (never a real English word).
+alternatives:
+  Other English words or spellings that are ALSO a correct answer for the same Russian prompt
+  and should be accepted (e.g. rubbish → "trash; garbage"; mobile phone → "mobile; cell phone").
+  Only true equivalents, separated by "; ". Empty if none.
+source:
+  URL(s) used as evidence for the meaning / level (and the licence URL if a sentence was copied).
+notes:
+  Anything the editor should know: the word is too rare or too specialised for its level, the
+  translation is ambiguous, the word should rather be removed, etc. Otherwise empty.
+
+=== OUTPUT FORMAT ===
+Return ONLY one CSV code block, UTF-8, comma-separated, every field in double quotes, a header
+row and exactly one row per input row, in the same order, with these columns:
+
+"word_id","word","translation_check","example","example_2","example_3","definition","cefr","collocations","spelling_trap","common_misspellings","alternatives","source","notes"
+
+Keep word_id and word exactly as in the input. Do not skip rows. Do not add commentary
+outside the code block.
+
+=== INPUT BATCH ===
+word_id,word,translation,part_of_speech,topic,current_example
+health-and-body-body-and-symptoms-stomach,stomach,"живот, желудок",noun,Health and Body,My stomach hurt after I ate too quickly.
+health-and-body-body-and-symptoms-throat,throat,горло,noun,Health and Body,My throat felt sore after speaking all day.
+health-and-body-body-and-symptoms-shoulder,shoulder,плечо,noun,Health and Body,He carried the bag over one shoulder.
+health-and-body-body-and-symptoms-knee,knee,колено,noun,Health and Body,My knee hurt after the long walk.
+health-and-body-body-and-symptoms-headache,headache,головная боль,noun,Health and Body,I stayed home because I had a headache.
+health-and-body-body-and-symptoms-fever,fever,"жар, высокая температура",noun,Health and Body,The child had a high fever during the night.
+health-and-body-body-and-symptoms-cough,cough,кашель; кашлять,noun,Health and Body,Her cough became better after a few days.
+health-and-body-body-and-symptoms-sneeze,sneeze,чихать,verb,Health and Body,I always sneeze when the room is dusty.
+health-and-body-body-and-symptoms-dizzy,dizzy,чувствующий головокружение (голова кружится),adjective,Health and Body,I felt dizzy after standing up too quickly.
+health-and-body-body-and-symptoms-sore,sore,"больной, ноющий (о горле, мышцах)",adjective,Health and Body,My muscles were sore after the first workout.
+health-and-body-body-and-symptoms-bruise,bruise,синяк,noun,Health and Body,The fall left a dark bruise on his arm.
+health-and-body-body-and-symptoms-injury,injury,травма,noun,Health and Body,He returned to training after a minor injury.
+health-and-body-at-the-doctor-appointment,appointment,"приём, запись",noun,Health and Body,I have a dentist appointment tomorrow afternoon.
+health-and-body-at-the-doctor-prescription,prescription,рецепт (врача),noun,Health and Body,The doctor gave me a prescription for medicine.
+health-and-body-at-the-doctor-symptom,symptom,симптом,noun,Health and Body,A sore throat can be a common cold symptom.
+health-and-body-at-the-doctor-treatment,treatment,лечение,noun,Health and Body,The treatment helped reduce his back pain.
+health-and-body-at-the-doctor-recover,recover,выздоравливать,verb,Health and Body,It took him two weeks to recover fully.
+health-and-body-at-the-doctor-vaccine,vaccine,вакцина,noun,Health and Body,The nurse explained how the vaccine protects people.
+health-and-body-at-the-doctor-dentist,dentist,стоматолог,noun,Health and Body,I have an appointment with the dentist next week.
+health-and-body-at-the-doctor-ambulance,ambulance,скорая помощь,noun,Health and Body,The ambulance arrived within a few minutes.
+health-and-body-at-the-doctor-painkiller,painkiller,обезболивающее,noun,Health and Body,The doctor recommended a painkiller for the headache.
+health-and-body-at-the-doctor-check-up,check-up,медосмотр,noun,Health and Body,I visit the doctor for a yearly check-up.
+health-and-body-at-the-doctor-allergy,allergy,аллергия,noun,Health and Body,The nurse asked whether I had any allergy.
+health-and-body-at-the-doctor-insurance,insurance,страховка,noun,Health and Body,Health insurance can cover part of the treatment.
+technology-devices-and-software-device,device,устройство,noun,Technology,This device measures temperature very accurately.
+technology-devices-and-software-screen,screen,экран,noun,Technology,The phone screen became difficult to read in sunlight.
+technology-devices-and-software-keyboard,keyboard,клавиатура,noun,Technology,I cleaned the keyboard before starting work.
+technology-devices-and-software-battery,battery,батарея,noun,Technology,The battery lasted through the entire journey.
+technology-devices-and-software-charger,charger,зарядка,noun,Technology,I packed my charger before leaving the apartment.
+technology-devices-and-software-software,software,программное обеспечение,noun,Technology,The new software makes our daily tasks easier.
+technology-devices-and-software-update,update,обновление; обновлять,noun,Technology,The latest update fixed several small problems.
+technology-devices-and-software-install,install,установить,verb,Technology,Please install the application before the lesson.
+technology-devices-and-software-download,download,скачивать,verb,Technology,You can download the document from the website.
+technology-devices-and-software-password,password,пароль,noun,Technology,Never share your password with another person.
+technology-devices-and-software-storage,storage,хранилище,noun,Technology,The phone has enough storage for many photos.
+technology-devices-and-software-wireless,wireless,беспроводной,adjective,Technology,The office has a wireless internet connection.
+technology-online-life-website,website,сайт,noun,Technology,The company website provides useful information.
+technology-online-life-browser,browser,браузер,noun,Technology,I opened the website in a different browser.
+technology-online-life-attachment,attachment,вложение,noun,Technology,The email included an attachment with the schedule.
+technology-online-life-username,username,имя пользователя,noun,Technology,Choose a username that is easy to remember.

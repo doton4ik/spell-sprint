@@ -1,0 +1,117 @@
+You are helping to improve the word data of "Spell Sprint", a spelling and vocabulary trainer
+for Russian-speaking learners of English (levels A2–C1). The app uses each word in several tasks:
+- the learner sees the Russian translation and types the English word;
+- dictation (the learner hears the word);
+- choosing the correct spelling among misspellings;
+- after answering, the learner sees an example sentence and a short English definition;
+- a hint about the spelling trap of the word.
+
+Below is a batch of words (CSV). For EACH row, research how the word is really used and return
+improved data. Use your research tools: learner dictionaries, corpora and word lists, to check
+meaning, typical collocations, CEFR level and spelling difficulty.
+
+=== SOURCES AND COPYRIGHT (important) ===
+- Use dictionaries and corpora as EVIDENCE only (Cambridge, Oxford Learner's, Longman, Collins,
+  Macmillan, English Vocabulary Profile, BNC, COCA, SkELL, Ludwig, Google Ngram).
+- Do NOT copy their example sentences or definitions word for word: they are copyrighted.
+  Write ORIGINAL sentences and definitions that follow the typical usage you found.
+- You MAY copy sentences from openly licensed sources (Tatoeba – CC BY 2.0 FR; Wiktionary –
+  CC BY-SA) — then put the exact URL in "source".
+- Never invent statistics or levels. If you are not sure, leave the field empty and explain in "notes".
+
+=== RULES FOR EACH FIELD ===
+translation_check:
+  "ok" if the Russian translation matches the main everyday meaning; otherwise a better Russian
+  translation (several meanings separated by ", "; a clarification in brackets, e.g.
+  "больной, ноющий (о горле, мышцах)"). Watch for false friends and for a translation that
+  belongs to another English word (e.g. "болезненный" is "painful", not "sore").
+example:
+  ONE natural sentence, 8–16 words, everyday situation (home, study, work, travel, friends).
+  - uses the word exactly in the meaning of the Russian translation;
+  - contains the word in the given form (a verb may change form: go → went is fine);
+  - British spelling and vocabulary (colour, organise, flat, mobile);
+  - no real people, brands, politics, religion, violence, alcohol or adult topics;
+  - not about logistics or warehouses unless the topic column says so;
+  - the sentence must make the meaning clear even without the translation
+    ("She paid the bill" is weak; "After dinner, the waiter brought us the bill" is good).
+example_2, example_3:
+  Two more sentences of the same quality in different situations (for future gap-fill and
+  proofreading tasks). A different collocation in each, if possible.
+definition:
+  Learner-friendly English definition, max 15 words, using only words easier than the headword.
+  Do not start with the headword. Nouns: "a/an …", verbs: "to …".
+cefr:
+  A1/A2/B1/B2/C1/C2 — the level of THIS meaning, from English Vocabulary Profile or Oxford 3000/5000.
+  Empty if not found.
+collocations:
+  3–5 most frequent collocations or phrases with this meaning, separated by "; "
+  (e.g. "pay the bill; split the bill; the bill came to").
+spelling_trap:
+  Short hint (max 60 characters) about WHY the word is hard to spell for a Russian speaker,
+  e.g. "double c, double m", "silent b at the end", "-ence, not -ance",
+  "ei after c". Empty if the word has no real trap.
+common_misspellings:
+  2–4 real misspellings that learners actually produce (search learner-error data, spelling
+  lists, "commonly misspelled words" lists, Ludwig/Google results). Separated by "; ".
+  Every item must be a non-word (never a real English word).
+alternatives:
+  Other English words or spellings that are ALSO a correct answer for the same Russian prompt
+  and should be accepted (e.g. rubbish → "trash; garbage"; mobile phone → "mobile; cell phone").
+  Only true equivalents, separated by "; ". Empty if none.
+source:
+  URL(s) used as evidence for the meaning / level (and the licence URL if a sentence was copied).
+notes:
+  Anything the editor should know: the word is too rare or too specialised for its level, the
+  translation is ambiguous, the word should rather be removed, etc. Otherwise empty.
+
+=== OUTPUT FORMAT ===
+Return ONLY one CSV code block, UTF-8, comma-separated, every field in double quotes, a header
+row and exactly one row per input row, in the same order, with these columns:
+
+"word_id","word","translation_check","example","example_2","example_3","definition","cefr","collocations","spelling_trap","common_misspellings","alternatives","source","notes"
+
+Keep word_id and word exactly as in the input. Do not skip rows. Do not add commentary
+outside the code block.
+
+=== INPUT BATCH ===
+word_id,word,translation,part_of_speech,topic,current_example
+jobs-and-career-at-work-contract,contract,"контракт, договор",noun,Jobs and Career,Read the contract before you sign it.
+jobs-and-career-at-work-shift,shift,смена (на работе),noun,Jobs and Career,I work the night shift this week.
+jobs-and-career-at-work-client,client,клиент,noun,Jobs and Career,I have a meeting with a client at ten.
+jobs-and-career-at-work-agenda,agenda,повестка дня,noun,Jobs and Career,What is on the agenda for the meeting?
+jobs-and-career-at-work-boss,boss,"босс, шеф",noun,Jobs and Career,My boss let me leave early today.
+jobs-and-career-at-work-unemployed,unemployed,безработный,adjective,Jobs and Career,He was unemployed for six months.
+jobs-and-career-at-work-colleagues,colleagues,коллеги,noun,Jobs and Career,My colleagues are very helpful.
+jobs-and-career-at-work-receptionist,receptionist,администратор (на ресепшене),noun,Jobs and Career,The receptionist gave me a visitor badge.
+jobs-and-career-at-work-payslip,payslip,расчётный листок,noun,Jobs and Career,Check your payslip at the end of the month.
+jobs-and-career-at-work-manager,manager,менеджер,noun,Jobs and Career,Ask the manager if you have a problem.
+school-and-learning-in-class-notebook,notebook,"тетрадь, блокнот",noun,School and Learning,Write the new words in your notebook.
+school-and-learning-in-class-pupil,pupil,школьник,noun,School and Learning,There are thirty pupils in the class.
+school-and-learning-in-class-headteacher,headteacher,директор школы,noun,School and Learning,The headteacher spoke to the whole school.
+school-and-learning-in-class-subject,subject,предмет (учебный),noun,School and Learning,My favourite subject is history.
+school-and-learning-in-class-ruler,ruler,линейка,noun,School and Learning,Draw a line with a ruler.
+school-and-learning-in-class-rubber,rubber,ластик,noun,School and Learning,Can I borrow your rubber?
+school-and-learning-in-class-calculator,calculator,калькулятор,noun,School and Learning,You can use a calculator in this test.
+school-and-learning-in-class-uniform,uniform,форма (школьная),noun,School and Learning,Pupils wear a blue uniform.
+school-and-learning-in-class-absent,absent,отсутствующий,adjective,School and Learning,Three pupils were absent today.
+school-and-learning-in-class-playground,playground,детская площадка,noun,School and Learning,The children are playing in the playground.
+school-and-learning-in-class-dictionary,dictionary,словарь,noun,School and Learning,Look the word up in a dictionary.
+school-and-learning-in-class-pencil,pencil,карандаш,noun,School and Learning,Write your answers in pencil.
+school-and-learning-in-class-classroom,classroom,класс (комната),noun,School and Learning,Our classroom is on the second floor.
+school-and-learning-in-class-term,term,"четверть, триместр",noun,School and Learning,The summer term ends in July.
+family-and-relationships-life-events-bride,bride,невеста,noun,Family and Relationships,The bride wore a long white dress.
+family-and-relationships-life-events-groom,groom,жених,noun,Family and Relationships,The groom gave a short speech.
+family-and-relationships-life-events-honeymoon,honeymoon,медовый месяц,noun,Family and Relationships,They went to Italy on their honeymoon.
+family-and-relationships-life-events-widow,widow,вдова,noun,Family and Relationships,His grandmother has been a widow for years.
+family-and-relationships-relatives-ancestor,ancestor,предок,noun,Family and Relationships,My ancestors came from Scotland.
+family-and-relationships-relatives-stepmother,stepmother,мачеха,noun,Family and Relationships,He gets on well with his stepmother.
+family-and-relationships-relatives-stepfather,stepfather,отчим,noun,Family and Relationships,Her stepfather taught her to drive.
+family-and-relationships-relatives-grandchild,grandchild,"внук, внучка",noun,Family and Relationships,She has one grandchild and another on the way.
+family-and-relationships-relatives-toddler,toddler,малыш (1–3 года),noun,Family and Relationships,The toddler is learning to walk.
+family-and-relationships-relatives-teenager,teenager,подросток,noun,Family and Relationships,Their son is a teenager now.
+family-and-relationships-relatives-adult,adult,взрослый,noun,Family and Relationships,Tickets are ten pounds for an adult.
+family-and-relationships-friends-and-partners-boyfriend,boyfriend,парень (молодой человек),noun,Family and Relationships,Her boyfriend cooked dinner for her.
+family-and-relationships-friends-and-partners-girlfriend,girlfriend,девушка (подруга),noun,Family and Relationships,He met his girlfriend at university.
+family-and-relationships-friends-and-partners-relationship,relationship,отношения,noun,Family and Relationships,They have a very close relationship.
+family-and-relationships-relatives-babysitter,babysitter,няня (на время),noun,Family and Relationships,We need a babysitter for Saturday night.
+city-and-transport-getting-around-tram,tram,трамвай,noun,City and Transport,The tram stops right outside our flat.

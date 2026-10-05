@@ -1,0 +1,117 @@
+You are helping to improve the word data of "Spell Sprint", a spelling and vocabulary trainer
+for Russian-speaking learners of English (levels A2–C1). The app uses each word in several tasks:
+- the learner sees the Russian translation and types the English word;
+- dictation (the learner hears the word);
+- choosing the correct spelling among misspellings;
+- after answering, the learner sees an example sentence and a short English definition;
+- a hint about the spelling trap of the word.
+
+Below is a batch of words (CSV). For EACH row, research how the word is really used and return
+improved data. Use your research tools: learner dictionaries, corpora and word lists, to check
+meaning, typical collocations, CEFR level and spelling difficulty.
+
+=== SOURCES AND COPYRIGHT (important) ===
+- Use dictionaries and corpora as EVIDENCE only (Cambridge, Oxford Learner's, Longman, Collins,
+  Macmillan, English Vocabulary Profile, BNC, COCA, SkELL, Ludwig, Google Ngram).
+- Do NOT copy their example sentences or definitions word for word: they are copyrighted.
+  Write ORIGINAL sentences and definitions that follow the typical usage you found.
+- You MAY copy sentences from openly licensed sources (Tatoeba – CC BY 2.0 FR; Wiktionary –
+  CC BY-SA) — then put the exact URL in "source".
+- Never invent statistics or levels. If you are not sure, leave the field empty and explain in "notes".
+
+=== RULES FOR EACH FIELD ===
+translation_check:
+  "ok" if the Russian translation matches the main everyday meaning; otherwise a better Russian
+  translation (several meanings separated by ", "; a clarification in brackets, e.g.
+  "больной, ноющий (о горле, мышцах)"). Watch for false friends and for a translation that
+  belongs to another English word (e.g. "болезненный" is "painful", not "sore").
+example:
+  ONE natural sentence, 8–16 words, everyday situation (home, study, work, travel, friends).
+  - uses the word exactly in the meaning of the Russian translation;
+  - contains the word in the given form (a verb may change form: go → went is fine);
+  - British spelling and vocabulary (colour, organise, flat, mobile);
+  - no real people, brands, politics, religion, violence, alcohol or adult topics;
+  - not about logistics or warehouses unless the topic column says so;
+  - the sentence must make the meaning clear even without the translation
+    ("She paid the bill" is weak; "After dinner, the waiter brought us the bill" is good).
+example_2, example_3:
+  Two more sentences of the same quality in different situations (for future gap-fill and
+  proofreading tasks). A different collocation in each, if possible.
+definition:
+  Learner-friendly English definition, max 15 words, using only words easier than the headword.
+  Do not start with the headword. Nouns: "a/an …", verbs: "to …".
+cefr:
+  A1/A2/B1/B2/C1/C2 — the level of THIS meaning, from English Vocabulary Profile or Oxford 3000/5000.
+  Empty if not found.
+collocations:
+  3–5 most frequent collocations or phrases with this meaning, separated by "; "
+  (e.g. "pay the bill; split the bill; the bill came to").
+spelling_trap:
+  Short hint (max 60 characters) about WHY the word is hard to spell for a Russian speaker,
+  e.g. "double c, double m", "silent b at the end", "-ence, not -ance",
+  "ei after c". Empty if the word has no real trap.
+common_misspellings:
+  2–4 real misspellings that learners actually produce (search learner-error data, spelling
+  lists, "commonly misspelled words" lists, Ludwig/Google results). Separated by "; ".
+  Every item must be a non-word (never a real English word).
+alternatives:
+  Other English words or spellings that are ALSO a correct answer for the same Russian prompt
+  and should be accepted (e.g. rubbish → "trash; garbage"; mobile phone → "mobile; cell phone").
+  Only true equivalents, separated by "; ". Empty if none.
+source:
+  URL(s) used as evidence for the meaning / level (and the licence URL if a sentence was copied).
+notes:
+  Anything the editor should know: the word is too rare or too specialised for its level, the
+  translation is ambiguous, the word should rather be removed, etc. Otherwise empty.
+
+=== OUTPUT FORMAT ===
+Return ONLY one CSV code block, UTF-8, comma-separated, every field in double quotes, a header
+row and exactly one row per input row, in the same order, with these columns:
+
+"word_id","word","translation_check","example","example_2","example_3","definition","cefr","collocations","spelling_trap","common_misspellings","alternatives","source","notes"
+
+Keep word_id and word exactly as in the input. Do not skip rows. Do not add commentary
+outside the code block.
+
+=== INPUT BATCH ===
+word_id,word,translation,part_of_speech,topic,current_example
+common-actions-everyday-phrasal-verbs-run-out-of,run out of,закончиться (о запасах),phrase,Common Actions,We may run out of milk before the shops open.
+common-actions-everyday-phrasal-verbs-put-off,put off,откладывать,phrase,Common Actions,Do not put off your important homework until Sunday.
+common-actions-everyday-phrasal-verbs-set-up,set up,"настроить, основать",phrase,Common Actions,We need to set up the new printer today.
+common-actions-everyday-phrasal-verbs-take-off,take off,"взлетать, снимать",phrase,Common Actions,The plane will take off after the storm ends.
+common-actions-everyday-phrasal-verbs-get-along-with,get along with,ладить с,phrase,Common Actions,I get along with my colleagues very well.
+common-actions-everyday-phrasal-verbs-come-across,come across,наткнуться на,phrase,Common Actions,You may come across new words in every article.
+common-actions-everyday-phrasal-verbs-work-out,work out,решить; тренироваться,phrase,Common Actions,I work out at the gym three times weekly.
+common-actions-everyday-phrasal-verbs-show-up,show up,появиться,phrase,Common Actions,Please show up ten minutes before the appointment.
+common-actions-everyday-phrasal-verbs-call-off,call off,отменить,phrase,Common Actions,They had to call off the match because of rain.
+common-actions-everyday-phrasal-verbs-look-forward-to,look forward to,ждать с нетерпением,phrase,Common Actions,I look forward to visiting my family next month.
+travel-and-culture-at-the-airport-boarding-pass,boarding pass,посадочный талон,noun,Travel and Culture,Please show your boarding pass at the gate.
+travel-and-culture-at-the-airport-passport-control,passport control,паспортный контроль,noun,Travel and Culture,We waited twenty minutes at passport control.
+travel-and-culture-at-the-airport-baggage-claim,baggage claim,зона выдачи багажа,noun,Travel and Culture,Our suitcases appeared at baggage claim after ten minutes.
+travel-and-culture-at-the-airport-check-in-desk,check-in desk,стойка регистрации,noun,Travel and Culture,There was a long queue at the check-in desk.
+travel-and-culture-at-the-airport-gate,gate,выход на посадку,noun,Travel and Culture,Our gate changed twenty minutes before departure.
+travel-and-culture-at-the-airport-terminal,terminal,терминал,noun,Travel and Culture,The new terminal has more shops than the old one.
+travel-and-culture-at-the-airport-customs-officer,customs officer,таможенник,noun,Travel and Culture,A customs officer asked to see our documents.
+travel-and-culture-at-the-airport-departure-lounge,departure lounge,зал ожидания вылета,noun,Travel and Culture,We had coffee in the departure lounge before boarding.
+travel-and-culture-at-the-airport-connecting-flight,connecting flight,стыковочный рейс,noun,Travel and Culture,We had only forty minutes for our connecting flight.
+travel-and-culture-at-the-airport-immigration,immigration,иммиграционная служба,noun,Travel and Culture,The queue for immigration moved very slowly.
+travel-and-culture-on-the-plane-seatbelt,seatbelt,ремень безопасности,noun,Travel and Culture,Please fasten your seatbelt before take-off.
+travel-and-culture-on-the-plane-cabin-crew,cabin crew,экипаж самолёта,noun,Travel and Culture,The cabin crew served drinks after take-off.
+travel-and-culture-on-the-plane-aisle,aisle,проход между рядами,noun,Travel and Culture,She walked down the aisle to find her row.
+travel-and-culture-on-the-plane-turbulence,turbulence,турбулентность,noun,Travel and Culture,The flight was smooth apart from some turbulence.
+travel-and-culture-on-the-plane-emergency-exit,emergency exit,аварийный выход,noun,Travel and Culture,Passengers near the emergency exit must listen carefully.
+travel-and-culture-on-the-plane-altitude,altitude,высота полёта,noun,Travel and Culture,The plane reached its cruising altitude after ten minutes.
+travel-and-culture-on-the-plane-announcement,announcement,объявление по громкой связи,noun,Travel and Culture,The pilot made an announcement about the weather.
+travel-and-culture-on-the-plane-jet-lag,jet lag,смена часовых поясов (усталость),noun,Travel and Culture,It took me two days to recover from jet lag.
+travel-and-culture-on-the-plane-runway,runway,взлётно-посадочная полоса,noun,Travel and Culture,The plane waited on the runway before take-off.
+jobs-and-career-job-interview-cover-letter,cover letter,сопроводительное письмо,noun,Jobs and Career,I attached a cover letter to my application.
+jobs-and-career-job-interview-curriculum-vitae,curriculum vitae,резюме,noun,Jobs and Career,Please send your curriculum vitae by Friday.
+jobs-and-career-job-interview-strength,strength,сильная сторона,noun,Jobs and Career,My main strength is working well under pressure.
+jobs-and-career-job-interview-weakness,weakness,слабая сторона,noun,Jobs and Career,She mentioned time management as a weakness.
+jobs-and-career-job-interview-reference,reference,рекомендация от работодателя,noun,Jobs and Career,He gave his former manager as a reference.
+jobs-and-career-job-interview-shortlist,shortlist,список финалистов,noun,Jobs and Career,Only five candidates made the final shortlist.
+jobs-and-career-job-interview-job-offer,job offer,предложение о работе,noun,Jobs and Career,She accepted the job offer the same week.
+jobs-and-career-job-interview-body-language,body language,язык тела,noun,Jobs and Career,Confident body language can help during an interview.
+jobs-and-career-job-interview-eye-contact,eye contact,зрительный контакт,noun,Jobs and Career,Keeping eye contact shows that you are listening.
+jobs-and-career-at-work-supervisor,supervisor,"руководитель, начальник",noun,Jobs and Career,My supervisor checked the report before it was sent.
+jobs-and-career-at-work-workload,workload,объём работы,noun,Jobs and Career,The workload increases at the end of every month.

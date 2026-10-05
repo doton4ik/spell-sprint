@@ -1,0 +1,117 @@
+You are helping to improve the word data of "Spell Sprint", a spelling and vocabulary trainer
+for Russian-speaking learners of English (levels A2–C1). The app uses each word in several tasks:
+- the learner sees the Russian translation and types the English word;
+- dictation (the learner hears the word);
+- choosing the correct spelling among misspellings;
+- after answering, the learner sees an example sentence and a short English definition;
+- a hint about the spelling trap of the word.
+
+Below is a batch of words (CSV). For EACH row, research how the word is really used and return
+improved data. Use your research tools: learner dictionaries, corpora and word lists, to check
+meaning, typical collocations, CEFR level and spelling difficulty.
+
+=== SOURCES AND COPYRIGHT (important) ===
+- Use dictionaries and corpora as EVIDENCE only (Cambridge, Oxford Learner's, Longman, Collins,
+  Macmillan, English Vocabulary Profile, BNC, COCA, SkELL, Ludwig, Google Ngram).
+- Do NOT copy their example sentences or definitions word for word: they are copyrighted.
+  Write ORIGINAL sentences and definitions that follow the typical usage you found.
+- You MAY copy sentences from openly licensed sources (Tatoeba – CC BY 2.0 FR; Wiktionary –
+  CC BY-SA) — then put the exact URL in "source".
+- Never invent statistics or levels. If you are not sure, leave the field empty and explain in "notes".
+
+=== RULES FOR EACH FIELD ===
+translation_check:
+  "ok" if the Russian translation matches the main everyday meaning; otherwise a better Russian
+  translation (several meanings separated by ", "; a clarification in brackets, e.g.
+  "больной, ноющий (о горле, мышцах)"). Watch for false friends and for a translation that
+  belongs to another English word (e.g. "болезненный" is "painful", not "sore").
+example:
+  ONE natural sentence, 8–16 words, everyday situation (home, study, work, travel, friends).
+  - uses the word exactly in the meaning of the Russian translation;
+  - contains the word in the given form (a verb may change form: go → went is fine);
+  - British spelling and vocabulary (colour, organise, flat, mobile);
+  - no real people, brands, politics, religion, violence, alcohol or adult topics;
+  - not about logistics or warehouses unless the topic column says so;
+  - the sentence must make the meaning clear even without the translation
+    ("She paid the bill" is weak; "After dinner, the waiter brought us the bill" is good).
+example_2, example_3:
+  Two more sentences of the same quality in different situations (for future gap-fill and
+  proofreading tasks). A different collocation in each, if possible.
+definition:
+  Learner-friendly English definition, max 15 words, using only words easier than the headword.
+  Do not start with the headword. Nouns: "a/an …", verbs: "to …".
+cefr:
+  A1/A2/B1/B2/C1/C2 — the level of THIS meaning, from English Vocabulary Profile or Oxford 3000/5000.
+  Empty if not found.
+collocations:
+  3–5 most frequent collocations or phrases with this meaning, separated by "; "
+  (e.g. "pay the bill; split the bill; the bill came to").
+spelling_trap:
+  Short hint (max 60 characters) about WHY the word is hard to spell for a Russian speaker,
+  e.g. "double c, double m", "silent b at the end", "-ence, not -ance",
+  "ei after c". Empty if the word has no real trap.
+common_misspellings:
+  2–4 real misspellings that learners actually produce (search learner-error data, spelling
+  lists, "commonly misspelled words" lists, Ludwig/Google results). Separated by "; ".
+  Every item must be a non-word (never a real English word).
+alternatives:
+  Other English words or spellings that are ALSO a correct answer for the same Russian prompt
+  and should be accepted (e.g. rubbish → "trash; garbage"; mobile phone → "mobile; cell phone").
+  Only true equivalents, separated by "; ". Empty if none.
+source:
+  URL(s) used as evidence for the meaning / level (and the licence URL if a sentence was copied).
+notes:
+  Anything the editor should know: the word is too rare or too specialised for its level, the
+  translation is ambiguous, the word should rather be removed, etc. Otherwise empty.
+
+=== OUTPUT FORMAT ===
+Return ONLY one CSV code block, UTF-8, comma-separated, every field in double quotes, a header
+row and exactly one row per input row, in the same order, with these columns:
+
+"word_id","word","translation_check","example","example_2","example_3","definition","cefr","collocations","spelling_trap","common_misspellings","alternatives","source","notes"
+
+Keep word_id and word exactly as in the input. Do not skip rows. Do not add commentary
+outside the code block.
+
+=== INPUT BATCH ===
+word_id,word,translation,part_of_speech,topic,current_example
+travel-and-culture-travel-planning-itinerary,itinerary,маршрут поездки,noun,Travel and Culture,Our itinerary includes three cities in five days.
+travel-and-culture-travel-planning-guidebook,guidebook,путеводитель,noun,Travel and Culture,The guidebook recommends this little restaurant.
+travel-and-culture-travel-planning-visa,visa,виза,noun,Travel and Culture,Do I need a visa to visit Canada?
+travel-and-culture-travel-planning-hostel,hostel,хостел,noun,Travel and Culture,We stayed in a cheap hostel near the station.
+travel-and-culture-travel-planning-campsite,campsite,кемпинг,noun,Travel and Culture,The campsite is next to a lake.
+travel-and-culture-travel-planning-backpack,backpack,рюкзак,noun,Travel and Culture,He travelled around Asia with just a backpack.
+travel-and-culture-travel-planning-abroad,abroad,"за границей, за границу",adverb,Travel and Culture,She wants to study abroad next year.
+travel-and-culture-travel-planning-destination,destination,пункт назначения,noun,Travel and Culture,Rome is a popular destination in spring.
+travel-and-culture-travel-planning-brochure,brochure,"буклет, брошюра",noun,Travel and Culture,I picked up a brochure about boat trips.
+travel-and-culture-at-the-destination-souvenir,souvenir,сувенир,noun,Travel and Culture,I bought a small souvenir for my sister.
+travel-and-culture-at-the-destination-museum,museum,музей,noun,Travel and Culture,The museum is free on Sundays.
+travel-and-culture-at-the-destination-gallery,gallery,галерея,noun,Travel and Culture,The gallery has paintings by local artists.
+travel-and-culture-at-the-destination-monument,monument,памятник,noun,Travel and Culture,There is a monument to the poet in the square.
+travel-and-culture-at-the-destination-cathedral,cathedral,собор,noun,Travel and Culture,The old cathedral took a hundred years to build.
+travel-and-culture-at-the-destination-castle,castle,замок,noun,Travel and Culture,We climbed to the top of the castle.
+travel-and-culture-at-the-destination-landmark,landmark,"достопримечательность, ориентир",noun,Travel and Culture,The tower is the city's most famous landmark.
+travel-and-culture-at-the-destination-tradition,tradition,традиция,noun,Travel and Culture,It is a tradition to eat fish on Christmas Eve.
+travel-and-culture-at-the-destination-local,local,местный,adjective,Travel and Culture,"Try the local cheese, it is delicious."
+travel-and-culture-at-the-destination-tourist,tourist,турист,noun,Travel and Culture,The town is full of tourists in summer.
+travel-and-culture-at-the-destination-excursion,excursion,экскурсия,noun,Travel and Culture,We went on an excursion to the mountains.
+travel-and-culture-at-the-destination-crowd,crowd,толпа,noun,Travel and Culture,A crowd gathered to watch the street dancers.
+travel-and-culture-at-the-destination-architecture,architecture,архитектура,noun,Travel and Culture,I love the old architecture in Prague.
+travel-and-culture-travel-planning-customs,customs,таможня,noun,Travel and Culture,We waited an hour to go through customs.
+travel-and-culture-travel-planning-ferry,ferry,паром,noun,Travel and Culture,We took the ferry to the island.
+travel-and-culture-travel-planning-cruise,cruise,круиз,noun,Travel and Culture,They went on a cruise around the Mediterranean.
+common-actions-at-home-wipe,wipe,вытирать,verb,Common Actions,Wipe your feet before you come in.
+common-actions-at-home-fold,fold,"складывать (ткань, бумагу)",verb,Common Actions,Fold the towels and put them away.
+common-actions-at-home-pour,pour,наливать,verb,Common Actions,Can you pour me some water?
+common-actions-at-home-stir,stir,"мешать, помешивать",verb,Common Actions,Stir the soup so that it doesn't burn.
+common-actions-at-home-rinse,rinse,ополаскивать,verb,Common Actions,Rinse the rice before you cook it.
+common-actions-at-home-hang,hang,вешать,verb,Common Actions,Hang your coat on the hook.
+common-actions-at-home-lock,lock,запирать,verb,Common Actions,Don't forget to lock the door.
+common-actions-out-and-about-knock,knock,стучать,verb,Common Actions,Please knock before you come in.
+common-actions-out-and-about-hurry,hurry,"спешить, торопиться",verb,Common Actions,We must hurry or we will be late.
+common-actions-out-and-about-wander,wander,бродить,verb,Common Actions,We like to wander around the old town.
+common-actions-out-and-about-carry,carry,нести,verb,Common Actions,Can you help me carry these bags?
+common-actions-out-and-about-borrow,borrow,брать взаймы,verb,Common Actions,Can I borrow your umbrella?
+common-actions-out-and-about-lend,lend,давать взаймы,verb,Common Actions,I can lend you twenty pounds.
+common-actions-out-and-about-fetch,fetch,"сходить за (чем-то), принести",verb,Common Actions,Could you fetch the children from school?
+common-actions-out-and-about-greet,greet,приветствовать,verb,Common Actions,Stand at the door and greet the guests.

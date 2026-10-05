@@ -1,0 +1,117 @@
+You are helping to improve the word data of "Spell Sprint", a spelling and vocabulary trainer
+for Russian-speaking learners of English (levels A2–C1). The app uses each word in several tasks:
+- the learner sees the Russian translation and types the English word;
+- dictation (the learner hears the word);
+- choosing the correct spelling among misspellings;
+- after answering, the learner sees an example sentence and a short English definition;
+- a hint about the spelling trap of the word.
+
+Below is a batch of words (CSV). For EACH row, research how the word is really used and return
+improved data. Use your research tools: learner dictionaries, corpora and word lists, to check
+meaning, typical collocations, CEFR level and spelling difficulty.
+
+=== SOURCES AND COPYRIGHT (important) ===
+- Use dictionaries and corpora as EVIDENCE only (Cambridge, Oxford Learner's, Longman, Collins,
+  Macmillan, English Vocabulary Profile, BNC, COCA, SkELL, Ludwig, Google Ngram).
+- Do NOT copy their example sentences or definitions word for word: they are copyrighted.
+  Write ORIGINAL sentences and definitions that follow the typical usage you found.
+- You MAY copy sentences from openly licensed sources (Tatoeba – CC BY 2.0 FR; Wiktionary –
+  CC BY-SA) — then put the exact URL in "source".
+- Never invent statistics or levels. If you are not sure, leave the field empty and explain in "notes".
+
+=== RULES FOR EACH FIELD ===
+translation_check:
+  "ok" if the Russian translation matches the main everyday meaning; otherwise a better Russian
+  translation (several meanings separated by ", "; a clarification in brackets, e.g.
+  "больной, ноющий (о горле, мышцах)"). Watch for false friends and for a translation that
+  belongs to another English word (e.g. "болезненный" is "painful", not "sore").
+example:
+  ONE natural sentence, 8–16 words, everyday situation (home, study, work, travel, friends).
+  - uses the word exactly in the meaning of the Russian translation;
+  - contains the word in the given form (a verb may change form: go → went is fine);
+  - British spelling and vocabulary (colour, organise, flat, mobile);
+  - no real people, brands, politics, religion, violence, alcohol or adult topics;
+  - not about logistics or warehouses unless the topic column says so;
+  - the sentence must make the meaning clear even without the translation
+    ("She paid the bill" is weak; "After dinner, the waiter brought us the bill" is good).
+example_2, example_3:
+  Two more sentences of the same quality in different situations (for future gap-fill and
+  proofreading tasks). A different collocation in each, if possible.
+definition:
+  Learner-friendly English definition, max 15 words, using only words easier than the headword.
+  Do not start with the headword. Nouns: "a/an …", verbs: "to …".
+cefr:
+  A1/A2/B1/B2/C1/C2 — the level of THIS meaning, from English Vocabulary Profile or Oxford 3000/5000.
+  Empty if not found.
+collocations:
+  3–5 most frequent collocations or phrases with this meaning, separated by "; "
+  (e.g. "pay the bill; split the bill; the bill came to").
+spelling_trap:
+  Short hint (max 60 characters) about WHY the word is hard to spell for a Russian speaker,
+  e.g. "double c, double m", "silent b at the end", "-ence, not -ance",
+  "ei after c". Empty if the word has no real trap.
+common_misspellings:
+  2–4 real misspellings that learners actually produce (search learner-error data, spelling
+  lists, "commonly misspelled words" lists, Ludwig/Google results). Separated by "; ".
+  Every item must be a non-word (never a real English word).
+alternatives:
+  Other English words or spellings that are ALSO a correct answer for the same Russian prompt
+  and should be accepted (e.g. rubbish → "trash; garbage"; mobile phone → "mobile; cell phone").
+  Only true equivalents, separated by "; ". Empty if none.
+source:
+  URL(s) used as evidence for the meaning / level (and the licence URL if a sentence was copied).
+notes:
+  Anything the editor should know: the word is too rare or too specialised for its level, the
+  translation is ambiguous, the word should rather be removed, etc. Otherwise empty.
+
+=== OUTPUT FORMAT ===
+Return ONLY one CSV code block, UTF-8, comma-separated, every field in double quotes, a header
+row and exactly one row per input row, in the same order, with these columns:
+
+"word_id","word","translation_check","example","example_2","example_3","definition","cefr","collocations","spelling_trap","common_misspellings","alternatives","source","notes"
+
+Keep word_id and word exactly as in the input. Do not skip rows. Do not add commentary
+outside the code block.
+
+=== INPUT BATCH ===
+word_id,word,translation,part_of_speech,topic,current_example
+technology-online-life-notification,notification,уведомление,noun,Technology,The app sent a notification about the new message.
+technology-online-life-subscribe,subscribe,подписаться,verb,Technology,You can subscribe to the newsletter for weekly updates.
+technology-online-life-account,account,"аккаунт, учётная запись",noun,Technology,I created an account to save my progress.
+technology-online-life-privacy,privacy,конфиденциальность,noun,Technology,The application settings include a privacy section.
+technology-online-life-search-engine,search engine,поисковая система,noun,Technology,I used a search engine to find the address.
+technology-online-life-social-media,social media,соцсети,noun,Technology,Many people use social media to share news.
+technology-online-life-delete,delete,удалить,verb,Technology,Please delete the old files after checking them.
+technology-online-life-backup,backup,резервная копия,noun,Technology,I made a backup before updating the computer.
+nature-and-animals-nature-and-animals-forest,forest,лес,noun,Nature and Animals,We walked through the forest on a cool morning.
+nature-and-animals-nature-and-animals-mountain,mountain,гора,noun,Nature and Animals,The mountain was covered with snow in winter.
+nature-and-animals-nature-and-animals-valley,valley,долина,noun,Nature and Animals,A small river runs through the green valley.
+nature-and-animals-nature-and-animals-island,island,остров,noun,Nature and Animals,They visited a quiet island during their holiday.
+nature-and-animals-nature-and-animals-wildlife,wildlife,дикая природа,noun,Nature and Animals,The national park protects local wildlife.
+nature-and-animals-nature-and-animals-insect,insect,насекомое,noun,Nature and Animals,A small insect landed on the window.
+nature-and-animals-nature-and-animals-butterfly,butterfly,бабочка,noun,Nature and Animals,A colourful butterfly rested on the flower.
+nature-and-animals-nature-and-animals-squirrel,squirrel,белка,noun,Nature and Animals,A squirrel quickly climbed the tree.
+nature-and-animals-nature-and-animals-eagle,eagle,орёл,noun,Nature and Animals,We saw an eagle flying above the valley.
+nature-and-animals-nature-and-animals-environment,environment,окружающая среда,noun,Nature and Animals,We should protect the environment by wasting less water.
+nature-and-animals-nature-and-animals-pollution,pollution,загрязнение,noun,Nature and Animals,Public transport can help reduce air pollution.
+nature-and-animals-nature-and-animals-recycle,recycle,перерабатывать,verb,Nature and Animals,We recycle paper and plastic at home.
+weather-and-seasons-weather-and-seasons-weather,weather,погода,noun,Weather and Seasons,The weather changed suddenly before the walk.
+weather-and-seasons-weather-and-seasons-temperature,temperature,температура (сколько градусов),noun,Weather and Seasons,The temperature dropped during the night.
+weather-and-seasons-weather-and-seasons-forecast,forecast,прогноз,noun,Weather and Seasons,The weather forecast predicts rain tomorrow.
+weather-and-seasons-weather-and-seasons-thunderstorm,thunderstorm,гроза,noun,Weather and Seasons,A thunderstorm interrupted our evening walk.
+weather-and-seasons-weather-and-seasons-breeze,breeze,лёгкий ветер,noun,Weather and Seasons,A cool breeze came through the open window.
+weather-and-seasons-weather-and-seasons-drizzle,drizzle,морось,noun,Weather and Seasons,Light drizzle continued throughout the morning.
+weather-and-seasons-weather-and-seasons-humid,humid,влажный,adjective,Weather and Seasons,The room felt humid after the heavy rain.
+weather-and-seasons-weather-and-seasons-freezing,freezing,ледяной,adjective,Weather and Seasons,"It was freezing outside, so I wore two coats."
+weather-and-seasons-weather-and-seasons-autumn,autumn,осень,noun,Weather and Seasons,The trees become colourful in autumn.
+weather-and-seasons-weather-and-seasons-spring,spring,весна,noun,Weather and Seasons,Flowers begin to grow in spring.
+weather-and-seasons-weather-and-seasons-flood,flood,наводнение,noun,Weather and Seasons,The heavy rain caused a flood near the river.
+weather-and-seasons-weather-and-seasons-drought,drought,засуха,noun,Weather and Seasons,The long drought damaged many local farms.
+general-english-commonly-misspelled-accommodation,accommodation,"жильё, размещение",noun,General English,Our accommodation was clean and close to public transport.
+general-english-commonly-misspelled-receive,receive,получать,verb,General English,I expect to receive the package tomorrow morning.
+general-english-commonly-misspelled-separate,separate,отдельный; разделять,adjective,General English,Please keep the clean and dirty clothes separate.
+general-english-commonly-misspelled-definitely,definitely,определённо,adverb,General English,I will definitely call you after the meeting.
+general-english-commonly-misspelled-occasionally,occasionally,время от времени,adverb,General English,We occasionally eat dinner at a small restaurant.
+general-english-commonly-misspelled-necessary,necessary,необходимый,adjective,General English,A valid passport is necessary for this journey.
+general-english-commonly-misspelled-embarrass,embarrass,смущать,verb,General English,I did not want to embarrass my colleague.
+general-english-commonly-misspelled-environment,environment,окружающая среда,noun,General English,We should protect the environment by wasting less water.

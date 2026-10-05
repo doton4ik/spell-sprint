@@ -1,0 +1,117 @@
+You are helping to improve the word data of "Spell Sprint", a spelling and vocabulary trainer
+for Russian-speaking learners of English (levels A2–C1). The app uses each word in several tasks:
+- the learner sees the Russian translation and types the English word;
+- dictation (the learner hears the word);
+- choosing the correct spelling among misspellings;
+- after answering, the learner sees an example sentence and a short English definition;
+- a hint about the spelling trap of the word.
+
+Below is a batch of words (CSV). For EACH row, research how the word is really used and return
+improved data. Use your research tools: learner dictionaries, corpora and word lists, to check
+meaning, typical collocations, CEFR level and spelling difficulty.
+
+=== SOURCES AND COPYRIGHT (important) ===
+- Use dictionaries and corpora as EVIDENCE only (Cambridge, Oxford Learner's, Longman, Collins,
+  Macmillan, English Vocabulary Profile, BNC, COCA, SkELL, Ludwig, Google Ngram).
+- Do NOT copy their example sentences or definitions word for word: they are copyrighted.
+  Write ORIGINAL sentences and definitions that follow the typical usage you found.
+- You MAY copy sentences from openly licensed sources (Tatoeba – CC BY 2.0 FR; Wiktionary –
+  CC BY-SA) — then put the exact URL in "source".
+- Never invent statistics or levels. If you are not sure, leave the field empty and explain in "notes".
+
+=== RULES FOR EACH FIELD ===
+translation_check:
+  "ok" if the Russian translation matches the main everyday meaning; otherwise a better Russian
+  translation (several meanings separated by ", "; a clarification in brackets, e.g.
+  "больной, ноющий (о горле, мышцах)"). Watch for false friends and for a translation that
+  belongs to another English word (e.g. "болезненный" is "painful", not "sore").
+example:
+  ONE natural sentence, 8–16 words, everyday situation (home, study, work, travel, friends).
+  - uses the word exactly in the meaning of the Russian translation;
+  - contains the word in the given form (a verb may change form: go → went is fine);
+  - British spelling and vocabulary (colour, organise, flat, mobile);
+  - no real people, brands, politics, religion, violence, alcohol or adult topics;
+  - not about logistics or warehouses unless the topic column says so;
+  - the sentence must make the meaning clear even without the translation
+    ("She paid the bill" is weak; "After dinner, the waiter brought us the bill" is good).
+example_2, example_3:
+  Two more sentences of the same quality in different situations (for future gap-fill and
+  proofreading tasks). A different collocation in each, if possible.
+definition:
+  Learner-friendly English definition, max 15 words, using only words easier than the headword.
+  Do not start with the headword. Nouns: "a/an …", verbs: "to …".
+cefr:
+  A1/A2/B1/B2/C1/C2 — the level of THIS meaning, from English Vocabulary Profile or Oxford 3000/5000.
+  Empty if not found.
+collocations:
+  3–5 most frequent collocations or phrases with this meaning, separated by "; "
+  (e.g. "pay the bill; split the bill; the bill came to").
+spelling_trap:
+  Short hint (max 60 characters) about WHY the word is hard to spell for a Russian speaker,
+  e.g. "double c, double m", "silent b at the end", "-ence, not -ance",
+  "ei after c". Empty if the word has no real trap.
+common_misspellings:
+  2–4 real misspellings that learners actually produce (search learner-error data, spelling
+  lists, "commonly misspelled words" lists, Ludwig/Google results). Separated by "; ".
+  Every item must be a non-word (never a real English word).
+alternatives:
+  Other English words or spellings that are ALSO a correct answer for the same Russian prompt
+  and should be accepted (e.g. rubbish → "trash; garbage"; mobile phone → "mobile; cell phone").
+  Only true equivalents, separated by "; ". Empty if none.
+source:
+  URL(s) used as evidence for the meaning / level (and the licence URL if a sentence was copied).
+notes:
+  Anything the editor should know: the word is too rare or too specialised for its level, the
+  translation is ambiguous, the word should rather be removed, etc. Otherwise empty.
+
+=== OUTPUT FORMAT ===
+Return ONLY one CSV code block, UTF-8, comma-separated, every field in double quotes, a header
+row and exactly one row per input row, in the same order, with these columns:
+
+"word_id","word","translation_check","example","example_2","example_3","definition","cefr","collocations","spelling_trap","common_misspellings","alternatives","source","notes"
+
+Keep word_id and word exactly as in the input. Do not skip rows. Do not add commentary
+outside the code block.
+
+=== INPUT BATCH ===
+word_id,word,translation,part_of_speech,topic,current_example
+family-and-relationships-relatives-cousin,cousin,двоюродный брат (сестра),noun,Family and Relationships,My cousin is coming to stay with us next week.
+family-and-relationships-relatives-nephew,nephew,племянник,noun,Family and Relationships,My nephew is five years old and loves football.
+family-and-relationships-relatives-niece,niece,племянница,noun,Family and Relationships,My niece gave me a picture she painted herself.
+family-and-relationships-relatives-aunt,aunt,тётя,noun,Family and Relationships,My aunt always sends me a card on my birthday.
+family-and-relationships-relatives-uncle,uncle,дядя,noun,Family and Relationships,My uncle works as a driver in a big company.
+family-and-relationships-relatives-twins,twins,близнецы,noun,Family and Relationships,The twins look so alike that nobody can tell them apart.
+family-and-relationships-relatives-elderly,elderly,пожилой,adjective,Family and Relationships,Please give your seat to an elderly person on the bus.
+family-and-relationships-friends-and-partners-flatmate,flatmate,сосед по квартире,noun,Family and Relationships,My flatmate cooks dinner on Monday and I cook on Tuesday.
+family-and-relationships-friends-and-partners-acquaintance,acquaintance,знакомый,noun,Family and Relationships,"He is not a close friend, only an acquaintance from university."
+family-and-relationships-friends-and-partners-engaged,engaged,помолвленный,adjective,Family and Relationships,They got engaged last summer and will marry next year.
+family-and-relationships-friends-and-partners-trust,trust,доверять,verb,Family and Relationships,I trust my best friend with all my secrets.
+family-and-relationships-friends-and-partners-argue,argue,"спорить, ссориться",verb,Family and Relationships,My brother and I often argue about what to watch.
+family-and-relationships-friends-and-partners-fall-out-with,fall out with,поссориться с,phrase,Family and Relationships,I never want to fall out with my best friend.
+family-and-relationships-life-events-wedding,wedding,свадьба,noun,Family and Relationships,We are going to a wedding in the mountains next Saturday.
+family-and-relationships-life-events-divorce,divorce,развод,noun,Family and Relationships,"After the divorce, the children lived with their mother."
+family-and-relationships-life-events-anniversary,anniversary,годовщина,noun,Family and Relationships,"It is our wedding anniversary, so we are going out for dinner."
+family-and-relationships-life-events-funeral,funeral,похороны,noun,Family and Relationships,Many people came to the funeral to say goodbye.
+family-and-relationships-life-events-celebrate,celebrate,"праздновать, отмечать",verb,Family and Relationships,We always celebrate the New Year with our whole family.
+family-and-relationships-life-events-adopt,adopt,усыновлять,verb,Family and Relationships,They decided to adopt a little girl from another country.
+family-and-relationships-life-events-bring-up,bring up,воспитывать,phrase,Family and Relationships,She had to bring up three children on her own.
+family-and-relationships-life-events-look-after,look after,"заботиться о, присматривать за",phrase,Family and Relationships,Can you look after my cat while I am on holiday?
+hobbies-and-free-time-sport-and-exercise-gym,gym,спортзал,noun,Hobbies and Free Time,I go to the gym three times a week after work.
+hobbies-and-free-time-sport-and-exercise-jog,jog,бегать трусцой,verb,Hobbies and Free Time,I like to jog in the park before breakfast.
+hobbies-and-free-time-sport-and-exercise-exercise,exercise,"делать упражнения, заниматься спортом",verb,Hobbies and Free Time,Doctors say we should exercise for at least thirty minutes daily.
+hobbies-and-free-time-sport-and-exercise-equipment,equipment,"оборудование, снаряжение",noun,Hobbies and Free Time,The club buys all the sports equipment for the children.
+hobbies-and-free-time-sport-and-exercise-competition,competition,"соревнование, конкурс",noun,Hobbies and Free Time,She won first prize in the swimming competition last month.
+hobbies-and-free-time-sport-and-exercise-champion,champion,чемпион,noun,Hobbies and Free Time,The young champion held up the cup and smiled.
+hobbies-and-free-time-sport-and-exercise-referee,referee,судья (в спорте),noun,Hobbies and Free Time,The referee stopped the match when the player fell down.
+hobbies-and-free-time-sport-and-exercise-stadium,stadium,стадион,noun,Hobbies and Free Time,Thousands of fans filled the stadium for the final.
+hobbies-and-free-time-sport-and-exercise-take-part-in,take part in,участвовать в,phrase,Hobbies and Free Time,Everyone in our class wants to take part in the race.
+hobbies-and-free-time-creative-hobbies-paint,paint,рисовать красками,verb,Hobbies and Free Time,My sister likes to paint pictures of flowers and trees.
+hobbies-and-free-time-creative-hobbies-knit,knit,вязать,verb,Hobbies and Free Time,My grandmother taught me how to knit a warm scarf.
+hobbies-and-free-time-creative-hobbies-sew,sew,шить,verb,Hobbies and Free Time,"Can you sew this button back onto my shirt, please?"
+hobbies-and-free-time-creative-hobbies-hobby,hobby,"хобби, увлечение",noun,Hobbies and Free Time,Photography is not just a hobby for me; it is my passion.
+hobbies-and-free-time-creative-hobbies-photography,photography,"фотография, фотосъёмка",noun,Hobbies and Free Time,She is studying photography because she wants to work for a magazine.
+hobbies-and-free-time-creative-hobbies-guitar,guitar,гитара,noun,Hobbies and Free Time,He plays the guitar in a small band at weekends.
+hobbies-and-free-time-creative-hobbies-instrument,instrument,(музыкальный) инструмент,noun,Hobbies and Free Time,Which musical instrument would you like to learn to play?
+hobbies-and-free-time-creative-hobbies-gardening,gardening,садоводство,noun,Hobbies and Free Time,"Gardening is a relaxing hobby, especially on warm sunny days."
+hobbies-and-free-time-creative-hobbies-collect,collect,"коллекционировать, собирать",verb,Hobbies and Free Time,My brother likes to collect old coins and stamps.
+hobbies-and-free-time-creative-hobbies-craft,craft,"ремесло, рукоделие",noun,Hobbies and Free Time,We made a paper bird in the craft lesson at school.

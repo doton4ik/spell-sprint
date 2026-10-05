@@ -1,0 +1,117 @@
+You are helping to improve the word data of "Spell Sprint", a spelling and vocabulary trainer
+for Russian-speaking learners of English (levels A2–C1). The app uses each word in several tasks:
+- the learner sees the Russian translation and types the English word;
+- dictation (the learner hears the word);
+- choosing the correct spelling among misspellings;
+- after answering, the learner sees an example sentence and a short English definition;
+- a hint about the spelling trap of the word.
+
+Below is a batch of words (CSV). For EACH row, research how the word is really used and return
+improved data. Use your research tools: learner dictionaries, corpora and word lists, to check
+meaning, typical collocations, CEFR level and spelling difficulty.
+
+=== SOURCES AND COPYRIGHT (important) ===
+- Use dictionaries and corpora as EVIDENCE only (Cambridge, Oxford Learner's, Longman, Collins,
+  Macmillan, English Vocabulary Profile, BNC, COCA, SkELL, Ludwig, Google Ngram).
+- Do NOT copy their example sentences or definitions word for word: they are copyrighted.
+  Write ORIGINAL sentences and definitions that follow the typical usage you found.
+- You MAY copy sentences from openly licensed sources (Tatoeba – CC BY 2.0 FR; Wiktionary –
+  CC BY-SA) — then put the exact URL in "source".
+- Never invent statistics or levels. If you are not sure, leave the field empty and explain in "notes".
+
+=== RULES FOR EACH FIELD ===
+translation_check:
+  "ok" if the Russian translation matches the main everyday meaning; otherwise a better Russian
+  translation (several meanings separated by ", "; a clarification in brackets, e.g.
+  "больной, ноющий (о горле, мышцах)"). Watch for false friends and for a translation that
+  belongs to another English word (e.g. "болезненный" is "painful", not "sore").
+example:
+  ONE natural sentence, 8–16 words, everyday situation (home, study, work, travel, friends).
+  - uses the word exactly in the meaning of the Russian translation;
+  - contains the word in the given form (a verb may change form: go → went is fine);
+  - British spelling and vocabulary (colour, organise, flat, mobile);
+  - no real people, brands, politics, religion, violence, alcohol or adult topics;
+  - not about logistics or warehouses unless the topic column says so;
+  - the sentence must make the meaning clear even without the translation
+    ("She paid the bill" is weak; "After dinner, the waiter brought us the bill" is good).
+example_2, example_3:
+  Two more sentences of the same quality in different situations (for future gap-fill and
+  proofreading tasks). A different collocation in each, if possible.
+definition:
+  Learner-friendly English definition, max 15 words, using only words easier than the headword.
+  Do not start with the headword. Nouns: "a/an …", verbs: "to …".
+cefr:
+  A1/A2/B1/B2/C1/C2 — the level of THIS meaning, from English Vocabulary Profile or Oxford 3000/5000.
+  Empty if not found.
+collocations:
+  3–5 most frequent collocations or phrases with this meaning, separated by "; "
+  (e.g. "pay the bill; split the bill; the bill came to").
+spelling_trap:
+  Short hint (max 60 characters) about WHY the word is hard to spell for a Russian speaker,
+  e.g. "double c, double m", "silent b at the end", "-ence, not -ance",
+  "ei after c". Empty if the word has no real trap.
+common_misspellings:
+  2–4 real misspellings that learners actually produce (search learner-error data, spelling
+  lists, "commonly misspelled words" lists, Ludwig/Google results). Separated by "; ".
+  Every item must be a non-word (never a real English word).
+alternatives:
+  Other English words or spellings that are ALSO a correct answer for the same Russian prompt
+  and should be accepted (e.g. rubbish → "trash; garbage"; mobile phone → "mobile; cell phone").
+  Only true equivalents, separated by "; ". Empty if none.
+source:
+  URL(s) used as evidence for the meaning / level (and the licence URL if a sentence was copied).
+notes:
+  Anything the editor should know: the word is too rare or too specialised for its level, the
+  translation is ambiguous, the word should rather be removed, etc. Otherwise empty.
+
+=== OUTPUT FORMAT ===
+Return ONLY one CSV code block, UTF-8, comma-separated, every field in double quotes, a header
+row and exactly one row per input row, in the same order, with these columns:
+
+"word_id","word","translation_check","example","example_2","example_3","definition","cefr","collocations","spelling_trap","common_misspellings","alternatives","source","notes"
+
+Keep word_id and word exactly as in the input. Do not skip rows. Do not add commentary
+outside the code block.
+
+=== INPUT BATCH ===
+word_id,word,translation,part_of_speech,topic,current_example
+general-english-active-vocabulary-depend,depend,зависеть,verb,General English,Our plans depend on the weather.
+general-english-active-vocabulary-mention,mention,упоминать,verb,General English,She did not mention the party.
+general-english-active-vocabulary-notice,notice,замечать,verb,General English,Did you notice his new haircut?
+general-english-active-vocabulary-opinion,opinion,мнение,noun,General English,"In my opinion, the book is better than the film."
+general-english-active-vocabulary-reason,reason,причина,noun,General English,What is the reason for the delay?
+general-english-active-vocabulary-choice,choice,выбор,noun,General English,You have a choice of three desserts.
+general-english-active-vocabulary-purpose,purpose,"назначение, смысл (зачем)",noun,General English,What is the purpose of your visit?
+general-english-active-vocabulary-chance,chance,шанс,noun,General English,This is your last chance to buy tickets.
+general-english-active-vocabulary-amount,amount,"количество, сумма",noun,General English,He spent a large amount of money on books.
+general-english-active-vocabulary-situation,situation,ситуация,noun,General English,The situation is better than last week.
+general-english-active-vocabulary-decision,decision,решение,noun,General English,Moving abroad was a difficult decision.
+general-english-active-vocabulary-difference,difference,"разница, отличие",noun,General English,Can you see the difference between the photos?
+general-english-active-vocabulary-condition,condition,состояние; условие,noun,General English,The car is in good condition.
+general-english-active-vocabulary-possible,possible,возможный,adjective,General English,Is it possible to change my ticket?
+general-english-active-vocabulary-available,available,"доступный, имеющийся",adjective,General English,Are there any rooms available tonight?
+general-english-active-vocabulary-similar,similar,похожий,adjective,General English,My sister and I have similar voices.
+general-english-active-vocabulary-recent,recent,недавний,adjective,General English,Have you read his recent article?
+general-english-active-vocabulary-certain,certain,определённый; точно известный,adjective,General English,Are you certain that the shop is open?
+general-english-active-vocabulary-especially,especially,особенно,adverb,General English,"I love fruit, especially apples."
+general-english-active-vocabulary-actually,actually,на самом деле,adverb,General English,"I thought he was French, but actually he is Swiss."
+study-and-career-learning-and-research-essay,essay,"эссе, сочинение",noun,Study and Career,Write an essay of about three hundred words.
+study-and-career-learning-and-research-thesis,thesis,"диссертация, дипломная работа",noun,Study and Career,She wrote her thesis on climate change.
+study-and-career-learning-and-research-degree,degree,"учёная степень, диплом",noun,Study and Career,He has a degree in economics.
+study-and-career-learning-and-research-graduate,graduate,выпускаться (из вуза),verb,Study and Career,She will graduate from university next year.
+study-and-career-learning-and-research-scholarship,scholarship,стипендия (грант на учёбу),noun,Study and Career,He won a scholarship to study in London.
+study-and-career-learning-and-research-semester,semester,семестр,noun,Study and Career,The new semester begins in September.
+study-and-career-learning-and-research-tutor,tutor,"репетитор, преподаватель",noun,Study and Career,My tutor helps me with my writing.
+study-and-career-learning-and-research-revise,revise,повторять (к экзамену),verb,Study and Career,I need to revise for my history exam.
+study-and-career-learning-and-research-summary,summary,краткое изложение,noun,Study and Career,Write a short summary of the article.
+study-and-career-learning-and-research-source,source,источник,noun,Study and Career,Always check the source of your information.
+study-and-career-learning-and-research-experiment,experiment,эксперимент,noun,Study and Career,We did an experiment with water and salt.
+study-and-career-learning-and-research-analysis,analysis,анализ,noun,Study and Career,The analysis of the results took two weeks.
+study-and-career-learning-and-research-evidence,evidence,доказательства,noun,Study and Career,There is no evidence that he was there.
+study-and-career-learning-and-research-conclusion,conclusion,"вывод, заключение",noun,Study and Career,What conclusion did you reach?
+study-and-career-learning-and-research-handout,handout,раздаточный материал,noun,Study and Career,The teacher gave us a handout with the main rules.
+study-and-career-career-development-internship,internship,стажировка,noun,Study and Career,She did an internship at a design studio.
+study-and-career-career-development-mentor,mentor,наставник,noun,Study and Career,My mentor gave me great advice about my career.
+study-and-career-career-development-workshop,workshop,"мастер-класс, семинар",noun,Study and Career,I went to a writing workshop on Saturday.
+study-and-career-career-development-ambition,ambition,"амбиция, стремление",noun,Study and Career,Her ambition is to become a doctor.
+study-and-career-career-development-employer,employer,работодатель,noun,Study and Career,My employer pays for my English classes.

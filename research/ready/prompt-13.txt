@@ -1,0 +1,117 @@
+You are helping to improve the word data of "Spell Sprint", a spelling and vocabulary trainer
+for Russian-speaking learners of English (levels A2–C1). The app uses each word in several tasks:
+- the learner sees the Russian translation and types the English word;
+- dictation (the learner hears the word);
+- choosing the correct spelling among misspellings;
+- after answering, the learner sees an example sentence and a short English definition;
+- a hint about the spelling trap of the word.
+
+Below is a batch of words (CSV). For EACH row, research how the word is really used and return
+improved data. Use your research tools: learner dictionaries, corpora and word lists, to check
+meaning, typical collocations, CEFR level and spelling difficulty.
+
+=== SOURCES AND COPYRIGHT (important) ===
+- Use dictionaries and corpora as EVIDENCE only (Cambridge, Oxford Learner's, Longman, Collins,
+  Macmillan, English Vocabulary Profile, BNC, COCA, SkELL, Ludwig, Google Ngram).
+- Do NOT copy their example sentences or definitions word for word: they are copyrighted.
+  Write ORIGINAL sentences and definitions that follow the typical usage you found.
+- You MAY copy sentences from openly licensed sources (Tatoeba – CC BY 2.0 FR; Wiktionary –
+  CC BY-SA) — then put the exact URL in "source".
+- Never invent statistics or levels. If you are not sure, leave the field empty and explain in "notes".
+
+=== RULES FOR EACH FIELD ===
+translation_check:
+  "ok" if the Russian translation matches the main everyday meaning; otherwise a better Russian
+  translation (several meanings separated by ", "; a clarification in brackets, e.g.
+  "больной, ноющий (о горле, мышцах)"). Watch for false friends and for a translation that
+  belongs to another English word (e.g. "болезненный" is "painful", not "sore").
+example:
+  ONE natural sentence, 8–16 words, everyday situation (home, study, work, travel, friends).
+  - uses the word exactly in the meaning of the Russian translation;
+  - contains the word in the given form (a verb may change form: go → went is fine);
+  - British spelling and vocabulary (colour, organise, flat, mobile);
+  - no real people, brands, politics, religion, violence, alcohol or adult topics;
+  - not about logistics or warehouses unless the topic column says so;
+  - the sentence must make the meaning clear even without the translation
+    ("She paid the bill" is weak; "After dinner, the waiter brought us the bill" is good).
+example_2, example_3:
+  Two more sentences of the same quality in different situations (for future gap-fill and
+  proofreading tasks). A different collocation in each, if possible.
+definition:
+  Learner-friendly English definition, max 15 words, using only words easier than the headword.
+  Do not start with the headword. Nouns: "a/an …", verbs: "to …".
+cefr:
+  A1/A2/B1/B2/C1/C2 — the level of THIS meaning, from English Vocabulary Profile or Oxford 3000/5000.
+  Empty if not found.
+collocations:
+  3–5 most frequent collocations or phrases with this meaning, separated by "; "
+  (e.g. "pay the bill; split the bill; the bill came to").
+spelling_trap:
+  Short hint (max 60 characters) about WHY the word is hard to spell for a Russian speaker,
+  e.g. "double c, double m", "silent b at the end", "-ence, not -ance",
+  "ei after c". Empty if the word has no real trap.
+common_misspellings:
+  2–4 real misspellings that learners actually produce (search learner-error data, spelling
+  lists, "commonly misspelled words" lists, Ludwig/Google results). Separated by "; ".
+  Every item must be a non-word (never a real English word).
+alternatives:
+  Other English words or spellings that are ALSO a correct answer for the same Russian prompt
+  and should be accepted (e.g. rubbish → "trash; garbage"; mobile phone → "mobile; cell phone").
+  Only true equivalents, separated by "; ". Empty if none.
+source:
+  URL(s) used as evidence for the meaning / level (and the licence URL if a sentence was copied).
+notes:
+  Anything the editor should know: the word is too rare or too specialised for its level, the
+  translation is ambiguous, the word should rather be removed, etc. Otherwise empty.
+
+=== OUTPUT FORMAT ===
+Return ONLY one CSV code block, UTF-8, comma-separated, every field in double quotes, a header
+row and exactly one row per input row, in the same order, with these columns:
+
+"word_id","word","translation_check","example","example_2","example_3","definition","cefr","collocations","spelling_trap","common_misspellings","alternatives","source","notes"
+
+Keep word_id and word exactly as in the input. Do not skip rows. Do not add commentary
+outside the code block.
+
+=== INPUT BATCH ===
+word_id,word,translation,part_of_speech,topic,current_example
+hobbies-and-free-time-relaxing-and-going-out-cinema,cinema,кинотеатр,noun,Hobbies and Free Time,We usually go to the cinema on Friday evening.
+hobbies-and-free-time-relaxing-and-going-out-concert,concert,концерт,noun,Hobbies and Free Time,"The concert starts at eight, so we must leave early."
+hobbies-and-free-time-relaxing-and-going-out-audience,audience,"публика, зрители",noun,Hobbies and Free Time,The audience clapped loudly at the end of the show.
+hobbies-and-free-time-relaxing-and-going-out-festival,festival,фестиваль,noun,Hobbies and Free Time,Thousands of young people travel to the music festival every summer.
+hobbies-and-free-time-relaxing-and-going-out-board-game,board game,настольная игра,phrase,Hobbies and Free Time,On rainy days we play a board game together as a family.
+hobbies-and-free-time-relaxing-and-going-out-relax,relax,расслабляться,verb,Hobbies and Free Time,I like to relax with a good book after dinner.
+hobbies-and-free-time-relaxing-and-going-out-enjoyable,enjoyable,"приятный, увлекательный",adjective,Hobbies and Free Time,The trip to the mountains was really enjoyable for everyone.
+hobbies-and-free-time-relaxing-and-going-out-exciting,exciting,"захватывающий, волнующий",adjective,Hobbies and Free Time,The last ten minutes of the match were really exciting.
+city-and-transport-places-in-the-city-skyscraper,skyscraper,небоскрёб,noun,City and Transport,From the top of the skyscraper you can see the whole city.
+city-and-transport-places-in-the-city-suburb,suburb,пригород,noun,City and Transport,We live in a quiet suburb about ten kilometres from the centre.
+city-and-transport-places-in-the-city-crowded,crowded,"многолюдный, переполненный",adjective,City and Transport,The train was so crowded that I had to stand.
+city-and-transport-getting-around-platform,platform,"платформа, перрон",noun,City and Transport,Your train leaves from platform three in five minutes.
+city-and-transport-getting-around-passenger,passenger,пассажир,noun,City and Transport,Every passenger must show a ticket before getting on the bus.
+city-and-transport-getting-around-underground,underground,"метро, подземка",noun,City and Transport,In London it is faster to take the underground than a taxi.
+city-and-transport-getting-around-journey,journey,"поездка, путешествие",noun,City and Transport,The journey to my grandparents' house takes about three hours.
+city-and-transport-getting-around-catch,catch,"ловить, успеть на (транспорт)",verb,City and Transport,We have to run if we want to catch the last bus.
+city-and-transport-getting-around-miss,miss,"опоздать на, пропустить",verb,City and Transport,"Hurry up, or we will miss the train!"
+city-and-transport-getting-around-get-off,get off,выходить (из транспорта),phrase,City and Transport,You need to get off at the next stop.
+city-and-transport-getting-around-bus-stop,bus stop,автобусная остановка,phrase,City and Transport,There is a bus stop right outside my school.
+city-and-transport-traffic-and-directions-traffic,traffic,дорожное движение,noun,City and Transport,The traffic was terrible this morning because of the roadworks.
+city-and-transport-traffic-and-directions-roundabout,roundabout,круговое движение,noun,City and Transport,Take the second exit at the roundabout and keep going.
+city-and-transport-traffic-and-directions-junction,junction,"перекрёсток, развязка",noun,City and Transport,Turn left at the next junction and you will see the bank.
+city-and-transport-traffic-and-directions-pedestrian,pedestrian,пешеход,noun,City and Transport,A pedestrian must use the crossing to get over the road safely.
+city-and-transport-traffic-and-directions-traffic-lights,traffic lights,светофор,phrase,City and Transport,Stop at the traffic lights when they turn red.
+city-and-transport-traffic-and-directions-straight-on,straight on,прямо,phrase,City and Transport,Go straight on until you see the big white church.
+city-and-transport-traffic-and-directions-opposite,opposite,напротив,preposition,City and Transport,"The bank is opposite the supermarket, next to the bus stop."
+city-and-transport-traffic-and-directions-cross,cross,переходить (через дорогу),verb,City and Transport,Look both ways before you cross the road.
+city-and-transport-traffic-and-directions-park,park,парковать(ся),verb,City and Transport,You cannot park here because there is a sign.
+city-and-transport-traffic-and-directions-lost,lost,"заблудившийся, потерянный",adjective,City and Transport,We got lost in the old town and asked a policeman.
+animals-pets-and-farm-animals-rabbit,rabbit,кролик,noun,Animals,The rabbit ate a carrot and then ran away.
+animals-pets-and-farm-animals-hamster,hamster,хомяк,noun,Animals,My hamster runs on its wheel every night.
+animals-pets-and-farm-animals-puppy,puppy,щенок,noun,Animals,We bought a puppy for our children last week.
+animals-pets-and-farm-animals-kitten,kitten,котёнок,noun,Animals,The little kitten fell asleep on the warm sofa.
+animals-pets-and-farm-animals-sheep,sheep,"овца, овцы",noun,Animals,One sheep escaped from the farm and walked down the road.
+animals-pets-and-farm-animals-chicken,chicken,"курица, цыплёнок",noun,Animals,We keep a chicken in the garden that lays eggs.
+animals-pets-and-farm-animals-cage,cage,клетка,noun,Animals,Please close the cage door so the bird cannot escape.
+animals-pets-and-farm-animals-lead,lead,поводок,noun,Animals,Keep your dog on a lead near the busy road.
+animals-pets-and-farm-animals-feed,feed,кормить,verb,Animals,Please feed the fish twice a day while I am away.
+animals-pets-and-farm-animals-stroke,stroke,гладить,verb,Animals,The cat loves it when you stroke its head.
+animals-wild-animals-elephant,elephant,слон,noun,Animals,The elephant used its long trunk to drink water.
