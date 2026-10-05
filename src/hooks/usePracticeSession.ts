@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { defaultPracticeSettings } from '../data/practice'
-import { loadPracticeSettings, savePracticeAttempt, savePracticeSettings } from '../services/practiceStorage'
+import { getPracticeAttempts, loadPracticeSettings, savePracticeAttempt, savePracticeSettings } from '../services/practiceStorage'
 import { scheduleAfterAnswer } from '../services/reviewSchedule'
 import { findOtherMeaning } from '../services/libraryPractice'
 import type { CheckResult, ErrorType, PracticeAttempt, PracticeSettings, PracticeTask } from '../types/practice'
@@ -115,7 +115,12 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
     setAnswer(''); setOtherMeaning(null); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0)
   }
 
-  function skip() { markOutcome('skipped'); recordAttempt({ isCorrect: false, wasSkipped: true, wasAnswerRevealed: answerRevealed }); advance() }
+  function skip() {
+    markOutcome('skipped')
+    const seenBefore = getPracticeAttempts().some((attempt) => (currentTask.wordId ? attempt.wordId === currentTask.wordId : attempt.taskId === currentTask.id))
+    if (seenBefore || attemptsOnTask > 0 || answerRevealed) recordAttempt({ isCorrect: false, wasSkipped: true, wasAnswerRevealed: answerRevealed })
+    advance()
+  }
   function useHint() { setHintStep((step) => Math.min(step + 1, 5)) }
   function markForReview() { recordAttempt({ isCorrect: result === 'correct', wasSkipped: false, wasAnswerRevealed: answerRevealed, wasMarkedForReview: true }) }
   function restart() { setShuffledTasks(buildSession()); setTaskIndex(0); setAnswer(''); setOtherMeaning(null); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0); setCompleted(false); setOutcomes({}) }

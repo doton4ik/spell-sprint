@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
 import { buildPairSession, pairQuestions, pairStatuses, recordPairAnswer, type PairQuestion, type PairStatus } from '../services/pairs'
 import './pairs.css'
@@ -44,6 +44,7 @@ function PairSession({ questions, onFinish, onQuit }: { questions: PairQuestion[
   const [results, setResults] = useState<Array<{ question: PairQuestion; chosen: string }>>([])
   const question = questions[index]
   const atStart = question?.sentence.text.startsWith('___') ?? false
+  const words = useMemo(() => { const list = [...(question?.pair.words ?? [])]; for (let i = list.length - 1; i > 0; i -= 1) { const j = Math.floor(Math.random() * (i + 1)); [list[i], list[j]] = [list[j], list[i]] } return list }, [question])
 
   const choose = (word: string) => {
     if (chosen || !question) return
@@ -61,7 +62,7 @@ function PairSession({ questions, onFinish, onQuit }: { questions: PairQuestion[
       if (!question) return
       if (chosen && event.key === 'Enter') { event.preventDefault(); next(); return }
       const number = Number(event.key)
-      if (!chosen && number >= 1 && number <= question.pair.words.length) choose(question.pair.words[number - 1])
+      if (!chosen && number >= 1 && number <= words.length) choose(words[number - 1])
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
@@ -74,7 +75,7 @@ function PairSession({ questions, onFinish, onQuit }: { questions: PairQuestion[
     <div className="pairs-bar"><span>{index + 1} / {questions.length}</span><button className="quiet-button" type="button" onClick={onQuit}>Stop</button></div>
     <section className="pair-card">
       <p className="pair-sentence">{before}<span className={chosen ? (right ? 'pair-gap pair-gap--right' : 'pair-gap pair-gap--wrong') : 'pair-gap'}>{chosen ? shown(question.sentence.answer, atStart) : '      '}</span>{after}</p>
-      <div className="pair-choices">{question.pair.words.map((word, number) => <button type="button" key={word} disabled={Boolean(chosen)} className={chosen ? (word === question.sentence.answer ? 'pair-choice pair-choice--answer' : word === chosen ? 'pair-choice pair-choice--wrong' : 'pair-choice') : 'pair-choice'} onClick={() => choose(word)}><small>{number + 1}</small>{shown(word, atStart)}</button>)}</div>
+      <div className="pair-choices">{words.map((word, number) => <button type="button" key={word} disabled={Boolean(chosen)} className={chosen ? (word === question.sentence.answer ? 'pair-choice pair-choice--answer' : word === chosen ? 'pair-choice pair-choice--wrong' : 'pair-choice') : 'pair-choice'} onClick={() => choose(word)}><small>{number + 1}</small>{shown(word, atStart)}</button>)}</div>
       {chosen ? <div className={right ? 'pair-feedback pair-feedback--right' : 'pair-feedback pair-feedback--wrong'} role="status">
         <strong>{right ? 'Correct!' : `Not “${chosen}” — it is “${question.sentence.answer}”.`}</strong>
         <p>{question.pair.hint}</p>
