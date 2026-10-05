@@ -8,6 +8,17 @@ import { scheduleAfterAnswer } from './reviewSchedule'
 export * from './proofreadingEngine'
 
 // How much each mistake type should come up: types the learner keeps missing count up to 4×.
+// How often each type should come up before the learner's own history counts. Based on learner-corpus
+// research on Russian speakers (Rozovskaya & Roth 2010, ICLE: articles 19% and prepositions 18% of all
+// corrections, an extra "the" is the most common article error) against the number of marked places
+// in the texts: the rare-but-frequent types are boosted, the over-represented ones damped.
+const baseTypeWeights: Record<string, number> = {
+  'article-extra': 4, article: 2, 'plural-uncountable': 2, preposition: 1.6, 'reported-speech': 1.5, 'since-for': 1.3,
+  'article-missing': 0.45, agreement: 0.7, tense: 0.8, 'past-irregular': 0.5, 'gerund-infinitive': 0.5, 'word-form': 0.6,
+  'word-order': 0.7, passive: 0.5, quantifier: 0.6, conditional: 0.6, comparative: 0.5, modal: 0.8,
+}
+
+// The base weights, raised for the types this learner keeps missing (up to ×4).
 export function typeWeights(): Record<string, number> {
   const weights: Record<string, number> = {}
   for (const attempt of getPracticeAttempts()) {
@@ -16,6 +27,7 @@ export function typeWeights(): Record<string, number> {
     const slug = Object.entries(proofreadingTypes).find(([, info]) => info.label === type)?.[0]
     if (slug) weights[slug] = Math.min(4, (weights[slug] ?? 1) + 0.5)
   }
+  for (const type of new Set([...Object.keys(baseTypeWeights), ...Object.keys(weights)])) weights[type] = (baseTypeWeights[type] ?? 1) * (weights[type] ?? 1)
   return weights
 }
 
