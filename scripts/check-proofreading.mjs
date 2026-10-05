@@ -76,6 +76,27 @@ for (const text of proofreadingTexts) {
     if (good.fixed !== hunt.slots.length || good.falseAlarms.length) fail(`${text.id} hunt seed ${seed}: perfect edits → fixed ${good.fixed}/${hunt.slots.length}`)
   }
 }
+// Ten-sentences pool (public/data/proofreading-sentences.json, from research/tatoeba-proof-sentences.mjs):
+// each sentence has exactly one valid place, and fixing it is accepted.
+let poolChecked = 0
+try {
+  const pool = JSON.parse(readFileSync(join(root, 'public/data/proofreading-sentences.json'), 'utf8'))
+  for (const item of pool) {
+    const { segments, problems } = engine.parseProofreadingText(item.text)
+    problems.forEach((problem) => fail(`sentence ${item.id}: ${problem}`))
+    const places = segments.filter((segment) => segment.kind === 'place')
+    if (places.length !== 1) { fail(`sentence ${item.id}: ${places.length} places`); continue }
+    if (places[0].place.wrong.some((wrong) => places[0].place.correct.includes(wrong))) fail(`sentence ${item.id}: wrong form equals the correct one`)
+    const text = { id: `s-${item.id}`, title: '', level: 'B1', format: 'sentences', topic: '', text: item.text }
+    const exercise = engine.buildExercise(text, 1, { [item.type]: 100 })
+    const slot = exercise.slots.find((candidate) => candidate.type === item.type)
+    if (!slot) continue
+    const fixed = engine.checkExercise(exercise, new Map(slot.tokenIds.map((id, index) => [id, index === 0 ? slot.correct[0] : ''])))
+    if (!fixed.slots.find((result) => result.slot.id === slot.id && result.status === 'fixed')) fail(`sentence ${item.id}: perfect fix not accepted`)
+    poolChecked += 1
+  }
+} catch (error) { if (error.code !== 'ENOENT') throw error }
+if (poolChecked) console.log(`sentence pool: ${poolChecked} sentences checked`)
 console.log('texts per level:', levels)
 if (lowVariety.length) console.log(`note: ${lowVariety.length} text(s) have fewer than twice as many places as mistakes (less variety)`)
 console.log(failed ? `\n${failed} problem(s).` : `\nAll ${proofreadingTexts.length} texts passed (150 random exercises of each mode).`)

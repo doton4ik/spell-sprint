@@ -3,17 +3,18 @@ import { Icon } from '../components/icons/Icon'
 import { AddWordPanel } from '../components/libraries/AddWordPanel'
 import type { ProofreadingLevel, ProofreadingText } from '../data/proofreadingTexts'
 import { getLevelChecks } from '../services/levelCheck'
+import { buildSentenceText } from '../services/proofreadingSentences'
 import { buildExercise, buildSpellingHunt, checkExercise, huntCountFor, huntOptions, mistakeCountFor, proofreadingTexts, proofreadingTypes, recordProofreading, typeWeights, wordCount, type Exercise, type ProofreadingResult, type Token } from '../services/proofreading'
 import './proofreading.css'
 
 const levels: ProofreadingLevel[] = ['A2', 'B1', 'B2', 'C1']
 const SHOW_COUNT_KEY = 'spell-sprint.proofreading-show-count'
 const readShowCount = () => { try { return window.localStorage.getItem(SHOW_COUNT_KEY) !== 'false' } catch { return true } }
-const formatLabels: Record<string, string> = { email: 'Email', message: 'Message', story: 'Story', notice: 'Notice', article: 'Article', dialogue: 'Dialogue', review: 'Review', diary: 'Diary', instructions: 'Instructions', report: 'Report', post: 'Forum post', blog: 'Blog', interview: 'Interview', chat: 'Group chat', column: 'Column', application: 'Application', speech: 'Speech' }
+const formatLabels: Record<string, string> = { email: 'Email', message: 'Message', story: 'Story', notice: 'Notice', article: 'Article', dialogue: 'Dialogue', review: 'Review', diary: 'Diary', instructions: 'Instructions', report: 'Report', post: 'Forum post', blog: 'Blog', interview: 'Interview', chat: 'Group chat', column: 'Column', application: 'Application', speech: 'Speech', sentences: 'Sentences' }
 // Grammar and spelling (marked places + a few slips) or a spelling hunt (slips only).
-type Mode = 'mixed' | 'spelling'
+type Mode = 'mixed' | 'spelling' | 'sentences'
 const MODE_KEY = 'spell-sprint.proofreading-mode'
-function readMode(): Mode { try { return window.localStorage.getItem(MODE_KEY) === 'spelling' ? 'spelling' : 'mixed' } catch { return 'mixed' } }
+function readMode(): Mode { try { const value = window.localStorage.getItem(MODE_KEY); return value === 'spelling' || value === 'sentences' ? value : 'mixed' } catch { return 'mixed' } }
 
 // The level of the last Level Check, so the first text is pitched right.
 function defaultLevel(): ProofreadingLevel {
@@ -40,7 +41,13 @@ export function ProofreadingPage() {
     const exercise = mode === 'spelling' ? buildSpellingHunt(text, Date.now(), huntOptions()) : buildExercise(text, Date.now(), typeWeights())
     setPhase({ kind: 'reading', text, exercise }); window.scrollTo({ top: 0 })
   }
+  const [loadError, setLoadError] = useState('')
+  async function startSentences() {
+    setLoadError('')
+    try { start(await buildSentenceText(level, typeWeights())) } catch { setLoadError('The sentences could not be loaded. Check your connection and try again.') }
+  }
   function randomText(except?: string) {
+    if (mode === 'sentences') { void startSentences(); return }
     const pool = proofreadingTexts.filter((text) => text.level === level && text.id !== except)
     const list = pool.length ? pool : proofreadingTexts.filter((text) => text.level === level)
     if (list.length) start(list[Math.floor(Math.random() * list.length)])
@@ -69,6 +76,7 @@ export function ProofreadingPage() {
       <div className="proof-modes" role="radiogroup" aria-label="Kind of mistakes">
         <button type="button" role="radio" aria-checked={mode === 'mixed'} className={mode === 'mixed' ? 'proof-mode proof-mode--active' : 'proof-mode'} onClick={() => setMode('mixed')}><strong>Grammar and spelling</strong><span>Articles, tenses, prepositions and a few spelling slips.</span></button>
         <button type="button" role="radio" aria-checked={mode === 'spelling'} className={mode === 'spelling' ? 'proof-mode proof-mode--active' : 'proof-mode'} onClick={() => setMode('spelling')}><strong>Spelling hunt</strong><span>Only spelling — about one slip in every eight words. Tests how carefully you read.</span></button>
+        <button type="button" role="radio" aria-checked={mode === 'sentences'} className={mode === 'sentences' ? 'proof-mode proof-mode--active' : 'proof-mode'} onClick={() => setMode('sentences')}><strong>Ten sentences</strong><span>Real sentences from Tatoeba. Some are correct — find only the ones with a mistake.</span></button>
       </div>
 
       <div className="proof-controls">
@@ -76,7 +84,14 @@ export function ProofreadingPage() {
         <label className="proof-toggle"><input type="checkbox" checked={showCount} onChange={toggleShowCount} /> Tell me how many mistakes there are</label>
       </div>
 
-      {texts.length ? (
+      {mode === 'sentences' ? (
+        <section className="proof-sentences-start">
+          <p>Ten short sentences at {level} level, taken from real English on Tatoeba.org. About half of them have one mistake: an extra article, a wrong preposition, a missing "it" or "is", a regular ending on an irregular verb… The kinds you miss most come up more often.</p>
+          <button className="check-button" type="button" onClick={() => void startSentences()}><Icon name="shuffle" size={16} /> Start 10 sentences</button>
+          {loadError ? <p className="proof-sentences-start__error" role="alert">{loadError}</p> : null}
+          <small>Sentences: Tatoeba.org, CC BY 2.0 FR.</small>
+        </section>
+      ) : texts.length ? (
         <>
           <button className="check-button proof-random" type="button" onClick={() => randomText()}><Icon name="shuffle" size={16} /> Random {level} text</button>
           <section className="proof-list">

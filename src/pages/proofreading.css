@@ -106,3 +106,10 @@
 .proof-editor__actions button.proof-editor__add { color: var(--teal-dark); }
 .proof-add-word { align-items: flex-start; background: rgba(16, 32, 29, 0.42); display: flex; inset: 0; justify-content: center; overflow-y: auto; padding: 8vh 16px 24px; position: fixed; z-index: 50; }
 .proof-add-word .add-word { margin: 0; max-width: 560px; position: relative; width: 100%; }
+
+/* Ten sentences mode */
+.proof-sentences-start { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: grid; gap: 12px; justify-items: start; padding: 20px 22px; }
+.proof-sentences-start p { color: #3f5853; font-size: calc(14.5px * var(--fs)); line-height: 1.55; margin: 0; }
+.proof-sentences-start .check-button { width: auto; }
+.proof-sentences-start small { color: var(--ink-muted); font-size: calc(12px * var(--fs)); }
+.proof-sentences-start__error { color: var(--danger) !important; }
