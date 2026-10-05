@@ -1,0 +1,65 @@
+I am building "Spell Sprint", a free trainer for Russian-speaking learners of English (A2–C1).
+One exercise is PROOFREADING: the learner reads a short text (email, story, article, chat …) with
+grammar mistakes in it and must find and fix them. The mistakes are chosen from marked places in
+102 texts, and the app shows more of the mistake types the learner tends to miss.
+
+I need DEEP RESEARCH on the real grammar errors that Russian-speaking learners make in written
+English, so that the exercise trains the errors that matter most.
+
+=== WHAT THE APP HAS NOW ===
+Mistake types and how many marked places of each type exist in the 102 texts:
+article-missing 241 (a/an/the left out: "I have car")
+gerund-infinitive 146 (enjoy to swim, decide going)
+agreement 146 (subject–verb: she go, people is)
+tense 130 (wrong tense for the time: I see him yesterday)
+past-irregular 122 (buyed, teached)
+word-form 117 (adjective vs adverb, noun vs adjective: speak quick)
+word-order 99 (questions without do, indirect questions with question order)
+passive 87 (was build, is make)
+quantifier 86 (much/many, few/little, less/fewer)
+preposition 80 (interested about, depend from, arrive to)
+conditional 78 (if I will have time)
+comparative 57 (more easier)
+pronoun 53 (me and him went, it's/its)
+modal 51 (must to go, can swims)
+confusable 25 (their/there, then/than)
+article 22 (a/an/the confusion: a hour, the life)
+since-for 20
+reported-speech 17
+plural-uncountable 17 (informations, an advice)
+article-extra 8 (an article where English has none: the life is hard, I like the music)
+
+=== QUESTIONS ===
+1. Which grammar errors are MOST FREQUENT in written English of Russian-speaking learners, by
+   level (A2, B1, B2, C1)? Use learner corpora and research: e.g. REALEC (Russian Error-Annotated
+   Learner English Corpus, HSE), ICLE (Russian subcorpus), Cambridge Learner Corpus / English
+   Grammar Profile, EFCAMDAT, published studies on L1-Russian interference. Give numbers or
+   percentages wherever the sources have them, and say which corpus they come from.
+2. Compare with the app's distribution above. Which types are over-represented, which are
+   under-represented (e.g. is "article-extra" really that rare, are prepositions under-trained)?
+   Propose a TARGET share (percent of all marked places) for each type and level.
+3. Which frequent error types are MISSING from the list? Examples to check: countable/uncountable
+   beyond "information", the present perfect vs past simple, "the" with generic nouns, word order
+   of adverbs (I very like), "make vs do", double negation, missing "there is", "it" as a dummy
+   subject (Is raining), possessive 's, relative clauses (which/who/that), "will" in time clauses
+   (when I will come), "a lot of / many", articles with names of places, "also/too" position.
+   For each missing type: name, short description, 3 typical wrong → right examples, level,
+   how frequent.
+4. For each type (existing and new), give 5 TYPICAL wrong → right pairs exactly as Russian
+   speakers write them (realistic, not textbook-made), and a one-line rule a learner can remember.
+5. Which errors do learners usually NOT NOTICE when proofreading (they are hard to see), and which
+   are easy to spot? This tells which ones are most worth training.
+
+=== OUTPUT ===
+1. A short summary (max 15 lines) with the main conclusions.
+2. CSV code block 1 — target distribution:
+   "type","label","level_A2_share","level_B1_share","level_B2_share","level_C1_share","current_share","verdict","evidence"
+   (verdict: more / fewer / ok / new; evidence: corpus or paper + URL)
+3. CSV code block 2 — examples for each type (existing and new):
+   "type","level","wrong","right","rule","source"
+   5 rows per type. The wrong sentence must be what a Russian speaker really writes.
+4. A list of sources with URLs.
+
+Rules: do not invent numbers. If a figure is not available, say so and give your best
+qualitative estimate marked "estimate". Prefer peer-reviewed papers and learner corpora over blog
+posts.
