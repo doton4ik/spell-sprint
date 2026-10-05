@@ -15,6 +15,7 @@ export * from './proofreadingEngine'
 const baseTypeWeights: Record<string, number> = {
   'article-extra': 4, article: 2, 'plural-uncountable': 2, preposition: 1.6, 'reported-speech': 1.5, 'since-for': 1.3,
   'article-missing': 0.45, agreement: 0.7, tense: 0.8, 'past-irregular': 0.5, 'gerund-infinitive': 0.5, 'word-form': 0.6,
+  'present-perfect': 1.6, 'time-clause': 1.6, 'dummy-it': 1.6, 'be-missing': 1.6, 'adverb-position': 1.6, 'double-negative': 1.6, 'there-is': 1.6,
   'word-order': 0.7, passive: 0.5, quantifier: 0.6, conditional: 0.6, comparative: 0.5, modal: 0.8,
 }
 

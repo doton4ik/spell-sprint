@@ -27,6 +27,13 @@ export const proofreadingTypes: Record<string, { label: string; hint: string }> 
   'reported-speech': { label: 'Reported speech', hint: 'After a past reporting verb, tenses usually move back: will → would.' },
   confusable: { label: 'Confusable words', hint: 'Words that sound alike: their/there, its/it\'s, then/than.' },
   spelling: { label: 'Spelling', hint: 'A spelling slip — check double letters, ie/ei, silent letters and endings.' },
+  'present-perfect': { label: 'Present perfect or past simple', hint: 'Finished time (yesterday, ago, last week) → past simple; up to now (since, for) → present perfect.' },
+  'time-clause': { label: 'Will after when / before', hint: 'No will after when, before, after, until, as soon as: When I arrive, I will call you.' },
+  'dummy-it': { label: 'Missing "it"', hint: 'An English sentence needs a subject: It is raining. It is hard to say.' },
+  'be-missing': { label: 'Missing am / is / are', hint: 'Before an adjective or a place you need be: I am tired. She is at home.' },
+  'adverb-position': { label: 'Adverb position', hint: 'always / often / usually go before the main verb (I often go); "really like", not "very like".' },
+  'double-negative': { label: 'Double negative', hint: 'One negative is enough: I did not see anything (or: I saw nothing).' },
+  'there-is': { label: 'There is / there are', hint: 'To say that something exists, use there is / there are: In our town there are two parks.' },
   typo: { label: 'Attention slip', hint: 'A letter is missing, extra or swapped. Read every word to its last letter.' },
 }
 
