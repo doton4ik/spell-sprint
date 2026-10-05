@@ -39,3 +39,5 @@
 .pairs-actions button { min-height: 46px; }
 @media (max-width: 800px) { .pairs-page { padding: 24px 16px 40px; } .pair-sentence { font-size: calc(18px * var(--fs)); } .pair-choice { flex: 1; justify-content: center; } }
 .pair-gap--right, .pair-gap--wrong { min-width: 0; padding: 0 1px; }
+.pairs-credit { color: var(--ink-muted); font-size: calc(12px * var(--fs)); margin: 18px 2px 0; }
+.pairs-credit a { color: inherit; text-decoration: underline; }

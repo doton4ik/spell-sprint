@@ -24,6 +24,7 @@ export function PairsPage() {
     </section>
     {tricky.length ? <section className="pairs-group"><h2>Your trickiest pairs</h2><div className="pairs-grid">{tricky.map((status) => <PairChip status={status} onOpen={() => setPhase({ kind: 'session', questions: pairQuestions(status.pair.id), label: status.pair.words.join(' / ') })} key={status.pair.id} />)}</div></section> : null}
     {(['A2', 'B1', 'B2'] as const).map((level) => <section className="pairs-group" key={level}><h2>{level}</h2><div className="pairs-grid">{statuses.filter((status) => status.pair.level === level).map((status) => <PairChip status={status} onOpen={() => setPhase({ kind: 'session', questions: pairQuestions(status.pair.id), label: status.pair.words.join(' / ') })} key={status.pair.id} />)}</div></section>)}
+    <p className="pairs-credit">Some example sentences come from <a href="https://tatoeba.org" target="_blank" rel="noreferrer">Tatoeba</a> (CC BY 2.0 FR).</p>
   </div>
 }
 

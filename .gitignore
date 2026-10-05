@@ -14,3 +14,7 @@ arena-skill/
 
 # Local Claude Code settings (launch config, installed skills)
 .claude/
+
+# Tatoeba download (about 100 MB) and generated candidates
+research/tatoeba/
+research/tatoeba-candidates.json
