@@ -1,0 +1,60 @@
+I attached full-library.csv — the complete word library (973 rows) of "Spell Sprint", a spelling and
+vocabulary trainer for Russian-speaking learners of English, levels A2–C1.
+
+How the app uses each row: the learner sees the Russian "translation" and types the English "word";
+in other modes the learner hears the word (dictation), translates it into Russian, or chooses the
+correct spelling among misspellings. After answering, the learner sees "example" and "definition".
+"spelling_hint" is shown after a mistake (it is empty for most words). "alternatives" are other
+English answers accepted as correct. Column "set": "base library" is studied by everyone; the
+"... pack" sets are optional add-on packs for people who need that field.
+
+Please do a DEEP QUALITY AUDIT of the whole file. Check every row. Use learner dictionaries,
+English Vocabulary Profile / Oxford 3000-5000 and corpora as evidence. Do not copy copyrighted
+dictionary sentences; when you propose a new example, write an original sentence.
+
+Find and report these problems:
+
+1. WRONG OR MISLEADING TRANSLATIONS
+   The Russian translation does not match the English word, is a false friend, is too narrow,
+   or belongs to another English word (example of a real past bug: sore = "болезненный",
+   but "болезненный" is painful; dizzy = "головокружительный" is wrong).
+2. AMBIGUOUS PROMPTS
+   A Russian translation for which a learner could reasonably type a different correct English
+   word (e.g. "мусор" → rubbish, but trash and garbage are also right). Propose either a more
+   precise Russian prompt or the extra English answers to accept.
+3. WORDS THAT DO NOT BELONG
+   In the BASE library: words that are too rare, too specialised, too formal, old-fashioned,
+   offensive, or free word combinations that are not real lexical units ("take out the rubbish",
+   "window seat" were removed for this reason). Also words whose level clearly does not match
+   "difficulty".
+4. DUPLICATES
+   The same word (same meaning) in several rows, or two rows whose translations are so close that
+   the learner cannot know which English word is expected.
+5. WEAK EXAMPLES AND DEFINITIONS
+   Examples that are unnatural, too short, do not show the meaning, use the word in another
+   meaning, use American spelling (the app teaches British English), or are about logistics in the
+   base library. Definitions that use harder words than the headword or are wrong.
+6. MISSING ESSENTIAL WORDS
+   Frequent A2–B2 words (Oxford 3000 / EVP) that are hard to SPELL for Russian speakers and are
+   missing from the base library. Up to 60, grouped by topic, each with a Russian translation.
+7. SPELLING HINTS
+   For the 100 rows where a hint would help most (the most commonly misspelled words), propose a
+   short spelling_hint (max 60 characters), e.g. "double c, double m", "silent b", "-ence not -ance".
+
+OUTPUT
+First a short summary (10 lines max): overall quality, the biggest problem types, how many rows
+are affected in each category.
+
+Then one CSV code block with ONLY the rows that need a change (do not list rows that are fine):
+"word_id","word","problem_type","problem","suggested_fix","confidence","evidence_url"
+- problem_type: one of wrong-translation, ambiguous-prompt, remove, wrong-level, duplicate,
+  weak-example, weak-definition, american-spelling, spelling-hint, other
+- suggested_fix: the exact new value (new translation / new example / "remove" / hint text …)
+- confidence: high / medium / low
+- evidence_url: a link that supports the fix (dictionary entry, EVP, corpus)
+
+Then a second CSV code block for missing words:
+"word","translation","part_of_speech","cefr","topic","why_hard_to_spell","example"
+
+Be strict but fair: do not report a row just to have more results. If you are not sure, use
+confidence "low" and explain. Never invent sources.
