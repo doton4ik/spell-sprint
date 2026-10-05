@@ -33,7 +33,7 @@ function slipsOf(word: string): string[] {
   add(/[^aeiou]e$/.test(word) && word.length >= 5 ? word.slice(0, -1) : null)
   // Short words need their own slips: y → ie, ck → k, ch → tch, a doubled last consonant.
   add(/[^aeiou]y$/.test(word) ? `${word.slice(0, -1)}ie` : null)
-  add(/y$/.test(word) ? `${word.slice(0, -1)}ey` : null)
+  add(/[^aeiou]y$/.test(word) ? `${word.slice(0, -1)}ey` : null)
   add(word.includes('ck') ? word.replace('ck', 'k') : null)
   add(/[^t]ch/.test(word) ? word.replace(/([^t])ch/, '$1tch') : word.includes('tch') ? word.replace('tch', 'ch') : null)
   add(word.length >= 3 && word.length <= 5 && /[aeiou][bdgklmnprt]$/.test(word) ? word + word.at(-1) : null)

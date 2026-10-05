@@ -2,7 +2,7 @@ import type { PracticeTask } from '../types/practice'
 
 // Several English answers can be right for one Russian prompt (мусор → rubbish, trash, garbage).
 // These helpers decide which accepted answer the learner was aiming at.
-const normalise = (value: string) => value.trim().toLocaleLowerCase().replace(/[’']/g, "'").replace(/[.,!?]+$/g, '').replace(/\s+/g, ' ')
+const normalise = (value: string) => value.trim().toLocaleLowerCase().replaceAll('ё', 'е').replace(/[’']/g, "'").replace(/[.,!?]+$/g, '').replace(/\s+/g, ' ')
 export const comparable = (value: string) => normalise(value).replaceAll(/[-\s]/g, '')
 
 export const acceptedAnswers = (task: PracticeTask) => [task.answer, ...(task.acceptedAnswers ?? [])]

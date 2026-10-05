@@ -74,7 +74,7 @@ export function MistakesPage() {
   return (
     <div className="learning-page" id="my-mistakes">
       <header className="learning-header">
-        <div><p className="eyebrow">My mistakes</p><h1>My mistakes</h1><p>{entries.length ? `${entries.length} words · ${due} to review today · ${mastered} mastered` : 'Every wrong answer is kept here, so you can practise it until it sticks.'}</p></div>
+        <div><p className="eyebrow">My mistakes</p><h1>My mistakes</h1><p>{entries.length ? `${entries.length} word${entries.length === 1 ? '' : 's'} · ${due} to review today · ${mastered} mastered` : 'Every wrong answer is kept here, so you can practise it until it sticks.'}</p></div>
         {due ? <button className="outline-action" type="button" onClick={() => practise(entries.filter(isDue), 'Mistakes due today')}><Icon name="practice" size={17} /> Practise today’s words</button> : <a className="outline-action" href="#practice"><Icon name="practice" size={17} /> Practice</a>}
       </header>
 

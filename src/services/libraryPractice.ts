@@ -19,6 +19,21 @@ export type PracticeSelection = { scope: PracticeScope; library: string; topic: 
 
 function levelFor(difficulty: LibraryWord['difficulty']): PracticeTask['level'] { return difficulty === 'easy' ? 'B1' : difficulty === 'medium' ? 'B1+' : 'B2' }
 function taskBase(word: LibraryWord) { return { topic: word.topic, topicId: word.topicId, subtopic: word.subtopic, wordId: word.wordId || word.id, library: word.library, level: levelFor(word.difficulty), hint: word.definition || word.example || `Focus on ${word.partOfSpeech || 'this word'}.`, example: word.example, rule: word.rule || `Review ${word.word} in the ${word.topic} topic.`, errorCategory: 'Inactive vocabulary' } }
+// Every meaning on its own, with and without its note: "парень (молодой человек)" → парень, парень (молодой человек).
+function russianAnswers(translation: string) {
+  // Split on , ; / outside brackets only: "больной, ноющий (о горле, мышцах)" has two meanings, not three.
+  const parts: string[] = []
+  let depth = 0; let current = ''
+  for (const char of translation) {
+    if (char === '(') depth += 1
+    if (char === ')') depth = Math.max(0, depth - 1)
+    if (depth === 0 && /[,;/]/.test(char)) { parts.push(current.trim()); current = '' } else current += char
+  }
+  parts.push(current.trim())
+  const answers = [...new Set([...parts, ...parts.map((part) => part.replace(/\s*\(.*?\)\s*/g, ' ').trim())])].filter((answer) => answer && answer !== translation)
+  return answers.length ? answers : undefined
+}
+
 function tasksForWord(word: LibraryWord): PracticeTask[] {
   const base = taskBase(word); const id = word.wordId || word.id
   // The order is shuffled when the task is shown (TaskCard), so the right answer is not always first.
@@ -26,7 +41,7 @@ function tasksForWord(word: LibraryWord): PracticeTask[] {
   return [
     { ...base, id: `library-${id}-write-en`, type: 'translate-ru-en', mode: 'write-en', prompt: word.translation, answer: word.word, acceptedAnswers: word.alternatives?.length ? word.alternatives : undefined },
     { ...base, id: `library-${id}-listen`, type: 'translate-ru-en', mode: 'listen-write', prompt: word.translation, answer: word.word },
-    { ...base, id: `library-${id}-translate-ru`, type: 'translate-en-ru', mode: 'translate-ru', prompt: word.word, answer: word.translation },
+    { ...base, id: `library-${id}-translate-ru`, type: 'translate-en-ru', mode: 'translate-ru', prompt: word.word, answer: word.translation, acceptedAnswers: russianAnswers(word.translation) },
     // No believable wrong spelling (go on, queue up): no choice task for this word.
     ...(spellingChoices.length > 1 ? [{ ...base, id: `library-${id}-spelling`, type: 'correct-spelling' as const, mode: 'choose-spelling' as const, prompt: word.translation, answer: word.word, choices: spellingChoices, errorCategory: 'Spelling' }] : []),
   ]
