@@ -18,7 +18,7 @@ export type PracticeScope = 'all' | 'library' | 'topic' | 'subtopic' | 'mistakes
 export type PracticeSelection = { scope: PracticeScope; library: string; topic: string; subtopic: string }
 
 function levelFor(difficulty: LibraryWord['difficulty']): PracticeTask['level'] { return difficulty === 'easy' ? 'B1' : difficulty === 'medium' ? 'B1+' : 'B2' }
-function taskBase(word: LibraryWord) { return { topic: word.topic, topicId: word.topicId, subtopic: word.subtopic, wordId: word.wordId || word.id, library: word.library, level: levelFor(word.difficulty), hint: word.definition || word.example || `Focus on ${word.partOfSpeech || 'this word'}.`, example: word.example, rule: word.rule || `Review ${word.word} in the ${word.topic} topic.`, errorCategory: 'Inactive vocabulary' } }
+function taskBase(word: LibraryWord) { return { topic: word.topic, topicId: word.topicId, subtopic: word.subtopic, wordId: word.wordId || word.id, library: word.library, level: levelFor(word.difficulty), hint: word.definition || word.example || `Focus on ${word.partOfSpeech || 'this word'}.`, example: word.example, extraExample: word.extraExample, extraExampleSource: word.extraExampleSource, rule: word.rule || `Review ${word.word} in the ${word.topic} topic.`, errorCategory: 'Inactive vocabulary' } }
 // Every meaning on its own, with and without its note: "парень (молодой человек)" → парень, парень (молодой человек).
 function russianAnswers(translation: string) {
   // Split on , ; / outside brackets only: "больной, ноющий (о горле, мышцах)" has two meanings, not three.

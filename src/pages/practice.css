@@ -230,3 +230,5 @@
 .task-pack { background: #f4f7f6; border-radius: 10px; color: #5b6f6a; font-size: calc(13px * var(--fs)); line-height: 1.45; margin: 0 0 14px; padding: 8px 12px; }
 .task-pack strong { color: #304640; }
 .task-pack button { background: none; border: 0; color: var(--teal-dark); cursor: pointer; font-family: inherit; font-size: inherit; font-weight: 700; padding: 0; text-decoration: underline; }
+
+.task-feedback__more a { color: inherit; font-size: .9em; opacity: .7; text-decoration: underline; }

@@ -20,6 +20,8 @@ export type LibraryWord = {
   risk: number
   rule?: string
   example?: string
+  extraExample?: string // a second example from Tatoeba (CC BY 2.0 FR)
+  extraExampleSource?: string // "tatoeba:<sentence id>"
   definition?: string
   alternatives?: string[] // other correct English answers for the same Russian prompt (rubbish → trash, garbage)
   partOfSpeech: PartOfSpeech

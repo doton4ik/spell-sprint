@@ -20,6 +20,8 @@ export type PracticeTask = {
   mode?: PracticeMode
   choices?: string[]
   example?: string
+  extraExample?: string
+  extraExampleSource?: string
   wordId?: string
   library?: string
   topicId?: string

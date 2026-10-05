@@ -18,3 +18,5 @@ arena-skill/
 # Tatoeba download (about 100 MB) and generated candidates
 research/tatoeba/
 research/tatoeba-candidates.json
+research/tatoeba-examples.json
+research/tatoeba-examples.txt

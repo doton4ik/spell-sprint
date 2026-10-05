@@ -22,7 +22,7 @@ function builtInWord(row: Record<string, string>): LibraryWord {
   const topic = canonicalTopic(row.topic_id, row.topic)
   return {
     id: row.word_id, wordId: row.word_id, word: row.word, translation: row.translation, topicId: topic.topicId, topic: topic.topic, subtopic: row.subtopic || 'General',
-    difficulty: row.difficulty as LibraryDifficulty, risk: Number(row.risk), rule: row.rule || undefined, example: row.example || undefined, definition: row.definition || undefined, alternatives: alternativesOf(row.alternatives),
+    difficulty: row.difficulty as LibraryDifficulty, risk: Number(row.risk), rule: row.rule || undefined, example: row.example || undefined, extraExample: row.extra_example || undefined, extraExampleSource: row.extra_example_source || undefined, definition: row.definition || undefined, alternatives: alternativesOf(row.alternatives),
     partOfSpeech: normalisePartOfSpeech(row.part_of_speech), library: row.library, source: row.source || 'legacy-migrated',
   }
 }
