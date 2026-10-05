@@ -1,4 +1,4 @@
-import { proofreadingTexts, type ProofreadingLevel, type ProofreadingText } from '../data/proofreadingTexts'
+import { proofreadingTexts as allProofreadingTexts, type ProofreadingLevel, type ProofreadingText } from '../data/proofreadingTexts'
 import type { PracticeAttempt } from '../types/practice'
 import { getPracticeAttempts, savePracticeAttempt } from './practiceStorage'
 import { getAllWords, getEveryWord } from './libraryStorage'
@@ -60,7 +60,7 @@ function knownWords() {
   const words = (value: string | undefined) => (value ?? '').toLocaleLowerCase().match(/[a-z]+/g) ?? []
   knownCache = new Set([
     ...getEveryWord().flatMap((word) => [...words(word.word), ...words(word.example), ...words(word.definition)]),
-    ...proofreadingTexts.flatMap((text) => words(cleanText(text))),
+    ...allProofreadingTexts.flatMap((text) => words(cleanText(text))),
   ])
   return knownCache
 }
@@ -73,5 +73,6 @@ export function huntOptions() {
   return { preferred, known: knownWords() }
 }
 
+// Texts marked hidden (weaker, template-like ones) stay in the data but are not offered.
+export const proofreadingTexts = allProofreadingTexts.filter((text) => !text.hidden)
 export function textsForLevel(level: ProofreadingLevel) { return proofreadingTexts.filter((text) => text.level === level) }
-export { proofreadingTexts }

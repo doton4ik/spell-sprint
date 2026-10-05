@@ -21,9 +21,11 @@ const lowVariety = []
 const fail = (message) => { failed += 1; if (failed <= 40) console.log('FAIL', message) }
 const ids = new Set()
 const levels = { A2: 0, B1: 0, B2: 0, C1: 0 }
+let hiddenCount = 0
 for (const text of proofreadingTexts) {
   if (ids.has(text.id)) fail(`${text.id}: duplicate id`); ids.add(text.id)
-  levels[text.level] = (levels[text.level] ?? 0) + 1
+  if (text.hidden) hiddenCount += 1
+  else levels[text.level] = (levels[text.level] ?? 0) + 1
   const { segments, problems } = engine.parseProofreadingText(text.text)
   problems.forEach((problem) => fail(`${text.id}: ${problem}`))
   const places = segments.filter((segment) => segment.kind === 'place').length
@@ -97,7 +99,7 @@ try {
   }
 } catch (error) { if (error.code !== 'ENOENT') throw error }
 if (poolChecked) console.log(`sentence pool: ${poolChecked} sentences checked`)
-console.log('texts per level:', levels)
+console.log('texts shown per level:', levels, hiddenCount ? `(+${hiddenCount} hidden, still checked)` : '')
 if (lowVariety.length) console.log(`note: ${lowVariety.length} text(s) have fewer than twice as many places as mistakes (less variety)`)
 console.log(failed ? `\n${failed} problem(s).` : `\nAll ${proofreadingTexts.length} texts passed (150 random exercises of each mode).`)
 process.exitCode = failed ? 1 : 0
