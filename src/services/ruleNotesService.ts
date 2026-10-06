@@ -16,6 +16,6 @@ export async function saveUserRuleNote(ruleId: string, note: string): Promise<vo
   await supabaseAuthedFetch(session, '/rest/v1/user_rule_notes?on_conflict=user_id,rule_id', {
     method: 'POST',
     headers: { Prefer: 'resolution=merge-duplicates,return=minimal' },
-    body: JSON.stringify({ user_id: session.user.id, rule_id: ruleId, note, updated_at: new Date().toISOString() }),
+    body: JSON.stringify({ user_id: session.user.id, rule_id: ruleId, note: note.slice(0, 2000), updated_at: new Date().toISOString() }),
   })
 }

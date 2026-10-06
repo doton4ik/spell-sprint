@@ -1,0 +1,3 @@
+# Security fix: source-map-js < 1.2.2 has a denial-of-service bug (GHSA-68fv-2mgg-jv7q); it comes in through vite/postcss.
+overrides:
+  source-map-js: '>=1.2.2'

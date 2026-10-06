@@ -4,31 +4,34 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  source-map-js: '>=1.2.2'
+
 importers:
 
   .:
     dependencies:
       '@vitejs/plugin-react':
-        specifier: latest
+        specifier: ^6.0.5
         version: 6.0.5(vite@8.2.1)
       react:
-        specifier: latest
+        specifier: ^19.2.8
         version: 19.2.8
       react-dom:
-        specifier: latest
+        specifier: ^19.2.8
         version: 19.2.8(react@19.2.8)
       typescript:
-        specifier: latest
+        specifier: ^7.0.2
         version: 7.0.2
       vite:
-        specifier: latest
+        specifier: ^8.2.1
         version: 8.2.1
     devDependencies:
       '@types/react':
-        specifier: latest
+        specifier: ^19.2.18
         version: 19.2.18
       '@types/react-dom':
-        specifier: latest
+        specifier: ^19.2.4
         version: 19.2.4(@types/react@19.2.18)
 
 packages:
@@ -398,8 +401,8 @@ packages:
   scheduler@0.27.0:
     resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
 
-  source-map-js@1.2.1:
-    resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
+  source-map-js@1.2.2:
+    resolution: {integrity: sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==}
     engines: {node: '>=0.10.0'}
 
   tinyglobby@0.2.17:
@@ -645,7 +648,7 @@ snapshots:
     dependencies:
       nanoid: 3.3.18
       picocolors: 1.1.1
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   react-dom@19.2.8(react@19.2.8):
     dependencies:
@@ -676,7 +679,7 @@ snapshots:
 
   scheduler@0.27.0: {}
 
-  source-map-js@1.2.1: {}
+  source-map-js@1.2.2: {}
 
   tinyglobby@0.2.17:
     dependencies:

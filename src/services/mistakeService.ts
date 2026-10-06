@@ -36,12 +36,13 @@ export async function sendMistake(attempt: PracticeAttempt, session: SupabaseSes
     headers: { Prefer: 'return=representation' },
     body: JSON.stringify({
       user_id: session.user.id,
-      word_id: attempt.wordId ?? null,
-      task_id: attempt.taskId,
-      user_answer: attempt.userAnswer,
-      correct_answer: attempt.correctAnswer,
-      error_type: attempt.errorType,
-      error_category: attempt.errorCategory,
+      // Cut to the database limits (database/security-hardening.sql), so a very long answer is still saved.
+      word_id: attempt.wordId?.slice(0, 200) ?? null,
+      task_id: attempt.taskId.slice(0, 300),
+      user_answer: attempt.userAnswer.slice(0, 500),
+      correct_answer: attempt.correctAnswer.slice(0, 500),
+      error_type: attempt.errorType.slice(0, 100),
+      error_category: attempt.errorCategory.slice(0, 200),
       category: ruleIds.length ? 'Classified' : 'Unclassified',
     }),
   }) as Array<{ id: string }>
