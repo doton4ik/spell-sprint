@@ -1,4 +1,5 @@
 import { mixedPracticeTasks } from '../data/practice'
+import { getHiddenWordIds } from './libraryPrefs'
 import type { LibraryWord } from '../types/library'
 import type { PracticeMode, PracticeTask } from '../types/practice'
 import { getAllWords, getEveryWord, getLibraries } from './libraryStorage'
@@ -54,6 +55,9 @@ export function getPracticeOptions() {
 
 function modeForLegacyTask(task: PracticeTask): PracticeMode { return task.type === 'translate-ru-en' ? 'write-en' : task.type === 'translate-en-ru' ? 'translate-ru' : 'choose-spelling' }
 
+// The older built-in tasks have no word behind them; a learner who hides one hides "task:<id>".
+function visibleLegacyTasks() { const hidden = getHiddenWordIds(); return mixedPracticeTasks.filter((task) => !hidden.has(`task:${task.id}`)) }
+
 export function getTasksForSelection(selection: PracticeSelection, mode: PracticeMode = 'write-en'): PracticeTask[] {
   const words = getAllWords(); let selected = words
   if (selection.scope === 'library') selected = getLibraries().find((library) => library.name === selection.library)?.words ?? []
@@ -66,10 +70,10 @@ export function getTasksForSelection(selection: PracticeSelection, mode: Practic
     const entries = selection.scope === 'review' ? getReviewEntries() : getMistakeEntries().filter((entry) => entry.status !== 'mastered')
     const taskIds = new Set(entries.map((entry) => entry.taskId))
     const wordIds = new Set(entries.map((entry) => entry.wordId).filter(Boolean))
-    return [...mixedPracticeTasks, ...words.flatMap(tasksForWord)].filter((task) => (task.mode ?? modeForLegacyTask(task)) === mode && (taskIds.has(task.id) || (task.wordId !== undefined && wordIds.has(task.wordId))))
+    return [...visibleLegacyTasks(), ...words.flatMap(tasksForWord)].filter((task) => (task.mode ?? modeForLegacyTask(task)) === mode && (taskIds.has(task.id) || (task.wordId !== undefined && wordIds.has(task.wordId))))
   }
   const generated = selected.flatMap(tasksForWord).filter((task) => task.mode === mode)
-  const legacy = mixedPracticeTasks.filter((task) => mode !== 'choose-spelling' && modeForLegacyTask(task) === mode)
+  const legacy = visibleLegacyTasks().filter((task) => mode !== 'choose-spelling' && modeForLegacyTask(task) === mode)
   return selection.scope === 'all' ? [...legacy, ...generated] : generated
 }
 

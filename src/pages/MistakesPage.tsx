@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { ReportWordButton } from '../components/ReportWordButton'
 import { Icon } from '../components/icons/Icon'
 import { AnswerDiff } from '../components/practice/AnswerDiff'
 import { getMistakeEntries, subscribeToLearningData } from '../services/learningData'
@@ -46,7 +47,7 @@ function MistakeRow({ entry }: { entry: MistakeEntry }) {
         <span className="good-days" title="Successful days in a row (5 = mastered)" aria-label={`${entry.goodDays ?? 0} of 5 successful days`}>{[0, 1, 2, 3, 4].map((day) => <i className={day < (entry.goodDays ?? 0) ? 'good-days__on' : ''} key={day} />)}</span>
         <small>{entry.numberOfErrors} error{entry.numberOfErrors === 1 ? '' : 's'} · {entry.numberOfCorrectAnswers} correct</small>
       </div>
-      <div className="mistake-when"><span>Next review</span><strong>{entry.status === 'mastered' ? '—' : when(entry.nextReviewAt)}</strong></div>
+      <div className="mistake-when"><span>Next review</span><strong>{entry.status === 'mastered' ? '—' : when(entry.nextReviewAt)}</strong><ReportWordButton word={{ wordId: entry.wordId ?? `task:${entry.taskId}`, word: entry.correctAnswer, translation: entry.translation, library: entry.library }} /></div>
     </div>
   )
 }

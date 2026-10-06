@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Icon } from '../components/icons/Icon'
+import { ReportWordButton } from '../components/ReportWordButton'
 import { completeReview, getReviewEntries, getRuleReviewIds } from '../services/learningData'
 import type { MistakeEntry } from '../types/learning'
 import './learning.css'
@@ -39,5 +40,5 @@ export function ReviewPage() {
 }
 
 function ReviewItem({ entry, onComplete }: { entry: MistakeEntry; onComplete: (taskId: string) => void }) {
-  return <article className="review-item"><div className="review-item__date"><Icon name="calendar" size={17} /><span>{dateLabel(entry.nextReviewAt)}</span></div><div className="review-item__word"><span>{entry.topic}</span><h2>{entry.correctAnswer}</h2><p>{entry.errorCategory} · {entry.numberOfErrors} recorded error{entry.numberOfErrors === 1 ? '' : 's'}</p></div><div className="review-item__actions"><a href="#practice" className="quiet-action">Practise <Icon name="arrow" size={16} /></a><button type="button" onClick={() => onComplete(entry.taskId)}>Mark reviewed <Icon name="check" size={16} /></button></div></article>
+  return <article className="review-item"><div className="review-item__date"><Icon name="calendar" size={17} /><span>{dateLabel(entry.nextReviewAt)}</span></div><div className="review-item__word"><span>{entry.topic}</span><h2>{entry.correctAnswer}</h2><p>{entry.errorCategory} · {entry.numberOfErrors} recorded error{entry.numberOfErrors === 1 ? '' : 's'}</p></div><div className="review-item__actions"><a href="#practice" className="quiet-action">Practise <Icon name="arrow" size={16} /></a><button type="button" onClick={() => onComplete(entry.taskId)}>Mark reviewed <Icon name="check" size={16} /></button><ReportWordButton word={{ wordId: entry.wordId ?? `task:${entry.taskId}`, word: entry.correctAnswer, translation: entry.translation, library: entry.library }} className="quiet-action" size={15} /></div></article>
 }

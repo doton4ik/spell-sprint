@@ -4,7 +4,7 @@ import { getCloudSession } from '../services/supabase'
 import { reportWord, wordReportReasons, type WordReportReason } from '../services/wordReports'
 import './word-report.css'
 
-type ReportedWord = { wordId: string; word: string; translation?: string; library?: string }
+export type ReportedWord = { wordId: string; word: string; translation?: string; library?: string }
 
 // "Report this word": pick a reason, add a comment if you like, and (by default) hide the word from
 // your own practice straight away. Not a <form>: it is shown inside the practice answer form.
@@ -25,7 +25,7 @@ export function WordReportPanel({ word, onDone, onCancel }: { word: ReportedWord
   if (state === 'done') {
     return (
       <div className="word-report word-report--done" role="status">
-        <p><Icon name="check" size={15} /> Thank you — “{word.word}” is reported. {sent ? 'We will check it.' : getCloudSession() ? 'It will be sent when you are back online.' : 'It will be sent once you sign in (Settings).'}{hide ? ' It is hidden from your practice; you can restore it in Libraries → My Libraries.' : ''}</p>
+        <p><Icon name="check" size={15} /> Thank you — “{word.word}” is reported. {sent ? 'We will check it.' : getCloudSession() ? 'It will be sent when you are back online.' : 'It will be sent once you sign in (Settings).'}{hide ? (word.wordId.startsWith('task:') ? ' It is hidden from your practice.' : ' It is hidden from your practice; you can restore it in Libraries → My Libraries.') : ''}</p>
         <button className="check-button" type="button" onClick={() => onDone(hide)}>{hide ? 'Next word' : 'OK'}</button>
       </div>
     )

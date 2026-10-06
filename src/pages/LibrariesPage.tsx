@@ -20,7 +20,7 @@ function HideButton({ word, onHide }: { word: LibraryWord; onHide: (word: Librar
   const [reporting, setReporting] = useState(false)
   return <>
     <button className="quiet-action word-hide" type="button" onClick={() => onHide(word)} title="Remove this word from your practice. You can restore it in My Libraries."><Icon name="eye" size={13} /> Hide</button>
-    {word.source === 'built-in' ? <button className="quiet-action word-hide" type="button" onClick={() => setReporting(!reporting)} aria-expanded={reporting} title="Tell us this word is strange, not worth learning or wrong"><Icon name="flag" size={13} /> Report</button> : null}
+    <button className="quiet-action word-hide" type="button" onClick={() => setReporting(!reporting)} aria-expanded={reporting} title="Tell us this word is strange, not worth learning or wrong"><Icon name="flag" size={13} /> Report</button>
     {reporting ? <div className="word-report-overlay" role="dialog" aria-modal="true" aria-label={`Report “${word.word}”`} onClick={(event) => { if (event.target === event.currentTarget) setReporting(false) }}><WordReportPanel word={{ wordId: word.wordId, word: word.word, translation: word.translation, library: word.library }} onCancel={() => setReporting(false)} onDone={(hide) => { setReporting(false); if (hide) onHide(word) }} /></div> : null}
   </>
 }

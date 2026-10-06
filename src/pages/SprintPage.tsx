@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react'
+import { ReportWordButton } from '../components/ReportWordButton'
 import { Icon } from '../components/icons/Icon'
 import { setPendingPracticeSelection } from '../services/libraryPractice'
 import { bestSprint, getSprintRounds, MIN_SPRINT_WORDS, saveSprintRound, slowWords, SPRINT_SECONDS, sprintCorrect, sprintPool, type SprintAnswer, type SprintRound } from '../services/sprint'
@@ -111,8 +112,8 @@ function SprintResult({ round, previousBest, onAgain }: { round: SprintRound; pr
     <header className="sprint-header"><p className="eyebrow">Sprint result</p><h1>{record ? 'New record!' : `${round.correct} word${round.correct === 1 ? '' : 's'} in 60 seconds`}</h1><p>{record ? previousBest ? `${round.correct} correct — your previous best was ${previousBest}.` : `${round.correct} correct in your first sprint.` : `Your record is ${Math.max(previousBest, round.correct)}.`}{perWord ? ` About ${perWord} s per correct word.` : ''}</p></header>
     <section className="sprint-summary">
       <div className="sprint-stats"><strong>{round.correct}<small>correct</small></strong><strong>{round.misses}<small>wrong</small></strong><strong>{slow.length}<small>slow to type</small></strong></div>
-      {misses.length ? <div className="sprint-list"><h2>Wrong</h2>{misses.map((answer, index) => <p key={index}><s>{answer.typed}</s> → <strong>{answer.word}</strong></p>)}</div> : null}
-      {slow.length ? <div className="sprint-list"><h2>Right, but slow to type</h2><p className="sprint-hint">Typed much slower than your usual pace in this sprint — the spelling is not automatic yet.</p><div className="sprint-chips">{slow.map((answer) => <span key={answer.wordId}>{answer.word}</span>)}</div></div> : null}
+      {misses.length ? <div className="sprint-list"><h2>Wrong</h2>{misses.map((answer, index) => <p key={index}><s>{answer.typed}</s> → <strong>{answer.word}</strong> <ReportWordButton word={{ wordId: answer.wordId, word: answer.word }} /></p>)}</div> : null}
+      {slow.length ? <div className="sprint-list"><h2>Right, but slow to type</h2><p className="sprint-hint">Typed much slower than your usual pace in this sprint — the spelling is not automatic yet.</p><div className="sprint-chips">{slow.map((answer) => <span key={answer.wordId}>{answer.word} <ReportWordButton word={{ wordId: answer.wordId, word: answer.word }} className="sprint-chip-report" size={12} /></span>)}</div></div> : null}
       <div className="sprint-actions"><button className="check-button" type="button" onClick={onAgain}><Icon name="refresh" size={16} /> Another sprint</button>{misses.length || slow.length ? <button className="outline-action sprint-text-button" type="button" onClick={practise}><Icon name="practice" size={16} /> Practise these words</button> : null}</div>
     </section>
   </div>
