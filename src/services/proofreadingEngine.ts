@@ -1,4 +1,5 @@
 import type { ProofreadingLevel, ProofreadingText } from '../data/proofreadingTexts'
+import { realWordExtras } from '../data/realWordTraps'
 
 // Pure engine (no storage, no browser APIs) — also run by scripts/check-proofreading.mjs.
 // Proofreading: a correct text with marked places {correct|type|wrong}. Each run picks some places,
@@ -81,7 +82,8 @@ pining holy better letter night rite rote rest ring rap wrap nit fiend lose loos
 dinner latter hopping planned filling comma supper cutter stripped matted tapping starring bitter robbed pinning wining wining
 thing thin shin spit star scar strip bath cloth breath plane stare scare spite shine bathe clothe stripe dine fined lined mined
 boned hoped hated rated dated noted voted moped coped duped taped piped wiped wades fades made mad bad dad sad pad lid hid bid rid
-peal real seal meal deal heal veal steal bead lead read mead weed feed need deed seed reed heed beet feet meet rites starred tars rote rots shad wast fiend wights`.split(/\s+/))
+peal real seal meal deal heal veal steal bead lead read mead weed feed need deed seed reed heed beet feet meet rites starred tars rote rots shad wast fiend wights
+${realWordExtras}`.split(/\s+/))
 const rude = /cunt|fuck|shit|dick|cock|piss|slut|twat|wank|nigg|fag/
 export const isRealOrRude = (value: string, known?: Set<string>) => {
   const word = value.toLocaleLowerCase()

@@ -66,6 +66,19 @@ export function spellingDistractors(answer: string, isReal: (word: string) => bo
       if (!real(extra) && !seen.has(extra.toLocaleLowerCase())) { seen.add(extra.toLocaleLowerCase()); options.push(extra) }
     }
   }
+  // Short phrasal verbs (give up, turn on) have few slips: written as one word, a doubled last letter,
+  // a lost silent e (tak off) or an added one (goe on).
+  if (options.length < count && words.length > 1) {
+    const change = (make: (word: string) => string | null) => words.map((_, index) => words.map((word, at) => (at === index ? make(word) ?? word : word)).join(' '))
+    const extras = [words.join(''),
+      ...change((word) => (/[b-df-hj-np-tv-z]$/i.test(word) && word.at(-1) !== word.at(-2) ? word + word.at(-1) : null)),
+      ...change((word) => (word.length > 3 && /[^aeiou]e$/i.test(word) ? word.slice(0, -1) : null)),
+      ...change((word) => (word.length <= 3 && /[^aeiou][aeiou]$/i.test(word) ? `${word}e` : null))]
+    for (const extra of extras) {
+      if (options.length >= count) break
+      if (!extra.split(' ').some((part, index) => part !== words[index] && real(part)) && !real(extra) && !seen.has(extra.toLocaleLowerCase())) { seen.add(extra.toLocaleLowerCase()); options.push(extra) }
+    }
+  }
   // Spread the kinds of slip: take from the start, the middle and the end of the list.
   if (options.length <= count) return options
   const picked = new Set<number>()

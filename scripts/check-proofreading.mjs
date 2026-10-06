@@ -9,8 +9,8 @@ import { pathToFileURL } from 'node:url'
 
 const root = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')
 const dir = mkdtempSync(join(tmpdir(), 'proofreading-'))
-for (const [file, name] of [['src/services/proofreadingEngine.ts', 'proofreadingEngine.ts'], ['src/data/proofreadingTexts.ts', 'proofreadingTexts.ts']]) {
-  const source = readFileSync(join(root, file), 'utf8').replace("'../data/proofreadingTexts'", "'./proofreadingTexts.ts'")
+for (const [file, name] of [['src/services/proofreadingEngine.ts', 'proofreadingEngine.ts'], ['src/data/proofreadingTexts.ts', 'proofreadingTexts.ts'], ['src/data/realWordTraps.ts', 'realWordTraps.ts']]) {
+  const source = readFileSync(join(root, file), 'utf8').replace("'../data/proofreadingTexts'", "'./proofreadingTexts.ts'").replace("'../data/realWordTraps'", "'./realWordTraps.ts'")
   writeFileSync(join(dir, name), source)
 }
 const engine = await import(pathToFileURL(join(dir, 'proofreadingEngine.ts')).href)
