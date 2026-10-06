@@ -1,4 +1,5 @@
 import { errorPatternLabel } from '../data/errorPatternLabels'
+import { relevanceCheck } from './mistakeRelevance'
 import type { PracticeAttempt } from '../types/practice'
 import { classifyMistake, type ConfusableSet } from './mistakeClassifier'
 import { shouldClassify } from './mistakeOutbox'
@@ -30,7 +31,7 @@ const locationOnly = new Set(['suffix_error', 'prefix_error', 'verb_ending_error
 const DAY = 86400000
 
 export function getMistakePatterns(confusableSets: ConfusableSet[] = []): { patterns: MistakePattern[]; unclassified: number } {
-  const attempts = getPracticeAttempts() // newest first
+  const attempts = getPracticeAttempts().filter(relevanceCheck()) // newest first; retired words and tasks left out
   const latestByItem = new Map<string, PracticeAttempt>()
   for (const attempt of attempts) { const key = attempt.wordId ?? attempt.taskId; if (!latestByItem.has(key)) latestByItem.set(key, attempt) }
 

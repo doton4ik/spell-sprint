@@ -5,6 +5,7 @@ import { getTaskById } from './libraryPractice'
 import { getEveryWord } from './libraryStorage'
 import { MASTERED_DAYS } from './reviewSchedule'
 import { getRemovedKeys, setRemoved } from './libraryPrefs'
+import { relevanceCheck } from './mistakeRelevance'
 
 const REVIEW_STATES_KEY = 'spell-sprint.review-states'
 const RULE_REVIEW_KEY = 'spell-sprint.rule-review'
@@ -33,8 +34,9 @@ export function getMistakeEntries(): MistakeEntry[] {
   const states = getReviewStates()
   const translations = new Map(getEveryWord().map((word) => [word.wordId, word.translation]))
   const groups = new Map<string, ReturnType<typeof getPracticeAttempts>>()
+  const relevant = relevanceCheck()
 
-  for (const attempt of getPracticeAttempts()) {
+  for (const attempt of getPracticeAttempts().filter(relevant)) {
     const key = attempt.wordId ?? attempt.taskId
     const items = groups.get(key) ?? []
     items.push(attempt)
@@ -92,7 +94,8 @@ export function getMistakeEntries(): MistakeEntry[] {
 export function getReviewEntries() {
   const mistakes = getMistakeEntries()
   const hintOnly = new Map<string, MistakeEntry>()
-  for (const attempt of getPracticeAttempts().filter((item) => item.hintUsed && item.isCorrect)) {
+  const relevant = relevanceCheck()
+  for (const attempt of getPracticeAttempts().filter((item) => item.hintUsed && item.isCorrect && relevant(item))) {
     if (mistakes.some((entry) => entry.taskId === attempt.taskId)) continue
     const current = hintOnly.get(attempt.taskId)
     if (current && current.lastSeen >= attempt.createdAt) continue
