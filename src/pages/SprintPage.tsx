@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react'
+import { noAutocorrect } from '../components/noAutocorrect'
 import { ReportWordButton } from '../components/ReportWordButton'
 import { Icon } from '../components/icons/Icon'
 import { setPendingPracticeSelection } from '../services/libraryPractice'
@@ -95,7 +96,7 @@ function SprintRun({ words, onFinish }: { words: LibraryWord[]; onFinish: (round
       <form className="sprint-card" onSubmit={submit}>
         <span className="sprint-pos">{word.partOfSpeech}</span>
         <h2>{word.translation}</h2>
-        <input ref={input} autoFocus value={typed} disabled={Boolean(miss)} onChange={(event) => { if (!firstKeyAt.current && event.target.value) firstKeyAt.current = performance.now(); setTyped(event.target.value) }} placeholder="Type the English word" autoCapitalize="off" autoCorrect="off" autoComplete="off" spellCheck={false} aria-label="English word" />
+        <input {...noAutocorrect} ref={input} autoFocus value={typed} disabled={Boolean(miss)} onChange={(event) => { if (!firstKeyAt.current && event.target.value) firstKeyAt.current = performance.now(); setTyped(event.target.value) }} placeholder="Type the English word" aria-label="English word" />
         {miss ? <p className="sprint-miss" role="status">✗ <strong>{miss}</strong></p> : <button className="check-button" type="submit" disabled={!typed.trim()}>Enter <Icon name="arrow" size={15} /></button>}
       </form>
     )}

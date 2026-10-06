@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { noAutocorrect } from '../noAutocorrect'
 import { Icon } from '../icons/Icon'
 import { AnswerDiff } from '../practice/AnswerDiff'
 import { recordRulePracticeAttempt } from '../../services/rulePracticeService'
@@ -76,7 +77,7 @@ export function RuleExerciseRunner({ items, loop, showRuleTitle, onProgress, onF
         <div className="rule-runner__choices">{choices.map((choice) => <button type="button" className="rule-runner__choice" onClick={() => { setAnswer(choice); void check(choice) }} key={choice}>{choice}</button>)}</div>
       ) : (
         <form className="rule-runner__form" onSubmit={(event) => { event.preventDefault(); void check(answer) }} key={index}>
-          <input value={answer} onChange={(event) => setAnswer(event.target.value)} placeholder="Type your answer" autoComplete="off" autoFocus />
+          <input {...noAutocorrect} value={answer} onChange={(event) => setAnswer(event.target.value)} placeholder="Type your answer" autoFocus />
           <button className="check-button" type="submit" disabled={!answer.trim()}>Check</button>
         </form>
       )}

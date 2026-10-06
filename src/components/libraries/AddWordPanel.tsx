@@ -1,4 +1,5 @@
 import { useEffect, useState, type FormEvent } from 'react'
+import { noAutocorrect } from '../noAutocorrect'
 import { Icon } from '../icons/Icon'
 import { addMyWord, getEveryWord, getAllWords, MY_WORDS, myWordId } from '../../services/libraryStorage'
 import { guessDifficulty, lookupWord, type LookupSense } from '../../services/wordLookup'
@@ -56,7 +57,7 @@ export function AddWordPanel({ onAdded, onPractise, initialWord, onClose }: { on
   return <section className="add-word">
     <div className="add-word__head"><span><Icon name="search" size={15} /> Add a word</span>{onClose ? <button className="add-word__close" type="button" onClick={onClose} aria-label="Close">✕</button> : null}<h2>{initialWord ? 'Add to my words' : 'Learn any English word'}</h2><p>{initialWord ? `Pick the meaning you need — the word goes to “${MY_WORDS}” and into practice. Check the spelling first: the text may have a mistake in it.` : `Type a word — the dictionary suggests its meanings with Russian translations. Pick the one you need; it goes to “${MY_WORDS}” and into practice.`}</p></div>
     <form className="add-word__search" onSubmit={search}>
-      <input value={query} onChange={(event) => { setQuery(event.target.value); if (step.kind !== 'loading') setStep({ kind: 'idle' }); setDraft(null) }} placeholder="e.g. fortune" autoCapitalize="off" autoCorrect="off" spellCheck={false} aria-label="English word" />
+      <input {...noAutocorrect} value={query} onChange={(event) => { setQuery(event.target.value); if (step.kind !== 'loading') setStep({ kind: 'idle' }); setDraft(null) }} placeholder="e.g. fortune" aria-label="English word" />
       <button className="check-button" type="submit" disabled={!query.trim() || step.kind === 'loading'}>{step.kind === 'loading' ? 'Looking up…' : 'Look up'}</button>
     </form>
     {elsewhere && step.kind !== 'loading' ? <p className="add-word__note">“{elsewhere.word}” is already in {elsewhere.library}{elsewhereActive ? '' : ' (hidden or in a pack that is switched off)'} as “{elsewhere.translation}”. You can still add your own meaning.</p> : null}
@@ -76,7 +77,7 @@ export function AddWordPanel({ onAdded, onPractise, initialWord, onClose }: { on
     {step.kind === 'missing' && !draft ? <div className="add-word__missing"><p>{step.message}</p><button className="outline-action add-word__text-button" type="button" onClick={() => choose(null)}>Enter it myself</button></div> : null}
 
     {draft ? <form className="add-word__form" onSubmit={save}>
-      <label>English<input required value={draft.word} onChange={(event) => setDraft({ ...draft, word: event.target.value })} autoCapitalize="off" spellCheck={false} /></label>
+      <label>English<input {...noAutocorrect} required value={draft.word} onChange={(event) => setDraft({ ...draft, word: event.target.value })} /></label>
       <label>Russian (what practice will show you)<input required value={draft.translation} onChange={(event) => setDraft({ ...draft, translation: event.target.value })} /></label>
       <label>Part of speech<select value={draft.partOfSpeech} onChange={(event) => setDraft({ ...draft, partOfSpeech: event.target.value })}>{partOfSpeechOptions.map((option) => <option key={option}>{option}</option>)}</select></label>
       <label>Meaning in English (optional)<input value={draft.definition} onChange={(event) => setDraft({ ...draft, definition: event.target.value })} /></label>

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
+import { noAutocorrect } from '../components/noAutocorrect'
 import { Icon } from '../components/icons/Icon'
 import { AnswerDiff } from '../components/practice/AnswerDiff'
 import { skillInstructions, skillLabels, type LevelItem, type Skill } from '../data/levelCheckBank'
@@ -164,7 +165,7 @@ function CheckRunner({ onQuit, onFinish }: { onQuit: () => void; onFinish: (resu
         <h2 className={item.skill === 'grammar' ? 'level-question__prompt level-question__prompt--sentence' : 'level-question__prompt'}>{item.prompt}</h2>
 
         <form onSubmit={submit}>
-          <input value={input} onChange={(event) => setInput(event.target.value)} placeholder={item.skill === 'grammar' ? 'Write the correct sentence…' : 'Type your answer…'} autoComplete="off" autoCapitalize="off" spellCheck={false} disabled={Boolean(feedback)} autoFocus key={item.id} />
+          <input {...noAutocorrect} value={input} onChange={(event) => setInput(event.target.value)} placeholder={item.skill === 'grammar' ? 'Write the correct sentence…' : 'Type your answer…'} disabled={Boolean(feedback)} autoFocus key={item.id} />
           {feedback ? (
             <div className={`level-feedback level-feedback--${feedback.correct ? 'correct' : 'incorrect'}`} role="status">
               <div>

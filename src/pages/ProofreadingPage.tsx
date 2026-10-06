@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react'
+import { noAutocorrect } from '../components/noAutocorrect'
 import { Icon } from '../components/icons/Icon'
 import { AddWordPanel } from '../components/libraries/AddWordPanel'
 import type { ProofreadingLevel, ProofreadingText } from '../data/proofreadingTexts'
@@ -162,7 +163,7 @@ function Reader({ text, exercise, showCount, onBack, onCheck }: { text: Proofrea
           if (editing === token.id) {
             return (
               <span className="proof-editor" key={token.id}>
-                <input ref={inputRef} value={draft} onChange={(event) => setDraft(event.target.value)} onKeyDown={onKey} aria-label={`Correction for ${token.text}`} spellCheck={false} autoCapitalize="off" autoComplete="off" />
+                <input {...noAutocorrect} ref={inputRef} value={draft} onChange={(event) => setDraft(event.target.value)} onKeyDown={onKey} aria-label={`Correction for ${token.text}`} />
                 <span className="proof-editor__actions">
                   <button type="button" onClick={() => save(draft)}>Save</button>
                   <button type="button" onClick={() => save('')}>Delete word</button>
