@@ -33,12 +33,12 @@ describe('closestAnswer', () => {
 
 describe('russianAnswers', () => {
   it('splits meanings on , ; / but not inside brackets', () => {
-    const answers = russianAnswers('больной, ноющий (о горле, мышцах)')
+    const answers = russianAnswers('больной, ноющий (о горле, мышцах)') ?? []
     expect(answers).toContain('больной')
     expect(answers).toContain('ноющий')
     expect(answers.some((answer) => answer === 'мышцах)' || answer === 'мышцах')).toBe(false)
   })
   it('accepts a meaning without its note', () => {
-    expect(russianAnswers('парень (молодой человек)').map(comparable)).toContain(comparable('парень'))
+    expect((russianAnswers('парень (молодой человек)') ?? []).map(comparable)).toContain(comparable('парень'))
   })
 })
