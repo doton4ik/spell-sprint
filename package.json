@@ -16,7 +16,8 @@
     "test": "vitest run",
     "lint": "oxlint src scripts",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "test:e2e": "pnpm build && playwright test"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^6.0.5",
@@ -26,6 +27,7 @@
     "vite": "^8.2.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "happy-dom": "^20.14.5",

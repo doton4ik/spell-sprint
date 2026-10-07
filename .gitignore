@@ -21,3 +21,7 @@ research/tatoeba-candidates.json
 research/tatoeba-examples.json
 research/tatoeba-examples.txt
 research/proof-sentences-review.txt
+
+# Playwright reports
+playwright-report/
+test-results/
