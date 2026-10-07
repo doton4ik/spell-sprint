@@ -30,3 +30,18 @@ export function closestAnswer(answer: string, task: PracticeTask) {
   const typed = comparable(answer)
   return acceptedAnswers(task).reduce((best, option) => (distance(typed, comparable(option)) < distance(typed, comparable(best)) ? option : best), task.answer)
 }
+
+// Every meaning on its own, with and without its note: "парень (молодой человек)" → парень, парень (молодой человек).
+export function russianAnswers(translation: string) {
+  // Split on , ; / outside brackets only: "больной, ноющий (о горле, мышцах)" has two meanings, not three.
+  const parts: string[] = []
+  let depth = 0; let current = ''
+  for (const char of translation) {
+    if (char === '(') depth += 1
+    if (char === ')') depth = Math.max(0, depth - 1)
+    if (depth === 0 && /[,;/]/.test(char)) { parts.push(current.trim()); current = '' } else current += char
+  }
+  parts.push(current.trim())
+  const answers = [...new Set([...parts, ...parts.map((part) => part.replace(/\s*\(.*?\)\s*/g, ' ').trim())])].filter((answer) => answer && answer !== translation)
+  return answers.length ? answers : undefined
+}

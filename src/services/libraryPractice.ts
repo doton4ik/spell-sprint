@@ -1,6 +1,7 @@
 import { mixedPracticeTasks } from '../data/practice'
 import type { LibraryWord } from '../types/library'
 import type { PracticeMode, PracticeTask } from '../types/practice'
+import { russianAnswers } from './answerMatch'
 import { getAllWords, getEveryWord, getLibraries } from './libraryStorage'
 import { getMistakeEntries, getReviewEntries } from './learningData'
 import { getPracticeAttempts } from './practiceStorage'
@@ -19,20 +20,6 @@ export type PracticeSelection = { scope: PracticeScope; library: string; topic: 
 
 function levelFor(difficulty: LibraryWord['difficulty']): PracticeTask['level'] { return difficulty === 'easy' ? 'B1' : difficulty === 'medium' ? 'B1+' : 'B2' }
 function taskBase(word: LibraryWord) { return { topic: word.topic, topicId: word.topicId, subtopic: word.subtopic, wordId: word.wordId || word.id, library: word.library, level: levelFor(word.difficulty), hint: word.definition || word.example || `Focus on ${word.partOfSpeech || 'this word'}.`, example: word.example, extraExample: word.extraExample, extraExampleSource: word.extraExampleSource, rule: word.rule || `Review ${word.word} in the ${word.topic} topic.`, errorCategory: 'Inactive vocabulary' } }
-// Every meaning on its own, with and without its note: "парень (молодой человек)" → парень, парень (молодой человек).
-function russianAnswers(translation: string) {
-  // Split on , ; / outside brackets only: "больной, ноющий (о горле, мышцах)" has two meanings, not three.
-  const parts: string[] = []
-  let depth = 0; let current = ''
-  for (const char of translation) {
-    if (char === '(') depth += 1
-    if (char === ')') depth = Math.max(0, depth - 1)
-    if (depth === 0 && /[,;/]/.test(char)) { parts.push(current.trim()); current = '' } else current += char
-  }
-  parts.push(current.trim())
-  const answers = [...new Set([...parts, ...parts.map((part) => part.replace(/\s*\(.*?\)\s*/g, ' ').trim())])].filter((answer) => answer && answer !== translation)
-  return answers.length ? answers : undefined
-}
 
 function tasksForWord(word: LibraryWord): PracticeTask[] {
   const base = taskBase(word); const id = word.wordId || word.id
