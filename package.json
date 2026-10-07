@@ -9,7 +9,10 @@
     "preview": "vite preview",
     "check:classifier": "node scripts/check-classifier.mjs",
     "check:proofreading": "node scripts/check-proofreading.mjs",
-    "check:pairs": "node scripts/check-pairs.mjs"
+    "check:pairs": "node scripts/check-pairs.mjs",
+    "check:library": "node scripts/check-library.mjs",
+    "typecheck": "tsc -b",
+    "check": "pnpm typecheck && pnpm check:library && pnpm check:pairs && pnpm check:classifier && pnpm check:proofreading"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^6.0.5",

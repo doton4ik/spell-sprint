@@ -1,6 +1,9 @@
 [build]
   command = "pnpm build"
   publish = "dist"
+  # Skip the build (and its credits) when nothing that ends up on the site changed:
+  # research notes, SQL files, scripts, CI settings. Exit code 0 = "nothing to build".
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- src public index.html package.json pnpm-lock.yaml pnpm-workspace.yaml vite.config.ts tsconfig.json tsconfig.app.json tsconfig.node.json netlify.toml"
 
 [build.environment]
   NODE_VERSION = "22"
