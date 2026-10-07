@@ -26,7 +26,7 @@ function hintFor(answer: string, step: number) {
   return `Answer: ${answer}`
 }
 
-export function TaskCard({ task, answer, result, attemptsOnTask, answerRevealed, hintStep, allowSkip, showRuleAfterMistake, onAnswerChange, onCheck, onShowAnswer, onHint, onPlayAudio, onSkip, onNext, onRepeatLater, audioMessage, reason, otherMeaning, onHideWord, reportable, onReported, pack }: TaskCardProps) {
+export function TaskCard({ task, answer, result, answerRevealed, hintStep, allowSkip, showRuleAfterMistake, onAnswerChange, onCheck, onShowAnswer, onHint, onPlayAudio, onSkip, onNext, onRepeatLater, audioMessage, reason, otherMeaning, onHideWord, reportable, onReported, pack }: TaskCardProps) {
   const mode = task.mode ?? (task.type === 'translate-en-ru' ? 'translate-ru' : task.type === 'translate-ru-en' ? 'write-en' : 'choose-spelling')
   const revealed = answerRevealed || result !== 'idle' || hintStep >= 5
   const correct = result === 'correct'

@@ -1,0 +1,9 @@
+dist
+node_modules
+public
+research
+database
+sources
+pnpm-lock.yaml
+*.csv
+*.md

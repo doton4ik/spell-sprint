@@ -35,6 +35,7 @@ function SprintRun({ words, onFinish }: { words: LibraryWord[]; onFinish: (round
   const [left, setLeft] = useState(SPRINT_SECONDS * 1000)
   const [paused, setPaused] = useState(false)
   const answers = useRef<SprintAnswer[]>([])
+  const [score, setScore] = useState(0)
   const spent = useRef(0) // ms of running time before the current stretch
   const since = useRef<number | null>(performance.now())
   const shownAt = useRef(performance.now())
@@ -81,13 +82,13 @@ function SprintRun({ words, onFinish }: { words: LibraryWord[]; onFinish: (round
     const started = firstKeyAt.current || now
     const correct = sprintCorrect(typed, word.word)
     answers.current.push({ wordId: word.wordId, word: word.word, typed: typed.trim(), correct, recallMs: Math.round(started - shownAt.current), typeMs: Math.round(now - started) })
+    if (correct) setScore((value) => value + 1)
     if (correct) { next(); return }
     setMiss(word.word)
     window.setTimeout(next, MISS_SHOWN_MS)
   }
 
   const seconds = Math.max(0, Math.ceil(left / 1000))
-  const score = answers.current.filter((answer) => answer.correct).length
   if (!word) return null
   return <div className="sprint-page sprint-run" id="sprint">
     <div className="sprint-bar"><span className={`sprint-clock${seconds <= 10 ? ' sprint-clock--low' : ''}`}>{seconds}s</span><span className="sprint-score"><Icon name="check" size={15} /> {score}</span><button className="quiet-button" type="button" onClick={() => pause(!paused)}>{paused ? 'Resume' : 'Pause'}</button><button className="quiet-button" type="button" onClick={finish}>Finish</button></div>

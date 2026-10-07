@@ -12,8 +12,11 @@
     "check:pairs": "node scripts/check-pairs.mjs",
     "check:library": "node scripts/check-library.mjs",
     "typecheck": "tsc -b",
-    "check": "pnpm typecheck && pnpm test && pnpm check:library && pnpm check:pairs && pnpm check:classifier && pnpm check:proofreading",
-    "test": "vitest run"
+    "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test && pnpm check:library && pnpm check:pairs && pnpm check:classifier && pnpm check:proofreading",
+    "test": "vitest run",
+    "lint": "oxlint src scripts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@vitejs/plugin-react": "^6.0.5",
@@ -26,6 +29,8 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "happy-dom": "^20.14.5",
+    "oxlint": "^1.87.0",
+    "prettier": "^3.9.9",
     "vitest": "^5.0.3"
   }
 }

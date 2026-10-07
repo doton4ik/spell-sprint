@@ -19,7 +19,7 @@ export function diffStrings(expectedText: string, submittedText: string): { dist
   const submitted = Array.from(submittedText)
   const m = expected.length
   const n = submitted.length
-  const table: number[][] = Array.from({ length: m + 1 }, () => new Array<number>(n + 1).fill(0))
+  const table: number[][] = Array.from({ length: m + 1 }, () => Array.from<number>({ length: n + 1 }).fill(0))
   for (let i = 0; i <= m; i += 1) table[i][0] = i
   for (let j = 0; j <= n; j += 1) table[0][j] = j
 

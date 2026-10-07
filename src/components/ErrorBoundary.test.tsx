@@ -16,7 +16,7 @@ describe('ErrorBoundary', () => {
   it('shows a calm message instead of a blank screen and logs the error', async () => {
     const host = document.createElement('div'); document.body.append(host)
     const root = createRoot(host)
-    await act(async () => root.render(<ErrorBoundary resetKey="practice"><Broken /></ErrorBoundary>))
+    await act(async () => root.render(<ErrorBoundary key="practice"><Broken /></ErrorBoundary>))
     expect(host.textContent).toContain('Something went wrong on this page.')
     expect(getStoredErrors().map((item) => item.message)).toContain('Broken page for the test')
     root.unmount()
@@ -25,8 +25,8 @@ describe('ErrorBoundary', () => {
   it('opening another page tries again', async () => {
     const host = document.createElement('div'); document.body.append(host)
     const root = createRoot(host)
-    await act(async () => root.render(<ErrorBoundary resetKey="a"><Broken /></ErrorBoundary>))
-    await act(async () => root.render(<ErrorBoundary resetKey="b"><p>Working page</p></ErrorBoundary>))
+    await act(async () => root.render(<ErrorBoundary key="a"><Broken /></ErrorBoundary>))
+    await act(async () => root.render(<ErrorBoundary key="b"><p>Working page</p></ErrorBoundary>))
     expect(host.textContent).toContain('Working page')
     root.unmount()
   })

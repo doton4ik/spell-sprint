@@ -4,7 +4,6 @@ import type { PracticeMode, PracticeTask } from '../types/practice'
 import { russianAnswers } from './answerMatch'
 import { getAllWords, getEveryWord, getLibraries } from './libraryStorage'
 import { getMistakeEntries, getReviewEntries } from './learningData'
-import { getPracticeAttempts } from './practiceStorage'
 import { spellingDistractors } from './spellingDistractors'
 import { isRealOrRude } from './proofreadingEngine'
 

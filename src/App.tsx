@@ -56,7 +56,7 @@ function App() {
   const Page = pages[route] ?? DashboardPage
   return (
     <AppShell activePage={route}>
-      <ErrorBoundary resetKey={route}>
+      <ErrorBoundary key={route}>
         <Suspense fallback={<div className="page-loading" role="status" aria-label="Loading" />}>
           <Page />
         </Suspense>

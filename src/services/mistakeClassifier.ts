@@ -258,7 +258,7 @@ export function classifyMistake(expectedRaw: string, submittedRaw: string, ctx: 
   // Sentence tasks are about grammar, not letters, so an edit-distance comparison would be meaningless.
   if (ctx.taskType === 'correct-sentence' || familyFor(ctx.errorCategory ?? '') === 'Grammar') return result([hit('wrong_word')], [hit('grammar_rule_error')])
   // A wrong translation (or Cyrillic in an English answer) is a wrong word, not a spelling pattern.
-  if (/[^\u0000-ɏ]/.test(expected) || /[^\u0000-ɏ]/.test(submitted)) return result([hit('wrong_word')], [hit('unclassified')])
+  if (/[\u0250-\uffff]/.test(expected) || /[\u0250-\uffff]/.test(submitted)) return result([hit('wrong_word')], [hit('unclassified')])
 
   const { distance, ops } = diffStrings(expected, submitted)
   if (distance === 0) return result([], [hit('unclassified')])

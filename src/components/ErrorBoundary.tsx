@@ -4,7 +4,8 @@ import { Icon } from './icons/Icon'
 
 // If a page breaks, the learner sees a calm message and a way out instead of a blank screen,
 // and the error is logged (services/errorLog.ts). Their saved progress is not affected.
-type Props = { children: ReactNode; resetKey: string }
+// Give it key={route}: opening another page mounts a fresh boundary, so that page gets a new try.
+type Props = { children: ReactNode }
 type State = { failed: boolean }
 
 export class ErrorBoundary extends Component<Props, State> {
@@ -14,11 +15,6 @@ export class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, info: ErrorInfo) {
     reportError(Object.assign(error, { stack: `${error.stack ?? ''}\n--- component stack ---${info.componentStack ?? ''}` }), 'page')
-  }
-
-  // Opening another page tries again.
-  componentDidUpdate(previous: Props) {
-    if (previous.resetKey !== this.props.resetKey && this.state.failed) this.setState({ failed: false })
   }
 
   render() {
