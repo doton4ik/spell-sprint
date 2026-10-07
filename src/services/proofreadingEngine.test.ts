@@ -3,7 +3,11 @@ import type { ProofreadingText } from '../data/proofreadingTexts'
 import { buildExercise, checkExercise, cleanText, isRealOrRude, mistakeCountFor, parseProofreadingText } from './proofreadingEngine'
 
 const text: ProofreadingText = {
-  id: 'test', title: 'Test', level: 'A2', format: 'message', topic: 'Test',
+  id: 'test',
+  title: 'Test',
+  level: 'A2',
+  format: 'message',
+  topic: 'Test',
   text: 'Yesterday I {went|past-irregular|goed} to {the shop|article|a shop} and {bought|past-irregular|buyed} some {bread|plural-uncountable|breads}. My sister {was|agreement|were} there too, and we {had|past-irregular|haved} a coffee {together|word-form|togetherly}. It {was|agreement|were} a nice morning.',
 }
 

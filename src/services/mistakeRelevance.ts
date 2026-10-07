@@ -16,7 +16,8 @@ export function relevanceCheck() {
     if (attempt.wordId) return words.has(attempt.wordId) && !hidden.has(attempt.wordId)
     if (retiredTaskIds.has(attempt.taskId) || hidden.has(`task:${attempt.taskId}`)) return false
     // Proofreading: proof-<text id>-<type>-<word>; mistakes in a retired text are skipped.
-    if (attempt.taskId.startsWith('proof-')) for (const id of hiddenProofreadingTextIds) if (attempt.taskId.startsWith(`proof-${id}-`)) return false
+    if (attempt.taskId.startsWith('proof-'))
+      for (const id of hiddenProofreadingTextIds) if (attempt.taskId.startsWith(`proof-${id}-`)) return false
     return true
   }
 }

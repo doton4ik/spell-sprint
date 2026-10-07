@@ -16,7 +16,13 @@ type RuleExerciseRunnerProps = {
   onFinish?: (result: { correct: number; total: number }) => void
 }
 
-const typeLabels: Record<RuleExerciseType, string> = { spell: 'Spell it', correct_word: 'Fix the spelling', fill_gap: 'Fill the gap', multiple_choice: 'Choose', grammar: 'Grammar' }
+const typeLabels: Record<RuleExerciseType, string> = {
+  spell: 'Spell it',
+  correct_word: 'Fix the spelling',
+  fill_gap: 'Fill the gap',
+  multiple_choice: 'Choose',
+  grammar: 'Grammar',
+}
 const AUTO_ADVANCE_MS = 900
 const normalize = (value: string) => value.trim().toLocaleLowerCase().replace(/[’‘`]/g, "'").replace(/\s+/g, ' ')
 
@@ -31,12 +37,16 @@ export function RuleExerciseRunner({ items, loop, showRuleTitle, onProgress, onF
 
   function next() {
     if (index + 1 >= items.length) {
-      if (!loop) { onFinish?.({ ...tally.current }); return }
+      if (!loop) {
+        onFinish?.({ ...tally.current })
+        return
+      }
       setIndex(0)
     } else {
       setIndex(index + 1)
     }
-    setAnswer(''); setFeedback(null)
+    setAnswer('')
+    setFeedback(null)
   }
 
   useEffect(() => {
@@ -64,21 +74,66 @@ export function RuleExerciseRunner({ items, loop, showRuleTitle, onProgress, onF
       <div className="rule-runner__meta">
         <span>{typeLabels[exercise.exerciseType]}</span>
         {showRuleTitle && item.ruleTitle ? <span className="rule-runner__rule">{item.ruleTitle}</span> : null}
-        {!loop ? <span className="rule-runner__count">{index + 1} / {items.length}</span> : null}
+        {!loop ? (
+          <span className="rule-runner__count">
+            {index + 1} / {items.length}
+          </span>
+        ) : null}
       </div>
       <p className="rule-runner__prompt">{exercise.prompt}</p>
 
       {feedback ? (
         <div className={`rule-runner__feedback rule-runner__feedback--${feedback}`} role="status">
-          <span>{feedback === 'correct' ? 'Correct!' : <>Not quite: <AnswerDiff expected={exercise.answer} submitted={answer} /></>}</span>
-          {feedback === 'incorrect' ? <button className="next-button" type="button" onClick={next} autoFocus>Next <Icon name="arrow" size={15} /></button> : null}
+          <span>
+            {feedback === 'correct' ? (
+              'Correct!'
+            ) : (
+              <>
+                Not quite: <AnswerDiff expected={exercise.answer} submitted={answer} />
+              </>
+            )}
+          </span>
+          {feedback === 'incorrect' ? (
+            <button className="next-button" type="button" onClick={next} autoFocus>
+              Next <Icon name="arrow" size={15} />
+            </button>
+          ) : null}
         </div>
       ) : choices?.length ? (
-        <div className="rule-runner__choices">{choices.map((choice) => <button type="button" className="rule-runner__choice" onClick={() => { setAnswer(choice); void check(choice) }} key={choice}>{choice}</button>)}</div>
+        <div className="rule-runner__choices">
+          {choices.map((choice) => (
+            <button
+              type="button"
+              className="rule-runner__choice"
+              onClick={() => {
+                setAnswer(choice)
+                void check(choice)
+              }}
+              key={choice}
+            >
+              {choice}
+            </button>
+          ))}
+        </div>
       ) : (
-        <form className="rule-runner__form" onSubmit={(event) => { event.preventDefault(); void check(answer) }} key={index}>
-          <input {...noAutocorrect} value={answer} onChange={(event) => setAnswer(event.target.value)} placeholder="Type your answer" autoFocus />
-          <button className="check-button" type="submit" disabled={!answer.trim()}>Check</button>
+        <form
+          className="rule-runner__form"
+          onSubmit={(event) => {
+            event.preventDefault()
+            void check(answer)
+          }}
+          key={index}
+        >
+          <input
+            {...noAutocorrect}
+            value={answer}
+            onChange={(event) => setAnswer(event.target.value)}
+            placeholder="Type your answer"
+            autoFocus
+          />
+          <button className="check-button" type="submit" disabled={!answer.trim()}>
+            Check
+          </button>
         </form>
       )}
     </div>

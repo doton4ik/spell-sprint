@@ -23,7 +23,10 @@ for (const file of ['src/services/spellDiff.ts', 'src/services/mistakeClassifier
 
 const { classifyMistake } = await import(pathToFileURL(join(out, 'src/services/mistakeClassifier.ts')).href)
 
-const confusableSets = [{ ruleId: 'there-their', words: ['there', 'their', "they're"] }, { ruleId: 'lose-loose', words: ['lose', 'loose'] }]
+const confusableSets = [
+  { ruleId: 'there-their', words: ['there', 'their', "they're"] },
+  { ruleId: 'lose-loose', words: ['lose', 'loose'] },
+]
 
 // [expected, submitted, context, technical tags that must be present, technical tags that must be absent, learning tags (exact set)]
 const cases = [
@@ -79,7 +82,9 @@ for (const [expected, submitted, ctx, mustHave, mustNotHave, learning] of cases)
   for (const tag of mustNotHave) if (technical.includes(tag)) problems.push(`unexpected technical ${tag}`)
   if ([...learned].sort().join() !== [...learning].sort().join()) problems.push(`learning expected [${learning}] got [${learned}]`)
   if (problems.length) failed += 1
-  console.log(`${problems.length ? 'FAIL' : ' ok '}  ${expected} → ${submitted || '(blank)'}   technical=[${technical}] learning=[${learned}]${problems.length ? `\n        ${problems.join('; ')}` : ''}`)
+  console.log(
+    `${problems.length ? 'FAIL' : ' ok '}  ${expected} → ${submitted || '(blank)'}   technical=[${technical}] learning=[${learned}]${problems.length ? `\n        ${problems.join('; ')}` : ''}`,
+  )
 }
 
 rmSync(out, { recursive: true, force: true })

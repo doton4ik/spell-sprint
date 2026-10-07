@@ -52,10 +52,19 @@ export function mergePracticeAttempts(incoming: PracticeAttempt[]) {
 let cached: { raw: string | null; attempts: readonly PracticeAttempt[] } | null = null
 export function getPracticeAttempts(): readonly PracticeAttempt[] {
   let raw: string | null = null
-  try { raw = window.localStorage.getItem(ATTEMPTS_KEY) } catch { /* storage blocked */ }
+  try {
+    raw = window.localStorage.getItem(ATTEMPTS_KEY)
+  } catch {
+    /* storage blocked */
+  }
   if (cached && cached.raw === raw) return cached.attempts
   let attempts: PracticeAttempt[] = []
-  try { const parsed: unknown = raw ? JSON.parse(raw) : []; attempts = Array.isArray(parsed) ? parsed : [] } catch { /* damaged storage: start empty */ }
+  try {
+    const parsed: unknown = raw ? JSON.parse(raw) : []
+    attempts = Array.isArray(parsed) ? parsed : []
+  } catch {
+    /* damaged storage: start empty */
+  }
   cached = { raw, attempts: Object.freeze(attempts) }
   return cached.attempts
 }
@@ -63,5 +72,8 @@ export function getPracticeAttempts(): readonly PracticeAttempt[] {
 export function subscribeToPracticeAttempts(onChange: () => void) {
   window.addEventListener(PRACTICE_UPDATED_EVENT, onChange)
   window.addEventListener('storage', onChange)
-  return () => { window.removeEventListener(PRACTICE_UPDATED_EVENT, onChange); window.removeEventListener('storage', onChange) }
+  return () => {
+    window.removeEventListener(PRACTICE_UPDATED_EVENT, onChange)
+    window.removeEventListener('storage', onChange)
+  }
 }

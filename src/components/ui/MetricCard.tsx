@@ -6,7 +6,9 @@ export function MetricCard({ metric }: { metric: Metric }) {
     <article className={`metric-card metric-card--${metric.tone}`}>
       <div className="metric-card__top">
         <span>{metric.label}</span>
-        <span className="metric-card__icon"><Icon name={metric.icon} size={18} /></span>
+        <span className="metric-card__icon">
+          <Icon name={metric.icon} size={18} />
+        </span>
       </div>
       <strong className="metric-card__value">{metric.value}</strong>
       <p className="metric-card__note">{metric.note}</p>
@@ -14,4 +16,3 @@ export function MetricCard({ metric }: { metric: Metric }) {
     </article>
   )
 }
-

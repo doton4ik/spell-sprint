@@ -12,8 +12,17 @@ export const canonicalTopics: CanonicalTopic[] = [
   { id: 'sport-and-fitness', name: 'Sport and Fitness', subtopics: ['Training and Competition', 'Health and Recovery'] },
 ]
 
-const topicAliases: Record<string, string> = { business: 'business-and-office', travel: 'travel-and-culture', sports: 'sport-and-fitness', 'sap-professional-logistics': 'warehouse-operations' }
-const key = (value: string) => value.trim().toLocaleLowerCase().replaceAll(/[^a-z0-9]+/g, '-')
+const topicAliases: Record<string, string> = {
+  business: 'business-and-office',
+  travel: 'travel-and-culture',
+  sports: 'sport-and-fitness',
+  'sap-professional-logistics': 'warehouse-operations',
+}
+const key = (value: string) =>
+  value
+    .trim()
+    .toLocaleLowerCase()
+    .replaceAll(/[^a-z0-9]+/g, '-')
 
 export function canonicalTopic(topicId: string, topic: string) {
   const id = topicAliases[key(topicId || topic)] ?? key(topicId || topic)
@@ -27,4 +36,6 @@ export function libraryKindForName(name: string): 'core' | 'topic' | 'shared' {
   return normalised.endsWith('core') ? 'core' : 'topic'
 }
 
-export function stableWordId(topicId: string, subtopic: string, word: string) { return [topicId, key(subtopic) || 'general', key(word)].filter(Boolean).join('-') }
+export function stableWordId(topicId: string, subtopic: string, word: string) {
+  return [topicId, key(subtopic) || 'general', key(word)].filter(Boolean).join('-')
+}

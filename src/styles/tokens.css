@@ -22,9 +22,8 @@
   --brand: #0e6a5c;
   --coral-light: #f0997b;
   --mint: #9fe1cb;
-  --shadow-sm: 0 1px 2px rgba(31, 51, 47, .03), 0 4px 14px rgba(31, 51, 47, .04);
-  --shadow-md: 0 12px 32px rgba(26, 61, 53, .08);
+  --shadow-sm: 0 1px 2px rgba(31, 51, 47, 0.03), 0 4px 14px rgba(31, 51, 47, 0.04);
+  --shadow-md: 0 12px 32px rgba(26, 61, 53, 0.08);
   --radius-lg: 20px;
   --radius-md: 14px;
 }
-

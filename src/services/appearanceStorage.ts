@@ -27,6 +27,10 @@ export function applyFontScale(scale: FontScale = getFontScale()) {
 }
 
 export function setFontScale(scale: FontScale) {
-  try { window.localStorage.setItem(KEY, scale) } catch { /* the choice still applies for this visit */ }
+  try {
+    window.localStorage.setItem(KEY, scale)
+  } catch {
+    /* the choice still applies for this visit */
+  }
   applyFontScale(scale)
 }

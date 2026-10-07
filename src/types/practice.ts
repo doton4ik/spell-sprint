@@ -1,8 +1,4 @@
-export type PracticeTaskType =
-  | 'correct-spelling'
-  | 'translate-ru-en'
-  | 'translate-en-ru'
-  | 'correct-sentence'
+export type PracticeTaskType = 'correct-spelling' | 'translate-ru-en' | 'translate-en-ru' | 'correct-sentence'
 
 export type PracticeMode = 'write-en' | 'listen-write' | 'translate-ru' | 'choose-spelling'
 
@@ -64,4 +60,12 @@ export type PracticeAttempt = {
 
 export type CheckResult = 'idle' | 'correct' | 'incorrect'
 
-export type ErrorType = 'missing_letter' | 'missing_vowel' | 'extra_letter' | 'letter_order' | 'vowel_confusion' | 'double_consonant' | 'phrase_spacing' | 'unknown'
+export type ErrorType =
+  | 'missing_letter'
+  | 'missing_vowel'
+  | 'extra_letter'
+  | 'letter_order'
+  | 'vowel_confusion'
+  | 'double_consonant'
+  | 'phrase_spacing'
+  | 'unknown'

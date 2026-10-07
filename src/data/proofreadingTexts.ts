@@ -5,10 +5,37 @@
 // automatically and are not marked. Full format: see the content brief.
 
 export type ProofreadingLevel = 'A2' | 'B1' | 'B2' | 'C1'
-export type ProofreadingFormat = 'email' | 'message' | 'story' | 'notice' | 'article' | 'dialogue' | 'review' | 'diary' | 'instructions' | 'report' | 'post' | 'blog' | 'interview' | 'chat' | 'column' | 'application' | 'speech' | 'sentences'
+export type ProofreadingFormat =
+  | 'email'
+  | 'message'
+  | 'story'
+  | 'notice'
+  | 'article'
+  | 'dialogue'
+  | 'review'
+  | 'diary'
+  | 'instructions'
+  | 'report'
+  | 'post'
+  | 'blog'
+  | 'interview'
+  | 'chat'
+  | 'column'
+  | 'application'
+  | 'speech'
+  | 'sentences'
 // situation: who wrote the text and why the learner is checking it ("Your friend wants to post this review…").
 // source: for texts adapted from open-licence articles (shown under the text, as the licence requires).
-export type ProofreadingText = { id: string; title: string; level: ProofreadingLevel; format: ProofreadingFormat; topic: string; text: string; situation?: string; source?: { name: string; url: string; licence: string } }
+export type ProofreadingText = {
+  id: string
+  title: string
+  level: ProofreadingLevel
+  format: ProofreadingFormat
+  topic: string
+  text: string
+  situation?: string
+  source?: { name: string; url: string; licence: string }
+}
 
 export const proofreadingTexts: ProofreadingText[] = [
   {
@@ -50,7 +77,7 @@ export const proofreadingTexts: ProofreadingText[] = [
     level: 'A2',
     format: 'notice',
     topic: 'Work and Career',
-    text: 'Notice for all staff\n\nOur office {will close|tense|closed} at four o\'clock next Friday. All workers {must|modal|must to} leave the building by half past four. The bus to the station {leaves|agreement|leave} from {the main entrance|article-missing|main entrance}. Please do not leave your bags in {the corridor|article-missing|corridor}.\n\nThere {is|agreement|are} {a new manager|article-missing|new manager} in the sales team. {His|pronoun|He} name is Mr Novak. He {has worked|tense|works} here {since|since-for|for} March. Please give him {a warm welcome|article-missing|warm welcome}. Thank you {for|preposition|to} your help.',
+    text: "Notice for all staff\n\nOur office {will close|tense|closed} at four o'clock next Friday. All workers {must|modal|must to} leave the building by half past four. The bus to the station {leaves|agreement|leave} from {the main entrance|article-missing|main entrance}. Please do not leave your bags in {the corridor|article-missing|corridor}.\n\nThere {is|agreement|are} {a new manager|article-missing|new manager} in the sales team. {His|pronoun|He} name is Mr Novak. He {has worked|tense|works} here {since|since-for|for} March. Please give him {a warm welcome|article-missing|warm welcome}. Thank you {for|preposition|to} your help.",
   },
   {
     id: 'a2-dialogue-before-test',
@@ -58,7 +85,7 @@ export const proofreadingTexts: ProofreadingText[] = [
     level: 'A2',
     format: 'dialogue',
     topic: 'Study and Learning',
-    text: 'Anna: Hi Paul! {How are you|word-order|How you are} today? Are you ready for {the test|article-missing|test}?\nPaul: Not really. Yesterday I {had|past-irregular|haved} {a bad headache|article-missing|bad headache}. So I {could|modal|can} not study.\nAnna: Don\'t worry. I {can help|modal|can to help} you. We can study together in {the library|article-missing|library}. Here is some {advice|plural-uncountable|advices}: sleep well tonight.\nPaul: Thanks! {How much|quantifier|How many} time do we have?\nAnna: About two hours. Bring {your|confusable|you\'re} grammar book, a pen and some water.\nPaul: OK. I already feel {better|comparative|more better}. I am {afraid of|preposition|afraid from} {failing|gerund-infinitive|fail}, but I hope it will be fine.\nAnna: Good luck, Paul! See you {at|preposition|on} five o\'clock.',
+    text: "Anna: Hi Paul! {How are you|word-order|How you are} today? Are you ready for {the test|article-missing|test}?\nPaul: Not really. Yesterday I {had|past-irregular|haved} {a bad headache|article-missing|bad headache}. So I {could|modal|can} not study.\nAnna: Don't worry. I {can help|modal|can to help} you. We can study together in {the library|article-missing|library}. Here is some {advice|plural-uncountable|advices}: sleep well tonight.\nPaul: Thanks! {How much|quantifier|How many} time do we have?\nAnna: About two hours. Bring {your|confusable|you're} grammar book, a pen and some water.\nPaul: OK. I already feel {better|comparative|more better}. I am {afraid of|preposition|afraid from} {failing|gerund-infinitive|fail}, but I hope it will be fine.\nAnna: Good luck, Paul! See you {at|preposition|on} five o'clock.",
   },
   {
     id: 'a2-diary-sore-throat',
@@ -130,235 +157,463 @@ export const proofreadingTexts: ProofreadingText[] = [
     level: 'B2',
     format: 'review',
     topic: 'Food and Drinks',
-    text: 'The Green Corner opened {in|preposition|on} the city centre last spring, and since then it {has become|tense|became} one of my favourite places. The interior is simple but {surprisingly|word-form|surprising} warm, and the waiters {are|agreement|is} friendly without being pushy.\n\nI {had never tried|tense|have never tried} Georgian food before, so the waiter suggested {ordering|gerund-infinitive|to order} a few small dishes. Everything {was cooked|passive|was cook ; cooked} fresh, and the bread was {the best|comparative|the most best} I have eaten this year.\n\nMy only complaint is the noise. If the tables {were|conditional|would be} further apart, it {would be|conditional|will be} easier to talk. {Its|confusable|It\'s} prices are reasonable, though, and I would happily recommend it to anyone who {enjoys|agreement|enjoy} trying new flavours.',
+    text: "The Green Corner opened {in|preposition|on} the city centre last spring, and since then it {has become|tense|became} one of my favourite places. The interior is simple but {surprisingly|word-form|surprising} warm, and the waiters {are|agreement|is} friendly without being pushy.\n\nI {had never tried|tense|have never tried} Georgian food before, so the waiter suggested {ordering|gerund-infinitive|to order} a few small dishes. Everything {was cooked|passive|was cook ; cooked} fresh, and the bread was {the best|comparative|the most best} I have eaten this year.\n\nMy only complaint is the noise. If the tables {were|conditional|would be} further apart, it {would be|conditional|will be} easier to talk. {Its|confusable|It's} prices are reasonable, though, and I would happily recommend it to anyone who {enjoys|agreement|enjoy} trying new flavours.",
   },
   // ───────────── B1 and B2 (assistant batch, reviewed) ─────────────
   {
-    id: 'b1-email-busy-week', title: 'A busy week', level: 'B1', format: 'email', topic: 'Everyday Life',
+    id: 'b1-email-busy-week',
+    title: 'A busy week',
+    level: 'B1',
+    format: 'email',
+    topic: 'Everyday Life',
     text: 'Hi Sam, I {have had|tense|had} a very busy week so far. Our new neighbour {has|agreement|have} two young children. They moved into {the flat|article-missing|flat} above ours {on Monday|preposition|in Monday}. Their boxes were much {heavier|comparative|more heavier} than they expected.\n\nYesterday I {helped|tense|have helped} them carry a table upstairs. One child asked me where {I lived|word-order|did I live}. I told him I lived downstairs and offered {to lend|gerund-infinitive|lending} them a lamp. They {were|agreement|was} pleased because their lights were not working.\n\nI also bought some bread for {dinner|article-extra|the dinner} on my way home. The shop assistant gave me {the wrong bag|article-missing|wrong bag} by mistake. I returned it and got {my|pronoun|me} shopping back. Can we meet {on Saturday|preposition|in Saturday}? I need {a quiet afternoon|article-missing|quiet afternoon} after all this activity.\n\nBest wishes, Alex',
   },
   {
-    id: 'b1-message-station-plan', title: 'At the station', level: 'B1', format: 'message', topic: 'Travel and Culture',
+    id: 'b1-message-station-plan',
+    title: 'At the station',
+    level: 'B1',
+    format: 'message',
+    topic: 'Travel and Culture',
     text: 'Hi! I {arrived|tense|have arrived} at the station twenty minutes ago. The train to the coast {leaves|agreement|leave} from platform four. I bought {a return ticket|article-missing|return ticket} because it was cheaper than two single tickets. The clerk gave me {some information|plural-uncountable|some informations} about the last train home.\n\nPlease meet me beside {the main entrance|article-missing|main entrance} at nine. If you bring a bag, you {can leave|modal|can to leave} it in the station locker. I asked the guard where {the lockers were|word-order|were the lockers}. He said they were behind the ticket office.\n\nWe can visit the old market first. Its stalls sell {many|quantifier|much} small gifts, but we do not have to buy anything. I would rather spend our money on lunch. The café across the square {serves|agreement|serve} good soup. Text me when you get here, and I will wait {for|preposition|on} you.',
   },
   {
-    id: 'b1-story-family-soup', title: 'The soup recipe', level: 'B1', format: 'story', topic: 'Food and Drinks',
+    id: 'b1-story-family-soup',
+    title: 'The soup recipe',
+    level: 'B1',
+    format: 'story',
+    topic: 'Food and Drinks',
     text: 'On Sunday, Mia {decided|tense|has decided} to cook lunch for her family. She found {a recipe|article-missing|recipe} in an old notebook. It called for two onions, carrots and {some rice|plural-uncountable|some rices}. Mia {bought|past-irregular|buyed} everything at the corner shop.\n\nAt home, she asked her brother to cut the vegetables. He worked {carefully|word-form|careful} but dropped an onion on the floor. Mia laughed and gave {him|pronoun|he} another one. They put the vegetables in {a large pot|article-missing|large pot} and added water. Their mother asked whether {the soup was ready|word-order|was the soup ready}.\n\nAfter half an hour, Mia tasted it. The soup needed {a little|quantifier|a few} salt, so she added some. Her father came in while she was setting {the table|article-missing|table}. Everyone enjoyed {eating|gerund-infinitive|to eat} together. Mia kept the recipe because it was {easier|comparative|more easier} than she had expected.',
   },
   {
-    id: 'b1-notice-office-move', title: 'Office move', level: 'B1', format: 'notice', topic: 'Work and Career',
+    id: 'b1-notice-office-move',
+    title: 'Office move',
+    level: 'B1',
+    format: 'notice',
+    topic: 'Work and Career',
     text: 'Our team is moving to another floor next Monday. Please put your personal things in {a labelled box|article-missing|labelled box} before Friday afternoon. The boxes {are|agreement|is} available beside reception. Do not leave {any equipment|plural-uncountable|any equipments} on your desk.\n\nThe new office is {smaller|comparative|more smaller} than our current one, but it has better light. Each desk will have {a chair|article-missing|chair} and a screen. If you need help carrying a box, you {can ask|modal|can to ask} one of the moving team. Please tell {them|pronoun|they} which desk is yours.\n\nA short meeting will take place at ten {on Monday|preposition|in Monday}. The manager will explain where {the meeting rooms are|word-order|are the meeting rooms}. There is also {a kitchen|article-missing|kitchen} near the entrance. It has cups and a kettle, but you should bring your own lunch. Thank you {for|preposition|to} helping us make the move easy.',
   },
   {
-    id: 'b1-article-study-breaks', title: 'Better study breaks', level: 'B1', format: 'article', topic: 'Study and Learning',
+    id: 'b1-article-study-breaks',
+    title: 'Better study breaks',
+    level: 'B1',
+    format: 'article',
+    topic: 'Study and Learning',
     text: 'Many students {spend|agreement|spends} hours {looking at|preposition|looking on} the same page. Taking {a short break|article-missing|short break} can make studying feel easier. Last term, I {tried|tense|have tried} a simple plan. I worked for half an hour, then walked around the room. This was {more useful|comparative|more more useful} than checking my phone.\n\nDuring each break, I drank water and looked out of {the window|article-missing|window}. I avoided {reading|gerund-infinitive|to read} messages because they made it hard to return to my work. My friend asked me how {I kept|word-order|did I keep} track of time. I showed her my kitchen timer.\n\nAt first, I had {little|quantifier|few} energy after {lunch|article-extra|the lunch}. After two weeks, I felt better and finished my {homework|plural-uncountable|homeworks} earlier. I also kept {a notebook|article-missing|notebook} beside me for questions. When I needed help, I asked {my teacher|pronoun|me teacher} instead of guessing.',
   },
   {
-    id: 'b1-dialogue-evening-walk', title: 'An evening walk', level: 'B1', format: 'dialogue', topic: 'Health and Body',
+    id: 'b1-dialogue-evening-walk',
+    title: 'An evening walk',
+    level: 'B1',
+    format: 'dialogue',
+    topic: 'Health and Body',
     text: 'Anna: Do you want to come for {a walk|article-missing|walk} after {dinner|article-extra|the dinner}?\nBen: Yes. I {sat|past-irregular|sitted} at my desk all day, and my legs feel stiff.\nAnna: We could walk through {the park|article-missing|park} near my house.\nBen: That sounds good. Is it {farther|comparative|more farther} than the river path?\nAnna: No, it is close. The entrance {is|agreement|are} just across the road.\nBen: I {have had|tense|had} a headache since lunchtime, so I would prefer a quiet route.\nAnna: Of course. You {can bring|modal|can to bring} a bottle of water.\nBen: Thanks. My doctor told {me|pronoun|I} to take regular breaks from my screen.\nAnna: I enjoy {walking|gerund-infinitive|to walk} there because the paths are wide.\nBen: What time {does the gate close|word-order|the gate closes}?\nAnna: At nine. We have enough time for {a gentle walk|article-missing|gentle walk} before it gets dark.\nBen: Great. I will meet you {at|preposition|on} your front door at seven.',
   },
   {
-    id: 'b1-review-budget-phone', title: 'A simple phone', level: 'B1', format: 'review', topic: 'Technology',
+    id: 'b1-review-budget-phone',
+    title: 'A simple phone',
+    level: 'B1',
+    format: 'review',
+    topic: 'Technology',
     text: 'I {bought|past-irregular|buyed} this phone last month because my old one stopped working. It has {a bright screen|article-missing|bright screen} and a battery that lasts all day. The buttons {are|agreement|is} easy to use, even when I wear gloves. I also like its {simple|word-form|simply} menu.\n\nSetting it up took {less|quantifier|fewer} time than I expected. The instructions explained where {the memory card goes|word-order|does the memory card go}. I needed {an adapter|article-missing|adapter} for my old charger, so I bought one nearby. Since then, the phone {has worked|tense|worked} well.\n\nThe camera is {better|comparative|more better} in daylight than indoors. It sometimes saves photos slowly, but that is not a big problem for me. I would recommend {it|pronoun|him} to someone who wants {a reliable device|article-missing|reliable device} without paying too much. Its sound is clear enough for calls.',
   },
   {
-    id: 'b1-diary-new-neighbour', title: 'A new neighbour', level: 'B1', format: 'diary', topic: 'Home and Town',
+    id: 'b1-diary-new-neighbour',
+    title: 'A new neighbour',
+    level: 'B1',
+    format: 'diary',
+    topic: 'Home and Town',
     text: 'Today I {met|past-irregular|meeted} the new person who lives next door. She moved into {the empty flat|article-missing|empty flat} yesterday. Her name is Sara, and she {works|agreement|work} at the library. She asked where {the nearest shop was|word-order|was the nearest shop}.\n\nI showed her the way and helped carry {a small box|article-missing|small box} upstairs. She had brought {too much|quantifier|too many} {furniture|plural-uncountable|furnitures} for the living room, so we moved a chair into the bedroom. She thanked {me|pronoun|I} and offered me tea.\n\nWe talked for an hour. Sara {has lived|tense|lived} in this town for three years, but this is her first flat near the centre. She said the buses here were {more frequent|comparative|more more frequent} than at her old address. I enjoyed {talking|gerund-infinitive|to talk} to her. Before I left, I told her about {the weekend market|article-missing|weekend market} in the square.',
   },
   {
-    id: 'b1-instructions-return-parcel', title: 'Returning a parcel', level: 'B1', format: 'instructions', topic: 'Shopping and Money',
+    id: 'b1-instructions-return-parcel',
+    title: 'Returning a parcel',
+    level: 'B1',
+    format: 'instructions',
+    topic: 'Shopping and Money',
     text: 'First, check that you {have|agreement|has} your receipt. Put the unwanted item in {a strong box|article-missing|strong box} and close it with tape. If the box is damaged, ask the shop for another one. You {can return|modal|can to return} the item within two weeks of purchase.\n\nWrite your address {clearly|word-form|clear} on the form. Do not include {too much|quantifier|too many} paper inside the parcel. Attach {the return label|article-missing|return label} to the top, not the bottom. The shop assistant will tell you where {the parcel should go|word-order|should the parcel go}.\n\nTake it to {the nearest collection point|article-missing|nearest collection point} and keep the receipt they give you. The shop {will send|tense|sent} your money back after it receives the parcel. If you paid by card, the payment will go back to {your|pronoun|you} account. Please wait {for|preposition|on} a message before contacting the shop.',
   },
   {
-    id: 'b1-report-park-paths', title: 'Park paths', level: 'B1', format: 'report', topic: 'Nature and Weather',
+    id: 'b1-report-park-paths',
+    title: 'Park paths',
+    level: 'B1',
+    format: 'report',
+    topic: 'Nature and Weather',
     text: 'Last Saturday, our group {walked|tense|has walked} through the local park after heavy rain. Several paths {were|agreement|was} wet and difficult to use. We counted {many|quantifier|much} puddles near the pond. One path was {narrower|comparative|more narrower} than the others, so people had to walk slowly.\n\nWe spoke to {a park worker|article-missing|park worker} about the problem. She asked which path {we had used|word-order|had we used}. We showed {her|pronoun|she} a map and pointed to the north entrance. A tree had fallen across {the main path|article-missing|main path} during the storm.\n\nThe worker said her team {would clear|reported-speech|will clear} it the next morning. She also suggested putting more stones on the muddy ground. Our group recommends {a clear sign|article-missing|clear sign} at each entrance when a path is closed. This would help visitors choose {a safer route|article-missing|safer route} without walking through the mud.',
   },
   {
-    id: 'b1-email-club-training', title: 'Training together', level: 'B1', format: 'email', topic: 'Sport and Fitness',
+    id: 'b1-email-club-training',
+    title: 'Training together',
+    level: 'B1',
+    format: 'email',
+    topic: 'Sport and Fitness',
     text: 'Hi Leo, our sports club {starts|agreement|start} a new beginner class next week. I went to {a trial session|article-missing|trial session} last Tuesday and enjoyed it. The coach {taught|past-irregular|teached} us how to warm up safely. She gave everyone {a simple plan|article-missing|simple plan} to follow at {home|article-extra|the home}.\n\nThe exercises were {easier|comparative|more easier} than I expected. We did {a few|quantifier|a little} stretches before moving on to short runs. I asked the coach how {I could improve|word-order|could I improve} my balance. She showed {me|pronoun|I} an exercise that takes only five minutes.\n\nI {have practised|tense|practised} it every day since the session. The next class is {on Thursday|preposition|in Thursday} evening. You {can join|modal|can to join} without buying any special {equipment|plural-uncountable|equipments}. Bring water and wear comfortable shoes. We can meet at {the sports hall|article-missing|sports hall} entrance just before six. I hope you can come. Best, Max',
   },
   {
-    id: 'b1-message-family-visit', title: 'Sunday plans', level: 'B1', format: 'message', topic: 'People and Feelings',
+    id: 'b1-message-family-visit',
+    title: 'Sunday plans',
+    level: 'B1',
+    format: 'message',
+    topic: 'People and Feelings',
     text: 'Hi, I {spoke|past-irregular|speaked} to our aunt this morning. She sounded happy about our visit. She has {a new puppy|article-missing|new puppy}, and she wants us to meet it. Her neighbours {are|agreement|is} coming for tea too. I think it will be {a lovely afternoon|article-missing|lovely afternoon}.\n\nI {have not seen|tense|did not see} her for six months, so {I am|be-missing|I} excited. She asked whether {we could arrive early|word-order|could we arrive early}. I told {her|pronoun|she} we could be there by two. Please bring {a small cake|article-missing|small cake} if you have time to buy one.\n\nLast time, there was {too much|quantifier|too many} food on the table, so we do not need {anything|double-negative|nothing} large. We can help her make tea and then take the puppy outside. She enjoys {walking|gerund-infinitive|to walk} with visitors. I will call you when I get on {the bus|article-missing|bus}. See you {on Sunday|preposition|in Sunday}!',
   },
   {
-    id: 'b1-story-lost-umbrella', title: 'The lost umbrella', level: 'B1', format: 'story', topic: 'Everyday Life',
+    id: 'b1-story-lost-umbrella',
+    title: 'The lost umbrella',
+    level: 'B1',
+    format: 'story',
+    topic: 'Everyday Life',
     text: 'Yesterday, Nina {left|past-irregular|leaved} her umbrella on the bus. She noticed it was missing when she reached {the office|article-missing|office}. It {was|agreement|were} raining hard, and her coat was thin. She asked a colleague where {the lost property desk was|word-order|was the lost property desk}.\n\nAt lunch, Nina rang the bus company. The person on the phone spoke {slowly|word-form|slow} and asked her to describe the umbrella. Nina said it had {a wooden handle|article-missing|wooden handle} and a blue cover. She had bought it {a few|quantifier|a little} weeks earlier. The clerk checked a list and found it.\n\nNina {went|past-irregular|goed} to collect it after work. The desk was {closer|comparative|more closer} than she had expected. She thanked {the clerk|article-missing|clerk} and put the umbrella in her bag. Since then, she {has checked|tense|checked} her seat before leaving every bus. She does not want another wet journey home.',
   },
   {
-    id: 'b1-notice-museum-visit', title: 'Museum visit', level: 'B1', format: 'notice', topic: 'Travel and Culture',
+    id: 'b1-notice-museum-visit',
+    title: 'Museum visit',
+    level: 'B1',
+    format: 'notice',
+    topic: 'Travel and Culture',
     text: 'Our group {is visiting|tense|visited} the local museum {on Friday|preposition|in Friday}. Please {arrive at|preposition|arrive to} {the school entrance|article-missing|school entrance} by eight thirty. The bus {leaves|agreement|leave} at nine, so we cannot {wait for|preposition|wait} late arrivals. Bring {a packed lunch|article-missing|packed lunch} and a bottle of water.\n\nAt the museum, a guide will show us old tools and clothes. Some rooms have {many|quantifier|much} small objects behind glass. Do not touch them. The guide will explain how {people lived|word-order|did people live} in the town long ago. If you have questions, you {can ask|modal|can to ask} them at the end of each room.\n\nThe visit will finish at three. We will meet beside {the main stairs|article-missing|main stairs} before returning to the bus. Tell {your teacher|pronoun|you teacher} if you need to leave the group. Please walk {quietly|word-form|quiet} inside the museum. We hope everyone enjoys the trip.',
   },
   {
-    id: 'b1-article-market-produce', title: 'Buying fresh food', level: 'B1', format: 'article', topic: 'Food and Drinks',
+    id: 'b1-article-market-produce',
+    title: 'Buying fresh food',
+    level: 'B1',
+    format: 'article',
+    topic: 'Food and Drinks',
     text: 'Buying food at {a local market|article-missing|local market} can be enjoyable. Some stalls {sell|agreement|sells} fruit that was picked that morning. Last weekend, I {went|past-irregular|goed} to a market near my home. I bought apples, carrots and some cheese for {lunch|article-extra|the lunch}.\n\nThe seller asked how {I planned|word-order|did I plan} to cook the carrots. I told {her|pronoun|she} I would roast them. She suggested adding {a little|quantifier|a few} oil and some herbs. Her {advice|plural-uncountable|advices} was {simpler|comparative|more simpler} than the recipe I had found online.\n\nI took my shopping home in {a cloth bag|article-missing|cloth bag}. It was strong enough for everything. The vegetables tasted fresh, and I enjoyed {preparing|gerund-infinitive|to prepare} lunch. Since that day, I {have visited|tense|visited} the market every Saturday. Going early helps me find what I need before the busiest hour.',
   },
   {
-    id: 'b1-dialogue-first-shift', title: 'A first shift', level: 'B1', format: 'dialogue', topic: 'Work and Career',
-    text: 'Eva: I {start|tense|started} my new job tomorrow, and I feel nervous.\nOmar: Did they give you {a timetable|article-missing|timetable} for the first week?\nEva: Yes, but I forgot where {the training room is|word-order|is the training room}.\nOmar: Ask at reception. The staff are usually helpful.\nEva: I also need {a clean shirt|article-missing|clean shirt} for the first day.\nOmar: You {can borrow|modal|can to borrow} one of mine if it fits.\nEva: Thanks. I {bought|past-irregular|buyed} new shoes, but they hurt my feet.\nOmar: Try wearing them for {a few|quantifier|a little} hours tonight.\nEva: The manager said the morning shift was {quieter|comparative|more quieter} than the afternoon shift.\nOmar: That gives you time to learn. Ask {your colleagues|pronoun|you colleagues} for help.\nEva: I hope I can remember everyone\'s name.\nOmar: Keep {a small notebook|article-missing|small notebook} in your pocket and write things down after work.',
+    id: 'b1-dialogue-first-shift',
+    title: 'A first shift',
+    level: 'B1',
+    format: 'dialogue',
+    topic: 'Work and Career',
+    text: "Eva: I {start|tense|started} my new job tomorrow, and I feel nervous.\nOmar: Did they give you {a timetable|article-missing|timetable} for the first week?\nEva: Yes, but I forgot where {the training room is|word-order|is the training room}.\nOmar: Ask at reception. The staff are usually helpful.\nEva: I also need {a clean shirt|article-missing|clean shirt} for the first day.\nOmar: You {can borrow|modal|can to borrow} one of mine if it fits.\nEva: Thanks. I {bought|past-irregular|buyed} new shoes, but they hurt my feet.\nOmar: Try wearing them for {a few|quantifier|a little} hours tonight.\nEva: The manager said the morning shift was {quieter|comparative|more quieter} than the afternoon shift.\nOmar: That gives you time to learn. Ask {your colleagues|pronoun|you colleagues} for help.\nEva: I hope I can remember everyone's name.\nOmar: Keep {a small notebook|article-missing|small notebook} in your pocket and write things down after work.",
   },
   {
-    id: 'b1-review-language-class', title: 'An evening class', level: 'B1', format: 'review', topic: 'Study and Learning',
+    id: 'b1-review-language-class',
+    title: 'An evening class',
+    level: 'B1',
+    format: 'review',
+    topic: 'Study and Learning',
     text: 'I joined {an evening class|article-missing|evening class} at the community centre last month. The teacher {explains|agreement|explain} new words clearly and gives us time to practise. Our group has fewer than ten people, so everyone can speak. I {have learned|tense|learned} a lot since the first lesson.\n\nBefore each class, we read {a short story|article-missing|short story}. The teacher asks what {we understood|word-order|did we understand} and helps us with difficult sentences. She never laughs at mistakes. This makes {us|pronoun|we} feel comfortable. The exercises become {harder|comparative|more harder} each week, but they are still enjoyable.\n\nI particularly like {working|gerund-infinitive|to work} with a partner. We talk about ordinary situations, such as asking for directions. I keep {a list|article-missing|list} of useful phrases at {home|article-extra|the home}. The room can be cold in winter, so bring a jumper. Apart from that, I would recommend this class to any beginner.',
   },
   {
-    id: 'b1-diary-new-routine', title: 'A gentler routine', level: 'B1', format: 'diary', topic: 'Health and Body',
-    text: 'This morning, I {woke|past-irregular|waked} up earlier than usual. I had {a glass of water|article-missing|glass of water} before {breakfast|article-extra|the breakfast} and opened the window. My legs {felt|past-irregular|feeled} tired after yesterday\'s walk, so I chose a gentle stretch.\n\nI {have followed|tense|followed} this routine for a week now. At first, I had {little|quantifier|few} patience with slow exercises. Today they felt {easier|comparative|more easier}. I asked my friend how {she stayed|word-order|did she stay} motivated, and she suggested keeping a diary. I thanked {her|pronoun|she} for the idea.\n\nAfter lunch, I went outside for {a short walk|article-missing|short walk}. The air was cool, but the sun was bright. I enjoyed {moving|gerund-infinitive|to move} without rushing. Tomorrow I want to try the same plan again. A calm start to the day {helps|agreement|help} me concentrate, especially when I have a lot of work.',
+    id: 'b1-diary-new-routine',
+    title: 'A gentler routine',
+    level: 'B1',
+    format: 'diary',
+    topic: 'Health and Body',
+    text: "This morning, I {woke|past-irregular|waked} up earlier than usual. I had {a glass of water|article-missing|glass of water} before {breakfast|article-extra|the breakfast} and opened the window. My legs {felt|past-irregular|feeled} tired after yesterday's walk, so I chose a gentle stretch.\n\nI {have followed|tense|followed} this routine for a week now. At first, I had {little|quantifier|few} patience with slow exercises. Today they felt {easier|comparative|more easier}. I asked my friend how {she stayed|word-order|did she stay} motivated, and she suggested keeping a diary. I thanked {her|pronoun|she} for the idea.\n\nAfter lunch, I went outside for {a short walk|article-missing|short walk}. The air was cool, but the sun was bright. I enjoyed {moving|gerund-infinitive|to move} without rushing. Tomorrow I want to try the same plan again. A calm start to the day {helps|agreement|help} me concentrate, especially when I have a lot of work.",
   },
   {
-    id: 'b1-instructions-update-app', title: 'Updating an app', level: 'B1', format: 'instructions', topic: 'Technology',
+    id: 'b1-instructions-update-app',
+    title: 'Updating an app',
+    level: 'B1',
+    format: 'instructions',
+    topic: 'Technology',
     text: 'Before you begin, make sure your phone {has|agreement|have} enough power. Connect it to {a reliable network|article-missing|reliable network} and open the settings menu. Look for {the update button|article-missing|update button} near the bottom of the screen. You {can check|modal|can to check} the version number there.\n\nPress the button once and wait. Do not close the app while it {is updating|tense|updated}. The download may take {a few|quantifier|a little} minutes. If a message appears, read it {carefully|word-form|careful} before choosing an option. The help page shows where {your saved files are|word-order|are your saved files}.\n\nWhen the update finishes, open {the app|article-missing|app} again. Check that your notes are still there. If anything is missing, contact the support team and tell {them|pronoun|they} what happened. Keep {a copy|article-missing|copy} of important notes before future updates. This simple step can save you time.',
   },
   {
-    id: 'b1-report-street-lights', title: 'Street lighting', level: 'B1', format: 'report', topic: 'Home and Town',
+    id: 'b1-report-street-lights',
+    title: 'Street lighting',
+    level: 'B1',
+    format: 'report',
+    topic: 'Home and Town',
     text: 'Last week, we {asked|tense|have asked} residents about the lights on our street. Most people {were|agreement|was} satisfied with the lamps near the shops. However, the road beside {the public garden|article-missing|public garden} was much darker. Several residents said they needed {a brighter lamp|article-missing|brighter lamp} near the crossing.\n\nWe walked along the road {on Friday|preposition|in Friday} evening. There were {fewer|quantifier|less} working lights at the far end than near the centre. One resident asked when {the broken lamp would be repaired|word-order|would the broken lamp be repaired}. We told {her|pronoun|she} we would report the problem.\n\nOur group recommends checking all the lamps every month. The route to {the bus stop|article-missing|bus stop} should be safe after dark. We also suggest adding {a clear sign|article-missing|clear sign} at the crossing. Better lighting would make the walk {safer|comparative|more safer} for everyone who uses this street {in the evening|preposition|at the evening}.',
   },
   {
-    id: 'b1-email-shoe-exchange', title: 'A shoe exchange', level: 'B1', format: 'email', topic: 'Shopping and Money',
+    id: 'b1-email-shoe-exchange',
+    title: 'A shoe exchange',
+    level: 'B1',
+    format: 'email',
+    topic: 'Shopping and Money',
     text: 'Hello, I {bought|past-irregular|buyed} a pair of walking shoes from your shop {on Tuesday|preposition|in Tuesday}. They looked comfortable, but the left shoe {is|agreement|are} too tight. I still have {the receipt|article-missing|receipt} and the original box. I would like to exchange them for {a larger size|article-missing|larger size}.\n\nI wore the shoes only inside my home. The soles are clean, and I have kept {all the packaging|plural-uncountable|all the packagings}. Could you tell me where {I should bring|word-order|should I bring} them? If my size is not available, I {can wait|modal|can to wait} until next week.\n\nYour website says exchanges are possible within fourteen days. I {have checked|tense|checked} the size guide since buying the shoes, and I think the next size will fit. Please let {me|pronoun|I} know if I need to complete {a form|article-missing|form} first. Thank you for your help. Kind regards, Jo',
   },
   {
-    id: 'b1-message-rainy-weekend', title: 'Rainy weekend', level: 'B1', format: 'message', topic: 'Nature and Weather',
+    id: 'b1-message-rainy-weekend',
+    title: 'Rainy weekend',
+    level: 'B1',
+    format: 'message',
+    topic: 'Nature and Weather',
     text: 'Hi! The weather forecast {says|agreement|say} it will rain most of Saturday. I checked it this morning. We can still take {a short walk|article-missing|short walk} if the rain stops after {lunch|article-extra|the lunch}. The path through the woods is {drier|comparative|more drier} than the one beside the stream.\n\nBring {a warm coat|article-missing|warm coat} because the wind is strong today. I have {some information|plural-uncountable|some informations} about the route on my phone. My brother asked where {we planned to meet|word-order|did we plan to meet}. I told {him|pronoun|he} to wait outside the library.\n\nIf it rains too hard, we {can visit|modal|can to visit} the indoor garden instead. It has a small café, so we could have tea there. Please send me {a message|article-missing|message} before you leave home. I will bring an umbrella, but it is not big enough for both of us.',
   },
   {
-    id: 'b1-story-local-race', title: 'A local race', level: 'B1', format: 'story', topic: 'Sport and Fitness',
+    id: 'b1-story-local-race',
+    title: 'A local race',
+    level: 'B1',
+    format: 'story',
+    topic: 'Sport and Fitness',
     text: 'Tom {ran|past-irregular|runned} in a local race {on Sunday|preposition|in Sunday}. He had trained for {a month|article-missing|month} and felt ready. His friends {were|agreement|was} waiting near the start line. They gave him {a bottle of water|article-missing|bottle of water} and wished him luck.\n\nThe first part of the route was flat, but the last hill was {steeper|comparative|more steeper} than Tom expected. He had {little|quantifier|few} energy left near the top. A runner beside him said that they could finish together. Tom thanked {her|pronoun|she}, and they continued at a steady pace.\n\nAfter the race, someone asked how {he had prepared|word-order|had he prepared}. Tom said he enjoyed {running|gerund-infinitive|to run} in the mornings before work. He {has kept|tense|kept} the same habit since the race. The result was not important to him; finishing with {a new friend|article-missing|new friend} made the day special.',
   },
   {
-    id: 'b2-review-small-theatre', title: 'The little theatre', level: 'B2', format: 'review', topic: 'Travel and Culture',
+    id: 'b2-review-small-theatre',
+    title: 'The little theatre',
+    level: 'B2',
+    format: 'review',
+    topic: 'Travel and Culture',
     text: 'I visited {a small theatre|article-missing|small theatre} during a weekend away. The building {was built|passive|was build} more than a century ago, but the seats are comfortable. Staff handed us {a programme|article-missing|programme} at the door and showed us to our places. The stage was closer than I expected, which made the performance feel personal.\n\nThe play began with {a quiet scene|article-missing|quiet scene} in a family kitchen. Its dialogue sounded natural, although a few jokes {depended on|preposition|depended from} local expressions. I asked my companion why {the audience had laughed|word-order|had the audience laughed} at one line. She explained the reference during the interval. The actors spoke {clearly|word-form|clear}, so even unfamiliar words were easy to follow.\n\nI have visited {several|quantifier|much} theatres this year, and this one was the most welcoming. The director said the group {would perform|reported-speech|will perform} another play the following month. I would recommend booking {a seat|article-missing|seat} early, because the room is small. The ticket cost less than a meal out, and the experience stayed with me for days.',
   },
   {
-    id: 'b2-instructions-interview-prep', title: 'Preparing for an interview', level: 'B2', format: 'instructions', topic: 'Work and Career',
+    id: 'b2-instructions-interview-prep',
+    title: 'Preparing for an interview',
+    level: 'B2',
+    format: 'instructions',
+    topic: 'Work and Career',
     text: 'Begin by reading {the job description|article-missing|job description} carefully. Identify the duties you have already handled and prepare {a brief example|article-missing|brief example} for each one. Your examples should describe what you did, not just what your team achieved. If you have a gap in experience, explain how you {would learn|conditional|will learn} the missing skill if you were offered the role.\n\nFind out where {the interview will take place|word-order|will the interview take place} and allow extra time for the journey. Bring {a printed copy|article-missing|printed copy} of your CV, even if you sent it earlier. Documents should be {organised|passive|organise} so that you can find them quickly. Avoid {memorising|gerund-infinitive|to memorise} complete answers; they {often sound|adverb-position|sound often} unnatural.\n\nDuring the interview, {listen to|preposition|listen} each question before replying. If something is unclear, ask {the interviewer|article-missing|interviewer} to repeat it. Speak {confidently|word-form|confident}, but do not claim skills you have never used. Afterwards, write down {a few|quantifier|a little} points you could improve. The interviewer said a decision {would be made|reported-speech|will be made} by the end of the following week.',
   },
   {
-    id: 'b2-report-library-survey', title: 'Library survey', level: 'B2', format: 'report', topic: 'Study and Learning',
+    id: 'b2-report-library-survey',
+    title: 'Library survey',
+    level: 'B2',
+    format: 'report',
+    topic: 'Study and Learning',
     text: 'Our class carried out {a short survey|article-missing|short survey} about study spaces last week. The questions {were sent|passive|were send} to students who use the town library regularly. Most respondents valued the quiet rooms, but several mentioned a shortage of desks. We asked how {they usually found|word-order|did they usually find} a place during busy periods.\n\nMany students arrived early because they expected the rooms to fill by midday. There were {fewer|quantifier|less} complaints about noise than we had anticipated. However, students said that {the internet connection|article-missing|internet connection} was unreliable near the windows. One respondent suggested moving the study lamps, while another recommended {adding|gerund-infinitive|to add} more sockets.\n\nOur findings should be treated {carefully|word-form|careful}, as only regular visitors answered the survey. We recommend testing {the connection|article-missing|connection} throughout the building before buying new {equipment|plural-uncountable|equipments}. The librarian said the results would be {discussed|preposition|discussed about} at the next staff meeting. If the proposed changes {were made|conditional|would be made}, more students could use the rooms comfortably during exams.',
   },
   {
-    id: 'b2-message-data-backup', title: 'Before the update', level: 'B2', format: 'message', topic: 'Technology',
+    id: 'b2-message-data-backup',
+    title: 'Before the update',
+    level: 'B2',
+    format: 'message',
+    topic: 'Technology',
     text: 'Before you install {the latest update|article-missing|latest update}, please make a copy of your project files. The shared folder {was created|passive|was create} for temporary drafts, not permanent storage. I {discovered|present-perfect|have discovered} yesterday that one of my diagrams had disappeared after I changed devices. Fortunately, I had saved {a separate copy|article-missing|separate copy} on my computer.\n\nThe support page explains where {the backup option is|word-order|is the backup option}, although the screenshots are slightly old. Select your files {carefully|word-form|careful}; copying everything will take much longer. There is {less|quantifier|fewer} space on the shared drive than we thought. I recommend {removing|gerund-infinitive|to remove} duplicate drafts before you begin.\n\nThe technician said the update would not affect files stored locally. Even so, I would rather not rely on that promise alone. If the connection {failed|conditional|would fail} halfway through, you could restart the upload later. Send me {a quick message|article-missing|quick message} when your backup is complete, and I will check that our final diagrams are still available.',
   },
   {
-    id: 'b2-story-roof-repair', title: 'The leaking roof', level: 'B2', format: 'story', topic: 'Home and Town',
+    id: 'b2-story-roof-repair',
+    title: 'The leaking roof',
+    level: 'B2',
+    format: 'story',
+    topic: 'Home and Town',
     text: 'When the first storm arrived, water began dripping through {the kitchen ceiling|article-missing|kitchen ceiling}. A loose tile {had been damaged|passive|had been damage} by the wind, although nobody had noticed it before. The family placed {a large bucket|article-missing|large bucket} under the leak and moved the table away. Their youngest child wondered why {the ceiling was wet|word-order|was the ceiling wet} when the windows were shut.\n\nThe next morning, a roofer inspected the house. He spoke {honestly|word-form|honest} about the cost and showed them photographs of the broken tile. He advised {replacing|gerund-infinitive|to replace} a second tile as well, since it had started to crack. The repair took {less|quantifier|fewer} time than the family expected.\n\nThat evening, rain returned, but the kitchen stayed dry. The roofer had said the new tiles {would last|reported-speech|will last} for many years. If they {had waited|conditional|would have waited} another month, the water might have damaged the walls too. The family decided to keep {a small emergency fund|article-missing|small emergency fund} for future repairs. The house felt peaceful again once the bucket was put away.',
   },
   {
-    id: 'b2-notice-market-refunds', title: 'Market refunds', level: 'B2', format: 'notice', topic: 'Shopping and Money',
+    id: 'b2-notice-market-refunds',
+    title: 'Market refunds',
+    level: 'B2',
+    format: 'notice',
+    topic: 'Shopping and Money',
     text: 'Customers who wish to return {a faulty item|article-missing|faulty item} should speak to the stall holder before leaving the market. Proof of purchase {is required|passive|is require} for refunds, so please keep your receipt. If you paid by card, bring {the same card|article-missing|same card} when you return. Refunds cannot be paid in cash for card purchases.\n\nPlease describe the problem {clearly|word-form|clear} and show the item to the seller. They may ask when {you first noticed|word-order|did you first notice} the fault. If the item was a gift, the person who bought it may need to provide the receipt. We have {fewer|quantifier|less} staff at the information desk on Sundays, so allow extra time.\n\nItems damaged through ordinary use cannot automatically be exchanged. The market manager said complaints would be reviewed within five working days. If you {were unsure|conditional|would be unsure} about the process, a staff member could explain it to you. Please keep {a copy|article-missing|copy} of any written complaint. We aim to handle every request fairly and without delay.',
   },
   {
-    id: 'b2-article-city-trees', title: 'Trees on our streets', level: 'B2', format: 'article', topic: 'Nature and Weather',
+    id: 'b2-article-city-trees',
+    title: 'Trees on our streets',
+    level: 'B2',
+    format: 'article',
+    topic: 'Nature and Weather',
     text: 'A street with mature trees can feel noticeably cooler on {a hot afternoon|article-missing|hot afternoon}. In one neighbourhood, several trees {were removed|passive|were remove} after their roots damaged the pavement. Residents then asked for {a new planting plan|article-missing|new planting plan} rather than leaving the street bare. They wanted shade without repeating the same problem.\n\nThe council invited residents to {discuss|preposition|discuss about} where {the new trees should go|word-order|should the new trees go}. A local gardener recommended {choosing|gerund-infinitive|to choose} varieties with roots suited to narrow spaces. She spoke {openly|word-form|open} about the need for watering during dry summers. There was {less|quantifier|fewer} space beside the shops than in the residential part of the street.\n\nThe council said the first trees {would be planted|reported-speech|will be planted} the following spring. If the young trees {were watered|conditional|would be watered} regularly, they could grow well despite the limited space. Neighbours offered to check {the soil|article-missing|soil} during warm weeks. The plan will not solve every problem, but it gives the street a greener future.',
   },
   {
-    id: 'b2-dialogue-training-load', title: 'Training without rushing', level: 'B2', format: 'dialogue', topic: 'Sport and Fitness',
+    id: 'b2-dialogue-training-load',
+    title: 'Training without rushing',
+    level: 'B2',
+    format: 'dialogue',
+    topic: 'Sport and Fitness',
     text: 'Coach: I noticed you changed {your training plan|article-missing|training plan} last week.\nRunner: Yes, but the new sessions {were suggested|passive|were suggest} by a friend.\nCoach: Did you ask why {the distances increased|word-order|did the distances increase} so quickly?\nRunner: No. I assumed that more running would always help.\nCoach: Progress {depends on|preposition|depends from} recovery too. You have {fewer|quantifier|less} rest days than before.\nRunner: I {felt|present-perfect|have felt} tired yesterday and struggled to finish {a short run|article-missing|short run}.\nCoach: I recommend {reducing|gerund-infinitive|to reduce} the distance for a week.\nRunner: My friend said the tiredness would disappear after a few sessions.\nCoach: If you {ignored|conditional|would ignore} it, you could make the problem worse.\nRunner: I see. I should pay attention to how I feel.\nCoach: Exactly. Record each session {accurately|word-form|accurate}, including the easy ones.\nRunner: I will keep {a simple diary|article-missing|simple diary} and show it to you next Monday.',
   },
   {
-    id: 'b2-review-community-choir', title: 'A welcoming choir', level: 'B2', format: 'review', topic: 'People and Feelings',
+    id: 'b2-review-community-choir',
+    title: 'A welcoming choir',
+    level: 'B2',
+    format: 'review',
+    topic: 'People and Feelings',
     text: 'I joined {a community choir|article-missing|community choir} because I wanted to meet people after moving house. New members are welcomed at the start of each rehearsal, and nobody expects them to read music. The group begins with {a short warm-up|article-missing|short warm-up} before learning songs together. That routine helped me feel less nervous on my first evening.\n\nThe conductor explains {clearly|word-form|clear} which parts each group should sing. She asked me whether {I preferred|word-order|did I prefer} a seat near the front or the back. I chose the back until I knew a few more people. There were {fewer|quantifier|less} unfamiliar faces by my third visit. I soon found myself {looking forward|gerund-infinitive|to look forward} to rehearsals.\n\nAt the end of term, we performed for friends and relatives. The conductor said the concert {would be|reported-speech|will be} informal, which took some pressure off us. If I {had stayed|conditional|would have stayed} at {home|article-extra|the home} that first evening, I would have missed several new friendships. I would recommend the choir to anyone seeking {a relaxed social activity|article-missing|relaxed social activity}.',
   },
   {
-    id: 'b2-report-shared-kitchen', title: 'A shared kitchen', level: 'B2', format: 'report', topic: 'Everyday Life',
+    id: 'b2-report-shared-kitchen',
+    title: 'A shared kitchen',
+    level: 'B2',
+    format: 'report',
+    topic: 'Everyday Life',
     text: 'This report examines how residents use {the shared kitchen|article-missing|shared kitchen} in our building. The room {was renovated|passive|was renovate} last autumn, and most residents now find it easier to prepare meals there. However, several people have reported that clean dishes are sometimes left on the worktop. We asked when {the kitchen became|word-order|did the kitchen become} busiest.\n\nThe answers showed that most residents cook between six and eight {in the evening|preposition|at the evening}. There is {less|quantifier|fewer} cupboard space than many expected. Some residents suggested {adding|gerund-infinitive|to add} a shelf for shared {equipment|plural-uncountable|equipments}, while others wanted clearer labels. A simple cleaning rota could make responsibilities {clearer|comparative|more clearer} without creating unnecessary rules.\n\nThe caretaker said the cupboard doors {would be repaired|reported-speech|will be repaired} the following week. If everyone {put|conditional|would put} their dishes away after use, the room could serve more people comfortably. We recommend placing {a notice|article-missing|notice} beside the sink and reviewing the arrangement after a month. Residents should be invited to comment before any permanent changes are made.',
   },
   {
-    id: 'b2-email-coastal-host', title: 'Questions before arrival', level: 'B2', format: 'email', topic: 'Travel and Culture',
+    id: 'b2-email-coastal-host',
+    title: 'Questions before arrival',
+    level: 'B2',
+    format: 'email',
+    topic: 'Travel and Culture',
     text: 'Dear host, thank you for sending {the arrival details|article-missing|arrival details} for our stay next month. We understand that the cottage {is reached|passive|is reach} by a narrow lane. Could you tell us where {we should park|word-order|should we park} if another car is already outside? We will arrive in the early evening and would rather avoid blocking the road.\n\nWe are also planning {to visit|gerund-infinitive|visiting} the coastal path. Your guide mentions that some sections become slippery after rain. Is there {a shorter route|article-missing|shorter route} suitable for an easy morning walk? We have {less|quantifier|fewer} time on our final day, so a local suggestion would be helpful.\n\nMy friend said the village shop would close early on Sundays. If that {information|plural-uncountable|informations} {were correct|conditional|would be correct}, we could bring breakfast supplies with us. Please let us know whether {the kitchen|article-missing|kitchen} has a kettle and basic cooking {equipment|plural-uncountable|equipments}. We appreciate your {advice|plural-uncountable|advices} and look forward to seeing the area at a relaxed pace. Kind regards, Elise',
   },
   {
-    id: 'b2-message-dinner-guests', title: 'Dinner for everyone', level: 'B2', format: 'message', topic: 'Food and Drinks',
+    id: 'b2-message-dinner-guests',
+    title: 'Dinner for everyone',
+    level: 'B2',
+    format: 'message',
+    topic: 'Food and Drinks',
     text: 'I have checked {the dinner menu|article-missing|dinner menu} with everyone coming {on Friday|preposition|in Friday}. The main dish {will be prepared|passive|will be prepare} without nuts, as one guest cannot eat them. I am making {a separate sauce|article-missing|separate sauce} so people can choose how much to add. Please do not put nuts on the table, even as a snack.\n\nOur neighbour offered {to bring|gerund-infinitive|bringing} dessert, but I asked her to send the ingredients first. She wanted to know whether {the oven would be free|word-order|would the oven be free} after six. It should be, provided the vegetables cook on time. I have {less|quantifier|fewer} preparation to do than I expected because two friends volunteered to help.\n\nOne guest said he would arrive a little late. If the train {were delayed|conditional|would be delayed} further, we could keep his meal warm. Could you bring {a serving spoon|article-missing|serving spoon} for the rice? Mine has disappeared. I want the evening to feel relaxed rather than perfectly planned, so there is no need to rush here after work.',
   },
   {
-    id: 'b2-story-warehouse-lesson', title: 'A better route', level: 'B2', format: 'story', topic: 'Work and Career',
-    text: 'When Lena joined {the warehouse team|article-missing|warehouse team}, she noticed that staff crossed the same aisle several times to collect each order. The routes {had been designed|passive|had been design} years earlier, before the shelves were rearranged. She drew {a simple map|article-missing|simple map} and marked where the busiest items were kept. Her supervisor asked why {the team travelled|word-order|did the team travel} so far between picks.\n\nLena suggested {moving|gerund-infinitive|to move} a few common items closer to the packing area. She explained her idea {carefully|word-form|careful}, since she did not want to criticise anyone\'s work. The change required {fewer|quantifier|less} steps for most orders, although large items still needed special handling.\n\nThe supervisor said the new route {would be tested|reported-speech|will be tested} for two weeks. If the trial {saved|conditional|would save} time without causing mistakes, the team could keep it. By the end of the trial, colleagues were using {the updated map|article-missing|updated map} without being reminded. Lena learnt that a useful suggestion often begins with {listening to|preposition|listening} the people who do the work every day.',
+    id: 'b2-story-warehouse-lesson',
+    title: 'A better route',
+    level: 'B2',
+    format: 'story',
+    topic: 'Work and Career',
+    text: "When Lena joined {the warehouse team|article-missing|warehouse team}, she noticed that staff crossed the same aisle several times to collect each order. The routes {had been designed|passive|had been design} years earlier, before the shelves were rearranged. She drew {a simple map|article-missing|simple map} and marked where the busiest items were kept. Her supervisor asked why {the team travelled|word-order|did the team travel} so far between picks.\n\nLena suggested {moving|gerund-infinitive|to move} a few common items closer to the packing area. She explained her idea {carefully|word-form|careful}, since she did not want to criticise anyone's work. The change required {fewer|quantifier|less} steps for most orders, although large items still needed special handling.\n\nThe supervisor said the new route {would be tested|reported-speech|will be tested} for two weeks. If the trial {saved|conditional|would save} time without causing mistakes, the team could keep it. By the end of the trial, colleagues were using {the updated map|article-missing|updated map} without being reminded. Lena learnt that a useful suggestion often begins with {listening to|preposition|listening} the people who do the work every day.",
   },
   {
-    id: 'b2-notice-exam-room', title: 'Exam room arrangements', level: 'B2', format: 'notice', topic: 'Study and Learning',
+    id: 'b2-notice-exam-room',
+    title: 'Exam room arrangements',
+    level: 'B2',
+    format: 'notice',
+    topic: 'Study and Learning',
     text: 'Students sitting {the written exam|article-missing|written exam} should arrive twenty minutes before the start. Desks {have been arranged|passive|have been arrange} in rows, and each place has a number. Check {the seating list|article-missing|seating list} outside the room before entering. Staff will explain where {you should leave|word-order|should you leave} coats and bags.\n\nOnly approved materials may be kept on desks. There are {fewer|quantifier|less} spare pens available this term, so bring your own. Avoid {bringing|gerund-infinitive|to bring} notes into the room, even if you do not intend to read them. If you need help, raise your hand and speak {quietly|word-form|quiet} to a member of staff.\n\nThe examination officer said late arrivals would be admitted only during the first fifteen minutes. If a student {felt|conditional|would feel} unwell, a supervisor could take them to the rest area. Please {listen to|preposition|listen} {the final instructions|article-missing|final instructions} before opening your paper. These arrangements are intended to keep the room calm and fair for everyone.',
   },
   {
-    id: 'b2-article-sleep-habits', title: 'A calmer evening', level: 'B2', format: 'article', topic: 'Health and Body',
+    id: 'b2-article-sleep-habits',
+    title: 'A calmer evening',
+    level: 'B2',
+    format: 'article',
+    topic: 'Health and Body',
     text: 'A regular evening routine can make {the end of the day|article-missing|end of the day} feel less rushed. In a small local workshop, participants {were asked|passive|were ask} to record what they did before bed. Most discovered that they spent longer on their phones than they had realised. The organiser asked when {they usually turned|word-order|did they usually turn} off their screens.\n\nSeveral participants tried reading a paper book instead. Others prepared clothes for the next day or wrote {a short list|article-missing|short list} of unfinished tasks. There was {less|quantifier|fewer} late-night checking of messages when phones were left in another room. These changes were modest, but people described feeling calmer.\n\nThe organiser said the group {would meet|reported-speech|will meet} again the following month to {discuss|preposition|discuss about} what worked. If a routine {felt|conditional|would feel} too strict, participants could change it rather than abandon it. The aim was not to create perfect habits, but to make {a little space|article-missing|little space} for rest. Anyone with persistent sleep problems should speak to a qualified health professional.',
   },
   {
-    id: 'b2-dialogue-new-device', title: 'Choosing a device', level: 'B2', format: 'dialogue', topic: 'Technology',
+    id: 'b2-dialogue-new-device',
+    title: 'Choosing a device',
+    level: 'B2',
+    format: 'dialogue',
+    topic: 'Technology',
     text: 'Nora: I need {a new laptop|article-missing|new laptop} for my course, but the choices are confusing.\nIvo: What tasks {will you use it for|word-order|you will use it for}?\nNora: Mostly writing reports and editing photographs.\nIvo: Then check whether {the memory can be upgraded|passive|the memory can be upgrade}.\nNora: The seller said this model would last for several years.\nIvo: That {depends on|preposition|depends from} your needs. Do you have {a fixed budget|article-missing|fixed budget}?\nNora: Yes, and I have {less|quantifier|fewer} money available than I first thought.\nIvo: I suggest {comparing|gerund-infinitive|to compare} repair costs as well as the purchase price.\nNora: Why {are repairs important|word-order|repairs are important} if it comes with a guarantee?\nIvo: A guarantee has limits. If you {broke|conditional|would break} the screen, you might have to pay.\nNora: That is worth considering. I will read {the conditions|article-missing|conditions} before deciding.\nIvo: Good idea. Choose {carefully|word-form|careful}, and do not let a sale sign rush you.',
   },
   {
-    id: 'b2-diary-garden-project', title: 'The courtyard garden', level: 'B2', format: 'diary', topic: 'Home and Town',
+    id: 'b2-diary-garden-project',
+    title: 'The courtyard garden',
+    level: 'B2',
+    format: 'diary',
+    topic: 'Home and Town',
     text: 'Today we began turning {the shared courtyard|article-missing|shared courtyard} into a small garden. The old benches {were moved|passive|were move} to one side so we could see how much space was available. A neighbour brought {a rough plan|article-missing|rough plan} showing paths between the flower beds. We {discussed|preposition|discussed about} where {the new planters should stand|word-order|should the new planters stand}.\n\nSome residents suggested {growing|gerund-infinitive|to grow} herbs that anyone could use. Others wanted flowers that would attract insects. There was {less|quantifier|fewer} agreement about the seating area, but everyone listened politely. I spoke {openly|word-form|open} about the need to leave enough room for bicycles and pushchairs.\n\nOur caretaker said the soil would be delivered {on Friday|preposition|in Friday}. If the weather {stayed|conditional|would stay} dry, we could fill the planters over the weekend. Before leaving, I put {a notice|article-missing|notice} in the entrance inviting more neighbours to take part. The courtyard still looks untidy, but it already feels like a place we are building together.',
   },
   {
-    id: 'b2-instructions-budget-plan', title: 'Planning monthly costs', level: 'B2', format: 'instructions', topic: 'Shopping and Money',
+    id: 'b2-instructions-budget-plan',
+    title: 'Planning monthly costs',
+    level: 'B2',
+    format: 'instructions',
+    topic: 'Shopping and Money',
     text: 'Start by listing {your regular expenses|article-missing|regular expenses}, such as rent and travel. Each amount should be {recorded|passive|record} in the same place so you can review it later. Then make {a separate list|article-missing|separate list} of costs that change from month to month. If you are unsure where {your money has gone|word-order|has your money gone}, check your recent receipts.\n\nAvoid {estimating|gerund-infinitive|to estimate} every cost from memory. Small purchases can add up, although each one seems unimportant. You may have {less|quantifier|fewer} money left for leisure than you expected. Look {carefully|word-form|careful} at subscriptions you no longer use before cutting things that matter to you.\n\nA financial adviser at our workshop said the plan would be easier to maintain if it remained simple. If an unexpected bill {arrived|conditional|would arrive}, a small reserve could help you manage it. Review {the plan|article-missing|plan} each month and adjust it when your circumstances change. The goal is to understand your spending, not to judge yourself for every purchase.',
   },
   {
-    id: 'b2-report-river-cleanup', title: 'Riverbank clean-up', level: 'B2', format: 'report', topic: 'Nature and Weather',
+    id: 'b2-report-river-cleanup',
+    title: 'Riverbank clean-up',
+    level: 'B2',
+    format: 'report',
+    topic: 'Nature and Weather',
     text: 'Last month, volunteers organised {a riverbank clean-up|article-missing|riverbank clean-up} near the footbridge. Protective gloves {were provided|passive|were provide} at the meeting point, along with bags for ordinary litter. The organiser gave {a short safety talk|article-missing|short safety talk} before anyone approached the water. She explained where {volunteers should leave|word-order|should volunteers leave} sharp or unfamiliar objects.\n\nThe group collected {less|quantifier|fewer} litter than during the previous event, which may reflect earlier work in the area. Volunteers avoided {disturbing|gerund-infinitive|to disturb} plants along the bank and stayed on existing paths. One team recorded the places where bins were full. They reported their findings {accurately|word-form|accurate} so the local maintenance team could act.\n\nThe organiser said the results {would be shared|reported-speech|will be shared} with residents the following week. If more bins {were installed|conditional|would be installed} near the bridge, visitors might find it easier to dispose of rubbish properly. We recommend arranging {another visit|article|other visit} after the summer holidays. Regular checks would help us understand whether the riverbank is staying cleaner over time.',
   },
   {
-    id: 'b2-email-club-feedback', title: 'Feedback on the class', level: 'B2', format: 'email', topic: 'Sport and Fitness',
+    id: 'b2-email-club-feedback',
+    title: 'Feedback on the class',
+    level: 'B2',
+    format: 'email',
+    topic: 'Sport and Fitness',
     text: 'Dear club manager, I am writing to offer {some feedback|plural-uncountable|some feedbacks} on the evening exercise class. The sessions {are led|passive|are lead} by an encouraging instructor, and beginners receive {a clear explanation|article-missing|clear explanation} of each movement. I particularly appreciate the time set aside for questions at the end.\n\nRecently, the class has become crowded. Several members asked whether {the room could be changed|word-order|could the room be changed} to a larger one. {It is|dummy-it|Is} difficult to move {safely|word-form|safe} when people stand close together. We also have {fewer|quantifier|less} mats than participants on some evenings. I suggest {adding|gerund-infinitive|to add} a booking system so staff know how many people to expect.\n\nThe instructor said the timetable would be reviewed next month. If a second session {were offered|conditional|would be offered}, some members could attend earlier and reduce the pressure on the room. Please consider placing {a notice|article-missing|notice} at reception when a class is full. I enjoy attending and hope these suggestions will make it comfortable for everyone. Kind regards, Dan',
   },
   {
-    id: 'b2-message-difficult-talk', title: 'After the conversation', level: 'B2', format: 'message', topic: 'People and Feelings',
-    text: '{I am|be-missing|I} glad we finally had {a proper conversation|article-missing|proper conversation} yesterday. Some things {were misunderstood|passive|were misunderstand} when we exchanged hurried messages, and neither of us felt heard. Thank you for giving me {a chance|article-missing|chance} to explain why I was upset. I realise now that I made assumptions about your plans.\n\nYou asked why {I had not called|word-order|had I not called} sooner. I was {afraid of|preposition|afraid from} making the disagreement worse. I should have spoken {honestly|word-form|honest} instead of avoiding it. There is {less|quantifier|fewer} tension between us now that we know what happened. I appreciate {listening|gerund-infinitive|to listen} to your side as well.\n\nYou said you would send me the details of next week\'s gathering. If I {were free|conditional|would be free}, I could help set up the room beforehand. Whatever we decide, I do not want one difficult afternoon to change our friendship. Let us make {a fresh start|article-missing|fresh start} and speak directly whenever something feels wrong.',
+    id: 'b2-message-difficult-talk',
+    title: 'After the conversation',
+    level: 'B2',
+    format: 'message',
+    topic: 'People and Feelings',
+    text: "{I am|be-missing|I} glad we finally had {a proper conversation|article-missing|proper conversation} yesterday. Some things {were misunderstood|passive|were misunderstand} when we exchanged hurried messages, and neither of us felt heard. Thank you for giving me {a chance|article-missing|chance} to explain why I was upset. I realise now that I made assumptions about your plans.\n\nYou asked why {I had not called|word-order|had I not called} sooner. I was {afraid of|preposition|afraid from} making the disagreement worse. I should have spoken {honestly|word-form|honest} instead of avoiding it. There is {less|quantifier|fewer} tension between us now that we know what happened. I appreciate {listening|gerund-infinitive|to listen} to your side as well.\n\nYou said you would send me the details of next week's gathering. If I {were free|conditional|would be free}, I could help set up the room beforehand. Whatever we decide, I do not want one difficult afternoon to change our friendship. Let us make {a fresh start|article-missing|fresh start} and speak directly whenever something feels wrong.",
   },
   {
-    id: 'b2-story-missed-delivery', title: 'A missed delivery', level: 'B2', format: 'story', topic: 'Everyday Life',
+    id: 'b2-story-missed-delivery',
+    title: 'A missed delivery',
+    level: 'B2',
+    format: 'story',
+    topic: 'Everyday Life',
     text: 'When Priya returned from work, she found {a delivery note|article-missing|delivery note} under the door. The parcel {had been taken|passive|had been take} to a nearby collection point because nobody had answered the bell. She had expected {a replacement kettle|article-missing|replacement kettle}, as the old one had stopped heating water. She checked where {the collection point was|word-order|was the collection point} before leaving again.\n\nThe shop was closing soon, so she walked {quickly|word-form|quick} through the side streets. There were {fewer|quantifier|less} people waiting than she had feared. The assistant asked for identification before {handing|gerund-infinitive|to hand} over the parcel. Priya showed her card and signed the form.\n\nThe assistant said the shop {would close|reported-speech|will close} in ten minutes. If Priya {had taken|conditional|would have taken} the longer route, she would have arrived too late. At home, she opened {the box|article-missing|box} and found the kettle safely packed. She made tea and decided to update her delivery instructions so future parcels would be left at the collection point directly.',
   },
   {
-    id: 'b2-notice-heritage-walk', title: 'Guided town walk', level: 'B2', format: 'notice', topic: 'Travel and Culture',
-    text: 'Visitors joining {the guided town walk|article-missing|guided town walk} should meet outside the old library. The route {has been planned|passive|has been plan} to avoid the busiest roads, but a few sections include steps. Please wear comfortable shoes and bring water on warm days. A guide will explain where {the group will stop|word-order|will the group stop} for a short break.\n\nWe ask participants to listen {carefully|word-form|careful} when crossing roads. The guide may recommend {waiting|gerund-infinitive|to wait} until everyone has reached the next corner. There are {fewer|quantifier|less} sheltered places on the second half of the route, so consider bringing a light coat. Children are welcome when accompanied by an adult.\n\nThe organiser said the walk would finish near the market square. If heavy rain {were forecast|conditional|would be forecast}, the event could be postponed and ticket holders would receive a message. Please keep {the booking confirmation|article-missing|booking confirmation} on your phone or in print. We hope the walk gives visitors an enjoyable introduction to the town\'s older streets.',
+    id: 'b2-notice-heritage-walk',
+    title: 'Guided town walk',
+    level: 'B2',
+    format: 'notice',
+    topic: 'Travel and Culture',
+    text: "Visitors joining {the guided town walk|article-missing|guided town walk} should meet outside the old library. The route {has been planned|passive|has been plan} to avoid the busiest roads, but a few sections include steps. Please wear comfortable shoes and bring water on warm days. A guide will explain where {the group will stop|word-order|will the group stop} for a short break.\n\nWe ask participants to listen {carefully|word-form|careful} when crossing roads. The guide may recommend {waiting|gerund-infinitive|to wait} until everyone has reached the next corner. There are {fewer|quantifier|less} sheltered places on the second half of the route, so consider bringing a light coat. Children are welcome when accompanied by an adult.\n\nThe organiser said the walk would finish near the market square. If heavy rain {were forecast|conditional|would be forecast}, the event could be postponed and ticket holders would receive a message. Please keep {the booking confirmation|article-missing|booking confirmation} on your phone or in print. We hope the walk gives visitors an enjoyable introduction to the town's older streets.",
   },
   {
-    id: 'b2-article-meal-sharing', title: 'Sharing food at home', level: 'B2', format: 'article', topic: 'Food and Drinks',
+    id: 'b2-article-meal-sharing',
+    title: 'Sharing food at home',
+    level: 'B2',
+    format: 'article',
+    topic: 'Food and Drinks',
     text: 'When several people share {a kitchen|article-missing|kitchen}, planning meals together can save effort. In one household, a weekly menu {was introduced|passive|was introduce} after residents kept buying the same ingredients. They agreed on {a short shopping list|article-missing|short shopping list} every Sunday and left room for individual meals. One resident asked how {the costs would be divided|word-order|would the costs be divided}.\n\nThe group decided to record shared purchases and settle the balance monthly. There was {less|quantifier|fewer} wasted food once everyone knew what was in the fridge. They enjoyed {trying|gerund-infinitive|to try} recipes from different family traditions, although not everyone liked the same spices. Their discussions became {more respectful|comparative|more more respectful} when they stopped assuming that one person would always cook.\n\nA resident said the arrangement would only work if people could change it. If someone {worked|conditional|would work} late, the others could save a portion rather than waiting. They put {a simple calendar|article-missing|simple calendar} on the fridge so everyone could see the plan. The system was not perfect, but it made shared evenings easier and more welcoming.',
   },
   {
-    id: 'b2-dialogue-project-meeting', title: 'The project meeting', level: 'B2', format: 'dialogue', topic: 'Work and Career',
+    id: 'b2-dialogue-project-meeting',
+    title: 'The project meeting',
+    level: 'B2',
+    format: 'dialogue',
+    topic: 'Work and Career',
     text: 'Leah: Has {the meeting agenda|article-missing|meeting agenda} been sent to everyone?\nRavi: Yes, it {was shared|passive|was share} this morning.\nLeah: Do you know why {the deadline was moved|word-order|was the deadline moved}?\nRavi: The client needs more time to review the first draft.\nLeah: That gives us {less|quantifier|fewer} time for testing at the end.\nRavi: I suggest {checking|gerund-infinitive|to check} the risky sections earlier.\nLeah: Good idea. Please explain that {clearly|word-form|clear} at the meeting.\nRavi: Our manager said she would join remotely.\nLeah: If she {were here|conditional|would be here}, we could {discuss|preposition|discuss about} the drawings together.\nRavi: We can still share {a copy|article-missing|copy} on screen.\nLeah: Have you prepared the list of questions?\nRavi: Yes. I put {the most urgent ones|article-missing|most urgent ones} at the top.\nLeah: Great. Let us make sure every decision has an owner before we finish.',
   },
   {
-    id: 'b2-review-study-group', title: 'A useful study group', level: 'B2', format: 'review', topic: 'Study and Learning',
+    id: 'b2-review-study-group',
+    title: 'A useful study group',
+    level: 'B2',
+    format: 'review',
+    topic: 'Study and Learning',
     text: 'I attended {a weekly study group|article-missing|weekly study group} during the final month of my course. The sessions {were organised|passive|were organise} by students rather than teachers, which made questions easier to ask. Each week, someone prepared {a short exercise|article-missing|short exercise} for the others. We then {discussed|preposition|discussed about} where {our answers differed|word-order|did our answers differ} and checked the course notes.\n\nThe group worked best when members explained their reasoning {clearly|word-form|clear}. There was {less|quantifier|fewer} pressure to answer immediately than in class. I enjoyed {hearing|gerund-infinitive|to hear} different approaches to the same problem. One student was particularly {good at|preposition|good in} turning long instructions into manageable steps without oversimplifying them.\n\nOur organiser said the group would continue next term. If I {had studied|conditional|would have studied} alone, I would probably have missed several useful ideas. The only drawback was that meetings sometimes ran late. I recommend setting {a clear finishing time|article-missing|clear finishing time} at the start. Overall, the group helped me study more confidently and notice mistakes in my own work.',
   },
   {
-    id: 'b2-diary-return-to-running', title: 'Running again', level: 'B2', format: 'diary', topic: 'Health and Body',
+    id: 'b2-diary-return-to-running',
+    title: 'Running again',
+    level: 'B2',
+    format: 'diary',
+    topic: 'Health and Body',
     text: 'Today I completed {a gentle run|article-missing|gentle run} after several weeks away from training. My old schedule {had been changed|passive|had been change} because I needed more time to recover from a minor strain. I followed {a shorter route|article-missing|shorter route} along the canal and paid attention to my pace. My friend asked how {I felt|word-order|did I feel} afterwards.\n\nI told her that I felt fine, although I was tempted {to run|gerund-infinitive|running} farther. My physiotherapist had advised me to increase distances {gradually|word-form|gradual}. There was {less|quantifier|fewer} discomfort than during my previous attempt, which was encouraging. I stopped when I reached the planned turning point rather than adding another loop.\n\nThe physiotherapist said the next stage {would depend|reported-speech|will depend} on how my leg responded. If the discomfort {returned|conditional|would return}, I could take another rest day and ask for {advice|plural-uncountable|advices}. I recorded {a few details|article-missing|few details} about the run in my diary. Taking things slowly is frustrating, but finishing comfortably felt better than forcing a faster result.',
   },
   {
-    id: 'b2-instructions-secure-notes', title: 'Protecting your notes', level: 'B2', format: 'instructions', topic: 'Technology',
+    id: 'b2-instructions-secure-notes',
+    title: 'Protecting your notes',
+    level: 'B2',
+    format: 'instructions',
+    topic: 'Technology',
     text: 'Before sharing {a set of notes|article-missing|set of notes}, check whether it contains private {information|plural-uncountable|informations}. Access settings {should be reviewed|passive|should be review} each time you invite someone new. Give collaborators {a clear description|article-missing|clear description} of what they may edit. If you are unsure who {can currently see|word-order|can see currently} the file, open its sharing panel.\n\nAvoid {using|gerund-infinitive|to use} the same password across different accounts. A longer phrase can be {easier|comparative|more easier} to remember than a random string, but it still needs to be unique. There may be {fewer|quantifier|less} people with access than you expect; check rather than assuming. Keep a separate copy of important work in case something is deleted.\n\nThe support team said older links would stop working after permissions changed. If someone {needed|conditional|would need} continued access, you could send a new invitation. Review {the activity history|article-missing|activity history} when a document changes unexpectedly. These habits cannot prevent every problem, but they make it easier to understand what happened and recover your work.',
   },
   {
-    id: 'b2-report-housing-feedback', title: 'Housing feedback', level: 'B2', format: 'report', topic: 'Home and Town',
+    id: 'b2-report-housing-feedback',
+    title: 'Housing feedback',
+    level: 'B2',
+    format: 'report',
+    topic: 'Home and Town',
     text: 'Residents completed {a housing survey|article-missing|housing survey} during the spring. Responses {were collected|passive|were collect} anonymously to encourage honest comments about shared areas. Most residents liked {the new entrance lighting|article-missing|new entrance lighting}, but several wanted better bicycle storage. We asked where {bicycles were usually kept|word-order|were bicycles usually kept} when the racks were full.\n\nMany people said they avoided {leaving|gerund-infinitive|to leave} bikes outside overnight. There was {less|quantifier|fewer} concern about the garden than in the previous survey, perhaps because it is now maintained regularly. The caretaker explained {clearly|word-form|clear} why an extra rack could not be placed near the fire exit. A different location beside the rear wall may be possible.\n\nThe housing officer said the suggestion would be reviewed at the next planning meeting. If that space {were approved|conditional|would be approved}, residents could use it without blocking the path. We recommend placing {a diagram|article-missing|diagram} in the entrance so people can comment on the proposed position. This would make the decision more transparent before any work begins.',
   },
   {
-    id: 'b2-email-delayed-refund', title: 'A delayed refund', level: 'B2', format: 'email', topic: 'Shopping and Money',
+    id: 'b2-email-delayed-refund',
+    title: 'A delayed refund',
+    level: 'B2',
+    format: 'email',
+    topic: 'Shopping and Money',
     text: 'Dear customer service team, I am writing about {a refund|article-missing|refund} for an item I {returned|present-perfect|have returned} last month. The parcel {was delivered|passive|was deliver} to your returns centre, according to the tracking record. I have attached {a copy|article-missing|copy} of the receipt and the delivery confirmation. Could you tell me when {the refund will appear|word-order|will the refund appear} in my account?\n\nI understand that returns may take time to process. However, there has been {less|quantifier|fewer} communication than I expected since the parcel arrived. I tried contacting the help desk last week but received only an automatic reply. Please check the case {carefully|word-form|careful}, as the original payment was made with a card that remains active.\n\nYour representative said the payment would be issued within ten working days. If there {were a problem|conditional|would be a problem} with the return, I would appreciate an explanation and the steps needed to resolve it. Please send {a written update|article-missing|written update} when you have checked the record. Kind regards, Robin',
   },
   {
-    id: 'b2-story-wildlife-pond', title: 'The new pond', level: 'B2', format: 'story', topic: 'Nature and Weather',
+    id: 'b2-story-wildlife-pond',
+    title: 'The new pond',
+    level: 'B2',
+    format: 'story',
+    topic: 'Nature and Weather',
     text: 'A group of neighbours created {a small pond|article-missing|small pond} in the community garden. Its position {was chosen|passive|was choose} to receive morning light without becoming too hot in summer. They placed {a shallow stone|article-missing|shallow stone} near the edge so small animals could climb out. One child asked when {frogs might arrive|word-order|might frogs arrive}.\n\nThe gardener advised {waiting|gerund-infinitive|to wait} rather than bringing animals from somewhere else. She spoke {patiently|word-form|patient} about how long a healthy pond can take to develop. There was {less|quantifier|fewer} water in it after a dry week, so the group added collected rainwater. They also left nearby plants undisturbed.\n\nThe gardener said insects {would appear|reported-speech|will appear} before larger visitors. If the neighbours {kept|conditional|would keep} the water clean, the pond could become a useful habitat over time. By late summer, they noticed insects moving across {the surface|article-missing|surface}. Nobody had expected an immediate transformation, but even this small change made the garden feel more alive.',
   },
   {
-    id: 'b2-notice-leisure-pool', title: 'Pool timetable changes', level: 'B2', format: 'notice', topic: 'Sport and Fitness',
+    id: 'b2-notice-leisure-pool',
+    title: 'Pool timetable changes',
+    level: 'B2',
+    format: 'notice',
+    topic: 'Sport and Fitness',
     text: 'From Monday, {the public pool|article-missing|public pool} will close an hour earlier on weekday evenings. The timetable {has been adjusted|passive|has been adjust} while repairs are completed in the changing rooms. Please check {the revised schedule|article-missing|revised schedule} before travelling. Reception staff can explain where {the temporary entrance is|word-order|is the temporary entrance} for evening classes.\n\nMembers are asked to move {carefully|word-form|careful} through the corridor near the work area. We recommend {arriving|gerund-infinitive|to arrive} a little earlier, as there are {fewer|quantifier|less} changing spaces available. Lockers remain in use, but the showers beside the training pool are closed. Signs will direct visitors to the open facilities.\n\nThe manager said the work would finish before the end of next month. If repairs {took|conditional|would take} longer, members would receive another update. Please speak to {a member of staff|article-missing|member of staff} if you need help finding an accessible route. We apologise for the inconvenience and thank everyone for their patience during the repairs.',
   },
   {
-    id: 'b2-article-listening-well', title: 'Listening well', level: 'B2', format: 'article', topic: 'People and Feelings',
-    text: 'When a friend shares {a difficult experience|article-missing|difficult experience}, it can be tempting to offer an immediate solution. In a communication workshop, participants {were encouraged|passive|were encourage} to listen first and ask questions. They practised {a simple technique|article-missing|simple technique}: repeating the main concern in their own words before responding. This helped them check whether {they had understood|word-order|had they understood} correctly.\n\nSome participants found it hard to avoid {interrupting|gerund-infinitive|to interrupt} with their own stories. Others learnt to speak {gently|word-form|gentle} when they disagreed. There was {less|quantifier|fewer} pressure to fix every problem once they realised that being heard could itself be helpful. The exercises also showed that silence need not mean indifference.\n\nThe facilitator said these habits would take practice outside the workshop. If someone {needed|conditional|would need} practical help, a listener could still offer it after asking what would be useful. Participants took home {a short guide|article-missing|short guide} with example questions. The aim was not to follow a script, but to make room for another person\'s feelings.',
+    id: 'b2-article-listening-well',
+    title: 'Listening well',
+    level: 'B2',
+    format: 'article',
+    topic: 'People and Feelings',
+    text: "When a friend shares {a difficult experience|article-missing|difficult experience}, it can be tempting to offer an immediate solution. In a communication workshop, participants {were encouraged|passive|were encourage} to listen first and ask questions. They practised {a simple technique|article-missing|simple technique}: repeating the main concern in their own words before responding. This helped them check whether {they had understood|word-order|had they understood} correctly.\n\nSome participants found it hard to avoid {interrupting|gerund-infinitive|to interrupt} with their own stories. Others learnt to speak {gently|word-form|gentle} when they disagreed. There was {less|quantifier|fewer} pressure to fix every problem once they realised that being heard could itself be helpful. The exercises also showed that silence need not mean indifference.\n\nThe facilitator said these habits would take practice outside the workshop. If someone {needed|conditional|would need} practical help, a listener could still offer it after asking what would be useful. Participants took home {a short guide|article-missing|short guide} with example questions. The aim was not to follow a script, but to make room for another person's feelings.",
   },
   {
-    id: 'b2-dialogue-weekend-chores', title: 'Sharing the chores', level: 'B2', format: 'dialogue', topic: 'Everyday Life',
+    id: 'b2-dialogue-weekend-chores',
+    title: 'Sharing the chores',
+    level: 'B2',
+    format: 'dialogue',
+    topic: 'Everyday Life',
     text: 'Maya: Have you seen {the cleaning schedule|article-missing|cleaning schedule} for this weekend?\nTheo: Yes, it {was posted|passive|was post} on the fridge yesterday.\nMaya: Do you know why {the tasks were changed|word-order|were the tasks changed}?\nTheo: Someone is away, so we need to share their jobs.\nMaya: I have {less|quantifier|fewer} time {on Saturday|preposition|in Saturday} than I expected.\nTheo: I do not mind {doing|gerund-infinitive|to do} the kitchen {in the morning|preposition|at the morning}.\nMaya: Thanks. I can clean the hallway after {lunch|article-extra|the lunch}.\nTheo: Our neighbour said she would bring the supplies {on Friday|preposition|in Friday}.\nMaya: If she {forgot|conditional|would forget}, we could use what is in the cupboard.\nTheo: Good point. I will check {the cupboard|article-missing|cupboard} tonight.\nMaya: Please write {a clear note|article-missing|clear note} if anything is missing.\nTheo: I will. Then everyone can see what still needs to be bought.',
   },
   // ───────────── Long reads (assistant batch 1, reviewed) ─────────────
@@ -416,7 +671,7 @@ export const proofreadingTexts: ProofreadingText[] = [
     level: 'B2',
     format: 'blog',
     topic: 'Family and Celebrations',
-    situation: 'Your friend Ola wrote this blog post about her sister\'s wedding and asked you to check it before publishing.',
+    situation: "Your friend Ola wrote this blog post about her sister's wedding and asked you to check it before publishing.",
     text: `Three months ago my sister asked me {to make|gerund-infinitive|making} her wedding cake. It was {an honour|article|a honour} to be asked, but suddenly I was {responsible for|preposition|responsible of} the most important dessert of her life. I had never baked {anything|double-negative|nothing} {more difficult|comparative|difficulter} than a banana loaf, but I {said|past-irregular|sayed} yes anyway. I watched {dozens|quantifier|dozen} of videos, bought a professional mixer, and {told|confusable|said} everyone that I was {confident|word-form|confidence}.
   
   Everything went wrong from the start. During the first weekend, my oven {broke|past-irregular|breaked} down halfway through the baking. My second attempt {was ruined|passive|ruined} when the dog jumped onto the table and {ate|past-irregular|eated} an entire layer. If I {had known|conditional|knew} how hard it would be, I would have ordered a cake from a shop. By Thursday I had {no|quantifier|none} time to start again, and I even considered {calling|gerund-infinitive|to call} a bakery. Instead, I {spent|past-irregular|spended} every evening that week {trying|gerund-infinitive|to try} to save my sister's wedding, working with {increasing|word-form|increase} panic.
@@ -523,7 +778,7 @@ export const proofreadingTexts: ProofreadingText[] = [
     level: 'B2',
     format: 'column',
     topic: 'City Life',
-    situation: 'Your friend writes a column for the local newspaper and asked you to check this week\'s piece before the editor sees it.',
+    situation: "Your friend writes a column for the local newspaper and asked you to check this week's piece before the editor sees it.",
     text: `When my car {broke|past-irregular|breaked} down in March, the mechanic told me it {would take|reported-speech|will take} a month to get the parts. My first reaction {was|agreement|were} panic. I {had been driving|tense|have been driving} to work every day for eleven years, and the idea of {taking|gerund-infinitive|take} the bus seemed impossible. My neighbour, who {cycles|agreement|cycle} everywhere, simply laughed and {lent|past-irregular|lended} me her old bike.
   
   The first week was a disaster. I arrived {at|preposition|to} the office wet, {exhausted|word-form|exhausting} and twenty minutes late, and my colleagues could hardly hide their smiles. If I {had checked|conditional|checked} the weather forecast, I would have taken a raincoat. I also {discovered|tense|have discovered} that our city {was designed|passive|designed} for cars, not people: the cycle lanes {suddenly|word-form|sudden} end in the middle of busy roads.
@@ -583,7 +838,7 @@ export const proofreadingTexts: ProofreadingText[] = [
     level: 'A2',
     format: 'diary',
     topic: 'Sport and Free Time',
-    situation: 'Your friend keeps an English diary for practice and asked you to check today\'s page.',
+    situation: "Your friend keeps an English diary for practice and asked you to check today's page.",
     text: `Monday, 6 October
   
   Today I {went|past-irregular|goed} to the new gym {near|preposition|near of} my office {for|preposition|at} the first time. I {wanted|tense|want} to lift weights, because my doctor says I {need|agreement|needs} more exercise. The woman at the desk {gave|past-irregular|gived} me a card and said, "Room 3, at seven o'clock."
@@ -600,7 +855,7 @@ export const proofreadingTexts: ProofreadingText[] = [
     level: 'A2',
     format: 'chat',
     topic: 'Family and Food',
-    situation: 'Your friend Ella wants to share her family\'s funny group chat in English class and asked you to check it first.',
+    situation: "Your friend Ella wants to share her family's funny group chat in English class and asked you to check it first.",
     text: `Mum: Hi everyone! Dad {is|agreement|are} ordering pizza tonight. What do you {want|agreement|wants}?
   Tom: Pepperoni, please! And {some|quantifier|any} garlic bread.
   Ella: I {don't|agreement|doesn't} eat meat, remember? Can I have {the one|article|a one} with mushrooms?
@@ -754,7 +1009,7 @@ export const proofreadingTexts: ProofreadingText[] = [
     level: 'A2',
     format: 'post',
     topic: 'Town and Neighbours',
-    situation: 'Your brother wrote this post for the local neighbours\' group and asked you to check it.',
+    situation: "Your brother wrote this post for the local neighbours' group and asked you to check it.",
     text: `Help! Somebody {stole|past-irregular|stealed} my bike yesterday.
   
   It is {a red bike|article-missing|red bike} with a black basket and a small bell. I {left|past-irregular|leaved} it outside the supermarket on Station Road {at|preposition|in} about five o'clock. I {went|past-irregular|goed} inside for ten minutes, and when I came out, it {wasn't|tense|isn't} there.
@@ -945,7 +1200,7 @@ export const proofreadingTexts: ProofreadingText[] = [
   },
   {
     id: 'c1-post-friends-cafe',
-    title: 'My best friend\'s cat café',
+    title: "My best friend's cat café",
     level: 'C1',
     format: 'post',
     topic: 'Friends and Money',
@@ -989,7 +1244,7 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'message',
     topic: 'Everyday Life',
     situation: 'Kate is sending this message to her friend Anna. Check it before she presses "send".',
-    text: 'Hi Anna!\n\n{It is|dummy-it|Is} raining again, so {I am|be-missing|I} at home today. {I usually go|adverb-position|I go usually} to the park on Saturdays, but not today. My brother {has been|present-perfect|was} ill {since|since-for|for} Tuesday, so we {did not|agreement|does not} go out yesterday either. He {didn\'t eat anything|double-negative|didn\'t eat nothing} for breakfast this morning.\n\nWhen the rain {stops|time-clause|will stop}, we will walk to the shop {on|preposition|in} the corner and buy some fruit. {I really like|adverb-position|I very like} the strawberries there. Do you want to come {to|preposition|in} my place later? We can watch {a film|article-missing|film} {at home|article-extra|at the home}.\n\nSee you soon,\nKate',
+    text: "Hi Anna!\n\n{It is|dummy-it|Is} raining again, so {I am|be-missing|I} at home today. {I usually go|adverb-position|I go usually} to the park on Saturdays, but not today. My brother {has been|present-perfect|was} ill {since|since-for|for} Tuesday, so we {did not|agreement|does not} go out yesterday either. He {didn't eat anything|double-negative|didn't eat nothing} for breakfast this morning.\n\nWhen the rain {stops|time-clause|will stop}, we will walk to the shop {on|preposition|in} the corner and buy some fruit. {I really like|adverb-position|I very like} the strawberries there. Do you want to come {to|preposition|in} my place later? We can watch {a film|article-missing|film} {at home|article-extra|at the home}.\n\nSee you soon,\nKate",
   },
   {
     id: 'b1-email-back-at-the-gym',
@@ -1026,7 +1281,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Hobbies and Free Time',
     situation: 'A classmate wrote this short news story for the school website. Check it before it goes online.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Indian_chess_grandmaster_Gukesh_Dommaraju%2C_18%2C_becomes_youngest_world_chess_champion_of_all_time', licence: 'CC BY 2.5' },
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/Indian_chess_grandmaster_Gukesh_Dommaraju%2C_18%2C_becomes_youngest_world_chess_champion_of_all_time',
+      licence: 'CC BY 2.5',
+    },
     text: 'In December 2024, Gukesh Dommaraju, an eighteen-year-old player from India, {won|past-irregular|winned} the World Chess Championship in Singapore. With this victory, he {became|past-irregular|becomed} the youngest world champion in {history|article-extra|the history}.\n\nHis opponent was Ding Liren from China. The match was very close, and for a long time it {looked|tense|looks} as if it would end in a draw. Both players {made|past-irregular|maked} very few mistakes. But late in the last game, Ding made a serious error, and Gukesh did not miss {his|pronoun|him} chance. After the game, Ding said that he {was|reported-speech|is} "totally in shock".\n\nBefore Gukesh, the youngest champion {was|agreement|were} Garry Kasparov from Russia, who won the title in 1985 {at|preposition|in} the age of twenty-two. Gukesh {started|tense|has started} playing chess when he was seven, and now he is {one of the most famous|comparative|one of the famousest} young sportsmen in India. Many children in his country {are|agreement|is} already {interested in|preposition|interested about} the game because of him. {It is|dummy-it|Is} amazing what he has done at such {a young age|article-missing|young age}.',
   },
   {
@@ -1036,7 +1295,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Nature and Animals',
     situation: 'This article is for a science club newsletter. The editor asked you to proofread it.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Researchers_film_colossal_squid_in_its_natural_habitat_for_the_first_time', licence: 'CC BY 4.0' },
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/Researchers_film_colossal_squid_in_its_natural_habitat_for_the_first_time',
+      licence: 'CC BY 4.0',
+    },
     text: 'In April 2025, the University of Essex {announced|present-perfect|has announced} that researchers had filmed {a colossal squid|article-missing|colossal squid} living in the deep sea for the first time. The young squid, about thirty centimetres long, {was seen|passive|was see} on 9 March near the South Sandwich Islands, {a British territory|article-missing|British territory} in {the South Atlantic|article-missing|South Atlantic}. It was swimming roughly six hundred metres below the surface.\n\nThe animal {was recorded|passive|recorded} by an underwater robot called SuBastian, which {was launched|passive|was launch} from the research ship Falkor (too). The ship was on a 35-day expedition {searching|gerund-infinitive|to searching} for new marine species. Interestingly, the discovery came exactly one hundred years after scientists first described and named the colossal squid.\n\nDr Kat Bolstad, a deep-sea biologist {who|pronoun|which} did not take part in the trip, helped to identify the animal. She and her colleagues had studied the species {for|since-for|since} decades without ever {seeing|gerund-infinitive|to see} one alive. "We are finally seeing confirmed footage of this animal," she said. Scientists hope that {the new images|article|a new images} will help them learn {much|quantifier|many} more about how these giants live.',
   },
   {
@@ -1046,8 +1309,12 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Technology and Internet',
     situation: 'Your friend is writing about space for a student magazine. Check the article before it is printed.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/20-year-old_astrophotographer_captures_rare_solar_eclipse_on_Saturn', licence: 'CC BY 4.0' },
-    text: 'A twenty-year-old astrophotographer from Shoreline, near Seattle, {has photographed|agreement|have photographed} a rare solar eclipse on Saturn, an event that {will not be|tense|is not} seen again until 2038. Adam Smadi planned the picture several days {in|preposition|on} advance. He used {a computer program|article-missing|computer program} to work out exactly when Titan, Saturn\'s largest moon, would cast its shadow {on|preposition|at} the planet.\n\nOn the night of 1 June, he set up his telescope at about 1 a.m. so that its glass {could cool|modal|could to cool ; could cooled} down to the outdoor temperature. This simple step stops warm air {from moving|gerund-infinitive|from move} inside the tube and blurring the image. By half past three, Saturn {was|agreement|were} high enough above the horizon, and he {began|past-irregular|beginned} filming.\n\nInstead of {taking|gerund-infinitive|to take} single photos, he recorded short videos and then used software to choose thousands of {the sharpest|comparative|the most sharp} frames and combine them into one picture. The final image shows Titan\'s small dark shadow crossing Saturn\'s pale surface, while three other moons appear as tiny dots near the rings. When Smadi shared the photo online, many people praised it for {its|confusable|it\'s} clarity.',
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/20-year-old_astrophotographer_captures_rare_solar_eclipse_on_Saturn',
+      licence: 'CC BY 4.0',
+    },
+    text: "A twenty-year-old astrophotographer from Shoreline, near Seattle, {has photographed|agreement|have photographed} a rare solar eclipse on Saturn, an event that {will not be|tense|is not} seen again until 2038. Adam Smadi planned the picture several days {in|preposition|on} advance. He used {a computer program|article-missing|computer program} to work out exactly when Titan, Saturn's largest moon, would cast its shadow {on|preposition|at} the planet.\n\nOn the night of 1 June, he set up his telescope at about 1 a.m. so that its glass {could cool|modal|could to cool ; could cooled} down to the outdoor temperature. This simple step stops warm air {from moving|gerund-infinitive|from move} inside the tube and blurring the image. By half past three, Saturn {was|agreement|were} high enough above the horizon, and he {began|past-irregular|beginned} filming.\n\nInstead of {taking|gerund-infinitive|to take} single photos, he recorded short videos and then used software to choose thousands of {the sharpest|comparative|the most sharp} frames and combine them into one picture. The final image shows Titan's small dark shadow crossing Saturn's pale surface, while three other moons appear as tiny dots near the rings. When Smadi shared the photo online, many people praised it for {its|confusable|it's} clarity.",
   },
   {
     id: 'b2-article-speedrun-cheaters',
@@ -1056,7 +1323,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Technology and Internet',
     situation: 'A friend wrote this for a gaming blog. He wants it to be correct before he posts it.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Roblox_player_uncovers_cheating%2C_awarded_Guinness_World_Record', licence: 'CC BY 4.0' },
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/Roblox_player_uncovers_cheating%2C_awarded_Guinness_World_Record',
+      licence: 'CC BY 4.0',
+    },
     text: 'In January 2026, eighteen-year-old Quinten Delaere {was given|passive|was give} {an official|article|a official} Guinness World Record after he exposed cheating {in|preposition|on} an online game.\n\nDelaere was taking part in a speed-running event for the Roblox game Ultimate Easy Obby, in which players {have|agreement|has} to finish an obstacle course as fast as possible. After weeks of {practice|plural-uncountable|practices}, he {set|past-irregular|setted} a time of 5 minutes 48 seconds. Shortly before the competition closed, however, three unknown accounts posted times of around 5 minutes 42 seconds. Delaere {did not believe|tense|was not believing} that {anyone|double-negative|no one} could play that fast.\n\nHe decided {to study|gerund-infinitive|studying} the data himself. He discovered that the rival players had collected their in-game badges in the wrong order, as if they had jumped from one part of the course to another. Their accounts were also missing {a special item|article-missing|special item} that every player automatically receives at the finish line. Finally, Delaere filmed his own best run and calculated the fastest time that {is|agreement|are} theoretically possible. Even a perfect run, he showed, could not be {as fast as|comparative|so fast like} the times the cheaters had posted.\n\nAfter {checking|gerund-infinitive|to check} his report, Guinness World Records disqualified the other accounts and {gave|past-irregular|gived} him the record.',
   },
   {
@@ -1066,7 +1337,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Nature and Animals',
     situation: 'This piece is going into an environmental newsletter. You are the last person to check it.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Polyurethane_plastic_substitute_can_biodegrade_in_seawater%2C_say_scientists', licence: 'CC BY 2.5' },
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/Polyurethane_plastic_substitute_can_biodegrade_in_seawater%2C_say_scientists',
+      licence: 'CC BY 2.5',
+    },
     text: 'In September 2022, researchers at the University of California San Diego reported that a type of polyurethane, already {used|passive|using} in some biodegradable products on land, can also break down {in|preposition|at} seawater. The material is used instead of conventional plastic in foams and in shoes {such as|preposition|such like} flip-flops, which make up a large share of the world\'s plastic waste.\n\nFor their experiment, the team cut the polyurethane into small cubes and left them in the sea {for|preposition|during} several weeks. When they checked the samples after a month, they {found|past-irregular|finded} that several kinds of marine bacteria and fungi {had attached|tense|attach} themselves to the cubes and {were breaking|tense|break} them down into simple chemicals, which the microbes then used as food.\n\n"Plastic {that is|be-missing|that} thrown into the ocean breaks down into microplastics and has become an enormous environmental problem," said one of the authors, Stephen Mayfield. "We have shown that {it is|dummy-it|is} absolutely possible to make high-performance plastic products that can also degrade in the ocean."\n\nEvery year, people dump roughly eight billion kilograms of plastic into the sea, {where|pronoun|which} fish and birds can mistake it for food. Although {much|quantifier|many} of the Great Pacific Garbage Patch consists of old fishing nets, {reducing|gerund-infinitive|to reducing} everyday plastic waste would still make {a real difference|article-missing|real difference}.',
   },
   // ───── Adapted from VOA Learning English, NASA Science, Global Voices and more Wikinews ─────
@@ -1077,7 +1352,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'post',
     topic: 'Languages and Learning',
     situation: 'A classmate wrote this short post about an English expression for the class blog. Check it before it goes up.',
-    source: { name: 'VOA Learning English (Anna Matteo)', url: 'https://learningenglish.voanews.com/a/watching-the-grass-grow-is-not-fun/8003108.html', licence: 'Public domain' },
+    source: {
+      name: 'VOA Learning English (Anna Matteo)',
+      url: 'https://learningenglish.voanews.com/a/watching-the-grass-grow-is-not-fun/8003108.html',
+      licence: 'Public domain',
+    },
     text: 'Spring {is|agreement|are} a time of new life. After the long winter, plants {start|agreement|starts} to grow again, and the grass {becomes|agreement|become} thick and green.\n\nNow imagine that {you are|be-missing|you} in a big field. Your only job is to watch the grass grow, and you {cannot leave|modal|cannot to leave}. That does not sound very {interesting|word-form|interested}. In fact, {it sounds|dummy-it|sounds} really boring!\n\nThis is where the English expression "like watching grass grow" {comes|agreement|come} from. We use it for things that are slow and dull. For example: "Last night the football match {was|agreement|were} like watching grass grow. Nobody scored {any|double-negative|no} goals."\n\nThere is also {a nice|article-missing|nice} expression for people who are always busy: "She {never lets|adverb-position|lets never} the grass grow under her feet." It means that she never {stays|agreement|stay} in one place for long.',
   },
   {
@@ -1097,7 +1376,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Books and Culture',
     situation: 'A friend wrote this short news story for a film club newsletter. Check it before it is sent out.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Ruby_slippers_worn_by_American_actress_Judy_Garland_in_1939_film_The_Wizard_of_Oz_break_sales_record%2C_sold_for_US%2428_million_at_auction', licence: 'CC BY 2.5' },
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/Ruby_slippers_worn_by_American_actress_Judy_Garland_in_1939_film_The_Wizard_of_Oz_break_sales_record%2C_sold_for_US%2428_million_at_auction',
+      licence: 'CC BY 2.5',
+    },
     text: 'In December 2024, a pair of red shoes from the 1939 film The Wizard of Oz {was sold|passive|was sell} at an auction in the United States for 28 million dollars. The actress Judy Garland {wore|past-irregular|weared} these "ruby slippers" when she played Dorothy, the girl {who|pronoun|which} follows the yellow brick road.\n\nNobody expected such {a high price|article-missing|high price}. Experts had thought that the shoes would sell for about three million, but more than eight hundred people {took|past-irregular|taked} part in the auction. The buyer, who did not give their name, will pay 32.5 million dollars in total. This is {the highest|comparative|the most high} price ever paid for a piece of film history.\n\nThese slippers {have|agreement|has} an exciting story. In 2005, someone {stole|past-irregular|stealed} them from a small museum in Minnesota, Judy Garland\'s home state. For thirteen years nobody knew {where they were|word-order|where were they}, and many people {thought|past-irregular|thinked} they were lost forever. Then, in 2018, the police finally {found|past-irregular|finded} them.\n\nOnly four pairs from the film still exist today. The museum {was|agreement|were} one of the bidders, because it {wanted|tense|wants} to bring the shoes home, but in the end it {could not|modal|could not to} pay so much.',
   },
   {
@@ -1107,17 +1390,25 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Science and Learning',
     situation: 'This short story is for the science page of a school website. The editor asked you to check it.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Scientists%3A_Rock_that_hit_New_Jersey_home_is_4.6_billion-year-old_meteorite', licence: 'CC BY 2.5' },
-    text: 'On 8 May 2023, a woman in Hopewell, New Jersey, {found|past-irregular|finded} a strange black rock on the floor of her father\'s bedroom. The rock {was|agreement|were} still warm, and {there were|there-is|were} two holes in the ceiling above it.\n\nSuzy Kop called the police. A special team came to the house to check that the rock was not dangerous. Luckily, nobody {was hurt|passive|was hurted}, and the rock was not radioactive.\n\nKop then took the rock to a college nearby, where two scientists {studied|tense|study} it {carefully|word-form|careful}. They measured its weight and looked at it {under|preposition|on} a powerful microscope. A week later they {said|reported-speech|say} that it {was|reported-speech|is} a real meteorite, a piece of rock from space. It {weighs|agreement|weigh} about one kilogram and is around 4.56 billion years old, which makes it {older|comparative|more old} than the Earth itself.\n\nThe scientists think the meteorite {hit|past-irregular|hitted} the roof at high speed, went through the ceiling and bounced off the floor. It is very rare for a meteorite to land on someone\'s house, so Kop has become quite famous.',
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/Scientists%3A_Rock_that_hit_New_Jersey_home_is_4.6_billion-year-old_meteorite',
+      licence: 'CC BY 2.5',
+    },
+    text: "On 8 May 2023, a woman in Hopewell, New Jersey, {found|past-irregular|finded} a strange black rock on the floor of her father's bedroom. The rock {was|agreement|were} still warm, and {there were|there-is|were} two holes in the ceiling above it.\n\nSuzy Kop called the police. A special team came to the house to check that the rock was not dangerous. Luckily, nobody {was hurt|passive|was hurted}, and the rock was not radioactive.\n\nKop then took the rock to a college nearby, where two scientists {studied|tense|study} it {carefully|word-form|careful}. They measured its weight and looked at it {under|preposition|on} a powerful microscope. A week later they {said|reported-speech|say} that it {was|reported-speech|is} a real meteorite, a piece of rock from space. It {weighs|agreement|weigh} about one kilogram and is around 4.56 billion years old, which makes it {older|comparative|more old} than the Earth itself.\n\nThe scientists think the meteorite {hit|past-irregular|hitted} the roof at high speed, went through the ceiling and bounced off the floor. It is very rare for a meteorite to land on someone's house, so Kop has become quite famous.",
   },
   {
     id: 'b1-post-eagle-eyes',
-    title: 'Eagle eyes and a bird\'s eye view',
+    title: "Eagle eyes and a bird's eye view",
     level: 'B1',
     format: 'post',
     topic: 'Languages and Learning',
     situation: 'Your friend is writing a blog about English expressions. Check this post before it is published.',
-    source: { name: 'VOA Learning English (Anna Matteo)', url: 'https://learningenglish.voanews.com/a/don-t-miss-a-thing-with-eagle-eyes-/7963085.html', licence: 'Public domain' },
+    source: {
+      name: 'VOA Learning English (Anna Matteo)',
+      url: 'https://learningenglish.voanews.com/a/don-t-miss-a-thing-with-eagle-eyes-/7963085.html',
+      licence: 'Public domain',
+    },
     text: 'Birds {have|agreement|has} a wonderful view of the world below them. That is why we say "a bird\'s eye view" when we mean a view from above, or the big picture. For example, when I start a new project, I {usually look|adverb-position|look usually} at the bird\'s eye view first. I ask myself {what the main goal is|word-order|what is the main goal} and what I have {to do|gerund-infinitive|doing}.\n\nSome birds, such as eagles and hawks, {can see|modal|can to see} very small animals from far away. Both their eyes can focus on one object {at|preposition|in} the same time, and special bones around their eyes protect them {from|preposition|of} bright sunlight. This makes them {excellent|word-form|excellently} hunters.\n\nIn English, if you {have|agreement|has} "eagle eyes", you notice everything, even details that other people {miss|agreement|misses}. Hawk-eyed people {are|agreement|is} also very observant.\n\nThe expression is quite old. The Oxford English Dictionary says that it {was first used|passive|was first use} in writing in 1567. So people {have been|present-perfect|were} talking about eagle eyes {for|since-for|since} more than four hundred years!',
   },
   {
@@ -1127,7 +1418,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'post',
     topic: 'Food and Drinks',
     situation: 'A classmate wrote this post about English words for food. Check it before the teacher reads it.',
-    source: { name: 'VOA Learning English (Anna Matteo)', url: 'https://learningenglish.voanews.com/a/how-to-dish-up-something-good/7980848.html', licence: 'Public domain' },
+    source: {
+      name: 'VOA Learning English (Anna Matteo)',
+      url: 'https://learningenglish.voanews.com/a/how-to-dish-up-something-good/7980848.html',
+      licence: 'Public domain',
+    },
     text: 'Food is {a popular topic|article-missing|popular topic} all over the world. It is fun {to talk|gerund-infinitive|talk} about our favourite meals, and it is even {more fun|comparative|funner} to share them with friends.\n\nThe English word "dish" {has|agreement|have} several meanings. A dish can be the plate {that|pronoun|what} you serve food on, but it can also be the food itself. Your "signature dish" is the meal that you cook {better|comparative|more better} than anything else. Mine {is|agreement|are} sweet potato bread rolls. My friends always {ask|agreement|asks} me to bring them to parties, and when the rolls are on the table, everyone knows who {made|past-irregular|maked} them.\n\n"Dish" can also be a verb. If a friend asks you {to dish|gerund-infinitive|dish ; dishing} about your new job, they want to hear all the interesting details. And when you dish up {food|plural-uncountable|foods}, you put it on plates for people {to eat|gerund-infinitive|eating}.\n\nFinally, some people love making jokes about others, but they get angry when someone {does|agreement|do} the same to them. We say about such people: "They can dish it out, but they can\'t take it."',
   },
   {
@@ -1147,7 +1442,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Nature and Animals',
     situation: 'This article is going into a nature club newsletter. The editor asked you to proofread it.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Report_indicates_Mexican_monarch_butterfly_population_at_ten-year_high%2C_reasons_unclear', licence: 'CC BY 2.5' },
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/Report_indicates_Mexican_monarch_butterfly_population_at_ten-year_high%2C_reasons_unclear',
+      licence: 'CC BY 2.5',
+    },
     text: 'In January 2019, scientists announced that the number of monarch butterflies spending the winter in Mexico {had grown|tense|grew} by 144 per cent {in|preposition|for} just one year. It was the largest population {since|since-for|for} the winter of 2006–2007.\n\nAlmost all the monarchs in North America, some from as far north as Canada, {fly|agreement|flies} to {the same|article-missing|same} fir forests in central Mexico every autumn. Researchers estimate their number by {measuring|gerund-infinitive|measure} {how much|quantifier|how many} forest the butterflies cover. That winter the insects turned about six hectares of trees orange, compared with less than two and a half the year before.\n\nHowever, the scientists warned people not {to be|gerund-infinitive|being} too optimistic. One ecologist explained that the cool weather of the previous year {had kept|tense|has kept} the butterflies in the right place at the right time to lay their eggs, and that this {would|reported-speech|will} probably not happen again. Another said that human actions {had|reported-speech|have} had little to do with the increase.\n\nMonarch caterpillars can only eat one plant, milkweed, and much of it {has been destroyed|passive|has destroyed} by farm chemicals. Nature groups therefore asked the US government {to protect|gerund-infinitive|protecting} the species. "One good year won\'t save the monarch in the long run," said one of {their|pronoun|they} scientists.',
   },
   {
@@ -1157,7 +1456,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Travel and Culture',
     situation: 'A friend wrote this short review of an exhibition for a student magazine. Check it before it goes to print.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/G%C3%B6beklitepe%2C_Ta%C5%9F_Tepeler_and_life_12%2C000_years_ago_exhibition_opens_in_Berlin%2C_Germany', licence: 'CC BY 4.0' },
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/G%C3%B6beklitepe%2C_Ta%C5%9F_Tepeler_and_life_12%2C000_years_ago_exhibition_opens_in_Berlin%2C_Germany',
+      licence: 'CC BY 4.0',
+    },
     text: 'In February 2026, an exhibition about one of {the oldest|comparative|the most old} known places of worship {opened|present-perfect|has opened} at the James-Simon-Galerie in {Berlin|article-extra|the Berlin}. Called "Building Community", it shows 93 objects that {were brought|passive|were bring} from Göbeklitepe and other sites in the Taş Tepeler region of south-eastern {Turkey|article-extra|the Turkey}.\n\nGöbeklitepe, which is now a UNESCO World Heritage site, {was built|passive|built} around twelve thousand years ago, long before people {had learnt ; had learned ; learnt ; learned|past-irregular|had learn} to write. The exhibition presents its huge stone sculptures {together with|preposition|together to} everyday objects and jewellery from nearby sites such as Karahantepe. Visitors can see how hunter-gatherers slowly {started|tense|start} to live in one place.\n\nThe show also {includes|agreement|include} the work of the Spanish photographer Isabel Muñoz, whose pictures {were exhibited|passive|exhibited} in Spain in 2024. It was organised by curators from Berlin and Istanbul {together|word-form|togetherly} with the Şanlıurfa Archaeology Museum.\n\nAlthough the objects had been shown in several Turkish cities, this {was|agreement|were} the first time that some of them {had left|tense|have left} the country. The exhibition {runs|agreement|run} until 19 July, so there is still plenty of time {to visit|gerund-infinitive|visiting} it.',
   },
   {
@@ -1167,7 +1470,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Sport and Free Time',
     situation: 'This article is for a sports website. Your colleague asked you to check it before it goes live.',
-    source: { name: 'Global Voices (Zita Zage)', url: 'https://globalvoices.org/2024/03/28/ethiopian-girls-are-changing-tradition-through-skateboarding/', licence: 'CC BY 3.0' },
+    source: {
+      name: 'Global Voices (Zita Zage)',
+      url: 'https://globalvoices.org/2024/03/28/ethiopian-girls-are-changing-tradition-through-skateboarding/',
+      licence: 'CC BY 3.0',
+    },
     text: 'Every Saturday morning, dozens of girls and young women {gather|agreement|gathers} at a skate park in Addis Ababa, the capital of Ethiopia. They practise {balancing|gerund-infinitive|to balance} and landing tricks, and {at|preposition|in} the same time they are challenging the idea that skateboarding is only for boys.\n\nIt all started a few years ago, when Sosina Challa posted a short message online: "Free skateboarding lessons for girls." {She was|be-missing|She} worried that {hardly anyone|double-negative|hardly no one} would come, because in Ethiopia skateboarding {is seen|passive|is see} as a boys\' sport. Instead, dozens of girls, most of {them|pronoun|they} between ten and twenty-five, {came|past-irregular|comed} for the first lesson.\n\nToday her group, Ethiopian Girl Skaters, {has|agreement|have} more than sixty members and is the first skateboarding club in the country {that|pronoun|who} is only for girls. It is not the only one, though. {In|preposition|At} 2021, eighteen-year-old Helina Solomon {set up|past-irregular|setted up} a second group. "It was not easy," she remembers. "The boys at the skate park {laughed ; would laugh ; used to laugh|tense|laugh} at us whenever they saw us on boards."\n\nSome parents are also unhappy, partly because they believe girls should help at home and partly because they {are worried|be-missing|worried} about the busy streets. But the skaters {have not given up|past-irregular|have not gave up}. "It\'s not common for a girl to start skating," says one member, "but somebody had to be the first."',
   },
   {
@@ -1177,8 +1484,12 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Nature and Animals',
     situation: 'This piece is going into an environmental newsletter. You are the last person to check it.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Voracious_fish_defend_coral_reefs_against_warming%2C_say_scientists', licence: 'CC BY 2.5' },
-    text: 'In October 2019, researchers from two American universities reported that warmer seas {appear to weaken|gerund-infinitive|appear weakening} the chemicals that corals release to protect themselves from bacteria and seaweed. {Their|confusable|There} study also found, however, that this loss may be reduced if {there are|there-is|are} plenty of hungry fish around.\n\nThe scientists studied three kinds of coral on reefs off the coast of Fiji. {Fishing|article-extra|The fishing} was banned in some of these areas but not in others. Where fish were plentiful, they ate the algae and seaweed growing on the corals, which seemed to make the corals {more resistant|comparative|resistanter} to a bacterium {that|pronoun|what} is linked to coral bleaching.\n\nBleaching {happens|agreement|happen} when warm water causes a coral to push out the tiny algae living inside it. These algae {give|agreement|gives} the coral its colour and {much|quantifier|many} of its food, so without them the reef turns white. The coral {is not killed|passive|does not killed} straight away, but it is left weak and open to disease.\n\nThe leader of the study, the marine ecologist Mark Hay, said that people often {ask|agreement|asks} {whether local action matters|word-order|does local action matter} when the main cause of warming lies elsewhere. His team\'s work, he argued, {suggests|agreement|suggest} that protecting fish gives reefs a degree of insurance. {Were temperatures to rise ; If temperatures rose ; If temperatures were to rise|conditional|If temperatures would rise} much further, though, even this protection {would|conditional|will} probably stop working.',
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/Voracious_fish_defend_coral_reefs_against_warming%2C_say_scientists',
+      licence: 'CC BY 2.5',
+    },
+    text: "In October 2019, researchers from two American universities reported that warmer seas {appear to weaken|gerund-infinitive|appear weakening} the chemicals that corals release to protect themselves from bacteria and seaweed. {Their|confusable|There} study also found, however, that this loss may be reduced if {there are|there-is|are} plenty of hungry fish around.\n\nThe scientists studied three kinds of coral on reefs off the coast of Fiji. {Fishing|article-extra|The fishing} was banned in some of these areas but not in others. Where fish were plentiful, they ate the algae and seaweed growing on the corals, which seemed to make the corals {more resistant|comparative|resistanter} to a bacterium {that|pronoun|what} is linked to coral bleaching.\n\nBleaching {happens|agreement|happen} when warm water causes a coral to push out the tiny algae living inside it. These algae {give|agreement|gives} the coral its colour and {much|quantifier|many} of its food, so without them the reef turns white. The coral {is not killed|passive|does not killed} straight away, but it is left weak and open to disease.\n\nThe leader of the study, the marine ecologist Mark Hay, said that people often {ask|agreement|asks} {whether local action matters|word-order|does local action matter} when the main cause of warming lies elsewhere. His team's work, he argued, {suggests|agreement|suggest} that protecting fish gives reefs a degree of insurance. {Were temperatures to rise ; If temperatures rose ; If temperatures were to rise|conditional|If temperatures would rise} much further, though, even this protection {would|conditional|will} probably stop working.",
   },
   // ───── Adapted from StoryWeaver (CC BY 4.0) and Global Voices (CC BY 3.0) ─────
   {
@@ -1188,17 +1499,25 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'story',
     topic: 'Food and Drinks',
     situation: 'A classmate retold this story for an English lesson. Help them check it.',
-    source: { name: 'StoryWeaver (Rohini Nilekani, Pratham Books)', url: 'https://storyweaver.org.in/en/stories/208-too-many-bananas', licence: 'CC BY 4.0' },
+    source: {
+      name: 'StoryWeaver (Rohini Nilekani, Pratham Books)',
+      url: 'https://storyweaver.org.in/en/stories/208-too-many-bananas',
+      licence: 'CC BY 4.0',
+    },
     text: 'Sringeri Srinivas {was|agreement|were} a farmer, and he {grew|past-irregular|growed} very sweet bananas. But one year nobody {wanted|tense|wants} them. Not his family, not his neighbours, not even his cows! "Your bananas {are|agreement|is} very sweet," everyone said, "but we {cannot eat|modal|cannot to eat} any more."\n\nSo Srinivas {took|past-irregular|taked} his best bananas to {a big town|article-missing|big town} near his village to ask for help. A few days later he came home, and he looked very happy. After that, he {did not give|tense|did not gave} his bananas to anyone, and everybody wanted to know where they were going.\n\nOne day his neighbour Shivanna needed 108 bananas for {a big ceremony|article-missing|big ceremony}. He {ran|past-irregular|runned} to Srinivas and said, "I am sorry. Can you help me, please?"\n\nAt the ceremony, Srinivas opened a big bag and took out 27 small packets of banana sweets. "There {are|agreement|is} four bananas in each packet," he said. "So here {are|agreement|is} your 108 bananas!" Everybody laughed and clapped. Now we know what Srinivas {does|agreement|do} with all his bananas!',
   },
   {
     id: 'a2-story-grandmas-glasses',
-    title: 'Grandma\'s glasses',
+    title: "Grandma's glasses",
     level: 'A2',
     format: 'story',
     topic: 'Family and Celebrations',
     situation: 'A friend retold this story for a reading club. Check it before they read it aloud.',
-    source: { name: 'StoryWeaver (Rohini Nilekani, Pratham Books)', url: 'https://storyweaver.org.in/en/stories/1034-grandma-s-glasses', licence: 'CC BY 4.0' },
+    source: {
+      name: 'StoryWeaver (Rohini Nilekani, Pratham Books)',
+      url: 'https://storyweaver.org.in/en/stories/1034-grandma-s-glasses',
+      licence: 'CC BY 4.0',
+    },
     text: 'My grandmother {is always losing|adverb-position|is losing always} her glasses. "Where {did I put|word-order|I put} them?" she asks. Without her glasses she {cannot find|modal|cannot to find} her glasses, so she needs me!\n\nUsually they are in the bathroom, on her bed or on her head. "Grandma, they {are|agreement|is} on your head!" I say, and she laughs.\n\nBut yesterday her glasses {were|agreement|was} not in any of these places. I looked under {her|pronoun|she} favourite chair and on the kitchen table. Nothing! So I decided {to be|gerund-infinitive|being} a detective. I asked everyone {what Grandma did|word-order|what did Grandma do} that day.\n\n"She {had|past-irregular|haved} tea with a neighbour," said my mother. "She {wrote|past-irregular|writed} a letter," said my brother. "And she finished knitting a sweater," said my aunt.\n\nAha! I {found|past-irregular|finded} the glasses on her desk, next to her pen, wrapped in wool! For her next birthday, I want to buy her {an extra pair|article-missing|extra pair}.',
   },
   {
@@ -1208,7 +1527,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'story',
     topic: 'Everyday Life',
     situation: 'Your younger cousin retold this funny story for school. Help them check it.',
-    source: { name: 'StoryWeaver (Rohini Nilekani, Pratham Books)', url: 'https://storyweaver.org.in/en/stories/283-annual-haircut-day', licence: 'CC BY 4.0' },
+    source: {
+      name: 'StoryWeaver (Rohini Nilekani, Pratham Books)',
+      url: 'https://storyweaver.org.in/en/stories/283-annual-haircut-day',
+      licence: 'CC BY 4.0',
+    },
     text: 'Sringeri Srinivas {had|tense|has} very long hair, and he cut it only once a year, on Annual Haircut Day.\n\nOn that day he {went|past-irregular|goed} to the barber as usual. But the barber said, "Sorry, I {have|agreement|has} no time to cut such long hair today!" Srinivas felt sad, so he went home and {asked|tense|asks} his wife for help. But she said the same thing. So did his friends, the tailor and the carpenter.\n\nPoor Srinivas! He walked into the forest, sat down near a cave and cried loudly. Inside the cave, a tiger {was sleeping|be-missing|sleeping}. The noise {woke|past-irregular|waked} it up, and it {came|past-irregular|comed} out of the cave, roaring.\n\nSrinivas was so {frightened|word-form|frightening} that all his hair {fell|past-irregular|falled} out! He ran all the way home, and the tiger went back to sleep. Now Srinivas {will not need|modal|will not to need} a haircut for {a very long time|article-missing|very long time}.',
   },
   {
@@ -1218,7 +1541,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'story',
     topic: 'Nature and Animals',
     situation: 'A friend wrote this short true story for a school magazine. Check it before it is printed.',
-    source: { name: 'StoryWeaver (Vinayak Varma, Pratham Books)', url: 'https://storyweaver.org.in/en/stories/5052-jadav-and-the-tree-place', licence: 'CC BY 4.0' },
+    source: {
+      name: 'StoryWeaver (Vinayak Varma, Pratham Books)',
+      url: 'https://storyweaver.org.in/en/stories/5052-jadav-and-the-tree-place',
+      licence: 'CC BY 4.0',
+    },
     text: 'This is the story of Jadav Payeng, a man from Assam, in north-east India, who {loves|agreement|love} trees.\n\nIn 1979, when he {was|agreement|were} sixteen, Jadav was walking along the Brahmaputra River. After {a flood|article-missing|flood}, hundreds of snakes {were lying|be-missing|lying} on the hot sand. {There were|there-is|Were} no trees, so they had no shade, and they were dying in the heat. "If only this place {had|conditional|would have} some trees!" Jadav thought.\n\nHe {brought|past-irregular|bringed} bamboo from his village and started {planting|gerund-infinitive|to planting} it in the sand. It was hard, hot work, and it {took|past-irregular|taked} years. But slowly the bamboo grew, its shade brought insects, and the dry sand {became|past-irregular|becomed} rich soil. Then Jadav planted many other kinds of trees. First the birds came, then the animals: deer, rabbits, elephants and even tigers. And finally the snakes came back {to cool|gerund-infinitive|for cool} themselves in the shade.\n\nToday the forest {covers|agreement|cover} about 550 hectares. In 2015, Jadav {received|present-perfect|has received} one of India\'s highest awards, but he {still visits|adverb-position|visits still} his forest every day and {keeps|agreement|keep} planting wherever he finds empty land.',
   },
   {
@@ -1228,7 +1555,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Nature and Animals',
     situation: 'This article is for a nature website. Your colleague asked you to check it before it goes live.',
-    source: { name: 'Global Voices (Kevin Rennie)', url: 'https://globalvoices.org/2026/09/14/nest-flix-peregrine-falcons-become-streaming-stars-of-the-34th-floor-in-australia/', licence: 'CC BY 3.0' },
+    source: {
+      name: 'Global Voices (Kevin Rennie)',
+      url: 'https://globalvoices.org/2026/09/14/nest-flix-peregrine-falcons-become-streaming-stars-of-the-34th-floor-in-australia/',
+      licence: 'CC BY 3.0',
+    },
     text: 'Since 1991, peregrine falcons {have nested|present-perfect|nested} on the roof of an office building at 367 Collins Street in {Melbourne|article-extra|the Melbourne}, Australia. It is the only known nest in the city centre, which makes the building surprisingly important for these rare birds.\n\nPeregrines are birds of prey, and they are known as {the fastest|comparative|the most fast} animals on Earth: when they dive, they can reach more than 320 kilometres an hour. In 2016 the owners of the building {installed|present-perfect|have installed} a webcam, and since then thousands of people {have watched|present-perfect|watched} the birds lay their eggs and raise their chicks. The live stream {has|agreement|have} more than 30,000 subscribers, and hundreds of people often watch {at|preposition|in} the same time.\n\nFans have even given the birds names: M24 for the male and F24 for the female. Watching can be stressful, though. One morning the male {did not turn up|past-irregular|did not turned up} until almost midday, and his fans {became|past-irregular|becomed} quite anxious. Others are amazed {by|preposition|of} how much the birds seem {to know|gerund-infinitive|knowing} without {being taught|passive|being teach}: nobody shows them how to turn their eggs, but they {just know|adverb-position|know just}.\n\nIn about six weeks the chicks {grow|agreement|grows} to thirty times their weight and take their first flight. As one scientist put it, people want to feel close to nature, even if they {cannot live|modal|cannot to live} in it.',
   },
   {
@@ -1238,7 +1569,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Sport and Free Time',
     situation: 'A friend wrote this for a sports club newsletter. Check it before it is sent out.',
-    source: { name: 'Global Voices (Hosein Gharibnavaz)', url: 'https://globalvoices.org/2026/01/01/the-table-tennis-players-planting-trees-to-fight-drought-in-iran/', licence: 'CC BY 3.0' },
+    source: {
+      name: 'Global Voices (Hosein Gharibnavaz)',
+      url: 'https://globalvoices.org/2026/01/01/the-table-tennis-players-planting-trees-to-fight-drought-in-iran/',
+      licence: 'CC BY 3.0',
+    },
     text: 'Safashahr is a small city in the mountains of Fars province, Iran. Like many parts of the country, it {is facing|be-missing|facing} a serious water crisis, and the land around it {is getting|agreement|are getting} drier every year.\n\nTwo years ago, Hosein Gharibnavaz became head of the local table tennis association. His main job was to build sports facilities, but the association also decided {to involve|gerund-infinitive|involving} its players and their families in protecting the environment. Since then, they {have organised|present-perfect|organised} several volunteer projects, from "plastic-free" training halls to small water troughs for wild animals.\n\nTheir latest event {took|past-irregular|taked} place near the village of Dehbid. Together with the local natural resources department, more than two hundred people, many of {them|pronoun|they} young players, planted four hundred trees. They chose wild almond and other species {that|pronoun|what} can survive with very little water. For many children, it was the first time they {had planted|tense|have planted} a tree {with|preposition|by} their own hands.\n\n"The same kids who compete at the table tennis table {are|agreement|is} now competing to plant more trees," said one mother, laughing as she watched her son {carry|gerund-infinitive|to carry} a young tree up the hill. Several families asked {when the next event would be|word-order|when would the next event be}, and the association now plans {to sign|gerund-infinitive|signing} an agreement with the local environment department. Even a small sports club, it seems, {can help|modal|can to help} protect nature.',
   },
   {
@@ -1248,8 +1583,12 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Travel and Culture',
     situation: 'This piece is going into a history society newsletter. You are the last person to check it.',
-    source: { name: 'Global Voices (Kevin Rennie)', url: 'https://globalvoices.org/2026/04/26/australias-budj-bim-features-one-of-the-worlds-oldest-aquaculture-systems/', licence: 'CC BY 3.0' },
-    text: 'The Budj Bim Cultural Landscape in western Victoria, Australia, {contains|agreement|contain} one of the oldest aquaculture systems in the world. There, the Gunditjmara people built a network of stone channels, traps and ponds {in which|pronoun|which} they could catch and keep eels. Carbon dating suggests that the oldest part of the system {was built|passive|built} around 6,600 years ago, {which|pronoun|what} makes it older than the Egyptian pyramids.\n\nIn 2019, Budj Bim {was added|passive|added} to the UNESCO World Heritage List, becoming the first Australian site to be listed for {its|confusable|it\'s} cultural value alone. The discovery has challenged the old belief {that|pronoun|what} Aboriginal people before colonisation {were|agreement|was} only nomadic hunter-gatherers. {Rather than ; Instead of|preposition|Instead} simply living on whatever nature provided, the Gunditjmara changed the flow of water to make eels more plentiful and reliable.\n\nNear the traps, archaeologists have also found the remains of about three hundred stone structures, which may have been houses. If this {is|conditional|will be} confirmed, it will show that people lived there all year round.\n\nThe Gunditjmara {fought|past-irregular|fighted} hard against white settlers in the nineteenth century, and many of them {were forced|passive|forced} to live on a church mission. Today they {manage|agreement|manages} the site themselves. Visitors can {take|modal|to take} guided tours of the eel traps and stone houses, and {can even taste|adverb-position|can taste even} eel at a local café.',
+    source: {
+      name: 'Global Voices (Kevin Rennie)',
+      url: 'https://globalvoices.org/2026/04/26/australias-budj-bim-features-one-of-the-worlds-oldest-aquaculture-systems/',
+      licence: 'CC BY 3.0',
+    },
+    text: "The Budj Bim Cultural Landscape in western Victoria, Australia, {contains|agreement|contain} one of the oldest aquaculture systems in the world. There, the Gunditjmara people built a network of stone channels, traps and ponds {in which|pronoun|which} they could catch and keep eels. Carbon dating suggests that the oldest part of the system {was built|passive|built} around 6,600 years ago, {which|pronoun|what} makes it older than the Egyptian pyramids.\n\nIn 2019, Budj Bim {was added|passive|added} to the UNESCO World Heritage List, becoming the first Australian site to be listed for {its|confusable|it's} cultural value alone. The discovery has challenged the old belief {that|pronoun|what} Aboriginal people before colonisation {were|agreement|was} only nomadic hunter-gatherers. {Rather than ; Instead of|preposition|Instead} simply living on whatever nature provided, the Gunditjmara changed the flow of water to make eels more plentiful and reliable.\n\nNear the traps, archaeologists have also found the remains of about three hundred stone structures, which may have been houses. If this {is|conditional|will be} confirmed, it will show that people lived there all year round.\n\nThe Gunditjmara {fought|past-irregular|fighted} hard against white settlers in the nineteenth century, and many of them {were forced|passive|forced} to live on a church mission. Today they {manage|agreement|manages} the site themselves. Visitors can {take|modal|to take} guided tours of the eel traps and stone houses, and {can even taste|adverb-position|can taste even} eel at a local café.",
   },
   // ───── More from Wikinews, Global Voices and StoryWeaver ─────
   {
@@ -1259,7 +1598,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'story',
     topic: 'Nature and Animals',
     situation: 'A classmate retold this funny story for an English lesson. Help them check it.',
-    source: { name: 'StoryWeaver (Ramendra Kumar, Pratham Books)', url: 'https://storyweaver.org.in/en/stories/2711-the-day-it-rained-fish', licence: 'CC BY 4.0' },
+    source: {
+      name: 'StoryWeaver (Ramendra Kumar, Pratham Books)',
+      url: 'https://storyweaver.org.in/en/stories/2711-the-day-it-rained-fish',
+      licence: 'CC BY 4.0',
+    },
     text: 'Avanti {was|agreement|were} the zookeeper at Pitara Zoo. There were many animals in the zoo, but her best friend {was|agreement|were} Ballu, a big, brown, strong bear.\n\nOn Ballu\'s fourth birthday, Avanti {made|past-irregular|maked} a cake for him. "Can you blow out all the candles at once?" she asked. "Of course!" said Ballu. He {took|past-irregular|taked} a very deep breath and went "WHOOSH!"\n\nThe air {blew|past-irregular|blowed} out the candles and flew up into the clouds. Suddenly there was thunder, and it started {to rain|gerund-infinitive|rain}. But it {was not|agreement|were not} raining water. It was raining fish!\n\nBallu picked up {a big basket|article-missing|big basket} and ran around {collecting|gerund-infinitive|to collecting} the fish. But the water got higher and higher, and {Avanti was|be-missing|Avanti} scared. So Ballu put her on his shoulders, and she {held|past-irregular|holded} on to his neck.\n\nSoon the sun came out again. "I will never ask you {to blow|gerund-infinitive|blow} out candles again," said Avanti. "Why not?" asked Ballu. "Next time it {might|modal|might to} rain frogs!"',
   },
   {
@@ -1269,7 +1612,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'story',
     topic: 'Family and Celebrations',
     situation: 'A friend retold this story for a school magazine. Check it before it is printed.',
-    source: { name: 'StoryWeaver (K.S. Nagarajan, Pratham Books)', url: 'https://storyweaver.org.in/en/stories/15758-grandfather-goes-on-strike', licence: 'CC BY 4.0' },
+    source: {
+      name: 'StoryWeaver (K.S. Nagarajan, Pratham Books)',
+      url: 'https://storyweaver.org.in/en/stories/15758-grandfather-goes-on-strike',
+      licence: 'CC BY 4.0',
+    },
     text: 'Last summer I {stayed|tense|stay} with my grandfather. One morning I was cleaning my bike in the garden when I heard a strange noise. Grandpa {was climbing|be-missing|climbing} a long ladder up the big neem tree in front of the house. A sign saying "SAVE THE TREES" {was hanging|agreement|were hanging} from one of the branches.\n\nThe town council wanted {to cut|gerund-infinitive|cutting} down the trees and build flats, so Grandpa {decided|tense|decides} to protest. When he reached the top, he shouted, "I am not coming down until the council {promises|time-clause|will promise} to leave the trees alone."\n\nI {did not know|tense|did not knew} what to do. Soon two police officers {arrived|present-perfect|have arrived}. One of them {fell|past-irregular|falled} over the ladder in the grass, which made Grandpa smile. They asked him {to come|gerund-infinitive|coming} down, but he refused.\n\nThen some journalists came and asked me lots of questions. The next morning, {there was|there-is|was} a story about Grandpa in the newspaper, with a photo of the tree. Friends and neighbours started bringing him food and coffee, and I sent everything up to him in a bucket on a rope. Grandpa looked {happier|comparative|more happy} than ever.',
   },
   {
@@ -1279,8 +1626,12 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Science and Learning',
     situation: 'This short article is for the science page of a school website. The editor asked you to check it.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/NASA\'s_OSIRIS-REx_arrives_in_Houston%2C_US_after_returning_asteroid_samples_to_Earth', licence: 'CC BY 2.5' },
-    text: 'In September 2023, a small capsule {landed|tense|lands} in the desert in Utah, in the United States. Inside it {was|agreement|were} something very special: dust and small stones from an asteroid called Bennu. It was {the first time|article-missing|first time} that NASA had brought back pieces of an asteroid.\n\nThe spacecraft, OSIRIS-REx, {left|past-irregular|leaved} the Earth in 2016 and {reached|present-perfect|has reached} Bennu two years later. Scientists then {spent|past-irregular|spended} almost two years choosing the best place to collect the samples. In October 2020, the spacecraft touched the surface with a robot arm and {blew|past-irregular|blowed} gas at it, so that dust and stones flew up into a container.\n\nThe journey home {took|past-irregular|taked} almost three years. When the spacecraft flew past the Earth, it dropped the capsule, which landed about ten minutes after entering the air. Teams {were waiting|be-missing|waiting} to find it and take it to a special clean room in Houston, where scientists will study the samples carefully and share {them|pronoun|it} with other researchers. They hope to learn more about {how the solar system began|word-order|how did the solar system begin}.\n\nThe spacecraft\'s work is not over: it is now on its way to {another|article|other} asteroid, called Apophis.',
+    source: {
+      name: 'Wikinews',
+      url: "https://en.wikinews.org/wiki/NASA's_OSIRIS-REx_arrives_in_Houston%2C_US_after_returning_asteroid_samples_to_Earth",
+      licence: 'CC BY 2.5',
+    },
+    text: "In September 2023, a small capsule {landed|tense|lands} in the desert in Utah, in the United States. Inside it {was|agreement|were} something very special: dust and small stones from an asteroid called Bennu. It was {the first time|article-missing|first time} that NASA had brought back pieces of an asteroid.\n\nThe spacecraft, OSIRIS-REx, {left|past-irregular|leaved} the Earth in 2016 and {reached|present-perfect|has reached} Bennu two years later. Scientists then {spent|past-irregular|spended} almost two years choosing the best place to collect the samples. In October 2020, the spacecraft touched the surface with a robot arm and {blew|past-irregular|blowed} gas at it, so that dust and stones flew up into a container.\n\nThe journey home {took|past-irregular|taked} almost three years. When the spacecraft flew past the Earth, it dropped the capsule, which landed about ten minutes after entering the air. Teams {were waiting|be-missing|waiting} to find it and take it to a special clean room in Houston, where scientists will study the samples carefully and share {them|pronoun|it} with other researchers. They hope to learn more about {how the solar system began|word-order|how did the solar system begin}.\n\nThe spacecraft's work is not over: it is now on its way to {another|article|other} asteroid, called Apophis.",
   },
   {
     id: 'b1-interview-juggler',
@@ -1289,7 +1640,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'interview',
     topic: 'Hobbies and Free Time',
     situation: 'A friend wrote up this interview for a school blog. Check it before it is published.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Wikinews_interviews_noted_juggler_for_International_Jugglers_Day', licence: 'CC BY 2.5' },
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/Wikinews_interviews_noted_juggler_for_International_Jugglers_Day',
+      licence: 'CC BY 2.5',
+    },
     text: 'Q: Congratulations! Jugglers {voted|passive|were voted} you number one in the Top 40 Jugglers of 2023. How does the list work?\nSpencer: Thank you! The list {has been running|present-perfect|is running} since 2003. Every December, jugglers {vote|agreement|votes} for their ten favourite jugglers in the comments under a YouTube video, and the organiser counts all the votes. So it is by jugglers, for jugglers.\nQ: How {did you feel|word-order|you felt} when you found out?\nSpencer: It was unreal. There are so many {amazing|word-form|amazed} jugglers out there, so I never {expected|tense|expect} to come first. It is one of {the proudest|comparative|the most proud} moments of my life.\nQ: How old were you when you started?\nSpencer: I {was|agreement|were} eight.\nQ: Last year you also {joined|present-perfect|have joined} a circus. What was that like?\nSpencer: I travelled with the Flynn Creek Circus from June to October, through Northern California and Oregon. I really enjoyed {showing|gerund-infinitive|to show} people what I had practised for so many years. The circus {tries|agreement|try} to bring shows to small country towns, and I feel I have the best job in the world, because I bring joy to {people|plural-uncountable|peoples} of all ages.\nQ: And before that?\nSpencer: I {did|past-irregular|doed} shows in schools with my friend Paul. We {were|agreement|was} a juggling duo called the Spence and Paul Show.',
   },
   {
@@ -1299,7 +1654,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Technology',
     situation: 'A colleague wrote this for a science blog. Check it before it goes live.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Slippery_business%3A_Materials_scientists_invent_new_coating_for_self-cleaning%2C_water-efficient_toilets', licence: 'CC BY 2.5' },
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/Slippery_business%3A_Materials_scientists_invent_new_coating_for_self-cleaning%2C_water-efficient_toilets',
+      licence: 'CC BY 2.5',
+    },
     text: 'In November 2019, researchers at Pennsylvania State University {announced|present-perfect|have announced} a new coating that could make toilets almost self-cleaning. The idea is simple: if a surface is slippery enough, nothing {can stick|modal|can to stick} to it.\n\nThis matters more than it might seem. Around the world, roughly one billion toilets {use|agreement|uses} about 141 billion litres of fresh water every day — several times more than the whole of Africa {uses|agreement|use} for everything. The cleaner a toilet stays, the less water it {needs|agreement|need}, so a slippery surface could cut this amount {by|preposition|on} half.\n\nThe coating {is applied|passive|is apply} in two steps. The first spray {is made|passive|makes} of tiny molecules that stand up from the surface like hairs, only {much|quantifier|many} thinner. The second {covers|agreement|cover} them with a thin layer of oil, which {makes|agreement|make} the surface extremely smooth. The whole process takes {less|quantifier|fewer} than five minutes.\n\nIn laboratory tests, the researchers poured a thick artificial mess onto a coated toilet, and it {slid|past-irregular|slided} straight down without leaving {any|double-negative|no} marks. The coating also {keeps|agreement|keep} bacteria away, which should help to stop the spread of disease and mean {fewer|quantifier|less} unpleasant smells.',
   },
   {
@@ -1309,7 +1668,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Science and Learning',
     situation: 'This article is for a student science magazine. Your friend asked you to check it.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/NASA_revises_asteroid_2024_YR4_threat%2C_near-zero_chance_of_Earth_impact', licence: 'CC BY 4.0' },
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/NASA_revises_asteroid_2024_YR4_threat%2C_near-zero_chance_of_Earth_impact',
+      licence: 'CC BY 4.0',
+    },
     text: 'In December 2024, astronomers {discovered|present-perfect|have discovered} an asteroid called 2024 YR4. At first, their calculations {showed|tense|show} a 2.3 per cent chance that it {would hit|reported-speech|will hit} the Earth on 22 December 2032. That may not sound {like|preposition|as} much, but it {was|agreement|were} enough to put space agencies on alert. The asteroid {is thought|passive|thinks} to be between 40 and 90 metres wide — about the size of the object that probably destroyed a large area of forest in Siberia in 1908.\n\nAs more observations {came|past-irregular|comed} in, scientists were able to calculate its path {more accurately|word-form|more accurate}. By the end of February 2025, NASA said there was "no significant potential" for the asteroid to hit our planet {for|since-for|since} the next century. There was still a small chance, about 1.7 per cent, that it {could hit|modal|could to hit} the Moon instead.\n\nScientists {plan|agreement|plans} to keep watching the asteroid, including with the James Webb Space Telescope. When it {comes|time-clause|will come} close again in 2028, they will learn even more. Even though it no longer {poses|agreement|pose} a serious threat, NASA called it an "invaluable opportunity" to practise {defending|gerund-infinitive|to defend} the planet.',
   },
   {
@@ -1319,8 +1682,12 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Nature and Animals',
     situation: 'This article is going into a nature club newsletter. The editor asked you to proofread it.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Northern_Arapaho_Tribe_welcomes_buffalo_herd_in_Wyoming%2C_United_States', licence: 'CC BY 2.5' },
-    text: 'In October 2019, more than a hundred members of the Northern Arapaho tribe gathered to watch ten buffalo {being released|passive|releasing} onto the Wind River Reservation in Wyoming. Schoolchildren sang, an elder {said|past-irregular|sayed} a prayer, and the animals ran out of a trailer into {a field|article-missing|field} that had been set aside for them.\n\nThe buffalo, properly called American bison, {had travelled|tense|have travelled} more than 800 kilometres from a national bison range in Montana. "With everything that\'s happened to our people, our language, our culture, we feel that bringing the buffalo back {is going to heal|gerund-infinitive|is going to healing} us," said Crystal C\'Bearing of the tribe\'s historic preservation office.\n\nIn the nineteenth century, buffalo {were hunted|passive|hunted} almost to extinction. They were killed not only for {their|confusable|there} skins but also because some American generals believed that without the buffalo, Native American tribes {would be|reported-speech|will be} easier to push onto reservations.\n\nThe Arapaho {plan|agreement|plans} to give the herd about 240 hectares of land, and they may one day join forces with the neighbouring Eastern Shoshone tribe, which already {has|agreement|have} 33 buffalo. But first, one of the organisers explained, they want {to grow|gerund-infinitive|growing} their own herd to one or two hundred animals, so that it is {strong enough|word-order|enough strong}.',
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/Northern_Arapaho_Tribe_welcomes_buffalo_herd_in_Wyoming%2C_United_States',
+      licence: 'CC BY 2.5',
+    },
+    text: "In October 2019, more than a hundred members of the Northern Arapaho tribe gathered to watch ten buffalo {being released|passive|releasing} onto the Wind River Reservation in Wyoming. Schoolchildren sang, an elder {said|past-irregular|sayed} a prayer, and the animals ran out of a trailer into {a field|article-missing|field} that had been set aside for them.\n\nThe buffalo, properly called American bison, {had travelled|tense|have travelled} more than 800 kilometres from a national bison range in Montana. \"With everything that's happened to our people, our language, our culture, we feel that bringing the buffalo back {is going to heal|gerund-infinitive|is going to healing} us,\" said Crystal C'Bearing of the tribe's historic preservation office.\n\nIn the nineteenth century, buffalo {were hunted|passive|hunted} almost to extinction. They were killed not only for {their|confusable|there} skins but also because some American generals believed that without the buffalo, Native American tribes {would be|reported-speech|will be} easier to push onto reservations.\n\nThe Arapaho {plan|agreement|plans} to give the herd about 240 hectares of land, and they may one day join forces with the neighbouring Eastern Shoshone tribe, which already {has|agreement|have} 33 buffalo. But first, one of the organisers explained, they want {to grow|gerund-infinitive|growing} their own herd to one or two hundred animals, so that it is {strong enough|word-order|enough strong}.",
   },
   {
     id: 'b2-article-water-tofu',
@@ -1329,7 +1696,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Food and Drinks',
     situation: 'A friend wrote this for a food blog. Check it before it is published.',
-    source: { name: 'Global Voices (Jo Carter)', url: 'https://globalvoices.org/2026/01/21/a-korean-chinese-womens-handmade-yanbian-style-water-tofu-symbolizes-family-unity/', licence: 'CC BY 3.0' },
+    source: {
+      name: 'Global Voices (Jo Carter)',
+      url: 'https://globalvoices.org/2026/01/21/a-korean-chinese-womens-handmade-yanbian-style-water-tofu-symbolizes-family-unity/',
+      licence: 'CC BY 3.0',
+    },
     text: 'In Helan, a village in the Yanbian region of China, {there is|there-is|is} a dish that brings whole families together: tsodibi, a soft "water tofu". It is not made for a particular festival, but whenever relatives {come|time-clause|will come} home, and it is usually prepared by the women of the family.\n\nMaking it {takes|agreement|take} more than a day. First, the soybeans {are soaked|passive|soaked} overnight. Then they {are ground|past-irregular|are grinded} twice, until they turn into a smooth, creamy paste. Hot water is added, and the paste is squeezed through a cloth bag, which is {harder|comparative|more hard} work than it looks. The women who do it are mostly over seventy, but they work with {great|word-form|greatly} strength and patience.\n\nThe liquid is heated in a large pot on a traditional stove, which also {heats|agreement|heat} the floor of the house. Meanwhile, the sisters cook side dishes, mostly kimchi made from wild plants. Many people think that kimchi {is|agreement|are} always spicy cabbage, but the word simply means "pickles".\n\nJust before the liquid boils, a natural ingredient {is added|passive|adds}, and white curds slowly {begin|agreement|begins} to form. The tofu is served with a sauce of soy, garlic, onion and chilli. Freshly made, it is soft and rich, and {much|quantifier|many} tastier than anything you can buy in a shop.',
   },
   {
@@ -1339,7 +1710,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Sport and Free Time',
     situation: 'This article is for a sports website. Your colleague asked you to check it before it goes live.',
-    source: { name: 'Global Voices (Laura)', url: 'https://globalvoices.org/2026/09/04/cameroons-indomitable-lionesses-football-team-finally-shatter-wafcon-glass-ceiling/', licence: 'CC BY 3.0' },
+    source: {
+      name: 'Global Voices (Laura)',
+      url: 'https://globalvoices.org/2026/09/04/cameroons-indomitable-lionesses-football-team-finally-shatter-wafcon-glass-ceiling/',
+      licence: 'CC BY 3.0',
+    },
     text: 'On 16 August 2026, Cameroon\'s women\'s football team finally {won|past-irregular|winned} the Women\'s Africa Cup of Nations. In the final in Rabat, the "Indomitable Lionesses" {beat|past-irregular|beated} Malawi 3–0 and lifted the trophy for the first time.\n\nIt had been a long wait. Cameroon {had reached|tense|has reached} the final three times before, in 2004, 2014 and 2016, but {lost|past-irregular|losed} every time to Nigeria without scoring a single goal. This time the team left no room for doubt. Marie Ngah Manga scored in the 20th minute, Naomi Eto {added|tense|adds} a second goal nine minutes later, and Ngah Manga scored again just before half-time.\n\nSurprisingly, Cameroon {did not qualify|tense|did not qualified} on the pitch at first. The Lionesses {were|agreement|was} only able to take part because the tournament {grew|past-irregular|growed} from 12 to 16 teams. Once there, however, the Lionesses beat Ghana, knocked out the champions, Nigeria, and {defeated|tense|defeat} the hosts, Morocco, on penalties.\n\nOne of the stars was 21-year-old Monique Ngock, who {was named|passive|named} Woman of the Competition. At first, her family {did not support|tense|did not supported} her, and she hopes the victory will show young girls that "girls {can do|modal|can to do} anything".',
   },
   {
@@ -1349,7 +1724,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Travel and Culture',
     situation: 'This piece is going into a history society newsletter. You are the last person to check it.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Scientists_report_correlation_between_locations_of_Easter_Island_statues_and_water_resources', licence: 'CC BY 2.5' },
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/Scientists_report_correlation_between_locations_of_Easter_Island_statues_and_water_resources',
+      licence: 'CC BY 2.5',
+    },
     text: 'In January 2019, a team of American archaeologists published a study {suggesting|gerund-infinitive|to suggest} that the famous stone statues of Easter Island, or Rapa Nui, {were|agreement|was} not placed at random. After mapping 93 statue platforms on the western side of the island, all of {which|pronoun|them} were built before Europeans arrived, the researchers found that most of them stood close to sources of {fresh water|plural-uncountable|fresh waters}.\n\nThe island has no rivers {that|pronoun|what} flow all year round. However, {at|preposition|in} low tide, slightly salty but drinkable water {seeps|agreement|seep} out of the ground along the coast. Most of these springs lie by the sea, and so {do|agreement|does} most of the statues. Where platforms {were built|passive|built} further inland, the team argues, water could be found in caves or {possibly|word-form|possible} in wells dug nearby. The statues, in other words, had a symbolic meaning but were also part of everyday life.\n\nNot everyone {is|agreement|are} convinced. Jo Anne Van Tilburg of the University of California {argues|agreement|argue} that the springs have always been minor resources and {are|agreement|is} unlikely to have decided where the platforms were built. The researchers now plan {to study|gerund-infinitive|studying} water sources on the rest of the island.',
   },
   // ───── More B2 texts from Wikinews and Global Voices ─────
@@ -1360,8 +1739,12 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Sport and Free Time',
     situation: 'A friend wrote this short news story for a school website. Check it before it goes online.',
-    source: { name: 'Global Voices (Sanjib Chaudhary)', url: 'https://globalvoices.org/2025/12/22/historic-wheelchair-bungee-jump-by-a-woman-with-disability-in-nepal/', licence: 'CC BY 3.0' },
-    text: 'On 16 December 2025, Deepa Devkota {became|past-irregular|becomed} the first Nepali woman with a disability to do a bungee jump in a wheelchair. She jumped from a bridge 160 metres {above|preposition|on} the Bhotekoshi River. This is Nepal\'s first bungee site, and it {attracts|agreement|attract} thrill-seekers from all over the world.\n\nDeepa has spina bifida and {works|agreement|work} for the rights of disabled people. She {did|past-irregular|doed} the jump on her birthday and dedicated it to her parents, who {had faced|tense|have faced} discrimination for raising a disabled child. "Disability {isn\'t|agreement|aren\'t} a problem," she said. "If we {have|conditional|will have} self-confidence and opportunities, we can succeed in any field." She hopes her jump will encourage other people with disabilities {to follow|gerund-infinitive|follow} their dreams.\n\nTwo men had already done a wheelchair jump from the same place earlier that month, and the world\'s first wheelchair bungee jump {took|past-irregular|taked} place in Russia in 2015. An official from Nepal\'s federation of disabled people said that Deepa\'s jump {was|reported-speech|is} an inspiration for everyone.',
+    source: {
+      name: 'Global Voices (Sanjib Chaudhary)',
+      url: 'https://globalvoices.org/2025/12/22/historic-wheelchair-bungee-jump-by-a-woman-with-disability-in-nepal/',
+      licence: 'CC BY 3.0',
+    },
+    text: "On 16 December 2025, Deepa Devkota {became|past-irregular|becomed} the first Nepali woman with a disability to do a bungee jump in a wheelchair. She jumped from a bridge 160 metres {above|preposition|on} the Bhotekoshi River. This is Nepal's first bungee site, and it {attracts|agreement|attract} thrill-seekers from all over the world.\n\nDeepa has spina bifida and {works|agreement|work} for the rights of disabled people. She {did|past-irregular|doed} the jump on her birthday and dedicated it to her parents, who {had faced|tense|have faced} discrimination for raising a disabled child. \"Disability {isn't|agreement|aren't} a problem,\" she said. \"If we {have|conditional|will have} self-confidence and opportunities, we can succeed in any field.\" She hopes her jump will encourage other people with disabilities {to follow|gerund-infinitive|follow} their dreams.\n\nTwo men had already done a wheelchair jump from the same place earlier that month, and the world's first wheelchair bungee jump {took|past-irregular|taked} place in Russia in 2015. An official from Nepal's federation of disabled people said that Deepa's jump {was|reported-speech|is} an inspiration for everyone.",
   },
   {
     id: 'b2-article-notre-dame-reopens',
@@ -1370,7 +1753,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Travel and Culture',
     situation: 'This article is for a travel website. Your colleague asked you to check it before it goes live.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/World_leaders_attend_grand_reopening_of_Notre_Dame_Cathedral_in_Paris_five_years_after_damaging_fire', licence: 'CC BY 2.5' },
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/World_leaders_attend_grand_reopening_of_Notre_Dame_Cathedral_in_Paris_five_years_after_damaging_fire',
+      licence: 'CC BY 2.5',
+    },
     text: 'In December 2024, Notre-Dame Cathedral in Paris {reopened|present-perfect|has reopened} five years after a terrible fire. The fire, which {broke|past-irregular|breaked} out in April 2019, destroyed the roof and the famous spire and {badly|word-form|bad} damaged the structure of the building.\n\nAbout fifty world leaders {attended|preposition|attended to} the reopening. The ceremony {had been|tense|has been} planned for the square outside, but it {was moved|passive|moved} indoors because of the bad weather. President Emmanuel Macron described the cathedral as "a happy metaphor" for {what|pronoun|that} a nation should be.\n\nThe cathedral {was completed|passive|completed} in 1345, so it {has stood|present-perfect|stands} in the centre of Paris for almost seven hundred years. Rebuilding it {was|agreement|were} an enormous task: around 1,200 craftspeople, from stonemasons to carpenters, {were needed|passive|needed} for the project. The first Mass in the restored cathedral {was held|passive|held} the next day.\n\nFor many French people, the reopening {was|agreement|were} a moment of great pride. {It was|dummy-it|Was} hard to believe that only five years earlier, the whole world {had watched|tense|has watched} the building burn.',
   },
   {
@@ -1380,8 +1767,12 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Technology and Internet',
     situation: 'A friend wrote this for a gaming blog. Check it before it is posted.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Players_line_up_for_the_launch_of_the_Nintendo_Switch_2_in_New_York_City', licence: 'CC BY 4.0' },
-    text: 'On 4 June 2025, Nintendo fans {gathered|present-perfect|have gathered} at the company\'s store in New York to celebrate the launch of the Switch 2, {the successor|article-missing|successor} to the original Switch, which {came|past-irregular|comed} out in 2017. Before the new console went on sale at midnight, players could try Mario Kart World, the first completely new Mario Kart game in more than {a decade|article-missing|decade}.\n\nUnder two large tents, Nintendo {had set|tense|has set} up 24 game stations. The new mode, Knockout Tour, {is|agreement|are} a long race in which the slowest players {are knocked|passive|knock} out one by one.\n\nJasmine and Valery, a couple at the front of the queue, {had arrived|tense|have arrived} at about eleven in the morning and waited more than four hours. Jasmine had not planned {to buy|gerund-infinitive|buying} the game, but after trying it, she said she {might|modal|might to} change her mind. Another fan, Blake, said he {had been|reported-speech|has been} playing the same Mario Kart with his friends for ten years and was looking forward to {trying|gerund-infinitive|try} something new.\n\nMany people {wore|past-irregular|weared} Nintendo T-shirts, some dressed up as Mario characters, and {lots of|quantifier|much} people took selfies or filmed themselves playing.',
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/Players_line_up_for_the_launch_of_the_Nintendo_Switch_2_in_New_York_City',
+      licence: 'CC BY 4.0',
+    },
+    text: "On 4 June 2025, Nintendo fans {gathered|present-perfect|have gathered} at the company's store in New York to celebrate the launch of the Switch 2, {the successor|article-missing|successor} to the original Switch, which {came|past-irregular|comed} out in 2017. Before the new console went on sale at midnight, players could try Mario Kart World, the first completely new Mario Kart game in more than {a decade|article-missing|decade}.\n\nUnder two large tents, Nintendo {had set|tense|has set} up 24 game stations. The new mode, Knockout Tour, {is|agreement|are} a long race in which the slowest players {are knocked|passive|knock} out one by one.\n\nJasmine and Valery, a couple at the front of the queue, {had arrived|tense|have arrived} at about eleven in the morning and waited more than four hours. Jasmine had not planned {to buy|gerund-infinitive|buying} the game, but after trying it, she said she {might|modal|might to} change her mind. Another fan, Blake, said he {had been|reported-speech|has been} playing the same Mario Kart with his friends for ten years and was looking forward to {trying|gerund-infinitive|try} something new.\n\nMany people {wore|past-irregular|weared} Nintendo T-shirts, some dressed up as Mario characters, and {lots of|quantifier|much} people took selfies or filmed themselves playing.",
   },
   {
     id: 'b2-article-koalas-endangered',
@@ -1390,7 +1781,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Nature and Animals',
     situation: 'This article is going into a nature club newsletter. The editor asked you to proofread it.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Koalas_labeled_as_\'endangered\'_in_eastern_states_of_Australia', licence: 'CC BY 2.5' },
+    source: {
+      name: 'Wikinews',
+      url: "https://en.wikinews.org/wiki/Koalas_labeled_as_'endangered'_in_eastern_states_of_Australia",
+      licence: 'CC BY 2.5',
+    },
     text: 'In February 2022, the Australian government {declared|present-perfect|has declared} the koala {an endangered|article|a endangered} species in Queensland, New South Wales and the Australian Capital Territory. Until then, it {had been|tense|has been} listed only as "vulnerable".\n\n{Since|since-for|For} 2001, koala numbers {have fallen|present-perfect|fell} by half in Queensland and by 62 per cent in New South Wales. The terrible bushfires of 2019 and 2020 {killed|tense|kill}, injured or affected around sixty thousand of the animals, and droughts, the growth of cities and the loss of forests have also played a part. One official inquiry warned that koalas {could|reported-speech|can} disappear from New South Wales by 2050.\n\nThe environment minister, Sussan Ley, said there {was|reported-speech|is} still time to save "this globally iconic species", and the government set aside 74 million Australian dollars {to protect|gerund-infinitive|for protect} koala habitats.\n\nHowever, some conservation groups were not satisfied. One of them argued that the koala {is|agreement|are} endangered in Victoria and South Australia too, and accused the government of {allowing|gerund-infinitive|to allow} too many forests {to be cleared|passive|to clear}.',
   },
   {
@@ -1400,7 +1795,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Nature and Animals',
     situation: 'A colleague wrote this for a science newsletter. Check it before it is sent out.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Entomological_Society_of_America_renames_invasive_moth', licence: 'CC BY 2.5' },
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/Entomological_Society_of_America_renames_invasive_moth',
+      licence: 'CC BY 2.5',
+    },
     text: 'In March 2022, the Entomological Society of America {gave|past-irregular|gived} a new English name to one of North America\'s most destructive insects. The moth, {whose|confusable|who\'s} scientific name is Lymantria dispar, {is|agreement|are} now called the "spongy moth". Its old name was dropped because it contained a word that many Roma people {find|agreement|finds} deeply offensive.\n\nThe society first announced the change in July 2021, but it took months {to choose|gerund-infinitive|choosing} a new name. A team of 57 experts {looked at|preposition|looked} more than two hundred suggestions from the public before the society voted.\n\nThe new name comes from the French word spongieuse and {describes|agreement|describe} the soft, sponge-like masses in which the moth {lays|agreement|lay} its eggs. It also matches the names {used|passive|using} in other languages, such as German.\n\nThe spongy moth is native to Europe, Asia and North Africa, but since it arrived in North America in 1869, it {has become|present-perfect|became} a serious problem. Its hairy caterpillars {can eat|modal|can to eat} so many leaves that they strip {a whole tree|article-missing|whole tree} bare. The society admits that the new name will not be adopted overnight, {especially|word-form|especial} in books and official documents.',
   },
   {
@@ -1410,18 +1809,26 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Travel and Culture',
     situation: 'A friend wrote this for a geography club newsletter. Check it before it is printed.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Chilean_president_Gabriel_Boric_makes_historic_trip_to_South_Pole_becoming_the_first_head_of_state_to_visit_and_third_head_of_government', licence: 'CC BY 4.0' },
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/Chilean_president_Gabriel_Boric_makes_historic_trip_to_South_Pole_becoming_the_first_head_of_state_to_visit_and_third_head_of_government',
+      licence: 'CC BY 4.0',
+    },
     text: 'In January 2025, Chile\'s president, Gabriel Boric, {became|past-irregular|becomed} the first serving head of state ever to visit the South Pole. He was also {the first|article-missing|first} Latin American leader to get there.\n\nBoric {flew|past-irregular|flied} from Punta Arenas, in the south of Chile, to a Chilean research station on the Union Glacier, and from there to the American Amundsen-Scott station at the Pole. {He was accompanied|passive|He accompanied} by his defence and environment ministers and three military commanders, and he {spent|past-irregular|spended} about two hours at the station. "This is a milestone for us," he said. "It is the first time {a Chilean president has come|present-perfect|a Chilean president came} to the South Pole."\n\nThe trip was also political. Chile is one of seven countries that {claim|agreement|claims} part of Antarctica, although the United States and most other countries {do not recognise|agreement|does not recognise} these claims. Since 1961, the continent {has been|present-perfect|is} governed by the Antarctic Treaty, which {aims|agreement|aim} to keep it free from conflict. Chile now hopes {to expand|gerund-infinitive|expanding} its research further south, into the Weddell and Bellingshausen Seas.',
   },
   {
     id: 'b2-article-india-cricket-final',
-    title: 'India\'s first World Cup',
+    title: "India's first World Cup",
     level: 'B2',
     format: 'article',
     topic: 'Sport and Free Time',
     situation: 'This report is for a sports website. Your colleague asked you to check it before it goes live.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/India_wins_2025_Women\'s_Cricket_World_Cup%2C_defeating_South_Africa_by_52_runs', licence: 'CC BY 4.0' },
-    text: 'On 2 November 2025, India {won|past-irregular|winned} the Women\'s Cricket World Cup for {the first time|article-missing|first time}, {beating|gerund-infinitive|beat} South Africa by 52 runs in the final in Navi Mumbai. The tournament {was held|passive|held} in India, so the victory {meant|past-irregular|meaned} even more to the home crowd.\n\nSouth Africa won the toss and chose {to bowl|gerund-infinitive|bowling} first. India scored 298 runs, {thanks to|preposition|thanks for} 87 from Shafali Verma and 58 from Deepti Sharma. It was the second-highest score ever {made|passive|making} in a Women\'s World Cup final.\n\nSouth Africa\'s captain, Laura Wolvaardt, scored a brilliant hundred, but her team {lost|past-irregular|losed} too many wickets, five of them to Deepti Sharma, and they were all out for 246.\n\nVerma was named Player of the Match. She said she had stayed calm and {believed|tense|believes} in herself, and she thanked her family and friends for their support. Wolvaardt said she {could not|modal|could not to} be prouder of her team, but admitted that India {had played|tense|has played} brilliant cricket.',
+    source: {
+      name: 'Wikinews',
+      url: "https://en.wikinews.org/wiki/India_wins_2025_Women's_Cricket_World_Cup%2C_defeating_South_Africa_by_52_runs",
+      licence: 'CC BY 4.0',
+    },
+    text: "On 2 November 2025, India {won|past-irregular|winned} the Women's Cricket World Cup for {the first time|article-missing|first time}, {beating|gerund-infinitive|beat} South Africa by 52 runs in the final in Navi Mumbai. The tournament {was held|passive|held} in India, so the victory {meant|past-irregular|meaned} even more to the home crowd.\n\nSouth Africa won the toss and chose {to bowl|gerund-infinitive|bowling} first. India scored 298 runs, {thanks to|preposition|thanks for} 87 from Shafali Verma and 58 from Deepti Sharma. It was the second-highest score ever {made|passive|making} in a Women's World Cup final.\n\nSouth Africa's captain, Laura Wolvaardt, scored a brilliant hundred, but her team {lost|past-irregular|losed} too many wickets, five of them to Deepti Sharma, and they were all out for 246.\n\nVerma was named Player of the Match. She said she had stayed calm and {believed|tense|believes} in herself, and she thanked her family and friends for their support. Wolvaardt said she {could not|modal|could not to} be prouder of her team, but admitted that India {had played|tense|has played} brilliant cricket.",
   },
   {
     id: 'c1-article-ivory-dna',
@@ -1430,7 +1837,11 @@ export const proofreadingTexts: ProofreadingText[] = [
     format: 'article',
     topic: 'Nature and Animals',
     situation: 'This piece is going into an environmental newsletter. You are the last person to check it.',
-    source: { name: 'Wikinews', url: 'https://en.wikinews.org/wiki/Scientists_use_DNA_analysis_to_track_elephant_poaching_networks', licence: 'CC BY 2.5' },
+    source: {
+      name: 'Wikinews',
+      url: 'https://en.wikinews.org/wiki/Scientists_use_DNA_analysis_to_track_elephant_poaching_networks',
+      licence: 'CC BY 2.5',
+    },
     text: 'In February 2022, scientists led by the University of Washington reported that they {had used|tense|have used} DNA analysis to trace the criminal networks behind {the illegal ivory trade|article-missing|illegal ivory trade}. Working with the US Department of Homeland Security, they examined 4,320 tusks {that had been seized|passive|that had seized} in 49 separate cases in twelve countries {between|preposition|from} 2002 and 2019.\n\nThe team found that tusks from closely related elephants — and sometimes even the two tusks of {a single animal|article-missing|single animal} — often turned up in different shipments that passed through the same ports. This {suggests|agreement|suggest} that poachers {return|agreement|returns} to the same herds year after year, and that the tusks {are split up|passive|split up} somewhere along the smuggling route, {which|pronoun|what} makes them {much harder|comparative|more harder} for the authorities to track.\n\nThe lead author, Samuel Wasser, believes that similar studies could give police the evidence {with which|pronoun|which} to prosecute poachers and the people who work with them, by proving that different seizures of ivory are linked. {Had such tools existed|conditional|If such tools would have existed} decades ago, far {fewer|quantifier|less} elephants might {have been killed|conditional|be killed}.',
   },
 ]

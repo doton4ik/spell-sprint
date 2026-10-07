@@ -9,8 +9,15 @@ import { pathToFileURL } from 'node:url'
 
 const root = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')
 const dir = mkdtempSync(join(tmpdir(), 'proofreading-'))
-for (const [file, name] of [['src/services/proofreadingEngine.ts', 'proofreadingEngine.ts'], ['src/data/proofreadingTexts.ts', 'proofreadingTexts.ts'], ['src/data/realWordTraps.ts', 'realWordTraps.ts'], ['src/data/proofreadingHidden.ts', 'proofreadingHidden.ts']]) {
-  const source = readFileSync(join(root, file), 'utf8').replace("'../data/proofreadingTexts'", "'./proofreadingTexts.ts'").replace("'../data/realWordTraps'", "'./realWordTraps.ts'")
+for (const [file, name] of [
+  ['src/services/proofreadingEngine.ts', 'proofreadingEngine.ts'],
+  ['src/data/proofreadingTexts.ts', 'proofreadingTexts.ts'],
+  ['src/data/realWordTraps.ts', 'realWordTraps.ts'],
+  ['src/data/proofreadingHidden.ts', 'proofreadingHidden.ts'],
+]) {
+  const source = readFileSync(join(root, file), 'utf8')
+    .replace("'../data/proofreadingTexts'", "'./proofreadingTexts.ts'")
+    .replace("'../data/realWordTraps'", "'./realWordTraps.ts'")
   writeFileSync(join(dir, name), source)
 }
 const engine = await import(pathToFileURL(join(dir, 'proofreadingEngine.ts')).href)
@@ -19,12 +26,16 @@ const { hiddenProofreadingTextIds } = await import(pathToFileURL(join(dir, 'proo
 
 let failed = 0
 const lowVariety = []
-const fail = (message) => { failed += 1; if (failed <= 40) console.log('FAIL', message) }
+const fail = (message) => {
+  failed += 1
+  if (failed <= 40) console.log('FAIL', message)
+}
 const ids = new Set()
 const levels = { A2: 0, B1: 0, B2: 0, C1: 0 }
 let hiddenCount = 0
 for (const text of proofreadingTexts) {
-  if (ids.has(text.id)) fail(`${text.id}: duplicate id`); ids.add(text.id)
+  if (ids.has(text.id)) fail(`${text.id}: duplicate id`)
+  ids.add(text.id)
   if (hiddenProofreadingTextIds.has(text.id)) hiddenCount += 1
   else levels[text.level] = (levels[text.level] ?? 0) + 1
   const { segments, problems } = engine.parseProofreadingText(text.text)
@@ -32,7 +43,8 @@ for (const text of proofreadingTexts) {
   const places = segments.filter((segment) => segment.kind === 'place').length
   if (places < 8) fail(`${text.id}: only ${places} marked places`)
   // Enough places to vary the exercise: at least 2 more than one exercise uses (twice as many is the goal).
-  if (places < engine.mistakeCountFor(text) + 2) fail(`${text.id}: ${places} places for ${engine.mistakeCountFor(text)} mistakes — too few to vary the exercise`)
+  if (places < engine.mistakeCountFor(text) + 2)
+    fail(`${text.id}: ${places} places for ${engine.mistakeCountFor(text)} mistakes — too few to vary the exercise`)
   else if (places < engine.mistakeCountFor(text) * 2) lowVariety.push(text.id)
 
   for (let seed = 1; seed <= 150; seed += 1) {
@@ -46,12 +58,16 @@ for (const text of proofreadingTexts) {
     const perfect = new Map()
     for (const slot of exercise.slots) slot.tokenIds.forEach((id, index) => perfect.set(id, index === 0 ? slot.correct[0] : ''))
     const good = engine.checkExercise(exercise, perfect)
-    if (good.fixed !== exercise.slots.length || good.falseAlarms.length) fail(`${text.id} seed ${seed}: perfect edits → fixed ${good.fixed}/${exercise.slots.length}, false alarms ${good.falseAlarms.map((alarm) => alarm.original).join(',')}`)
+    if (good.fixed !== exercise.slots.length || good.falseAlarms.length)
+      fail(
+        `${text.id} seed ${seed}: perfect edits → fixed ${good.fixed}/${exercise.slots.length}, false alarms ${good.falseAlarms.map((alarm) => alarm.original).join(',')}`,
+      )
 
     // Fix a missing word through the word before it: "bought" → "bought a", span unchanged.
     const words = exercise.tokens.filter((token) => token.isWord)
     for (const slot of exercise.slots.filter((item) => item.type === 'article-missing')) {
-      const at = words.findIndex((token) => token.id === slot.tokenIds[0]); const before = words[at - 1]
+      const at = words.findIndex((token) => token.id === slot.tokenIds[0])
+      const before = words[at - 1]
       if (!before) continue
       const extra = slot.correct[0].split(' ').slice(0, -slot.shown.split(' ').length).join(' ')
       // If the word before is itself a mistake, the learner fixes it in the same edit.
@@ -60,7 +76,8 @@ for (const text of proofreadingTexts) {
       const edits = new Map([[before.id, `${beforeText} ${extra}`]])
       if (neighbour) neighbour.tokenIds.filter((id) => id !== before.id).forEach((id) => edits.set(id, ''))
       const result = engine.checkExercise(exercise, edits)
-      if (result.slots.find((item) => item.slot.id === slot.id).status !== 'fixed' || result.falseAlarms.length) fail(`${text.id} seed ${seed}: neighbour fix for "${slot.correct[0]}" not accepted`)
+      if (result.slots.find((item) => item.slot.id === slot.id).status !== 'fixed' || result.falseAlarms.length)
+        fail(`${text.id} seed ${seed}: neighbour fix for "${slot.correct[0]}" not accepted`)
     }
   }
   // Spelling hunt: every slip is a real change, the text gets (nearly) its full number, and fixing
@@ -76,7 +93,8 @@ for (const text of proofreadingTexts) {
     if (real) fail(`${text.id} hunt seed ${seed}: slip "${real.shown}" is a real or rude word`)
     const perfect = new Map(hunt.slots.map((slot) => [slot.tokenIds[0], slot.correct[0]]))
     const good = engine.checkExercise(hunt, perfect)
-    if (good.fixed !== hunt.slots.length || good.falseAlarms.length) fail(`${text.id} hunt seed ${seed}: perfect edits → fixed ${good.fixed}/${hunt.slots.length}`)
+    if (good.fixed !== hunt.slots.length || good.falseAlarms.length)
+      fail(`${text.id} hunt seed ${seed}: perfect edits → fixed ${good.fixed}/${hunt.slots.length}`)
   }
 }
 // Hidden ids must name real texts, and none may be the start of another id (mistakes are matched by prefix).
@@ -93,17 +111,24 @@ try {
     const { segments, problems } = engine.parseProofreadingText(item.text)
     problems.forEach((problem) => fail(`sentence ${item.id}: ${problem}`))
     const places = segments.filter((segment) => segment.kind === 'place')
-    if (places.length !== 1) { fail(`sentence ${item.id}: ${places.length} places`); continue }
-    if (places[0].place.wrong.some((wrong) => places[0].place.correct.includes(wrong))) fail(`sentence ${item.id}: wrong form equals the correct one`)
+    if (places.length !== 1) {
+      fail(`sentence ${item.id}: ${places.length} places`)
+      continue
+    }
+    if (places[0].place.wrong.some((wrong) => places[0].place.correct.includes(wrong)))
+      fail(`sentence ${item.id}: wrong form equals the correct one`)
     const text = { id: `s-${item.id}`, title: '', level: 'B1', format: 'sentences', topic: '', text: item.text }
     const exercise = engine.buildExercise(text, 1, { [item.type]: 100 })
     const slot = exercise.slots.find((candidate) => candidate.type === item.type)
     if (!slot) continue
     const fixed = engine.checkExercise(exercise, new Map(slot.tokenIds.map((id, index) => [id, index === 0 ? slot.correct[0] : ''])))
-    if (!fixed.slots.find((result) => result.slot.id === slot.id && result.status === 'fixed')) fail(`sentence ${item.id}: perfect fix not accepted`)
+    if (!fixed.slots.find((result) => result.slot.id === slot.id && result.status === 'fixed'))
+      fail(`sentence ${item.id}: perfect fix not accepted`)
     poolChecked += 1
   }
-} catch (error) { if (error.code !== 'ENOENT') throw error }
+} catch (error) {
+  if (error.code !== 'ENOENT') throw error
+}
 if (poolChecked) console.log(`sentence pool: ${poolChecked} sentences checked`)
 console.log('texts shown per level:', levels, hiddenCount ? `(+${hiddenCount} hidden, still checked)` : '')
 if (lowVariety.length) console.log(`note: ${lowVariety.length} text(s) have fewer than twice as many places as mistakes (less variety)`)

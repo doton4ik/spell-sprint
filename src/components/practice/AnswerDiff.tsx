@@ -9,11 +9,20 @@ export function buildSegments(expected: string, submitted: string, ops: EditOp[]
   const submittedKinds = new Map<number, Segment['kind']>()
   const gapsBefore = new Map<number, number>()
   for (const op of ops) {
-    if (op.type === 'delete') { expectedKinds.set(op.expectedIndex, 'fix'); gapsBefore.set(op.submittedIndex, (gapsBefore.get(op.submittedIndex) ?? 0) + 1) }
+    if (op.type === 'delete') {
+      expectedKinds.set(op.expectedIndex, 'fix')
+      gapsBefore.set(op.submittedIndex, (gapsBefore.get(op.submittedIndex) ?? 0) + 1)
+    }
     if (op.type === 'insert') submittedKinds.set(op.submittedIndex, 'bad')
-    if (op.type === 'substitute') { expectedKinds.set(op.expectedIndex, 'fix'); submittedKinds.set(op.submittedIndex, 'bad') }
+    if (op.type === 'substitute') {
+      expectedKinds.set(op.expectedIndex, 'fix')
+      submittedKinds.set(op.submittedIndex, 'bad')
+    }
     if (op.type === 'transpose') {
-      for (const offset of [0, 1]) { expectedKinds.set(op.expectedIndex + offset, 'swap'); submittedKinds.set(op.submittedIndex + offset, 'swap') }
+      for (const offset of [0, 1]) {
+        expectedKinds.set(op.expectedIndex + offset, 'swap')
+        submittedKinds.set(op.submittedIndex + offset, 'swap')
+      }
     }
   }
   const expectedChars = Array.from(expected).map((char, index): Segment => ({ char, kind: expectedKinds.get(index) ?? 'same' }))
@@ -27,7 +36,15 @@ export function buildSegments(expected: string, submitted: string, ops: EditOp[]
 }
 
 export function Letters({ segments, small }: { segments: Segment[]; small?: boolean }) {
-  return <span className={`diff-word${small ? ' diff-word--small' : ''}`}>{segments.map((segment, index) => <span className={`diff-char diff-char--${segment.kind}`} key={index}>{segment.char}</span>)}</span>
+  return (
+    <span className={`diff-word${small ? ' diff-word--small' : ''}`}>
+      {segments.map((segment, index) => (
+        <span className={`diff-char diff-char--${segment.kind}`} key={index}>
+          {segment.char}
+        </span>
+      ))}
+    </span>
+  )
 }
 
 // Compact "wrong → right" with the mistaken letters marked. Answers that share almost nothing with
@@ -37,13 +54,24 @@ export function AnswerDiff({ expected, submitted, show = 'both' }: { expected: s
   const b = submitted.trim().toLocaleLowerCase()
   const { distance, ops } = diffStrings(a, b)
   if (!b || distance > Math.max(2, Math.ceil(a.length / 2))) {
-    return show === 'both' ? <span className="answer-diff"><s>{submitted || 'Skipped'}</s> → <strong>{expected}</strong></span> : <s>{submitted || 'Skipped'}</s>
+    return show === 'both' ? (
+      <span className="answer-diff">
+        <s>{submitted || 'Skipped'}</s> → <strong>{expected}</strong>
+      </span>
+    ) : (
+      <s>{submitted || 'Skipped'}</s>
+    )
   }
   const { expectedChars, submittedChars } = buildSegments(a, b, ops)
   return (
     <span className="answer-diff">
       <Letters segments={submittedChars} small />
-      {show === 'both' ? <><span className="answer-diff__arrow">→</span><Letters segments={expectedChars} small /></> : null}
+      {show === 'both' ? (
+        <>
+          <span className="answer-diff__arrow">→</span>
+          <Letters segments={expectedChars} small />
+        </>
+      ) : null}
     </span>
   )
 }

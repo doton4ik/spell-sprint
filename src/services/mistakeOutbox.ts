@@ -13,18 +13,35 @@ const OUTBOX_EVENT = 'spell-sprint:mistake-outbox'
 // would only fill "Unclassified" with noise, and a blank answer carries no spelling information.
 export function shouldClassify(attempt: PracticeAttempt) {
   // An attention slip (a letter lost while reading fast) has no spelling rule behind it.
-  return !attempt.isCorrect && Boolean(attempt.userAnswer.trim()) && attempt.taskType !== 'correct-sentence' && attempt.taskType !== 'translate-en-ru' && attempt.errorCategory !== 'Attention slip'
+  return (
+    !attempt.isCorrect &&
+    Boolean(attempt.userAnswer.trim()) &&
+    attempt.taskType !== 'correct-sentence' &&
+    attempt.taskType !== 'translate-en-ru' &&
+    attempt.errorCategory !== 'Attention slip'
+  )
 }
 
 function read(): PracticeAttempt[] {
-  try { const value = JSON.parse(window.localStorage.getItem(OUTBOX_KEY) ?? '[]'); return Array.isArray(value) ? value : [] } catch { return [] }
+  try {
+    const value = JSON.parse(window.localStorage.getItem(OUTBOX_KEY) ?? '[]')
+    return Array.isArray(value) ? value : []
+  } catch {
+    return []
+  }
 }
 function write(items: PracticeAttempt[]) {
-  try { window.localStorage.setItem(OUTBOX_KEY, JSON.stringify(items.slice(-MAX_QUEUED))) } catch { /* storage blocked: nothing more we can do */ }
+  try {
+    window.localStorage.setItem(OUTBOX_KEY, JSON.stringify(items.slice(-MAX_QUEUED)))
+  } catch {
+    /* storage blocked: nothing more we can do */
+  }
   window.dispatchEvent(new Event(OUTBOX_EVENT))
 }
 
-export function getOutboxSize() { return read().length }
+export function getOutboxSize() {
+  return read().length
+}
 export function subscribeToOutbox(onChange: () => void) {
   window.addEventListener(OUTBOX_EVENT, onChange)
   return () => window.removeEventListener(OUTBOX_EVENT, onChange)
@@ -56,7 +73,10 @@ export function flushMistakeOutbox(): Promise<number> {
           // The server rejected this row itself (bad data): retrying cannot help, so drop it rather than
           // block the whole queue. No network, auth or server trouble: keep everything and try later.
           const status = (error as { status?: number }).status
-          if (status !== 400 && status !== 409 && status !== 422) { console.warn('Mistake kept in the outbox; will retry.', error); break }
+          if (status !== 400 && status !== 409 && status !== 422) {
+            console.warn('Mistake kept in the outbox; will retry.', error)
+            break
+          }
           console.warn('A queued mistake was rejected by the server and dropped.', error)
         }
         write(read().filter((item) => item.id !== attempt.id))

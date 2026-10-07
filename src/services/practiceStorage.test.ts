@@ -3,7 +3,7 @@ import type { PracticeAttempt } from '../types/practice'
 import { getPracticeAttempts, mergePracticeAttempts } from './practiceStorage'
 
 const KEY = 'spell-sprint.practice-attempts'
-const attempt = (id: string, createdAt: string): PracticeAttempt => ({ id, taskId: 't', createdAt, isCorrect: true } as PracticeAttempt)
+const attempt = (id: string, createdAt: string): PracticeAttempt => ({ id, taskId: 't', createdAt, isCorrect: true }) as PracticeAttempt
 
 describe('getPracticeAttempts cache', () => {
   beforeEach(() => window.localStorage.clear())

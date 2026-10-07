@@ -20,7 +20,13 @@ export type TopicStats = {
   lastPractised: string | null
 }
 
-export const topicStatusLabels: Record<TopicStatus, string> = { 'not-started': 'Not started', preliminary: 'Too little data', 'needs-focus': 'Needs focus', developing: 'Developing', strong: 'Strong' }
+export const topicStatusLabels: Record<TopicStatus, string> = {
+  'not-started': 'Not started',
+  preliminary: 'Too little data',
+  'needs-focus': 'Needs focus',
+  developing: 'Developing',
+  strong: 'Strong',
+}
 
 function groupFor(topic: string): TopicStats['groupId'] {
   return libraryGroups.find((group) => !group.personal && group.id !== 'all' && group.topics.includes(topic))?.id ?? 'other'
@@ -39,7 +45,11 @@ export function getTopicStats(): TopicStats[] {
   const progress = getWordProgress()
   const byTopic = new Map<string, LibraryWord[]>()
   // Imported CSVs may spell a built-in topic differently ("business"); fold those into the canonical name.
-  for (const word of getAllWords()) { const raw = canonicalTopic(word.topicId, word.topic).topic.trim() || 'Other'; const name = raw[0].toLocaleUpperCase() + raw.slice(1); byTopic.set(name, [...(byTopic.get(name) ?? []), word]) }
+  for (const word of getAllWords()) {
+    const raw = canonicalTopic(word.topicId, word.topic).topic.trim() || 'Other'
+    const name = raw[0].toLocaleUpperCase() + raw.slice(1)
+    byTopic.set(name, [...(byTopic.get(name) ?? []), word])
+  }
 
   return [...byTopic.entries()].map(([topic, words]) => {
     const entries = words.map((word) => progress.get(word.wordId)).filter((entry): entry is WordProgress => Boolean(entry))
@@ -49,11 +59,20 @@ export function getTopicStats(): TopicStats[] {
     const due = entries.filter((entry) => entry.due).length
     const subtopicNames = [...new Set(words.map((word) => word.subtopic || 'General'))]
     return {
-      topic, groupId: groupFor(topic), words, practised: entries.length, due, accuracy,
+      topic,
+      groupId: groupFor(topic),
+      words,
+      practised: entries.length,
+      due,
+      accuracy,
       known: entries.filter((entry) => entry.latest.isCorrect && entry.correct >= 2).length,
       answers: attempts,
       status: statusFor(entries.length, words.length, accuracy, due, attempts),
-      lastPractised: entries.map((entry) => entry.latest.createdAt).sort().at(-1) ?? null,
+      lastPractised:
+        entries
+          .map((entry) => entry.latest.createdAt)
+          .sort()
+          .at(-1) ?? null,
       subtopics: subtopicNames.map((name) => {
         const inSub = words.filter((word) => (word.subtopic || 'General') === name)
         const subEntries = inSub.map((word) => progress.get(word.wordId)).filter(Boolean) as WordProgress[]

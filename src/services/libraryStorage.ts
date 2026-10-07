@@ -8,17 +8,50 @@ import { normalisePartOfSpeech, partOfSpeechOptions, type LibraryWord, type Word
 const CUSTOM_LIBRARIES_KEY = 'spell-sprint.custom-libraries'
 export const initialTopics = canonicalTopics.map((item) => item.name)
 
-function read<T>(key: string, fallback: T): T { try { const value = window.localStorage.getItem(key); return value ? JSON.parse(value) as T : fallback } catch { return fallback } }
-function normalise(value: string) { return value.trim().toLocaleLowerCase() }
-function uniqueWords(words: LibraryWord[]) { const seen = new Set<string>(); return words.filter((word) => { const key = word.wordId || `${word.topicId}:${normalise(word.word)}:${normalise(word.partOfSpeech)}`; if (seen.has(key)) return false; seen.add(key); return true }) }
+function read<T>(key: string, fallback: T): T {
+  try {
+    const value = window.localStorage.getItem(key)
+    return value ? (JSON.parse(value) as T) : fallback
+  } catch {
+    return fallback
+  }
+}
+function normalise(value: string) {
+  return value.trim().toLocaleLowerCase()
+}
+function uniqueWords(words: LibraryWord[]) {
+  const seen = new Set<string>()
+  return words.filter((word) => {
+    const key = word.wordId || `${word.topicId}:${normalise(word.word)}:${normalise(word.partOfSpeech)}`
+    if (seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
+}
 
 function migrateLibrary(library: WordLibrary): WordLibrary {
-  return { ...library, kind: library.kind ?? libraryKindForName(library.name), includes: library.includes ?? [], words: library.words.map((legacy) => {
-    const word = legacy as LibraryWord & Partial<LibraryWord>
-    const canonical = canonicalTopic(word.topicId ?? '', word.topic); const subtopic = word.subtopic ?? ''
-    const wordId = word.wordId || word.id || stableWordId(canonical.topicId, subtopic, word.word)
-    return { ...word, id: word.id || wordId, wordId, topicId: canonical.topicId, topic: canonical.topic, subtopic, partOfSpeech: normalisePartOfSpeech(word.partOfSpeech), library: word.library || library.name, source: word.source || library.source }
-  }) }
+  return {
+    ...library,
+    kind: library.kind ?? libraryKindForName(library.name),
+    includes: library.includes ?? [],
+    words: library.words.map((legacy) => {
+      const word = legacy as LibraryWord & Partial<LibraryWord>
+      const canonical = canonicalTopic(word.topicId ?? '', word.topic)
+      const subtopic = word.subtopic ?? ''
+      const wordId = word.wordId || word.id || stableWordId(canonical.topicId, subtopic, word.word)
+      return {
+        ...word,
+        id: word.id || wordId,
+        wordId,
+        topicId: canonical.topicId,
+        topic: canonical.topic,
+        subtopic,
+        partOfSpeech: normalisePartOfSpeech(word.partOfSpeech),
+        library: word.library || library.name,
+        source: word.source || library.source,
+      }
+    }),
+  }
 }
 
 function resolveLibraries(libraries: WordLibrary[]) {
@@ -26,7 +59,10 @@ function resolveLibraries(libraries: WordLibrary[]) {
   const resolve = (library: WordLibrary, trail = new Set<string>()): LibraryWord[] => {
     if (trail.has(library.id)) return library.words
     const nextTrail = new Set(trail).add(library.id)
-    const injected = (library.includes ?? []).flatMap((id) => { const shared = byId.get(id); return shared ? resolve(shared, nextTrail) : [] })
+    const injected = (library.includes ?? []).flatMap((id) => {
+      const shared = byId.get(id)
+      return shared ? resolve(shared, nextTrail) : []
+    })
     return uniqueWords([...library.words, ...injected]).map((word) => ({ ...word, library: library.name }))
   }
   return libraries.map((library) => ({ ...library, words: resolve(library) }))
@@ -46,31 +82,53 @@ export function repairImportedLibraries(libraries: WordLibrary[]): WordLibrary[]
   const byName = new Map<string, WordLibrary>()
   const misfiled: WordLibrary[] = []
   for (const library of [...libraries].sort((a, b) => createdTime(a) - createdTime(b))) {
-    if (partOfSpeechNames.has(normalise(library.name))) { misfiled.push(library); continue }
+    if (partOfSpeechNames.has(normalise(library.name))) {
+      misfiled.push(library)
+      continue
+    }
     const existing = byName.get(normalise(library.name))
     if (existing) existing.words = [...existing.words, ...library.words]
     else byName.set(normalise(library.name), { ...library, words: [...library.words] })
   }
   const kept = [...byName.values()]
   for (const library of misfiled) {
-    const sameImport = kept.filter((candidate) => Math.abs(createdTime(candidate) - createdTime(library)) <= 2 * 86400000)
+    const sameImport = kept
+      .filter((candidate) => Math.abs(createdTime(candidate) - createdTime(library)) <= 2 * 86400000)
       .sort((a, b) => Math.abs(createdTime(a) - createdTime(library)) - Math.abs(createdTime(b) - createdTime(library)))[0]
     let target = sameImport ?? kept.find((candidate) => candidate.name === 'Imported words')
-    if (!target) { target = { ...library, name: 'Imported words', words: [], kind: libraryKindForName('Imported words') }; kept.push(target) }
+    if (!target) {
+      target = { ...library, name: 'Imported words', words: [], kind: libraryKindForName('Imported words') }
+      kept.push(target)
+    }
     target.words = [...target.words, ...library.words]
   }
-  return kept.map((library) => {
-    const seen = new Set<string>()
-    const words = library.words.filter((word) => { const key = wordKey(word); if (seen.has(key)) return false; seen.add(key); return true }).map((word) => ({ ...word, library: library.name }))
-    return { ...library, words }
-  }).filter((library) => library.words.length)
+  return kept
+    .map((library) => {
+      const seen = new Set<string>()
+      const words = library.words
+        .filter((word) => {
+          const key = wordKey(word)
+          if (seen.has(key)) return false
+          seen.add(key)
+          return true
+        })
+        .map((word) => ({ ...word, library: library.name }))
+      return { ...library, words }
+    })
+    .filter((library) => library.words.length)
 }
 
 export function getImportedLibraries(): WordLibrary[] {
   const stored = read<WordLibrary[]>(CUSTOM_LIBRARIES_KEY, []).map(migrateLibrary)
   const repaired = repairImportedLibraries(stored)
   // Save the repair once, so other screens and the next cloud sync see the clean list.
-  if (JSON.stringify(repaired) !== JSON.stringify(stored)) { try { window.localStorage.setItem(CUSTOM_LIBRARIES_KEY, JSON.stringify(repaired)) } catch { /* keep using the repaired copy in memory */ } }
+  if (JSON.stringify(repaired) !== JSON.stringify(stored)) {
+    try {
+      window.localStorage.setItem(CUSTOM_LIBRARIES_KEY, JSON.stringify(repaired))
+    } catch {
+      /* keep using the repaired copy in memory */
+    }
+  }
   return repaired
 }
 export const removalKey = { library: (name: string) => `lib:${normalise(name)}`, word: (wordId: string) => `word:${wordId}` }
@@ -79,7 +137,8 @@ export const removalKey = { library: (name: string) => `lib:${normalise(name)}`,
 function withoutRemoved(libraries: WordLibrary[]) {
   const removed = getRemovedKeys()
   if (!removed.size) return libraries
-  return libraries.filter((library) => !removed.has(removalKey.library(library.name)))
+  return libraries
+    .filter((library) => !removed.has(removalKey.library(library.name)))
     .map((library) => ({ ...library, words: library.words.filter((word) => !removed.has(removalKey.word(word.wordId))) }))
     .filter((library) => library.words.length)
 }
@@ -88,8 +147,13 @@ function withoutRemoved(libraries: WordLibrary[]) {
 export function mergeImportedLibraries(incoming: WordLibrary[]) {
   const local = getImportedLibraries()
   // From the cloud backup: words without text are dropped before migration, the rest checked field by field.
-  const valid = incoming.filter((library) => library && typeof library.id === 'string' && typeof library.name === 'string' && Array.isArray(library.words))
-    .map((library) => ({ ...library, name: library.name.slice(0, 120), words: library.words.filter((word) => word && typeof word.word === 'string' && typeof word.translation === 'string') }))
+  const valid = incoming
+    .filter((library) => library && typeof library.id === 'string' && typeof library.name === 'string' && Array.isArray(library.words))
+    .map((library) => ({
+      ...library,
+      name: library.name.slice(0, 120),
+      words: library.words.filter((word) => word && typeof word.word === 'string' && typeof word.translation === 'string'),
+    }))
     .map(migrateLibrary)
     .map((library) => ({ ...library, words: library.words.map(sanitizeWord).filter((word): word is LibraryWord => word !== null) }))
   const merged = withoutRemoved(repairImportedLibraries([...local, ...valid]))
@@ -105,17 +169,29 @@ export function mergeImportedLibraries(incoming: WordLibrary[]) {
 let everyCache: { raw: string | null; libraries: WordLibrary[]; words: LibraryWord[] } | null = null
 function everything() {
   let raw: string | null = null
-  try { raw = window.localStorage.getItem(CUSTOM_LIBRARIES_KEY) } catch { /* storage blocked */ }
+  try {
+    raw = window.localStorage.getItem(CUSTOM_LIBRARIES_KEY)
+  } catch {
+    /* storage blocked */
+  }
   if (!everyCache || everyCache.raw !== raw) {
     const libraries = resolveLibraries([...builtInLibraries, ...getImportedLibraries()])
     // getImportedLibraries may have saved a repaired list; key the cache by what is stored now.
-    try { raw = window.localStorage.getItem(CUSTOM_LIBRARIES_KEY) } catch { /* storage blocked */ }
+    try {
+      raw = window.localStorage.getItem(CUSTOM_LIBRARIES_KEY)
+    } catch {
+      /* storage blocked */
+    }
     everyCache = { raw, libraries, words: uniqueWords(libraries.flatMap((library) => library.words)) }
   }
   return everyCache
 }
-export function getEveryLibrary(): WordLibrary[] { return everything().libraries }
-export function getEveryWord() { return everything().words }
+export function getEveryLibrary(): WordLibrary[] {
+  return everything().libraries
+}
+export function getEveryWord() {
+  return everything().words
+}
 
 // Before packs existed everything was on. Packs the learner has already practised stay on.
 function packsInUse() {
@@ -123,7 +199,9 @@ function packsInUse() {
     const attempts = JSON.parse(window.localStorage.getItem('spell-sprint.practice-attempts') ?? '[]') as Array<{ library?: string }>
     const used = new Set(attempts.map((attempt) => attempt.library).filter(Boolean))
     return libraryPacks.filter((pack) => pack.libraries.some((name) => used.has(name))).map((pack) => pack.id)
-  } catch { return [] }
+  } catch {
+    return []
+  }
 }
 
 export function isLibraryActive(library: WordLibrary) {
@@ -137,10 +215,17 @@ export function isLibraryActive(library: WordLibrary) {
 export function getLibraries(): WordLibrary[] {
   if (!getLibraryPrefs().packsInitialised) initialisePacks(packsInUse())
   const hidden = getHiddenWordIds()
-  return getEveryLibrary().filter(isLibraryActive).map((library) => ({ ...library, words: library.words.filter((word) => !hidden.has(word.wordId)) })).filter((library) => library.words.length)
+  return getEveryLibrary()
+    .filter(isLibraryActive)
+    .map((library) => ({ ...library, words: library.words.filter((word) => !hidden.has(word.wordId)) }))
+    .filter((library) => library.words.length)
 }
-export function getAllWords() { return uniqueWords(getLibraries().flatMap((library) => library.words)) }
-export function getTopicNames() { return [...new Set([...initialTopics, ...getAllWords().map((word) => word.topic)])] }
+export function getAllWords() {
+  return uniqueWords(getLibraries().flatMap((library) => library.words))
+}
+export function getTopicNames() {
+  return [...new Set([...initialTopics, ...getAllWords().map((word) => word.topic)])]
+}
 const LIBRARIES_UPDATED_EVENT = 'spell-sprint:learning-updated'
 // Replaces the imported libraries on this device (used by the CSV import and its undo).
 export function saveImportedLibraries(libraries: WordLibrary[]) {
@@ -158,21 +243,54 @@ export const csvTemplate = `word_id,word,translation,topic_id,topic,subtopic,dif
 
 // ---- Words the learner adds one by one (Libraries → Add a word) ----------------------------------
 export const MY_WORDS = 'My words'
-export type MyWordFields = { word: string; translation: string; partOfSpeech: string; definition: string; example: string; difficulty: LibraryWord['difficulty']; risk: number }
+export type MyWordFields = {
+  word: string
+  translation: string
+  partOfSpeech: string
+  definition: string
+  example: string
+  difficulty: LibraryWord['difficulty']
+  risk: number
+}
 
-export function myWordId(word: string) { return stableWordId('my-words', 'Added words', word) }
+export function myWordId(word: string) {
+  return stableWordId('my-words', 'Added words', word)
+}
 
 // Adds the word to "My words" (created on first use), or updates it if it is already there.
 export function addMyWord(fields: MyWordFields) {
   const libraries = getImportedLibraries()
   const wordId = myWordId(fields.word)
   const entry: LibraryWord = {
-    id: wordId, wordId, word: fields.word.trim(), translation: fields.translation.trim(), topicId: 'my-words', topic: MY_WORDS, subtopic: 'Added words',
-    difficulty: fields.difficulty, risk: fields.risk, example: fields.example.trim() || undefined, definition: fields.definition.trim() || undefined,
-    partOfSpeech: normalisePartOfSpeech(fields.partOfSpeech), library: MY_WORDS, source: 'dictionary',
+    id: wordId,
+    wordId,
+    word: fields.word.trim(),
+    translation: fields.translation.trim(),
+    topicId: 'my-words',
+    topic: MY_WORDS,
+    subtopic: 'Added words',
+    difficulty: fields.difficulty,
+    risk: fields.risk,
+    example: fields.example.trim() || undefined,
+    definition: fields.definition.trim() || undefined,
+    partOfSpeech: normalisePartOfSpeech(fields.partOfSpeech),
+    library: MY_WORDS,
+    source: 'dictionary',
   }
   let library = libraries.find((item) => item.name === MY_WORDS)
-  if (!library) { library = { id: crypto.randomUUID(), name: MY_WORDS, topic: MY_WORDS, words: [], source: 'imported', kind: 'topic', includes: [], createdAt: new Date().toISOString() }; libraries.push(library) }
+  if (!library) {
+    library = {
+      id: crypto.randomUUID(),
+      name: MY_WORDS,
+      topic: MY_WORDS,
+      words: [],
+      source: 'imported',
+      kind: 'topic',
+      includes: [],
+      createdAt: new Date().toISOString(),
+    }
+    libraries.push(library)
+  }
   const updated = library.words.some((word) => word.wordId === wordId)
   library.words = [...library.words.filter((word) => word.wordId !== wordId), entry]
   // A word or library deleted earlier and added again must not be dropped by the next sync.

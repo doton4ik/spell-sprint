@@ -13,5 +13,10 @@ export async function saveUserRuleNote(ruleId: string, note: string): Promise<vo
   if (!isSupabaseConfigured()) return
   const session = await getActiveCloudSession()
   if (!session) throw new Error('Sign in before saving a note.')
-  await insertRows(session, 'user_rule_notes', { user_id: session.user.id, rule_id: ruleId, note: note.slice(0, 2000), updated_at: new Date().toISOString() }, { onConflict: 'user_id,rule_id' })
+  await insertRows(
+    session,
+    'user_rule_notes',
+    { user_id: session.user.id, rule_id: ruleId, note: note.slice(0, 2000), updated_at: new Date().toISOString() },
+    { onConflict: 'user_id,rule_id' },
+  )
 }

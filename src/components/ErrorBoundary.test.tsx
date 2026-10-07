@@ -8,25 +8,50 @@ import { getStoredErrors } from '../services/errorLog'
 vi.spyOn(console, 'error').mockImplementation(() => undefined)
 ;(globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true
 
-function Broken(): never { throw new Error('Broken page for the test') }
+function Broken(): never {
+  throw new Error('Broken page for the test')
+}
 
 describe('ErrorBoundary', () => {
-  afterEach(() => { document.body.innerHTML = ''; window.localStorage.clear() })
+  afterEach(() => {
+    document.body.innerHTML = ''
+    window.localStorage.clear()
+  })
 
   it('shows a calm message instead of a blank screen and logs the error', async () => {
-    const host = document.createElement('div'); document.body.append(host)
+    const host = document.createElement('div')
+    document.body.append(host)
     const root = createRoot(host)
-    await act(async () => root.render(<ErrorBoundary key="practice"><Broken /></ErrorBoundary>))
+    await act(async () =>
+      root.render(
+        <ErrorBoundary key="practice">
+          <Broken />
+        </ErrorBoundary>,
+      ),
+    )
     expect(host.textContent).toContain('Something went wrong on this page.')
     expect(getStoredErrors().map((item) => item.message)).toContain('Broken page for the test')
     root.unmount()
   })
 
   it('opening another page tries again', async () => {
-    const host = document.createElement('div'); document.body.append(host)
+    const host = document.createElement('div')
+    document.body.append(host)
     const root = createRoot(host)
-    await act(async () => root.render(<ErrorBoundary key="a"><Broken /></ErrorBoundary>))
-    await act(async () => root.render(<ErrorBoundary key="b"><p>Working page</p></ErrorBoundary>))
+    await act(async () =>
+      root.render(
+        <ErrorBoundary key="a">
+          <Broken />
+        </ErrorBoundary>,
+      ),
+    )
+    await act(async () =>
+      root.render(
+        <ErrorBoundary key="b">
+          <p>Working page</p>
+        </ErrorBoundary>,
+      ),
+    )
     expect(host.textContent).toContain('Working page')
     root.unmount()
   })

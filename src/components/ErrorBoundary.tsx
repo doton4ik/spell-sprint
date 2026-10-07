@@ -11,7 +11,9 @@ type State = { failed: boolean }
 export class ErrorBoundary extends Component<Props, State> {
   state: State = { failed: false }
 
-  static getDerivedStateFromError(): State { return { failed: true } }
+  static getDerivedStateFromError(): State {
+    return { failed: true }
+  }
 
   componentDidCatch(error: Error, info: ErrorInfo) {
     reportError(Object.assign(error, { stack: `${error.stack ?? ''}\n--- component stack ---${info.componentStack ?? ''}` }), 'page')
@@ -21,12 +23,18 @@ export class ErrorBoundary extends Component<Props, State> {
     if (!this.state.failed) return this.props.children
     return (
       <div className="error-screen" role="alert">
-        <span className="error-screen__icon"><Icon name="refresh" size={26} /></span>
+        <span className="error-screen__icon">
+          <Icon name="refresh" size={26} />
+        </span>
         <h1>Something went wrong on this page.</h1>
         <p>Your progress is saved. Reload the page, or go back to the dashboard. We have noted the problem.</p>
         <div className="error-screen__actions">
-          <button className="check-button" type="button" onClick={() => window.location.reload()}><Icon name="refresh" size={17} /> Reload</button>
-          <a className="outline-action" href="#dashboard" onClick={() => this.setState({ failed: false })}>Go to the dashboard</a>
+          <button className="check-button" type="button" onClick={() => window.location.reload()}>
+            <Icon name="refresh" size={17} /> Reload
+          </button>
+          <a className="outline-action" href="#dashboard" onClick={() => this.setState({ failed: false })}>
+            Go to the dashboard
+          </a>
         </div>
       </div>
     )

@@ -1,4 +1,6 @@
-export function canSpeak() { return typeof window !== 'undefined' && 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window }
+export function canSpeak() {
+  return typeof window !== 'undefined' && 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window
+}
 
 // Android reports voice languages as "en_US", desktop browsers as "en-US"; compare them in one form.
 const normaliseLang = (lang: string) => lang.replace('_', '-').toLowerCase()
@@ -6,7 +8,9 @@ const normaliseLang = (lang: string) => lang.replace('_', '-').toLowerCase()
 // Voices load asynchronously (on Android the first getVoices() call is often empty), so keep a copy
 // that refreshes when the browser announces the list is ready.
 let voices: SpeechSynthesisVoice[] = []
-function loadVoices() { voices = window.speechSynthesis.getVoices() }
+function loadVoices() {
+  voices = window.speechSynthesis.getVoices()
+}
 if (canSpeak()) {
   loadVoices()
   window.speechSynthesis.addEventListener?.('voiceschanged', loadVoices)
@@ -29,7 +33,8 @@ export function speakEnglish(text: string, locale: 'en-US' | 'en-GB') {
   utterance.lang = locale
   const { voice, exact } = pickVoice(locale)
   if (voice) utterance.voice = voice
-  window.speechSynthesis.cancel(); window.speechSynthesis.speak(utterance)
+  window.speechSynthesis.cancel()
+  window.speechSynthesis.speak(utterance)
   // Only warn when a different accent is really being used; with no voice list yet, the browser picks by utterance.lang.
   return { ok: true, fallback: Boolean(voice && !exact) }
 }

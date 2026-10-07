@@ -2,7 +2,18 @@ import { describe, expect, it } from 'vitest'
 import type { PracticeTask } from '../types/practice'
 import { closestAnswer, comparable, isAcceptedAnswer, russianAnswers } from './answerMatch'
 
-const task = (answer: string, acceptedAnswers?: string[]): PracticeTask => ({ id: 't', type: 'translate-ru-en', topic: '', level: 'B1', prompt: '', answer, acceptedAnswers, hint: '', rule: '', errorCategory: '' })
+const task = (answer: string, acceptedAnswers?: string[]): PracticeTask => ({
+  id: 't',
+  type: 'translate-ru-en',
+  topic: '',
+  level: 'B1',
+  prompt: '',
+  answer,
+  acceptedAnswers,
+  hint: '',
+  rule: '',
+  errorCategory: '',
+})
 
 describe('isAcceptedAnswer', () => {
   it('ignores case, spaces around, final punctuation and ё', () => {

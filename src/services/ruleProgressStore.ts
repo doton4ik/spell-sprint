@@ -20,11 +20,23 @@ export function today() {
 
 export async function getProgressRow(session: SupabaseSession, ruleId: string): Promise<ProgressRow | null> {
   const [row] = await selectRows(session, 'user_rule_progress', { user_id: session.user.id, rule_id: ruleId }, { limit: 1 })
-  return row ? { id: row.id, status: row.status as RuleStatus, priority: row.priority as RulePriority, mistake_count: row.mistake_count, correct_count: row.correct_count, correct_calendar_days: row.correct_calendar_days } : null
+  return row
+    ? {
+        id: row.id,
+        status: row.status as RuleStatus,
+        priority: row.priority as RulePriority,
+        mistake_count: row.mistake_count,
+        correct_count: row.correct_count,
+        correct_calendar_days: row.correct_calendar_days,
+      }
+    : null
 }
 
 export async function upsertProgressRow(session: SupabaseSession, ruleId: string, next: ProgressRow) {
-  await insertRows(session, 'user_rule_progress', {
+  await insertRows(
+    session,
+    'user_rule_progress',
+    {
       user_id: session.user.id,
       rule_id: ruleId,
       status: next.status,
@@ -34,7 +46,9 @@ export async function upsertProgressRow(session: SupabaseSession, ruleId: string
       correct_calendar_days: next.correct_calendar_days,
       last_result_at: new Date().toISOString(),
       updated_at: new Date().toISOString(),
-  }, { onConflict: 'user_id,rule_id' })
+    },
+    { onConflict: 'user_id,rule_id' },
+  )
 }
 
 // Rules #10-14: one wrong answer always counts, but it only demotes a rule that was already
@@ -62,7 +76,13 @@ export function nextProgressAfterMistake(existing: ProgressRow | null): Progress
 // day, the rule becomes "mastered" and its priority settles to "stable".
 export function nextProgressAfterCorrectPractice(existing: ProgressRow | null): ProgressRow {
   const day = today()
-  const base = existing ?? { status: 'learning' as RuleStatus, priority: 'practice' as RulePriority, mistake_count: 0, correct_count: 0, correct_calendar_days: [] }
+  const base = existing ?? {
+    status: 'learning' as RuleStatus,
+    priority: 'practice' as RulePriority,
+    mistake_count: 0,
+    correct_count: 0,
+    correct_calendar_days: [],
+  }
   const correctCalendarDays = base.correct_calendar_days.includes(day) ? base.correct_calendar_days : [...base.correct_calendar_days, day]
   const mastered = correctCalendarDays.length >= 5
   return {

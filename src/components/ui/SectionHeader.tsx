@@ -14,8 +14,13 @@ export function SectionHeader({ eyebrow, title, action, actionHref = '#dashboard
         {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
         <h2>{title}</h2>
       </div>
-      {action ? <a className="text-action" href={actionHref}>{action}</a> : children}
+      {action ? (
+        <a className="text-action" href={actionHref}>
+          {action}
+        </a>
+      ) : (
+        children
+      )}
     </div>
   )
 }
-

@@ -57,7 +57,13 @@ export async function getAllRuleWordLinks(): Promise<RuleWordLink[]> {
   if (!isSupabaseConfigured()) return []
   try {
     const rows = await selectRows(null, 'rule_word_links', {}, { select: 'id,rule_id,word_id,relation,note' })
-    return rows.map((row) => ({ id: row.id as string, ruleId: row.rule_id as string, wordId: row.word_id as string, relation: row.relation as RuleWordLink['relation'], note: (row.note as string) ?? undefined }))
+    return rows.map((row) => ({
+      id: row.id as string,
+      ruleId: row.rule_id as string,
+      wordId: row.word_id as string,
+      relation: row.relation as RuleWordLink['relation'],
+      note: (row.note as string) ?? undefined,
+    }))
   } catch {
     return []
   }
@@ -66,9 +72,17 @@ export async function getAllRuleWordLinks(): Promise<RuleWordLink[]> {
 const PENDING_RULE_FOCUS_KEY = 'spell-sprint.pending-rule-focus'
 // Lets another page (e.g. a word in Libraries) ask the Rules page to open on one specific rule,
 // the same sessionStorage handoff pattern libraryPractice.ts uses for a pending practice selection.
-export function setPendingRuleFocus(ruleId: string) { window.sessionStorage.setItem(PENDING_RULE_FOCUS_KEY, ruleId) }
+export function setPendingRuleFocus(ruleId: string) {
+  window.sessionStorage.setItem(PENDING_RULE_FOCUS_KEY, ruleId)
+}
 export function consumePendingRuleFocus(): string | null {
-  try { const value = window.sessionStorage.getItem(PENDING_RULE_FOCUS_KEY); window.sessionStorage.removeItem(PENDING_RULE_FOCUS_KEY); return value } catch { return null }
+  try {
+    const value = window.sessionStorage.getItem(PENDING_RULE_FOCUS_KEY)
+    window.sessionStorage.removeItem(PENDING_RULE_FOCUS_KEY)
+    return value
+  } catch {
+    return null
+  }
 }
 
 // Rule ids directly linked to a stable word id, via rule_word_links.
@@ -100,7 +114,14 @@ export async function getUserRuleProgressByRuleId(ruleId: string) {
 }
 
 function toExample(row: Record<string, unknown>): RuleExample {
-  return { id: row.id as string, ruleId: row.rule_id as string, exampleType: row.example_type as RuleExample['exampleType'], text: row.text as string, correction: (row.correction as string) ?? undefined, note: (row.note as string) ?? undefined }
+  return {
+    id: row.id as string,
+    ruleId: row.rule_id as string,
+    exampleType: row.example_type as RuleExample['exampleType'],
+    text: row.text as string,
+    correction: (row.correction as string) ?? undefined,
+    note: (row.note as string) ?? undefined,
+  }
 }
 
 export async function getRuleExamples(ruleId: string): Promise<RuleExample[]> {
@@ -115,7 +136,9 @@ export async function getRuleExamples(ruleId: string): Promise<RuleExample[]> {
 
 // Linked words for a rule, cross-referenced against this browser's word library so the card
 // can show the actual word and its Russian translation rather than a bare id.
-export async function getRuleLinkedWords(ruleId: string): Promise<Array<{ wordId: string; relation: RuleWordLink['relation']; word?: string; translation?: string }>> {
+export async function getRuleLinkedWords(
+  ruleId: string,
+): Promise<Array<{ wordId: string; relation: RuleWordLink['relation']; word?: string; translation?: string }>> {
   if (!isSupabaseConfigured()) return []
   try {
     const rows = await selectRows(null, 'rule_word_links', { rule_id: ruleId }, { select: 'word_id,relation' })
@@ -133,7 +156,12 @@ export async function getRuleRelationships(ruleId: string): Promise<RuleRelation
   if (!isSupabaseConfigured()) return []
   try {
     const rows = await selectRows(null, 'rule_relationships', { rule_id: ruleId })
-    return rows.map((row) => ({ id: row.id as string, ruleId: row.rule_id as string, relatedRuleId: row.related_rule_id as string, relationType: (row.relation_type as string) ?? undefined }))
+    return rows.map((row) => ({
+      id: row.id as string,
+      ruleId: row.rule_id as string,
+      relatedRuleId: row.related_rule_id as string,
+      relationType: (row.relation_type as string) ?? undefined,
+    }))
   } catch {
     return []
   }
@@ -146,12 +174,23 @@ export async function getUnclassifiedMistakes(limit = 20): Promise<MistakeEvent[
   const session = await getActiveCloudSession()
   if (!session) return []
   try {
-    const rows = await selectRows(session, 'mistake_events', { user_id: session.user.id, category: 'Unclassified' }, { order: 'created_at.desc', limit })
+    const rows = await selectRows(
+      session,
+      'mistake_events',
+      { user_id: session.user.id, category: 'Unclassified' },
+      { order: 'created_at.desc', limit },
+    )
     return rows.map((row) => ({
-      id: row.id as string, userId: row.user_id as string, wordId: (row.word_id as string) ?? undefined, taskId: (row.task_id as string) ?? undefined,
-      userAnswer: (row.user_answer as string) ?? undefined, correctAnswer: (row.correct_answer as string) ?? undefined,
-      errorType: (row.error_type as string) ?? undefined, errorCategory: (row.error_category as string) ?? undefined,
-      category: row.category as string, createdAt: row.created_at as string,
+      id: row.id as string,
+      userId: row.user_id as string,
+      wordId: (row.word_id as string) ?? undefined,
+      taskId: (row.task_id as string) ?? undefined,
+      userAnswer: (row.user_answer as string) ?? undefined,
+      correctAnswer: (row.correct_answer as string) ?? undefined,
+      errorType: (row.error_type as string) ?? undefined,
+      errorCategory: (row.error_category as string) ?? undefined,
+      category: row.category as string,
+      createdAt: row.created_at as string,
     }))
   } catch {
     return []
@@ -164,24 +203,50 @@ export async function getLinkedMistakesForRule(ruleId: string, limit = 5): Promi
   const session = await getActiveCloudSession()
   if (!session) return []
   try {
-    const links = await selectRows(session, 'mistake_rule_links', { user_id: session.user.id, rule_id: ruleId }, { select: 'mistake_event_id', order: 'created_at.desc', limit })
+    const links = await selectRows(
+      session,
+      'mistake_rule_links',
+      { user_id: session.user.id, rule_id: ruleId },
+      { select: 'mistake_event_id', order: 'created_at.desc', limit },
+    )
     if (!links.length) return []
     const rows = await selectRows(session, 'mistake_events', { id: links.map((link) => link.mistake_event_id) })
-    return rows.map((row) => ({
-      id: row.id as string, userId: row.user_id as string, wordId: (row.word_id as string) ?? undefined, taskId: (row.task_id as string) ?? undefined,
-      userAnswer: (row.user_answer as string) ?? undefined, correctAnswer: (row.correct_answer as string) ?? undefined,
-      errorType: (row.error_type as string) ?? undefined, errorCategory: (row.error_category as string) ?? undefined,
-      category: row.category as string, createdAt: row.created_at as string,
-    })).sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+    return rows
+      .map((row) => ({
+        id: row.id as string,
+        userId: row.user_id as string,
+        wordId: (row.word_id as string) ?? undefined,
+        taskId: (row.task_id as string) ?? undefined,
+        userAnswer: (row.user_answer as string) ?? undefined,
+        correctAnswer: (row.correct_answer as string) ?? undefined,
+        errorType: (row.error_type as string) ?? undefined,
+        errorCategory: (row.error_category as string) ?? undefined,
+        category: row.category as string,
+        createdAt: row.created_at as string,
+      }))
+      .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
   } catch {
     return []
   }
 }
 
-export type PersonalRuleDraft = { title: string; category: string; ruleType: RuleType; shortExplanation: string; wrongExample?: string; correctExample?: string }
+export type PersonalRuleDraft = {
+  title: string
+  category: string
+  ruleType: RuleType
+  shortExplanation: string
+  wrongExample?: string
+  correctExample?: string
+}
 
 function slugify(title: string) {
-  return title.trim().toLocaleLowerCase().replaceAll(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'rule'
+  return (
+    title
+      .trim()
+      .toLocaleLowerCase()
+      .replaceAll(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '') || 'rule'
+  )
 }
 
 // Item 7: a rule the learner creates themselves. Private by default; could be switched to
@@ -190,16 +255,29 @@ export async function createPersonalRule(draft: PersonalRuleDraft): Promise<Rule
   const session = await getActiveCloudSession()
   if (!session) throw new Error('Sign in before creating a personal rule.')
   const slug = `${slugify(draft.title)}-${session.user.id.slice(0, 8)}-${Date.now().toString(36)}`
-  const [row] = await insertRows(session, 'rules', {
-    slug, title: draft.title, category: draft.category, rule_type: draft.ruleType, short_explanation: draft.shortExplanation,
-    source: 'personal', visibility: 'private', created_by: session.user.id, is_active: true,
-  }, { returning: true })
+  const [row] = await insertRows(
+    session,
+    'rules',
+    {
+      slug,
+      title: draft.title,
+      category: draft.category,
+      rule_type: draft.ruleType,
+      short_explanation: draft.shortExplanation,
+      source: 'personal',
+      visibility: 'private',
+      created_by: session.user.id,
+      is_active: true,
+    },
+    { returning: true },
+  )
   if (!row) throw new Error('The rule was not saved.')
   const rule = toRule(row)
   if (draft.wrongExample || draft.correctExample) {
     const examples: Array<{ rule_id: string; example_type: string; text: string; correction?: string | null }> = []
     if (draft.correctExample) examples.push({ rule_id: rule.id, example_type: 'correct', text: draft.correctExample })
-    if (draft.wrongExample) examples.push({ rule_id: rule.id, example_type: 'incorrect', text: draft.wrongExample, correction: draft.correctExample ?? null })
+    if (draft.wrongExample)
+      examples.push({ rule_id: rule.id, example_type: 'incorrect', text: draft.wrongExample, correction: draft.correctExample ?? null })
     await insertRows(session, 'rule_examples', examples)
   }
   return rule
@@ -210,7 +288,11 @@ export async function createPersonalRule(draft: PersonalRuleDraft): Promise<Rule
 // rule's progress — closing the loop without losing the original event.
 // linkWord is only allowed for the learner's own rules: rule_word_links of a built-in rule can be
 // changed only by its owner (see RLS), so linking to a built-in rule skips that step.
-export async function reclassifyMistakeWithRule(mistake: MistakeEvent, ruleId: string, options: { linkWord?: boolean } = {}): Promise<void> {
+export async function reclassifyMistakeWithRule(
+  mistake: MistakeEvent,
+  ruleId: string,
+  options: { linkWord?: boolean } = {},
+): Promise<void> {
   const session = await getActiveCloudSession()
   if (!session) throw new Error('Sign in required.')
   if (mistake.wordId && options.linkWord !== false) {

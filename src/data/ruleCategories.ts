@@ -28,9 +28,15 @@ export const ruleTypeLabels: Record<string, string> = {
 }
 
 export const ruleStatusLabels: Record<string, string> = {
-  new: 'New', learning: 'Learning', repeat_later: 'Repeat later', mastered: 'Mastered', archived: 'Archived',
+  new: 'New',
+  learning: 'Learning',
+  repeat_later: 'Repeat later',
+  mastered: 'Mastered',
+  archived: 'Archived',
 }
 
 export const rulePriorityLabels: Record<string, string> = {
-  critical: 'Critical', practice: 'Practice', stable: 'Stable',
+  critical: 'Critical',
+  practice: 'Practice',
+  stable: 'Stable',
 }

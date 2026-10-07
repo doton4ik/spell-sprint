@@ -53,14 +53,19 @@ export function getMistakeEntries(): MistakeEntry[] {
       const state = states[entryId]
       // Successful review days since the last mistake, as stored on the newest answer (see reviewSchedule.ts).
       const latest = chronological.at(-1)!
-      const confidence = latest.isCorrect ? latest.confidence ?? 0 : 0
+      const confidence = latest.isCorrect ? (latest.confidence ?? 0) : 0
       // The level follows the latest answers: one right answer lifts the word out of "new"/"difficult",
       // and each successful day moves it further. "Difficult" is only for a word that is wrong right now.
-      const status: LearningStatus = confidence >= MASTERED_DAYS || (state?.completedReviews ?? 0) >= 3
-        ? 'mastered'
-        : !latest.isCorrect
-          ? failed.length >= 3 ? 'difficult' : 'new'
-          : confidence >= 3 ? 'review' : 'learning'
+      const status: LearningStatus =
+        confidence >= MASTERED_DAYS || (state?.completedReviews ?? 0) >= 3
+          ? 'mastered'
+          : !latest.isCorrect
+            ? failed.length >= 3
+              ? 'difficult'
+              : 'new'
+            : confidence >= 3
+              ? 'review'
+              : 'learning'
 
       return {
         taskId: entryId,
@@ -81,15 +86,17 @@ export function getMistakeEntries(): MistakeEntry[] {
         firstSeen: chronological[0].createdAt,
         lastSeen: chronological.at(-1)!.createdAt,
         // The latest answer sets the next review; "Mark reviewed" counts only if it is newer.
-        nextReviewAt: state?.nextReviewAt && state.nextReviewAt > (latest.nextReviewAt ?? '') && (state.lastReviewedAt ?? '') > latest.createdAt ? state.nextReviewAt : latest.nextReviewAt ?? addDays(new Date(latest.createdAt), 1),
+        nextReviewAt:
+          state?.nextReviewAt && state.nextReviewAt > (latest.nextReviewAt ?? '') && (state.lastReviewedAt ?? '') > latest.createdAt
+            ? state.nextReviewAt
+            : (latest.nextReviewAt ?? addDays(new Date(latest.createdAt), 1)),
         status,
         goodDays: Math.min(confidence, MASTERED_DAYS),
       } as MistakeEntry
     })
     .filter((entry): entry is MistakeEntry => entry !== null)
 
-  return practiceEntries
-    .sort((a, b) => b.lastSeen.localeCompare(a.lastSeen))
+  return practiceEntries.sort((a, b) => b.lastSeen.localeCompare(a.lastSeen))
 }
 
 export function getReviewEntries() {
@@ -100,21 +107,50 @@ export function getReviewEntries() {
     if (mistakes.some((entry) => entry.taskId === attempt.taskId)) continue
     const current = hintOnly.get(attempt.taskId)
     if (current && current.lastSeen >= attempt.createdAt) continue
-    hintOnly.set(attempt.taskId, { taskId: attempt.taskId, correctAnswer: attempt.correctAnswer, lastUserVersion: attempt.userAnswer || 'Hint used', errorCategory: 'Hint used', family: 'Vocabulary', topic: attempt.topic, topicId: attempt.topicId, subtopic: attempt.subtopic, wordId: attempt.wordId, library: attempt.library, numberOfAttempts: 1, numberOfErrors: 0, numberOfCorrectAnswers: 1, firstSeen: attempt.createdAt, lastSeen: attempt.createdAt, nextReviewAt: attempt.nextReviewAt ?? addDays(new Date(attempt.createdAt), 1), status: 'review', source: 'practice' })
+    hintOnly.set(attempt.taskId, {
+      taskId: attempt.taskId,
+      correctAnswer: attempt.correctAnswer,
+      lastUserVersion: attempt.userAnswer || 'Hint used',
+      errorCategory: 'Hint used',
+      family: 'Vocabulary',
+      topic: attempt.topic,
+      topicId: attempt.topicId,
+      subtopic: attempt.subtopic,
+      wordId: attempt.wordId,
+      library: attempt.library,
+      numberOfAttempts: 1,
+      numberOfErrors: 0,
+      numberOfCorrectAnswers: 1,
+      firstSeen: attempt.createdAt,
+      lastSeen: attempt.createdAt,
+      nextReviewAt: attempt.nextReviewAt ?? addDays(new Date(attempt.createdAt), 1),
+      status: 'review',
+      source: 'practice',
+    })
   }
-  return [...mistakes, ...hintOnly.values()].filter((entry) => entry.status !== 'mastered').sort((a, b) => a.nextReviewAt.localeCompare(b.nextReviewAt))
+  return [...mistakes, ...hintOnly.values()]
+    .filter((entry) => entry.status !== 'mastered')
+    .sort((a, b) => a.nextReviewAt.localeCompare(b.nextReviewAt))
 }
 
 // Keeps the more advanced review state per task and unions saved rules; never removes local data.
 export function mergeReviewData(states: Record<string, ReviewState>, ruleIds: string[]) {
   const merged = { ...getReviewStates() }
   for (const [taskId, state] of Object.entries(states)) {
-    if (state && typeof state.completedReviews === 'number' && (!merged[taskId] || state.completedReviews > merged[taskId].completedReviews)) merged[taskId] = state
+    if (
+      state &&
+      typeof state.completedReviews === 'number' &&
+      (!merged[taskId] || state.completedReviews > merged[taskId].completedReviews)
+    )
+      merged[taskId] = state
   }
   window.localStorage.setItem(REVIEW_STATES_KEY, JSON.stringify(merged))
   // A rule unsaved on any device stays unsaved (the mark is synced with the library preferences).
   const removed = getRemovedKeys()
-  window.localStorage.setItem(RULE_REVIEW_KEY, JSON.stringify([...new Set([...getRuleReviewIds(), ...ruleIds])].filter((id) => !removed.has(`rule:${id}`))))
+  window.localStorage.setItem(
+    RULE_REVIEW_KEY,
+    JSON.stringify([...new Set([...getRuleReviewIds(), ...ruleIds])].filter((id) => !removed.has(`rule:${id}`))),
+  )
   window.dispatchEvent(new Event(LEARNING_UPDATED_EVENT))
 }
 
@@ -149,5 +185,8 @@ export function toggleRuleReview(ruleId: string) {
 export function subscribeToLearningData(onChange: () => void) {
   const unsubscribe = subscribeToPracticeAttempts(onChange)
   window.addEventListener(LEARNING_UPDATED_EVENT, onChange)
-  return () => { unsubscribe(); window.removeEventListener(LEARNING_UPDATED_EVENT, onChange) }
+  return () => {
+    unsubscribe()
+    window.removeEventListener(LEARNING_UPDATED_EVENT, onChange)
+  }
 }

@@ -15,7 +15,8 @@ describe('spellingDistractors', () => {
     for (const option of spellingDistractors('battery', (word) => real.has(word), 10)) expect(real.has(option)).toBe(false)
   })
   it('gives short phrasal verbs at least two options', () => {
-    for (const phrase of ['give up', 'turn on', 'take off', 'go on']) expect(spellingDistractors(phrase, noRealWords).length).toBeGreaterThanOrEqual(2)
+    for (const phrase of ['give up', 'turn on', 'take off', 'go on'])
+      expect(spellingDistractors(phrase, noRealWords).length).toBeGreaterThanOrEqual(2)
   })
   it('keeps the other words of a phrase', () => {
     for (const option of spellingDistractors('look forward to', noRealWords)) expect(option.split(' ').length).toBeGreaterThanOrEqual(2)

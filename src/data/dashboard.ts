@@ -1,10 +1,4 @@
-import type {
-  Metric,
-  MistakePreview,
-  NavigationItem,
-  TopicProgress,
-  WeekDay,
-} from '../types/dashboard'
+import type { Metric, MistakePreview, NavigationItem, TopicProgress, WeekDay } from '../types/dashboard'
 
 export const navigationItems: NavigationItem[] = [
   { label: 'Dashboard', icon: 'dashboard', isActive: true },
@@ -87,4 +81,3 @@ export const weekProgress: WeekDay[] = [
   { label: 'Sat', completed: 5, target: 12 },
   { label: 'Sun', completed: 9, target: 12, isToday: true },
 ]
-

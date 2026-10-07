@@ -4,14 +4,31 @@ import { RuleCard } from '../components/rules/RuleCard'
 import { RulePracticePanel } from '../components/rules/RulePracticePanel'
 import { ruleCategories, ruleTypeLabels } from '../data/ruleCategories'
 import { getAllUserRuleProgress } from '../services/rulePracticeService'
-import { consumePendingRuleFocus, createPersonalRule, getUnclassifiedMistakes, getVisibleRules, reclassifyMistakeWithRule, type PersonalRuleDraft } from '../services/rulesService'
+import {
+  consumePendingRuleFocus,
+  createPersonalRule,
+  getUnclassifiedMistakes,
+  getVisibleRules,
+  reclassifyMistakeWithRule,
+  type PersonalRuleDraft,
+} from '../services/rulesService'
 import type { MistakeEvent, Rule, RuleType, UserRuleProgress } from '../types/rules'
 import './learning.css'
 import './rules.css'
 
 // One unclassified mistake with its two ways out: attach it to a rule that already exists, or
 // start a new private rule from it.
-function UnclassifiedItem({ mistake, rules, onCreate, onLinked }: { mistake: MistakeEvent; rules: Rule[]; onCreate: (mistake: MistakeEvent) => void; onLinked: () => Promise<void> }) {
+function UnclassifiedItem({
+  mistake,
+  rules,
+  onCreate,
+  onLinked,
+}: {
+  mistake: MistakeEvent
+  rules: Rule[]
+  onCreate: (mistake: MistakeEvent) => void
+  onLinked: () => Promise<void>
+}) {
   const [ruleId, setRuleId] = useState('')
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
@@ -19,7 +36,8 @@ function UnclassifiedItem({ mistake, rules, onCreate, onLinked }: { mistake: Mis
   async function link() {
     const rule = rules.find((item) => item.id === ruleId)
     if (!rule) return
-    setBusy(true); setError('')
+    setBusy(true)
+    setError('')
     try {
       await reclassifyMistakeWithRule(mistake, rule.id, { linkWord: rule.source === 'personal' })
       await onLinked()
@@ -33,22 +51,39 @@ function UnclassifiedItem({ mistake, rules, onCreate, onLinked }: { mistake: Mis
   return (
     <div className="rule-unclassified__item">
       <div className="rule-unclassified__main">
-        <p><s>{mistake.userAnswer || 'Skipped'}</s> <Icon name="arrow" size={13} /> <strong>{mistake.correctAnswer}</strong></p>
+        <p>
+          <s>{mistake.userAnswer || 'Skipped'}</s> <Icon name="arrow" size={13} /> <strong>{mistake.correctAnswer}</strong>
+        </p>
         {error ? <small className="rule-unclassified__error">{error}</small> : null}
       </div>
       <div className="rule-unclassified__actions">
         <select value={ruleId} onChange={(event) => setRuleId(event.target.value)} aria-label="Link to an existing rule">
           <option value="">Link to a rule…</option>
-          {rules.map((rule) => <option value={rule.id} key={rule.id}>{rule.title}</option>)}
+          {rules.map((rule) => (
+            <option value={rule.id} key={rule.id}>
+              {rule.title}
+            </option>
+          ))}
         </select>
-        <button className="quiet-action" type="button" disabled={!ruleId || busy} onClick={link}>{busy ? 'Linking…' : 'Link'}</button>
-        <button className="quiet-action" type="button" onClick={() => onCreate(mistake)}><Icon name="plus" size={13} /> New rule</button>
+        <button className="quiet-action" type="button" disabled={!ruleId || busy} onClick={link}>
+          {busy ? 'Linking…' : 'Link'}
+        </button>
+        <button className="quiet-action" type="button" onClick={() => onCreate(mistake)}>
+          <Icon name="plus" size={13} /> New rule
+        </button>
       </div>
     </div>
   )
 }
 
-const emptyDraft: PersonalRuleDraft = { title: '', category: ruleCategories[0].slug, ruleType: 'language_rule', shortExplanation: '', wrongExample: '', correctExample: '' }
+const emptyDraft: PersonalRuleDraft = {
+  title: '',
+  category: ruleCategories[0].slug,
+  ruleType: 'language_rule',
+  shortExplanation: '',
+  wrongExample: '',
+  correctExample: '',
+}
 
 export function RulesPage() {
   const [rules, setRules] = useState<Rule[]>([])
@@ -67,8 +102,15 @@ export function RulesPage() {
 
   async function refresh() {
     setLoading(true)
-    const [ruleRows, unclassifiedRows, progressRows] = await Promise.all([getVisibleRules(), getUnclassifiedMistakes(), getAllUserRuleProgress().catch(() => [] as UserRuleProgress[])])
-    setRules(ruleRows); setUnclassified(unclassifiedRows); setProgressByRule(new Map(progressRows.map((row) => [row.ruleId, row]))); setLoading(false)
+    const [ruleRows, unclassifiedRows, progressRows] = await Promise.all([
+      getVisibleRules(),
+      getUnclassifiedMistakes(),
+      getAllUserRuleProgress().catch(() => [] as UserRuleProgress[]),
+    ])
+    setRules(ruleRows)
+    setUnclassified(unclassifiedRows)
+    setProgressByRule(new Map(progressRows.map((row) => [row.ruleId, row])))
+    setLoading(false)
     return ruleRows
   }
 
@@ -83,7 +125,11 @@ export function RulesPage() {
       const focusId = consumePendingRuleFocus()
       if (!focusId) return
       const target = ruleRows.find((rule) => rule.id === focusId)
-      if (target) { setCategory(target.category); setFocusedRuleId(target.id); setOpenRuleId(target.id) }
+      if (target) {
+        setCategory(target.category)
+        setFocusedRuleId(target.id)
+        setOpenRuleId(target.id)
+      }
     })
   }, [])
 
@@ -97,31 +143,57 @@ export function RulesPage() {
     if (!progress || progress.status === 'mastered' || progress.status === 'archived') return 3
     return { critical: 0, practice: 1, stable: 2 }[progress.priority]
   }
-  const visibleRules = (category === 'All' ? rules : rules.filter((rule) => rule.category === category)).slice().sort((a, b) => attention(a) - attention(b) || a.title.localeCompare(b.title))
+  const visibleRules = (category === 'All' ? rules : rules.filter((rule) => rule.category === category))
+    .slice()
+    .sort((a, b) => attention(a) - attention(b) || a.title.localeCompare(b.title))
   const needRepeating = rules.filter((rule) => attention(rule) < 3).length
   const repeatCount = (slug: string) => rules.filter((rule) => rule.category === slug && attention(rule) < 3).length
   // Three plain groups instead of one long list: what to repeat, what is new, what is done.
-  const isDone = (rule: Rule) => { const status = progressByRule.get(rule.id)?.status; return status === 'mastered' || status === 'archived' }
+  const isDone = (rule: Rule) => {
+    const status = progressByRule.get(rule.id)?.status
+    return status === 'mastered' || status === 'archived'
+  }
   const groups = [
-    { id: 'repeat', title: 'To repeat', note: 'Rules you got wrong — the most urgent first.', rules: visibleRules.filter((rule) => attention(rule) < 3) },
-    { id: 'new', title: 'Not started', note: 'Open a rule to read it and try its exercises.', rules: visibleRules.filter((rule) => attention(rule) === 3 && !isDone(rule)) },
+    {
+      id: 'repeat',
+      title: 'To repeat',
+      note: 'Rules you got wrong — the most urgent first.',
+      rules: visibleRules.filter((rule) => attention(rule) < 3),
+    },
+    {
+      id: 'new',
+      title: 'Not started',
+      note: 'Open a rule to read it and try its exercises.',
+      rules: visibleRules.filter((rule) => attention(rule) === 3 && !isDone(rule)),
+    },
     { id: 'done', title: 'Mastered', note: 'Five good days — they come back only if you slip.', rules: visibleRules.filter(isDone) },
   ].filter((group) => group.rules.length)
 
   function openCreateForm(fromMistake?: MistakeEvent) {
     setLinkingMistake(fromMistake ?? null)
-    setDraft({ ...emptyDraft, wrongExample: fromMistake?.userAnswer ?? '', correctExample: fromMistake?.correctAnswer ?? '', title: fromMistake?.correctAnswer ? `Remember: ${fromMistake.correctAnswer}` : '' })
-    setFormError(''); setShowForm(true)
+    setDraft({
+      ...emptyDraft,
+      wrongExample: fromMistake?.userAnswer ?? '',
+      correctExample: fromMistake?.correctAnswer ?? '',
+      title: fromMistake?.correctAnswer ? `Remember: ${fromMistake.correctAnswer}` : '',
+    })
+    setFormError('')
+    setShowForm(true)
   }
 
   async function submitDraft(event: FormEvent) {
     event.preventDefault()
-    if (!draft.title.trim() || !draft.shortExplanation.trim()) { setFormError('Title and a short explanation are required.'); return }
-    setCreating(true); setFormError('')
+    if (!draft.title.trim() || !draft.shortExplanation.trim()) {
+      setFormError('Title and a short explanation are required.')
+      return
+    }
+    setCreating(true)
+    setFormError('')
     try {
       const rule = await createPersonalRule(draft)
       if (linkingMistake) await reclassifyMistakeWithRule(linkingMistake, rule.id)
-      setShowForm(false); setLinkingMistake(null)
+      setShowForm(false)
+      setLinkingMistake(null)
       await refresh()
     } catch (error) {
       setFormError(error instanceof Error ? error.message : 'Could not create this rule.')
@@ -133,83 +205,203 @@ export function RulesPage() {
   return (
     <div className="learning-page" id="rules">
       <header className="learning-header">
-        <div><p className="eyebrow">Rules</p><h1>Rules that stick</h1><p>{rules.length} rules{needRepeating ? ` · ${needRepeating} to repeat` : ''}. Start with the practice, or open a rule to study it.</p></div>
-        <button className="outline-action" type="button" onClick={() => openCreateForm()}><Icon name="plus" size={17} /> New rule</button>
+        <div>
+          <p className="eyebrow">Rules</p>
+          <h1>Rules that stick</h1>
+          <p>
+            {rules.length} rules{needRepeating ? ` · ${needRepeating} to repeat` : ''}. Start with the practice, or open a rule to study it.
+          </p>
+        </div>
+        <button className="outline-action" type="button" onClick={() => openCreateForm()}>
+          <Icon name="plus" size={17} /> New rule
+        </button>
       </header>
 
       <div className="rules-layout">
-      <nav className="rules-nav" aria-label="Rule categories">
-        <span className="rules-nav__title">Categories</span>
-        <button type="button" className={category === 'All' ? 'rules-nav__item rules-nav__item--active' : 'rules-nav__item'} onClick={() => setCategory('All')}><span>All rules</span><small>{rules.length}</small></button>
-        {usedCategories.map((item) => (
-          <button type="button" key={item.slug} className={category === item.slug ? 'rules-nav__item rules-nav__item--active' : 'rules-nav__item'} onClick={() => setCategory(item.slug)}>
-            <span>{item.label}</span>{repeatCount(item.slug) ? <b title="To repeat">{repeatCount(item.slug)}</b> : null}<small>{categoryCount(item.slug)}</small>
+        <nav className="rules-nav" aria-label="Rule categories">
+          <span className="rules-nav__title">Categories</span>
+          <button
+            type="button"
+            className={category === 'All' ? 'rules-nav__item rules-nav__item--active' : 'rules-nav__item'}
+            onClick={() => setCategory('All')}
+          >
+            <span>All rules</span>
+            <small>{rules.length}</small>
           </button>
-        ))}
-      </nav>
+          {usedCategories.map((item) => (
+            <button
+              type="button"
+              key={item.slug}
+              className={category === item.slug ? 'rules-nav__item rules-nav__item--active' : 'rules-nav__item'}
+              onClick={() => setCategory(item.slug)}
+            >
+              <span>{item.label}</span>
+              {repeatCount(item.slug) ? <b title="To repeat">{repeatCount(item.slug)}</b> : null}
+              <small>{categoryCount(item.slug)}</small>
+            </button>
+          ))}
+        </nav>
 
-      <div className="rules-main">
-      <RulePracticePanel onProgress={updateProgress} />
+        <div className="rules-main">
+          <RulePracticePanel onProgress={updateProgress} />
 
-      {showForm ? (
-        <section className="rule-create-form">
-          <div className="rule-create-form__top">
-            <h2>{linkingMistake ? 'Create a rule for this mistake' : 'New personal rule'}</h2>
-            <button className="quiet-action" type="button" onClick={() => { setShowForm(false); setLinkingMistake(null) }}>Cancel</button>
-          </div>
-          {linkingMistake ? <p className="rule-create-form__hint"><s>{linkingMistake.userAnswer || 'Skipped'}</s> <Icon name="arrow" size={13} /> <strong>{linkingMistake.correctAnswer}</strong> — this mistake will be linked to the new rule.</p> : null}
-          <form onSubmit={submitDraft}>
-            <label>Title<input value={draft.title} onChange={(event) => setDraft({ ...draft, title: event.target.value })} placeholder="e.g. Lose vs loose" /></label>
-            <div className="rule-create-form__row">
-              <label>Category<select value={draft.category} onChange={(event) => setDraft({ ...draft, category: event.target.value })}>{ruleCategories.map((item) => <option value={item.slug} key={item.slug}>{item.label}</option>)}</select></label>
-              <label>Type<select value={draft.ruleType} onChange={(event) => setDraft({ ...draft, ruleType: event.target.value as RuleType })}>{Object.entries(ruleTypeLabels).map(([value, label]) => <option value={value} key={value}>{label}</option>)}</select></label>
-            </div>
-            <label>Short explanation (English)<textarea value={draft.shortExplanation} onChange={(event) => setDraft({ ...draft, shortExplanation: event.target.value })} rows={2} placeholder="One or two sentences — this should be readable in under a minute." /></label>
-            <div className="rule-create-form__row">
-              <label>Wrong example<input value={draft.wrongExample} onChange={(event) => setDraft({ ...draft, wrongExample: event.target.value })} /></label>
-              <label>Correct example<input value={draft.correctExample} onChange={(event) => setDraft({ ...draft, correctExample: event.target.value })} /></label>
-            </div>
-            {formError ? <p className="auth-message auth-message--error">{formError}</p> : null}
-            <button className="check-button" type="submit" disabled={creating}>{creating ? 'Creating…' : 'Create rule'} <Icon name="arrow" size={16} /></button>
-          </form>
-        </section>
-      ) : null}
-
-      {loading ? null : visibleRules.length === 0 ? (
-        <section className="empty-learning-state">
-          <span><Icon name="rules" size={25} /></span><h2>No rules here yet.</h2>
-          <p>Either pick another category, or add your own private rule for this one.</p>
-          <button className="check-button" type="button" onClick={() => openCreateForm()}><Icon name="plus" size={17} /> New personal rule</button>
-        </section>
-      ) : (
-        groups.map((group) => (
-          <section className="rules-group" key={group.id} aria-labelledby={`rules-group-${group.id}`}>
-            <header className="rules-group__head"><h2 id={`rules-group-${group.id}`}>{group.title} <small>{group.rules.length}</small></h2><p>{group.note}</p></header>
-            <div className="rules-grid rules-grid--compact">
-              {group.rules.map((rule) => (
-                <RuleCard rule={rule} rulesById={rulesById} progress={progressByRule.get(rule.id) ?? null} expanded={openRuleId === rule.id} focused={rule.id === focusedRuleId}
-                  onToggle={() => setOpenRuleId(openRuleId === rule.id ? null : rule.id)} onProgressChange={updateProgress} key={rule.id} />
-              ))}
-            </div>
-          </section>
-        ))
-      )}
-
-      {unclassified.length ? (
-        <section className="rule-unclassified">
-          <button className="rule-unclassified__toggle" type="button" onClick={() => setShowUnclassified(!showUnclassified)} aria-expanded={showUnclassified}>
-            <span><strong>Mistakes without a rule · {unclassified.length}</strong> — link one to a rule, or make a new rule from it</span>
-            <span className={showUnclassified ? 'rule-unclassified__chevron rule-unclassified__chevron--open' : 'rule-unclassified__chevron'}><Icon name="chevron" size={16} /></span>
-          </button>
-          {showUnclassified ? (
-            <div className="rule-unclassified__list">
-              <p className="rule-unclassified__note">For an explanation of your mistakes, see <a href="#my-mistakes">My Mistakes → Problems &amp; rules</a>.</p>
-              {unclassified.slice(0, 6).map((mistake) => <UnclassifiedItem mistake={mistake} rules={rules} onCreate={openCreateForm} onLinked={async () => { await refresh() }} key={mistake.id} />)}
-            </div>
+          {showForm ? (
+            <section className="rule-create-form">
+              <div className="rule-create-form__top">
+                <h2>{linkingMistake ? 'Create a rule for this mistake' : 'New personal rule'}</h2>
+                <button
+                  className="quiet-action"
+                  type="button"
+                  onClick={() => {
+                    setShowForm(false)
+                    setLinkingMistake(null)
+                  }}
+                >
+                  Cancel
+                </button>
+              </div>
+              {linkingMistake ? (
+                <p className="rule-create-form__hint">
+                  <s>{linkingMistake.userAnswer || 'Skipped'}</s> <Icon name="arrow" size={13} />{' '}
+                  <strong>{linkingMistake.correctAnswer}</strong> — this mistake will be linked to the new rule.
+                </p>
+              ) : null}
+              <form onSubmit={submitDraft}>
+                <label>
+                  Title
+                  <input
+                    value={draft.title}
+                    onChange={(event) => setDraft({ ...draft, title: event.target.value })}
+                    placeholder="e.g. Lose vs loose"
+                  />
+                </label>
+                <div className="rule-create-form__row">
+                  <label>
+                    Category
+                    <select value={draft.category} onChange={(event) => setDraft({ ...draft, category: event.target.value })}>
+                      {ruleCategories.map((item) => (
+                        <option value={item.slug} key={item.slug}>
+                          {item.label}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  <label>
+                    Type
+                    <select value={draft.ruleType} onChange={(event) => setDraft({ ...draft, ruleType: event.target.value as RuleType })}>
+                      {Object.entries(ruleTypeLabels).map(([value, label]) => (
+                        <option value={value} key={value}>
+                          {label}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                </div>
+                <label>
+                  Short explanation (English)
+                  <textarea
+                    value={draft.shortExplanation}
+                    onChange={(event) => setDraft({ ...draft, shortExplanation: event.target.value })}
+                    rows={2}
+                    placeholder="One or two sentences — this should be readable in under a minute."
+                  />
+                </label>
+                <div className="rule-create-form__row">
+                  <label>
+                    Wrong example
+                    <input value={draft.wrongExample} onChange={(event) => setDraft({ ...draft, wrongExample: event.target.value })} />
+                  </label>
+                  <label>
+                    Correct example
+                    <input value={draft.correctExample} onChange={(event) => setDraft({ ...draft, correctExample: event.target.value })} />
+                  </label>
+                </div>
+                {formError ? <p className="auth-message auth-message--error">{formError}</p> : null}
+                <button className="check-button" type="submit" disabled={creating}>
+                  {creating ? 'Creating…' : 'Create rule'} <Icon name="arrow" size={16} />
+                </button>
+              </form>
+            </section>
           ) : null}
-        </section>
-      ) : null}
-      </div>
+
+          {loading ? null : visibleRules.length === 0 ? (
+            <section className="empty-learning-state">
+              <span>
+                <Icon name="rules" size={25} />
+              </span>
+              <h2>No rules here yet.</h2>
+              <p>Either pick another category, or add your own private rule for this one.</p>
+              <button className="check-button" type="button" onClick={() => openCreateForm()}>
+                <Icon name="plus" size={17} /> New personal rule
+              </button>
+            </section>
+          ) : (
+            groups.map((group) => (
+              <section className="rules-group" key={group.id} aria-labelledby={`rules-group-${group.id}`}>
+                <header className="rules-group__head">
+                  <h2 id={`rules-group-${group.id}`}>
+                    {group.title} <small>{group.rules.length}</small>
+                  </h2>
+                  <p>{group.note}</p>
+                </header>
+                <div className="rules-grid rules-grid--compact">
+                  {group.rules.map((rule) => (
+                    <RuleCard
+                      rule={rule}
+                      rulesById={rulesById}
+                      progress={progressByRule.get(rule.id) ?? null}
+                      expanded={openRuleId === rule.id}
+                      focused={rule.id === focusedRuleId}
+                      onToggle={() => setOpenRuleId(openRuleId === rule.id ? null : rule.id)}
+                      onProgressChange={updateProgress}
+                      key={rule.id}
+                    />
+                  ))}
+                </div>
+              </section>
+            ))
+          )}
+
+          {unclassified.length ? (
+            <section className="rule-unclassified">
+              <button
+                className="rule-unclassified__toggle"
+                type="button"
+                onClick={() => setShowUnclassified(!showUnclassified)}
+                aria-expanded={showUnclassified}
+              >
+                <span>
+                  <strong>Mistakes without a rule · {unclassified.length}</strong> — link one to a rule, or make a new rule from it
+                </span>
+                <span
+                  className={
+                    showUnclassified ? 'rule-unclassified__chevron rule-unclassified__chevron--open' : 'rule-unclassified__chevron'
+                  }
+                >
+                  <Icon name="chevron" size={16} />
+                </span>
+              </button>
+              {showUnclassified ? (
+                <div className="rule-unclassified__list">
+                  <p className="rule-unclassified__note">
+                    For an explanation of your mistakes, see <a href="#my-mistakes">My Mistakes → Problems &amp; rules</a>.
+                  </p>
+                  {unclassified.slice(0, 6).map((mistake) => (
+                    <UnclassifiedItem
+                      mistake={mistake}
+                      rules={rules}
+                      onCreate={openCreateForm}
+                      onLinked={async () => {
+                        await refresh()
+                      }}
+                      key={mistake.id}
+                    />
+                  ))}
+                </div>
+              ) : null}
+            </section>
+          ) : null}
+        </div>
       </div>
     </div>
   )

@@ -40,13 +40,28 @@ export function diffStrings(expectedText: string, submittedText: string): { dist
   let j = n
   while (i > 0 || j > 0) {
     if (i > 0 && j > 0 && expected[i - 1] === submitted[j - 1] && table[i][j] === table[i - 1][j - 1]) {
-      i -= 1; j -= 1
-    } else if (i > 1 && j > 1 && expected[i - 1] === submitted[j - 2] && expected[i - 2] === submitted[j - 1] && table[i][j] === table[i - 2][j - 2] + 1) {
-      ops.push({ type: 'transpose', expectedIndex: i - 2, submittedIndex: j - 2, expected: expected[i - 2] + expected[i - 1], submitted: submitted[j - 2] + submitted[j - 1] })
-      i -= 2; j -= 2
+      i -= 1
+      j -= 1
+    } else if (
+      i > 1 &&
+      j > 1 &&
+      expected[i - 1] === submitted[j - 2] &&
+      expected[i - 2] === submitted[j - 1] &&
+      table[i][j] === table[i - 2][j - 2] + 1
+    ) {
+      ops.push({
+        type: 'transpose',
+        expectedIndex: i - 2,
+        submittedIndex: j - 2,
+        expected: expected[i - 2] + expected[i - 1],
+        submitted: submitted[j - 2] + submitted[j - 1],
+      })
+      i -= 2
+      j -= 2
     } else if (i > 0 && j > 0 && table[i][j] === table[i - 1][j - 1] + 1) {
       ops.push({ type: 'substitute', expectedIndex: i - 1, submittedIndex: j - 1, expected: expected[i - 1], submitted: submitted[j - 1] })
-      i -= 1; j -= 1
+      i -= 1
+      j -= 1
     } else if (i > 0 && table[i][j] === table[i - 1][j] + 1) {
       ops.push({ type: 'delete', expectedIndex: i - 1, submittedIndex: j, expected: expected[i - 1], submitted: '' })
       i -= 1

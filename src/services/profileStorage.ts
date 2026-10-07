@@ -20,7 +20,11 @@ export function getProfile(): Profile {
 
 export function saveProfile(patch: Partial<Profile>) {
   const next = { ...getProfile(), ...patch, name: (patch.name ?? getProfile().name).slice(0, 40) }
-  try { window.localStorage.setItem(PROFILE_KEY, JSON.stringify(next)) } catch { /* private mode: keep the in-memory value only */ }
+  try {
+    window.localStorage.setItem(PROFILE_KEY, JSON.stringify(next))
+  } catch {
+    /* private mode: keep the in-memory value only */
+  }
   window.dispatchEvent(new Event(PROFILE_UPDATED_EVENT))
   return next
 }

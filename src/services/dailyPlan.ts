@@ -8,7 +8,11 @@ import { localDayKey } from './dateKeys'
 
 export { localDayKey } from './dateKeys'
 
-function shiftDay(date: Date, days: number) { const copy = new Date(date); copy.setDate(copy.getDate() + days); return copy }
+function shiftDay(date: Date, days: number) {
+  const copy = new Date(date)
+  copy.setDate(copy.getDate() + days)
+  return copy
+}
 
 // Consecutive days with at least one answer. Today still counts as "kept" before the first answer,
 // so the streak only breaks once a whole day has passed without practice.
@@ -17,7 +21,10 @@ export function getStreak(attempts: readonly PracticeAttempt[] = getPracticeAtte
   const today = new Date()
   let cursor = days.has(localDayKey(today)) ? today : shiftDay(today, -1)
   let streak = 0
-  while (days.has(localDayKey(cursor))) { streak += 1; cursor = shiftDay(cursor, -1) }
+  while (days.has(localDayKey(cursor))) {
+    streak += 1
+    cursor = shiftDay(cursor, -1)
+  }
   return { streak, practisedToday: days.has(localDayKey(today)) }
 }
 
@@ -37,7 +44,10 @@ const professionalTopics = new Set(libraryGroups.find((group) => group.id === 'p
 // Stable pseudo-random order for one day: the plan must not reshuffle every time the page re-renders.
 function dayHash(text: string) {
   let hash = 2166136261
-  for (const char of text) { hash ^= char.charCodeAt(0); hash = Math.imul(hash, 16777619) }
+  for (const char of text) {
+    hash ^= char.charCodeAt(0)
+    hash = Math.imul(hash, 16777619)
+  }
   return hash >>> 0
 }
 
@@ -47,18 +57,32 @@ export type WordProgress = { latest: PracticeAttempt; errors: number; correct: n
 // its review date has come (today or earlier, local time). Shared by the daily plan and the Topics page.
 export function getWordProgress(): Map<string, WordProgress> {
   const reviewStates = getReviewStates()
-  const endOfToday = new Date(); endOfToday.setHours(23, 59, 59, 999)
+  const endOfToday = new Date()
+  endOfToday.setHours(23, 59, 59, 999)
   const progress = new Map<string, WordProgress>()
-  for (const attempt of getPracticeAttempts()) { // newest first
+  for (const attempt of getPracticeAttempts()) {
+    // newest first
     if (!attempt.wordId) continue
     const current = progress.get(attempt.wordId)
-    if (current) { current.attempts += 1; if (attempt.isCorrect) current.correct += 1; else current.errors += 1; continue }
-    progress.set(attempt.wordId, { latest: attempt, errors: attempt.isCorrect ? 0 : 1, correct: attempt.isCorrect ? 1 : 0, attempts: 1, dueAt: '', due: false })
+    if (current) {
+      current.attempts += 1
+      if (attempt.isCorrect) current.correct += 1
+      else current.errors += 1
+      continue
+    }
+    progress.set(attempt.wordId, {
+      latest: attempt,
+      errors: attempt.isCorrect ? 0 : 1,
+      correct: attempt.isCorrect ? 1 : 0,
+      attempts: 1,
+      dueAt: '',
+      due: false,
+    })
   }
   for (const [wordId, entry] of progress) {
     const manual = reviewStates[wordId]?.nextReviewAt
     // "Mark reviewed" on the Review page pushes the date forward; only honour it if it is newer than the last answer.
-    entry.dueAt = manual && manual > entry.latest.createdAt ? manual : entry.latest.nextReviewAt ?? entry.latest.createdAt
+    entry.dueAt = manual && manual > entry.latest.createdAt ? manual : (entry.latest.nextReviewAt ?? entry.latest.createdAt)
     entry.due = new Date(entry.dueAt) <= endOfToday
   }
   return progress
@@ -73,7 +97,9 @@ export function buildDailyPlan(size = PLAN_SIZE): DailyPlan {
 
   const due = [...stats.entries()]
     .filter(([, entry]) => entry.due)
-    .sort(([, a], [, b]) => Number(a.latest.isCorrect) - Number(b.latest.isCorrect) || b.errors - a.errors || a.dueAt.localeCompare(b.dueAt))
+    .sort(
+      ([, a], [, b]) => Number(a.latest.isCorrect) - Number(b.latest.isCorrect) || b.errors - a.errors || a.dueAt.localeCompare(b.dueAt),
+    )
     .map(([wordId]) => wordId)
   const dueSet = new Set(due)
   const weak = [...stats.entries()]

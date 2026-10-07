@@ -43,7 +43,8 @@ export const mistakeGuides: Record<string, MistakeGuide> = {
     what: 'You use the wrong vowel: restaurent, becouse, seperate. The vowel is usually in an unstressed syllable.',
     why: 'Unstressed English vowels all sound like a short “uh” (schwa). You cannot hear which letter it is, just as in Russian “молоко”.',
     rule: 'An unstressed vowel cannot be heard — link the word to a related word where it is stressed: separate ← “par”, competition ← compete.',
-    check: 'Find the unstressed syllable and ask: “Do I know a related word where this vowel is clear?” If not, learn the word with a memory hook.',
+    check:
+      'Find the unstressed syllable and ask: “Do I know a related word where this vowel is clear?” If not, learn the word with a memory hook.',
     examples: ['separate', 'grammar', 'definitely', 'restaurant', 'calendar'],
   },
   vowel_order: {
@@ -208,7 +209,8 @@ export const mistakeGuides: Record<string, MistakeGuide> = {
     what: 'You wrote a different word: not a spelling slip, but a different meaning (illness instead of sore, or another word with a similar translation).',
     why: 'One Russian word can match several English ones (больной → ill, sick, sore), and the English words are not interchangeable.',
     rule: 'Learn words in short phrases, not alone: a sore throat, feel ill, a serious illness. The phrase shows which word fits.',
-    check: 'Read the Russian prompt and the hint carefully and ask what situation it describes, then choose the word that fits that situation.',
+    check:
+      'Read the Russian prompt and the hint carefully and ask what situation it describes, then choose the word that fits that situation.',
     examples: ['a sore throat', 'take a photo', 'make a mistake', 'do homework'],
   },
   grammar_rule_error: {
@@ -396,11 +398,11 @@ export const mistakeGuides: Record<string, MistakeGuide> = {
     examples: ['I often go', 'She is always late', 'I really like it'],
   },
   'grammar:double-negative': {
-    what: 'There are two negatives: I didn\'t see nothing.',
+    what: "There are two negatives: I didn't see nothing.",
     why: 'In Russian two negatives are normal (Я ничего не видел).',
-    rule: 'One negative is enough: I didn\'t see anything, or I saw nothing.',
-    check: 'If the verb has not / n\'t, the next word is any-: anything, anyone, anywhere.',
-    examples: ['I didn\'t see anything', 'Nobody said anything', 'I saw nothing'],
+    rule: "One negative is enough: I didn't see anything, or I saw nothing.",
+    check: "If the verb has not / n't, the next word is any-: anything, anyone, anywhere.",
+    examples: ["I didn't see anything", 'Nobody said anything', 'I saw nothing'],
   },
   'grammar:there-is': {
     what: 'There is / there are is missing: In our town are two parks.',

@@ -14,10 +14,31 @@ export * from './proofreadingEngine'
 // corrections, an extra "the" is the most common article error) against the number of marked places
 // in the texts: the rare-but-frequent types are boosted, the over-represented ones damped.
 const baseTypeWeights: Record<string, number> = {
-  'article-extra': 4, article: 2, 'plural-uncountable': 2, preposition: 1.6, 'reported-speech': 1.5, 'since-for': 1.3,
-  'article-missing': 0.45, agreement: 0.7, tense: 0.8, 'past-irregular': 0.5, 'gerund-infinitive': 0.5, 'word-form': 0.6,
-  'present-perfect': 1.6, 'time-clause': 1.6, 'dummy-it': 1.6, 'be-missing': 1.6, 'adverb-position': 1.6, 'double-negative': 1.6, 'there-is': 1.6,
-  'word-order': 0.7, passive: 0.5, quantifier: 0.6, conditional: 0.6, comparative: 0.5, modal: 0.8,
+  'article-extra': 4,
+  article: 2,
+  'plural-uncountable': 2,
+  preposition: 1.6,
+  'reported-speech': 1.5,
+  'since-for': 1.3,
+  'article-missing': 0.45,
+  agreement: 0.7,
+  tense: 0.8,
+  'past-irregular': 0.5,
+  'gerund-infinitive': 0.5,
+  'word-form': 0.6,
+  'present-perfect': 1.6,
+  'time-clause': 1.6,
+  'dummy-it': 1.6,
+  'be-missing': 1.6,
+  'adverb-position': 1.6,
+  'double-negative': 1.6,
+  'there-is': 1.6,
+  'word-order': 0.7,
+  passive: 0.5,
+  quantifier: 0.6,
+  conditional: 0.6,
+  comparative: 0.5,
+  modal: 0.8,
 }
 
 // The base weights, raised for the types this learner keeps missing (up to ×4).
@@ -29,7 +50,8 @@ export function typeWeights(): Record<string, number> {
     const slug = Object.entries(proofreadingTypes).find(([, info]) => info.label === type)?.[0]
     if (slug) weights[slug] = Math.min(4, (weights[slug] ?? 1) + 0.5)
   }
-  for (const type of new Set([...Object.keys(baseTypeWeights), ...Object.keys(weights)])) weights[type] = (baseTypeWeights[type] ?? 1) * (weights[type] ?? 1)
+  for (const type of new Set([...Object.keys(baseTypeWeights), ...Object.keys(weights)]))
+    weights[type] = (baseTypeWeights[type] ?? 1) * (weights[type] ?? 1)
   return weights
 }
 
@@ -42,10 +64,29 @@ export function recordProofreading(text: ProofreadingText, result: ProofreadingR
     const correct = status === 'fixed'
     const { confidence, nextReviewAt } = scheduleAfterAnswer({ taskId }, correct, false, 'write-en')
     const attempt: PracticeAttempt = {
-      id: crypto.randomUUID(), taskId, taskType: spelling ? 'correct-spelling' : 'correct-sentence', topic: text.topic, library: 'Proofreading',
-      userAnswer: status === 'missed' ? slot.shown : learnerText, correctAnswer: slot.correct[0], isCorrect: correct, wasSkipped: false, wasAnswerRevealed: false, hintUsed: false,
-      attemptMode: 'write-en', errorType: 'unknown', confidence, nextReviewAt, needsReview: !correct,
-      errorCategory: slot.type === 'typo' ? 'Attention slip' : spelling ? 'General spelling' : `Grammar · ${proofreadingTypes[slot.type]?.label ?? slot.type}`, createdAt: new Date().toISOString(),
+      id: crypto.randomUUID(),
+      taskId,
+      taskType: spelling ? 'correct-spelling' : 'correct-sentence',
+      topic: text.topic,
+      library: 'Proofreading',
+      userAnswer: status === 'missed' ? slot.shown : learnerText,
+      correctAnswer: slot.correct[0],
+      isCorrect: correct,
+      wasSkipped: false,
+      wasAnswerRevealed: false,
+      hintUsed: false,
+      attemptMode: 'write-en',
+      errorType: 'unknown',
+      confidence,
+      nextReviewAt,
+      needsReview: !correct,
+      errorCategory:
+        slot.type === 'typo'
+          ? 'Attention slip'
+          : spelling
+            ? 'General spelling'
+            : `Grammar · ${proofreadingTypes[slot.type]?.label ?? slot.type}`,
+      createdAt: new Date().toISOString(),
     }
     savePracticeAttempt(attempt)
   }
@@ -69,11 +110,15 @@ function knownWords() {
 export function huntOptions() {
   const preferred = new Set([
     ...getAllWords().map((word) => word.word.toLocaleLowerCase()),
-    ...getPracticeAttempts().filter((attempt) => !attempt.isCorrect).map((attempt) => attempt.correctAnswer.toLocaleLowerCase()),
+    ...getPracticeAttempts()
+      .filter((attempt) => !attempt.isCorrect)
+      .map((attempt) => attempt.correctAnswer.toLocaleLowerCase()),
   ])
   return { preferred, known: knownWords() }
 }
 
 // Texts marked hidden (weaker, template-like ones) stay in the data but are not offered.
 export const proofreadingTexts = allProofreadingTexts.filter((text) => !hiddenProofreadingTextIds.has(text.id))
-export function textsForLevel(level: ProofreadingLevel) { return proofreadingTexts.filter((text) => text.level === level) }
+export function textsForLevel(level: ProofreadingLevel) {
+  return proofreadingTexts.filter((text) => text.level === level)
+}

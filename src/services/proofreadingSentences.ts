@@ -7,15 +7,26 @@ export type PoolSentence = { id: string; text: string; type: string; level: 'A2'
 
 let pool: Promise<PoolSentence[]> | null = null
 export function loadSentencePool() {
-  pool ??= fetch(`${import.meta.env.BASE_URL}data/proofreading-sentences.json`).then((response) => {
-    if (!response.ok) throw new Error('The sentences could not be loaded.')
-    return response.json() as Promise<PoolSentence[]>
-  }).catch((error) => { pool = null; throw error })
+  pool ??= fetch(`${import.meta.env.BASE_URL}data/proofreading-sentences.json`)
+    .then((response) => {
+      if (!response.ok) throw new Error('The sentences could not be loaded.')
+      return response.json() as Promise<PoolSentence[]>
+    })
+    .catch((error) => {
+      pool = null
+      throw error
+    })
   return pool
 }
 
 const SEEN_KEY = 'spell-sprint.proof-sentences-seen'
-const readSeen = (): string[] => { try { return JSON.parse(window.localStorage.getItem(SEEN_KEY) ?? '[]') } catch { return [] } }
+const readSeen = (): string[] => {
+  try {
+    return JSON.parse(window.localStorage.getItem(SEEN_KEY) ?? '[]')
+  } catch {
+    return []
+  }
+}
 const levelsFor: Record<ProofreadingLevel, PoolSentence['level'][]> = { A2: ['A2'], B1: ['B1', 'A2'], B2: ['B2', 'B1'], C1: ['B2'] }
 export const SENTENCES_TEXT_ID = 'sentences'
 
@@ -38,7 +49,11 @@ export async function buildSentenceText(level: ProofreadingLevel, weights: Recor
     perType[pick.type] = (perType[pick.type] ?? 0) + 1
     candidates = candidates.filter((item) => item !== pick)
   }
-  try { window.localStorage.setItem(SEEN_KEY, JSON.stringify([...readSeen(), ...chosen.map((item) => item.id)].slice(-400))) } catch { /* only a convenience */ }
+  try {
+    window.localStorage.setItem(SEEN_KEY, JSON.stringify([...readSeen(), ...chosen.map((item) => item.id)].slice(-400)))
+  } catch {
+    /* only a convenience */
+  }
   return {
     id: SENTENCES_TEXT_ID,
     title: 'Ten real sentences',

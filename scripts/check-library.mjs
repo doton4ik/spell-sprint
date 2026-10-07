@@ -11,22 +11,41 @@ const text = readFileSync(join(root, 'src/data/spell-sprint-built-in-library.csv
 
 // A small CSV reader (quotes, doubled quotes, commas and new lines inside quotes).
 function parse(source) {
-  const rows = []; let row = []; let field = ''; let quoted = false
+  const rows = []
+  let row = []
+  let field = ''
+  let quoted = false
   for (let i = 0; i < source.length; i += 1) {
     const char = source[i]
-    if (quoted) { if (char === '"') { if (source[i + 1] === '"') { field += '"'; i += 1 } else quoted = false } else field += char }
-    else if (char === '"') quoted = true
-    else if (char === ',') { row.push(field); field = '' }
-    else if (char === '\n') { row.push(field.replace(/\r$/, '')); rows.push(row); row = []; field = '' }
-    else field += char
+    if (quoted) {
+      if (char === '"') {
+        if (source[i + 1] === '"') {
+          field += '"'
+          i += 1
+        } else quoted = false
+      } else field += char
+    } else if (char === '"') quoted = true
+    else if (char === ',') {
+      row.push(field)
+      field = ''
+    } else if (char === '\n') {
+      row.push(field.replace(/\r$/, ''))
+      rows.push(row)
+      row = []
+      field = ''
+    } else field += char
   }
-  if (field || row.length) { row.push(field.replace(/\r$/, '')); rows.push(row) }
+  if (field || row.length) {
+    row.push(field.replace(/\r$/, ''))
+    rows.push(row)
+  }
   return rows.filter((item) => item.some(Boolean))
 }
 const [header, ...data] = parse(text)
 const rows = data.map((cells, index) => ({ line: index + 2, ...Object.fromEntries(header.map((key, at) => [key, cells[at] ?? ''])) }))
 
-const errors = []; const notes = []
+const errors = []
+const notes = []
 const fail = (row, message) => errors.push(`line ${row.line} (${row.word || row.word_id}): ${message}`)
 const latin = /^[A-Za-zÀ-ÿ][A-Za-zÀ-ÿ '’-]*$/
 const cyrillic = /[а-яё]/i
@@ -34,8 +53,10 @@ const limits = { word: 60, translation: 120, example: 200, rule: 120 }
 
 const ids = new Set()
 for (const row of rows) {
-  for (const key of ['word_id', 'word', 'translation', 'topic_id', 'topic', 'library', 'difficulty']) if (!row[key]?.trim()) fail(row, `empty ${key}`)
-  if (ids.has(row.word_id)) fail(row, `duplicate word_id ${row.word_id}`); ids.add(row.word_id)
+  for (const key of ['word_id', 'word', 'translation', 'topic_id', 'topic', 'library', 'difficulty'])
+    if (!row[key]?.trim()) fail(row, `empty ${key}`)
+  if (ids.has(row.word_id)) fail(row, `duplicate word_id ${row.word_id}`)
+  ids.add(row.word_id)
   for (const key of ['word', 'translation', 'example', 'rule', 'definition', 'alternatives', 'extra_example']) {
     const value = row[key] ?? ''
     if (value !== value.trim() || /\s{2,}/.test(value)) fail(row, `stray spaces in ${key}`)
@@ -46,19 +67,27 @@ for (const row of rows) {
   if (row.risk && !/^[1-5]$/.test(row.risk)) fail(row, `risk "${row.risk}" is not 1–5`)
   for (const [key, max] of Object.entries(limits)) if ((row[key] ?? '').length > max) fail(row, `${key} is longer than ${max} characters`)
   if (row.extra_example && !/^tatoeba:\d+$/.test(row.extra_example_source ?? '')) fail(row, `extra example without a tatoeba:<id> source`)
-  for (const alternative of (row.alternatives ?? '').split(';').map((item) => item.trim()).filter(Boolean)) {
+  for (const alternative of (row.alternatives ?? '')
+    .split(';')
+    .map((item) => item.trim())
+    .filter(Boolean)) {
     if (!latin.test(alternative)) fail(row, `alternative "${alternative}" is not English`)
     if (alternative.toLowerCase() === row.word.toLowerCase()) fail(row, `alternative repeats the word`)
   }
   // The example should show the word (any form: "chop" → "chopped"); only a note, some forms change a lot.
-  const stem = row.word.toLowerCase().split(' ')[0].slice(0, Math.max(3, row.word.length - 3))
+  const stem = row.word
+    .toLowerCase()
+    .split(' ')[0]
+    .slice(0, Math.max(3, row.word.length - 3))
   if (row.example && !row.example.toLowerCase().includes(stem)) notes.push(`line ${row.line}: example of "${row.word}" does not contain it`)
 }
 
 // One English word in two libraries must have one translation.
 const byWord = new Map()
 for (const row of rows) byWord.set(row.word.toLowerCase(), [...(byWord.get(row.word.toLowerCase()) ?? []), row])
-for (const [word, list] of byWord) if (new Set(list.map((row) => row.translation)).size > 1) errors.push(`"${word}" has different translations: ${list.map((row) => `${row.translation} (line ${row.line})`).join(' | ')}`)
+for (const [word, list] of byWord)
+  if (new Set(list.map((row) => row.translation)).size > 1)
+    errors.push(`"${word}" has different translations: ${list.map((row) => `${row.translation} (line ${row.line})`).join(' | ')}`)
 
 // Two different words with the same Russian prompt: the learner cannot know which one is meant,
 // unless each accepts the other.
@@ -67,10 +96,21 @@ for (const row of rows) byPrompt.set(row.translation, [...(byPrompt.get(row.tran
 for (const [prompt, list] of byPrompt) {
   const words = [...new Set(list.map((row) => row.word))]
   if (words.length < 2) continue
-  const accepted = list.every((row) => words.every((word) => word === row.word || (row.alternatives ?? '').split(';').map((item) => item.trim()).includes(word)))
+  const accepted = list.every((row) =>
+    words.every(
+      (word) =>
+        word === row.word ||
+        (row.alternatives ?? '')
+          .split(';')
+          .map((item) => item.trim())
+          .includes(word),
+    ),
+  )
   if (!accepted) notes.push(`"${prompt}" is the prompt of ${words.join(' / ')} — add them as alternatives or make the translations differ`)
 }
 
 if (notes.length) console.log(`${notes.length} note(s):\n  ${notes.slice(0, 30).join('\n  ')}${notes.length > 30 ? '\n  …' : ''}`)
-if (errors.length) { console.log(`\n${errors.length} error(s):\n  ${errors.slice(0, 50).join('\n  ')}`); process.exitCode = 1 }
-else console.log(`\nAll ${rows.length} library words passed.`)
+if (errors.length) {
+  console.log(`\n${errors.length} error(s):\n  ${errors.slice(0, 50).join('\n  ')}`)
+  process.exitCode = 1
+} else console.log(`\nAll ${rows.length} library words passed.`)

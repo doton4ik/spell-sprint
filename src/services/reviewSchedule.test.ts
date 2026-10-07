@@ -3,11 +3,29 @@ import type { PracticeAttempt } from '../types/practice'
 import { scheduleAfterAnswer } from './reviewSchedule'
 
 const KEY = 'spell-sprint.practice-attempts'
-const day = (offset: number, hour = 12) => { const date = new Date(2026, 0, 10 + offset, hour); return date }
-const attempt = (when: Date, isCorrect: boolean, extra: Partial<PracticeAttempt> = {}): PracticeAttempt => ({
-  id: crypto.randomUUID(), taskId: 'library-w-write-en', wordId: 'w', taskType: 'translate-ru-en', topic: '', userAnswer: '', correctAnswer: 'word',
-  isCorrect, wasSkipped: false, wasAnswerRevealed: false, hintUsed: false, attemptMode: 'write-en', errorType: 'unknown', errorCategory: '', createdAt: when.toISOString(), ...extra,
-} as PracticeAttempt)
+const day = (offset: number, hour = 12) => {
+  const date = new Date(2026, 0, 10 + offset, hour)
+  return date
+}
+const attempt = (when: Date, isCorrect: boolean, extra: Partial<PracticeAttempt> = {}): PracticeAttempt =>
+  ({
+    id: crypto.randomUUID(),
+    taskId: 'library-w-write-en',
+    wordId: 'w',
+    taskType: 'translate-ru-en',
+    topic: '',
+    userAnswer: '',
+    correctAnswer: 'word',
+    isCorrect,
+    wasSkipped: false,
+    wasAnswerRevealed: false,
+    hintUsed: false,
+    attemptMode: 'write-en',
+    errorType: 'unknown',
+    errorCategory: '',
+    createdAt: when.toISOString(),
+    ...extra,
+  }) as PracticeAttempt
 const history = (...attempts: PracticeAttempt[]) => window.localStorage.setItem(KEY, JSON.stringify(attempts))
 const daysUntil = (iso: string, from: Date) => Math.round((new Date(iso).getTime() - from.getTime()) / 86400000)
 const item = { wordId: 'w', taskId: 'library-w-write-en' }

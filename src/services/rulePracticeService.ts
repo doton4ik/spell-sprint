@@ -1,6 +1,12 @@
 import { getActiveCloudSession, insertRows, isSupabaseConfigured, selectRows } from './supabase'
 import { getVisibleRules } from './rulesService'
-import { getProgressRow, nextProgressAfterCorrectPractice, nextProgressAfterMistake, upsertProgressRow, type ProgressRow } from './ruleProgressStore'
+import {
+  getProgressRow,
+  nextProgressAfterCorrectPractice,
+  nextProgressAfterMistake,
+  upsertProgressRow,
+  type ProgressRow,
+} from './ruleProgressStore'
 import type { RuleExercise, RuleExerciseType, RulePriority, RuleStatus, UserRuleProgress } from '../types/rules'
 
 // Item 19: spell / correct_word / fill_gap ship first; multiple_choice and grammar exist in the
@@ -38,7 +44,9 @@ export async function getRuleExercises(ruleId: string): Promise<RuleExercise[]> 
   if (!isSupabaseConfigured()) return []
   try {
     const rows = await selectRows(null, 'rule_exercises', { rule_id: ruleId })
-    return rows.map(toExercise).sort((a, b) => EXERCISE_TYPE_PRIORITY.indexOf(a.exerciseType) - EXERCISE_TYPE_PRIORITY.indexOf(b.exerciseType))
+    return rows
+      .map(toExercise)
+      .sort((a, b) => EXERCISE_TYPE_PRIORITY.indexOf(a.exerciseType) - EXERCISE_TYPE_PRIORITY.indexOf(b.exerciseType))
   } catch {
     return []
   }
@@ -57,7 +65,13 @@ export async function getAllUserRuleProgress(): Promise<UserRuleProgress[]> {
   const session = await getActiveCloudSession()
   if (!session) return []
   const rows = await selectRows(session, 'user_rule_progress', { user_id: session.user.id })
-  return rows.map((row) => toProgress(session.user.id, row.rule_id, { ...row, status: row.status as ProgressRow['status'], priority: row.priority as ProgressRow['priority'] }))
+  return rows.map((row) =>
+    toProgress(session.user.id, row.rule_id, {
+      ...row,
+      status: row.status as ProgressRow['status'],
+      priority: row.priority as ProgressRow['priority'],
+    }),
+  )
 }
 
 // Records one mini-practice attempt (rule card, not a Spell Sprint test — see mistakeService.ts
@@ -69,7 +83,12 @@ export async function recordRulePracticeAttempt(ruleId: string, isCorrect: boole
   const session = await getActiveCloudSession()
   if (!session) return null
   try {
-    await insertRows(session, 'rule_practice_attempts', { user_id: session.user.id, rule_id: ruleId, exercise_id: exerciseId ?? null, is_correct: isCorrect })
+    await insertRows(session, 'rule_practice_attempts', {
+      user_id: session.user.id,
+      rule_id: ruleId,
+      exercise_id: exerciseId ?? null,
+      is_correct: isCorrect,
+    })
     const existing = await getProgressRow(session, ruleId)
     const next = isCorrect ? nextProgressAfterCorrectPractice(existing) : nextProgressAfterMistake(existing)
     await upsertProgressRow(session, ruleId, next)
@@ -82,12 +101,24 @@ export async function recordRulePracticeAttempt(ruleId: string, isCorrect: boole
 
 // Rule #16: the learner can always override status/priority by hand, regardless of the
 // computed rules above (e.g. "Mark as mastered" or "Add to Repeat later" from the rule card).
-export async function setUserRuleProgress(ruleId: string, patch: Partial<Pick<ProgressRow, 'status' | 'priority'>>): Promise<UserRuleProgress | null> {
+export async function setUserRuleProgress(
+  ruleId: string,
+  patch: Partial<Pick<ProgressRow, 'status' | 'priority'>>,
+): Promise<UserRuleProgress | null> {
   if (!isSupabaseConfigured()) return null
   const session = await getActiveCloudSession()
   if (!session) return null
   const existing = await getProgressRow(session, ruleId)
-  const next: ProgressRow = { ...(existing ?? { status: 'new' as RuleStatus, priority: 'practice' as RulePriority, mistake_count: 0, correct_count: 0, correct_calendar_days: [] }), ...patch }
+  const next: ProgressRow = {
+    ...(existing ?? {
+      status: 'new' as RuleStatus,
+      priority: 'practice' as RulePriority,
+      mistake_count: 0,
+      correct_count: 0,
+      correct_calendar_days: [],
+    }),
+    ...patch,
+  }
   await upsertProgressRow(session, ruleId, next)
   return toProgress(session.user.id, ruleId, next)
 }
@@ -113,7 +144,12 @@ const challengeTypeOrder: RuleExerciseType[] = ['correct_word', 'spell', 'fill_g
 
 export async function getRuleChallenge(ruleIds: string[], avoidWord: string): Promise<RuleExercise[]> {
   const avoid = avoidWord.trim().toLocaleLowerCase()
-  const exercises = (await getExercisesForRules(ruleIds)).filter((exercise) => exercise.metadata.set === CHALLENGE_SET && exercise.answer.toLocaleLowerCase() !== avoid && String(exercise.metadata.word ?? '').toLocaleLowerCase() !== avoid)
+  const exercises = (await getExercisesForRules(ruleIds)).filter(
+    (exercise) =>
+      exercise.metadata.set === CHALLENGE_SET &&
+      exercise.answer.toLocaleLowerCase() !== avoid &&
+      String(exercise.metadata.word ?? '').toLocaleLowerCase() !== avoid,
+  )
   // One per rule (the first rule is the most specific), a writing task before a multiple choice.
   return ruleIds.flatMap((ruleId) => {
     const options = exercises.filter((exercise) => exercise.ruleId === ruleId)
@@ -138,7 +174,10 @@ export async function buildRulePracticeQueue(limit = 10): Promise<RulePracticeQu
 
   let source: RulePracticeQueue['source'] = 'weak'
   let exercises = await getExercisesForRules(weak.map((entry) => entry.ruleId))
-  if (!exercises.length) { source = 'all'; exercises = await getExercisesForRules(rules.map((rule) => rule.id)) }
+  if (!exercises.length) {
+    source = 'all'
+    exercises = await getExercisesForRules(rules.map((rule) => rule.id))
+  }
 
   const items = exercises
     .map((exercise) => ({ exercise, score: (rankByRule.get(exercise.ruleId) ?? 1) + Math.random() * 1.2 }))

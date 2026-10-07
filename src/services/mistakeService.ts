@@ -24,14 +24,23 @@ export async function sendMistake(attempt: PracticeAttempt, session: SupabaseSes
   const catalog = await loadErrorCatalog()
   const word = attempt.wordId ? getEveryWord().find((item) => item.wordId === attempt.wordId) : undefined
   const classification = classifyMistake(attempt.correctAnswer, attempt.userAnswer, {
-    taskType: attempt.taskType, errorCategory: attempt.errorCategory, partOfSpeech: word?.partOfSpeech, confusableSets: catalog.confusableSets,
+    taskType: attempt.taskType,
+    errorCategory: attempt.errorCategory,
+    partOfSpeech: word?.partOfSpeech,
+    confusableSets: catalog.confusableSets,
   })
 
   // The older single-tag map is only a fallback for before the pattern tables exist.
-  const [byWord, byLegacyType] = await Promise.all([getRuleIdsForWord(attempt.wordId ?? ''), catalog.hasPatterns ? Promise.resolve([]) : getRuleIdsForErrorType(attempt.errorType)])
+  const [byWord, byLegacyType] = await Promise.all([
+    getRuleIdsForWord(attempt.wordId ?? ''),
+    catalog.hasPatterns ? Promise.resolve([]) : getRuleIdsForErrorType(attempt.errorType),
+  ])
   const ruleIds = [...new Set([...byWord, ...byLegacyType, ...ruleIdsFromClassification(classification, catalog)])]
 
-  const [event] = await insertRows(session, 'mistake_events', {
+  const [event] = await insertRows(
+    session,
+    'mistake_events',
+    {
       user_id: session.user.id,
       // Cut to the database limits (database/security-hardening.sql), so a very long answer is still saved.
       word_id: attempt.wordId?.slice(0, 200) ?? null,
@@ -41,21 +50,33 @@ export async function sendMistake(attempt: PracticeAttempt, session: SupabaseSes
       error_type: attempt.errorType.slice(0, 100),
       error_category: attempt.errorCategory.slice(0, 200),
       category: ruleIds.length ? 'Classified' : 'Unclassified',
-  }, { returning: true, select: 'id' })
+    },
+    { returning: true, select: 'id' },
+  )
   if (!event) throw new Error('The mistake was not saved.')
 
   // The event is already safe; nothing below may throw back to the outbox.
-  try { await saveMistakePatterns(session, event.id, classification, catalog) } catch (error) { console.warn('Could not save the error patterns for this mistake.', error) }
+  try {
+    await saveMistakePatterns(session, event.id, classification, catalog)
+  } catch (error) {
+    console.warn('Could not save the error patterns for this mistake.', error)
+  }
 
   const patternSlugs = [...classification.technical, ...classification.learning].map((tag) => tag.slug)
   if (!ruleIds.length) return { recorded: true, ruleIds: [], unclassified: true, patternSlugs }
 
   try {
-    await insertRows(session, 'mistake_rule_links', ruleIds.map((ruleId) => ({ mistake_event_id: event.id, rule_id: ruleId, user_id: session.user.id })))
-    await Promise.all(ruleIds.map(async (ruleId) => {
-      const existing = await getProgressRow(session, ruleId)
-      await upsertProgressRow(session, ruleId, nextProgressAfterMistake(existing))
-    }))
+    await insertRows(
+      session,
+      'mistake_rule_links',
+      ruleIds.map((ruleId) => ({ mistake_event_id: event.id, rule_id: ruleId, user_id: session.user.id })),
+    )
+    await Promise.all(
+      ruleIds.map(async (ruleId) => {
+        const existing = await getProgressRow(session, ruleId)
+        await upsertProgressRow(session, ruleId, nextProgressAfterMistake(existing))
+      }),
+    )
   } catch (error) {
     console.warn('The mistake was saved, but its rule links or progress could not be updated.', error)
   }

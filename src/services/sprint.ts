@@ -21,9 +21,13 @@ export function sprintPool(): { words: LibraryWord[]; fromHistory: number } {
   const words = getAllWords()
   const byId = new Map(words.map((word) => [word.wordId, word]))
   const lastTyped = new Map<string, boolean>()
-  for (const attempt of getPracticeAttempts()) { // newest first
+  for (const attempt of getPracticeAttempts()) {
+    // newest first
     if (!attempt.wordId || lastTyped.has(attempt.wordId) || !byId.has(attempt.wordId)) continue
-    if (!attempt.isCorrect) { lastTyped.set(attempt.wordId, false); continue }
+    if (!attempt.isCorrect) {
+      lastTyped.set(attempt.wordId, false)
+      continue
+    }
     if (!recognitionOnly(attempt.attemptMode)) lastTyped.set(attempt.wordId, true)
   }
   const known = [...lastTyped].filter(([, ok]) => ok).map(([id]) => byId.get(id)!)
@@ -32,17 +36,35 @@ export function sprintPool(): { words: LibraryWord[]; fromHistory: number } {
   return { words: [...shuffle(known), ...fill].slice(0, 40), fromHistory: known.length }
 }
 
-function shuffle<T>(items: T[]) { const copy = [...items]; for (let i = copy.length - 1; i > 0; i -= 1) { const j = Math.floor(Math.random() * (i + 1)); [copy[i], copy[j]] = [copy[j], copy[i]] } return copy }
+function shuffle<T>(items: T[]) {
+  const copy = [...items]
+  for (let i = copy.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[copy[i], copy[j]] = [copy[j], copy[i]]
+  }
+  return copy
+}
 
 export const sprintCorrect = (typed: string, word: string) => typed.trim().toLocaleLowerCase() === word.trim().toLocaleLowerCase()
 
 export function getSprintRounds(): SprintRound[] {
-  try { const value = JSON.parse(window.localStorage.getItem(ROUNDS_KEY) ?? '[]'); return Array.isArray(value) ? value : [] } catch { return [] }
+  try {
+    const value = JSON.parse(window.localStorage.getItem(ROUNDS_KEY) ?? '[]')
+    return Array.isArray(value) ? value : []
+  } catch {
+    return []
+  }
 }
 export function saveSprintRound(round: SprintRound) {
-  try { window.localStorage.setItem(ROUNDS_KEY, JSON.stringify([round, ...getSprintRounds()].slice(0, MAX_ROUNDS))) } catch { /* the result is still shown */ }
+  try {
+    window.localStorage.setItem(ROUNDS_KEY, JSON.stringify([round, ...getSprintRounds()].slice(0, MAX_ROUNDS)))
+  } catch {
+    /* the result is still shown */
+  }
 }
-export function bestSprint(rounds = getSprintRounds()) { return rounds.reduce((best, round) => Math.max(best, round.correct), 0) }
+export function bestSprint(rounds = getSprintRounds()) {
+  return rounds.reduce((best, round) => Math.max(best, round.correct), 0)
+}
 
 // Words typed noticeably slower than the learner's own pace in this round (per letter, over 1.5× the
 // median). Only typing time counts: the pause before the first key is remembering, not spelling.

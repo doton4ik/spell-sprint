@@ -11,12 +11,24 @@ function page<T extends Record<string, unknown>>(load: () => Promise<T>, name: k
   return lazy(async () => {
     try {
       const module = await load()
-      try { window.sessionStorage.removeItem(RELOAD_FLAG) } catch { /* storage blocked */ }
+      try {
+        window.sessionStorage.removeItem(RELOAD_FLAG)
+      } catch {
+        /* storage blocked */
+      }
       return { default: module[name] as ComponentType }
     } catch (error) {
       let reloaded = false
-      try { reloaded = window.sessionStorage.getItem(RELOAD_FLAG) === '1'; window.sessionStorage.setItem(RELOAD_FLAG, '1') } catch { /* storage blocked */ }
-      if (!reloaded) { window.location.reload(); return new Promise<never>(() => undefined) }
+      try {
+        reloaded = window.sessionStorage.getItem(RELOAD_FLAG) === '1'
+        window.sessionStorage.setItem(RELOAD_FLAG, '1')
+      } catch {
+        /* storage blocked */
+      }
+      if (!reloaded) {
+        window.location.reload()
+        return new Promise<never>(() => undefined)
+      }
       throw error
     }
   })
@@ -35,9 +47,18 @@ const SprintPage = page(() => import('./pages/SprintPage'), 'SprintPage')
 const PairsPage = page(() => import('./pages/PairsPage'), 'PairsPage')
 
 const pages: Record<string, ComponentType> = {
-  practice: PracticePage, 'my-mistakes': MistakesPage, rules: RulesPage, libraries: LibrariesPage, review: ReviewPage,
-  'level-check': DiagnosticPage, 'test-analysis': DiagnosticPage, settings: SettingsPage, topics: TopicsPage,
-  proofreading: ProofreadingPage, sprint: SprintPage, pairs: PairsPage,
+  practice: PracticePage,
+  'my-mistakes': MistakesPage,
+  rules: RulesPage,
+  libraries: LibrariesPage,
+  review: ReviewPage,
+  'level-check': DiagnosticPage,
+  'test-analysis': DiagnosticPage,
+  settings: SettingsPage,
+  topics: TopicsPage,
+  proofreading: ProofreadingPage,
+  sprint: SprintPage,
+  pairs: PairsPage,
 }
 
 function getRoute() {

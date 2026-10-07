@@ -1,11 +1,26 @@
 import { describe, expect, it } from 'vitest'
 import { sanitizeAttempt, sanitizeWord } from './validate'
 
-const goodAttempt = { id: 'a1', taskId: 'library-x-write-en', createdAt: '2026-10-07T10:00:00.000Z', userAnswer: 'enviroment', correctAnswer: 'environment', isCorrect: false, attemptMode: 'write-en', confidence: 2 }
+const goodAttempt = {
+  id: 'a1',
+  taskId: 'library-x-write-en',
+  createdAt: '2026-10-07T10:00:00.000Z',
+  userAnswer: 'enviroment',
+  correctAnswer: 'environment',
+  isCorrect: false,
+  attemptMode: 'write-en',
+  confidence: 2,
+}
 
 describe('sanitizeAttempt', () => {
   it('keeps a good attempt', () => {
-    expect(sanitizeAttempt(goodAttempt)).toMatchObject({ id: 'a1', userAnswer: 'enviroment', isCorrect: false, confidence: 2, attemptMode: 'write-en' })
+    expect(sanitizeAttempt(goodAttempt)).toMatchObject({
+      id: 'a1',
+      userAnswer: 'enviroment',
+      isCorrect: false,
+      confidence: 2,
+      attemptMode: 'write-en',
+    })
   })
   it('drops records without id, task or a real date', () => {
     expect(sanitizeAttempt({ ...goodAttempt, id: 5 })).toBeNull()
@@ -15,7 +30,14 @@ describe('sanitizeAttempt', () => {
     expect(sanitizeAttempt('text')).toBeNull()
   })
   it('repairs wrong types instead of passing them on', () => {
-    const fixed = sanitizeAttempt({ ...goodAttempt, userAnswer: 42, isCorrect: 'yes', attemptMode: 'hack', confidence: 1e9, nextReviewAt: 'soon' })!
+    const fixed = sanitizeAttempt({
+      ...goodAttempt,
+      userAnswer: 42,
+      isCorrect: 'yes',
+      attemptMode: 'hack',
+      confidence: 1e9,
+      nextReviewAt: 'soon',
+    })!
     expect(fixed.userAnswer).toBe('')
     expect(fixed.isCorrect).toBe(false)
     expect(fixed.attemptMode).toBe('write-en')
@@ -30,7 +52,15 @@ describe('sanitizeAttempt', () => {
 describe('sanitizeWord', () => {
   const goodWord = { wordId: 'w1', word: ' bridge ', translation: 'мост', difficulty: 'easy', risk: 2, alternatives: ['span', 7] }
   it('keeps a good word and trims it', () => {
-    expect(sanitizeWord(goodWord)).toMatchObject({ wordId: 'w1', id: 'w1', word: 'bridge', translation: 'мост', difficulty: 'easy', risk: 2, alternatives: ['span'] })
+    expect(sanitizeWord(goodWord)).toMatchObject({
+      wordId: 'w1',
+      id: 'w1',
+      word: 'bridge',
+      translation: 'мост',
+      difficulty: 'easy',
+      risk: 2,
+      alternatives: ['span'],
+    })
   })
   it('drops a word without text or id', () => {
     expect(sanitizeWord({ ...goodWord, word: '' })).toBeNull()

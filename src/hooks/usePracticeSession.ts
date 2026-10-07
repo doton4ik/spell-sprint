@@ -7,19 +7,31 @@ import type { CheckResult, ErrorType, PracticeAttempt, PracticeSettings, Practic
 import { closestAnswer, isAcceptedAnswer } from '../services/answerMatch'
 
 function normalize(value: string) {
-  return value.trim().toLocaleLowerCase().replace(/[’']/g, "'").replace(/[.,!?]+$/g, '').replace(/\s+/g, ' ')
+  return value
+    .trim()
+    .toLocaleLowerCase()
+    .replace(/[’']/g, "'")
+    .replace(/[.,!?]+$/g, '')
+    .replace(/\s+/g, ' ')
 }
 
 const isAnswerCorrect = isAcceptedAnswer
 
-function comparison(value: string) { return normalize(value).replaceAll(/[-\s]/g, '') }
+function comparison(value: string) {
+  return normalize(value).replaceAll(/[-\s]/g, '')
+}
 function errorType(answer: string, correct: string): ErrorType {
-  const value = comparison(answer); const target = comparison(correct)
+  const value = comparison(answer)
+  const target = comparison(correct)
   if (!value || value === target) return 'unknown'
-  if (normalize(answer).replaceAll('-', ' ') === normalize(correct).replaceAll('-', ' ') && normalize(answer) !== normalize(correct)) return 'phrase_spacing'
+  if (normalize(answer).replaceAll('-', ' ') === normalize(correct).replaceAll('-', ' ') && normalize(answer) !== normalize(correct))
+    return 'phrase_spacing'
   if (value.length < target.length) {
-    if ([...target].some((letter, index) => /[aeiou]/i.test(letter) && `${target.slice(0, index)}${target.slice(index + 1)}` === value)) return 'missing_vowel'
-    return /([bcdfghjklmnpqrstvwxyz])\1/i.test(target) && !/([bcdfghjklmnpqrstvwxyz])\1/i.test(value) ? 'double_consonant' : 'missing_letter'
+    if ([...target].some((letter, index) => /[aeiou]/i.test(letter) && `${target.slice(0, index)}${target.slice(index + 1)}` === value))
+      return 'missing_vowel'
+    return /([bcdfghjklmnpqrstvwxyz])\1/i.test(target) && !/([bcdfghjklmnpqrstvwxyz])\1/i.test(value)
+      ? 'double_consonant'
+      : 'missing_letter'
   }
   if (value.length > target.length) return 'extra_letter'
   if ([...value].sort().join('') === [...target].sort().join('')) return 'letter_order'
@@ -27,7 +39,16 @@ function errorType(answer: string, correct: string): ErrorType {
   return 'unknown'
 }
 function categoryForError(type: ErrorType) {
-  const labels: Record<ErrorType, string> = { missing_letter: 'Missing letters', missing_vowel: 'Missing vowel', extra_letter: 'Extra letters', letter_order: 'Letter order', vowel_confusion: 'Vowel confusion', double_consonant: 'Missing letters', phrase_spacing: 'Letter order', unknown: 'General spelling' }
+  const labels: Record<ErrorType, string> = {
+    missing_letter: 'Missing letters',
+    missing_vowel: 'Missing vowel',
+    extra_letter: 'Extra letters',
+    letter_order: 'Letter order',
+    vowel_confusion: 'Vowel confusion',
+    double_consonant: 'Missing letters',
+    phrase_spacing: 'Letter order',
+    unknown: 'General spelling',
+  }
   return labels[type]
 }
 function shuffle<T>(array: T[]): T[] {
@@ -59,9 +80,20 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
   const currentTask = shuffledTasks[taskIndex]
   const progress = useMemo(() => Math.round((taskIndex / shuffledTasks.length) * 100), [taskIndex, shuffledTasks.length])
 
-  useEffect(() => { savePracticeSettings(settings) }, [settings])
   useEffect(() => {
-    setShuffledTasks(buildSession()); setTaskIndex(0); setAnswer(''); setOtherMeaning(null); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0); setCompleted(false); setOutcomes({})
+    savePracticeSettings(settings)
+  }, [settings])
+  useEffect(() => {
+    setShuffledTasks(buildSession())
+    setTaskIndex(0)
+    setAnswer('')
+    setOtherMeaning(null)
+    setResult('idle')
+    setAttemptsOnTask(0)
+    setAnswerRevealed(false)
+    setHintStep(0)
+    setCompleted(false)
+    setOutcomes({})
   }, [tasks, taskLimit])
 
   useEffect(() => {
@@ -71,20 +103,45 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
   }, [result, settings.writeUntilCorrect])
 
   function markOutcome(outcome: TaskOutcome) {
-    setOutcomes((previous) => previous[currentTask.id] ? previous : { ...previous, [currentTask.id]: outcome })
+    setOutcomes((previous) => (previous[currentTask.id] ? previous : { ...previous, [currentTask.id]: outcome }))
   }
 
-  function recordAttempt(overrides: Pick<PracticeAttempt, 'isCorrect' | 'wasSkipped' | 'wasAnswerRevealed'> & { wasMarkedForReview?: boolean }) {
+  function recordAttempt(
+    overrides: Pick<PracticeAttempt, 'isCorrect' | 'wasSkipped' | 'wasAnswerRevealed'> & { wasMarkedForReview?: boolean },
+  ) {
     const correct = overrides.isCorrect
     // With several right answers, a mistake is measured against the one the learner was aiming at.
     const target = answer.trim() ? closestAnswer(answer, currentTask) : currentTask.answer
-    const attemptMode = currentTask.mode ?? (currentTask.type === 'translate-en-ru' ? 'translate-ru' : currentTask.type === 'translate-ru-en' ? 'write-en' : 'choose-spelling')
-    const { confidence, nextReviewAt } = scheduleAfterAnswer({ wordId: currentTask.wordId, taskId: currentTask.id }, correct, Boolean(hintStep), attemptMode)
+    const attemptMode =
+      currentTask.mode ??
+      (currentTask.type === 'translate-en-ru' ? 'translate-ru' : currentTask.type === 'translate-ru-en' ? 'write-en' : 'choose-spelling')
+    const { confidence, nextReviewAt } = scheduleAfterAnswer(
+      { wordId: currentTask.wordId, taskId: currentTask.id },
+      correct,
+      Boolean(hintStep),
+      attemptMode,
+    )
     const needsReview = Boolean(overrides.wasMarkedForReview) || !correct || Boolean(hintStep)
     savePracticeAttempt({
-      id: crypto.randomUUID(), taskId: currentTask.id, taskType: currentTask.type, topic: currentTask.topic, topicId: currentTask.topicId, subtopic: currentTask.subtopic, wordId: currentTask.wordId, library: currentTask.library,
-      userAnswer: answer, correctAnswer: target, errorCategory: correct ? currentTask.errorCategory : categoryForError(errorType(answer, target)),
-      hintUsed: Boolean(hintStep), attemptMode, errorType: correct ? 'unknown' : errorType(answer, target), confidence, nextReviewAt, needsReview: needsReview && settings.repeatDifficultItemLater, createdAt: new Date().toISOString(), ...overrides,
+      id: crypto.randomUUID(),
+      taskId: currentTask.id,
+      taskType: currentTask.type,
+      topic: currentTask.topic,
+      topicId: currentTask.topicId,
+      subtopic: currentTask.subtopic,
+      wordId: currentTask.wordId,
+      library: currentTask.library,
+      userAnswer: answer,
+      correctAnswer: target,
+      errorCategory: correct ? currentTask.errorCategory : categoryForError(errorType(answer, target)),
+      hintUsed: Boolean(hintStep),
+      attemptMode,
+      errorType: correct ? 'unknown' : errorType(answer, target),
+      confidence,
+      nextReviewAt,
+      needsReview: needsReview && settings.repeatDifficultItemLater,
+      createdAt: new Date().toISOString(),
+      ...overrides,
     })
   }
 
@@ -93,7 +150,10 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
     const correct = isAnswerCorrect(answer, currentTask)
     // A real word for another meaning of the same Russian prompt is not a mistake: hint, then try again.
     const other = correct ? null : findOtherMeaning(answer, currentTask)
-    if (other) { setOtherMeaning(other); return }
+    if (other) {
+      setOtherMeaning(other)
+      return
+    }
     setOtherMeaning(null)
     setAttemptsOnTask((value) => value + 1)
     setResult(correct ? 'correct' : 'incorrect')
@@ -110,25 +170,80 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
   }
 
   function advance() {
-    if (taskIndex >= shuffledTasks.length - 1) { setCompleted(true); return }
+    if (taskIndex >= shuffledTasks.length - 1) {
+      setCompleted(true)
+      return
+    }
     setTaskIndex((value) => value + 1)
-    setAnswer(''); setOtherMeaning(null); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0)
+    setAnswer('')
+    setOtherMeaning(null)
+    setResult('idle')
+    setAttemptsOnTask(0)
+    setAnswerRevealed(false)
+    setHintStep(0)
   }
 
   function skip() {
     markOutcome('skipped')
-    const seenBefore = getPracticeAttempts().some((attempt) => (currentTask.wordId ? attempt.wordId === currentTask.wordId : attempt.taskId === currentTask.id))
-    if (seenBefore || attemptsOnTask > 0 || answerRevealed) recordAttempt({ isCorrect: false, wasSkipped: true, wasAnswerRevealed: answerRevealed })
+    const seenBefore = getPracticeAttempts().some((attempt) =>
+      currentTask.wordId ? attempt.wordId === currentTask.wordId : attempt.taskId === currentTask.id,
+    )
+    if (seenBefore || attemptsOnTask > 0 || answerRevealed)
+      recordAttempt({ isCorrect: false, wasSkipped: true, wasAnswerRevealed: answerRevealed })
     advance()
   }
-  function useHint() { setHintStep((step) => Math.min(step + 1, 5)) }
-  function markForReview() { recordAttempt({ isCorrect: result === 'correct', wasSkipped: false, wasAnswerRevealed: answerRevealed, wasMarkedForReview: true }) }
-  function restart() { setShuffledTasks(buildSession()); setTaskIndex(0); setAnswer(''); setOtherMeaning(null); setResult('idle'); setAttemptsOnTask(0); setAnswerRevealed(false); setHintStep(0); setCompleted(false); setOutcomes({}) }
+  function useHint() {
+    setHintStep((step) => Math.min(step + 1, 5))
+  }
+  function markForReview() {
+    recordAttempt({ isCorrect: result === 'correct', wasSkipped: false, wasAnswerRevealed: answerRevealed, wasMarkedForReview: true })
+  }
+  function restart() {
+    setShuffledTasks(buildSession())
+    setTaskIndex(0)
+    setAnswer('')
+    setOtherMeaning(null)
+    setResult('idle')
+    setAttemptsOnTask(0)
+    setAnswerRevealed(false)
+    setHintStep(0)
+    setCompleted(false)
+    setOutcomes({})
+  }
 
-  return { otherMeaning, sessionTasks: shuffledTasks, outcomes, currentTask, taskIndex, progress, answer, setAnswer, result, attemptsOnTask, answerRevealed, hintStep, completed, settings, setSettings, checkAnswer, revealAnswer, useHint, markForReview, advance, skip, restart, totalTasks: shuffledTasks.length }
+  return {
+    otherMeaning,
+    sessionTasks: shuffledTasks,
+    outcomes,
+    currentTask,
+    taskIndex,
+    progress,
+    answer,
+    setAnswer,
+    result,
+    attemptsOnTask,
+    answerRevealed,
+    hintStep,
+    completed,
+    settings,
+    setSettings,
+    checkAnswer,
+    revealAnswer,
+    useHint,
+    markForReview,
+    advance,
+    skip,
+    restart,
+    totalTasks: shuffledTasks.length,
+  }
 }
 
 function uniqueTasks(tasks: PracticeTask[]) {
   const seen = new Set<string>()
-  return tasks.filter((task) => { const key = task.wordId ?? task.id; if (seen.has(key)) return false; seen.add(key); return true })
+  return tasks.filter((task) => {
+    const key = task.wordId ?? task.id
+    if (seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
 }

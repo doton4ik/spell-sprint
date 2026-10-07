@@ -38,18 +38,28 @@ export function RuleCard({ rule, rulesById, progress, expanded, focused, onToggl
   const [savingNote, setSavingNote] = useState(false)
   const [busy, setBusy] = useState(false)
 
-  useEffect(() => { if (focused) cardRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }) }, [focused])
+  useEffect(() => {
+    if (focused) cardRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }, [focused])
 
   useEffect(() => {
     if (!expanded || details) return
     let cancelled = false
-    Promise.all([getRuleExamples(rule.id), getRuleLinkedWords(rule.id), getRuleRelationships(rule.id), getLinkedMistakesForRule(rule.id), getRuleExercises(rule.id), getUserRuleNote(rule.id)])
-      .then(([examples, linkedWords, relationships, linkedMistakes, exercises, noteRow]) => {
-        if (cancelled) return
-        setDetails({ examples, linkedWords, relationships, linkedMistakes, exercises, note: noteRow?.note ?? '' })
-        setNoteDraft(noteRow?.note ?? '')
-      })
-    return () => { cancelled = true }
+    Promise.all([
+      getRuleExamples(rule.id),
+      getRuleLinkedWords(rule.id),
+      getRuleRelationships(rule.id),
+      getLinkedMistakesForRule(rule.id),
+      getRuleExercises(rule.id),
+      getUserRuleNote(rule.id),
+    ]).then(([examples, linkedWords, relationships, linkedMistakes, exercises, noteRow]) => {
+      if (cancelled) return
+      setDetails({ examples, linkedWords, relationships, linkedMistakes, exercises, note: noteRow?.note ?? '' })
+      setNoteDraft(noteRow?.note ?? '')
+    })
+    return () => {
+      cancelled = true
+    }
   }, [expanded, rule.id, details])
 
   const status = progress?.status ?? 'new'
@@ -68,7 +78,12 @@ export function RuleCard({ rule, rulesById, progress, expanded, focused, onToggl
 
   async function saveNote() {
     setSavingNote(true)
-    try { await saveUserRuleNote(rule.id, noteDraft); setDetails((current) => current && { ...current, note: noteDraft }) } catch { /* the draft stays in the box */ }
+    try {
+      await saveUserRuleNote(rule.id, noteDraft)
+      setDetails((current) => current && { ...current, note: noteDraft })
+    } catch {
+      /* the draft stays in the box */
+    }
     setSavingNote(false)
   }
   async function act(action: (ruleId: string) => Promise<UserRuleProgress | null>) {
@@ -77,7 +92,9 @@ export function RuleCard({ rule, rulesById, progress, expanded, focused, onToggl
     if (next) onProgressChange(next)
     setBusy(false)
   }
-  function listen() { if (rule.ttsText) speakEnglish(rule.ttsText, loadPracticeSettings(defaultPracticeSettings).speechLocale) }
+  function listen() {
+    if (rule.ttsText) speakEnglish(rule.ttsText, loadPracticeSettings(defaultPracticeSettings).speechLocale)
+  }
 
   return (
     <article className={`rule-card-v2${expanded ? ' rule-card-v2--open' : ''}${focused ? ' rule-card-v2--focused' : ''}`} ref={cardRef}>
@@ -89,59 +106,160 @@ export function RuleCard({ rule, rulesById, progress, expanded, focused, onToggl
         <span className="rule-card-v2__title">{rule.title}</span>
         <span className="rule-card-v2__summary">{rule.shortExplanation}</span>
         <span className="rule-card-v2__state">
-          {progress ? <><span className={`learning-status learning-status--${statusClass}`}>{ruleStatusLabels[status]}</span><span className={`rule-priority rule-priority--${priority}`}>{rulePriorityLabels[priority]}</span></> : <span className="rule-card-v2__hint">Not started</span>}
-          <span className="rule-card-v2__chevron" aria-hidden="true"><Icon name="chevron" size={16} /></span>
+          {progress ? (
+            <>
+              <span className={`learning-status learning-status--${statusClass}`}>{ruleStatusLabels[status]}</span>
+              <span className={`rule-priority rule-priority--${priority}`}>{rulePriorityLabels[priority]}</span>
+            </>
+          ) : (
+            <span className="rule-card-v2__hint">Not started</span>
+          )}
+          <span className="rule-card-v2__chevron" aria-hidden="true">
+            <Icon name="chevron" size={16} />
+          </span>
         </span>
       </button>
 
       {expanded ? (
         <div className="rule-card-v2__body">
-          {!details ? <p className="rule-card-v2__loading">Loading…</p> : (
+          {!details ? (
+            <p className="rule-card-v2__loading">Loading…</p>
+          ) : (
             <>
               <div className="rule-card-v2__col">
-                <div className="rule-card-v2__typeline"><span className="rule-type-pill">{ruleTypeLabels[rule.ruleType] ?? rule.ruleType}</span>{rule.ttsText ? <button className="quiet-action" type="button" onClick={listen}><Icon name="volume" size={14} /> Listen</button> : null}</div>
+                <div className="rule-card-v2__typeline">
+                  <span className="rule-type-pill">{ruleTypeLabels[rule.ruleType] ?? rule.ruleType}</span>
+                  {rule.ttsText ? (
+                    <button className="quiet-action" type="button" onClick={listen}>
+                      <Icon name="volume" size={14} /> Listen
+                    </button>
+                  ) : null}
+                </div>
 
                 {incorrectExamples.slice(0, 2).map((example) => (
                   <div className="wrong-right" key={example.id}>
-                    <div><span>Wrong</span><s>{example.text}</s></div>
+                    <div>
+                      <span>Wrong</span>
+                      <s>{example.text}</s>
+                    </div>
                     <Icon name="arrow" size={16} />
-                    <div><span>Correct</span><strong>{example.correction ?? rule.title}</strong></div>
+                    <div>
+                      <span>Correct</span>
+                      <strong>{example.correction ?? rule.title}</strong>
+                    </div>
                   </div>
                 ))}
-                {correctExamples.length ? <div className="rule-examples"><span>More examples</span><p>{correctExamples.map((example) => example.text).join(' · ')}</p></div> : null}
-                {exceptionExamples.length ? <div className="rule-examples rule-examples--exception"><span>Exceptions</span><p>{exceptionExamples.map((example) => example.text).join(' · ')}</p></div> : null}
-                {rule.mnemonic ? <div className="memory-cue"><Icon name="lightbulb" size={16} /><p><strong>Memory cue</strong>{rule.mnemonic}</p></div> : null}
-                {details.linkedWords.length ? <div className="rule-linked-words"><span>Linked words</span><p>{details.linkedWords.map((word) => word.translation ? `${word.word ?? word.wordId} (${word.translation})` : word.word ?? word.wordId).join(' · ')}</p></div> : null}
-                {details.relationships.length ? <div className="rule-linked-words"><span>Related rules</span><p>{details.relationships.map((relationship) => rulesById.get(relationship.relatedRuleId)?.title ?? relationship.relatedRuleId).join(' · ')}</p></div> : null}
+                {correctExamples.length ? (
+                  <div className="rule-examples">
+                    <span>More examples</span>
+                    <p>{correctExamples.map((example) => example.text).join(' · ')}</p>
+                  </div>
+                ) : null}
+                {exceptionExamples.length ? (
+                  <div className="rule-examples rule-examples--exception">
+                    <span>Exceptions</span>
+                    <p>{exceptionExamples.map((example) => example.text).join(' · ')}</p>
+                  </div>
+                ) : null}
+                {rule.mnemonic ? (
+                  <div className="memory-cue">
+                    <Icon name="lightbulb" size={16} />
+                    <p>
+                      <strong>Memory cue</strong>
+                      {rule.mnemonic}
+                    </p>
+                  </div>
+                ) : null}
+                {details.linkedWords.length ? (
+                  <div className="rule-linked-words">
+                    <span>Linked words</span>
+                    <p>
+                      {details.linkedWords
+                        .map((word) =>
+                          word.translation ? `${word.word ?? word.wordId} (${word.translation})` : (word.word ?? word.wordId),
+                        )
+                        .join(' · ')}
+                    </p>
+                  </div>
+                ) : null}
+                {details.relationships.length ? (
+                  <div className="rule-linked-words">
+                    <span>Related rules</span>
+                    <p>
+                      {details.relationships
+                        .map((relationship) => rulesById.get(relationship.relatedRuleId)?.title ?? relationship.relatedRuleId)
+                        .join(' · ')}
+                    </p>
+                  </div>
+                ) : null}
               </div>
 
               <div className="rule-card-v2__col">
                 <div className="rule-progress-strip">
-                  <span className="rule-progress-strip__stat">{progress?.mistakeCount ?? 0} mistake{(progress?.mistakeCount ?? 0) === 1 ? '' : 's'}</span>
+                  <span className="rule-progress-strip__stat">
+                    {progress?.mistakeCount ?? 0} mistake{(progress?.mistakeCount ?? 0) === 1 ? '' : 's'}
+                  </span>
                   <span className="rule-progress-strip__stat">{accuracy === null ? 'No practice yet' : `${accuracy}% accuracy`}</span>
                 </div>
                 <div className="rule-mastery-bar" aria-label={`${streakDays} of 5 correct days towards mastered`}>
-                  {[1, 2, 3, 4, 5].map((day) => <span key={day} className={day <= streakDays ? 'rule-mastery-bar__dot rule-mastery-bar__dot--filled' : 'rule-mastery-bar__dot'} />)}
+                  {[1, 2, 3, 4, 5].map((day) => (
+                    <span
+                      key={day}
+                      className={day <= streakDays ? 'rule-mastery-bar__dot rule-mastery-bar__dot--filled' : 'rule-mastery-bar__dot'}
+                    />
+                  ))}
                   <small>{streakDays}/5 correct days</small>
                 </div>
 
                 {details.linkedMistakes.length ? (
-                  <div className="rule-linked-mistakes"><span>Your related mistakes</span>
-                    {details.linkedMistakes.slice(0, 3).map((mistake) => <p key={mistake.id}><s>{mistake.userAnswer || 'Skipped'}</s> → <strong>{mistake.correctAnswer}</strong></p>)}
+                  <div className="rule-linked-mistakes">
+                    <span>Your related mistakes</span>
+                    {details.linkedMistakes.slice(0, 3).map((mistake) => (
+                      <p key={mistake.id}>
+                        <s>{mistake.userAnswer || 'Skipped'}</s> → <strong>{mistake.correctAnswer}</strong>
+                      </p>
+                    ))}
                   </div>
                 ) : null}
 
-                {details.exercises.length ? <div className="rule-mini-practice"><RuleExerciseRunner items={details.exercises.map((exercise) => ({ exercise }))} loop onProgress={onProgressChange} /></div> : null}
+                {details.exercises.length ? (
+                  <div className="rule-mini-practice">
+                    <RuleExerciseRunner items={details.exercises.map((exercise) => ({ exercise }))} loop onProgress={onProgressChange} />
+                  </div>
+                ) : null}
 
                 <div className="rule-note">
                   <span>Personal note / mnemonic</span>
-                  <textarea value={noteDraft} onChange={(event) => setNoteDraft(event.target.value)} placeholder="Write your own memory trick for this rule…" rows={2} />
-                  {noteDraft !== details.note ? <button className="quiet-action" type="button" disabled={savingNote} onClick={saveNote}>{savingNote ? 'Saving…' : 'Save note'}</button> : null}
+                  <textarea
+                    value={noteDraft}
+                    onChange={(event) => setNoteDraft(event.target.value)}
+                    placeholder="Write your own memory trick for this rule…"
+                    rows={2}
+                  />
+                  {noteDraft !== details.note ? (
+                    <button className="quiet-action" type="button" disabled={savingNote} onClick={saveNote}>
+                      {savingNote ? 'Saving…' : 'Save note'}
+                    </button>
+                  ) : null}
                 </div>
 
                 <div className="rule-card-v2__actions">
-                  <button className="rule-save" type="button" disabled={busy || status === 'repeat_later'} onClick={() => void act(addRuleToRepeatLater)}><Icon name="calendar" size={15} /> Add to Repeat later</button>
-                  <button className="rule-save rule-save--active" type="button" disabled={busy || status === 'mastered'} onClick={() => void act(markRuleAsMastered)}><Icon name="check" size={15} /> Mark as mastered</button>
+                  <button
+                    className="rule-save"
+                    type="button"
+                    disabled={busy || status === 'repeat_later'}
+                    onClick={() => void act(addRuleToRepeatLater)}
+                  >
+                    <Icon name="calendar" size={15} /> Add to Repeat later
+                  </button>
+                  <button
+                    className="rule-save rule-save--active"
+                    type="button"
+                    disabled={busy || status === 'mastered'}
+                    onClick={() => void act(markRuleAsMastered)}
+                  >
+                    <Icon name="check" size={15} /> Mark as mastered
+                  </button>
                 </div>
               </div>
             </>

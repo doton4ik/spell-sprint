@@ -47,7 +47,8 @@ export async function loadErrorCatalog(): Promise<ErrorCatalog> {
     const rules = await selectRows(null, 'rules', { rule_type: 'confusing_words', is_active: true }, { select: 'id,metadata' })
     for (const rule of rules) {
       const words = (rule.metadata as { confusable_words?: unknown } | null)?.confusable_words
-      if (Array.isArray(words) && words.every((word) => typeof word === 'string')) catalog.confusableSets.push({ ruleId: rule.id, words: words as string[] })
+      if (Array.isArray(words) && words.every((word) => typeof word === 'string'))
+        catalog.confusableSets.push({ ruleId: rule.id, words: words as string[] })
     }
   } catch {
     // classification still works without confusable words
@@ -68,10 +69,25 @@ export function ruleIdsFromClassification(classification: Classification, catalo
   return [...ids]
 }
 
-export async function saveMistakePatterns(session: SupabaseSession, mistakeEventId: string, classification: Classification, catalog: ErrorCatalog): Promise<void> {
+export async function saveMistakePatterns(
+  session: SupabaseSession,
+  mistakeEventId: string,
+  classification: Classification,
+  catalog: ErrorCatalog,
+): Promise<void> {
   const rows = [...classification.technical, ...classification.learning].flatMap((tag) => {
     const patternId = catalog.patternIds.get(tag.slug)
-    return patternId ? [{ mistake_event_id: mistakeEventId, error_pattern_id: patternId, user_id: session.user.id, confidence: tag.confidence, detail: tag.detail ?? null }] : []
+    return patternId
+      ? [
+          {
+            mistake_event_id: mistakeEventId,
+            error_pattern_id: patternId,
+            user_id: session.user.id,
+            confidence: tag.confidence,
+            detail: tag.detail ?? null,
+          },
+        ]
+      : []
   })
   if (!rows.length) return
   await insertRows(session, 'mistake_error_patterns', rows, { onConflict: 'mistake_event_id,error_pattern_id', ignoreDuplicates: true })

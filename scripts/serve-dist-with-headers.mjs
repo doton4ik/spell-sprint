@@ -9,7 +9,16 @@ const dist = join(root, 'dist')
 const toml = readFileSync(join(root, 'netlify.toml'), 'utf8')
 const block = toml.split('[[headers]]')[1] ?? ''
 const headers = Object.fromEntries([...block.matchAll(/^\s+([A-Za-z-]+) = "(.*)"$/gm)].map((match) => [match[1], match[2]]))
-const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.webmanifest': 'application/manifest+json', '.csv': 'text/csv', '.png': 'image/png' }
+const types = {
+  '.html': 'text/html',
+  '.js': 'text/javascript',
+  '.css': 'text/css',
+  '.json': 'application/json',
+  '.svg': 'image/svg+xml',
+  '.webmanifest': 'application/manifest+json',
+  '.csv': 'text/csv',
+  '.png': 'image/png',
+}
 const port = Number(process.env.PORT ?? 4179)
 
 createServer((request, response) => {
