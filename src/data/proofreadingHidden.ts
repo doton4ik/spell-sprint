@@ -1,0 +1,19 @@
+// Proofreading texts that are no longer offered (the weaker template-like ones, hidden in October 2026).
+// They stay in proofreadingTexts.ts, so old results and the known-word list keep them, and the checker still
+// validates them. A small separate file, so My Mistakes can skip their mistakes without loading every text.
+export const hiddenProofreadingTextIds = new Set([
+  'b1-message-station-plan', 'b1-notice-office-move', 'b1-review-budget-phone',
+  'b1-instructions-return-parcel', 'b1-report-park-paths', 'b1-dialogue-first-shift',
+  'b1-review-language-class', 'b1-instructions-update-app', 'b1-report-street-lights',
+  'b1-email-shoe-exchange', 'b1-message-rainy-weekend', 'b2-review-small-theatre',
+  'b2-instructions-interview-prep', 'b2-report-library-survey', 'b2-message-data-backup',
+  'b2-story-roof-repair', 'b2-notice-market-refunds', 'b2-article-city-trees', 'b2-dialogue-training-load',
+  'b2-review-community-choir', 'b2-report-shared-kitchen', 'b2-email-coastal-host', 'b2-message-dinner-guests',
+  'b2-story-warehouse-lesson', 'b2-notice-exam-room', 'b2-article-sleep-habits', 'b2-dialogue-new-device',
+  'b2-diary-garden-project', 'b2-instructions-budget-plan', 'b2-report-river-cleanup',
+  'b2-email-club-feedback', 'b2-message-difficult-talk', 'b2-story-missed-delivery', 'b2-notice-heritage-walk',
+  'b2-article-meal-sharing', 'b2-dialogue-project-meeting', 'b2-review-study-group',
+  'b2-diary-return-to-running', 'b2-instructions-secure-notes', 'b2-report-housing-feedback',
+  'b2-email-delayed-refund', 'b2-story-wildlife-pond', 'b2-notice-leisure-pool', 'b2-article-listening-well',
+  'b2-dialogue-weekend-chores',
+])

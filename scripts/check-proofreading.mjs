@@ -9,12 +9,13 @@ import { pathToFileURL } from 'node:url'
 
 const root = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')
 const dir = mkdtempSync(join(tmpdir(), 'proofreading-'))
-for (const [file, name] of [['src/services/proofreadingEngine.ts', 'proofreadingEngine.ts'], ['src/data/proofreadingTexts.ts', 'proofreadingTexts.ts'], ['src/data/realWordTraps.ts', 'realWordTraps.ts']]) {
+for (const [file, name] of [['src/services/proofreadingEngine.ts', 'proofreadingEngine.ts'], ['src/data/proofreadingTexts.ts', 'proofreadingTexts.ts'], ['src/data/realWordTraps.ts', 'realWordTraps.ts'], ['src/data/proofreadingHidden.ts', 'proofreadingHidden.ts']]) {
   const source = readFileSync(join(root, file), 'utf8').replace("'../data/proofreadingTexts'", "'./proofreadingTexts.ts'").replace("'../data/realWordTraps'", "'./realWordTraps.ts'")
   writeFileSync(join(dir, name), source)
 }
 const engine = await import(pathToFileURL(join(dir, 'proofreadingEngine.ts')).href)
 const { proofreadingTexts } = await import(pathToFileURL(join(dir, 'proofreadingTexts.ts')).href)
+const { hiddenProofreadingTextIds } = await import(pathToFileURL(join(dir, 'proofreadingHidden.ts')).href)
 
 let failed = 0
 const lowVariety = []
@@ -24,7 +25,7 @@ const levels = { A2: 0, B1: 0, B2: 0, C1: 0 }
 let hiddenCount = 0
 for (const text of proofreadingTexts) {
   if (ids.has(text.id)) fail(`${text.id}: duplicate id`); ids.add(text.id)
-  if (text.hidden) hiddenCount += 1
+  if (hiddenProofreadingTextIds.has(text.id)) hiddenCount += 1
   else levels[text.level] = (levels[text.level] ?? 0) + 1
   const { segments, problems } = engine.parseProofreadingText(text.text)
   problems.forEach((problem) => fail(`${text.id}: ${problem}`))
@@ -77,6 +78,11 @@ for (const text of proofreadingTexts) {
     const good = engine.checkExercise(hunt, perfect)
     if (good.fixed !== hunt.slots.length || good.falseAlarms.length) fail(`${text.id} hunt seed ${seed}: perfect edits → fixed ${good.fixed}/${hunt.slots.length}`)
   }
+}
+// Hidden ids must name real texts, and none may be the start of another id (mistakes are matched by prefix).
+for (const id of hiddenProofreadingTextIds) {
+  if (!ids.has(id)) fail(`hidden text ${id} does not exist`)
+  for (const other of ids) if (other !== id && other.startsWith(`${id}-`)) fail(`hidden id ${id} is a prefix of ${other}`)
 }
 // Ten-sentences pool (public/data/proofreading-sentences.json, from research/tatoeba-proof-sentences.mjs):
 // each sentence has exactly one valid place, and fixing it is accepted.

@@ -13,3 +13,6 @@ button { cursor: pointer; }
 
 /* Keyboard focus is always visible; mouse clicks do not show the ring. */
 :where(button, a, input, select, textarea, [role="radio"]):focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+
+/* While a page file loads (usually a split second): keep the space so the layout does not jump. */
+.page-loading { min-height: 60vh; }

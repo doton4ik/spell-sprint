@@ -1,3 +1,4 @@
+import { hiddenProofreadingTextIds } from '../data/proofreadingHidden'
 import { proofreadingTexts as allProofreadingTexts, type ProofreadingLevel, type ProofreadingText } from '../data/proofreadingTexts'
 import type { PracticeAttempt } from '../types/practice'
 import { getPracticeAttempts, savePracticeAttempt } from './practiceStorage'
@@ -74,5 +75,5 @@ export function huntOptions() {
 }
 
 // Texts marked hidden (weaker, template-like ones) stay in the data but are not offered.
-export const proofreadingTexts = allProofreadingTexts.filter((text) => !text.hidden)
+export const proofreadingTexts = allProofreadingTexts.filter((text) => !hiddenProofreadingTextIds.has(text.id))
 export function textsForLevel(level: ProofreadingLevel) { return proofreadingTexts.filter((text) => text.level === level) }
