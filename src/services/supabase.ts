@@ -1,4 +1,5 @@
 import { claimDeviceData } from './deviceData'
+import type { Insert, Json, Row, TableName } from '../types/database'
 
 type SupabaseUser = { id: string; email?: string }
 export type SupabaseSession = { access_token: string; refresh_token: string; user: SupabaseUser }
@@ -129,29 +130,60 @@ export async function signOut() {
   storeSession(null)
 }
 
-// Read-only access to public data (e.g. built-in rules); works even when signed out.
-export async function supabasePublicRequest(path: string, init: RequestInit = {}) {
-  return request(path, init)
-}
 
-// Access to the signed-in user's own rows (RLS-protected tables). Throws if not signed in.
-export async function supabaseUserRequest(path: string, init: RequestInit = {}) {
-  const session = await getActiveCloudSession()
-  if (!session) throw new Error('Sign in required for this action.')
-  return { session, data: await supabaseAuthedFetch(session, path, init) }
-}
-
-// Same as supabaseUserRequest, but reuses an already-verified session so a multi-step
+// A request as the signed-in learner (RLS applies), with an already-verified session so a multi-step
 // operation (e.g. recording one mistake against several rules) does not re-verify per call.
 export async function supabaseAuthedFetch(session: SupabaseSession, path: string, init: RequestInit = {}) {
   return request(path, { ...init, headers: { ...headers(session.access_token), ...init.headers } })
 }
 
+// ---- Typed table access ------------------------------------------------------------------------
+// Column filters become PostgREST conditions with every value encoded: a scalar → eq, a list → in,
+// null → is.null. Table and column names come from the generated database types.
+type FilterValue = string | number | boolean | null | readonly (string | number)[]
+export type Filters<T extends TableName> = Partial<Record<keyof Row<T> & string, FilterValue>>
+type QueryOptions = { select?: string; order?: string; limit?: number }
+
+const encodeValue = (value: string | number | boolean) => encodeURIComponent(String(value))
+export function tableQuery<T extends TableName>(table: T, filters: Filters<T> = {}, options: QueryOptions & { onConflict?: string } = {}) {
+  const parts: string[] = []
+  for (const [column, value] of Object.entries(filters) as Array<[string, FilterValue | undefined]>) {
+    if (value === undefined) continue
+    if (value === null) parts.push(`${column}=is.null`)
+    else if (Array.isArray(value)) parts.push(`${column}=in.(${value.map((item) => `"${encodeValue(String(item).replace(/"/g, '\\"'))}"`).join(',')})`)
+    else parts.push(`${column}=eq.${encodeValue(value as string | number | boolean)}`)
+  }
+  if (options.select) parts.push(`select=${options.select}`)
+  if (options.order) parts.push(`order=${options.order}`)
+  if (options.limit !== undefined) parts.push(`limit=${options.limit}`)
+  if (options.onConflict) parts.push(`on_conflict=${options.onConflict}`)
+  return `/rest/v1/${table}${parts.length ? `?${parts.join('&')}` : ''}`
+}
+
+/** Reads rows; with a session the learner's own (RLS), without one only public data. */
+export async function selectRows<T extends TableName>(session: SupabaseSession | null, table: T, filters: Filters<T> = {}, options: QueryOptions = {}): Promise<Row<T>[]> {
+  const path = tableQuery(table, filters, { select: '*', ...options })
+  const rows = session ? await supabaseAuthedFetch(session, path) : await request(path)
+  return Array.isArray(rows) ? rows as Row<T>[] : []
+}
+
+/** Adds rows (or updates them when `onConflict` names a unique key). Returns them if `returning` is set. */
+export async function insertRows<T extends TableName>(session: SupabaseSession, table: T, rows: Insert<T> | Insert<T>[], options: { onConflict?: string; ignoreDuplicates?: boolean; returning?: boolean; select?: string } = {}): Promise<Row<T>[]> {
+  const prefer = [options.onConflict ? (options.ignoreDuplicates ? 'resolution=ignore-duplicates' : 'resolution=merge-duplicates') : '', options.returning ? 'return=representation' : 'return=minimal'].filter(Boolean).join(',')
+  const path = tableQuery(table, {}, { onConflict: options.onConflict, select: options.returning ? options.select : undefined })
+  const result = await supabaseAuthedFetch(session, path, { method: 'POST', headers: { Prefer: prefer }, body: JSON.stringify(rows) })
+  return Array.isArray(result) ? result as Row<T>[] : []
+}
+
+/** Changes the rows that match the filters (RLS decides which of them the learner may change). */
+export async function updateRows<T extends TableName>(session: SupabaseSession, table: T, filters: Filters<T>, patch: Partial<Insert<T>>) {
+  await supabaseAuthedFetch(session, tableQuery(table, filters), { method: 'PATCH', headers: { Prefer: 'return=minimal' }, body: JSON.stringify(patch) })
+}
+
 export async function loadCloudSnapshot(): Promise<{ payload: unknown; updatedAt: string } | null> {
   const session = await getActiveCloudSession()
   if (!session) throw new Error('Sign in before restoring your learning data.')
-  const rows = await request(`/rest/v1/learning_snapshots?select=payload,updated_at&user_id=eq.${encodeURIComponent(session.user.id)}`, { headers: headers(session.access_token) })
-  const row = Array.isArray(rows) ? rows[0] : null
+  const [row] = await selectRows(session, 'learning_snapshots', { user_id: session.user.id }, { select: 'payload,updated_at' })
   return row ? { payload: row.payload, updatedAt: row.updated_at } : null
 }
 
@@ -159,17 +191,14 @@ export async function loadCloudSnapshot(): Promise<{ payload: unknown; updatedAt
 export async function loadCloudSnapshotVersion(): Promise<string | null> {
   const session = await getActiveCloudSession()
   if (!session) throw new Error('Sign in before synchronising your learning data.')
-  const rows = await request(`/rest/v1/learning_snapshots?select=updated_at&user_id=eq.${encodeURIComponent(session.user.id)}`, { headers: headers(session.access_token) })
-  return Array.isArray(rows) && rows[0] ? rows[0].updated_at as string : null
+  const [row] = await selectRows(session, 'learning_snapshots', { user_id: session.user.id }, { select: 'updated_at' })
+  return row?.updated_at ?? null
 }
 
 // Returns the new version (updated_at) of the backup.
 export async function saveCloudSnapshot(payload: unknown) {
   const session = await getActiveCloudSession()
   if (!session) throw new Error('Sign in before synchronising your learning data.')
-  const rows = await request('/rest/v1/learning_snapshots?on_conflict=user_id&select=updated_at', {
-    method: 'POST', headers: { ...headers(session.access_token), Prefer: 'resolution=merge-duplicates,return=representation' },
-    body: JSON.stringify({ user_id: session.user.id, payload, updated_at: new Date().toISOString() }),
-  })
-  return Array.isArray(rows) && rows[0] ? rows[0].updated_at as string : null
+  const [row] = await insertRows(session, 'learning_snapshots', { user_id: session.user.id, payload: payload as Json, updated_at: new Date().toISOString() }, { onConflict: 'user_id', returning: true, select: 'updated_at' })
+  return row?.updated_at ?? null
 }

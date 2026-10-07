@@ -1,4 +1,4 @@
-import { getActiveCloudSession, isSupabaseConfigured, supabaseAuthedFetch, supabasePublicRequest } from './supabase'
+import { getActiveCloudSession, insertRows, isSupabaseConfigured, selectRows } from './supabase'
 import { getVisibleRules } from './rulesService'
 import { getProgressRow, nextProgressAfterCorrectPractice, nextProgressAfterMistake, upsertProgressRow, type ProgressRow } from './ruleProgressStore'
 import type { RuleExercise, RuleExerciseType, RulePriority, RuleStatus, UserRuleProgress } from '../types/rules'
@@ -37,7 +37,7 @@ function toProgress(userId: string, ruleId: string, row: ProgressRow): UserRuleP
 export async function getRuleExercises(ruleId: string): Promise<RuleExercise[]> {
   if (!isSupabaseConfigured()) return []
   try {
-    const rows = await supabasePublicRequest(`/rest/v1/rule_exercises?rule_id=eq.${encodeURIComponent(ruleId)}&select=*`) as Record<string, unknown>[]
+    const rows = await selectRows(null, 'rule_exercises', { rule_id: ruleId })
     return rows.map(toExercise).sort((a, b) => EXERCISE_TYPE_PRIORITY.indexOf(a.exerciseType) - EXERCISE_TYPE_PRIORITY.indexOf(b.exerciseType))
   } catch {
     return []
@@ -56,8 +56,8 @@ export async function getAllUserRuleProgress(): Promise<UserRuleProgress[]> {
   if (!isSupabaseConfigured()) return []
   const session = await getActiveCloudSession()
   if (!session) return []
-  const rows = await supabaseAuthedFetch(session, `/rest/v1/user_rule_progress?user_id=eq.${session.user.id}&select=*`) as Array<ProgressRow & { rule_id: string }>
-  return rows.map((row) => toProgress(session.user.id, row.rule_id, row))
+  const rows = await selectRows(session, 'user_rule_progress', { user_id: session.user.id })
+  return rows.map((row) => toProgress(session.user.id, row.rule_id, { ...row, status: row.status as ProgressRow['status'], priority: row.priority as ProgressRow['priority'] }))
 }
 
 // Records one mini-practice attempt (rule card, not a Spell Sprint test — see mistakeService.ts
@@ -69,11 +69,7 @@ export async function recordRulePracticeAttempt(ruleId: string, isCorrect: boole
   const session = await getActiveCloudSession()
   if (!session) return null
   try {
-    await supabaseAuthedFetch(session, '/rest/v1/rule_practice_attempts', {
-      method: 'POST',
-      headers: { Prefer: 'return=minimal' },
-      body: JSON.stringify({ user_id: session.user.id, rule_id: ruleId, exercise_id: exerciseId ?? null, is_correct: isCorrect }),
-    })
+    await insertRows(session, 'rule_practice_attempts', { user_id: session.user.id, rule_id: ruleId, exercise_id: exerciseId ?? null, is_correct: isCorrect })
     const existing = await getProgressRow(session, ruleId)
     const next = isCorrect ? nextProgressAfterCorrectPractice(existing) : nextProgressAfterMistake(existing)
     await upsertProgressRow(session, ruleId, next)
@@ -102,7 +98,7 @@ export const addRuleToRepeatLater = (ruleId: string) => setUserRuleProgress(rule
 export async function getExercisesForRules(ruleIds: string[]): Promise<RuleExercise[]> {
   if (!isSupabaseConfigured() || !ruleIds.length) return []
   try {
-    const rows = await supabasePublicRequest(`/rest/v1/rule_exercises?rule_id=in.(${ruleIds.join(',')})&select=*`) as Record<string, unknown>[]
+    const rows = await selectRows(null, 'rule_exercises', { rule_id: ruleIds })
     return rows.map(toExercise)
   } catch {
     return []

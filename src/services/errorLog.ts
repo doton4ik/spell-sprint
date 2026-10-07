@@ -1,4 +1,4 @@
-import { getActiveCloudSession, isSupabaseConfigured, supabaseAuthedFetch } from './supabase'
+import { getActiveCloudSession, insertRows, isSupabaseConfigured } from './supabase'
 
 // When something breaks on a learner's device, we want to know. Errors are kept on the device
 // (at most 20) and sent to the client_errors table (database/client-errors.sql) when someone is signed in.
@@ -46,10 +46,7 @@ export function flushErrors() {
       if (!session) return
       for (const item of pending) {
         try {
-          await supabaseAuthedFetch(session, '/rest/v1/client_errors', {
-            method: 'POST', headers: { Prefer: 'return=minimal' },
-            body: JSON.stringify({ user_id: session.user.id, message: item.message, stack: item.stack ?? null, page: item.page, app_version: item.version, user_agent: item.userAgent, created_at: item.at }),
-          })
+          await insertRows(session, 'client_errors', { user_id: session.user.id, message: item.message, stack: item.stack ?? null, page: item.page, app_version: item.version, user_agent: item.userAgent, created_at: item.at })
           write(read().map((saved) => (saved.id === item.id ? { ...saved, sent: true } : saved)))
         } catch (error) {
           // No table yet (404), refused (400/403): mark as sent so it is not retried forever.

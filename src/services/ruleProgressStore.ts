@@ -1,4 +1,4 @@
-import { supabaseAuthedFetch, type SupabaseSession } from './supabase'
+import { insertRows, selectRows, type SupabaseSession } from './supabase'
 import type { RulePriority, RuleStatus } from '../types/rules'
 
 // Shared read/write helpers for user_rule_progress, used by both the general-test mistake
@@ -19,15 +19,12 @@ export function today() {
 }
 
 export async function getProgressRow(session: SupabaseSession, ruleId: string): Promise<ProgressRow | null> {
-  const rows = await supabaseAuthedFetch(session, `/rest/v1/user_rule_progress?user_id=eq.${session.user.id}&rule_id=eq.${ruleId}&select=*&limit=1`) as ProgressRow[]
-  return rows[0] ?? null
+  const [row] = await selectRows(session, 'user_rule_progress', { user_id: session.user.id, rule_id: ruleId }, { limit: 1 })
+  return row ? { id: row.id, status: row.status as RuleStatus, priority: row.priority as RulePriority, mistake_count: row.mistake_count, correct_count: row.correct_count, correct_calendar_days: row.correct_calendar_days } : null
 }
 
 export async function upsertProgressRow(session: SupabaseSession, ruleId: string, next: ProgressRow) {
-  await supabaseAuthedFetch(session, '/rest/v1/user_rule_progress?on_conflict=user_id,rule_id', {
-    method: 'POST',
-    headers: { Prefer: 'resolution=merge-duplicates,return=minimal' },
-    body: JSON.stringify({
+  await insertRows(session, 'user_rule_progress', {
       user_id: session.user.id,
       rule_id: ruleId,
       status: next.status,
@@ -37,8 +34,7 @@ export async function upsertProgressRow(session: SupabaseSession, ruleId: string
       correct_calendar_days: next.correct_calendar_days,
       last_result_at: new Date().toISOString(),
       updated_at: new Date().toISOString(),
-    }),
-  })
+  }, { onConflict: 'user_id,rule_id' })
 }
 
 // Rules #10-14: one wrong answer always counts, but it only demotes a rule that was already

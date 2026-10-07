@@ -1,4 +1,4 @@
-import { supabaseAuthedFetch, type SupabaseSession } from './supabase'
+import { insertRows, type SupabaseSession } from './supabase'
 import { getEveryWord } from './libraryStorage'
 import { getRuleIdsForErrorType, getRuleIdsForWord } from './rulesService'
 import { getProgressRow, nextProgressAfterMistake, upsertProgressRow } from './ruleProgressStore'
@@ -31,10 +31,7 @@ export async function sendMistake(attempt: PracticeAttempt, session: SupabaseSes
   const [byWord, byLegacyType] = await Promise.all([getRuleIdsForWord(attempt.wordId ?? ''), catalog.hasPatterns ? Promise.resolve([]) : getRuleIdsForErrorType(attempt.errorType)])
   const ruleIds = [...new Set([...byWord, ...byLegacyType, ...ruleIdsFromClassification(classification, catalog)])]
 
-  const [event] = await supabaseAuthedFetch(session, '/rest/v1/mistake_events', {
-    method: 'POST',
-    headers: { Prefer: 'return=representation' },
-    body: JSON.stringify({
+  const [event] = await insertRows(session, 'mistake_events', {
       user_id: session.user.id,
       // Cut to the database limits (database/security-hardening.sql), so a very long answer is still saved.
       word_id: attempt.wordId?.slice(0, 200) ?? null,
@@ -44,8 +41,8 @@ export async function sendMistake(attempt: PracticeAttempt, session: SupabaseSes
       error_type: attempt.errorType.slice(0, 100),
       error_category: attempt.errorCategory.slice(0, 200),
       category: ruleIds.length ? 'Classified' : 'Unclassified',
-    }),
-  }) as Array<{ id: string }>
+  }, { returning: true, select: 'id' })
+  if (!event) throw new Error('The mistake was not saved.')
 
   // The event is already safe; nothing below may throw back to the outbox.
   try { await saveMistakePatterns(session, event.id, classification, catalog) } catch (error) { console.warn('Could not save the error patterns for this mistake.', error) }
@@ -54,11 +51,7 @@ export async function sendMistake(attempt: PracticeAttempt, session: SupabaseSes
   if (!ruleIds.length) return { recorded: true, ruleIds: [], unclassified: true, patternSlugs }
 
   try {
-    await supabaseAuthedFetch(session, '/rest/v1/mistake_rule_links', {
-      method: 'POST',
-      headers: { Prefer: 'return=minimal' },
-      body: JSON.stringify(ruleIds.map((ruleId) => ({ mistake_event_id: event.id, rule_id: ruleId, user_id: session.user.id }))),
-    })
+    await insertRows(session, 'mistake_rule_links', ruleIds.map((ruleId) => ({ mistake_event_id: event.id, rule_id: ruleId, user_id: session.user.id })))
     await Promise.all(ruleIds.map(async (ruleId) => {
       const existing = await getProgressRow(session, ruleId)
       await upsertProgressRow(session, ruleId, nextProgressAfterMistake(existing))

@@ -1,4 +1,4 @@
-import { isSupabaseConfigured, supabaseAuthedFetch, supabasePublicRequest, type SupabaseSession } from './supabase'
+import { insertRows, isSupabaseConfigured, selectRows, type SupabaseSession } from './supabase'
 import type { Classification, ConfusableSet } from './mistakeClassifier'
 
 // Database side of mistake classification: the catalogue of error patterns, the mapping from a
@@ -28,8 +28,8 @@ export async function loadErrorCatalog(): Promise<ErrorCatalog> {
 
   try {
     const [patterns, links] = await Promise.all([
-      supabasePublicRequest('/rest/v1/error_patterns?is_active=eq.true&select=id,slug') as Promise<Array<{ id: string; slug: string }>>,
-      supabasePublicRequest('/rest/v1/error_pattern_rule_links?select=error_pattern_id,rule_id') as Promise<Array<{ error_pattern_id: string; rule_id: string }>>,
+      selectRows(null, 'error_patterns', { is_active: true }, { select: 'id,slug' }),
+      selectRows(null, 'error_pattern_rule_links', {}, { select: 'error_pattern_id,rule_id' }),
     ])
     const slugById = new Map(patterns.map((pattern) => [pattern.id, pattern.slug]))
     for (const pattern of patterns) catalog.patternIds.set(pattern.slug, pattern.id)
@@ -44,9 +44,9 @@ export async function loadErrorCatalog(): Promise<ErrorCatalog> {
 
   try {
     // Confusable words live on the rule itself (rules.metadata.confusable_words), so a new pair is data, not code.
-    const rules = await supabasePublicRequest('/rest/v1/rules?rule_type=eq.confusing_words&is_active=eq.true&select=id,metadata') as Array<{ id: string; metadata?: { confusable_words?: unknown } }>
+    const rules = await selectRows(null, 'rules', { rule_type: 'confusing_words', is_active: true }, { select: 'id,metadata' })
     for (const rule of rules) {
-      const words = rule.metadata?.confusable_words
+      const words = (rule.metadata as { confusable_words?: unknown } | null)?.confusable_words
       if (Array.isArray(words) && words.every((word) => typeof word === 'string')) catalog.confusableSets.push({ ruleId: rule.id, words: words as string[] })
     }
   } catch {
@@ -74,9 +74,5 @@ export async function saveMistakePatterns(session: SupabaseSession, mistakeEvent
     return patternId ? [{ mistake_event_id: mistakeEventId, error_pattern_id: patternId, user_id: session.user.id, confidence: tag.confidence, detail: tag.detail ?? null }] : []
   })
   if (!rows.length) return
-  await supabaseAuthedFetch(session, '/rest/v1/mistake_error_patterns?on_conflict=mistake_event_id,error_pattern_id', {
-    method: 'POST',
-    headers: { Prefer: 'resolution=ignore-duplicates,return=minimal' },
-    body: JSON.stringify(rows),
-  })
+  await insertRows(session, 'mistake_error_patterns', rows, { onConflict: 'mistake_event_id,error_pattern_id', ignoreDuplicates: true })
 }

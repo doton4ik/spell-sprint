@@ -1,4 +1,4 @@
-import { getActiveCloudSession, supabaseAuthedFetch, supabasePublicRequest, supabaseUserRequest, isSupabaseConfigured } from './supabase'
+import { getActiveCloudSession, insertRows, isSupabaseConfigured, selectRows, updateRows } from './supabase'
 import { getEveryWord } from './libraryStorage'
 import { getProgressRow, nextProgressAfterMistake, upsertProgressRow } from './ruleProgressStore'
 import type { MistakeEvent, Rule, RuleExample, RuleRelationship, RuleType, RuleWordLink } from '../types/rules'
@@ -34,7 +34,7 @@ export const ERROR_TYPE_RULE_SLUGS: Record<string, string[]> = {
 export async function getVisibleRules(): Promise<Rule[]> {
   if (!isSupabaseConfigured()) return []
   try {
-    const rows = await supabasePublicRequest('/rest/v1/rules?is_active=eq.true&select=*&order=title.asc') as Record<string, unknown>[]
+    const rows = await selectRows(null, 'rules', { is_active: true }, { order: 'title.asc' })
     return rows.map(toRule)
   } catch {
     return []
@@ -44,7 +44,7 @@ export async function getVisibleRules(): Promise<Rule[]> {
 export async function getRuleBySlug(slug: string): Promise<Rule | null> {
   if (!isSupabaseConfigured()) return null
   try {
-    const rows = await supabasePublicRequest(`/rest/v1/rules?slug=eq.${encodeURIComponent(slug)}&select=*&limit=1`) as Record<string, unknown>[]
+    const rows = await selectRows(null, 'rules', { slug }, { limit: 1 })
     return rows[0] ? toRule(rows[0]) : null
   } catch {
     return null
@@ -56,7 +56,7 @@ export async function getRuleBySlug(slug: string): Promise<Rule | null> {
 export async function getAllRuleWordLinks(): Promise<RuleWordLink[]> {
   if (!isSupabaseConfigured()) return []
   try {
-    const rows = await supabasePublicRequest('/rest/v1/rule_word_links?select=id,rule_id,word_id,relation,note') as Array<Record<string, unknown>>
+    const rows = await selectRows(null, 'rule_word_links', {}, { select: 'id,rule_id,word_id,relation,note' })
     return rows.map((row) => ({ id: row.id as string, ruleId: row.rule_id as string, wordId: row.word_id as string, relation: row.relation as RuleWordLink['relation'], note: (row.note as string) ?? undefined }))
   } catch {
     return []
@@ -75,7 +75,7 @@ export function consumePendingRuleFocus(): string | null {
 export async function getRuleIdsForWord(wordId: string): Promise<string[]> {
   if (!isSupabaseConfigured() || !wordId) return []
   try {
-    const rows = await supabasePublicRequest(`/rest/v1/rule_word_links?word_id=eq.${encodeURIComponent(wordId)}&select=rule_id`) as Array<Pick<RuleWordLink, 'ruleId'> & { rule_id: string }>
+    const rows = await selectRows(null, 'rule_word_links', { word_id: wordId }, { select: 'rule_id' })
     return [...new Set(rows.map((row) => row.rule_id))]
   } catch {
     return []
@@ -93,8 +93,9 @@ export async function getRuleIdsForErrorType(errorType?: string): Promise<string
 
 // One personal (private) rule row for the signed-in user's own progress table, keyed by ruleId.
 export async function getUserRuleProgressByRuleId(ruleId: string) {
-  const { data } = await supabaseUserRequest(`/rest/v1/user_rule_progress?rule_id=eq.${encodeURIComponent(ruleId)}&select=*&limit=1`)
-  const rows = data as Record<string, unknown>[]
+  const session = await getActiveCloudSession()
+  if (!session) throw new Error('Sign in required for this action.')
+  const rows = await selectRows(session, 'user_rule_progress', { rule_id: ruleId }, { limit: 1 })
   return rows[0] ?? null
 }
 
@@ -105,7 +106,7 @@ function toExample(row: Record<string, unknown>): RuleExample {
 export async function getRuleExamples(ruleId: string): Promise<RuleExample[]> {
   if (!isSupabaseConfigured()) return []
   try {
-    const rows = await supabasePublicRequest(`/rest/v1/rule_examples?rule_id=eq.${encodeURIComponent(ruleId)}&select=*`) as Record<string, unknown>[]
+    const rows = await selectRows(null, 'rule_examples', { rule_id: ruleId })
     return rows.map(toExample)
   } catch {
     return []
@@ -117,11 +118,11 @@ export async function getRuleExamples(ruleId: string): Promise<RuleExample[]> {
 export async function getRuleLinkedWords(ruleId: string): Promise<Array<{ wordId: string; relation: RuleWordLink['relation']; word?: string; translation?: string }>> {
   if (!isSupabaseConfigured()) return []
   try {
-    const rows = await supabasePublicRequest(`/rest/v1/rule_word_links?rule_id=eq.${encodeURIComponent(ruleId)}&select=word_id,relation`) as Array<{ word_id: string; relation: RuleWordLink['relation'] }>
+    const rows = await selectRows(null, 'rule_word_links', { rule_id: ruleId }, { select: 'word_id,relation' })
     const words = getEveryWord()
     return rows.map((row) => {
       const match = words.find((word) => word.wordId === row.word_id)
-      return { wordId: row.word_id, relation: row.relation, word: match?.word, translation: match?.translation }
+      return { wordId: row.word_id, relation: row.relation as RuleWordLink['relation'], word: match?.word, translation: match?.translation }
     })
   } catch {
     return []
@@ -131,7 +132,7 @@ export async function getRuleLinkedWords(ruleId: string): Promise<Array<{ wordId
 export async function getRuleRelationships(ruleId: string): Promise<RuleRelationship[]> {
   if (!isSupabaseConfigured()) return []
   try {
-    const rows = await supabasePublicRequest(`/rest/v1/rule_relationships?rule_id=eq.${encodeURIComponent(ruleId)}&select=*`) as Record<string, unknown>[]
+    const rows = await selectRows(null, 'rule_relationships', { rule_id: ruleId })
     return rows.map((row) => ({ id: row.id as string, ruleId: row.rule_id as string, relatedRuleId: row.related_rule_id as string, relationType: (row.relation_type as string) ?? undefined }))
   } catch {
     return []
@@ -145,7 +146,7 @@ export async function getUnclassifiedMistakes(limit = 20): Promise<MistakeEvent[
   const session = await getActiveCloudSession()
   if (!session) return []
   try {
-    const rows = await supabaseAuthedFetch(session, `/rest/v1/mistake_events?user_id=eq.${session.user.id}&category=eq.Unclassified&select=*&order=created_at.desc&limit=${limit}`) as Record<string, unknown>[]
+    const rows = await selectRows(session, 'mistake_events', { user_id: session.user.id, category: 'Unclassified' }, { order: 'created_at.desc', limit })
     return rows.map((row) => ({
       id: row.id as string, userId: row.user_id as string, wordId: (row.word_id as string) ?? undefined, taskId: (row.task_id as string) ?? undefined,
       userAnswer: (row.user_answer as string) ?? undefined, correctAnswer: (row.correct_answer as string) ?? undefined,
@@ -163,10 +164,9 @@ export async function getLinkedMistakesForRule(ruleId: string, limit = 5): Promi
   const session = await getActiveCloudSession()
   if (!session) return []
   try {
-    const links = await supabaseAuthedFetch(session, `/rest/v1/mistake_rule_links?user_id=eq.${session.user.id}&rule_id=eq.${ruleId}&select=mistake_event_id&order=created_at.desc&limit=${limit}`) as Array<{ mistake_event_id: string }>
+    const links = await selectRows(session, 'mistake_rule_links', { user_id: session.user.id, rule_id: ruleId }, { select: 'mistake_event_id', order: 'created_at.desc', limit })
     if (!links.length) return []
-    const ids = links.map((link) => link.mistake_event_id).join(',')
-    const rows = await supabaseAuthedFetch(session, `/rest/v1/mistake_events?id=in.(${ids})&select=*`) as Record<string, unknown>[]
+    const rows = await selectRows(session, 'mistake_events', { id: links.map((link) => link.mistake_event_id) })
     return rows.map((row) => ({
       id: row.id as string, userId: row.user_id as string, wordId: (row.word_id as string) ?? undefined, taskId: (row.task_id as string) ?? undefined,
       userAnswer: (row.user_answer as string) ?? undefined, correctAnswer: (row.correct_answer as string) ?? undefined,
@@ -190,20 +190,17 @@ export async function createPersonalRule(draft: PersonalRuleDraft): Promise<Rule
   const session = await getActiveCloudSession()
   if (!session) throw new Error('Sign in before creating a personal rule.')
   const slug = `${slugify(draft.title)}-${session.user.id.slice(0, 8)}-${Date.now().toString(36)}`
-  const [row] = await supabaseAuthedFetch(session, '/rest/v1/rules', {
-    method: 'POST',
-    headers: { Prefer: 'return=representation' },
-    body: JSON.stringify({
-      slug, title: draft.title, category: draft.category, rule_type: draft.ruleType, short_explanation: draft.shortExplanation,
-      source: 'personal', visibility: 'private', created_by: session.user.id, is_active: true,
-    }),
-  }) as Record<string, unknown>[]
+  const [row] = await insertRows(session, 'rules', {
+    slug, title: draft.title, category: draft.category, rule_type: draft.ruleType, short_explanation: draft.shortExplanation,
+    source: 'personal', visibility: 'private', created_by: session.user.id, is_active: true,
+  }, { returning: true })
+  if (!row) throw new Error('The rule was not saved.')
   const rule = toRule(row)
   if (draft.wrongExample || draft.correctExample) {
-    const examples = []
+    const examples: Array<{ rule_id: string; example_type: string; text: string; correction?: string | null }> = []
     if (draft.correctExample) examples.push({ rule_id: rule.id, example_type: 'correct', text: draft.correctExample })
     if (draft.wrongExample) examples.push({ rule_id: rule.id, example_type: 'incorrect', text: draft.wrongExample, correction: draft.correctExample ?? null })
-    await supabaseAuthedFetch(session, '/rest/v1/rule_examples', { method: 'POST', headers: { Prefer: 'return=minimal' }, body: JSON.stringify(examples) })
+    await insertRows(session, 'rule_examples', examples)
   }
   return rule
 }
@@ -217,18 +214,10 @@ export async function reclassifyMistakeWithRule(mistake: MistakeEvent, ruleId: s
   const session = await getActiveCloudSession()
   if (!session) throw new Error('Sign in required.')
   if (mistake.wordId && options.linkWord !== false) {
-    await supabaseAuthedFetch(session, '/rest/v1/rule_word_links', {
-      method: 'POST', headers: { Prefer: 'return=minimal' },
-      body: JSON.stringify({ rule_id: ruleId, word_id: mistake.wordId, relation: 'primary' }),
-    })
+    await insertRows(session, 'rule_word_links', { rule_id: ruleId, word_id: mistake.wordId, relation: 'primary' })
   }
-  await supabaseAuthedFetch(session, `/rest/v1/mistake_events?id=eq.${mistake.id}`, {
-    method: 'PATCH', headers: { Prefer: 'return=minimal' }, body: JSON.stringify({ category: 'Classified' }),
-  })
-  await supabaseAuthedFetch(session, '/rest/v1/mistake_rule_links', {
-    method: 'POST', headers: { Prefer: 'return=minimal' },
-    body: JSON.stringify({ mistake_event_id: mistake.id, rule_id: ruleId, user_id: session.user.id }),
-  })
+  await updateRows(session, 'mistake_events', { id: mistake.id }, { category: 'Classified' })
+  await insertRows(session, 'mistake_rule_links', { mistake_event_id: mistake.id, rule_id: ruleId, user_id: session.user.id })
   const existing = await getProgressRow(session, ruleId)
   await upsertProgressRow(session, ruleId, nextProgressAfterMistake(existing))
 }

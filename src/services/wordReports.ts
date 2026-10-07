@@ -1,4 +1,4 @@
-import { getActiveCloudSession, isSupabaseConfigured, supabaseAuthedFetch } from './supabase'
+import { getActiveCloudSession, insertRows, isSupabaseConfigured } from './supabase'
 
 // Learners flag built-in words that should not be in the library (database/word-reports.sql).
 // A report is saved on the device first and sent when there is a signed-in session, like the
@@ -39,10 +39,7 @@ export function flushWordReports() {
       if (!session) return
       for (const item of pending) {
         try {
-          await supabaseAuthedFetch(session, '/rest/v1/word_reports?on_conflict=user_id,word_id', {
-            method: 'POST', headers: { Prefer: 'resolution=merge-duplicates,return=minimal' },
-            body: JSON.stringify({ user_id: session.user.id, word_id: item.wordId, word: item.word.slice(0, 120), translation: item.translation?.slice(0, 300) ?? null, library: item.library?.slice(0, 120) ?? null, reason: item.reason, comment: item.comment ?? null, updated_at: new Date().toISOString() }),
-          })
+          await insertRows(session, 'word_reports', { user_id: session.user.id, word_id: item.wordId, word: item.word.slice(0, 120), translation: item.translation?.slice(0, 300) ?? null, library: item.library?.slice(0, 120) ?? null, reason: item.reason, comment: item.comment ?? null, updated_at: new Date().toISOString() }, { onConflict: 'user_id,word_id' })
           write(read().map((saved) => (saved.wordId === item.wordId ? { ...saved, sent: true } : saved)))
         } catch (error) {
           // A row the server refuses (bad data) is dropped; anything else (no table yet, no network) waits.
