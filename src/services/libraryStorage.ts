@@ -95,8 +95,22 @@ export function mergeImportedLibraries(incoming: WordLibrary[]) {
 }
 // Every library and word, including switched-off packs and hidden words. Use it to look things up
 // (history, past mistakes), never to choose what the learner practises.
-export function getEveryLibrary(): WordLibrary[] { return resolveLibraries([...builtInLibraries, ...getImportedLibraries()]) }
-export function getEveryWord() { return uniqueWords(getEveryLibrary().flatMap((library) => library.words)) }
+// Built every time a word is looked up (history, mistakes, reports), so the result is kept until the
+// learner's own libraries change in storage. Shared: copy before changing.
+let everyCache: { raw: string | null; libraries: WordLibrary[]; words: LibraryWord[] } | null = null
+function everything() {
+  let raw: string | null = null
+  try { raw = window.localStorage.getItem(CUSTOM_LIBRARIES_KEY) } catch { /* storage blocked */ }
+  if (!everyCache || everyCache.raw !== raw) {
+    const libraries = resolveLibraries([...builtInLibraries, ...getImportedLibraries()])
+    // getImportedLibraries may have saved a repaired list; key the cache by what is stored now.
+    try { raw = window.localStorage.getItem(CUSTOM_LIBRARIES_KEY) } catch { /* storage blocked */ }
+    everyCache = { raw, libraries, words: uniqueWords(libraries.flatMap((library) => library.words)) }
+  }
+  return everyCache
+}
+export function getEveryLibrary(): WordLibrary[] { return everything().libraries }
+export function getEveryWord() { return everything().words }
 
 // Before packs existed everything was on. Packs the learner has already practised stay on.
 function packsInUse() {

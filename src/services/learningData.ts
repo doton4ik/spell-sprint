@@ -1,5 +1,6 @@
 import { familyFor } from '../data/errorFamilies'
 import type { LearningStatus, MistakeEntry, ReviewState } from '../types/learning'
+import type { PracticeAttempt } from '../types/practice'
 import { getPracticeAttempts, subscribeToPracticeAttempts } from './practiceStorage'
 import { getTaskById } from './libraryPractice'
 import { getEveryWord } from './libraryStorage'
@@ -33,7 +34,7 @@ export function getReviewStates() {
 export function getMistakeEntries(): MistakeEntry[] {
   const states = getReviewStates()
   const translations = new Map(getEveryWord().map((word) => [word.wordId, word.translation]))
-  const groups = new Map<string, ReturnType<typeof getPracticeAttempts>>()
+  const groups = new Map<string, PracticeAttempt[]>()
   const relevant = relevanceCheck()
 
   for (const attempt of getPracticeAttempts().filter(relevant)) {

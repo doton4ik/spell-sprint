@@ -24,7 +24,7 @@ export function savePracticeSettings(settings: PracticeSettings) {
 }
 
 export function savePracticeAttempt(attempt: PracticeAttempt) {
-  const attempts = read<PracticeAttempt[]>(ATTEMPTS_KEY, [])
+  const attempts = getPracticeAttempts()
   window.localStorage.setItem(ATTEMPTS_KEY, JSON.stringify([attempt, ...attempts].slice(0, MAX_ATTEMPTS)))
   window.dispatchEvent(new Event(PRACTICE_UPDATED_EVENT))
   // The rules module is a layer on top of local practice history: wrong spelling answers are queued
@@ -34,7 +34,7 @@ export function savePracticeAttempt(attempt: PracticeAttempt) {
 
 // Adds attempts that are not stored locally yet (matched by id); never removes anything.
 export function mergePracticeAttempts(incoming: PracticeAttempt[]) {
-  const attempts = read<PracticeAttempt[]>(ATTEMPTS_KEY, [])
+  const attempts = getPracticeAttempts()
   const known = new Set(attempts.map((attempt) => attempt.id))
   const fresh = incoming.filter((attempt) => attempt && typeof attempt.id === 'string' && typeof attempt.taskId === 'string' && typeof attempt.createdAt === 'string' && !known.has(attempt.id))
   if (!fresh.length) return 0
@@ -44,8 +44,18 @@ export function mergePracticeAttempts(incoming: PracticeAttempt[]) {
   return fresh.length
 }
 
-export function getPracticeAttempts() {
-  return read<PracticeAttempt[]>(ATTEMPTS_KEY, [])
+// The history (up to 5000 answers) is read in many places, often several times per answer. Parsing
+// it each time is slow on a phone, so the parsed list is kept until the stored text changes (any
+// writer, this tab or another). The list is shared and frozen: copy it before sorting.
+let cached: { raw: string | null; attempts: readonly PracticeAttempt[] } | null = null
+export function getPracticeAttempts(): readonly PracticeAttempt[] {
+  let raw: string | null = null
+  try { raw = window.localStorage.getItem(ATTEMPTS_KEY) } catch { /* storage blocked */ }
+  if (cached && cached.raw === raw) return cached.attempts
+  let attempts: PracticeAttempt[] = []
+  try { const parsed: unknown = raw ? JSON.parse(raw) : []; attempts = Array.isArray(parsed) ? parsed : [] } catch { /* damaged storage: start empty */ }
+  cached = { raw, attempts: Object.freeze(attempts) }
+  return cached.attempts
 }
 
 export function subscribeToPracticeAttempts(onChange: () => void) {

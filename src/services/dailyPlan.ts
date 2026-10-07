@@ -12,7 +12,7 @@ function shiftDay(date: Date, days: number) { const copy = new Date(date); copy.
 
 // Consecutive days with at least one answer. Today still counts as "kept" before the first answer,
 // so the streak only breaks once a whole day has passed without practice.
-export function getStreak(attempts: PracticeAttempt[] = getPracticeAttempts()) {
+export function getStreak(attempts: readonly PracticeAttempt[] = getPracticeAttempts()) {
   const days = new Set(attempts.map((attempt) => localDayKey(attempt.createdAt)))
   const today = new Date()
   let cursor = days.has(localDayKey(today)) ? today : shiftDay(today, -1)
@@ -21,7 +21,7 @@ export function getStreak(attempts: PracticeAttempt[] = getPracticeAttempts()) {
   return { streak, practisedToday: days.has(localDayKey(today)) }
 }
 
-export function getTodayCount(attempts: PracticeAttempt[] = getPracticeAttempts()) {
+export function getTodayCount(attempts: readonly PracticeAttempt[] = getPracticeAttempts()) {
   const today = localDayKey(new Date())
   return attempts.filter((attempt) => localDayKey(attempt.createdAt) === today).length
 }
