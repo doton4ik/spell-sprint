@@ -5,8 +5,10 @@ import { clearLegacyServiceWorkers } from './pwa/registerServiceWorker'
 import { applyFontScale } from './services/appearanceStorage'
 import { startAutoSync } from './services/cloudSync'
 import { captureAuthRedirect } from './services/supabase'
+import { startErrorLog } from './services/errorLog'
 import './styles/global.css'
 
+startErrorLog()
 applyFontScale()
 captureAuthRedirect()
 

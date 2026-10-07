@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useState, type ComponentType } from 'react'
 import { AppShell } from './components/layout/AppShell'
 import { DashboardPage } from './pages/DashboardPage'
+import { ErrorBoundary } from './components/ErrorBoundary'
 
 // Every page except the dashboard is its own file, loaded when it is first opened: the first visit
 // downloads much less. If a page file is missing (a new version was deployed while the tab was open),
@@ -55,9 +56,11 @@ function App() {
   const Page = pages[route] ?? DashboardPage
   return (
     <AppShell activePage={route}>
-      <Suspense fallback={<div className="page-loading" role="status" aria-label="Loading" />}>
-        <Page />
-      </Suspense>
+      <ErrorBoundary resetKey={route}>
+        <Suspense fallback={<div className="page-loading" role="status" aria-label="Loading" />}>
+          <Page />
+        </Suspense>
+      </ErrorBoundary>
     </AppShell>
   )
 }
