@@ -1,5 +1,6 @@
 import type { PracticeAttempt, PracticeSettings } from '../types/practice'
 import { enqueueMistake } from './mistakeOutbox'
+import { sanitizeAttempt } from './validate'
 
 const SETTINGS_KEY = 'spell-sprint.practice-settings'
 const ATTEMPTS_KEY = 'spell-sprint.practice-attempts'
@@ -36,7 +37,8 @@ export function savePracticeAttempt(attempt: PracticeAttempt) {
 export function mergePracticeAttempts(incoming: PracticeAttempt[]) {
   const attempts = getPracticeAttempts()
   const known = new Set(attempts.map((attempt) => attempt.id))
-  const fresh = incoming.filter((attempt) => attempt && typeof attempt.id === 'string' && typeof attempt.taskId === 'string' && typeof attempt.createdAt === 'string' && !known.has(attempt.id))
+  // From the cloud backup: checked field by field (validate.ts), broken records dropped.
+  const fresh = incoming.map(sanitizeAttempt).filter((attempt): attempt is PracticeAttempt => attempt !== null && !known.has(attempt.id))
   if (!fresh.length) return 0
   const merged = [...attempts, ...fresh].sort((a, b) => b.createdAt.localeCompare(a.createdAt)).slice(0, MAX_ATTEMPTS)
   window.localStorage.setItem(ATTEMPTS_KEY, JSON.stringify(merged))

@@ -1,4 +1,5 @@
 import { canonicalTopic, libraryKindForName, stableWordId } from '../data/libraryTaxonomy'
+import { wordLimits } from './validate'
 import { normalisePartOfSpeech, partOfSpeechOptions, type LibraryDifficulty, type LibraryWord, type WordLibrary } from '../types/library'
 import { parseCsvRows } from './csv'
 import { getEveryWord, getImportedLibraries, removalKey, saveImportedLibraries } from './libraryStorage'
@@ -38,8 +39,11 @@ export function analyseCsv(text: string, fileName: string): CsvPreview {
   const fail = (fatal: string): CsvPreview => ({ fileName, fatal, totalRows: 0, rows: [], counts: empty, ignoredColumns: [], newTopics: [], newSubtopics: [], libraries: [] })
 
   if (!fileName.toLocaleLowerCase().endsWith('.csv')) return fail('Only .csv files can be imported.')
+  // Limits keep the library small enough for this device and for the cloud backup (5 MB).
+  if (text.length > 2_000_000) return fail('The file is too large (over 2 MB). Split it into smaller files.')
   const table = parseCsvRows(text.replace(/^﻿/, ''))
   if (table.length < 2) return fail('The file needs a header row and at least one word.')
+  if (table.length > 5001) return fail('The file has more than 5000 words. Split it into smaller files.')
   const headers = table[0].map(norm)
   const missing = requiredColumns.filter((column) => !headers.includes(column))
   if (missing.length) return fail(`Missing required column${missing.length === 1 ? '' : 's'}: ${missing.join(', ')}. The first row must be the header (download the template to see it).`)
@@ -54,9 +58,11 @@ export function analyseCsv(text: string, fileName: string): CsvPreview {
 
   const rows: PreviewRow[] = table.slice(1).map((cells, index) => {
     const line = index + 2
-    const value = (name: string) => (headers.indexOf(name) >= 0 ? cells[headers.indexOf(name)] ?? '' : '').trim()
+    const value = (name: string) => (headers.indexOf(name) >= 0 ? cells[headers.indexOf(name)] ?? '' : '').trim().slice(0, wordLimits.text)
     const word = value('word'); const translation = value('translation')
     const issues: string[] = []; const warnings: string[] = []
+    if (word.length > wordLimits.word) issues.push(`word is longer than ${wordLimits.word} characters`)
+    if (translation.length > wordLimits.translation) issues.push(`translation is longer than ${wordLimits.translation} characters`)
     if (!word) issues.push('word is empty')
     if (!translation) issues.push('translation is empty')
     if (word && hasCyrillic(word)) issues.push('the English word contains Russian letters')

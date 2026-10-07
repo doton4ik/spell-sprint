@@ -1,4 +1,5 @@
 import { builtInLibraries } from '../data/libraries'
+import { sanitizeWord } from './validate'
 import { libraryPacks, packForLibrary } from '../data/libraryPacks'
 import { getHiddenWordIds, getLibraryPrefs, getRemovedKeys, initialisePacks, setRemoved } from './libraryPrefs'
 import { canonicalTopic, canonicalTopics, libraryKindForName, stableWordId } from '../data/libraryTaxonomy'
@@ -86,7 +87,11 @@ function withoutRemoved(libraries: WordLibrary[]) {
 // Cloud restore: libraries from another device are merged by name, so a synced copy never shows up twice.
 export function mergeImportedLibraries(incoming: WordLibrary[]) {
   const local = getImportedLibraries()
-  const valid = incoming.filter((library) => library && typeof library.id === 'string' && typeof library.name === 'string' && Array.isArray(library.words)).map(migrateLibrary)
+  // From the cloud backup: words without text are dropped before migration, the rest checked field by field.
+  const valid = incoming.filter((library) => library && typeof library.id === 'string' && typeof library.name === 'string' && Array.isArray(library.words))
+    .map((library) => ({ ...library, name: library.name.slice(0, 120), words: library.words.filter((word) => word && typeof word.word === 'string' && typeof word.translation === 'string') }))
+    .map(migrateLibrary)
+    .map((library) => ({ ...library, words: library.words.map(sanitizeWord).filter((word): word is LibraryWord => word !== null) }))
   const merged = withoutRemoved(repairImportedLibraries([...local, ...valid]))
   const before = local.reduce((sum, library) => sum + library.words.length, 0)
   const after = merged.reduce((sum, library) => sum + library.words.length, 0)
