@@ -38,4 +38,8 @@ describe('getPracticeAttempts cache', () => {
     expect(read.wordId).toBe('places-in-town-places-in-town-library')
     expect(read.taskId).toBe('library-places-in-town-places-in-town-library-write-en')
   })
+  it('answers from a topic that was merged count under the new topic', () => {
+    window.localStorage.setItem(KEY, JSON.stringify([{ ...attempt('a', '2026-01-01'), topicId: 'animals', topic: 'Animals' }]))
+    expect(getPracticeAttempts()[0]).toMatchObject({ topicId: 'nature-and-animals', topic: 'Nature and Animals' })
+  })
 })

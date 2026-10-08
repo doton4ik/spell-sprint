@@ -3,6 +3,7 @@ import { enqueueMistake } from './mistakeOutbox'
 import { sanitizeAttempt } from './validate'
 import { safeSetItem } from './safeStorage'
 import { wordAliases } from '../data/wordAliases'
+import { canonicalTopic } from '../data/libraryTaxonomy'
 
 const SETTINGS_KEY = 'spell-sprint.practice-settings'
 const ATTEMPTS_KEY = 'spell-sprint.practice-attempts'
@@ -71,9 +72,17 @@ export function getPracticeAttempts(): readonly PracticeAttempt[] {
   return cached.attempts
 }
 
+// Older answers are read with today's ids: a word that is in two libraries has one id
+// (data/wordAliases.ts), and a merged topic has one name (data/libraryTaxonomy.ts).
 function withSharedWordId(attempt: PracticeAttempt): PracticeAttempt {
-  const shared = attempt?.wordId ? wordAliases[attempt.wordId] : undefined
-  return shared ? { ...attempt, wordId: shared, taskId: attempt.taskId.replace(attempt.wordId!, shared) } : attempt
+  if (!attempt || typeof attempt !== 'object') return attempt
+  const shared = attempt.wordId ? wordAliases[attempt.wordId] : undefined
+  let result = shared ? { ...attempt, wordId: shared, taskId: attempt.taskId.replace(attempt.wordId!, shared) } : attempt
+  if (result.topicId && typeof result.topic === 'string') {
+    const topic = canonicalTopic(result.topicId, result.topic)
+    if (topic.topicId !== result.topicId) result = { ...result, topicId: topic.topicId, topic: topic.topic }
+  }
+  return result
 }
 
 export function subscribeToPracticeAttempts(onChange: () => void) {

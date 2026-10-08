@@ -10,6 +10,9 @@ export const canonicalTopics: CanonicalTopic[] = [
   { id: 'travel-and-culture', name: 'Travel and Culture', subtopics: ['Travel Planning', 'At the Destination'] },
   { id: 'study-and-career', name: 'Study and Career', subtopics: ['Learning and Research', 'Career Development'] },
   { id: 'sport-and-fitness', name: 'Sport and Fitness', subtopics: ['Training and Competition', 'Health and Recovery'] },
+  { id: 'nature-and-animals', name: 'Nature and Animals', subtopics: [] },
+  { id: 'people-and-family', name: 'People and Family', subtopics: [] },
+  { id: 'city-and-transport', name: 'City and Transport', subtopics: [] },
 ]
 
 const topicAliases: Record<string, string> = {
@@ -17,6 +20,12 @@ const topicAliases: Record<string, string> = {
   travel: 'travel-and-culture',
   sports: 'sport-and-fitness',
   'sap-professional-logistics': 'warehouse-operations',
+  // Topics that overlapped (October 2026): one topic each, the words keep their subtopics.
+  animals: 'nature-and-animals',
+  'family-and-relationships': 'people-and-family',
+  'jobs-and-career': 'study-and-career',
+  home: 'everyday-life',
+  'places-in-town': 'city-and-transport',
 }
 const key = (value: string) =>
   value
