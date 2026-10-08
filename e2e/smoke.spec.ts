@@ -38,6 +38,8 @@ test('every page opens without an error', async ({ page }) => {
 test('a wrong answer in practice becomes a mistake', async ({ page }) => {
   const errors = watchErrors(page)
   await page.goto('/#practice')
+  // A new learner meets the word first; skipping that goes straight to the test.
+  await page.getByRole('button', { name: /I know this word/ }).click()
   const answer = page.locator('#practice-answer')
   await expect(answer).toHaveAttribute('autocorrect', 'off')
   await expect(answer).toHaveAttribute('spellcheck', 'false')
@@ -76,4 +78,20 @@ test('typos not noticed in Spelling hunt become yellow cards, not mistakes', asy
   await expect(page.getByRole('heading', { name: /Yellow cards/ })).toBeVisible()
   await expect(page.locator('.mistake-row--yellow').first()).toBeVisible()
   await expect(page.locator('.mistake-row:not(.mistake-row--yellow)')).toHaveCount(0)
+})
+
+test('a new word is shown first, and copying it is not a mistake', async ({ page }) => {
+  const errors = watchErrors(page)
+  await page.goto('/#practice')
+  await expect(page.getByText('Meet the word first.')).toBeVisible()
+  const word = (await page.locator('.meet-word__word').textContent())!.trim()
+  await page.locator('#meet-answer').fill('zzzz')
+  await page.getByRole('button', { name: 'Got it' }).click()
+  await expect(page.getByText(/Not the same yet/)).toBeVisible()
+  await page.locator('#meet-answer').fill(word)
+  await page.getByRole('button', { name: 'Got it' }).click()
+  await expect(page.locator('.session-dot--met')).toHaveCount(1)
+  await page.goto('/#my-mistakes')
+  await expect(page.locator('.mistake-row')).toHaveCount(0)
+  expect(errors).toEqual([])
 })

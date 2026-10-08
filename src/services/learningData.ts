@@ -7,6 +7,7 @@ import { getEveryWord } from './libraryStorage'
 import { MASTERED_DAYS } from './reviewSchedule'
 import { getRemovedKeys, setRemoved } from './libraryPrefs'
 import { relevanceCheck } from './mistakeRelevance'
+import { safeSetItem } from './safeStorage'
 import { pairDrills } from '../data/pairDrills'
 import { getPairAttempts, pairStatuses } from './pairs'
 import { getAllYellowCards } from './yellowCards'
@@ -212,7 +213,7 @@ export function getReviewEntries() {
   const mistakes = getMistakeEntries()
   const hintOnly = new Map<string, MistakeEntry>()
   const relevant = relevanceCheck()
-  for (const attempt of getPracticeAttempts().filter((item) => item.hintUsed && item.isCorrect && relevant(item))) {
+  for (const attempt of getPracticeAttempts().filter((item) => item.hintUsed && item.isCorrect && !item.introduced && relevant(item))) {
     if (mistakes.some((entry) => entry.taskId === attempt.taskId)) continue
     const current = hintOnly.get(attempt.taskId)
     if (current && current.lastSeen >= attempt.createdAt) continue
@@ -269,7 +270,7 @@ export function completeReview(taskId: string) {
   const intervals = [3, 7, 21]
   const nextReviewAt = addDays(new Date(), intervals[Math.min(completedReviews - 1, intervals.length - 1)])
   const updated = { ...getReviewStates(), [taskId]: { taskId, completedReviews, nextReviewAt, lastReviewedAt: new Date().toISOString() } }
-  window.localStorage.setItem(REVIEW_STATES_KEY, JSON.stringify(updated))
+  safeSetItem(REVIEW_STATES_KEY, JSON.stringify(updated))
   window.dispatchEvent(new Event(LEARNING_UPDATED_EVENT))
 }
 
@@ -286,7 +287,7 @@ export function toggleRuleReview(ruleId: string) {
   const removing = existing.includes(ruleId)
   const next = removing ? existing.filter((id) => id !== ruleId) : [...existing, ruleId]
   setRemoved([`rule:${ruleId}`], removing)
-  window.localStorage.setItem(RULE_REVIEW_KEY, JSON.stringify(next))
+  safeSetItem(RULE_REVIEW_KEY, JSON.stringify(next))
   window.dispatchEvent(new Event(LEARNING_UPDATED_EVENT))
   return next
 }

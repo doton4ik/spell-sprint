@@ -53,6 +53,7 @@ export type PracticeAttempt = {
   confidence: number
   nextReviewAt?: string
   wasMarkedForReview?: boolean
+  introduced?: boolean // "Meet the word": shown and copied once, not a test (no mistake, no good day)
   errorCategory: string
   needsReview: boolean
   createdAt: string

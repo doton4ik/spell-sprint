@@ -1,6 +1,7 @@
 import type { PracticeAttempt, PracticeSettings } from '../types/practice'
 import { enqueueMistake } from './mistakeOutbox'
 import { sanitizeAttempt } from './validate'
+import { safeSetItem } from './safeStorage'
 
 const SETTINGS_KEY = 'spell-sprint.practice-settings'
 const ATTEMPTS_KEY = 'spell-sprint.practice-attempts'
@@ -21,12 +22,12 @@ export function loadPracticeSettings(defaults: PracticeSettings): PracticeSettin
 }
 
 export function savePracticeSettings(settings: PracticeSettings) {
-  window.localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings))
+  safeSetItem(SETTINGS_KEY, JSON.stringify(settings))
 }
 
 export function savePracticeAttempt(attempt: PracticeAttempt) {
   const attempts = getPracticeAttempts()
-  window.localStorage.setItem(ATTEMPTS_KEY, JSON.stringify([attempt, ...attempts].slice(0, MAX_ATTEMPTS)))
+  if (!safeSetItem(ATTEMPTS_KEY, JSON.stringify([attempt, ...attempts].slice(0, MAX_ATTEMPTS)))) return
   window.dispatchEvent(new Event(PRACTICE_UPDATED_EVENT))
   // The rules module is a layer on top of local practice history: wrong spelling answers are queued
   // and sent in the background, so a slow network or a signed-out user never blocks saving the attempt.

@@ -1,4 +1,5 @@
 import { claimDeviceData } from './deviceData'
+import { safeSetItem } from './safeStorage'
 import type { Insert, Json, Row, TableName } from '../types/database'
 
 type SupabaseUser = { id: string; email?: string }
@@ -81,7 +82,7 @@ export async function getActiveCloudSession(): Promise<SupabaseSession | null> {
 
 function storeSession(session: SupabaseSession | null) {
   if (session) claimDeviceData(session.user.id)
-  if (session) window.localStorage.setItem(SESSION_KEY, JSON.stringify(session))
+  if (session) safeSetItem(SESSION_KEY, JSON.stringify(session))
   else window.localStorage.removeItem(SESSION_KEY)
 }
 

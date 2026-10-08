@@ -65,7 +65,16 @@ export function SessionSidebar({ modeLabel, scopeLabel, mode, taskIndex, progres
       {tasks.length > 1 && tasks.length <= MAX_MAP_TASKS ? (
         <div className="session-map" aria-label="Session map">
           {tasks.map((task, index) => {
-            const state = index === taskIndex ? 'current' : results[index] === 'correct' ? 'correct' : results[index] ? 'missed' : 'todo'
+            const state =
+              index === taskIndex
+                ? 'current'
+                : results[index] === 'correct'
+                  ? 'correct'
+                  : results[index] === 'met'
+                    ? 'met'
+                    : results[index]
+                      ? 'missed'
+                      : 'todo'
             return (
               <span className={`session-dot session-dot--${state}`} title={`Task ${index + 1}`} key={task.id}>
                 {index + 1}

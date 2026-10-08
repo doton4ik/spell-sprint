@@ -36,7 +36,7 @@ const percent = (correct: number, total: number) => (total ? Math.round((correct
 // One source for every number here: the practice attempt log (practice, reviews and level checks
 // all write to it), so Dashboard, My Mistakes and Topics count the same answers.
 export function getLearningAnalytics() {
-  const attempts = getPracticeAttempts()
+  const attempts = getPracticeAttempts().filter((item) => !item.introduced)
   const mistakes = attempts.filter((item) => !item.isCorrect).length
 
   const since = daysAgo(WINDOW_DAYS - 1)

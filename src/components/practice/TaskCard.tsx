@@ -35,6 +35,7 @@ type TaskCardProps = {
   reportable?: { wordId: string; word: string; translation?: string; library?: string } | null
   onReported?: (hide: boolean) => void
   pack?: { name: string; onTurnOff: () => void } | null
+  onMeet?: (typed: string) => void
 }
 
 const labels = {
@@ -78,6 +79,7 @@ export function TaskCard({
   reportable,
   onReported,
   pack,
+  onMeet,
 }: TaskCardProps) {
   const mode =
     task.mode ?? (task.type === 'translate-en-ru' ? 'translate-ru' : task.type === 'translate-ru-en' ? 'write-en' : 'choose-spelling')
@@ -88,10 +90,19 @@ export function TaskCard({
   // Rule challenge opened from the mistake breakdown; cleared when the next task appears.
   const [challengeRules, setChallengeRules] = useState<Rule[] | null>(null)
   const [reporting, setReporting] = useState(false)
+  // A new word is taught before it is tested: see it, hear it, type it once. "I know this word"
+  // goes straight to the test.
+  const canMeet = Boolean(onMeet && task.wordId && reason?.kind === 'new' && (mode === 'write-en' || mode === 'listen-write'))
+  const [testFor, setTestFor] = useState<string | null>(null) // "I know this word" pressed for this task
+  const meeting = canMeet && testFor !== task.id
+  const [copy, setCopy] = useState('')
+  const [copyWrong, setCopyWrong] = useState(false)
   useEffect(() => {
     setChallengeRules(null)
     setReporting(false)
-  }, [task.id])
+    setCopy('')
+    setCopyWrong(false)
+  }, [task.id]) // eslint-disable-line react-hooks/exhaustive-deps
   const isDefaultRule = /^Review .+ in the .+ topic.$/.test(task.rule)
   const spellingTask = mode !== 'translate-ru' && task.type !== 'correct-sentence'
   // A new random order for every task, kept while the task is on screen.
@@ -104,6 +115,82 @@ export function TaskCard({
   // Several answers can be right: show the one the learner aimed at, and the others as "Also correct".
   const target = checkedAnswer.trim() ? closestAnswer(checkedAnswer, task) : task.answer
   const others = acceptedAnswers(task).filter((option) => comparable(option) !== comparable(target))
+  if (meeting && onMeet)
+    return (
+      <article className="task-card">
+        <div className="task-card__meta">
+          <span className="task-card__labels">
+            <span className="task-reason task-reason--new">New word</span>
+          </span>
+          <span>
+            {task.topic}
+            {task.subtopic ? ` · ${task.subtopic}` : ''} <i /> {task.level}
+          </span>
+        </div>
+        <h2>Meet the word first.</h2>
+        <div className="meet-word">
+          <p className="meet-word__word" lang="en">
+            {task.answer}
+          </p>
+          <p className="meet-word__meaning">{task.prompt}</p>
+          {others.length ? <p className="meet-word__also">Also correct: {others.join(', ')}</p> : null}
+          {task.example ? (
+            <p className="meet-word__example" lang="en">
+              {task.example}
+            </p>
+          ) : null}
+          {task.rule && !isDefaultRule ? (
+            <p className="related-rule">
+              <Icon name="lightbulb" size={16} /> {task.rule}
+            </p>
+          ) : null}
+          <button className="quiet-button" type="button" onClick={onPlayAudio}>
+            <Icon name="volume" size={17} /> Listen
+          </button>
+        </div>
+        <form
+          onSubmit={(event) => {
+            event.preventDefault()
+            if (!copy.trim()) return
+            if (acceptedAnswers(task).some((option) => comparable(option) === comparable(copy))) onMeet(copy)
+            else setCopyWrong(true)
+          }}
+        >
+          <label className="answer-label" htmlFor="meet-answer">
+            Type it once to remember it
+          </label>
+          <input
+            {...noAutocorrect}
+            id="meet-answer"
+            autoFocus
+            value={copy}
+            onChange={(event) => {
+              setCopy(event.target.value)
+              setCopyWrong(false)
+            }}
+            placeholder="Type the word…"
+          />
+          {copyWrong ? (
+            <p className="meet-word__retry" role="status">
+              Not the same yet — look at the word above and try again.
+            </p>
+          ) : null}
+          <div className="task-actions">
+            <button className="check-button" type="submit" disabled={!copy.trim()}>
+              <Icon name="check" size={18} /> Got it
+            </button>
+            <div className="task-actions__secondary">
+              <button className="quiet-button" type="button" onClick={() => setTestFor(task.id)}>
+                I know this word — test me
+              </button>
+            </div>
+          </div>
+          <p className="meet-word__note">
+            Not a test: it will not count as a mistake. The word comes back tomorrow to check you remember it.
+          </p>
+        </form>
+      </article>
+    )
   return (
     <article className="task-card">
       {pack ? (

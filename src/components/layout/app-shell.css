@@ -331,3 +331,28 @@
     animation: none;
   }
 }
+
+/* A save failed: browser storage full or blocked */
+.storage-warning {
+  align-items: flex-start;
+  background: #fff4e5;
+  border: 1px solid #f0c78a;
+  border-radius: 10px;
+  color: #6b4a12;
+  display: flex;
+  font-size: calc(13px * var(--fs, 1));
+  gap: 10px;
+  margin: 0 0 16px;
+  padding: 10px 14px;
+}
+.storage-warning span {
+  flex: 1;
+}
+.storage-warning button {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0 4px;
+}

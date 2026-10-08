@@ -21,6 +21,21 @@ function addDays(from: Date, days: number) {
 // still counts, because it shows the word is not known.
 export const recognitionOnly = (mode?: PracticeMode) => mode === 'choose-spelling' || mode === 'translate-ru'
 
+// A right answer is a successful day only when it is earned:
+//  - the word was due (its review date has come). Practising it again early, from a topic list for
+//    example, is fine but does not move it forward; otherwise five days in a row would "master" it.
+//  - it is not the same day as the last mistake: writing it right a minute after seeing the answer
+//    shows short-term memory, so the word comes back tomorrow for a real check.
+// The past is replayed with the same rules, so a day that was not counted then is not counted now.
+function countsAsGoodDay(
+  attempt: Pick<PracticeAttempt, 'isCorrect' | 'hintUsed' | 'attemptMode'>,
+  day: string,
+  plannedDay: string,
+  mistakeDay: string,
+) {
+  return attempt.isCorrect && !attempt.hintUsed && !recognitionOnly(attempt.attemptMode) && day !== mistakeDay && day >= plannedDay
+}
+
 // `confidence` on an attempt = successful review days since the last mistake (0–5).
 export function scheduleAfterAnswer(
   item: Pick<PracticeAttempt, 'wordId' | 'taskId'>,
@@ -29,34 +44,37 @@ export function scheduleAfterAnswer(
   mode?: PracticeMode,
   now = new Date(),
 ) {
-  const history = getPracticeAttempts().filter((attempt) => itemKey(attempt) === itemKey(item))
-  const lastMistake =
-    history
-      .filter((attempt) => !attempt.isCorrect)
-      .map((attempt) => attempt.createdAt)
-      .sort()
-      .at(-1) ?? ''
-  const goodDays = new Set(
-    history
-      .filter(
-        (attempt) => attempt.isCorrect && !attempt.hintUsed && !recognitionOnly(attempt.attemptMode) && attempt.createdAt > lastMistake,
-      )
-      .map((attempt) => localDayKey(attempt.createdAt)),
-  )
+  const history = getPracticeAttempts()
+    .filter((attempt) => itemKey(attempt) === itemKey(item))
+    .sort((a, b) => a.createdAt.localeCompare(b.createdAt))
+  const lastMistake = history.filter((attempt) => !attempt.isCorrect).at(-1)?.createdAt ?? ''
+  const mistakeDay = lastMistake ? localDayKey(lastMistake) : ''
+  const goodDays = new Set<string>()
+  let plannedDay = ''
+  let planned = ''
+  for (const attempt of history) {
+    const day = localDayKey(attempt.createdAt)
+    if (attempt.createdAt > lastMistake && countsAsGoodDay(attempt, day, plannedDay, mistakeDay)) goodDays.add(day)
+    if (attempt.nextReviewAt) {
+      planned = attempt.nextReviewAt
+      plannedDay = localDayKey(planned)
+    }
+  }
 
   if (!correct) return { confidence: 0, nextReviewAt: now.toISOString() }
-  if (hintUsed) return { confidence: goodDays.size, nextReviewAt: addDays(now, 1) }
-  if (recognitionOnly(mode)) {
-    // Keeps the word's current review date (a known word is not pulled back), at least tomorrow.
-    const tomorrow = addDays(now, 1)
-    const planned =
-      history
-        .map((attempt) => attempt.nextReviewAt ?? '')
-        .sort()
-        .at(-1) ?? ''
-    return { confidence: goodDays.size, nextReviewAt: planned > tomorrow ? planned : tomorrow }
-  }
-  goodDays.add(localDayKey(now))
+  const tomorrow = addDays(now, 1)
+  // Keeps the word's current review date (a known word is not pulled back), at least tomorrow.
+  const keepPlan = () => ({ confidence: goodDays.size, nextReviewAt: planned > tomorrow ? planned : tomorrow })
+  if (hintUsed) return { confidence: goodDays.size, nextReviewAt: tomorrow }
+  if (recognitionOnly(mode)) return keepPlan()
+  const today = localDayKey(now)
+  if (today === mistakeDay) return { confidence: 0, nextReviewAt: tomorrow }
+  if (
+    goodDays.has(today) ||
+    !countsAsGoodDay({ isCorrect: true, hintUsed: false, attemptMode: mode ?? 'write-en' }, today, plannedDay, mistakeDay)
+  )
+    return keepPlan()
+  goodDays.add(today)
   const days = Math.min(goodDays.size, MASTERED_DAYS)
   return { confidence: days, nextReviewAt: addDays(now, REVIEW_INTERVALS[days - 1]) }
 }

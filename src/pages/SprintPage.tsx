@@ -164,7 +164,7 @@ function SprintRun({ words, onFinish }: { words: LibraryWord[]; onFinish: (round
     if (!typed.trim() || miss || paused || !word) return
     const now = performance.now()
     const started = firstKeyAt.current || now
-    const correct = sprintCorrect(typed, word.word)
+    const correct = sprintCorrect(typed, word)
     if (!correct) recordSprintMiss(word, typed)
     answers.current.push({
       wordId: word.wordId,

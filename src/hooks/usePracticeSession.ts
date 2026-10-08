@@ -60,7 +60,7 @@ function shuffle<T>(array: T[]): T[] {
   return result
 }
 
-export type TaskOutcome = 'correct' | 'incorrect' | 'skipped'
+export type TaskOutcome = 'correct' | 'incorrect' | 'skipped' | 'met'
 
 export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'all' = 'all') {
   const buildSession = () => shuffle(uniqueTasks(tasks)).slice(0, taskLimit === 'all' ? undefined : taskLimit)
@@ -192,6 +192,43 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
       recordAttempt({ isCorrect: false, wasSkipped: true, wasAnswerRevealed: answerRevealed })
     advance()
   }
+  // "Meet the word": a new word is shown first and copied once. That is saved as a helped answer
+  // (like a hint): no mistake and no good day, and the word comes back tomorrow for the real test.
+  function meetWord(typed: string) {
+    const attemptMode = currentTask.mode ?? 'write-en'
+    const { confidence, nextReviewAt } = scheduleAfterAnswer(
+      { wordId: currentTask.wordId, taskId: currentTask.id },
+      true,
+      true,
+      attemptMode,
+    )
+    markOutcome('met')
+    savePracticeAttempt({
+      id: crypto.randomUUID(),
+      taskId: currentTask.id,
+      taskType: currentTask.type,
+      topic: currentTask.topic,
+      topicId: currentTask.topicId,
+      subtopic: currentTask.subtopic,
+      wordId: currentTask.wordId,
+      library: currentTask.library,
+      userAnswer: typed.trim().slice(0, 500),
+      correctAnswer: currentTask.answer,
+      errorCategory: currentTask.errorCategory,
+      hintUsed: true,
+      introduced: true,
+      attemptMode,
+      errorType: 'unknown',
+      confidence,
+      nextReviewAt,
+      needsReview: false,
+      isCorrect: true,
+      wasSkipped: false,
+      wasAnswerRevealed: false,
+      createdAt: new Date().toISOString(),
+    })
+    advance()
+  }
   function useHint() {
     setHintStep((step) => Math.min(step + 1, 5))
   }
@@ -228,6 +265,7 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
     settings,
     setSettings,
     checkAnswer,
+    meetWord,
     revealAnswer,
     useHint,
     markForReview,

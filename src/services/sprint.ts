@@ -1,13 +1,14 @@
 // 60-second sprint: type as many known words as you can. It measures speed, it does not teach, so
 // a correct answer is not written to the practice history. A miss against the clock is a yellow card
 // in My Mistakes (yellowCards.ts); the same word missed a second time becomes a real mistake.
-// Rounds are kept only on this device.
+// Rounds are part of the cloud backup (cloudSync.ts) and merged by their start time.
 import type { LibraryWord } from '../types/library'
 import { getAllWords } from './libraryStorage'
 import { getPracticeAttempts } from './practiceStorage'
 import { recognitionOnly, scheduleAfterAnswer } from './reviewSchedule'
 import { savePracticeAttempt } from './practiceStorage'
 import { addYellowCard } from './yellowCards'
+import { comparable } from './answerMatch'
 import { hasOpenMistake } from './learningData'
 
 export const SPRINT_SECONDS = 60
@@ -49,7 +50,10 @@ function shuffle<T>(items: T[]) {
   return copy
 }
 
-export const sprintCorrect = (typed: string, word: string) => typed.trim().toLocaleLowerCase() === word.trim().toLocaleLowerCase()
+// The same matching as Practice: any accepted answer (autumn / fall), and spaces, hyphens, case and
+// a final full stop do not matter.
+export const sprintCorrect = (typed: string, word: Pick<LibraryWord, 'word' | 'alternatives'>) =>
+  [word.word, ...(word.alternatives ?? [])].map(comparable).includes(comparable(typed))
 
 export function getSprintRounds(): SprintRound[] {
   try {
@@ -66,6 +70,45 @@ export function saveSprintRound(round: SprintRound) {
     /* the result is still shown */
   }
 }
+// Adds rounds from another device (matched by their start time); broken records are dropped.
+export function mergeSprintRounds(raw: unknown) {
+  if (!Array.isArray(raw)) return 0
+  const local = getSprintRounds()
+  const known = new Set(local.map((round) => round.date))
+  const fresh: SprintRound[] = []
+  for (const item of raw) {
+    const round = sanitizeRound(item)
+    if (round && !known.has(round.date)) {
+      known.add(round.date)
+      fresh.push(round)
+    }
+  }
+  if (!fresh.length) return 0
+  const merged = [...local, ...fresh].sort((a, b) => b.date.localeCompare(a.date)).slice(0, MAX_ROUNDS)
+  window.localStorage.setItem(ROUNDS_KEY, JSON.stringify(merged))
+  return fresh.length
+}
+const count = (value: unknown) => (typeof value === 'number' && Number.isFinite(value) ? Math.max(0, Math.round(value)) : 0)
+const short = (value: unknown, max: number) => (typeof value === 'string' ? value.slice(0, max) : '')
+function sanitizeRound(raw: unknown): SprintRound | null {
+  if (!raw || typeof raw !== 'object') return null
+  const item = raw as Record<string, unknown>
+  if (typeof item.date !== 'string' || Number.isNaN(Date.parse(item.date))) return null
+  const answers = (Array.isArray(item.answers) ? item.answers : [])
+    .slice(0, 200)
+    .filter((answer): answer is Record<string, unknown> => Boolean(answer) && typeof answer === 'object')
+    .map((answer) => ({
+      wordId: short(answer.wordId, 200),
+      word: short(answer.word, 100),
+      typed: short(answer.typed, 100),
+      correct: answer.correct === true,
+      recallMs: count(answer.recallMs),
+      typeMs: count(answer.typeMs),
+    }))
+    .filter((answer) => answer.word)
+  return { date: item.date, correct: count(item.correct), misses: count(item.misses), answers }
+}
+
 export function bestSprint(rounds = getSprintRounds()) {
   return rounds.reduce((best, round) => Math.max(best, round.correct), 0)
 }

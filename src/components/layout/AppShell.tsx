@@ -1,4 +1,5 @@
 import { useEffect, useState, type PropsWithChildren } from 'react'
+import { STORAGE_FAILED_EVENT } from '../../services/safeStorage'
 import { navigationItems } from '../../data/dashboard'
 import { getMistakeEntries, isDueToday, subscribeToLearningData } from '../../services/learningData'
 import { getProfile, subscribeToProfile } from '../../services/profileStorage'
@@ -59,6 +60,13 @@ export function AppShell({ children, activePage }: AppShellProps) {
   const [profile, setProfile] = useState(getProfile)
   useEffect(() => subscribeToLearningData(() => setOpenMistakes(countOpenMistakes())), [])
   useEffect(() => subscribeToProfile(() => setProfile(getProfile())), [])
+  // A save that failed (browser storage full or blocked): say so once, so answers are not lost unnoticed.
+  const [storageFailed, setStorageFailed] = useState(false)
+  useEffect(() => {
+    const onFail = () => setStorageFailed(true)
+    window.addEventListener(STORAGE_FAILED_EVENT, onFail)
+    return () => window.removeEventListener(STORAGE_FAILED_EVENT, onFail)
+  }, [])
   const badgeFor = (label: string) => (label === 'My Mistakes' && openMistakes ? openMistakes : null)
 
   return (
@@ -101,7 +109,21 @@ export function AppShell({ children, activePage }: AppShellProps) {
         </div>
       </aside>
 
-      <main className="page-content">{children}</main>
+      <main className="page-content">
+        {storageFailed ? (
+          <div className="storage-warning" role="alert">
+            <Icon name="flag" size={17} />
+            <span>
+              <strong>Your last answer could not be saved.</strong> The browser&apos;s storage for this site is full or blocked. Sign in and
+              sync in Settings to keep your progress, or free some space in the browser.
+            </span>
+            <button type="button" onClick={() => setStorageFailed(false)} aria-label="Close">
+              ×
+            </button>
+          </div>
+        ) : null}
+        {children}
+      </main>
 
       {moreOpen ? (
         <>

@@ -44,6 +44,7 @@ export function sanitizeAttempt(raw: unknown): PracticeAttempt | null {
     wasAnswerRevealed: flag(item.wasAnswerRevealed),
     hintUsed: flag(item.hintUsed),
     wasMarkedForReview: item.wasMarkedForReview === undefined ? undefined : flag(item.wasMarkedForReview),
+    introduced: item.introduced === true ? true : undefined,
     errorType: (text(item.errorType, 60) ?? 'unknown') as ErrorType,
     errorCategory: text(item.errorCategory, 200) ?? '',
     confidence,

@@ -9,6 +9,7 @@ import { getProfile, saveProfile } from './profileStorage'
 import { getLibraryPrefs, mergeLibraryPrefs } from './libraryPrefs'
 import { getPairAttempts, mergePairAttempts } from './pairs'
 import { getAllYellowCards, mergeYellowCards } from './yellowCards'
+import { getSprintRounds, mergeSprintRounds } from './sprint'
 import { clearPersonalData } from './deviceData'
 import { getActiveCloudSession, getCloudSession, loadCloudSnapshot, loadCloudSnapshotVersion, saveCloudSnapshot, signOut } from './supabase'
 
@@ -23,13 +24,13 @@ type Snapshot = {
   profile?: unknown
   libraryPrefs?: unknown
   pairAttempts?: unknown
+  sprintRounds?: unknown
 }
 
 // Merges the cloud copy into this device. It only adds missing data and never deletes local data.
 export async function restoreLearningData() {
   const snapshot = await loadCloudSnapshot()
   if (!snapshot) return { found: false, attempts: 0 }
-  writeSyncState({ ...readSyncState(), version: snapshot.updatedAt })
   const data = (snapshot.payload ?? {}) as Snapshot
   // Deletion marks first, so a library or saved rule removed on another device is not merged back in.
   mergeLibraryPrefs(data.libraryPrefs)
@@ -51,6 +52,9 @@ export async function restoreLearningData() {
     saveProfile({ name: profile.name, ...(typeof profile.dailyGoal === 'number' ? { dailyGoal: profile.dailyGoal } : {}) })
   if (!loadDiagnosticResult() && data.diagnosticResult && typeof data.diagnosticResult === 'object')
     saveDiagnosticResult(data.diagnosticResult as Parameters<typeof saveDiagnosticResult>[0])
+  mergeSprintRounds(data.sprintRounds)
+  // Only now: if any merge above failed, the version stays old and the next sync pulls again.
+  writeSyncState({ ...readSyncState(), version: snapshot.updatedAt })
   return { found: true, attempts }
 }
 
@@ -101,6 +105,7 @@ export async function syncLearningData() {
     libraryPrefs: getLibraryPrefs(),
     pairAttempts: getPairAttempts(),
     yellowCards: getAllYellowCards(),
+    sprintRounds: getSprintRounds(),
   }
   const uploaded = fingerprint(JSON.stringify(payload))
   const state = readSyncState()

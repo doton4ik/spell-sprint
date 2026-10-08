@@ -254,6 +254,10 @@
   background: #f3d8d3;
   color: #a5584d;
 }
+.session-dot--met {
+  background: #e3efe9;
+  color: var(--teal-dark);
+}
 .session-dot--current {
   background: #fff;
   box-shadow: 0 0 0 2px var(--teal);
@@ -1092,4 +1096,51 @@
   font-size: 0.9em;
   opacity: 0.7;
   text-decoration: underline;
+}
+
+/* Meet the word: a new word is shown before it is tested */
+.meet-word {
+  background: #f7faf8;
+  border: 1px solid #e6ece9;
+  border-radius: 16px;
+  display: grid;
+  gap: 6px;
+  justify-items: start;
+  padding: 22px 28px;
+}
+.meet-word p {
+  margin: 0;
+}
+.meet-word__word {
+  color: #25443e;
+  font-size: calc(clamp(28px, 3.4vw, 38px) * var(--fs));
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.meet-word__meaning {
+  color: #4d625c;
+  font-size: calc(17px * var(--fs));
+}
+.meet-word__also,
+.meet-word__note {
+  color: var(--ink-muted);
+  font-size: calc(12.5px * var(--fs));
+}
+.meet-word__example {
+  color: #4d625c;
+  font-style: italic;
+}
+.meet-word .quiet-button {
+  margin-left: -11px;
+}
+.meet-word + form {
+  margin-top: 18px;
+}
+.meet-word__retry {
+  color: #a5584d;
+  font-size: calc(13px * var(--fs));
+  margin: 8px 0 0;
+}
+.meet-word__note {
+  margin: 14px 0 0;
 }

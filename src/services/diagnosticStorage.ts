@@ -1,3 +1,4 @@
+import { safeSetItem } from './safeStorage'
 import type { DiagnosticResult } from '../types/diagnostic'
 
 const KEY = 'spell-sprint.diagnostic-result'
@@ -12,5 +13,5 @@ export function loadDiagnosticResult(): DiagnosticResult | null {
 }
 
 export function saveDiagnosticResult(result: DiagnosticResult) {
-  window.localStorage.setItem(KEY, JSON.stringify(result))
+  safeSetItem(KEY, JSON.stringify(result))
 }

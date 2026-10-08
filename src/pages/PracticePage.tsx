@@ -239,6 +239,7 @@ export function PracticePage() {
           showRuleAfterMistake={session.settings.showRuleAfterMistake}
           onAnswerChange={session.setAnswer}
           onCheck={session.checkAnswer}
+          onMeet={session.meetWord}
           onShowAnswer={session.revealAnswer}
           onHint={session.useHint}
           onPlayAudio={playAudio}

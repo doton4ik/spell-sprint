@@ -62,6 +62,31 @@ describe('scheduleAfterAnswer', () => {
     expect(result.confidence).toBe(1)
     expect(daysUntil(result.nextReviewAt, day(1))).toBe(1)
   })
+  it('a right answer before the review date keeps the plan and is not a good day', () => {
+    const planned = day(3).toISOString()
+    history(attempt(day(0), true, { nextReviewAt: day(1).toISOString() }), attempt(day(1), true, { nextReviewAt: planned }))
+    expect(scheduleAfterAnswer(item, true, false, 'write-en', day(2))).toEqual({ confidence: 2, nextReviewAt: planned })
+    // On the review date it counts.
+    expect(scheduleAfterAnswer(item, true, false, 'write-en', day(3)).confidence).toBe(3)
+  })
+  it('five days in a row do not master a word: early days were never counted', () => {
+    let previous: PracticeAttempt[] = []
+    for (const offset of [0, 1, 2, 3, 4]) {
+      history(...previous)
+      const { confidence, nextReviewAt } = scheduleAfterAnswer(item, true, false, 'write-en', day(offset))
+      previous = [...previous, attempt(day(offset), true, { confidence, nextReviewAt })]
+    }
+    history(...previous)
+    expect(scheduleAfterAnswer(item, true, false, 'write-en', day(5)).confidence).toBe(3) // days 0, 1 and 4 (due dates), not 5
+  })
+  it('right after a mistake on the same day: no good day, back tomorrow', () => {
+    history(attempt(day(0, 9), false, { nextReviewAt: day(0, 9).toISOString() }))
+    const result = scheduleAfterAnswer(item, true, false, 'write-en', day(0, 10))
+    expect(result.confidence).toBe(0)
+    expect(daysUntil(result.nextReviewAt, day(0, 10))).toBe(1)
+    history(attempt(day(0, 9), false, { nextReviewAt: day(0, 9).toISOString() }), attempt(day(0, 10), true, result))
+    expect(scheduleAfterAnswer(item, true, false, 'write-en', day(1)).confidence).toBe(1)
+  })
   it('never goes past mastered (5 days)', () => {
     history(...[0, 1, 2, 3, 4, 5].map((offset) => attempt(day(offset), true)))
     expect(scheduleAfterAnswer(item, true, false, 'write-en', day(6)).confidence).toBe(5)
