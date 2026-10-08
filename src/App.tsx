@@ -34,17 +34,38 @@ function page<T extends Record<string, unknown>>(load: () => Promise<T>, name: k
   })
 }
 
-const PracticePage = page(() => import('./pages/PracticePage'), 'PracticePage')
-const MistakesPage = page(() => import('./pages/MistakesPage'), 'MistakesPage')
-const RulesPage = page(() => import('./pages/RulesPage'), 'RulesPage')
-const LibrariesPage = page(() => import('./pages/LibrariesPage'), 'LibrariesPage')
-const ReviewPage = page(() => import('./pages/ReviewPage'), 'ReviewPage')
-const DiagnosticPage = page(() => import('./pages/DiagnosticPage'), 'DiagnosticPage')
-const SettingsPage = page(() => import('./pages/SettingsPage'), 'SettingsPage')
-const TopicsPage = page(() => import('./pages/TopicsPage'), 'TopicsPage')
-const ProofreadingPage = page(() => import('./pages/ProofreadingPage'), 'ProofreadingPage')
-const SprintPage = page(() => import('./pages/SprintPage'), 'SprintPage')
-const PairsPage = page(() => import('./pages/PairsPage'), 'PairsPage')
+const loaders = {
+  Practice: () => import('./pages/PracticePage'),
+  Mistakes: () => import('./pages/MistakesPage'),
+  Rules: () => import('./pages/RulesPage'),
+  Libraries: () => import('./pages/LibrariesPage'),
+  Review: () => import('./pages/ReviewPage'),
+  Diagnostic: () => import('./pages/DiagnosticPage'),
+  Settings: () => import('./pages/SettingsPage'),
+  Topics: () => import('./pages/TopicsPage'),
+  Proofreading: () => import('./pages/ProofreadingPage'),
+  Sprint: () => import('./pages/SprintPage'),
+  Pairs: () => import('./pages/PairsPage'),
+}
+const PracticePage = page(loaders.Practice, 'PracticePage')
+const MistakesPage = page(loaders.Mistakes, 'MistakesPage')
+const RulesPage = page(loaders.Rules, 'RulesPage')
+const LibrariesPage = page(loaders.Libraries, 'LibrariesPage')
+const ReviewPage = page(loaders.Review, 'ReviewPage')
+const DiagnosticPage = page(loaders.Diagnostic, 'DiagnosticPage')
+const SettingsPage = page(loaders.Settings, 'SettingsPage')
+const TopicsPage = page(loaders.Topics, 'TopicsPage')
+const ProofreadingPage = page(loaders.Proofreading, 'ProofreadingPage')
+const SprintPage = page(loaders.Sprint, 'SprintPage')
+const PairsPage = page(loaders.Pairs, 'PairsPage')
+
+// Once the first page is on screen and the browser is idle, the other pages (and their styles) are
+// fetched in the background, so opening one later is instant.
+function prefetchPages() {
+  for (const load of Object.values(loaders)) load().catch(() => undefined)
+}
+const whenIdle = (run: () => void) =>
+  'requestIdleCallback' in window ? window.requestIdleCallback(run, { timeout: 4000 }) : setTimeout(run, 2000)
 
 const pages: Record<string, ComponentType> = {
   practice: PracticePage,
@@ -71,6 +92,7 @@ function App() {
   useEffect(() => {
     const updateRoute = () => setRoute(getRoute())
     window.addEventListener('hashchange', updateRoute)
+    whenIdle(prefetchPages)
     return () => window.removeEventListener('hashchange', updateRoute)
   }, [])
 

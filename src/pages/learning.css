@@ -283,8 +283,7 @@
   color: #546963;
   font-size: calc(12.5px * var(--fs));
 }
-.review-date a,
-.quiet-action {
+.review-date a {
   align-items: center;
   color: var(--teal);
   display: inline-flex;

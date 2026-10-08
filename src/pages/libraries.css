@@ -820,9 +820,6 @@
   }
 }
 /* Hide a word, add-on packs, hidden words */
-.word-hide {
-  color: #8a7a6d !important;
-}
 .library-notice {
   align-items: center;
   background: var(--teal-soft);
