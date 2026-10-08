@@ -236,14 +236,8 @@ const commonMisspellings: Record<string, string[]> = {
 const attentionSlips: Array<(word: string) => string | null> = [
   (word) => (/[^aeiou]e$/.test(word) && word.length >= 5 ? word.slice(0, -1) : null), // village → villag (never birds → bird)
   (word) => (/e[sdn]$/.test(word) && word.length >= 5 ? word.slice(0, -2) + word.slice(-1) : null),
-  (word) => {
-    const match = /^(.+?)([aeiou])([aeiou])(.+)$/.exec(word)
-    return match ? match[1] + match[3] + match[4] : null
-  },
-  (word) => {
-    const at = Math.floor(word.length / 2)
-    return word.length >= 6 && word[at] !== word[at - 1] ? word.slice(0, at - 1) + word[at] + word[at - 1] + word.slice(at + 1) : null
-  },
+  // (Dropped: a vowel lost from a pair — qiet — and two swapped letters — evertyhing: nobody writes
+  // like that, so the slip jumps out instead of testing careful reading.)
   (word) => {
     const match = /^(.+?[aeiou])([bdfgmnprst])([aeiou].*)$/.exec(word)
     return match ? match[1] + match[2] + match[2] + match[3] : null
@@ -356,10 +350,10 @@ function buildOnce(
 // ---- Spelling hunt ------------------------------------------------------------------------------------
 // Only spelling: about one slip in every 8 words, half of them with a rule behind them and half
 // attention slips. Works on any text (the grammar mark-up is resolved to its correct form first).
-// About one slip in every 18 words (4–12 per text): enough to make the learner read carefully,
-// not so many that the text turns into a list of typos.
+// About one slip in every 22 words (3–10 per text): few, but believable ones in longer words, so the
+// learner has to read every word instead of spotting obvious typos.
 export function huntCountFor(text: ProofreadingText) {
-  return Math.max(4, Math.min(12, Math.round(wordCount(text) / 18)))
+  return Math.max(3, Math.min(10, Math.round(wordCount(text) / 22)))
 }
 // The same kind of slip (a lost double letter, two swapped letters…) at most twice in one text.
 const MAX_PER_KIND = 2
@@ -378,11 +372,25 @@ export function buildSpellingHunt(
   const isReal = (value: string) => inText.has(value.toLocaleLowerCase()) || isRealOrRude(value, options.known)
   const total = huntCountFor(text)
   const slots: Slot[] = []
+  // Where a slip hides best: a known learner misspelling (becuse, freindly) or a longer word inside
+  // a sentence. Short words and sentence starts are read with more attention.
+  const startsSentence = (token: Token) => {
+    for (let at = token.id - 1; at >= 0; at -= 1) {
+      if (tokens[at].isWord) return false
+      if (/[.!?:]|\n/.test(tokens[at].text)) return true
+    }
+    return true
+  }
   const pool = tokens.filter(
-    (token) => token.isWord && token.text.length >= 5 && (token.text === token.text.toLocaleLowerCase() || commonMisspellings[token.text]),
+    (token) =>
+      token.isWord &&
+      (commonMisspellings[token.text] || (token.text.length >= 6 && token.text === token.text.toLocaleLowerCase())) &&
+      !startsSentence(token),
   )
   const weight = (token: Token) =>
-    (commonMisspellings[token.text] ? 3 : 1) * (options.preferred?.has(token.text.toLocaleLowerCase()) ? 3 : 1)
+    (commonMisspellings[token.text] ? 4 : 1) *
+    (options.preferred?.has(token.text.toLocaleLowerCase()) ? 3 : 1) *
+    (token.text.length >= 8 ? 1.5 : 1)
   let usedLast = -3
   const kindsUsed = new Map<string, number>()
   while (slots.length < total && pool.length) {
@@ -417,8 +425,8 @@ export function buildSpellingHunt(
       attentionSlips.map((make) => make(token.text)),
       (index) => `typo:${index}`,
     )
-    // About half attention slips; when the word allows only one kind, use that kind.
-    const attention = typos.length > 0 && (next() < 0.45 || !ruleSlips.length)
+    // About one attention slip in four; when the word allows only one kind, use that kind.
+    const attention = typos.length > 0 && (next() < 0.25 || !ruleSlips.length)
     const choices = attention ? typos : ruleSlips
     if (!choices.length) continue
     const choice = choices[Math.floor(next() * choices.length)]

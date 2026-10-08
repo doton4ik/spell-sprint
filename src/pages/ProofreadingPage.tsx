@@ -182,7 +182,7 @@ export function ProofreadingPage() {
           onClick={() => setMode('spelling')}
         >
           <strong>Spelling hunt</strong>
-          <span>Only spelling — a few slips of different kinds, about one in every 18 words. Tests how carefully you read.</span>
+          <span>Only spelling — a few believable slips hidden in longer words. Tests how carefully you read.</span>
         </button>
         <button
           type="button"

@@ -85,7 +85,7 @@ for (const text of proofreadingTexts) {
   for (let seed = 1; seed <= 150; seed += 1) {
     const hunt = engine.buildSpellingHunt(text, seed)
     const wanted = engine.huntCountFor(text)
-    if (hunt.slots.length < wanted * 0.8) fail(`${text.id} hunt seed ${seed}: ${hunt.slots.length} slips, wanted ${wanted}`)
+    if (hunt.slots.length < Math.max(2, Math.floor(wanted * 0.75))) fail(`${text.id} hunt seed ${seed}: ${hunt.slots.length} slips, wanted ${wanted}`)
     if (hunt.slots.some((slot) => slot.shown === slot.correct[0])) fail(`${text.id} hunt seed ${seed}: a slip equals the word`)
     const slipped = hunt.slots.map((slot) => slot.correct[0].toLowerCase())
     if (new Set(slipped).size !== slipped.length) fail(`${text.id} hunt seed ${seed}: the same word has two slips`)
