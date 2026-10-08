@@ -14,22 +14,22 @@
   padding: 0 1px;
 }
 .diff-char--same {
-  color: #3b4f4a;
+  color: var(--ink-soft);
 }
 .diff-char--bad,
 .diff-char--gap {
-  background: #f7d9d3;
-  color: #b0473b;
+  background: var(--danger-soft);
+  color: var(--danger-text);
   font-weight: 700;
 }
 .diff-char--fix {
-  background: #d3ece5;
-  color: #14705f;
+  background: var(--teal-muted);
+  color: var(--teal-text-strong);
   font-weight: 700;
 }
 .diff-char--swap {
-  background: #f6e7bf;
-  color: #8d6413;
+  background: var(--amber-soft);
+  color: var(--amber-text);
   font-weight: 700;
 }
 .answer-diff {
@@ -39,5 +39,5 @@
   gap: 4px 8px;
 }
 .answer-diff__arrow {
-  color: #8b9895;
+  color: var(--ink-muted);
 }

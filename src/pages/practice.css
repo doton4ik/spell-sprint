@@ -12,7 +12,7 @@
   margin-bottom: 30px;
 }
 .practice-header h1 {
-  color: #1d312d;
+  color: var(--ink);
   font-size: calc(clamp(28px, 3vw, 38px) * var(--fs));
   letter-spacing: -1.4px;
   line-height: 1.12;
@@ -38,7 +38,7 @@
 }
 .practice-settings summary {
   align-items: center;
-  color: #546762;
+  color: var(--ink-soft);
   cursor: pointer;
   display: flex;
   font-size: calc(13px * var(--fs));
@@ -81,7 +81,7 @@
   padding: 11px;
 }
 .settings-option:hover {
-  background: #f5f8f6;
+  background: var(--surface-soft);
 }
 .settings-option > span {
   display: grid;
@@ -89,7 +89,7 @@
   gap: 3px;
 }
 .settings-option strong {
-  color: #40524e;
+  color: var(--ink-soft);
   font-size: calc(13px * var(--fs));
 }
 .settings-option small {
@@ -111,7 +111,7 @@
   margin: 0 0 26px;
 }
 .practice-select {
-  color: #71827d;
+  color: var(--ink-muted);
   display: grid;
   font-size: calc(11px * var(--fs));
   font-weight: 700;
@@ -121,7 +121,7 @@
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
-  color: #40524e;
+  color: var(--ink-soft);
   font-size: calc(13px * var(--fs));
   min-height: 40px;
   padding: 0 10px;
@@ -135,8 +135,8 @@
 }
 .session-sidebar {
   align-self: start;
-  background: #eff7f4;
-  border: 1px solid #d9e9e3;
+  background: var(--teal-soft);
+  border: 1px solid var(--teal-line);
   border-radius: var(--radius-lg);
   display: grid;
   gap: 24px;
@@ -148,14 +148,14 @@
 }
 .session-mode span {
   align-items: center;
-  color: var(--teal-dark);
+  color: var(--teal-text-strong);
   display: flex;
   font-size: calc(14px * var(--fs));
   font-weight: 730;
   gap: 9px;
 }
 .session-mode small {
-  color: #70847f;
+  color: var(--ink-muted);
   font-size: calc(12px * var(--fs));
   padding-left: 27px;
 }
@@ -170,22 +170,22 @@
 }
 .session-progress span,
 .session-section-label {
-  color: #6a827c;
+  color: var(--ink-muted);
   font-size: calc(11px * var(--fs));
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 .session-progress strong {
-  color: #37675f;
+  color: var(--teal-text);
   font-size: calc(19px * var(--fs));
 }
 .session-progress strong small {
-  color: #86a19a;
+  color: var(--ink-muted);
   font-size: calc(12px * var(--fs));
 }
 .session-progress__track {
-  background: #d6e5e0;
+  background: var(--teal-muted);
   border-radius: 100px;
   height: 9px;
   overflow: hidden;
@@ -203,8 +203,8 @@
   grid-template-columns: repeat(3, 1fr);
 }
 .session-stat {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid #d9e9e3;
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  border: 1px solid var(--teal-line);
   border-radius: 12px;
   display: grid;
   gap: 3px;
@@ -212,21 +212,21 @@
   text-align: center;
 }
 .session-stat strong {
-  color: #37675f;
+  color: var(--teal-text);
   font-size: calc(21px * var(--fs));
   letter-spacing: -0.5px;
   line-height: 1.1;
 }
 .session-stat span {
-  color: #7a908a;
+  color: var(--ink-muted);
   font-size: calc(11px * var(--fs));
   font-weight: 650;
 }
 .session-stat--good strong {
-  color: var(--teal);
+  color: var(--teal-text);
 }
 .session-stat--bad strong {
-  color: var(--danger);
+  color: var(--danger-text);
 }
 
 .session-map {
@@ -236,9 +236,9 @@
 }
 .session-dot {
   align-items: center;
-  background: #dfeae6;
+  background: var(--teal-soft);
   border-radius: 8px;
-  color: #7f948e;
+  color: var(--ink-muted);
   display: inline-flex;
   font-size: calc(12px * var(--fs));
   font-weight: 700;
@@ -248,24 +248,24 @@
 }
 .session-dot--correct {
   background: var(--teal);
-  color: #fff;
+  color: var(--on-accent);
 }
 .session-dot--missed {
-  background: #f3d8d3;
-  color: #a5584d;
+  background: var(--danger-soft);
+  color: var(--danger-text);
 }
 .session-dot--met {
-  background: #e3efe9;
-  color: var(--teal-dark);
+  background: var(--surface-strong);
+  color: var(--teal-text-strong);
 }
 .session-dot--current {
-  background: #fff;
+  background: var(--surface);
   box-shadow: 0 0 0 2px var(--teal);
-  color: var(--teal-dark);
+  color: var(--teal-text-strong);
 }
 
 .session-missed {
-  border-top: 1px solid #d8e8e2;
+  border-top: 1px solid var(--teal-line);
   display: grid;
   gap: 9px;
   padding-top: 20px;
@@ -278,34 +278,34 @@
   margin: 0;
 }
 .session-missed strong {
-  color: #a5584d;
+  color: var(--danger-text);
   font-size: calc(14px * var(--fs));
 }
 .session-missed small {
-  color: #6f837d;
+  color: var(--ink-muted);
   font-size: calc(12px * var(--fs));
 }
 .session-missed__more {
-  color: #86a19a;
+  color: var(--ink-muted);
   font-size: calc(12px * var(--fs));
 }
 
 .session-note {
   align-items: flex-start;
-  border-top: 1px solid #d8e8e2;
-  color: var(--teal);
+  border-top: 1px solid var(--teal-line);
+  color: var(--teal-text);
   display: flex;
   gap: 11px;
   padding-top: 20px;
 }
 .session-note p {
-  color: #6a7e79;
+  color: var(--ink-muted);
   font-size: calc(12px * var(--fs));
   line-height: 1.55;
   margin: 0;
 }
 .session-note strong {
-  color: #426660;
+  color: var(--teal-text);
 }
 
 /* ---------- Task card ---------- */
@@ -325,10 +325,10 @@
   justify-content: space-between;
 }
 .task-card__meta > span:last-child {
-  color: #84928f;
+  color: var(--ink-muted);
 }
 .task-card__meta i {
-  background: #a4b0ad;
+  background: var(--ink-muted);
   border-radius: 50%;
   display: inline-block;
   height: 4px;
@@ -339,7 +339,7 @@
   align-items: center;
   background: var(--teal-soft);
   border-radius: 8px;
-  color: var(--teal-dark);
+  color: var(--teal-text-strong);
   display: inline-flex;
   font-size: calc(11px * var(--fs));
   font-weight: 700;
@@ -347,15 +347,15 @@
   padding: 6px 9px;
 }
 .task-card h2 {
-  color: #394b47;
+  color: var(--ink);
   font-size: calc(16px * var(--fs));
   font-weight: 650;
   margin: 32px 0 12px;
 }
 .task-prompt {
   align-items: center;
-  background: #f7faf8;
-  border: 1px solid #e6ece9;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
   border-radius: 16px;
   display: flex;
   min-height: 120px;
@@ -363,7 +363,7 @@
   position: relative;
 }
 .task-prompt p {
-  color: #25443e;
+  color: var(--ink);
   font-size: calc(clamp(26px, 3.2vw, 36px) * var(--fs));
   font-weight: 660;
   letter-spacing: -0.8px;
@@ -374,7 +374,7 @@
   font-size: calc(clamp(20px, 2.4vw, 26px) * var(--fs));
 }
 .prompt-label {
-  color: #8b9995;
+  color: var(--ink-muted);
   font-size: calc(10px * var(--fs));
   font-weight: 730;
   letter-spacing: 0.07em;
@@ -385,10 +385,10 @@
 }
 .hint-box {
   align-items: flex-start;
-  background: #f9f5e9;
-  border: 1px solid #f0e4c7;
+  background: var(--amber-soft);
+  border: 1px solid var(--amber-line);
   border-radius: 12px;
-  color: #ad7b26;
+  color: var(--amber-text);
   display: flex;
   font-size: calc(13px * var(--fs));
   gap: 10px;
@@ -397,16 +397,16 @@
   padding: 12px 14px;
 }
 .hint-box span {
-  color: #826d44;
+  color: var(--amber-text);
   display: grid;
   gap: 3px;
 }
 .hint-box strong {
-  color: #886920;
+  color: var(--amber-text);
   font-size: calc(11px * var(--fs));
 }
 .answer-label {
-  color: #5d706b;
+  color: var(--ink-soft);
   display: block;
   font-size: calc(12px * var(--fs));
   font-weight: 680;
@@ -414,10 +414,10 @@
 }
 .task-card input,
 .task-card textarea {
-  background: #fff;
-  border: 1px solid #dbe4e0;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
   border-radius: 12px;
-  color: #2c403c;
+  color: var(--ink);
   display: block;
   font-size: calc(17px * var(--fs));
   outline: none;
@@ -430,13 +430,13 @@
 }
 .task-card input:focus,
 .task-card textarea:focus {
-  border-color: #5ca99d;
+  border-color: var(--teal);
   box-shadow: 0 0 0 4px rgba(40, 139, 125, 0.1);
 }
 .task-card input:disabled,
 .task-card textarea:disabled {
-  background: #f5faf7;
-  color: #47736b;
+  background: var(--teal-soft);
+  color: var(--teal-text);
 }
 .task-card textarea {
   line-height: 1.5;
@@ -451,10 +451,10 @@
   margin-top: 26px;
 }
 .spelling-choice {
-  background: #fff;
-  border: 1px solid #dbe4e0;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
   border-radius: 12px;
-  color: #2c403c;
+  color: var(--ink);
   cursor: pointer;
   font-size: calc(17px * var(--fs));
   padding: 15px;
@@ -464,13 +464,13 @@
     background 0.15s ease;
 }
 .spelling-choice:hover {
-  background: #f5faf7;
-  border-color: #9cc9c1;
+  background: var(--teal-soft);
+  border-color: var(--teal-muted);
 }
 .spelling-choice--selected {
   background: var(--teal-soft);
   border-color: var(--teal);
-  color: var(--teal-dark);
+  color: var(--teal-text-strong);
   font-weight: 700;
 }
 
@@ -494,21 +494,21 @@
 }
 .task-feedback--correct {
   background: var(--teal-soft);
-  color: var(--teal-dark);
+  color: var(--teal-text-strong);
 }
 .task-feedback--correct small {
-  color: #4c7d75;
+  color: var(--teal-text);
 }
 .task-feedback--incorrect {
-  background: #fcf2ed;
-  color: #ab604f;
+  background: var(--danger-soft);
+  color: var(--danger-text);
 }
 .task-feedback--incorrect small {
-  color: #9c786c;
+  color: var(--ink-muted);
 }
 .related-rule {
   align-items: flex-start;
-  color: #6d817c;
+  color: var(--ink-muted);
   display: flex;
   font-size: calc(12px * var(--fs));
   gap: 8px;
@@ -516,14 +516,14 @@
   margin: 14px 2px 0;
 }
 .related-rule svg {
-  color: #b08025;
+  color: var(--amber-text);
   flex: 0 0 auto;
   margin-top: 2px;
 }
 .revealed-answer {
   align-items: center;
-  background: #eff7f4;
-  border: 1px solid #d5e9e2;
+  background: var(--teal-soft);
+  border: 1px solid var(--teal-line);
   border-radius: 12px;
   display: flex;
   gap: 12px;
@@ -531,25 +531,25 @@
   padding: 14px 16px;
 }
 .revealed-answer span {
-  color: #75928c;
+  color: var(--ink-muted);
   font-size: calc(11px * var(--fs));
   text-transform: uppercase;
 }
 .revealed-answer strong {
-  color: #18786c;
+  color: var(--teal-text-strong);
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: calc(15px * var(--fs));
 }
 .revealed-answer small {
-  color: #70857f;
+  color: var(--ink-muted);
   font-size: calc(12px * var(--fs));
   margin-left: auto;
 }
 
 /* Mistake breakdown: coloured letters, pattern tags, linked rule */
 .mistake-breakdown {
-  background: #fafbf9;
-  border: 1px solid #ebefed;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
   border-radius: 12px;
   display: grid;
   gap: 12px;
@@ -567,7 +567,7 @@
   grid-template-columns: 92px minmax(0, 1fr);
 }
 .diff-label {
-  color: #8b9895;
+  color: var(--ink-muted);
   font-size: calc(10px * var(--fs));
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -580,9 +580,9 @@
   gap: 8px;
 }
 .mistake-tag {
-  background: #eef3f1;
+  background: var(--surface-muted);
   border-radius: 999px;
-  color: #56706a;
+  color: var(--ink-soft);
   font-size: calc(12px * var(--fs));
   font-weight: 700;
   padding: 5px 11px;
@@ -592,7 +592,7 @@
   background: var(--teal-soft);
   border: 0;
   border-radius: 10px;
-  color: var(--teal-dark);
+  color: var(--teal-text-strong);
   cursor: pointer;
   display: inline-flex;
   font-size: calc(13px * var(--fs));
@@ -601,7 +601,7 @@
   padding: 9px 13px;
 }
 .mistake-rule-link:hover {
-  background: #d5ebe5;
+  background: var(--teal-muted);
 }
 
 /* ---------- Buttons (shared across the app) ---------- */
@@ -646,7 +646,7 @@
   align-items: center;
   background: var(--teal-soft);
   border-radius: 50%;
-  color: var(--teal);
+  color: var(--teal-text);
   display: inline-flex;
   height: 68px;
   justify-content: center;
@@ -654,7 +654,7 @@
   width: 68px;
 }
 .completion-card h1 {
-  color: #2b403b;
+  color: var(--ink);
   font-size: calc(28px * var(--fs));
   letter-spacing: -1px;
   margin: 0;
@@ -800,10 +800,10 @@
 /* Dictation: a large replay button in place of the written prompt. */
 .dictation-play {
   align-items: center;
-  background: #fff;
-  border: 1px solid #d9e7e2;
+  background: var(--surface);
+  border: 1px solid var(--teal-line);
   border-radius: 12px;
-  color: var(--teal);
+  color: var(--teal-text);
   cursor: pointer;
   display: flex;
   font-family: inherit;
@@ -815,22 +815,22 @@
   width: 100%;
 }
 .dictation-play:hover {
-  background: #f1f8f5;
+  background: var(--teal-soft);
 }
 .dictation-play > svg {
-  background: #e3f2ed;
+  background: var(--teal-soft);
   border-radius: 50%;
   box-sizing: content-box;
   flex-shrink: 0;
   padding: 10px;
 }
 .dictation-play strong {
-  color: #24403a;
+  color: var(--ink);
   display: block;
   font-size: calc(16px * var(--fs));
 }
 .dictation-play small {
-  color: #72857f;
+  color: var(--ink-muted);
   display: block;
   font-size: calc(13px * var(--fs));
   margin-top: 2px;
@@ -838,13 +838,13 @@
 
 /* Rule challenge: the same rule on a new word, shown under the task after a linked mistake. */
 .mistake-rule-link--challenge {
-  background: #fff6e2;
-  border-color: #f0dca8;
-  color: #8a5d0c;
+  background: var(--amber-soft);
+  border-color: var(--amber-line);
+  color: var(--amber-text);
 }
 .rule-challenge {
-  background: #fffdf7;
-  border: 1px solid #f0e2bd;
+  background: var(--amber-soft);
+  border: 1px solid var(--amber-line);
   border-radius: 14px;
   display: grid;
   gap: 10px;
@@ -858,7 +858,7 @@
 }
 .rule-challenge__head > span {
   align-items: center;
-  color: #8a5d0c;
+  color: var(--amber-text);
   display: inline-flex;
   font-size: calc(13px * var(--fs));
   font-weight: 750;
@@ -873,7 +873,7 @@
   font-family: inherit;
 }
 .rule-challenge__text {
-  color: #6c7a76;
+  color: var(--ink-muted);
   font-size: calc(14px * var(--fs));
   line-height: 1.5;
   margin: 0;
@@ -882,7 +882,7 @@
   align-items: center;
   background: transparent;
   border: 0;
-  color: var(--teal);
+  color: var(--teal-text);
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
@@ -896,17 +896,17 @@
   padding: 12px 14px;
 }
 .rule-challenge__result--good {
-  background: #e3f3ed;
+  background: var(--teal-soft);
 }
 .rule-challenge__result--retry {
-  background: #fcefe9;
+  background: var(--danger-soft);
 }
 .rule-challenge__result strong {
-  color: #24403a;
+  color: var(--ink);
   font-size: calc(15px * var(--fs));
 }
 .rule-challenge__result p {
-  color: #56706a;
+  color: var(--ink-soft);
   font-size: calc(14px * var(--fs));
   margin: 4px 0 8px;
 }
@@ -925,44 +925,44 @@
   padding: 4px 8px;
 }
 .task-reason--new {
-  background: #eaf1f7;
-  color: #4a718b;
+  background: var(--blue-soft);
+  color: var(--blue-text);
 }
 .task-reason--missed {
-  background: #fbe3de;
-  color: #a4473a;
+  background: var(--danger-soft);
+  color: var(--danger-text);
 }
 .task-reason--due {
   background: var(--amber-soft);
-  color: #9b6417;
+  color: var(--amber-text);
 }
 .task-reason--weak {
-  background: #fbe3de;
-  color: #a4473a;
+  background: var(--danger-soft);
+  color: var(--danger-text);
 }
 .task-reason--practice {
-  background: #eef2f0;
-  color: #6b7b77;
+  background: var(--surface-muted);
+  color: var(--ink-muted);
 }
 .mistake-breakdown__explain {
-  background: #fff;
-  border: 1px solid #e3ece8;
+  background: var(--surface);
+  border: 1px solid var(--line);
   border-radius: 10px;
   padding: 10px 12px;
 }
 .mistake-breakdown__explain strong {
-  color: #24403a;
+  color: var(--ink);
   font-size: calc(14px * var(--fs));
 }
 .mistake-breakdown__explain p {
-  color: #56706a;
+  color: var(--ink-soft);
   font-size: calc(14px * var(--fs));
   line-height: 1.5;
   margin: 4px 0 0;
 }
 .mistake-breakdown__explain .mistake-breakdown__cue {
   align-items: center;
-  color: #8a5d0c;
+  color: var(--amber-text);
   display: flex;
   gap: 6px;
 }
@@ -970,9 +970,9 @@
 /* Answer is a real word for another meaning of the Russian prompt (среда → environment). */
 .other-meaning {
   align-items: flex-start;
-  background: #eaf1f7;
+  background: var(--blue-soft);
   border-radius: 12px;
-  color: #3f6680;
+  color: var(--blue-text);
   display: flex;
   gap: 10px;
   margin-top: 12px;
@@ -987,7 +987,7 @@
   font-size: calc(14.5px * var(--fs));
 }
 .other-meaning small {
-  color: #56718a;
+  color: var(--blue-text);
   display: block;
   font-size: calc(13.5px * var(--fs));
   margin-top: 3px;
@@ -995,10 +995,10 @@
 /* The learner's own memory tip */
 .word-tip {
   align-items: flex-start;
-  background: #fbf6e6;
-  border: 1px solid #efe1b5;
+  background: var(--amber-soft);
+  border: 1px solid var(--amber-line);
   border-radius: 10px;
-  color: #6b5a2d;
+  color: var(--amber-text);
   display: flex;
   font-size: calc(13px * var(--fs));
   gap: 8px;
@@ -1016,7 +1016,7 @@
 .word-tip button {
   background: transparent;
   border: 0;
-  color: #8a6d1f;
+  color: var(--amber-text);
   font-weight: 700;
   padding: 0 2px;
 }
@@ -1030,8 +1030,8 @@
   gap: 5px;
 }
 .word-tip--editing input {
-  background: #fff;
-  border: 1px solid #e3d3a3;
+  background: var(--surface);
+  border: 1px solid var(--amber-line);
   border-radius: 8px;
   font-size: max(16px, calc(14px * var(--fs)));
   padding: 8px 10px;
@@ -1043,14 +1043,14 @@
   gap: 8px;
 }
 .word-tip--editing small {
-  color: #9a8a5e;
+  color: var(--amber-text);
   margin-left: auto;
 }
 .word-tip-add {
   align-items: center;
   background: transparent;
   border: 0;
-  color: #8a7a4f;
+  color: var(--amber-text);
   display: inline-flex;
   font-size: calc(12.5px * var(--fs));
   font-weight: 700;
@@ -1059,30 +1059,30 @@
   padding: 4px 0;
 }
 .word-tip-add--wrong {
-  background: #fbf6e6;
-  border: 1px dashed #e3d3a3;
+  background: var(--amber-soft);
+  border: 1px dashed var(--amber-line);
   border-radius: 8px;
-  color: #7a6320;
+  color: var(--amber-text);
   padding: 7px 11px;
 }
 
 /* A word from an add-on pack says so, with a one-tap way to switch the pack off. */
 .task-pack {
-  background: #f4f7f6;
+  background: var(--surface-muted);
   border-radius: 10px;
-  color: #5b6f6a;
+  color: var(--ink-soft);
   font-size: calc(13px * var(--fs));
   line-height: 1.45;
   margin: 0 0 14px;
   padding: 8px 12px;
 }
 .task-pack strong {
-  color: #304640;
+  color: var(--ink);
 }
 .task-pack button {
   background: none;
   border: 0;
-  color: var(--teal-dark);
+  color: var(--teal-text-strong);
   cursor: pointer;
   font-family: inherit;
   font-size: inherit;
@@ -1100,8 +1100,8 @@
 
 /* Meet the word: a new word is shown before it is tested */
 .meet-word {
-  background: #f7faf8;
-  border: 1px solid #e6ece9;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
   border-radius: 16px;
   display: grid;
   gap: 6px;
@@ -1112,13 +1112,13 @@
   margin: 0;
 }
 .meet-word__word {
-  color: #25443e;
+  color: var(--ink);
   font-size: calc(clamp(28px, 3.4vw, 38px) * var(--fs));
   font-weight: 700;
   letter-spacing: -0.5px;
 }
 .meet-word__meaning {
-  color: #4d625c;
+  color: var(--ink-soft);
   font-size: calc(17px * var(--fs));
 }
 .meet-word__also,
@@ -1127,7 +1127,7 @@
   font-size: calc(12.5px * var(--fs));
 }
 .meet-word__example {
-  color: #4d625c;
+  color: var(--ink-soft);
   font-style: italic;
 }
 .meet-word .quiet-button {
@@ -1137,7 +1137,7 @@
   margin-top: 18px;
 }
 .meet-word__retry {
-  color: #a5584d;
+  color: var(--danger-text);
   font-size: calc(13px * var(--fs));
   margin: 8px 0 0;
 }

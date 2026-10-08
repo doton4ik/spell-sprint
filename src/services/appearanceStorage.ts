@@ -34,3 +34,37 @@ export function setFontScale(scale: FontScale) {
   }
   applyFontScale(scale)
 }
+
+// Colour theme: follow the system (default), or always light / always dark. "system" leaves
+// data-theme off <html>, so the prefers-color-scheme rules in tokens.css decide.
+export type Theme = 'system' | 'light' | 'dark'
+export const themeOptions: Array<{ value: Theme; label: string }> = [
+  { value: 'system', label: 'System' },
+  { value: 'light', label: 'Light' },
+  { value: 'dark', label: 'Dark' },
+]
+const THEME_KEY = 'spell-sprint.theme'
+const isTheme = (value: unknown): value is Theme => themeOptions.some((option) => option.value === value)
+
+export function getTheme(): Theme {
+  try {
+    const stored = window.localStorage.getItem(THEME_KEY)
+    return isTheme(stored) ? stored : 'system'
+  } catch {
+    return 'system'
+  }
+}
+
+export function applyTheme(theme: Theme = getTheme()) {
+  if (theme === 'system') delete document.documentElement.dataset.theme
+  else document.documentElement.dataset.theme = theme
+}
+
+export function setTheme(theme: Theme) {
+  try {
+    window.localStorage.setItem(THEME_KEY, theme)
+  } catch {
+    /* the choice still applies for this visit */
+  }
+  applyTheme(theme)
+}

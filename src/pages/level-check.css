@@ -4,7 +4,7 @@
   padding: 49px 56px 70px;
 }
 .level-page h1 {
-  color: #1d312d;
+  color: var(--ink);
   font-size: calc(clamp(28px, 3vw, 36px) * var(--fs));
   letter-spacing: -1.2px;
   margin: 0;
@@ -22,7 +22,7 @@
   margin-bottom: 12px;
 }
 .level-section-head h2 {
-  color: #24403a;
+  color: var(--ink);
   font-size: calc(18px * var(--fs));
   letter-spacing: -0.4px;
   margin: 0;
@@ -54,9 +54,9 @@
 }
 .level-hero__meta span {
   align-items: center;
-  background: #eef5f2;
+  background: var(--surface-muted);
   border-radius: 20px;
-  color: #4f6a64;
+  color: var(--ink-soft);
   display: inline-flex;
   font-size: calc(13px * var(--fs));
   font-weight: 600;
@@ -69,16 +69,16 @@
   padding: 0 22px;
 }
 .level-hero__next {
-  color: #8a6a1f;
+  color: var(--amber-text);
   font-size: calc(13.5px * var(--fs));
   margin: 12px 0 0;
 }
 .level-hero__last {
   align-content: start;
-  background: linear-gradient(140deg, #0e6a5c, #1b8d7d);
+  background: linear-gradient(140deg, var(--teal-dark), var(--teal));
   border: 0;
   border-radius: var(--radius-lg);
-  color: #fff;
+  color: var(--on-accent);
   cursor: pointer;
   display: grid;
   font-family: inherit;
@@ -130,7 +130,7 @@
   padding: 16px 18px;
 }
 .level-how strong {
-  color: #24403a;
+  color: var(--ink);
   font-size: calc(15px * var(--fs));
 }
 .level-how p {
@@ -157,30 +157,30 @@
   width: 100%;
 }
 .level-chart__grid {
-  stroke: #e7edea;
+  stroke: var(--on-accent);
   stroke-width: 1;
 }
 .level-chart__axis {
-  fill: #8a9a96;
+  fill: var(--ink-muted);
   font-size: 11px;
 }
 .level-chart__line polyline {
   stroke-width: 2.5;
 }
 .level-chart__line--spelling {
-  color: #1d8577;
+  color: var(--teal-text);
 }
 .level-chart__line--vocabulary {
-  color: #d49a3a;
+  color: var(--amber-text);
 }
 .level-chart__line--grammar {
-  color: #5f8fb0;
+  color: var(--blue-text);
 }
 .level-chart__line polyline {
   stroke: currentColor;
 }
 .level-chart__line circle {
-  fill: #fff;
+  fill: var(--on-accent);
   stroke: currentColor;
   stroke-width: 2;
 }
@@ -192,7 +192,7 @@
 }
 .level-legend {
   align-items: center;
-  color: #56706a;
+  color: var(--ink-soft);
   display: inline-flex;
   font-size: calc(12.5px * var(--fs));
   font-weight: 600;
@@ -205,13 +205,13 @@
   width: 14px;
 }
 .level-legend--spelling::before {
-  background: #1d8577;
+  background: var(--teal);
 }
 .level-legend--vocabulary::before {
-  background: #d49a3a;
+  background: var(--amber);
 }
 .level-legend--grammar::before {
-  background: #5f8fb0;
+  background: var(--blue-text);
 }
 
 .level-history__list {
@@ -224,8 +224,8 @@
   align-items: center;
   background: transparent;
   border: 0;
-  border-bottom: 1px solid #edf1ef;
-  color: #2f4944;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
   cursor: pointer;
   display: grid;
   font-family: inherit;
@@ -239,7 +239,7 @@
   border-bottom: 0;
 }
 .level-history__row:hover {
-  background: #f5faf8;
+  background: var(--teal-soft);
 }
 .level-history__row > svg {
   color: var(--ink-faint);
@@ -251,7 +251,7 @@
 .level-badge {
   background: var(--teal-soft);
   border-radius: 8px;
-  color: var(--teal-dark);
+  color: var(--teal-text-strong);
   font-size: calc(15px * var(--fs));
   padding: 3px 0;
   text-align: center;
@@ -262,7 +262,7 @@
   gap: 4px 12px;
 }
 .level-history__skills small {
-  color: #5b6f6a;
+  color: var(--ink-soft);
   font-size: calc(12.5px * var(--fs));
 }
 .level-delta {
@@ -273,16 +273,16 @@
   white-space: nowrap;
 }
 .level-delta--up {
-  background: #dcf0e9;
-  color: #13705f;
+  background: var(--teal-soft);
+  color: var(--teal-text-strong);
 }
 .level-delta--down {
-  background: #fbe3de;
-  color: #a4473a;
+  background: var(--danger-soft);
+  color: var(--danger-text);
 }
 .level-delta--flat {
-  background: #eef2f0;
-  color: #6b7b77;
+  background: var(--surface-muted);
+  color: var(--ink-muted);
 }
 
 /* Running */
@@ -305,7 +305,7 @@
   font-size: calc(13px * var(--fs));
 }
 .level-run__track {
-  background: #e7eeeb;
+  background: var(--surface-strong);
   border-radius: 100px;
   height: 6px;
   margin-top: 10px;
@@ -329,7 +329,7 @@
 .level-question__skill {
   background: var(--teal-soft);
   border-radius: 8px;
-  color: var(--teal-dark);
+  color: var(--teal-text-strong);
   font-size: calc(12.5px * var(--fs));
   font-weight: 700;
   padding: 4px 9px;
@@ -340,7 +340,7 @@
   margin: 14px 0 6px;
 }
 .level-question__prompt {
-  color: #1f3934;
+  color: var(--ink);
   font-size: calc(32px * var(--fs));
   letter-spacing: -0.6px;
   line-height: 1.25;
@@ -352,11 +352,11 @@
   letter-spacing: -0.3px;
 }
 .level-question input {
-  background: #fbfcfb;
-  border: 1px solid #d5e0dc;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
   border-radius: 12px;
   box-sizing: border-box;
-  color: #24403a;
+  color: var(--ink);
   font-family: inherit;
   font-size: max(16px, calc(18px * var(--fs)));
   min-height: 52px;
@@ -365,7 +365,7 @@
   width: 100%;
 }
 .level-question input:focus {
-  border-color: #67aa9e;
+  border-color: var(--teal);
   box-shadow: 0 0 0 3px rgba(29, 133, 119, 0.12);
 }
 .level-actions {
@@ -385,19 +385,19 @@
   padding: 12px 14px;
 }
 .level-feedback--correct {
-  background: #e3f3ed;
-  color: #13705f;
+  background: var(--teal-soft);
+  color: var(--teal-text-strong);
 }
 .level-feedback--incorrect {
-  background: #fcefe9;
-  color: #9c4436;
+  background: var(--danger-soft);
+  color: var(--danger-text);
 }
 .level-feedback strong {
   display: block;
   font-size: calc(15px * var(--fs));
 }
 .level-feedback__diff {
-  color: #2f4944;
+  color: var(--ink);
   font-size: calc(15px * var(--fs));
   margin-top: 6px;
 }
@@ -407,7 +407,7 @@
   align-items: center;
   background: transparent;
   border: 0;
-  color: var(--teal);
+  color: var(--teal-text);
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
@@ -434,9 +434,9 @@
 }
 .level-result-hero__badge {
   align-items: center;
-  background: linear-gradient(140deg, #0e6a5c, #1b8d7d);
+  background: linear-gradient(140deg, var(--teal-dark), var(--teal));
   border-radius: 22px;
-  color: #fff;
+  color: var(--on-accent);
   display: flex;
   flex-shrink: 0;
   font-size: calc(40px * var(--fs));
@@ -470,19 +470,19 @@
   font-weight: 700;
 }
 .level-skill > strong {
-  color: #1f3934;
+  color: var(--ink);
   font-size: calc(30px * var(--fs));
   letter-spacing: -0.6px;
 }
 .level-skill__scale {
-  background: #eef2f0;
+  background: var(--surface-muted);
   border-radius: 8px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
 }
 .level-skill__step {
-  color: #93a29e;
+  color: var(--ink-faint);
   font-size: calc(11.5px * var(--fs));
   font-weight: 700;
   padding: 5px 0;
@@ -491,7 +491,7 @@
 .level-skill__step--on {
   background: var(--teal);
   border-radius: 8px;
-  color: #fff;
+  color: var(--on-accent);
 }
 .level-skill small {
   color: var(--ink-muted);
@@ -523,7 +523,7 @@
   align-items: center;
   background: var(--teal-soft);
   border-radius: 50%;
-  color: var(--teal-dark);
+  color: var(--teal-text-strong);
   display: inline-flex;
   font-size: calc(14px * var(--fs));
   font-weight: 750;
@@ -532,7 +532,7 @@
   width: 30px;
 }
 .level-plan strong {
-  color: #24403a;
+  color: var(--ink);
   font-size: calc(15px * var(--fs));
 }
 .level-plan p {
@@ -556,7 +556,7 @@
 }
 .level-mistakes li {
   align-items: baseline;
-  border-bottom: 1px solid #edf1ef;
+  border-bottom: 1px solid var(--line);
   display: grid;
   gap: 4px 14px;
   grid-template-columns: 90px minmax(0, 1fr);
@@ -572,7 +572,7 @@
   grid-row: span 2;
 }
 .level-mistakes__prompt {
-  color: #56706a;
+  color: var(--ink-soft);
   font-size: calc(13.5px * var(--fs));
 }
 .level-mistakes__diff {
@@ -583,7 +583,7 @@
   color: var(--ink-faint);
 }
 .level-mistakes__diff strong {
-  color: var(--teal-dark);
+  color: var(--teal-text-strong);
 }
 .level-result-actions {
   display: flex;

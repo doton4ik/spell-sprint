@@ -19,7 +19,16 @@ import {
 } from '../services/supabase'
 import { loadPracticeSettings, savePracticeSettings } from '../services/practiceStorage'
 import { defaultPracticeSettings } from '../data/practice'
-import { fontScaleOptions, getFontScale, setFontScale, type FontScale } from '../services/appearanceStorage'
+import {
+  fontScaleOptions,
+  getFontScale,
+  getTheme,
+  setFontScale,
+  setTheme,
+  themeOptions,
+  type FontScale,
+  type Theme,
+} from '../services/appearanceStorage'
 import { dailyGoalOptions, getProfile, saveProfile } from '../services/profileStorage'
 import { getOutboxSize, subscribeToOutbox } from '../services/mistakeOutbox'
 import './settings.css'
@@ -52,6 +61,7 @@ export function SettingsPage() {
   const [busy, setBusy] = useState(false)
   const [speechLocale, setSpeechLocale] = useState(() => loadPracticeSettings(defaultPracticeSettings).speechLocale)
   const [fontScale, setFontScaleState] = useState<FontScale>(getFontScale)
+  const [theme, setThemeState] = useState<Theme>(getTheme)
   const [profile, setProfileState] = useState(getProfile)
   const configured = isSupabaseConfigured()
   const [syncStatus, setSyncStatus] = useState(getSyncStatus)
@@ -397,8 +407,10 @@ export function SettingsPage() {
             <Icon name="eye" size={19} />
           </div>
           <p className="settings-card__eyebrow">Appearance</p>
-          <h2>Text size</h2>
-          <p>One setting for every page. It applies immediately and is remembered on this device.</p>
+          <h2>Text size and theme</h2>
+          <p>
+            For every page. They apply immediately and are remembered on this device. “System” follows your device’s light or dark mode.
+          </p>
           <div className="font-scale-options" role="radiogroup" aria-label="Text size">
             {fontScaleOptions.map((option) => (
               <button
@@ -407,6 +419,24 @@ export function SettingsPage() {
                 aria-checked={fontScale === option.value}
                 className={fontScale === option.value ? 'font-scale-option font-scale-option--active' : 'font-scale-option'}
                 onClick={() => chooseFontScale(option.value)}
+                key={option.value}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
+          <span className="settings-field-label">Theme</span>
+          <div className="font-scale-options font-scale-options--theme" role="radiogroup" aria-label="Theme">
+            {themeOptions.map((option) => (
+              <button
+                type="button"
+                role="radio"
+                aria-checked={theme === option.value}
+                className={theme === option.value ? 'font-scale-option font-scale-option--active' : 'font-scale-option'}
+                onClick={() => {
+                  setTheme(option.value)
+                  setThemeState(option.value)
+                }}
                 key={option.value}
               >
                 {option.label}

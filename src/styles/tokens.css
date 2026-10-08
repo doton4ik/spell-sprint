@@ -1,29 +1,150 @@
+/* The whole palette. Stylesheets use only these names (no hex colours), so the dark theme below is
+   just a second set of values. Light is the default; dark follows the system, or the choice in
+   Settings → Appearance (data-theme on <html>, see services/appearanceStorage.ts). */
 :root {
   /* Text size multiplier, set from Settings (see services/appearanceStorage.ts).
      Write every font size as calc(Npx * var(--fs)) so it follows the setting. */
   --fs: 1;
+  color-scheme: light;
+
+  /* Surfaces, from the page background up */
   --canvas: #f5f7f4;
   --surface: #ffffff;
-  --surface-soft: #fbfcfa;
-  --ink: #20322f;
+  --surface-soft: #fafbf9;
+  --surface-muted: #eff3f1;
+  --surface-strong: #e3e9e6;
+
+  /* Text */
+  --ink: #24403a;
+  --ink-soft: #4f6660;
   --ink-muted: #6f7f7b;
-  --ink-faint: #99a5a2;
+  --ink-faint: #849390;
+  --on-accent: #ffffff; /* text on teal, red or other strong colours */
+
+  /* Lines */
   --line: #e4eae6;
-  --teal: #11766a;
+  --line-strong: #d3ddd9;
+
+  /* Teal: the brand and "good" colour */
+  --teal: #11766a; /* buttons and fills (white text on top) */
   --teal-dark: #0b5c52;
+  --teal-text: #11766a; /* teal words on a light surface */
+  --teal-text-strong: #0e5a4d;
   --teal-soft: #e2f3ed;
-  --blue-soft: #edf4f9;
+  --teal-muted: #a6cec5;
+  --teal-line: #d4e7e0;
+
+  /* Amber: warnings, streaks, yellow cards */
   --amber: #b67819;
+  --amber-text: #8a5d0c;
   --amber-soft: #fbf1dc;
+  --amber-line: #ecdcbc;
+  --yellow: #f2c230;
+
+  /* Red: mistakes */
+  --danger: #c0533a;
+  --danger-text: #a4473a;
+  --danger-soft: #fbe3de;
+  --danger-line: #e7b9aa;
+
+  /* Blue and violet: categories and charts */
+  --blue-text: #4a718b;
+  --blue-soft: #edf4f9;
+  --blue-line: #cfdeea;
   --violet: #7b679f;
   --violet-soft: #f0ebf7;
-  --danger: #c0533a;
+  --violet-line: #ddd3ec;
+
   /* Logo: deep teal square, coral mistake line, mint tick (see components/layout/BrandMark.tsx). */
   --brand: #0e6a5c;
   --coral-light: #f0997b;
   --mint: #9fe1cb;
+
   --shadow-sm: 0 1px 2px rgba(31, 51, 47, 0.03), 0 4px 14px rgba(31, 51, 47, 0.04);
   --shadow-md: 0 12px 32px rgba(26, 61, 53, 0.08);
   --radius-lg: 20px;
   --radius-md: 14px;
+}
+
+/* Dark theme: the same names with dark values. Written twice: once for "follow the system" and once
+   for an explicit choice. Keep the two blocks identical. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --canvas: #0f1715;
+    --surface: #17211e;
+    --surface-soft: #1b2623;
+    --surface-muted: #212e2a;
+    --surface-strong: #2a3934;
+    --ink: #e3ece9;
+    --ink-soft: #c0cdc9;
+    --ink-muted: #95a5a0;
+    --ink-faint: #6f807b;
+    --on-accent: #ffffff;
+    --line: #2a3733;
+    --line-strong: #384843;
+    --teal: #16806f;
+    --teal-dark: #0f6458;
+    --teal-text: #5cc4b2;
+    --teal-text-strong: #8ad9ca;
+    --teal-soft: #173731;
+    --teal-muted: #2f6a5f;
+    --teal-line: #26493f;
+    --amber: #c98a2a;
+    --amber-text: #e7b45c;
+    --amber-soft: #352b17;
+    --amber-line: #5d4a24;
+    --yellow: #e0b52c;
+    --danger: #d0664c;
+    --danger-text: #f0a291;
+    --danger-soft: #3b221d;
+    --danger-line: #6a3a30;
+    --blue-text: #93bde0;
+    --blue-soft: #1a2833;
+    --blue-line: #2c4354;
+    --violet: #b3a1d6;
+    --violet-soft: #29233a;
+    --violet-line: #463c5e;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25), 0 4px 14px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.35);
+  }
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --canvas: #0f1715;
+  --surface: #17211e;
+  --surface-soft: #1b2623;
+  --surface-muted: #212e2a;
+  --surface-strong: #2a3934;
+  --ink: #e3ece9;
+  --ink-soft: #c0cdc9;
+  --ink-muted: #95a5a0;
+  --ink-faint: #6f807b;
+  --on-accent: #ffffff;
+  --line: #2a3733;
+  --line-strong: #384843;
+  --teal: #16806f;
+  --teal-dark: #0f6458;
+  --teal-text: #5cc4b2;
+  --teal-text-strong: #8ad9ca;
+  --teal-soft: #173731;
+  --teal-muted: #2f6a5f;
+  --teal-line: #26493f;
+  --amber: #c98a2a;
+  --amber-text: #e7b45c;
+  --amber-soft: #352b17;
+  --amber-line: #5d4a24;
+  --yellow: #e0b52c;
+  --danger: #d0664c;
+  --danger-text: #f0a291;
+  --danger-soft: #3b221d;
+  --danger-line: #6a3a30;
+  --blue-text: #93bde0;
+  --blue-soft: #1a2833;
+  --blue-line: #2c4354;
+  --violet: #b3a1d6;
+  --violet-soft: #29233a;
+  --violet-line: #463c5e;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25), 0 4px 14px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.35);
 }

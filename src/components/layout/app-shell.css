@@ -3,7 +3,7 @@
 }
 
 .sidebar {
-  background: #fbfcfa;
+  background: var(--surface-soft);
   border-right: 1px solid var(--line);
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
 }
 .brand {
   align-items: center;
-  color: #183d37;
+  color: var(--teal-text-strong);
   display: inline-flex;
   font-size: calc(20px * var(--fs));
   font-weight: 750;
@@ -27,7 +27,7 @@
   width: fit-content;
 }
 .brand > span:last-child span {
-  color: var(--teal);
+  color: var(--teal-text);
 }
 .brand-mark {
   flex: 0 0 auto;
@@ -39,7 +39,7 @@
 .nav-link {
   align-items: center;
   border-radius: 10px;
-  color: #6b7a76;
+  color: var(--ink-muted);
   display: flex;
   font-size: calc(15px * var(--fs));
   font-weight: 540;
@@ -51,16 +51,16 @@
     color 0.18s ease;
 }
 .nav-link:hover {
-  background: #f0f5f2;
-  color: var(--teal-dark);
+  background: var(--surface-muted);
+  color: var(--teal-text-strong);
 }
 .nav-link--active {
   background: var(--teal-soft);
-  color: #0c6e62;
+  color: var(--teal-text-strong);
   font-weight: 680;
 }
 .nav-badge {
-  background: #d6e9e4;
+  background: var(--teal-muted);
   border-radius: 12px;
   font-size: calc(12.5px * var(--fs));
   font-weight: 700;
@@ -82,9 +82,9 @@
 }
 .profile-avatar {
   align-items: center;
-  background: #d9e8e2;
+  background: var(--teal-soft);
   border-radius: 50%;
-  color: #236b60;
+  color: var(--teal-text-strong);
   display: flex;
   font-size: calc(14px * var(--fs));
   font-weight: 700;
@@ -129,7 +129,7 @@
   /* Bottom bar: icon in a pill that fills when active, like a native tab bar. */
   .mobile-nav {
     align-items: stretch;
-    background: rgba(255, 255, 255, 0.97);
+    background: color-mix(in srgb, var(--surface) 97%, transparent);
     border-top: 1px solid var(--line);
     bottom: 0;
     display: flex;
@@ -143,7 +143,7 @@
   }
   .mobile-nav__link {
     align-items: center;
-    color: #7d8c88;
+    color: var(--ink-muted);
     display: grid;
     flex: 1;
     font-size: calc(11px * var(--fs));
@@ -165,7 +165,7 @@
     width: 52px;
   }
   .mobile-nav__link--active {
-    color: var(--teal-dark);
+    color: var(--teal-text-strong);
     font-weight: 750;
   }
   .mobile-nav__link--active .mobile-nav__icon {
@@ -173,9 +173,9 @@
   }
   .mobile-nav__badge {
     background: var(--danger);
-    border: 2px solid #fff;
+    border: 2px solid var(--line);
     border-radius: 999px;
-    color: #fff;
+    color: var(--on-accent);
     font-size: 10px;
     font-weight: 750;
     left: calc(50% + 6px);
@@ -204,7 +204,7 @@
   }
   .mobile-more {
     animation: more-rise 0.2s ease;
-    background: var(--surface, #fff);
+    background: var(--surface, var(--surface));
     border-radius: 22px 22px 0 0;
     bottom: 0;
     box-shadow: 0 -10px 30px rgba(20, 35, 31, 0.14);
@@ -219,7 +219,7 @@
     z-index: 12;
   }
   .mobile-more__handle {
-    background: #d6dedb;
+    background: var(--surface-strong);
     border-radius: 99px;
     height: 4px;
     justify-self: center;
@@ -227,7 +227,7 @@
   }
   .mobile-more__profile {
     align-items: center;
-    background: #f3f8f6;
+    background: var(--surface-muted);
     border-radius: 14px;
     color: var(--ink);
     display: flex;
@@ -249,13 +249,13 @@
     font-size: calc(12.5px * var(--fs));
   }
   .mobile-more__profile > svg {
-    color: var(--teal);
+    color: var(--teal-text);
   }
   .mobile-more__profile--active {
     box-shadow: inset 0 0 0 2px var(--teal-soft);
   }
   .mobile-more__group h2 {
-    color: #8b9895;
+    color: var(--ink-muted);
     font-size: calc(11.5px * var(--fs));
     font-weight: 750;
     letter-spacing: 0.06em;
@@ -295,7 +295,7 @@
     align-items: center;
     background: var(--teal-soft);
     border-radius: 10px;
-    color: var(--teal-dark);
+    color: var(--teal-text-strong);
     display: inline-flex;
     flex: 0 0 auto;
     height: 36px;
@@ -303,8 +303,8 @@
     width: 36px;
   }
   .mobile-more__link--active {
-    background: #eef7f4;
-    border-color: #b9dbd3;
+    background: var(--teal-soft);
+    border-color: var(--teal-muted);
   }
 }
 @keyframes more-rise {
@@ -335,10 +335,10 @@
 /* A save failed: browser storage full or blocked */
 .storage-warning {
   align-items: flex-start;
-  background: #fff4e5;
-  border: 1px solid #f0c78a;
+  background: var(--amber-soft);
+  border: 1px solid var(--amber);
   border-radius: 10px;
-  color: #6b4a12;
+  color: var(--amber-text);
   display: flex;
   font-size: calc(13px * var(--fs, 1));
   gap: 10px;

@@ -1,6 +1,6 @@
 .word-report {
-  background: #fbf7f1;
-  border: 1px solid #ecdcc4;
+  background: var(--amber-soft);
+  border: 1px solid var(--amber-line);
   border-radius: 12px;
   display: grid;
   gap: 10px;
@@ -9,7 +9,7 @@
 }
 .word-report__title {
   align-items: center;
-  color: #6b4a1c;
+  color: var(--amber-text);
   display: flex;
   font-size: calc(14px * var(--fs));
   font-weight: 700;
@@ -23,9 +23,9 @@
 }
 .word-report__reason {
   background: var(--surface);
-  border: 1px solid #e3d6c3;
+  border: 1px solid var(--amber-line);
   border-radius: 999px;
-  color: #4f5f5b;
+  color: var(--ink-soft);
   cursor: pointer;
   font-family: inherit;
   font-size: calc(13px * var(--fs));
@@ -33,16 +33,16 @@
   padding: 6px 12px;
 }
 .word-report__reason:hover {
-  border-color: #c9a86f;
+  border-color: var(--amber);
 }
 .word-report__reason--on {
-  background: #7a5520;
-  border-color: #7a5520;
-  color: #fff;
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--on-accent);
 }
 .word-report__comment {
   background: var(--surface);
-  border: 1px solid #e3d6c3;
+  border: 1px solid var(--amber-line);
   border-radius: 8px;
   font-family: inherit;
   font-size: max(16px, calc(14px * var(--fs)));
@@ -50,7 +50,7 @@
 }
 .word-report__hide {
   align-items: center;
-  color: #5b6f6a;
+  color: var(--ink-soft);
   cursor: pointer;
   display: flex;
   font-size: calc(13px * var(--fs));
@@ -83,17 +83,17 @@
   width: auto;
 }
 .word-report--done {
-  background: #eef7f4;
-  border-color: #cfe5de;
+  background: var(--teal-soft);
+  border-color: var(--teal-line);
 }
 .word-report--done p {
-  color: #24403a;
+  color: var(--ink);
   font-size: calc(14px * var(--fs));
   line-height: 1.5;
   margin: 0;
 }
 .word-report--done svg {
-  color: var(--teal);
+  color: var(--teal-text);
   vertical-align: -2px;
 }
 

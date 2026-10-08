@@ -5,7 +5,7 @@
 }
 .proof-header h1,
 .proof-reading-head h1 {
-  color: #1d312d;
+  color: var(--ink);
   font-size: calc(clamp(26px, 3vw, 34px) * var(--fs));
   letter-spacing: -1px;
   margin: 0;
@@ -27,7 +27,7 @@
   margin-top: 24px;
 }
 .proof-levels {
-  background: #eef3f1;
+  background: var(--surface-muted);
   border-radius: 11px;
   display: inline-flex;
   gap: 3px;
@@ -38,7 +38,7 @@
   background: transparent;
   border: 0;
   border-radius: 9px;
-  color: #5f7671;
+  color: var(--ink-soft);
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
@@ -55,11 +55,11 @@
 .proof-levels .proof-levels__active {
   background: var(--surface);
   box-shadow: var(--shadow-sm);
-  color: var(--teal-dark);
+  color: var(--teal-text-strong);
 }
 .proof-toggle {
   align-items: center;
-  color: #4f6a64;
+  color: var(--ink-soft);
   cursor: pointer;
   display: inline-flex;
   font-size: calc(14px * var(--fs));
@@ -85,7 +85,7 @@
   border: 1px solid var(--line);
   border-radius: 14px;
   box-shadow: var(--shadow-sm);
-  color: #24403a;
+  color: var(--ink);
   cursor: pointer;
   display: grid;
   font-family: inherit;
@@ -94,7 +94,7 @@
   text-align: left;
 }
 .proof-card:hover {
-  border-color: #9cc9c1;
+  border-color: var(--teal-muted);
 }
 .proof-card strong {
   font-size: calc(16px * var(--fs));
@@ -106,7 +106,7 @@
 }
 .proof-card__go {
   align-items: center;
-  color: var(--teal);
+  color: var(--teal-text);
   display: inline-flex;
   font-size: calc(13px * var(--fs));
   font-weight: 700;
@@ -122,7 +122,7 @@
   align-items: center;
   background: transparent;
   border: 0;
-  color: var(--teal);
+  color: var(--teal-text);
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
@@ -144,7 +144,7 @@
 .proof-counter {
   background: var(--teal-soft);
   border-radius: 12px;
-  color: var(--teal-dark);
+  color: var(--teal-text-strong);
   display: grid;
   flex-shrink: 0;
   justify-items: end;
@@ -171,7 +171,7 @@
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
-  color: #22332f;
+  color: var(--ink);
   font-size: calc(18px * var(--fs));
   line-height: 2;
   margin-top: 16px;
@@ -190,21 +190,21 @@
   padding: 0 1px;
 }
 .proof-word:hover {
-  background: #eef6f3;
+  background: var(--teal-soft);
 }
 .proof-word:focus-visible {
   outline: 2px solid var(--teal);
   outline-offset: 1px;
 }
 .proof-word--edited {
-  background: #fff3d6;
+  background: var(--amber-soft);
 }
 .proof-word s {
-  color: #a4473a;
+  color: var(--danger-text);
   margin-right: 4px;
 }
 .proof-word ins {
-  color: #13705f;
+  color: var(--teal-text-strong);
   font-weight: 700;
   text-decoration: none;
 }
@@ -215,8 +215,8 @@
 }
 .proof-editor {
   align-items: center;
-  background: #f1f8f5;
-  border: 1px solid #9cc9c1;
+  background: var(--teal-soft);
+  border: 1px solid var(--teal-muted);
   border-radius: 10px;
   display: inline-flex;
   flex-wrap: wrap;
@@ -227,7 +227,7 @@
   white-space: normal;
 }
 .proof-editor input {
-  border: 1px solid #cfe0da;
+  border: 1px solid var(--teal-line);
   border-radius: 7px;
   font-family: inherit;
   font-size: max(16px, calc(16px * var(--fs)));
@@ -241,9 +241,9 @@
 }
 .proof-editor__actions button {
   background: var(--surface);
-  border: 1px solid #dce7e3;
+  border: 1px solid var(--line);
   border-radius: 7px;
-  color: #2f4944;
+  color: var(--ink);
   cursor: pointer;
   font-family: inherit;
   font-size: calc(12.5px * var(--fs));
@@ -253,7 +253,7 @@
 .proof-editor__actions button:first-child {
   background: var(--teal);
   border-color: var(--teal);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 .proof-actions {
@@ -289,7 +289,7 @@
   font-weight: 650;
 }
 .proof-score strong {
-  color: #24403a;
+  color: var(--ink);
   font-size: calc(24px * var(--fs));
 }
 .proof-score small {
@@ -301,33 +301,33 @@
   padding: 1px 4px;
 }
 .proof-mark s {
-  color: #8a6f6a;
+  color: var(--ink-muted);
 }
 .proof-mark--fixed {
-  background: #dcf0e9;
+  background: var(--teal-soft);
 }
 .proof-mark--fixed b {
-  color: #13705f;
+  color: var(--teal-text-strong);
 }
 .proof-mark--wrong-fix {
-  background: #fff3d6;
+  background: var(--amber-soft);
 }
 .proof-mark--wrong-fix b {
-  color: #8a5d0c;
+  color: var(--amber-text);
 }
 .proof-mark--missed {
-  background: #fbe3de;
-  box-shadow: inset 0 -2px 0 #d9826f;
+  background: var(--danger-soft);
+  box-shadow: inset 0 -2px 0 var(--danger);
 }
 .proof-mark--missed b {
-  color: #a4473a;
+  color: var(--danger-text);
 }
 .proof-mark--alarm {
-  background: #eef2f0;
-  color: #6b7b77;
+  background: var(--surface-muted);
+  color: var(--ink-muted);
 }
 .proof-mark--alarm small {
-  color: #8a9a96;
+  color: var(--ink-muted);
   font-size: 0.7em;
   margin-left: 4px;
   text-decoration: line-through;
@@ -345,27 +345,27 @@
   padding: 2px 8px;
 }
 .proof-legend__fixed {
-  background: #dcf0e9;
-  color: #13705f;
+  background: var(--teal-soft);
+  color: var(--teal-text-strong);
 }
 .proof-legend__wrong-fix {
-  background: #fff3d6;
-  color: #8a5d0c;
+  background: var(--amber-soft);
+  color: var(--amber-text);
 }
 .proof-legend__missed {
-  background: #fbe3de;
-  color: #a4473a;
+  background: var(--danger-soft);
+  color: var(--danger-text);
 }
 .proof-legend__alarm {
-  background: #eef2f0;
-  color: #6b7b77;
+  background: var(--surface-muted);
+  color: var(--ink-muted);
 }
 
 .proof-explain {
   margin-top: 24px;
 }
 .proof-explain h2 {
-  color: #24403a;
+  color: var(--ink);
   font-size: calc(18px * var(--fs));
   margin: 0 0 10px;
 }
@@ -380,7 +380,7 @@
 }
 .proof-explain__item {
   align-items: flex-start;
-  border-bottom: 1px solid #edf1ef;
+  border-bottom: 1px solid var(--line);
   display: flex;
   gap: 12px;
   padding: 11px 16px;
@@ -398,24 +398,24 @@
   width: 24px;
 }
 .proof-explain__item--fixed .proof-explain__status {
-  background: #dcf0e9;
-  color: #13705f;
+  background: var(--teal-soft);
+  color: var(--teal-text-strong);
 }
 .proof-explain__item--wrong-fix .proof-explain__status {
-  background: #fff3d6;
-  color: #8a5d0c;
+  background: var(--amber-soft);
+  color: var(--amber-text);
 }
 .proof-explain__item--missed .proof-explain__status {
-  background: #fbe3de;
-  color: #a4473a;
+  background: var(--danger-soft);
+  color: var(--danger-text);
 }
 .proof-explain__item p {
-  color: #24403a;
+  color: var(--ink);
   font-size: calc(15px * var(--fs));
   margin: 0;
 }
 .proof-explain__item em {
-  color: #8a5d0c;
+  color: var(--amber-text);
   font-size: calc(13.5px * var(--fs));
 }
 .proof-explain__item small {
@@ -474,14 +474,14 @@
   gap: 6px;
 }
 .proof-card__size b {
-  background: #eaf1f7;
+  background: var(--blue-soft);
   border-radius: 6px;
-  color: #4a718b;
+  color: var(--blue-text);
   font-size: calc(11.5px * var(--fs));
   padding: 2px 6px;
 }
 .proof-card__situation {
-  color: #71837e;
+  color: var(--ink-muted);
   display: block;
   font-size: calc(12px * var(--fs));
   font-style: italic;
@@ -489,10 +489,10 @@
   margin-top: 4px;
 }
 .proof-situation {
-  background: #f7f3e8;
-  border-left: 3px solid #d9c38c;
+  background: var(--amber-soft);
+  border-left: 3px solid var(--amber);
   border-radius: 6px;
-  color: #6f5f39;
+  color: var(--amber-text);
   font-size: calc(13.5px * var(--fs));
   line-height: 1.5;
   margin: 0 0 10px;
@@ -508,14 +508,14 @@
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 12px;
-  color: #4f6660;
+  color: var(--ink-soft);
   display: grid;
   gap: 4px;
   padding: 13px 15px;
   text-align: left;
 }
 .proof-mode strong {
-  color: #304640;
+  color: var(--ink);
   font-size: calc(14.5px * var(--fs));
 }
 .proof-mode span {
@@ -524,7 +524,7 @@
 }
 .proof-mode--active {
   background: var(--teal-soft);
-  border-color: #9cc9c1;
+  border-color: var(--teal-muted);
   box-shadow: 0 0 0 2px rgba(29, 133, 119, 0.12);
 }
 @media (max-width: 640px) {
@@ -535,7 +535,7 @@
 
 /* "My words" from the editor: the dictionary panel over the text, so the reading place is kept. */
 .proof-editor__actions button.proof-editor__add {
-  color: var(--teal-dark);
+  color: var(--teal-text-strong);
 }
 .proof-add-word {
   align-items: flex-start;
@@ -567,7 +567,7 @@
   padding: 20px 22px;
 }
 .proof-sentences-start p {
-  color: #3f5853;
+  color: var(--ink-soft);
   font-size: calc(14.5px * var(--fs));
   line-height: 1.55;
   margin: 0;
@@ -580,7 +580,7 @@
   font-size: calc(12px * var(--fs));
 }
 .proof-sentences-start__error {
-  color: var(--danger) !important;
+  color: var(--danger-text) !important;
 }
 
 .proof-source {

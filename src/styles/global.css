@@ -48,8 +48,37 @@ button {
 }
 
 /* While a page file loads (usually a split second): keep the space so the layout does not jump. */
+/* While a page file loads: nothing for the first 0.3 s (most loads are faster), then a small spinner. */
 .page-loading {
+  display: grid;
   min-height: 60vh;
+  place-items: center;
+}
+.page-loading::after {
+  animation:
+    page-loading-in 0.2s ease 0.3s both,
+    page-loading-spin 0.8s linear infinite;
+  border: 3px solid var(--teal-soft);
+  border-radius: 50%;
+  border-top-color: var(--teal);
+  content: '';
+  height: 30px;
+  width: 30px;
+}
+@keyframes page-loading-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes page-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-loading::after {
+    animation: page-loading-in 0.2s ease 0.3s both;
+  }
 }
 
 /* A page that broke (components/ErrorBoundary.tsx) */

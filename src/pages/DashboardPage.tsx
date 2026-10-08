@@ -114,13 +114,18 @@ export function DashboardPage() {
         </div>
       </header>
 
-      <section className="metrics-grid" aria-label="Learning overview">
-        {metrics.map((metric) => (
-          <MetricCard metric={metric} key={metric.label} />
-        ))}
-      </section>
-
-      <LevelCheckNudge revision={revision} />
+      {analytics.totalAttempts ? (
+        <>
+          <section className="metrics-grid" aria-label="Learning overview">
+            {metrics.map((metric) => (
+              <MetricCard metric={metric} key={metric.label} />
+            ))}
+          </section>
+          <LevelCheckNudge revision={revision} />
+        </>
+      ) : (
+        <Welcome />
+      )}
 
       <TodayCard plan={plan} todayCount={todayCount} goal={profile.dailyGoal} />
 
@@ -354,5 +359,46 @@ function RulesCard() {
         {signedIn ? 'Practise rules' : 'Sign in'} <Icon name="arrow" size={17} />
       </a>
     </aside>
+  )
+}
+
+// A new learner has no numbers yet: instead of four empty cards, how Spell Sprint works.
+function Welcome() {
+  const steps = [
+    {
+      icon: 'analysis' as const,
+      title: 'Find your level',
+      text: '20 adaptive questions, about 6 minutes. Your sessions then start at the right difficulty.',
+      action: { label: 'Start the level check', href: '#level-check' },
+    },
+    {
+      icon: 'practice' as const,
+      title: 'Ten words a day',
+      text: 'Each new word is shown first — you hear it and type it once. The real check comes the next day.',
+    },
+    {
+      icon: 'calendar' as const,
+      title: 'Mistakes come back',
+      text: 'A word you get wrong returns tomorrow, then after 3, 7, 14 and 30 days, until you can write it without help.',
+    },
+  ]
+  return (
+    <section className="welcome" aria-label="How Spell Sprint works">
+      {steps.map((step, index) => (
+        <article className="welcome-step" key={step.title}>
+          <span className="welcome-step__icon">
+            <Icon name={step.icon} size={18} />
+          </span>
+          <small>Step {index + 1}</small>
+          <h2>{step.title}</h2>
+          <p>{step.text}</p>
+          {step.action ? (
+            <a href={step.action.href}>
+              {step.action.label} <Icon name="arrow" size={15} />
+            </a>
+          ) : null}
+        </article>
+      ))}
+    </section>
   )
 }
