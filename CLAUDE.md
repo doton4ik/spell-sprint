@@ -10,6 +10,22 @@ Deployed on Netlify from GitHub `doton4ik/spell-sprint`, branch `main`.
 - Write content yourself (words, examples, texts); don't hand it off to another assistant.
 - Before a big or unclear task, say the plan in a few lines; for "делай" just do it.
 
+## Three models: Sonnet builds, Haiku explores, Opus reviews
+
+This project runs with Sonnet as the main model, Opus as the advisor and Haiku for subagents
+(`.claude/settings.json`). Use them like this:
+
+- **Explore with Haiku, in parallel.** Before changing code you don't know yet, send 1–3 subagents (Explore or
+  general-purpose) to find the files, read docs and report back — e.g. one maps the code involved, one finds the
+  tests and checks, one looks for similar existing code. Give each a self-contained prompt and ask for a short
+  report with file:line. Keep exploration out of the main context; read only the files you will edit.
+- **Build with Sonnet.** You write the code, run the checks and commit.
+- **Review with Opus (advisor).** Call the advisor: before committing to a plan on any non-trivial task; when the
+  same error comes back twice or the approach isn't converging; and before saying a multi-step task is done
+  (after the work is committed). Skip it for one-line fixes and plain questions.
+- Subagents are weaker (Haiku): don't let them decide or edit; verify anything important they report. For a
+  serious audit the user may ask for subagents on sonnet or opus — pass `model` to the Agent tool then.
+
 ## Commits and pushes
 
 - You commit (clear message, what changed and why). The user runs `git push` — never push yourself.
