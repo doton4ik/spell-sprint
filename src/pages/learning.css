@@ -29,7 +29,7 @@
   align-items: center;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: var(--shadow-sm);
   color: var(--ink-soft);
   display: inline-flex;
@@ -39,7 +39,13 @@
   gap: 8px;
   padding: 11px 13px;
 }
+.outline-action {
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
 .outline-action:hover {
+  background: var(--teal-soft);
   border-color: var(--teal-muted);
   color: var(--teal-text-strong);
 }
@@ -896,10 +902,7 @@
 }
 .mistake-when__actions .quiet-action {
   justify-content: center;
-  min-height: 28px;
-  min-width: 84px;
-  padding: 0 10px;
-  white-space: nowrap;
+  min-width: 88px;
 }
 .mistake-row__history {
   border-top: 1px dashed var(--line);
