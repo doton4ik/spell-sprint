@@ -356,9 +356,13 @@ function buildOnce(
 // ---- Spelling hunt ------------------------------------------------------------------------------------
 // Only spelling: about one slip in every 8 words, half of them with a rule behind them and half
 // attention slips. Works on any text (the grammar mark-up is resolved to its correct form first).
+// About one slip in every 18 words (4–12 per text): enough to make the learner read carefully,
+// not so many that the text turns into a list of typos.
 export function huntCountFor(text: ProofreadingText) {
-  return Math.max(5, Math.min(40, Math.round(wordCount(text) / 8)))
+  return Math.max(4, Math.min(12, Math.round(wordCount(text) / 18)))
 }
+// The same kind of slip (a lost double letter, two swapped letters…) at most twice in one text.
+const MAX_PER_KIND = 2
 
 // preferred: words the learner practises or gets wrong — they are picked first.
 // known: real words, so a slip never turns one real word into another (planet → plane).
@@ -380,6 +384,7 @@ export function buildSpellingHunt(
   const weight = (token: Token) =>
     (commonMisspellings[token.text] ? 3 : 1) * (options.preferred?.has(token.text.toLocaleLowerCase()) ? 3 : 1)
   let usedLast = -3
+  const kindsUsed = new Map<string, number>()
   while (slots.length < total && pool.length) {
     const sum = pool.reduce((acc, token) => acc + weight(token), 0)
     let roll = next() * sum
@@ -392,21 +397,37 @@ export function buildSpellingHunt(
     for (let at = pool.length - 1; at >= 0; at -= 1)
       if (pool[at].text.toLocaleLowerCase() === token.text.toLocaleLowerCase()) pool.splice(at, 1)
     if (Math.abs(token.id - usedLast) < 3 && pool.length > total) continue // keep slips apart a little
-    const usable = (values: Array<string | null>) =>
-      values.filter((value): value is string => value !== null && value !== token.text && !isReal(value))
+    // Every possible slip of this word with its kind; kinds already used twice are left out.
+    type Option = { value: string; kind: string }
+    const options = (values: Array<string | null>, kind: (index: number) => string): Option[] =>
+      values.flatMap((value, index) =>
+        value !== null && value !== token.text && !isReal(value) && (kindsUsed.get(kind(index)) ?? 0) < MAX_PER_KIND
+          ? [{ value, kind: kind(index) }]
+          : [],
+      )
     // A real misspelling of this very word beats a generated one.
-    const common = usable(commonMisspellings[token.text] ?? [])
-    const ruleSlips = common.length ? common : usable(spellingSlips.map((make) => make(token.text)))
-    const typos = usable(attentionSlips.map((make) => make(token.text)))
+    const common = options(commonMisspellings[token.text] ?? [], () => `common:${token.text}`)
+    const ruleSlips = common.length
+      ? common
+      : options(
+          spellingSlips.map((make) => make(token.text)),
+          (index) => `rule:${index}`,
+        )
+    const typos = options(
+      attentionSlips.map((make) => make(token.text)),
+      (index) => `typo:${index}`,
+    )
     // About half attention slips; when the word allows only one kind, use that kind.
     const attention = typos.length > 0 && (next() < 0.45 || !ruleSlips.length)
     const choices = attention ? typos : ruleSlips
     if (!choices.length) continue
+    const choice = choices[Math.floor(next() * choices.length)]
+    kindsUsed.set(choice.kind, (kindsUsed.get(choice.kind) ?? 0) + 1)
     const slot: Slot = {
       id: slots.length,
       type: attention ? 'typo' : 'spelling',
       correct: [token.text],
-      shown: choices[Math.floor(next() * choices.length)],
+      shown: choice.value,
       tokenIds: [token.id],
     }
     token.text = slot.shown
