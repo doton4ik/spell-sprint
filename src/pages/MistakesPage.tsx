@@ -2,7 +2,8 @@ import { useEffect, useMemo, useState } from 'react'
 import { ReportWordButton } from '../components/ReportWordButton'
 import { Icon } from '../components/icons/Icon'
 import { AnswerDiff } from '../components/practice/AnswerDiff'
-import { getMistakeEntries, subscribeToLearningData } from '../services/learningData'
+import { getEntryHistory, getMistakeEntries, isDueToday, subscribeToLearningData } from '../services/learningData'
+import { openPairOnPairsPage } from '../services/pairs'
 import { setPendingPracticeSelection } from '../services/libraryPractice'
 import { dismissYellowCard, getYellowCards, type YellowCard } from '../services/yellowCards'
 import type { ErrorFamily, LearningStatus, MistakeEntry } from '../types/learning'
@@ -35,10 +36,36 @@ function when(value: string) {
   return new Intl.DateTimeFormat('en', { month: 'short', day: 'numeric' }).format(new Date(value))
 }
 const isToday = (value?: string) => Boolean(value) && new Date(value!).toDateString() === new Date().toDateString()
-const isDue = (entry: MistakeEntry) => {
-  const end = new Date()
-  end.setHours(23, 59, 59, 999)
-  return entry.status !== 'mastered' && new Date(entry.nextReviewAt) <= end
+const isDue = isDueToday
+const shortDate = (value: string) => new Intl.DateTimeFormat('en', { month: 'short', day: 'numeric' }).format(new Date(value))
+
+// Everything that happened with this word: where, when, what was written.
+function History({ entry }: { entry: MistakeEntry }) {
+  const items = getEntryHistory(entry)
+  if (!items.length) return <p className="mistake-history__empty">No answers saved yet.</p>
+  return (
+    <ol className="mistake-history">
+      {items.map((item, index) => (
+        <li
+          key={index}
+          className={item.yellow ? 'mistake-history__yellow' : item.correct ? 'mistake-history__right' : 'mistake-history__wrong'}
+        >
+          <span className="mistake-history__mark" aria-hidden="true">
+            {item.yellow ? '' : item.correct ? '✓' : '✗'}
+          </span>
+          <strong>{item.correct ? entry.correctAnswer : item.typed || '—'}</strong>
+          <span>
+            {item.yellow ? 'yellow card · ' : ''}
+            {item.where}
+          </span>
+          <time dateTime={item.at}>
+            {isToday(item.at) ? 'today' : shortDate(item.at)},{' '}
+            {new Date(item.at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
+          </time>
+        </li>
+      ))}
+    </ol>
+  )
 }
 
 function practise(entries: MistakeEntry[], label: string) {
@@ -50,8 +77,9 @@ function practise(entries: MistakeEntry[], label: string) {
 }
 
 function MistakeRow({ entry }: { entry: MistakeEntry }) {
+  const [open, setOpen] = useState(false)
   return (
-    <div className="mistake-row">
+    <div className={open ? 'mistake-row mistake-row--open' : 'mistake-row'}>
       <div className="mistake-answer">
         <p>
           <AnswerDiff expected={entry.correctAnswer} submitted={entry.lastUserVersion} />
@@ -85,15 +113,31 @@ function MistakeRow({ entry }: { entry: MistakeEntry }) {
       <div className="mistake-when">
         <span>Next review</span>
         <strong>{entry.status === 'mastered' ? '—' : when(entry.nextReviewAt)}</strong>
-        <ReportWordButton
-          word={{
-            wordId: entry.wordId ?? `task:${entry.taskId}`,
-            word: entry.correctAnswer,
-            translation: entry.translation,
-            library: entry.library,
-          }}
-        />
+        <span className="mistake-when__actions">
+          <button className="quiet-action word-hide" type="button" aria-expanded={open} onClick={() => setOpen(!open)}>
+            <Icon name="calendar" size={13} /> History
+          </button>
+          {entry.pairId ? (
+            <button className="quiet-action word-hide" type="button" onClick={() => openPairOnPairsPage(entry.pairId!)}>
+              <Icon name="practice" size={13} /> Practise this pair
+            </button>
+          ) : (
+            <ReportWordButton
+              word={{
+                wordId: entry.wordId ?? `task:${entry.taskId}`,
+                word: entry.correctAnswer,
+                translation: entry.translation,
+                library: entry.library,
+              }}
+            />
+          )}
+        </span>
       </div>
+      {open ? (
+        <div className="mistake-row__history">
+          <History entry={entry} />
+        </div>
+      ) : null}
     </div>
   )
 }
@@ -137,6 +181,7 @@ export function MistakesPage() {
   const visible = useMemo(() => (family === 'All' ? entries : entries.filter((entry) => entry.family === family)), [entries, family])
   const due = entries.filter(isDue).length
   const mastered = entries.filter((entry) => entry.status === 'mastered').length
+  const archivedCount = entries.filter((entry) => entry.archived).length
   const familyCount = (item: (typeof families)[number]) =>
     item === 'All' ? entries.length : entries.filter((entry) => entry.family === item).length
   const familyDue = (item: (typeof families)[number]) =>
@@ -147,7 +192,8 @@ export function MistakesPage() {
   const today = visible
     .filter((entry) => entry.status !== 'mastered' && isToday(entry.lastMistakeAt))
     .sort((a, b) => (b.lastMistakeAt ?? '').localeCompare(a.lastMistakeAt ?? ''))
-  const earlier = visible.filter((entry) => !today.includes(entry))
+  const earlier = visible.filter((entry) => !today.includes(entry) && !entry.archived)
+  const archived = visible.filter((entry) => entry.archived && !today.includes(entry))
   const groups = [
     {
       id: 'today',
@@ -177,6 +223,13 @@ export function MistakesPage() {
       entries: earlier.filter((entry) => entry.status === 'mastered'),
       action: false,
     },
+    {
+      id: 'archive',
+      title: 'Archive',
+      note: 'No mistake for 30 days and right since — kept here quietly. A new mistake brings a word back.',
+      entries: archived,
+      action: false,
+    },
   ].filter((group) => group.entries.length)
 
   return (
@@ -187,7 +240,7 @@ export function MistakesPage() {
           <h1>My mistakes</h1>
           <p>
             {entries.length || yellowCards.length
-              ? `${entries.length} word${entries.length === 1 ? '' : 's'} · ${due} to review today · ${mastered} mastered${yellowCards.length ? ` · ${yellowCards.length} yellow card${yellowCards.length === 1 ? '' : 's'}` : ''}`
+              ? `${entries.length} word${entries.length === 1 ? '' : 's'} · ${due} to review today · ${mastered} mastered${archivedCount ? ` · ${archivedCount} archived` : ''}${yellowCards.length ? ` · ${yellowCards.length} yellow card${yellowCards.length === 1 ? '' : 's'}` : ''}`
               : 'Every wrong answer is kept here, so you can practise it until it sticks.'}
           </p>
         </div>
@@ -265,9 +318,12 @@ export function MistakesPage() {
                           </button>
                         ) : null}
                       </header>
-                      {group.id === 'mastered' && group.entries.length > 5 ? (
+                      {(group.id === 'mastered' && group.entries.length > 5) || group.id === 'archive' ? (
                         <details className="mistakes-more">
-                          <summary>Show {group.entries.length} mastered words</summary>
+                          <summary>
+                            Show {group.entries.length} {group.id === 'archive' ? 'archived' : 'mastered'} word
+                            {group.entries.length === 1 ? '' : 's'}
+                          </summary>
                           <div className="mistake-list">
                             {group.entries.map((entry) => (
                               <MistakeRow entry={entry} key={entry.taskId} />

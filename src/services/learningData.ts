@@ -7,6 +7,9 @@ import { getEveryWord } from './libraryStorage'
 import { MASTERED_DAYS } from './reviewSchedule'
 import { getRemovedKeys, setRemoved } from './libraryPrefs'
 import { relevanceCheck } from './mistakeRelevance'
+import { pairDrills } from '../data/pairDrills'
+import { getPairAttempts, pairStatuses } from './pairs'
+import { getAllYellowCards } from './yellowCards'
 
 const REVIEW_STATES_KEY = 'spell-sprint.review-states'
 const RULE_REVIEW_KEY = 'spell-sprint.rule-review'
@@ -29,6 +32,63 @@ function read<T>(key: string, fallback: T): T {
 
 export function getReviewStates() {
   return read<Record<string, ReviewState>>(REVIEW_STATES_KEY, {})
+}
+
+const ARCHIVE_AFTER_MS = 30 * 86400000
+
+/** Due today (or overdue), not mastered and not archived: what the badge counts. */
+export function isDueToday(entry: MistakeEntry) {
+  const end = new Date()
+  end.setHours(23, 59, 59, 999)
+  return entry.status !== 'mastered' && !entry.archived && new Date(entry.nextReviewAt) <= end
+}
+
+// Look-alike pairs (their / there) keep their own log (pairs.ts); a pair with a mistake is shown in
+// My Mistakes too, with a link back to the pair.
+function pairMistakeEntries(): MistakeEntry[] {
+  const attempts = getPairAttempts()
+  return pairStatuses(attempts)
+    .filter((status) => status.errors > 0)
+    .map((status) => {
+      const history = attempts.filter((attempt) => attempt.pairId === status.pair.id).sort((a, b) => a.createdAt.localeCompare(b.createdAt))
+      const lastFailure = [...history].reverse().find((attempt) => !attempt.correct)!
+      const latest = history.at(-1)!
+      const sentence = status.pair.sentences.find((item) => item.text === lastFailure.sentence)
+      const answer = sentence?.answer ?? status.pair.words.find((word) => word !== lastFailure.chosen) ?? status.pair.words[0]
+      const result: MistakeEntry = {
+        taskId: `pair:${status.pair.id}`,
+        pairId: status.pair.id,
+        correctAnswer: answer,
+        lastUserVersion: lastFailure.chosen,
+        errorCategory: 'Confusing words',
+        family: 'Spelling',
+        topic: status.pair.words.join(' / '),
+        translation: lastFailure.sentence.replace('___', answer),
+        numberOfAttempts: history.length,
+        numberOfErrors: status.errors,
+        numberOfCorrectAnswers: history.length - status.errors,
+        firstSeen: history[0].createdAt,
+        lastSeen: latest.createdAt,
+        lastMistakeAt: lastFailure.createdAt,
+        nextReviewAt: status.nextReviewAt,
+        status:
+          status.state === 'mastered'
+            ? 'mastered'
+            : !latest.correct
+              ? status.errors >= 3
+                ? 'difficult'
+                : 'new'
+              : status.goodDays >= 3
+                ? 'review'
+                : 'learning',
+        goodDays: status.goodDays,
+        origin: 'Pairs',
+      }
+      result.archived =
+        result.status !== 'mastered' && latest.correct && Date.now() - new Date(lastFailure.createdAt).getTime() > ARCHIVE_AFTER_MS
+      return result
+    })
+    .filter((entry) => pairDrills.some((pair) => pair.id === entry.pairId))
 }
 
 export function getMistakeEntries(): MistakeEntry[] {
@@ -84,6 +144,8 @@ export function getMistakeEntries(): MistakeEntry[] {
         numberOfErrors: failed.length,
         numberOfCorrectAnswers: attempts.filter((attempt) => attempt.isCorrect).length,
         origin: ['Proofreading', 'Level check', 'Sprint'].includes(lastFailure.library ?? '') ? lastFailure.library : 'Practice',
+        // Quiet archive: no mistake for 30 days and the latest answer was right.
+        archived: status !== 'mastered' && latest.isCorrect && Date.now() - new Date(lastFailure.createdAt).getTime() > ARCHIVE_AFTER_MS,
         lastMistakeAt: lastFailure.createdAt,
         firstSeen: chronological[0].createdAt,
         lastSeen: chronological.at(-1)!.createdAt,
@@ -98,13 +160,52 @@ export function getMistakeEntries(): MistakeEntry[] {
     })
     .filter((entry): entry is MistakeEntry => entry !== null)
 
-  return practiceEntries.sort((a, b) => b.lastSeen.localeCompare(a.lastSeen))
+  return [...practiceEntries, ...pairMistakeEntries()].sort((a, b) => b.lastSeen.localeCompare(a.lastSeen))
 }
 
 /** The word is already an open mistake (not mastered): a yellow card for it would only repeat it. */
 export function hasOpenMistake(word: string) {
   const lower = word.toLocaleLowerCase()
   return getMistakeEntries().some((entry) => entry.status !== 'mastered' && entry.correctAnswer.toLocaleLowerCase() === lower)
+}
+
+// Everything that happened with one word (or pair), newest first: answers in every part of the app
+// and yellow cards. Shown under "History" in My Mistakes.
+export type HistoryItem = { at: string; where: string; typed: string; correct: boolean; yellow?: boolean }
+const modeNames: Record<string, string> = {
+  'write-en': 'Write in English',
+  'listen-write': 'Listen and write',
+  'translate-ru': 'Translate to Russian',
+  'choose-spelling': 'Choose the spelling',
+}
+export function getEntryHistory(entry: MistakeEntry): HistoryItem[] {
+  if (entry.pairId)
+    return getPairAttempts()
+      .filter((attempt) => attempt.pairId === entry.pairId)
+      .map((attempt) => ({ at: attempt.createdAt, where: 'Pairs', typed: attempt.chosen, correct: attempt.correct }))
+      .sort((a, b) => b.at.localeCompare(a.at))
+      .slice(0, 30)
+  const answers = getPracticeAttempts()
+    .filter((attempt) => (attempt.wordId ?? attempt.taskId) === entry.taskId)
+    .map((attempt) => ({
+      at: attempt.createdAt,
+      where: ['Proofreading', 'Level check', 'Sprint'].includes(attempt.library ?? '')
+        ? attempt.library!
+        : `Practice · ${modeNames[attempt.attemptMode] ?? attempt.attemptMode}`,
+      typed: attempt.wasSkipped && !attempt.userAnswer ? 'Skipped' : attempt.userAnswer,
+      correct: attempt.isCorrect,
+    }))
+  const lower = entry.correctAnswer.toLocaleLowerCase()
+  const cards = getAllYellowCards()
+    .filter((card) => card.word.toLocaleLowerCase() === lower)
+    .map((card) => ({
+      at: card.at,
+      where: card.source === 'sprint' ? 'Sprint' : `Proofreading · “${card.where}”`,
+      typed: card.shown,
+      correct: false,
+      yellow: true,
+    }))
+  return [...answers, ...cards].sort((a, b) => b.at.localeCompare(a.at)).slice(0, 30)
 }
 
 export function getReviewEntries() {

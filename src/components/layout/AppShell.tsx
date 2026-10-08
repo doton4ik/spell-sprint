@@ -1,6 +1,6 @@
 import { useEffect, useState, type PropsWithChildren } from 'react'
 import { navigationItems } from '../../data/dashboard'
-import { getMistakeEntries, subscribeToLearningData } from '../../services/learningData'
+import { getMistakeEntries, isDueToday, subscribeToLearningData } from '../../services/learningData'
 import { getProfile, subscribeToProfile } from '../../services/profileStorage'
 import type { IconName } from '../../types/dashboard'
 import { Icon } from '../icons/Icon'
@@ -11,7 +11,8 @@ type AppShellProps = PropsWithChildren<{
   activePage: string
 }>
 
-const countOpenMistakes = () => getMistakeEntries().filter((entry) => entry.status !== 'mastered').length
+// The badge counts what can be done today: mistakes due now (not archived, not mastered).
+const countOpenMistakes = () => getMistakeEntries().filter(isDueToday).length
 const pageId = (label: string) => label.toLowerCase().replaceAll(' ', '-')
 const shortLabel = (label: string) => (label === 'My Mistakes' ? 'Mistakes' : label === 'Level Check' ? 'Level' : label)
 

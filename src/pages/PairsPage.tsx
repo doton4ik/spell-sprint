@@ -1,6 +1,15 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
-import { buildPairSession, pairQuestions, pairStatuses, recordPairAnswer, type PairQuestion, type PairStatus } from '../services/pairs'
+import {
+  buildPairSession,
+  clearPairToOpen,
+  pairQuestions,
+  pairStatuses,
+  pairToOpen,
+  recordPairAnswer,
+  type PairQuestion,
+  type PairStatus,
+} from '../services/pairs'
 import './pairs.css'
 
 type Phase =
@@ -10,7 +19,13 @@ type Phase =
 const stateLabels: Record<PairStatus['state'], string> = { new: 'New', learning: 'Learning', mastered: 'Mastered' }
 
 export function PairsPage() {
-  const [phase, setPhase] = useState<Phase>({ kind: 'list' })
+  // Opened from My Mistakes with one pair: start its sentences at once.
+  const [phase, setPhase] = useState<Phase>(() => {
+    const id = pairToOpen()
+    const questions = id ? pairQuestions(id) : []
+    return questions.length ? { kind: 'session', questions, label: questions[0].pair.words.join(' / ') } : { kind: 'list' }
+  })
+  useEffect(() => clearPairToOpen(), [])
   if (phase.kind === 'session')
     return (
       <PairSession

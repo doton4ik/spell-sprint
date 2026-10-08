@@ -111,7 +111,10 @@ export function getTasksForSelection(selection: PracticeSelection, mode: Practic
     // Only the learner's own words, never the whole library: the exact tasks they missed, plus the same
     // words in the chosen mode (a word missed in dictation can be practised in "Write in English").
     // Mastered words are left out. Nothing to repeat → an empty list, and the page says so.
-    const entries = selection.scope === 'review' ? getReviewEntries() : getMistakeEntries().filter((entry) => entry.status !== 'mastered')
+    const entries =
+      selection.scope === 'review'
+        ? getReviewEntries()
+        : getMistakeEntries().filter((entry) => entry.status !== 'mastered' && !entry.archived)
     const taskIds = new Set(entries.map((entry) => entry.taskId))
     const wordIds = new Set(entries.map((entry) => entry.wordId).filter(Boolean))
     return oncePerWord(

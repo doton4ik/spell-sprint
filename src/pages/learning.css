@@ -1103,3 +1103,68 @@
 .mistake-row--yellow {
   border-left: 3px solid #f2c230;
 }
+
+/* My Mistakes: a word's history */
+.mistake-when__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+.mistake-row__history {
+  border-top: 1px dashed var(--line);
+  grid-column: 1 / -1;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.mistake-history {
+  display: grid;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mistake-history li {
+  align-items: baseline;
+  display: grid;
+  font-size: calc(13px * var(--fs, 1));
+  gap: 8px;
+  grid-template-columns: 18px minmax(80px, auto) 1fr auto;
+}
+.mistake-history__mark {
+  font-weight: 700;
+  text-align: center;
+}
+.mistake-history__right .mistake-history__mark {
+  color: var(--success, #1f7a4d);
+}
+.mistake-history__wrong .mistake-history__mark {
+  color: var(--danger, #b42318);
+}
+.mistake-history__yellow .mistake-history__mark {
+  background: #f2c230;
+  border-radius: 2px;
+  display: inline-block;
+  height: 12px;
+  margin: 0 auto;
+  transform: rotate(-8deg);
+  width: 9px;
+}
+.mistake-history li span,
+.mistake-history time {
+  color: var(--ink-muted);
+}
+.mistake-history__empty {
+  color: var(--ink-muted);
+  margin: 0;
+}
+@media (max-width: 640px) {
+  .mistake-history li {
+    grid-template-columns: 18px 1fr;
+  }
+  .mistake-history li span,
+  .mistake-history time {
+    grid-column: 2;
+  }
+}

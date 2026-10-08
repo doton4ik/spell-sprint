@@ -18,6 +18,7 @@ export type PairStatus = {
   errors: number
   answers: number
   goodDays: number
+  nextReviewAt: string
 }
 export type PairQuestion = { pair: PairDrill; sentence: PairSentence }
 
@@ -73,7 +74,7 @@ export function pairStatuses(attempts = getPairAttempts(), now = new Date()): Pa
   for (const attempt of attempts) byPair.set(attempt.pairId, [...(byPair.get(attempt.pairId) ?? []), attempt])
   return pairDrills.map((pair) => {
     const history = byPair.get(pair.id) ?? []
-    if (!history.length) return { pair, state: 'new', due: true, errors: 0, answers: 0, goodDays: 0 }
+    if (!history.length) return { pair, state: 'new', due: true, errors: 0, answers: 0, goodDays: 0, nextReviewAt: now.toISOString() }
     const lastMistake =
       history
         .filter((attempt) => !attempt.correct)
@@ -97,6 +98,7 @@ export function pairStatuses(attempts = getPairAttempts(), now = new Date()): Pa
       errors: history.filter((attempt) => !attempt.correct).length,
       answers: history.length,
       goodDays,
+      nextReviewAt: next.toISOString(),
     }
   })
 }
@@ -134,4 +136,30 @@ export function buildPairSession(size = 10): PairQuestion[] {
 export function pairQuestions(pairId: string): PairQuestion[] {
   const pair = pairDrills.find((item) => item.id === pairId)
   return pair ? shuffle(pair.sentences).map((sentence) => ({ pair, sentence })) : []
+}
+
+// My Mistakes → "Practise this pair": the Pairs page opens that pair's sentences straight away.
+const OPEN_KEY = 'spell-sprint.open-pair'
+export function openPairOnPairsPage(pairId: string) {
+  try {
+    window.sessionStorage.setItem(OPEN_KEY, pairId)
+  } catch {
+    /* the page opens the list instead */
+  }
+  window.location.hash = 'pairs'
+}
+/** The pair to open, if any (read only; clearPairToOpen removes it once the session has started). */
+export function pairToOpen(): string | null {
+  try {
+    return window.sessionStorage.getItem(OPEN_KEY)
+  } catch {
+    return null
+  }
+}
+export function clearPairToOpen() {
+  try {
+    window.sessionStorage.removeItem(OPEN_KEY)
+  } catch {
+    /* nothing stored */
+  }
 }
