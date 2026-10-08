@@ -19,7 +19,7 @@ export const learningRules: LearningRule[] = [
     wrong: 'recieved',
     correct: 'received',
     memoryCue: 'After c, use ei: receive.',
-    examples: ['receive', 'ceiling', 'their', 'believe'],
+    examples: ['receive', 'ceiling', 'receipt', 'believe'],
   },
   {
     id: 'did-base-verb',

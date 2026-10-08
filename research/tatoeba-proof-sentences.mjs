@@ -88,6 +88,9 @@ for (const item of all) {
     break
   }
 }
+// Tatoeba sentences that are correct but sound unnatural to a learner (checked by hand).
+const UNNATURAL = new Set(['40861', '8719310']) // "We can but wait…", "…I'll have been studying, so I'll be tired."
+for (const items of Object.values(byType)) items.splice(0, items.length, ...items.filter((item) => !UNNATURAL.has(item.id)))
 // Spread: a sample of each type across the levels, the most common wording first.
 const pool = []
 for (const [type, items] of Object.entries(byType)) {

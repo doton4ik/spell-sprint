@@ -39,7 +39,6 @@ const loaders = {
   Mistakes: () => import('./pages/MistakesPage'),
   Rules: () => import('./pages/RulesPage'),
   Libraries: () => import('./pages/LibrariesPage'),
-  Review: () => import('./pages/ReviewPage'),
   Diagnostic: () => import('./pages/DiagnosticPage'),
   Settings: () => import('./pages/SettingsPage'),
   Topics: () => import('./pages/TopicsPage'),
@@ -51,7 +50,6 @@ const PracticePage = page(loaders.Practice, 'PracticePage')
 const MistakesPage = page(loaders.Mistakes, 'MistakesPage')
 const RulesPage = page(loaders.Rules, 'RulesPage')
 const LibrariesPage = page(loaders.Libraries, 'LibrariesPage')
-const ReviewPage = page(loaders.Review, 'ReviewPage')
 const DiagnosticPage = page(loaders.Diagnostic, 'DiagnosticPage')
 const SettingsPage = page(loaders.Settings, 'SettingsPage')
 const TopicsPage = page(loaders.Topics, 'TopicsPage')
@@ -72,7 +70,7 @@ const pages: Record<string, ComponentType> = {
   'my-mistakes': MistakesPage,
   rules: RulesPage,
   libraries: LibrariesPage,
-  review: ReviewPage,
+  review: MistakesPage, // the old Review page: its words are in My Mistakes now
   'level-check': DiagnosticPage,
   'test-analysis': DiagnosticPage,
   settings: SettingsPage,

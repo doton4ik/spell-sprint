@@ -73,7 +73,7 @@ function practise(entries: MistakeEntry[], label: string) {
   if (wordIds.length) {
     setPendingPracticeSelection({ wordIds, label, mode: 'write-en' })
     window.location.hash = 'practice'
-  } else window.location.hash = 'review'
+  } else window.location.hash = 'practice'
 }
 
 function MistakeRow({ entry }: { entry: MistakeEntry }) {

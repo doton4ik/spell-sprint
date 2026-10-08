@@ -6,7 +6,7 @@ const task = (answer: string, acceptedAnswers?: string[]): PracticeTask => ({
   id: 't',
   type: 'translate-ru-en',
   topic: '',
-  level: 'B1',
+  level: 'Easy',
   prompt: '',
   answer,
   acceptedAnswers,

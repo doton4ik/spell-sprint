@@ -16,7 +16,7 @@ const pages: Array<[string, RegExp]> = [
   ['my-mistakes', /My mistakes/],
   ['rules', /Rules that stick/],
   ['libraries', /Libraries/],
-  ['review', /Review later/],
+  ['review', /My mistakes/], // the old Review page opens My Mistakes
   ['level-check', /Where is your English now/],
   ['settings', /Your learning space/],
   ['topics', /Topics/],

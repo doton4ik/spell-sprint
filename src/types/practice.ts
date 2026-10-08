@@ -6,7 +6,7 @@ export type PracticeTask = {
   id: string
   type: PracticeTaskType
   topic: string
-  level: 'B1' | 'B1+' | 'B2'
+  level: 'Easy' | 'Medium' | 'Hard' // the word's difficulty in the library (not a CEFR level)
   prompt: string
   answer: string
   acceptedAnswers?: string[]

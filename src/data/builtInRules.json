@@ -1,0 +1,1797 @@
+{
+  "exportedAt": "2026-10-08",
+  "rules": [
+    {
+      "id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "slug": "able-vs-ible",
+      "title": "-able versus -ible endings",
+      "category": "prefixes_and_suffixes",
+      "rule_type": "language_rule",
+      "short_explanation": "Some adjectives end in -able and others in -ible, and there is no simple rule, so these words are often best learned individually, like available and possible.",
+      "tts_text": "Some words end in able, others end in ible.",
+      "mnemonic": "Able is common; ible likes to hide in short roots.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "slug": "accept-vs-except",
+      "title": "Accept or except",
+      "category": "confusing_words",
+      "rule_type": "confusing_words",
+      "short_explanation": "Accept means to agree to take something. Except means not including.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "Accept an offer; except one item.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": { "confusable_words": ["accept", "except"] }
+    },
+    {
+      "id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "slug": "advice-vs-advise",
+      "title": "Advice or advise",
+      "category": "confusing_words",
+      "rule_type": "confusing_words",
+      "short_explanation": "Advice is a noun for a suggestion. Advise is a verb meaning to give a suggestion.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "Advice is a thing; advise is an action.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": { "confusable_words": ["advice", "advise"] }
+    },
+    {
+      "id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "slug": "affect-vs-effect",
+      "title": "Affect vs effect",
+      "category": "confusing_words",
+      "rule_type": "confusing_words",
+      "short_explanation": "Affect is usually a verb meaning to influence something. Effect is usually a noun meaning the result.",
+      "tts_text": "Affect versus effect",
+      "mnemonic": "Affect = Action, Effect = End result.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": { "confusable_words": ["affect", "effect"] }
+    },
+    {
+      "id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "slug": "irregular-past-common",
+      "title": "Common irregular past verbs",
+      "category": "irregular_forms_and_exceptions",
+      "rule_type": "exception",
+      "short_explanation": "Many common verbs change spelling in the past. Buy becomes bought, teach becomes taught, and think becomes thought.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "Bought, brought and thought share ought.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "slug": "irregular-plurals",
+      "title": "Common irregular plurals",
+      "category": "irregular_forms_and_exceptions",
+      "rule_type": "exception",
+      "short_explanation": "Some plural nouns do not use -s or -es. Child becomes children, mouse becomes mice and person becomes people.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "Child becomes children; mouse becomes mice.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "slug": "comparatives-er-est",
+      "title": "Comparatives with -er and -est",
+      "category": "english_spelling",
+      "rule_type": "language_rule",
+      "short_explanation": "Short adjectives often add -er or -est. Double a final consonant after a short vowel, change final y to i, or drop a final e.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "Big doubles; happy changes y; nice drops e.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "slug": "double-consonants",
+      "title": "Double consonants",
+      "category": "double_consonants",
+      "rule_type": "language_rule",
+      "short_explanation": "Some common words need doubled letters. Learn the whole visual pattern instead of relying only on sound.",
+      "tts_text": "Double consonants",
+      "mnemonic": "Tomorrow has a double r; useful has one l.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "slug": "double-before-ing-ed",
+      "title": "Doubling before -ing and -ed",
+      "category": "verb_endings",
+      "rule_type": "language_rule",
+      "short_explanation": "Short verbs that end in one vowel and one consonant often double the final consonant before -ing or -ed, as in plan becoming planning.",
+      "tts_text": "Double the final consonant before ing or ed.",
+      "mnemonic": "One vowel, one consonant, double before you go on.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "slug": "drop-silent-e",
+      "title": "Dropping the silent e",
+      "category": "verb_endings",
+      "rule_type": "language_rule",
+      "short_explanation": "When a verb ends in a silent e, you usually drop the e before adding -ing or -ed. For example, make becomes making.",
+      "tts_text": "Drop the silent e before ing or ed.",
+      "mnemonic": "The silent e steps aside to let -ing and -ed in.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "slug": "adverbs-ly",
+      "title": "Forming adverbs with -ly",
+      "category": "prefixes_and_suffixes",
+      "rule_type": "language_rule",
+      "short_explanation": "Most adverbs are formed by adding -ly to an adjective, but adjectives ending in y usually change to i before -ly, as in happy becoming happily.",
+      "tts_text": "Change y to i before adding ly.",
+      "mnemonic": "Happy waves goodbye to y and says hi to ily.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "f24e103c-9c72-4143-8657-414346787d18",
+      "slug": "irregular-past-go",
+      "title": "Irregular past: go / went",
+      "category": "irregular_forms_and_exceptions",
+      "rule_type": "exception",
+      "short_explanation": "Go does not take -ed in the past tense. Its past form is the irregular word went.",
+      "tts_text": "Irregular past of go",
+      "mnemonic": "Go, went, gone — learn the whole set together.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "slug": "its-vs-its-contraction",
+      "title": "Its vs it's",
+      "category": "confusing_words",
+      "rule_type": "confusing_words",
+      "short_explanation": "Its (no apostrophe) shows that something belongs to it. It's is short for it is or it has.",
+      "tts_text": "Its versus it is",
+      "mnemonic": "If you can say \"it is\", use it's.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": { "confusable_words": ["its", "it's"] }
+    },
+    {
+      "id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "slug": "soft-c-and-g",
+      "title": "Keep e after soft c and g",
+      "category": "vowels_and_letter_patterns",
+      "rule_type": "language_rule",
+      "short_explanation": "Keep e after soft c or g before a suffix beginning with a or o. Notice becomes noticeable, and courage becomes courageous.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "Keep e so c and g stay soft.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "slug": "lose-vs-loose",
+      "title": "Lose vs loose",
+      "category": "confusing_words",
+      "rule_type": "confusing_words",
+      "short_explanation": "Lose is a verb meaning to not have something anymore. Loose is an adjective meaning not tight.",
+      "tts_text": "Lose versus loose",
+      "mnemonic": "One O in lose, like losing one letter.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": { "confusable_words": ["lose", "loose"] }
+    },
+    {
+      "id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "slug": "ance-vs-ence",
+      "title": "Nouns ending in -ance or -ence",
+      "category": "prefixes_and_suffixes",
+      "rule_type": "language_rule",
+      "short_explanation": "Some nouns end in -ance, like appearance. Others end in -ence, like difference and independence.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "Appearance takes ance; difference takes ence.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "slug": "tion-vs-sion",
+      "title": "Nouns ending in -tion or -sion",
+      "category": "prefixes_and_suffixes",
+      "rule_type": "language_rule",
+      "short_explanation": "Some nouns end in -tion, like information. Others end in -sion, like decision and discussion. Learn the ending with each word.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "Information takes tion; decision takes sion.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "slug": "plural-es",
+      "title": "Plural nouns with -es",
+      "category": "plural_forms",
+      "rule_type": "language_rule",
+      "short_explanation": "Add -es to most nouns ending in s, x, z, ch or sh. Box becomes boxes.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "A hissing ending needs an extra e.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "slug": "plural-f-to-ves",
+      "title": "Plural nouns with -ves",
+      "category": "plural_forms",
+      "rule_type": "language_rule",
+      "short_explanation": "Some nouns ending in f or fe change that ending to -ves in the plural. Knife becomes knives.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "A knife loses fe and gains ves.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "slug": "plural-y-to-ies",
+      "title": "Plural: y becomes ies",
+      "category": "plural_forms",
+      "rule_type": "language_rule",
+      "short_explanation": "When a noun ends in a consonant plus y, change y to i and add es to form the plural.",
+      "tts_text": "Plural y to ies",
+      "mnemonic": "Company to companies; one lonely y turns into two i's.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "slug": "practice-vs-practise",
+      "title": "Practice or practise",
+      "category": "confusing_words",
+      "rule_type": "confusing_words",
+      "short_explanation": "In British English, practice is a noun. Practise is a verb.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "Practise with s is something you do.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": { "confusable_words": ["practice", "practise"] }
+    },
+    {
+      "id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "slug": "principal-vs-principle",
+      "title": "Principal or principle",
+      "category": "confusing_words",
+      "rule_type": "confusing_words",
+      "short_explanation": "Principal means main or a head teacher. Principle is a basic belief or rule.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "Principal is main; principle is a rule.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": { "confusable_words": ["principal", "principle"] }
+    },
+    {
+      "id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "slug": "quiet-vs-quite",
+      "title": "Quiet or quite",
+      "category": "confusing_words",
+      "rule_type": "confusing_words",
+      "short_explanation": "Quiet means making little noise. Quite means fairly or rather.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "Quiet sounds soft; quite means fairly.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": { "confusable_words": ["quiet", "quite"] }
+    },
+    {
+      "id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "slug": "silent-letters",
+      "title": "Silent letters",
+      "category": "silent_letters",
+      "rule_type": "language_rule",
+      "short_explanation": "Some English words contain letters that are written but not pronounced. Learning these silent letters helps you spell tricky words correctly.",
+      "tts_text": "Some letters in English words are silent.",
+      "mnemonic": "The k in knife is silent, just like the w in write.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "slug": "stationary-vs-stationery",
+      "title": "Stationary or stationery",
+      "category": "confusing_words",
+      "rule_type": "confusing_words",
+      "short_explanation": "Stationary means not moving. Stationery means paper and writing supplies.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "Stationery has e for envelopes.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": { "confusable_words": ["stationary", "stationery"] }
+    },
+    {
+      "id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "slug": "suffix-ful",
+      "title": "The suffix -ful has one L",
+      "category": "prefixes_and_suffixes",
+      "rule_type": "language_rule",
+      "short_explanation": "The suffix -ful always has a single l, as in useful and careful, even though the word full has two.",
+      "tts_text": "The suffix ful has only one l.",
+      "mnemonic": "Ful is never full of extra Ls.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "slug": "then-vs-than",
+      "title": "Then or than",
+      "category": "confusing_words",
+      "rule_type": "confusing_words",
+      "short_explanation": "Then refers to time or the next step. Than is used when comparing things.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "Then is time; than compares.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": { "confusable_words": ["then", "than"] }
+    },
+    {
+      "id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "slug": "there-vs-their",
+      "title": "There vs their vs they're",
+      "category": "confusing_words",
+      "rule_type": "confusing_words",
+      "short_explanation": "There points to a place or starts a sentence (there is). Their shows that something belongs to them. They're is short for they are.",
+      "tts_text": "There, their, and they are",
+      "mnemonic": "Their has \"heir\" in it: it belongs to someone.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": { "confusable_words": ["there", "their", "they're"] }
+    },
+    {
+      "id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "slug": "to-too-two",
+      "title": "To, too or two",
+      "category": "confusing_words",
+      "rule_type": "confusing_words",
+      "short_explanation": "To shows direction or comes before a verb. Too means also or excessively; two means the number 2.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "Two is a number; too is extra.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": { "confusable_words": ["to", "too", "two"] }
+    },
+    {
+      "id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "slug": "vowel-order-ei-ie",
+      "title": "Vowel order: i and e",
+      "category": "vowels_and_letter_patterns",
+      "rule_type": "exception",
+      "short_explanation": "The order of i and e changes the spelling of a word. After c, most words use ei.",
+      "tts_text": "Vowel order i and e",
+      "mnemonic": "After c, use ei: receive.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "slug": "weather-vs-whether",
+      "title": "Weather or whether",
+      "category": "confusing_words",
+      "rule_type": "confusing_words",
+      "short_explanation": "Weather is the condition outside. Whether introduces a question or a choice.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "Weather is outside; whether is a choice.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": { "confusable_words": ["weather", "whether"] }
+    },
+    {
+      "id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "slug": "were-where-wear",
+      "title": "Were, where or wear",
+      "category": "confusing_words",
+      "rule_type": "confusing_words",
+      "short_explanation": "Were is a past form of be. Where asks about a place; wear means to have clothes on.",
+      "tts_text": "Listen and choose the correct form.",
+      "mnemonic": "Where is a place; wear is clothes.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": { "confusable_words": ["were", "where", "wear"] }
+    },
+    {
+      "id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "slug": "your-vs-youre",
+      "title": "Your vs you're",
+      "category": "confusing_words",
+      "rule_type": "confusing_words",
+      "short_explanation": "Your shows that something belongs to you. You're is short for you are.",
+      "tts_text": "Your versus you are",
+      "mnemonic": "If you can say \"you are\", use you're.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": { "confusable_words": ["your", "you're"] }
+    }
+  ],
+  "examples": [
+    {
+      "id": "fc056dd1-a5f9-4a06-985e-93f14a3d276d",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "incorrect",
+      "text": "tomorow",
+      "correction": "tomorrow",
+      "note": "Missing the second r"
+    },
+    {
+      "id": "852cd0fa-63d4-486f-a1a7-9efdd898d8bf",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "correct",
+      "text": "beginning",
+      "correction": null,
+      "note": "Double n before -ing"
+    },
+    {
+      "id": "413a325c-f5a8-405b-be27-c8cc97ba7d59",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "correct",
+      "text": "recommended",
+      "correction": null,
+      "note": "Double m"
+    },
+    {
+      "id": "1383c8fd-5782-49ad-9f9a-28521b476e72",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "recieve",
+      "correction": "receive",
+      "note": "ei after c"
+    },
+    {
+      "id": "83c89bfd-69da-4214-902a-5d63d0639ed1",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "believe",
+      "correction": null,
+      "note": "ie after b, not after c"
+    },
+    {
+      "id": "af4be571-02d2-40f7-9016-aedd1af4f0a0",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "exception",
+      "text": "seize",
+      "correction": null,
+      "note": "Common exception: ei even though not after c"
+    },
+    {
+      "id": "42bdfad3-d641-4ee9-9ab4-ed290cfe6ca6",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "I don't want to loose my keys.",
+      "correction": "I don't want to lose my keys.",
+      "note": "loose used instead of lose"
+    },
+    {
+      "id": "7b17c686-9319-465d-9ebb-a42182f79dcf",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "These jeans are too loose.",
+      "correction": null,
+      "note": "loose is the adjective"
+    },
+    {
+      "id": "45d6206f-b81b-4be9-ac70-2032b27d2a2d",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "companys",
+      "correction": "companies",
+      "note": "y kept instead of changing to ies"
+    },
+    {
+      "id": "57be71fd-3d1e-42b4-a5a2-58ebd8fe75d1",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "delivery -> deliveries",
+      "correction": null,
+      "note": "Standard pattern"
+    },
+    {
+      "id": "36d8a542-31dd-4441-954e-fc1f1f977a78",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "We goed to the warehouse.",
+      "correction": "We went to the warehouse.",
+      "note": "Regular -ed added to an irregular verb"
+    },
+    {
+      "id": "4520d3f3-9285-4879-8d27-8ebf4a02a6e3",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "correct",
+      "text": "She went to the meeting.",
+      "correction": null,
+      "note": "Correct irregular past form"
+    },
+    {
+      "id": "223264ca-957a-461e-ba3c-627b88694c1b",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "Their is a meeting at noon.",
+      "correction": "There is a meeting at noon.",
+      "note": "their used instead of there"
+    },
+    {
+      "id": "8ef10500-d2d8-497b-b482-080b878c3e10",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "Their truck arrived late.",
+      "correction": null,
+      "note": "their = belonging to them"
+    },
+    {
+      "id": "2feae589-6065-4de2-b68a-a35995e3a1c4",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "The company changed it's name.",
+      "correction": "The company changed its name.",
+      "note": "it's means it is"
+    },
+    {
+      "id": "e19d2588-6b13-4b5a-a1d1-29f7fe6bfde4",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "It's a large warehouse.",
+      "correction": null,
+      "note": "it's = it is"
+    },
+    {
+      "id": "aad82a9c-5a68-4373-81e4-3b83e84e6934",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Your welcome.",
+      "correction": "You're welcome.",
+      "note": "you're = you are"
+    },
+    {
+      "id": "f801755c-6448-47f0-850e-5e0b77465183",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "Your invoice is ready.",
+      "correction": null,
+      "note": "your = belonging to you"
+    },
+    {
+      "id": "2fadf84d-7991-40fa-85c1-086f4a824279",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "The delay will effect the delivery.",
+      "correction": "The delay will affect the delivery.",
+      "note": "verb needed: affect"
+    },
+    {
+      "id": "59a862d7-1ff6-48a2-8bba-117f121420a8",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "The delay had a big effect.",
+      "correction": null,
+      "note": "noun: effect"
+    },
+    {
+      "id": "4477c316-071a-4862-8717-71159824c4aa",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "She decided to write a letter to her friend.",
+      "correction": null,
+      "note": "silent w in write"
+    },
+    {
+      "id": "ea0561a8-c6cf-48a1-9dd0-b3f514fcada1",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "The chef used a sharp knife to cut the bread.",
+      "correction": null,
+      "note": "silent k in knife"
+    },
+    {
+      "id": "c1cbaa7e-c3b5-4fbc-a7af-47ef8ed18b0f",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "rite",
+      "correction": "write",
+      "note": "missing silent w"
+    },
+    {
+      "id": "7b52f6e9-374e-49d8-b817-220f5629b019",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "nife",
+      "correction": "knife",
+      "note": "missing silent k"
+    },
+    {
+      "id": "aec07b98-5566-46a4-8f3f-a48cd31f2864",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "exception",
+      "text": "agreeing",
+      "correction": null,
+      "note": "keeps both e letters because it ends in -ee"
+    },
+    {
+      "id": "ed8ededa-d6ce-45bf-a48e-0814d96100b2",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "correct",
+      "text": "He danced all night at the party.",
+      "correction": null,
+      "note": "silent e dropped before ed"
+    },
+    {
+      "id": "e6c2d61b-06c0-4c2e-bdc0-64b842937dbb",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "correct",
+      "text": "She is writing a long letter to her cousin.",
+      "correction": null,
+      "note": "silent e dropped before ing"
+    },
+    {
+      "id": "33740a59-68da-4d66-919c-53a94424cd8e",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "hopeed",
+      "correction": "hoped",
+      "note": "silent e not dropped"
+    },
+    {
+      "id": "e0b396b3-1157-49cc-abc9-0316f0198ebb",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "makeing",
+      "correction": "making",
+      "note": "silent e kept by mistake"
+    },
+    {
+      "id": "73256d5f-7ab1-4fb9-bae7-c096b2501cf3",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "exception",
+      "text": "fixing",
+      "correction": null,
+      "note": "no doubling after x, so fix keeps one x"
+    },
+    {
+      "id": "81427651-e3af-43ef-80d2-f484dcce1e89",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "correct",
+      "text": "She dropped her phone on the floor.",
+      "correction": null,
+      "note": "doubled p before ed"
+    },
+    {
+      "id": "ed8af019-67c5-480e-93a2-676428384a40",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "correct",
+      "text": "They are shopping for groceries this afternoon.",
+      "correction": null,
+      "note": "doubled p before ing"
+    },
+    {
+      "id": "12c220b2-5598-4997-86a3-19ec48c76ae1",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "stoped",
+      "correction": "stopped",
+      "note": "missing doubled p"
+    },
+    {
+      "id": "7f57cf79-7c64-4fb0-8ef9-47c608c94572",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "planing",
+      "correction": "planning",
+      "note": "missing doubled n"
+    },
+    {
+      "id": "a2c6ae95-2f51-4332-8f77-4099f079af92",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "exception",
+      "text": "carefully",
+      "correction": null,
+      "note": "double l appears only when -ly is added to careful"
+    },
+    {
+      "id": "25d48c44-28f0-4437-8c9c-ab43140a5334",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "He gave a truthful answer to the question.",
+      "correction": null,
+      "note": "single l in truthful"
+    },
+    {
+      "id": "8835ea45-3aae-40a4-ba00-1af845922e9b",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "It was a helpful suggestion from my colleague.",
+      "correction": null,
+      "note": "single l in helpful"
+    },
+    {
+      "id": "4dff9580-bd22-4c3b-87ea-a2dea43fb085",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "carefull",
+      "correction": "careful",
+      "note": "extra l added"
+    },
+    {
+      "id": "673e0434-eed1-4596-ae54-ee9189ab8c98",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "usefull",
+      "correction": "useful",
+      "note": "extra l added"
+    },
+    {
+      "id": "f30964d8-7b73-4172-a57a-8f4335c0ac68",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "exception",
+      "text": "simply",
+      "correction": null,
+      "note": "drop the final e before ly"
+    },
+    {
+      "id": "a3829725-63fc-4b45-9d46-5219ae4968bf",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "correct",
+      "text": "He easily finished the puzzle in ten minutes.",
+      "correction": null,
+      "note": "y changed to i before ly"
+    },
+    {
+      "id": "929fb233-a8ad-41d7-a8f7-45a99eb98dbe",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "correct",
+      "text": "She spoke quietly during the meeting.",
+      "correction": null,
+      "note": "ly added directly"
+    },
+    {
+      "id": "541cab96-8c24-4f3f-950f-9b0ceef9b9bd",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "finaly",
+      "correction": "finally",
+      "note": "missing double l"
+    },
+    {
+      "id": "c9200656-820d-4433-bd09-7f4af92c1ffa",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "happyly",
+      "correction": "happily",
+      "note": "y not changed to i before ly"
+    },
+    {
+      "id": "8b95aea1-01ce-4fb8-a386-c6c644182445",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "It is possible to finish the project early.",
+      "correction": null,
+      "note": "correct -ible ending"
+    },
+    {
+      "id": "d98cd06c-0575-475f-ac60-475fe74a4ab4",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The tickets are still available online.",
+      "correction": null,
+      "note": "correct -able ending"
+    },
+    {
+      "id": "b30ace46-6105-4846-ad12-f9f21f666224",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "responsable",
+      "correction": "responsible",
+      "note": "wrong ending used"
+    },
+    {
+      "id": "f52c8062-59f8-4b80-942d-af58f3545c1e",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "availible",
+      "correction": "available",
+      "note": "wrong ending used"
+    },
+    {
+      "id": "5624cb1f-e556-40bf-b706-3e858226310d",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "correct",
+      "text": "The train remained stationary at the platform.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "1594248e-2537-47d3-8c1d-68bdf51769fa",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "This room is bigger than ours.",
+      "correction": null,
+      "note": "Correct spelling in context"
+    },
+    {
+      "id": "5572bd29-8df6-4506-b20b-8a9f139d0fca",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "biger",
+      "correction": "bigger",
+      "note": "Correct the spelling of this form"
+    },
+    {
+      "id": "7e1cbdfd-1add-4879-92ae-e4952c5e6608",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "Her cheerful voice made everyone smile.",
+      "correction": null,
+      "note": "Correct use in context"
+    },
+    {
+      "id": "b2bb4cee-945c-4ebd-8152-3945d31be9cf",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Your very kind.",
+      "correction": "You're very kind.",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "a6ec8a56-8d79-48d6-9040-c0d60128ef70",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "hopeing",
+      "correction": "hoping",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "3f7f6513-9df2-4e58-a0eb-e532846c8c86",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "They left their coats there by the door.",
+      "correction": null,
+      "note": "Correct use in context"
+    },
+    {
+      "id": "6ae89f91-6469-4048-a481-a4fa7410beb6",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "The principal reason was the price.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "7c396e76-9735-42bf-b18f-427bb0409c7f",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "The film was quiet interesting.",
+      "correction": "The film was quite interesting.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "6c8fa1ad-92e7-46f7-be65-203498d43ecb",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "I want to practice speaking.",
+      "correction": "I want to practise speaking.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "7c693ff3-6531-4199-ac42-5b590e7978d3",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The menu was readable even in poor light.",
+      "correction": null,
+      "note": "Correct use in context"
+    },
+    {
+      "id": "18e925a2-47c2-4a8c-b75e-c56d2dd464a1",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "Their independence matters to them.",
+      "correction": null,
+      "note": "Correct spelling in context"
+    },
+    {
+      "id": "c30e8116-8f3e-4865-9e60-9c4711f76f50",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "I practise speaking English each morning.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "e377d961-0a9b-40ab-94c8-c91f8ff3285b",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "You're bag is heavy.",
+      "correction": "Your bag is heavy.",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "86156803-4e18-40d4-9983-0d6e271b0944",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "We were tired after the walk.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "56a93d41-6975-422f-8bec-20e2231cc468",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "Honesty is an important principal.",
+      "correction": "Honesty is an important principle.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "217f56b6-3aae-4c61-b54b-11a4dee51184",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "accessable",
+      "correction": "accessible",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "063ffecd-377b-4a5e-b1e4-ef1e893e65db",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "The weather improved before our walk.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "da8e8ea1-05ed-42d6-96e0-da1cf8d2e323",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "This bag is two heavy.",
+      "correction": "This bag is too heavy.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "fcc3cc59-44fb-4b57-90dc-3cfc7b3f178e",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "correct",
+      "text": "They were running through the park together.",
+      "correction": null,
+      "note": "Correct use in context"
+    },
+    {
+      "id": "57f007ba-5bb5-460d-b31c-10a8b03a79f5",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "hopefull",
+      "correction": "hopeful",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "0291f502-c657-486d-8dfc-1064ea7b8c2b",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "Her advice helped me choose a course.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "178acfdc-20ca-4d48-b352-91e5b0d91966",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "correct",
+      "text": "The change was noticeable after a week.",
+      "correction": null,
+      "note": "Correct spelling in context"
+    },
+    {
+      "id": "6c8bbd2c-b6e9-47e4-9817-4acfaa19e8b2",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "I have to sisters.",
+      "correction": "I have two sisters.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "fd4ec46a-ad80-4712-80c6-f612ba126775",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "correct",
+      "text": "She wears two watches on special occasions.",
+      "correction": null,
+      "note": "Correct spelling in context"
+    },
+    {
+      "id": "411fb783-bd34-48b5-8216-db11acd916e3",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "She chose the nicest cake.",
+      "correction": null,
+      "note": "Correct spelling in context"
+    },
+    {
+      "id": "4b51ecda-3eb0-4c21-89f9-4aa103b60305",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "cheerfull",
+      "correction": "cheerful",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "d7522f31-8f6a-4469-af3e-c0e234ba45fa",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "The car stayed stationery.",
+      "correction": "The car stayed stationary.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "83ed47ed-0d16-4d2d-95b0-fcc164b32fe3",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "Everyone came accept me.",
+      "correction": "Everyone came except me.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "447513ab-01e3-4dfd-9d01-a123df472a2a",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "sliped",
+      "correction": "slipped",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "4d96c9c0-844a-4e50-a4c9-ed529db3869e",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "correct",
+      "text": "Write your address clearly on the form.",
+      "correction": null,
+      "note": "Correct use in context"
+    },
+    {
+      "id": "8b5b415a-4a15-43c2-a4ac-4b976211175c",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "watchs",
+      "correction": "watches",
+      "note": "Correct the spelling of this form"
+    },
+    {
+      "id": "e3c51854-fc13-4502-b622-d999036a664a",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "The new rule had an affect.",
+      "correction": "The new rule had an effect.",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "6024a4c5-bfcc-46d3-ab6c-759c6567422c",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "The two boys wanted to come too.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "c1552883-184e-4e33-be44-f7400dbc9384",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "slowley",
+      "correction": "slowly",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "cbdc18ff-f79e-4d9b-93ca-8dd642d4a398",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "Daily practise is useful.",
+      "correction": "Daily practice is useful.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "5fcfd901-f52a-45c6-ac27-a5d70538f966",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "We had a discussion after the film.",
+      "correction": null,
+      "note": "Correct spelling in context"
+    },
+    {
+      "id": "b9d95977-ea5d-4794-8642-3e12b3f77064",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "Noise can effect sleep.",
+      "correction": "Noise can affect sleep.",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "215c2b26-6953-40b0-9f46-90838d1346b0",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "We walked to the park after lunch.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "d71b1c8b-7893-4262-bb28-910e2e815739",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "My friend waited near the entrance.",
+      "correction": null,
+      "note": "Correct use in context"
+    },
+    {
+      "id": "98698258-d22a-4fb6-ab92-90626e5f889f",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "runing",
+      "correction": "running",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "6dc41bc7-7dfe-40cd-8a65-20f5e1e2e510",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "She decided to accept the invitation.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "5181f3a7-5ba7-40d4-b716-d55d45a25687",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "correct",
+      "text": "She smiled while moving the chairs.",
+      "correction": null,
+      "note": "Correct use in context"
+    },
+    {
+      "id": "b0f80fed-1368-4956-b59e-06baa062c2c2",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "dairys",
+      "correction": "dairies",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "9292e123-92f2-4b51-a2d3-47a6a32a3bbb",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "The dog ate it's food.",
+      "correction": "The dog ate its food.",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "42e0bb43-7b6a-4117-8c1a-f9707a873f1a",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "I asked whether the shop was open.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "1b61dc10-1676-4388-91ba-618a1cae1397",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "She goed home.",
+      "correction": "She went home.",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "84863347-bc33-4d33-837b-a62d6f8257e7",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "This coat is warmer than mine.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "d1152eb6-fb88-4545-82aa-47e62879cee5",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "We need more stationary for the office.",
+      "correction": "We need more stationery for the office.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "b8cea34a-a766-4d62-ba28-55ce58b342ce",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "noticable",
+      "correction": "noticeable",
+      "note": "Correct the spelling of this form"
+    },
+    {
+      "id": "ed3f9e3d-6edb-43af-91e5-1ba8ef6b63a6",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "The room was quite after lunch.",
+      "correction": "The room was quiet after lunch.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "fb683cab-aeb7-450c-9cda-c578bca72d09",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "We ate and than left.",
+      "correction": "We ate and then left.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "0054b91f-94a9-49f3-b01e-03d47f39fc60",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "wifes",
+      "correction": "wives",
+      "note": "Correct the spelling of this form"
+    },
+    {
+      "id": "8df83004-a4ac-4508-91e8-893388600bdd",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "correct",
+      "text": "I bought stationery for my class.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "7b534045-7680-454c-8625-a5d8c8a00dea",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "Its a sunny day.",
+      "correction": "It's a sunny day.",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "9f4166cd-94b0-43fe-a9e7-c25383af257c",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "The whether is cold today.",
+      "correction": "The weather is cold today.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "fcaa3b9e-f418-4dfe-b364-de7b74b2a092",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "correct",
+      "text": "After lunch, they went to the park.",
+      "correction": null,
+      "note": "Correct use in context"
+    },
+    {
+      "id": "2bbaaab4-0bdd-4dce-87df-46c5ade35e79",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "I need your advise.",
+      "correction": "I need your advice.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "aa0a3111-19db-4a5a-95d7-524e8e1c0b74",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "I advise you to check the details.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "9efc0019-2ecf-4589-94c2-5c6a3298cd91",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "mouses",
+      "correction": "mice",
+      "note": "Correct the spelling of this form"
+    },
+    {
+      "id": "0f4334e8-2718-40b7-97e7-42ad68f956e2",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "The coats are over their.",
+      "correction": "The coats are over there.",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "13c552ba-a00a-4659-9490-5f3a90d5335b",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "exception",
+      "text": "good → better → best",
+      "correction": null,
+      "note": "Good uses irregular comparison forms"
+    },
+    {
+      "id": "830c6222-87ef-4157-b98a-b281c725da3b",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "The principle reason was cost.",
+      "correction": "The principal reason was cost.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "f2450c2f-ff3c-4dae-b813-143035918b44",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "The lid was loose, so I nearly lost it.",
+      "correction": null,
+      "note": "Correct use in context"
+    },
+    {
+      "id": "f7506106-a064-410e-ac65-3dd248bc0dd2",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "The berries were fresh and sweet.",
+      "correction": null,
+      "note": "Correct use in context"
+    },
+    {
+      "id": "9029dcdd-f620-4d8f-83a1-d76fc3c02263",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "correct",
+      "text": "The book was quite interesting.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "b157e9e6-aaca-4da7-b6f9-848184eaa98b",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "readible",
+      "correction": "readable",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "c70cba93-0c05-41da-939d-eae71054a05f",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "freind",
+      "correction": "friend",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "bf6937d3-c9c0-4721-9ec3-d1d1e5b5d95d",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "Your brother said you're coming soon.",
+      "correction": null,
+      "note": "Correct use in context"
+    },
+    {
+      "id": "a52e724e-98bb-4b02-9b30-45de5c378b7c",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "Regular practice improves spelling.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "e1472bd8-0664-494a-a802-3a0b0ac99a8d",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "Two mice ran across the floor.",
+      "correction": null,
+      "note": "Correct spelling in context"
+    },
+    {
+      "id": "d5a043f7-41be-41e7-a077-56a045d779fa",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "exception",
+      "text": "roof → roofs; chef → chefs",
+      "correction": null,
+      "note": "These nouns keep f and add s"
+    },
+    {
+      "id": "65a257ea-85b0-4f2f-a527-2bdcc05427c4",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "decition",
+      "correction": "decision",
+      "note": "Correct the spelling of this form"
+    },
+    {
+      "id": "4bd73a9a-21f3-4fff-b4a8-8bc6de3ac9de",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "informasion",
+      "correction": "information",
+      "note": "Correct the spelling of this form"
+    },
+    {
+      "id": "e6747200-8a1d-4e7d-bf42-48f6923e1959",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "Where do you wear that jacket?",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "ec5562de-8e11-4a13-a4a1-3b51de336dde",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "The cold may affect how quickly the medicine takes effect.",
+      "correction": null,
+      "note": "Correct use in context"
+    },
+    {
+      "id": "28678ec4-3b18-40b8-aba6-6a5fe38d2dae",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "I wonder weather she is home.",
+      "correction": "I wonder whether she is home.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "874c4062-815f-434a-b760-6c136d17e522",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "quickley",
+      "correction": "quickly",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "c8e5d036-da7a-45f5-ae85-0b4e2e133cbf",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "The bird opened its wings because it's ready to fly.",
+      "correction": null,
+      "note": "Correct use in context"
+    },
+    {
+      "id": "1ef828a0-2e86-4577-bcfb-cf322748322d",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "Her appearance changed over the years.",
+      "correction": null,
+      "note": "Correct spelling in context"
+    },
+    {
+      "id": "2432c8db-e67a-4c71-8acb-800d9b64c99f",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "happyer",
+      "correction": "happier",
+      "note": "Correct the spelling of this form"
+    },
+    {
+      "id": "7e9cf2b5-2cb9-4fc5-a521-d6e93611097e",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "The information was easy to find.",
+      "correction": null,
+      "note": "Correct spelling in context"
+    },
+    {
+      "id": "58a0437f-d87d-42d4-8848-ed31c91b7807",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "childs",
+      "correction": "children",
+      "note": "Correct the spelling of this form"
+    },
+    {
+      "id": "c46dd0ee-2aa2-448c-b12f-16991542d4d3",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "correct",
+      "text": "We packed the boxes before lunch.",
+      "correction": null,
+      "note": "Correct spelling in context"
+    },
+    {
+      "id": "331de645-dfd1-4e42-8f56-1257f1c37a04",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "exception",
+      "text": "stomach → stomachs",
+      "correction": null,
+      "note": "Hard ch sound takes only s"
+    },
+    {
+      "id": "723550d2-a375-4d65-9715-fd3a81f99d82",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "Fairness is an important principle.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "f632b84b-7a58-46a1-9160-4277c78987fb",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "I will except the offer.",
+      "correction": "I will accept the offer.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "fadbe312-7ce4-4579-a332-b0dfd87c8425",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "There house is small.",
+      "correction": "Their house is small.",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "aea3eb11-354d-45bd-a6b6-21015cdb3f80",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "I will where a coat.",
+      "correction": "I will wear a coat.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "7f8a7ae0-f684-40b2-9e59-4235a70175f7",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "lam",
+      "correction": "lamb",
+      "note": "Keep the silent final b"
+    },
+    {
+      "id": "d5505108-dc0e-4db2-afc1-b0e8984cffe4",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "Please advice me.",
+      "correction": "Please advise me.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "669766c2-7db6-48fe-a7fb-bd507672fda9",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "All the shops were open except one.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "543a52d3-7f46-4e86-aff7-8d43c4fc798d",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "cherrys",
+      "correction": "cherries",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "e63ddf74-8ecf-4402-896f-75610c18d5a9",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "He has went home.",
+      "correction": "He has gone home.",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "54f3b6f2-4cd2-4f66-867f-ff10f3f8f195",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "buyed",
+      "correction": "bought",
+      "note": "Correct the spelling of this form"
+    },
+    {
+      "id": "28317abf-bba2-49be-8819-1479636df265",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "correct",
+      "text": "The library is quiet in the morning.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "f3f3636d-c7b8-4a19-92cf-f7143aa838b8",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "The rope is lose.",
+      "correction": "The rope is loose.",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "cf43b4ef-0afc-493d-8859-7a3dbedca68b",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "The knives are in the kitchen drawer.",
+      "correction": null,
+      "note": "Correct spelling in context"
+    },
+    {
+      "id": "7d73f003-14af-4496-8502-0a572b481e83",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "She bought some bread yesterday.",
+      "correction": null,
+      "note": "Correct spelling in context"
+    },
+    {
+      "id": "d0f7fb2e-1ee9-4988-a301-da1fc4a246a1",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "Where you at home yesterday?",
+      "correction": "Were you at home yesterday?",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "685d5b84-77bd-4708-bc93-f7b17feb304a",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "correct",
+      "text": "She answered the question quickly and clearly.",
+      "correction": null,
+      "note": "Correct use in context"
+    },
+    {
+      "id": "a6a4974e-398b-46b1-9522-cecc60ae4dd5",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "We finished dinner, then went home.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "052c088e-d69f-4ae8-a1c3-eaa0604a3d65",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "appearence",
+      "correction": "appearance",
+      "note": "Correct the spelling of this form"
+    },
+    {
+      "id": "8fe39620-b1e1-4f3e-9a8c-c6a93d8c2c35",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "She is taller then me.",
+      "correction": "She is taller than me.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "5833d9e2-9a39-4442-94fd-2ca8009ef057",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "moveing",
+      "correction": "moving",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "ef3e72ff-0e1b-4d82-baa9-3fe34690ca76",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "Do not loose the ticket.",
+      "correction": "Do not lose the ticket.",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "06c7975e-8e3f-4326-aaef-3ecfab1183e1",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "teached",
+      "correction": "taught",
+      "note": "Correct the spelling of this form"
+    },
+    {
+      "id": "bedc832d-0ca7-40c9-a05a-18a43782737e",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "independance",
+      "correction": "independence",
+      "note": "Correct the spelling of this form"
+    },
+    {
+      "id": "155e20f7-de6e-4929-9c85-069689cde19b",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "The children played outside all afternoon.",
+      "correction": null,
+      "note": "Correct spelling in context"
+    },
+    {
+      "id": "e735354e-c217-4647-beb8-5e9b89dae7c8",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "boxs",
+      "correction": "boxes",
+      "note": "Correct the spelling of this form"
+    },
+    {
+      "id": "7b06022f-11ae-4a15-a885-a65f1c602719",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "The lamb slept beside the old fence.",
+      "correction": null,
+      "note": "Correct use in context"
+    },
+    {
+      "id": "7ede2573-9724-44ac-a880-93e69fa8eda1",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "incorrect",
+      "text": "adress",
+      "correction": "address",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "81e8b2ca-a9d8-4195-be20-fbc31a76af80",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "knifes",
+      "correction": "knives",
+      "note": "Correct the spelling of this form"
+    },
+    {
+      "id": "5591eeed-bd20-4934-a904-69d6aea77ee8",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "incorrect",
+      "text": "succes",
+      "correction": "success",
+      "note": "Correct the relevant rule here"
+    },
+    {
+      "id": "0fd2db85-47ba-474b-a8e8-82d4a8c32e5d",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "correct",
+      "text": "It was courageous of her to speak up.",
+      "correction": null,
+      "note": "Correct spelling in context"
+    },
+    {
+      "id": "225ded0f-31ab-4bbe-a935-0e1edcd06f2e",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "The teacher taught us a new song.",
+      "correction": null,
+      "note": "Correct spelling in context"
+    },
+    {
+      "id": "5b0d0260-e8a4-4ce2-b855-0d093151cda7",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "Several leaves fell from the tree.",
+      "correction": null,
+      "note": "Correct spelling in context"
+    },
+    {
+      "id": "8728a9ba-98b4-47e3-b163-7080db34f80f",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "couragous",
+      "correction": "courageous",
+      "note": "Correct the spelling of this form"
+    }
+  ]
+}

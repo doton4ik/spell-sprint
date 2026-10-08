@@ -1,5 +1,6 @@
 import { getActiveCloudSession, insertRows, isSupabaseConfigured, selectRows, updateRows } from './supabase'
 import { getEveryWord } from './libraryStorage'
+import { canonicalWordId } from '../data/wordAliases'
 import { getProgressRow, nextProgressAfterMistake, upsertProgressRow } from './ruleProgressStore'
 import type { MistakeEvent, Rule, RuleExample, RuleRelationship, RuleType, RuleWordLink } from '../types/rules'
 
@@ -22,6 +23,23 @@ function toRule(row: Record<string, unknown>): Rule {
   }
 }
 
+// ---- Offline ---------------------------------------------------------------------------------
+// The built-in rules and their examples ship with the app (data/builtInRules.json, exported from
+// the database), so the Rules page works offline and without Supabase. Word links are kept from the
+// last successful load. The file is loaded only when it is needed.
+type BuiltInRules = { rules: Array<Record<string, unknown>>; examples: Array<Record<string, unknown>> }
+let builtIn: Promise<BuiltInRules> | null = null
+const bundled = () => (builtIn ??= import('../data/builtInRules.json').then((module) => module.default as BuiltInRules))
+const LINKS_CACHE_KEY = 'spell-sprint.rule-links-cache'
+function cachedLinks(): RuleWordLink[] {
+  try {
+    const value = JSON.parse(window.localStorage.getItem(LINKS_CACHE_KEY) ?? '[]')
+    return Array.isArray(value) ? value : []
+  } catch {
+    return []
+  }
+}
+
 // A small, explicit fallback: when a mistake has no direct rule_word_links match,
 // this maps the practice engine's own error classification to a starter rule slug.
 // Safe to extend later without changing the data model (see database/rules-schema.sql).
@@ -32,40 +50,47 @@ export const ERROR_TYPE_RULE_SLUGS: Record<string, string[]> = {
 
 // All active rules visible to the current viewer: public built-in rules, plus their own private ones.
 export async function getVisibleRules(): Promise<Rule[]> {
-  if (!isSupabaseConfigured()) return []
   try {
+    if (!isSupabaseConfigured()) throw new Error('offline')
     const rows = await selectRows(null, 'rules', { is_active: true }, { order: 'title.asc' })
     return rows.map(toRule)
   } catch {
-    return []
+    return (await bundled()).rules.map(toRule)
   }
 }
 
 export async function getRuleBySlug(slug: string): Promise<Rule | null> {
-  if (!isSupabaseConfigured()) return null
   try {
+    if (!isSupabaseConfigured()) throw new Error('offline')
     const rows = await selectRows(null, 'rules', { slug }, { limit: 1 })
     return rows[0] ? toRule(rows[0]) : null
   } catch {
-    return null
+    const row = (await bundled()).rules.find((rule) => rule.slug === slug)
+    return row ? toRule(row) : null
   }
 }
 
 // All rule_word_links at once, so a page with many words (Libraries) can build a wordId -> rule
 // map with a single request instead of one request per word.
 export async function getAllRuleWordLinks(): Promise<RuleWordLink[]> {
-  if (!isSupabaseConfigured()) return []
   try {
+    if (!isSupabaseConfigured()) throw new Error('offline')
     const rows = await selectRows(null, 'rule_word_links', {}, { select: 'id,rule_id,word_id,relation,note' })
-    return rows.map((row) => ({
+    const links = rows.map((row) => ({
       id: row.id as string,
       ruleId: row.rule_id as string,
       wordId: row.word_id as string,
       relation: row.relation as RuleWordLink['relation'],
       note: (row.note as string) ?? undefined,
     }))
+    try {
+      window.localStorage.setItem(LINKS_CACHE_KEY, JSON.stringify(links))
+    } catch {
+      /* the offline copy is optional */
+    }
+    return links
   } catch {
-    return []
+    return cachedLinks()
   }
 }
 
@@ -87,18 +112,25 @@ export function consumePendingRuleFocus(): string | null {
 
 // Rule ids directly linked to a stable word id, via rule_word_links.
 export async function getRuleIdsForWord(wordId: string): Promise<string[]> {
-  if (!isSupabaseConfigured() || !wordId) return []
+  if (!wordId) return []
   try {
+    if (!isSupabaseConfigured()) throw new Error('offline')
     const rows = await selectRows(null, 'rule_word_links', { word_id: wordId }, { select: 'rule_id' })
     return [...new Set(rows.map((row) => row.rule_id))]
   } catch {
-    return []
+    return [
+      ...new Set(
+        cachedLinks()
+          .filter((link) => link.wordId === wordId)
+          .map((link) => link.ruleId),
+      ),
+    ]
   }
 }
 
 // Rule ids suggested by the practice engine's own error classification (no word link needed).
 export async function getRuleIdsForErrorType(errorType?: string): Promise<string[]> {
-  if (!isSupabaseConfigured() || !errorType) return []
+  if (!errorType) return []
   const slugs = ERROR_TYPE_RULE_SLUGS[errorType]
   if (!slugs?.length) return []
   const rules = await Promise.all(slugs.map(getRuleBySlug))
@@ -125,12 +157,12 @@ function toExample(row: Record<string, unknown>): RuleExample {
 }
 
 export async function getRuleExamples(ruleId: string): Promise<RuleExample[]> {
-  if (!isSupabaseConfigured()) return []
   try {
+    if (!isSupabaseConfigured()) throw new Error('offline')
     const rows = await selectRows(null, 'rule_examples', { rule_id: ruleId })
     return rows.map(toExample)
   } catch {
-    return []
+    return (await bundled()).examples.filter((row) => row.rule_id === ruleId).map(toExample)
   }
 }
 
@@ -139,17 +171,20 @@ export async function getRuleExamples(ruleId: string): Promise<RuleExample[]> {
 export async function getRuleLinkedWords(
   ruleId: string,
 ): Promise<Array<{ wordId: string; relation: RuleWordLink['relation']; word?: string; translation?: string }>> {
-  if (!isSupabaseConfigured()) return []
+  let rows: Array<{ word_id: string; relation: string }>
   try {
-    const rows = await selectRows(null, 'rule_word_links', { rule_id: ruleId }, { select: 'word_id,relation' })
-    const words = getEveryWord()
-    return rows.map((row) => {
-      const match = words.find((word) => word.wordId === row.word_id)
-      return { wordId: row.word_id, relation: row.relation as RuleWordLink['relation'], word: match?.word, translation: match?.translation }
-    })
+    if (!isSupabaseConfigured()) throw new Error('offline')
+    rows = await selectRows(null, 'rule_word_links', { rule_id: ruleId }, { select: 'word_id,relation' })
   } catch {
-    return []
+    rows = cachedLinks()
+      .filter((link) => link.ruleId === ruleId)
+      .map((link) => ({ word_id: link.wordId, relation: link.relation }))
   }
+  const words = getEveryWord()
+  return rows.map((row) => {
+    const match = words.find((word) => word.wordId === canonicalWordId(row.word_id))
+    return { wordId: row.word_id, relation: row.relation as RuleWordLink['relation'], word: match?.word, translation: match?.translation }
+  })
 }
 
 export async function getRuleRelationships(ruleId: string): Promise<RuleRelationship[]> {

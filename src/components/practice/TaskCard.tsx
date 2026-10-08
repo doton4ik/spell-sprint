@@ -124,7 +124,7 @@ export function TaskCard({
           </span>
           <span>
             {task.topic}
-            {task.subtopic ? ` · ${task.subtopic}` : ''} <i /> {task.level}
+            {task.subtopic && task.subtopic !== task.topic ? ` · ${task.subtopic}` : ''} <i /> {task.level}
           </span>
         </div>
         <h2>Meet the word first.</h2>
@@ -214,7 +214,7 @@ export function TaskCard({
         </span>
         <span>
           {task.topic}
-          {task.subtopic ? ` · ${task.subtopic}` : ''} <i /> {task.level}
+          {task.subtopic && task.subtopic !== task.topic ? ` · ${task.subtopic}` : ''} <i /> {task.level}
         </span>
       </div>
       <h2>

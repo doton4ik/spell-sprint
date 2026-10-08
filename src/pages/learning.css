@@ -43,15 +43,13 @@
   border-color: var(--teal-muted);
   color: var(--teal-text-strong);
 }
-.learning-summary,
-.review-overview {
+.learning-summary {
   display: grid;
   gap: 14px;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 23px;
 }
-.learning-summary > div,
-.review-overview > div {
+.learning-summary > div {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
@@ -61,8 +59,7 @@
   min-height: 124px;
   padding: 17px 19px;
 }
-.learning-summary span,
-.review-overview span {
+.learning-summary span {
   align-items: center;
   color: var(--ink-muted);
   display: flex;
@@ -72,31 +69,22 @@
   letter-spacing: 0.035em;
   text-transform: uppercase;
 }
-.learning-summary strong,
-.review-overview strong {
+.learning-summary strong {
   color: var(--ink);
   font-size: calc(28px * var(--fs));
   letter-spacing: -1px;
   line-height: 1.05;
   margin-top: 6px;
 }
-.learning-summary small,
-.review-overview small {
+.learning-summary small {
   color: var(--ink-muted);
   font-size: calc(11.5px * var(--fs));
 }
 .learning-summary > div:nth-child(2) strong {
   color: var(--amber-text);
 }
-.learning-summary > div:nth-child(3) strong,
-.review-overview > div:nth-child(2) strong {
+.learning-summary > div:nth-child(3) strong {
   color: var(--teal-text);
-}
-.review-overview > div:nth-child(1) strong {
-  color: var(--amber-text);
-}
-.review-overview > div:nth-child(3) strong {
-  color: var(--violet);
 }
 .empty-learning-state {
   align-items: center;
@@ -137,32 +125,18 @@
 .empty-learning-state .check-button {
   text-decoration: none;
 }
-.learning-panel,
-.review-list {
+.learning-panel {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   overflow: hidden;
 }
-.review-list__heading {
-  align-items: flex-start;
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  padding: 23px 24px 19px;
-}
-.learning-panel h2,
-.review-list h2 {
+.learning-panel h2 {
   color: var(--ink);
   font-size: calc(17px * var(--fs));
   letter-spacing: -0.4px;
   margin: 0;
-}
-.review-list__heading p {
-  color: var(--ink-muted);
-  font-size: calc(12.5px * var(--fs));
-  margin: 6px 0 0;
 }
 .mistake-answer p {
   align-items: center;
@@ -354,69 +328,9 @@
   margin-top: auto;
   width: fit-content;
 }
-.review-list__heading {
-  padding-bottom: 21px;
-}
-.review-item {
-  align-items: center;
-  border-top: 1px solid var(--line);
-  display: grid;
-  gap: 19px;
-  grid-template-columns: 110px minmax(0, 1fr) auto;
-  padding: 17px 24px;
-}
-.review-item__date {
-  align-items: center;
-  color: var(--amber-text);
-  display: flex;
-  font-size: calc(11.5px * var(--fs));
-  font-weight: 700;
-  gap: 7px;
-}
-.review-item__word > span {
-  color: var(--ink-muted);
-  font-size: calc(11.5px * var(--fs));
-}
-.review-item__word h2 {
-  color: var(--ink-soft);
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: calc(15px * var(--fs));
-  margin: 3px 0;
-}
-.review-item__word p {
-  color: var(--ink-muted);
-  font-size: calc(11.5px * var(--fs));
-  margin: 0;
-}
-.review-item__actions {
-  align-items: center;
-  display: flex;
-  gap: 8px;
-}
-.review-item__actions button {
-  align-items: center;
-  background: var(--teal-soft);
-  border: 0;
-  border-radius: 8px;
-  color: var(--teal-text-strong);
-  display: inline-flex;
-  font-size: calc(11.5px * var(--fs));
-  font-weight: 700;
-  gap: 6px;
-  padding: 9px 10px;
-}
-.review-item__actions button:hover {
-  background: var(--teal-muted);
-}
 @media (max-width: 1060px) {
   .learning-page {
     padding: 41px 34px;
-  }
-  .review-item {
-    grid-template-columns: 100px 1fr;
-  }
-  .review-item__actions {
-    grid-column: 2;
   }
   .rules-grid {
     grid-template-columns: 1fr;
@@ -429,17 +343,14 @@
   .learning-header {
     margin-bottom: 23px;
   }
-  .learning-summary,
-  .review-overview {
+  .learning-summary {
     gap: 9px;
   }
-  .learning-summary > div,
-  .review-overview > div {
+  .learning-summary > div {
     min-height: 105px;
     padding: 14px;
   }
-  .learning-summary strong,
-  .review-overview strong {
+  .learning-summary strong {
     font-size: calc(24px * var(--fs));
   }
   .rules-saved {
@@ -468,21 +379,17 @@
     height: 19px;
     width: 19px;
   }
-  .learning-summary,
-  .review-overview {
+  .learning-summary {
     grid-template-columns: 1fr;
   }
-  .learning-summary > div,
-  .review-overview > div {
+  .learning-summary > div {
     min-height: 78px;
     grid-template-columns: 1fr auto;
   }
-  .learning-summary small,
-  .review-overview small {
+  .learning-summary small {
     grid-column: 1 / -1;
   }
-  .learning-summary strong,
-  .review-overview strong {
+  .learning-summary strong {
     grid-column: 2;
     grid-row: 1 / span 2;
     margin: 0;
@@ -492,18 +399,6 @@
   }
   .rule-summary {
     min-height: 0;
-  }
-  .review-item {
-    gap: 9px;
-    grid-template-columns: 1fr;
-    padding: 16px;
-  }
-  .review-item__actions {
-    grid-column: auto;
-    justify-content: space-between;
-  }
-  .review-list__heading {
-    padding: 20px 16px;
   }
   .wrong-right {
     gap: 5px;

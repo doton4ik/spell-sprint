@@ -2,6 +2,7 @@ import type { PracticeAttempt, PracticeSettings } from '../types/practice'
 import { enqueueMistake } from './mistakeOutbox'
 import { sanitizeAttempt } from './validate'
 import { safeSetItem } from './safeStorage'
+import { wordAliases } from '../data/wordAliases'
 
 const SETTINGS_KEY = 'spell-sprint.practice-settings'
 const ATTEMPTS_KEY = 'spell-sprint.practice-attempts'
@@ -62,12 +63,17 @@ export function getPracticeAttempts(): readonly PracticeAttempt[] {
   let attempts: PracticeAttempt[] = []
   try {
     const parsed: unknown = raw ? JSON.parse(raw) : []
-    attempts = Array.isArray(parsed) ? parsed : []
+    attempts = Array.isArray(parsed) ? parsed.map(withSharedWordId) : []
   } catch {
     /* damaged storage: start empty */
   }
   cached = { raw, attempts: Object.freeze(attempts) }
   return cached.attempts
+}
+
+function withSharedWordId(attempt: PracticeAttempt): PracticeAttempt {
+  const shared = attempt?.wordId ? wordAliases[attempt.wordId] : undefined
+  return shared ? { ...attempt, wordId: shared, taskId: attempt.taskId.replace(attempt.wordId!, shared) } : attempt
 }
 
 export function subscribeToPracticeAttempts(onChange: () => void) {

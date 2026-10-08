@@ -44,7 +44,7 @@ export const proofreadingTexts: ProofreadingText[] = [
     level: 'A2',
     format: 'message',
     topic: 'Home and Town',
-    text: 'Hi Tom! Last week I {found|past-irregular|finded} {a new flat|article-missing|new flat}. It {is|agreement|are} small but very bright, and {the kitchen|article|a kitchen} is my favourite room.\n\nMy neighbours {are|agreement|is} really friendly. Yesterday one of them {gave|past-irregular|gived} me {some|quantifier|many} {advice|plural-uncountable|advices} about {the buses|article-missing|buses} in this area. There {is|agreement|are} a nice park near {my|pronoun|me} building, so I {go|agreement|goes} running there every morning.\n\n{Do you want|word-order|You want} to visit me {on Saturday|preposition|in Saturday}? I can {cook|modal|to cook} dinner for us!',
+    text: 'Hi Sam! Last week I {found|past-irregular|finded} {a new flat|article-missing|new flat}. It {is|agreement|are} small but very bright, and {the kitchen|article|a kitchen} is my favourite room.\n\nMy neighbours {are|agreement|is} really friendly. Yesterday one of them {gave|past-irregular|gived} me {some|quantifier|many} {advice|plural-uncountable|advices} about the buses in this area. There {is|agreement|are} a nice park near {my|pronoun|me} building, so I {go|agreement|goes} running there every morning.\n\n{Do you want|word-order|You want} to visit me {on Saturday|preposition|in Saturday}? I can {cook|modal|to cook} dinner for us!',
   },
   // ───────────── A2 (12) ─────────────
   {

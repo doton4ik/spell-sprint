@@ -5,7 +5,7 @@ import { SectionHeader } from '../components/ui/SectionHeader'
 import { buildDailyPlan, getStreak, getTodayCount, type DailyPlan } from '../services/dailyPlan'
 import { getLearningAnalytics } from '../services/learningAnalytics'
 import { getLevelChecks, nextCheckDue } from '../services/levelCheck'
-import { subscribeToLearningData } from '../services/learningData'
+import { getMistakeEntries, isDueToday, subscribeToLearningData } from '../services/learningData'
 import { setPendingPracticeSelection } from '../services/libraryPractice'
 import { getProfile, subscribeToProfile } from '../services/profileStorage'
 import { getAllUserRuleProgress } from '../services/rulePracticeService'
@@ -37,6 +37,7 @@ export function DashboardPage() {
   const { streak, practisedToday } = useMemo(() => getStreak(), [revision])
   const todayCount = useMemo(() => getTodayCount(), [revision])
   const profile = useMemo(getProfile, [revision])
+  const mistakesDue = useMemo(() => getMistakeEntries().filter(isDueToday).length, [revision])
   const goalReached = todayCount >= profile.dailyGoal
 
   const { accuracy } = analytics
@@ -57,15 +58,17 @@ export function DashboardPage() {
       icon: 'dashboard' as const,
     },
     {
-      label: 'Due for review',
+      label: 'Due today',
       value: String(plan.dueTotal),
-      note: 'Words whose review date has come',
-      short: 'words to review',
+      note: mistakesDue
+        ? `Words whose review date has come · ${mistakesDue} of them are mistakes (the number on My Mistakes)`
+        : 'Words whose review date has come',
+      short: mistakesDue ? `${mistakesDue} are mistakes` : 'words to review',
       tone: 'amber' as const,
       icon: 'calendar' as const,
     },
     {
-      label: 'Open mistakes',
+      label: 'Not mastered yet',
       value: String(analytics.openMistakes),
       note: `Words not mastered yet · ${analytics.mistakes} wrong answer${analytics.mistakes === 1 ? '' : 's'} in total`,
       short: 'not mastered yet',

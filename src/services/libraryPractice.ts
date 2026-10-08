@@ -18,7 +18,7 @@ export type PracticeScope = 'all' | 'library' | 'topic' | 'subtopic' | 'mistakes
 export type PracticeSelection = { scope: PracticeScope; library: string; topic: string; subtopic: string }
 
 function levelFor(difficulty: LibraryWord['difficulty']): PracticeTask['level'] {
-  return difficulty === 'easy' ? 'B1' : difficulty === 'medium' ? 'B1+' : 'B2'
+  return difficulty === 'easy' ? 'Easy' : difficulty === 'medium' ? 'Medium' : 'Hard'
 }
 function taskBase(word: LibraryWord) {
   return {

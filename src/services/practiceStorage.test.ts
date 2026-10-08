@@ -31,4 +31,11 @@ describe('getPracticeAttempts cache', () => {
     expect(mergePracticeAttempts([attempt('a', '2026-01-01'), attempt('b', '2026-01-03')])).toBe(1)
     expect(getPracticeAttempts().map((item) => item.id)).toEqual(['b', 'a'])
   })
+  it('a word that is in two libraries keeps one history', () => {
+    const dup = 'general-english-commonly-misspelled-library'
+    window.localStorage.setItem(KEY, JSON.stringify([{ ...attempt('a', '2026-01-01'), wordId: dup, taskId: `library-${dup}-write-en` }]))
+    const [read] = getPracticeAttempts()
+    expect(read.wordId).toBe('places-in-town-places-in-town-library')
+    expect(read.taskId).toBe('library-places-in-town-places-in-town-library-write-en')
+  })
 })

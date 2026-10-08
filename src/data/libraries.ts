@@ -1,6 +1,7 @@
 import builtInCsv from './spell-sprint-built-in-library.csv?raw'
 import { canonicalTopic, libraryKindForName } from './libraryTaxonomy'
 import { parseCsvRows } from '../services/csv'
+import { canonicalWordId } from './wordAliases'
 import { normalisePartOfSpeech, type LibraryDifficulty, type LibraryWord, type WordLibrary } from '../types/library'
 
 const includesByLibrary: Record<string, string[]> = {
@@ -27,7 +28,7 @@ function builtInWord(row: Record<string, string>): LibraryWord {
   const topic = canonicalTopic(row.topic_id, row.topic)
   return {
     id: row.word_id,
-    wordId: row.word_id,
+    wordId: canonicalWordId(row.word_id),
     word: row.word,
     translation: row.translation,
     topicId: topic.topicId,

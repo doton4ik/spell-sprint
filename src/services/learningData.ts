@@ -264,16 +264,6 @@ export function mergeReviewData(states: Record<string, ReviewState>, ruleIds: st
   window.dispatchEvent(new Event(LEARNING_UPDATED_EVENT))
 }
 
-export function completeReview(taskId: string) {
-  const current = getReviewStates()[taskId]
-  const completedReviews = (current?.completedReviews ?? 0) + 1
-  const intervals = [3, 7, 21]
-  const nextReviewAt = addDays(new Date(), intervals[Math.min(completedReviews - 1, intervals.length - 1)])
-  const updated = { ...getReviewStates(), [taskId]: { taskId, completedReviews, nextReviewAt, lastReviewedAt: new Date().toISOString() } }
-  safeSetItem(REVIEW_STATES_KEY, JSON.stringify(updated))
-  window.dispatchEvent(new Event(LEARNING_UPDATED_EVENT))
-}
-
 export function getTaskForReview(taskId: string) {
   return getTaskById(taskId)
 }

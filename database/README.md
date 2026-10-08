@@ -38,3 +38,11 @@ Status checked against the live database on 7 October 2026 (read-only queries).
 - Every table with user data has RLS with `user_id = auth.uid()`; public reference tables are read-only.
 - Never use the `service_role` key in the app. The app only has the public anon key.
 - Check after a change: Supabase → Advisors → Security should show no errors.
+
+## Offline copy of the built-in rules
+
+`src/data/builtInRules.json` is a copy of the public built-in rules and their examples (exported
+2026-10-08). The app uses it when Supabase cannot be reached, so the Rules page works offline. If the
+built-in rules or examples change in the database, export them again (read-only `select` of
+`rules` where `source = 'built-in' and visibility = 'public'`, plus their `rule_examples`) and
+replace the file.
