@@ -66,3 +66,14 @@ test('the ten-sentence mode loads its sentences', async ({ page }) => {
   await page.getByRole('button', { name: /Start 10 sentences/ }).click()
   await expect(page.getByText('Ten real sentences')).toBeVisible()
 })
+
+test('typos not noticed in Spelling hunt become yellow cards, not mistakes', async ({ page }) => {
+  await page.goto('/#proofreading')
+  await page.getByRole('radio', { name: /Spelling hunt/ }).click()
+  await page.locator('.proof-card').first().click()
+  await page.getByRole('button', { name: 'Check' }).click()
+  await page.goto('/#my-mistakes')
+  await expect(page.getByRole('heading', { name: /Yellow cards/ })).toBeVisible()
+  await expect(page.locator('.mistake-row--yellow').first()).toBeVisible()
+  await expect(page.locator('.mistake-row:not(.mistake-row--yellow)')).toHaveCount(0)
+})

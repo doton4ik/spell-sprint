@@ -5,6 +5,8 @@ import { getPracticeAttempts, savePracticeAttempt } from './practiceStorage'
 import { getAllWords, getEveryWord } from './libraryStorage'
 import { cleanText, normalise, proofreadingTypes, type ProofreadingResult } from './proofreadingEngine'
 import { scheduleAfterAnswer } from './reviewSchedule'
+import { addYellowCard } from './yellowCards'
+import { hasOpenMistake } from './learningData'
 
 export * from './proofreadingEngine'
 
@@ -57,17 +59,34 @@ export function typeWeights(): Record<string, number> {
 
 // Every mistake in the text becomes a normal practice attempt, so it shows up in My Mistakes,
 // Patterns and the review schedule. Spelling slips go through the spelling classifier and rules.
+// The library word behind a text word, so a misspelling found in a text can be practised.
+function libraryWordId(word: string) {
+  const lower = word.toLocaleLowerCase()
+  return getEveryWord().find((item) => item.word.toLocaleLowerCase() === lower)?.wordId
+}
+
 export function recordProofreading(text: ProofreadingText, result: ProofreadingResult) {
   for (const { slot, status, learnerText } of result.slots) {
     const spelling = slot.type === 'spelling' || slot.type === 'typo'
+    const wordId = spelling ? libraryWordId(slot.correct[0]) : undefined
+    // A slip not noticed in someone else's text is a yellow card, not a mistake (yellowCards.ts).
+    // Only the second card for the same word is recorded as a mistake.
+    if (spelling && status === 'missed') {
+      if (hasOpenMistake(slot.correct[0])) continue // already in My Mistakes
+      const card = addYellowCard({ word: slot.correct[0], shown: slot.shown, wordId, source: 'proofreading', where: text.title })
+      if (card === 'yellow') continue
+    }
     const taskId = `proof-${text.id}-${slot.type}-${normalise(slot.correct[0]).replace(/\s+/g, '-')}`
     const correct = status === 'fixed'
-    const { confidence, nextReviewAt } = scheduleAfterAnswer({ taskId }, correct, false, 'write-en')
+    // Fixing someone else's slip shows the word is recognised, not that it can be written from memory.
+    const mode = wordId ? 'choose-spelling' : 'write-en'
+    const { confidence, nextReviewAt } = scheduleAfterAnswer({ wordId, taskId }, correct, false, mode)
     const attempt: PracticeAttempt = {
       id: crypto.randomUUID(),
       taskId,
       taskType: spelling ? 'correct-spelling' : 'correct-sentence',
       topic: text.topic,
+      wordId,
       library: 'Proofreading',
       userAnswer: status === 'missed' ? slot.shown : learnerText,
       correctAnswer: slot.correct[0],
@@ -75,7 +94,7 @@ export function recordProofreading(text: ProofreadingText, result: ProofreadingR
       wasSkipped: false,
       wasAnswerRevealed: false,
       hintUsed: false,
-      attemptMode: 'write-en',
+      attemptMode: mode,
       errorType: 'unknown',
       confidence,
       nextReviewAt,

@@ -4,6 +4,7 @@ import { Icon } from '../components/icons/Icon'
 import { AnswerDiff } from '../components/practice/AnswerDiff'
 import { getMistakeEntries, subscribeToLearningData } from '../services/learningData'
 import { setPendingPracticeSelection } from '../services/libraryPractice'
+import { dismissYellowCard, getYellowCards, type YellowCard } from '../services/yellowCards'
 import type { ErrorFamily, LearningStatus, MistakeEntry } from '../types/learning'
 import { MistakePatternsView } from '../components/mistakes/MistakePatternsView'
 import './learning.css'
@@ -33,6 +34,7 @@ function when(value: string) {
   if (days < 7) return `In ${days} days`
   return new Intl.DateTimeFormat('en', { month: 'short', day: 'numeric' }).format(new Date(value))
 }
+const isToday = (value?: string) => Boolean(value) && new Date(value!).toDateString() === new Date().toDateString()
 const isDue = (entry: MistakeEntry) => {
   const end = new Date()
   end.setHours(23, 59, 59, 999)
@@ -58,6 +60,8 @@ function MistakeRow({ entry }: { entry: MistakeEntry }) {
           <p className="mistake-answer__translation">{entry.translation}</p>
         ) : null}
         <small>
+          {isToday(entry.lastMistakeAt) ? <b className="mistake-new">New</b> : null}
+          {entry.origin ? <span className="mistake-origin">from {entry.origin}</span> : null}
           {entry.errorCategory}
           {entry.topic ? ` · ${entry.topic}` : ''}
           {entry.memoryCue ? ` · cue: ${entry.memoryCue}` : ''}
@@ -94,12 +98,42 @@ function MistakeRow({ entry }: { entry: MistakeEntry }) {
   )
 }
 
+// A possible mistake: not noticed in a text, or mistyped against the clock in a sprint.
+function YellowCardRow({ card }: { card: YellowCard }) {
+  return (
+    <div className="mistake-row mistake-row--yellow">
+      <div className="mistake-answer">
+        <p>
+          <span className="yellow-card" aria-hidden="true" />
+          <AnswerDiff expected={card.word} submitted={card.shown} />
+        </p>
+        <small>{card.source === 'sprint' ? 'Mistyped in a sprint, against the clock' : `Not noticed in “${card.where}”`}</small>
+      </div>
+      <div className="mistake-progress">
+        <span className="learning-status learning-status--yellow">Yellow card</span>
+        <small>
+          {when(card.at) === 'Today'
+            ? 'Today'
+            : new Intl.DateTimeFormat('en', { month: 'short', day: 'numeric' }).format(new Date(card.at))}
+        </small>
+      </div>
+      <div className="mistake-when">
+        <button className="quiet-action word-hide" type="button" onClick={() => dismissYellowCard(card.id)} title="Remove this card">
+          <Icon name="check" size={13} /> Got it
+        </button>
+      </div>
+    </div>
+  )
+}
+
 export function MistakesPage() {
   const [family, setFamily] = useState<(typeof families)[number]>('All')
   const [view, setView] = useState<'words' | 'patterns'>('words')
   const [revision, setRevision] = useState(0)
   useEffect(() => subscribeToLearningData(() => setRevision((value) => value + 1)), [])
   const entries = useMemo(getMistakeEntries, [revision])
+  const yellowCards = useMemo(getYellowCards, [revision])
+  const showYellow = family === 'All' || family === 'Spelling'
   const visible = useMemo(() => (family === 'All' ? entries : entries.filter((entry) => entry.family === family)), [entries, family])
   const due = entries.filter(isDue).length
   const mastered = entries.filter((entry) => entry.status === 'mastered').length
@@ -110,26 +144,37 @@ export function MistakesPage() {
 
   // Same idea as Rules: what to do today, what comes back later, what is done.
   const byDate = (a: MistakeEntry, b: MistakeEntry) => a.nextReviewAt.localeCompare(b.nextReviewAt)
+  const today = visible
+    .filter((entry) => entry.status !== 'mastered' && isToday(entry.lastMistakeAt))
+    .sort((a, b) => (b.lastMistakeAt ?? '').localeCompare(a.lastMistakeAt ?? ''))
+  const earlier = visible.filter((entry) => !today.includes(entry))
   const groups = [
+    {
+      id: 'today',
+      title: 'New today',
+      note: 'The mistakes you made today, the newest first.',
+      entries: today,
+      action: true,
+    },
     {
       id: 'due',
       title: 'Review today',
       note: 'These words are due. A correct answer moves a word up a level.',
-      entries: visible.filter(isDue).sort((a, b) => Number(b.status === 'difficult') - Number(a.status === 'difficult') || byDate(a, b)),
+      entries: earlier.filter(isDue).sort((a, b) => Number(b.status === 'difficult') - Number(a.status === 'difficult') || byDate(a, b)),
       action: true,
     },
     {
       id: 'later',
       title: 'Coming back later',
       note: 'Answered correctly recently — they return on the date shown.',
-      entries: visible.filter((entry) => entry.status !== 'mastered' && !isDue(entry)).sort(byDate),
+      entries: earlier.filter((entry) => entry.status !== 'mastered' && !isDue(entry)).sort(byDate),
       action: false,
     },
     {
       id: 'mastered',
       title: 'Mastered',
       note: 'Five good days in a row. They come back only if you slip.',
-      entries: visible.filter((entry) => entry.status === 'mastered'),
+      entries: earlier.filter((entry) => entry.status === 'mastered'),
       action: false,
     },
   ].filter((group) => group.entries.length)
@@ -141,8 +186,8 @@ export function MistakesPage() {
           <p className="eyebrow">My mistakes</p>
           <h1>My mistakes</h1>
           <p>
-            {entries.length
-              ? `${entries.length} word${entries.length === 1 ? '' : 's'} · ${due} to review today · ${mastered} mastered`
+            {entries.length || yellowCards.length
+              ? `${entries.length} word${entries.length === 1 ? '' : 's'} · ${due} to review today · ${mastered} mastered${yellowCards.length ? ` · ${yellowCards.length} yellow card${yellowCards.length === 1 ? '' : 's'}` : ''}`
               : 'Every wrong answer is kept here, so you can practise it until it sticks.'}
           </p>
         </div>
@@ -157,7 +202,7 @@ export function MistakesPage() {
         )}
       </header>
 
-      {entries.length === 0 ? (
+      {entries.length === 0 && yellowCards.length === 0 ? (
         <section className="empty-learning-state">
           <span>
             <Icon name="mistakes" size={25} />
@@ -200,7 +245,7 @@ export function MistakesPage() {
                   ))}
               </nav>
               <div className="rules-main">
-                {groups.length ? (
+                {groups.length || (showYellow && yellowCards.length) ? (
                   groups.map((group) => (
                     <section className="rules-group" key={group.id} aria-labelledby={`mistakes-group-${group.id}`}>
                       <header className="rules-group__head mistakes-group__head">
@@ -211,7 +256,11 @@ export function MistakesPage() {
                           <p>{group.note}</p>
                         </div>
                         {group.action ? (
-                          <button className="check-button" type="button" onClick={() => practise(group.entries, 'Mistakes due today')}>
+                          <button
+                            className="check-button"
+                            type="button"
+                            onClick={() => practise(group.entries, group.id === 'today' ? 'Today’s mistakes' : 'Mistakes due today')}
+                          >
                             <Icon name="practice" size={15} /> Practise these
                           </button>
                         ) : null}
@@ -237,6 +286,26 @@ export function MistakesPage() {
                 ) : (
                   <p className="patterns-empty">No {family.toLocaleLowerCase()} mistakes.</p>
                 )}
+                {showYellow && yellowCards.length ? (
+                  <section className="rules-group" aria-labelledby="mistakes-group-yellow">
+                    <header className="rules-group__head mistakes-group__head">
+                      <div>
+                        <h2 id="mistakes-group-yellow">
+                          <span className="yellow-card" aria-hidden="true" /> Yellow cards <small>{yellowCards.length}</small>
+                        </h2>
+                        <p>
+                          Possible mistakes: typos you did not notice in a text, or words mistyped in a sprint. They are not counted as
+                          mistakes — the same word a second time becomes one.
+                        </p>
+                      </div>
+                    </header>
+                    <div className="mistake-list">
+                      {yellowCards.map((card) => (
+                        <YellowCardRow card={card} key={card.id} />
+                      ))}
+                    </div>
+                  </section>
+                ) : null}
               </div>
             </div>
           )}

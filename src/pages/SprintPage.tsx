@@ -3,6 +3,7 @@ import { noAutocorrect } from '../components/noAutocorrect'
 import { ReportWordButton } from '../components/ReportWordButton'
 import { Icon } from '../components/icons/Icon'
 import { setPendingPracticeSelection } from '../services/libraryPractice'
+import { recordSprintMiss } from '../services/sprint'
 import {
   bestSprint,
   getSprintRounds,
@@ -164,6 +165,7 @@ function SprintRun({ words, onFinish }: { words: LibraryWord[]; onFinish: (round
     const now = performance.now()
     const started = firstKeyAt.current || now
     const correct = sprintCorrect(typed, word.word)
+    if (!correct) recordSprintMiss(word, typed)
     answers.current.push({
       wordId: word.wordId,
       word: word.word,

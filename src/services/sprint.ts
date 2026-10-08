@@ -1,10 +1,14 @@
 // 60-second sprint: type as many known words as you can. It measures speed, it does not teach, so
-// nothing here is written to the practice history: review dates, confidence, streaks and mistakes
-// stay exactly as they were. Rounds are kept only on this device.
+// a correct answer is not written to the practice history. A miss against the clock is a yellow card
+// in My Mistakes (yellowCards.ts); the same word missed a second time becomes a real mistake.
+// Rounds are kept only on this device.
 import type { LibraryWord } from '../types/library'
 import { getAllWords } from './libraryStorage'
 import { getPracticeAttempts } from './practiceStorage'
-import { recognitionOnly } from './reviewSchedule'
+import { recognitionOnly, scheduleAfterAnswer } from './reviewSchedule'
+import { savePracticeAttempt } from './practiceStorage'
+import { addYellowCard } from './yellowCards'
+import { hasOpenMistake } from './learningData'
 
 export const SPRINT_SECONDS = 60
 export const MIN_SPRINT_WORDS = 10
@@ -74,4 +78,35 @@ export function slowWords(answers: SprintAnswer[]) {
   const perLetter = done.map((answer) => answer.typeMs / answer.word.length).sort((a, b) => a - b)
   const median = perLetter[Math.floor(perLetter.length / 2)]
   return done.filter((answer) => answer.typeMs / answer.word.length > median * 1.5)
+}
+
+export function recordSprintMiss(word: LibraryWord, typed: string) {
+  if (hasOpenMistake(word.word)) return // already in My Mistakes
+  if (addYellowCard({ word: word.word, shown: typed.trim() || '—', wordId: word.wordId, source: 'sprint', where: 'Sprint' }) === 'yellow')
+    return
+  const taskId = `library-${word.wordId}-write-en`
+  const { confidence, nextReviewAt } = scheduleAfterAnswer({ wordId: word.wordId, taskId }, false, false, 'write-en')
+  savePracticeAttempt({
+    id: crypto.randomUUID(),
+    taskId,
+    taskType: 'translate-ru-en',
+    topic: word.topic,
+    topicId: word.topicId,
+    subtopic: word.subtopic,
+    wordId: word.wordId,
+    library: 'Sprint',
+    userAnswer: typed.trim().slice(0, 500),
+    correctAnswer: word.word,
+    isCorrect: false,
+    wasSkipped: false,
+    wasAnswerRevealed: false,
+    hintUsed: false,
+    attemptMode: 'write-en',
+    errorType: 'unknown',
+    confidence,
+    nextReviewAt,
+    needsReview: true,
+    errorCategory: 'General spelling',
+    createdAt: new Date().toISOString(),
+  })
 }

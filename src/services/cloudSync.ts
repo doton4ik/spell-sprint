@@ -8,10 +8,12 @@ import { flushWordReports } from './wordReports'
 import { getProfile, saveProfile } from './profileStorage'
 import { getLibraryPrefs, mergeLibraryPrefs } from './libraryPrefs'
 import { getPairAttempts, mergePairAttempts } from './pairs'
+import { getAllYellowCards, mergeYellowCards } from './yellowCards'
 import { clearPersonalData } from './deviceData'
 import { getActiveCloudSession, getCloudSession, loadCloudSnapshot, loadCloudSnapshotVersion, saveCloudSnapshot, signOut } from './supabase'
 
 type Snapshot = {
+  yellowCards?: unknown
   practiceAttempts?: unknown
   diagnosticResult?: unknown
   reviewStates?: unknown
@@ -43,6 +45,7 @@ export async function restoreLearningData() {
   mergeImportedLibraries(Array.isArray(data.importedLibraries) ? data.importedLibraries : [])
   mergeLevelChecks(data.levelChecks)
   mergePairAttempts(data.pairAttempts)
+  mergeYellowCards(data.yellowCards)
   const profile = data.profile as { name?: unknown; dailyGoal?: unknown } | undefined
   if (profile && !getProfile().name && typeof profile.name === 'string' && profile.name)
     saveProfile({ name: profile.name, ...(typeof profile.dailyGoal === 'number' ? { dailyGoal: profile.dailyGoal } : {}) })
@@ -97,6 +100,7 @@ export async function syncLearningData() {
     profile: getProfile(),
     libraryPrefs: getLibraryPrefs(),
     pairAttempts: getPairAttempts(),
+    yellowCards: getAllYellowCards(),
   }
   const uploaded = fingerprint(JSON.stringify(payload))
   const state = readSyncState()

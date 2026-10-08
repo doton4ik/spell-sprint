@@ -16,6 +16,7 @@ const PERSONAL_KEYS = [
   'spell-sprint.pair-attempts',
   'spell-sprint.mistake-outbox',
   'spell-sprint.error-outbox',
+  'spell-sprint.yellow-cards',
   'spell-sprint.diagnostic-result',
   'spell-sprint.profile',
   'spell-sprint.pending-practice-selection',

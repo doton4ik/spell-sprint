@@ -27,6 +27,8 @@ export type MistakeEntry = {
   memoryCue?: string
   riskLevel?: 'low' | 'medium' | 'high'
   source?: 'practice' | 'personal-baseline'
+  origin?: string // Practice, Proofreading, Level check or Sprint
+  lastMistakeAt?: string
 }
 
 export type ReviewState = {

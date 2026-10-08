@@ -83,6 +83,8 @@ export function getMistakeEntries(): MistakeEntry[] {
         numberOfAttempts: attempts.length,
         numberOfErrors: failed.length,
         numberOfCorrectAnswers: attempts.filter((attempt) => attempt.isCorrect).length,
+        origin: ['Proofreading', 'Level check', 'Sprint'].includes(lastFailure.library ?? '') ? lastFailure.library : 'Practice',
+        lastMistakeAt: lastFailure.createdAt,
         firstSeen: chronological[0].createdAt,
         lastSeen: chronological.at(-1)!.createdAt,
         // The latest answer sets the next review; "Mark reviewed" counts only if it is newer.
@@ -97,6 +99,12 @@ export function getMistakeEntries(): MistakeEntry[] {
     .filter((entry): entry is MistakeEntry => entry !== null)
 
   return practiceEntries.sort((a, b) => b.lastSeen.localeCompare(a.lastSeen))
+}
+
+/** The word is already an open mistake (not mastered): a yellow card for it would only repeat it. */
+export function hasOpenMistake(word: string) {
+  const lower = word.toLocaleLowerCase()
+  return getMistakeEntries().some((entry) => entry.status !== 'mastered' && entry.correctAnswer.toLocaleLowerCase() === lower)
 }
 
 export function getReviewEntries() {

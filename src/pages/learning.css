@@ -1067,3 +1067,39 @@
 .mistake-row .learning-status {
   text-transform: none;
 }
+
+/* My Mistakes: today's mistakes, where they came from, yellow cards (possible mistakes) */
+.mistake-new {
+  background: var(--accent-soft, #e3f1ec);
+  border-radius: 999px;
+  color: var(--accent, #1f6f5c);
+  font-size: 0.85em;
+  font-weight: 700;
+  margin-right: 6px;
+  padding: 1px 7px;
+}
+.mistake-origin {
+  color: var(--ink-muted);
+  margin-right: 6px;
+}
+.mistake-origin::after {
+  content: ' ·';
+}
+.yellow-card {
+  background: #f2c230;
+  border: 1px solid #d9a816;
+  border-radius: 2px;
+  display: inline-block;
+  height: 15px;
+  margin-right: 8px;
+  transform: rotate(-8deg);
+  vertical-align: -2px;
+  width: 11px;
+}
+.learning-status--yellow {
+  background: #fdf3cf;
+  color: #7a5b00;
+}
+.mistake-row--yellow {
+  border-left: 3px solid #f2c230;
+}
