@@ -24,7 +24,9 @@ export function SessionSidebar({ modeLabel, scopeLabel, mode, taskIndex, progres
   const missedTasks = tasks.filter((task) => outcomes[task.id] === 'incorrect' || outcomes[task.id] === 'skipped')
   // In "Translate to Russian" the task shows English and the answer is Russian; otherwise the reverse.
   const pair = (task: PracticeTask) =>
-    (task.mode ?? mode) === 'translate-ru' ? { word: task.prompt, meaning: task.answer } : { word: task.answer, meaning: task.prompt }
+    (task.mode ?? mode) === 'translate-ru'
+      ? { word: task.prompt, meaning: task.answer }
+      : { word: task.answer, meaning: task.promptNote ?? task.prompt }
 
   return (
     <aside className="session-sidebar">

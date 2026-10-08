@@ -1,6 +1,6 @@
 export type PracticeTaskType = 'correct-spelling' | 'translate-ru-en' | 'translate-en-ru' | 'correct-sentence'
 
-export type PracticeMode = 'write-en' | 'listen-write' | 'translate-ru' | 'choose-spelling'
+export type PracticeMode = 'write-en' | 'listen-write' | 'translate-ru' | 'choose-spelling' | 'fill-gap'
 
 export type PracticeTask = {
   id: string
@@ -15,6 +15,7 @@ export type PracticeTask = {
   errorCategory: string
   mode?: PracticeMode
   choices?: string[]
+  promptNote?: string // Fill the gap: the word's Russian meaning, shown under the sentence
   example?: string
   extraExample?: string
   extraExampleSource?: string
@@ -53,6 +54,7 @@ export type PracticeAttempt = {
   confidence: number
   nextReviewAt?: string
   wasMarkedForReview?: boolean
+  claimedCorrect?: boolean // "My translation is right too": counted as right, the synonym is reported for review
   introduced?: boolean // "Meet the word": shown and copied once, not a test (no mistake, no good day)
   errorCategory: string
   needsReview: boolean

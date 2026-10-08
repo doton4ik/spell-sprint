@@ -242,15 +242,28 @@ export async function loadCloudSnapshotVersion(): Promise<string | null> {
   return row?.updated_at ?? null
 }
 
-// Returns the new version (updated_at) of the backup.
-export async function saveCloudSnapshot(payload: unknown) {
+// Saves the backup only over the version this device has merged (`expected`, or none yet).
+// Returns the new version, or null when another device saved in between: the caller pulls their
+// data, merges it and tries again, so neither device overwrites the other.
+export async function saveCloudSnapshot(payload: unknown, expected: string | null): Promise<string | null> {
   const session = await getActiveCloudSession()
   if (!session) throw new Error('Sign in before synchronising your learning data.')
-  const [row] = await insertRows(
+  const updatedAt = new Date().toISOString()
+  if (expected === null) {
+    // First backup: added only if there is still none (another device may have just made one).
+    const [row] = await insertRows(
+      session,
+      'learning_snapshots',
+      { user_id: session.user.id, payload: payload as Json, updated_at: updatedAt },
+      { onConflict: 'user_id', ignoreDuplicates: true, returning: true, select: 'updated_at' },
+    )
+    return row?.updated_at ?? null
+  }
+  const rows = await supabaseAuthedFetch(
     session,
-    'learning_snapshots',
-    { user_id: session.user.id, payload: payload as Json, updated_at: new Date().toISOString() },
-    { onConflict: 'user_id', returning: true, select: 'updated_at' },
+    tableQuery('learning_snapshots', { user_id: session.user.id, updated_at: expected }, { select: 'updated_at' }),
+    { method: 'PATCH', headers: { Prefer: 'return=representation' }, body: JSON.stringify({ payload, updated_at: updatedAt }) },
   )
+  const [row] = Array.isArray(rows) ? (rows as Array<{ updated_at: string } | undefined>) : []
   return row?.updated_at ?? null
 }

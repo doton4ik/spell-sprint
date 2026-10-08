@@ -36,6 +36,7 @@ type TaskCardProps = {
   onReported?: (hide: boolean) => void
   pack?: { name: string; onTurnOff: () => void } | null
   onMeet?: (typed: string) => void
+  onClaimCorrect?: () => void
 }
 
 const labels = {
@@ -43,6 +44,7 @@ const labels = {
   'listen-write': 'Listen and write',
   'translate-ru': 'Translate to Russian',
   'choose-spelling': 'Choose correct spelling',
+  'fill-gap': 'Fill the gap',
 }
 function hintFor(answer: string, step: number) {
   const words = answer.split(/\s+/)
@@ -80,7 +82,10 @@ export function TaskCard({
   onReported,
   pack,
   onMeet,
+  onClaimCorrect,
 }: TaskCardProps) {
+  // The Russian meaning: the prompt, or the note under a Fill-the-gap sentence.
+  const meaning = task.promptNote ?? task.prompt
   const mode =
     task.mode ?? (task.type === 'translate-en-ru' ? 'translate-ru' : task.type === 'translate-ru-en' ? 'write-en' : 'choose-spelling')
   const revealed = answerRevealed || result !== 'idle' || hintStep >= 5
@@ -92,7 +97,9 @@ export function TaskCard({
   const [reporting, setReporting] = useState(false)
   // A new word is taught before it is tested: see it, hear it, type it once. "I know this word"
   // goes straight to the test.
-  const canMeet = Boolean(onMeet && task.wordId && reason?.kind === 'new' && (mode === 'write-en' || mode === 'listen-write'))
+  const canMeet = Boolean(
+    onMeet && task.wordId && reason?.kind === 'new' && (mode === 'write-en' || mode === 'listen-write' || mode === 'fill-gap'),
+  )
   const [testFor, setTestFor] = useState<string | null>(null) // "I know this word" pressed for this task
   const meeting = canMeet && testFor !== task.id
   const [copy, setCopy] = useState('')
@@ -132,7 +139,7 @@ export function TaskCard({
           <p className="meet-word__word" lang="en">
             {task.answer}
           </p>
-          <p className="meet-word__meaning">{task.prompt}</p>
+          <p className="meet-word__meaning">{meaning}</p>
           {others.length ? <p className="meet-word__also">Also correct: {others.join(', ')}</p> : null}
           {task.example ? (
             <p className="meet-word__example" lang="en">
@@ -222,7 +229,9 @@ export function TaskCard({
           ? 'Translate to Russian.'
           : mode === 'choose-spelling'
             ? 'Choose the correct English spelling.'
-            : 'Write the English word or expression.'}
+            : mode === 'fill-gap'
+              ? 'Fill the gap with the English word.'
+              : 'Write the English word or expression.'}
       </h2>
       {mode === 'listen-write' ? (
         <div className="task-prompt">
@@ -237,8 +246,9 @@ export function TaskCard({
         </div>
       ) : (
         <div className={`task-prompt task-prompt--${mode}`}>
-          <span className="prompt-label">{mode === 'translate-ru' ? 'English' : 'Russian'}</span>
-          <p>{task.prompt}</p>
+          <span className="prompt-label">{mode === 'translate-ru' ? 'English' : mode === 'fill-gap' ? 'Sentence' : 'Russian'}</span>
+          <p lang={mode === 'fill-gap' ? 'en' : undefined}>{task.prompt}</p>
+          {task.promptNote ? <small className="task-prompt__note">{task.promptNote}</small> : null}
         </div>
       )}
       {hintStep ? (
@@ -298,8 +308,19 @@ export function TaskCard({
               <strong>{correct ? (hintStep > 0 ? 'Correct — with a hint.' : 'Correct!') : 'Not quite.'}</strong>
               {correct && hintStep > 0 ? <small>It comes back tomorrow, so you can write it without help.</small> : null}
               {!correct && <small>Your answer: {checkedAnswer || 'Skipped'}</small>}
+              {!correct && mode === 'translate-ru' && checkedAnswer.trim() && onClaimCorrect ? (
+                <button className="claim-correct" type="button" onClick={onClaimCorrect}>
+                  My translation is right too
+                </button>
+              ) : null}
+              {correct &&
+              mode === 'translate-ru' &&
+              checkedAnswer.trim() &&
+              !acceptedAnswers(task).some((option) => comparable(option) === comparable(checkedAnswer)) ? (
+                <small>Counted as right. Thanks — we will check this translation and add it to the list.</small>
+              ) : null}
               <small>
-                Correct answer: {target} — {task.prompt}
+                Correct answer: {target} — {meaning}
               </small>
               {others.length ? <small>Also correct: {others.join(', ')}</small> : null}
               {task.example && <small>Example: {task.example}</small>}

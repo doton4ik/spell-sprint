@@ -1,6 +1,13 @@
 import { useEffect, useMemo, useState } from 'react'
 import { defaultPracticeSettings } from '../data/practice'
-import { getPracticeAttempts, loadPracticeSettings, savePracticeAttempt, savePracticeSettings } from '../services/practiceStorage'
+import {
+  getPracticeAttempts,
+  loadPracticeSettings,
+  markAttemptClaimedCorrect,
+  savePracticeAttempt,
+  savePracticeSettings,
+} from '../services/practiceStorage'
+import { reportWord } from '../services/wordReports'
 import { scheduleAfterAnswer } from '../services/reviewSchedule'
 import { findOtherMeaning } from '../services/libraryPractice'
 import type { CheckResult, ErrorType, PracticeAttempt, PracticeSettings, PracticeTask } from '../types/practice'
@@ -76,6 +83,7 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
   const [outcomes, setOutcomes] = useState<Record<string, TaskOutcome>>({})
   const [otherMeaning, setOtherMeaning] = useState<{ word: string; translation: string } | null>(null)
   const [settings, setSettings] = useState<PracticeSettings>(() => loadPracticeSettings(defaultPracticeSettings))
+  const [lastAttemptId, setLastAttemptId] = useState<string | null>(null)
 
   const currentTask = shuffledTasks[taskIndex]
   const progress = useMemo(() => Math.round((taskIndex / shuffledTasks.length) * 100), [taskIndex, shuffledTasks.length])
@@ -122,8 +130,10 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
       attemptMode,
     )
     const needsReview = Boolean(overrides.wasMarkedForReview) || !correct || Boolean(hintStep)
+    const id = crypto.randomUUID()
+    setLastAttemptId(id)
     savePracticeAttempt({
-      id: crypto.randomUUID(),
+      id,
       taskId: currentTask.id,
       taskType: currentTask.type,
       topic: currentTask.topic,
@@ -192,6 +202,24 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
       recordAttempt({ isCorrect: false, wasSkipped: true, wasAnswerRevealed: answerRevealed })
     advance()
   }
+  // "My translation is right too" (Translate to Russian): a meaning the list does not have yet. The answer
+  // counts as right, and the word is reported so the translation list can be checked and extended.
+  function claimCorrect() {
+    if (!lastAttemptId || result !== 'incorrect' || currentTask.mode !== 'translate-ru') return
+    const schedule = scheduleAfterAnswer({ wordId: currentTask.wordId, taskId: currentTask.id }, true, false, 'translate-ru')
+    markAttemptClaimedCorrect(lastAttemptId, schedule)
+    void reportWord({
+      wordId: currentTask.wordId ?? `task:${currentTask.id}`,
+      word: currentTask.prompt,
+      translation: currentTask.answer,
+      library: currentTask.library,
+      reason: 'wrong-translation',
+      comment: `Should also accept: ${answer.trim().slice(0, 200)}`,
+    })
+    setOutcomes((previous) => ({ ...previous, [currentTask.id]: 'correct' }))
+    setResult('correct')
+  }
+
   // "Meet the word": a new word is shown first and copied once. That is saved as a helped answer
   // (like a hint): no mistake and no good day, and the word comes back tomorrow for the real test.
   function meetWord(typed: string) {
@@ -265,6 +293,7 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
     settings,
     setSettings,
     checkAnswer,
+    claimCorrect,
     meetWord,
     revealAnswer,
     useHint,

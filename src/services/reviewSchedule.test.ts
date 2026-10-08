@@ -87,6 +87,17 @@ describe('scheduleAfterAnswer', () => {
     history(attempt(day(0, 9), false, { nextReviewAt: day(0, 9).toISOString() }), attempt(day(0, 10), true, result))
     expect(scheduleAfterAnswer(item, true, false, 'write-en', day(1)).confidence).toBe(1)
   })
+  it('a wrong Russian meaning brings the word back today but keeps its spelling progress', () => {
+    history(attempt(day(0), true, { nextReviewAt: day(1).toISOString() }), attempt(day(1), true, { nextReviewAt: day(4).toISOString() }))
+    const wrongMeaning = scheduleAfterAnswer(item, false, false, 'translate-ru', day(2))
+    expect(wrongMeaning).toEqual({ confidence: 2, nextReviewAt: day(2).toISOString() })
+    history(
+      attempt(day(0), true, { nextReviewAt: day(1).toISOString() }),
+      attempt(day(1), true, { nextReviewAt: day(4).toISOString() }),
+      attempt(day(2), false, { attemptMode: 'translate-ru', ...wrongMeaning }),
+    )
+    expect(scheduleAfterAnswer(item, true, false, 'write-en', day(3)).confidence).toBe(3)
+  })
   it('never goes past mastered (5 days)', () => {
     history(...[0, 1, 2, 3, 4, 5].map((offset) => attempt(day(offset), true)))
     expect(scheduleAfterAnswer(item, true, false, 'write-en', day(6)).confidence).toBe(5)

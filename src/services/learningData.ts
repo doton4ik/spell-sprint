@@ -178,6 +178,7 @@ const modeNames: Record<string, string> = {
   'listen-write': 'Listen and write',
   'translate-ru': 'Translate to Russian',
   'choose-spelling': 'Choose the spelling',
+  'fill-gap': 'Fill the gap',
 }
 export function getEntryHistory(entry: MistakeEntry): HistoryItem[] {
   if (entry.pairId)

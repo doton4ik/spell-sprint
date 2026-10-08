@@ -37,11 +37,24 @@ function taskBase(word: LibraryWord) {
   }
 }
 
+// "Fill the gap": the word's own example with the word taken out. Only when the example has the word
+// exactly as it is learnt (not "borrowed" for "borrow"), so the gap has one right answer.
+export function gapSentence(example: string | undefined, word: string) {
+  if (!example) return null
+  const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  const pattern = new RegExp(`(^|[^A-Za-z'-])${escaped}(?=$|[^A-Za-z'-])`, 'i')
+  const match = example.match(pattern)
+  if (!match || match.index === undefined) return null
+  const start = match.index + match[1].length
+  return `${example.slice(0, start)}_____${example.slice(start + word.length)}`
+}
+
 function tasksForWord(word: LibraryWord): PracticeTask[] {
   const base = taskBase(word)
   const id = word.wordId || word.id
   // The order is shuffled when the task is shown (TaskCard), so the right answer is not always first.
   const spellingChoices = [word.word, ...spellingDistractors(word.word, (value) => knownWords().has(value) || isRealOrRude(value))]
+  const gap = gapSentence(word.example, word.word)
   return [
     {
       ...base,
@@ -62,6 +75,19 @@ function tasksForWord(word: LibraryWord): PracticeTask[] {
       answer: word.translation,
       acceptedAnswers: russianAnswers(word.translation),
     },
+    ...(gap
+      ? [
+          {
+            ...base,
+            id: `library-${id}-gap`,
+            type: 'translate-ru-en' as const,
+            mode: 'fill-gap' as const,
+            prompt: gap,
+            promptNote: word.translation,
+            answer: word.word,
+          },
+        ]
+      : []),
     // No believable wrong spelling (go on, queue up): no choice task for this word.
     ...(spellingChoices.length > 1
       ? [

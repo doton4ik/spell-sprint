@@ -36,17 +36,38 @@ export function savePracticeAttempt(attempt: PracticeAttempt) {
   enqueueMistake(attempt)
 }
 
-// Adds attempts that are not stored locally yet (matched by id); never removes anything.
+// "My translation is right too": the wrong answer becomes a right one (the only change ever made to a
+// saved answer). Another device takes the change from the backup (see the merge below).
+export function markAttemptClaimedCorrect(id: string, schedule: Pick<PracticeAttempt, 'confidence' | 'nextReviewAt'>) {
+  const attempts = getPracticeAttempts().map((attempt) =>
+    attempt.id === id
+      ? { ...attempt, ...schedule, isCorrect: true, claimedCorrect: true, errorType: 'unknown' as const, needsReview: false }
+      : attempt,
+  )
+  if (safeSetItem(ATTEMPTS_KEY, JSON.stringify(attempts))) window.dispatchEvent(new Event(PRACTICE_UPDATED_EVENT))
+}
+
+// Adds attempts that are not stored locally yet (matched by id); never removes anything. An answer
+// marked "right too" on another device replaces the wrong version here.
 export function mergePracticeAttempts(incoming: PracticeAttempt[]) {
   const attempts = getPracticeAttempts()
-  const known = new Set(attempts.map((attempt) => attempt.id))
+  const known = new Map(attempts.map((attempt) => [attempt.id, attempt]))
   // From the cloud backup: checked field by field (validate.ts), broken records dropped.
-  const fresh = incoming.map(sanitizeAttempt).filter((attempt): attempt is PracticeAttempt => attempt !== null && !known.has(attempt.id))
-  if (!fresh.length) return 0
-  const merged = [...attempts, ...fresh].sort((a, b) => b.createdAt.localeCompare(a.createdAt)).slice(0, MAX_ATTEMPTS)
+  const checked = incoming.map(sanitizeAttempt).filter((attempt): attempt is PracticeAttempt => attempt !== null)
+  const fresh = checked.filter((attempt) => !known.has(attempt.id))
+  const claimed = new Map(
+    checked
+      .filter((attempt) => attempt.claimedCorrect && known.get(attempt.id)?.claimedCorrect !== true)
+      .filter((attempt) => known.has(attempt.id))
+      .map((attempt) => [attempt.id, attempt]),
+  )
+  if (!fresh.length && !claimed.size) return 0
+  const merged = [...attempts.map((attempt) => claimed.get(attempt.id) ?? attempt), ...fresh]
+    .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+    .slice(0, MAX_ATTEMPTS)
   window.localStorage.setItem(ATTEMPTS_KEY, JSON.stringify(merged))
   window.dispatchEvent(new Event(PRACTICE_UPDATED_EVENT))
-  return fresh.length
+  return fresh.length + claimed.size
 }
 
 // The history (up to 5000 answers) is read in many places, often several times per answer. Parsing

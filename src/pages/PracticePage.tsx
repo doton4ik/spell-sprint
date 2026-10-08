@@ -33,6 +33,7 @@ const modeLabels: Record<PracticeMode, string> = {
   'listen-write': 'Listen and write',
   'translate-ru': 'Translate to Russian',
   'choose-spelling': 'Choose correct spelling',
+  'fill-gap': 'Fill the gap',
 }
 
 export function PracticePage() {
@@ -240,6 +241,7 @@ export function PracticePage() {
           onAnswerChange={session.setAnswer}
           onCheck={session.checkAnswer}
           onMeet={session.meetWord}
+          onClaimCorrect={session.claimCorrect}
           onShowAnswer={session.revealAnswer}
           onHint={session.useHint}
           onPlayAudio={playAudio}

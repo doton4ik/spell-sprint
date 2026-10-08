@@ -47,7 +47,8 @@ export function scheduleAfterAnswer(
   const history = getPracticeAttempts()
     .filter((attempt) => itemKey(attempt) === itemKey(item))
     .sort((a, b) => a.createdAt.localeCompare(b.createdAt))
-  const lastMistake = history.filter((attempt) => !attempt.isCorrect).at(-1)?.createdAt ?? ''
+  // A wrong Russian meaning says nothing about spelling: it does not undo spelling progress.
+  const lastMistake = history.filter((attempt) => !attempt.isCorrect && attempt.attemptMode !== 'translate-ru').at(-1)?.createdAt ?? ''
   const mistakeDay = lastMistake ? localDayKey(lastMistake) : ''
   const goodDays = new Set<string>()
   let plannedDay = ''
@@ -61,7 +62,8 @@ export function scheduleAfterAnswer(
     }
   }
 
-  if (!correct) return { confidence: 0, nextReviewAt: now.toISOString() }
+  // A wrong meaning brings the word back today, with its spelling progress kept.
+  if (!correct) return { confidence: mode === 'translate-ru' ? goodDays.size : 0, nextReviewAt: now.toISOString() }
   const tomorrow = addDays(now, 1)
   // Keeps the word's current review date (a known word is not pulled back), at least tomorrow.
   const keepPlan = () => ({ confidence: goodDays.size, nextReviewAt: planned > tomorrow ? planned : tomorrow })

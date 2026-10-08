@@ -19,7 +19,8 @@ vi.mock('./practiceStorage', async (original) => {
     },
   }
 })
-const { restoreLearningData } = await import('./cloudSync')
+const { restoreLearningData, syncLearningData } = await import('./cloudSync')
+const supabase = await import('./supabase')
 const syncedVersion = () => JSON.parse(window.localStorage.getItem('spell-sprint.sync-state') ?? 'null')?.version ?? null
 
 describe('restoring the cloud backup', () => {
@@ -36,5 +37,18 @@ describe('restoring the cloud backup', () => {
     failMerge.on = true
     await expect(restoreLearningData()).rejects.toThrow()
     expect(syncedVersion()).toBeNull()
+  })
+  it('when another device saved in between, pulls again and saves over the newer version', async () => {
+    vi.clearAllMocks()
+    vi.mocked(supabase.getActiveCloudSession).mockResolvedValue({} as never)
+    vi.mocked(supabase.loadCloudSnapshotVersion).mockResolvedValueOnce('v1').mockResolvedValueOnce('v2')
+    vi.mocked(supabase.loadCloudSnapshot)
+      .mockResolvedValueOnce({ updatedAt: 'v1', payload: {} })
+      .mockResolvedValueOnce({ updatedAt: 'v2', payload: {} })
+    vi.mocked(supabase.saveCloudSnapshot).mockResolvedValueOnce(null).mockResolvedValueOnce('v3')
+    await syncLearningData()
+    expect(vi.mocked(supabase.saveCloudSnapshot).mock.calls.map((call) => call[1])).toEqual(['v1', 'v2'])
+    expect(vi.mocked(supabase.loadCloudSnapshot)).toHaveBeenCalledTimes(2)
+    expect(syncedVersion()).toBe('v3')
   })
 })

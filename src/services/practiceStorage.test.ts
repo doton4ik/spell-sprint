@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 import type { PracticeAttempt } from '../types/practice'
-import { getPracticeAttempts, mergePracticeAttempts } from './practiceStorage'
+import { getPracticeAttempts, markAttemptClaimedCorrect, mergePracticeAttempts } from './practiceStorage'
 
 const KEY = 'spell-sprint.practice-attempts'
 const attempt = (id: string, createdAt: string): PracticeAttempt => ({ id, taskId: 't', createdAt, isCorrect: true }) as PracticeAttempt
@@ -41,5 +41,19 @@ describe('getPracticeAttempts cache', () => {
   it('answers from a topic that was merged count under the new topic', () => {
     window.localStorage.setItem(KEY, JSON.stringify([{ ...attempt('a', '2026-01-01'), topicId: 'animals', topic: 'Animals' }]))
     expect(getPracticeAttempts()[0]).toMatchObject({ topicId: 'nature-and-animals', topic: 'Nature and Animals' })
+  })
+  it('an answer marked "right too" is right here and on another device', () => {
+    const wrong = { ...attempt('a', '2026-01-01T10:00:00.000Z'), isCorrect: false }
+    window.localStorage.setItem(KEY, JSON.stringify([wrong]))
+    markAttemptClaimedCorrect('a', { confidence: 1, nextReviewAt: '2026-01-02T00:00:00.000Z' })
+    expect(getPracticeAttempts()[0]).toMatchObject({ isCorrect: true, claimedCorrect: true })
+    const claimed = getPracticeAttempts()[0]
+    window.localStorage.setItem(KEY, JSON.stringify([wrong])) // the other device still has the wrong version
+    expect(
+      mergePracticeAttempts([
+        { ...claimed, userAnswer: 'x', correctAnswer: 'y', taskType: 'translate-en-ru', topic: 't' } as PracticeAttempt,
+      ]),
+    ).toBe(1)
+    expect(getPracticeAttempts()[0].isCorrect).toBe(true)
   })
 })

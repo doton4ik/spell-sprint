@@ -10,7 +10,7 @@ const isDate = (value: unknown): value is string => typeof value === 'string' &&
 const oneOf = <T extends string>(value: unknown, allowed: readonly T[], fallback: T): T =>
   allowed.includes(value as T) ? (value as T) : fallback
 
-const modes = ['write-en', 'listen-write', 'translate-ru', 'choose-spelling'] as const satisfies readonly PracticeMode[]
+const modes = ['write-en', 'listen-write', 'translate-ru', 'choose-spelling', 'fill-gap'] as const satisfies readonly PracticeMode[]
 const taskTypes = [
   'correct-spelling',
   'translate-ru-en',
@@ -45,6 +45,7 @@ export function sanitizeAttempt(raw: unknown): PracticeAttempt | null {
     hintUsed: flag(item.hintUsed),
     wasMarkedForReview: item.wasMarkedForReview === undefined ? undefined : flag(item.wasMarkedForReview),
     introduced: item.introduced === true ? true : undefined,
+    claimedCorrect: item.claimedCorrect === true ? true : undefined,
     errorType: (text(item.errorType, 60) ?? 'unknown') as ErrorType,
     errorCategory: text(item.errorCategory, 200) ?? '',
     confidence,

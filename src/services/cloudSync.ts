@@ -88,8 +88,17 @@ function fingerprint(text: string) {
   return `${text.length}:${(hash >>> 0).toString(36)}`
 }
 
+const SAVE_TRIES = 3
+
 export async function syncLearningData() {
   if (!(await getActiveCloudSession())) throw new Error('Sign in before synchronising your learning data.')
+  for (let attempt = 0; attempt < SAVE_TRIES; attempt += 1) if (await pullThenPush()) return
+  throw new Error('Another device is saving at the same time. Your answers are safe here; sync will try again.')
+}
+
+// One round: pull what is new, then save over exactly that version. False when another device
+// saved in between (nothing was written; the next round pulls their data first).
+async function pullThenPush() {
   // Pull first, so a fresh device can never overwrite an existing cloud backup with empty data.
   const remoteVersion = await loadCloudSnapshotVersion()
   if (remoteVersion === null || remoteVersion !== readSyncState().version) await restoreLearningData()
@@ -109,9 +118,11 @@ export async function syncLearningData() {
   }
   const uploaded = fingerprint(JSON.stringify(payload))
   const state = readSyncState()
-  if (remoteVersion !== null && remoteVersion === state.version && uploaded === state.uploaded) return
-  const version = await saveCloudSnapshot({ ...payload, syncedAt: new Date().toISOString() })
+  if (remoteVersion !== null && remoteVersion === state.version && uploaded === state.uploaded) return true
+  const version = await saveCloudSnapshot({ ...payload, syncedAt: new Date().toISOString() }, remoteVersion)
+  if (!version) return false
   writeSyncState({ version, uploaded })
+  return true
 }
 
 // ---- Automatic sync ---------------------------------------------------------------------------
