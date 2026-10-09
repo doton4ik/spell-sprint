@@ -242,11 +242,6 @@ function LevelCheckNudge({ revision }: { revision: number }) {
       </span>
       <span>
         <strong>{checks.length ? 'Time for a new level check' : 'Find your level in 6 minutes'}</strong>
-        <small>
-          {checks.length
-            ? `Last result: ${checks[0].overall.level}. See how far you have come.`
-            : '20 adaptive questions across spelling, vocabulary and grammar.'}
-        </small>
       </span>
       <Icon name="arrow" size={17} />
     </a>
@@ -374,18 +369,15 @@ function Welcome() {
     {
       icon: 'analysis' as const,
       title: 'Find your level',
-      text: '20 adaptive questions, about 6 minutes. Your sessions then start at the right difficulty.',
       action: { label: 'Start the level check', href: '#level-check' },
     },
     {
       icon: 'practice' as const,
       title: 'Ten words a day',
-      text: 'Each new word is shown first — you hear it and type it once. The real check comes the next day.',
     },
     {
       icon: 'calendar' as const,
       title: 'Mistakes come back',
-      text: 'A word you get wrong returns tomorrow, then after 3, 7, 14 and 30 days, until you can write it without help.',
     },
   ]
   return (
@@ -397,7 +389,6 @@ function Welcome() {
           </span>
           <small>Step {index + 1}</small>
           <h2>{step.title}</h2>
-          <p>{step.text}</p>
           {step.action ? (
             <a href={step.action.href}>
               {step.action.label} <Icon name="arrow" size={15} />

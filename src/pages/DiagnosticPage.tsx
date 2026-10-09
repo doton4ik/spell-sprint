@@ -73,12 +73,7 @@ function HomeView({ checks, onStart, onOpen }: { checks: LevelCheckResult[]; onS
     <div className="level-page" id="level-check">
       <section className="level-hero">
         <div>
-          <p className="eyebrow">Level check</p>
           <h1>Where is your English now?</h1>
-          <p>
-            A short adaptive check: questions get harder when you are right and easier when you are not, so {TOTAL_QUESTIONS} questions are
-            enough to find your level in each skill.
-          </p>
           <div className="level-hero__meta">
             <span>
               <Icon name="check" size={15} /> {TOTAL_QUESTIONS} questions
@@ -117,24 +112,7 @@ function HomeView({ checks, onStart, onOpen }: { checks: LevelCheckResult[]; onS
         ) : null}
       </section>
 
-      {checks.length ? (
-        <History checks={checks} onOpen={onOpen} />
-      ) : (
-        <section className="level-how">
-          <div>
-            <strong>1 · Answer</strong>
-            <p>Write each word or sentence. “I don’t know” is fine — it helps the check find your level faster.</p>
-          </div>
-          <div>
-            <strong>2 · See your level</strong>
-            <p>A2 to C1 for each skill, and how it compares with your previous check.</p>
-          </div>
-          <div>
-            <strong>3 · Follow the plan</strong>
-            <p>Mistakes go into your review queue, and you get three next steps picked from the result.</p>
-          </div>
-        </section>
-      )}
+      {checks.length ? <History checks={checks} onOpen={onOpen} /> : null}
     </div>
   )
 }

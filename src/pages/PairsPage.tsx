@@ -54,12 +54,8 @@ export function PairsPage() {
   return (
     <div className="pairs-page" id="pairs">
       <header className="pairs-header">
-        <p className="eyebrow">Pairs</p>
         <h1>Words that sound or look alike</h1>
-        <p>
-          their or there, lose or loose, affect or effect: a spell checker cannot catch these, because both words exist. Choose the one that
-          fits the sentence.
-        </p>
+        <p>their or there, lose or loose — choose the one that fits.</p>
       </header>
       <section className="pairs-start">
         <div className="pairs-stats">
@@ -83,7 +79,6 @@ export function PairsPage() {
         >
           <Icon name="shuffle" size={16} /> Practise 10 sentences
         </button>
-        <p className="pairs-note">Pairs you got wrong come back first, then new ones from the easiest level.</p>
       </section>
       {tricky.length ? (
         <section className="pairs-group">

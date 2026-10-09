@@ -76,9 +76,7 @@ export function TopicsPage() {
     <div className="topics-page" id="topics">
       <header className="topics-header">
         <div>
-          <p className="eyebrow">Topic map</p>
           <h1>Topics</h1>
-          <p>How well you know each theme, and what to practise next. Each session picks the words that need you most.</p>
         </div>
         <dl className="topics-summary" aria-label="Topic overview">
           <div>

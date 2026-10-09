@@ -155,12 +155,8 @@ export function ProofreadingPage() {
   return (
     <div className="proof-page" id="proofreading">
       <header className="proof-header">
-        <p className="eyebrow">Proofreading</p>
         <h1>Find the mistakes</h1>
-        <p>
-          Read a text, tap every word that looks wrong and write the correction. Each time you open a text it gets a new set of mistakes,
-          with more of the kinds you tend to miss.
-        </p>
+        <p>Tap every word that looks wrong and fix it.</p>
       </header>
 
       <div className="proof-modes" role="radiogroup" aria-label="Kind of mistakes">
@@ -172,7 +168,7 @@ export function ProofreadingPage() {
           onClick={() => setMode('mixed')}
         >
           <strong>Grammar and spelling</strong>
-          <span>Articles, tenses, prepositions and a few spelling slips.</span>
+          <span>Articles, tenses, spelling</span>
         </button>
         <button
           type="button"
@@ -182,7 +178,7 @@ export function ProofreadingPage() {
           onClick={() => setMode('spelling')}
         >
           <strong>Spelling hunt</strong>
-          <span>Only spelling — a few believable slips hidden in longer words. Tests how carefully you read.</span>
+          <span>Spelling slips only</span>
         </button>
         <button
           type="button"
@@ -192,7 +188,7 @@ export function ProofreadingPage() {
           onClick={() => setMode('sentences')}
         >
           <strong>Ten sentences</strong>
-          <span>Real sentences from Tatoeba. Some are correct — find only the ones with a mistake.</span>
+          <span>Real sentences, some are correct</span>
         </button>
       </div>
 
@@ -554,9 +550,6 @@ function ResultView({
             Changed but already correct: {result.falseAlarms.map((alarm) => `“${alarm.original}”`).join(', ')}.
           </p>
         ) : null}
-        <p className="proof-explain__note">
-          Missed and wrongly fixed mistakes are saved to My Mistakes, so they come back in your reviews.
-        </p>
       </section>
 
       <div className="proof-actions">

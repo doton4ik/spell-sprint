@@ -202,9 +202,7 @@ export function SettingsPage() {
     <div className="settings-page" id="settings">
       <header className="settings-header">
         <div>
-          <p className="eyebrow">Settings</p>
           <h1>Your learning space</h1>
-          <p>Keep studying locally, or connect a private account to back up your progress securely.</p>
         </div>
       </header>
       {!configured ? (

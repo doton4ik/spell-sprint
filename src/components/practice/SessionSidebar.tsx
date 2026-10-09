@@ -106,13 +106,6 @@ export function SessionSidebar({ modeLabel, scopeLabel, mode, taskIndex, progres
           ) : null}
         </div>
       ) : null}
-
-      <div className="session-note">
-        <Icon name="lightbulb" size={19} />
-        <p>
-          <strong>The English answer stays hidden.</strong> Use staged hints or listen when needed.
-        </p>
-      </div>
     </aside>
   )
 }

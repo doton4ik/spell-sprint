@@ -198,35 +198,30 @@ export function MistakesPage() {
     {
       id: 'today',
       title: 'New today',
-      note: 'The mistakes you made today, the newest first.',
       entries: today,
       action: true,
     },
     {
       id: 'due',
       title: 'Review today',
-      note: 'These words are due. A correct answer moves a word up a level.',
       entries: earlier.filter(isDue).sort((a, b) => Number(b.status === 'difficult') - Number(a.status === 'difficult') || byDate(a, b)),
       action: true,
     },
     {
       id: 'later',
       title: 'Coming back later',
-      note: 'Answered correctly recently — they return on the date shown.',
       entries: earlier.filter((entry) => entry.status !== 'mastered' && !isDue(entry)).sort(byDate),
       action: false,
     },
     {
       id: 'mastered',
       title: 'Mastered',
-      note: 'Five good days in a row. They come back only if you slip.',
       entries: earlier.filter((entry) => entry.status === 'mastered'),
       action: false,
     },
     {
       id: 'archive',
       title: 'Archive',
-      note: 'No mistake for 30 days and right since — kept here quietly. A new mistake brings a word back.',
       entries: archived,
       action: false,
     },
@@ -236,7 +231,6 @@ export function MistakesPage() {
     <div className="learning-page" id="my-mistakes">
       <header className="learning-header">
         <div>
-          <p className="eyebrow">My mistakes</p>
           <h1>My mistakes</h1>
           <p>
             {entries.length || yellowCards.length
@@ -306,7 +300,6 @@ export function MistakesPage() {
                           <h2 id={`mistakes-group-${group.id}`}>
                             {group.title} <small>{group.entries.length}</small>
                           </h2>
-                          <p>{group.note}</p>
                         </div>
                         {group.action ? (
                           <button
@@ -349,10 +342,7 @@ export function MistakesPage() {
                         <h2 id="mistakes-group-yellow">
                           <span className="yellow-card" aria-hidden="true" /> Yellow cards <small>{yellowCards.length}</small>
                         </h2>
-                        <p>
-                          Possible mistakes: typos you did not notice in a text, or words mistyped in a sprint. They are not counted as
-                          mistakes — the same word a second time becomes one.
-                        </p>
+                        <p>Possible typos. They are not counted as mistakes.</p>
                       </div>
                     </header>
                     <div className="mistake-list">

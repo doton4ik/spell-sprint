@@ -113,7 +113,6 @@ export function PracticePage() {
           <span className="completion-card__icon">
             <Icon name="check" size={29} strokeWidth={2.3} />
           </span>
-          <p className="eyebrow">Practice</p>
           <h1>{scope === 'mistakes' || scope === 'review' ? 'Nothing to repeat here' : 'No words here yet'}</h1>
           <p>
             {scope === 'mistakes'
@@ -165,9 +164,8 @@ export function PracticePage() {
     <div className="practice-page" id="practice">
       <header className="practice-header">
         <div>
-          <p className="eyebrow">Practice</p>
           <h1>Build accuracy, one answer at a time.</h1>
-          <p>{pendingSelection ? `Practising: ${pendingSelection.label}` : 'Choose the library or theme you want to practise.'}</p>
+          {pendingSelection ? <p>{`Practising: ${pendingSelection.label}`}</p> : null}
         </div>
         <PracticeSettings settings={session.settings} onChange={session.setSettings} />
       </header>

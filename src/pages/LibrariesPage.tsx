@@ -237,9 +237,7 @@ export function LibrariesPage() {
     <div className="libraries-page" id="libraries">
       <header className="libraries-header">
         <div>
-          <p className="eyebrow">Vocabulary system</p>
           <h1>Libraries</h1>
-          <p>Search across every word, or browse by group, topic, and subtopic.</p>
         </div>
         <div className="library-total">
           <strong>{totalWords}</strong>

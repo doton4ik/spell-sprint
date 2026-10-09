@@ -157,16 +157,14 @@ export function RulesPage() {
     {
       id: 'repeat',
       title: 'To repeat',
-      note: 'Rules you got wrong — the most urgent first.',
       rules: visibleRules.filter((rule) => attention(rule) < 3),
     },
     {
       id: 'new',
       title: 'Not started',
-      note: 'Open a rule to read it and try its exercises.',
       rules: visibleRules.filter((rule) => attention(rule) === 3 && !isDone(rule)),
     },
-    { id: 'done', title: 'Mastered', note: 'Five good days — they come back only if you slip.', rules: visibleRules.filter(isDone) },
+    { id: 'done', title: 'Mastered', rules: visibleRules.filter(isDone) },
   ].filter((group) => group.rules.length)
 
   function openCreateForm(fromMistake?: MistakeEvent) {
@@ -206,7 +204,6 @@ export function RulesPage() {
     <div className="learning-page" id="rules">
       <header className="learning-header">
         <div>
-          <p className="eyebrow">Rules</p>
           <h1>Rules that stick</h1>
           <p>
             {rules.length} rules{needRepeating ? ` · ${needRepeating} to repeat` : ''}. Start with the practice, or open a rule to study it.
@@ -342,7 +339,6 @@ export function RulesPage() {
                   <h2 id={`rules-group-${group.id}`}>
                     {group.title} <small>{group.rules.length}</small>
                   </h2>
-                  <p>{group.note}</p>
                 </header>
                 <div className="rules-grid rules-grid--compact">
                   {group.rules.map((rule) => (
@@ -383,9 +379,6 @@ export function RulesPage() {
               </button>
               {showUnclassified ? (
                 <div className="rule-unclassified__list">
-                  <p className="rule-unclassified__note">
-                    For an explanation of your mistakes, see <a href="#my-mistakes">My Mistakes → Problems &amp; rules</a>.
-                  </p>
                   {unclassified.slice(0, 6).map((mistake) => (
                     <UnclassifiedItem
                       mistake={mistake}

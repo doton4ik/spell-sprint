@@ -53,12 +53,8 @@ export function SprintPage() {
   return (
     <div className="sprint-page" id="sprint">
       <header className="sprint-header">
-        <p className="eyebrow">Sprint</p>
         <h1>60 seconds, as many words as you can</h1>
-        <p>
-          You see the Russian word and type the English one. No hints and no second tries: a wrong word shows the right spelling for a
-          second and the clock keeps running. Sprints measure your speed — they never change your review plan or your mistakes list.
-        </p>
+        <p>Type the English word. No hints, no second tries.</p>
       </header>
       <section className="sprint-intro">
         <div className="sprint-stats">

@@ -26,10 +26,9 @@ export function PracticeSettings({ settings, onChange }: PracticeSettingsProps) 
       </summary>
       <div className="practice-settings__content">
         {settingLabels.map(({ key, label, detail }) => (
-          <label className="settings-option" key={key}>
+          <label className="settings-option" key={key} title={detail}>
             <span>
               <strong>{label}</strong>
-              <small>{detail}</small>
             </span>
             <input type="checkbox" checked={settings[key]} onChange={(event) => onChange({ ...settings, [key]: event.target.checked })} />
           </label>
