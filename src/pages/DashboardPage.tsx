@@ -198,23 +198,26 @@ export function DashboardPage() {
         <section className="panel mistakes-panel">
           <SectionHeader eyebrow="Last activity" title="Recent mistakes" action="Open mistakes" actionHref="#my-mistakes" />
           {analytics.recent.length ? (
-            <div className="mistake-list">
+            <div className="recent-list">
               {analytics.recent.map((mistake) => (
-                <div className="mistake-row" key={`${mistake.submitted}-${mistake.correct}-${mistake.when}`}>
-                  <div className="mistake-row__letter">Aa</div>
-                  <div className="mistake-row__content">
-                    <p>
+                <a
+                  className="recent-row"
+                  href="#my-mistakes"
+                  key={`${mistake.submitted}-${mistake.correct}-${mistake.when}`}
+                  aria-label={`Review ${mistake.correct}`}
+                >
+                  <span className="recent-row__icon">
+                    <Icon name="mistakes" size={16} />
+                  </span>
+                  <span className="recent-row__body">
+                    <span className="recent-row__words">
                       <s>{mistake.submitted}</s>
                       <Icon name="arrow" size={14} /> <strong>{mistake.correct}</strong>
-                    </p>
-                    <span>
-                      {mistake.category} · {mistake.when}
                     </span>
-                  </div>
-                  <a href="#my-mistakes" aria-label={`Review ${mistake.correct}`}>
-                    <Icon name="chevron" size={18} />
-                  </a>
-                </div>
+                    <span className="recent-row__meta">{mistake.category}</span>
+                  </span>
+                  <time className="recent-row__when">{mistake.when}</time>
+                </a>
               ))}
             </div>
           ) : (
