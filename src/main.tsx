@@ -7,6 +7,7 @@ import { startAutoSync } from './services/cloudSync'
 import { captureAuthRedirect } from './services/supabase'
 import { startErrorLog } from './services/errorLog'
 import './styles/global.css'
+import './styles/looks.css'
 
 startErrorLog()
 applyFontScale()
