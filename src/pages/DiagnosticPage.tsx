@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
 import { noAutocorrect } from '../components/noAutocorrect'
 import { Icon } from '../components/icons/Icon'
 import { AnswerDiff } from '../components/practice/AnswerDiff'
+import { LevelPicture } from '../components/level/LevelPicture'
 import { skillInstructions, skillLabels, type LevelItem, type Skill } from '../data/levelCheckBank'
 import {
   buildPlan,
@@ -111,6 +112,8 @@ function HomeView({ checks, onStart, onOpen }: { checks: LevelCheckResult[]; onS
           </button>
         ) : null}
       </section>
+
+      <LevelPicture />
 
       {checks.length ? <History checks={checks} onOpen={onOpen} /> : null}
     </div>
