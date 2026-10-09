@@ -16,9 +16,9 @@
 
   /* Text */
   --ink: #24403a;
-  --ink-soft: #4f6660;
-  --ink-muted: #6f7f7b;
-  --ink-faint: #849390;
+  --ink-soft: #3d5650;
+  --ink-muted: #51645f;
+  --ink-faint: #5d706b;
   --on-accent: #ffffff; /* text on teal, red or other strong colours */
 
   /* Lines */
