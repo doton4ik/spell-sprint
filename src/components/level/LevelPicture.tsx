@@ -6,7 +6,6 @@ import { getTopicStats } from '../../services/topicStats'
 
 // "Where you stand today": a picture built from the learner's own answers (last 30 days), so the Level
 // check page has something real to show before and between checks.
-const tone = (percent: number) => (percent >= 80 ? 'good' : percent >= 60 ? 'mid' : 'low')
 
 export function LevelPicture() {
   const [skills] = useState(getSkillSnapshot)
@@ -29,9 +28,7 @@ export function LevelPicture() {
               <li key={skill}>
                 <span className="level-skillbars__name">{skillLabels[skill]}</span>
                 <span className="level-skillbars__track">
-                  {percent !== null ? (
-                    <i className={`level-skillbars__fill level-skillbars__fill--${tone(percent)}`} style={{ width: `${percent}%` }} />
-                  ) : null}
+                  {percent !== null ? <i className="level-skillbars__fill" style={{ width: `${percent}%` }} /> : null}
                 </span>
                 <span className="level-skillbars__value">{percent !== null ? `${percent}%` : '—'}</span>
                 <small>{percent !== null ? `${answers} answers` : answers ? 'too few answers' : 'no answers yet'}</small>

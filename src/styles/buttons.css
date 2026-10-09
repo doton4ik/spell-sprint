@@ -122,18 +122,11 @@
   color: var(--ink-soft);
   font-size: calc(12.5px * var(--fs));
   font-weight: 400;
-  left: -8px;
   letter-spacing: 0;
   line-height: 1.45;
   padding: 10px 12px;
-  position: absolute;
+  position: fixed;
   text-align: left;
   text-transform: none;
-  top: calc(100% + 8px);
-  width: 240px;
-  z-index: 20;
-}
-.info-tip__bubble--right {
-  left: auto;
-  right: -8px;
+  z-index: 60;
 }

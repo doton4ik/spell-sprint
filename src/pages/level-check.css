@@ -343,7 +343,7 @@
 }
 .level-question input:focus {
   border-color: var(--teal);
-  box-shadow: 0 0 0 3px rgba(29, 133, 119, 0.12);
+  box-shadow: 0 0 0 3px rgba(29, 133, 119, 0.25);
 }
 .level-actions {
   align-items: center;
@@ -408,18 +408,6 @@
   font-size: calc(15px * var(--fs));
   line-height: 1.55;
   margin: 10px 0 0;
-}
-.level-result-hero__badge {
-  align-items: center;
-  background: linear-gradient(140deg, var(--teal-dark), var(--teal));
-  border-radius: 20px;
-  color: var(--on-accent);
-  display: flex;
-  flex-shrink: 0;
-  font-size: calc(40px * var(--fs));
-  height: 96px;
-  justify-content: center;
-  width: 96px;
 }
 .level-skills {
   display: grid;
@@ -630,11 +618,6 @@
     grid-column: 1 / -1;
     justify-content: center;
   }
-  .level-result-hero__badge {
-    font-size: calc(30px * var(--fs));
-    height: 72px;
-    width: 72px;
-  }
   .level-mistakes li {
     grid-template-columns: 1fr;
   }
@@ -694,18 +677,10 @@
   overflow: hidden;
 }
 .level-skillbars__fill {
+  background: var(--teal);
   border-radius: 999px;
   display: block;
   height: 100%;
-}
-.level-skillbars__fill--good {
-  background: var(--teal);
-}
-.level-skillbars__fill--mid {
-  background: var(--amber);
-}
-.level-skillbars__fill--low {
-  background: var(--danger);
 }
 .level-skillbars__value {
   color: var(--ink);

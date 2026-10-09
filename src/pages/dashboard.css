@@ -570,6 +570,9 @@
 }
 
 /* Today's session: the plan built from due, weak and new words, with the daily goal ring. */
+.today-card :focus-visible {
+  outline-color: #fff;
+}
 .today-card {
   align-items: center;
   background: linear-gradient(108deg, var(--teal-dark) 0%, var(--teal) 67%, var(--teal) 100%);

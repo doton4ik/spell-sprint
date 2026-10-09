@@ -551,6 +551,10 @@
   margin: 0 0 22px;
   padding: 0 14px;
 }
+.global-word-search:focus-within {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(17, 118, 106, 0.25);
+}
 .global-word-search input {
   background: transparent;
   border: 0;
@@ -1012,7 +1016,7 @@
 .add-word__search input:focus,
 .add-word__form input:focus {
   border-color: var(--teal);
-  box-shadow: 0 0 0 3px rgba(29, 133, 119, 0.1);
+  box-shadow: 0 0 0 3px rgba(29, 133, 119, 0.25);
 }
 .add-word__search .check-button {
   flex: 0 0 auto;

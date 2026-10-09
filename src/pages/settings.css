@@ -107,12 +107,14 @@
   border: 1px solid var(--line);
   border-radius: 8px;
   color: var(--ink);
+  font-size: calc(16px * var(--fs));
+  min-height: 44px;
   outline: none;
   padding: 9px 10px;
 }
 .settings-card input:focus {
   border-color: var(--teal);
-  box-shadow: 0 0 0 3px rgba(29, 133, 119, 0.1);
+  box-shadow: 0 0 0 3px rgba(29, 133, 119, 0.25);
 }
 .settings-card form .check-button {
   justify-content: center;
@@ -161,6 +163,8 @@
   border: 1px solid var(--line);
   border-radius: 8px;
   color: var(--ink);
+  font-size: calc(16px * var(--fs));
+  min-height: 44px;
   outline: none;
   padding: 9px 10px;
   width: 100%;

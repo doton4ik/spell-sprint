@@ -104,10 +104,8 @@
   margin: 0 0 14px;
 }
 .sprint-history ol {
-  align-items: end;
   display: flex;
   gap: 10px;
-  height: 150px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -118,13 +116,19 @@
   flex: 1;
   flex-direction: column;
   gap: 4px;
-  height: 100%;
-  justify-content: flex-end;
+  min-width: 0;
+}
+.sprint-history__track {
+  align-items: flex-end;
+  display: flex;
+  flex: none;
+  height: 110px;
+  width: 100%;
 }
 .sprint-history__bar {
   background: linear-gradient(to top, var(--teal), var(--teal-muted));
   border-radius: 8px 8px 4px 4px;
-  min-height: 6px;
+  display: block;
   width: 100%;
 }
 .sprint-history li strong {
@@ -264,7 +268,7 @@
 }
 .sprint-card input:focus {
   border-color: var(--teal);
-  box-shadow: 0 0 0 3px rgba(29, 133, 119, 0.12);
+  box-shadow: 0 0 0 3px rgba(29, 133, 119, 0.25);
 }
 .sprint-card .check-button {
   min-height: 46px;

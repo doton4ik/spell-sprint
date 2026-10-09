@@ -51,7 +51,7 @@ export function SprintPage() {
 
   const best = bestSprint()
   const allRounds = getSprintRounds()
-  const recent = allRounds.slice(-8)
+  const recent = allRounds.slice(0, 8).reverse()
   const top = Math.max(1, ...recent.map((round) => round.correct))
   const poolIsSmall = pool.fromHistory < MIN_SPRINT_WORDS
   return (
@@ -98,7 +98,9 @@ export function SprintPage() {
           <ol>
             {recent.map((round) => (
               <li key={round.date}>
-                <span className="sprint-history__bar" style={{ height: `${Math.max(8, (round.correct / top) * 100)}%` }} />
+                <span className="sprint-history__track">
+                  <span className="sprint-history__bar" style={{ height: `${Math.max(6, (round.correct / top) * 100)}%` }} />
+                </span>
                 <strong>{round.correct}</strong>
                 <small>{new Date(round.date).toLocaleDateString('en', { day: 'numeric', month: 'short' })}</small>
               </li>

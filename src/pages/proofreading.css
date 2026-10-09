@@ -521,7 +521,7 @@
 .proof-mode--active {
   background: var(--teal-soft);
   border-color: var(--teal-muted);
-  box-shadow: 0 0 0 2px rgba(29, 133, 119, 0.12);
+  box-shadow: 0 0 0 2px rgba(29, 133, 119, 0.25);
 }
 @media (max-width: 640px) {
   .proof-modes {

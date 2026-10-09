@@ -60,8 +60,8 @@ export function DashboardPage() {
       label: 'Due today',
       value: String(plan.dueTotal),
       note: mistakesDue
-        ? `Words whose review date has come · ${mistakesDue} of them are mistakes (the number on My Mistakes)`
-        : 'Words whose review date has come',
+        ? `Words whose review date has come. My Mistakes lists ${mistakesDue} to repeat today.`
+        : 'Words whose review date has come.',
       tone: 'amber' as const,
       icon: 'calendar' as const,
     },

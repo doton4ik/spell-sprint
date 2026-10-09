@@ -24,7 +24,7 @@
 }
 .diff-char--fix {
   background: var(--teal-muted);
-  color: var(--teal-text-strong);
+  color: var(--ink);
   font-weight: 700;
 }
 .diff-char--swap {

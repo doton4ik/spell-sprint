@@ -105,7 +105,7 @@
 }
 .topics-search:focus-within {
   border-color: var(--teal);
-  box-shadow: 0 0 0 3px rgba(29, 133, 119, 0.1);
+  box-shadow: 0 0 0 3px rgba(29, 133, 119, 0.25);
 }
 .topics-search input {
   background: transparent;

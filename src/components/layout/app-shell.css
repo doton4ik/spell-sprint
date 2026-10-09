@@ -61,6 +61,7 @@
 }
 .nav-badge {
   background: var(--teal-muted);
+  color: var(--ink);
   border-radius: 12px;
   font-size: calc(12.5px * var(--fs));
   font-weight: 700;

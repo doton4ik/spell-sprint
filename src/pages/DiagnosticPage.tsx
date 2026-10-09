@@ -161,11 +161,7 @@ function History({ checks, onOpen }: { checks: LevelCheckResult[]; onOpen: (id: 
 
 function Delta({ value }: { value: number }) {
   if (Math.abs(value) < 0.1) return <span className="level-delta level-delta--flat">no change</span>
-  return (
-    <span className={`level-delta level-delta--${value > 0 ? 'up' : 'down'}`}>
-      {value > 0 ? '▲' : '▼'} {Math.abs(value).toFixed(1)}
-    </span>
-  )
+  return <span className={`level-delta level-delta--${value > 0 ? 'up' : 'down'}`}>{value > 0 ? '▲ higher' : '▼ lower'}</span>
 }
 
 // Ability over time, one line per skill, oldest on the left. Up to the last 8 checks.
@@ -382,7 +378,6 @@ function ResultView({
             )}
           </p>
         </div>
-        <strong className="level-result-hero__badge">{result.overall.level}</strong>
       </section>
 
       <section className="level-skills">
