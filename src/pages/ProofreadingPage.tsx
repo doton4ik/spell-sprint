@@ -9,9 +9,7 @@ import {
   buildExercise,
   buildSpellingHunt,
   checkExercise,
-  huntCountFor,
   huntOptions,
-  mistakeCountFor,
   proofreadingTexts,
   proofreadingTypes,
   recordProofreading,
@@ -88,8 +86,6 @@ export function ProofreadingPage() {
       /* a convenience only */
     }
   }
-  const countFor = (text: ProofreadingText) => (mode === 'spelling' ? huntCountFor(text) : mistakeCountFor(text))
-
   function toggleShowCount() {
     const next = !showCount
     setShowCount(next)
@@ -235,10 +231,7 @@ export function ProofreadingPage() {
                   {formatLabels[text.format] ?? text.format} · {text.topic}
                 </span>
                 <strong>{text.title}</strong>
-                {text.situation ? <small className="proof-card__situation">{text.situation}</small> : null}
-                <span className="proof-card__size">
-                  {wordCount(text)} words · {countFor(text)} mistakes{wordCount(text) > 200 ? <b>Long read</b> : null}
-                </span>
+                <span className={`proof-card__size proof-card__size--${lengthOf(text).key}`}>{lengthOf(text).label}</span>
                 <span className="proof-card__go">
                   Start <Icon name="arrow" size={14} />
                 </span>
@@ -251,6 +244,14 @@ export function ProofreadingPage() {
       )}
     </div>
   )
+}
+
+// Short, medium or long: how much there is to read, instead of word and mistake counts.
+function lengthOf(text: Parameters<typeof wordCount>[0]) {
+  const words = wordCount(text)
+  if (words <= 140) return { key: 'short', label: 'Short' }
+  if (words <= 200) return { key: 'medium', label: 'Medium' }
+  return { key: 'long', label: 'Long read' }
 }
 
 // ---- Reading and marking --------------------------------------------------------------------------

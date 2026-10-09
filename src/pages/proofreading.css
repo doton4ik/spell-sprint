@@ -466,27 +466,23 @@
   }
 }
 .proof-card__size {
-  align-items: center;
-  color: var(--ink-faint);
-  display: flex;
-  flex-wrap: wrap;
-  font-size: calc(12.5px * var(--fs));
-  gap: 6px;
-}
-.proof-card__size b {
-  background: var(--blue-soft);
-  border-radius: 6px;
-  color: var(--blue-text);
-  font-size: calc(11.5px * var(--fs));
-  padding: 2px 6px;
-}
-.proof-card__situation {
-  color: var(--ink-muted);
-  display: block;
+  align-self: flex-start;
+  border-radius: 999px;
   font-size: calc(12px * var(--fs));
-  font-style: italic;
-  line-height: 1.4;
-  margin-top: 4px;
+  font-weight: 700;
+  padding: 3px 10px;
+}
+.proof-card__size--short {
+  background: var(--teal-soft);
+  color: var(--teal-text-strong);
+}
+.proof-card__size--medium {
+  background: var(--amber-soft);
+  color: var(--amber-text);
+}
+.proof-card__size--long {
+  background: var(--blue-soft);
+  color: var(--blue-text);
 }
 .proof-situation {
   background: var(--amber-soft);
