@@ -466,7 +466,7 @@
   }
 }
 .proof-card__size {
-  align-self: flex-start;
+  justify-self: start;
   border-radius: 999px;
   font-size: calc(12px * var(--fs));
   font-weight: 700;
