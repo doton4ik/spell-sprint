@@ -53,7 +53,6 @@ export function DashboardPage() {
       label: 'Accuracy',
       value: accuracy.percent === null ? '—' : `${accuracy.percent}%`,
       note: accuracyNote,
-      short: accuracy.total ? `${accuracy.correct} of ${accuracy.total} · 30 days` : 'no answers yet',
       tone: 'teal' as const,
       icon: 'dashboard' as const,
     },
@@ -63,7 +62,6 @@ export function DashboardPage() {
       note: mistakesDue
         ? `Words whose review date has come · ${mistakesDue} of them are mistakes (the number on My Mistakes)`
         : 'Words whose review date has come',
-      short: mistakesDue ? `${mistakesDue} are mistakes` : 'words to review',
       tone: 'amber' as const,
       icon: 'calendar' as const,
     },
@@ -71,7 +69,6 @@ export function DashboardPage() {
       label: 'Not mastered yet',
       value: String(analytics.openMistakes),
       note: `Words not mastered yet · ${analytics.mistakes} wrong answer${analytics.mistakes === 1 ? '' : 's'} in total`,
-      short: 'not mastered yet',
       tone: 'violet' as const,
       icon: 'mistakes' as const,
     },
@@ -79,7 +76,6 @@ export function DashboardPage() {
       label: 'Answers',
       value: String(analytics.totalAttempts),
       note: 'All practice, review and level-check answers',
-      short: 'answers in total',
       tone: 'blue' as const,
       icon: 'practice' as const,
     },

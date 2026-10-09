@@ -81,7 +81,7 @@
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
-  min-height: 140px;
+  min-height: 0;
   padding: 17px 18px;
 }
 .metric-card__top {
@@ -91,6 +91,11 @@
   font-size: calc(13px * var(--fs));
   font-weight: 650;
   justify-content: space-between;
+}
+.metric-card__label {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
 }
 .metric-card__icon {
   align-items: center;
@@ -106,12 +111,7 @@
   font-size: calc(30px * var(--fs));
   letter-spacing: -1.1px;
   line-height: 1;
-  margin: 18px 0 8px;
-}
-.metric-card p {
-  color: var(--ink-muted);
-  font-size: calc(12.5px * var(--fs));
-  margin: 0;
+  margin: 14px 0 0;
 }
 .metric-card--teal .metric-card__icon {
   background: var(--teal-soft);
@@ -819,9 +819,6 @@
   font-weight: 600;
 }
 
-.metric-card__short {
-  display: none;
-}
 /* Phone: the main action first, the numbers as small tiles, the streak as a chip next to the date. */
 @media (max-width: 570px) {
   .dashboard {
@@ -909,15 +906,6 @@
   .metric-card__value {
     font-size: calc(22px * var(--fs));
     margin: 8px 0 3px;
-  }
-  .metric-card__note {
-    display: none;
-  }
-  .metric-card__short {
-    color: var(--ink-muted);
-    display: block;
-    font-size: calc(11.5px * var(--fs));
-    margin: 0;
   }
   .dashboard-columns {
     gap: 14px;

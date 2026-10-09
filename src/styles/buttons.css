@@ -85,3 +85,55 @@
 .word-hide {
   color: var(--ink-muted) !important;
 }
+
+/* A "?" that opens a short explanation (components/ui/InfoTip.tsx). */
+.info-tip {
+  display: inline-flex;
+  position: relative;
+}
+.info-tip__button {
+  align-items: center;
+  background: var(--surface-muted);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink-muted);
+  display: inline-flex;
+  font-size: calc(11px * var(--fs));
+  font-weight: 700;
+  height: 20px;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+  width: 20px;
+}
+.info-tip__button:hover,
+.info-tip__button[aria-expanded='true'] {
+  background: var(--teal-soft);
+  color: var(--teal-text-strong);
+}
+.info-tip__bubble {
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  color: var(--ink-soft);
+  font-size: calc(12.5px * var(--fs));
+  font-weight: 400;
+  left: -8px;
+  letter-spacing: 0;
+  line-height: 1.45;
+  padding: 10px 12px;
+  position: absolute;
+  text-align: left;
+  text-transform: none;
+  top: calc(100% + 8px);
+  width: 240px;
+  z-index: 20;
+}
+.info-tip__bubble--right {
+  left: auto;
+  right: -8px;
+}
