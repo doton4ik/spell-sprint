@@ -117,27 +117,99 @@
   margin-top: 8px;
 }
 
-.level-how {
+.level-tiles {
   display: grid;
   gap: 14px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 34px;
 }
-.level-how > div {
+.level-tile {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 16px 18px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+  padding: 18px;
 }
-.level-how strong {
+.level-tile__icon {
+  align-items: center;
+  border-radius: 12px;
+  display: inline-flex;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+}
+.level-tile--spelling .level-tile__icon {
+  background: var(--teal-soft);
+  color: var(--teal-text);
+}
+.level-tile--vocabulary .level-tile__icon {
+  background: var(--amber-soft);
+  color: var(--amber-text);
+}
+.level-tile--grammar .level-tile__icon {
+  background: var(--violet-soft);
+  color: var(--violet);
+}
+.level-tile strong {
+  color: var(--ink);
+  font-size: calc(16px * var(--fs));
+}
+.level-tile code {
+  background: var(--surface-muted);
+  border-radius: 8px;
+  color: var(--ink-soft);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: calc(13px * var(--fs));
+  padding: 5px 9px;
+}
+.level-scale {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 18px;
+}
+.level-scale__title {
+  color: var(--ink-muted);
+  font-size: calc(12px * var(--fs));
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.level-scale ol {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.level-scale li {
+  border-radius: 10px;
   color: var(--ink);
   font-size: calc(15px * var(--fs));
+  font-weight: 700;
+  padding: 11px 0;
+  text-align: center;
 }
-.level-how p {
-  color: var(--ink-muted);
-  font-size: calc(13.5px * var(--fs));
-  line-height: 1.55;
-  margin: 6px 0 0;
+.level-scale li:nth-child(1) {
+  background: var(--teal-soft);
+}
+.level-scale li:nth-child(2) {
+  background: color-mix(in srgb, var(--teal) 28%, var(--surface));
+}
+.level-scale li:nth-child(3) {
+  background: color-mix(in srgb, var(--teal) 55%, var(--surface));
+}
+.level-scale li:nth-child(4) {
+  background: var(--teal);
+  color: var(--on-accent);
 }
 
 /* History */
@@ -603,7 +675,7 @@
   .level-hero {
     grid-template-columns: 1fr;
   }
-  .level-how,
+  .level-tiles,
   .level-skills {
     grid-template-columns: 1fr;
   }

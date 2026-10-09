@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { noAutocorrect } from '../components/noAutocorrect'
 import { ReportWordButton } from '../components/ReportWordButton'
 import { Icon } from '../components/icons/Icon'
+import { InfoTip } from '../components/ui/InfoTip'
 import { setPendingPracticeSelection } from '../services/libraryPractice'
 import { recordSprintMiss } from '../services/sprint'
 import {
@@ -49,36 +50,83 @@ export function SprintPage() {
     )
 
   const best = bestSprint()
-  const rounds = getSprintRounds().length
+  const allRounds = getSprintRounds()
+  const recent = allRounds.slice(-8)
+  const top = Math.max(1, ...recent.map((round) => round.correct))
+  const poolIsSmall = pool.fromHistory < MIN_SPRINT_WORDS
   return (
     <div className="sprint-page" id="sprint">
       <header className="sprint-header">
         <h1>60 seconds, as many words as you can</h1>
         <p>Type the English word. No hints, no second tries.</p>
       </header>
-      <section className="sprint-intro">
-        <div className="sprint-stats">
-          <strong>
-            {best || '—'}
-            <small>your record</small>
-          </strong>
-          <strong>
-            {rounds}
-            <small>sprints so far</small>
-          </strong>
+      <section className="sprint-hero">
+        <div className="sprint-hero__clock" aria-hidden="true">
+          <strong>60</strong>
+          <span>seconds</span>
         </div>
-        {pool.fromHistory < MIN_SPRINT_WORDS ? (
-          <p className="sprint-note">
-            You have typed {pool.fromHistory} word{pool.fromHistory === 1 ? '' : 's'} correctly so far, so this sprint adds easy words from
-            the base library. After a few practice sessions it will use only your own words.
-          </p>
-        ) : (
-          <p className="sprint-note">Words you have already typed correctly: {pool.fromHistory}.</p>
-        )}
-        <button className="check-button sprint-start" type="button" onClick={() => setPhase({ kind: 'running' })}>
-          <Icon name="bolt" size={17} /> Start the sprint
-        </button>
+        <div className="sprint-hero__main">
+          <div className="sprint-stats">
+            <div>
+              <strong>{best || '—'}</strong>
+              <small>your record</small>
+            </div>
+            <div>
+              <strong>{allRounds.length}</strong>
+              <small>sprints so far</small>
+            </div>
+            <div>
+              <strong>{pool.fromHistory}</strong>
+              <small>
+                your words
+                {poolIsSmall ? (
+                  <InfoTip label="About your words">
+                    Until you have typed more words correctly, the sprint adds easy words from the base library.
+                  </InfoTip>
+                ) : null}
+              </small>
+            </div>
+          </div>
+          <button className="check-button sprint-start" type="button" onClick={() => setPhase({ kind: 'running' })}>
+            <Icon name="bolt" size={17} /> Start the sprint
+          </button>
+        </div>
       </section>
+      {recent.length ? (
+        <section className="sprint-history" aria-label="Your last sprints">
+          <h2>Last sprints</h2>
+          <ol>
+            {recent.map((round) => (
+              <li key={round.date}>
+                <span className="sprint-history__bar" style={{ height: `${Math.max(8, (round.correct / top) * 100)}%` }} />
+                <strong>{round.correct}</strong>
+                <small>{new Date(round.date).toLocaleDateString('en', { day: 'numeric', month: 'short' })}</small>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ) : (
+        <ol className="sprint-flow" aria-label="How a sprint works">
+          <li>
+            <span>
+              <Icon name="eye" size={18} />
+            </span>
+            Russian word
+          </li>
+          <li>
+            <span>
+              <Icon name="practice" size={18} />
+            </span>
+            Type it in English
+          </li>
+          <li>
+            <span>
+              <Icon name="skip" size={18} />
+            </span>
+            Next one, fast
+          </li>
+        </ol>
+      )}
     </div>
   )
 }
