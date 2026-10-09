@@ -39,9 +39,6 @@ const moreGroups: Array<{ title: string; items: Array<{ label: string; icon: Ico
 ]
 const mobileMoreItems = [...moreGroups.flatMap((group) => group.items), { label: 'Settings' }]
 
-// Three looks to compare, one per page (rules in styles/looks.css).
-const looks: Record<string, string> = { dashboard: 'ink', proofreading: 'sheet', sprint: 'focus' }
-
 export function AppShell({ children, activePage }: AppShellProps) {
   const [moreOpen, setMoreOpen] = useState(false)
   const moreActive = mobileMoreItems.some((item) => pageId(item.label) === activePage)
@@ -112,7 +109,7 @@ export function AppShell({ children, activePage }: AppShellProps) {
         </div>
       </aside>
 
-      <main className="page-content" data-look={looks[activePage]}>
+      <main className="page-content">
         {storageFailed ? (
           <div className="storage-warning" role="alert">
             <Icon name="flag" size={17} />
