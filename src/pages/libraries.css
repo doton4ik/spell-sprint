@@ -80,7 +80,7 @@
 .template-button {
   background: transparent;
   border: 1px solid var(--teal-muted);
-  border-radius: 9px;
+  border-radius: 10px;
   color: var(--teal-text);
   font-size: calc(12.5px * var(--fs));
   font-weight: 700;
@@ -239,7 +239,7 @@
 .library-select select {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 7px;
+  border-radius: 6px;
   color: var(--ink-soft);
   min-height: 38px;
   padding: 0 8px;
@@ -594,7 +594,7 @@
 }
 .word-row__actions .quiet-action {
   background: var(--surface-muted);
-  border-radius: 7px;
+  border-radius: 6px;
   padding: 6px 9px;
 }
 @media (min-width: 571px) {
@@ -1001,7 +1001,7 @@
 .add-word__form select {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 9px;
+  border-radius: 10px;
   color: var(--ink);
   font-size: max(16px, calc(15px * var(--fs)));
   min-height: 44px;
@@ -1028,7 +1028,7 @@
 .add-word__saved {
   align-items: center;
   background: var(--teal-soft);
-  border-radius: 9px;
+  border-radius: 10px;
   color: var(--teal-text);
   display: flex;
   flex-wrap: wrap;

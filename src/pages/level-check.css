@@ -5,8 +5,8 @@
 }
 .level-page h1 {
   color: var(--ink);
-  font-size: calc(clamp(28px, 3vw, 36px) * var(--fs));
-  letter-spacing: -1.2px;
+  font-size: calc(clamp(28px, 3vw, 37px) * var(--fs));
+  letter-spacing: -1.35px;
   margin: 0;
 }
 .level-muted {
@@ -115,101 +115,6 @@
   font-weight: 700;
   gap: 4px;
   margin-top: 8px;
-}
-
-.level-tiles {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 34px;
-}
-.level-tile {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  box-shadow: var(--shadow-sm);
-  display: grid;
-  gap: 10px;
-  justify-items: start;
-  padding: 18px;
-}
-.level-tile__icon {
-  align-items: center;
-  border-radius: 12px;
-  display: inline-flex;
-  height: 40px;
-  justify-content: center;
-  width: 40px;
-}
-.level-tile--spelling .level-tile__icon {
-  background: var(--teal-soft);
-  color: var(--teal-text);
-}
-.level-tile--vocabulary .level-tile__icon {
-  background: var(--amber-soft);
-  color: var(--amber-text);
-}
-.level-tile--grammar .level-tile__icon {
-  background: var(--violet-soft);
-  color: var(--violet);
-}
-.level-tile strong {
-  color: var(--ink);
-  font-size: calc(16px * var(--fs));
-}
-.level-tile code {
-  background: var(--surface-muted);
-  border-radius: 8px;
-  color: var(--ink-soft);
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: calc(13px * var(--fs));
-  padding: 5px 9px;
-}
-.level-scale {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  box-shadow: var(--shadow-sm);
-  display: grid;
-  gap: 12px;
-  margin-top: 14px;
-  padding: 18px;
-}
-.level-scale__title {
-  color: var(--ink-muted);
-  font-size: calc(12px * var(--fs));
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-.level-scale ol {
-  display: grid;
-  gap: 6px;
-  grid-template-columns: repeat(4, 1fr);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.level-scale li {
-  border-radius: 10px;
-  color: var(--ink);
-  font-size: calc(15px * var(--fs));
-  font-weight: 700;
-  padding: 11px 0;
-  text-align: center;
-}
-.level-scale li:nth-child(1) {
-  background: var(--teal-soft);
-}
-.level-scale li:nth-child(2) {
-  background: color-mix(in srgb, var(--teal) 28%, var(--surface));
-}
-.level-scale li:nth-child(3) {
-  background: color-mix(in srgb, var(--teal) 55%, var(--surface));
-}
-.level-scale li:nth-child(4) {
-  background: var(--teal);
-  color: var(--on-accent);
 }
 
 /* History */
@@ -378,14 +283,14 @@
 }
 .level-run__track {
   background: var(--surface-strong);
-  border-radius: 100px;
+  border-radius: 999px;
   height: 6px;
   margin-top: 10px;
   overflow: hidden;
 }
 .level-run__track i {
   background: var(--teal);
-  border-radius: 100px;
+  border-radius: 999px;
   display: block;
   height: 100%;
   transition: width 0.3s ease;
@@ -507,7 +412,7 @@
 .level-result-hero__badge {
   align-items: center;
   background: linear-gradient(140deg, var(--teal-dark), var(--teal));
-  border-radius: 22px;
+  border-radius: 20px;
   color: var(--on-accent);
   display: flex;
   flex-shrink: 0;
@@ -675,7 +580,6 @@
   .level-hero {
     grid-template-columns: 1fr;
   }
-  .level-tiles,
   .level-skills {
     grid-template-columns: 1fr;
   }

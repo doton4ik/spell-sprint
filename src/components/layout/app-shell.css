@@ -205,7 +205,7 @@
   .mobile-more {
     animation: more-rise 0.2s ease;
     background: var(--surface, var(--surface));
-    border-radius: 22px 22px 0 0;
+    border-radius: 20px 22px 0 0;
     bottom: 0;
     box-shadow: 0 -10px 30px rgba(20, 35, 31, 0.14);
     display: grid;
@@ -220,7 +220,7 @@
   }
   .mobile-more__handle {
     background: var(--surface-strong);
-    border-radius: 99px;
+    border-radius: 999px;
     height: 4px;
     justify-self: center;
     width: 40px;

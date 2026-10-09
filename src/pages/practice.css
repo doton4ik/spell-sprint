@@ -13,8 +13,8 @@
 }
 .practice-header h1 {
   color: var(--ink);
-  font-size: calc(clamp(28px, 3vw, 38px) * var(--fs));
-  letter-spacing: -1.4px;
+  font-size: calc(clamp(28px, 3vw, 37px) * var(--fs));
+  letter-spacing: -1.35px;
   line-height: 1.12;
   margin: 0;
 }
@@ -74,7 +74,7 @@
 }
 .settings-option {
   align-items: center;
-  border-radius: 9px;
+  border-radius: 10px;
   cursor: pointer;
   display: flex;
   gap: 12px;
@@ -186,7 +186,7 @@
 }
 .session-progress__track {
   background: var(--teal-muted);
-  border-radius: 100px;
+  border-radius: 999px;
   height: 9px;
   overflow: hidden;
 }

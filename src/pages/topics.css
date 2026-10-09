@@ -67,7 +67,7 @@
 .topics-focus__icon {
   align-items: center;
   background: var(--amber-soft);
-  border-radius: 9px;
+  border-radius: 10px;
   color: var(--amber-text);
   display: inline-flex;
   flex-shrink: 0;
@@ -96,7 +96,7 @@
   align-items: center;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 11px;
+  border-radius: 12px;
   color: var(--ink-faint);
   display: flex;
   flex: 1;
@@ -129,7 +129,7 @@
 .topics-sort select {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 9px;
+  border-radius: 10px;
   color: var(--ink);
   font-family: inherit;
   font-size: max(16px, calc(14px * var(--fs)));
@@ -146,7 +146,7 @@
 .topics-tabs button {
   background: transparent;
   border: 0;
-  border-radius: 9px;
+  border-radius: 10px;
   color: var(--ink-muted);
   cursor: pointer;
   font-family: inherit;
@@ -273,14 +273,14 @@
 }
 .topic-line__bar {
   background: var(--surface-muted);
-  border-radius: 100px;
+  border-radius: 999px;
   flex: 1;
   height: 7px;
   overflow: hidden;
   position: relative;
 }
 .topic-line__bar i {
-  border-radius: 100px;
+  border-radius: 999px;
   height: 100%;
   left: 0;
   position: absolute;

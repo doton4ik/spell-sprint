@@ -65,38 +65,6 @@ export function DiagnosticPage() {
   return <HomeView checks={checks} onStart={() => setView({ kind: 'running' })} onOpen={(id) => setView({ kind: 'result', id })} />
 }
 
-// What the check looks like before the first one: three skills with an example each, and the scale of levels.
-const previewTiles: Array<{ skill: Skill; icon: 'check' | 'library' | 'rules'; example: string }> = [
-  { skill: 'spelling', icon: 'check', example: 'recieve → receive' },
-  { skill: 'vocabulary', icon: 'library', example: 'склад → warehouse' },
-  { skill: 'grammar', icon: 'rules', example: 'he go → he goes' },
-]
-function LevelPreview() {
-  return (
-    <>
-      <section className="level-tiles" aria-label="Skills">
-        {previewTiles.map(({ skill, icon, example }) => (
-          <div className={`level-tile level-tile--${skill}`} key={skill}>
-            <span className="level-tile__icon">
-              <Icon name={icon} size={20} />
-            </span>
-            <strong>{skillLabels[skill]}</strong>
-            <code>{example}</code>
-          </div>
-        ))}
-      </section>
-      <section className="level-scale" aria-label="Levels from A2 to C1">
-        <span className="level-scale__title">Your result</span>
-        <ol>
-          {['A2', 'B1', 'B2', 'C1'].map((level) => (
-            <li key={level}>{level}</li>
-          ))}
-        </ol>
-      </section>
-    </>
-  )
-}
-
 // ---- Start screen and history ----------------------------------------------------------------
 function HomeView({ checks, onStart, onOpen }: { checks: LevelCheckResult[]; onStart: () => void; onOpen: (id: string) => void }) {
   const last = checks[0]
@@ -144,7 +112,7 @@ function HomeView({ checks, onStart, onOpen }: { checks: LevelCheckResult[]; onS
         ) : null}
       </section>
 
-      {checks.length ? <History checks={checks} onOpen={onOpen} /> : <LevelPreview />}
+      {checks.length ? <History checks={checks} onOpen={onOpen} /> : null}
     </div>
   )
 }

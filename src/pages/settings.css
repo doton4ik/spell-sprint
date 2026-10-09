@@ -63,7 +63,7 @@
 .settings-card__icon {
   align-items: center;
   background: var(--teal-soft);
-  border-radius: 9px;
+  border-radius: 10px;
   color: var(--teal-text);
   display: inline-flex;
   height: 35px;
@@ -139,7 +139,7 @@
 }
 .settings-message {
   background: var(--teal-soft);
-  border-radius: 9px;
+  border-radius: 10px;
   color: var(--teal-text-strong);
   font-size: calc(12.5px * var(--fs));
   margin: 18px 0 0;
@@ -176,7 +176,7 @@
 .settings-card .font-scale-option {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 9px;
+  border-radius: 10px;
   color: var(--ink-soft);
   font-size: calc(13px * var(--fs));
   font-weight: 700;

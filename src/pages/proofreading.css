@@ -28,7 +28,7 @@
 }
 .proof-levels {
   background: var(--surface-muted);
-  border-radius: 11px;
+  border-radius: 12px;
   display: inline-flex;
   gap: 3px;
   padding: 3px;
@@ -37,7 +37,7 @@
   align-items: baseline;
   background: transparent;
   border: 0;
-  border-radius: 9px;
+  border-radius: 10px;
   color: var(--ink-soft);
   cursor: pointer;
   display: inline-flex;
@@ -228,7 +228,7 @@
 }
 .proof-editor input {
   border: 1px solid var(--teal-line);
-  border-radius: 7px;
+  border-radius: 6px;
   font-family: inherit;
   font-size: max(16px, calc(16px * var(--fs)));
   min-width: 120px;
@@ -242,7 +242,7 @@
 .proof-editor__actions button {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 7px;
+  border-radius: 6px;
   color: var(--ink);
   cursor: pointer;
   font-family: inherit;
