@@ -38,8 +38,7 @@ test('every page opens without an error', async ({ page }) => {
 test('a wrong answer in practice becomes a mistake', async ({ page }) => {
   const errors = watchErrors(page)
   await page.goto('/#practice')
-  // A new learner meets the word first; skipping that goes straight to the test.
-  await page.getByRole('button', { name: /I know this word/ }).click()
+  // A new word goes straight to the test.
   const answer = page.locator('#practice-answer')
   await expect(answer).toHaveAttribute('autocorrect', 'off')
   await expect(answer).toHaveAttribute('spellcheck', 'false')
@@ -49,6 +48,22 @@ test('a wrong answer in practice becomes a mistake', async ({ page }) => {
   await page.goto('/#my-mistakes')
   await expect(page.locator('.mistake-row')).toHaveCount(1)
   await expect(page.locator('.mistake-row').getByRole('button', { name: 'Report' })).toBeVisible()
+  expect(errors).toEqual([])
+})
+
+test('Enter after an answer starts the next word', async ({ page }) => {
+  const errors = watchErrors(page)
+  await page.goto('/#practice')
+  const answer = page.locator('#practice-answer')
+  await answer.fill('zzzz')
+  await answer.press('Enter') // checks the answer
+  await expect(page.getByText('Not quite.')).toBeVisible()
+  await answer.press('Enter') // starts the next word
+  await expect(page.getByText('Not quite.')).toHaveCount(0)
+  await expect(answer).toHaveValue('')
+  // The wrong answer was recorded once, not once per Enter.
+  await page.goto('/#my-mistakes')
+  await expect(page.locator('.mistake-row')).toHaveCount(1)
   expect(errors).toEqual([])
 })
 
@@ -80,9 +95,11 @@ test('typos not noticed in Spelling hunt become yellow cards, not mistakes', asy
   await expect(page.locator('.mistake-row:not(.mistake-row--yellow)')).toHaveCount(0)
 })
 
-test('a new word is shown first, and copying it is not a mistake', async ({ page }) => {
+test('"I don\'t know this word" shows it first, and copying it is not a mistake', async ({ page }) => {
   const errors = watchErrors(page)
   await page.goto('/#practice')
+  await expect(page.locator('#practice-answer')).toBeVisible() // a new word is tested straight away
+  await page.getByRole('button', { name: /I don.t know this word/ }).click()
   await expect(page.getByText('Meet the word first.')).toBeVisible()
   const word = (await page.locator('.meet-word__word').textContent())!.trim()
   await page.locator('#meet-answer').fill('zzzz')

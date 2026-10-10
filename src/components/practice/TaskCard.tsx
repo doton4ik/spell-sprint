@@ -95,13 +95,13 @@ export function TaskCard({
   // Rule challenge opened from the mistake breakdown; cleared when the next task appears.
   const [challengeRules, setChallengeRules] = useState<Rule[] | null>(null)
   const [reporting, setReporting] = useState(false)
-  // A new word is taught before it is tested: see it, hear it, type it once. "I know this word"
-  // goes straight to the test.
+  // A new word goes straight to the test. "I don't know this word" (next to Hint) opens the teaching
+  // screen instead: see it, hear it, type it once, and it comes back tomorrow.
   const canMeet = Boolean(
     onMeet && task.wordId && reason?.kind === 'new' && (mode === 'write-en' || mode === 'listen-write' || mode === 'fill-gap'),
   )
-  const [testFor, setTestFor] = useState<string | null>(null) // "I know this word" pressed for this task
-  const meeting = canMeet && testFor !== task.id
+  const [meetFor, setMeetFor] = useState<string | null>(null) // "I don't know this word" pressed for this task
+  const meeting = canMeet && meetFor === task.id
   const [copy, setCopy] = useState('')
   const [copyWrong, setCopyWrong] = useState(false)
   useEffect(() => {
@@ -119,6 +119,22 @@ export function TaskCard({
     setCheckedAnswer(answer)
     onCheck()
   }
+  // Enter after an answer has been checked starts the next word. Typing a different answer first and
+  // pressing Enter still checks that new answer, and Enter inside other fields (a tip, a report) is theirs.
+  useEffect(() => {
+    if (result === 'idle') return
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key !== 'Enter' || event.isComposing || event.repeat) return
+      const target = event.target as HTMLElement | null
+      const onAnswer = target instanceof HTMLInputElement && target.id === 'practice-answer'
+      const free = target === document.body || target === null
+      if (!(free || (onAnswer && answer === checkedAnswer))) return
+      event.preventDefault()
+      onNext()
+    }
+    window.addEventListener('keydown', onKey, true)
+    return () => window.removeEventListener('keydown', onKey, true)
+  }, [result, answer, checkedAnswer, onNext])
   // Several answers can be right: show the one the learner aimed at, and the others as "Also correct".
   const target = checkedAnswer.trim() ? closestAnswer(checkedAnswer, task) : task.answer
   const others = acceptedAnswers(task).filter((option) => comparable(option) !== comparable(target))
@@ -187,8 +203,8 @@ export function TaskCard({
               <Icon name="check" size={18} /> Got it
             </button>
             <div className="task-actions__secondary">
-              <button className="quiet-button" type="button" onClick={() => setTestFor(task.id)}>
-                I know this word — test me
+              <button className="quiet-button" type="button" onClick={() => setMeetFor(null)}>
+                I know it — test me
               </button>
             </div>
           </div>
@@ -382,6 +398,11 @@ export function TaskCard({
             <button className="quiet-button" type="button" onClick={onPlayAudio}>
               <Icon name="volume" size={17} /> Listen
             </button>
+            {canMeet && result === 'idle' ? (
+              <button className="quiet-button" type="button" onClick={() => setMeetFor(task.id)}>
+                <Icon name="lightbulb" size={17} /> I don’t know this word
+              </button>
+            ) : null}
             <button className="quiet-button" type="button" onClick={onShowAnswer} disabled={revealed}>
               <Icon name="eye" size={17} /> Show answer
             </button>
