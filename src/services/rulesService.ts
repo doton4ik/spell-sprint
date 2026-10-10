@@ -174,11 +174,35 @@ export async function getRuleExamples(ruleId: string): Promise<RuleExample[]> {
   }
 }
 
-// Linked words for a rule, cross-referenced against this browser's word library so the card
-// can show the actual word and its Russian translation rather than a bare id.
+// A rule's linked words, matched against this browser's word library so the panel can show the word
+// and its Russian translation. A link whose word is not in the library (or an old id) is left out
+// instead of showing a bare id, a word that appears twice is shown once, and the main links
+// ('primary') come before the related ones.
+export function resolveLinkedWords(
+  rows: Array<{ word_id: string; relation: string }>,
+  words: Array<{ wordId: string; word: string; translation?: string }>,
+): Array<{ wordId: string; relation: RuleWordLink['relation']; word: string; translation?: string }> {
+  const seen = new Set<string>()
+  const result: Array<{ wordId: string; relation: RuleWordLink['relation']; word: string; translation?: string }> = []
+  for (const row of rows) {
+    const match = words.find((word) => word.wordId === canonicalWordId(row.word_id))
+    if (!match) continue
+    const key = match.word.trim().toLocaleLowerCase()
+    if (seen.has(key)) continue
+    seen.add(key)
+    result.push({
+      wordId: row.word_id,
+      relation: row.relation as RuleWordLink['relation'],
+      word: match.word,
+      translation: match.translation,
+    })
+  }
+  return result.sort((a, b) => Number(b.relation === 'primary') - Number(a.relation === 'primary'))
+}
+
 export async function getRuleLinkedWords(
   ruleId: string,
-): Promise<Array<{ wordId: string; relation: RuleWordLink['relation']; word?: string; translation?: string }>> {
+): Promise<Array<{ wordId: string; relation: RuleWordLink['relation']; word: string; translation?: string }>> {
   let rows: Array<{ word_id: string; relation: string }>
   try {
     if (!isSupabaseConfigured()) throw new Error('offline')
@@ -188,11 +212,7 @@ export async function getRuleLinkedWords(
       .filter((link) => link.ruleId === ruleId)
       .map((link) => ({ word_id: link.wordId, relation: link.relation }))
   }
-  const words = getEveryWord()
-  return rows.map((row) => {
-    const match = words.find((word) => word.wordId === canonicalWordId(row.word_id))
-    return { wordId: row.word_id, relation: row.relation as RuleWordLink['relation'], word: match?.word, translation: match?.translation }
-  })
+  return resolveLinkedWords(rows, getEveryWord())
 }
 
 export async function getRuleRelationships(ruleId: string): Promise<RuleRelationship[]> {

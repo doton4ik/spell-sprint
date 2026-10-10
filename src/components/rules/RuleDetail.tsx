@@ -10,6 +10,10 @@ import { speakEnglish } from '../../services/speech'
 import type { MistakeEvent, Rule, RuleExample, RuleExercise, RuleRelationship, UserRuleProgress } from '../../types/rules'
 import { RuleExerciseRunner } from './RuleExerciseRunner'
 
+const MAX_WORDS = 8
+// "встреча (по записи), запись (к врачу), приём" -> "встреча (по записи)": the first meaning is enough in a chip.
+const shortTranslation = (translation: string) => translation.split(/,\s(?![^(]*\))/)[0]
+
 export type RuleTab = 'rule' | 'examples' | 'practice' | 'notes'
 const tabs: Array<{ id: RuleTab; label: string }> = [
   { id: 'rule', label: 'Rule' },
@@ -29,7 +33,7 @@ type RuleDetailProps = {
 
 type Details = {
   examples: RuleExample[]
-  linkedWords: Array<{ wordId: string; word?: string; translation?: string }>
+  linkedWords: Array<{ wordId: string; word: string; translation?: string }>
   relationships: RuleRelationship[]
   linkedMistakes: MistakeEvent[]
   exercises: RuleExercise[]
@@ -148,12 +152,20 @@ export function RuleDetail({ rule, rulesById, progress, initialTab = 'rule', onB
               </div>
             ) : null}
             {details.linkedWords.length ? (
-              <p className="rules-pane__line">
-                <strong>Words</strong>{' '}
-                {details.linkedWords
-                  .map((word) => (word.translation ? `${word.word ?? word.wordId} (${word.translation})` : (word.word ?? word.wordId)))
-                  .join(' · ')}
-              </p>
+              <div className="rules-words">
+                <strong>Words with this rule</strong>
+                <ul>
+                  {details.linkedWords.slice(0, MAX_WORDS).map((word) => (
+                    <li key={word.wordId} title={word.translation}>
+                      {word.word}
+                      {word.translation ? <small>{shortTranslation(word.translation)}</small> : null}
+                    </li>
+                  ))}
+                  {details.linkedWords.length > MAX_WORDS ? (
+                    <li className="rules-words__more">+{details.linkedWords.length - MAX_WORDS} more</li>
+                  ) : null}
+                </ul>
+              </div>
             ) : null}
             {details.relationships.length ? (
               <p className="rules-pane__line">

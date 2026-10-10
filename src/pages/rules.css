@@ -674,6 +674,42 @@
 .rules-pane__line strong {
   color: var(--ink);
 }
+.rules-words strong {
+  color: var(--ink);
+  display: block;
+  font-size: calc(13px * var(--fs));
+  margin-bottom: 8px;
+}
+.rules-words ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.rules-words li {
+  align-items: baseline;
+  background: var(--surface-muted);
+  border-radius: 999px;
+  color: var(--ink);
+  display: inline-flex;
+  font-size: calc(13px * var(--fs));
+  font-weight: 650;
+  gap: 6px;
+  line-height: 1.4;
+  padding: 4px 11px;
+}
+.rules-words li small {
+  color: var(--ink-muted);
+  font-size: calc(12px * var(--fs));
+  font-weight: 400;
+}
+.rules-words__more {
+  background: none !important;
+  color: var(--ink-muted) !important;
+  font-weight: 400 !important;
+}
 .rules-fixes,
 .rules-lines {
   display: grid;
