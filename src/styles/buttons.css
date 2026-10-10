@@ -11,7 +11,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.14);
   color: var(--on-accent);
   display: inline-flex;
-  font-size: calc(13.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
   font-weight: 700;
   gap: 8px;
   justify-content: center;
@@ -133,7 +133,7 @@
   border-radius: 50%;
   color: var(--ink-muted);
   display: inline-flex;
-  font-size: calc(11px * var(--fs));
+  font-size: calc(12px * var(--fs));
   font-weight: 700;
   height: 20px;
   justify-content: center;
@@ -155,7 +155,7 @@
   border-radius: 12px;
   box-shadow: var(--shadow-md);
   color: var(--ink-soft);
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.45;

@@ -11,7 +11,7 @@
 }
 .settings-header p:last-child {
   color: var(--ink-muted);
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
   line-height: 1.55;
   margin: 10px 0 0;
   max-width: 620px;
@@ -23,7 +23,7 @@
   border-radius: 12px;
   color: var(--amber-text);
   display: flex;
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   gap: 10px;
   line-height: 1.5;
   margin: 25px 0;
@@ -72,21 +72,21 @@
 }
 .settings-card__eyebrow {
   color: var(--ink-muted);
-  font-size: calc(11.5px * var(--fs));
-  font-weight: 750;
+  font-size: calc(12px * var(--fs));
+  font-weight: 700;
   letter-spacing: 0.045em;
   margin: 17px 0 6px;
   text-transform: uppercase;
 }
 .settings-card h2 {
   color: var(--ink);
-  font-size: calc(19px * var(--fs));
+  font-size: calc(18px * var(--fs));
   letter-spacing: -0.5px;
   margin: 0;
 }
 .settings-card > p:not(.settings-card__eyebrow) {
   color: var(--ink-muted);
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   line-height: 1.55;
   margin: 8px 0 17px;
 }
@@ -98,7 +98,7 @@
 .settings-card label {
   color: var(--ink-muted);
   display: grid;
-  font-size: calc(11.5px * var(--fs));
+  font-size: calc(12px * var(--fs));
   font-weight: 700;
   gap: 5px;
 }
@@ -124,7 +124,7 @@
   background: transparent;
   border: 0;
   color: var(--teal-text);
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   font-weight: 700;
   margin-top: 15px;
   padding: 0;
@@ -135,7 +135,7 @@
 .settings-card small {
   color: var(--ink-muted);
   display: block;
-  font-size: calc(11.5px * var(--fs));
+  font-size: calc(12px * var(--fs));
   line-height: 1.45;
   margin-top: 12px;
 }
@@ -143,7 +143,7 @@
   background: var(--teal-soft);
   border-radius: 10px;
   color: var(--teal-text-strong);
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   margin: 18px 0 0;
   padding: 12px 14px;
 }
@@ -210,7 +210,7 @@
 }
 .font-scale-preview span {
   color: var(--teal-text-strong);
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
 }
 .settings-card .font-scale-preview small {
   color: var(--ink-muted);
@@ -225,7 +225,7 @@
 .settings-field-label {
   color: var(--ink-muted);
   display: block;
-  font-size: calc(11.5px * var(--fs));
+  font-size: calc(12px * var(--fs));
   font-weight: 700;
   margin: 14px 0 7px;
 }

@@ -95,6 +95,7 @@ export function TaskCard({
   // Rule challenge opened from the mistake breakdown; cleared when the next task appears.
   const [challengeRules, setChallengeRules] = useState<Rule[] | null>(null)
   const [reporting, setReporting] = useState(false)
+  const [moreOpen, setMoreOpen] = useState(false)
   // A new word goes straight to the test. "I don't know this word" (next to Hint) opens the teaching
   // screen instead: see it, hear it, type it once, and it comes back tomorrow.
   const canMeet = Boolean(
@@ -107,6 +108,7 @@ export function TaskCard({
   useEffect(() => {
     setChallengeRules(null)
     setReporting(false)
+    setMoreOpen(false)
     setCopy('')
     setCopyWrong(false)
   }, [task.id]) // eslint-disable-line react-hooks/exhaustive-deps
@@ -319,45 +321,62 @@ export function TaskCard({
         ) : null}
         {result !== 'idle' ? (
           <div className={`task-feedback task-feedback--${correct ? 'correct' : 'incorrect'}`} role="status">
-            <Icon name={correct ? 'check' : 'refresh'} size={17} />
-            <span>
-              <strong>{correct ? (hintStep > 0 ? 'Correct — with a hint.' : 'Correct!') : 'Not quite.'}</strong>
-              {correct && hintStep > 0 ? <small>It comes back tomorrow, so you can write it without help.</small> : null}
-              {!correct && <small>Your answer: {checkedAnswer || 'Skipped'}</small>}
-              {!correct && mode === 'translate-ru' && checkedAnswer.trim() && onClaimCorrect ? (
-                <button className="claim-correct" type="button" onClick={onClaimCorrect}>
-                  My translation is right too
-                </button>
-              ) : null}
-              {correct &&
-              mode === 'translate-ru' &&
-              checkedAnswer.trim() &&
-              !acceptedAnswers(task).some((option) => comparable(option) === comparable(checkedAnswer)) ? (
-                <small>Counted as right. Thanks — we will check this translation and add it to the list.</small>
-              ) : null}
-              <small>
-                Correct answer: {target} — {meaning}
-              </small>
-              {others.length ? <small>Also correct: {others.join(', ')}</small> : null}
-              {task.example && <small>Example: {task.example}</small>}
-              {task.extraExample ? (
-                <small className="task-feedback__more">
-                  Another example: {task.extraExample}{' '}
-                  <a
-                    href={
-                      task.extraExampleSource?.startsWith('tatoeba:')
-                        ? `https://tatoeba.org/en/sentences/show/${task.extraExampleSource.slice(8)}`
-                        : 'https://tatoeba.org'
-                    }
-                    target="_blank"
-                    rel="noreferrer"
-                    title="Sentence from Tatoeba, CC BY 2.0 FR"
-                  >
-                    Tatoeba
-                  </a>
-                </small>
-              ) : null}
-            </span>
+            <p className="task-feedback__title">
+              <Icon name={correct ? 'check' : 'refresh'} size={17} />
+              {correct ? (hintStep > 0 ? 'Correct — with a hint' : 'Correct') : 'Not quite'}
+            </p>
+            {correct && hintStep > 0 ? (
+              <p className="task-feedback__note">It comes back tomorrow, so you can write it without help.</p>
+            ) : null}
+            {!correct ? (
+              <dl className="task-feedback__compare">
+                <div>
+                  <dt>You wrote</dt>
+                  <dd className="task-feedback__wrote">{checkedAnswer || 'Skipped'}</dd>
+                </div>
+                <div>
+                  <dt>Correct</dt>
+                  <dd className="task-feedback__right">
+                    {target} <span>— {meaning}</span>
+                  </dd>
+                </div>
+              </dl>
+            ) : (
+              <p className="task-feedback__right">
+                {target} <span>— {meaning}</span>
+              </p>
+            )}
+            {!correct && mode === 'translate-ru' && checkedAnswer.trim() && onClaimCorrect ? (
+              <button className="claim-correct" type="button" onClick={onClaimCorrect}>
+                My translation is right too
+              </button>
+            ) : null}
+            {correct &&
+            mode === 'translate-ru' &&
+            checkedAnswer.trim() &&
+            !acceptedAnswers(task).some((option) => comparable(option) === comparable(checkedAnswer)) ? (
+              <p className="task-feedback__note">Counted as right. Thanks — we will check this translation and add it to the list.</p>
+            ) : null}
+            {others.length ? <p className="task-feedback__note">Also correct: {others.join(', ')}</p> : null}
+            {task.example ? (
+              <p className="task-feedback__example">{task.example}</p>
+            ) : task.extraExample ? (
+              <p className="task-feedback__example">
+                {task.extraExample}{' '}
+                <a
+                  href={
+                    task.extraExampleSource?.startsWith('tatoeba:')
+                      ? `https://tatoeba.org/en/sentences/show/${task.extraExampleSource.slice(8)}`
+                      : 'https://tatoeba.org'
+                  }
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Sentence from Tatoeba, CC BY 2.0 FR"
+                >
+                  Tatoeba
+                </a>
+              </p>
+            ) : null}
           </div>
         ) : null}
         {result !== 'idle' && task.wordId ? <WordTip wordId={task.wordId} wrong={!correct} key={task.wordId} /> : null}
@@ -383,34 +402,51 @@ export function TaskCard({
           </div>
         ) : null}
         <div className="task-actions">
-          <button className="check-button" type="submit" disabled={!answer.trim() || correct}>
-            <Icon name="check" size={18} /> Check
-          </button>
+          {result !== 'correct' ? (
+            <button className={result === 'idle' ? 'check-button' : 'outline-action'} type="submit" disabled={!answer.trim()}>
+              <Icon name="check" size={18} /> {result === 'idle' ? 'Check' : 'Try again'}
+            </button>
+          ) : null}
           {result !== 'idle' ? (
             <button className="next-button" type="button" onClick={onNext}>
               Next <Icon name="arrow" size={17} />
             </button>
           ) : null}
           <div className="task-actions__secondary">
-            <button className="quiet-button" type="button" onClick={onHint} disabled={hintStep >= 5}>
-              <Icon name="lightbulb" size={17} /> Hint
-            </button>
-            <button className="quiet-button" type="button" onClick={onPlayAudio}>
-              <Icon name="volume" size={17} /> Listen
-            </button>
-            {canMeet && result === 'idle' ? (
-              <button className="quiet-button" type="button" onClick={() => setMeetFor(task.id)}>
-                <Icon name="lightbulb" size={17} /> I don’t know this word
+            {result === 'idle' ? (
+              <>
+                <button className="quiet-button" type="button" onClick={onHint} disabled={hintStep >= 5}>
+                  <Icon name="lightbulb" size={17} /> Hint
+                </button>
+                <button className="quiet-button" type="button" onClick={onPlayAudio}>
+                  <Icon name="volume" size={17} /> Listen
+                </button>
+                {canMeet ? (
+                  <button className="quiet-button" type="button" onClick={() => setMeetFor(task.id)}>
+                    <Icon name="lightbulb" size={17} /> I don’t know this word
+                  </button>
+                ) : null}
+                <button className="quiet-button" type="button" onClick={onShowAnswer} disabled={revealed}>
+                  <Icon name="eye" size={17} /> Show answer
+                </button>
+                {allowSkip ? (
+                  <button className="quiet-button" type="button" onClick={onSkip}>
+                    <Icon name="skip" size={17} /> Skip
+                  </button>
+                ) : null}
+              </>
+            ) : (
+              <button className="quiet-button" type="button" onClick={onPlayAudio}>
+                <Icon name="volume" size={17} /> Listen
               </button>
-            ) : null}
-            <button className="quiet-button" type="button" onClick={onShowAnswer} disabled={revealed}>
-              <Icon name="eye" size={17} /> Show answer
+            )}
+            <button className="quiet-button" type="button" aria-expanded={moreOpen} onClick={() => setMoreOpen(!moreOpen)}>
+              More <Icon name="chevron" size={14} />
             </button>
-            {allowSkip ? (
-              <button className="quiet-button" type="button" onClick={onSkip}>
-                <Icon name="skip" size={17} /> Skip
-              </button>
-            ) : null}
+          </div>
+        </div>
+        {moreOpen ? (
+          <div className="task-more">
             {onHideWord ? (
               <button
                 className="quiet-button"
@@ -432,8 +468,13 @@ export function TaskCard({
                 <Icon name="flag" size={17} /> Report
               </button>
             ) : null}
+            {result !== 'idle' || revealed ? (
+              <button className="quiet-button" type="button" onClick={onRepeatLater}>
+                <Icon name="refresh" size={17} /> Repeat this word later
+              </button>
+            ) : null}
           </div>
-        </div>
+        ) : null}
         {reporting && reportable && onReported ? (
           <WordReportPanel
             word={reportable}
@@ -446,11 +487,6 @@ export function TaskCard({
           />
         ) : null}
         {audioMessage ? <p className="related-rule">{audioMessage}</p> : null}
-        {result !== 'idle' || revealed ? (
-          <button className="quiet-button" type="button" onClick={onRepeatLater}>
-            Repeat this word later
-          </button>
-        ) : null}
       </form>
       {challengeRules ? (
         <RuleChallenge rules={challengeRules} avoidWord={task.answer} onClose={() => setChallengeRules(null)} key={task.id} />

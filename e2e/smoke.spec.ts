@@ -44,7 +44,7 @@ test('a wrong answer in practice becomes a mistake', async ({ page }) => {
   await expect(answer).toHaveAttribute('spellcheck', 'false')
   await answer.fill('zzzz')
   await page.getByRole('button', { name: 'Check' }).click()
-  await expect(page.getByText('Not quite.')).toBeVisible()
+  await expect(page.getByText('Not quite')).toBeVisible()
   await page.goto('/#my-mistakes')
   await expect(page.locator('.mistake-row')).toHaveCount(1)
   await expect(page.locator('.mistake-row').getByRole('button', { name: 'Report' })).toBeVisible()
@@ -57,9 +57,9 @@ test('Enter after an answer starts the next word', async ({ page }) => {
   const answer = page.locator('#practice-answer')
   await answer.fill('zzzz')
   await answer.press('Enter') // checks the answer
-  await expect(page.getByText('Not quite.')).toBeVisible()
+  await expect(page.getByText('Not quite')).toBeVisible()
   await answer.press('Enter') // starts the next word
-  await expect(page.getByText('Not quite.')).toHaveCount(0)
+  await expect(page.getByText('Not quite')).toHaveCount(0)
   await expect(answer).toHaveValue('')
   // The wrong answer was recorded once, not once per Enter.
   await page.goto('/#my-mistakes')

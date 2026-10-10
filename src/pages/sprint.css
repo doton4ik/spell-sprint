@@ -12,7 +12,7 @@
 }
 .sprint-header p:last-child {
   color: var(--ink-muted);
-  font-size: calc(14.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
   line-height: 1.55;
   margin: 10px 0 0;
 }
@@ -78,7 +78,7 @@
 .sprint-stats strong {
   color: var(--teal-text-strong);
   display: block;
-  font-size: calc(26px * var(--fs));
+  font-size: calc(24px * var(--fs));
   line-height: 1.1;
 }
 .sprint-stats small {
@@ -137,7 +137,7 @@
 }
 .sprint-history li small {
   color: var(--ink-muted);
-  font-size: calc(11px * var(--fs));
+  font-size: calc(12px * var(--fs));
 }
 .sprint-flow {
   display: grid;
@@ -155,7 +155,7 @@
   color: var(--ink-soft);
   display: flex;
   font-size: calc(14px * var(--fs));
-  font-weight: 650;
+  font-weight: 600;
   gap: 10px;
   padding: 14px;
 }
@@ -203,9 +203,9 @@
 }
 .sprint-clock {
   color: var(--teal-text-strong);
-  font-size: calc(30px * var(--fs));
+  font-size: calc(28px * var(--fs));
   font-variant-numeric: tabular-nums;
-  font-weight: 800;
+  font-weight: 700;
   min-width: 72px;
 }
 .sprint-clock--low {
@@ -217,7 +217,7 @@
   border-radius: 999px;
   color: var(--teal-text-strong);
   display: inline-flex;
-  font-weight: 750;
+  font-weight: 700;
   gap: 5px;
   margin-right: auto;
   padding: 5px 11px;
@@ -315,9 +315,9 @@
   padding: 5px 8px;
 }
 .sprint-actions {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   margin-top: 20px;
 }
 .sprint-actions button {

@@ -12,7 +12,7 @@
 }
 .pairs-header p:last-child {
   color: var(--ink-muted);
-  font-size: calc(14.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
   line-height: 1.55;
   margin: 10px 0 0;
   max-width: 680px;
@@ -33,7 +33,7 @@
 }
 .pairs-stats strong {
   color: var(--teal-text-strong);
-  font-size: calc(26px * var(--fs));
+  font-size: calc(24px * var(--fs));
 }
 .pairs-stats small {
   color: var(--ink-muted);
@@ -46,7 +46,7 @@
 }
 .pairs-note {
   color: var(--ink-muted);
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   margin: 10px 0 0;
 }
 .pairs-group {
@@ -81,7 +81,7 @@
 }
 .pair-chip small {
   color: var(--ink-muted);
-  font-size: calc(11.5px * var(--fs));
+  font-size: calc(12px * var(--fs));
 }
 .pair-chip--learning {
   border-left: 3px solid var(--amber);
@@ -98,14 +98,14 @@
 }
 .pair-sentence {
   color: var(--ink);
-  font-size: calc(21px * var(--fs));
+  font-size: calc(20px * var(--fs));
   line-height: 1.55;
   margin: 0 0 18px;
 }
 .pair-gap {
   border-bottom: 2px solid var(--teal-muted);
   display: inline-block;
-  font-weight: 750;
+  font-weight: 700;
   min-width: 70px;
   padding: 0 4px;
   text-align: center;
@@ -128,7 +128,7 @@
   border-radius: 10px;
   color: var(--ink);
   display: inline-flex;
-  font-size: calc(17px * var(--fs));
+  font-size: calc(18px * var(--fs));
   font-weight: 700;
   gap: 8px;
   min-height: 50px;
@@ -136,7 +136,7 @@
 }
 .pair-choice small {
   color: var(--ink-faint);
-  font-size: calc(11px * var(--fs));
+  font-size: calc(12px * var(--fs));
 }
 .pair-choice:not(:disabled):hover {
   background: var(--teal-soft);
@@ -168,12 +168,12 @@
 }
 .pair-feedback p {
   color: var(--ink-soft);
-  font-size: calc(13.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
   margin: 6px 0;
 }
 .pair-feedback ul {
   color: var(--ink-soft);
-  font-size: calc(13.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
   margin: 0 0 12px;
   padding-left: 18px;
 }
@@ -219,4 +219,12 @@
 .pairs-credit a {
   color: inherit;
   text-decoration: underline;
+}
+
+.pair-miss__word {
+  background: var(--teal-soft);
+  border-radius: 4px;
+  color: var(--teal-text-strong);
+  font-weight: 600;
+  padding: 0 4px;
 }

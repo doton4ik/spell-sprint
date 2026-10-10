@@ -1,12 +1,12 @@
 .diff-word {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: calc(21px * var(--fs));
+  font-size: calc(20px * var(--fs));
   letter-spacing: 0.04em;
   overflow-wrap: anywhere;
   white-space: pre-wrap;
 }
 .diff-word--small {
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
   letter-spacing: 0.02em;
 }
 .diff-char {

@@ -47,14 +47,6 @@
   --danger-soft: #fbe3de;
   --danger-line: #e7b9aa;
 
-  /* Blue and violet: categories and charts */
-  --blue-text: #4a718b;
-  --blue-soft: #edf4f9;
-  --blue-line: #cfdeea;
-  --violet: #7b679f;
-  --violet-soft: #f0ebf7;
-  --violet-line: #ddd3ec;
-
   /* Logo: deep teal square, coral mistake line, mint tick (see components/layout/BrandMark.tsx). */
   --brand: #0e6a5c;
   --coral-light: #f0997b;
@@ -99,12 +91,6 @@
     --danger-text: #f0a291;
     --danger-soft: #3b221d;
     --danger-line: #6a3a30;
-    --blue-text: #93bde0;
-    --blue-soft: #1a2833;
-    --blue-line: #2c4354;
-    --violet: #b3a1d6;
-    --violet-soft: #29233a;
-    --violet-line: #463c5e;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25), 0 4px 14px rgba(0, 0, 0, 0.2);
     --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.35);
   }
@@ -139,12 +125,6 @@
   --danger-text: #f0a291;
   --danger-soft: #3b221d;
   --danger-line: #6a3a30;
-  --blue-text: #93bde0;
-  --blue-soft: #1a2833;
-  --blue-line: #2c4354;
-  --violet: #b3a1d6;
-  --violet-soft: #29233a;
-  --violet-line: #463c5e;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25), 0 4px 14px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.35);
 }

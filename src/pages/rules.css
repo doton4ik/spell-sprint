@@ -15,15 +15,15 @@
   align-items: center;
   color: var(--teal-text);
   display: inline-flex;
-  font-size: calc(11.5px * var(--fs));
-  font-weight: 750;
+  font-size: calc(12px * var(--fs));
+  font-weight: 700;
   gap: 5px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 .rule-practice-panel h2 {
   color: var(--ink);
-  font-size: calc(17px * var(--fs));
+  font-size: calc(18px * var(--fs));
   letter-spacing: -0.3px;
   margin: 4px 0 0;
 }
@@ -56,7 +56,7 @@
   color: var(--ink-muted);
   display: flex;
   flex-wrap: wrap;
-  font-size: calc(11.5px * var(--fs));
+  font-size: calc(12px * var(--fs));
   font-weight: 700;
   gap: 10px;
   letter-spacing: 0.04em;
@@ -76,7 +76,7 @@
 .rule-runner__prompt {
   color: var(--teal-text-strong);
   font-size: calc(18px * var(--fs));
-  font-weight: 640;
+  font-weight: 600;
   letter-spacing: -0.3px;
   line-height: 1.35;
   margin: 0;
@@ -110,7 +110,7 @@
   border: 1px solid var(--teal-muted);
   border-radius: 10px;
   color: var(--ink);
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
   padding: 10px 16px;
 }
 .rule-runner__choice:hover {
@@ -122,7 +122,7 @@
   border-radius: 10px;
   display: flex;
   font-size: calc(14px * var(--fs));
-  font-weight: 650;
+  font-weight: 600;
   gap: 12px;
   justify-content: space-between;
   padding: 10px 13px;
@@ -140,21 +140,21 @@
 }
 
 .rule-type-pill {
-  background: var(--blue-soft);
+  background: var(--surface-muted);
   border-radius: 6px;
-  color: var(--blue-text);
-  font-size: calc(11.5px * var(--fs));
+  color: var(--ink-soft);
+  font-size: calc(12px * var(--fs));
   font-weight: 700;
   padding: 5px 7px;
 }
 .rule-type-pill--personal {
-  background: var(--violet-soft);
-  color: var(--violet);
+  background: var(--surface-muted);
+  color: var(--ink-soft);
 }
 .rule-priority {
   border-radius: 6px;
-  font-size: calc(11px * var(--fs));
-  font-weight: 720;
+  font-size: calc(12px * var(--fs));
+  font-weight: 700;
   padding: 4px 7px;
   text-transform: capitalize;
 }
@@ -187,7 +187,7 @@
 }
 .rule-mastery-bar small {
   color: var(--ink-muted);
-  font-size: calc(11.5px * var(--fs));
+  font-size: calc(12px * var(--fs));
   margin-left: 6px;
 }
 .rule-linked-mistakes {
@@ -197,7 +197,7 @@
 }
 .rule-linked-mistakes span {
   color: var(--ink-muted);
-  font-size: calc(11px * var(--fs));
+  font-size: calc(12px * var(--fs));
   font-weight: 700;
   letter-spacing: 0.045em;
   text-transform: uppercase;
@@ -228,7 +228,7 @@
 }
 .rule-note > span {
   color: var(--ink-muted);
-  font-size: calc(11px * var(--fs));
+  font-size: calc(12px * var(--fs));
   font-weight: 700;
   letter-spacing: 0.045em;
   text-transform: uppercase;
@@ -288,7 +288,7 @@
 .rule-create-form label {
   color: var(--ink-muted);
   display: grid;
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   font-weight: 700;
   gap: 5px;
 }
@@ -380,7 +380,7 @@
 }
 .rule-unclassified__error {
   color: var(--danger-text);
-  font-size: calc(11.5px * var(--fs));
+  font-size: calc(12px * var(--fs));
 }
 .rule-unclassified__actions {
   align-items: center;
@@ -394,7 +394,7 @@
   border: 1px solid var(--line);
   border-radius: 6px;
   color: var(--ink-soft);
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   max-width: 170px;
   padding: 6px 7px;
 }
@@ -452,7 +452,7 @@
   cursor: pointer;
   display: flex;
   font-family: inherit;
-  font-size: calc(13.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
   font-weight: 600;
   gap: 6px;
   padding: 8px 12px;
@@ -465,13 +465,13 @@
 .rules-nav__item small {
   color: var(--ink-faint);
   font-size: calc(12px * var(--fs));
-  font-weight: 650;
+  font-weight: 600;
 }
 .rules-nav__item b {
   background: var(--danger-soft);
   border-radius: 999px;
   color: var(--danger-text);
-  font-size: calc(11px * var(--fs));
+  font-size: calc(12px * var(--fs));
   padding: 1px 7px;
 }
 .rules-nav__item:hover {
@@ -495,7 +495,7 @@
 }
 .rules-group__head h2 {
   color: var(--ink);
-  font-size: calc(17px * var(--fs));
+  font-size: calc(18px * var(--fs));
   margin: 0;
 }
 .rules-group__head h2 small {
@@ -568,7 +568,7 @@
 .rules-row__title {
   flex: 1;
   font-size: calc(14px * var(--fs));
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.3;
 }
 .rules-row__dot {
@@ -608,7 +608,7 @@
 }
 .rules-detail__head h2 {
   color: var(--ink);
-  font-size: calc(22px * var(--fs));
+  font-size: calc(20px * var(--fs));
   letter-spacing: -0.4px;
   line-height: 1.25;
   margin: 0;
@@ -630,7 +630,7 @@
   cursor: pointer;
   font: inherit;
   font-size: calc(14px * var(--fs));
-  font-weight: 650;
+  font-weight: 600;
   margin-bottom: -1px;
   min-height: 42px;
   padding: 0 12px;
@@ -646,7 +646,7 @@
 }
 .rules-pane {
   display: grid;
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
   gap: 16px;
   line-height: 1.65;
   min-height: 260px;

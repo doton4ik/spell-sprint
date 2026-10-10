@@ -20,7 +20,7 @@
 }
 .practice-header > div > p:last-child {
   color: var(--ink-muted);
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
   line-height: 1.55;
   margin: 10px 0 0;
 }
@@ -113,7 +113,7 @@
 .practice-select {
   color: var(--ink-muted);
   display: grid;
-  font-size: calc(11px * var(--fs));
+  font-size: calc(12px * var(--fs));
   font-weight: 700;
   gap: 5px;
 }
@@ -151,7 +151,7 @@
   color: var(--teal-text-strong);
   display: flex;
   font-size: calc(14px * var(--fs));
-  font-weight: 730;
+  font-weight: 700;
   gap: 9px;
 }
 .session-mode small {
@@ -171,14 +171,14 @@
 .session-progress span,
 .session-section-label {
   color: var(--ink-muted);
-  font-size: calc(11px * var(--fs));
+  font-size: calc(12px * var(--fs));
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 .session-progress strong {
   color: var(--teal-text);
-  font-size: calc(19px * var(--fs));
+  font-size: calc(18px * var(--fs));
 }
 .session-progress strong small {
   color: var(--ink-muted);
@@ -213,14 +213,14 @@
 }
 .session-stat strong {
   color: var(--teal-text);
-  font-size: calc(21px * var(--fs));
+  font-size: calc(20px * var(--fs));
   letter-spacing: -0.5px;
   line-height: 1.1;
 }
 .session-stat span {
   color: var(--ink-muted);
-  font-size: calc(11px * var(--fs));
-  font-weight: 650;
+  font-size: calc(12px * var(--fs));
+  font-weight: 600;
 }
 .session-stat--good strong {
   color: var(--teal-text);
@@ -341,7 +341,7 @@
   border-radius: 8px;
   color: var(--teal-text-strong);
   display: inline-flex;
-  font-size: calc(11px * var(--fs));
+  font-size: calc(12px * var(--fs));
   font-weight: 700;
   gap: 6px;
   padding: 6px 9px;
@@ -349,7 +349,7 @@
 .task-card h2 {
   color: var(--ink);
   font-size: calc(16px * var(--fs));
-  font-weight: 650;
+  font-weight: 600;
   margin: 32px 0 12px;
 }
 .task-prompt {
@@ -365,7 +365,7 @@
 .task-prompt p {
   color: var(--ink);
   font-size: calc(clamp(26px, 3.2vw, 36px) * var(--fs));
-  font-weight: 660;
+  font-weight: 600;
   letter-spacing: -0.8px;
   line-height: 1.2;
   margin: 0;
@@ -375,8 +375,8 @@
 }
 .prompt-label {
   color: var(--ink-muted);
-  font-size: calc(10px * var(--fs));
-  font-weight: 730;
+  font-size: calc(12px * var(--fs));
+  font-weight: 700;
   letter-spacing: 0.07em;
   position: absolute;
   right: 18px;
@@ -403,13 +403,13 @@
 }
 .hint-box strong {
   color: var(--amber-text);
-  font-size: calc(11px * var(--fs));
+  font-size: calc(12px * var(--fs));
 }
 .answer-label {
   color: var(--ink-soft);
   display: block;
   font-size: calc(12px * var(--fs));
-  font-weight: 680;
+  font-weight: 600;
   margin: 24px 0 8px;
 }
 .task-card input,
@@ -419,7 +419,7 @@
   border-radius: 12px;
   color: var(--ink);
   display: block;
-  font-size: calc(17px * var(--fs));
+  font-size: calc(18px * var(--fs));
   outline: none;
   padding: 13px 15px;
   resize: vertical;
@@ -456,7 +456,7 @@
   border-radius: 12px;
   color: var(--ink);
   cursor: pointer;
-  font-size: calc(17px * var(--fs));
+  font-size: calc(18px * var(--fs));
   padding: 15px;
   text-align: center;
   transition:
@@ -532,13 +532,13 @@
 }
 .revealed-answer span {
   color: var(--ink-muted);
-  font-size: calc(11px * var(--fs));
+  font-size: calc(12px * var(--fs));
   text-transform: uppercase;
 }
 .revealed-answer strong {
   color: var(--teal-text-strong);
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
 }
 .revealed-answer small {
   color: var(--ink-muted);
@@ -568,7 +568,7 @@
 }
 .diff-label {
   color: var(--ink-muted);
-  font-size: calc(10px * var(--fs));
+  font-size: calc(12px * var(--fs));
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -773,7 +773,7 @@
     gap: 4px;
   }
   .mistake-breakdown .diff-word {
-    font-size: calc(19px * var(--fs));
+    font-size: calc(18px * var(--fs));
   }
   .task-actions {
     align-items: stretch;
@@ -861,7 +861,7 @@
   color: var(--amber-text);
   display: inline-flex;
   font-size: calc(13px * var(--fs));
-  font-weight: 750;
+  font-weight: 700;
   gap: 6px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -903,7 +903,7 @@
 }
 .rule-challenge__result strong {
   color: var(--ink);
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
 }
 .rule-challenge__result p {
   color: var(--ink-soft);
@@ -925,8 +925,8 @@
   padding: 4px 8px;
 }
 .task-reason--new {
-  background: var(--blue-soft);
-  color: var(--blue-text);
+  background: var(--surface-muted);
+  color: var(--ink-soft);
 }
 .task-reason--missed {
   background: var(--danger-soft);
@@ -970,9 +970,9 @@
 /* Answer is a real word for another meaning of the Russian prompt (среда → environment). */
 .other-meaning {
   align-items: flex-start;
-  background: var(--blue-soft);
+  background: var(--surface-muted);
   border-radius: 12px;
-  color: var(--blue-text);
+  color: var(--ink-soft);
   display: flex;
   gap: 10px;
   margin-top: 12px;
@@ -984,12 +984,12 @@
 }
 .other-meaning strong {
   display: block;
-  font-size: calc(14.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
 }
 .other-meaning small {
-  color: var(--blue-text);
+  color: var(--ink-soft);
   display: block;
-  font-size: calc(13.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
   margin-top: 3px;
 }
 /* The learner's own memory tip */
@@ -1052,7 +1052,7 @@
   border: 0;
   color: var(--amber-text);
   display: inline-flex;
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   font-weight: 700;
   gap: 5px;
   margin-top: 8px;
@@ -1119,12 +1119,12 @@
 }
 .meet-word__meaning {
   color: var(--ink-soft);
-  font-size: calc(17px * var(--fs));
+  font-size: calc(18px * var(--fs));
 }
 .meet-word__also,
 .meet-word__note {
   color: var(--ink-muted);
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
 }
 .meet-word__example {
   color: var(--ink-soft);
@@ -1166,7 +1166,7 @@
   border: 1px solid var(--line-strong);
   border-radius: 8px;
   color: var(--teal-text);
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   font-weight: 700;
   margin: 4px 0;
   padding: 5px 10px;
@@ -1198,4 +1198,186 @@
   .task-actions:has(.next-button) .task-actions__secondary {
     display: none;
   }
+}
+
+/* Focus layout: the task in one centred column, the session as one slim row above it. */
+.practice-page {
+  max-width: 780px;
+}
+.practice-header {
+  margin-bottom: 18px;
+}
+.practice-header h1 {
+  font-size: calc(clamp(22px, 2.4vw, 26px) * var(--fs));
+  letter-spacing: -0.6px;
+}
+.practice-workspace {
+  gap: 14px;
+  grid-template-columns: minmax(0, 1fr);
+}
+.session-sidebar {
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  gap: 10px 28px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  padding: 12px 18px;
+}
+.session-sidebar .session-mode,
+.session-sidebar .session-map {
+  display: none;
+}
+.session-progress {
+  gap: 8px;
+}
+.session-progress__track {
+  height: 6px;
+}
+.session-stats {
+  display: flex;
+  gap: 18px;
+}
+.session-stat {
+  align-items: baseline;
+  background: none;
+  border: 0;
+  display: flex;
+  gap: 6px;
+  padding: 0;
+  text-align: left;
+}
+.session-stat strong {
+  font-size: calc(16px * var(--fs));
+}
+.session-stat span {
+  font-size: calc(13px * var(--fs));
+}
+.session-missed {
+  border-top: 0;
+  grid-column: 1 / -1;
+  padding-top: 0;
+}
+@media (max-width: 570px) {
+  .session-sidebar {
+    grid-template-columns: 1fr;
+  }
+  .session-stats {
+    justify-content: space-between;
+  }
+}
+
+/* After an answer: a plain card with a coloured edge, the comparison first. */
+.task-feedback {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left-width: 3px;
+  display: grid;
+  gap: 8px;
+  padding: 14px 16px;
+}
+.task-feedback--correct {
+  border-left-color: var(--teal);
+  color: var(--ink);
+}
+.task-feedback--incorrect {
+  border-left-color: var(--danger);
+  color: var(--ink);
+}
+.task-feedback span {
+  display: inline;
+}
+.task-feedback p,
+.task-feedback dl,
+.task-feedback dd {
+  margin: 0;
+}
+.task-feedback__title {
+  align-items: center;
+  display: flex;
+  font-size: calc(16px * var(--fs));
+  font-weight: 600;
+  gap: 8px;
+}
+.task-feedback--correct .task-feedback__title {
+  color: var(--teal-text-strong);
+}
+.task-feedback--incorrect .task-feedback__title {
+  color: var(--danger-text);
+}
+.task-feedback__compare {
+  display: grid;
+  gap: 6px;
+}
+.task-feedback__compare > div {
+  align-items: baseline;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 84px minmax(0, 1fr);
+}
+.task-feedback__compare dt {
+  color: var(--ink-muted);
+  font-size: calc(13px * var(--fs));
+}
+.task-feedback__wrote {
+  color: var(--danger-text);
+  font-size: calc(18px * var(--fs));
+  text-decoration: line-through;
+  text-decoration-color: var(--danger-line);
+}
+.task-feedback__right {
+  color: var(--teal-text-strong);
+  font-size: calc(20px * var(--fs));
+  font-weight: 600;
+}
+.task-feedback__right span {
+  color: var(--ink-muted);
+  font-size: calc(14px * var(--fs));
+  font-weight: 400;
+}
+.task-feedback__note,
+.task-feedback__example {
+  color: var(--ink-muted);
+  font-size: calc(13px * var(--fs));
+}
+.task-feedback__example {
+  font-size: calc(14px * var(--fs));
+}
+.task-feedback__example a {
+  color: inherit;
+  font-size: calc(12px * var(--fs));
+  opacity: 0.7;
+  text-decoration: underline;
+}
+.task-more {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+.task-actions__secondary {
+  flex-basis: 100%;
+  gap: 2px;
+  margin: 0;
+}
+.task-actions__secondary svg[class*='chevron'],
+.task-actions__secondary [aria-expanded='true'] svg {
+  transform: rotate(90deg);
+}
+/* The memory tip is quiet: no yellow. */
+.word-tip-add,
+.word-tip-add--wrong {
+  background: none;
+  border: 0;
+  color: var(--ink-muted);
+  padding: 4px 0;
+}
+.word-tip {
+  background: none;
+  border: 0;
+  color: var(--ink-soft);
+  padding: 0;
+}
+.word-tip button {
+  color: var(--teal-text);
 }

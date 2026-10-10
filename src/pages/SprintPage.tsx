@@ -310,7 +310,7 @@ function SprintResult({ round, previousBest, onAgain }: { round: SprintRound; pr
     <div className="sprint-page" id="sprint">
       <header className="sprint-header">
         <p className="eyebrow">Sprint result</p>
-        <h1>{record ? 'New record!' : `${round.correct} word${round.correct === 1 ? '' : 's'} in 60 seconds`}</h1>
+        <h1>{record ? 'New record!' : `${round.correct} word${round.correct === 1 ? '' : 's'}`}</h1>
         <p>
           {record
             ? previousBest

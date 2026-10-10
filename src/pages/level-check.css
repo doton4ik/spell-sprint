@@ -41,7 +41,7 @@
 }
 .level-hero > div > p:not(.eyebrow):not(.level-hero__next) {
   color: var(--ink-muted);
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
   line-height: 1.6;
   margin: 12px 0 0;
   max-width: 560px;
@@ -70,7 +70,7 @@
 }
 .level-hero__next {
   color: var(--amber-text);
-  font-size: calc(13.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
   margin: 12px 0 0;
 }
 .level-hero__last {
@@ -89,11 +89,11 @@
 }
 .level-hero__last > span {
   color: rgba(255, 255, 255, 0.78);
-  font-size: calc(12.5px * var(--fs));
-  font-weight: 650;
+  font-size: calc(13px * var(--fs));
+  font-weight: 600;
 }
 .level-hero__last > strong {
-  font-size: calc(46px * var(--fs));
+  font-size: calc(44px * var(--fs));
   letter-spacing: -1px;
   line-height: 1.05;
 }
@@ -134,7 +134,7 @@
   width: 100%;
 }
 .level-chart__grid {
-  stroke: var(--on-accent);
+  stroke: var(--line);
   stroke-width: 1;
 }
 .level-chart__axis {
@@ -151,7 +151,7 @@
   color: var(--amber-text);
 }
 .level-chart__line--grammar {
-  color: var(--blue-text);
+  color: var(--ink-soft);
 }
 .level-chart__line polyline {
   stroke: currentColor;
@@ -171,7 +171,7 @@
   align-items: center;
   color: var(--ink-soft);
   display: inline-flex;
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   font-weight: 600;
   gap: 6px;
 }
@@ -188,7 +188,7 @@
   background: var(--amber);
 }
 .level-legend--grammar::before {
-  background: var(--blue-text);
+  background: var(--teal-muted);
 }
 
 .level-history__list {
@@ -229,7 +229,7 @@
   background: var(--teal-soft);
   border-radius: 8px;
   color: var(--teal-text-strong);
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
   padding: 3px 0;
   text-align: center;
 }
@@ -240,7 +240,7 @@
 }
 .level-history__skills small {
   color: var(--ink-soft);
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
 }
 .level-delta {
   border-radius: 10px;
@@ -271,7 +271,7 @@
   color: var(--ink-muted);
   display: flex;
   font-size: calc(14px * var(--fs));
-  font-weight: 650;
+  font-weight: 600;
   justify-content: space-between;
 }
 .level-run__top .quiet-action {
@@ -307,7 +307,7 @@
   background: var(--teal-soft);
   border-radius: 8px;
   color: var(--teal-text-strong);
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   font-weight: 700;
   padding: 4px 9px;
 }
@@ -318,14 +318,14 @@
 }
 .level-question__prompt {
   color: var(--ink);
-  font-size: calc(32px * var(--fs));
+  font-size: calc(28px * var(--fs));
   letter-spacing: -0.6px;
   line-height: 1.25;
   margin: 0 0 20px;
   overflow-wrap: anywhere;
 }
 .level-question__prompt--sentence {
-  font-size: calc(22px * var(--fs));
+  font-size: calc(20px * var(--fs));
   letter-spacing: -0.3px;
 }
 .level-question input {
@@ -371,11 +371,11 @@
 }
 .level-feedback strong {
   display: block;
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
 }
 .level-feedback__diff {
   color: var(--ink);
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
   margin-top: 6px;
 }
 
@@ -388,7 +388,7 @@
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
-  font-size: calc(13.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
   font-weight: 700;
   gap: 4px;
   margin-bottom: 14px;
@@ -405,7 +405,7 @@
 }
 .level-result-hero p:not(.eyebrow) {
   color: var(--ink-muted);
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
   line-height: 1.55;
   margin: 10px 0 0;
 }
@@ -431,12 +431,12 @@
 }
 .level-skill__head span:first-child {
   color: var(--ink-muted);
-  font-size: calc(13.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
   font-weight: 700;
 }
 .level-skill > strong {
   color: var(--ink);
-  font-size: calc(30px * var(--fs));
+  font-size: calc(28px * var(--fs));
   letter-spacing: -0.6px;
 }
 .level-skill__scale {
@@ -448,7 +448,7 @@
 }
 .level-skill__step {
   color: var(--ink-faint);
-  font-size: calc(11.5px * var(--fs));
+  font-size: calc(12px * var(--fs));
   font-weight: 700;
   padding: 5px 0;
   text-align: center;
@@ -460,7 +460,7 @@
 }
 .level-skill small {
   color: var(--ink-muted);
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
 }
 
 .level-plan,
@@ -491,18 +491,18 @@
   color: var(--teal-text-strong);
   display: inline-flex;
   font-size: calc(14px * var(--fs));
-  font-weight: 750;
+  font-weight: 700;
   height: 30px;
   justify-content: center;
   width: 30px;
 }
 .level-plan strong {
   color: var(--ink);
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
 }
 .level-plan p {
   color: var(--ink-muted);
-  font-size: calc(13.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
   line-height: 1.5;
   margin: 3px 0 0;
 }
@@ -538,7 +538,7 @@
 }
 .level-mistakes__prompt {
   color: var(--ink-soft);
-  font-size: calc(13.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
 }
 .level-mistakes__diff {
   font-size: calc(14px * var(--fs));
@@ -580,10 +580,10 @@
     padding: 20px 16px;
   }
   .level-question__prompt {
-    font-size: calc(26px * var(--fs));
+    font-size: calc(24px * var(--fs));
   }
   .level-question__prompt--sentence {
-    font-size: calc(19px * var(--fs));
+    font-size: calc(18px * var(--fs));
   }
   .level-feedback {
     align-items: stretch;
@@ -668,7 +668,7 @@
 .level-skillbars__name {
   color: var(--ink);
   font-size: calc(14px * var(--fs));
-  font-weight: 650;
+  font-weight: 600;
 }
 .level-skillbars__track {
   background: var(--surface-muted);

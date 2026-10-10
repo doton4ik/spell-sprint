@@ -12,7 +12,7 @@
 }
 .proof-header > p:last-child {
   color: var(--ink-muted);
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
   line-height: 1.6;
   margin: 10px 0 0;
   max-width: 640px;
@@ -43,13 +43,13 @@
   display: inline-flex;
   font-family: inherit;
   font-size: calc(14px * var(--fs));
-  font-weight: 750;
+  font-weight: 700;
   gap: 5px;
   padding: 8px 14px;
 }
 .proof-levels small {
   color: var(--ink-faint);
-  font-size: calc(11.5px * var(--fs));
+  font-size: calc(12px * var(--fs));
   font-weight: 600;
 }
 .proof-levels .proof-levels__active {
@@ -101,8 +101,8 @@
 }
 .proof-card__meta {
   color: var(--ink-muted);
-  font-size: calc(12.5px * var(--fs));
-  font-weight: 650;
+  font-size: calc(13px * var(--fs));
+  font-weight: 600;
 }
 .proof-card__go {
   align-items: center;
@@ -126,7 +126,7 @@
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
-  font-size: calc(13.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
   font-weight: 700;
   gap: 4px;
   margin-bottom: 12px;
@@ -151,12 +151,12 @@
   padding: 8px 14px;
 }
 .proof-counter strong {
-  font-size: calc(22px * var(--fs));
+  font-size: calc(20px * var(--fs));
   line-height: 1.1;
 }
 .proof-counter span {
   font-size: calc(12px * var(--fs));
-  font-weight: 650;
+  font-weight: 600;
 }
 .proof-instructions {
   color: var(--ink-muted);
@@ -246,7 +246,7 @@
   color: var(--ink);
   cursor: pointer;
   font-family: inherit;
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   font-weight: 700;
   padding: 5px 8px;
 }
@@ -265,7 +265,7 @@
 }
 .proof-actions > span {
   color: var(--ink-muted);
-  font-size: calc(13.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
 }
 
 /* Result */
@@ -285,8 +285,8 @@
 }
 .proof-score span {
   color: var(--ink-muted);
-  font-size: calc(12.5px * var(--fs));
-  font-weight: 650;
+  font-size: calc(13px * var(--fs));
+  font-weight: 600;
 }
 .proof-score strong {
   color: var(--ink);
@@ -340,8 +340,8 @@
 }
 .proof-legend span {
   border-radius: 5px;
-  font-size: calc(12.5px * var(--fs));
-  font-weight: 650;
+  font-size: calc(13px * var(--fs));
+  font-weight: 600;
   padding: 2px 8px;
 }
 .proof-legend__fixed {
@@ -391,7 +391,7 @@
 .proof-explain__status {
   border-radius: 50%;
   flex-shrink: 0;
-  font-weight: 800;
+  font-weight: 700;
   height: 24px;
   line-height: 24px;
   text-align: center;
@@ -411,12 +411,12 @@
 }
 .proof-explain__item p {
   color: var(--ink);
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
   margin: 0;
 }
 .proof-explain__item em {
   color: var(--amber-text);
-  font-size: calc(13.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
 }
 .proof-explain__item small {
   color: var(--ink-muted);
@@ -428,7 +428,7 @@
 .proof-explain__alarms,
 .proof-explain__note {
   color: var(--ink-muted);
-  font-size: calc(13.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
   margin: 10px 2px 0;
 }
 
@@ -447,7 +447,7 @@
     padding: 24px 14px 35px;
   }
   .proof-text {
-    font-size: calc(17px * var(--fs));
+    font-size: calc(18px * var(--fs));
     padding: 16px;
   }
   .proof-reading-head {
@@ -481,15 +481,15 @@
   color: var(--amber-text);
 }
 .proof-card__size--long {
-  background: var(--blue-soft);
-  color: var(--blue-text);
+  background: var(--surface-muted);
+  color: var(--ink-soft);
 }
 .proof-situation {
   background: var(--amber-soft);
   border-left: 3px solid var(--amber);
   border-radius: 6px;
   color: var(--amber-text);
-  font-size: calc(13.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
   line-height: 1.5;
   margin: 0 0 10px;
   padding: 9px 12px;
@@ -512,10 +512,10 @@
 }
 .proof-mode strong {
   color: var(--ink);
-  font-size: calc(14.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
 }
 .proof-mode span {
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   line-height: 1.45;
 }
 .proof-mode--active {
@@ -564,7 +564,7 @@
 }
 .proof-sentences-start p {
   color: var(--ink-soft);
-  font-size: calc(14.5px * var(--fs));
+  font-size: calc(14px * var(--fs));
   line-height: 1.55;
   margin: 0;
 }
@@ -581,10 +581,28 @@
 
 .proof-source {
   color: var(--ink-muted);
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   margin: -4px 0 12px;
 }
 .proof-source a {
   color: inherit;
   text-decoration: underline;
+}
+
+/* Reading: about 65 characters a line, and the counter with Check sticks to the bottom while you read. */
+.proof-text {
+  max-width: 68ch;
+}
+.proof-actions {
+  background: linear-gradient(to top, var(--canvas) 70%, transparent);
+  bottom: 0;
+  margin-inline: -4px;
+  padding: 14px 4px 12px;
+  position: sticky;
+  z-index: 5;
+}
+@media (max-width: 900px) {
+  .proof-actions {
+    bottom: calc(60px + env(safe-area-inset-bottom));
+  }
 }

@@ -283,8 +283,9 @@ function PairResult({
           <h2 className="pairs-subtitle">Mistakes</h2>
           {wrong.map((result, index) => (
             <p className="pair-miss" key={index}>
-              {result.question.sentence.text.replace('___', `[${result.question.sentence.answer}]`)}{' '}
-              <small>you chose “{result.chosen}”</small>
+              {result.question.sentence.text.split('___')[0]}
+              <mark className="pair-miss__word">{result.question.sentence.answer}</mark>
+              {result.question.sentence.text.split('___').slice(1).join('___')} <small>you chose “{result.chosen}”</small>
             </p>
           ))}
         </section>

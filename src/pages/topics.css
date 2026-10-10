@@ -17,7 +17,7 @@
 }
 .topics-header p:last-child {
   color: var(--ink-muted);
-  font-size: calc(15px * var(--fs));
+  font-size: calc(16px * var(--fs));
   line-height: 1.55;
   margin: 10px 0 0;
   max-width: 520px;
@@ -39,12 +39,12 @@
 .topics-summary dt {
   color: var(--ink-muted);
   font-size: calc(12px * var(--fs));
-  font-weight: 650;
+  font-weight: 600;
 }
 .topics-summary dd {
   color: var(--ink);
-  font-size: calc(21px * var(--fs));
-  font-weight: 750;
+  font-size: calc(20px * var(--fs));
+  font-weight: 700;
   letter-spacing: -0.4px;
   margin: 4px 0 0;
 }
@@ -113,7 +113,7 @@
   color: var(--ink);
   flex: 1;
   font-family: inherit;
-  font-size: max(16px, calc(15px * var(--fs)));
+  font-size: max(16px, calc(16px * var(--fs)));
   min-height: 42px;
   min-width: 0;
   outline: none;
@@ -123,7 +123,7 @@
   color: var(--ink-muted);
   display: flex;
   font-size: calc(13px * var(--fs));
-  font-weight: 650;
+  font-weight: 600;
   gap: 8px;
 }
 .topics-sort select {
@@ -151,7 +151,7 @@
   cursor: pointer;
   font-family: inherit;
   font-size: calc(14px * var(--fs));
-  font-weight: 650;
+  font-weight: 600;
   padding: 8px 12px;
   white-space: nowrap;
 }
@@ -170,7 +170,7 @@
   align-items: center;
   color: var(--ink-muted);
   display: flex;
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   gap: 8px;
   letter-spacing: 0.05em;
   margin: 0 0 8px 4px;
@@ -180,7 +180,7 @@
   background: var(--surface-muted);
   border-radius: 10px;
   color: var(--ink-muted);
-  font-size: calc(11.5px * var(--fs));
+  font-size: calc(12px * var(--fs));
   letter-spacing: 0;
   padding: 1px 7px;
 }
@@ -242,7 +242,7 @@
   background: var(--amber);
 }
 .topic-dot--developing {
-  background: var(--blue-text);
+  background: var(--teal-muted);
 }
 .topic-dot--strong {
   background: var(--teal);
@@ -250,15 +250,15 @@
 .topic-line__name {
   color: var(--ink);
   display: grid;
-  font-size: calc(15px * var(--fs));
-  font-weight: 680;
+  font-size: calc(16px * var(--fs));
+  font-weight: 600;
   gap: 2px;
   min-width: 0;
 }
 .topic-line__name small {
   color: var(--ink-muted);
-  font-size: calc(12.5px * var(--fs));
-  font-weight: 550;
+  font-size: calc(13px * var(--fs));
+  font-weight: 500;
 }
 .topic-line__progress {
   align-items: center;
@@ -267,7 +267,7 @@
 }
 .topic-line__progress small {
   color: var(--ink-soft);
-  font-size: calc(12.5px * var(--fs));
+  font-size: calc(13px * var(--fs));
   font-variant-numeric: tabular-nums;
   min-width: 38px;
 }
@@ -355,8 +355,8 @@
   border-color: var(--teal-muted);
 }
 .subtopic-chip span {
-  font-size: calc(13.5px * var(--fs));
-  font-weight: 650;
+  font-size: calc(14px * var(--fs));
+  font-weight: 600;
 }
 .subtopic-chip small {
   color: var(--ink-muted);
@@ -432,5 +432,5 @@
   }
 }
 .topic-dot--preliminary {
-  background: var(--blue-text);
+  background: var(--teal-muted);
 }
