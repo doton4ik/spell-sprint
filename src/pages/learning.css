@@ -24,7 +24,6 @@
   margin: 10px 0 0;
   max-width: 650px;
 }
-.outline-action,
 .rules-saved {
   align-items: center;
   background: var(--surface);
@@ -38,16 +37,6 @@
   font-weight: 700;
   gap: 8px;
   padding: 11px 13px;
-}
-.outline-action {
-  transition:
-    background 0.15s ease,
-    border-color 0.15s ease;
-}
-.outline-action:hover {
-  background: var(--teal-soft);
-  border-color: var(--teal-muted);
-  color: var(--teal-text-strong);
 }
 .learning-summary {
   display: grid;
@@ -376,14 +365,9 @@
   .learning-header > div > p:last-child {
     font-size: calc(13px * var(--fs));
   }
-  .outline-action {
-    font-size: 0;
-    gap: 0;
-    padding: 10px;
-  }
-  .outline-action svg {
-    height: 19px;
-    width: 19px;
+  .learning-header {
+    flex-wrap: wrap;
+    gap: 12px;
   }
   .learning-summary {
     grid-template-columns: 1fr;
@@ -958,5 +942,13 @@
   .mistake-history li span,
   .mistake-history time {
     grid-column: 2;
+  }
+}
+
+/* Phone: filters and view switches are easy to hit. */
+@media (max-width: 570px) {
+  .mistakes-view-switch button,
+  .rules-nav__item {
+    min-height: 40px;
   }
 }

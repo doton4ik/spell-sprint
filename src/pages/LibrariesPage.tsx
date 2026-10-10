@@ -279,7 +279,7 @@ export function LibrariesPage() {
                         Open library
                       </button>
                       <button className="quiet-action" type="button" onClick={() => beginPractice([word], word.word)}>
-                        <Icon name="practice" size={13} /> Practice
+                        <Icon name="practice" size={13} /> Practise
                       </button>
                       <HideButton word={word} onHide={hideWord} />
                     </div>
@@ -293,7 +293,7 @@ export function LibrariesPage() {
         <>
           <div className="libraries-actions">
             <button className="check-button" type="button" onClick={() => beginPractice(allWords, 'All libraries')}>
-              <Icon name="practice" size={17} /> Practice all words
+              <Icon name="practice" size={17} /> Practise all words
             </button>
             <button className="template-button" type="button" onClick={() => setActiveGroup('my-libraries')}>
               Add a word
@@ -398,7 +398,7 @@ function GroupCard({
           Open <Icon name="arrow" size={16} />
         </button>
         <button className="check-button" type="button" onClick={() => onPractice(words, group.name)}>
-          Practice
+          Practise
         </button>
       </div>
     </article>
@@ -440,7 +440,7 @@ function MyLibraries({
                   Open
                 </button>
                 <button className="check-button" type="button" onClick={() => onPractice(library.words, library.name)}>
-                  Practice
+                  Practise
                 </button>
                 <button className="quiet-button" type="button" onClick={() => onDelete(library)}>
                   Delete

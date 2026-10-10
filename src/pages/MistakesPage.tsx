@@ -244,7 +244,7 @@ export function MistakesPage() {
           </button>
         ) : (
           <a className="outline-action" href="#practice">
-            <Icon name="practice" size={17} /> Practice
+            <Icon name="practice" size={17} /> Practise
           </a>
         )}
       </header>

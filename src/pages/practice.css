@@ -1174,3 +1174,28 @@
 .claim-correct:hover {
   background: var(--teal-soft);
 }
+
+/* Phone: the question comes first, and after an answer Check / Next stay in reach above the bottom bar. */
+@media (max-width: 570px) {
+  .session-map,
+  .session-mode small {
+    display: none;
+  }
+  .task-actions:has(.next-button) {
+    background: linear-gradient(to top, var(--surface) 75%, transparent);
+    bottom: calc(60px + env(safe-area-inset-bottom));
+    flex-direction: row;
+    margin-inline: -6px;
+    padding: 14px 6px 6px;
+    position: sticky;
+    z-index: 6;
+  }
+  .task-actions:has(.next-button) .check-button,
+  .task-actions:has(.next-button) .next-button {
+    flex: 1;
+    width: auto;
+  }
+  .task-actions:has(.next-button) .task-actions__secondary {
+    display: none;
+  }
+}

@@ -81,7 +81,7 @@ export function RulePracticePanel({ onProgress }: { onProgress: (progress: UserR
             {result.correct === result.total ? 'Clean round!' : 'The rules you missed will come back first.'}
           </p>
           <button className="check-button" type="button" onClick={() => void load()}>
-            <Icon name="refresh" size={16} /> Practice again
+            <Icon name="refresh" size={16} /> Practise again
           </button>
         </div>
       ) : null}

@@ -77,19 +77,6 @@
   display: flex;
   gap: 8px;
 }
-.template-button {
-  background: transparent;
-  border: 1px solid var(--teal-muted);
-  border-radius: 10px;
-  color: var(--teal-text);
-  font-size: calc(12.5px * var(--fs));
-  font-weight: 700;
-  min-height: 41px;
-  padding: 0 12px;
-}
-.template-button:hover {
-  background: var(--teal-soft);
-}
 .import-report {
   border-radius: 10px;
   grid-column: 1 / -1;

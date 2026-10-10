@@ -405,8 +405,8 @@
   gap: 8px;
 }
 .rule-card-v2__actions button:disabled {
-  cursor: default;
-  opacity: 0.55;
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 /* ---------- Create form ---------- */
@@ -567,7 +567,7 @@
   padding: 6px 9px;
 }
 .rule-unclassified__actions .quiet-action:disabled {
-  cursor: default;
+  cursor: not-allowed;
   opacity: 0.5;
 }
 
