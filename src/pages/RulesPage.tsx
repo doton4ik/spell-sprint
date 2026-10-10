@@ -1,6 +1,6 @@
 import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
-import { RuleCard } from '../components/rules/RuleCard'
+import { RuleDetail, type RuleTab } from '../components/rules/RuleDetail'
 import { RulePracticePanel } from '../components/rules/RulePracticePanel'
 import { ruleCategories, ruleTypeLabels } from '../data/ruleCategories'
 import { getAllUserRuleProgress } from '../services/rulePracticeService'
@@ -95,8 +95,10 @@ export function RulesPage() {
   const [linkingMistake, setLinkingMistake] = useState<MistakeEvent | null>(null)
   const [creating, setCreating] = useState(false)
   const [formError, setFormError] = useState('')
-  const [focusedRuleId, setFocusedRuleId] = useState<string | null>(null)
-  const [openRuleId, setOpenRuleId] = useState<string | null>(null)
+  const [selectedRuleId, setSelectedRuleId] = useState<string | null>(null)
+  const [initialTab, setInitialTab] = useState<RuleTab>('rule')
+  // Wide screens show the list and the selected rule side by side; narrow ones show one at a time.
+  const [wide, setWide] = useState(() => window.matchMedia('(min-width: 901px)').matches)
   const [showUnclassified, setShowUnclassified] = useState(false)
   const [progressByRule, setProgressByRule] = useState<Map<string, UserRuleProgress>>(new Map())
 
@@ -119,16 +121,23 @@ export function RulesPage() {
   }
 
   useEffect(() => {
+    const query = window.matchMedia('(min-width: 901px)')
+    const update = () => setWide(query.matches)
+    query.addEventListener('change', update)
+    return () => query.removeEventListener('change', update)
+  }, [])
+
+  useEffect(() => {
     void refresh().then((ruleRows) => {
       // Item: a word in Libraries can send the learner straight to its rule. Jump to the right
-      // category and let RuleCard scroll itself into view once it has rendered.
+      // category and open that rule (on the Practice tab: they came for the exercises).
       const focusId = consumePendingRuleFocus()
       if (!focusId) return
       const target = ruleRows.find((rule) => rule.id === focusId)
       if (target) {
         setCategory(target.category)
-        setFocusedRuleId(target.id)
-        setOpenRuleId(target.id)
+        setSelectedRuleId(target.id)
+        setInitialTab('practice') // they came here for the exercises
       }
     })
   }, [])
@@ -166,6 +175,9 @@ export function RulesPage() {
     },
     { id: 'done', title: 'Mastered', rules: visibleRules.filter(isDone) },
   ].filter((group) => group.rules.length)
+
+  // The rule shown on the right: the one picked (if it is still in this category), else the first on a wide screen.
+  const activeRule = visibleRules.find((rule) => rule.id === selectedRuleId) ?? (wide && !loading ? (groups[0]?.rules[0] ?? null) : null)
 
   function openCreateForm(fromMistake?: MistakeEvent) {
     setLinkingMistake(fromMistake ?? null)
@@ -333,29 +345,51 @@ export function RulesPage() {
               </button>
             </section>
           ) : (
-            groups.map((group) => (
-              <section className="rules-group" key={group.id} aria-labelledby={`rules-group-${group.id}`}>
-                <header className="rules-group__head">
-                  <h2 id={`rules-group-${group.id}`}>
-                    {group.title} <small>{group.rules.length}</small>
-                  </h2>
-                </header>
-                <div className="rules-grid rules-grid--compact">
-                  {group.rules.map((rule) => (
-                    <RuleCard
-                      rule={rule}
-                      rulesById={rulesById}
-                      progress={progressByRule.get(rule.id) ?? null}
-                      expanded={openRuleId === rule.id}
-                      focused={rule.id === focusedRuleId}
-                      onToggle={() => setOpenRuleId(openRuleId === rule.id ? null : rule.id)}
-                      onProgressChange={updateProgress}
-                      key={rule.id}
-                    />
-                  ))}
-                </div>
-              </section>
-            ))
+            <div className={activeRule ? 'rules-split rules-split--detail' : 'rules-split'}>
+              <div className="rules-list">
+                {groups.map((group) => (
+                  <section className="rules-group" key={group.id} aria-labelledby={`rules-group-${group.id}`}>
+                    <header className="rules-group__head">
+                      <h2 id={`rules-group-${group.id}`}>
+                        {group.title} <small>{group.rules.length}</small>
+                      </h2>
+                    </header>
+                    <div className="rules-rows">
+                      {group.rules.map((rule) => (
+                        <button
+                          type="button"
+                          className={rule.id === activeRule?.id ? 'rules-row rules-row--active' : 'rules-row'}
+                          aria-current={rule.id === activeRule?.id}
+                          onClick={() => {
+                            setSelectedRuleId(rule.id)
+                            setInitialTab('rule')
+                          }}
+                          key={rule.id}
+                        >
+                          <span
+                            className={`rules-row__dot rules-row__dot--${isDone(rule) ? 'done' : attention(rule) < 3 ? 'repeat' : 'new'}`}
+                          />
+                          <span className="rules-row__title">{rule.title}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </section>
+                ))}
+              </div>
+              <div className="rules-detail-col">
+                {activeRule ? (
+                  <RuleDetail
+                    rule={activeRule}
+                    rulesById={rulesById}
+                    progress={progressByRule.get(activeRule.id) ?? null}
+                    initialTab={initialTab}
+                    onBack={() => setSelectedRuleId(null)}
+                    onProgressChange={updateProgress}
+                    key={activeRule.id}
+                  />
+                ) : null}
+              </div>
+            </div>
           )}
 
           {unclassified.length ? (
