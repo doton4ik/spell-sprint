@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
 import { noAutocorrect } from '../noAutocorrect'
 import { Icon } from '../icons/Icon'
 import { AnswerDiff } from '../practice/AnswerDiff'
+import { isSentence } from '../../services/sentenceDiff'
+import { SentenceDiff } from './SentenceDiff'
 import { defaultPracticeSettings } from '../../data/practice'
 import { levelPassages, skillInstructions, skillLabels, type LevelItem } from '../../data/levelCheckBank'
 import {
@@ -224,6 +226,8 @@ export function CheckRunner({
                 <div className="level-feedback__diff">
                   {kind === 'choice' ? (
                     <b>{item.answer}</b>
+                  ) : feedback.answer && isSentence(item.answer.split('|')[0]) ? (
+                    <SentenceDiff expected={item.answer.split('|')[0]} submitted={feedback.answer} />
                   ) : feedback.answer ? (
                     <AnswerDiff expected={item.answer.split('|')[0]} submitted={feedback.answer} />
                   ) : (

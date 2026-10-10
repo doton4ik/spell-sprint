@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
 import { AnswerDiff } from '../components/practice/AnswerDiff'
 import { CheckRunner } from '../components/level/CheckRunner'
+import { SentenceDiff } from '../components/level/SentenceDiff'
+import { isSentence } from '../services/sentenceDiff'
 import { getAllWords } from '../services/libraryStorage'
 import { LevelPicture } from '../components/level/LevelPicture'
 import { buildLevelBank, skillLabels } from '../data/levelCheckBank'
@@ -384,6 +386,8 @@ function ResultView({
                     <>
                       {answer.answer ? <s>{answer.answer}</s> : <em>no answer</em>} → <strong>{answer.expected}</strong>
                     </>
+                  ) : answer.answer && isSentence(answer.expected) ? (
+                    <SentenceDiff expected={answer.expected} submitted={answer.answer} />
                   ) : answer.answer ? (
                     <AnswerDiff expected={answer.expected} submitted={answer.answer} />
                   ) : (

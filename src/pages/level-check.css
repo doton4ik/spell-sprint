@@ -876,3 +876,34 @@
 .level-hero__resume .level-hero__start {
   margin-top: 0;
 }
+
+/* A written sentence against the right one, word by word */
+.sentence-diff {
+  display: grid;
+  gap: 4px;
+}
+.sentence-diff p {
+  color: var(--ink);
+  font-size: calc(16px * var(--fs));
+  line-height: 1.5;
+  margin: 0;
+}
+.sentence-diff p > span:first-child {
+  color: var(--ink-muted);
+  display: inline-block;
+  font-size: calc(13px * var(--fs));
+  margin-right: 10px;
+  min-width: 70px;
+}
+.sentence-diff__wrong {
+  color: var(--danger-text);
+  text-decoration: line-through;
+  text-decoration-color: var(--danger-line);
+}
+.sentence-diff__missing {
+  background: var(--teal-muted);
+  border-radius: 4px;
+  color: var(--ink);
+  font-weight: 600;
+  padding: 0 3px;
+}
