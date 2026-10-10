@@ -9,6 +9,7 @@ import {
   buildPlan,
   clearRun,
   getLevelChecks,
+  abilityChange,
   levelLabel,
   loadRun,
   nextCheckDue,
@@ -134,7 +135,7 @@ function HomeView({
         {last ? (
           <button className="level-hero__last" type="button" onClick={() => onOpen(last.id)}>
             <span>Your last result · {daysAgo(last.completedAt)}</span>
-            <strong>{last.overall.level}</strong>
+            <strong>{levelLabel(last.overall)}</strong>
             <div>
               {skills
                 .filter((skill) => last.skills[skill])
@@ -175,11 +176,11 @@ function History({ checks, onOpen }: { checks: LevelCheckResult[]; onOpen: (id: 
       <div className="level-history__list">
         {checks.map((check, index) => {
           const previous = checks[index + 1]
-          const delta = previous ? Math.round((check.overall.ability - previous.overall.ability) * 10) / 10 : null
+          const delta = previous ? abilityChange(check, previous) : null
           return (
             <button className="level-history__row" type="button" onClick={() => onOpen(check.id)} key={check.id}>
               <span className="level-history__date">{formatDate(check.completedAt)}</span>
-              <strong className="level-badge">{check.overall.level}</strong>
+              <strong className="level-badge">{check.overall.range ?? check.overall.level}</strong>
               <span className="level-history__skills">
                 {skills
                   .filter((skill) => check.skills[skill])
@@ -269,7 +270,7 @@ function startPractice(step: PlanStep) {
   setPendingPracticeSelection({
     wordIds: step.action.words.map((word) => word.wordId),
     label: step.action.practiceLabel ?? step.title,
-    mode: 'write-en',
+    mode: step.action.mode ?? 'write-en',
   })
   window.location.hash = 'practice'
 }
@@ -303,8 +304,7 @@ function ResultView({
           <p>
             {previous ? (
               <>
-                Compared with {formatDate(previous.completedAt)}:{' '}
-                <Delta value={Math.round((result.overall.ability - previous.overall.ability) * 10) / 10} />
+                Compared with {formatDate(previous.completedAt)}: <Delta value={abilityChange(result, previous)} />
               </>
             ) : (
               'This is your starting point. Take another check in about a month to see how it moves.'

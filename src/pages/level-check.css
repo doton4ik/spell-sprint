@@ -153,6 +153,18 @@
 .level-chart__line--grammar {
   color: var(--ink-soft);
 }
+.level-chart__line--reading {
+  color: var(--teal-text);
+}
+.level-chart__line--listening {
+  color: var(--ink-soft);
+}
+.level-chart__line--reading polyline {
+  stroke-dasharray: 6 4;
+}
+.level-chart__line--listening polyline {
+  stroke-dasharray: 2 4;
+}
 .level-chart__line polyline {
   stroke: currentColor;
 }
@@ -189,6 +201,12 @@
 }
 .level-legend--grammar::before {
   background: var(--teal-muted);
+}
+.level-legend--reading::before {
+  background: repeating-linear-gradient(to right, var(--teal) 0 6px, transparent 6px 10px);
+}
+.level-legend--listening::before {
+  background: repeating-linear-gradient(to right, var(--ink-soft) 0 2px, transparent 2px 6px);
 }
 
 .level-history__list {

@@ -58,8 +58,8 @@ describe('the deeper questions', () => {
 
   it('dictation sentences are complete sentences that a voice can read', () => {
     for (const item of deep.filter((entry) => entry.kind === 'dictation')) {
-      expect(item.answer, item.id).toBe(item.prompt)
-      expect(item.answer, item.id).toMatch(/[.?]$/)
+      expect(item.answer.split('|')[0], item.id).toBe(item.prompt)
+      expect(item.prompt, item.id).toMatch(/[.?]$/)
       expect(item.answer.split(/\s+/).length, item.id).toBeGreaterThanOrEqual(5)
     }
   })
@@ -149,5 +149,21 @@ describe('a whole check on the real questions', () => {
       expect(top.skills[skill], skill).toBeDefined()
       expect(top.skills[skill]!.ability, skill).toBeGreaterThan(bottom.skills[skill]!.ability)
     }
+  })
+})
+
+describe('dictation', () => {
+  it('accepts a number written in digits, and o’clock without the apostrophe', () => {
+    const byId = (id: string) => bank.find((item) => item.id === id)!
+    expect(isCorrectAnswer(byId('lcd-ls-1-02'), 'The shop opens at 9 oclock')).toBe(true)
+    expect(isCorrectAnswer(byId('lcd-ls-1-02'), "the shop opens at nine o'clock.")).toBe(true)
+    expect(isCorrectAnswer(byId('lcd-ls-1-05'), 'She has 2 cats and a small dog.')).toBe(true)
+    expect(isCorrectAnswer(byId('lcd-ls-2-01'), 'I have lived in this city for about 10 years')).toBe(true)
+    expect(isCorrectAnswer(byId('lcd-ls-2-02'), 'He said that the meeting would start at half past 3.')).toBe(true)
+    expect(isCorrectAnswer(byId('lcd-ls-1-02'), 'The shop opens at ten o’clock.')).toBe(false)
+  })
+  it('does not accept a digit that was not said', () => {
+    const item = bank.find((entry) => entry.id === 'lcd-ls-1-02')!
+    expect(isCorrectAnswer(item, 'The shop opens at 10 oclock.')).toBe(false)
   })
 })

@@ -183,3 +183,52 @@ describe('what to show for a level', () => {
     expect(levelLabel({ level: 'C1', ability: 4.4 })).toBe('C1 or above')
   })
 })
+
+describe('comparing two checks', () => {
+  const asked = (skill: 'spelling' | 'vocabulary' | 'grammar' | 'reading', level: 1 | 2 | 3 | 4, correct: boolean) =>
+    answer(item(`${skill}${level}${correct}`, skill, level), correct)
+  const make = (answers: CheckAnswer[], id: string) =>
+    ({ id, completedAt: '2026-10-01T10:00:00.000Z', answers, ...scoreCheck(answers) }) as LevelCheckResult
+
+  it('only counts the skills both checks measured', async () => {
+    const { abilityChange } = await import('./levelCheck')
+    const old = make([asked('spelling', 2, true), asked('vocabulary', 2, true), asked('grammar', 2, true)], 'old')
+    // the new check also has reading, which the old one never measured, and it is much lower there
+    const now = make(
+      [asked('spelling', 2, true), asked('vocabulary', 2, true), asked('grammar', 2, true), asked('reading', 1, false)],
+      'new',
+    )
+    expect(abilityChange(now, old)).toBe(0)
+  })
+  it('shows a rise when the shared skills went up', async () => {
+    const { abilityChange } = await import('./levelCheck')
+    const before = make([asked('spelling', 2, false), asked('vocabulary', 2, false)], 'before')
+    const after = make([asked('spelling', 3, true), asked('vocabulary', 3, true), asked('reading', 1, false)], 'after')
+    expect(abilityChange(after, before)).toBeGreaterThan(1)
+  })
+})
+
+describe('a retake', () => {
+  it('does not always start the reading with the same text', () => {
+    const texts = ['A', 'B', 'C'].flatMap((passage) =>
+      [1, 2, 3].map((n) => item(`${passage}${n}`, 'reading', 2, { passage, kind: 'choice', choices: ['x', 'y'] })),
+    )
+    const firsts = new Set(Array.from({ length: 60 }, () => nextItem(texts, 'reading', [])?.passage))
+    expect(firsts.size).toBeGreaterThan(1)
+  })
+})
+
+describe('the plan for listening', () => {
+  it('opens dictation (listen-write), not ordinary practice', () => {
+    const answers = [
+      answer(item('l1', 'listening', 1), false),
+      answer(item('s1', 'spelling', 4), true),
+      answer(item('v1', 'vocabulary', 4), true),
+      answer(item('g1', 'grammar', 4), true),
+      answer(item('r1', 'reading', 4), true),
+    ]
+    const result = { id: 'x', completedAt: '2026-10-10T10:00:00.000Z', answers, ...scoreCheck(answers) } as LevelCheckResult
+    const step = buildPlan(result).find((entry) => /dictation/i.test(entry.title))
+    expect(step?.action.mode).toBe('listen-write')
+  })
+})

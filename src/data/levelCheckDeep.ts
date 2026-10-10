@@ -49,13 +49,14 @@ const formation = (id: string, level: Level, prompt: string, answer: string, exp
   log: false,
   instruction: 'Write the correct form of the word in capitals.',
 })
-const dictation = (id: string, level: Level, sentence: string): LevelItem => ({
+// alternatives: other ways to write what was heard (digits instead of number words)
+const dictation = (id: string, level: Level, sentence: string, alternatives: string[] = []): LevelItem => ({
   id: `lcd-ls-${id}`,
   skill: 'listening',
   level,
   kind: 'dictation',
   prompt: sentence,
-  answer: sentence,
+  answer: [sentence, ...alternatives].join('|'),
   explain: 'Listen again for the little words: articles, endings and prepositions.',
 })
 
@@ -485,13 +486,19 @@ const readingItems: LevelItem[] = [
 // ---- Dictation -----------------------------------------------------------------------------
 const dictationItems: LevelItem[] = [
   dictation('1-01', 1, 'My brother plays football on Sunday.'),
-  dictation('1-02', 1, 'The shop opens at nine o’clock.'),
+  dictation('1-02', 1, 'The shop opens at nine o’clock.', [
+    'The shop opens at 9 o’clock.',
+    'The shop opens at nine oclock.',
+    'The shop opens at 9 oclock.',
+  ]),
   dictation('1-03', 1, 'Can you help me with this bag?'),
   dictation('1-04', 1, 'We are going to the station now.'),
-  dictation('1-05', 1, 'She has two cats and a small dog.'),
+  dictation('1-05', 1, 'She has two cats and a small dog.', ['She has 2 cats and a small dog.']),
   dictation('1-06', 1, 'It is very cold in the morning.'),
-  dictation('2-01', 2, 'I have lived in this city for about ten years.'),
-  dictation('2-02', 2, 'He said that the meeting would start at half past three.'),
+  dictation('2-01', 2, 'I have lived in this city for about ten years.', ['I have lived in this city for about 10 years.']),
+  dictation('2-02', 2, 'He said that the meeting would start at half past three.', [
+    'He said that the meeting would start at half past 3.',
+  ]),
   dictation('2-03', 2, 'If the weather is nice, we will have lunch in the garden.'),
   dictation('2-04', 2, 'She forgot to bring her passport, so she missed the flight.'),
   dictation('2-05', 2, 'The new restaurant near the river is surprisingly cheap.'),

@@ -114,8 +114,10 @@ function nextReadingItem(bank: LevelItem[], answers: CheckAnswer[], pool: LevelI
   for (const distance of DISTANCES) {
     const firsts = pool.filter((item) => item.level === target + distance)
     // the first question of a text that has not been started
-    const start = firsts.find((item) => !answers.some((answer) => passageOf(answer.itemId) === item.passage))
-    if (start) return start
+    const unstarted = firsts.filter((item) => !answers.some((answer) => passageOf(answer.itemId) === item.passage))
+    // one entry per text (its first question), and not always the same text on a retake
+    const firstOfEach = unstarted.filter((item, index) => unstarted.findIndex((other) => other.passage === item.passage) === index)
+    if (firstOfEach.length) return pickOne(firstOfEach)
   }
   return null
 }
@@ -152,6 +154,15 @@ export function levelLabel(result: { level: string; ability: number; range?: str
   if (result.level === 'A2' && result.ability <= 1.2) return 'A2 or below'
   if (result.level === 'C1' && result.ability >= 4.2) return 'C1 or above'
   return result.level
+}
+
+// How much better (or worse) the learner is than in the previous check, over the skills both checks measured.
+// An older check has three skills, a new one five: comparing the two averages would compare different things.
+export function abilityChange(current: LevelCheckResult, previous: LevelCheckResult) {
+  const shared = skillOrder.filter((skill) => current.skills[skill] && previous.skills[skill])
+  if (!shared.length) return 0
+  const mean = (result: LevelCheckResult) => shared.reduce((sum, skill) => sum + (result.skills[skill]?.ability ?? 0), 0) / shared.length
+  return Math.round((mean(current) - mean(previous)) * 10) / 10
 }
 
 // How far the estimate can be trusted: with few answers it can sit on either side of a level boundary.
