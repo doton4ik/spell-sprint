@@ -61,3 +61,11 @@ describe('isRealOrRude', () => {
     expect(isRealOrRude('enviroment')).toBe(false)
   })
 })
+
+describe('contractions in a correction', () => {
+  it('"couldn\'t" is the same correction as "could not"', async () => {
+    const { normalise } = await import('./proofreadingEngine')
+    expect(normalise("couldn't")).toBe(normalise('could not'))
+    expect(normalise("it's")).not.toBe(normalise('its'))
+  })
+})

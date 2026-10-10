@@ -1,3 +1,4 @@
+import { expandWord } from './contractions'
 import type { ProofreadingLevel, ProofreadingText } from '../data/proofreadingTexts'
 import { realWordExtras } from '../data/realWordTraps'
 
@@ -133,6 +134,9 @@ export const normalise = (value: string) =>
     .replace(/[.,!?;:"()]/g, '')
     .replace(/\s+/g, ' ')
     .trim()
+    .split(' ')
+    .flatMap((word) => expandWord(word)[0])
+    .join(' ')
 
 // Spelling slips of the kinds the rules teach: a lost double letter, ie/ei, -ful, -able/-ible …
 const spellingSlips: Array<(word: string) => string | null> = [

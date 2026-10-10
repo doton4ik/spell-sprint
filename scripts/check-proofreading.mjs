@@ -14,10 +14,12 @@ for (const [file, name] of [
   ['src/data/proofreadingTexts.ts', 'proofreadingTexts.ts'],
   ['src/data/realWordTraps.ts', 'realWordTraps.ts'],
   ['src/data/proofreadingHidden.ts', 'proofreadingHidden.ts'],
+  ['src/services/contractions.ts', 'contractions.ts'],
 ]) {
   const source = readFileSync(join(root, file), 'utf8')
     .replace("'../data/proofreadingTexts'", "'./proofreadingTexts.ts'")
     .replace("'../data/realWordTraps'", "'./realWordTraps.ts'")
+    .replace("'./contractions'", "'./contractions.ts'")
   writeFileSync(join(dir, name), source)
 }
 const engine = await import(pathToFileURL(join(dir, 'proofreadingEngine.ts')).href)

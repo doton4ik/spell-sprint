@@ -34,3 +34,20 @@ describe('diffWords', () => {
     expect(isSentence('accommodation')).toBe(false)
   })
 })
+
+describe('diffWords with contractions', () => {
+  it('"It\'s" and "It is" are the same words', () => {
+    const result = diffWords('It is very cold in the morning.', "It's very cold in the morning")
+    expect(marked(result.given)).toEqual([])
+    expect(marked(result.expected)).toEqual([])
+  })
+  it('marks only what differs when a contraction is used', () => {
+    const result = diffWords('It is very cold in the morning.', "It's very cold at night")
+    expect(marked(result.given)).toEqual(['at', 'night'])
+    expect(marked(result.expected)).toEqual(['in', 'the', 'morning.'])
+  })
+  it('marks "don\'t" when the other side has something else', () => {
+    const result = diffWords('I do not know.', "I won't know")
+    expect(marked(result.given)).toEqual(["won't"])
+  })
+})

@@ -232,3 +232,19 @@ describe('the plan for listening', () => {
     expect(step?.action.mode).toBe('listen-write')
   })
 })
+
+describe('dictation and contractions', () => {
+  const sentence = item('d1', 'listening', 1, { kind: 'dictation', answer: 'It is very cold in the morning.' })
+  it('accepts the contraction a learner may well write', () => {
+    expect(isCorrectAnswer(sentence, "It's very cold in the morning")).toBe(true)
+    expect(isCorrectAnswer(sentence, 'it’s very cold in the morning.')).toBe(true)
+  })
+  it('still rejects a different word', () => {
+    expect(isCorrectAnswer(sentence, "It's very cold in the evening")).toBe(false)
+    expect(isCorrectAnswer(sentence, 'Its very cold in the morning')).toBe(false)
+  })
+  it('accepts the long form when the sentence is written with a contraction', () => {
+    const contracted = item('d2', 'listening', 1, { kind: 'dictation', answer: "I don't know." })
+    expect(isCorrectAnswer(contracted, 'I do not know')).toBe(true)
+  })
+})

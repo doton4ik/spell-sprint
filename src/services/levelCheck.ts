@@ -4,6 +4,7 @@ import type { PracticeAttempt, PracticeMode } from '../types/practice'
 import { getAllWords } from './libraryStorage'
 import { savePracticeAttempt } from './practiceStorage'
 import { scheduleAfterAnswer } from './reviewSchedule'
+import { plain, sameText } from './contractions'
 import { pickPracticeWords } from './topicStats'
 
 // ---- The adaptive check ----------------------------------------------------------------------
@@ -51,16 +52,7 @@ const kindOf = (item: LevelItem): ItemKind => item.kind ?? 'type'
 export const cefrFor = (ability: number) => (ability < 1.5 ? 'A2' : ability < 2.5 ? 'B1' : ability < 3.5 ? 'B2' : 'C1')
 const percentFor = (ability: number) => Math.round(Math.min(100, Math.max(0, ((ability - 0.5) / 4) * 100)))
 
-export function normaliseAnswer(value: string) {
-  return value
-    .trim()
-    .toLocaleLowerCase()
-    .replace(/[’‘`]/g, "'")
-    .replace(/[.!?,;:"“”]+/g, '')
-    .replace(/-/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-}
+export const normaliseAnswer = plain
 
 // The order of the questions: the skills interleaved, with the reading questions in two blocks of three
 // (a text is read once and asked together). Without speech in the browser there is no listening part.
@@ -139,9 +131,10 @@ export function nextItem(bank: LevelItem[], skill: Skill, answers: CheckAnswer[]
 }
 
 // Several accepted answers can be written as "I do not know|I don't know".
+// Contractions count as the same sentence: "It's" is "It is", "don't" is "do not".
 export function isCorrectAnswer(item: LevelItem, answer: string) {
-  const given = normaliseAnswer(answer)
-  return item.answer.split('|').some((option) => normaliseAnswer(option) === given)
+  if (item.kind === 'choice') return normaliseAnswer(answer) === normaliseAnswer(item.answer)
+  return item.answer.split('|').some((option) => sameText(option, answer))
 }
 
 // "He is ___ honest man." + "an" -> "He is an honest man." (for the log of a wrong gap-fill)

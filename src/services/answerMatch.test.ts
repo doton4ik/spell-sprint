@@ -53,3 +53,14 @@ describe('russianAnswers', () => {
     expect((russianAnswers('парень (молодой человек)') ?? []).map(comparable)).toContain(comparable('парень'))
   })
 })
+
+describe('sentences with contractions', () => {
+  it('"It\'s" is accepted for "It is", and the other way round', () => {
+    expect(isAcceptedAnswer("It's very cold in the morning", task('It is very cold in the morning.'))).toBe(true)
+    expect(isAcceptedAnswer('It is very cold in the morning', task("It's very cold in the morning."))).toBe(true)
+  })
+  it('single words still compare as before', () => {
+    expect(isAcceptedAnswer('its', task("it's"))).toBe(false)
+    expect(isAcceptedAnswer('ice-cream', task('ice cream'))).toBe(true)
+  })
+})

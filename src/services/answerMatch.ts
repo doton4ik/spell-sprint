@@ -1,4 +1,5 @@
 import type { PracticeTask } from '../types/practice'
+import { sameText } from './contractions'
 
 // Several English answers can be right for one Russian prompt (мусор → rubbish, trash, garbage).
 // These helpers decide which accepted answer the learner was aiming at.
@@ -15,7 +16,9 @@ export const comparable = (value: string) => normalise(value).replaceAll(/[-\s]/
 export const acceptedAnswers = (task: PracticeTask) => [task.answer, ...(task.acceptedAnswers ?? [])]
 
 export function isAcceptedAnswer(answer: string, task: PracticeTask) {
-  return acceptedAnswers(task).map(comparable).includes(comparable(answer))
+  if (acceptedAnswers(task).map(comparable).includes(comparable(answer))) return true
+  // a sentence written with or without contractions is the same sentence ("It's" / "It is")
+  return /\s/.test(answer.trim()) && acceptedAnswers(task).some((option) => sameText(option, answer))
 }
 
 function distance(a: string, b: string) {
