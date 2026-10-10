@@ -1,23 +1,22 @@
-import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
-import { noAutocorrect } from '../components/noAutocorrect'
+import { useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
 import { AnswerDiff } from '../components/practice/AnswerDiff'
+import { CheckRunner } from '../components/level/CheckRunner'
+import { getAllWords } from '../services/libraryStorage'
 import { LevelPicture } from '../components/level/LevelPicture'
-import { skillInstructions, skillLabels, type LevelItem } from '../data/levelCheckBank'
+import { buildLevelBank, skillLabels } from '../data/levelCheckBank'
 import {
   buildPlan,
-  createCheck,
-  finishCheck,
+  clearRun,
   getLevelChecks,
-  isCorrectAnswer,
+  levelLabel,
+  loadRun,
   nextCheckDue,
-  nextItem,
-  recordCheckAnswer,
   skillOrder,
   TOTAL_QUESTIONS,
-  type CheckAnswer,
   type LevelCheckResult,
   type PlanStep,
+  type SavedRun,
 } from '../services/levelCheck'
 import { subscribeToLearningData } from '../services/learningData'
 import { setPendingPracticeSelection } from '../services/libraryPractice'
@@ -33,7 +32,7 @@ function daysAgo(value: string) {
   return days <= 0 ? 'today' : days === 1 ? 'yesterday' : `${days} days ago`
 }
 
-type View = { kind: 'home' } | { kind: 'running' } | { kind: 'result'; id: string }
+type View = { kind: 'home' } | { kind: 'running'; resume: SavedRun | null } | { kind: 'result'; id: string }
 
 export function DiagnosticPage() {
   const [revision, setRevision] = useState(0)
@@ -44,6 +43,7 @@ export function DiagnosticPage() {
   if (view.kind === 'running')
     return (
       <CheckRunner
+        resume={view.resume}
         onQuit={() => setView({ kind: 'home' })}
         onFinish={(result) => {
           setRevision((value) => value + 1)
@@ -60,15 +60,39 @@ export function DiagnosticPage() {
           previous={checks[index + 1]}
           checks={checks}
           onBack={() => setView({ kind: 'home' })}
-          onRetake={() => setView({ kind: 'running' })}
+          onRetake={() => setView({ kind: 'running', resume: null })}
         />
       )
   }
-  return <HomeView checks={checks} onStart={() => setView({ kind: 'running' })} onOpen={(id) => setView({ kind: 'result', id })} />
+  const saved = loadRun()
+  return (
+    <HomeView
+      checks={checks}
+      saved={saved}
+      onStart={() => {
+        clearRun()
+        setView({ kind: 'running', resume: null })
+      }}
+      onResume={() => setView({ kind: 'running', resume: saved })}
+      onOpen={(id) => setView({ kind: 'result', id })}
+    />
+  )
 }
 
 // ---- Start screen and history ----------------------------------------------------------------
-function HomeView({ checks, onStart, onOpen }: { checks: LevelCheckResult[]; onStart: () => void; onOpen: (id: string) => void }) {
+function HomeView({
+  checks,
+  saved,
+  onStart,
+  onResume,
+  onOpen,
+}: {
+  checks: LevelCheckResult[]
+  saved: SavedRun | null
+  onStart: () => void
+  onResume: () => void
+  onOpen: (id: string) => void
+}) {
   const last = checks[0]
   const { due, date } = nextCheckDue(checks)
   return (
@@ -81,15 +105,26 @@ function HomeView({ checks, onStart, onOpen }: { checks: LevelCheckResult[]; onS
               <Icon name="check" size={15} /> {TOTAL_QUESTIONS} questions
             </span>
             <span>
-              <Icon name="calendar" size={15} /> about 6 minutes
+              <Icon name="calendar" size={15} /> about {Math.round((TOTAL_QUESTIONS * 0.65) / 5) * 5} minutes
             </span>
             <span>
-              <Icon name="rules" size={15} /> spelling · vocabulary · grammar
+              <Icon name="rules" size={15} /> reading · listening · grammar · vocabulary · spelling
             </span>
           </div>
-          <button className="check-button level-hero__start" type="button" onClick={onStart}>
-            <Icon name="practice" size={17} /> {last ? 'Start a new check' : 'Start the check'}
-          </button>
+          {saved ? (
+            <div className="level-hero__resume">
+              <button className="check-button level-hero__start" type="button" onClick={onResume}>
+                <Icon name="practice" size={17} /> Continue · {saved.answers.length} of {saved.plan.length}
+              </button>
+              <button className="quiet-button" type="button" onClick={onStart}>
+                Start over
+              </button>
+            </div>
+          ) : (
+            <button className="check-button level-hero__start" type="button" onClick={onStart}>
+              <Icon name="practice" size={17} /> {last ? 'Start a new check' : 'Start the check'}
+            </button>
+          )}
           {last ? (
             <p className="level-hero__next">
               {due ? 'It has been a month — a good time to measure your progress.' : `Next check recommended around ${formatDate(date!)}.`}
@@ -224,122 +259,6 @@ function ProgressChart({ checks }: { checks: LevelCheckResult[] }) {
   )
 }
 
-// ---- Running the check -----------------------------------------------------------------------
-function CheckRunner({ onQuit, onFinish }: { onQuit: () => void; onFinish: (result: LevelCheckResult) => void }) {
-  const [{ bank, plan }] = useState(createCheck)
-  const [answers, setAnswers] = useState<CheckAnswer[]>([])
-  const [item, setItem] = useState<LevelItem | null>(() => nextItem(bank, plan[0], []))
-  const [input, setInput] = useState('')
-  const [feedback, setFeedback] = useState<{ correct: boolean; answer: string } | null>(null)
-  const nextRef = useRef<HTMLButtonElement>(null)
-  const step = answers.length + (feedback ? 0 : 1)
-
-  useEffect(() => {
-    if (feedback) nextRef.current?.focus()
-  }, [feedback])
-
-  function submit(event?: FormEvent, giveUp = false) {
-    event?.preventDefault()
-    if (!item || feedback || (!giveUp && !input.trim())) return
-    const answer = giveUp ? '' : input
-    const correct = !giveUp && isCorrectAnswer(item, answer)
-    recordCheckAnswer(item, answer, correct)
-    setAnswers((current) => [
-      ...current,
-      {
-        itemId: item.id,
-        skill: item.skill,
-        level: item.level,
-        correct,
-        answer,
-        expected: item.answer,
-        prompt: item.prompt,
-        wordId: item.wordId,
-      },
-    ])
-    setFeedback({ correct, answer })
-  }
-
-  function next() {
-    const done = answers.length >= plan.length
-    const upcoming = done ? null : nextItem(bank, plan[answers.length], answers)
-    if (!upcoming) {
-      onFinish(finishCheck(answers))
-      return
-    }
-    setItem(upcoming)
-    setInput('')
-    setFeedback(null)
-  }
-
-  if (!item) return null
-  return (
-    <div className="level-page level-page--running" id="level-check">
-      <div className="level-run__top">
-        <span>
-          Question {Math.min(step, TOTAL_QUESTIONS)} of {TOTAL_QUESTIONS}
-        </span>
-        <button
-          className="quiet-action"
-          type="button"
-          onClick={() => {
-            if (window.confirm('Stop the check? Answers so far stay in your practice history, but no level is saved.')) onQuit()
-          }}
-        >
-          Stop
-        </button>
-      </div>
-      <div className="level-run__track">
-        <i style={{ width: `${(answers.length / TOTAL_QUESTIONS) * 100}%` }} />
-      </div>
-
-      <section className="level-question">
-        <span className="level-question__skill">{skillLabels[item.skill]}</span>
-        <p className="level-question__hint">{skillInstructions[item.skill]}</p>
-        <h2 className={item.skill === 'grammar' ? 'level-question__prompt level-question__prompt--sentence' : 'level-question__prompt'}>
-          {item.prompt}
-        </h2>
-
-        <form onSubmit={submit}>
-          <input
-            {...noAutocorrect}
-            value={input}
-            onChange={(event) => setInput(event.target.value)}
-            placeholder={item.skill === 'grammar' ? 'Write the correct sentence…' : 'Type your answer…'}
-            disabled={Boolean(feedback)}
-            autoFocus
-            key={item.id}
-          />
-          {feedback ? (
-            <div className={`level-feedback level-feedback--${feedback.correct ? 'correct' : 'incorrect'}`} role="status">
-              <div>
-                <strong>{feedback.correct ? 'Correct' : feedback.answer ? 'Not quite' : 'Here is the answer'}</strong>
-                {!feedback.correct ? (
-                  <div className="level-feedback__diff">
-                    {feedback.answer ? <AnswerDiff expected={item.answer} submitted={feedback.answer} /> : <b>{item.answer}</b>}
-                  </div>
-                ) : null}
-              </div>
-              <button className="check-button" type="button" onClick={next} ref={nextRef}>
-                {answers.length >= TOTAL_QUESTIONS ? 'See my level' : 'Next'} <Icon name="arrow" size={16} />
-              </button>
-            </div>
-          ) : (
-            <div className="level-actions">
-              <button className="quiet-button" type="button" onClick={() => submit(undefined, true)}>
-                I don’t know
-              </button>
-              <button className="check-button" type="submit" disabled={!input.trim()}>
-                <Icon name="check" size={16} /> Check
-              </button>
-            </div>
-          )}
-        </form>
-      </section>
-    </div>
-  )
-}
-
 // ---- Result -----------------------------------------------------------------------------------
 function startPractice(step: PlanStep) {
   if (step.action.href) {
@@ -370,6 +289,7 @@ function ResultView({
 }) {
   const plan = useMemo(() => buildPlan(result), [result])
   const mistakes = result.answers.filter((answer) => !answer.correct)
+  const itemById = useMemo(() => new Map(buildLevelBank(getAllWords()).map((entry) => [entry.id, entry])), [])
   const isLatest = checks[0]?.id === result.id
   return (
     <div className="level-page" id="level-check">
@@ -379,7 +299,7 @@ function ResultView({
       <section className="level-result-hero">
         <div>
           <p className="eyebrow">Level check · {formatDate(result.completedAt)}</p>
-          <h1>Your level: {result.overall.level}</h1>
+          <h1>Your level: {levelLabel(result.overall)}</h1>
           <p>
             {previous ? (
               <>
@@ -407,8 +327,8 @@ function ResultView({
                 <span>{skillLabels[skill]}</span>
                 {before ? <Delta value={Math.round((value.ability - before.ability) * 10) / 10} /> : null}
               </div>
-              <strong>{value.range ?? value.level}</strong>
-              <div className="level-skill__scale" aria-label={`${skillLabels[skill]}: ${value.range ?? value.level}`}>
+              <strong>{levelLabel(value)}</strong>
+              <div className="level-skill__scale" aria-label={`${skillLabels[skill]}: ${levelLabel(value)}`}>
                 {levelNames.map((name) => (
                   <span className={shown(name) ? 'level-skill__step level-skill__step--on' : 'level-skill__step'} key={name}>
                     {name}
@@ -458,9 +378,13 @@ function ResultView({
             {mistakes.map((answer) => (
               <li key={answer.itemId}>
                 <span className="level-mistakes__skill">{skillLabels[answer.skill]}</span>
-                <span className="level-mistakes__prompt">{answer.prompt}</span>
+                {itemById.get(answer.itemId)?.kind === 'dictation' ? null : <span className="level-mistakes__prompt">{answer.prompt}</span>}
                 <span className="level-mistakes__diff">
-                  {answer.answer ? (
+                  {itemById.get(answer.itemId)?.kind === 'choice' ? (
+                    <>
+                      {answer.answer ? <s>{answer.answer}</s> : <em>no answer</em>} → <strong>{answer.expected}</strong>
+                    </>
+                  ) : answer.answer ? (
                     <AnswerDiff expected={answer.expected} submitted={answer.answer} />
                   ) : (
                     <>
@@ -468,6 +392,9 @@ function ResultView({
                     </>
                   )}
                 </span>
+                {itemById.get(answer.itemId)?.explain ? (
+                  <small className="level-mistakes__explain">{itemById.get(answer.itemId)?.explain}</small>
+                ) : null}
               </li>
             ))}
           </ul>

@@ -237,7 +237,7 @@ function LevelCheckNudge({ revision }: { revision: number }) {
         <Icon name="analysis" size={18} />
       </span>
       <span>
-        <strong>{checks.length ? 'Time for a new level check' : 'Find your level in 6 minutes'}</strong>
+        <strong>{checks.length ? 'Time for a new level check' : 'Find your level in 15 minutes'}</strong>
       </span>
       <Icon name="arrow" size={17} />
     </a>

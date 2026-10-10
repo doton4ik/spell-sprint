@@ -172,3 +172,14 @@ describe('older results with three skills', () => {
     expect(titles.some((title) => /Read more|dictation/i.test(title))).toBe(true)
   })
 })
+
+describe('what to show for a level', () => {
+  it('is the single level, the range, or an honest edge', async () => {
+    const { levelLabel } = await import('./levelCheck')
+    expect(levelLabel({ level: 'B1', ability: 2.1 })).toBe('B1')
+    expect(levelLabel({ level: 'B1', ability: 2.5, range: 'B1–B2' })).toBe('B1–B2')
+    expect(levelLabel({ level: 'A2', ability: 0.9 })).toBe('A2 or below')
+    expect(levelLabel({ level: 'A2', ability: 1.4 })).toBe('A2')
+    expect(levelLabel({ level: 'C1', ability: 4.4 })).toBe('C1 or above')
+  })
+})

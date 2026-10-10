@@ -27,10 +27,11 @@ function pickVoice(locale: string) {
   return { voice: english, exact: false }
 }
 
-export function speakEnglish(text: string, locale: 'en-US' | 'en-GB') {
+export function speakEnglish(text: string, locale: 'en-US' | 'en-GB', rate = 1) {
   if (!canSpeak()) return { ok: false, fallback: false }
   const utterance = new SpeechSynthesisUtterance(text)
   utterance.lang = locale
+  utterance.rate = rate
   const { voice, exact } = pickVoice(locale)
   if (voice) utterance.voice = voice
   window.speechSynthesis.cancel()

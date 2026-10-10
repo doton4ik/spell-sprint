@@ -145,6 +145,15 @@ export function isCorrectAnswer(item: LevelItem, answer: string) {
 // "He is ___ honest man." + "an" -> "He is an honest man." (for the log of a wrong gap-fill)
 export const fillGap = (prompt: string, option: string) => (prompt.includes('___') ? prompt.replace('___', option) : option)
 
+// What to show for a level: the range when the answers do not settle it, and an honest edge at the ends of the
+// scale (the questions only go from A2 to C1, so "A2" can mean lower and "C1" can mean higher).
+export function levelLabel(result: { level: string; ability: number; range?: string }) {
+  if (result.range) return result.range
+  if (result.level === 'A2' && result.ability <= 1.2) return 'A2 or below'
+  if (result.level === 'C1' && result.ability >= 4.2) return 'C1 or above'
+  return result.level
+}
+
 // How far the estimate can be trusted: with few answers it can sit on either side of a level boundary.
 // Then the level is shown as a range (e.g. B1–B2).
 export function rangeFor(ability: number, answers: number): string | undefined {
@@ -248,6 +257,38 @@ export function recordCheckAnswer(item: LevelItem, answer: string, correct: bool
     createdAt: new Date().toISOString(),
   }
   savePracticeAttempt(attempt)
+}
+
+// ---- A check in progress ---------------------------------------------------------------------
+const RUN_KEY = 'spell-sprint.level-check-run'
+const RUN_MAX_AGE_MS = 24 * 3600 * 1000
+export type SavedRun = { plan: Skill[]; answers: CheckAnswer[]; savedAt: string }
+
+export function saveRun(plan: Skill[], answers: CheckAnswer[]) {
+  try {
+    window.localStorage.setItem(RUN_KEY, JSON.stringify({ plan, answers, savedAt: new Date().toISOString() }))
+  } catch {
+    /* the check goes on without being saved */
+  }
+}
+export function clearRun() {
+  try {
+    window.localStorage.removeItem(RUN_KEY)
+  } catch {
+    /* nothing to clear */
+  }
+}
+// A saved run that is not finished and not older than a day.
+export function loadRun(now = Date.now()): SavedRun | null {
+  try {
+    const run = JSON.parse(window.localStorage.getItem(RUN_KEY) ?? 'null') as SavedRun | null
+    if (!run || !Array.isArray(run.plan) || !Array.isArray(run.answers) || typeof run.savedAt !== 'string') return null
+    if (!run.answers.length || run.answers.length >= run.plan.length) return null
+    if (now - new Date(run.savedAt).getTime() > RUN_MAX_AGE_MS) return null
+    return run
+  } catch {
+    return null
+  }
 }
 
 // ---- History ---------------------------------------------------------------------------------

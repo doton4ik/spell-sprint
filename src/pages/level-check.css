@@ -750,3 +750,111 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Deeper questions: a reading text, answers to pick, a sentence to listen to */
+.level-passage {
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  margin-top: 20px;
+  padding: 18px 22px;
+}
+.level-passage h3 {
+  color: var(--ink);
+  font-size: calc(16px * var(--fs));
+  margin: 0 0 8px;
+}
+.level-passage p {
+  color: var(--ink);
+  font-size: calc(16px * var(--fs));
+  line-height: 1.7;
+  margin: 0;
+  max-width: 68ch;
+}
+.level-choices {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+.level-choice {
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  font-size: calc(16px * var(--fs));
+  gap: 12px;
+  min-height: 52px;
+  padding: 10px 14px;
+  text-align: left;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+.level-choice:hover:not(:disabled) {
+  background: var(--teal-soft);
+  border-color: var(--teal-muted);
+}
+.level-choice kbd {
+  align-items: center;
+  background: var(--surface-muted);
+  border-radius: 6px;
+  color: var(--ink-muted);
+  display: inline-flex;
+  flex: none;
+  font: inherit;
+  font-size: calc(12px * var(--fs));
+  font-weight: 600;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
+}
+.level-choice:disabled {
+  cursor: default;
+}
+.level-choice--right {
+  background: var(--teal-soft);
+  border-color: var(--teal);
+  color: var(--teal-text-strong);
+}
+.level-choice--wrong {
+  background: var(--danger-soft);
+  border-color: var(--danger);
+  color: var(--danger-text);
+}
+.level-listen {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 16px;
+}
+.level-listen small {
+  color: var(--ink-muted);
+  font-size: calc(13px * var(--fs));
+}
+.level-feedback__explain {
+  color: var(--ink-muted);
+  display: block;
+  font-size: calc(13px * var(--fs));
+  margin-top: 6px;
+}
+.level-mistakes__explain {
+  color: var(--ink-muted);
+  display: block;
+  font-size: calc(13px * var(--fs));
+  grid-column: 1 / -1;
+}
+.level-hero__resume {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+.level-hero__resume .level-hero__start {
+  margin-top: 0;
+}
