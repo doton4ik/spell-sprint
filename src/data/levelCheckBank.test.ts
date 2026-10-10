@@ -52,7 +52,8 @@ describe('the deeper questions', () => {
     expect(articles.length).toBeGreaterThanOrEqual(4)
     for (const item of articles) {
       expect(item.logAs).toBe('Grammar · Articles')
-      expect(item.choices).toEqual(expect.arrayContaining(['a', 'an', 'the', 'no article']))
+      // the blank can open the sentence, then the choices are capitalised
+      expect(item.choices?.map((choice) => choice.toLowerCase())).toEqual(expect.arrayContaining(['a', 'an', 'the', 'no article']))
     }
   })
 

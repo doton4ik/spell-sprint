@@ -65,7 +65,15 @@ const grammarItems: LevelItem[] = [
   // A2
   gap('1-01', 1, 'She ___ to school every day.', 'goes', ['go', 'going', 'is go'], 'He, she and it take -s in the present simple.'),
   gap('1-02', 1, 'There ___ two apples on the table.', 'are', ['is', 'be', 'am'], 'Two apples is plural, so use are.'),
-  gap('1-03', 1, 'I have ___ umbrella in my bag.', 'an', ['a', 'the', 'no article'], 'Umbrella starts with a vowel sound, so an.', ARTICLE),
+  gap(
+    '1-03',
+    1,
+    'There is ___ umbrella in my bag.',
+    'an',
+    ['a', 'the', 'no article'],
+    'Umbrella starts with a vowel sound, so an.',
+    ARTICLE,
+  ),
   gap('1-04', 1, 'He is taller ___ his brother.', 'than', ['that', 'then', 'as'], 'Use than after a comparative.'),
   gap('1-05', 1, 'Yesterday we ___ to the park.', 'went', ['go', 'goed', 'gone'], 'Go is irregular: the past is went.'),
   mistake('1-06', 1, 'I am agree with you.', ['I', 'am agree', 'with', 'you'], 'am agree', 'Say “I agree”, without am.'),
@@ -138,13 +146,13 @@ const grammarItems: LevelItem[] = [
   ),
   gap('3-03', 3, 'He was born in ___ Netherlands.', 'the', ['a', 'an', 'no article'], 'Plural country names take the.', ARTICLE),
   gap('3-04', 3, 'She is not used to ___ up so early.', 'getting', ['get', 'got', 'be get'], 'After be used to, use the -ing form.'),
-  mistake(
+  gap(
     '3-05',
     3,
-    'Hardly he had arrived when it started to rain.',
-    ['Hardly', 'he had arrived', 'when', 'it started to rain'],
-    'he had arrived',
-    'After hardly, invert: Hardly had he arrived.',
+    'Hardly ___ when it started to rain.',
+    'had he arrived',
+    ['he had arrived', 'he arrived', 'did he arrived'],
+    'After hardly at the start, invert: Hardly had he arrived.',
   ),
   gap(
     '3-06',
@@ -171,14 +179,22 @@ const grammarItems: LevelItem[] = [
     ['will call', 'would call', 'had called'],
     'Had I known… means If I had known…; then would have.',
   ),
-  gap('4-03', 4, 'She is ___ only person here who knows the code.', 'the', ['a', 'an', 'no article'], 'Only takes the.', ARTICLE),
+  gap(
+    '4-03',
+    4,
+    '___ unemployed often find it hard to get a loan.',
+    'The',
+    ['A', 'An', 'No article'],
+    'The + adjective names a whole group of people: the unemployed.',
+    ARTICLE,
+  ),
   gap(
     '4-04',
     4,
-    'The report, ___ was published last week, caused a debate.',
-    'which',
-    ['what', 'who', 'whose'],
-    'Use which for a thing after a comma.',
+    'The report, ___ conclusions were disputed, caused a debate.',
+    'whose',
+    ['which', 'that', 'whom'],
+    'Whose shows that the conclusions belong to the report, also for things.',
   ),
   mistake(
     '4-05',
@@ -194,7 +210,7 @@ const grammarItems: LevelItem[] = [
     'It is high time we ___ a decision.',
     'made',
     ['make', 'will make', 'have made'],
-    'After It is time, use the past simple.',
+    'It is (high) time + subject + past simple.',
   ),
 ]
 
@@ -203,11 +219,17 @@ const formationItems: LevelItem[] = [
   formation('1-02', 1, 'The weather is ___ today. (SUN)', 'sunny', 'Add -y to make an adjective.'),
   formation('1-03', 1, 'He walked ___ to the door. (SLOW)', 'slowly', 'Most adverbs end in -ly.'),
   formation('2-01', 2, 'We were very ___ with the service. (SATISFY)', 'satisfied', 'A feeling uses the -ed adjective.'),
-  formation('2-02', 2, 'His ___ surprised everyone. (DECIDE)', 'decision', 'The noun of decide is decision.'),
-  formation('2-03', 2, 'It is ___ to park here. (LEGAL)', 'illegal', 'Il- goes before words that start with l.'),
+  formation('2-02', 2, 'His ___ surprised everyone. (DECIDE)', 'decision|indecision|decisiveness', 'The noun of decide is decision.'),
+  formation('2-03', 2, 'It is ___ to park here, so you may get a fine. (LEGAL)', 'illegal', 'Il- goes before words that start with l.'),
   formation('3-01', 3, 'The ___ of the project took three years. (COMPLETE)', 'completion', 'The noun of complete is completion.'),
   formation('3-02', 3, 'She spoke ___ about her job. (ENTHUSIASM)', 'enthusiastically', 'Enthusiastic + ally makes the adverb.'),
-  formation('3-03', 3, 'It was an ___ mistake. (EXCUSE)', 'inexcusable', 'In- + excuse + -able means cannot be excused.'),
+  formation(
+    '3-03',
+    3,
+    'It was an ___ mistake, and he lost his job because of it. (EXCUSE)',
+    'inexcusable',
+    'In- + excuse + -able means cannot be excused.',
+  ),
   formation('4-01', 4, 'He was blamed for his ___ . (RESPONSIBLE)', 'irresponsibility', 'Ir- before r, and -ity for the noun.'),
   formation('4-02', 4, 'The ___ of the data is in doubt. (ACCURATE)', 'accuracy', 'The noun of accurate is accuracy.'),
   formation('4-03', 4, 'She is known for her ___ approach. (PRAGMATISM)', 'pragmatic', 'The adjective of pragmatism is pragmatic.'),
@@ -215,21 +237,21 @@ const formationItems: LevelItem[] = [
 
 // ---- Collocations and phrasal verbs --------------------------------------------------------
 const vocabularyItems: LevelItem[] = [
-  phrase('1-01', 1, 'I need to ___ a decision soon.', 'make', ['do', 'take', 'have'], 'We say make a decision.'),
-  phrase('1-02', 1, 'Please ___ off the lights when you leave.', 'turn', ['put', 'set', 'get'], 'Turn off the lights.'),
+  phrase('1-01', 1, 'I need to ___ a decision soon.', 'make', ['do', 'get', 'have'], 'We say make a decision.'),
+  phrase('1-02', 1, 'Please ___ off the lights when you leave.', 'turn', ['make', 'set', 'get'], 'Turn off the lights.'),
   phrase('1-03', 1, 'She ___ the bus to work every day.', 'takes', ['does', 'makes', 'goes'], 'We take a bus, a train or a taxi.'),
   phrase('1-04', 1, 'Can you ___ me a favour?', 'do', ['make', 'give', 'take'], 'We say do someone a favour.'),
-  phrase('1-05', 1, 'Don’t forget to ___ your teeth.', 'brush', ['wash', 'clean', 'wipe'], 'We brush our teeth.'),
+  phrase('1-05', 1, 'Don’t forget to ___ your teeth.', 'brush', ['wash', 'make', 'wipe'], 'We brush our teeth.'),
   phrase('1-06', 1, 'Look ___! A car is coming.', 'out', ['up', 'for', 'at'], 'Look out means be careful.'),
   phrase('2-01', 2, 'We have run ___ milk. Can you buy some?', 'out of', ['off', 'away', 'over'], 'Run out of means there is none left.'),
   phrase('2-02', 2, 'He ___ his mind and stayed at home.', 'changed', ['turned', 'moved', 'switched'], 'We say change your mind.'),
   phrase('2-03', 2, 'It is important to ___ attention in class.', 'pay', ['give', 'make', 'take'], 'We say pay attention.'),
-  phrase('2-04', 2, 'The meeting was ___ off because of the strike.', 'called', ['turned', 'put', 'cut'], 'Call off means cancel.'),
+  phrase('2-04', 2, 'The meeting was ___ off because of the strike.', 'called', ['turned', 'taken', 'cut'], 'Call off means cancel.'),
   phrase('2-05', 2, 'They ___ a deal after a long discussion.', 'reached', ['took', 'put', 'held'], 'We reach an agreement or a deal.'),
   phrase('2-06', 2, 'I am looking ___ to seeing you.', 'forward', ['ahead', 'up', 'out'], 'Look forward to is a fixed phrase.'),
   phrase('3-01', 3, 'She decided to ___ up smoking.', 'give', ['put', 'take', 'set'], 'Give up means stop doing something.'),
   phrase('3-02', 3, 'He ___ a good impression at the interview.', 'made', ['did', 'took', 'had'], 'We say make an impression.'),
-  phrase('3-03', 3, 'The new law will ___ into effect in May.', 'come', ['go', 'get', 'run'], 'We say come into effect.'),
+  phrase('3-03', 3, 'The new law will ___ into effect in May.', 'come', ['make', 'get', 'run'], 'We say come into effect.'),
   phrase(
     '3-04',
     3,
@@ -238,7 +260,7 @@ const vocabularyItems: LevelItem[] = [
     ['solve', 'treat', 'work'],
     'Deal with a problem is the usual phrase.',
   ),
-  phrase('3-05', 3, 'She ___ the blame for the mistake.', 'took', ['got', 'had', 'made'], 'We say take the blame.'),
+  phrase('3-05', 3, 'She ___ the blame for the mistake.', 'took', ['gave', 'had', 'made'], 'We say take the blame.'),
   phrase(
     '3-06',
     3,
@@ -257,8 +279,15 @@ const vocabularyItems: LevelItem[] = [
   ),
   phrase('4-02', 4, 'His speech ___ a lot of controversy.', 'sparked', ['lit', 'struck', 'flamed'], 'We say spark controversy.'),
   phrase('4-03', 4, 'The two companies decided to ___ forces.', 'join', ['meet', 'bring', 'add'], 'Join forces means work together.'),
-  phrase('4-04', 4, 'We must ___ the issue head-on.', 'tackle', ['hit', 'catch', 'stop'], 'We tackle an issue or a problem.'),
-  phrase('4-05', 4, 'He was ___ of all charges.', 'cleared', ['free', 'released', 'emptied'], 'Cleared of charges means found not guilty.'),
+  phrase('4-04', 4, 'We must ___ the issue head-on.', 'tackle', ['kick', 'catch', 'stop'], 'We tackle an issue or a problem.'),
+  phrase(
+    '4-05',
+    4,
+    'He was ___ of all charges.',
+    'cleared',
+    ['excused', 'released', 'emptied'],
+    'Cleared of charges means found not guilty.',
+  ),
   phrase(
     '4-06',
     4,
@@ -364,8 +393,8 @@ const readingItems: LevelItem[] = [
   ...reading('library', 2, [
     [
       'Why is the library moving?',
-      'The old building is too small and hard to reach',
-      ['The council wants a bigger café', 'Students asked for more books', 'The old building is closing down'],
+      'The old building is too small and has no lift',
+      ['The council wants a bigger café', 'Students asked for more books', 'The old building is too expensive to heat'],
       'It is too small and has no lift.',
     ],
     [
@@ -485,8 +514,10 @@ const readingItems: LevelItem[] = [
 
 // ---- Dictation -----------------------------------------------------------------------------
 const dictationItems: LevelItem[] = [
-  dictation('1-01', 1, 'My brother plays football on Sunday.'),
+  dictation('1-01', 1, 'My brother plays football on Sundays.', ['My brother plays football on Sunday.']),
   dictation('1-02', 1, 'The shop opens at nine o’clock.', [
+    'The shop opens at 9:00.',
+    'The shop opens at nine.',
     'The shop opens at 9 o’clock.',
     'The shop opens at nine oclock.',
     'The shop opens at 9 oclock.',
@@ -498,6 +529,7 @@ const dictationItems: LevelItem[] = [
   dictation('2-01', 2, 'I have lived in this city for about ten years.', ['I have lived in this city for about 10 years.']),
   dictation('2-02', 2, 'He said that the meeting would start at half past three.', [
     'He said that the meeting would start at half past 3.',
+    'He said that the meeting would start at 3:30.',
   ]),
   dictation('2-03', 2, 'If the weather is nice, we will have lunch in the garden.'),
   dictation('2-04', 2, 'She forgot to bring her passport, so she missed the flight.'),

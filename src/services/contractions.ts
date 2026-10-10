@@ -54,7 +54,7 @@ const NUMBER_WORDS = [
 ]
 
 export function expandWord(word: string): string[][] {
-  if (/^d{1,2}$/.test(word) && Number(word) < NUMBER_WORDS.length) return [[NUMBER_WORDS[Number(word)]], [word]]
+  if (/^\d{1,2}$/.test(word) && Number(word) < NUMBER_WORDS.length) return [[NUMBER_WORDS[Number(word)]], [word]]
   const number = NUMBER_WORDS.indexOf(word)
   if (number >= 0) return [[word], [String(number)]]
   if (IRREGULAR[word]) return IRREGULAR[word]
