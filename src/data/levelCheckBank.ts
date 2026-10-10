@@ -1,24 +1,46 @@
 import { grammar, spelling, vocabulary } from './diagnostic'
 import type { LibraryWord } from '../types/library'
 import { extraLevelItems } from './levelCheckExtra'
+import { deepLevelItems, levelPassages } from './levelCheckDeep'
+
+export { levelPassages }
 
 // Question bank for the adaptive level check. Levels: 1 = A2, 2 = B1, 3 = B2, 4 = C1.
-export type Skill = 'spelling' | 'vocabulary' | 'grammar'
+export type Skill = 'spelling' | 'vocabulary' | 'grammar' | 'reading' | 'listening'
+// type: the learner writes the answer. choice: picks one of the options. dictation: hears a sentence and writes it.
+export type ItemKind = 'type' | 'choice' | 'dictation'
 export type LevelItem = {
-  id: string
+  id: string // stable: never derived from a position, so adding an item does not change the others' ids
   skill: Skill
   level: 1 | 2 | 3 | 4
   prompt: string
-  answer: string
+  answer: string // several accepted answers can be separated by |
+  kind?: ItemKind // no kind means type
+  choices?: string[] // for choice: the options, the answer is one of them
+  passage?: string // reading: the id of the text this question belongs to
+  instruction?: string // overrides the skill's default line above the question
+  explain?: string // one short line shown after a wrong answer
+  log?: boolean // typed items only: false keeps the answer out of My Mistakes (default: logged)
+  logAs?: string // choice items only: a wrong answer is logged with this category, e.g. 'Grammar · Articles'
   wordId?: string // set when the item is a library word, so the result feeds that word's progress
   translation?: string
 }
+// A reading text: its questions are the items with this id in `passage`, asked together.
+export type LevelPassage = { id: string; level: 1 | 2 | 3 | 4; title: string; text: string }
 
-export const skillLabels: Record<Skill, string> = { spelling: 'Spelling', vocabulary: 'Vocabulary', grammar: 'Grammar' }
+export const skillLabels: Record<Skill, string> = {
+  spelling: 'Spelling',
+  vocabulary: 'Vocabulary',
+  grammar: 'Grammar',
+  reading: 'Reading',
+  listening: 'Listening',
+}
 export const skillInstructions: Record<Skill, string> = {
   spelling: 'Write the word correctly. Some are already right — then just copy them.',
   vocabulary: 'Write the English word.',
   grammar: 'Rewrite the sentence correctly. If it is already right, copy it.',
+  reading: 'Read the text, then choose the best answer.',
+  listening: 'Listen, then type exactly what you hear.',
 }
 
 // Levels for the original diagnostic items, by how often B1–B2 learners get them wrong.
@@ -132,5 +154,5 @@ export function buildLevelBank(words: LibraryWord[]): LevelItem[] {
       answer,
     }))
     .filter((item) => item.prompt.trim() && item.answer.trim() && !known.has(item.id))
-  return [...spellingItems, ...vocabularyItems, ...grammarItems, ...extra]
+  return [...spellingItems, ...vocabularyItems, ...grammarItems, ...extra, ...deepLevelItems]
 }

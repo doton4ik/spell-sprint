@@ -3,7 +3,7 @@ import { noAutocorrect } from '../components/noAutocorrect'
 import { Icon } from '../components/icons/Icon'
 import { AnswerDiff } from '../components/practice/AnswerDiff'
 import { LevelPicture } from '../components/level/LevelPicture'
-import { skillInstructions, skillLabels, type LevelItem, type Skill } from '../data/levelCheckBank'
+import { skillInstructions, skillLabels, type LevelItem } from '../data/levelCheckBank'
 import {
   buildPlan,
   createCheck,
@@ -13,6 +13,7 @@ import {
   nextCheckDue,
   nextItem,
   recordCheckAnswer,
+  skillOrder,
   TOTAL_QUESTIONS,
   type CheckAnswer,
   type LevelCheckResult,
@@ -22,7 +23,7 @@ import { subscribeToLearningData } from '../services/learningData'
 import { setPendingPracticeSelection } from '../services/libraryPractice'
 import './level-check.css'
 
-const skills: Skill[] = ['spelling', 'vocabulary', 'grammar']
+const skills = skillOrder
 const levelNames = ['A2', 'B1', 'B2', 'C1']
 const formatDate = (value: string | Date) =>
   new Intl.DateTimeFormat('en', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(value))
@@ -100,11 +101,13 @@ function HomeView({ checks, onStart, onOpen }: { checks: LevelCheckResult[]; onS
             <span>Your last result · {daysAgo(last.completedAt)}</span>
             <strong>{last.overall.level}</strong>
             <div>
-              {skills.map((skill) => (
-                <small key={skill}>
-                  {skillLabels[skill]} <b>{last.skills[skill].level}</b>
-                </small>
-              ))}
+              {skills
+                .filter((skill) => last.skills[skill])
+                .map((skill) => (
+                  <small key={skill}>
+                    {skillLabels[skill]} <b>{last.skills[skill]?.level}</b>
+                  </small>
+                ))}
             </div>
             <em>
               See details <Icon name="arrow" size={14} />
@@ -143,11 +146,13 @@ function History({ checks, onOpen }: { checks: LevelCheckResult[]; onOpen: (id: 
               <span className="level-history__date">{formatDate(check.completedAt)}</span>
               <strong className="level-badge">{check.overall.level}</strong>
               <span className="level-history__skills">
-                {skills.map((skill) => (
-                  <small key={skill}>
-                    {skillLabels[skill].slice(0, 5)}. {check.skills[skill].level}
-                  </small>
-                ))}
+                {skills
+                  .filter((skill) => check.skills[skill])
+                  .map((skill) => (
+                    <small key={skill}>
+                      {skillLabels[skill].slice(0, 5)}. {check.skills[skill]?.level}
+                    </small>
+                  ))}
               </span>
               {delta !== null ? <Delta value={delta} /> : <span />}
               <Icon name="chevron" size={16} />
@@ -191,21 +196,29 @@ function ProgressChart({ checks }: { checks: LevelCheckResult[] }) {
             {new Intl.DateTimeFormat('en', { day: 'numeric', month: 'short' }).format(new Date(check.completedAt))}
           </text>
         ))}
-        {skills.map((skill) => (
-          <g key={skill} className={`level-chart__line level-chart__line--${skill}`}>
-            <polyline points={points.map((check, index) => `${x(index)},${y(check.skills[skill].ability)}`).join(' ')} fill="none" />
-            {points.map((check, index) => (
-              <circle key={check.id} cx={x(index)} cy={y(check.skills[skill].ability)} r={3.5} />
-            ))}
-          </g>
-        ))}
+        {skills.map((skill) => {
+          const own = points.flatMap((check, index) =>
+            check.skills[skill] ? [{ check, index, ability: check.skills[skill].ability }] : [],
+          )
+          if (!own.length) return null
+          return (
+            <g key={skill} className={`level-chart__line level-chart__line--${skill}`}>
+              <polyline points={own.map(({ index, ability }) => `${x(index)},${y(ability)}`).join(' ')} fill="none" />
+              {own.map(({ check, index, ability }) => (
+                <circle key={check.id} cx={x(index)} cy={y(ability)} r={3.5} />
+              ))}
+            </g>
+          )
+        })}
       </svg>
       <figcaption>
-        {skills.map((skill) => (
-          <span className={`level-legend level-legend--${skill}`} key={skill}>
-            {skillLabels[skill]}
-          </span>
-        ))}
+        {skills
+          .filter((skill) => points.some((check) => check.skills[skill]))
+          .map((skill) => (
+            <span className={`level-legend level-legend--${skill}`} key={skill}>
+              {skillLabels[skill]}
+            </span>
+          ))}
       </figcaption>
     </figure>
   )
@@ -383,17 +396,21 @@ function ResultView({
       <section className="level-skills">
         {skills.map((skill) => {
           const value = result.skills[skill]
+          if (!value) return null
           const before = previous?.skills[skill]
+          const [low, high] = (value.range ?? `${value.level}–${value.level}`).split('–')
+          const shown = (name: string) =>
+            levelNames.indexOf(name) >= levelNames.indexOf(low) && levelNames.indexOf(name) <= levelNames.indexOf(high)
           return (
             <article className="level-skill" key={skill}>
               <div className="level-skill__head">
                 <span>{skillLabels[skill]}</span>
                 {before ? <Delta value={Math.round((value.ability - before.ability) * 10) / 10} /> : null}
               </div>
-              <strong>{value.level}</strong>
-              <div className="level-skill__scale" aria-label={`${skillLabels[skill]}: ${value.level}`}>
+              <strong>{value.range ?? value.level}</strong>
+              <div className="level-skill__scale" aria-label={`${skillLabels[skill]}: ${value.range ?? value.level}`}>
                 {levelNames.map((name) => (
-                  <span className={name === value.level ? 'level-skill__step level-skill__step--on' : 'level-skill__step'} key={name}>
+                  <span className={shown(name) ? 'level-skill__step level-skill__step--on' : 'level-skill__step'} key={name}>
                     {name}
                   </span>
                 ))}

@@ -1,16 +1,17 @@
-import { buildLevelBank, skillLabels, type LevelItem, type Skill } from '../data/levelCheckBank'
+import { buildLevelBank, skillLabels, type ItemKind, type LevelItem, type Skill } from '../data/levelCheckBank'
 import type { LibraryWord } from '../types/library'
-import type { PracticeAttempt } from '../types/practice'
+import type { PracticeAttempt, PracticeMode } from '../types/practice'
 import { getAllWords } from './libraryStorage'
 import { savePracticeAttempt } from './practiceStorage'
 import { scheduleAfterAnswer } from './reviewSchedule'
 import { pickPracticeWords } from './topicStats'
 
 // ---- The adaptive check ----------------------------------------------------------------------
-// 20 questions, interleaved across three skills. Each skill runs its own staircase: start at B1,
+// 25 questions across five skills. Each skill runs its own staircase: start at B1,
 // one level up after a right answer, one down after a wrong one, so every skill quickly settles
 // around the learner's real level instead of spending questions on things far too easy or hard.
-export const QUESTIONS_PER_SKILL: Record<Skill, number> = { spelling: 7, vocabulary: 7, grammar: 6 }
+export const QUESTIONS_PER_SKILL: Record<Skill, number> = { spelling: 4, vocabulary: 5, grammar: 6, reading: 6, listening: 4 }
+const READING_BLOCK = 3 // a text is asked together: three questions
 export const TOTAL_QUESTIONS = Object.values(QUESTIONS_PER_SKILL).reduce((sum, value) => sum + value, 0)
 const START_LEVEL = 2
 export const RECHECK_AFTER_DAYS = 30
@@ -25,16 +26,28 @@ export type CheckAnswer = {
   prompt: string
   wordId?: string
 }
-export type SkillResult = { ability: number; level: string; percent: number; correct: number; total: number }
+// range: set when the answers do not settle the level (e.g. "B1–B2"); level is then the best single guess.
+export type SkillResult = { ability: number; level: string; percent: number; correct: number; total: number; range?: string }
 export type LevelCheckResult = {
   id: string
   completedAt: string
-  skills: Record<Skill, SkillResult>
-  overall: { ability: number; level: string }
+  // Older checks have only spelling, vocabulary and grammar; a skill that was not measured is missing.
+  skills: Partial<Record<Skill, SkillResult>>
+  overall: { ability: number; level: string; range?: string }
   answers: CheckAnswer[]
 }
 
-const skillOrder: Skill[] = ['spelling', 'vocabulary', 'grammar']
+export const skillOrder: Skill[] = ['spelling', 'vocabulary', 'grammar', 'reading', 'listening']
+
+// What kind of question each skill asks, in order, so a check is not 25 of the same thing.
+const KIND_PLAN: Record<Skill, ItemKind[]> = {
+  spelling: ['type', 'type', 'type', 'type'],
+  vocabulary: ['type', 'choice', 'choice', 'type', 'choice'],
+  grammar: ['choice', 'choice', 'type', 'choice', 'choice', 'type'],
+  reading: [],
+  listening: ['dictation', 'dictation', 'dictation', 'dictation'],
+}
+const kindOf = (item: LevelItem): ItemKind => item.kind ?? 'type'
 export const cefrFor = (ability: number) => (ability < 1.5 ? 'A2' : ability < 2.5 ? 'B1' : ability < 3.5 ? 'B2' : 'C1')
 const percentFor = (ability: number) => Math.round(Math.min(100, Math.max(0, ((ability - 0.5) / 4) * 100)))
 
@@ -43,21 +56,31 @@ export function normaliseAnswer(value: string) {
     .trim()
     .toLocaleLowerCase()
     .replace(/[’‘`]/g, "'")
-    .replace(/[.!?,]+/g, '')
+    .replace(/[.!?,;:"“”]+/g, '')
+    .replace(/-/g, ' ')
     .replace(/\s+/g, ' ')
+    .trim()
 }
 
-export function createCheck() {
-  const bank = buildLevelBank(getAllWords())
-  // Skill of every question, spread evenly: S V G S V G … until each skill has its quota.
-  const plan: Skill[] = []
+// The order of the questions: the skills interleaved, with the reading questions in two blocks of three
+// (a text is read once and asked together). Without speech in the browser there is no listening part.
+export function createCheck(options: { listening?: boolean; bank?: LevelItem[] } = {}) {
+  const bank = options.bank ?? buildLevelBank(getAllWords())
   const left = { ...QUESTIONS_PER_SKILL }
-  while (plan.length < TOTAL_QUESTIONS)
-    for (const skill of skillOrder)
+  if (options.listening === false) left.listening = 0
+  // a skill the bank has no questions for is left out instead of ending the check early
+  for (const skill of skillOrder) if (!bank.some((item) => item.skill === skill)) left[skill] = 0
+  const others: Skill[] = []
+  const rest = skillOrder.filter((skill) => skill !== 'reading')
+  while (rest.some((skill) => left[skill] > 0))
+    for (const skill of rest)
       if (left[skill] > 0) {
-        plan.push(skill)
+        others.push(skill)
         left[skill] -= 1
       }
+  const block = left.reading > 0 ? Array<Skill>(READING_BLOCK).fill('reading') : []
+  const cut = Math.round(others.length * 0.45)
+  const plan = [...others.slice(0, cut), ...block, ...others.slice(cut), ...block]
   return { bank, plan }
 }
 
@@ -68,19 +91,67 @@ function targetLevel(answers: CheckAnswer[], skill: Skill) {
 }
 
 // Next question: the target level for its skill, or the nearest level that still has unused items.
-export function nextItem(bank: LevelItem[], skill: Skill, answers: CheckAnswer[]): LevelItem | null {
-  const used = new Set(answers.map((answer) => answer.itemId))
-  const pool = bank.filter((item) => item.skill === skill && !used.has(item.id))
-  const target = targetLevel(answers, skill)
-  for (const distance of [0, 1, -1, 2, -2, 3, -3]) {
-    const candidates = pool.filter((item) => item.level === target + distance)
-    if (candidates.length) return candidates[Math.floor(Math.random() * candidates.length)]
+const DISTANCES = [0, 1, -1, 2, -2, 3, -3]
+const pickOne = <T>(items: T[]) => items[Math.floor(Math.random() * items.length)]
+
+// Reading goes text by text: finish the text being read; then the next text's level follows the block
+// (2 or 3 of 3 right goes up, 0 or 1 goes down), not the last single answer.
+function nextReadingItem(bank: LevelItem[], answers: CheckAnswer[], pool: LevelItem[]): LevelItem | null {
+  const passageOf = (id: string) => bank.find((item) => item.id === id)?.passage
+  const mine = answers.filter((answer) => answer.skill === 'reading')
+  const last = mine.at(-1)
+  const lastPassage = last ? passageOf(last.itemId) : undefined
+  if (lastPassage) {
+    const same = pool.filter((item) => item.passage === lastPassage)
+    if (same.length) return same[0]
+  }
+  let target = START_LEVEL
+  if (last && lastPassage) {
+    const block = mine.filter((answer) => passageOf(answer.itemId) === lastPassage)
+    const right = block.filter((answer) => answer.correct).length
+    target = Math.min(4, Math.max(1, last.level + (right * 2 >= block.length + 1 ? 1 : -1)))
+  }
+  for (const distance of DISTANCES) {
+    const firsts = pool.filter((item) => item.level === target + distance)
+    // the first question of a text that has not been started
+    const start = firsts.find((item) => !answers.some((answer) => passageOf(answer.itemId) === item.passage))
+    if (start) return start
   }
   return null
 }
 
+// Next question: the target level for its skill, or the nearest level that still has unused items; the
+// kind of question follows KIND_PLAN, and falls back to any kind when none is left.
+export function nextItem(bank: LevelItem[], skill: Skill, answers: CheckAnswer[]): LevelItem | null {
+  const used = new Set(answers.map((answer) => answer.itemId))
+  const pool = bank.filter((item) => item.skill === skill && !used.has(item.id))
+  if (skill === 'reading') return nextReadingItem(bank, answers, pool)
+  const target = targetLevel(answers, skill)
+  const wanted = KIND_PLAN[skill][answers.filter((answer) => answer.skill === skill).length]
+  for (const kind of [wanted, undefined])
+    for (const distance of DISTANCES) {
+      const candidates = pool.filter((item) => item.level === target + distance && (!kind || kindOf(item) === kind))
+      if (candidates.length) return pickOne(candidates)
+    }
+  return null
+}
+
+// Several accepted answers can be written as "I do not know|I don't know".
 export function isCorrectAnswer(item: LevelItem, answer: string) {
-  return normaliseAnswer(answer) === normaliseAnswer(item.answer)
+  const given = normaliseAnswer(answer)
+  return item.answer.split('|').some((option) => normaliseAnswer(option) === given)
+}
+
+// "He is ___ honest man." + "an" -> "He is an honest man." (for the log of a wrong gap-fill)
+export const fillGap = (prompt: string, option: string) => (prompt.includes('___') ? prompt.replace('___', option) : option)
+
+// How far the estimate can be trusted: with few answers it can sit on either side of a level boundary.
+// Then the level is shown as a range (e.g. B1–B2).
+export function rangeFor(ability: number, answers: number): string | undefined {
+  const spread = 0.6 / Math.sqrt(Math.max(1, answers))
+  const low = cefrFor(Math.max(0.5, ability - spread))
+  const high = cefrFor(Math.min(4.5, ability + spread))
+  return low === high ? undefined : `${low}–${high}`
 }
 
 // Ability: each answer is evidence that the level is a bit above (right) or below (wrong) that item.
@@ -94,28 +165,65 @@ function scoreSkill(answers: CheckAnswer[]): SkillResult {
     percent: percentFor(ability),
     correct: answers.filter((answer) => answer.correct).length,
     total: answers.length,
+    range: rangeFor(ability, answers.length),
   }
 }
 
-export function finishCheck(answers: CheckAnswer[]): LevelCheckResult {
-  const skills = Object.fromEntries(
-    skillOrder.map((skill) => [skill, scoreSkill(answers.filter((answer) => answer.skill === skill))]),
-  ) as Record<Skill, SkillResult>
-  const ability = Math.round((skillOrder.reduce((sum, skill) => sum + skills[skill].ability, 0) / skillOrder.length) * 10) / 10
-  const result = {
-    id: crypto.randomUUID(),
-    completedAt: new Date().toISOString(),
-    skills,
-    overall: { ability, level: cefrFor(ability) },
-    answers,
+// The result of a set of answers, without saving it. Only skills that were asked about are in it.
+export function scoreCheck(answers: CheckAnswer[]): Pick<LevelCheckResult, 'skills' | 'overall'> {
+  const skills: Partial<Record<Skill, SkillResult>> = {}
+  for (const skill of skillOrder) {
+    const own = answers.filter((answer) => answer.skill === skill)
+    if (own.length) skills[skill] = scoreSkill(own)
   }
+  const measured = Object.values(skills)
+  const ability = measured.length
+    ? Math.round((measured.reduce((sum, value) => sum + value.ability, 0) / measured.length) * 10) / 10
+    : START_LEVEL
+  return { skills, overall: { ability, level: cefrFor(ability), range: rangeFor(ability, answers.length) } }
+}
+
+export function finishCheck(answers: CheckAnswer[]): LevelCheckResult {
+  const result = { id: crypto.randomUUID(), completedAt: new Date().toISOString(), ...scoreCheck(answers), answers }
   saveLevelCheck(result)
   return result
 }
 
-// Every answer is also a normal practice attempt: mistakes land in My Mistakes and the review queue,
-// spelling mistakes get classified and linked to rules, and library words update their progress.
+// Typed words and sentences are also normal practice attempts: mistakes land in My Mistakes and the review
+// queue, spelling mistakes get classified and linked to rules, and library words update their progress.
+// Choices, reading and dictation stay out of the log (an "a / an" pick is not a spelling mistake), with one
+// exception: a wrong pick on an item marked logAs (an article gap-fill) is logged as that grammar mistake
+// with the whole corrected phrase, so it shows up under Articles and links to the article rules.
 export function recordCheckAnswer(item: LevelItem, answer: string, correct: boolean) {
+  const kind = item.kind ?? 'type'
+  if (kind === 'dictation' || (kind === 'type' && item.log === false)) return
+  if (kind === 'choice') {
+    if (correct || !item.logAs) return
+    const now = new Date().toISOString()
+    const taskId = item.id
+    const { confidence, nextReviewAt } = scheduleAfterAnswer({ taskId }, false, false, 'write-en')
+    savePracticeAttempt({
+      id: crypto.randomUUID(),
+      taskId,
+      taskType: 'correct-sentence',
+      topic: 'Grammar',
+      library: 'Level check',
+      userAnswer: fillGap(item.prompt, answer),
+      correctAnswer: fillGap(item.prompt, item.answer),
+      isCorrect: false,
+      wasSkipped: !answer.trim(),
+      wasAnswerRevealed: false,
+      hintUsed: false,
+      attemptMode: 'write-en',
+      errorType: 'unknown',
+      confidence,
+      nextReviewAt,
+      errorCategory: item.logAs,
+      needsReview: true,
+      createdAt: now,
+    })
+    return
+  }
   const taskId = item.wordId ? `library-${item.wordId}-write-en` : item.id
   const { confidence, nextReviewAt } = scheduleAfterAnswer({ wordId: item.wordId, taskId }, correct, false, 'write-en')
   const attempt: PracticeAttempt = {
@@ -200,7 +308,7 @@ export function nextCheckDue(checks = getLevelChecks()) {
 export type PlanStep = {
   title: string
   text: string
-  action: { label: string; href?: string; words?: LibraryWord[]; practiceLabel?: string }
+  action: { label: string; href?: string; words?: LibraryWord[]; practiceLabel?: string; mode?: PracticeMode }
 }
 
 const levelDifficulty = (level: string) => (level === 'A2' ? ['easy'] : level === 'B1' ? ['easy', 'medium'] : ['medium', 'hard'])
@@ -210,7 +318,10 @@ export function buildPlan(result: LevelCheckResult): PlanStep[] {
   const everyday = words.filter(
     (word) => !['Logistics', 'Warehouse Operations', 'Transport and Trade', 'Supply Chain'].includes(word.topic),
   )
-  const bySkill = [...skillOrder].sort((a, b) => result.skills[a].ability - result.skills[b].ability)
+  // Older checks have three skills only; sort just the ones this result measured.
+  const bySkill = skillOrder
+    .filter((skill) => result.skills[skill])
+    .sort((a, b) => (result.skills[a]?.ability ?? START_LEVEL) - (result.skills[b]?.ability ?? START_LEVEL))
   const steps: PlanStep[] = []
 
   const wrongWordIds = new Set(result.answers.filter((answer) => !answer.correct && answer.wordId).map((answer) => answer.wordId!))
@@ -230,7 +341,7 @@ export function buildPlan(result: LevelCheckResult): PlanStep[] {
   }
 
   for (const skill of bySkill.slice(0, 2)) {
-    const level = result.skills[skill].level
+    const level = result.skills[skill]?.level ?? 'B1'
     if (skill === 'vocabulary') {
       const pool = everyday.filter((word) => levelDifficulty(level).includes(word.difficulty))
       steps.push({
@@ -248,6 +359,19 @@ export function buildPlan(result: LevelCheckResult): PlanStep[] {
           words: pickPracticeWords(traps.length ? traps : everyday),
           practiceLabel: 'Spelling traps',
         },
+      })
+    } else if (skill === 'reading') {
+      steps.push({
+        title: 'Read more at your level',
+        text: 'Proofreading texts are short readings; finding the mistakes makes you read closely.',
+        action: { label: 'Open proofreading', href: '#proofreading' },
+      })
+    } else if (skill === 'listening') {
+      const pool = everyday.filter((word) => levelDifficulty(result.skills.listening?.level ?? 'B1').includes(word.difficulty))
+      steps.push({
+        title: 'Train your ear with dictation',
+        text: 'Hear a word, then type it: it trains listening and spelling at once.',
+        action: { label: 'Practise 10 words', words: pickPracticeWords(pool), practiceLabel: 'Dictation', mode: 'listen-write' },
       })
     } else {
       steps.push({
