@@ -2,17 +2,13 @@ import { useEffect, useMemo, useState } from 'react'
 import { Icon } from '../icons/Icon'
 import { ruleCategoryLabel, rulePriorityLabels, ruleStatusLabels, ruleTypeLabels } from '../../data/ruleCategories'
 import { defaultPracticeSettings } from '../../data/practice'
-import { getLinkedMistakesForRule, getRuleExamples, getRuleLinkedWords, getRuleRelationships } from '../../services/rulesService'
+import { getLinkedMistakesForRule, getRuleExamples, getRuleRelationships } from '../../services/rulesService'
 import { getUserRuleNote, saveUserRuleNote } from '../../services/ruleNotesService'
 import { addRuleToRepeatLater, getRuleExercises, markRuleAsMastered } from '../../services/rulePracticeService'
 import { loadPracticeSettings } from '../../services/practiceStorage'
 import { speakEnglish } from '../../services/speech'
 import type { MistakeEvent, Rule, RuleExample, RuleExercise, RuleRelationship, UserRuleProgress } from '../../types/rules'
 import { RuleExerciseRunner } from './RuleExerciseRunner'
-
-const MAX_WORDS = 8
-// "встреча (по записи), запись (к врачу), приём" -> "встреча (по записи)": the first meaning is enough in a chip.
-const shortTranslation = (translation: string) => translation.split(/,\s(?![^(]*\))/)[0]
 
 export type RuleTab = 'rule' | 'examples' | 'practice' | 'notes'
 const tabs: Array<{ id: RuleTab; label: string }> = [
@@ -33,7 +29,6 @@ type RuleDetailProps = {
 
 type Details = {
   examples: RuleExample[]
-  linkedWords: Array<{ wordId: string; word: string; translation?: string }>
   relationships: RuleRelationship[]
   linkedMistakes: MistakeEvent[]
   exercises: RuleExercise[]
@@ -53,14 +48,13 @@ export function RuleDetail({ rule, rulesById, progress, initialTab = 'rule', onB
     let cancelled = false
     Promise.all([
       getRuleExamples(rule.id),
-      getRuleLinkedWords(rule.id),
       getRuleRelationships(rule.id),
       getLinkedMistakesForRule(rule.id),
       getRuleExercises(rule.id),
       getUserRuleNote(rule.id),
-    ]).then(([examples, linkedWords, relationships, linkedMistakes, exercises, noteRow]) => {
+    ]).then(([examples, relationships, linkedMistakes, exercises, noteRow]) => {
       if (cancelled) return
-      setDetails({ examples, linkedWords, relationships, linkedMistakes, exercises, note: noteRow?.note ?? '' })
+      setDetails({ examples, relationships, linkedMistakes, exercises, note: noteRow?.note ?? '' })
       setNoteDraft(noteRow?.note ?? '')
     })
     return () => {
@@ -141,31 +135,6 @@ export function RuleDetail({ rule, rulesById, progress, initialTab = 'rule', onB
               <button className="quiet-action rules-pane__listen" type="button" onClick={listen}>
                 <Icon name="volume" size={14} /> Listen
               </button>
-            ) : null}
-            {rule.mnemonic ? (
-              <div className="memory-cue">
-                <Icon name="lightbulb" size={16} />
-                <p>
-                  <strong>Memory cue</strong>
-                  {rule.mnemonic}
-                </p>
-              </div>
-            ) : null}
-            {details.linkedWords.length ? (
-              <div className="rules-words">
-                <strong>Words with this rule</strong>
-                <ul>
-                  {details.linkedWords.slice(0, MAX_WORDS).map((word) => (
-                    <li key={word.wordId} title={word.translation}>
-                      {word.word}
-                      {word.translation ? <small>{shortTranslation(word.translation)}</small> : null}
-                    </li>
-                  ))}
-                  {details.linkedWords.length > MAX_WORDS ? (
-                    <li className="rules-words__more">+{details.linkedWords.length - MAX_WORDS} more</li>
-                  ) : null}
-                </ul>
-              </div>
             ) : null}
             {details.relationships.length ? (
               <p className="rules-pane__line">
