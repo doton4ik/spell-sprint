@@ -1,0 +1,230 @@
+{
+  "_about": "Source of the article rules (pack 3). scripts/build-articles-pack.mjs turns this file into database/content-pack-3-articles.sql, the additions to src/data/builtInRules.json and src/data/builtInRuleExercises.json. Edit here, then run: node scripts/build-articles-pack.mjs",
+  "category": "english_grammar",
+  "rules": [
+    {
+      "slug": "a-or-an",
+      "title": "A or an: the sound decides",
+      "rule_type": "language_rule",
+      "short_explanation": "Use a before a consonant SOUND and an before a vowel SOUND. Listen to the first sound of the next word, not its first letter: an hour (the h is silent), a university (it starts with the sound \"yoo\").",
+      "tts_text": "Use a before a consonant sound and an before a vowel sound.",
+      "mnemonic": "Say the next word aloud. Does it start with a vowel sound? Then an.",
+      "examples": [
+        { "type": "correct", "text": "an hour", "note": "silent h: the first sound is a vowel" },
+        { "type": "correct", "text": "a university", "note": "starts with the sound \"yoo\", a consonant sound" },
+        { "type": "correct", "text": "an MBA", "note": "the letter M is read \"em\", a vowel sound" },
+        { "type": "incorrect", "text": "She is a honest person.", "correction": "She is an honest person.", "note": "honest starts with a vowel sound" },
+        { "type": "incorrect", "text": "It was an European tradition.", "correction": "It was a European tradition.", "note": "European starts with \"yoo\"" },
+        { "type": "exception", "text": "a one-way ticket", "note": "one starts with the sound \"w\"" }
+      ],
+      "exercises": [
+        { "prompt": "She studies at ___ university in London.", "answer": "a", "choices": ["a", "an"] },
+        { "prompt": "We waited for ___ hour.", "answer": "an", "choices": ["a", "an"] },
+        { "prompt": "He is ___ honest man.", "answer": "an", "choices": ["a", "an"] },
+        { "prompt": "She wants to visit ___ European country.", "answer": "a", "choices": ["a", "an"] },
+        { "prompt": "I need ___ umbrella, it is raining.", "answer": "an", "choices": ["a", "an"] },
+        { "prompt": "He has ___ one-year contract.", "answer": "a", "choices": ["a", "an"] },
+        { "prompt": "She has ___ MBA from a good school.", "answer": "an", "choices": ["a", "an"] },
+        { "prompt": "This is ___ useful tool.", "answer": "a", "choices": ["a", "an"] },
+        { "prompt": "Can I have ___ egg, please?", "answer": "an", "choices": ["a", "an"] },
+        { "prompt": "That was ___ unusual question.", "answer": "an", "choices": ["a", "an"] }
+      ]
+    },
+    {
+      "slug": "a-or-the",
+      "title": "A or the: new or already known?",
+      "rule_type": "language_rule",
+      "short_explanation": "Use a / an when you mention something for the first time or mean any one of its kind. Use the when the listener already knows which one: it was mentioned before, it is clear from the situation, or there is only one.",
+      "tts_text": "Use a for something new, and the for something already known.",
+      "mnemonic": "A: any one, new. The: that one, we both know it.",
+      "examples": [
+        { "type": "correct", "text": "I bought a dress and a bag. The dress was expensive.", "note": "first a, then the: it was already mentioned" },
+        { "type": "correct", "text": "Can you close the window? It is cold.", "note": "both people know which window" },
+        { "type": "correct", "text": "We need a new teacher.", "note": "any teacher, not a particular one" },
+        { "type": "incorrect", "text": "I have a car. A car is old but reliable.", "correction": "I have a car. The car is old but reliable.", "note": "the same car, so the" },
+        { "type": "incorrect", "text": "Pass me a salt, please.", "correction": "Pass me the salt, please.", "note": "the salt on the table, and salt has no a" },
+        { "type": "exception", "text": "She wore the same dress.", "note": "the same, the next, the other always take the" }
+      ],
+      "exercises": [
+        { "prompt": "I bought a dress and a bag. ___ dress was expensive.", "answer": "the", "choices": ["a", "an", "the"] },
+        { "prompt": "Look! There is ___ cat in the garden.", "answer": "a", "choices": ["a", "an", "the"] },
+        { "prompt": "Can you close ___ window, please? It is cold in here.", "answer": "the", "choices": ["a", "an", "the"] },
+        { "prompt": "She has ___ brother and two sisters.", "answer": "a", "choices": ["a", "an", "the"] },
+        { "prompt": "I have a car. ___ car is old but reliable.", "answer": "the", "choices": ["a", "an", "the"] },
+        { "prompt": "Pass me ___ salt, please. It is next to you.", "answer": "the", "choices": ["a", "an", "the"] },
+        { "prompt": "We need ___ new teacher for the course.", "answer": "a", "choices": ["a", "an", "the"] },
+        { "prompt": "I saw ___ accident on my way here.", "answer": "an", "choices": ["a", "an", "the"] },
+        { "prompt": "I saw an accident on my way here. ___ driver was not hurt.", "answer": "the", "choices": ["a", "an", "the"] },
+        { "prompt": "Is there ___ bank near here?", "answer": "a", "choices": ["a", "an", "the"] }
+      ]
+    },
+    {
+      "slug": "the-one-of-a-kind",
+      "title": "The with one-of-a-kind things, superlatives and ordinals",
+      "rule_type": "language_rule",
+      "short_explanation": "Use the when there is only one: the sun, the moon, the Internet. Use the with superlatives (the best, the most beautiful), with ordinals (the first, the second) and with the only / the same / the next / the last.",
+      "tts_text": "Use the with things that are unique, superlatives and ordinal numbers.",
+      "mnemonic": "Only one? The. Best, first, last, only? The.",
+      "examples": [
+        { "type": "correct", "text": "The sun rises in the east.", "note": "only one sun" },
+        { "type": "correct", "text": "She is the best student in the class.", "note": "superlative" },
+        { "type": "correct", "text": "It is the first day of the course.", "note": "ordinal number" },
+        { "type": "incorrect", "text": "He is best player in the team.", "correction": "He is the best player in the team.", "note": "superlative needs the" },
+        { "type": "incorrect", "text": "She is the better writer than me.", "correction": "She is a better writer than me.", "note": "a comparative (better) takes a, not the" },
+        { "type": "exception", "text": "most people", "note": "most meaning \"the majority\" takes no article" }
+      ],
+      "exercises": [
+        { "prompt": "___ sun rises in the east.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "She is ___ best student in the class.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "It is ___ first day of the course.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "He lives on ___ second floor.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "This is ___ most beautiful city I know.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "Many people use ___ Internet every day.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "She is ___ only person who knows the code.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "What is ___ highest mountain in Europe?", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "She is ___ better writer than me.", "answer": "a", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "He ate ___ last piece of cake.", "answer": "the", "choices": ["a", "an", "the", "no article"] }
+      ]
+    },
+    {
+      "slug": "no-article-in-general",
+      "title": "No article for things in general",
+      "rule_type": "language_rule",
+      "short_explanation": "When you talk about a whole group or an idea in general, use no article with plural and uncountable nouns: I love music. Cats are independent. Life is not easy. Use the only when you mean something specific: The music at the party was too loud.",
+      "tts_text": "Use no article for plural and uncountable nouns when you mean them in general.",
+      "mnemonic": "In general: nothing. Specific: the.",
+      "examples": [
+        { "type": "correct", "text": "I love music.", "note": "music in general" },
+        { "type": "correct", "text": "Children need love and attention.", "note": "all children, in general" },
+        { "type": "correct", "text": "The music at the party was too loud.", "note": "that particular music: the" },
+        { "type": "incorrect", "text": "The life is not easy.", "correction": "Life is not easy.", "note": "life in general: no article" },
+        { "type": "incorrect", "text": "I like the apples.", "correction": "I like apples.", "note": "apples in general, not particular ones" },
+        { "type": "exception", "text": "a cat / cats / the cat", "note": "I like cats (all), the cat (one we know), a cat (any one)" }
+      ],
+      "exercises": [
+        { "prompt": "I love ___ music.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "___ cats are independent animals.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "___ life is not easy.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "She drinks ___ water every morning.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "___ honesty is very important in business.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "I like ___ apples.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "___ music at the party was too loud.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "___ children need love and attention.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "Be careful: ___ water in this bottle is dirty.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "Do you like ___ coffee?", "answer": "no article", "choices": ["a", "an", "the", "no article"] }
+      ]
+    },
+    {
+      "slug": "no-article-names-meals-languages",
+      "title": "No article: names, meals, languages, sports",
+      "rule_type": "language_rule",
+      "short_explanation": "Use no article with names of people, most cities and countries, languages, sports and the meals: Paris, Canada, French, football, breakfast. If you add an adjective to a meal, you need a: We had a wonderful lunch.",
+      "tts_text": "No article with names, languages, sports and meals.",
+      "mnemonic": "Names, languages, games and meals walk alone.",
+      "examples": [
+        { "type": "correct", "text": "I usually have breakfast at seven.", "note": "meal: no article" },
+        { "type": "correct", "text": "She speaks French and Spanish.", "note": "language: no article" },
+        { "type": "correct", "text": "We had a wonderful lunch at the beach.", "note": "adjective + meal: a" },
+        { "type": "incorrect", "text": "I live in the Paris.", "correction": "I live in Paris.", "note": "a city name: no article" },
+        { "type": "incorrect", "text": "He plays the chess very well.", "correction": "He plays chess very well.", "note": "games and sports: no article" },
+        { "type": "exception", "text": "the Browns", "note": "the + plural surname means the whole family" }
+      ],
+      "exercises": [
+        { "prompt": "I usually have ___ breakfast at seven.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "She speaks ___ French and Spanish.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "We play ___ football on Sundays.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "I live in ___ Paris.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "We had ___ wonderful lunch at the beach.", "answer": "a", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "He plays ___ chess very well.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "My friend works in ___ Canada.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "___ Spanish is easy for her.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "We had ___ lunch at noon.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "___ Mr Brown is my English teacher.", "answer": "no article", "choices": ["a", "an", "the", "no article"] }
+      ]
+    },
+    {
+      "slug": "the-geography",
+      "title": "The with rivers, seas, mountain ranges and plural countries",
+      "rule_type": "language_rule",
+      "short_explanation": "Use the with oceans, seas, rivers and mountain ranges (the Atlantic, the Thames, the Alps), with plural names (the Netherlands, the United States) and with countries that have words like Kingdom, Republic or States in the name. Most single countries, cities, lakes and single mountains take no article: Japan, Lake Geneva, Mount Everest.",
+      "tts_text": "Use the with oceans, rivers, mountain ranges and plural country names.",
+      "mnemonic": "Water and groups take the. Single places walk alone.",
+      "examples": [
+        { "type": "correct", "text": "We crossed the Atlantic Ocean by ship.", "note": "ocean: the" },
+        { "type": "correct", "text": "The Alps are popular for skiing.", "note": "a group of mountains: the" },
+        { "type": "correct", "text": "She lives in the United States.", "note": "States is plural: the" },
+        { "type": "incorrect", "text": "I want to visit the Japan.", "correction": "I want to visit Japan.", "note": "single country: no article" },
+        { "type": "incorrect", "text": "He climbed the Mount Everest.", "correction": "He climbed Mount Everest.", "note": "a single mountain: no article" },
+        { "type": "exception", "text": "Lake Geneva", "note": "single lakes take no article" }
+      ],
+      "exercises": [
+        { "prompt": "We crossed ___ Atlantic Ocean by ship.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "She lives in ___ United States.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "He climbed ___ Mount Everest.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "___ Alps are popular for skiing.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "We flew over ___ Pacific.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "They visited ___ Netherlands last year.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "___ Lake Geneva is very deep.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "The longest river in Europe is ___ Volga.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "I want to visit ___ Japan.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "He lives in ___ United Kingdom.", "answer": "the", "choices": ["a", "an", "the", "no article"] }
+      ]
+    },
+    {
+      "slug": "no-article-routine-places",
+      "title": "Routine places and transport: go to school, by bus",
+      "rule_type": "language_rule",
+      "short_explanation": "Some places and times are used for their normal purpose and take no article: go to school (as a pupil), go to work, be at home, go to bed, at night, by bus, by train. If you mean the building or one particular thing, use the: I am going to the school to speak to the teacher.",
+      "tts_text": "No article with routine places and with by plus transport.",
+      "mnemonic": "Normal use: no article. A particular building: the.",
+      "examples": [
+        { "type": "correct", "text": "My son goes to school every morning.", "note": "he is a pupil: normal purpose" },
+        { "type": "correct", "text": "We travelled to Rome by train.", "note": "by + transport: no article" },
+        { "type": "correct", "text": "I am going to the school to speak to his teacher.", "note": "a visitor going to the building: the" },
+        { "type": "incorrect", "text": "I go to the work at eight.", "correction": "I go to work at eight.", "note": "work as a routine: no article" },
+        { "type": "incorrect", "text": "She stays in the bed when she is ill.", "correction": "She stays in bed when she is ill.", "note": "in bed: no article" },
+        { "type": "exception", "text": "I listen to the radio. We watched TV.", "note": "radio takes the, TV takes no article" }
+      ],
+      "exercises": [
+        { "prompt": "My son is a pupil. He goes to ___ school every morning.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "I go to ___ work at eight.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "She stays in ___ bed when she is ill.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "We travelled to Rome by ___ train.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "I am visiting his teacher. I am going to ___ school to speak to her.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "He is at ___ home now.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "I always listen to ___ radio in the car.", "answer": "the", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "We watched ___ TV all evening.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "It is very cold at ___ night here.", "answer": "no article", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "He is going to ___ bed early tonight.", "answer": "no article", "choices": ["a", "an", "the", "no article"] }
+      ]
+    },
+    {
+      "slug": "a-with-jobs-and-quantities",
+      "title": "A / an with jobs, per, and quantity words",
+      "rule_type": "language_rule",
+      "short_explanation": "Use a / an with a job when you say what someone is: She is a teacher. Use a / an to mean per: twice a week, ten pounds an hour. Quantity expressions also take a: a few, a little, a lot of, half an hour, such a, what a. Few and little without a mean \"not enough\".",
+      "tts_text": "Use a or an with jobs, with per, and in a few, a little, such a, what a.",
+      "mnemonic": "A job, a week, a few, a little: the little word a is needed.",
+      "examples": [
+        { "type": "correct", "text": "My mother is an engineer.", "note": "a job: a / an" },
+        { "type": "correct", "text": "She goes to the gym twice a week.", "note": "a = per" },
+        { "type": "correct", "text": "What a beautiful day!", "note": "what a + singular noun" },
+        { "type": "incorrect", "text": "He works as waiter.", "correction": "He works as a waiter.", "note": "a job needs a / an" },
+        { "type": "incorrect", "text": "It takes half hour.", "correction": "It takes half an hour.", "note": "half an hour" },
+        { "type": "exception", "text": "Few people came. / A few people came.", "note": "few = almost none, a few = some" }
+      ],
+      "exercises": [
+        { "prompt": "My mother is ___ engineer.", "answer": "an", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "He works as ___ waiter.", "answer": "a", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "She goes to the gym twice ___ week.", "answer": "a", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "Don't worry. We still have ___ few days left.", "answer": "a", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "What ___ beautiful day!", "answer": "a", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "She is such ___ kind person.", "answer": "a", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "There is ___ little milk left, enough for our tea.", "answer": "a", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "It takes half ___ hour to get there.", "answer": "an", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "He earns twelve pounds ___ hour.", "answer": "an", "choices": ["a", "an", "the", "no article"] },
+        { "prompt": "My neighbour is ___ pilot.", "answer": "a", "choices": ["a", "an", "the", "no article"] }
+      ]
+    }
+  ]
+}

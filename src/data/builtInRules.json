@@ -27,7 +27,9 @@
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
-      "metadata": { "confusable_words": ["accept", "except"] }
+      "metadata": {
+        "confusable_words": ["accept", "except"]
+      }
     },
     {
       "id": "9e69efa0-5835-4473-bad0-af8c62974b86",
@@ -41,7 +43,9 @@
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
-      "metadata": { "confusable_words": ["advice", "advise"] }
+      "metadata": {
+        "confusable_words": ["advice", "advise"]
+      }
     },
     {
       "id": "28845a5a-5837-4e00-a597-c8f026a1582f",
@@ -55,7 +59,9 @@
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
-      "metadata": { "confusable_words": ["affect", "effect"] }
+      "metadata": {
+        "confusable_words": ["affect", "effect"]
+      }
     },
     {
       "id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
@@ -181,7 +187,9 @@
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
-      "metadata": { "confusable_words": ["its", "it's"] }
+      "metadata": {
+        "confusable_words": ["its", "it's"]
+      }
     },
     {
       "id": "93b24004-5fe9-44e6-93b4-8daa94655988",
@@ -209,7 +217,9 @@
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
-      "metadata": { "confusable_words": ["lose", "loose"] }
+      "metadata": {
+        "confusable_words": ["lose", "loose"]
+      }
     },
     {
       "id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
@@ -293,7 +303,9 @@
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
-      "metadata": { "confusable_words": ["practice", "practise"] }
+      "metadata": {
+        "confusable_words": ["practice", "practise"]
+      }
     },
     {
       "id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
@@ -307,7 +319,9 @@
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
-      "metadata": { "confusable_words": ["principal", "principle"] }
+      "metadata": {
+        "confusable_words": ["principal", "principle"]
+      }
     },
     {
       "id": "ef029428-e99e-4dfe-9275-700b4311aa54",
@@ -321,7 +335,9 @@
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
-      "metadata": { "confusable_words": ["quiet", "quite"] }
+      "metadata": {
+        "confusable_words": ["quiet", "quite"]
+      }
     },
     {
       "id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
@@ -349,7 +365,9 @@
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
-      "metadata": { "confusable_words": ["stationary", "stationery"] }
+      "metadata": {
+        "confusable_words": ["stationary", "stationery"]
+      }
     },
     {
       "id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
@@ -377,7 +395,9 @@
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
-      "metadata": { "confusable_words": ["then", "than"] }
+      "metadata": {
+        "confusable_words": ["then", "than"]
+      }
     },
     {
       "id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
@@ -391,7 +411,9 @@
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
-      "metadata": { "confusable_words": ["there", "their", "they're"] }
+      "metadata": {
+        "confusable_words": ["there", "their", "they're"]
+      }
     },
     {
       "id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
@@ -405,7 +427,9 @@
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
-      "metadata": { "confusable_words": ["to", "too", "two"] }
+      "metadata": {
+        "confusable_words": ["to", "too", "two"]
+      }
     },
     {
       "id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
@@ -433,7 +457,9 @@
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
-      "metadata": { "confusable_words": ["weather", "whether"] }
+      "metadata": {
+        "confusable_words": ["weather", "whether"]
+      }
     },
     {
       "id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
@@ -447,7 +473,9 @@
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
-      "metadata": { "confusable_words": ["were", "where", "wear"] }
+      "metadata": {
+        "confusable_words": ["were", "where", "wear"]
+      }
     },
     {
       "id": "e632b690-6cca-485f-a7ea-3997def76e0b",
@@ -461,7 +489,121 @@
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
-      "metadata": { "confusable_words": ["your", "you're"] }
+      "metadata": {
+        "confusable_words": ["your", "you're"]
+      }
+    },
+    {
+      "id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "slug": "a-or-an",
+      "title": "A or an: the sound decides",
+      "category": "english_grammar",
+      "rule_type": "language_rule",
+      "short_explanation": "Use a before a consonant SOUND and an before a vowel SOUND. Listen to the first sound of the next word, not its first letter: an hour (the h is silent), a university (it starts with the sound \"yoo\").",
+      "tts_text": "Use a before a consonant sound and an before a vowel sound.",
+      "mnemonic": "Say the next word aloud. Does it start with a vowel sound? Then an.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "slug": "a-or-the",
+      "title": "A or the: new or already known?",
+      "category": "english_grammar",
+      "rule_type": "language_rule",
+      "short_explanation": "Use a / an when you mention something for the first time or mean any one of its kind. Use the when the listener already knows which one: it was mentioned before, it is clear from the situation, or there is only one.",
+      "tts_text": "Use a for something new, and the for something already known.",
+      "mnemonic": "A: any one, new. The: that one, we both know it.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "slug": "the-one-of-a-kind",
+      "title": "The with one-of-a-kind things, superlatives and ordinals",
+      "category": "english_grammar",
+      "rule_type": "language_rule",
+      "short_explanation": "Use the when there is only one: the sun, the moon, the Internet. Use the with superlatives (the best, the most beautiful), with ordinals (the first, the second) and with the only / the same / the next / the last.",
+      "tts_text": "Use the with things that are unique, superlatives and ordinal numbers.",
+      "mnemonic": "Only one? The. Best, first, last, only? The.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "slug": "no-article-in-general",
+      "title": "No article for things in general",
+      "category": "english_grammar",
+      "rule_type": "language_rule",
+      "short_explanation": "When you talk about a whole group or an idea in general, use no article with plural and uncountable nouns: I love music. Cats are independent. Life is not easy. Use the only when you mean something specific: The music at the party was too loud.",
+      "tts_text": "Use no article for plural and uncountable nouns when you mean them in general.",
+      "mnemonic": "In general: nothing. Specific: the.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "slug": "no-article-names-meals-languages",
+      "title": "No article: names, meals, languages, sports",
+      "category": "english_grammar",
+      "rule_type": "language_rule",
+      "short_explanation": "Use no article with names of people, most cities and countries, languages, sports and the meals: Paris, Canada, French, football, breakfast. If you add an adjective to a meal, you need a: We had a wonderful lunch.",
+      "tts_text": "No article with names, languages, sports and meals.",
+      "mnemonic": "Names, languages, games and meals walk alone.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "slug": "the-geography",
+      "title": "The with rivers, seas, mountain ranges and plural countries",
+      "category": "english_grammar",
+      "rule_type": "language_rule",
+      "short_explanation": "Use the with oceans, seas, rivers and mountain ranges (the Atlantic, the Thames, the Alps), with plural names (the Netherlands, the United States) and with countries that have words like Kingdom, Republic or States in the name. Most single countries, cities, lakes and single mountains take no article: Japan, Lake Geneva, Mount Everest.",
+      "tts_text": "Use the with oceans, rivers, mountain ranges and plural country names.",
+      "mnemonic": "Water and groups take the. Single places walk alone.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "slug": "no-article-routine-places",
+      "title": "Routine places and transport: go to school, by bus",
+      "category": "english_grammar",
+      "rule_type": "language_rule",
+      "short_explanation": "Some places and times are used for their normal purpose and take no article: go to school (as a pupil), go to work, be at home, go to bed, at night, by bus, by train. If you mean the building or one particular thing, use the: I am going to the school to speak to the teacher.",
+      "tts_text": "No article with routine places and with by plus transport.",
+      "mnemonic": "Normal use: no article. A particular building: the.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "slug": "a-with-jobs-and-quantities",
+      "title": "A / an with jobs, per, and quantity words",
+      "category": "english_grammar",
+      "rule_type": "language_rule",
+      "short_explanation": "Use a / an with a job when you say what someone is: She is a teacher. Use a / an to mean per: twice a week, ten pounds an hour. Quantity expressions also take a: a few, a little, a lot of, half an hour, such a, what a. Few and little without a mean \"not enough\".",
+      "tts_text": "Use a or an with jobs, with per, and in a few, a little, such a, what a.",
+      "mnemonic": "A job, a week, a few, a little: the little word a is needed.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
     }
   ],
   "examples": [
@@ -1792,6 +1934,390 @@
       "text": "couragous",
       "correction": "courageous",
       "note": "Correct the spelling of this form"
+    },
+    {
+      "id": "33c8ea9f-d7eb-556d-b431-15de85cdb561",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "correct",
+      "text": "an hour",
+      "correction": null,
+      "note": "silent h: the first sound is a vowel"
+    },
+    {
+      "id": "9d2a261a-065d-59c6-a785-a8c5c94d8a14",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "correct",
+      "text": "a university",
+      "correction": null,
+      "note": "starts with the sound \"yoo\", a consonant sound"
+    },
+    {
+      "id": "92f5c5f0-2c65-529f-8e02-7494782bb858",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "correct",
+      "text": "an MBA",
+      "correction": null,
+      "note": "the letter M is read \"em\", a vowel sound"
+    },
+    {
+      "id": "a9a043f6-d4e7-556b-b991-bdcd6d80453a",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "incorrect",
+      "text": "She is a honest person.",
+      "correction": "She is an honest person.",
+      "note": "honest starts with a vowel sound"
+    },
+    {
+      "id": "61e2e8ad-9853-53f7-a1e9-9b9317b79ae3",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "incorrect",
+      "text": "It was an European tradition.",
+      "correction": "It was a European tradition.",
+      "note": "European starts with \"yoo\""
+    },
+    {
+      "id": "74ef476e-33c3-5801-8705-f4240226d138",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "exception",
+      "text": "a one-way ticket",
+      "correction": null,
+      "note": "one starts with the sound \"w\""
+    },
+    {
+      "id": "8fc6af53-bb79-5ccc-8654-594c064a8ae7",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "I bought a dress and a bag. The dress was expensive.",
+      "correction": null,
+      "note": "first a, then the: it was already mentioned"
+    },
+    {
+      "id": "31b4dba1-a4ab-52d5-ad96-c3149014b614",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "Can you close the window? It is cold.",
+      "correction": null,
+      "note": "both people know which window"
+    },
+    {
+      "id": "61c6341e-7de9-5026-882e-909f1896ff4a",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "We need a new teacher.",
+      "correction": null,
+      "note": "any teacher, not a particular one"
+    },
+    {
+      "id": "b53469ce-624f-58d4-beed-3c02646a4ed6",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "I have a car. A car is old but reliable.",
+      "correction": "I have a car. The car is old but reliable.",
+      "note": "the same car, so the"
+    },
+    {
+      "id": "caa7f1ad-30d7-5cc2-b601-c3554b33bf97",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "Pass me a salt, please.",
+      "correction": "Pass me the salt, please.",
+      "note": "the salt on the table, and salt has no a"
+    },
+    {
+      "id": "fffb6348-8b9b-5b5d-bd95-d33e0269c210",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "exception",
+      "text": "She wore the same dress.",
+      "correction": null,
+      "note": "the same, the next, the other always take the"
+    },
+    {
+      "id": "4f6f408b-9d9f-552d-b2b1-703b948828b0",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "correct",
+      "text": "The sun rises in the east.",
+      "correction": null,
+      "note": "only one sun"
+    },
+    {
+      "id": "bb7e5ea1-05fc-5242-a716-5d803a08c9d9",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "correct",
+      "text": "She is the best student in the class.",
+      "correction": null,
+      "note": "superlative"
+    },
+    {
+      "id": "eeeed710-4191-5658-bffc-75f9c1f301e3",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "correct",
+      "text": "It is the first day of the course.",
+      "correction": null,
+      "note": "ordinal number"
+    },
+    {
+      "id": "a92e7037-1cd2-596d-b402-f938937d1934",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "incorrect",
+      "text": "He is best player in the team.",
+      "correction": "He is the best player in the team.",
+      "note": "superlative needs the"
+    },
+    {
+      "id": "b95313c3-a5f8-55a8-a316-12bbed273fba",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "incorrect",
+      "text": "She is the better writer than me.",
+      "correction": "She is a better writer than me.",
+      "note": "a comparative (better) takes a, not the"
+    },
+    {
+      "id": "c5d7c508-246e-5f78-af33-b2e735bd1122",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "exception",
+      "text": "most people",
+      "correction": null,
+      "note": "most meaning \"the majority\" takes no article"
+    },
+    {
+      "id": "3ebdc522-aaca-51ba-90aa-7fac7883dcbd",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "correct",
+      "text": "I love music.",
+      "correction": null,
+      "note": "music in general"
+    },
+    {
+      "id": "79ac28b4-9c7f-50e7-b3a5-0ecd5c9ec8eb",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "correct",
+      "text": "Children need love and attention.",
+      "correction": null,
+      "note": "all children, in general"
+    },
+    {
+      "id": "5d158786-3793-5a9b-b35b-2cf8f1406c51",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "correct",
+      "text": "The music at the party was too loud.",
+      "correction": null,
+      "note": "that particular music: the"
+    },
+    {
+      "id": "8811fe43-951c-52bf-b7cc-94cedf9f1281",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "incorrect",
+      "text": "The life is not easy.",
+      "correction": "Life is not easy.",
+      "note": "life in general: no article"
+    },
+    {
+      "id": "48ca1b67-7248-55cb-8af0-a64d9820310b",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "incorrect",
+      "text": "I like the apples.",
+      "correction": "I like apples.",
+      "note": "apples in general, not particular ones"
+    },
+    {
+      "id": "64ffba48-7560-5a87-8045-a40024727a59",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "exception",
+      "text": "a cat / cats / the cat",
+      "correction": null,
+      "note": "I like cats (all), the cat (one we know), a cat (any one)"
+    },
+    {
+      "id": "e3613248-6bf6-5209-805f-646cf0f79d22",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "correct",
+      "text": "I usually have breakfast at seven.",
+      "correction": null,
+      "note": "meal: no article"
+    },
+    {
+      "id": "bfb7bae1-0843-51b2-b14f-9a3118b312a7",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "correct",
+      "text": "She speaks French and Spanish.",
+      "correction": null,
+      "note": "language: no article"
+    },
+    {
+      "id": "34d27558-3358-5d0e-8861-09da39705c50",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "correct",
+      "text": "We had a wonderful lunch at the beach.",
+      "correction": null,
+      "note": "adjective + meal: a"
+    },
+    {
+      "id": "55e286ed-bb08-541d-aaf6-46992530f913",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "incorrect",
+      "text": "I live in the Paris.",
+      "correction": "I live in Paris.",
+      "note": "a city name: no article"
+    },
+    {
+      "id": "7f912e70-2d19-5f6c-a0b3-54e7e1e226fd",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "incorrect",
+      "text": "He plays the chess very well.",
+      "correction": "He plays chess very well.",
+      "note": "games and sports: no article"
+    },
+    {
+      "id": "3f081a79-7ca5-59a7-870f-86de3e26576a",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "exception",
+      "text": "the Browns",
+      "correction": null,
+      "note": "the + plural surname means the whole family"
+    },
+    {
+      "id": "431b9927-0f19-53eb-8e38-d3476d729590",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "correct",
+      "text": "We crossed the Atlantic Ocean by ship.",
+      "correction": null,
+      "note": "ocean: the"
+    },
+    {
+      "id": "81ec18f6-23b7-550e-b76e-2517dfc333be",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "correct",
+      "text": "The Alps are popular for skiing.",
+      "correction": null,
+      "note": "a group of mountains: the"
+    },
+    {
+      "id": "341baef6-9e98-5646-a6fc-8476e90a8ac7",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "correct",
+      "text": "She lives in the United States.",
+      "correction": null,
+      "note": "States is plural: the"
+    },
+    {
+      "id": "7d6171a0-4639-55b8-a4f7-49d64378a9c0",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "incorrect",
+      "text": "I want to visit the Japan.",
+      "correction": "I want to visit Japan.",
+      "note": "single country: no article"
+    },
+    {
+      "id": "392501ab-bcc9-55e2-90b1-12acad495525",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "incorrect",
+      "text": "He climbed the Mount Everest.",
+      "correction": "He climbed Mount Everest.",
+      "note": "a single mountain: no article"
+    },
+    {
+      "id": "344ae441-7541-57db-8878-edf47abc61b9",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "exception",
+      "text": "Lake Geneva",
+      "correction": null,
+      "note": "single lakes take no article"
+    },
+    {
+      "id": "80362d08-5310-5122-a30f-61fb43b32cec",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "correct",
+      "text": "My son goes to school every morning.",
+      "correction": null,
+      "note": "he is a pupil: normal purpose"
+    },
+    {
+      "id": "1a7b7182-e6f0-55e9-a955-dab62b433f1e",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "correct",
+      "text": "We travelled to Rome by train.",
+      "correction": null,
+      "note": "by + transport: no article"
+    },
+    {
+      "id": "4a76acf0-e21d-5963-8511-53f69c3033d4",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "correct",
+      "text": "I am going to the school to speak to his teacher.",
+      "correction": null,
+      "note": "a visitor going to the building: the"
+    },
+    {
+      "id": "343cb320-5c99-5832-b44b-f406551d5b8e",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "incorrect",
+      "text": "I go to the work at eight.",
+      "correction": "I go to work at eight.",
+      "note": "work as a routine: no article"
+    },
+    {
+      "id": "893f033b-1d2a-5c08-b995-94563d3cc680",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "incorrect",
+      "text": "She stays in the bed when she is ill.",
+      "correction": "She stays in bed when she is ill.",
+      "note": "in bed: no article"
+    },
+    {
+      "id": "799a3018-5854-59c1-a7ce-cb37e1decdad",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "exception",
+      "text": "I listen to the radio. We watched TV.",
+      "correction": null,
+      "note": "radio takes the, TV takes no article"
+    },
+    {
+      "id": "b405bd83-115b-5eb9-a938-149328ca78dc",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "correct",
+      "text": "My mother is an engineer.",
+      "correction": null,
+      "note": "a job: a / an"
+    },
+    {
+      "id": "ee6dc32f-46dd-5a53-bd93-0fecadf85297",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "correct",
+      "text": "She goes to the gym twice a week.",
+      "correction": null,
+      "note": "a = per"
+    },
+    {
+      "id": "8b23b7a7-59d5-5706-9934-47d8f2c17466",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "correct",
+      "text": "What a beautiful day!",
+      "correction": null,
+      "note": "what a + singular noun"
+    },
+    {
+      "id": "58ecae54-9115-5584-8f04-f491132ebfd4",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "incorrect",
+      "text": "He works as waiter.",
+      "correction": "He works as a waiter.",
+      "note": "a job needs a / an"
+    },
+    {
+      "id": "e3c51247-7f92-526a-94e6-6c61fe109362",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "incorrect",
+      "text": "It takes half hour.",
+      "correction": "It takes half an hour.",
+      "note": "half an hour"
+    },
+    {
+      "id": "9e38c268-9141-5274-9958-c005405c925a",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "exception",
+      "text": "Few people came. / A few people came.",
+      "correction": null,
+      "note": "few = almost none, a few = some"
     }
   ]
 }

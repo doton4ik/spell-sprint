@@ -26,6 +26,18 @@ function toExercise(row: Record<string, unknown>): RuleExercise {
   }
 }
 
+// Exercises that ship with the app (the articles pack, src/data/builtInRuleExercises.json). They are used
+// only for a rule the database has no exercises for: offline, or before database/content-pack-3-articles.sql
+// has been run. Once the database has rows for a rule, those rows win, so nothing appears twice.
+type ExerciseRows = Record<string, Array<Record<string, unknown>>>
+async function withBundled(ruleIds: string[], fromDatabase: RuleExercise[]): Promise<RuleExercise[]> {
+  const have = new Set(fromDatabase.map((exercise) => exercise.ruleId))
+  const missing = ruleIds.filter((id) => !have.has(id))
+  if (!missing.length) return fromDatabase
+  const bundled = (await import('../data/builtInRuleExercises.json')).default as ExerciseRows
+  return [...fromDatabase, ...missing.flatMap((id) => (bundled[id] ?? []).map(toExercise))]
+}
+
 function toProgress(userId: string, ruleId: string, row: ProgressRow): UserRuleProgress {
   return {
     id: row.id,
@@ -41,15 +53,17 @@ function toProgress(userId: string, ruleId: string, row: ProgressRow): UserRuleP
 
 // Active exercises for one rule's mini-practice, ordered by the priority above.
 export async function getRuleExercises(ruleId: string): Promise<RuleExercise[]> {
-  if (!isSupabaseConfigured()) return []
-  try {
-    const rows = await selectRows(null, 'rule_exercises', { rule_id: ruleId })
-    return rows
-      .map(toExercise)
-      .sort((a, b) => EXERCISE_TYPE_PRIORITY.indexOf(a.exerciseType) - EXERCISE_TYPE_PRIORITY.indexOf(b.exerciseType))
-  } catch {
-    return []
+  let fromDatabase: RuleExercise[] = []
+  if (isSupabaseConfigured()) {
+    try {
+      fromDatabase = (await selectRows(null, 'rule_exercises', { rule_id: ruleId })).map(toExercise)
+    } catch {
+      fromDatabase = []
+    }
   }
+  return (await withBundled([ruleId], fromDatabase)).sort(
+    (a, b) => EXERCISE_TYPE_PRIORITY.indexOf(a.exerciseType) - EXERCISE_TYPE_PRIORITY.indexOf(b.exerciseType),
+  )
 }
 
 export async function getUserRuleProgress(ruleId: string): Promise<UserRuleProgress | null> {
@@ -127,13 +141,16 @@ export const markRuleAsMastered = (ruleId: string) => setUserRuleProgress(ruleId
 export const addRuleToRepeatLater = (ruleId: string) => setUserRuleProgress(ruleId, { status: 'repeat_later' })
 
 export async function getExercisesForRules(ruleIds: string[]): Promise<RuleExercise[]> {
-  if (!isSupabaseConfigured() || !ruleIds.length) return []
-  try {
-    const rows = await selectRows(null, 'rule_exercises', { rule_id: ruleIds })
-    return rows.map(toExercise)
-  } catch {
-    return []
+  if (!ruleIds.length) return []
+  let fromDatabase: RuleExercise[] = []
+  if (isSupabaseConfigured()) {
+    try {
+      fromDatabase = (await selectRows(null, 'rule_exercises', { rule_id: ruleIds })).map(toExercise)
+    } catch {
+      fromDatabase = []
+    }
   }
+  return withBundled(ruleIds, fromDatabase)
 }
 
 // Rule challenge: after a mistake, check the RULE on a different word — fixing the one word you

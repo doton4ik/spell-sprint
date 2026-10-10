@@ -43,6 +43,14 @@ function cachedLinks(): RuleWordLink[] {
 // A small, explicit fallback: when a mistake has no direct rule_word_links match,
 // this maps the practice engine's own error classification to a starter rule slug.
 // Safe to extend later without changing the data model (see database/rules-schema.sql).
+// Article mistakes come from Proofreading as "grammar:*" patterns, which are not rows of the database's
+// pattern table, so the rules that explain them are named here (see database/content-pack-3-articles.sql).
+export const PATTERN_RULE_SLUGS: Record<string, string[]> = {
+  'grammar:article': ['a-or-an', 'a-or-the', 'the-one-of-a-kind'],
+  'grammar:article-missing': ['a-or-the', 'a-with-jobs-and-quantities', 'a-or-an'],
+  'grammar:article-extra': ['no-article-in-general', 'no-article-names-meals-languages', 'the-geography', 'no-article-routine-places'],
+}
+
 export const ERROR_TYPE_RULE_SLUGS: Record<string, string[]> = {
   double_consonant: ['double-consonants'],
   vowel_confusion: ['vowel-order-ei-ie'],

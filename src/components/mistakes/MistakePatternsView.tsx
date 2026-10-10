@@ -5,7 +5,7 @@ import { guideFor } from '../../data/mistakeGuides'
 import { loadErrorCatalog, type ErrorCatalog } from '../../services/errorPatternService'
 import { setPendingPracticeSelection } from '../../services/libraryPractice'
 import { getMistakePatterns, isHabit, type MistakePattern } from '../../services/mistakePatterns'
-import { getVisibleRules, setPendingRuleFocus } from '../../services/rulesService'
+import { getVisibleRules, PATTERN_RULE_SLUGS, setPendingRuleFocus } from '../../services/rulesService'
 import type { Rule } from '../../types/rules'
 
 function daysAgo(value: string) {
@@ -80,8 +80,12 @@ export function MistakePatternsView({ revision }: { revision: number }) {
   const habits = patterns.filter(isHabit)
   const slips = patterns.filter((pattern) => !isHabit(pattern))
   const sheet = (habits.length ? habits : patterns).slice(0, 6)
-  const linkedRules = (pattern: MistakePattern) =>
-    (catalog?.ruleIdsByPattern.get(pattern.slug) ?? []).map((id) => rulesById.get(id)).filter((rule): rule is Rule => Boolean(rule))
+  const rulesBySlug = new Map(rules.map((rule) => [rule.slug, rule]))
+  const linkedRules = (pattern: MistakePattern) => {
+    const fromDatabase = (catalog?.ruleIdsByPattern.get(pattern.slug) ?? []).map((id) => rulesById.get(id))
+    const named = (PATTERN_RULE_SLUGS[pattern.slug] ?? []).map((slug) => rulesBySlug.get(slug))
+    return [...new Set([...fromDatabase, ...named])].filter((rule): rule is Rule => Boolean(rule))
+  }
   const show = (slug: string) => {
     const card = document.getElementById(cardId(slug))
     if (!card) return
