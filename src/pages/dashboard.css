@@ -1080,3 +1080,18 @@
 .dashboard-rules {
   margin-top: 23px;
 }
+
+/* Narrow windows: today's session above the week, the three cards in two columns with the last one wide. */
+@media (max-width: 1120px) {
+  .dashboard-hero {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .metrics-grid > :last-child {
+    grid-column: 1 / -1;
+  }
+}

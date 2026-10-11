@@ -1,0 +1,80 @@
+/* A few quiet cards in the margin beside a page, on wide screens only. The page is the positioning box; the
+   free space to its right decides from which window width the rail fits (the page width + 24px gap + 260px). */
+.page-rail {
+  display: none;
+}
+.rail-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+}
+.rail-card__label {
+  color: var(--ink-muted);
+  font-size: calc(12px * var(--fs));
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.rail-row {
+  align-items: baseline;
+  background: none;
+  border: 0;
+  color: var(--ink);
+  display: flex;
+  font-size: calc(14px * var(--fs));
+  gap: 12px;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.rail-row span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.rail-row strong {
+  color: var(--teal-text-strong);
+  font-weight: 600;
+}
+.rail-row--button {
+  cursor: pointer;
+  width: 100%;
+}
+.rail-row--button:hover span {
+  color: var(--teal-text);
+}
+
+.sprint-page,
+.pairs-page,
+.proof-page,
+.topics-page,
+.settings-page {
+  position: relative;
+}
+@media (min-width: 1500px) {
+  .sprint-page > .page-rail {
+    display: grid;
+  }
+}
+@media (min-width: 1600px) {
+  .pairs-page > .page-rail,
+  .proof-page > .page-rail {
+    display: grid;
+  }
+}
+@media (min-width: 1800px) {
+  .topics-page > .page-rail,
+  .settings-page > .page-rail {
+    display: grid;
+  }
+}
+.page-rail {
+  gap: 14px;
+  left: calc(100% - 32px);
+  position: absolute;
+  top: 49px;
+  width: 260px;
+}

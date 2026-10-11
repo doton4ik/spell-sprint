@@ -1,3 +1,4 @@
+import { ProofreadingRail } from '../components/ui/PageRails'
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react'
 import { noAutocorrect } from '../components/noAutocorrect'
 import { Icon } from '../components/icons/Icon'
@@ -150,6 +151,7 @@ export function ProofreadingPage() {
   const texts = proofreadingTexts.filter((text) => text.level === level)
   return (
     <div className="proof-page" id="proofreading">
+      <ProofreadingRail />
       <header className="proof-header">
         <h1>Find the mistakes</h1>
         <p>Tap every word that looks wrong and fix it.</p>

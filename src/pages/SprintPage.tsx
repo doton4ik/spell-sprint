@@ -1,3 +1,4 @@
+import { SprintRail } from '../components/ui/PageRails'
 import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { noAutocorrect } from '../components/noAutocorrect'
 import { ReportWordButton } from '../components/ReportWordButton'
@@ -56,6 +57,7 @@ export function SprintPage() {
   const poolIsSmall = pool.fromHistory < MIN_SPRINT_WORDS
   return (
     <div className="sprint-page" id="sprint">
+      <SprintRail />
       <header className="sprint-header">
         <h1>60 seconds, as many words as you can</h1>
         <p>Type the English word. No hints, no second tries.</p>

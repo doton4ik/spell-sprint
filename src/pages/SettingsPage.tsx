@@ -1,3 +1,4 @@
+import { SettingsRail } from '../components/ui/PageRails'
 import { FormEvent, useEffect, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
 import {
@@ -200,6 +201,7 @@ export function SettingsPage() {
 
   return (
     <div className="settings-page" id="settings">
+      <SettingsRail />
       <header className="settings-header">
         <div>
           <h1>Your learning space</h1>

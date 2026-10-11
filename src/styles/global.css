@@ -1,5 +1,6 @@
 @import './tokens.css';
 @import './buttons.css';
+@import './rail.css';
 
 * {
   box-sizing: border-box;

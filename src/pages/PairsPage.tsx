@@ -1,3 +1,4 @@
+import { PairsRail } from '../components/ui/PageRails'
 import { useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
 import {
@@ -53,6 +54,7 @@ export function PairsPage() {
     .slice(0, 6)
   return (
     <div className="pairs-page" id="pairs">
+      <PairsRail />
       <header className="pairs-header">
         <h1>Words that sound or look alike</h1>
         <p>their or there, lose or loose — choose the one that fits.</p>

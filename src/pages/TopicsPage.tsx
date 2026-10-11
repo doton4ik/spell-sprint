@@ -1,3 +1,4 @@
+import { TopicsRail } from '../components/ui/PageRails'
 import { useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
 import { subscribeToLearningData } from '../services/learningData'
@@ -74,6 +75,7 @@ export function TopicsPage() {
 
   return (
     <div className="topics-page" id="topics">
+      <TopicsRail />
       <header className="topics-header">
         <div>
           <h1>Topics</h1>
