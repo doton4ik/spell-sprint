@@ -171,6 +171,63 @@ export function PracticePage() {
         </div>
         <PracticeSettings settings={session.settings} onChange={session.setSettings} />
       </header>
+      <div className="practice-setup">
+        <p className="practice-setup__summary">
+          {pendingSelection?.label ?? scopeLabels[scope]} · {sessionSize === 'all' ? 'all words' : `${sessionSize} words`} ·{' '}
+          {modeLabels[mode]}
+          <button className="practice-setup__toggle" type="button" aria-expanded={setupOpen} onClick={() => setSetupOpen((open) => !open)}>
+            {setupOpen ? 'Done' : 'Change'}
+          </button>
+        </p>
+        {setupOpen ? (
+          <div className="practice-filters">
+            <label className="practice-select">
+              <span>Practice set</span>
+              <select
+                value={pendingSelection ? 'picked' : scope}
+                onChange={(event) => {
+                  clearPendingPracticeSelection()
+                  setPendingSelection(null)
+                  setScope(event.target.value as PracticeScope)
+                }}
+              >
+                {pendingSelection ? <option value="picked">{pendingSelection.label}</option> : null}
+                {(Object.keys(scopeLabels) as PracticeScope[]).map((item) => (
+                  <option value={item} key={item}>
+                    {scopeLabels[item]}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="practice-select">
+              <span>Mode</span>
+              <select value={mode} onChange={(event) => setMode(event.target.value as PracticeMode)}>
+                {(Object.keys(modeLabels) as PracticeMode[]).map((item) => (
+                  <option value={item} key={item}>
+                    {modeLabels[item]}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="practice-select">
+              <span>Words in session</span>
+              <select
+                value={sessionSize}
+                onChange={(event) => setSessionSize(event.target.value === 'all' ? 'all' : Number(event.target.value))}
+              >
+                <option value={5}>5</option>
+                <option value={10}>10</option>
+                <option value={20}>20</option>
+                <option value={30}>30</option>
+                <option value="all">All available</option>
+              </select>
+            </label>
+            {select('Library', library, setLibrary, options.libraries, scope !== 'library')}
+            {select('Topic', topic, setTopic, options.topics, scope !== 'topic')}
+            {select('Subtopic', subtopic, setSubtopic, options.subtopics, scope !== 'subtopic')}
+          </div>
+        ) : null}
+      </div>
       <section className="practice-workspace" aria-label="Practice session">
         <SessionSidebar
           modeLabel={modeLabels[mode]}
@@ -232,63 +289,6 @@ export function PracticePage() {
           }}
         />
       </section>
-      <div className="practice-setup">
-        <p className="practice-setup__summary">
-          {pendingSelection?.label ?? scopeLabels[scope]} · {sessionSize === 'all' ? 'all words' : `${sessionSize} words`} ·{' '}
-          {modeLabels[mode]}
-          <button className="practice-setup__toggle" type="button" aria-expanded={setupOpen} onClick={() => setSetupOpen((open) => !open)}>
-            {setupOpen ? 'Done' : 'Change'}
-          </button>
-        </p>
-        {setupOpen ? (
-          <div className="practice-filters">
-            <label className="practice-select">
-              <span>Practice set</span>
-              <select
-                value={pendingSelection ? 'picked' : scope}
-                onChange={(event) => {
-                  clearPendingPracticeSelection()
-                  setPendingSelection(null)
-                  setScope(event.target.value as PracticeScope)
-                }}
-              >
-                {pendingSelection ? <option value="picked">{pendingSelection.label}</option> : null}
-                {(Object.keys(scopeLabels) as PracticeScope[]).map((item) => (
-                  <option value={item} key={item}>
-                    {scopeLabels[item]}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label className="practice-select">
-              <span>Mode</span>
-              <select value={mode} onChange={(event) => setMode(event.target.value as PracticeMode)}>
-                {(Object.keys(modeLabels) as PracticeMode[]).map((item) => (
-                  <option value={item} key={item}>
-                    {modeLabels[item]}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label className="practice-select">
-              <span>Words in session</span>
-              <select
-                value={sessionSize}
-                onChange={(event) => setSessionSize(event.target.value === 'all' ? 'all' : Number(event.target.value))}
-              >
-                <option value={5}>5</option>
-                <option value={10}>10</option>
-                <option value={20}>20</option>
-                <option value={30}>30</option>
-                <option value="all">All available</option>
-              </select>
-            </label>
-            {select('Library', library, setLibrary, options.libraries, scope !== 'library')}
-            {select('Topic', topic, setTopic, options.topics, scope !== 'topic')}
-            {select('Subtopic', subtopic, setSubtopic, options.subtopics, scope !== 'subtopic')}
-          </div>
-        ) : null}
-      </div>
     </div>
   )
 }

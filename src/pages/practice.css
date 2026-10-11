@@ -1439,7 +1439,7 @@
 .practice-setup {
   display: grid;
   gap: 12px;
-  margin-top: 14px;
+  margin-bottom: 14px;
 }
 .practice-setup__summary {
   align-items: center;
