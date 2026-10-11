@@ -89,10 +89,8 @@ function MistakeRow({ entry }: { entry: MistakeEntry }) {
         ) : null}
         <small>
           {isToday(entry.lastMistakeAt) ? <b className="mistake-new">New</b> : null}
-          {entry.origin ? <span className="mistake-origin">from {entry.origin}</span> : null}
           {entry.errorCategory}
           {entry.topic ? ` · ${entry.topic}` : ''}
-          {entry.memoryCue ? ` · cue: ${entry.memoryCue}` : ''}
         </small>
       </div>
       <div className="mistake-progress">
@@ -106,36 +104,40 @@ function MistakeRow({ entry }: { entry: MistakeEntry }) {
             <i className={day < (entry.goodDays ?? 0) ? 'good-days__on' : ''} key={day} />
           ))}
         </span>
-        <small>
-          {entry.numberOfErrors} error{entry.numberOfErrors === 1 ? '' : 's'} · {entry.numberOfCorrectAnswers} correct
-        </small>
       </div>
       <div className="mistake-when">
         <span>Next review</span>
         <strong>{entry.status === 'mastered' ? '—' : when(entry.nextReviewAt)}</strong>
         <span className="mistake-when__actions">
           <button className="quiet-action word-hide" type="button" aria-expanded={open} onClick={() => setOpen(!open)}>
-            <Icon name="calendar" size={13} /> History
+            {open ? 'Less' : 'Details'}
           </button>
-          {entry.pairId ? (
-            <button className="quiet-action word-hide" type="button" onClick={() => openPairOnPairsPage(entry.pairId!)}>
-              <Icon name="practice" size={13} /> Practise this pair
-            </button>
-          ) : (
-            <ReportWordButton
-              word={{
-                wordId: entry.wordId ?? `task:${entry.taskId}`,
-                word: entry.correctAnswer,
-                translation: entry.translation,
-                library: entry.library,
-              }}
-            />
-          )}
         </span>
       </div>
       {open ? (
         <div className="mistake-row__history">
+          <p className="mistake-row__facts">
+            {entry.numberOfErrors} error{entry.numberOfErrors === 1 ? '' : 's'} · {entry.numberOfCorrectAnswers} correct
+            {entry.origin ? ` · from ${entry.origin}` : ''}
+            {entry.memoryCue ? ` · cue: ${entry.memoryCue}` : ''}
+          </p>
           <History entry={entry} />
+          <div className="mistake-row__actions">
+            {entry.pairId ? (
+              <button className="quiet-action word-hide" type="button" onClick={() => openPairOnPairsPage(entry.pairId!)}>
+                <Icon name="practice" size={13} /> Practise this pair
+              </button>
+            ) : (
+              <ReportWordButton
+                word={{
+                  wordId: entry.wordId ?? `task:${entry.taskId}`,
+                  word: entry.correctAnswer,
+                  translation: entry.translation,
+                  library: entry.library,
+                }}
+              />
+            )}
+          </div>
         </div>
       ) : null}
     </div>

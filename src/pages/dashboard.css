@@ -73,8 +73,8 @@
 .metrics-grid {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-bottom: 23px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 23px;
 }
 .metric-card {
   background: var(--surface);
@@ -477,8 +477,8 @@
   .dashboard {
     padding: 41px 34px;
   }
-  .metrics-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .dashboard-hero {
+    grid-template-columns: 1fr;
   }
   .dashboard-columns,
   .dashboard-columns--lower {
@@ -575,9 +575,8 @@
 }
 .today-card {
   align-items: center;
-  background: linear-gradient(108deg, var(--teal-dark) 0%, var(--teal) 67%, var(--teal) 100%);
+  background: var(--teal);
   border-radius: var(--radius-lg);
-  box-shadow: 0 14px 26px rgba(12, 91, 79, 0.14);
   color: var(--on-accent);
   display: flex;
   gap: 28px;
@@ -837,8 +836,11 @@
     order: 0;
     position: relative;
   }
-  .dashboard .today-card {
+  .dashboard .dashboard-hero {
     order: 1;
+  }
+  .dashboard .dashboard-rules {
+    order: 5;
   }
   .dashboard .level-nudge {
     order: 2;
@@ -1062,4 +1064,19 @@
     font-size: calc(13px * var(--fs));
     padding: 3px 10px;
   }
+}
+
+/* The day at the top: today's session beside the week, then three plain cards. */
+.dashboard-hero {
+  align-items: stretch;
+  display: grid;
+  gap: 23px;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  margin-top: 23px;
+}
+.dashboard-hero .today-card {
+  margin: 0;
+}
+.dashboard-rules {
+  margin-top: 23px;
 }

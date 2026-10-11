@@ -47,6 +47,7 @@ test('a wrong answer in practice becomes a mistake', async ({ page }) => {
   await expect(page.getByText('Not quite')).toBeVisible()
   await page.goto('/#my-mistakes')
   await expect(page.locator('.mistake-row')).toHaveCount(1)
+  await page.locator('.mistake-row').getByRole('button', { name: 'Details' }).click()
   await expect(page.locator('.mistake-row').getByRole('button', { name: 'Report' })).toBeVisible()
   expect(errors).toEqual([])
 })

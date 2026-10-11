@@ -73,13 +73,6 @@ export function DashboardPage() {
       tone: 'violet' as const,
       icon: 'mistakes' as const,
     },
-    {
-      label: 'Answers',
-      value: String(analytics.totalAttempts),
-      note: 'All practice, review and level-check answers',
-      tone: 'blue' as const,
-      icon: 'practice' as const,
-    },
   ]
   const date = new Intl.DateTimeFormat('en', { weekday: 'long', month: 'long', day: 'numeric' }).format(new Date())
   const subtitle = goalReached
@@ -115,6 +108,35 @@ export function DashboardPage() {
           </div>
         </header>
 
+        {analytics.totalAttempts ? null : <Welcome />}
+
+        <div className="dashboard-hero">
+          <TodayCard plan={plan} todayCount={todayCount} goal={profile.dailyGoal} />
+          <section className="panel activity-panel">
+            <SectionHeader eyebrow="This week" title="Daily progress">
+              <span className="weekly-total">
+                {analytics.weeklyTotal} <small>tasks</small>
+              </span>
+            </SectionHeader>
+            <div className="bar-chart" aria-label="Tasks completed this week">
+              {analytics.daily.map((day) => (
+                <div className="bar-chart__day" key={day.label} title={`${day.completed} tasks`}>
+                  <div className="bar-chart__rail">
+                    <div
+                      className={`bar-chart__bar${day.isToday ? ' bar-chart__bar--today' : ''}${day.completed >= day.target ? ' bar-chart__bar--goal' : ''}`}
+                      style={{ height: `${Math.min(100, (day.completed / day.target) * 100)}%` }}
+                    />
+                  </div>
+                  <span className={day.isToday ? 'today-label' : ''}>{day.label}</span>
+                </div>
+              ))}
+            </div>
+            <p className="chart-caption">
+              <span /> Your daily goal: {profile.dailyGoal} tasks · <a href="#settings">change</a>
+            </p>
+          </section>
+        </div>
+
         {analytics.totalAttempts ? (
           <>
             <section className="metrics-grid" aria-label="Learning overview">
@@ -124,11 +146,7 @@ export function DashboardPage() {
             </section>
             <LevelCheckNudge revision={revision} />
           </>
-        ) : (
-          <Welcome />
-        )}
-
-        <TodayCard plan={plan} todayCount={todayCount} goal={profile.dailyGoal} />
+        ) : null}
 
         <div className="dashboard-columns">
           <section className="panel progress-panel">
@@ -167,32 +185,6 @@ export function DashboardPage() {
             </div>
           </section>
 
-          <section className="panel activity-panel">
-            <SectionHeader eyebrow="This week" title="Daily progress">
-              <span className="weekly-total">
-                {analytics.weeklyTotal} <small>tasks</small>
-              </span>
-            </SectionHeader>
-            <div className="bar-chart" aria-label="Tasks completed this week">
-              {analytics.daily.map((day) => (
-                <div className="bar-chart__day" key={day.label} title={`${day.completed} tasks`}>
-                  <div className="bar-chart__rail">
-                    <div
-                      className={`bar-chart__bar${day.isToday ? ' bar-chart__bar--today' : ''}${day.completed >= day.target ? ' bar-chart__bar--goal' : ''}`}
-                      style={{ height: `${Math.min(100, (day.completed / day.target) * 100)}%` }}
-                    />
-                  </div>
-                  <span className={day.isToday ? 'today-label' : ''}>{day.label}</span>
-                </div>
-              ))}
-            </div>
-            <p className="chart-caption">
-              <span /> Your daily goal: {profile.dailyGoal} tasks · <a href="#settings">change</a>
-            </p>
-          </section>
-        </div>
-
-        <div className="dashboard-columns dashboard-columns--lower">
           <section className="panel mistakes-panel">
             <SectionHeader eyebrow="Last activity" title="Recent mistakes" action="Open mistakes" actionHref="#my-mistakes" />
             {analytics.recent.length ? (
@@ -222,7 +214,9 @@ export function DashboardPage() {
               <p className="panel-empty">No mistakes yet. They will show up here with what went wrong.</p>
             )}
           </section>
+        </div>
 
+        <div className="dashboard-rules">
           <RulesCard />
         </div>
       </div>

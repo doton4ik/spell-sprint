@@ -952,3 +952,15 @@
     min-height: 40px;
   }
 }
+
+/* One row per word: the answer, the progress, the date and "Details"; facts and actions open under it. */
+.mistake-row__facts {
+  color: var(--ink-muted);
+  font-size: calc(13px * var(--fs));
+  margin: 0 0 10px;
+}
+.mistake-row__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}

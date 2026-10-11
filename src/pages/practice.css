@@ -1434,3 +1434,66 @@
     gap: 0;
   }
 }
+
+/* The session setup (set, mode, size) is a quiet line under the task; the three selects open on "Change". */
+.practice-setup {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+.practice-setup__summary {
+  align-items: center;
+  color: var(--ink-muted);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: calc(13px * var(--fs));
+  gap: 6px 10px;
+  margin: 0;
+}
+.practice-setup__toggle {
+  background: none;
+  border: 0;
+  color: var(--teal-text);
+  cursor: pointer;
+  font-size: calc(13px * var(--fs));
+  font-weight: 600;
+  padding: 4px 2px;
+}
+@media (min-width: 1480px) {
+  /* The panel beside the task carries the progress, so the bar above it goes. */
+  .practice-workspace .session-sidebar {
+    display: none;
+  }
+  .session-rail__head {
+    display: grid;
+    gap: 8px;
+  }
+  .session-rail__head strong {
+    font-size: calc(16px * var(--fs));
+  }
+  .session-rail__head small {
+    color: var(--ink-muted);
+    font-size: calc(13px * var(--fs));
+    font-weight: 400;
+  }
+  .session-rail__head > span {
+    color: var(--ink-muted);
+    font-size: calc(13px * var(--fs));
+  }
+  .session-rail__track {
+    background: var(--teal-soft);
+    border-radius: 4px;
+    height: 4px;
+  }
+  .session-rail__track > div {
+    background: var(--teal);
+    border-radius: 4px;
+    height: 4px;
+  }
+  .session-rail__good {
+    color: var(--teal-text-strong);
+  }
+  .session-rail__bad {
+    color: var(--danger-text);
+  }
+}

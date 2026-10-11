@@ -22,13 +22,25 @@ function pairOf(task: PracticeTask, mode: PracticeMode) {
 // so far. The same things as the slim bar above the task, never hints.
 export function SessionRails({ mode, taskIndex, tasks, outcomes }: SessionRailsProps) {
   const results = tasks.map((task) => outcomes[task.id])
+  const correct = results.filter((outcome) => outcome === 'correct').length
+  const missed = results.filter((outcome) => outcome === 'incorrect' || outcome === 'skipped').length
   const missedTasks = tasks.filter((task) => outcomes[task.id] === 'incorrect' || outcomes[task.id] === 'skipped')
 
   return (
     <aside className="session-rail" aria-label="Session">
+      <div className="session-rail__head">
+        <strong>
+          Word {taskIndex + 1} <small>of {tasks.length}</small>
+        </strong>
+        <div className="session-rail__track">
+          <div style={{ width: `${(taskIndex / Math.max(1, tasks.length)) * 100}%` }} />
+        </div>
+        <span>
+          <b className="session-rail__good">{correct}</b> correct · <b className="session-rail__bad">{missed}</b> missed
+        </span>
+      </div>
       {tasks.length > 1 && tasks.length <= MAX_MAP_TASKS ? (
         <div className="session-rail__block">
-          <span className="session-rail__label">This session</span>
           <div className="session-map">
             {tasks.map((task, index) => {
               const state =
