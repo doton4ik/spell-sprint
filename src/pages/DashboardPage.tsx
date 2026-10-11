@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { DayRail } from '../components/dashboard/DayRail'
 import { Icon } from '../components/icons/Icon'
 import { MetricCard } from '../components/ui/MetricCard'
 import { SectionHeader } from '../components/ui/SectionHeader'
@@ -90,139 +91,142 @@ export function DashboardPage() {
         : 'A short focused session is the best way to start.'
 
   return (
-    <div className="dashboard" id="dashboard">
-      <header className="page-header">
-        <div>
-          <p className="date-line">{date}</p>
-          <h1>
-            {greeting()}
-            {profile.name.trim() ? `, ${profile.name.trim()}` : ''} <span aria-hidden="true">✦</span>
-          </h1>
-          <p className="page-subtitle">{subtitle}</p>
-        </div>
-        <div
-          className={`header-streak${practisedToday ? '' : ' header-streak--pending'}`}
-          role="status"
-          aria-label={`${streak} day learning streak`}
-        >
-          <span>
-            <Icon name="bolt" size={18} strokeWidth={2.25} />
-          </span>
-          <strong>{streak}</strong>
-          <small>day streak</small>
-        </div>
-      </header>
-
-      {analytics.totalAttempts ? (
-        <>
-          <section className="metrics-grid" aria-label="Learning overview">
-            {metrics.map((metric) => (
-              <MetricCard metric={metric} key={metric.label} />
-            ))}
-          </section>
-          <LevelCheckNudge revision={revision} />
-        </>
-      ) : (
-        <Welcome />
-      )}
-
-      <TodayCard plan={plan} todayCount={todayCount} goal={profile.dailyGoal} />
-
-      <div className="dashboard-columns">
-        <section className="panel progress-panel">
-          <SectionHeader eyebrow="Last 30 days" title="Topic confidence" action="View all topics" actionHref="#topics" />
-          {analytics.topics.length ? (
-            <div className="topic-list">
-              {analytics.topics.map((topic) => (
-                <div className="topic-row" key={topic.topic}>
-                  <div className="topic-row__label">
-                    <span>{topic.topic}</span>
-                    <small className={`status status--${topic.status.replaceAll(' ', '-').toLowerCase()}`}>{topic.status}</small>
-                  </div>
-                  <div className="progress-track">
-                    <div className="progress-fill" style={{ width: `${topic.score}%` }} />
-                  </div>
-                  <strong title={`${topic.correct} of ${topic.total} right in 30 days`}>
-                    {topic.score}%<small className="topic-row__count"> · {topic.total}</small>
-                  </strong>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p className="panel-empty">Topic scores appear after your first practice answers.</p>
-          )}
-          <div className="weak-focus">
-            <span className="weak-focus__icon">
-              <Icon name="mistakes" size={18} />
-            </span>
-            <p>
-              <strong>Your main focus:</strong> {analytics.weakTopic?.topic ?? 'Spelling patterns'}. Review{' '}
-              {analytics.mainCategory.toLowerCase()} to build speed and confidence.
-            </p>
-            <a href="#rules" aria-label="Practice spelling patterns">
-              <Icon name="arrow" size={18} />
-            </a>
+    <div className="dashboard-wrap">
+      <div className="dashboard" id="dashboard">
+        <header className="page-header">
+          <div>
+            <p className="date-line">{date}</p>
+            <h1>
+              {greeting()}
+              {profile.name.trim() ? `, ${profile.name.trim()}` : ''} <span aria-hidden="true">✦</span>
+            </h1>
+            <p className="page-subtitle">{subtitle}</p>
           </div>
-        </section>
-
-        <section className="panel activity-panel">
-          <SectionHeader eyebrow="This week" title="Daily progress">
-            <span className="weekly-total">
-              {analytics.weeklyTotal} <small>tasks</small>
+          <div
+            className={`header-streak${practisedToday ? '' : ' header-streak--pending'}`}
+            role="status"
+            aria-label={`${streak} day learning streak`}
+          >
+            <span>
+              <Icon name="bolt" size={18} strokeWidth={2.25} />
             </span>
-          </SectionHeader>
-          <div className="bar-chart" aria-label="Tasks completed this week">
-            {analytics.daily.map((day) => (
-              <div className="bar-chart__day" key={day.label} title={`${day.completed} tasks`}>
-                <div className="bar-chart__rail">
-                  <div
-                    className={`bar-chart__bar${day.isToday ? ' bar-chart__bar--today' : ''}${day.completed >= day.target ? ' bar-chart__bar--goal' : ''}`}
-                    style={{ height: `${Math.min(100, (day.completed / day.target) * 100)}%` }}
-                  />
-                </div>
-                <span className={day.isToday ? 'today-label' : ''}>{day.label}</span>
+            <strong>{streak}</strong>
+            <small>day streak</small>
+          </div>
+        </header>
+
+        {analytics.totalAttempts ? (
+          <>
+            <section className="metrics-grid" aria-label="Learning overview">
+              {metrics.map((metric) => (
+                <MetricCard metric={metric} key={metric.label} />
+              ))}
+            </section>
+            <LevelCheckNudge revision={revision} />
+          </>
+        ) : (
+          <Welcome />
+        )}
+
+        <TodayCard plan={plan} todayCount={todayCount} goal={profile.dailyGoal} />
+
+        <div className="dashboard-columns">
+          <section className="panel progress-panel">
+            <SectionHeader eyebrow="Last 30 days" title="Topic confidence" action="View all topics" actionHref="#topics" />
+            {analytics.topics.length ? (
+              <div className="topic-list">
+                {analytics.topics.map((topic) => (
+                  <div className="topic-row" key={topic.topic}>
+                    <div className="topic-row__label">
+                      <span>{topic.topic}</span>
+                      <small className={`status status--${topic.status.replaceAll(' ', '-').toLowerCase()}`}>{topic.status}</small>
+                    </div>
+                    <div className="progress-track">
+                      <div className="progress-fill" style={{ width: `${topic.score}%` }} />
+                    </div>
+                    <strong title={`${topic.correct} of ${topic.total} right in 30 days`}>
+                      {topic.score}%<small className="topic-row__count"> · {topic.total}</small>
+                    </strong>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <p className="chart-caption">
-            <span /> Your daily goal: {profile.dailyGoal} tasks · <a href="#settings">change</a>
-          </p>
-        </section>
-      </div>
+            ) : (
+              <p className="panel-empty">Topic scores appear after your first practice answers.</p>
+            )}
+            <div className="weak-focus">
+              <span className="weak-focus__icon">
+                <Icon name="mistakes" size={18} />
+              </span>
+              <p>
+                <strong>Your main focus:</strong> {analytics.weakTopic?.topic ?? 'Spelling patterns'}. Review{' '}
+                {analytics.mainCategory.toLowerCase()} to build speed and confidence.
+              </p>
+              <a href="#rules" aria-label="Practice spelling patterns">
+                <Icon name="arrow" size={18} />
+              </a>
+            </div>
+          </section>
 
-      <div className="dashboard-columns dashboard-columns--lower">
-        <section className="panel mistakes-panel">
-          <SectionHeader eyebrow="Last activity" title="Recent mistakes" action="Open mistakes" actionHref="#my-mistakes" />
-          {analytics.recent.length ? (
-            <div className="recent-list">
-              {analytics.recent.map((mistake) => (
-                <a
-                  className="recent-row"
-                  href="#my-mistakes"
-                  key={`${mistake.submitted}-${mistake.correct}-${mistake.when}`}
-                  aria-label={`Review ${mistake.correct}`}
-                >
-                  <span className="recent-row__icon">
-                    <Icon name="mistakes" size={16} />
-                  </span>
-                  <span className="recent-row__body">
-                    <span className="recent-row__words">
-                      <s>{mistake.submitted}</s>
-                      <Icon name="arrow" size={14} /> <strong>{mistake.correct}</strong>
-                    </span>
-                    <span className="recent-row__meta">{mistake.category}</span>
-                  </span>
-                  <time className="recent-row__when">{mistake.when}</time>
-                </a>
+          <section className="panel activity-panel">
+            <SectionHeader eyebrow="This week" title="Daily progress">
+              <span className="weekly-total">
+                {analytics.weeklyTotal} <small>tasks</small>
+              </span>
+            </SectionHeader>
+            <div className="bar-chart" aria-label="Tasks completed this week">
+              {analytics.daily.map((day) => (
+                <div className="bar-chart__day" key={day.label} title={`${day.completed} tasks`}>
+                  <div className="bar-chart__rail">
+                    <div
+                      className={`bar-chart__bar${day.isToday ? ' bar-chart__bar--today' : ''}${day.completed >= day.target ? ' bar-chart__bar--goal' : ''}`}
+                      style={{ height: `${Math.min(100, (day.completed / day.target) * 100)}%` }}
+                    />
+                  </div>
+                  <span className={day.isToday ? 'today-label' : ''}>{day.label}</span>
+                </div>
               ))}
             </div>
-          ) : (
-            <p className="panel-empty">No mistakes yet. They will show up here with what went wrong.</p>
-          )}
-        </section>
+            <p className="chart-caption">
+              <span /> Your daily goal: {profile.dailyGoal} tasks · <a href="#settings">change</a>
+            </p>
+          </section>
+        </div>
 
-        <RulesCard />
+        <div className="dashboard-columns dashboard-columns--lower">
+          <section className="panel mistakes-panel">
+            <SectionHeader eyebrow="Last activity" title="Recent mistakes" action="Open mistakes" actionHref="#my-mistakes" />
+            {analytics.recent.length ? (
+              <div className="recent-list">
+                {analytics.recent.map((mistake) => (
+                  <a
+                    className="recent-row"
+                    href="#my-mistakes"
+                    key={`${mistake.submitted}-${mistake.correct}-${mistake.when}`}
+                    aria-label={`Review ${mistake.correct}`}
+                  >
+                    <span className="recent-row__icon">
+                      <Icon name="mistakes" size={16} />
+                    </span>
+                    <span className="recent-row__body">
+                      <span className="recent-row__words">
+                        <s>{mistake.submitted}</s>
+                        <Icon name="arrow" size={14} /> <strong>{mistake.correct}</strong>
+                      </span>
+                      <span className="recent-row__meta">{mistake.category}</span>
+                    </span>
+                    <time className="recent-row__when">{mistake.when}</time>
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <p className="panel-empty">No mistakes yet. They will show up here with what went wrong.</p>
+            )}
+          </section>
+
+          <RulesCard />
+        </div>
       </div>
+      <DayRail />
     </div>
   )
 }

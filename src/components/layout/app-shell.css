@@ -357,3 +357,9 @@
   line-height: 1;
   padding: 0 4px;
 }
+
+/* A faint dot grid on the page behind the cards, so wide empty areas do not look like a blank wall. */
+.page-content {
+  background-image: radial-gradient(circle, color-mix(in srgb, var(--line-strong) 70%, transparent) 1px, transparent 1.4px);
+  background-size: 24px 24px;
+}
