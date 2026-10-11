@@ -224,9 +224,6 @@ export function SettingsPage() {
       ) : null}
       <section className="settings-grid">
         <article className="settings-card">
-          <div className="settings-card__icon">
-            <Icon name="settings" size={19} />
-          </div>
           <p className="settings-card__eyebrow">Account</p>
           {session && settingPassword ? (
             <>
@@ -320,9 +317,6 @@ export function SettingsPage() {
           )}
         </article>
         <article className="settings-card settings-card--sync">
-          <div className="settings-card__icon">
-            <Icon name="refresh" size={19} />
-          </div>
           <p className="settings-card__eyebrow">Cloud backup</p>
           <h2>Sync learning history</h2>
           <p>
@@ -354,9 +348,6 @@ export function SettingsPage() {
           ) : null}
         </article>
         <article className="settings-card">
-          <div className="settings-card__icon">
-            <Icon name="volume" size={19} />
-          </div>
           <p className="settings-card__eyebrow">Pronunciation</p>
           <h2>English voice</h2>
           <p>Practice uses your browser’s built-in speech synthesis. No audio files or external audio service are used.</p>
@@ -369,9 +360,6 @@ export function SettingsPage() {
           </label>
         </article>
         <article className="settings-card settings-card--compact">
-          <div className="settings-card__icon">
-            <Icon name="calendar" size={19} />
-          </div>
           <p className="settings-card__eyebrow">Profile</p>
           <h2>Name and daily goal</h2>
           <p>Used for the greeting and for today's progress on the Dashboard. Stored on this device.</p>
@@ -401,9 +389,6 @@ export function SettingsPage() {
           </div>
         </article>
         <article className="settings-card settings-card--compact">
-          <div className="settings-card__icon">
-            <Icon name="eye" size={19} />
-          </div>
           <p className="settings-card__eyebrow">Appearance</p>
           <h2>Text size and theme</h2>
           <p>

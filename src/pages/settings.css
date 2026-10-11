@@ -45,6 +45,7 @@
 .settings-grid {
   display: grid;
   gap: 18px;
+  align-items: start;
   grid-template-columns: 1fr 1fr;
   margin-top: 28px;
 }
@@ -53,22 +54,7 @@
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
-  min-height: 354px;
   padding: 24px;
-}
-.settings-card--sync {
-  background: var(--teal-soft);
-  border-color: var(--teal-line);
-}
-.settings-card__icon {
-  align-items: center;
-  background: var(--teal-soft);
-  border-radius: 10px;
-  color: var(--teal-text);
-  display: inline-flex;
-  height: 35px;
-  justify-content: center;
-  width: 35px;
 }
 .settings-card__eyebrow {
   color: var(--ink-muted);
@@ -126,7 +112,7 @@
   color: var(--teal-text);
   font-size: calc(13px * var(--fs));
   font-weight: 700;
-  margin-top: 15px;
+  margin-top: 0;
   padding: 0;
 }
 .settings-card--sync .check-button {

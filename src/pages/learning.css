@@ -555,7 +555,7 @@
   text-transform: uppercase;
 }
 .report-sheet {
-  background: linear-gradient(180deg, var(--teal-soft), var(--surface));
+  background: var(--teal-soft);
   border: 1px solid var(--teal-line);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);

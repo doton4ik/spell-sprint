@@ -178,7 +178,7 @@ function TopicRow({ topic, open, onToggle }: { topic: TopicStats; open: boolean;
           <span className="topic-line__name">
             {topic.topic}
             <small>
-              {topicStatusLabels[topic.status]}
+              {topic.status === 'not-started' ? null : topicStatusLabels[topic.status]}
               {topic.accuracy !== null ? ` · ${topic.accuracy}% of ${topic.answers} answer${topic.answers === 1 ? '' : 's'}` : ''}
             </small>
           </span>

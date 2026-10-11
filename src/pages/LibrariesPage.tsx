@@ -397,7 +397,7 @@ function GroupCard({
         <button className="outline-action" type="button" onClick={() => onOpen(group)}>
           Open <Icon name="arrow" size={16} />
         </button>
-        <button className="check-button" type="button" onClick={() => onPractice(words, group.name)}>
+        <button className="outline-action" type="button" onClick={() => onPractice(words, group.name)}>
           Practise
         </button>
       </div>
@@ -439,7 +439,7 @@ function MyLibraries({
                 <button className="outline-action" type="button" onClick={() => onOpen(library)}>
                   Open
                 </button>
-                <button className="check-button" type="button" onClick={() => onPractice(library.words, library.name)}>
+                <button className="outline-action" type="button" onClick={() => onPractice(library.words, library.name)}>
                   Practise
                 </button>
                 <button className="quiet-button" type="button" onClick={() => onDelete(library)}>

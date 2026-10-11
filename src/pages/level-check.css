@@ -1,6 +1,6 @@
 .level-page {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 900px;
   padding: 49px 56px 70px;
 }
 .level-page h1 {
@@ -75,7 +75,7 @@
 }
 .level-hero__last {
   align-content: start;
-  background: linear-gradient(140deg, var(--teal-dark), var(--teal));
+  background: var(--teal);
   border: 0;
   border-radius: var(--radius-lg);
   color: var(--on-accent);

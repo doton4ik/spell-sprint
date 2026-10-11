@@ -1,10 +1,10 @@
 .topics-page {
   margin: 0 auto;
-  max-width: 980px;
+  max-width: 1100px;
   padding: 49px 56px 70px;
 }
 .topics-header {
-  align-items: flex-end;
+  align-items: flex-start;
   display: flex;
   gap: 24px;
   justify-content: space-between;

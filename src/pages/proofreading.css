@@ -1,12 +1,12 @@
 .proof-page {
   margin: 0 auto;
-  max-width: 860px;
+  max-width: 900px;
   padding: 49px 56px 70px;
 }
 .proof-header h1,
 .proof-reading-head h1 {
   color: var(--ink);
-  font-size: calc(clamp(26px, 3vw, 34px) * var(--fs));
+  font-size: calc(clamp(28px, 3vw, 37px) * var(--fs));
   letter-spacing: -1px;
   margin: 0;
 }

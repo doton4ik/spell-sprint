@@ -247,7 +247,7 @@
   overflow: hidden;
 }
 .progress-fill {
-  background: linear-gradient(90deg, var(--teal), var(--teal));
+  background: var(--teal);
   border-radius: 999px;
   height: 100%;
 }

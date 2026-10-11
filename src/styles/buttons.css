@@ -171,8 +171,13 @@
   .quiet-action,
   .quiet-button,
   .proof-levels button,
-  .topics-tabs button {
+  .topics-tabs button,
+  .font-scale-option {
     min-height: 40px;
+  }
+  .topic-line__play {
+    height: 40px;
+    width: 40px;
   }
   .info-tip__button::after {
     content: '';
