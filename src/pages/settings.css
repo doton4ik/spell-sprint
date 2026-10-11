@@ -42,14 +42,16 @@
   font-family: ui-monospace, monospace;
   padding: 2px 4px;
 }
+/* Two balanced columns: the cards of different heights fill them evenly, with no empty rows. */
 .settings-grid {
-  display: grid;
-  gap: 18px;
-  align-items: start;
-  grid-template-columns: 1fr 1fr;
+  column-count: 2;
+  column-gap: 18px;
   margin-top: 28px;
 }
 .settings-card {
+  break-inside: avoid;
+  display: block;
+  margin: 0 0 18px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
@@ -138,7 +140,7 @@
     padding: 30px 18px 40px;
   }
   .settings-grid {
-    grid-template-columns: 1fr;
+    column-count: 1;
   }
   .settings-card {
     min-height: 0;
@@ -230,4 +232,15 @@
   .font-scale-options--theme {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.settings-link + .settings-link {
+  margin-left: 16px;
+}
+.settings-grid {
+  column-fill: auto;
+}
+/* Account, backup and voice on the left; name and goal, text size and theme on the right: about the same height. */
+.settings-card:nth-child(3) {
+  break-after: column;
 }
