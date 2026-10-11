@@ -1381,3 +1381,100 @@
 .word-tip button {
   color: var(--teal-text);
 }
+
+/* Wide screens: the margins beside the task hold the session map and the missed words (left), the previous word
+   and the shortcut (right). Hidden on narrower screens, where the slim bar above the task is enough. */
+.session-rail {
+  display: none;
+}
+@media (min-width: 1500px) {
+  .practice-workspace {
+    position: relative;
+  }
+  .session-rail {
+    display: grid;
+    gap: 22px;
+    position: absolute;
+    top: 0;
+    width: 232px;
+  }
+  .session-rail--left {
+    right: calc(100% + 28px);
+  }
+  .session-rail--right {
+    left: calc(100% + 28px);
+  }
+  .session-rail:empty {
+    display: none;
+  }
+  .session-sidebar .session-missed {
+    display: none;
+  }
+  .session-rail__block {
+    display: grid;
+    gap: 10px;
+  }
+  .session-rail__label {
+    color: var(--ink-muted);
+    font-size: calc(12px * var(--fs));
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .session-rail .session-map {
+    justify-content: flex-end;
+  }
+  .session-rail .session-missed--rail {
+    border-top: 0;
+    padding-top: 0;
+    text-align: right;
+  }
+  .session-rail .session-missed--rail p {
+    justify-content: flex-end;
+  }
+  .session-previous {
+    align-items: flex-start;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left-width: 3px;
+    border-radius: 10px;
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 10px 12px;
+  }
+  .session-previous--good {
+    border-left-color: var(--teal);
+    color: var(--teal-text-strong);
+  }
+  .session-previous--bad {
+    border-left-color: var(--danger);
+    color: var(--danger-text);
+  }
+  .session-previous span {
+    display: grid;
+    gap: 2px;
+  }
+  .session-previous strong {
+    color: var(--ink);
+    font-size: calc(15px * var(--fs));
+  }
+  .session-previous small {
+    color: var(--ink-muted);
+    font-size: calc(12px * var(--fs));
+  }
+  .session-rail__keys {
+    color: var(--ink-muted);
+    font-size: calc(13px * var(--fs));
+    line-height: 1.5;
+    margin: 0;
+  }
+  .session-rail__keys kbd {
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: calc(12px * var(--fs));
+    padding: 1px 6px;
+  }
+}

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
 import { PracticeSettings } from '../components/practice/PracticeSettings'
+import { SessionRails } from '../components/practice/SessionRails'
 import { SessionSidebar } from '../components/practice/SessionSidebar'
 import { TaskCard } from '../components/practice/TaskCard'
 import { usePracticeSession } from '../hooks/usePracticeSession'
@@ -225,6 +226,7 @@ export function PracticePage() {
           tasks={session.sessionTasks}
           outcomes={session.outcomes}
         />
+        <SessionRails mode={mode} taskIndex={session.taskIndex} tasks={session.sessionTasks} outcomes={session.outcomes} />
         <TaskCard
           otherMeaning={session.otherMeaning}
           reason={session.currentTask?.wordId ? reasons.get(session.currentTask.id) : undefined}
