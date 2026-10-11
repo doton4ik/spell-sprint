@@ -27,6 +27,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Headings break evenly, paragraphs avoid a lone last word (ui-design skill). */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
 button,
 input,
 textarea,
