@@ -69,4 +69,5 @@ This project runs with Sonnet as the main model, Opus as the advisor and Haiku f
 - If the dev server serves a stale module ("X is not defined" while the file is fine), restart it.
 - Prettier runs in `pnpm check` (`format:check`); run `pnpm exec prettier --write <files>` after edits.
 - Browser checks on the dev server: back up localStorage first and restore it afterwards.
+- Before and after layout or UI changes, use the `ui-design` skill (`.claude/skills/ui-design/SKILL.md`): task first, no filler beside it, measure alignment, check three widths.
 - Typed sentences are compared through `src/services/contractions.ts` (`sameText`): "It's" = "It is", "9" = "nine", case and punctuation do not matter, "its" ≠ "it's". Show sentence differences word by word (`sentenceDiff.ts`), single words letter by letter. For every new answer check, list the equivalent writings and add tests (the user tests such cases on purpose).
