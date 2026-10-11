@@ -1387,7 +1387,13 @@
 .session-rail {
   display: none;
 }
-@media (min-width: 1480px) {
+@media (min-width: 1200px) {
+  .practice-page:has(.session-rail) {
+    margin-left: max(0px, calc((100% - 780px - 200px) / 2));
+    margin-right: 0;
+    max-width: none;
+    width: min(780px, 100% - 200px);
+  }
   .practice-workspace {
     position: relative;
   }

@@ -54,20 +54,31 @@
 .settings-page {
   position: relative;
 }
-@media (min-width: 1500px) {
-  .sprint-page > .page-rail {
-    display: grid;
-  }
+/* The page and its rail are one group, centred together; when the window is narrower the group moves left and the page
+   gets a little narrower, so the rail stays. Below 1200px (a narrow window or a high zoom) the rail goes. */
+.sprint-page {
+  --page-w: 780px;
 }
-@media (min-width: 1600px) {
-  .pairs-page > .page-rail,
-  .proof-page > .page-rail {
-    display: grid;
-  }
+.pairs-page,
+.proof-page {
+  --page-w: 900px;
 }
-@media (min-width: 1800px) {
-  .topics-page > .page-rail,
-  .settings-page > .page-rail {
+.topics-page,
+.settings-page {
+  --page-w: 1100px;
+}
+@media (min-width: 1200px) {
+  .sprint-page:has(> .page-rail),
+  .pairs-page:has(> .page-rail),
+  .proof-page:has(> .page-rail),
+  .topics-page:has(> .page-rail),
+  .settings-page:has(> .page-rail) {
+    margin-left: max(0px, calc((100% - var(--page-w) - 228px) / 2));
+    margin-right: 0;
+    max-width: none;
+    width: min(var(--page-w), 100% - 228px);
+  }
+  .page-rail {
     display: grid;
   }
 }
