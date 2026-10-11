@@ -107,7 +107,7 @@ test('"I don\'t know this word" shows it first, and copying it is not a mistake'
   await expect(page.getByText(/Not the same yet/)).toBeVisible()
   await page.locator('#meet-answer').fill(word)
   await page.getByRole('button', { name: 'Got it' }).click()
-  await expect(page.locator('.session-dot--met')).toHaveCount(1)
+  await expect(page.locator('.session-sidebar .session-dot--met')).toHaveCount(1)
   await page.goto('/#my-mistakes')
   await expect(page.locator('.mistake-row')).toHaveCount(0)
   expect(errors).toEqual([])
