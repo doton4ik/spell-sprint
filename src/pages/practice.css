@@ -1503,3 +1503,28 @@
     color: var(--danger-text);
   }
 }
+
+/* After an answer the word can be heard right where it is shown (the Listen row is hidden next to Next on the phone). */
+.task-feedback__listen {
+  align-items: center;
+  background: var(--teal-soft);
+  border: 0;
+  border-radius: 50%;
+  color: var(--teal-text);
+  cursor: pointer;
+  display: inline-flex;
+  height: 36px;
+  justify-content: center;
+  margin-left: 8px;
+  vertical-align: middle;
+  width: 36px;
+}
+.task-feedback__listen:hover {
+  background: var(--teal-line);
+}
+@media (max-width: 570px) {
+  .task-feedback__listen {
+    height: 40px;
+    width: 40px;
+  }
+}

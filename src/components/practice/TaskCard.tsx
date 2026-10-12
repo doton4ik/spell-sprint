@@ -338,12 +338,30 @@ export function TaskCard({
                   <dt>Correct</dt>
                   <dd className="task-feedback__right">
                     {target} <span>— {meaning}</span>
+                    <button
+                      className="task-feedback__listen"
+                      type="button"
+                      onClick={onPlayAudio}
+                      aria-label="Listen to the word"
+                      title="Listen"
+                    >
+                      <Icon name="volume" size={16} />
+                    </button>
                   </dd>
                 </div>
               </dl>
             ) : (
               <p className="task-feedback__right">
                 {target} <span>— {meaning}</span>
+                <button
+                  className="task-feedback__listen"
+                  type="button"
+                  onClick={onPlayAudio}
+                  aria-label="Listen to the word"
+                  title="Listen"
+                >
+                  <Icon name="volume" size={16} />
+                </button>
               </p>
             )}
             {!correct && mode === 'translate-ru' && checkedAnswer.trim() && onClaimCorrect ? (
