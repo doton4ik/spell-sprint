@@ -85,7 +85,7 @@ from (values
   ('454e5d22-05ee-51e2-8304-7de17094e46f', 'soft-c-and-g', 'incorrect', 'It was an advantagous deal.', 'It was an advantageous deal.', 'Keeping the e after soft c or g'),
   ('41eda9ad-e776-5f65-89c0-e7bd30f29cc0', 'soft-c-and-g', 'incorrect', 'The rule is not enforcable.', 'The rule is not enforceable.', 'Keeping the e after soft c or g'),
   ('28eb20a7-5fce-5da9-9469-31eb9814fbcd', 'affect-vs-effect', 'correct', 'Heat can affect the colour of the paint.', null, 'Correct word in context'),
-  ('1c15422e-c360-5a02-848f-c44bcb82fcec', 'affect-vs-effect', 'correct', 'The new law came into effect in May.', null, 'Correct word in context'),
+  ('1c15422e-c360-5a02-848f-c44bcb82fcec', 'affect-vs-effect', 'correct', 'The new law took effect in May.', null, 'Correct word in context'),
   ('78c3fb5a-a7e6-5c57-9567-938539af047c', 'affect-vs-effect', 'incorrect', 'Her kind words had a good affect on me.', 'Her kind words had a good effect on me.', 'The meaning selects this word'),
   ('de4f1f42-5041-54c2-9cc5-5ac1ccb2c0ca', 'its-vs-its-contraction', 'correct', 'The company announced its new plan.', null, 'Correct word in context'),
   ('3361f058-24c9-576e-bdfc-e178cb527fe8', 'its-vs-its-contraction', 'correct', 'It''s a pleasure to meet you.', null, 'Correct word in context'),

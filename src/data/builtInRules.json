@@ -2907,7 +2907,7 @@
       "id": "1c15422e-c360-5a02-848f-c44bcb82fcec",
       "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
       "example_type": "correct",
-      "text": "The new law came into effect in May.",
+      "text": "The new law took effect in May.",
       "correction": null,
       "note": "Correct word in context"
     },
