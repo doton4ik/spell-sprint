@@ -964,3 +964,31 @@
   gap: 8px;
   margin-top: 12px;
 }
+
+/* Problems & rules on a narrow screen: every box may shrink to the screen, long text wraps instead of pushing the page wide. */
+.report,
+.report > *,
+.report-sheet li,
+.report-sheet li > *,
+.pattern-card,
+.pattern-card > * {
+  min-width: 0;
+}
+.report-sheet li strong,
+.report-sheet li span,
+.pattern-card p,
+.pattern-card h3,
+.pattern-card__examples li {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 570px) {
+  .report-sheet li {
+    grid-template-columns: 26px minmax(0, 1fr);
+  }
+  .learning-page {
+    overflow-x: clip;
+  }
+}
+.report {
+  grid-template-columns: minmax(0, 1fr);
+}
