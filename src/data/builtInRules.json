@@ -2894,6 +2894,390 @@
       "text": "The rule is not enforcable.",
       "correction": "The rule is not enforceable.",
       "note": "Keeping the e after soft c or g"
+    },
+    {
+      "id": "28eb20a7-5fce-5da9-9469-31eb9814fbcd",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "Heat can affect the colour of the paint.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "1c15422e-c360-5a02-848f-c44bcb82fcec",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "The new law came into effect in May.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "78c3fb5a-a7e6-5c57-9567-938539af047c",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "Her kind words had a good affect on me.",
+      "correction": "Her kind words had a good effect on me.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "de4f1f42-5041-54c2-9cc5-5ac1ccb2c0ca",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "The company announced its new plan.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "3361f058-24c9-576e-bdfc-e178cb527fe8",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "It's a pleasure to meet you.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "7ad59a03-8158-5e4f-a920-7bed4d7b57dd",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "The team lost it's last game.",
+      "correction": "The team lost its last game.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "b44e34b6-f863-569d-bce0-b8d5f203eee8",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "Do not lose your passport at the airport.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "10387b7a-6f81-57cb-9184-abe057245014",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "The knot is loose; tie it again.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "170f812a-e5d5-5a12-a763-7af81300f0ae",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "These shoes feel lose.",
+      "correction": "These shoes feel loose.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "2766025c-2644-5b30-9ec9-7060bd5f963d",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "There are three chairs in the room.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "ffd729d9-d2e4-5928-b228-56c5d4132718",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "They said they're ready to start.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "b8f8e7e3-01c8-52b9-acba-78bdaff8b0a9",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "Their going to be late.",
+      "correction": "They're going to be late.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "dec9ffb3-6c1c-5aa9-8ae5-64ae966c67b8",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "You're welcome to stay.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "8bce3dad-7ba3-5cd6-9c21-1b2806ada630",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "Your answer is correct.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "cfa949cb-a8fe-5e02-8c60-77d130d47ded",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Is that you're coat?",
+      "correction": "Is that your coat?",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "e878139d-c601-5727-8a19-0ce7032c00ea",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "correct",
+      "text": "We went swimming yesterday.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "2fc0370a-a2b7-58db-9e2c-59a10dd98bd5",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "correct",
+      "text": "She has gone to the shop.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "05e9d5b1-ee80-5679-acfd-f1324dc2a10f",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "They have went to bed.",
+      "correction": "They have gone to bed.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "1b6058bd-c633-5e4a-8fc9-fd6973f79a07",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "The libraries open at nine.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "399e00d3-8ebd-5684-a3bd-5b30683b6d5b",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "The bakeries sell fresh bread.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "cd70cd7e-e639-561f-b427-a293d17ff578",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "The factorys closed early.",
+      "correction": "The factories closed early.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "0668f4a4-ad5f-5789-8936-a5b244e8ae4c",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "She received a letter from her niece.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "3001cc06-b265-58c4-bb3b-fa1f6f6bcc0b",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "The ceiling was painted white.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "81885686-0eb8-529b-814a-266a267f58de",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "We need to wiegh the bag.",
+      "correction": "We need to weigh the bag.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "a2454bd4-e67f-52ab-b385-0a6b3eb3fe0e",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "correct",
+      "text": "He gave me an honest answer.",
+      "correction": null,
+      "note": "Article use"
+    },
+    {
+      "id": "795b2ca9-90db-58e1-b910-a03b58e50cd5",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "correct",
+      "text": "She owns a unique painting.",
+      "correction": null,
+      "note": "Article use"
+    },
+    {
+      "id": "3c850b82-240b-5c6f-909e-e15afe773191",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "incorrect",
+      "text": "He is an university student.",
+      "correction": "He is a university student.",
+      "note": "Article use"
+    },
+    {
+      "id": "fa1d65d8-0804-5f1a-bf3d-96eaa1291582",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "There is a book on the table. The book is mine.",
+      "correction": null,
+      "note": "Article use"
+    },
+    {
+      "id": "1e9163e3-0646-588a-b5c1-1f91b5ce26be",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "The moon is bright tonight.",
+      "correction": null,
+      "note": "Article use"
+    },
+    {
+      "id": "22a9eaec-5c33-5870-a22b-815ab92528df",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "I need the pen. Can you lend me one?",
+      "correction": "I need a pen. Can you lend me one?",
+      "note": "Article use"
+    },
+    {
+      "id": "57813c94-784b-5f83-9e27-f48d0a5cd0e4",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "correct",
+      "text": "My brother is a dentist.",
+      "correction": null,
+      "note": "Article use"
+    },
+    {
+      "id": "069adb38-a7d3-5996-b216-862117220019",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "correct",
+      "text": "She phones her mother three times a week.",
+      "correction": null,
+      "note": "Article use"
+    },
+    {
+      "id": "b0779373-06e4-59c4-8fd2-4d68104d0fa5",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "incorrect",
+      "text": "He is dentist.",
+      "correction": "He is a dentist.",
+      "note": "Article use"
+    },
+    {
+      "id": "583ee09e-1378-57aa-bf2d-45446fe70231",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "correct",
+      "text": "Dogs are loyal animals.",
+      "correction": null,
+      "note": "Article use"
+    },
+    {
+      "id": "2a284d10-a078-502a-95bc-42478b9139a1",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "correct",
+      "text": "Honesty matters more than money.",
+      "correction": null,
+      "note": "Article use"
+    },
+    {
+      "id": "1b7746d7-2421-5f37-9f2e-09caa539022f",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "incorrect",
+      "text": "I am afraid of the spiders.",
+      "correction": "I am afraid of spiders.",
+      "note": "Article use"
+    },
+    {
+      "id": "a0e69cf6-b0d4-57d5-82fc-0d1a9143790c",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "correct",
+      "text": "We play tennis every Saturday.",
+      "correction": null,
+      "note": "Article use"
+    },
+    {
+      "id": "dad7586d-d68f-50a5-a9ec-2ce4a951af8a",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "correct",
+      "text": "Dinner is at eight.",
+      "correction": null,
+      "note": "Article use"
+    },
+    {
+      "id": "8d59722c-2c8b-5809-94ca-4be3d559304d",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "incorrect",
+      "text": "The Maria is my sister.",
+      "correction": "Maria is my sister.",
+      "note": "Article use"
+    },
+    {
+      "id": "99bafe04-ff2c-5dbf-8384-a09ae8551d26",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "correct",
+      "text": "He goes to bed at ten.",
+      "correction": null,
+      "note": "Article use"
+    },
+    {
+      "id": "f5c80d9b-2753-5de7-94dd-5aa5c764b423",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "correct",
+      "text": "She came to the hospital to visit her friend.",
+      "correction": null,
+      "note": "Article use"
+    },
+    {
+      "id": "87805ec4-2b08-5f05-b877-566d8f63c2f3",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "incorrect",
+      "text": "We went home by the bus.",
+      "correction": "We went home by bus.",
+      "note": "Article use"
+    },
+    {
+      "id": "121af292-86da-52c9-9a7b-012588fe4662",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "correct",
+      "text": "The Danube flows through several countries.",
+      "correction": null,
+      "note": "Article use"
+    },
+    {
+      "id": "b80d7928-4395-54ca-b6b0-a09abe9c8e5f",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "correct",
+      "text": "She has never visited Spain.",
+      "correction": null,
+      "note": "Article use"
+    },
+    {
+      "id": "55db8c72-aac5-5b26-921e-138e0efef220",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "incorrect",
+      "text": "We flew to the Italy.",
+      "correction": "We flew to Italy.",
+      "note": "Article use"
+    },
+    {
+      "id": "854e5880-7fd5-5efd-94bc-d8b231dcdb08",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "correct",
+      "text": "The Earth goes around the sun.",
+      "correction": null,
+      "note": "Article use"
+    },
+    {
+      "id": "55477b90-518d-5fec-8d10-692c12860aa4",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "correct",
+      "text": "He was the third person to arrive.",
+      "correction": null,
+      "note": "Article use"
+    },
+    {
+      "id": "cd09664f-dd26-55d7-acc5-18460fad6328",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "incorrect",
+      "text": "She is most talented singer here.",
+      "correction": "She is the most talented singer here.",
+      "note": "Article use"
     }
   ]
 }

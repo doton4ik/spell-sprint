@@ -1201,6 +1201,764 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "affect-vs-effect",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Heat can affect the colour of the paint.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "The new law came into effect in May.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "Her kind words had a good affect on me.",
+          "correction": "Her kind words had a good effect on me.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "Too much sugar can ___ your teeth.",
+          "answer": "affect"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The side ___ of the pill is sleepiness.",
+          "answer": "effect"
+        }
+      ]
+    },
+    {
+      "slug": "its-vs-its-contraction",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The company announced its new plan.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "It's a pleasure to meet you.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "The team lost it's last game.",
+          "correction": "The team lost its last game.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "The old bridge lost ___ charm.",
+          "answer": "its"
+        }
+      ]
+    },
+    {
+      "slug": "lose-vs-loose",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Do not lose your passport at the airport.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "The knot is loose; tie it again.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "These shoes feel lose.",
+          "correction": "These shoes feel loose.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "Hurry up, or we will ___ the bus.",
+          "answer": "lose"
+        }
+      ]
+    },
+    {
+      "slug": "there-vs-their",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "There are three chairs in the room.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "They said they're ready to start.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "Their going to be late.",
+          "correction": "They're going to be late.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "Do you know where ___ house is?",
+          "answer": "their"
+        }
+      ]
+    },
+    {
+      "slug": "your-vs-youre",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "You're welcome to stay.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "Your answer is correct.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "Is that you're coat?",
+          "correction": "Is that your coat?",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "I hope ___ feeling better today.",
+          "answer": "you're"
+        }
+      ]
+    },
+    {
+      "slug": "irregular-past-go",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "We went swimming yesterday.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "She has gone to the shop.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "They have went to bed.",
+          "correction": "They have gone to bed.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "Where have you ___ today?",
+          "answer": "gone"
+        }
+      ]
+    },
+    {
+      "slug": "plural-y-to-ies",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The libraries open at nine.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "The bakeries sell fresh bread.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "The factorys closed early.",
+          "correction": "The factories closed early.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the plural of hobby.",
+          "answer": "hobbies",
+          "choices": [
+            "hobbys",
+            "hobbies",
+            "hobbyes"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "vowel-order-ei-ie",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "She received a letter from her niece.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "The ceiling was painted white.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "We need to wiegh the bag.",
+          "correction": "We need to weigh the bag.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "wierd",
+          "answer": "weird"
+        }
+      ]
+    },
+    {
+      "slug": "a-or-an",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "He gave me an honest answer.",
+          "note": "Article use"
+        },
+        {
+          "type": "correct",
+          "text": "She owns a unique painting.",
+          "note": "Article use"
+        },
+        {
+          "type": "incorrect",
+          "text": "He is an university student.",
+          "correction": "He is a university student.",
+          "note": "Article use"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "My sister is ___ engineer.",
+          "answer": "an",
+          "choices": [
+            "a",
+            "an"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "I saw ___ one-eyed cat in the garden.",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "He is ___ honourable man.",
+          "answer": "an",
+          "choices": [
+            "a",
+            "an"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "She wants ___ useful gift.",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "a-or-the",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "There is a book on the table. The book is mine.",
+          "note": "Article use"
+        },
+        {
+          "type": "correct",
+          "text": "The moon is bright tonight.",
+          "note": "Article use"
+        },
+        {
+          "type": "incorrect",
+          "text": "I need the pen. Can you lend me one?",
+          "correction": "I need a pen. Can you lend me one?",
+          "note": "Article use"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Close ___ door, please. It is windy.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "She got ___ job in a bank.",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "I need ___ pen. Do you have one?",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Where is ___ remote control? I cannot find it.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "a-with-jobs-and-quantities",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "My brother is a dentist.",
+          "note": "Article use"
+        },
+        {
+          "type": "correct",
+          "text": "She phones her mother three times a week.",
+          "note": "Article use"
+        },
+        {
+          "type": "incorrect",
+          "text": "He is dentist.",
+          "correction": "He is a dentist.",
+          "note": "Article use"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "He works as ___ electrician.",
+          "answer": "an",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "She drives ninety kilometres ___ hour.",
+          "answer": "an",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "What ___ lovely garden!",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "What ___ pity that you cannot come!",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "no-article-in-general",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Dogs are loyal animals.",
+          "note": "Article use"
+        },
+        {
+          "type": "correct",
+          "text": "Honesty matters more than money.",
+          "note": "Article use"
+        },
+        {
+          "type": "incorrect",
+          "text": "I am afraid of the spiders.",
+          "correction": "I am afraid of spiders.",
+          "note": "Article use"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "___ money does not buy happiness.",
+          "answer": "no article",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "___ books on that shelf are old.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "She is afraid of ___ spiders.",
+          "answer": "no article",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Please pass ___ sugar; it is next to you.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "no-article-names-meals-languages",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "We play tennis every Saturday.",
+          "note": "Article use"
+        },
+        {
+          "type": "correct",
+          "text": "Dinner is at eight.",
+          "note": "Article use"
+        },
+        {
+          "type": "incorrect",
+          "text": "The Maria is my sister.",
+          "correction": "Maria is my sister.",
+          "note": "Article use"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "She is learning ___ German.",
+          "answer": "no article",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "We had ___ breakfast in bed.",
+          "answer": "no article",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "He plays ___ basketball after school.",
+          "answer": "no article",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "They invited us to ___ lovely dinner.",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "no-article-routine-places",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "He goes to bed at ten.",
+          "note": "Article use"
+        },
+        {
+          "type": "correct",
+          "text": "She came to the hospital to visit her friend.",
+          "note": "Article use"
+        },
+        {
+          "type": "incorrect",
+          "text": "We went home by the bus.",
+          "correction": "We went home by bus.",
+          "note": "Article use"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "My father is at ___ work now.",
+          "answer": "no article",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "She came to ___ hospital to see her sick friend.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "The baby goes to ___ bed at seven.",
+          "answer": "no article",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "We usually travel by ___ plane.",
+          "answer": "no article",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "the-geography",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The Danube flows through several countries.",
+          "note": "Article use"
+        },
+        {
+          "type": "correct",
+          "text": "She has never visited Spain.",
+          "note": "Article use"
+        },
+        {
+          "type": "incorrect",
+          "text": "We flew to the Italy.",
+          "correction": "We flew to Italy.",
+          "note": "Article use"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "My cousin lives in ___ Philippines.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "We swam in ___ Red Sea.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "She wants to climb ___ Mount Fuji.",
+          "answer": "no article",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "They visited ___ Czech Republic.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "the-one-of-a-kind",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The Earth goes around the sun.",
+          "note": "Article use"
+        },
+        {
+          "type": "correct",
+          "text": "He was the third person to arrive.",
+          "note": "Article use"
+        },
+        {
+          "type": "incorrect",
+          "text": "She is most talented singer here.",
+          "correction": "She is the most talented singer here.",
+          "note": "Article use"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "She was ___ first woman to win the prize.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "This is ___ same book I lost.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Who is ___ tallest boy in the class?",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "We looked at ___ moon through a telescope.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        }
+      ]
     }
   ]
 }
