@@ -1,0 +1,1206 @@
+{
+  "set": "more-practice-v1",
+  "rules": [
+    {
+      "slug": "accept-vs-except",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "I accept your apology.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "Everyone except Tom arrived on time.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "They welcomed everyone accept the last guest.",
+          "correction": "They welcomed everyone except the last guest.",
+          "note": "The meaning selects this word"
+        },
+        {
+          "type": "incorrect",
+          "text": "I cannot except this gift.",
+          "correction": "I cannot accept this gift.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "I cannot ___ his excuse.",
+          "answer": "accept"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Everybody ___ Anna joined the trip.",
+          "answer": "except"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: She was happy to ___ the job.",
+          "answer": "accept",
+          "choices": [
+            "accept",
+            "except"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: We work every day ___ Sunday.",
+          "answer": "except",
+          "choices": [
+            "accept",
+            "except"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Do you ___ credit cards here?",
+          "answer": "accept"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "All the windows ___ this one were closed.",
+          "answer": "except"
+        }
+      ]
+    },
+    {
+      "slug": "advice-vs-advise",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "My teacher gave me useful advice.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "Can you advise me which book to buy?",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "He gave me good advise.",
+          "correction": "He gave me good advice.",
+          "note": "The meaning selects this word"
+        },
+        {
+          "type": "incorrect",
+          "text": "I advice you to start early.",
+          "correction": "I advise you to start early.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "She asked her friend for ___ about the exam.",
+          "answer": "advice"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "I would ___ you not to wait.",
+          "answer": "advise"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Thank you for your ___.",
+          "answer": "advice",
+          "choices": [
+            "advice",
+            "advise"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: The doctor will ___ you what to eat.",
+          "answer": "advise",
+          "choices": [
+            "advice",
+            "advise"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "That is a good piece of ___.",
+          "answer": "advice"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Who can ___ me on the best route?",
+          "answer": "advise"
+        }
+      ]
+    },
+    {
+      "slug": "practice-vs-practise",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Practice makes perfect.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "We practise the dialogue together.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "She needs more practise.",
+          "correction": "She needs more practice.",
+          "note": "The meaning selects this word"
+        },
+        {
+          "type": "incorrect",
+          "text": "They practice the song before class.",
+          "correction": "They practise the song before class.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "The football ___ starts at five.",
+          "answer": "practice"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "I ___ my English with a friend.",
+          "answer": "practise"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: It takes a lot of ___ to write well.",
+          "answer": "practice",
+          "choices": [
+            "practice",
+            "practise"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Please ___ the new words daily.",
+          "answer": "practise",
+          "choices": [
+            "practice",
+            "practise"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "After hours of ___, she played perfectly.",
+          "answer": "practice"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "We ___ spelling on the bus.",
+          "answer": "practise"
+        }
+      ]
+    },
+    {
+      "slug": "principal-vs-principle",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The principal thanked the students.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "It is against my principles to cheat.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "The principle of the school is kind.",
+          "correction": "The principal of the school is kind.",
+          "note": "The meaning selects this word"
+        },
+        {
+          "type": "incorrect",
+          "text": "He lives by strong principals.",
+          "correction": "He lives by strong principles.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "The ___ cause of the delay was snow.",
+          "answer": "principal"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "She refuses to lie as a matter of ___.",
+          "answer": "principle"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: The ___ of the college gave a speech.",
+          "answer": "principal",
+          "choices": [
+            "principal",
+            "principle"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Honesty is a basic ___.",
+          "answer": "principle",
+          "choices": [
+            "principal",
+            "principle"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Our ___ aim is to help beginners.",
+          "answer": "principal"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "It is the same ___ in every science.",
+          "answer": "principle"
+        }
+      ]
+    },
+    {
+      "slug": "quiet-vs-quite",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The baby is quiet now.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "It was quite a long journey.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "Please be quite in the library.",
+          "correction": "Please be quiet in the library.",
+          "note": "The meaning selects this word"
+        },
+        {
+          "type": "incorrect",
+          "text": "The exam was quiet easy.",
+          "correction": "The exam was quite easy.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "The village is very ___ at night.",
+          "answer": "quiet"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "I was ___ tired after the trip.",
+          "answer": "quite"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Keep ___, the neighbours are sleeping.",
+          "answer": "quiet",
+          "choices": [
+            "quiet",
+            "quite"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: That is ___ a good idea.",
+          "answer": "quite",
+          "choices": [
+            "quiet",
+            "quite"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "It is ___ cold outside.",
+          "answer": "quite"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "He is a ___ boy who reads a lot.",
+          "answer": "quiet"
+        }
+      ]
+    },
+    {
+      "slug": "stationary-vs-stationery",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The shop sells pens and other stationery.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "The car was stationary at the lights.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "He bought some stationary for school.",
+          "correction": "He bought some stationery for school.",
+          "note": "The meaning selects this word"
+        },
+        {
+          "type": "incorrect",
+          "text": "The stationery bike stood in the corner.",
+          "correction": "The stationary bike stood in the corner.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "Please order more ___ for the office.",
+          "answer": "stationery"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The traffic was ___ for ten minutes.",
+          "answer": "stationary"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Envelopes and paper are ___.",
+          "answer": "stationery",
+          "choices": [
+            "stationery",
+            "stationary"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: The satellite looks ___ in the sky.",
+          "answer": "stationary",
+          "choices": [
+            "stationery",
+            "stationary"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "She keeps her ___ in a blue box.",
+          "answer": "stationery"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The plane was ___ on the runway.",
+          "answer": "stationary"
+        }
+      ]
+    },
+    {
+      "slug": "then-vs-than",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Add the flour, then mix well.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "Tea is cheaper than coffee here.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "I would rather read then watch TV.",
+          "correction": "I would rather read than watch TV.",
+          "note": "The meaning selects this word"
+        },
+        {
+          "type": "incorrect",
+          "text": "First we eat, than we go out.",
+          "correction": "First we eat, then we go out.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "My brother is older ___ me.",
+          "answer": "than"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Finish your homework, ___ you can play.",
+          "answer": "then"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: She runs faster ___ I do.",
+          "answer": "than",
+          "choices": [
+            "then",
+            "than"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Turn left, ___ go straight.",
+          "answer": "then",
+          "choices": [
+            "then",
+            "than"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "It was better ___ nothing.",
+          "answer": "than"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "If you are tired, ___ rest.",
+          "answer": "then"
+        }
+      ]
+    },
+    {
+      "slug": "to-too-two",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "I want to learn two new words.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "The soup is too salty.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "She has to cats.",
+          "correction": "She has two cats.",
+          "note": "The meaning selects this word"
+        },
+        {
+          "type": "incorrect",
+          "text": "I am to tired to walk.",
+          "correction": "I am too tired to walk.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "It is ___ late to call him.",
+          "answer": "too"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "We bought ___ tickets for the show.",
+          "answer": "two"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: I am going ___ the market.",
+          "answer": "to",
+          "choices": [
+            "to",
+            "too",
+            "two"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: This coat is ___ big for me.",
+          "answer": "too",
+          "choices": [
+            "to",
+            "too",
+            "two"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "He wants ___ study medicine.",
+          "answer": "to"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The ___ sisters live in Rome.",
+          "answer": "two"
+        }
+      ]
+    },
+    {
+      "slug": "weather-vs-whether",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The weather is sunny today.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "I am not sure whether it will rain.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "I asked weather it was ready.",
+          "correction": "I asked whether it was ready.",
+          "note": "The meaning selects this word"
+        },
+        {
+          "type": "incorrect",
+          "text": "The whether is nice in spring.",
+          "correction": "The weather is nice in spring.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "We do not know ___ the train is late.",
+          "answer": "whether"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The ___ was windy all week.",
+          "answer": "weather"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Nobody knows ___ he will come.",
+          "answer": "whether",
+          "choices": [
+            "weather",
+            "whether"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Today’s ___ forecast says rain.",
+          "answer": "weather",
+          "choices": [
+            "weather",
+            "whether"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "She cannot decide ___ to stay or leave.",
+          "answer": "whether"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "In hot ___ we drink more water.",
+          "answer": "weather"
+        }
+      ]
+    },
+    {
+      "slug": "were-where-wear",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Where did you put my keys?",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "correct",
+          "text": "They were happy to see us.",
+          "note": "Correct word in context"
+        },
+        {
+          "type": "incorrect",
+          "text": "I forgot were I parked.",
+          "correction": "I forgot where I parked.",
+          "note": "The meaning selects this word"
+        },
+        {
+          "type": "incorrect",
+          "text": "We always where warm clothes here.",
+          "correction": "We always wear warm clothes here.",
+          "note": "The meaning selects this word"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "___ is the post office?",
+          "answer": "where"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "What do you ___ to school?",
+          "answer": "wear"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The shops ___ closed on Sunday.",
+          "answer": "were"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Do you know ___ the exit is?",
+          "answer": "where",
+          "choices": [
+            "were",
+            "where",
+            "wear"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: You ___ right about the date.",
+          "answer": "were",
+          "choices": [
+            "were",
+            "where",
+            "wear"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: I need to ___ a helmet.",
+          "answer": "wear",
+          "choices": [
+            "were",
+            "where",
+            "wear"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "comparatives-er-est",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "My bag is lighter than yours.",
+          "note": "Adding -er / -est"
+        },
+        {
+          "type": "correct",
+          "text": "This is the happiest day of my life.",
+          "note": "Adding -er / -est"
+        },
+        {
+          "type": "incorrect",
+          "text": "She is the tinyest girl in class.",
+          "correction": "She is the tiniest girl in class.",
+          "note": "Adding -er / -est"
+        },
+        {
+          "type": "incorrect",
+          "text": "It got much bigger and hoter.",
+          "correction": "It got much bigger and hotter.",
+          "note": "Adding -er / -est"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "sunnyer",
+          "answer": "sunnier"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "fatest",
+          "answer": "fattest"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the comparative form of wide.",
+          "answer": "wider"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the superlative form of big.",
+          "answer": "biggest"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the superlative of busy.",
+          "answer": "busiest",
+          "choices": [
+            "busyest",
+            "busiest",
+            "busiiest"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The ___ day of summer is in June. (самый длинный)",
+          "answer": "longest"
+        }
+      ]
+    },
+    {
+      "slug": "irregular-past-common",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "He told me the news yesterday.",
+          "note": "Irregular past form"
+        },
+        {
+          "type": "correct",
+          "text": "We found the keys under the sofa.",
+          "note": "Irregular past form"
+        },
+        {
+          "type": "incorrect",
+          "text": "She tolded me a secret.",
+          "correction": "She told me a secret.",
+          "note": "Irregular past form"
+        },
+        {
+          "type": "incorrect",
+          "text": "I finded my wallet.",
+          "correction": "I found my wallet.",
+          "note": "Irregular past form"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "sayed",
+          "answer": "said"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "maked",
+          "answer": "made"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the past form of leave.",
+          "answer": "left"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the past form of keep.",
+          "answer": "kept"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "She ___ me a postcard from Paris. (прислала)",
+          "answer": "sent"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct past form of meet.",
+          "answer": "met",
+          "choices": [
+            "meeted",
+            "met",
+            "meat"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "irregular-plurals",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The women met at the station.",
+          "note": "Irregular plural"
+        },
+        {
+          "type": "correct",
+          "text": "The geese flew over the lake.",
+          "note": "Irregular plural"
+        },
+        {
+          "type": "incorrect",
+          "text": "The childs are in the garden.",
+          "correction": "The children are in the garden.",
+          "note": "Irregular plural"
+        },
+        {
+          "type": "incorrect",
+          "text": "Two sheeps stood by the gate.",
+          "correction": "Two sheep stood by the gate.",
+          "note": "Irregular plural"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "oxes",
+          "answer": "oxen"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "mouses",
+          "answer": "mice"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: more than one man.",
+          "answer": "men"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "feets",
+          "answer": "feet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct plural of child.",
+          "answer": "children",
+          "choices": [
+            "childs",
+            "childen",
+            "children"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Look at those ___ in the field. (овцы)",
+          "answer": "sheep"
+        }
+      ]
+    },
+    {
+      "slug": "plural-es",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "I put two sandwiches in my bag.",
+          "note": "Plural with -es"
+        },
+        {
+          "type": "correct",
+          "text": "The churches in the town are old.",
+          "note": "Plural with -es"
+        },
+        {
+          "type": "incorrect",
+          "text": "She sliced two peachs.",
+          "correction": "She sliced two peaches.",
+          "note": "Plural with -es"
+        },
+        {
+          "type": "incorrect",
+          "text": "The bosss met yesterday.",
+          "correction": "The bosses met yesterday.",
+          "note": "Plural with -es"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "benchs",
+          "answer": "benches"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "taxs",
+          "answer": "taxes"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: more than one wish.",
+          "answer": "wishes"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: more than one class.",
+          "answer": "classes"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Please wash the ___. (посуду)",
+          "answer": "dishes"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct plural of match.",
+          "answer": "matches",
+          "choices": [
+            "matchs",
+            "matches",
+            "matchies"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "plural-f-to-ves",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The two wives were sisters.",
+          "note": "Plural with -ves"
+        },
+        {
+          "type": "correct",
+          "text": "The scarves hung by the door.",
+          "note": "Plural with -ves"
+        },
+        {
+          "type": "incorrect",
+          "text": "The shelfs are full of books.",
+          "correction": "The shelves are full of books.",
+          "note": "Plural with -ves"
+        },
+        {
+          "type": "incorrect",
+          "text": "Three wolfs crossed the road.",
+          "correction": "Three wolves crossed the road.",
+          "note": "Plural with -ves"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "calfs",
+          "answer": "calves"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "thiefs",
+          "answer": "thieves"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: more than one knife.",
+          "answer": "knives"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: more than one elf.",
+          "answer": "elves"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct plural of life.",
+          "answer": "lives",
+          "choices": [
+            "lifes",
+            "lives",
+            "livs"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct plural of leaf.",
+          "answer": "leaves",
+          "choices": [
+            "leafs",
+            "leaves",
+            "leavs"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ance-vs-ence",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The doctor gave us clear guidance.",
+          "note": "Spelling of -ance / -ence"
+        },
+        {
+          "type": "correct",
+          "text": "There was no violence at the match.",
+          "note": "Spelling of -ance / -ence"
+        },
+        {
+          "type": "incorrect",
+          "text": "It made a big differance.",
+          "correction": "It made a big difference.",
+          "note": "Spelling of -ance / -ence"
+        },
+        {
+          "type": "incorrect",
+          "text": "He showed great intellegence.",
+          "correction": "He showed great intelligence.",
+          "note": "Spelling of -ance / -ence"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "existance",
+          "answer": "existence"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "resistence",
+          "answer": "resistance"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the people who watch a show in a theatre (one word, -ence).",
+          "answer": "audience"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: proof that something is true.",
+          "answer": "evidence"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Her ___ at the meeting surprised us. (присутствие)",
+          "answer": "presence"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: keeping a machine in good condition.",
+          "answer": "maintenance",
+          "choices": [
+            "maintainance",
+            "maintenance",
+            "maintenence"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tion-vs-sion",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The instructions were clear.",
+          "note": "Spelling of -tion / -sion"
+        },
+        {
+          "type": "correct",
+          "text": "We watched a television show.",
+          "note": "Spelling of -tion / -sion"
+        },
+        {
+          "type": "incorrect",
+          "text": "They gave us permition.",
+          "correction": "They gave us permission.",
+          "note": "Spelling of -tion / -sion"
+        },
+        {
+          "type": "incorrect",
+          "text": "The explanasion was short.",
+          "correction": "The explanation was short.",
+          "note": "Spelling of -tion / -sion"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "revition",
+          "answer": "revision"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "condision",
+          "answer": "condition"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the place where a train stops for passengers (one word, -tion).",
+          "answer": "station"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the answer to a problem.",
+          "answer": "solution"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Please answer the last ___. (вопрос)",
+          "answer": "question"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: entering a country by force.",
+          "answer": "invasion",
+          "choices": [
+            "invation",
+            "invasion",
+            "invacion"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "soft-c-and-g",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The price was outrageous.",
+          "note": "Keeping the e after soft c or g"
+        },
+        {
+          "type": "correct",
+          "text": "The stain is hardly noticeable.",
+          "note": "Keeping the e after soft c or g"
+        },
+        {
+          "type": "incorrect",
+          "text": "It was an advantagous deal.",
+          "correction": "It was an advantageous deal.",
+          "note": "Keeping the e after soft c or g"
+        },
+        {
+          "type": "incorrect",
+          "text": "The rule is not enforcable.",
+          "correction": "The rule is not enforceable.",
+          "note": "Keeping the e after soft c or g"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "outragous",
+          "answer": "outrageous"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "peacable",
+          "answer": "peaceable"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: giving you an advantage.",
+          "answer": "advantageous"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: able to be charged to an account.",
+          "answer": "chargeable"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: able to be pronounced.",
+          "answer": "pronounceable",
+          "choices": [
+            "pronouncable",
+            "pronounceable",
+            "pronounciable"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: very beautiful.",
+          "answer": "gorgeous",
+          "choices": [
+            "gorgous",
+            "gorgeous",
+            "gorgius"
+          ]
+        }
+      ]
+    }
+  ]
+}

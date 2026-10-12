@@ -64,9 +64,52 @@ for (const [ruleId, list] of Object.entries(exercisesByRule)) {
   if (!sql.includes(ruleId)) fail(`${rule.slug}: missing from database/content-pack-3-articles.sql`)
 }
 
+// The "more practice" pack: new examples and exercises for rules that already exist (database/content-pack-4-more-practice.sql).
+const morePack = JSON.parse(readFileSync('database/rules-import/more-practice-pack.json', 'utf8'))
+const moreSql = readFileSync('database/content-pack-4-more-practice.sql', 'utf8')
+const exerciseTypes = new Set(['spell', 'correct_word', 'multiple_choice', 'fill_gap', 'grammar'])
+let moreExamples = 0
+let moreExercises = 0
+for (const item of morePack.rules) {
+  const rule = rules.rules.find((entry) => entry.slug === item.slug)
+  if (!rule) {
+    fail(`more-practice pack: no rule "${item.slug}"`)
+    continue
+  }
+  const texts = new Set(rules.examples.filter((example) => example.rule_id === rule.id).map((example) => example.text))
+  for (const example of item.examples) {
+    moreExamples += 1
+    if (!exampleTypes.has(example.type)) fail(`${item.slug}: example "${example.text}" has an unknown type`)
+    if (example.type === 'incorrect' && !example.correction) fail(`${item.slug}: incorrect example "${example.text}" needs a correction`)
+    if (!moreSql.includes(example.text.replaceAll("'", "''")))
+      fail(`${item.slug}: example "${example.text}" is not in the SQL file (run node scripts/build-more-practice-pack.mjs)`)
+    if (!texts.has(example.text))
+      fail(`${item.slug}: example "${example.text}" is not in builtInRules.json (run node scripts/build-more-practice-pack.mjs)`)
+  }
+  const prompts = new Set()
+  for (const exercise of item.exercises) {
+    moreExercises += 1
+    const label = `${item.slug}: "${exercise.prompt}"`
+    if (!exerciseTypes.has(exercise.type)) fail(`${label}: unknown type`)
+    if (prompts.has(exercise.prompt)) fail(`${label}: duplicate prompt in the pack`)
+    prompts.add(exercise.prompt)
+    if (!exercise.answer?.trim()) fail(`${label}: no answer`)
+    if (exercise.type === 'fill_gap' && !exercise.prompt.includes('___')) fail(`${label}: a fill_gap prompt needs a ___ gap`)
+    if (exercise.type === 'multiple_choice') {
+      if (!Array.isArray(exercise.choices) || exercise.choices.length < 2) fail(`${label}: needs at least two choices`)
+      else if (exercise.choices.filter((choice) => choice === exercise.answer).length !== 1)
+        fail(`${label}: the answer must be exactly one of the choices`)
+    }
+    if (!moreSql.includes(exercise.prompt.replaceAll("'", "''")))
+      fail(`${label}: missing from the SQL file (run node scripts/build-more-practice-pack.mjs)`)
+  }
+}
+
 if (problems.length) {
   console.error(problems.map((problem) => `  ✗ ${problem}`).join('\n'))
   console.error(`\n${problems.length} problem(s) in the rule content.`)
   process.exit(1)
 }
-console.log(`All ${rules.rules.length} rules, ${rules.examples.length} examples and ${exerciseCount} bundled exercises passed.`)
+console.log(
+  `All ${rules.rules.length} rules, ${rules.examples.length} examples and ${exerciseCount} bundled exercises passed; more-practice pack: ${moreExamples} examples, ${moreExercises} exercises.`,
+)

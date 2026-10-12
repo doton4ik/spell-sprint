@@ -2318,6 +2318,582 @@
       "text": "Few people came. / A few people came.",
       "correction": null,
       "note": "few = almost none, a few = some"
+    },
+    {
+      "id": "cdb0078b-9974-5587-9a37-da9d4a1b3007",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "I accept your apology.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "332ea77f-d81f-5731-afe8-de3d00215257",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "Everyone except Tom arrived on time.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "73df25db-b320-581a-a53b-56e5e8b7d2a5",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "They welcomed everyone accept the last guest.",
+      "correction": "They welcomed everyone except the last guest.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "78b8a68c-40b1-50c4-bf64-46cdd3945143",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "I cannot except this gift.",
+      "correction": "I cannot accept this gift.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "0c9144cd-c269-520a-b175-5c2b410fc266",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "My teacher gave me useful advice.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "c8945cc4-19b4-566a-9d8c-7f40b4db376b",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "Can you advise me which book to buy?",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "e7ce85b3-a694-538b-9233-db5b5b16fc84",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "He gave me good advise.",
+      "correction": "He gave me good advice.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "e2bad929-a9ce-5a1a-895b-6851a50d8abc",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "I advice you to start early.",
+      "correction": "I advise you to start early.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "3939e1a3-de12-5a17-bd1b-e97e6b9f85b2",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "Practice makes perfect.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "c53cffbb-ab16-59d9-89b1-be54cb4d162b",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "We practise the dialogue together.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "0798a096-13f1-5e50-bf62-379d41fe7806",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "She needs more practise.",
+      "correction": "She needs more practice.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "3d183f5a-621d-5a5c-9b54-542f7ea40b62",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "They practice the song before class.",
+      "correction": "They practise the song before class.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "09e40286-52b6-5ff8-a341-87cec7543829",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "The principal thanked the students.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "13253cf6-c589-5c55-9416-c33bbefff1f7",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "It is against my principles to cheat.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "f44e2079-9c4e-5e48-943b-e4e6c09dfec4",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "The principle of the school is kind.",
+      "correction": "The principal of the school is kind.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "46b462dc-d863-527c-8912-f96b6cdbdbf0",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "He lives by strong principals.",
+      "correction": "He lives by strong principles.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "6b34df6c-5f58-5a3e-9196-b4bdc6dd9117",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "correct",
+      "text": "The baby is quiet now.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "203a4476-62d0-54e8-92c7-89519dd92f23",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "correct",
+      "text": "It was quite a long journey.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "c743e989-703b-51c2-be85-b4dddef9489c",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "Please be quite in the library.",
+      "correction": "Please be quiet in the library.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "26274e62-3fad-5115-9a05-1f5674c570b6",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "The exam was quiet easy.",
+      "correction": "The exam was quite easy.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "8f436e73-2cfa-5e6d-b351-29812f16638d",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "correct",
+      "text": "The shop sells pens and other stationery.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "bdf9f5f6-222c-5e66-8381-bf41a6beec74",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "correct",
+      "text": "The car was stationary at the lights.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "8135fc87-14e6-5c73-a7f0-530797302717",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "He bought some stationary for school.",
+      "correction": "He bought some stationery for school.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "5ecc67a6-978c-59b4-9b2e-3b4a037223a2",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "The stationery bike stood in the corner.",
+      "correction": "The stationary bike stood in the corner.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "ba4aac96-846d-5700-8659-84245b907984",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "Add the flour, then mix well.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "9284035a-52ed-52ae-b72f-32b2aa45f3ef",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "Tea is cheaper than coffee here.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "26daf947-1dcd-587e-84ab-77495b1d0203",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "I would rather read then watch TV.",
+      "correction": "I would rather read than watch TV.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "55d5d4e7-b866-51d9-a2f2-c2b91d475eeb",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "First we eat, than we go out.",
+      "correction": "First we eat, then we go out.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "2eba7d99-925f-5483-aa7e-bdcc40edbce8",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "I want to learn two new words.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "4ea5aede-717b-573a-ad33-4c5917d44b38",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "The soup is too salty.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "8593a358-1694-5689-9c5a-b1b40fce8d8e",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "She has to cats.",
+      "correction": "She has two cats.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "77714a2f-b70e-50cf-a29c-51c71ee3a3e6",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "I am to tired to walk.",
+      "correction": "I am too tired to walk.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "3fc381da-9593-5be6-9626-66e4e5b048aa",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "The weather is sunny today.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "f109ffdf-bafa-52b2-ba06-18f23781048b",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "I am not sure whether it will rain.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "16ab09fb-c9a2-590b-8029-0421ad714b71",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "I asked weather it was ready.",
+      "correction": "I asked whether it was ready.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "5b4f2431-374a-59db-8e8a-85a83cb78686",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "The whether is nice in spring.",
+      "correction": "The weather is nice in spring.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "8e2a84e9-1b5c-560d-9c4e-aa1bab4d3c8c",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "Where did you put my keys?",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "eda63be9-af43-5910-b5d7-4209c5cfce77",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "They were happy to see us.",
+      "correction": null,
+      "note": "Correct word in context"
+    },
+    {
+      "id": "cc5649a3-dc7d-53d8-a80d-09728db8b7c7",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "I forgot were I parked.",
+      "correction": "I forgot where I parked.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "7176065b-e84c-5968-9f23-fb684eb39203",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "We always where warm clothes here.",
+      "correction": "We always wear warm clothes here.",
+      "note": "The meaning selects this word"
+    },
+    {
+      "id": "17d3e1de-b0ea-5b41-8311-7be2ff6875b4",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "My bag is lighter than yours.",
+      "correction": null,
+      "note": "Adding -er / -est"
+    },
+    {
+      "id": "441eed15-6d16-5620-bfc4-a7df2ca9527d",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "This is the happiest day of my life.",
+      "correction": null,
+      "note": "Adding -er / -est"
+    },
+    {
+      "id": "26186de7-e6ec-54c1-b659-308a4a73229b",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "She is the tinyest girl in class.",
+      "correction": "She is the tiniest girl in class.",
+      "note": "Adding -er / -est"
+    },
+    {
+      "id": "a521188f-7021-5319-8e47-b1e67aa5726e",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "It got much bigger and hoter.",
+      "correction": "It got much bigger and hotter.",
+      "note": "Adding -er / -est"
+    },
+    {
+      "id": "413ca646-5d39-55fd-8bef-7eaf29cc9653",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "He told me the news yesterday.",
+      "correction": null,
+      "note": "Irregular past form"
+    },
+    {
+      "id": "b793da5e-0a55-526a-845f-4248ad252e96",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "We found the keys under the sofa.",
+      "correction": null,
+      "note": "Irregular past form"
+    },
+    {
+      "id": "eb0441bf-ecc5-5258-9ec2-b175307abb48",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "She tolded me a secret.",
+      "correction": "She told me a secret.",
+      "note": "Irregular past form"
+    },
+    {
+      "id": "c10a87af-0dfb-5da8-8846-6888515091b7",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "I finded my wallet.",
+      "correction": "I found my wallet.",
+      "note": "Irregular past form"
+    },
+    {
+      "id": "ef017380-c871-5e09-a94d-386dc146f4eb",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "The women met at the station.",
+      "correction": null,
+      "note": "Irregular plural"
+    },
+    {
+      "id": "20bbff95-0c5e-5be3-9abd-d8e875470f06",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "The geese flew over the lake.",
+      "correction": null,
+      "note": "Irregular plural"
+    },
+    {
+      "id": "ae5a4ea6-37d2-5ffd-95bf-2e9f5dd86186",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "The childs are in the garden.",
+      "correction": "The children are in the garden.",
+      "note": "Irregular plural"
+    },
+    {
+      "id": "4a74a129-442b-54ae-947e-d0d9123916ff",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "Two sheeps stood by the gate.",
+      "correction": "Two sheep stood by the gate.",
+      "note": "Irregular plural"
+    },
+    {
+      "id": "bd8d8494-b453-50e5-a58f-ab1f333a8759",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "correct",
+      "text": "I put two sandwiches in my bag.",
+      "correction": null,
+      "note": "Plural with -es"
+    },
+    {
+      "id": "3b39dc97-1503-56a2-9bb6-19b06ce5d753",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "correct",
+      "text": "The churches in the town are old.",
+      "correction": null,
+      "note": "Plural with -es"
+    },
+    {
+      "id": "484380d9-094a-5947-b399-612fbd786b43",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "She sliced two peachs.",
+      "correction": "She sliced two peaches.",
+      "note": "Plural with -es"
+    },
+    {
+      "id": "b841858d-074d-536d-86dd-7889b6d63bd2",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "The bosss met yesterday.",
+      "correction": "The bosses met yesterday.",
+      "note": "Plural with -es"
+    },
+    {
+      "id": "fe45016d-1cb4-591c-a275-f2f7239f8266",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "The two wives were sisters.",
+      "correction": null,
+      "note": "Plural with -ves"
+    },
+    {
+      "id": "27673394-7e7c-5587-8d2f-1e7a7a957615",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "The scarves hung by the door.",
+      "correction": null,
+      "note": "Plural with -ves"
+    },
+    {
+      "id": "bdbbb8d0-cbab-5808-8139-60492a168cfd",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "The shelfs are full of books.",
+      "correction": "The shelves are full of books.",
+      "note": "Plural with -ves"
+    },
+    {
+      "id": "5a293c5e-9fc6-58f6-8422-d35bfb9e3a5f",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "Three wolfs crossed the road.",
+      "correction": "Three wolves crossed the road.",
+      "note": "Plural with -ves"
+    },
+    {
+      "id": "2d37ac37-69e6-544d-8d2e-77f879d180c3",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "The doctor gave us clear guidance.",
+      "correction": null,
+      "note": "Spelling of -ance / -ence"
+    },
+    {
+      "id": "8ceaed1a-59ab-53a1-baf1-77f3d27db514",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "There was no violence at the match.",
+      "correction": null,
+      "note": "Spelling of -ance / -ence"
+    },
+    {
+      "id": "947c1557-3615-5056-aa05-5343b80d8247",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "It made a big differance.",
+      "correction": "It made a big difference.",
+      "note": "Spelling of -ance / -ence"
+    },
+    {
+      "id": "c93bb44b-1988-5a89-b98b-6ff2c031287c",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "He showed great intellegence.",
+      "correction": "He showed great intelligence.",
+      "note": "Spelling of -ance / -ence"
+    },
+    {
+      "id": "3148b580-d5e5-588e-8b7a-2310bb3fcd4f",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "The instructions were clear.",
+      "correction": null,
+      "note": "Spelling of -tion / -sion"
+    },
+    {
+      "id": "7f27e12a-104e-5968-916d-0ad95d10a373",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "We watched a television show.",
+      "correction": null,
+      "note": "Spelling of -tion / -sion"
+    },
+    {
+      "id": "3f1395aa-e9d7-5858-b192-2b223c4d5821",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "They gave us permition.",
+      "correction": "They gave us permission.",
+      "note": "Spelling of -tion / -sion"
+    },
+    {
+      "id": "501e102f-ebbb-5266-9862-d7a6a4a427d7",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "The explanasion was short.",
+      "correction": "The explanation was short.",
+      "note": "Spelling of -tion / -sion"
+    },
+    {
+      "id": "44ae9cb5-b91a-5764-9d1f-7cde5bd54765",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "correct",
+      "text": "The price was outrageous.",
+      "correction": null,
+      "note": "Keeping the e after soft c or g"
+    },
+    {
+      "id": "cd6f959e-af5c-5395-acb5-8398c8990094",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "correct",
+      "text": "The stain is hardly noticeable.",
+      "correction": null,
+      "note": "Keeping the e after soft c or g"
+    },
+    {
+      "id": "454e5d22-05ee-51e2-8304-7de17094e46f",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "It was an advantagous deal.",
+      "correction": "It was an advantageous deal.",
+      "note": "Keeping the e after soft c or g"
+    },
+    {
+      "id": "41eda9ad-e776-5f65-89c0-e7bd30f29cc0",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "The rule is not enforcable.",
+      "correction": "The rule is not enforceable.",
+      "note": "Keeping the e after soft c or g"
     }
   ]
 }
