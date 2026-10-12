@@ -3123,7 +3123,7 @@
       "id": "1e9163e3-0646-588a-b5c1-1f91b5ce26be",
       "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
-      "text": "The moon is bright tonight.",
+      "text": "I bought a cake. The cake was delicious.",
       "correction": null,
       "note": "Article use"
     },
@@ -3219,7 +3219,7 @@
       "id": "f5c80d9b-2753-5de7-94dd-5aa5c764b423",
       "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
       "example_type": "correct",
-      "text": "She came to the hospital to visit her friend.",
+      "text": "He went to the school to talk to his son's teacher.",
       "correction": null,
       "note": "Article use"
     },
@@ -3259,7 +3259,7 @@
       "id": "854e5880-7fd5-5efd-94bc-d8b231dcdb08",
       "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
       "example_type": "correct",
-      "text": "The Earth goes around the sun.",
+      "text": "The Earth goes around the Sun.",
       "correction": null,
       "note": "Article use"
     },
@@ -3267,7 +3267,7 @@
       "id": "55477b90-518d-5fec-8d10-692c12860aa4",
       "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
       "example_type": "correct",
-      "text": "He was the third person to arrive.",
+      "text": "This is the best day of my life.",
       "correction": null,
       "note": "Article use"
     },

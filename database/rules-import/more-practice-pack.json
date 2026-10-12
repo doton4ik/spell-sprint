@@ -1286,7 +1286,7 @@
       "exercises": [
         {
           "type": "fill_gap",
-          "prompt": "Hurry up, or we will ___ the bus.",
+          "prompt": "Keep your ticket safe and do not ___ it.",
           "answer": "lose"
         }
       ]
@@ -1370,7 +1370,7 @@
       "exercises": [
         {
           "type": "fill_gap",
-          "prompt": "Where have you ___ today?",
+          "prompt": "Tom is not here. He has ___ to the shop.",
           "answer": "gone"
         }
       ]
@@ -1505,7 +1505,7 @@
         },
         {
           "type": "correct",
-          "text": "The moon is bright tonight.",
+          "text": "I bought a cake. The cake was delicious.",
           "note": "Article use"
         },
         {
@@ -1538,7 +1538,7 @@
         },
         {
           "type": "multiple_choice",
-          "prompt": "I need ___ pen. Do you have one?",
+          "prompt": "I am looking for ___ cheap hotel near the station.",
           "answer": "a",
           "choices": [
             "a",
@@ -1592,7 +1592,7 @@
         },
         {
           "type": "multiple_choice",
-          "prompt": "She drives ninety kilometres ___ hour.",
+          "prompt": "She drives at ninety kilometres ___ hour.",
           "answer": "an",
           "choices": [
             "a",
@@ -1614,7 +1614,7 @@
         },
         {
           "type": "multiple_choice",
-          "prompt": "What ___ pity that you cannot come!",
+          "prompt": "I drink coffee twice ___ day.",
           "answer": "a",
           "choices": [
             "a",
@@ -1670,7 +1670,7 @@
         },
         {
           "type": "multiple_choice",
-          "prompt": "She is afraid of ___ spiders.",
+          "prompt": "___ cats sleep a lot.",
           "answer": "no article",
           "choices": [
             "a",
@@ -1769,7 +1769,7 @@
         },
         {
           "type": "correct",
-          "text": "She came to the hospital to visit her friend.",
+          "text": "He went to the school to talk to his son's teacher.",
           "note": "Article use"
         },
         {
@@ -1804,7 +1804,7 @@
         },
         {
           "type": "multiple_choice",
-          "prompt": "The baby goes to ___ bed at seven.",
+          "prompt": "What time do you finish ___ school?",
           "answer": "no article",
           "choices": [
             "a",
@@ -1898,12 +1898,12 @@
       "examples": [
         {
           "type": "correct",
-          "text": "The Earth goes around the sun.",
+          "text": "The Earth goes around the Sun.",
           "note": "Article use"
         },
         {
           "type": "correct",
-          "text": "He was the third person to arrive.",
+          "text": "This is the best day of my life.",
           "note": "Article use"
         },
         {
@@ -1927,7 +1927,7 @@
         },
         {
           "type": "multiple_choice",
-          "prompt": "This is ___ same book I lost.",
+          "prompt": "We go to ___ same school.",
           "answer": "the",
           "choices": [
             "a",
