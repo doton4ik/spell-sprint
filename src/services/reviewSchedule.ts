@@ -21,6 +21,10 @@ function addDays(from: Date, days: number) {
 // still counts, because it shows the word is not known.
 export const recognitionOnly = (mode?: PracticeMode) => mode === 'choose-spelling' || mode === 'translate-ru'
 
+// Help makes a right answer not count as known: a hint or the audio before answering, and dictation, where the
+// audio is the whole task. The word comes back tomorrow and has to be written without help.
+export const assistedMode = (mode?: PracticeMode) => mode === 'listen-write'
+
 // A right answer is a successful day only when it is earned:
 //  - the word was due (its review date has come). Practising it again early, from a topic list for
 //    example, is fine but does not move it forward; otherwise five days in a row would "master" it.
@@ -33,7 +37,14 @@ function countsAsGoodDay(
   plannedDay: string,
   mistakeDay: string,
 ) {
-  return attempt.isCorrect && !attempt.hintUsed && !recognitionOnly(attempt.attemptMode) && day !== mistakeDay && day >= plannedDay
+  return (
+    attempt.isCorrect &&
+    !attempt.hintUsed &&
+    !recognitionOnly(attempt.attemptMode) &&
+    !assistedMode(attempt.attemptMode) &&
+    day !== mistakeDay &&
+    day >= plannedDay
+  )
 }
 
 // `confidence` on an attempt = successful review days since the last mistake (0–5).
@@ -67,7 +78,7 @@ export function scheduleAfterAnswer(
   const tomorrow = addDays(now, 1)
   // Keeps the word's current review date (a known word is not pulled back), at least tomorrow.
   const keepPlan = () => ({ confidence: goodDays.size, nextReviewAt: planned > tomorrow ? planned : tomorrow })
-  if (hintUsed) return { confidence: goodDays.size, nextReviewAt: tomorrow }
+  if (hintUsed || assistedMode(mode)) return { confidence: goodDays.size, nextReviewAt: tomorrow }
   if (recognitionOnly(mode)) return keepPlan()
   const today = localDayKey(now)
   if (today === mistakeDay) return { confidence: 0, nextReviewAt: tomorrow }

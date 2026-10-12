@@ -78,6 +78,7 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
   const [attemptsOnTask, setAttemptsOnTask] = useState(0)
   const [answerRevealed, setAnswerRevealed] = useState(false)
   const [hintStep, setHintStep] = useState(0)
+  const [audioUsed, setAudioUsed] = useState(false) // the word was listened to before answering: that is help too
   const [completed, setCompleted] = useState(false)
   // First result per task in this session (a later retry does not overwrite it), for the live stats panel.
   const [outcomes, setOutcomes] = useState<Record<string, TaskOutcome>>({})
@@ -100,6 +101,7 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
     setAttemptsOnTask(0)
     setAnswerRevealed(false)
     setHintStep(0)
+    setAudioUsed(false)
     setCompleted(false)
     setOutcomes({})
   }, [tasks, taskLimit])
@@ -123,13 +125,14 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
     const attemptMode =
       currentTask.mode ??
       (currentTask.type === 'translate-en-ru' ? 'translate-ru' : currentTask.type === 'translate-ru-en' ? 'write-en' : 'choose-spelling')
+    const helped = Boolean(hintStep) || audioUsed
     const { confidence, nextReviewAt } = scheduleAfterAnswer(
       { wordId: currentTask.wordId, taskId: currentTask.id },
       correct,
-      Boolean(hintStep),
+      helped,
       attemptMode,
     )
-    const needsReview = Boolean(overrides.wasMarkedForReview) || !correct || Boolean(hintStep)
+    const needsReview = Boolean(overrides.wasMarkedForReview) || !correct || helped
     const id = crypto.randomUUID()
     setLastAttemptId(id)
     savePracticeAttempt({
@@ -144,7 +147,7 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
       userAnswer: answer,
       correctAnswer: target,
       errorCategory: correct ? currentTask.errorCategory : categoryForError(errorType(answer, target)),
-      hintUsed: Boolean(hintStep),
+      hintUsed: helped,
       attemptMode,
       errorType: correct ? 'unknown' : errorType(answer, target),
       confidence,
@@ -191,6 +194,7 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
     setAttemptsOnTask(0)
     setAnswerRevealed(false)
     setHintStep(0)
+    setAudioUsed(false)
   }
 
   function skip() {
@@ -260,6 +264,10 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
   function useHint() {
     setHintStep((step) => Math.min(step + 1, 5))
   }
+  // Listening to the word before answering gives its spelling away in the modes where the learner writes it.
+  function markAudioUsed() {
+    if (result === 'idle' && currentTask?.mode !== 'listen-write') setAudioUsed(true)
+  }
   function markForReview() {
     recordAttempt({ isCorrect: result === 'correct', wasSkipped: false, wasAnswerRevealed: answerRevealed, wasMarkedForReview: true })
   }
@@ -272,6 +280,7 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
     setAttemptsOnTask(0)
     setAnswerRevealed(false)
     setHintStep(0)
+    setAudioUsed(false)
     setCompleted(false)
     setOutcomes({})
   }
@@ -289,6 +298,8 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
     attemptsOnTask,
     answerRevealed,
     hintStep,
+    audioUsed,
+    markAudioUsed,
     completed,
     settings,
     setSettings,

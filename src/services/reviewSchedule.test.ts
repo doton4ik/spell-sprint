@@ -102,4 +102,28 @@ describe('scheduleAfterAnswer', () => {
     history(...[0, 1, 2, 3, 4, 5].map((offset) => attempt(day(offset), true)))
     expect(scheduleAfterAnswer(item, true, false, 'write-en', day(6)).confidence).toBe(5)
   })
+  it('a right answer with help (a hint or the audio) is not a good day: back tomorrow, nothing earned', () => {
+    history(attempt(day(0), false, { nextReviewAt: day(0).toISOString() }))
+    const helped = scheduleAfterAnswer(item, true, true, 'write-en', day(1))
+    expect(helped.confidence).toBe(0)
+    expect(daysUntil(helped.nextReviewAt, day(1))).toBe(1)
+    // the unaided answer the next day is the first good day
+    history(attempt(day(0), false, { nextReviewAt: day(0).toISOString() }), attempt(day(1), true, { hintUsed: true, ...helped }))
+    expect(scheduleAfterAnswer(item, true, false, 'write-en', day(2)).confidence).toBe(1)
+  })
+  it('dictation is help too: it never makes a good day, the word must also be written without the audio', () => {
+    history(attempt(day(0), false, { nextReviewAt: day(0).toISOString() }))
+    const heard = scheduleAfterAnswer(item, true, false, 'listen-write', day(1))
+    expect(heard.confidence).toBe(0)
+    expect(daysUntil(heard.nextReviewAt, day(1))).toBe(1)
+    history(
+      attempt(day(0), false, { nextReviewAt: day(0).toISOString() }),
+      attempt(day(1), true, { attemptMode: 'listen-write', ...heard }),
+      attempt(day(2), true, { attemptMode: 'listen-write', nextReviewAt: day(3).toISOString() }),
+    )
+    // dictation answers on two days are still no good day
+    expect(scheduleAfterAnswer(item, true, false, 'listen-write', day(3)).confidence).toBe(0)
+    // written without help, it counts
+    expect(scheduleAfterAnswer(item, true, false, 'write-en', day(3)).confidence).toBe(1)
+  })
 })

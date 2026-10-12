@@ -264,6 +264,7 @@ export function PracticePage() {
           attemptsOnTask={session.attemptsOnTask}
           answerRevealed={session.answerRevealed}
           hintStep={session.hintStep}
+          audioUsed={session.audioUsed}
           allowSkip={session.settings.allowSkip}
           showRuleAfterMistake={session.settings.showRuleAfterMistake}
           onAnswerChange={session.setAnswer}
@@ -272,7 +273,10 @@ export function PracticePage() {
           onClaimCorrect={session.claimCorrect}
           onShowAnswer={session.revealAnswer}
           onHint={session.useHint}
-          onPlayAudio={playAudio}
+          onPlayAudio={() => {
+            session.markAudioUsed()
+            playAudio()
+          }}
           onSkip={session.skip}
           onNext={session.advance}
           onRepeatLater={session.markForReview}

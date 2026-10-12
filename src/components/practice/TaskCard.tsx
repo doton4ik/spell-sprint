@@ -25,6 +25,7 @@ type TaskCardProps = {
   onShowAnswer: () => void
   onHint: () => void
   onPlayAudio: () => void
+  audioUsed?: boolean
   onSkip: () => void
   onNext: () => void
   onRepeatLater: () => void
@@ -71,6 +72,7 @@ export function TaskCard({
   onShowAnswer,
   onHint,
   onPlayAudio,
+  audioUsed,
   onSkip,
   onNext,
   onRepeatLater,
@@ -323,9 +325,9 @@ export function TaskCard({
           <div className={`task-feedback task-feedback--${correct ? 'correct' : 'incorrect'}`} role="status">
             <p className="task-feedback__title">
               <Icon name={correct ? 'check' : 'refresh'} size={17} />
-              {correct ? (hintStep > 0 ? 'Correct — with a hint' : 'Correct') : 'Not quite'}
+              {correct ? (hintStep > 0 ? 'Correct — with a hint' : audioUsed ? 'Correct — with audio' : 'Correct') : 'Not quite'}
             </p>
-            {correct && hintStep > 0 ? (
+            {correct && (hintStep > 0 || audioUsed) ? (
               <p className="task-feedback__note">It comes back tomorrow, so you can write it without help.</p>
             ) : null}
             {!correct ? (
