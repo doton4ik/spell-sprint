@@ -15,6 +15,7 @@ import {
 } from '../services/libraryPractice'
 import { speakEnglish } from '../services/speech'
 import { getWordProgress, reasonForWord } from '../services/dailyPlan'
+import { markServed } from '../services/mistakePicker'
 import type { PracticeMode } from '../types/practice'
 import './practice.css'
 import { setPackEnabled, setWordHidden } from '../services/libraryPrefs'
@@ -49,14 +50,21 @@ export function PracticePage() {
   const [setupOpen, setSetupOpen] = useState(false)
   const [sessionSize, setSessionSize] = useState<number | 'all'>(pendingSelection?.mode ? 'all' : 10)
   const [packsRevision, setPacksRevision] = useState(0) // a pack switched off → a new session without it
+  const [round, setRound] = useState(0) // another round of mistakes picks other words
   const tasks = useMemo(
     () =>
       pendingSelection
         ? getTasksForWordIds(pendingSelection.wordIds, mode)
-        : getTasksForSelection({ scope, library, topic, subtopic }, mode),
-    [pendingSelection, scope, library, topic, subtopic, mode, packsRevision],
+        : getTasksForSelection({ scope, library, topic, subtopic, limit: sessionSize === 'all' ? undefined : sessionSize }, mode),
+    [pendingSelection, scope, library, topic, subtopic, mode, packsRevision, sessionSize, round],
   ) // eslint-disable-line react-hooks/exhaustive-deps
   const session = usePracticeSession(tasks, sessionSize)
+  // Remember which mistakes were just handed out, so the next session brings others.
+  const servedSignature =
+    scope === 'mistakes' || pendingSelection?.kind === 'mistakes' ? tasks.map((task) => task.wordId ?? task.id).join('|') : ''
+  useEffect(() => {
+    if (servedSignature) markServed(servedSignature.split('|'))
+  }, [servedSignature])
   const select = (label: string, value: string, onChange: (value: string) => void, values: string[], hidden: boolean) =>
     hidden ? null : (
       <label className="practice-select">
@@ -153,7 +161,15 @@ export function PracticePage() {
             className="check-button"
             type="button"
             onClick={() => {
+              // Another round of mistakes is a fresh pick, not the same words again.
+              if (pendingSelection?.kind === 'mistakes') {
+                setScope('mistakes')
+                setMode(pendingSelection.mode ?? 'write-en')
+                setSessionSize(10)
+              }
               clearPendingPracticeSelection()
+              setPendingSelection(null)
+              setRound((value) => value + 1)
               session.restart()
             }}
           >

@@ -4,6 +4,7 @@ import type { PracticeMode, PracticeTask } from '../types/practice'
 import { russianAnswers } from './answerMatch'
 import { getAllWords, getEveryWord, getLibraries } from './libraryStorage'
 import { getMistakeEntries, getReviewEntries } from './learningData'
+import { loadServed, pickMistakes } from './mistakePicker'
 import { spellingDistractors } from './spellingDistractors'
 import { isRealOrRude } from './proofreadingEngine'
 
@@ -15,7 +16,8 @@ function knownWords() {
 }
 
 export type PracticeScope = 'all' | 'library' | 'topic' | 'subtopic' | 'mistakes' | 'review'
-export type PracticeSelection = { scope: PracticeScope; library: string; topic: string; subtopic: string }
+// limit: for 'mistakes', how many words a session takes. They are picked by need and rotated, not the same list every time.
+export type PracticeSelection = { scope: PracticeScope; library: string; topic: string; subtopic: string; limit?: number }
 
 function levelFor(difficulty: LibraryWord['difficulty']): PracticeTask['level'] {
   return difficulty === 'easy' ? 'Easy' : difficulty === 'medium' ? 'Medium' : 'Hard'
@@ -137,10 +139,12 @@ export function getTasksForSelection(selection: PracticeSelection, mode: Practic
     // Only the learner's own words, never the whole library: the exact tasks they missed, plus the same
     // words in the chosen mode (a word missed in dictation can be practised in "Write in English").
     // Mastered words are left out. Nothing to repeat → an empty list, and the page says so.
-    const entries =
+    const all =
       selection.scope === 'review'
         ? getReviewEntries()
         : getMistakeEntries().filter((entry) => entry.status !== 'mastered' && !entry.archived)
+    const entries =
+      selection.scope === 'mistakes' && selection.limit ? pickMistakes({ entries: all, size: selection.limit, served: loadServed() }) : all
     const taskIds = new Set(entries.map((entry) => entry.taskId))
     const wordIds = new Set(entries.map((entry) => entry.wordId).filter(Boolean))
     return oncePerWord(
@@ -159,7 +163,7 @@ export function getTaskById(taskId: string) {
 }
 
 const PENDING_SELECTION_KEY = 'spell-sprint.pending-practice-selection'
-export type PendingPracticeSelection = { wordIds: string[]; label: string; mode?: PracticeMode }
+export type PendingPracticeSelection = { wordIds: string[]; label: string; mode?: PracticeMode; kind?: 'mistakes' }
 export function setPendingPracticeSelection(selection: PendingPracticeSelection) {
   window.sessionStorage.setItem(PENDING_SELECTION_KEY, JSON.stringify(selection))
 }

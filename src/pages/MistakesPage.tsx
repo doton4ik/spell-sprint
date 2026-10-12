@@ -5,6 +5,7 @@ import { AnswerDiff } from '../components/practice/AnswerDiff'
 import { getEntryHistory, getMistakeEntries, isDueToday, subscribeToLearningData } from '../services/learningData'
 import { openPairOnPairsPage } from '../services/pairs'
 import { setPendingPracticeSelection } from '../services/libraryPractice'
+import { loadServed, mistakeKey, pickMistakes } from '../services/mistakePicker'
 import { dismissYellowCard, getYellowCards, type YellowCard } from '../services/yellowCards'
 import type { ErrorFamily, LearningStatus, MistakeEntry } from '../types/learning'
 import { MistakePatternsView } from '../components/mistakes/MistakePatternsView'
@@ -68,12 +69,14 @@ function History({ entry }: { entry: MistakeEntry }) {
   )
 }
 
+// A session is a mix, not the group itself: the pressed group (today's, due) comes first, the rest is filled with
+// other words that need work, and the words handed out last time give way (see mistakePicker.ts).
+const MIX_SIZE = 10
 function practise(entries: MistakeEntry[], label: string) {
-  const wordIds = [...new Set(entries.map((entry) => entry.wordId).filter((id): id is string => Boolean(id)))]
-  if (wordIds.length) {
-    setPendingPracticeSelection({ wordIds, label, mode: 'write-en' })
-    window.location.hash = 'practice'
-  } else window.location.hash = 'practice'
+  const picked = pickMistakes({ entries: getMistakeEntries(), size: MIX_SIZE, preferred: entries.map(mistakeKey), served: loadServed() })
+  const wordIds = [...new Set(picked.map((entry) => entry.wordId).filter((id): id is string => Boolean(id)))]
+  if (wordIds.length) setPendingPracticeSelection({ wordIds, label, mode: 'write-en', kind: 'mistakes' })
+  window.location.hash = 'practice'
 }
 
 function MistakeRow({ entry }: { entry: MistakeEntry }) {
@@ -241,7 +244,7 @@ export function MistakesPage() {
           </p>
         </div>
         {due ? (
-          <button className="outline-action" type="button" onClick={() => practise(entries.filter(isDue), 'Mistakes due today')}>
+          <button className="outline-action" type="button" onClick={() => practise(entries.filter(isDue), 'Mistakes mix')}>
             <Icon name="practice" size={17} /> Practise today’s words
           </button>
         ) : (
@@ -304,12 +307,8 @@ export function MistakesPage() {
                           </h2>
                         </div>
                         {group.action ? (
-                          <button
-                            className="check-button"
-                            type="button"
-                            onClick={() => practise(group.entries, group.id === 'today' ? 'Today’s mistakes' : 'Mistakes due today')}
-                          >
-                            <Icon name="practice" size={15} /> Practise these
+                          <button className="check-button" type="button" onClick={() => practise(group.entries, 'Mistakes mix')}>
+                            <Icon name="practice" size={15} /> Practise a mix
                           </button>
                         ) : null}
                       </header>
