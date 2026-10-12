@@ -64,9 +64,10 @@ for (const [ruleId, list] of Object.entries(exercisesByRule)) {
   if (!sql.includes(ruleId)) fail(`${rule.slug}: missing from database/content-pack-3-articles.sql`)
 }
 
-// The "more practice" pack: new examples and exercises for rules that already exist (database/content-pack-4-more-practice.sql).
+// The "more practice" pack: new examples and exercises for rules that already exist (database/content-pack-4-more-practice-part1.sql).
 const morePack = JSON.parse(readFileSync('database/rules-import/more-practice-pack.json', 'utf8'))
-const moreSql = readFileSync('database/content-pack-4-more-practice.sql', 'utf8')
+const moreExamplesSql = readFileSync('database/content-pack-4-more-practice-part1.sql', 'utf8')
+const moreExercisesSql = readFileSync('database/content-pack-4-more-practice-part2.sql', 'utf8')
 const exerciseTypes = new Set(['spell', 'correct_word', 'multiple_choice', 'fill_gap', 'grammar'])
 let moreExamples = 0
 let moreExercises = 0
@@ -81,7 +82,7 @@ for (const item of morePack.rules) {
     moreExamples += 1
     if (!exampleTypes.has(example.type)) fail(`${item.slug}: example "${example.text}" has an unknown type`)
     if (example.type === 'incorrect' && !example.correction) fail(`${item.slug}: incorrect example "${example.text}" needs a correction`)
-    if (!moreSql.includes(example.text.replaceAll("'", "''")))
+    if (!moreExamplesSql.includes(example.text.replaceAll("'", "''")))
       fail(`${item.slug}: example "${example.text}" is not in the SQL file (run node scripts/build-more-practice-pack.mjs)`)
     if (!texts.has(example.text))
       fail(`${item.slug}: example "${example.text}" is not in builtInRules.json (run node scripts/build-more-practice-pack.mjs)`)
@@ -100,7 +101,7 @@ for (const item of morePack.rules) {
       else if (exercise.choices.filter((choice) => choice === exercise.answer).length !== 1)
         fail(`${label}: the answer must be exactly one of the choices`)
     }
-    if (!moreSql.includes(exercise.prompt.replaceAll("'", "''")))
+    if (!moreExercisesSql.includes(exercise.prompt.replaceAll("'", "''")))
       fail(`${label}: missing from the SQL file (run node scripts/build-more-practice-pack.mjs)`)
   }
 }
