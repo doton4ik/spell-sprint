@@ -1883,6 +1883,517 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "quiet-vs-quite",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Please speak in a quiet voice.",
+          "note": "Quiet = making little noise"
+        },
+        {
+          "type": "correct",
+          "text": "The soup is quite hot, so be careful.",
+          "note": "Quite = fairly, rather"
+        },
+        {
+          "type": "correct",
+          "text": "It was a quiet evening at home.",
+          "note": "Quiet describes a calm, silent evening"
+        },
+        {
+          "type": "correct",
+          "text": "She plays the piano quite well.",
+          "note": "Quite = fairly, before an adverb"
+        },
+        {
+          "type": "incorrect",
+          "text": "The street is quite at night.",
+          "correction": "The street is quiet at night.",
+          "note": "Little noise = quiet, not quite"
+        },
+        {
+          "type": "incorrect",
+          "text": "He is quiet good at chess.",
+          "correction": "He is quite good at chess.",
+          "note": "Fairly good = quite good"
+        },
+        {
+          "type": "incorrect",
+          "text": "Can you be quite while I work?",
+          "correction": "Can you be quiet while I work?",
+          "note": "Making no noise = quiet"
+        },
+        {
+          "type": "incorrect",
+          "text": "The movie was quiet long.",
+          "correction": "The movie was quite long.",
+          "note": "Rather long = quite long"
+        },
+        {
+          "type": "incorrect",
+          "text": "She gave a quite answer and left.",
+          "correction": "She gave a quiet answer and left.",
+          "note": "A soft answer is quiet"
+        },
+        {
+          "type": "incorrect",
+          "text": "I felt quiet sure about my choice.",
+          "correction": "I felt quite sure about my choice.",
+          "note": "Fairly sure = quite sure"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "The children were ___ during the film.",
+          "answer": "quiet"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "My bag is ___ heavy today.",
+          "answer": "quite"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: We need a ___ place to study.",
+          "answer": "quiet",
+          "choices": [
+            "quiet",
+            "quite"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: The test was ___ difficult.",
+          "answer": "quite",
+          "choices": [
+            "quiet",
+            "quite"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "He spoke in a ___ voice, so I could hardly hear him.",
+          "answer": "quiet"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "It is ___ late, so let's go home.",
+          "answer": "quite"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: The baby finally went ___.",
+          "answer": "quiet",
+          "choices": [
+            "quiet",
+            "quite"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: I am ___ sure that I locked the door.",
+          "answer": "quite",
+          "choices": [
+            "quiet",
+            "quite"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The lake was calm and ___ in the early morning.",
+          "answer": "quiet"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Nobody was talking and the room was ___.",
+          "answer": "quiet",
+          "choices": [
+            "quiet",
+            "quite"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "silent-letters",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "I always listen to music on the bus.",
+          "note": "The t is silent in listen"
+        },
+        {
+          "type": "correct",
+          "text": "She wrote her answer on the board.",
+          "note": "The w is silent in answer"
+        },
+        {
+          "type": "correct",
+          "text": "They live on a small island near the coast.",
+          "note": "The s is silent in island"
+        },
+        {
+          "type": "correct",
+          "text": "We climb the hill every Sunday morning.",
+          "note": "The b is silent in climb"
+        },
+        {
+          "type": "incorrect",
+          "text": "Let's lisen to the radio.",
+          "correction": "Let's listen to the radio.",
+          "note": "Silent t: listen"
+        },
+        {
+          "type": "incorrect",
+          "text": "They live on a small iland.",
+          "correction": "They live on a small island.",
+          "note": "Silent s: island"
+        },
+        {
+          "type": "incorrect",
+          "text": "She hurt her rist playing tennis.",
+          "correction": "She hurt her wrist playing tennis.",
+          "note": "Silent w: wrist"
+        },
+        {
+          "type": "incorrect",
+          "text": "I have no dout about his plan.",
+          "correction": "I have no doubt about his plan.",
+          "note": "Silent b: doubt"
+        },
+        {
+          "type": "incorrect",
+          "text": "She shares her nowledge of music with us.",
+          "correction": "She shares her knowledge of music with us.",
+          "note": "Silent k: knowledge"
+        },
+        {
+          "type": "incorrect",
+          "text": "Mum bought a gitar for my birthday.",
+          "correction": "Mum bought a guitar for my birthday.",
+          "note": "Silent u: guitar"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "rong",
+          "answer": "wrong"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "sord",
+          "answer": "sword"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "colum",
+          "answer": "column"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "onest",
+          "answer": "honest"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "casle",
+          "answer": "castle"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "thum",
+          "answer": "thumb"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "gost",
+          "answer": "ghost"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "autum",
+          "answer": "autumn"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling of the third day after Monday.",
+          "answer": "Wednesday",
+          "choices": [
+            "Wensday",
+            "Wednesday",
+            "Wedensday"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling of the place where you keep plates.",
+          "answer": "cupboard",
+          "choices": [
+            "cupbord",
+            "cupboard",
+            "cubboard"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "stationary-vs-stationery",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The bus was stationary because of the accident.",
+          "note": "Stationary = not moving"
+        },
+        {
+          "type": "correct",
+          "text": "We keep pens and paper in the stationery cupboard.",
+          "note": "Stationery = paper and writing supplies"
+        },
+        {
+          "type": "correct",
+          "text": "The stationery shop opens at nine.",
+          "note": "Stationery has e, like envelopes"
+        },
+        {
+          "type": "correct",
+          "text": "The ship stayed stationary in the calm sea.",
+          "note": "Stationary = staying in one place"
+        },
+        {
+          "type": "incorrect",
+          "text": "She sells cards and stationary online.",
+          "correction": "She sells cards and stationery online.",
+          "note": "Cards and paper = stationery"
+        },
+        {
+          "type": "incorrect",
+          "text": "The cyclist stayed stationery at the red light.",
+          "correction": "The cyclist stayed stationary at the red light.",
+          "note": "Not moving = stationary"
+        },
+        {
+          "type": "incorrect",
+          "text": "Please buy envelopes and other stationary.",
+          "correction": "Please buy envelopes and other stationery.",
+          "note": "Envelopes are stationery (e)"
+        },
+        {
+          "type": "incorrect",
+          "text": "The queue was stationery for an hour.",
+          "correction": "The queue was stationary for an hour.",
+          "note": "A queue that does not move is stationary"
+        },
+        {
+          "type": "incorrect",
+          "text": "My uncle owns a stationary shop in town.",
+          "correction": "My uncle owns a stationery shop in town.",
+          "note": "A shop for paper and pens: stationery"
+        },
+        {
+          "type": "incorrect",
+          "text": "A stationery target is easy to hit.",
+          "correction": "A stationary target is easy to hit.",
+          "note": "A target that does not move: stationary"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "The lift was ___, so we waited.",
+          "answer": "stationary"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "I need to buy some ___ for my new job.",
+          "answer": "stationery"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: The car park is full of ___ cars.",
+          "answer": "stationary",
+          "choices": [
+            "stationary",
+            "stationery"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: She sells notebooks and other ___.",
+          "answer": "stationery",
+          "choices": [
+            "stationary",
+            "stationery"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Birds are easy to see when they are ___.",
+          "answer": "stationary"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Pens, paper and envelopes are all types of ___.",
+          "answer": "stationery"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: The train stood ___ in the tunnel.",
+          "answer": "stationary",
+          "choices": [
+            "stationary",
+            "stationery"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Our school sells ___ in the shop.",
+          "answer": "stationery",
+          "choices": [
+            "stationary",
+            "stationery"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Keep the camera ___ while you take the picture.",
+          "answer": "stationary"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: There is a ___ cupboard next to the printer.",
+          "answer": "stationery",
+          "choices": [
+            "stationary",
+            "stationery"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "suffix-ful",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The garden is beautiful in spring.",
+          "note": "Beauty + ful: one l"
+        },
+        {
+          "type": "correct",
+          "text": "She was grateful for your help.",
+          "note": "Grate + ful: one l"
+        },
+        {
+          "type": "correct",
+          "text": "It was a peaceful walk by the river.",
+          "note": "Peace + ful: one l"
+        },
+        {
+          "type": "correct",
+          "text": "He is a very successful doctor.",
+          "note": "Success + ful: one l"
+        },
+        {
+          "type": "incorrect",
+          "text": "The view was wonderfull.",
+          "correction": "The view was wonderful.",
+          "note": "Suffix -ful has one l: wonderful"
+        },
+        {
+          "type": "incorrect",
+          "text": "That medicine can be harmfull.",
+          "correction": "That medicine can be harmful.",
+          "note": "Suffix -ful has one l: harmful"
+        },
+        {
+          "type": "incorrect",
+          "text": "She felt thankfull for the gift.",
+          "correction": "She felt thankful for the gift.",
+          "note": "Suffix -ful has one l: thankful"
+        },
+        {
+          "type": "incorrect",
+          "text": "He had a painfull knee.",
+          "correction": "He had a painful knee.",
+          "note": "Suffix -ful has one l: painful"
+        },
+        {
+          "type": "incorrect",
+          "text": "Be respectfull to your teachers.",
+          "correction": "Be respectful to your teachers.",
+          "note": "Suffix -ful has one l: respectful"
+        },
+        {
+          "type": "incorrect",
+          "text": "The new engine is very powerfull.",
+          "correction": "The new engine is very powerful.",
+          "note": "Suffix -ful has one l: powerful"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "beautifull",
+          "answer": "beautiful"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "gratefull",
+          "answer": "grateful"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "peacefull",
+          "answer": "peaceful"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "successfull",
+          "answer": "successful"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "forgetfull",
+          "answer": "forgetful"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "gracefull",
+          "answer": "graceful"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: add -ful to the noun 'joy'.",
+          "answer": "joyful"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: add -ful to the noun 'delight'.",
+          "answer": "delightful"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling of the adjective meaning 'full of pain'.",
+          "answer": "painful",
+          "choices": [
+            "painful",
+            "painfull",
+            "paineful"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling of the adjective meaning 'full of play'.",
+          "answer": "playful",
+          "choices": [
+            "playfull",
+            "playful"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,52 @@
+[
+  {"slug": "stationary-vs-stationery",
+   "examples": [
+     {"type": "correct", "text": "The bus was stationary because of the accident.", "note": "Stationary = not moving"},
+     {"type": "correct", "text": "We keep pens and paper in the stationery cupboard.", "note": "Stationery = paper and writing supplies"},
+     {"type": "correct", "text": "The stationery shop opens at nine.", "note": "Stationery has e, like envelopes"},
+     {"type": "correct", "text": "The ship stayed stationary in the calm sea.", "note": "Stationary = staying in one place"},
+     {"type": "incorrect", "text": "She sells cards and stationary online.", "correction": "She sells cards and stationery online.", "note": "Cards and paper = stationery"},
+     {"type": "incorrect", "text": "The cyclist stayed stationery at the red light.", "correction": "The cyclist stayed stationary at the red light.", "note": "Not moving = stationary"},
+     {"type": "incorrect", "text": "Please buy envelopes and other stationary.", "correction": "Please buy envelopes and other stationery.", "note": "Envelopes are stationery (e)"},
+     {"type": "incorrect", "text": "The queue was stationery for an hour.", "correction": "The queue was stationary for an hour.", "note": "A queue that does not move is stationary"},
+     {"type": "incorrect", "text": "My uncle owns a stationary shop in town.", "correction": "My uncle owns a stationery shop in town.", "note": "A shop for paper and pens: stationery"},
+     {"type": "incorrect", "text": "A stationery target is easy to hit.", "correction": "A stationary target is easy to hit.", "note": "A target that does not move: stationary"}
+   ],
+   "exercises": [
+     {"type": "fill_gap", "prompt": "The lift was ___, so we waited.", "answer": "stationary"},
+     {"type": "fill_gap", "prompt": "I need to buy some ___ for my new job.", "answer": "stationery"},
+     {"type": "multiple_choice", "prompt": "Choose the word: The car park is full of ___ cars.", "answer": "stationary", "choices": ["stationary", "stationery"]},
+     {"type": "multiple_choice", "prompt": "Choose the word: She sells notebooks and other ___.", "answer": "stationery", "choices": ["stationary", "stationery"]},
+     {"type": "fill_gap", "prompt": "Birds are easy to see when they are ___.", "answer": "stationary"},
+     {"type": "fill_gap", "prompt": "Pens, paper and envelopes are all types of ___.", "answer": "stationery"},
+     {"type": "multiple_choice", "prompt": "Choose the word: The train stood ___ in the tunnel.", "answer": "stationary", "choices": ["stationary", "stationery"]},
+     {"type": "multiple_choice", "prompt": "Choose the word: Our school sells ___ in the shop.", "answer": "stationery", "choices": ["stationary", "stationery"]},
+     {"type": "fill_gap", "prompt": "Keep the camera ___ while you take the picture.", "answer": "stationary"},
+     {"type": "multiple_choice", "prompt": "Choose the word: There is a ___ cupboard next to the printer.", "answer": "stationery", "choices": ["stationary", "stationery"]}
+   ]},
+  {"slug": "suffix-ful",
+   "examples": [
+     {"type": "correct", "text": "The garden is beautiful in spring.", "note": "Beauty + ful: one l"},
+     {"type": "correct", "text": "She was grateful for your help.", "note": "Grate + ful: one l"},
+     {"type": "correct", "text": "It was a peaceful walk by the river.", "note": "Peace + ful: one l"},
+     {"type": "correct", "text": "He is a very successful doctor.", "note": "Success + ful: one l"},
+     {"type": "incorrect", "text": "The view was wonderfull.", "correction": "The view was wonderful.", "note": "Suffix -ful has one l: wonderful"},
+     {"type": "incorrect", "text": "That medicine can be harmfull.", "correction": "That medicine can be harmful.", "note": "Suffix -ful has one l: harmful"},
+     {"type": "incorrect", "text": "She felt thankfull for the gift.", "correction": "She felt thankful for the gift.", "note": "Suffix -ful has one l: thankful"},
+     {"type": "incorrect", "text": "He had a painfull knee.", "correction": "He had a painful knee.", "note": "Suffix -ful has one l: painful"},
+     {"type": "incorrect", "text": "Be respectfull to your teachers.", "correction": "Be respectful to your teachers.", "note": "Suffix -ful has one l: respectful"},
+     {"type": "incorrect", "text": "The new engine is very powerfull.", "correction": "The new engine is very powerful.", "note": "Suffix -ful has one l: powerful"}
+   ],
+   "exercises": [
+     {"type": "correct_word", "prompt": "beautifull", "answer": "beautiful"},
+     {"type": "correct_word", "prompt": "gratefull", "answer": "grateful"},
+     {"type": "correct_word", "prompt": "peacefull", "answer": "peaceful"},
+     {"type": "correct_word", "prompt": "successfull", "answer": "successful"},
+     {"type": "correct_word", "prompt": "forgetfull", "answer": "forgetful"},
+     {"type": "correct_word", "prompt": "gracefull", "answer": "graceful"},
+     {"type": "spell", "prompt": "Spell the word: add -ful to the noun 'joy'.", "answer": "joyful"},
+     {"type": "spell", "prompt": "Spell the word: add -ful to the noun 'delight'.", "answer": "delightful"},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling of the adjective meaning 'full of pain'.", "answer": "painful", "choices": ["painful", "painfull", "paineful"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling of the adjective meaning 'full of play'.", "answer": "playful", "choices": ["playfull", "playful"]}
+   ]}
+]

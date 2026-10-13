@@ -4462,6 +4462,326 @@
       "text": "They go to the beach last Sunday.",
       "correction": "They went to the beach last Sunday.",
       "note": "A finished time needs the past: went"
+    },
+    {
+      "id": "2954f9df-b183-58f3-ae05-87ab216c5f7e",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "correct",
+      "text": "Please speak in a quiet voice.",
+      "correction": null,
+      "note": "Quiet = making little noise"
+    },
+    {
+      "id": "fbb19a4d-ea53-5721-8fe9-affc3a1ffc99",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "correct",
+      "text": "The soup is quite hot, so be careful.",
+      "correction": null,
+      "note": "Quite = fairly, rather"
+    },
+    {
+      "id": "c8135ff1-71aa-50c1-9343-e69f928e7417",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "correct",
+      "text": "It was a quiet evening at home.",
+      "correction": null,
+      "note": "Quiet describes a calm, silent evening"
+    },
+    {
+      "id": "888a9a04-587d-576b-be09-531b7f024cad",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "correct",
+      "text": "She plays the piano quite well.",
+      "correction": null,
+      "note": "Quite = fairly, before an adverb"
+    },
+    {
+      "id": "5dff9db8-3861-59fd-a735-1fa380c8083b",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "The street is quite at night.",
+      "correction": "The street is quiet at night.",
+      "note": "Little noise = quiet, not quite"
+    },
+    {
+      "id": "470fc842-8a0e-509b-afa9-8da304f33d9b",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "He is quiet good at chess.",
+      "correction": "He is quite good at chess.",
+      "note": "Fairly good = quite good"
+    },
+    {
+      "id": "73839912-7120-55a6-b6af-0fc17d1b77ac",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "Can you be quite while I work?",
+      "correction": "Can you be quiet while I work?",
+      "note": "Making no noise = quiet"
+    },
+    {
+      "id": "376514b2-e45b-54e1-be5f-38dd58694833",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "The movie was quiet long.",
+      "correction": "The movie was quite long.",
+      "note": "Rather long = quite long"
+    },
+    {
+      "id": "d7ea8a0c-f197-5ba0-bd7d-50dafbfb0ae8",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "She gave a quite answer and left.",
+      "correction": "She gave a quiet answer and left.",
+      "note": "A soft answer is quiet"
+    },
+    {
+      "id": "643e34b7-0854-56b5-8acb-43dd1ac26802",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "I felt quiet sure about my choice.",
+      "correction": "I felt quite sure about my choice.",
+      "note": "Fairly sure = quite sure"
+    },
+    {
+      "id": "9ac50265-03aa-5d65-b654-3243edd32a3f",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "I always listen to music on the bus.",
+      "correction": null,
+      "note": "The t is silent in listen"
+    },
+    {
+      "id": "4c3b68e6-21e5-5bf1-87d2-75b215fd49a7",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "She wrote her answer on the board.",
+      "correction": null,
+      "note": "The w is silent in answer"
+    },
+    {
+      "id": "8c5d8853-0b51-5567-ae83-3c3752fe0d76",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "They live on a small island near the coast.",
+      "correction": null,
+      "note": "The s is silent in island"
+    },
+    {
+      "id": "f9741985-6345-5a3b-8da8-040f2cb9f040",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "We climb the hill every Sunday morning.",
+      "correction": null,
+      "note": "The b is silent in climb"
+    },
+    {
+      "id": "0edaa814-e32a-523b-acb7-ac143f083d80",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "Let's lisen to the radio.",
+      "correction": "Let's listen to the radio.",
+      "note": "Silent t: listen"
+    },
+    {
+      "id": "f247035d-c9ff-5c68-98a4-d9d128970294",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "They live on a small iland.",
+      "correction": "They live on a small island.",
+      "note": "Silent s: island"
+    },
+    {
+      "id": "54621586-7aa6-551e-9800-5197ccc3dac2",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "She hurt her rist playing tennis.",
+      "correction": "She hurt her wrist playing tennis.",
+      "note": "Silent w: wrist"
+    },
+    {
+      "id": "8be66908-dcd4-566d-9333-d4c6707d811f",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "I have no dout about his plan.",
+      "correction": "I have no doubt about his plan.",
+      "note": "Silent b: doubt"
+    },
+    {
+      "id": "87366c8b-94a1-5dff-8a63-ec24734562f5",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "She shares her nowledge of music with us.",
+      "correction": "She shares her knowledge of music with us.",
+      "note": "Silent k: knowledge"
+    },
+    {
+      "id": "1d1d2b56-5220-5690-874c-b6c781be19c9",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "Mum bought a gitar for my birthday.",
+      "correction": "Mum bought a guitar for my birthday.",
+      "note": "Silent u: guitar"
+    },
+    {
+      "id": "f80b8387-4d6c-54c4-b7b8-e562eb095d72",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "correct",
+      "text": "The bus was stationary because of the accident.",
+      "correction": null,
+      "note": "Stationary = not moving"
+    },
+    {
+      "id": "0afc4131-30b9-5bee-b02a-4ef08e8035b8",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "correct",
+      "text": "We keep pens and paper in the stationery cupboard.",
+      "correction": null,
+      "note": "Stationery = paper and writing supplies"
+    },
+    {
+      "id": "ecf0efbd-52f4-59df-bd11-7af5884af370",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "correct",
+      "text": "The stationery shop opens at nine.",
+      "correction": null,
+      "note": "Stationery has e, like envelopes"
+    },
+    {
+      "id": "39001c4e-7ed4-5934-a307-4ee1f4dba744",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "correct",
+      "text": "The ship stayed stationary in the calm sea.",
+      "correction": null,
+      "note": "Stationary = staying in one place"
+    },
+    {
+      "id": "7694f4d6-82d9-5908-891b-69ce5e5ea724",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "She sells cards and stationary online.",
+      "correction": "She sells cards and stationery online.",
+      "note": "Cards and paper = stationery"
+    },
+    {
+      "id": "1b616d74-db3c-5795-8318-9337a9aec70a",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "The cyclist stayed stationery at the red light.",
+      "correction": "The cyclist stayed stationary at the red light.",
+      "note": "Not moving = stationary"
+    },
+    {
+      "id": "44c9f320-cc4f-57a9-a70d-05dc4dee8223",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "Please buy envelopes and other stationary.",
+      "correction": "Please buy envelopes and other stationery.",
+      "note": "Envelopes are stationery (e)"
+    },
+    {
+      "id": "dcf18d25-4ff4-5c04-8ebd-52e12f2422a3",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "The queue was stationery for an hour.",
+      "correction": "The queue was stationary for an hour.",
+      "note": "A queue that does not move is stationary"
+    },
+    {
+      "id": "742744ee-485e-5194-81fc-ada671ec2c25",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "My uncle owns a stationary shop in town.",
+      "correction": "My uncle owns a stationery shop in town.",
+      "note": "A shop for paper and pens: stationery"
+    },
+    {
+      "id": "a6261e86-99dc-5fff-9e1e-bb7da3b282b4",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "A stationery target is easy to hit.",
+      "correction": "A stationary target is easy to hit.",
+      "note": "A target that does not move: stationary"
+    },
+    {
+      "id": "7a2fa323-5e97-5171-8fef-249d18cf1e7f",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "The garden is beautiful in spring.",
+      "correction": null,
+      "note": "Beauty + ful: one l"
+    },
+    {
+      "id": "dc1e25df-78c3-5c9c-beb2-d41114b99ae7",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "She was grateful for your help.",
+      "correction": null,
+      "note": "Grate + ful: one l"
+    },
+    {
+      "id": "05e107b4-e029-531d-a084-c3b0372478ae",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "It was a peaceful walk by the river.",
+      "correction": null,
+      "note": "Peace + ful: one l"
+    },
+    {
+      "id": "127c50ba-e017-5d83-a2ef-88b4919c335a",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "He is a very successful doctor.",
+      "correction": null,
+      "note": "Success + ful: one l"
+    },
+    {
+      "id": "067240f8-7ac2-5c4a-9c6f-eab8bb009beb",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "The view was wonderfull.",
+      "correction": "The view was wonderful.",
+      "note": "Suffix -ful has one l: wonderful"
+    },
+    {
+      "id": "89feb5db-6686-5287-b7c6-1b679446fdaa",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "That medicine can be harmfull.",
+      "correction": "That medicine can be harmful.",
+      "note": "Suffix -ful has one l: harmful"
+    },
+    {
+      "id": "6455d339-5944-5823-b370-74abc720446a",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "She felt thankfull for the gift.",
+      "correction": "She felt thankful for the gift.",
+      "note": "Suffix -ful has one l: thankful"
+    },
+    {
+      "id": "7f8ee907-5f04-583d-9a86-25689f328687",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "He had a painfull knee.",
+      "correction": "He had a painful knee.",
+      "note": "Suffix -ful has one l: painful"
+    },
+    {
+      "id": "e05621ac-2967-54ae-9989-8380f2048b1f",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "Be respectfull to your teachers.",
+      "correction": "Be respectful to your teachers.",
+      "note": "Suffix -ful has one l: respectful"
+    },
+    {
+      "id": "d97fe8de-3a4e-548a-b570-c6a723cfb3e5",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "The new engine is very powerfull.",
+      "correction": "The new engine is very powerful.",
+      "note": "Suffix -ful has one l: powerful"
     }
   ]
 }
