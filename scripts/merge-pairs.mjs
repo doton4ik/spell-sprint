@@ -25,7 +25,12 @@ const { pairDrills } = await import(pathToFileURL(join(dir, 'pairs.ts')).href)
 const batch = JSON.parse(readFileSync(file, 'utf8'))
 const skip = new Set((skipFile ? JSON.parse(readFileSync(skipFile, 'utf8')) : []).map((text) => text.toLowerCase()))
 
-const norm = (text) => text.toLowerCase().replace(/[^a-z0-9_' ]+/g, ' ').replace(/\s+/g, ' ').trim()
+const norm = (text) =>
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9_' ]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
 const tokens = (text) => norm(text).split(' ')
 const seen = new Set(pairDrills.flatMap((pair) => pair.sentences.map((sentence) => norm(sentence.text))))
 const pairs = new Map(pairDrills.map((pair) => [pair.id, pair]))
