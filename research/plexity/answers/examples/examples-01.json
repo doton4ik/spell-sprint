@@ -1,0 +1,146 @@
+[
+  {
+    "word_id": "logistics-inventory-control-stock",
+    "extra_example": "The bakery has no stock of fresh bread after noon."
+  },
+  {
+    "word_id": "logistics-inventory-control-replenishment",
+    "extra_example": "Daily replenishment keeps the vending machines full of snacks."
+  },
+  {
+    "word_id": "logistics-inventory-control-safety-stock",
+    "extra_example": "We keep a small safety stock of batteries in case of delays."
+  },
+  {
+    "word_id": "logistics-inventory-control-demand-planning",
+    "extra_example": "Demand planning uses last year's sales to predict next season's orders."
+  },
+  {
+    "word_id": "logistics-inventory-control-inventory-accuracy",
+    "extra_example": "Scanning every item at the door improves inventory accuracy in small shops."
+  },
+  {
+    "word_id": "logistics-receiving-and-storage-storage-location",
+    "extra_example": "Please write the storage location on the label of each pallet."
+  },
+  {
+    "word_id": "logistics-supply-chain-supplier",
+    "extra_example": "We changed our supplier because the prices were too high."
+  },
+  {
+    "word_id": "logistics-supply-chain-delivery",
+    "extra_example": "The delivery of the new sofa is planned for Monday."
+  },
+  {
+    "word_id": "logistics-receiving-and-storage-goods-receipt",
+    "extra_example": "After the goods receipt, the worker moved the pallets to the shelves."
+  },
+  {
+    "word_id": "logistics-order-fulfilment-order-picking",
+    "extra_example": "Workers use handheld scanners during order picking to avoid mistakes."
+  },
+  {
+    "word_id": "logistics-receiving-and-storage-warehouse-layout",
+    "extra_example": "A clear warehouse layout helps drivers find the loading doors quickly."
+  },
+  {
+    "word_id": "logistics-supply-chain-distribution-center",
+    "extra_example": "Trucks leave the distribution centre every morning with fresh vegetables."
+  },
+  {
+    "word_id": "logistics-supply-chain-lead-time",
+    "extra_example": "A long lead time means we must plan furniture orders months earlier."
+  },
+  {
+    "word_id": "logistics-supply-chain-transportation-cost",
+    "extra_example": "Buying bigger quantities can lower the transportation cost per box."
+  },
+  {
+    "word_id": "warehouse-operations-sap-warehouse-processes-purchase-order",
+    "extra_example": "The purchase order shows the price, quantity and delivery date."
+  },
+  {
+    "word_id": "warehouse-operations-sap-warehouse-processes-goods-movement",
+    "extra_example": "Every goods movement between two storage areas must be scanned."
+  },
+  {
+    "word_id": "warehouse-operations-sap-warehouse-processes-warehouse-task",
+    "extra_example": "The system gave each worker a new warehouse task on the screen."
+  },
+  {
+    "word_id": "warehouse-operations-sap-warehouse-processes-inbound-processing",
+    "extra_example": "Inbound processing includes unloading, checking and storing new goods."
+  },
+  {
+    "word_id": "warehouse-operations-sap-warehouse-processes-outbound-processing",
+    "extra_example": "Outbound processing ends when the packed parcels leave the building."
+  },
+  {
+    "word_id": "warehouse-operations-inventory-control-physical-inventory",
+    "extra_example": "A physical inventory is required once a year to check the real quantities."
+  },
+  {
+    "word_id": "warehouse-operations-sap-warehouse-processes-material-document",
+    "extra_example": "You can open the material document to see who moved the goods."
+  },
+  {
+    "word_id": "business-and-office-meetings-and-negotiation-agreement",
+    "extra_example": "After a long talk, the two sides reached an agreement on the price."
+  },
+  {
+    "word_id": "business-and-office-meetings-and-negotiation-recruitment",
+    "extra_example": "The company started recruitment for warehouse workers in autumn."
+  },
+  {
+    "word_id": "business-and-office-finance-and-planning-target",
+    "extra_example": "The sales target for next year is ten percent growth."
+  },
+  {
+    "word_id": "business-and-office-meetings-and-negotiation-customer-satisfaction",
+    "extra_example": "Friendly staff and quick answers increase customer satisfaction in every shop."
+  },
+  {
+    "word_id": "business-and-office-finance-and-planning-market-demand",
+    "extra_example": "High market demand for electric bikes pushed prices up this summer."
+  },
+  {
+    "word_id": "travel-and-culture-travel-planning-delay",
+    "extra_example": "Heavy traffic caused a delay, so we arrived at the hotel late."
+  },
+  {
+    "word_id": "sport-and-fitness-training-and-competition-score",
+    "extra_example": "What was the score at the end of the basketball game?"
+  },
+  {
+    "word_id": "transport-and-trade-road-freight-freight",
+    "extra_example": "Rail freight is often cheaper than trucks for long distances."
+  },
+  {
+    "word_id": "transport-and-trade-road-freight-consignment",
+    "extra_example": "The customer checked each box in the consignment before signing."
+  },
+  {
+    "word_id": "transport-and-trade-road-freight-carrier",
+    "extra_example": "We asked the carrier to pick up the parcels on Thursday."
+  },
+  {
+    "word_id": "transport-and-trade-customs-and-trade-customs-clearance",
+    "extra_example": "Customs clearance is needed before the goods can enter the country."
+  },
+  {
+    "word_id": "transport-and-trade-customs-and-trade-bill-of-lading",
+    "extra_example": "The bill of lading lists the goods, the sender and the receiver."
+  },
+  {
+    "word_id": "food-and-drinks-meals-and-cooking-boil",
+    "extra_example": "Boil the pasta in salted water until it is soft."
+  },
+  {
+    "word_id": "food-and-drinks-meals-and-cooking-chop",
+    "extra_example": "Chop the garlic into small pieces and add it to the sauce."
+  },
+  {
+    "word_id": "food-and-drinks-caf-and-restaurant-order",
+    "extra_example": "Are you ready to order, or do you need more time?"
+  }
+]
