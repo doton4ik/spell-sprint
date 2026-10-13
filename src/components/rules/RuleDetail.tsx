@@ -6,6 +6,7 @@ import { getLinkedMistakesForRule, getRuleExamples, getRuleRelationships } from 
 import { getUserRuleNote, saveUserRuleNote } from '../../services/ruleNotesService'
 import { addRuleToRepeatLater, getRuleExercises, markRuleAsMastered } from '../../services/rulePracticeService'
 import { loadPracticeSettings } from '../../services/practiceStorage'
+import { exercisesWithoutOverlap, pickShownExamples, ruleKeywords } from '../../services/ruleOverlap'
 import { speakEnglish } from '../../services/speech'
 import type { MistakeEvent, Rule, RuleExample, RuleExercise, RuleRelationship, UserRuleProgress } from '../../types/rules'
 import { RuleExerciseRunner } from './RuleExerciseRunner'
@@ -72,9 +73,16 @@ export function RuleDetail({ rule, rulesById, progress, initialTab = 'rule', onB
   }, [progress])
   const statusClass = status === 'repeat_later' ? 'review' : status === 'archived' ? 'mastered' : status
 
-  const wrong = details?.examples.filter((example) => example.exampleType === 'incorrect') ?? []
-  const right = details?.examples.filter((example) => example.exampleType === 'correct') ?? []
-  const exceptions = details?.examples.filter((example) => example.exampleType === 'exception') ?? []
+  // The Examples tab shows only examples that give no exercise away, and the Practice tab leaves out exercises whose answer is on show.
+  const { shownExamples, practiceExercises } = useMemo(() => {
+    if (!details) return { shownExamples: [] as RuleExample[], practiceExercises: [] as RuleExercise[] }
+    const keywords = ruleKeywords(rule)
+    const shown = pickShownExamples(details.examples, details.exercises, keywords)
+    return { shownExamples: shown, practiceExercises: exercisesWithoutOverlap(details.exercises, shown, keywords) }
+  }, [details, rule])
+  const wrong = shownExamples.filter((example) => example.exampleType === 'incorrect')
+  const right = shownExamples.filter((example) => example.exampleType === 'correct')
+  const exceptions = shownExamples.filter((example) => example.exampleType === 'exception')
 
   async function saveNote() {
     setSavingNote(true)
@@ -225,9 +233,9 @@ export function RuleDetail({ rule, rulesById, progress, initialTab = 'rule', onB
           </>
         ) : tab === 'practice' ? (
           <>
-            {details.exercises.length ? (
+            {practiceExercises.length ? (
               <div className="rule-mini-practice">
-                <RuleExerciseRunner items={details.exercises.map((exercise) => ({ exercise }))} loop onProgress={onProgressChange} />
+                <RuleExerciseRunner items={practiceExercises.map((exercise) => ({ exercise }))} loop onProgress={onProgressChange} />
               </div>
             ) : (
               <p className="rules-pane__loading">No exercises for this rule yet.</p>
