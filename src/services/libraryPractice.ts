@@ -1,5 +1,6 @@
 import { mixedPracticeTasks } from '../data/practice'
 import type { LibraryWord } from '../types/library'
+import type { MistakeEntry } from '../types/learning'
 import type { PracticeMode, PracticeTask } from '../types/practice'
 import { russianAnswers } from './answerMatch'
 import { getAllWords, getEveryWord, getLibraries } from './libraryStorage'
@@ -156,6 +157,21 @@ export function wordsToRefresh(words: LibraryWord[], limit?: number) {
   return limit ? seen.slice(0, limit) : seen
 }
 
+// The mistakes that can actually be practised in this mode: the word is in the learner's active libraries (not hidden,
+// not in a pack that is switched off) and has a task here. Grammar and rule mistakes have none. An entry that has only a
+// task id gets its word id from the task. Used before picking, so skipped entries never take a place in a session.
+export function usableMistakeEntries(entries: MistakeEntry[], mode: PracticeMode): MistakeEntry[] {
+  const modeTasks = getAllWords()
+    .flatMap(tasksForWord)
+    .filter((task) => task.mode === mode)
+  const wordOfTask = new Map(modeTasks.map((task) => [task.id, task.wordId]))
+  const wordIds = new Set(modeTasks.map((task) => task.wordId))
+  return entries.flatMap((entry) => {
+    const wordId = entry.wordId ?? wordOfTask.get(entry.taskId)
+    return wordId && wordIds.has(wordId) ? [{ ...entry, wordId }] : []
+  })
+}
+
 export function getTasksForSelection(selection: PracticeSelection, mode: PracticeMode = 'write-en'): PracticeTask[] {
   const words = getAllWords()
   let selected = words
@@ -171,11 +187,7 @@ export function getTasksForSelection(selection: PracticeSelection, mode: Practic
         ? getReviewEntries()
         : getMistakeEntries().filter((entry) => entry.status !== 'mastered' && !entry.archived)
     const modeTasks = words.flatMap(tasksForWord).filter((task) => task.mode === mode)
-    // Only entries that have a task in this mode (a hidden word or a switched-off pack has none): they must not
-    // take a place in the session and leave it short.
-    const taskIdsAll = new Set(modeTasks.map((task) => task.id))
-    const wordIdsAll = new Set(modeTasks.map((task) => task.wordId))
-    const usable = all.filter((entry) => taskIdsAll.has(entry.taskId) || (entry.wordId !== undefined && wordIdsAll.has(entry.wordId)))
+    const usable = usableMistakeEntries(all, mode)
     const entries =
       selection.scope === 'mistakes' && selection.limit
         ? pickMistakes({ entries: usable, size: selection.limit, served: loadServed() })

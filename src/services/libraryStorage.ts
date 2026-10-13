@@ -2,7 +2,7 @@ import { builtInLibraries } from '../data/libraries'
 import { sanitizeWord } from './validate'
 import { libraryPacks, packForLibrary } from '../data/libraryPacks'
 import { libraryGroups } from './libraryGroups'
-import { getHiddenWordIds, getLibraryPrefs, hideKey, getRemovedKeys, initialisePacks, setRemoved } from './libraryPrefs'
+import { getHiddenWordIds, getLibraryPrefs, hideKey, getRemovedKeys, initialisePacks, setRemoved, setWordHidden } from './libraryPrefs'
 import { canonicalTopic, canonicalTopics, libraryKindForName, stableWordId } from '../data/libraryTaxonomy'
 import { normalisePartOfSpeech, partOfSpeechOptions, type LibraryWord, type WordLibrary } from '../types/library'
 
@@ -205,6 +205,10 @@ function packsInUse() {
   }
 }
 
+// The base library: built-in and not an add-on pack. Hiding a vocabulary group only affects these, so a pack the
+// learner switched on (Business and Office, Sport and Fitness) and their own libraries keep their words.
+export const isBaseLibrary = (library: WordLibrary) => library.source === 'built-in' && !packForLibrary(library.name)
+
 export function isLibraryActive(library: WordLibrary) {
   if (library.source !== 'built-in') return true
   const pack = packForLibrary(library.name)
@@ -221,7 +225,7 @@ export function getLibraries(): WordLibrary[] {
     .filter((library) => isLibraryActive(library) && !hidden.has(hideKey.library(library.name)))
     .map((library) => ({
       ...library,
-      words: library.words.filter((word) => !hidden.has(word.wordId) && !hiddenTopics.has(word.topic)),
+      words: library.words.filter((word) => !hidden.has(word.wordId) && !(isBaseLibrary(library) && hiddenTopics.has(word.topic))),
     }))
     .filter((library) => library.words.length)
 }
@@ -300,6 +304,10 @@ export function addMyWord(fields: MyWordFields) {
   library.words = [...library.words.filter((word) => word.wordId !== wordId), entry]
   // A word or library deleted earlier and added again must not be dropped by the next sync.
   setRemoved([removalKey.word(wordId), removalKey.library(MY_WORDS)], false)
+  // A word added to a hidden "My words" (or one hidden earlier) would silently stay out of practice.
+  const hidden = getHiddenWordIds()
+  if (hidden.has(hideKey.library(MY_WORDS))) setWordHidden(hideKey.library(MY_WORDS), false)
+  if (hidden.has(wordId)) setWordHidden(wordId, false)
   saveImportedLibraries(libraries)
   return { wordId, updated }
 }

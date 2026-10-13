@@ -5,14 +5,7 @@ import { LibrarySetup } from '../components/libraries/LibrarySetup'
 import { WordReportPanel } from '../components/WordReportPanel'
 import { Icon } from '../components/icons/Icon'
 import { libraryGroups, wordsForGroup, type LibraryGroup } from '../services/libraryGroups'
-import {
-  csvTemplate,
-  deleteImportedLibrary,
-  getEveryLibrary,
-  getEveryWord,
-  getLibraries,
-  isLibraryActive,
-} from '../services/libraryStorage'
+import { csvTemplate, deleteImportedLibrary, getEveryLibrary, getEveryWord, getLibraries, isBaseLibrary } from '../services/libraryStorage'
 import { getHiddenWordIds, getWordNote, hideKey, setPackEnabled, setWordHidden } from '../services/libraryPrefs'
 import { libraryPacks, type LibraryPack } from '../data/libraryPacks'
 import { setPendingPracticeSelection } from '../services/libraryPractice'
@@ -420,8 +413,8 @@ function GroupCard({
   onOpen: (group: LibraryGroup) => void
   onPractice: (words: LibraryWord[], label: string) => void
 }) {
-  // A hidden group has no words among the active libraries: count them from everything that is switched on.
-  const words = wordsForGroup(group, hidden ? getEveryLibrary().filter(isLibraryActive) : libraries)
+  // A hidden group has no words among the active libraries: count them from the base library.
+  const words = wordsForGroup(group, hidden ? getEveryLibrary().filter(isBaseLibrary) : libraries)
   const topics = new Set(words.map((word) => word.topic))
   const examples = words.slice(0, 5)
   if (hidden)
@@ -464,9 +457,11 @@ function GroupCard({
         <button className="outline-action" type="button" onClick={() => onPractice(words, group.name)}>
           Practise
         </button>
-        <button className="quiet-button" type="button" onClick={() => onSetHidden(true)}>
-          Hide
-        </button>
+        {group.id === 'professional-vocabulary' ? null : (
+          <button className="quiet-button" type="button" onClick={() => onSetHidden(true)}>
+            Hide
+          </button>
+        )}
       </div>
     </article>
   )

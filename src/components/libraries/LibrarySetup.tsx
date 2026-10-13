@@ -3,7 +3,7 @@ import { Icon } from '../icons/Icon'
 import { libraryPacks } from '../../data/libraryPacks'
 import { libraryGroups, wordsForGroup } from '../../services/libraryGroups'
 import { getHiddenWordIds, hideKey, isPackEnabled, markLibrarySetupDone, setPackEnabled, setWordHidden } from '../../services/libraryPrefs'
-import { getEveryLibrary } from '../../services/libraryStorage'
+import { getEveryLibrary, isBaseLibrary } from '../../services/libraryStorage'
 import '../../pages/libraries.css'
 
 // The first-run (and later "tune my library") choice: which parts of the vocabulary this learner studies.
@@ -22,11 +22,15 @@ export function LibrarySetup({ onDone, title = 'Set up your library' }: { onDone
     if (!next.delete(id)) next.add(id)
     return next
   }
+  const [initial] = useState(() => ({ groups, packs }))
   const none = groups.size === 0 && packs.size === 0
 
   function save() {
-    for (const group of choosable) setWordHidden(hideKey.group(group.id), !groups.has(group.id))
-    for (const pack of libraryPacks) setPackEnabled(pack.id, packs.has(pack.id))
+    // Only what the learner changed in this panel is written: a new device may still be waiting for the cloud copy,
+    // and a fresh timestamp on every flag would overwrite the choices already saved in the account.
+    for (const group of choosable)
+      if (groups.has(group.id) !== initial.groups.has(group.id)) setWordHidden(hideKey.group(group.id), !groups.has(group.id))
+    for (const pack of libraryPacks) if (packs.has(pack.id) !== initial.packs.has(pack.id)) setPackEnabled(pack.id, packs.has(pack.id))
     markLibrarySetupDone()
     onDone()
   }
@@ -46,7 +50,7 @@ export function LibrarySetup({ onDone, title = 'Set up your library' }: { onDone
         {choosable.map((group) => {
           const count = wordsForGroup(
             group,
-            everyLibrary.filter((library) => library.source === 'built-in'),
+            everyLibrary.filter((library) => isBaseLibrary(library)),
           ).length
           return (
             <label className="library-setup__option" key={group.id}>

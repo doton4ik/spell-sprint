@@ -43,8 +43,7 @@ export function pickMistakes(options: {
 }): MistakeEntry[] {
   const { entries, size, preferred = [], served = {}, now = new Date(), random = Math.random } = options
   const open = entries.filter((entry) => entry.status !== 'mastered' && !entry.archived)
-  // `size` counts words, not entries: one word can have several entries (written, dictated, gap), and ten entries
-  // used to come out as two or three words.
+  // `size` counts words, not entries: if a word has several entries it still takes one place in the session.
   const groups = new Map<string, MistakeEntry[]>()
   for (const entry of open) groups.set(mistakeKey(entry), [...(groups.get(mistakeKey(entry)) ?? []), entry])
   if (groups.size <= size) return open

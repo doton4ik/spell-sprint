@@ -4,7 +4,7 @@ import { Icon } from '../components/icons/Icon'
 import { AnswerDiff } from '../components/practice/AnswerDiff'
 import { getEntryHistory, getMistakeEntries, isDueToday, subscribeToLearningData } from '../services/learningData'
 import { openPairOnPairsPage } from '../services/pairs'
-import { wordsToRefresh, setPendingPracticeSelection } from '../services/libraryPractice'
+import { setPendingPracticeSelection, usableMistakeEntries, wordsToRefresh } from '../services/libraryPractice'
 import { getAllWords } from '../services/libraryStorage'
 import { loadServed, mistakeKey, pickMistakes } from '../services/mistakePicker'
 import { dismissYellowCard, getYellowCards, type YellowCard } from '../services/yellowCards'
@@ -85,7 +85,12 @@ function savedMixSize() {
   }
 }
 function practise(entries: MistakeEntry[], label: string, size: number) {
-  const picked = pickMistakes({ entries: getMistakeEntries(), size, preferred: entries.map(mistakeKey), served: loadServed() })
+  const picked = pickMistakes({
+    entries: usableMistakeEntries(getMistakeEntries(), 'write-en'),
+    size,
+    preferred: entries.map(mistakeKey),
+    served: loadServed(),
+  })
   const wordIds = [...new Set(picked.map((entry) => entry.wordId).filter((id): id is string => Boolean(id)))]
   if (wordIds.length < size) {
     const taken = new Set(wordIds)
