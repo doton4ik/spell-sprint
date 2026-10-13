@@ -47,10 +47,13 @@ const paths: Record<IconName, ReactNode> = {
       <circle cx="17.5" cy="7" r="1" fill="currentColor" stroke="none" />
     </>
   ),
+  // Books standing on a shelf (the Rules icon is one open book, so the two never look alike in the menu)
   library: (
     <>
-      <path d="M5 3.5h10.5A2.5 2.5 0 0 1 18 6v14H7.5A2.5 2.5 0 0 1 5 17.5Z" />
-      <path d="M5 17.5A2.5 2.5 0 0 1 7.5 15H18M8.5 7h6m-6 4h6" />
+      <rect x="3.5" y="5" width="4" height="14" rx="1" />
+      <rect x="9.5" y="3" width="4" height="16" rx="1" />
+      <path d="m15.7 6.4 3.6-1 3 13.2-3.6 1Z" />
+      <path d="M2 21.5h20" />
     </>
   ),
   settings: (
