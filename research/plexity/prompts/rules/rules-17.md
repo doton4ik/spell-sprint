@@ -71,12 +71,14 @@ Every exercise is independent: no "see the sentence above". Every answer must be
 
 ## Output format
 
+One array with one object per rule listed in this round. The shape (the values are placeholders, NOT content to copy):
+
 [
-  {"slug": "accept-vs-except",
-   "examples": [{"type": "correct", "text": "I accept your apology.", "note": "Accept = receive or agree"},
-                {"type": "incorrect", "text": "Everyone accept Tom came.", "correction": "Everyone except Tom came.", "note": "Except = not including"}],
-   "exercises": [{"type": "fill_gap", "prompt": "I cannot ___ his excuse.", "answer": "accept"},
-                 {"type": "multiple_choice", "prompt": "We work every day ___ Sunday.", "answer": "except", "choices": ["accept", "except"]}]}
+  {"slug": "<a slug from the list above>",
+   "examples": [{"type": "correct", "text": "<sentence>", "note": "<short reason>"},
+                {"type": "incorrect", "text": "<sentence with the typical mistake>", "correction": "<the same sentence corrected>", "note": "<short reason>"}],
+   "exercises": [{"type": "fill_gap", "prompt": "<sentence with one ___>", "answer": "<word>"},
+                 {"type": "multiple_choice", "prompt": "<sentence with ___>", "answer": "<word>", "choices": ["<word>", "<word>"]}]}
 ]
 
 Use the slug exactly as written. Before you answer, check every item against the rule above: wrong sentences must really be wrong, correct ones really correct, each exercise has exactly one answer.
