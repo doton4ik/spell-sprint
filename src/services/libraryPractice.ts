@@ -59,9 +59,10 @@ function tasksForWord(word: LibraryWord): PracticeTask[] {
   // The order is shuffled when the task is shown (TaskCard), so the right answer is not always first.
   const spellingChoices = [word.word, ...spellingDistractors(word.word, (value) => knownWords().has(value) || isRealOrRude(value))]
   const gap = gapSentence(word.example, word.word)
-  // A second gap sentence from the second example, when it was written for the app (a Tatoeba sentence would need a credit
-  // next to the gap). A session still takes one gap task per word (oncePerWord), chosen at random.
-  const gap2 = word.extraExampleSource === 'written' ? gapSentence(word.extraExample, word.word) : null
+  // A second gap sentence from the second example (Tatoeba or written for the app). After the answer the feedback shows this
+  // sentence with its credit (TaskCard), so a Tatoeba sentence is always credited. A session still takes one gap task per word
+  // (oncePerWord), chosen at random, so a learner meets both sentences over time.
+  const gap2 = gapSentence(word.extraExample, word.word)
   return [
     {
       ...base,
@@ -100,6 +101,7 @@ function tasksForWord(word: LibraryWord): PracticeTask[] {
           {
             ...base,
             id: `library-${id}-gap2`,
+            example: undefined, // the feedback shows the second example (with its source) instead of the first
             type: 'translate-ru-en' as const,
             mode: 'fill-gap' as const,
             prompt: gap2,
@@ -248,10 +250,13 @@ export function clearPendingPracticeSelection() {
 }
 export function getTasksForWordIds(wordIds: string[], mode: PracticeMode = 'write-en') {
   const wanted = new Set(wordIds)
-  return getAllWords()
-    .filter((word) => wanted.has(word.wordId))
-    .flatMap(tasksForWord)
-    .filter((task) => task.mode === mode)
+  // One task per word and mode: a word with two gap sentences gets one of them, not both in the same session.
+  return oncePerWord(
+    getAllWords()
+      .filter((word) => wanted.has(word.wordId))
+      .flatMap(tasksForWord)
+      .filter((task) => task.mode === mode),
+  )
 }
 
 // "среда" → environment: the answer is a real library word that also fits the Russian prompt (a
