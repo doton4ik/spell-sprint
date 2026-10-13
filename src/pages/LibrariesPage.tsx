@@ -1,11 +1,19 @@
 import { useEffect, useMemo, useState } from 'react'
 import { ImportLibraryPanel } from '../components/libraries/ImportLibraryPanel'
 import { AddWordPanel } from '../components/libraries/AddWordPanel'
+import { LibrarySetup } from '../components/libraries/LibrarySetup'
 import { WordReportPanel } from '../components/WordReportPanel'
 import { Icon } from '../components/icons/Icon'
 import { libraryGroups, wordsForGroup, type LibraryGroup } from '../services/libraryGroups'
-import { csvTemplate, deleteImportedLibrary, getEveryLibrary, getEveryWord, getLibraries } from '../services/libraryStorage'
-import { getHiddenWordIds, getWordNote, setPackEnabled, setWordHidden } from '../services/libraryPrefs'
+import {
+  csvTemplate,
+  deleteImportedLibrary,
+  getEveryLibrary,
+  getEveryWord,
+  getLibraries,
+  isLibraryActive,
+} from '../services/libraryStorage'
+import { getHiddenWordIds, getWordNote, hideKey, setPackEnabled, setWordHidden } from '../services/libraryPrefs'
 import { libraryPacks, type LibraryPack } from '../data/libraryPacks'
 import { setPendingPracticeSelection } from '../services/libraryPractice'
 import { getAllRuleWordLinks, getVisibleRules, setPendingRuleFocus } from '../services/rulesService'
@@ -118,6 +126,7 @@ export function LibrariesPage() {
   const [notice, setNotice] = useState<{ text: string; undo?: () => void } | null>(null)
   const [details, setDetails] = useState<Details | null>(null)
   const [query, setQuery] = useState('')
+  const [tuning, setTuning] = useState(false)
   const ruleMap = useWordRuleMap()
   const groups = libraryGroups.filter((group) => group.id !== 'all')
   const allWords = useMemo(() => uniqueWords(libraries.flatMap((library) => library.words)), [libraries])
@@ -133,6 +142,21 @@ export function LibrariesPage() {
       text: `“${word.word}” is hidden and will not appear in practice.`,
       undo: () => {
         setWordHidden(word.wordId, false)
+        refresh()
+        setNotice(null)
+      },
+    })
+  }
+  // Hide or show a whole library (a vocabulary group or one of the learner's own libraries).
+  const setLibraryHidden = (key: string, name: string, hide: boolean) => {
+    setWordHidden(key, hide)
+    refresh()
+    setNotice({
+      text: hide
+        ? `“${name}” is hidden: its words stay out of practice and the daily plan. Your history is kept.`
+        : `“${name}” is back in practice and in the daily plan.`,
+      undo: () => {
+        setWordHidden(key, !hide)
         refresh()
         setNotice(null)
       },
@@ -304,7 +328,19 @@ export function LibrariesPage() {
             <button className="template-button" type="button" onClick={downloadTemplate}>
               CSV template
             </button>
+            <button className="template-button" type="button" onClick={() => setTuning((open) => !open)}>
+              Tune my library
+            </button>
           </div>
+          {tuning ? (
+            <LibrarySetup
+              title="Tune my library"
+              onDone={() => {
+                setTuning(false)
+                refresh()
+              }}
+            />
+          ) : null}
           <nav className="library-tabs" aria-label="Library groups">
             {libraryGroups.map((group) => (
               <button
@@ -332,7 +368,9 @@ export function LibrariesPage() {
                 }}
               />
               <MyLibraries
-                libraries={libraries.filter((library) => library.source === 'imported')}
+                libraries={getEveryLibrary().filter((library) => library.source === 'imported')}
+                hiddenKeys={getHiddenWordIds()}
+                onSetHidden={(library, hide) => setLibraryHidden(hideKey.library(library.name), library.name, hide)}
                 onOpen={openLibrary}
                 onPractice={beginPractice}
                 onDelete={remove}
@@ -349,7 +387,15 @@ export function LibrariesPage() {
           ) : (
             <section className="library-groups">
               {cards.map((group) => (
-                <GroupCard group={group} libraries={libraries} onOpen={openGroup} onPractice={beginPractice} key={group.id} />
+                <GroupCard
+                  group={group}
+                  libraries={libraries}
+                  hidden={getHiddenWordIds().has(hideKey.group(group.id))}
+                  onSetHidden={(hide) => setLibraryHidden(hideKey.group(group.id), group.name, hide)}
+                  onOpen={openGroup}
+                  onPractice={beginPractice}
+                  key={group.id}
+                />
               ))}
             </section>
           )}
@@ -362,17 +408,35 @@ export function LibrariesPage() {
 function GroupCard({
   group,
   libraries,
+  hidden,
+  onSetHidden,
   onOpen,
   onPractice,
 }: {
   group: LibraryGroup
   libraries: WordLibrary[]
+  hidden: boolean
+  onSetHidden: (hide: boolean) => void
   onOpen: (group: LibraryGroup) => void
   onPractice: (words: LibraryWord[], label: string) => void
 }) {
-  const words = wordsForGroup(group, libraries)
+  // A hidden group has no words among the active libraries: count them from everything that is switched on.
+  const words = wordsForGroup(group, hidden ? getEveryLibrary().filter(isLibraryActive) : libraries)
   const topics = new Set(words.map((word) => word.topic))
   const examples = words.slice(0, 5)
+  if (hidden)
+    return (
+      <article className="group-card group-card--hidden">
+        <span className="group-card__eyebrow">Hidden — not in practice</span>
+        <h2>{group.name}</h2>
+        <p>{words.length} words are out of practice, the daily plan and Topics. Your history with them is kept.</p>
+        <div className="group-card__actions">
+          <button className="check-button" type="button" onClick={() => onSetHidden(false)}>
+            Show this library
+          </button>
+        </div>
+      </article>
+    )
   return (
     <article className="group-card">
       <span className="group-card__eyebrow">Vocabulary group</span>
@@ -400,6 +464,9 @@ function GroupCard({
         <button className="outline-action" type="button" onClick={() => onPractice(words, group.name)}>
           Practise
         </button>
+        <button className="quiet-button" type="button" onClick={() => onSetHidden(true)}>
+          Hide
+        </button>
       </div>
     </article>
   )
@@ -407,12 +474,16 @@ function GroupCard({
 
 function MyLibraries({
   libraries,
+  hiddenKeys,
+  onSetHidden,
   onOpen,
   onPractice,
   onDelete,
   onImported,
 }: {
   libraries: WordLibrary[]
+  hiddenKeys: Set<string>
+  onSetHidden: (library: WordLibrary, hide: boolean) => void
   onOpen: (library: WordLibrary) => void
   onPractice: (words: LibraryWord[], label: string) => void
   onDelete: (library: WordLibrary) => void
@@ -423,31 +494,39 @@ function MyLibraries({
       <ImportLibraryPanel onImported={onImported} />
       {libraries.length ? (
         <div className="personal-library-list">
-          {libraries.map((library) => (
-            <article className="personal-library" key={library.id}>
-              <div>
-                <span>Imported library</span>
-                <h2>{library.name}</h2>
-                <p>
-                  {library.words.length} words · updated{' '}
-                  {library.createdAt
-                    ? new Intl.DateTimeFormat('en', { month: 'short', day: 'numeric' }).format(new Date(library.createdAt))
-                    : 'recently'}
-                </p>
-              </div>
-              <div>
-                <button className="outline-action" type="button" onClick={() => onOpen(library)}>
-                  Open
-                </button>
-                <button className="outline-action" type="button" onClick={() => onPractice(library.words, library.name)}>
-                  Practise
-                </button>
-                <button className="quiet-button" type="button" onClick={() => onDelete(library)}>
-                  Delete
-                </button>
-              </div>
-            </article>
-          ))}
+          {libraries.map((library) => {
+            const hidden = hiddenKeys.has(hideKey.library(library.name))
+            return (
+              <article className="personal-library" key={library.id}>
+                <div>
+                  <span>{hidden ? 'Hidden — not in practice' : 'Imported library'}</span>
+                  <h2>{library.name}</h2>
+                  <p>
+                    {library.words.length} words · updated{' '}
+                    {library.createdAt
+                      ? new Intl.DateTimeFormat('en', { month: 'short', day: 'numeric' }).format(new Date(library.createdAt))
+                      : 'recently'}
+                  </p>
+                </div>
+                <div>
+                  <button className="outline-action" type="button" onClick={() => onOpen(library)}>
+                    Open
+                  </button>
+                  {hidden ? null : (
+                    <button className="outline-action" type="button" onClick={() => onPractice(library.words, library.name)}>
+                      Practise
+                    </button>
+                  )}
+                  <button className="quiet-button" type="button" onClick={() => onSetHidden(library, !hidden)}>
+                    {hidden ? 'Show' : 'Hide'}
+                  </button>
+                  <button className="quiet-button" type="button" onClick={() => onDelete(library)}>
+                    Delete
+                  </button>
+                </div>
+              </article>
+            )
+          })}
         </div>
       ) : (
         <div className="libraries-empty">

@@ -4,6 +4,7 @@ import type { PracticeMode, PracticeTask } from '../types/practice'
 import { russianAnswers } from './answerMatch'
 import { getAllWords, getEveryWord, getLibraries } from './libraryStorage'
 import { getMistakeEntries, getReviewEntries } from './learningData'
+import { getWordProgress } from './dailyPlan'
 import { loadServed, pickMistakes } from './mistakePicker'
 import { spellingDistractors } from './spellingDistractors'
 import { isRealOrRude } from './proofreadingEngine'
@@ -15,7 +16,7 @@ function knownWords() {
   return knownCache
 }
 
-export type PracticeScope = 'all' | 'library' | 'topic' | 'subtopic' | 'mistakes' | 'review'
+export type PracticeScope = 'all' | 'new' | 'known' | 'library' | 'topic' | 'subtopic' | 'mistakes' | 'review'
 // limit: for 'mistakes', how many words a session takes. They are picked by need and rotated, not the same list every time.
 export type PracticeSelection = { scope: PracticeScope; library: string; topic: string; subtopic: string; limit?: number }
 
@@ -129,6 +130,32 @@ function oncePerWord(tasks: PracticeTask[]) {
   })
 }
 
+// "New words": words the learner has never answered, in a random order. "Words I know": words already practised —
+// the ones whose review is due first, then those that keep going wrong, then the longest unseen — so a session
+// refreshes what can slip rather than repeating what was just done.
+function shuffled<T>(items: T[]) {
+  const copy = [...items]
+  for (let index = copy.length - 1; index > 0; index -= 1) {
+    const other = Math.floor(Math.random() * (index + 1))
+    ;[copy[index], copy[other]] = [copy[other], copy[index]]
+  }
+  return copy
+}
+export function wordsToLearn(words: LibraryWord[], limit?: number) {
+  const progress = getWordProgress()
+  const fresh = shuffled(words.filter((word) => !progress.has(word.wordId)))
+  return limit ? fresh.slice(0, limit) : fresh
+}
+export function wordsToRefresh(words: LibraryWord[], limit?: number) {
+  const progress = getWordProgress()
+  const rank = (word: LibraryWord) => {
+    const entry = progress.get(word.wordId)!
+    return (entry.due ? 0 : entry.errors > entry.correct ? 1 : 2) * 1e15 + new Date(entry.latest.createdAt).getTime()
+  }
+  const seen = words.filter((word) => progress.has(word.wordId)).sort((a, b) => rank(a) - rank(b))
+  return limit ? seen.slice(0, limit) : seen
+}
+
 export function getTasksForSelection(selection: PracticeSelection, mode: PracticeMode = 'write-en'): PracticeTask[] {
   const words = getAllWords()
   let selected = words
@@ -143,15 +170,23 @@ export function getTasksForSelection(selection: PracticeSelection, mode: Practic
       selection.scope === 'review'
         ? getReviewEntries()
         : getMistakeEntries().filter((entry) => entry.status !== 'mastered' && !entry.archived)
+    const modeTasks = words.flatMap(tasksForWord).filter((task) => task.mode === mode)
+    // Only entries that have a task in this mode (a hidden word or a switched-off pack has none): they must not
+    // take a place in the session and leave it short.
+    const taskIdsAll = new Set(modeTasks.map((task) => task.id))
+    const wordIdsAll = new Set(modeTasks.map((task) => task.wordId))
+    const usable = all.filter((entry) => taskIdsAll.has(entry.taskId) || (entry.wordId !== undefined && wordIdsAll.has(entry.wordId)))
     const entries =
-      selection.scope === 'mistakes' && selection.limit ? pickMistakes({ entries: all, size: selection.limit, served: loadServed() }) : all
+      selection.scope === 'mistakes' && selection.limit
+        ? pickMistakes({ entries: usable, size: selection.limit, served: loadServed() })
+        : usable
     const taskIds = new Set(entries.map((entry) => entry.taskId))
     const wordIds = new Set(entries.map((entry) => entry.wordId).filter(Boolean))
-    return oncePerWord(
-      words
-        .flatMap(tasksForWord)
-        .filter((task) => task.mode === mode && (taskIds.has(task.id) || (task.wordId !== undefined && wordIds.has(task.wordId)))),
-    )
+    return oncePerWord(modeTasks.filter((task) => taskIds.has(task.id) || (task.wordId !== undefined && wordIds.has(task.wordId))))
+  }
+  if (selection.scope === 'new' || selection.scope === 'known') {
+    const chosen = selection.scope === 'known' ? wordsToRefresh(words, selection.limit) : wordsToLearn(words, selection.limit)
+    return oncePerWord(chosen.flatMap(tasksForWord).filter((task) => task.mode === mode))
   }
   // The eight early demo tasks (data/practice.ts) are no longer practised: they had no word behind them,
   // and a corrected sentence does not fit any of the four modes. They stay only for old history.

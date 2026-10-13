@@ -1,7 +1,8 @@
 import { builtInLibraries } from '../data/libraries'
 import { sanitizeWord } from './validate'
 import { libraryPacks, packForLibrary } from '../data/libraryPacks'
-import { getHiddenWordIds, getLibraryPrefs, getRemovedKeys, initialisePacks, setRemoved } from './libraryPrefs'
+import { libraryGroups } from './libraryGroups'
+import { getHiddenWordIds, getLibraryPrefs, hideKey, getRemovedKeys, initialisePacks, setRemoved } from './libraryPrefs'
 import { canonicalTopic, canonicalTopics, libraryKindForName, stableWordId } from '../data/libraryTaxonomy'
 import { normalisePartOfSpeech, partOfSpeechOptions, type LibraryWord, type WordLibrary } from '../types/library'
 
@@ -215,9 +216,13 @@ export function isLibraryActive(library: WordLibrary) {
 export function getLibraries(): WordLibrary[] {
   if (!getLibraryPrefs().packsInitialised) initialisePacks(packsInUse())
   const hidden = getHiddenWordIds()
+  const hiddenTopics = new Set(libraryGroups.filter((group) => hidden.has(hideKey.group(group.id))).flatMap((group) => group.topics))
   return getEveryLibrary()
-    .filter(isLibraryActive)
-    .map((library) => ({ ...library, words: library.words.filter((word) => !hidden.has(word.wordId)) }))
+    .filter((library) => isLibraryActive(library) && !hidden.has(hideKey.library(library.name)))
+    .map((library) => ({
+      ...library,
+      words: library.words.filter((word) => !hidden.has(word.wordId) && !hiddenTopics.has(word.topic)),
+    }))
     .filter((library) => library.words.length)
 }
 export function getAllWords() {

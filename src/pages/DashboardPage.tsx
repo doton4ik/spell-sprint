@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import { DayRail } from '../components/dashboard/DayRail'
 import { Icon } from '../components/icons/Icon'
+import { LibrarySetup } from '../components/libraries/LibrarySetup'
+import { isLibrarySetupDone } from '../services/libraryPrefs'
 import { MetricCard } from '../components/ui/MetricCard'
 import { SectionHeader } from '../components/ui/SectionHeader'
 import { buildDailyPlan, getStreak, getTodayCount, type DailyPlan } from '../services/dailyPlan'
@@ -108,6 +110,7 @@ export function DashboardPage() {
           </div>
         </header>
 
+        {analytics.totalAttempts || isLibrarySetupDone() ? null : <LibrarySetup onDone={() => setRevision((value) => value + 1)} />}
         {analytics.totalAttempts ? null : <Welcome />}
 
         <div className="dashboard-hero">

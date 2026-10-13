@@ -63,6 +63,12 @@ describe('pickMistakes', () => {
     const second = pickMistakes({ entries: list, size: 2, served, now: NOW, random: none })
     expect(keys(second).some((key) => key.startsWith('now'))).toBe(false)
   })
+  it('the size counts words: several entries of one word are one place in the session', () => {
+    const list = ['a', 'b', 'c', 'd'].flatMap((word) => [entry(word), entry(word, { taskId: `other-${word}` })])
+    const picked = pickMistakes({ entries: list, size: 3, now: NOW, random: none })
+    expect(new Set(picked.map(mistakeKey)).size).toBe(3)
+    expect(picked).toHaveLength(6)
+  })
   it('the old penalty fades: after a day the words can come back', () => {
     const list = [entry('a', { lastMistakeAt: ago(1) }), entry('b'), entry('c')]
     const served = { a: ago(30) }

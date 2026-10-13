@@ -17,6 +17,7 @@ export type LibraryPrefs = {
   removed: Record<string, Flag>
   notes: Record<string, Note>
   packsInitialised?: boolean
+  setupDone?: boolean // the learner chose what to study (or skipped) the first time
 }
 export const NOTE_LIMIT = 140
 
@@ -50,6 +51,7 @@ export function getLibraryPrefs(): LibraryPrefs {
       removed: isFlagMap(stored.removed) ? stored.removed : {},
       notes: isNoteMap(stored.notes) ? stored.notes : {},
       packsInitialised: stored.packsInitialised === true,
+      setupDone: stored.setupDone === true,
     }
   } catch {
     return empty()
@@ -73,6 +75,13 @@ export function getHiddenWordIds() {
       .filter(([, flag]) => flag.on)
       .map(([id]) => id),
   )
+}
+
+// A whole library can be hidden too: a vocabulary group ("group:<id>") or one of the learner's own libraries
+// ("library:<name>"). It uses the same marks as hidden words, so it merges between devices the same way.
+export const hideKey = {
+  group: (id: string) => `group:${id}`,
+  library: (name: string) => `library:${name.trim().toLocaleLowerCase()}`,
 }
 
 export function setWordHidden(wordId: string, hidden: boolean) {
@@ -127,6 +136,13 @@ export function initialisePacks(packIdsInUse: string[]) {
   save(prefs, false)
 }
 
+export const isLibrarySetupDone = () => getLibraryPrefs().setupDone === true
+export function markLibrarySetupDone() {
+  const prefs = getLibraryPrefs()
+  prefs.setupDone = true
+  save(prefs)
+}
+
 // Cloud restore: keep the most recent change for every word and pack.
 export function mergeLibraryPrefs(incoming: unknown) {
   if (!incoming || typeof incoming !== 'object') return
@@ -148,6 +164,7 @@ export function mergeLibraryPrefs(incoming: unknown) {
     removed: merge(local.removed, remote.removed, isFlagMap),
     notes: merge(local.notes, remote.notes, isNoteMap),
     packsInitialised: local.packsInitialised || remote.packsInitialised === true,
+    setupDone: local.setupDone || remote.setupDone === true,
   }
   if (JSON.stringify(next) !== JSON.stringify(local)) save(next)
 }

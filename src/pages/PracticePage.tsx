@@ -24,6 +24,8 @@ import { getEveryWord } from '../services/libraryStorage'
 
 const scopeLabels: Record<PracticeScope, string> = {
   all: 'All libraries',
+  new: 'New words (learn)',
+  known: 'Words I know (refresh)',
   library: 'Specific library',
   topic: 'Specific topic',
   subtopic: 'Specific subtopic',

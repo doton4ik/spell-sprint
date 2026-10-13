@@ -10,6 +10,28 @@
   justify-content: space-between;
   margin-bottom: 29px;
 }
+.learning-header__actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.mix-size {
+  align-items: center;
+  color: var(--ink-muted);
+  display: flex;
+  font-size: calc(14px * var(--fs));
+  gap: 8px;
+}
+.mix-size select {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink);
+  font: inherit;
+  min-height: 40px;
+  padding: 0 10px;
+}
 .learning-header h1 {
   color: var(--ink);
   font-size: calc(clamp(28px, 3vw, 37px) * var(--fs));

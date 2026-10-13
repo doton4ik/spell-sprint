@@ -43,13 +43,17 @@ export function pickMistakes(options: {
 }): MistakeEntry[] {
   const { entries, size, preferred = [], served = {}, now = new Date(), random = Math.random } = options
   const open = entries.filter((entry) => entry.status !== 'mastered' && !entry.archived)
-  if (open.length <= size) return open
+  // `size` counts words, not entries: one word can have several entries (written, dictated, gap), and ten entries
+  // used to come out as two or three words.
+  const groups = new Map<string, MistakeEntry[]>()
+  for (const entry of open) groups.set(mistakeKey(entry), [...(groups.get(mistakeKey(entry)) ?? []), entry])
+  if (groups.size <= size) return open
   const wanted = new Set(preferred)
-  return open
-    .map((entry) => ({ entry, score: scoreMistake(entry, now, served, wanted) + random() }))
+  return [...groups.values()]
+    .map((group) => ({ group, score: Math.max(...group.map((entry) => scoreMistake(entry, now, served, wanted))) + random() }))
     .sort((a, b) => b.score - a.score)
     .slice(0, size)
-    .map((item) => item.entry)
+    .flatMap((item) => item.group)
 }
 
 export function loadServed(): ServedLog {

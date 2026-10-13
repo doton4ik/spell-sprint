@@ -4,7 +4,8 @@ import { Icon } from '../components/icons/Icon'
 import { AnswerDiff } from '../components/practice/AnswerDiff'
 import { getEntryHistory, getMistakeEntries, isDueToday, subscribeToLearningData } from '../services/learningData'
 import { openPairOnPairsPage } from '../services/pairs'
-import { setPendingPracticeSelection } from '../services/libraryPractice'
+import { wordsToRefresh, setPendingPracticeSelection } from '../services/libraryPractice'
+import { getAllWords } from '../services/libraryStorage'
 import { loadServed, mistakeKey, pickMistakes } from '../services/mistakePicker'
 import { dismissYellowCard, getYellowCards, type YellowCard } from '../services/yellowCards'
 import type { ErrorFamily, LearningStatus, MistakeEntry } from '../types/learning'
@@ -71,10 +72,28 @@ function History({ entry }: { entry: MistakeEntry }) {
 
 // A session is a mix, not the group itself: the pressed group (today's, due) comes first, the rest is filled with
 // other words that need work, and the words handed out last time give way (see mistakePicker.ts).
-const MIX_SIZE = 10
-function practise(entries: MistakeEntry[], label: string) {
-  const picked = pickMistakes({ entries: getMistakeEntries(), size: MIX_SIZE, preferred: entries.map(mistakeKey), served: loadServed() })
+// The size counts words (10, 20, 30). When there are fewer mistakes than that, the session is filled up with words
+// the learner already knows and that are due or slipping, so it is never just two or three words.
+const MIX_SIZES = [10, 20, 30]
+const MIX_SIZE_KEY = 'spell-sprint.mix-size'
+function savedMixSize() {
+  try {
+    const value = Number(window.localStorage.getItem(MIX_SIZE_KEY))
+    return MIX_SIZES.includes(value) ? value : 10
+  } catch {
+    return 10
+  }
+}
+function practise(entries: MistakeEntry[], label: string, size: number) {
+  const picked = pickMistakes({ entries: getMistakeEntries(), size, preferred: entries.map(mistakeKey), served: loadServed() })
   const wordIds = [...new Set(picked.map((entry) => entry.wordId).filter((id): id is string => Boolean(id)))]
+  if (wordIds.length < size) {
+    const taken = new Set(wordIds)
+    for (const word of wordsToRefresh(getAllWords(), size * 2)) {
+      if (wordIds.length >= size) break
+      if (!taken.has(word.wordId)) wordIds.push(word.wordId)
+    }
+  }
   if (wordIds.length) setPendingPracticeSelection({ wordIds, label, mode: 'write-en', kind: 'mistakes' })
   window.location.hash = 'practice'
 }
@@ -179,6 +198,15 @@ export function MistakesPage() {
   const [family, setFamily] = useState<(typeof families)[number]>('All')
   const [view, setView] = useState<'words' | 'patterns'>('words')
   const [revision, setRevision] = useState(0)
+  const [mixSize, setMixSize] = useState(savedMixSize)
+  const chooseMixSize = (size: number) => {
+    setMixSize(size)
+    try {
+      window.localStorage.setItem(MIX_SIZE_KEY, String(size))
+    } catch {
+      /* the choice lasts for this visit */
+    }
+  }
   useEffect(() => subscribeToLearningData(() => setRevision((value) => value + 1)), [])
   const entries = useMemo(getMistakeEntries, [revision])
   const yellowCards = useMemo(getYellowCards, [revision])
@@ -243,15 +271,27 @@ export function MistakesPage() {
               : 'Every wrong answer is kept here, so you can practise it until it sticks.'}
           </p>
         </div>
-        {due ? (
-          <button className="outline-action" type="button" onClick={() => practise(entries.filter(isDue), 'Mistakes mix')}>
-            <Icon name="practice" size={17} /> Practise today’s words
-          </button>
-        ) : (
-          <a className="outline-action" href="#practice">
-            <Icon name="practice" size={17} /> Practise
-          </a>
-        )}
+        <div className="learning-header__actions">
+          <label className="mix-size">
+            <span>Words</span>
+            <select value={mixSize} onChange={(event) => chooseMixSize(Number(event.target.value))}>
+              {MIX_SIZES.map((size) => (
+                <option value={size} key={size}>
+                  {size}
+                </option>
+              ))}
+            </select>
+          </label>
+          {due ? (
+            <button className="outline-action" type="button" onClick={() => practise(entries.filter(isDue), 'Mistakes mix', mixSize)}>
+              <Icon name="practice" size={17} /> Practise today’s words
+            </button>
+          ) : (
+            <a className="outline-action" href="#practice">
+              <Icon name="practice" size={17} /> Practise
+            </a>
+          )}
+        </div>
       </header>
 
       {entries.length === 0 && yellowCards.length === 0 ? (
@@ -307,7 +347,7 @@ export function MistakesPage() {
                           </h2>
                         </div>
                         {group.action ? (
-                          <button className="check-button" type="button" onClick={() => practise(group.entries, 'Mistakes mix')}>
+                          <button className="check-button" type="button" onClick={() => practise(group.entries, 'Mistakes mix', mixSize)}>
                             <Icon name="practice" size={15} /> Practise a mix
                           </button>
                         ) : null}
