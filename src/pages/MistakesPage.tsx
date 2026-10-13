@@ -103,16 +103,33 @@ function practise(entries: MistakeEntry[], label: string, size: number) {
   window.location.hash = 'practice'
 }
 
+// A pair mistake shows the whole sentence with the right word in bold, so the choice is seen in its context.
+function SentenceWithWord({ sentence, word }: { sentence: string; word: string }) {
+  // a whole word: "no" must not be found inside "know"
+  const found = new RegExp(`(^|[^A-Za-z'])(${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})(?![A-Za-z'])`, 'i').exec(sentence)
+  if (!found) return <>{sentence}</>
+  const at = found.index + found[1].length
+  return (
+    <>
+      {sentence.slice(0, at)}
+      <b>{sentence.slice(at, at + word.length)}</b>
+      {sentence.slice(at + word.length)}
+    </>
+  )
+}
+
 function MistakeRow({ entry }: { entry: MistakeEntry }) {
   const [open, setOpen] = useState(false)
   return (
     <div className={open ? 'mistake-row mistake-row--open' : 'mistake-row'}>
       <div className="mistake-answer">
         <p>
-          <AnswerDiff expected={entry.correctAnswer} submitted={entry.lastUserVersion} />
+          <AnswerDiff expected={entry.correctAnswer} submitted={entry.lastUserVersion} plain={Boolean(entry.pairId)} />
         </p>
         {entry.translation && entry.translation !== entry.correctAnswer ? (
-          <p className="mistake-answer__translation">{entry.translation}</p>
+          <p className="mistake-answer__translation">
+            {entry.pairId ? <SentenceWithWord sentence={entry.translation} word={entry.correctAnswer} /> : entry.translation}
+          </p>
         ) : null}
         <small>
           {isToday(entry.lastMistakeAt) ? <b className="mistake-new">New</b> : null}

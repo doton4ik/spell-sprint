@@ -49,11 +49,22 @@ export function Letters({ segments, small }: { segments: Segment[]; small?: bool
 
 // Compact "wrong → right" with the mistaken letters marked. Answers that share almost nothing with
 // the correct one (a different word) are shown plainly, since letter colours would only be noise.
-export function AnswerDiff({ expected, submitted, show = 'both' }: { expected: string; submitted: string; show?: 'both' | 'submitted' }) {
+// plain: two real words that were mixed up (know / no): whole words, never letter colours, which would suggest a spelling slip.
+export function AnswerDiff({
+  expected,
+  submitted,
+  show = 'both',
+  plain = false,
+}: {
+  expected: string
+  submitted: string
+  show?: 'both' | 'submitted'
+  plain?: boolean
+}) {
   const a = expected.trim().toLocaleLowerCase()
   const b = submitted.trim().toLocaleLowerCase()
   const { distance, ops } = diffStrings(a, b)
-  if (!b || distance > Math.max(2, Math.ceil(a.length / 2))) {
+  if (!b || plain || distance > Math.max(2, Math.ceil(a.length / 2))) {
     return show === 'both' ? (
       <span className="answer-diff">
         <s>{submitted || 'Skipped'}</s> → <strong>{expected}</strong>
