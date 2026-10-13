@@ -27,11 +27,9 @@ const norm = (text) =>
 function existingFor(rule) {
   const packs = [readPack(PACK1), readPack(PACK2)]
   const fromPacks = packs.flatMap((pack) => pack.rules.filter((item) => item.slug === rule.slug))
-  const examples = [
-    ...builtIn.examples
-      .filter((example) => example.rule_id === rule.id)
-      .map((example) => ({ type: example.example_type, text: example.text, correction: example.correction })),
-  ]
+  const examples = builtIn.examples
+    .filter((example) => example.rule_id === rule.id)
+    .map((example) => ({ type: example.example_type, text: example.text, correction: example.correction }))
   const exercises = [
     ...(bundled[rule.id] ?? []).map((exercise) => ({
       type: exercise.exercise_type,
