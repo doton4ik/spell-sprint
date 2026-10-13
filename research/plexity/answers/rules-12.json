@@ -46,7 +46,7 @@
      {"type": "correct_word", "prompt": "thum", "answer": "thumb"},
      {"type": "correct_word", "prompt": "gost", "answer": "ghost"},
      {"type": "correct_word", "prompt": "autum", "answer": "autumn"},
-     {"type": "multiple_choice", "prompt": "Choose the correct spelling of the third day after Monday.", "answer": "Wednesday", "choices": ["Wensday", "Wednesday", "Wedensday"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling of the day between Tuesday and Thursday.", "answer": "Wednesday", "choices": ["Wensday", "Wednesday", "Wedensday"]},
      {"type": "multiple_choice", "prompt": "Choose the correct spelling of the place where you keep plates.", "answer": "cupboard", "choices": ["cupbord", "cupboard", "cubboard"]}
    ]}
 ]

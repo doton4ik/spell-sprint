@@ -21,8 +21,8 @@
      {"type": "spell", "prompt": "Spell the word: more than one wife.", "answer": "wives"},
      {"type": "multiple_choice", "prompt": "Choose the correct word: Please help ___ to some tea, everyone.", "answer": "yourselves", "choices": ["yourself", "yourselfs", "yourselves"]},
      {"type": "multiple_choice", "prompt": "Choose the correct plural of thief.", "answer": "thieves", "choices": ["thiefs", "thieves", "thievs"]},
-     {"type": "fill_gap", "prompt": "Cut the sandwich into two ___.", "answer": "halves"},
-     {"type": "fill_gap", "prompt": "The new safety rules saved many ___ last year.", "answer": "lives"}
+     {"type": "fill_gap", "prompt": "Cut the sandwich into two ___. (половинки)", "answer": "halves"},
+     {"type": "fill_gap", "prompt": "The new safety rules saved many ___ last year. (жизни)", "answer": "lives"}
    ]},
   {"slug": "plural-y-to-ies",
    "examples": [

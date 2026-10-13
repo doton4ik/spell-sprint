@@ -2120,7 +2120,7 @@
         },
         {
           "type": "multiple_choice",
-          "prompt": "Choose the correct spelling of the third day after Monday.",
+          "prompt": "Choose the correct spelling of the day between Tuesday and Thursday.",
           "answer": "Wednesday",
           "choices": [
             "Wensday",
@@ -2284,7 +2284,7 @@
         {
           "type": "correct",
           "text": "She was grateful for your help.",
-          "note": "Grate + ful: one l"
+          "note": "Grateful: -ful has one l"
         },
         {
           "type": "correct",
@@ -2559,7 +2559,7 @@
         },
         {
           "type": "incorrect",
-          "text": "He is very knowlegable about history.",
+          "text": "He is very knowledgable about history.",
           "correction": "He is very knowledgeable about history.",
           "note": "Keep e so g stays soft: knowledgeable"
         },
@@ -2591,7 +2591,7 @@
       "exercises": [
         {
           "type": "correct_word",
-          "prompt": "knowlegable",
+          "prompt": "knowledgable",
           "answer": "knowledgeable"
         },
         {
@@ -3026,12 +3026,12 @@
         },
         {
           "type": "fill_gap",
-          "prompt": "Cut the sandwich into two ___.",
+          "prompt": "Cut the sandwich into two ___. (половинки)",
           "answer": "halves"
         },
         {
           "type": "fill_gap",
-          "prompt": "The new safety rules saved many ___ last year.",
+          "prompt": "The new safety rules saved many ___ last year. (жизни)",
           "answer": "lives"
         }
       ]

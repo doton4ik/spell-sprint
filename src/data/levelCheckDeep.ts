@@ -893,7 +893,7 @@ const formationItems: LevelItem[] = [
   formation('b03-4-11', 4, 'Her analysis was remarkably ___. (INSIGHT)', 'insightful', 'Add -ful to make the adjective.'),
   formation('b05-1-01', 1, 'My brother is a football ___. (PLAY)', 'player', 'Add -er for the person who plays.'),
   formation('b05-1-02', 1, 'The weather was very ___ yesterday. (RAIN)', 'rainy', 'Add -y to make the adjective.'),
-  formation('b05-1-03', 1, 'She is a very good ___. (DANCE)', 'dancer', 'Add -er for the person who dances.'),
+  formation('b05-1-03', 1, 'She is a very good ___. (DANCE)', 'dancer', 'Add -r to dance for the person who dances.'),
 ]
 
 // ---- Collocations and phrasal verbs --------------------------------------------------------

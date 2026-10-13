@@ -31,14 +31,14 @@
      {"type": "correct", "text": "The weather here is changeable in spring.", "note": "Keep e after g: change + able"},
      {"type": "correct", "text": "Every parcel is traceable online.", "note": "Keep e after c: trace + able"},
      {"type": "incorrect", "text": "The task was not managable for one person.", "correction": "The task was not manageable for one person.", "note": "Keep e so g stays soft: manageable"},
-     {"type": "incorrect", "text": "He is very knowlegable about history.", "correction": "He is very knowledgeable about history.", "note": "Keep e so g stays soft: knowledgeable"},
+     {"type": "incorrect", "text": "He is very knowledgable about history.", "correction": "He is very knowledgeable about history.", "note": "Keep e so g stays soft: knowledgeable"},
      {"type": "incorrect", "text": "The old phone is not replacable.", "correction": "The old phone is not replaceable.", "note": "Keep e so c stays soft: replaceable"},
      {"type": "incorrect", "text": "The weather is changable in April.", "correction": "The weather is changeable in April.", "note": "Keep e so g stays soft: changeable"},
      {"type": "incorrect", "text": "She wore a gorgous dress to the party.", "correction": "She wore a gorgeous dress to the party.", "note": "Keep e so g stays soft: gorgeous"},
      {"type": "incorrect", "text": "Every parcel is tracable online.", "correction": "Every parcel is traceable online.", "note": "Keep e so c stays soft: traceable"}
    ],
    "exercises": [
-     {"type": "correct_word", "prompt": "knowlegable", "answer": "knowledgeable"},
+     {"type": "correct_word", "prompt": "knowledgable", "answer": "knowledgeable"},
      {"type": "correct_word", "prompt": "replacable", "answer": "replaceable"},
      {"type": "correct_word", "prompt": "tracable", "answer": "traceable"},
      {"type": "correct_word", "prompt": "irreplacable", "answer": "irreplaceable"},

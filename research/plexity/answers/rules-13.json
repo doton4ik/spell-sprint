@@ -27,7 +27,7 @@
   {"slug": "suffix-ful",
    "examples": [
      {"type": "correct", "text": "The garden is beautiful in spring.", "note": "Beauty + ful: one l"},
-     {"type": "correct", "text": "She was grateful for your help.", "note": "Grate + ful: one l"},
+     {"type": "correct", "text": "She was grateful for your help.", "note": "Grateful: -ful has one l"},
      {"type": "correct", "text": "It was a peaceful walk by the river.", "note": "Peace + ful: one l"},
      {"type": "correct", "text": "He is a very successful doctor.", "note": "Success + ful: one l"},
      {"type": "incorrect", "text": "The view was wonderfull.", "correction": "The view was wonderful.", "note": "Suffix -ful has one l: wonderful"},
