@@ -1,0 +1,572 @@
+[
+  {
+    "id": "like-as",
+    "level": "B1",
+    "words": [
+      "like",
+      "as"
+    ],
+    "meanings": {
+      "like": "как, похожий на",
+      "as": "как (в роли), в качестве"
+    },
+    "hint": "like = similar to, before a noun · as = in the role of, or before a clause",
+    "sentences": [
+      {
+        "text": "She works ___ a nurse in a small hospital.",
+        "answer": "as"
+      },
+      {
+        "text": "My brother looks just ___ our father.",
+        "answer": "like"
+      },
+      {
+        "text": "He used an old box ___ a table.",
+        "answer": "as"
+      },
+      {
+        "text": "This soup tastes ___ chicken.",
+        "answer": "like"
+      },
+      {
+        "text": "___ a child, I lived near the sea.",
+        "answer": "as"
+      },
+      {
+        "text": "That building looks ___ a giant ship.",
+        "answer": "like"
+      },
+      {
+        "text": "Many people see the park ___ a perfect place to relax.",
+        "answer": "as"
+      },
+      {
+        "text": "He runs ___ the wind.",
+        "answer": "like"
+      },
+      {
+        "text": "Use this cloth ___ a bandage if you need to.",
+        "answer": "as"
+      },
+      {
+        "text": "What does your new flat look ___?",
+        "answer": "like"
+      },
+      {
+        "text": "She was famous ___ a singer before she became an actress.",
+        "answer": "as"
+      },
+      {
+        "text": "Do not behave ___ a spoiled child.",
+        "answer": "like"
+      },
+      {
+        "text": "___ a student, I get cheaper train tickets.",
+        "answer": "as"
+      },
+      {
+        "text": "Your phone is ___ mine, but a little bigger.",
+        "answer": "like"
+      },
+      {
+        "text": "Everything went ___ planned.",
+        "answer": "as"
+      },
+      {
+        "text": "It feels ___ summer in the middle of October.",
+        "answer": "like"
+      },
+      {
+        "text": "Please act ___ our guide for the day.",
+        "answer": "as"
+      },
+      {
+        "text": "She sings ___ an angel.",
+        "answer": "like"
+      },
+      {
+        "text": "Leave the room ___ you found it.",
+        "answer": "as"
+      },
+      {
+        "text": "He speaks English ___ a native speaker.",
+        "answer": "like"
+      }
+    ]
+  },
+  {
+    "id": "since-for",
+    "level": "B1",
+    "words": [
+      "since",
+      "for"
+    ],
+    "meanings": {
+      "since": "с (какого-то момента)",
+      "for": "в течение (какого-то времени)"
+    },
+    "hint": "since = from a starting point in time · for = how long, a period of time",
+    "sentences": [
+      {
+        "text": "I have lived here ___ 2019.",
+        "answer": "since"
+      },
+      {
+        "text": "She has been ill ___ three days.",
+        "answer": "for"
+      },
+      {
+        "text": "We have known each other ___ we were children.",
+        "answer": "since"
+      },
+      {
+        "text": "He has worked at the bakery ___ ten years.",
+        "answer": "for"
+      },
+      {
+        "text": "It has rained ___ Monday morning.",
+        "answer": "since"
+      },
+      {
+        "text": "They have been married ___ a long time.",
+        "answer": "for"
+      },
+      {
+        "text": "I have not eaten anything ___ breakfast.",
+        "answer": "since"
+      },
+      {
+        "text": "My phone has been broken ___ two weeks.",
+        "answer": "for"
+      },
+      {
+        "text": "___ I moved to Košice, I have made many friends.",
+        "answer": "since"
+      },
+      {
+        "text": "Have you been waiting ___ long?",
+        "answer": "for"
+      },
+      {
+        "text": "She has learned Spanish ___ last year.",
+        "answer": "since"
+      },
+      {
+        "text": "We have been friends ___ almost a decade.",
+        "answer": "for"
+      },
+      {
+        "text": "He has not called me ___ the party.",
+        "answer": "since"
+      },
+      {
+        "text": "The shop has been closed ___ a month.",
+        "answer": "for"
+      },
+      {
+        "text": "I have played the guitar ___ I was twelve.",
+        "answer": "since"
+      },
+      {
+        "text": "Anna has lived abroad ___ several years.",
+        "answer": "for"
+      },
+      {
+        "text": "The road has been blocked ___ the storm.",
+        "answer": "since"
+      },
+      {
+        "text": "I have not seen them ___ ages.",
+        "answer": "for"
+      },
+      {
+        "text": "Nothing has changed ___ yesterday.",
+        "answer": "since"
+      },
+      {
+        "text": "They have studied together ___ two hours.",
+        "answer": "for"
+      }
+    ]
+  },
+  {
+    "id": "ago-before",
+    "level": "B1",
+    "words": [
+      "ago",
+      "before"
+    ],
+    "meanings": {
+      "ago": "назад (от сегодняшнего дня)",
+      "before": "до, раньше"
+    },
+    "hint": "ago = counted back from now (three days ago) · before = earlier than a moment or an event",
+    "sentences": [
+      {
+        "text": "We moved to this town two years ___.",
+        "answer": "ago"
+      },
+      {
+        "text": "Please call me ___ you leave the office.",
+        "answer": "before"
+      },
+      {
+        "text": "I met my best friend ten years ___.",
+        "answer": "ago"
+      },
+      {
+        "text": "She had never seen the sea ___.",
+        "answer": "before"
+      },
+      {
+        "text": "The film started five minutes ___.",
+        "answer": "ago"
+      },
+      {
+        "text": "Wash your hands ___ dinner.",
+        "answer": "before"
+      },
+      {
+        "text": "How long ___ did you buy this laptop?",
+        "answer": "ago"
+      },
+      {
+        "text": "He said he had been to Rome ___.",
+        "answer": "before"
+      },
+      {
+        "text": "My grandfather was born eighty years ___.",
+        "answer": "ago"
+      },
+      {
+        "text": "The store opens an hour ___ the concert starts.",
+        "answer": "before"
+      },
+      {
+        "text": "A week ___, it was snowing here.",
+        "answer": "ago"
+      },
+      {
+        "text": "I felt tired the day ___ the exam.",
+        "answer": "before"
+      },
+      {
+        "text": "It happened a long time ___.",
+        "answer": "ago"
+      },
+      {
+        "text": "She called twice ___ lunch.",
+        "answer": "before"
+      },
+      {
+        "text": "Tom left the party an hour ___.",
+        "answer": "ago"
+      },
+      {
+        "text": "Read the rules ___ you start the game.",
+        "answer": "before"
+      },
+      {
+        "text": "The bakery was here fifty years ___.",
+        "answer": "ago"
+      },
+      {
+        "text": "Have we met ___? You look familiar.",
+        "answer": "before"
+      },
+      {
+        "text": "The letter arrived two days ___, but nobody read it.",
+        "answer": "ago"
+      },
+      {
+        "text": "Turn off the lights ___ going to bed.",
+        "answer": "before"
+      }
+    ]
+  },
+  {
+    "id": "much-many",
+    "level": "A2",
+    "words": [
+      "much",
+      "many"
+    ],
+    "meanings": {
+      "much": "много (неисчисляемое)",
+      "many": "много (исчисляемое)"
+    },
+    "hint": "many = countable things (many books) · much = uncountable things (much water)",
+    "sentences": [
+      {
+        "text": "How ___ books did you read this year?",
+        "answer": "many"
+      },
+      {
+        "text": "There isn't ___ milk left in the fridge.",
+        "answer": "much"
+      },
+      {
+        "text": "Not ___ people came to the meeting.",
+        "answer": "many"
+      },
+      {
+        "text": "Do you have ___ free time on Sundays?",
+        "answer": "much"
+      },
+      {
+        "text": "I do not see ___ bikes in this town.",
+        "answer": "many"
+      },
+      {
+        "text": "I don't eat ___ sugar.",
+        "answer": "much"
+      },
+      {
+        "text": "There aren't ___ tomatoes in the shop today.",
+        "answer": "many"
+      },
+      {
+        "text": "How ___ does this jacket cost?",
+        "answer": "much"
+      },
+      {
+        "text": "___ of my friends live abroad.",
+        "answer": "many"
+      },
+      {
+        "text": "We did not have ___ rain last summer.",
+        "answer": "much"
+      },
+      {
+        "text": "She speaks so ___ languages that I lose count.",
+        "answer": "many"
+      },
+      {
+        "text": "He does not drink ___ coffee in the evening.",
+        "answer": "much"
+      },
+      {
+        "text": "Too ___ cars drive through our street.",
+        "answer": "many"
+      },
+      {
+        "text": "There is not ___ traffic at night.",
+        "answer": "much"
+      },
+      {
+        "text": "I don't know how ___ days we will stay.",
+        "answer": "many"
+      },
+      {
+        "text": "Thank you very ___ for your help.",
+        "answer": "much"
+      },
+      {
+        "text": "Were there ___ passengers on the bus?",
+        "answer": "many"
+      },
+      {
+        "text": "Don't put too ___ salt in the soup.",
+        "answer": "much"
+      },
+      {
+        "text": "I haven't met ___ of her friends.",
+        "answer": "many"
+      },
+      {
+        "text": "She doesn't have ___ homework today.",
+        "answer": "much"
+      }
+    ]
+  },
+  {
+    "id": "also-too",
+    "level": "B1",
+    "words": [
+      "also",
+      "too"
+    ],
+    "meanings": {
+      "also": "также, ещё",
+      "too": "тоже (в конце); слишком"
+    },
+    "hint": "also = before the main verb, after 'be', or 'and also + noun' · too = at the end of a clause (me too), or 'too + adjective' = more than needed",
+    "sentences": [
+      {
+        "text": "She speaks French and ___ German.",
+        "answer": "also"
+      },
+      {
+        "text": "I want to come ___.",
+        "answer": "too"
+      },
+      {
+        "text": "The soup is ___ salty for me.",
+        "answer": "too"
+      },
+      {
+        "text": "Tom is a teacher and ___ a writer.",
+        "answer": "also"
+      },
+      {
+        "text": "Can I have a coffee, ___?",
+        "answer": "too"
+      },
+      {
+        "text": "We visited the museum and ___ the old castle.",
+        "answer": "also"
+      },
+      {
+        "text": "She plays tennis and ___ swims every week.",
+        "answer": "also"
+      },
+      {
+        "text": "You are ___ young to drive a car.",
+        "answer": "too"
+      },
+      {
+        "text": "The hotel has a pool and ___ a small gym.",
+        "answer": "also"
+      },
+      {
+        "text": "I am tired, and my brother is tired ___.",
+        "answer": "too"
+      },
+      {
+        "text": "This bag is ___ heavy to carry.",
+        "answer": "too"
+      },
+      {
+        "text": "Our teacher ___ helps us after class.",
+        "answer": "also"
+      },
+      {
+        "text": "Happy birthday! Same to you, ___!",
+        "answer": "too"
+      },
+      {
+        "text": "Please be careful, and ___ remember to lock the door.",
+        "answer": "also"
+      },
+      {
+        "text": "The shop sells books and ___ sells coffee.",
+        "answer": "also"
+      },
+      {
+        "text": "She can sing, and she can dance ___.",
+        "answer": "too"
+      },
+      {
+        "text": "It is ___ late to call him now.",
+        "answer": "too"
+      },
+      {
+        "text": "They have two dogs and ___ a cat.",
+        "answer": "also"
+      },
+      {
+        "text": "I love this song, and my friends love it ___.",
+        "answer": "too"
+      },
+      {
+        "text": "He bought bread, and ___ some cheese.",
+        "answer": "also"
+      }
+    ]
+  },
+  {
+    "id": "lonely-alone",
+    "level": "B1",
+    "words": [
+      "lonely",
+      "alone"
+    ],
+    "meanings": {
+      "lonely": "одинокий (грустно без людей)",
+      "alone": "один (без других людей)"
+    },
+    "hint": "lonely = sad because you have no company (also: a remote place) · alone = without other people, not always sad",
+    "sentences": [
+      {
+        "text": "She lives ___ in a small flat but she loves it.",
+        "answer": "alone"
+      },
+      {
+        "text": "The ___ boy sat on a bench, hoping someone would talk to him.",
+        "answer": "lonely"
+      },
+      {
+        "text": "I like to walk ___ in the forest.",
+        "answer": "alone"
+      },
+      {
+        "text": "A ___ student may join a club to meet people.",
+        "answer": "lonely"
+      },
+      {
+        "text": "Please do not leave the child ___ at home.",
+        "answer": "alone"
+      },
+      {
+        "text": "The ___ old man had no friends to visit him.",
+        "answer": "lonely"
+      },
+      {
+        "text": "I need to be ___ to finish this essay.",
+        "answer": "alone"
+      },
+      {
+        "text": "It is a ___ road with no houses or shops.",
+        "answer": "lonely"
+      },
+      {
+        "text": "He travelled ___ across Europe by bike.",
+        "answer": "alone"
+      },
+      {
+        "text": "A ___ child may need a friend to talk to.",
+        "answer": "lonely"
+      },
+      {
+        "text": "Leave me ___ for ten minutes, please.",
+        "answer": "alone"
+      },
+      {
+        "text": "Moving to a big city can be a ___ experience.",
+        "answer": "lonely"
+      },
+      {
+        "text": "I can do it ___; I do not need help.",
+        "answer": "alone"
+      },
+      {
+        "text": "He wrote a poem about a ___ tree on a hill.",
+        "answer": "lonely"
+      },
+      {
+        "text": "Do not walk home ___ at night.",
+        "answer": "alone"
+      },
+      {
+        "text": "She wrote a sad song about a ___ girl.",
+        "answer": "lonely"
+      },
+      {
+        "text": "I prefer to study ___ in a quiet room.",
+        "answer": "alone"
+      },
+      {
+        "text": "The ___ lighthouse stood far from the shore.",
+        "answer": "lonely"
+      },
+      {
+        "text": "Can you stay here ___ for a while?",
+        "answer": "alone"
+      },
+      {
+        "text": "A ___ cabin in the mountains was his home.",
+        "answer": "lonely"
+      }
+    ]
+  }
+]

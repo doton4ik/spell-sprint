@@ -36,7 +36,7 @@ const seen = new Set(pairDrills.flatMap((pair) => pair.sentences.map((sentence) 
 const pairs = new Map(pairDrills.map((pair) => [pair.id, pair]))
 const wholeWord = (text, word) => new RegExp(`(^|[^A-Za-z'])${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}($|[^A-Za-z'])`, 'i').test(text)
 
-const MIN_NEW = 18
+const MIN_NEW = Number(flags.find((flag) => flag.startsWith('--min='))?.slice(6) ?? 18)
 const accepted = new Map()
 let rejected = 0
 const created = new Map() // new pairs: id -> the pair object from the batch

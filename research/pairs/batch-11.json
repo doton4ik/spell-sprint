@@ -1,0 +1,667 @@
+[
+  {
+    "id": "few-little",
+    "level": "B1",
+    "words": [
+      "few",
+      "little"
+    ],
+    "meanings": {
+      "few": "мало (исчисляемое)",
+      "little": "мало (неисчисляемое)"
+    },
+    "hint": "few = not many, countable things (few books) · little = not much, uncountable things (little water)",
+    "sentences": [
+      {
+        "text": "There are ___ chairs left, so hurry up.",
+        "answer": "few"
+      },
+      {
+        "text": "We have very ___ time before the train leaves.",
+        "answer": "little"
+      },
+      {
+        "text": "Only a ___ students passed the hard test.",
+        "answer": "few"
+      },
+      {
+        "text": "I put a ___ sugar in my tea.",
+        "answer": "little"
+      },
+      {
+        "text": "___ people know how to repair old watches.",
+        "answer": "few"
+      },
+      {
+        "text": "She has ___ money, so she cooks at home.",
+        "answer": "little"
+      },
+      {
+        "text": "He made very ___ mistakes in the dictation.",
+        "answer": "few"
+      },
+      {
+        "text": "Add a ___ milk if the soup is too thick.",
+        "answer": "little"
+      },
+      {
+        "text": "A ___ friends are coming over tonight.",
+        "answer": "few"
+      },
+      {
+        "text": "We had ___ snow in the city this winter.",
+        "answer": "little"
+      },
+      {
+        "text": "I have only a ___ euros in my pocket.",
+        "answer": "few"
+      },
+      {
+        "text": "Please give me a ___ help with this box.",
+        "answer": "little"
+      },
+      {
+        "text": "Quite a ___ shops are closed on Sunday.",
+        "answer": "few"
+      },
+      {
+        "text": "The town has ___ interest in new buses.",
+        "answer": "little"
+      },
+      {
+        "text": "Very ___ tourists visit this village in winter.",
+        "answer": "few"
+      },
+      {
+        "text": "There was ___ hope of finding the lost ring.",
+        "answer": "little"
+      },
+      {
+        "text": "Only a ___ minutes are left in the lesson.",
+        "answer": "few"
+      },
+      {
+        "text": "I know ___ about cars, so ask someone else.",
+        "answer": "little"
+      },
+      {
+        "text": "Just a ___ days ago, it was sunny.",
+        "answer": "few"
+      },
+      {
+        "text": "She speaks ___ English, but she tries her best.",
+        "answer": "little"
+      }
+    ]
+  },
+  {
+    "id": "interested-interesting",
+    "level": "B1",
+    "words": [
+      "interested",
+      "interesting"
+    ],
+    "meanings": {
+      "interested": "заинтересованный (человек)",
+      "interesting": "интересный (вещь, человек)"
+    },
+    "hint": "interested = how a person feels (I am interested) · interesting = what causes the interest (an interesting book)",
+    "sentences": [
+      {
+        "text": "This book is really ___ and I can't stop reading.",
+        "answer": "interesting"
+      },
+      {
+        "text": "Are you ___ in learning to cook?",
+        "answer": "interested"
+      },
+      {
+        "text": "We saw an ___ film about space last night.",
+        "answer": "interesting"
+      },
+      {
+        "text": "My brother is very ___ in old cars.",
+        "answer": "interested"
+      },
+      {
+        "text": "That is a very ___ idea.",
+        "answer": "interesting"
+      },
+      {
+        "text": "She was ___ in the news about the new bridge.",
+        "answer": "interested"
+      },
+      {
+        "text": "The museum has some ___ paintings from Italy.",
+        "answer": "interesting"
+      },
+      {
+        "text": "I am not ___ in football.",
+        "answer": "interested"
+      },
+      {
+        "text": "What an ___ story!",
+        "answer": "interesting"
+      },
+      {
+        "text": "The teacher asked who was ___ in the trip.",
+        "answer": "interested"
+      },
+      {
+        "text": "It was an ___ trip with lots of surprises.",
+        "answer": "interesting"
+      },
+      {
+        "text": "Many students are ___ in studying abroad.",
+        "answer": "interested"
+      },
+      {
+        "text": "He told us something ___ about his village.",
+        "answer": "interesting"
+      },
+      {
+        "text": "Tom looks ___ in everything the guide says.",
+        "answer": "interested"
+      },
+      {
+        "text": "Her job sounds really ___.",
+        "answer": "interesting"
+      },
+      {
+        "text": "I was so ___ that I asked ten questions.",
+        "answer": "interested"
+      },
+      {
+        "text": "Do you know any ___ websites for learning English?",
+        "answer": "interesting"
+      },
+      {
+        "text": "The visitors seemed ___ in our old photos.",
+        "answer": "interested"
+      },
+      {
+        "text": "The lesson was ___ because we played a game.",
+        "answer": "interesting"
+      },
+      {
+        "text": "I'm ___ in buying a used bike if it is cheap.",
+        "answer": "interested"
+      }
+    ]
+  },
+  {
+    "id": "so-such",
+    "level": "B1",
+    "words": [
+      "so",
+      "such"
+    ],
+    "meanings": {
+      "so": "так, настолько (+ прилагательное)",
+      "such": "такой (+ существительное)"
+    },
+    "hint": "so = before an adjective or adverb (so happy) · such = before a noun (such a nice day)",
+    "sentences": [
+      {
+        "text": "It was ___ a hot day that we stayed indoors.",
+        "answer": "such"
+      },
+      {
+        "text": "The soup is ___ delicious!",
+        "answer": "so"
+      },
+      {
+        "text": "She has ___ a kind heart.",
+        "answer": "such"
+      },
+      {
+        "text": "I am ___ tired that I can't think.",
+        "answer": "so"
+      },
+      {
+        "text": "We had ___ nice weather on our trip.",
+        "answer": "such"
+      },
+      {
+        "text": "He speaks ___ quickly that I cannot follow.",
+        "answer": "so"
+      },
+      {
+        "text": "You have ___ lovely children.",
+        "answer": "such"
+      },
+      {
+        "text": "Thank you, you are ___ helpful.",
+        "answer": "so"
+      },
+      {
+        "text": "I have never seen ___ a big dog.",
+        "answer": "such"
+      },
+      {
+        "text": "Why are you walking ___ slowly today?",
+        "answer": "so"
+      },
+      {
+        "text": "They live in ___ a small flat that guests sleep in the hall.",
+        "answer": "such"
+      },
+      {
+        "text": "The film was ___ boring that I fell asleep.",
+        "answer": "so"
+      },
+      {
+        "text": "It was ___ an exciting match!",
+        "answer": "such"
+      },
+      {
+        "text": "Don't speak ___ loudly in the library.",
+        "answer": "so"
+      },
+      {
+        "text": "She told ___ funny stories that everyone laughed.",
+        "answer": "such"
+      },
+      {
+        "text": "I'm ___ glad you came to the party.",
+        "answer": "so"
+      },
+      {
+        "text": "He gave me ___ good advice that I wrote it down.",
+        "answer": "such"
+      },
+      {
+        "text": "The road was ___ icy that we turned back.",
+        "answer": "so"
+      },
+      {
+        "text": "What ___ lovely weather we have today!",
+        "answer": "such"
+      },
+      {
+        "text": "The coffee is ___ strong that I cannot sleep.",
+        "answer": "so"
+      }
+    ]
+  },
+  {
+    "id": "been-gone",
+    "level": "B1",
+    "words": [
+      "been",
+      "gone"
+    ],
+    "meanings": {
+      "been": "был (и вернулся)",
+      "gone": "ушёл (и ещё не вернулся); исчез"
+    },
+    "hint": "been = went and came back (been to Rome) · gone = went and is still away, or disappeared",
+    "sentences": [
+      {
+        "text": "I have ___ to Vienna twice.",
+        "answer": "been"
+      },
+      {
+        "text": "Where is Anna? She has ___ to the shop.",
+        "answer": "gone"
+      },
+      {
+        "text": "Have you ever ___ to Japan?",
+        "answer": "been"
+      },
+      {
+        "text": "Dad is not here; he has ___ to work.",
+        "answer": "gone"
+      },
+      {
+        "text": "We have never ___ to a concert like that.",
+        "answer": "been"
+      },
+      {
+        "text": "My keys have ___; I cannot find them anywhere.",
+        "answer": "gone"
+      },
+      {
+        "text": "She has ___ to the dentist, and her tooth feels fine now.",
+        "answer": "been"
+      },
+      {
+        "text": "The last bus has already ___.",
+        "answer": "gone"
+      },
+      {
+        "text": "I have just ___ to the post office, so the parcel is sent.",
+        "answer": "been"
+      },
+      {
+        "text": "All the cake has ___! Who ate it?",
+        "answer": "gone"
+      },
+      {
+        "text": "They have ___ to this café many times.",
+        "answer": "been"
+      },
+      {
+        "text": "The tourists have ___ and the beach is quiet again.",
+        "answer": "gone"
+      },
+      {
+        "text": "He has ___ to Prague and loved the old town.",
+        "answer": "been"
+      },
+      {
+        "text": "Everybody has ___ home, and the classroom is empty.",
+        "answer": "gone"
+      },
+      {
+        "text": "How long have you ___ in Slovakia?",
+        "answer": "been"
+      },
+      {
+        "text": "Jana has ___ out; please call back later.",
+        "answer": "gone"
+      },
+      {
+        "text": "Has your sister ever ___ to a farm?",
+        "answer": "been"
+      },
+      {
+        "text": "His fever has ___ and he feels better.",
+        "answer": "gone"
+      },
+      {
+        "text": "We have ___ here before, haven't we?",
+        "answer": "been"
+      },
+      {
+        "text": "The birds have ___ south for the winter.",
+        "answer": "gone"
+      }
+    ]
+  },
+  {
+    "id": "last-latest",
+    "level": "B1",
+    "words": [
+      "last",
+      "latest"
+    ],
+    "meanings": {
+      "last": "последний (финальный); прошлый",
+      "latest": "последний (самый новый)"
+    },
+    "hint": "last = final, or the one before this one (last week, the last bus) · latest = the newest, just released or most recent (the latest news, the latest update)",
+    "sentences": [
+      {
+        "text": "Please turn off the lights; you are the ___ person to leave.",
+        "answer": "last"
+      },
+      {
+        "text": "My phone is the ___ model, released this week.",
+        "answer": "latest"
+      },
+      {
+        "text": "We watched the ___ episode, and the series ended.",
+        "answer": "last"
+      },
+      {
+        "text": "She always reads the ___ news on her phone.",
+        "answer": "latest"
+      },
+      {
+        "text": "That was the ___ piece of cake, and now it's gone.",
+        "answer": "last"
+      },
+      {
+        "text": "Have you heard their ___ song? It came out yesterday.",
+        "answer": "latest"
+      },
+      {
+        "text": "I saw her ___ month in Prague.",
+        "answer": "last"
+      },
+      {
+        "text": "The ___ fashion shows new colours for this autumn.",
+        "answer": "latest"
+      },
+      {
+        "text": "He ran the ___ lap and won the race.",
+        "answer": "last"
+      },
+      {
+        "text": "Check the ___ version of the app for new features.",
+        "answer": "latest"
+      },
+      {
+        "text": "Who was the ___ to arrive at school?",
+        "answer": "last"
+      },
+      {
+        "text": "I love the ___ film by that director; it just came to cinemas.",
+        "answer": "latest"
+      },
+      {
+        "text": "It was the ___ day of our holiday.",
+        "answer": "last"
+      },
+      {
+        "text": "The ___ update fixed several bugs and was released this morning.",
+        "answer": "latest"
+      },
+      {
+        "text": "Sunday was the ___ time we saw each other.",
+        "answer": "last"
+      },
+      {
+        "text": "She bought the ___ laptop with the newest processor.",
+        "answer": "latest"
+      },
+      {
+        "text": "We missed the ___ train and walked home.",
+        "answer": "last"
+      },
+      {
+        "text": "What is the ___ news about the weather?",
+        "answer": "latest"
+      },
+      {
+        "text": "This is my ___ chance to pass the exam.",
+        "answer": "last"
+      },
+      {
+        "text": "The ___ edition of the magazine has a long interview.",
+        "answer": "latest"
+      }
+    ]
+  },
+  {
+    "id": "make-do",
+    "level": "A2",
+    "words": [
+      "make",
+      "do"
+    ],
+    "meanings": {
+      "make": "делать (создавать, производить)",
+      "do": "делать (выполнять действие, задание)"
+    },
+    "hint": "make = create or produce (make a cake) · do = perform an action, task or activity (do homework) · fixed phrases: make a decision, a phone call, friends, a mistake; do the dishes, a favour, your best",
+    "sentences": [
+      {
+        "text": "Can you ___ a cup of tea for me?",
+        "answer": "make"
+      },
+      {
+        "text": "I need to ___ my homework before dinner.",
+        "answer": "do"
+      },
+      {
+        "text": "Please try not to ___ so much noise.",
+        "answer": "make"
+      },
+      {
+        "text": "Let's ___ the dishes together.",
+        "answer": "do"
+      },
+      {
+        "text": "She wants to ___ a cake for the party.",
+        "answer": "make"
+      },
+      {
+        "text": "What are you going to ___ this weekend?",
+        "answer": "do"
+      },
+      {
+        "text": "Try not to ___ mistakes in the dictation.",
+        "answer": "make"
+      },
+      {
+        "text": "Could you ___ me a favour?",
+        "answer": "do"
+      },
+      {
+        "text": "Dad will ___ a decision tomorrow.",
+        "answer": "make"
+      },
+      {
+        "text": "She likes to ___ yoga every morning.",
+        "answer": "do"
+      },
+      {
+        "text": "We need to ___ a plan for the trip.",
+        "answer": "make"
+      },
+      {
+        "text": "My brother will ___ the shopping today.",
+        "answer": "do"
+      },
+      {
+        "text": "Mix the eggs and flour to ___ dough.",
+        "answer": "make"
+      },
+      {
+        "text": "I have a lot of work to ___ today.",
+        "answer": "do"
+      },
+      {
+        "text": "Children ___ friends easily at the beach.",
+        "answer": "make"
+      },
+      {
+        "text": "Please ___ your best on the test.",
+        "answer": "do"
+      },
+      {
+        "text": "Can you ___ a phone call for me?",
+        "answer": "make"
+      },
+      {
+        "text": "I will ___ the laundry on Saturday.",
+        "answer": "do"
+      },
+      {
+        "text": "Good habits ___ a big difference.",
+        "answer": "make"
+      },
+      {
+        "text": "Would you ___ the cleaning while I cook?",
+        "answer": "do"
+      }
+    ]
+  },
+  {
+    "id": "each-every",
+    "level": "B1",
+    "words": [
+      "each",
+      "every"
+    ],
+    "meanings": {
+      "each": "каждый (по отдельности)",
+      "every": "каждый, все без исключения"
+    },
+    "hint": "each = one by one, used with 'of', after the verb, or before a noun (each child) · every = all without exception, before a singular noun (every day) · fixed: each other, every now and then",
+    "sentences": [
+      {
+        "text": "___ of the children got a small present.",
+        "answer": "each"
+      },
+      {
+        "text": "I go running almost ___ morning before school.",
+        "answer": "every"
+      },
+      {
+        "text": "The two friends help ___ other with homework.",
+        "answer": "each"
+      },
+      {
+        "text": "Nearly ___ shop in town was closed on Monday.",
+        "answer": "every"
+      },
+      {
+        "text": "She gave a pen to ___ of the guests.",
+        "answer": "each"
+      },
+      {
+        "text": "The bus comes ___ ten minutes.",
+        "answer": "every"
+      },
+      {
+        "text": "The two boys carried three bags ___.",
+        "answer": "each"
+      },
+      {
+        "text": "Not ___ student passed the test.",
+        "answer": "every"
+      },
+      {
+        "text": "___ of us brought a different dish to the picnic.",
+        "answer": "each"
+      },
+      {
+        "text": "I changed my password ___ three months.",
+        "answer": "every"
+      },
+      {
+        "text": "The teacher spoke to ___ of the parents separately.",
+        "answer": "each"
+      },
+      {
+        "text": "Almost ___ person in the room smiled.",
+        "answer": "every"
+      },
+      {
+        "text": "They hugged ___ other at the station.",
+        "answer": "each"
+      },
+      {
+        "text": "Take ___ of these pills after meals.",
+        "answer": "each"
+      },
+      {
+        "text": "I visit my grandparents ___ other weekend.",
+        "answer": "every"
+      },
+      {
+        "text": "The tickets cost ten euros ___.",
+        "answer": "each"
+      },
+      {
+        "text": "You can visit us ___ now and then.",
+        "answer": "every"
+      },
+      {
+        "text": "I water the plants ___ second day.",
+        "answer": "every"
+      },
+      {
+        "text": "He gave ___ of us a map.",
+        "answer": "each"
+      },
+      {
+        "text": "She writes to her mother ___ two days.",
+        "answer": "every"
+      }
+    ]
+  }
+]

@@ -8,117 +8,123 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### economic-economical (level B2)
-Words: economic / economical
-Meaning: economic = экономический; economical = экономный, выгодный
-Rule: economic = about the economy · economical = saving money or fuel
+### choice-chance (level B1)
+Words: choice / chance
+Meaning: choice = выбор; chance = шанс, вероятность
+Rule: choice = choosing between options · chance = a possibility
 Existing sentences (do not repeat these ideas):
-    - The country has serious ___ problems at the moment.  [economic]
-    - It is more ___ to buy food in large packs.  [economical]
-    - She studies ___ history at university.  [economic]
-    - A small car is cheaper and more ___ to run.  [economical]
-    - The small car is very ___ because it uses little petrol.  [economical]
-    - The country faces serious ___ problems this year.  [economic]
-    - Buying food in large packs is more ___.  [economical]
-    - She studies ___ growth in European countries.  [economic]
+    - You have no ___ but to apologise.  [choice]
+    - There's a good ___ of rain later.  [chance]
+    - Blue was an easy ___ for the walls.  [choice]
+    - Is there any ___ I can change my seat?  [chance]
+    - The menu offers plenty of ___ for vegetarians.  [choice]
+    - You have a ___ between tea and coffee.  [choice]
+    - There is a good ___ of rain tomorrow.  [chance]
+    - It was a hard ___ because I liked both shirts.  [choice]
 
-### sensible-sensitive (level B1)
-Words: sensible / sensitive
-Meaning: sensible = разумный, здравомыслящий; sensitive = чувствительный
-Rule: sensible = showing good judgement · sensitive = easily hurt or affected
+### offer-suggest (level B1)
+Words: offer / suggest
+Meaning: offer = предлагать (дать что-то); suggest = предлагать (идею), советовать
+Rule: offer = say you will give or do something · suggest = give an idea
 Existing sentences (do not repeat these ideas):
-    - It is ___ to take a warm coat in winter.  [sensible]
-    - My skin is very ___ to the sun.  [sensitive]
-    - He is a ___ person who always thinks before acting.  [sensible]
-    - Be kind to her, because she is very ___.  [sensitive]
-    - It is ___ to take a coat when it is cold.  [sensible]
-    - My skin is ___ to the sun, so I wear a hat.  [sensitive]
-    - Be kind to Dan; he is very ___ about his accent.  [sensitive]
-    - Wearing a helmet is a ___ choice for cyclists.  [sensible]
+    - Can I ___ you some tea?  [offer]
+    - I ___ taking the earlier train.  [suggest]
+    - The waiter will ___ dessert later.  [offer]
+    - Can you ___ a good place for lunch near here?  [suggest]
+    - Can I ___ you a cup of tea?  [offer]
+    - I ___ going to the cinema on Friday.  [suggest]
+    - The shop will ___ a ten percent discount.  [offer]
+    - Can you ___ a good place to eat?  [suggest]
 
-### lose-miss (level B1)
-Words: lose / miss
-Meaning: lose = терять; проигрывать; miss = пропустить; скучать по
-Rule: lose = cannot find or not win · miss = be too late for, or feel sad without someone
+### weather-whether (level A2)
+Words: weather / whether
+Meaning: weather = погода; whether = ли
+Rule: weather = rain, sun, wind · whether = "if" after verbs like know or ask
 Existing sentences (do not repeat these ideas):
-    - Hurry up, or we will ___ the last bus.  [miss]
-    - Don't ___ your wallet on the crowded train.  [lose]
-    - We will ___ you very much when you leave.  [miss]
-    - I always ___ my keys when I am in a hurry.  [lose]
-    - Hurry, or you will ___ the last bus.  [miss]
-    - Be careful not to ___ your phone at the airport.  [lose]
-    - I really ___ my friends when I am abroad.  [miss]
-    - If you press this button, you may ___ all your work.  [lose]
+    - The ___ was terrible all weekend, so we stayed home.  [weather]
+    - I don't know ___ he will come to the meeting.  [whether]
+    - We will have a picnic if the ___ is good.  [weather]
+    - She asked ___ the shop was open on Sundays.  [whether]
+    - The ___ will change for the worse this afternoon.  [weather]
+    - No, I don't think the ___ will clear up.  [weather]
+    - I wonder ___ I should really become a teacher.  [whether]
+    - I don't know ___ you like her or not.  [whether]
+    - I couldn't care less ___ you stay or go.  [whether]
 
-### hope-wait (level A2)
-Words: hope / wait
-Meaning: hope = надеяться; wait = ждать
-Rule: hope = want something to happen · wait = stay until something happens
+### lose-loose (level B1)
+Words: lose / loose
+Meaning: lose = терять, проигрывать; loose = свободный, болтающийся
+Rule: lose = not win or not keep (verb) · loose = not tight (adjective)
 Existing sentences (do not repeat these ideas):
-    - I ___ you feel better very soon.  [hope]
-    - Please ___ here until I come back.  [wait]
-    - I can't ___ to see you again in June.  [wait]
-    - We ___ that the weather will be good on Saturday.  [hope]
-    - Please ___ here until the doctor calls you.  [wait]
-    - I ___ you feel better soon.  [hope]
-    - I ___ it will not rain on Saturday.  [hope]
-    - Can you ___ a minute while I find my keys?  [wait]
+    - These trousers are too ___ for me now.  [loose]
+    - Be careful not to ___ your ticket on the train.  [lose]
+    - One of the screws on the chair is ___.  [loose]
+    - I am afraid we will ___ the match tomorrow.  [lose]
+    - I gave up trying to ___ weight years ago.  [lose]
+    - I was afraid I was going to ___ you.  [lose]
+    - He's got a ___ button on his coat.  [loose]
+    - Look for it among the ___ papers on my desk.  [loose]
+    - Please be careful not to let the dog ___.  [loose]
 
-### fewer-less (level B1)
-Words: fewer / less
-Meaning: fewer = меньше (о том, что можно посчитать); less = меньше (о том, что нельзя посчитать)
-Rule: fewer = a smaller number of things you can count · less = a smaller amount
+### quiet-quite (level B1)
+Words: quiet / quite
+Meaning: quiet = тихий; quite = довольно, вполне
+Rule: quiet = with little noise · quite = fairly or rather
 Existing sentences (do not repeat these ideas):
-    - There are ___ students in our class than last year.  [fewer]
-    - I drink ___ coffee than I used to.  [less]
-    - We made ___ mistakes in this test than in the last one.  [fewer]
-    - You should spend ___ time on your phone every day.  [less]
-    - There are ___ cars on the road on Sundays.  [fewer]
-    - I drink ___ coffee than my brother.  [less]
-    - We have ___ homework this week than last week.  [less]
-    - ___ people came to the cinema because of the storm.  [fewer]
+    - Please be ___, because the baby is sleeping upstairs.  [quiet]
+    - The film was ___ good, but a little too long.  [quite]
+    - We live in a very ___ street near the park.  [quiet]
+    - I am ___ tired after the long journey today.  [quite]
+    - She found a ___ place to read her book.  [quiet]
+    - Let's get out of here and go somewhere ___.  [quiet]
+    - I tried to be as ___ as I could.  [quiet]
+    - It's ___ cold here, so I wear a hat.  [quite]
+    - It's ___ a bit more expensive than I thought.  [quite]
 
-### adapt-adopt (level B1)
-Words: adapt / adopt
-Meaning: adapt = приспосабливать(ся); adopt = принять (решение, правило); усыновить
-Rule: adapt = change to fit · adopt = take and start using; take a child into your family
+### affect-effect (level B2)
+Words: affect / effect
+Meaning: affect = влиять на; effect = эффект, влияние
+Rule: affect = to influence (verb) · effect = a result (noun)
 Existing sentences (do not repeat these ideas):
-    - We had to ___ quickly to the new timetable.  [adapt]
-    - They want to ___ a child next year.  [adopt]
-    - This recipe is easy to ___ for vegetarians.  [adapt]
-    - Our school plans to ___ a new rule about phones.  [adopt]
-    - Animals slowly ___ to colder winters.  [adapt]
-    - It takes time to ___ to a new school.  [adapt]
-    - The family wants to ___ a small dog from the shelter.  [adopt]
-    - Chefs often ___ old recipes for modern kitchens.  [adapt]
+    - Stress can ___ your sleep and your health.  [affect]
+    - The medicine had a strange ___ on him.  [effect]
+    - Bad weather may ___ the time of our flight.  [affect]
+    - The new law had a big ___ on small businesses.  [effect]
+    - I hope that this doesn't ___ our friendship.  [affect]
+    - We must not allow these problems to ___ the project.  [affect]
+    - The medicine seemed to have no ___ on the patient.  [effect]
+    - His words had a great ___ on my life.  [effect]
+    - The storm had a serious ___ on the economy.  [effect]
 
-### during-while (level B1)
-Words: during / while
-Meaning: during = во время (+ существительное); while = пока, в то время как (+ предложение)
-Rule: during + noun (during the film) · while + subject and verb (while he cooked)
+### advice-advise (level B1)
+Words: advice / advise
+Meaning: advice = совет; advise = советовать
+Rule: advice = a suggestion (noun, with c) · advise = to give advice (verb, with s)
 Existing sentences (do not repeat these ideas):
-    - Nobody spoke ___ the film.  [during]
-    - I washed up ___ he cooked dinner.  [while]
-    - She hurt her knee ___ the match.  [during]
-    - Please wait here ___ I check the booking.  [while]
-    - I met Tom ___ my lunch break.  [during]
-    - Please do not talk ___ the film.  [during]
-    - I listen to music ___ I cook dinner.  [while]
-    - He fell asleep ___ the long lesson.  [during]
+    - She gave me some good ___ about finding a job.  [advice]
+    - Can you ___ me which train to take?  [advise]
+    - I would ___ you to book a table early.  [advise]
+    - Thank you for your ___; it really helped me.  [advice]
+    - I have no one to go to for ___.  [advice]
+    - All I can do is to give her ___.  [advice]
+    - What do you ___ me to do?  [advise]
+    - I'd ___ you not to eat it.  [advise]
+    - Can you ___ me on what I should do?  [advise]
 
-### job-work (level A2)
-Words: job / work
-Meaning: job = работа, должность (одна, конкретная); work = работа, труд (вообще, неисчисляемое)
-Rule: a job = a position you have · work = what you do, uncountable (no "a work")
+### buy-by-bye (level A2)
+Words: buy / by / bye
+Meaning: buy = покупать; by = у, рядом; (автор) — кем; на (транспорте); bye = пока
+Rule: buy = pay for something · by = near, or who did it · bye = goodbye
 Existing sentences (do not repeat these ideas):
-    - She found a new ___ in a bookshop.  [job]
-    - I have too much ___ this week.  [work]
-    - Please turn off your phone and ___ quietly.  [work]
-    - Cleaning windows is hard ___.  [work]
-    - My sister found a new ___ at a bakery.  [job]
-    - I have a lot of ___ to finish today.  [work]
-    - Dad leaves for ___ at seven every morning.  [work]
-    - Being a nurse is a hard ___.  [job]
+    - I want to ___ a new jacket for winter.  [buy]
+    - This book was written ___ a local teacher.  [by]
+    - She waved and said ___ at the station.  [bye]
+    - He was sitting ___ the window and reading.  [by]
+    - Where can I ___ stamps around here?  [buy]
+    - He doesn't have enough money to ___ a car.  [buy]
+    - Is this a good time to ___ a house?  [buy]
+    - He doesn't think he can do that ___ himself.  [by]
+    - I'll stop ___ your place on my way home.  [by]
 
 ## Rules for every sentence
 

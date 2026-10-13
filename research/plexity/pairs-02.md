@@ -8,84 +8,6 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### lend-borrow-loan (level B1)
-Words: lend / borrow / loan
-Meaning: lend = одолжить (дать); borrow = взять взаймы; loan = заём, кредит
-Rule: lend = give for a while · borrow = take for a while · a loan = money you borrow
-Existing sentences (do not repeat these ideas):
-    - Can I ___ your umbrella for tonight?  [borrow]
-    - I'll ___ you my charger after lunch.  [lend]
-    - The bank refused our home ___.  [loan]
-    - Never ___ money you can't afford to lose.  [lend]
-    - She used a student ___ to pay fees.  [loan]
-    - May I ___ a pen from you?  [borrow]
-    - The bank gave him a ___ to buy a car.  [loan]
-
-### road-way (level A2)
-Words: road / way
-Meaning: road = дорога (улица, шоссе); way = путь, дорога (куда); способ
-Rule: road = the real street · way = the route or the method (the way to the station)
-Existing sentences (do not repeat these ideas):
-    - This ___ gets icy in winter.  [road]
-    - Is this the right ___ to the station?  [way]
-    - They live on a quiet country ___.  [road]
-    - Show me the easiest ___ to open it.  [way]
-    - The main ___ was closed after the storm.  [road]
-    - Cars drive slowly on this narrow ___.  [road]
-    - On the ___ home, I bought some bread.  [way]
-
-### wait-expect (level B1)
-Words: wait / expect
-Meaning: wait = ждать (оставаться, пока); expect = ожидать, рассчитывать (что будет)
-Rule: wait (for) = stay until something happens · expect = think something will happen
-Existing sentences (do not repeat these ideas):
-    - Please ___ here while I check the order.  [wait]
-    - I didn't ___ such a long reply.  [expect]
-    - We had to ___ outside the clinic.  [wait]
-    - I can't ___ any longer in this queue.  [wait]
-    - I ___ a letter from my friend this week.  [expect]
-    - Do you ___ the exam to be difficult?  [expect]
-    - We have to ___ ten minutes for the next bus.  [wait]
-
-### price-prize (level A2)
-Words: price / prize
-Meaning: price = цена; prize = приз
-Rule: price = how much it costs · prize = what you get for winning
-Existing sentences (do not repeat these ideas):
-    - What's the ___ of this blue jacket?  [price]
-    - She won first ___ in the art contest.  [prize]
-    - The shop reduced the ___ of milk.  [price]
-    - His ___ was a weekend in Edinburgh.  [prize]
-    - I checked the ___ before buying it.  [price]
-    - What is the ___ of this jacket?  [price]
-    - The ___ of bread went up last month.  [price]
-
-### economy-economics (level B2)
-Words: economy / economics
-Meaning: economy = экономика (страны); economics = экономика (наука, предмет)
-Rule: economy = the money system of a country · economics = the subject you study
-Existing sentences (do not repeat these ideas):
-    - She is studying ___ at Bristol.  [economics]
-    - Tourism is important for the island's ___.  [economy]
-    - His degree in ___ helped him get the job.  [economics]
-    - The national ___ grew last quarter.  [economy]
-    - She studies ___ at university.  [economics]
-    - The country's ___ grew slowly last year.  [economy]
-    - My brother has a degree in ___.  [economics]
-
-### notice-note (level B2)
-Words: notice / note
-Meaning: notice = заметить; note = отметить, записать; обратить внимание
-Rule: notice = see, become aware · note = write down, or "please note" = pay attention
-Existing sentences (do not repeat these ideas):
-    - Did you ___ her new haircut?  [notice]
-    - Please ___ your seat number on the form.  [note]
-    - I didn't ___ the sign by the gate.  [notice]
-    - Please ___ that the shop closes early on Sundays.  [note]
-    - Did you ___ the new painting on the wall?  [notice]
-    - Please ___ the date of the meeting in your diary.  [note]
-    - I did not ___ that my bag was open.  [notice]
-
 ### custom-habit (level B2)
 Words: custom / habit
 Meaning: custom = обычай; habit = привычка
@@ -111,6 +33,89 @@ Existing sentences (do not repeat these ideas):
     - Be ___ when you cross the busy road.  [careful]
     - A ___ father helps with homework and cooks dinner.  [caring]
     - Please be ___ with the glass; it breaks easily.  [careful]
+
+### excuse-apologise (level B1)
+Words: excuse / apologise
+Meaning: excuse = извинить, простить; apologise = извиниться
+Rule: excuse me / excuse someone · apologise (to someone) = say sorry yourself
+Existing sentences (do not repeat these ideas):
+    - Please ___ me for being late.  [excuse]
+    - You should ___ to your sister.  [apologise]
+    - ___ me, is this seat free?  [excuse]
+    - He forgot to ___ after the mistake.  [apologise]
+    - I want to ___ for being late.  [apologise]
+    - Please ___ my bad handwriting; I was in a hurry.  [excuse]
+    - We ___ for the long delay.  [apologise]
+
+### then-than (level A2)
+Words: then / than
+Meaning: then = потом, тогда; than = чем (в сравнении)
+Rule: then = at that time or next · than = used to compare
+Existing sentences (do not repeat these ideas):
+    - She is much taller ___ her older brother.  [than]
+    - Finish your dinner, and ___ you can watch TV.  [then]
+    - First wash the rice, and ___ cook it slowly.  [then]
+    - Travelling by train is cheaper ___ flying to Spain.  [than]
+    - I ate one and ___ I ate the other.  [then]
+    - No one could be sure what would happen ___.  [then]
+    - He has a lot more money ___ I have.  [than]
+    - I'm better at looking after children ___ you are.  [than]
+
+### whose-whos (level B1)
+Words: whose / who's
+Meaning: whose = чей; who's = кто есть = who is / who has
+Rule: whose = belongs to which person · who's = who is or who has
+Existing sentences (do not repeat these ideas):
+    - Do you know ___ bag is left on the bus?  [whose]
+    - I don't know ___ coming to the party tonight.  [who's]
+    - ___ car is parked in front of my garage?  [whose]
+    - She is the girl ___ been living next door.  [who's]
+    - I know a girl ___ father is a lawyer.  [whose]
+    - ___ little child is this? Where are his parents?  [whose]
+    - I wonder ___ going to be at the party.  [who's]
+    - We need to know ___ going to be there.  [who's]
+
+### accept-except (level B1)
+Words: accept / except
+Meaning: accept = принимать; except = кроме
+Rule: accept = take or agree to (verb) · except = not including
+Existing sentences (do not repeat these ideas):
+    - Please ___ this small gift from all of us.  [accept]
+    - Everyone came to the party ___ Tom, who was ill.  [except]
+    - Do you ___ credit cards in your little shop?  [accept]
+    - The museum is open every day ___ Monday.  [except]
+    - I had no choice but to ___ the offer.  [accept]
+    - Are you too proud to ___ a little help?  [accept]
+    - I'll give you any of them ___ this one.  [except]
+    - ___ for the storm, I would have arrived earlier.  [except]
+
+### write-right (level A2)
+Words: write / right
+Meaning: write = писать; right = правый; правильный; право
+Rule: write = put words on paper · right = correct, or the opposite of left
+Existing sentences (do not repeat these ideas):
+    - Please ___ your name at the top of the page.  [write]
+    - Turn ___ at the next traffic lights and go straight.  [right]
+    - You are ___ about the price of the tickets.  [right]
+    - I will ___ you a long letter next week.  [write]
+    - I know how to ___ a letter in English.  [write]
+    - All you have to do is ___ it down.  [write]
+    - Now that you say it, I think you're ___.  [right]
+    - She doesn't have a lot of money ___ now.  [right]
+
+### hear-here (level A2)
+Words: hear / here
+Meaning: hear = слышать; here = здесь
+Rule: hear = listen with your ears · here = in this place
+Existing sentences (do not repeat these ideas):
+    - Can you ___ the music from your room?  [hear]
+    - Please sit ___ next to me on the sofa.  [here]
+    - I can't ___ you, so please speak louder.  [hear]
+    - Come ___ and look at these old photos.  [here]
+    - I would be very happy to ___ from her.  [hear]
+    - If you've got a better idea, let's ___ it.  [hear]
+    - We can go if you don't like it ___.  [here]
+    - What time did I tell you to get ___?  [here]
 
 ## Rules for every sentence
 

@@ -46,70 +46,70 @@ Existing sentences (do not repeat these ideas):
     - How much did you spend on ___ last year?  [clothes]
     - If the ___ don't fit, you can return them.  [clothes]
 
-### bring-take (level A2)
-Words: bring / take
-Meaning: bring = приносить, приводить (сюда); take = относить, отводить, брать (отсюда)
-Rule: bring = carry towards the speaker · take = carry away from the speaker
+### road-way (level A2)
+Words: road / way
+Meaning: road = дорога (улица, шоссе); way = путь, дорога (куда); способ
+Rule: road = the real street · way = the route or the method (the way to the station)
 Existing sentences (do not repeat these ideas):
-    - Waiter, could you ___ us the bill, please?  [bring]
-    - I will ___ this parcel to the post office.  [take]
-    - Could you ___ me a glass of water, please?  [bring]
-    - Don't forget to ___ the rubbish out tonight.  [take]
-    - ___ this letter to the post office, please.  [take]
-    - Please ___ a salad to my party on Saturday.  [bring]
-    - I will ___ the dog for a walk after lunch.  [take]
+    - This ___ gets icy in winter.  [road]
+    - Is this the right ___ to the station?  [way]
+    - They live on a quiet country ___.  [road]
+    - Show me the easiest ___ to open it.  [way]
+    - The main ___ was closed after the storm.  [road]
+    - Cars drive slowly on this narrow ___.  [road]
+    - On the ___ home, I bought some bread.  [way]
 
-### fun-funny (level A2)
-Words: fun / funny
-Meaning: fun = веселье, удовольствие; funny = смешной
-Rule: fun = enjoyment · funny = makes you laugh (or strange)
+### wait-expect (level B1)
+Words: wait / expect
+Meaning: wait = ждать (оставаться, пока); expect = ожидать, рассчитывать (что будет)
+Rule: wait (for) = stay until something happens · expect = think something will happen
 Existing sentences (do not repeat these ideas):
-    - We had a lot of ___ at the beach.  [fun]
-    - He told a very ___ joke, and everyone laughed.  [funny]
-    - Skiing with friends is great ___ in winter.  [fun]
-    - My little brother makes ___ faces at the camera.  [funny]
-    - The clown told a very ___ story.  [funny]
-    - Skating with friends is great ___.  [fun]
-    - That ___ video made everyone laugh out loud.  [funny]
+    - Please ___ here while I check the order.  [wait]
+    - I didn't ___ such a long reply.  [expect]
+    - We had to ___ outside the clinic.  [wait]
+    - I can't ___ any longer in this queue.  [wait]
+    - I ___ a letter from my friend this week.  [expect]
+    - Do you ___ the exam to be difficult?  [expect]
+    - We have to ___ ten minutes for the next bus.  [wait]
 
-### look-see-watch (level A2)
-Words: look / see / watch
-Meaning: look = смотреть (направить взгляд); see = видеть; watch = смотреть, наблюдать (за чем-то движущимся)
-Rule: look at = turn your eyes to · see = notice with your eyes · watch = look for a time (TV, a match)
+### price-prize (level A2)
+Words: price / prize
+Meaning: price = цена; prize = приз
+Rule: price = how much it costs · prize = what you get for winning
 Existing sentences (do not repeat these ideas):
-    - Can you ___ at my screen for a second?  [look]
-    - I can't ___ anything without my glasses.  [see]
-    - We usually ___ a film on Fridays.  [watch]
-    - Did you ___ the man in the blue coat?  [see]
-    - Please ___ the soup so it doesn't boil over.  [watch]
-    - ___ at the beautiful sky tonight!  [look]
-    - I like to ___ football with my dad.  [watch]
+    - What's the ___ of this blue jacket?  [price]
+    - She won first ___ in the art contest.  [prize]
+    - The shop reduced the ___ of milk.  [price]
+    - His ___ was a weekend in Edinburgh.  [prize]
+    - I checked the ___ before buying it.  [price]
+    - What is the ___ of this jacket?  [price]
+    - The ___ of bread went up last month.  [price]
 
-### all-whole (level B1)
-Words: all / whole
-Meaning: all = все, весь; whole = целый, весь (одна вещь целиком)
-Rule: the whole + singular (the whole day) · all + plural or all the (all the students)
+### economy-economics (level B2)
+Words: economy / economics
+Meaning: economy = экономика (страны); economics = экономика (наука, предмет)
+Rule: economy = the money system of a country · economics = the subject you study
 Existing sentences (do not repeat these ideas):
-    - I spent the ___ day cleaning the flat.  [whole]
-    - ___ the students passed the test.  [all]
-    - She ate the ___ cake by herself.  [whole]
-    - The ___ family came to dinner.  [whole]
-    - I ate the ___ pizza by myself.  [whole]
-    - She read the ___ book in one night.  [whole]
-    - She spent ___ day cooking for the party.  [all]
+    - She is studying ___ at Bristol.  [economics]
+    - Tourism is important for the island's ___.  [economy]
+    - His degree in ___ helped him get the job.  [economics]
+    - The national ___ grew last quarter.  [economy]
+    - She studies ___ at university.  [economics]
+    - The country's ___ grew slowly last year.  [economy]
+    - My brother has a degree in ___.  [economics]
 
-### hear-listen (level A2)
-Words: hear / listen
-Meaning: hear = слышать; listen = слушать
-Rule: hear = sound reaches you · listen (to) = you pay attention
+### notice-note (level B2)
+Words: notice / note
+Meaning: notice = заметить; note = отметить, записать; обратить внимание
+Rule: notice = see, become aware · note = write down, or "please note" = pay attention
 Existing sentences (do not repeat these ideas):
-    - Can you ___ the music next door?  [hear]
-    - Please ___ carefully to the instructions.  [listen]
-    - I didn't ___ my phone ring.  [hear]
-    - The children never ___ in class.  [listen]
-    - I cannot ___ you because the music is too loud.  [hear]
-    - Do you ___ to podcasts on the bus?  [listen]
-    - Can you ___ that strange noise outside?  [hear]
+    - Did you ___ her new haircut?  [notice]
+    - Please ___ your seat number on the form.  [note]
+    - I didn't ___ the sign by the gate.  [notice]
+    - Please ___ that the shop closes early on Sundays.  [note]
+    - Did you ___ the new painting on the wall?  [notice]
+    - Please ___ the date of the meeting in your diary.  [note]
+    - I did not ___ that my bag was open.  [notice]
 
 ## Rules for every sentence
 

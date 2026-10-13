@@ -8,117 +8,130 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### house-home (level A2)
-Words: house / home
-Meaning: house = дом (здание); home = дом, где ты живёшь; домой
-Rule: house = the building · home = where you live (go home, at home — no "to", no "the")
+### week-weak (level A2)
+Words: week / weak
+Meaning: week = неделя; weak = слабый
+Rule: week = seven days · weak = not strong
 Existing sentences (do not repeat these ideas):
-    - I'm going ___ after class.  [home]
-    - She stayed at ___ with the baby.  [home]
-    - That old ___ needs a new roof.  [house]
-    - The builders are painting the ___ next to ours.  [house]
-    - After a long trip, it is great to be back ___.  [home]
-    - They bought a big ___ with a garden.  [house]
-    - I walk ___ from school every day.  [home]
-    - The ___ next door has a blue door.  [house]
+    - We have a team meeting every ___ on Monday.  [week]
+    - After the illness, he felt very ___ for days.  [weak]
+    - She was too ___ to lift the heavy bag.  [weak]
+    - Next ___ we are going on holiday to Greece.  [week]
+    - All I know is that she left last ___.  [week]
+    - What will we be doing this time next ___?  [week]
+    - He will be up and about in a ___.  [week]
+    - I was too ___ to get out of bed.  [weak]
+    - I'm not as ___ as you think I am.  [weak]
 
-### other-another (level A2)
-Words: other / another
-Meaning: other = другой, другие, остальные; another = ещё один; другой (один)
-Rule: another = one more, + singular (another cup) · other = + plural, or after the/my
+### sea-see (level A2)
+Words: sea / see
+Meaning: sea = море; see = видеть
+Rule: sea = salt water · see = use your eyes
 Existing sentences (do not repeat these ideas):
-    - Can I have ___ cup of tea?  [another]
-    - My ___ shoes are under the bed.  [other]
-    - Let's try ___ restaurant tonight.  [another]
-    - Where are the ___ children?  [other]
-    - She needs ___ minute to finish.  [another]
-    - Would you like ___ cup of tea?  [another]
-    - One shoe is here, but where is the ___ one?  [other]
-    - My ___ brother lives in Prague.  [other]
+    - We swam in the warm ___ every afternoon.  [sea]
+    - Can you ___ the mountains from your window?  [see]
+    - I will ___ you at the station tomorrow.  [see]
+    - The ___ was calm and blue this morning.  [sea]
+    - There are a lot of fish in the ___.  [sea]
+    - You will have a wonderful view of the ___.  [sea]
+    - The town is located twelve miles from the ___.  [sea]
+    - I would very much like to ___ her again.  [see]
+    - This is something that we don't ___ every day.  [see]
 
-### still-yet-already (level B1)
-Words: still / yet / already
-Meaning: still = всё ещё; yet = ещё (в отрицаниях); уже (в вопросах); already = уже
-Rule: still = continuing · yet = not yet / …yet? at the end · already = sooner than expected
+### magazine-shop (level A2)
+Words: magazine / shop
+Meaning: magazine = журнал; shop = магазин
+Rule: "магазин" is a shop · a magazine is a журнал
 Existing sentences (do not repeat these ideas):
-    - Are you ready to go ___?  [yet]
-    - I have ___ done my homework.  [already]
-    - She is ___ waiting outside.  [still]
-    - He hasn't called me ___.  [yet]
-    - We were ___ eating when they arrived.  [still]
-    - I have not finished my homework ___.  [yet]
-    - It is midnight, but Tom is ___ awake.  [still]
-    - We arrived at six, but the film had ___ started.  [already]
+    - I bought a fashion ___ at the station.  [magazine]
+    - There's a new shoe ___ near my flat.  [shop]
+    - She reads one cooking ___ every month.  [magazine]
+    - The ___ closes at six on Sundays.  [shop]
+    - He left the ___ with two bags.  [shop]
+    - Dad always reads a ___ at the breakfast table.  [magazine]
+    - Here is a new ___ for you to read.  [magazine]
+    - There's a book ___ across the road from me.  [shop]
+    - If you turn left, you'll see a coffee ___.  [shop]
 
-### among-between (level B1)
-Words: among / between
-Meaning: among = среди (в группе); between = между (двумя, или каждым по отдельности)
-Rule: between = two things, or clear separate ones · among = in a group, a crowd
+### success-succeed (level A2)
+Words: success / succeed
+Meaning: success = успех; succeed = преуспеть, добиться успеха
+Rule: success = noun (a big success) · succeed = verb (to succeed)
 Existing sentences (do not repeat these ideas):
-    - The bank is ___ the post office and the chemist's.  [between]
-    - She felt nervous ___ strangers.  [among]
-    - Please split the bill ___ you and me.  [between]
-    - Her house is hidden ___ the tall trees.  [among]
-    - The ball rolled ___ the two chairs.  [between]
-    - She found her ring ___ the old papers in the box.  [among]
-    - The path runs ___ the lake and the forest.  [between]
-    - He was ___ the best students in his class.  [among]
+    - Her small café became a real ___.  [success]
+    - I hope you ___ in your new job.  [succeed]
+    - The play was an overnight ___.  [success]
+    - Few people ___ without hard work.  [succeed]
+    - Winning the cup was a huge ___.  [success]
+    - Our ___ was due in part to good luck.  [success]
+    - His business in New York was a great ___.  [success]
+    - If you want to ___, use your time well.  [succeed]
+    - We believe he will ___, for he has talent.  [succeed]
 
-### teach-learn-study (level A2)
-Words: teach / learn / study
-Meaning: teach = учить (кого-то), преподавать; learn = учить, выучить (самому); study = учиться, заниматься, изучать
-Rule: teach = give knowledge · learn = get knowledge · study = spend time learning
+### say-speak (level A2)
+Words: say / speak
+Meaning: say = сказать (слова); speak = говорить (языком, с кем-то)
+Rule: say + the words (say hello) · speak + a language, or speak to someone
 Existing sentences (do not repeat these ideas):
-    - My mum will ___ me how to cook rice.  [teach]
-    - I'm trying to ___ ten new words today.  [learn]
-    - She needs to ___ for her biology exam.  [study]
-    - We usually ___ in the library after lunch.  [study]
-    - My aunt will ___ me how to bake bread.  [teach]
-    - Babies ___ to walk before they turn two.  [learn]
-    - I ___ for the exam at the library every evening.  [study]
-    - She wants to ___ English to young children.  [teach]
+    - What did she ___ about the meeting?  [say]
+    - Could I ___ to Mr Brown now?  [speak]
+    - Don't ___ anything to upset him.  [say]
+    - He can ___ three languages well.  [speak]
+    - I didn't know what to ___.  [say]
+    - Can you ___ Slovak and German?  [speak]
+    - What did you ___ to the teacher?  [say]
+    - My grandfather can ___ three languages.  [speak]
+    - I will ___ goodbye to everyone.  [say]
 
-### dictionary-vocabulary (level B1)
-Words: dictionary / vocabulary
-Meaning: dictionary = словарь (книга, приложение); vocabulary = словарный запас
-Rule: dictionary = a book or app of words · vocabulary = the words you know
+### your-youre (level A2)
+Words: your / you're
+Meaning: your = твой, ваш; you're = ты есть = you are
+Rule: your = belongs to you · you're = you are
 Existing sentences (do not repeat these ideas):
-    - My English ___ is better than last year.  [vocabulary]
-    - Use a ___ if you don't know the word.  [dictionary]
-    - This app helps you build your ___.  [vocabulary]
-    - I checked the spelling in my ___.  [dictionary]
-    - Her scientific ___ is very strong.  [vocabulary]
-    - I looked up the word in my ___.  [dictionary]
-    - Reading books helps to build your ___.  [vocabulary]
-    - My English ___ grew a lot after the trip to London.  [vocabulary]
+    - Is this ___ phone on the table?  [your]
+    - I think ___ right about the exam date.  [you're]
+    - Don't forget to bring ___ passport tomorrow.  [your]
+    - ___ very kind to help us with the bags.  [you're]
+    - Is there enough room for me in ___ car?  [your]
+    - We might not have found it without ___ help.  [your]
+    - You will soon get used to ___ new life.  [your]
+    - ___ the best thing that's ever happened to me.  [you're]
+    - You should make sure that ___ there on time.  [you're]
+    - ___ in love, aren't you? I can see it.  [you're]
 
-### possibility-opportunity (level B1)
-Words: possibility / opportunity
-Meaning: possibility = возможность, вероятность (что-то может случиться); opportunity = возможность, шанс (сделать что-то)
-Rule: possibility = something might happen · opportunity = a good chance to do something
+### its-its (level A2)
+Words: its / it's
+Meaning: its = его, её (о предмете, животном); it's = это есть = it is / it has
+Rule: its = belongs to it · it's = it is or it has
 Existing sentences (do not repeat these ideas):
-    - There is a real ___ of snow tonight.  [possibility]
-    - This job is a great ___ for graduates.  [opportunity]
-    - We should discuss every ___ before deciding.  [possibility]
-    - She had the ___ to work abroad.  [opportunity]
-    - Is there any ___ the train will be late?  [possibility]
-    - There is a ___ of snow in the mountains tonight.  [possibility]
-    - Studying abroad is a great ___ to practise English.  [opportunity]
-    - Is there any ___ that the train will be late?  [possibility]
+    - The dog hurt ___ leg while playing in the park.  [its]
+    - ___ raining again, so take an umbrella.  [it's]
+    - The company is moving ___ office to a new city.  [its]
+    - I think ___ time for us to go home.  [it's]
+    - It looks like a storm is on ___ way.  [its]
+    - A place for everything and everything in ___ place.  [its]
+    - It'll go away on ___ own in two weeks.  [its]
+    - I think now ___ time for us to leave.  [it's]
+    - I can't find it. Are you sure ___ here?  [it's]
+    - My job is the same as ___ always been.  [it's]
 
-### homework-housework (level A2)
-Words: homework / housework
-Meaning: homework = домашнее задание; housework = работа по дому
-Rule: homework = tasks from school · housework = cleaning, washing, ironing
+### to-too-two (level A2)
+Words: to / too / two
+Meaning: to = к, в, чтобы; too = слишком; тоже; two = два
+Rule: to = direction or before a verb · too = more than needed, or also · two = the number 2
 Existing sentences (do not repeat these ideas):
-    - I can't go out until I finish my ___.  [homework]
-    - She does most of the ___ on Saturdays.  [housework]
-    - Our maths ___ took two hours last night.  [homework]
-    - Nobody enjoys ironing and other ___.  [housework]
-    - The teacher checked our ___ this morning.  [homework]
-    - I must finish my maths ___ before dinner.  [homework]
-    - Doing the ___ is boring, but I like a clean flat.  [housework]
-    - Mum and Dad share the ___ at weekends, like washing and cleaning.  [housework]
+    - We waited ___ hours for the train yesterday.  [two]
+    - It is far ___ hot to walk in the afternoon.  [too]
+    - I am going ___ the market with my mother.  [to]
+    - You like this band, and I like them, ___.  [too]
+    - She has ___ brothers and one younger sister.  [two]
+    - I need time ___ think about all of this.  [to]
+    - I see why you don't want ___ go there.  [to]
+    - Tell him you love him before it's ___ late!  [too]
+    - I couldn't do that because I was ___ busy.  [too]
+    - He will be back in a day or ___.  [two]
+    - Don't try doing ___ things at the same time.  [two]
+    - May I have this for ___ or three days?  [two]
 
 ## Rules for every sentence
 

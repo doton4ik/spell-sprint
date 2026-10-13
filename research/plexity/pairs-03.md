@@ -8,89 +8,6 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### excuse-apologise (level B1)
-Words: excuse / apologise
-Meaning: excuse = извинить, простить; apologise = извиниться
-Rule: excuse me / excuse someone · apologise (to someone) = say sorry yourself
-Existing sentences (do not repeat these ideas):
-    - Please ___ me for being late.  [excuse]
-    - You should ___ to your sister.  [apologise]
-    - ___ me, is this seat free?  [excuse]
-    - He forgot to ___ after the mistake.  [apologise]
-    - I want to ___ for being late.  [apologise]
-    - Please ___ my bad handwriting; I was in a hurry.  [excuse]
-    - We ___ for the long delay.  [apologise]
-
-### then-than (level A2)
-Words: then / than
-Meaning: then = потом, тогда; than = чем (в сравнении)
-Rule: then = at that time or next · than = used to compare
-Existing sentences (do not repeat these ideas):
-    - She is much taller ___ her older brother.  [than]
-    - Finish your dinner, and ___ you can watch TV.  [then]
-    - First wash the rice, and ___ cook it slowly.  [then]
-    - Travelling by train is cheaper ___ flying to Spain.  [than]
-    - I ate one and ___ I ate the other.  [then]
-    - No one could be sure what would happen ___.  [then]
-    - He has a lot more money ___ I have.  [than]
-    - I'm better at looking after children ___ you are.  [than]
-
-### whose-whos (level B1)
-Words: whose / who's
-Meaning: whose = чей; who's = кто есть = who is / who has
-Rule: whose = belongs to which person · who's = who is or who has
-Existing sentences (do not repeat these ideas):
-    - Do you know ___ bag is left on the bus?  [whose]
-    - I don't know ___ coming to the party tonight.  [who's]
-    - ___ car is parked in front of my garage?  [whose]
-    - She is the girl ___ been living next door.  [who's]
-    - I know a girl ___ father is a lawyer.  [whose]
-    - ___ little child is this? Where are his parents?  [whose]
-    - I wonder ___ going to be at the party.  [who's]
-    - We need to know ___ going to be there.  [who's]
-
-### accept-except (level B1)
-Words: accept / except
-Meaning: accept = принимать; except = кроме
-Rule: accept = take or agree to (verb) · except = not including
-Existing sentences (do not repeat these ideas):
-    - Please ___ this small gift from all of us.  [accept]
-    - Everyone came to the party ___ Tom, who was ill.  [except]
-    - Do you ___ credit cards in your little shop?  [accept]
-    - The museum is open every day ___ Monday.  [except]
-    - I had no choice but to ___ the offer.  [accept]
-    - Are you too proud to ___ a little help?  [accept]
-    - I'll give you any of them ___ this one.  [except]
-    - ___ for the storm, I would have arrived earlier.  [except]
-
-### write-right (level A2)
-Words: write / right
-Meaning: write = писать; right = правый; правильный; право
-Rule: write = put words on paper · right = correct, or the opposite of left
-Existing sentences (do not repeat these ideas):
-    - Please ___ your name at the top of the page.  [write]
-    - Turn ___ at the next traffic lights and go straight.  [right]
-    - You are ___ about the price of the tickets.  [right]
-    - I will ___ you a long letter next week.  [write]
-    - I know how to ___ a letter in English.  [write]
-    - All you have to do is ___ it down.  [write]
-    - Now that you say it, I think you're ___.  [right]
-    - She doesn't have a lot of money ___ now.  [right]
-
-### hear-here (level A2)
-Words: hear / here
-Meaning: hear = слышать; here = здесь
-Rule: hear = listen with your ears · here = in this place
-Existing sentences (do not repeat these ideas):
-    - Can you ___ the music from your room?  [hear]
-    - Please sit ___ next to me on the sofa.  [here]
-    - I can't ___ you, so please speak louder.  [hear]
-    - Come ___ and look at these old photos.  [here]
-    - I would be very happy to ___ from her.  [hear]
-    - If you've got a better idea, let's ___ it.  [hear]
-    - We can go if you don't like it ___.  [here]
-    - What time did I tell you to get ___?  [here]
-
 ### wear-where (level A2)
 Words: wear / where
 Meaning: wear = носить (одежду); where = где, куда
@@ -118,6 +35,90 @@ Existing sentences (do not repeat these ideas):
     - I had to ___ a window to get in.  [break]
     - He put his foot on the ___ suddenly.  [brake]
     - He didn't ___ in time, and ran into a tree.  [brake]
+
+### piece-peace (level B1)
+Words: piece / peace
+Meaning: piece = кусок, кусочек; peace = мир; покой
+Rule: piece = a part of something · peace = no war, or calm and quiet
+Existing sentences (do not repeat these ideas):
+    - Would you like a ___ of cake with your tea?  [piece]
+    - The two countries finally made ___ after a long war.  [peace]
+    - I need some ___ and quiet to study today.  [peace]
+    - She gave me a small ___ of paper with her number.  [piece]
+    - He wrote a letter on a ___ of paper.  [piece]
+    - I'd like to give you a ___ of advice.  [piece]
+    - She loves the ___ and quiet of the town.  [peace]
+    - People all over the world are anxious for ___.  [peace]
+
+### meat-meet (level A2)
+Words: meat / meet
+Meaning: meat = мясо; meet = встречать(ся), знакомиться
+Rule: meat = food from animals · meet = see or come together with someone
+Existing sentences (do not repeat these ideas):
+    - She does not eat ___ or fish at all.  [meat]
+    - Let's ___ in front of the cinema at six.  [meet]
+    - It is nice to ___ you at last.  [meet]
+    - This ___ is too salty for me.  [meat]
+    - Are you sure there's no ___ in this soup?  [meat]
+    - Do you have many friends who don't eat ___?  [meat]
+    - We used to ___ on our way to school.  [meet]
+    - Come on. There's someone I want you to ___.  [meet]
+
+### whole-hole (level B1)
+Words: whole / hole
+Meaning: whole = целый, весь; hole = дыра, яма
+Rule: whole = all of something · hole = an empty space in something
+Existing sentences (do not repeat these ideas):
+    - He ate the ___ pizza by himself last night.  [whole]
+    - There is a big ___ in my left sock.  [hole]
+    - The dog dug a deep ___ in the garden.  [hole]
+    - I spent the ___ day reading in the library.  [whole]
+    - We are going to stay there the ___ week.  [whole]
+    - I just want to forget about the ___ thing.  [whole]
+    - Be careful. There's a ___ in the floor.  [hole]
+    - We've got to fill this ___ with something.  [hole]
+
+### flour-flower (level B1)
+Words: flour / flower
+Meaning: flour = мука; flower = цветок
+Rule: flour = powder for baking bread · flower = the colourful part of a plant
+Existing sentences (do not repeat these ideas):
+    - Mix the eggs with ___ and sugar in a bowl.  [flour]
+    - She put a red ___ in her hair.  [flower]
+    - We need more ___ to bake bread tonight.  [flour]
+    - Every ___ in the garden was open this morning.  [flower]
+    - This cake contains ___, milk, eggs and sugar.  [flour]
+    - There was no ___ in the shop.  [flour]
+    - My uncle has a ___ shop near the station.  [flower]
+    - That red ___ over there is very pretty.  [flower]
+
+### allowed-aloud (level B2)
+Words: allowed / aloud
+Meaning: allowed = разрешённый; aloud = вслух
+Rule: allowed = permitted · aloud = in a voice that people can hear
+Existing sentences (do not repeat these ideas):
+    - Phones are not ___ in the exam room.  [allowed]
+    - She read the letter ___ to her grandfather.  [aloud]
+    - He laughed ___ at the joke in the film.  [aloud]
+    - Children are not ___ to swim here without adults.  [allowed]
+    - Will we be ___ to eat during the meeting?  [allowed]
+    - My father ___ me to go to the concert.  [allowed]
+    - Please read it ___ so that everyone can hear.  [aloud]
+    - Read ___ what you have written.  [aloud]
+
+### passed-past (level B1)
+Words: passed / past
+Meaning: passed = сдал; прошёл; передал; past = мимо; прошлое
+Rule: passed = verb (went by, handed, succeeded) · past = beyond, or earlier time
+Existing sentences (do not repeat these ideas):
+    - He ___ his driving test on Friday morning.  [passed]
+    - We walked ___ the old church on our way home.  [past]
+    - In the ___, people wrote many more letters.  [past]
+    - She ___ me the salt without saying a word.  [passed]
+    - Five years have ___ since they came to Japan.  [passed]
+    - The story lived on, ___ from person to person.  [passed]
+    - I've been studying French for the ___ three years.  [past]
+    - I need to understand what happened in the ___.  [past]
 
 ## Rules for every sentence
 
