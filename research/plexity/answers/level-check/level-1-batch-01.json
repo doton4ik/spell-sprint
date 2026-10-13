@@ -1,0 +1,264 @@
+{
+  "gap": [
+    {
+      "prompt": "My sister ___ breakfast at seven every morning.",
+      "answer": "has",
+      "wrong": [
+        "have",
+        "having",
+        "is have"
+      ],
+      "explain": "With she, use has in the present simple."
+    },
+    {
+      "prompt": "There ___ two big windows in my room.",
+      "answer": "are",
+      "wrong": [
+        "is",
+        "be",
+        "was"
+      ],
+      "explain": "Use are with plural nouns."
+    },
+    {
+      "prompt": "We ___ to the beach last summer.",
+      "answer": "went",
+      "wrong": [
+        "go",
+        "goes",
+        "are going"
+      ],
+      "explain": "Last summer needs the past simple."
+    },
+    {
+      "prompt": "I ___ my homework before dinner yesterday.",
+      "answer": "did",
+      "wrong": [
+        "do",
+        "does",
+        "doing"
+      ],
+      "explain": "Use did for a finished past action."
+    },
+    {
+      "prompt": "The bus is ___ than the train.",
+      "answer": "slower",
+      "wrong": [
+        "slow",
+        "slowest",
+        "more slow"
+      ],
+      "explain": "Use -er to compare two things."
+    },
+    {
+      "prompt": "Can you ___ me with this exercise, please?",
+      "answer": "help",
+      "wrong": [
+        "helps",
+        "helping",
+        "helped"
+      ],
+      "explain": "After can, use the base verb."
+    },
+    {
+      "prompt": "She is ___ a message to her friend now.",
+      "answer": "sending",
+      "wrong": [
+        "send",
+        "sends",
+        "sent"
+      ],
+      "explain": "Use am/is/are + -ing for now."
+    },
+    {
+      "prompt": "I don’t ___ coffee in the evening.",
+      "answer": "drink",
+      "wrong": [
+        "drinks",
+        "drinking",
+        "drank"
+      ],
+      "explain": "After don’t, use the base verb."
+    }
+  ],
+  "mistake": [
+    {
+      "sentence": "He play football after school.",
+      "parts": [
+        "He",
+        "play",
+        "football",
+        "after school"
+      ],
+      "answer": "play",
+      "explain": "With he, use plays."
+    },
+    {
+      "sentence": "I am agree with your idea.",
+      "parts": [
+        "I",
+        "am",
+        "agree",
+        "with your idea"
+      ],
+      "answer": "am",
+      "explain": "Say I agree, without am."
+    },
+    {
+      "sentence": "She can to swim very well.",
+      "parts": [
+        "She",
+        "can",
+        "to swim",
+        "very well"
+      ],
+      "answer": "to swim",
+      "explain": "After can, use swim without to."
+    },
+    {
+      "sentence": "My parents is at home today.",
+      "parts": [
+        "My parents",
+        "is",
+        "at home",
+        "today"
+      ],
+      "answer": "is",
+      "explain": "Use are with parents."
+    },
+    {
+      "sentence": "I bought a new phone yesterday.",
+      "parts": [
+        "I",
+        "bought",
+        "a new phone",
+        "yesterday"
+      ],
+      "answer": "a new phone",
+      "explain": "Use a before a consonant sound."
+    },
+    {
+      "sentence": "There is many people in the shop.",
+      "parts": [
+        "There",
+        "is",
+        "many people",
+        "in the shop"
+      ],
+      "answer": "is",
+      "explain": "Use are with many people."
+    }
+  ],
+  "phrase": [
+    {
+      "prompt": "I want to ___ a new job next year.",
+      "answer": "find",
+      "wrong": [
+        "make",
+        "take",
+        "put"
+      ],
+      "explain": "We find a job."
+    },
+    {
+      "prompt": "Please ___ off your shoes before you enter.",
+      "answer": "take",
+      "wrong": [
+        "put",
+        "get",
+        "bring"
+      ],
+      "explain": "Take off means remove clothes or shoes."
+    },
+    {
+      "prompt": "Can you ___ the music down? It is too loud.",
+      "answer": "turn",
+      "wrong": [
+        "make",
+        "put",
+        "give"
+      ],
+      "explain": "Turn down means make quieter."
+    },
+    {
+      "prompt": "I need to ___ an appointment with the doctor.",
+      "answer": "make",
+      "wrong": [
+        "do",
+        "take",
+        "get"
+      ],
+      "explain": "We make an appointment."
+    },
+    {
+      "prompt": "She ___ the bus to work every day.",
+      "answer": "takes",
+      "wrong": [
+        "makes",
+        "goes",
+        "rides"
+      ],
+      "explain": "We take the bus."
+    },
+    {
+      "prompt": "I usually ___ shopping on Saturday.",
+      "answer": "go",
+      "wrong": [
+        "make",
+        "do",
+        "take"
+      ],
+      "explain": "We go shopping."
+    }
+  ],
+  "formation": [
+    {
+      "prompt": "My uncle works as a ___. (DRIVE)",
+      "answer": "driver",
+      "explain": "Add -er for the person who drives."
+    },
+    {
+      "prompt": "This exercise is very ___. (EASY)",
+      "answer": "easy",
+      "explain": "Use the adjective to describe a thing."
+    },
+    {
+      "prompt": "She gave me some useful ___. (INFORM)",
+      "answer": "information",
+      "explain": "Use the noun form of inform."
+    },
+    {
+      "prompt": "I want to ___ my English this year. (BETTER)",
+      "answer": "improve",
+      "explain": "Use the verb meaning make better."
+    }
+  ],
+  "dictation": [
+    {
+      "sentence": "My brother plays football on Sundays.",
+      "alternatives": [
+        "My brother plays football on Sunday."
+      ]
+    },
+    {
+      "sentence": "The supermarket is near the train station.",
+      "alternatives": []
+    },
+    {
+      "sentence": "I usually drink tea in the morning.",
+      "alternatives": []
+    },
+    {
+      "sentence": "She sent me a message last night.",
+      "alternatives": []
+    },
+    {
+      "sentence": "We need to buy some fruit and vegetables.",
+      "alternatives": []
+    },
+    {
+      "sentence": "My laptop is on the desk in my room.",
+      "alternatives": []
+    }
+  ]
+}

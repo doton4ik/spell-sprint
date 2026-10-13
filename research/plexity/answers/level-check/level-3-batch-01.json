@@ -1,0 +1,262 @@
+{
+  "gap": [
+    {
+      "prompt": "If she ___ about the delay, she would have waited.",
+      "answer": "had known",
+      "wrong": [
+        "knew",
+        "would know",
+        "has known"
+      ],
+      "explain": "Use past perfect in the third conditional."
+    },
+    {
+      "prompt": "The manager insisted that every order ___ checked twice.",
+      "answer": "be",
+      "wrong": [
+        "is",
+        "was",
+        "will be"
+      ],
+      "explain": "Use the subjunctive after insist that."
+    },
+    {
+      "prompt": "Hardly ___ sat down when the phone rang.",
+      "answer": "had I",
+      "wrong": [
+        "I had",
+        "did I",
+        "I did"
+      ],
+      "explain": "Use inversion after hardly."
+    },
+    {
+      "prompt": "He was accused ___ giving false information.",
+      "answer": "of",
+      "wrong": [
+        "for",
+        "with",
+        "to"
+      ],
+      "explain": "We accuse someone of something."
+    },
+    {
+      "prompt": "The new policy had a major ___ on productivity.",
+      "answer": "impact",
+      "wrong": [
+        "affect",
+        "result",
+        "force"
+      ],
+      "explain": "Impact is the noun; affect is a verb."
+    },
+    {
+      "prompt": "I would rather you ___ the report today.",
+      "answer": "finished",
+      "wrong": [
+        "finish",
+        "will finish",
+        "have finished"
+      ],
+      "explain": "Use the past form after would rather you."
+    },
+    {
+      "prompt": "Not only ___ the deadline, but he also reduced costs.",
+      "answer": "did he meet",
+      "wrong": [
+        "he met",
+        "he did meet",
+        "met he"
+      ],
+      "explain": "Use inversion after not only."
+    },
+    {
+      "prompt": "The contract is ___ to change without written agreement.",
+      "answer": "unlikely",
+      "wrong": [
+        "improbably",
+        "unlikely to",
+        "not likely"
+      ],
+      "explain": "Unlikely is followed by to + infinitive."
+    }
+  ],
+  "mistake": [
+    {
+      "sentence": "Despite he was tired, he continued working.",
+      "parts": [
+        "Despite",
+        "he was tired,",
+        "he continued",
+        "working"
+      ],
+      "answer": "Despite",
+      "explain": "Use although, or despite being tired."
+    },
+    {
+      "sentence": "The number of customers have increased this year.",
+      "parts": [
+        "The number of customers",
+        "have increased",
+        "this year",
+        ""
+      ],
+      "answer": "have increased",
+      "explain": "Use has with the number."
+    },
+    {
+      "sentence": "She suggested that he goes to the doctor.",
+      "parts": [
+        "She suggested",
+        "that he",
+        "goes",
+        "to the doctor"
+      ],
+      "answer": "goes",
+      "explain": "Use the base form after suggest that."
+    },
+    {
+      "sentence": "I am looking forward to hear from you.",
+      "parts": [
+        "I am",
+        "looking forward",
+        "to hear",
+        "from you"
+      ],
+      "answer": "to hear",
+      "explain": "Use to hearing after look forward to."
+    },
+    {
+      "sentence": "He made me to repeat the instructions.",
+      "parts": [
+        "He",
+        "made me",
+        "to repeat",
+        "the instructions"
+      ],
+      "answer": "to repeat",
+      "explain": "After make someone, use the base verb."
+    },
+    {
+      "sentence": "If I would have known, I would have helped.",
+      "parts": [
+        "If I",
+        "would have known,",
+        "I",
+        "would have helped"
+      ],
+      "answer": "would have known,",
+      "explain": "Use had known in the if clause."
+    }
+  ],
+  "phrase": [
+    {
+      "prompt": "We need to ___ up with a solution before Friday.",
+      "answer": "come",
+      "wrong": [
+        "catch",
+        "put",
+        "bring"
+      ],
+      "explain": "Come up with means produce an idea."
+    },
+    {
+      "prompt": "The company decided to ___ down operations in that region.",
+      "answer": "wind",
+      "wrong": [
+        "put",
+        "take",
+        "bring"
+      ],
+      "explain": "Wind down means gradually reduce or close."
+    },
+    {
+      "prompt": "She managed to ___ round the strict rules.",
+      "answer": "get",
+      "wrong": [
+        "take",
+        "put",
+        "turn"
+      ],
+      "explain": "Get round means avoid a rule or problem."
+    },
+    {
+      "prompt": "The team must ___ up with the new schedule.",
+      "answer": "keep",
+      "wrong": [
+        "follow",
+        "match",
+        "reach"
+      ],
+      "explain": "Keep up with means stay at the same level."
+    },
+    {
+      "prompt": "They decided to ___ off the launch until May.",
+      "answer": "put",
+      "wrong": [
+        "take",
+        "set",
+        "bring"
+      ],
+      "explain": "Put off means postpone."
+    },
+    {
+      "prompt": "He was ___ up by the difficult questions.",
+      "answer": "thrown",
+      "wrong": [
+        "put",
+        "taken",
+        "set"
+      ],
+      "explain": "Be thrown up means be confused or surprised."
+    }
+  ],
+  "formation": [
+    {
+      "prompt": "The report highlighted several ___ in the process. (WEAK)",
+      "answer": "weaknesses",
+      "explain": "Use the plural noun form of weak."
+    },
+    {
+      "prompt": "Her explanation was clear and ___. (PERSUADE)",
+      "answer": "persuasive",
+      "explain": "Add -ive to make the adjective."
+    },
+    {
+      "prompt": "The system needs further ___. (DEVELOP)",
+      "answer": "development",
+      "explain": "Use the noun form of develop."
+    },
+    {
+      "prompt": "He was ___ about the risks involved. (IGNORE)",
+      "answer": "ignorant",
+      "explain": "Add -ant to make the adjective."
+    }
+  ],
+  "dictation": [
+    {
+      "sentence": "If she had known about the delay, she would have waited.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The manager insisted that every order be checked twice.",
+      "alternatives": []
+    },
+    {
+      "sentence": "Not only did he meet the deadline, but he also reduced costs.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The company decided to put off the launch until May.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The report highlighted several weaknesses in the process.",
+      "alternatives": []
+    },
+    {
+      "sentence": "I would rather you finished the report today.",
+      "alternatives": []
+    }
+  ]
+}

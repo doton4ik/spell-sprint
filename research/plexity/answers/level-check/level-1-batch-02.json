@@ -1,0 +1,262 @@
+{
+  "gap": [
+    {
+      "prompt": "My father ___ a car to work every day.",
+      "answer": "drives",
+      "wrong": [
+        "drive",
+        "driving",
+        "is drive"
+      ],
+      "explain": "With he, use drives in the present simple."
+    },
+    {
+      "prompt": "I ___ my keys this morning.",
+      "answer": "lost",
+      "wrong": [
+        "lose",
+        "loses",
+        "losing"
+      ],
+      "explain": "Use the past simple for this morning."
+    },
+    {
+      "prompt": "There ___ a hospital near my house.",
+      "answer": "is",
+      "wrong": [
+        "are",
+        "be",
+        "were"
+      ],
+      "explain": "Use is with one place or thing."
+    },
+    {
+      "prompt": "We ___ dinner at a restaurant last Friday.",
+      "answer": "had",
+      "wrong": [
+        "have",
+        "has",
+        "having"
+      ],
+      "explain": "Use had for a finished past action."
+    },
+    {
+      "prompt": "This bag is ___ than that one.",
+      "answer": "cheaper",
+      "wrong": [
+        "cheap",
+        "cheapest",
+        "more cheap"
+      ],
+      "explain": "Use -er to compare two things."
+    },
+    {
+      "prompt": "Please ___ the door when you leave.",
+      "answer": "close",
+      "wrong": [
+        "closes",
+        "closing",
+        "closed"
+      ],
+      "explain": "After please, use the base verb."
+    },
+    {
+      "prompt": "He ___ his homework at the moment.",
+      "answer": "is doing",
+      "wrong": [
+        "does",
+        "do",
+        "did"
+      ],
+      "explain": "Use is + -ing for an action now."
+    },
+    {
+      "prompt": "She doesn’t ___ meat.",
+      "answer": "eat",
+      "wrong": [
+        "eats",
+        "eating",
+        "ate"
+      ],
+      "explain": "After doesn’t, use the base verb."
+    }
+  ],
+  "mistake": [
+    {
+      "sentence": "She go to school by bus.",
+      "parts": [
+        "She",
+        "go",
+        "to school",
+        "by bus"
+      ],
+      "answer": "go",
+      "explain": "With she, use goes."
+    },
+    {
+      "sentence": "I have 15 years old.",
+      "parts": [
+        "I",
+        "have",
+        "15 years",
+        "old"
+      ],
+      "answer": "have",
+      "explain": "Say I am 15 years old."
+    },
+    {
+      "sentence": "He can plays the guitar.",
+      "parts": [
+        "He",
+        "can",
+        "plays",
+        "the guitar"
+      ],
+      "answer": "plays",
+      "explain": "After can, use play."
+    },
+    {
+      "sentence": "My brother and sister is students.",
+      "parts": [
+        "My brother and sister",
+        "is",
+        "students",
+        ""
+      ],
+      "answer": "is",
+      "explain": "Use are with two people."
+    },
+    {
+      "sentence": "I saw a interesting film last night.",
+      "parts": [
+        "I",
+        "saw",
+        "a interesting film",
+        "last night"
+      ],
+      "answer": "a interesting film",
+      "explain": "Use an before a vowel sound."
+    },
+    {
+      "sentence": "There are a lot of rain today.",
+      "parts": [
+        "There",
+        "are",
+        "a lot of rain",
+        "today"
+      ],
+      "answer": "are",
+      "explain": "Use is with rain."
+    }
+  ],
+  "phrase": [
+    {
+      "prompt": "I need to ___ a taxi to the airport.",
+      "answer": "take",
+      "wrong": [
+        "make",
+        "do",
+        "give"
+      ],
+      "explain": "We take a taxi."
+    },
+    {
+      "prompt": "Can you ___ me a favour?",
+      "answer": "do",
+      "wrong": [
+        "make",
+        "give",
+        "take"
+      ],
+      "explain": "We do someone a favour."
+    },
+    {
+      "prompt": "Please ___ on the lights; it is dark.",
+      "answer": "turn",
+      "wrong": [
+        "open",
+        "put",
+        "take"
+      ],
+      "explain": "Turn on means start a light or device."
+    },
+    {
+      "prompt": "I want to ___ a reservation for two people.",
+      "answer": "make",
+      "wrong": [
+        "do",
+        "take",
+        "get"
+      ],
+      "explain": "We make a reservation."
+    },
+    {
+      "prompt": "He ___ after his little sister every day.",
+      "answer": "looks",
+      "wrong": [
+        "sees",
+        "watches",
+        "puts"
+      ],
+      "explain": "Look after means take care of someone."
+    },
+    {
+      "prompt": "I usually ___ up at seven o’clock.",
+      "answer": "wake",
+      "wrong": [
+        "stand",
+        "open",
+        "get"
+      ],
+      "explain": "Wake up means stop sleeping."
+    }
+  ],
+  "formation": [
+    {
+      "prompt": "My mother is a very good ___. (COOK)",
+      "answer": "cook",
+      "explain": "A cook is a person who makes food."
+    },
+    {
+      "prompt": "The weather was ___ yesterday. (SUN)",
+      "answer": "sunny",
+      "explain": "Add -ny to make the adjective."
+    },
+    {
+      "prompt": "Thank you for your ___. (HELP)",
+      "answer": "help",
+      "explain": "Use the noun form of help."
+    },
+    {
+      "prompt": "This book is very ___. (INTEREST)",
+      "answer": "interesting",
+      "explain": "Add -ing to describe a thing."
+    }
+  ],
+  "dictation": [
+    {
+      "sentence": "My sister works in a small shop.",
+      "alternatives": []
+    },
+    {
+      "sentence": "I go to school by bus every day.",
+      "alternatives": []
+    },
+    {
+      "sentence": "We watched a film at home last night.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The doctor gave me some medicine.",
+      "alternatives": []
+    },
+    {
+      "sentence": "There are many trees in the park.",
+      "alternatives": []
+    },
+    {
+      "sentence": "I bought a present for my friend.",
+      "alternatives": []
+    }
+  ]
+}

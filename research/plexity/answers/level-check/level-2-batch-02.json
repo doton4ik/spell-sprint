@@ -1,0 +1,262 @@
+{
+  "gap": [
+    {
+      "prompt": "By the time we arrived, the train ___.",
+      "answer": "had left",
+      "wrong": [
+        "left",
+        "has left",
+        "was leaving"
+      ],
+      "explain": "Use past perfect for the earlier action."
+    },
+    {
+      "prompt": "I wish I ___ more time to prepare.",
+      "answer": "had",
+      "wrong": [
+        "have",
+        "will have",
+        "would have"
+      ],
+      "explain": "Use the past simple after wish."
+    },
+    {
+      "prompt": "She’s the woman ___ helped me yesterday.",
+      "answer": "who",
+      "wrong": [
+        "which",
+        "whose",
+        "whom"
+      ],
+      "explain": "Use who for a person."
+    },
+    {
+      "prompt": "You ___ smoke here; it is not allowed.",
+      "answer": "mustn’t",
+      "wrong": [
+        "don’t have to",
+        "shouldn’t have",
+        "needn’t"
+      ],
+      "explain": "Mustn’t means it is prohibited."
+    },
+    {
+      "prompt": "If I ___ you, I would apologise.",
+      "answer": "were",
+      "wrong": [
+        "am",
+        "was being",
+        "will be"
+      ],
+      "explain": "Use were in this second conditional."
+    },
+    {
+      "prompt": "The package ___ tomorrow morning.",
+      "answer": "will be delivered",
+      "wrong": [
+        "will deliver",
+        "is delivering",
+        "delivered"
+      ],
+      "explain": "Use the passive future for the package."
+    },
+    {
+      "prompt": "He denied ___ the money.",
+      "answer": "taking",
+      "wrong": [
+        "to take",
+        "take",
+        "took"
+      ],
+      "explain": "After deny, use the -ing form."
+    },
+    {
+      "prompt": "We’d rather ___ at home tonight.",
+      "answer": "stay",
+      "wrong": [
+        "to stay",
+        "staying",
+        "stayed"
+      ],
+      "explain": "After would rather, use the base verb."
+    }
+  ],
+  "mistake": [
+    {
+      "sentence": "She is used to wake up early.",
+      "parts": [
+        "She",
+        "is used to",
+        "wake up",
+        "early"
+      ],
+      "answer": "wake up",
+      "explain": "Use waking up after be used to."
+    },
+    {
+      "sentence": "I look forward to meet you soon.",
+      "parts": [
+        "I",
+        "look forward to",
+        "meet you",
+        "soon"
+      ],
+      "answer": "meet you",
+      "explain": "Use meeting after look forward to."
+    },
+    {
+      "sentence": "He has worked here since three years.",
+      "parts": [
+        "He",
+        "has worked",
+        "here",
+        "since three years"
+      ],
+      "answer": "since three years",
+      "explain": "Use for with a period of time."
+    },
+    {
+      "sentence": "The problem must to be solved today.",
+      "parts": [
+        "The problem",
+        "must",
+        "to be solved",
+        "today"
+      ],
+      "answer": "to be solved",
+      "explain": "After must, use be solved."
+    },
+    {
+      "sentence": "Despite of the rain, we went out.",
+      "parts": [
+        "Despite",
+        "of the rain,",
+        "we",
+        "went out"
+      ],
+      "answer": "of the rain,",
+      "explain": "Say despite the rain."
+    },
+    {
+      "sentence": "She suggested me to try again.",
+      "parts": [
+        "She",
+        "suggested",
+        "me",
+        "to try again"
+      ],
+      "answer": "suggested",
+      "explain": "Use suggested that I try, or advised me."
+    }
+  ],
+  "phrase": [
+    {
+      "prompt": "We need to ___ down the main ideas before writing.",
+      "answer": "note",
+      "wrong": [
+        "write",
+        "put",
+        "take"
+      ],
+      "explain": "Note down means write something quickly."
+    },
+    {
+      "prompt": "She managed to ___ over a difficult period.",
+      "answer": "get",
+      "wrong": [
+        "take",
+        "put",
+        "come"
+      ],
+      "explain": "Get over means recover from something."
+    },
+    {
+      "prompt": "Can you ___ me up at the station?",
+      "answer": "pick",
+      "wrong": [
+        "take",
+        "bring",
+        "collect"
+      ],
+      "explain": "Pick up means collect someone by car."
+    },
+    {
+      "prompt": "They decided to ___ ahead with the project.",
+      "answer": "go",
+      "wrong": [
+        "make",
+        "put",
+        "take"
+      ],
+      "explain": "Go ahead means continue with a plan."
+    },
+    {
+      "prompt": "I’d like to ___ an issue with my order.",
+      "answer": "raise",
+      "wrong": [
+        "lift",
+        "rise",
+        "grow"
+      ],
+      "explain": "Raise an issue means mention a problem."
+    },
+    {
+      "prompt": "He had to ___ up with a lot of pressure.",
+      "answer": "put",
+      "wrong": [
+        "take",
+        "give",
+        "make"
+      ],
+      "explain": "Put up with means tolerate something."
+    }
+  ],
+  "formation": [
+    {
+      "prompt": "Her ___ at the interview was excellent. (PERFORM)",
+      "answer": "performance",
+      "explain": "Use the noun form of perform."
+    },
+    {
+      "prompt": "The instructions were very ___. (CONFUSE)",
+      "answer": "confusing",
+      "explain": "Add -ing to describe something that causes confusion."
+    },
+    {
+      "prompt": "He spoke with great ___. (CONFIDENT)",
+      "answer": "confidence",
+      "explain": "Use the noun form of confident."
+    },
+    {
+      "prompt": "This decision was completely ___. (REASON)",
+      "answer": "unreasonable",
+      "explain": "Add un- and -able for not reasonable."
+    }
+  ],
+  "dictation": [
+    {
+      "sentence": "She had already left when I called her.",
+      "alternatives": []
+    },
+    {
+      "sentence": "If I were you, I would accept the offer.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The delivery will be made on Monday morning.",
+      "alternatives": []
+    },
+    {
+      "sentence": "He is used to working under pressure.",
+      "alternatives": []
+    },
+    {
+      "sentence": "We need to come up with a better solution.",
+      "alternatives": []
+    },
+    {
+      "sentence": "I wish I had more experience in this field.",
+      "alternatives": []
+    }
+  ]
+}

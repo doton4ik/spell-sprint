@@ -1,0 +1,262 @@
+{
+  "gap": [
+    {
+      "prompt": "The report needs ___ before it can be sent.",
+      "answer": "revising",
+      "wrong": [
+        "to revise",
+        "revise",
+        "revised"
+      ],
+      "explain": "Need + -ing has a passive meaning."
+    },
+    {
+      "prompt": "He is used to ___ under pressure.",
+      "answer": "working",
+      "wrong": [
+        "work",
+        "worked",
+        "have worked"
+      ],
+      "explain": "After be used to, use the -ing form."
+    },
+    {
+      "prompt": "The sooner we start, ___ it will be.",
+      "answer": "the easier",
+      "wrong": [
+        "easier",
+        "the easiest",
+        "more easy"
+      ],
+      "explain": "Use the + comparative in this structure."
+    },
+    {
+      "prompt": "She is thought ___ abroad last year.",
+      "answer": "to have worked",
+      "wrong": [
+        "working",
+        "work",
+        "to work"
+      ],
+      "explain": "Use perfect infinitive for an earlier action."
+    },
+    {
+      "prompt": "The decision was made ___ the new data.",
+      "answer": "on the basis of",
+      "wrong": [
+        "in the basis of",
+        "on basis of",
+        "at the basis of"
+      ],
+      "explain": "Use on the basis of + noun."
+    },
+    {
+      "prompt": "No sooner ___ the meeting than the power went out.",
+      "answer": "had we started",
+      "wrong": [
+        "we had started",
+        "did we start",
+        "we started"
+      ],
+      "explain": "Use inversion after no sooner."
+    },
+    {
+      "prompt": "The company is committed to ___ waste.",
+      "answer": "reducing",
+      "wrong": [
+        "reduce",
+        "reduced",
+        "have reduced"
+      ],
+      "explain": "After committed to, use the -ing form."
+    },
+    {
+      "prompt": "He must ___ the deadline; the report is ready.",
+      "answer": "have met",
+      "wrong": [
+        "meet",
+        "met",
+        "has met"
+      ],
+      "explain": "Use must have + participle for a past conclusion."
+    }
+  ],
+  "mistake": [
+    {
+      "sentence": "The furniture in the office are very old.",
+      "parts": [
+        "The furniture in the office",
+        "are",
+        "very old",
+        ""
+      ],
+      "answer": "are",
+      "explain": "Use is with furniture."
+    },
+    {
+      "sentence": "She is responsible for manage the team.",
+      "parts": [
+        "She is",
+        "responsible for",
+        "manage",
+        "the team"
+      ],
+      "answer": "manage",
+      "explain": "Use managing after responsible for."
+    },
+    {
+      "sentence": "The problem was difficult to be solved.",
+      "parts": [
+        "The problem",
+        "was difficult",
+        "to be solved",
+        ""
+      ],
+      "answer": "to be solved",
+      "explain": "Use to solve after a difficult noun."
+    },
+    {
+      "sentence": "He suggested that she takes a break.",
+      "parts": [
+        "He suggested",
+        "that she",
+        "takes",
+        "a break"
+      ],
+      "answer": "takes",
+      "explain": "Use the base form after suggest that."
+    },
+    {
+      "sentence": "I would rather you don’t tell anyone.",
+      "parts": [
+        "I would rather",
+        "you",
+        "don’t tell",
+        "anyone"
+      ],
+      "answer": "don’t tell",
+      "explain": "Use didn’t tell after would rather you."
+    },
+    {
+      "sentence": "The number of problems have decreased significantly.",
+      "parts": [
+        "The number of problems",
+        "have decreased",
+        "significantly",
+        ""
+      ],
+      "answer": "have decreased",
+      "explain": "Use has with the number."
+    }
+  ],
+  "phrase": [
+    {
+      "prompt": "We need to ___ up with rising costs.",
+      "answer": "keep",
+      "wrong": [
+        "catch",
+        "put",
+        "take"
+      ],
+      "explain": "Keep up with means stay level with changes."
+    },
+    {
+      "prompt": "The team decided to ___ back the release date.",
+      "answer": "push",
+      "wrong": [
+        "put",
+        "take",
+        "bring"
+      ],
+      "explain": "Push back means delay."
+    },
+    {
+      "prompt": "She managed to ___ through a difficult period.",
+      "answer": "pull",
+      "wrong": [
+        "put",
+        "take",
+        "bring"
+      ],
+      "explain": "Pull through means survive a difficult situation."
+    },
+    {
+      "prompt": "They want to ___ down the old warehouse.",
+      "answer": "knock",
+      "wrong": [
+        "put",
+        "take",
+        "bring"
+      ],
+      "explain": "Knock down means destroy a building."
+    },
+    {
+      "prompt": "The manager asked him to ___ up for his mistake.",
+      "answer": "make",
+      "wrong": [
+        "take",
+        "put",
+        "give"
+      ],
+      "explain": "Make up for means compensate for."
+    },
+    {
+      "prompt": "We should ___ out all possible risks before launching.",
+      "answer": "rule",
+      "wrong": [
+        "take",
+        "put",
+        "cross"
+      ],
+      "explain": "Rule out means decide something is impossible."
+    }
+  ],
+  "formation": [
+    {
+      "prompt": "The new process improved overall ___. (EFFICIENT)",
+      "answer": "efficiency",
+      "explain": "Use the noun form of efficient."
+    },
+    {
+      "prompt": "His behaviour at the meeting was highly ___. (PROFESSION)",
+      "answer": "unprofessional",
+      "explain": "Add un- and -al for not professional."
+    },
+    {
+      "prompt": "The data provided a clear ___ for the decision. (JUSTIFY)",
+      "answer": "justification",
+      "explain": "Use the noun form of justify."
+    },
+    {
+      "prompt": "The instructions were ___ and easy to follow. (ACCESS)",
+      "answer": "accessible",
+      "explain": "Add -ible to make the adjective."
+    }
+  ],
+  "dictation": [
+    {
+      "sentence": "The report needs revising before it can be sent.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The sooner we start, the easier it will be.",
+      "alternatives": []
+    },
+    {
+      "sentence": "No sooner had we started the meeting than the power went out.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The company is committed to reducing waste.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The team decided to push back the release date.",
+      "alternatives": []
+    },
+    {
+      "sentence": "We should rule out all possible risks before launching.",
+      "alternatives": []
+    }
+  ]
+}
