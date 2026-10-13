@@ -16,7 +16,7 @@ All ready prompts are in THIS folder. One file = one round = one new chat.
 | 1 | `rules-07.md` … `rules-21.md` | examples and exercises for the rules (2 rules per file). Do first **07, 08, 10, 14, 15, 17** (1 exercise each), then 09, 11, 16, 18–21 | rules-01 … rules-06 are done (12 rules), and rules-12 and rules-13 were written by Claude Code itself (quiet/quite, silent-letters, stationary/stationery, -ful) — do not paste these 8 again |
 | 2 | `words-01.md` … `words-19.md` | new library words (4 topics per file) | none |
 | 3 | `pairs-01.md` … `pairs-12.md` | more sentences for the existing pairs | pairs are partly done (older files); 11 pairs still have 6–7 sentences |
-| 4 | `examples-02.md` … `examples-04.md` | a second example sentence for words | examples-01 done; 108 words still have none |
+| 4 | `examples-01.md` … `examples-04.md` | a second example sentence for words (DONE, do not paste) | all 966 words now have a second example (the last 108 were written by Claude Code) |
 | 5 | `newpairs-01.md` … (optional) | new pairs | not needed now |
 | - | `level-1-A2.md` … `level-4-C1.md` | level-check questions | enough for now; C1/B2 need a lot of review |
 

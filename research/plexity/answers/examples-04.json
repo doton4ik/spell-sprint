@@ -1,0 +1,20 @@
+[
+  {"word_id": "phone-and-messages-texting-and-online-unread", "extra_example": "There is one unread email from my boss in my inbox."},
+  {"word_id": "phone-and-messages-texting-and-online-block", "extra_example": "You can block a number if someone keeps calling you."},
+  {"word_id": "travel-and-culture-on-the-plane-landing", "extra_example": "Please keep your seat belt on during the landing."},
+  {"word_id": "travel-and-culture-on-the-plane-lifejacket", "extra_example": "Each passenger on the boat must wear a lifejacket."},
+  {"word_id": "travel-and-culture-at-the-airport-boarding", "extra_example": "Boarding will begin at gate five in ten minutes."},
+  {"word_id": "travel-and-culture-at-the-airport-carousel", "extra_example": "We waited at the carousel, but our suitcase never appeared."},
+  {"word_id": "jobs-and-career-at-work-payslip", "extra_example": "I need my last payslip to rent a flat."},
+  {"word_id": "school-and-learning-in-class-subject", "extra_example": "Maths is the hardest subject for many students."},
+  {"word_id": "school-and-learning-in-class-ruler", "extra_example": "Use a ruler to measure the length of the table."},
+  {"word_id": "school-and-learning-in-class-term", "extra_example": "In the spring term we will study three new topics."},
+  {"word_id": "city-and-transport-getting-around-cyclist", "extra_example": "A cyclist stopped at the red light and waited."},
+  {"word_id": "city-and-transport-traffic-and-directions-subway", "extra_example": "The subway under the road is dark, but it is safe."},
+  {"word_id": "technology-devices-and-software-virus", "extra_example": "My brother's laptop got a virus from a strange website."},
+  {"word_id": "technology-devices-and-software-cable", "extra_example": "I need a longer cable to reach the plug."},
+  {"word_id": "technology-devices-and-software-icon", "extra_example": "Click the small icon of a folder to open your files."},
+  {"word_id": "shopping-paying-cheap", "extra_example": "These bags are cheap, so I bought two."},
+  {"word_id": "describing-things-size-and-shape-wide", "extra_example": "The door is wide enough for a wheelchair."},
+  {"word_id": "describing-things-size-and-shape-deep", "extra_example": "The hole in the garden was very deep."}
+]
