@@ -1,0 +1,272 @@
+[
+  {
+    "slug": "accept-vs-except",
+    "examples": [
+      {
+        "type": "correct",
+        "text": "They accepted my application yesterday.",
+        "note": "Accept = agree to take or receive"
+      },
+      {
+        "type": "correct",
+        "text": "The museum is open every day except Monday.",
+        "note": "Except = not including"
+      },
+      {
+        "type": "correct",
+        "text": "He accepted the prize with a smile.",
+        "note": "Accept = receive willingly"
+      },
+      {
+        "type": "correct",
+        "text": "All students passed the test except Daniel.",
+        "note": "Except = not including"
+      },
+      {
+        "type": "incorrect",
+        "text": "She excepted the job offer immediately.",
+        "correction": "She accepted the job offer immediately.",
+        "note": "Accept an offer, not except"
+      },
+      {
+        "type": "incorrect",
+        "text": "I like all fruit accept bananas.",
+        "correction": "I like all fruit except bananas.",
+        "note": "Except = not including"
+      },
+      {
+        "type": "incorrect",
+        "text": "Please accept your shoes at the door.",
+        "correction": "Please except your shoes at the door.",
+        "note": "Except = leave out, not including"
+      },
+      {
+        "type": "incorrect",
+        "text": "We accepted the last question on the exam.",
+        "correction": "We excepted the last question on the exam.",
+        "note": "Except = not including"
+      },
+      {
+        "type": "incorrect",
+        "text": "The café does not except cash payments.",
+        "correction": "The café does not accept cash payments.",
+        "note": "Accept = agree to take"
+      },
+      {
+        "type": "incorrect",
+        "text": "Everyone was tired accept the children.",
+        "correction": "Everyone was tired except the children.",
+        "note": "Except = not including"
+      }
+    ],
+    "exercises": [
+      {
+        "type": "fill_gap",
+        "prompt": "She was glad to ___ the award.",
+        "answer": "accept"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The shop is open every day ___ Sunday.",
+        "answer": "except"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "I cannot ___ this answer without proof.",
+        "answer": "accept"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Everyone enjoyed the meal ___ Peter.",
+        "answer": "except"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: They ___ the delivery this morning.",
+        "answer": "accepted",
+        "choices": [
+          "accepted",
+          "excepted"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: I know everyone here ___ Mark.",
+        "answer": "except",
+        "choices": [
+          "accept",
+          "except"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The hotel ___ pets.",
+        "answer": "accepts",
+        "choices": [
+          "accepts",
+          "excepts"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: All rooms ___ number 12 are ready.",
+        "answer": "except",
+        "choices": [
+          "accept",
+          "except"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: He was happy to ___ the invitation.",
+        "answer": "accept",
+        "choices": [
+          "accept",
+          "except"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: We sell everything ___ old books.",
+        "answer": "except",
+        "choices": [
+          "accept",
+          "except"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "able-vs-ible",
+    "examples": [
+      {
+        "type": "correct",
+        "text": "The hotel is accessible from the main road.",
+        "note": "Accessible ends in -ible"
+      },
+      {
+        "type": "correct",
+        "text": "This bag is suitable for school.",
+        "note": "Suitable ends in -able"
+      },
+      {
+        "type": "correct",
+        "text": "The instructions were understandable and clear.",
+        "note": "Understandable ends in -able"
+      },
+      {
+        "type": "correct",
+        "text": "It is impossible to park near the station.",
+        "note": "Impossible ends in -ible"
+      },
+      {
+        "type": "incorrect",
+        "text": "The website is accessable on any phone.",
+        "correction": "The website is accessible on any phone.",
+        "note": "Accessible, not accessable"
+      },
+      {
+        "type": "incorrect",
+        "text": "This shirt is suitible for warm weather.",
+        "correction": "This shirt is suitable for warm weather.",
+        "note": "Suitable, not suitible"
+      },
+      {
+        "type": "incorrect",
+        "text": "The story was understandible for beginners.",
+        "correction": "The story was understandable for beginners.",
+        "note": "Understandable, not understandible"
+      },
+      {
+        "type": "incorrect",
+        "text": "It is imposible to finish this today.",
+        "correction": "It is impossible to finish this today.",
+        "note": "Impossible, not imposible"
+      },
+      {
+        "type": "incorrect",
+        "text": "The old bridge is not passable in winter.",
+        "correction": "The old bridge is not passable in winter.",
+        "note": "Passable ends in -able"
+      },
+      {
+        "type": "incorrect",
+        "text": "The answer was not visable on the screen.",
+        "correction": "The answer was not visible on the screen.",
+        "note": "Visible ends in -ible"
+      }
+    ],
+    "exercises": [
+      {
+        "type": "correct_word",
+        "prompt": "accessable",
+        "answer": "accessible"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "suitible",
+        "answer": "suitable"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "imposible",
+        "answer": "impossible"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "visable",
+        "answer": "visible"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "understandible",
+        "answer": "understandable"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling: The road is ___ after heavy rain.",
+        "answer": "passable",
+        "choices": [
+          "passable",
+          "passible"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling: The building is ___ by wheelchair.",
+        "answer": "accessible",
+        "choices": [
+          "accessible",
+          "accessable"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling: This jacket is ___ for cold weather.",
+        "answer": "suitable",
+        "choices": [
+          "suitable",
+          "suitible"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling: It is ___ to learn a language in one day.",
+        "answer": "impossible",
+        "choices": [
+          "impossible",
+          "imposible"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling: The text was small but still ___.",
+        "answer": "readable",
+        "choices": [
+          "readable",
+          "readible"
+        ]
+      }
+    ]
+  }
+]

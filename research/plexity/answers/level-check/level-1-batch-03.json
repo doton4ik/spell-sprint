@@ -1,0 +1,262 @@
+{
+  "gap": [
+    {
+      "prompt": "My brother ___ to music every evening.",
+      "answer": "listens",
+      "wrong": [
+        "listen",
+        "listening",
+        "is listen"
+      ],
+      "explain": "With he, use listens in the present simple."
+    },
+    {
+      "prompt": "We ___ a film last weekend.",
+      "answer": "watched",
+      "wrong": [
+        "watch",
+        "watches",
+        "are watching"
+      ],
+      "explain": "Use the past simple for last weekend."
+    },
+    {
+      "prompt": "There ___ some milk in the fridge.",
+      "answer": "is",
+      "wrong": [
+        "are",
+        "be",
+        "were"
+      ],
+      "explain": "Use is with an uncountable noun."
+    },
+    {
+      "prompt": "I ___ my friends at the park yesterday.",
+      "answer": "met",
+      "wrong": [
+        "meet",
+        "meets",
+        "meeting"
+      ],
+      "explain": "Use met for a finished past action."
+    },
+    {
+      "prompt": "This book is ___ than that one.",
+      "answer": "more interesting",
+      "wrong": [
+        "interestinger",
+        "most interesting",
+        "as interesting"
+      ],
+      "explain": "Use more with longer adjectives."
+    },
+    {
+      "prompt": "Please ___ your name here.",
+      "answer": "write",
+      "wrong": [
+        "writes",
+        "writing",
+        "wrote"
+      ],
+      "explain": "After please, use the base verb."
+    },
+    {
+      "prompt": "She ___ a letter at the moment.",
+      "answer": "is writing",
+      "wrong": [
+        "writes",
+        "write",
+        "wrote"
+      ],
+      "explain": "Use is + -ing for an action now."
+    },
+    {
+      "prompt": "They don’t ___ football on Mondays.",
+      "answer": "play",
+      "wrong": [
+        "plays",
+        "playing",
+        "played"
+      ],
+      "explain": "After don’t, use the base verb."
+    }
+  ],
+  "mistake": [
+    {
+      "sentence": "He don’t like cold weather.",
+      "parts": [
+        "He",
+        "don’t",
+        "like",
+        "cold weather"
+      ],
+      "answer": "don’t",
+      "explain": "With he, use doesn’t."
+    },
+    {
+      "sentence": "She go to work by train.",
+      "parts": [
+        "She",
+        "go",
+        "to work",
+        "by train"
+      ],
+      "answer": "go",
+      "explain": "With she, use goes."
+    },
+    {
+      "sentence": "I have 20 years old.",
+      "parts": [
+        "I",
+        "have",
+        "20 years",
+        "old"
+      ],
+      "answer": "have",
+      "explain": "Say I am 20 years old."
+    },
+    {
+      "sentence": "My friends is at school now.",
+      "parts": [
+        "My friends",
+        "is",
+        "at school",
+        "now"
+      ],
+      "answer": "is",
+      "explain": "Use are with friends."
+    },
+    {
+      "sentence": "I saw a elephant at the zoo.",
+      "parts": [
+        "I",
+        "saw",
+        "a elephant",
+        "at the zoo"
+      ],
+      "answer": "a elephant",
+      "explain": "Use an before a vowel sound."
+    },
+    {
+      "sentence": "There is two apples on the table.",
+      "parts": [
+        "There",
+        "is",
+        "two apples",
+        "on the table"
+      ],
+      "answer": "is",
+      "explain": "Use are with two apples."
+    }
+  ],
+  "phrase": [
+    {
+      "prompt": "I need to ___ a decision about my holiday.",
+      "answer": "make",
+      "wrong": [
+        "do",
+        "take",
+        "get"
+      ],
+      "explain": "We make a decision."
+    },
+    {
+      "prompt": "Can you ___ me a favour, please?",
+      "answer": "do",
+      "wrong": [
+        "make",
+        "give",
+        "take"
+      ],
+      "explain": "We do someone a favour."
+    },
+    {
+      "prompt": "She ___ the bus to school every day.",
+      "answer": "takes",
+      "wrong": [
+        "makes",
+        "goes",
+        "rides"
+      ],
+      "explain": "We take the bus."
+    },
+    {
+      "prompt": "I usually ___ shopping after work.",
+      "answer": "go",
+      "wrong": [
+        "make",
+        "do",
+        "take"
+      ],
+      "explain": "We go shopping."
+    },
+    {
+      "prompt": "Please ___ off your coat; it is warm inside.",
+      "answer": "take",
+      "wrong": [
+        "put",
+        "get",
+        "bring"
+      ],
+      "explain": "Take off means remove clothes."
+    },
+    {
+      "prompt": "Can you ___ the window open, please?",
+      "answer": "leave",
+      "wrong": [
+        "let",
+        "put",
+        "stay"
+      ],
+      "explain": "Leave something open means keep it open."
+    }
+  ],
+  "formation": [
+    {
+      "prompt": "My father is a bus ___. (DRIVE)",
+      "answer": "driver",
+      "explain": "Add -er for the person who drives."
+    },
+    {
+      "prompt": "The weather is very ___ today. (SUN)",
+      "answer": "sunny",
+      "explain": "Add -ny to make the adjective."
+    },
+    {
+      "prompt": "She is a very good ___. (SING)",
+      "answer": "singer",
+      "explain": "Add -er for the person who sings."
+    },
+    {
+      "prompt": "This film is very ___. (INTEREST)",
+      "answer": "interesting",
+      "explain": "Add -ing to describe a thing."
+    }
+  ],
+  "dictation": [
+    {
+      "sentence": "My mother cooks dinner every evening.",
+      "alternatives": []
+    },
+    {
+      "sentence": "We visited my grandparents last weekend.",
+      "alternatives": []
+    },
+    {
+      "sentence": "There is a big park near my house.",
+      "alternatives": []
+    },
+    {
+      "sentence": "I usually take the bus to school.",
+      "alternatives": []
+    },
+    {
+      "sentence": "She bought a new dress yesterday.",
+      "alternatives": []
+    },
+    {
+      "sentence": "My friends play basketball after school.",
+      "alternatives": []
+    }
+  ]
+}

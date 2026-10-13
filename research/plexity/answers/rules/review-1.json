@@ -1,0 +1,16 @@
+[
+  { "text": "Please accept your shoes at the door.", "file": "rules-01.json", "kind": "example", "why": "Nonsense either way: neither 'accept' nor 'except your shoes' means 'take off/leave'. The pair is also reversed (marked incorrect, 'corrected' to except). Note is wrong." },
+  { "text": "We accepted the last question on the exam.", "file": "rules-01.json", "kind": "example", "why": "Reversed pair: the text is correct English. 'excepted the last question' is a rare formal verb and not what learners need; the note 'Except = not including' doesn't fit a verb." },
+  { "text": "The old bridge is not passable in winter.", "file": "rules-01.json", "kind": "example", "why": "Marked incorrect, but the text is correct and the correction is identical to it." },
+  { "text": "It is imposible to finish this today.", "file": "rules-01.json", "kind": "example", "why": "The mistake is single s (imposible) and has nothing to do with -able/-ible. The rule-related error would be 'impossable'." },
+  { "text": "imposible", "file": "rules-01.json", "kind": "exercise", "why": "correct_word tests ss, not the -able/-ible ending. Use 'impossable' instead." },
+  { "text": "Choose the correct spelling: It is ___ to learn a language in one day.", "file": "rules-01.json", "kind": "exercise", "why": "The only distractor, 'imposible', differs in ss, not in the ending, so it doesn't test the rule. Use 'impossable'." },
+  { "text": "They accepted the smallest room from the list.", "file": "rules-02.json", "kind": "example", "why": "Reversed pair: the text is correct English. 'excepted the smallest room from the list' is a rare formal verb, so the 'correction' teaches a wrong pattern." },
+  { "text": "The school does not accept late students.", "file": "rules-02.json", "kind": "example", "why": "Reversed pair: the text is correct. 'does not except late students' is wrong, and the note 'Except = not including' doesn't fit a verb." },
+  { "text": "Choose the correct spelling: The label was easy to read and ___.", "file": "rules-02.json", "kind": "exercise", "why": "Tautological sentence ('easy to read and readable'), so it is poor model English." },
+  { "text": "The company accepted this item from the delivery.", "file": "rules-03.json", "kind": "example", "why": "Reversed pair: the text is correct English. 'excepted this item from the delivery' is an odd, rare verb use, presented as the correct form." },
+  { "text": "The schedule is not changeable after Friday.", "file": "rules-03.json", "kind": "example", "why": "Marked incorrect, but the text is correct and the correction is identical to it." },
+  { "text": "The office is closed ___ Wednesday afternoon.", "file": "rules-03.json", "kind": "exercise", "why": "The natural word is 'on' ('closed on Wednesday afternoon'). With 'except' the meaning is odd: it says the office is only open on Wednesday afternoon." },
+  { "text": "Choose the word: The school does not ___ mobile phones in class.", "file": "rules-03.json", "kind": "exercise", "why": "Unnatural sense: we say 'allow' phones in class, not 'accept'. It teaches accept = allow." },
+  { "text": "Choose the correct spelling: The date is ___ in the settings.", "file": "rules-03.json", "kind": "exercise", "why": "The only distractor, 'changeible', is a form nobody writes, so the task is trivial. The real learner error is 'changable'." }
+]

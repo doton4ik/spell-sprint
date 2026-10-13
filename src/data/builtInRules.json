@@ -3278,6 +3278,422 @@
       "text": "She is most talented singer here.",
       "correction": "She is the most talented singer here.",
       "note": "Article use"
+    },
+    {
+      "id": "33960c35-0edd-51db-93cb-aa7fde5b62a4",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "They accepted my application yesterday.",
+      "correction": null,
+      "note": "Accept = agree to take or receive"
+    },
+    {
+      "id": "c3d4d58b-5090-5835-9313-12b22f0811b7",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "The museum is open every day except Monday.",
+      "correction": null,
+      "note": "Except = not including"
+    },
+    {
+      "id": "dc053dcf-cbea-560e-aac3-fce1ec2b979e",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "He accepted the prize with a smile.",
+      "correction": null,
+      "note": "Accept = receive willingly"
+    },
+    {
+      "id": "81a5ae9b-3dd1-554f-9fe4-791ef1f7083a",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "All students passed the test except Daniel.",
+      "correction": null,
+      "note": "Except = not including"
+    },
+    {
+      "id": "1269a102-b407-59cf-92c9-e3432fefa3ad",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "She excepted the job offer immediately.",
+      "correction": "She accepted the job offer immediately.",
+      "note": "Accept an offer, not except"
+    },
+    {
+      "id": "13614310-9494-552d-b017-dc9559f32254",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "I like all fruit accept bananas.",
+      "correction": "I like all fruit except bananas.",
+      "note": "Except = not including"
+    },
+    {
+      "id": "2254ea59-7f20-5c00-9d82-3630bae52a1c",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "The café does not except cash payments.",
+      "correction": "The café does not accept cash payments.",
+      "note": "Accept = agree to take"
+    },
+    {
+      "id": "6edf3c97-9c6c-59c8-b912-0703ae81b7aa",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "Everyone was tired accept the children.",
+      "correction": "Everyone was tired except the children.",
+      "note": "Except = not including"
+    },
+    {
+      "id": "0b042dbc-7834-580d-93d0-da4f456a8703",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "I accept your decision about the meeting.",
+      "correction": null,
+      "note": "Accept = agree to something"
+    },
+    {
+      "id": "51436e14-112c-5086-87bf-3095e64d9c54",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "The bus stops everywhere except the airport.",
+      "correction": null,
+      "note": "Except = not including"
+    },
+    {
+      "id": "881fc32a-26b5-55c8-ade1-3474f026dde9",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "She accepted his help with the boxes.",
+      "correction": null,
+      "note": "Accept = agree to take"
+    },
+    {
+      "id": "6cf8d89b-be97-5ee3-82dc-664720461cff",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "The restaurant accepts reservations by phone.",
+      "correction": null,
+      "note": "Accept = agree to receive"
+    },
+    {
+      "id": "014e0052-160a-55e4-a80f-dfa09c6a03ae",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "He could not except the bad news.",
+      "correction": "He could not accept the bad news.",
+      "note": "Accept = receive or agree"
+    },
+    {
+      "id": "2fbb76ad-437e-5f08-8d81-17ec4ae56539",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "The museum is closed every day accept Friday.",
+      "correction": "The museum is closed every day except Friday.",
+      "note": "Except = not including"
+    },
+    {
+      "id": "32b9ece2-04c5-5789-ab97-8c64d43a8d1d",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "Please except my invitation to dinner.",
+      "correction": "Please accept my invitation to dinner.",
+      "note": "Accept an invitation"
+    },
+    {
+      "id": "0f6f3a62-6540-5d1e-a8c1-ae79ee570330",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "All the workers were present accept Maria.",
+      "correction": "All the workers were present except Maria.",
+      "note": "Except = not including"
+    },
+    {
+      "id": "9e7c937c-96f3-5cee-84bc-312425925270",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "They accepted the new timetable without problems.",
+      "correction": null,
+      "note": "Accept = agree to something"
+    },
+    {
+      "id": "342dc7a3-8fbc-5994-9b3f-88a888118fd0",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "The shop is open every day except holidays.",
+      "correction": null,
+      "note": "Except = not including"
+    },
+    {
+      "id": "aa69747a-6571-5ddb-adce-31e69bf72bd5",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "He accepted the ticket from his friend.",
+      "correction": null,
+      "note": "Accept = receive something"
+    },
+    {
+      "id": "a7720cc4-a7d8-59e1-9fe6-1e67de581e20",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "Everyone passed the course except one student.",
+      "correction": null,
+      "note": "Except = not including"
+    },
+    {
+      "id": "e4dd5bce-5d4e-5f39-9d12-33655d00f000",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "She excepted the apology after the argument.",
+      "correction": "She accepted the apology after the argument.",
+      "note": "Accept an apology"
+    },
+    {
+      "id": "8c491b8f-166d-529f-a2b7-d984edeb3a4e",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "I eat all vegetables accept carrots.",
+      "correction": "I eat all vegetables except carrots.",
+      "note": "Except = not including"
+    },
+    {
+      "id": "d1b71372-a224-5918-9cf4-30ec632449fc",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "Please except the terms before you continue.",
+      "correction": "Please accept the terms before you continue.",
+      "note": "Accept = agree to terms"
+    },
+    {
+      "id": "07af8f27-52eb-5e94-b9f6-e1cb64a84592",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "The team was ready accept the goalkeeper.",
+      "correction": "The team was ready except the goalkeeper.",
+      "note": "Except = not including"
+    },
+    {
+      "id": "44a59e87-0f13-5fba-9b3d-e6b09c2339d9",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "The hotel does not except large dogs.",
+      "correction": "The hotel does not accept large dogs.",
+      "note": "Accept = allow or take"
+    },
+    {
+      "id": "5ea14093-bf62-568f-b94a-5015b245c068",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The hotel is accessible from the main road.",
+      "correction": null,
+      "note": "Accessible ends in -ible"
+    },
+    {
+      "id": "988b110e-b98f-5ffb-935e-275e95cc9b07",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "This bag is suitable for school.",
+      "correction": null,
+      "note": "Suitable ends in -able"
+    },
+    {
+      "id": "c279607a-c632-5ce0-9464-887cb69b4499",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The instructions were understandable and clear.",
+      "correction": null,
+      "note": "Understandable ends in -able"
+    },
+    {
+      "id": "d613fb3b-0f41-5191-828c-85f4c97a6954",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "It is impossible to park near the station.",
+      "correction": null,
+      "note": "Impossible ends in -ible"
+    },
+    {
+      "id": "f9cb9f03-6abc-5c97-9234-40b63cbde43b",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The website is accessable on any phone.",
+      "correction": "The website is accessible on any phone.",
+      "note": "Accessible, not accessable"
+    },
+    {
+      "id": "7bef6492-d8c1-5757-a372-09d92b993f8e",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "This shirt is suitible for warm weather.",
+      "correction": "This shirt is suitable for warm weather.",
+      "note": "Suitable, not suitible"
+    },
+    {
+      "id": "27956d60-d442-576e-9f8a-b5ecb23217f8",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The story was understandible for beginners.",
+      "correction": "The story was understandable for beginners.",
+      "note": "Understandable, not understandible"
+    },
+    {
+      "id": "60baa5a6-1d65-5704-8a59-ae2f4cec7454",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The answer was not visable on the screen.",
+      "correction": "The answer was not visible on the screen.",
+      "note": "Visible ends in -ible"
+    },
+    {
+      "id": "e3020697-f536-5745-a4ab-0d888ff107c4",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The old letter was barely readable.",
+      "correction": null,
+      "note": "Readable ends in -able"
+    },
+    {
+      "id": "882fb859-8242-58a8-8dd2-6eaf072cff01",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "Fresh vegetables are available at the market.",
+      "correction": null,
+      "note": "Available ends in -able"
+    },
+    {
+      "id": "91b6b3d0-9bc1-5f8c-8e39-f4693ed7bb1d",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The damage to the car was visible.",
+      "correction": null,
+      "note": "Visible ends in -ible"
+    },
+    {
+      "id": "ccca963d-d627-594a-844c-b5352fc990bc",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "This route is passable by car.",
+      "correction": null,
+      "note": "Passable ends in -able"
+    },
+    {
+      "id": "87f3fda4-60a0-56fd-b8f6-062bcdc16331",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The tickets are availible at the office.",
+      "correction": "The tickets are available at the office.",
+      "note": "Available, not availible"
+    },
+    {
+      "id": "94d15d72-e4aa-5dcf-b4a1-25ef522a186a",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The sign was not readible from the road.",
+      "correction": "The sign was not readable from the road.",
+      "note": "Readable, not readible"
+    },
+    {
+      "id": "2f42f505-3294-5e9a-8680-1e6f37a76378",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The stain was still visable after washing.",
+      "correction": "The stain was still visible after washing.",
+      "note": "Visible, not visable"
+    },
+    {
+      "id": "fb7e4494-2e3b-5b37-8df4-6cb39d4f9792",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The path is accessable only in summer.",
+      "correction": "The path is accessible only in summer.",
+      "note": "Accessible, not accessable"
+    },
+    {
+      "id": "e1ebe2cc-4f47-5ca1-9c06-6e66af9b603d",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "This plan is not workible for our team.",
+      "correction": "This plan is not workable for our team.",
+      "note": "Workable ends in -able"
+    },
+    {
+      "id": "7a76c6f0-99e8-5784-9439-210230b5feec",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The result was predictible after the test.",
+      "correction": "The result was predictable after the test.",
+      "note": "Predictable ends in -able"
+    },
+    {
+      "id": "36310bdc-ea3b-5bcb-ae8b-bfee8127d5dc",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The new app is available for all students.",
+      "correction": null,
+      "note": "Available ends in -able"
+    },
+    {
+      "id": "072d8255-fd50-5ced-8712-ee4124adf7c5",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The handwriting was clear and readable.",
+      "correction": null,
+      "note": "Readable ends in -able"
+    },
+    {
+      "id": "bfc91e26-9a6e-5021-b703-35f1758c84c3",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The small print was visible under the lamp.",
+      "correction": null,
+      "note": "Visible ends in -ible"
+    },
+    {
+      "id": "9778fa3e-5206-5bb3-8b3a-353bc7ab60fc",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The mountain path is passable in dry weather.",
+      "correction": null,
+      "note": "Passable ends in -able"
+    },
+    {
+      "id": "0d2d0bd4-94f9-5dfb-b9ca-0cfd77c8570e",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The form is availible at reception.",
+      "correction": "The form is available at reception.",
+      "note": "Available, not availible"
+    },
+    {
+      "id": "7bda0aee-7ef6-5de3-b12a-f67b3715198c",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The label was not readible in the dark.",
+      "correction": "The label was not readable in the dark.",
+      "note": "Readable, not readible"
+    },
+    {
+      "id": "e6b2e892-3f61-5552-90fd-8ab5cf9cea13",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The crack was visable on the wall.",
+      "correction": "The crack was visible on the wall.",
+      "note": "Visible, not visable"
+    },
+    {
+      "id": "3aac2c9f-afca-5584-9224-63f5233d19a4",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The garden is accessable through the side gate.",
+      "correction": "The garden is accessible through the side gate.",
+      "note": "Accessible, not accessable"
+    },
+    {
+      "id": "d6fcb611-0eee-5f6d-b022-3fa69b9c6b05",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The mistake was preventible with better planning.",
+      "correction": "The mistake was preventable with better planning.",
+      "note": "Preventable ends in -able"
     }
   ]
 }

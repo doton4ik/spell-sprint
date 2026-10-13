@@ -1,0 +1,266 @@
+{
+  "gap": [
+    {
+      "prompt": "I ___ in this town since I was a child.",
+      "answer": "have lived",
+      "wrong": [
+        "live",
+        "lived",
+        "am living"
+      ],
+      "explain": "Use present perfect with since."
+    },
+    {
+      "prompt": "If it ___ tomorrow, we will cancel the trip.",
+      "answer": "rains",
+      "wrong": [
+        "will rain",
+        "rained",
+        "is raining"
+      ],
+      "explain": "Use the present simple after if."
+    },
+    {
+      "prompt": "She said she ___ finish the project by Friday.",
+      "answer": "would",
+      "wrong": [
+        "will",
+        "is",
+        "does"
+      ],
+      "explain": "Use would for reported future plans."
+    },
+    {
+      "prompt": "This is ___ interesting book I have ever read.",
+      "answer": "the most",
+      "wrong": [
+        "more",
+        "most",
+        "the more"
+      ],
+      "explain": "Use the most with longer adjectives."
+    },
+    {
+      "prompt": "You ___ see a doctor if the pain continues.",
+      "answer": "should",
+      "wrong": [
+        "should to",
+        "will",
+        "would"
+      ],
+      "explain": "Should gives advice, without to."
+    },
+    {
+      "prompt": "The emails ___ by the assistant every morning.",
+      "answer": "are checked",
+      "wrong": [
+        "check",
+        "checked",
+        "are checking"
+      ],
+      "explain": "Use the present passive for a regular action."
+    },
+    {
+      "prompt": "I’m looking forward to ___ you next week.",
+      "answer": "seeing",
+      "wrong": [
+        "see",
+        "saw",
+        "have seen"
+      ],
+      "explain": "After look forward to, use -ing."
+    },
+    {
+      "prompt": "He asked me where I ___.",
+      "answer": "lived",
+      "wrong": [
+        "live",
+        "am living",
+        "will live"
+      ],
+      "explain": "Use the past tense in reported questions."
+    }
+  ],
+  "mistake": [
+    {
+      "sentence": "She has visited Paris last year.",
+      "parts": [
+        "She",
+        "has visited",
+        "Paris",
+        "last year"
+      ],
+      "answer": "has visited",
+      "explain": "Use the past simple with last year."
+    },
+    {
+      "sentence": "I am living here since January.",
+      "parts": [
+        "I",
+        "am living",
+        "here",
+        "since January"
+      ],
+      "answer": "am living",
+      "explain": "Use have lived with since."
+    },
+    {
+      "sentence": "He suggested to meet at the station.",
+      "parts": [
+        "He",
+        "suggested",
+        "to meet",
+        "at the station"
+      ],
+      "answer": "to meet",
+      "explain": "Use suggest meeting."
+    },
+    {
+      "sentence": "If I will have time, I will call you.",
+      "parts": [
+        "If I",
+        "will have",
+        "time,",
+        "I will call you"
+      ],
+      "answer": "will have",
+      "explain": "Use the present simple after if."
+    },
+    {
+      "sentence": "This hotel is more cheaper than that one.",
+      "parts": [
+        "This hotel",
+        "is",
+        "more cheaper",
+        "than that one"
+      ],
+      "answer": "more cheaper",
+      "explain": "Use cheaper, not more cheaper."
+    },
+    {
+      "sentence": "She told that she was busy.",
+      "parts": [
+        "She",
+        "told",
+        "that she",
+        "was busy"
+      ],
+      "answer": "told",
+      "explain": "Use said that, or told me."
+    }
+  ],
+  "phrase": [
+    {
+      "prompt": "We need to ___ up with a better plan.",
+      "answer": "come",
+      "wrong": [
+        "get",
+        "take",
+        "put"
+      ],
+      "explain": "Come up with means think of."
+    },
+    {
+      "prompt": "I can’t ___ up with this noise any longer.",
+      "answer": "put",
+      "wrong": [
+        "take",
+        "make",
+        "give"
+      ],
+      "explain": "Put up with means accept something unpleasant."
+    },
+    {
+      "prompt": "She decided to ___ up smoking last month.",
+      "answer": "give",
+      "wrong": [
+        "take",
+        "put",
+        "make"
+      ],
+      "explain": "Give up means stop doing something."
+    },
+    {
+      "prompt": "The meeting was ___ off because of the snow.",
+      "answer": "called",
+      "wrong": [
+        "put",
+        "taken",
+        "made"
+      ],
+      "explain": "Call off means cancel."
+    },
+    {
+      "prompt": "He wants to ___ for a job at the new company.",
+      "answer": "apply",
+      "wrong": [
+        "ask",
+        "request",
+        "demand"
+      ],
+      "explain": "We apply for a job."
+    },
+    {
+      "prompt": "I need to ___ an eye on my suitcase.",
+      "answer": "keep",
+      "wrong": [
+        "give",
+        "make",
+        "take"
+      ],
+      "explain": "Keep an eye on means watch carefully."
+    }
+  ],
+  "formation": [
+    {
+      "prompt": "She showed great ___ during the difficult week. (STRONG)",
+      "answer": "strength",
+      "explain": "Use the noun form of strong."
+    },
+    {
+      "prompt": "It is ___ to check the weather before a trip. (USE)",
+      "answer": "useful",
+      "explain": "Add -ful to make the adjective."
+    },
+    {
+      "prompt": "He made a quick ___ to change the plan. (DECIDE)",
+      "answer": "decision",
+      "explain": "Use the noun form of decide."
+    },
+    {
+      "prompt": "The new system works very ___. (EFFICIENT)",
+      "answer": "efficiently",
+      "explain": "Use an adverb to describe how it works."
+    }
+  ],
+  "dictation": [
+    {
+      "sentence": "I have lived in this town since I was a child.",
+      "alternatives": [
+        "I've lived in this town since I was a child."
+      ]
+    },
+    {
+      "sentence": "She said she would finish the project by Friday.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The meeting was called off because of the snow.",
+      "alternatives": []
+    },
+    {
+      "sentence": "We should leave early to avoid traffic.",
+      "alternatives": []
+    },
+    {
+      "sentence": "He is looking for a job in logistics.",
+      "alternatives": []
+    },
+    {
+      "sentence": "This is the most interesting book I have ever read.",
+      "alternatives": [
+        "This is the most interesting book I've ever read."
+      ]
+    }
+  ]
+}
