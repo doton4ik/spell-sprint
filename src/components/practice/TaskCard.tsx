@@ -383,18 +383,20 @@ export function TaskCard({
             ) : task.extraExample ? (
               <p className="task-feedback__example">
                 {task.extraExample}{' '}
-                <a
-                  href={
-                    task.extraExampleSource?.startsWith('tatoeba:')
-                      ? `https://tatoeba.org/en/sentences/show/${task.extraExampleSource.slice(8)}`
-                      : 'https://tatoeba.org'
-                  }
-                  target="_blank"
-                  rel="noreferrer"
-                  title="Sentence from Tatoeba, CC BY 2.0 FR"
-                >
-                  Tatoeba
-                </a>
+                {task.extraExampleSource === 'written' ? null : (
+                  <a
+                    href={
+                      task.extraExampleSource?.startsWith('tatoeba:')
+                        ? `https://tatoeba.org/en/sentences/show/${task.extraExampleSource.slice(8)}`
+                        : 'https://tatoeba.org'
+                    }
+                    target="_blank"
+                    rel="noreferrer"
+                    title="Sentence from Tatoeba, CC BY 2.0 FR"
+                  >
+                    Tatoeba
+                  </a>
+                )}
               </p>
             ) : null}
           </div>

@@ -59,6 +59,9 @@ function tasksForWord(word: LibraryWord): PracticeTask[] {
   // The order is shuffled when the task is shown (TaskCard), so the right answer is not always first.
   const spellingChoices = [word.word, ...spellingDistractors(word.word, (value) => knownWords().has(value) || isRealOrRude(value))]
   const gap = gapSentence(word.example, word.word)
+  // A second gap sentence from the second example, when it was written for the app (a Tatoeba sentence would need a credit
+  // next to the gap). A session still takes one gap task per word (oncePerWord), chosen at random.
+  const gap2 = word.extraExampleSource === 'written' ? gapSentence(word.extraExample, word.word) : null
   return [
     {
       ...base,
@@ -87,6 +90,19 @@ function tasksForWord(word: LibraryWord): PracticeTask[] {
             type: 'translate-ru-en' as const,
             mode: 'fill-gap' as const,
             prompt: gap,
+            promptNote: word.translation,
+            answer: word.word,
+          },
+        ]
+      : []),
+    ...(gap2
+      ? [
+          {
+            ...base,
+            id: `library-${id}-gap2`,
+            type: 'translate-ru-en' as const,
+            mode: 'fill-gap' as const,
+            prompt: gap2,
             promptNote: word.translation,
             answer: word.word,
           },
@@ -122,13 +138,14 @@ export function getPracticeOptions() {
 
 // A word that sits in two libraries (environment: General English and Spelling Traps) comes once per session.
 function oncePerWord(tasks: PracticeTask[]) {
-  const seen = new Set<string>()
-  return tasks.filter((task) => {
+  // The first task for a word and mode is kept; two gap sentences of one word share a place, and either may take it.
+  const chosen = new Map<string, PracticeTask>()
+  for (const task of tasks) {
     const key = `${task.mode}:${(task.mode === 'translate-ru' ? task.prompt : task.answer).toLocaleLowerCase()}`
-    if (seen.has(key)) return false
-    seen.add(key)
-    return true
-  })
+    if (!chosen.has(key) || (task.mode === 'fill-gap' && task.wordId === chosen.get(key)?.wordId && Math.random() < 0.5))
+      chosen.set(key, task)
+  }
+  return [...chosen.values()]
 }
 
 // "New words": words the learner has never answered, in a random order. "Words I know": words already practised —
