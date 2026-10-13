@@ -8,45 +8,43 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### borrow-lend (level A2)
-Words: borrow / lend
-Meaning: borrow = брать взаймы, одолжить (у кого-то); lend = давать взаймы, одолжить (кому-то)
-Rule: borrow = take something for a short time · lend = give something for a short time
+### actual-current (level B2)
+Words: actual / current
+Meaning: actual = фактический, настоящий; current = текущий, нынешний (актуальный)
+Rule: actual = real (not "актуальный"!) · current = happening now
 Existing sentences (do not repeat these ideas):
-    - Can I ___ your pen for a minute?  [borrow]
-    - Could you ___ me some money until Friday?  [lend]
-    - I never ___ books from the library without a card.  [borrow]
-    - My uncle will ___ us his car for the weekend.  [lend]
+    - The ___ price is lower than we expected.  [actual]
+    - Who is the ___ manager of the shop?  [current]
+    - Please give the ___ number of guests.  [actual]
+    - Our ___ plan may change tomorrow.  [current]
+    - What is the ___ time in Tokyo right now?  [current]
+    - The ad said twenty minutes, but the ___ trip took an hour.  [actual]
 
-### say-tell (level A2)
-Words: say / tell
-Meaning: say = сказать; tell = сказать (кому-то), рассказать
-Rule: say = speak words (say hello) · tell = give information to someone (tell me)
+### know-no (level A2)
+Words: know / no
+Meaning: know = знать; no = нет; никакой
+Rule: know = have information · no = not any, or the opposite of yes
 Existing sentences (do not repeat these ideas):
-    - Please ___ me the truth about the accident.  [tell]
-    - What did he ___ about the film last night?  [say]
-    - Did she ___ hello when she came in?  [say]
-    - Can you ___ us the way to the station?  [tell]
+    - I ___ the answer to that question.  [know]
+    - There is ___ milk left in the fridge.  [no]
+    - Do you ___ where my brother lives now?  [know]
+    - She has ___ time for lunch today because of work.  [no]
+    - Don't think that I don't ___ what you're doing.  [know]
+    - She says she has ___ idea what to do.  [no]
+    - That's why ___ one wants to work with you.  [no]
 
-### rob-steal (level B1)
-Words: rob / steal
-Meaning: rob = грабить (место, человека); steal = красть (вещь)
-Rule: rob = take things from a person or place · steal = take a thing that is not yours
+### cloth-clothes (level A2)
+Words: cloth / clothes
+Meaning: cloth = ткань, тряпка; clothes = одежда
+Rule: cloth = a piece of fabric · clothes = things you wear (shirts, trousers)
 Existing sentences (do not repeat these ideas):
-    - Two men tried to ___ the bank on Monday.  [rob]
-    - Someone tried to ___ my bike yesterday.  [steal]
-    - It is a crime to ___ money from shops.  [steal]
-    - They planned to ___ an old lady in the street.  [rob]
-
-### remember-remind (level A2)
-Words: remember / remind
-Meaning: remember = помнить, вспоминать; remind = напоминать (кому-то)
-Rule: remember = keep in your mind · remind = make someone remember
-Existing sentences (do not repeat these ideas):
-    - I can't ___ where I parked the car.  [remember]
-    - Please ___ me to call my mother tonight.  [remind]
-    - Do you ___ the name of that restaurant?  [remember]
-    - This song always seems to ___ me of summer.  [remind]
+    - Wipe the table with a clean, wet ___.  [cloth]
+    - She bought some new ___ for the winter.  [clothes]
+    - My ___ are still wet because it rained.  [clothes]
+    - This dress is made of soft blue ___.  [cloth]
+    - That ___ feels nice to the touch.  [cloth]
+    - How much did you spend on ___ last year?  [clothes]
+    - If the ___ don't fit, you can return them.  [clothes]
 
 ### bring-take (level A2)
 Words: bring / take
@@ -57,6 +55,9 @@ Existing sentences (do not repeat these ideas):
     - I will ___ this parcel to the post office.  [take]
     - Could you ___ me a glass of water, please?  [bring]
     - Don't forget to ___ the rubbish out tonight.  [take]
+    - ___ this letter to the post office, please.  [take]
+    - Please ___ a salad to my party on Saturday.  [bring]
+    - I will ___ the dog for a walk after lunch.  [take]
 
 ### fun-funny (level A2)
 Words: fun / funny
@@ -67,26 +68,48 @@ Existing sentences (do not repeat these ideas):
     - He told a very ___ joke, and everyone laughed.  [funny]
     - Skiing with friends is great ___ in winter.  [fun]
     - My little brother makes ___ faces at the camera.  [funny]
+    - The clown told a very ___ story.  [funny]
+    - Skating with friends is great ___.  [fun]
+    - That ___ video made everyone laugh out loud.  [funny]
 
-### economic-economical (level B2)
-Words: economic / economical
-Meaning: economic = экономический; economical = экономный, выгодный
-Rule: economic = about the economy · economical = saving money or fuel
+### look-see-watch (level A2)
+Words: look / see / watch
+Meaning: look = смотреть (направить взгляд); see = видеть; watch = смотреть, наблюдать (за чем-то движущимся)
+Rule: look at = turn your eyes to · see = notice with your eyes · watch = look for a time (TV, a match)
 Existing sentences (do not repeat these ideas):
-    - The country has serious ___ problems at the moment.  [economic]
-    - It is more ___ to buy food in large packs.  [economical]
-    - She studies ___ history at university.  [economic]
-    - A small car is cheaper and more ___ to run.  [economical]
+    - Can you ___ at my screen for a second?  [look]
+    - I can't ___ anything without my glasses.  [see]
+    - We usually ___ a film on Fridays.  [watch]
+    - Did you ___ the man in the blue coat?  [see]
+    - Please ___ the soup so it doesn't boil over.  [watch]
+    - ___ at the beautiful sky tonight!  [look]
+    - I like to ___ football with my dad.  [watch]
 
-### sensible-sensitive (level B1)
-Words: sensible / sensitive
-Meaning: sensible = разумный, здравомыслящий; sensitive = чувствительный
-Rule: sensible = showing good judgement · sensitive = easily hurt or affected
+### all-whole (level B1)
+Words: all / whole
+Meaning: all = все, весь; whole = целый, весь (одна вещь целиком)
+Rule: the whole + singular (the whole day) · all + plural or all the (all the students)
 Existing sentences (do not repeat these ideas):
-    - It is ___ to take a warm coat in winter.  [sensible]
-    - My skin is very ___ to the sun.  [sensitive]
-    - He is a ___ person who always thinks before acting.  [sensible]
-    - Be kind to her, because she is very ___.  [sensitive]
+    - I spent the ___ day cleaning the flat.  [whole]
+    - ___ the students passed the test.  [all]
+    - She ate the ___ cake by herself.  [whole]
+    - The ___ family came to dinner.  [whole]
+    - I ate the ___ pizza by myself.  [whole]
+    - She read the ___ book in one night.  [whole]
+    - She spent ___ day cooking for the party.  [all]
+
+### hear-listen (level A2)
+Words: hear / listen
+Meaning: hear = слышать; listen = слушать
+Rule: hear = sound reaches you · listen (to) = you pay attention
+Existing sentences (do not repeat these ideas):
+    - Can you ___ the music next door?  [hear]
+    - Please ___ carefully to the instructions.  [listen]
+    - I didn't ___ my phone ring.  [hear]
+    - The children never ___ in class.  [listen]
+    - I cannot ___ you because the music is too loud.  [hear]
+    - Do you ___ to podcasts on the bus?  [listen]
+    - Can you ___ that strange noise outside?  [hear]
 
 ## Rules for every sentence
 

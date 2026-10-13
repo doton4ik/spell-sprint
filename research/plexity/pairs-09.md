@@ -8,70 +8,103 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### know-no (level A2)
-Words: know / no
-Meaning: know = знать; no = нет; никакой
-Rule: know = have information · no = not any, or the opposite of yes
+### robber-thief (level B1)
+Words: robber / thief
+Meaning: robber = грабитель (с угрозой, силой); thief = вор (тайно)
+Rule: thief = steals secretly · robber = takes things by force or threat
 Existing sentences (do not repeat these ideas):
-    - I ___ the answer to that question.  [know]
-    - There is ___ milk left in the fridge.  [no]
-    - Do you ___ where my brother lives now?  [know]
-    - She has ___ time for lunch today because of work.  [no]
-    - Don't think that I don't ___ what you're doing.  [know]
-    - She says she has ___ idea what to do.  [no]
-    - That's why ___ one wants to work with you.  [no]
+    - Police caught the bike ___ yesterday.  [thief]
+    - A masked ___ entered the bank.  [robber]
+    - Someone called me a ___ after the joke.  [thief]
+    - The ___ threatened the cashier with a knife.  [robber]
+    - The ___ quietly took my wallet from my pocket on the tram.  [thief]
+    - The ___ made the shop owner give him all the money.  [robber]
+    - A clever ___ stole the painting without a sound.  [thief]
+    - The ___ demanded money from the taxi driver.  [robber]
 
-### cloth-clothes (level A2)
-Words: cloth / clothes
-Meaning: cloth = ткань, тряпка; clothes = одежда
-Rule: cloth = a piece of fabric · clothes = things you wear (shirts, trousers)
+### salary-wage (level B2)
+Words: salary / wage
+Meaning: salary = оклад (в месяц, в год); wage = зарплата (почасовая, недельная)
+Rule: salary = fixed pay per month or year · wage = pay per hour, day or week
 Existing sentences (do not repeat these ideas):
-    - Wipe the table with a clean, wet ___.  [cloth]
-    - She bought some new ___ for the winter.  [clothes]
-    - My ___ are still wet because it rained.  [clothes]
-    - This dress is made of soft blue ___.  [cloth]
-    - That ___ feels nice to the touch.  [cloth]
-    - How much did you spend on ___ last year?  [clothes]
-    - If the ___ don't fit, you can return them.  [clothes]
+    - She earns a good ___ as an accountant.  [salary]
+    - Farm workers demanded a higher hourly ___.  [wage]
+    - His annual ___ increased in April.  [salary]
+    - The company promised to raise the minimum ___.  [wage]
+    - My mum gets her ___ on the first day of each month.  [salary]
+    - He earns a low hourly ___ at the café.  [wage]
+    - She has a yearly ___ of thirty thousand euros.  [salary]
+    - The workers asked for a higher ___ per hour.  [wage]
 
-### complement-compliment (level B2)
-Words: complement / compliment
-Meaning: complement = дополнять; дополнение; compliment = комплимент
-Rule: complement = goes well with, completes · compliment = a kind word about someone
+### historic-historical (level B2)
+Words: historic / historical
+Meaning: historic = исторический (важный, знаменательный); historical = исторический (о прошлом, об истории)
+Rule: historic = very important in history · historical = about the past (historical novels)
 Existing sentences (do not repeat these ideas):
-    - That red scarf will ___ your grey coat nicely.  [complement]
-    - She gave me a lovely ___ about my cooking.  [compliment]
-    - A glass of wine can ___ this dish very well.  [complement]
-    - He blushed when she paid him such a ___.  [compliment]
-    - I think that we ___ each other.  [complement]
-    - I'll take that as a ___.  [compliment]
-    - Was that supposed to be a ___?  [compliment]
+    - It was a ___ moment for the country.  [historic]
+    - She loves reading ___ novels.  [historical]
+    - The castle is a ___ building.  [historic]
+    - They signed a ___ peace agreement.  [historic]
+    - Today is a ___ day for our town; the new bridge has opened.  [historic]
+    - I love ___ novels set in the Middle Ages.  [historical]
+    - The museum shows ___ photos of the city from 1900.  [historical]
+    - The first moon landing was a ___ moment.  [historic]
 
-### principal-principle (level B2)
-Words: principal / principle
-Meaning: principal = директор (школы); главный; principle = принцип
-Rule: principal = head of a school, or main · principle = a rule or belief
+### story-history (level A2)
+Words: story / history
+Meaning: story = история, рассказ; history = история (прошлое, предмет)
+Rule: story = a tale, what happened to someone · history = the past, the school subject
 Existing sentences (do not repeat these ideas):
-    - The ___ of the school spoke to the parents.  [principal]
-    - It is against my ___ to lie to friends.  [principle]
-    - Our ___ reason for moving was the new job.  [principal]
-    - He never breaks a ___ even when it is difficult.  [principle]
-    - The ___ walked into the classroom and everyone stood up.  [principal]
-    - For me, this is a matter of ___.  [principle]
-    - I agree to the proposal in ___.  [principle]
+    - My grandad told us a funny ___.  [story]
+    - She's studying ___ at university.  [history]
+    - That book has a sad love ___.  [story]
+    - The museum shows the town's ___.  [history]
+    - Tell me the whole ___ from the beginning.  [story]
+    - Grandma told us a funny ___ before bed.  [story]
+    - We study the ___ of Slovakia at school.  [history]
+    - My favourite lesson at school is ___.  [history]
 
-### conscious-conscience (level B2)
-Words: conscious / conscience
-Meaning: conscious = в сознании; осознающий; conscience = совесть
-Rule: conscious = awake, aware (adjective) · conscience = inner sense of right and wrong (noun)
+### end-finish (level A2)
+Words: end / finish
+Meaning: end = заканчиваться (сам); finish = заканчивать (что-то делать)
+Rule: end = stop, come to the last part · finish = complete what you are doing
 Existing sentences (do not repeat these ideas):
-    - The patient was ___ again after the operation.  [conscious]
-    - He had a guilty ___ about the lie.  [conscience]
-    - I was not ___ of the danger at that moment.  [conscious]
-    - Her ___ told her to give the money back.  [conscience]
-    - I wasn't ___ of anyone watching me.  [conscious]
-    - I was ___ that something was missing.  [conscious]
-    - I could not do this with an easy ___.  [conscience]
+    - The film will ___ at half past nine.  [end]
+    - Please ___ your soup before dessert.  [finish]
+    - The summer holidays ___ next Monday.  [end]
+    - I must ___ this report tonight.  [finish]
+    - I want to ___ this book before the weekend.  [finish]
+    - At the ___ of the street, there is a bakery.  [end]
+    - Please ___ your soup before the main course.  [finish]
+    - Stories for children often have a happy ___.  [end]
+
+### win-earn (level B1)
+Words: win / earn
+Meaning: win = выиграть; earn = зарабатывать
+Rule: win = get by playing or luck · earn = get by working
+Existing sentences (do not repeat these ideas):
+    - I hope we ___ the quiz tonight.  [win]
+    - Doctors often ___ more than teachers.  [earn]
+    - Our team can still ___ the match.  [win]
+    - Students can ___ some money in the summer holidays.  [earn]
+    - She wants to ___ a lot of money as a pilot.  [earn]
+    - I hope to ___ the first prize in the quiz.  [win]
+    - How much do nurses ___ per month?  [earn]
+    - Our school choir will ___ the singing contest!  [win]
+
+### worth-worthy (level B2)
+Words: worth / worthy
+Meaning: worth = стоящий (be worth + -ing / цена); worthy = достойный
+Rule: be worth + -ing or a price (worth reading) · worthy = deserving (a worthy cause)
+Existing sentences (do not repeat these ideas):
+    - This book is ___ reading twice.  [worth]
+    - The film wasn't ___ the ticket price.  [worth]
+    - They support several ___ charities.  [worthy]
+    - Is it ___ driving that far for lunch?  [worth]
+    - This old book is ___ a lot of money.  [worth]
+    - He is a ___ winner of the prize.  [worthy]
+    - Is the film ___ watching twice?  [worth]
+    - She is a ___ leader and everyone trusts her.  [worthy]
 
 ### quite-quit (level A2)
 Words: quite / quit
@@ -85,34 +118,7 @@ Existing sentences (do not repeat these ideas):
     - That exam was ___ difficult for me.  [quite]
     - I don't have the will power to ___ smoking.  [quit]
     - If you don't like it, then you can ___.  [quit]
-
-### then-than (level A2)
-Words: then / than
-Meaning: then = потом, тогда; than = чем (в сравнении)
-Rule: then = at that time or next · than = used to compare
-Existing sentences (do not repeat these ideas):
-    - She is much taller ___ her older brother.  [than]
-    - Finish your dinner, and ___ you can watch TV.  [then]
-    - First wash the rice, and ___ cook it slowly.  [then]
-    - Travelling by train is cheaper ___ flying to Spain.  [than]
-    - I ate one and ___ I ate the other.  [then]
-    - No one could be sure what would happen ___.  [then]
-    - He has a lot more money ___ I have.  [than]
-    - I'm better at looking after children ___ you are.  [than]
-
-### whose-whos (level B1)
-Words: whose / who's
-Meaning: whose = чей; who's = кто есть = who is / who has
-Rule: whose = belongs to which person · who's = who is or who has
-Existing sentences (do not repeat these ideas):
-    - Do you know ___ bag is left on the bus?  [whose]
-    - I don't know ___ coming to the party tonight.  [who's]
-    - ___ car is parked in front of my garage?  [whose]
-    - She is the girl ___ been living next door.  [who's]
-    - I know a girl ___ father is a lawyer.  [whose]
-    - ___ little child is this? Where are his parents?  [whose]
-    - I wonder ___ going to be at the party.  [who's]
-    - We need to know ___ going to be there.  [who's]
+    - I will ___ my job at the end of the month.  [quit]
 
 ## Rules for every sentence
 

@@ -8,117 +8,117 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### accept-except (level B1)
-Words: accept / except
-Meaning: accept = принимать; except = кроме
-Rule: accept = take or agree to (verb) · except = not including
+### price-value (level B1)
+Words: price / value
+Meaning: price = цена (сколько платишь); value = ценность, стоимость (чего стоит)
+Rule: price = the money you pay · value = how much something is worth or how important
 Existing sentences (do not repeat these ideas):
-    - Please ___ this small gift from all of us.  [accept]
-    - Everyone came to the party ___ Tom, who was ill.  [except]
-    - Do you ___ credit cards in your little shop?  [accept]
-    - The museum is open every day ___ Monday.  [except]
-    - I had no choice but to ___ the offer.  [accept]
-    - Are you too proud to ___ a little help?  [accept]
-    - I'll give you any of them ___ this one.  [except]
-    - ___ for the storm, I would have arrived earlier.  [except]
+    - The ___ of petrol has gone up again.  [price]
+    - What was the ___ of your flight?  [price]
+    - Good friends add ___ to your life.  [value]
+    - The shop lowered the ___ by five pounds.  [price]
+    - The ___ of the ticket is twelve euros.  [price]
+    - Old family photos have a lot of ___ for me.  [value]
+    - The shop lowered its ___ for the summer sale.  [price]
+    - Honesty is a key ___ in our family.  [value]
 
-### write-right (level A2)
-Words: write / right
-Meaning: write = писать; right = правый; правильный; право
-Rule: write = put words on paper · right = correct, or the opposite of left
+### late-lately (level B1)
+Words: late / lately
+Meaning: late = поздно; опоздавший; lately = в последнее время
+Rule: late = not on time, near the end · lately = recently
 Existing sentences (do not repeat these ideas):
-    - Please ___ your name at the top of the page.  [write]
-    - Turn ___ at the next traffic lights and go straight.  [right]
-    - You are ___ about the price of the tickets.  [right]
-    - I will ___ you a long letter next week.  [write]
-    - I know how to ___ a letter in English.  [write]
-    - All you have to do is ___ it down.  [write]
-    - Now that you say it, I think you're ___.  [right]
-    - She doesn't have a lot of money ___ now.  [right]
+    - The bus was ___ again this morning.  [late]
+    - Have you seen Maria ___?  [lately]
+    - I stayed up ___ finishing the essay.  [late]
+    - Sales have improved ___ at our shop.  [lately]
+    - Sorry I'm ___; the traffic was awful.  [late]
+    - I have been very tired ___.  [lately]
+    - The train was twenty minutes ___.  [late]
+    - Have you seen any good films ___?  [lately]
 
-### hear-here (level A2)
-Words: hear / here
-Meaning: hear = слышать; here = здесь
-Rule: hear = listen with your ears · here = in this place
+### hard-hardly (level B1)
+Words: hard / hardly
+Meaning: hard = усердно; твёрдый, трудный; hardly = едва, почти не
+Rule: hard = with effort (work hard) · hardly = almost not (I could hardly hear)
 Existing sentences (do not repeat these ideas):
-    - Can you ___ the music from your room?  [hear]
-    - Please sit ___ next to me on the sofa.  [here]
-    - I can't ___ you, so please speak louder.  [hear]
-    - Come ___ and look at these old photos.  [here]
-    - I would be very happy to ___ from her.  [hear]
-    - If you've got a better idea, let's ___ it.  [hear]
-    - We can go if you don't like it ___.  [here]
-    - What time did I tell you to get ___?  [here]
+    - She works very ___ before every exam.  [hard]
+    - I could ___ hear him on the phone.  [hardly]
+    - The ground was ___ after the frost.  [hard]
+    - We had ___ any milk left.  [hardly]
+    - They train ___ all winter.  [hard]
+    - She studied ___ for the test.  [hard]
+    - I can ___ hear you, the room is so loud.  [hardly]
+    - The ice was so ___ that we could walk on it.  [hard]
 
-### wear-where (level A2)
-Words: wear / where
-Meaning: wear = носить (одежду); where = где, куда
-Rule: wear = have clothes on · where = in or to which place
+### actual-topical (level B2)
+Words: actual / topical
+Meaning: actual = фактический, настоящий; topical = актуальный, злободневный
+Rule: "актуальный" is topical or current — never actual (= real)
 Existing sentences (do not repeat these ideas):
-    - I like to ___ a hat when it is sunny.  [wear]
-    - ___ did you put my keys this morning?  [where]
-    - Do you know ___ the nearest bank is?  [where]
-    - You don't have to ___ a tie at this office.  [wear]
-    - He didn't have anything to ___ for the party.  [wear]
-    - If it is cold outside, we ___ warm clothes.  [wear]
-    - I need you to tell me ___ to go.  [where]
-    - No one asked me ___ I wanted to go.  [where]
+    - We need the ___ figures, not guesses.  [actual]
+    - The programme discussed several ___ issues.  [topical]
+    - The ___ distance was shorter than the map showed.  [actual]
+    - Climate change remains a highly ___ subject.  [topical]
+    - Tell me the ___ reason you left early.  [actual]
+    - Climate change is a very ___ subject in the news this week.  [topical]
+    - I want the ___ facts, not what people think.  [actual]
+    - Our podcast talks about ___ issues such as new school rules.  [topical]
 
-### break-brake (level B1)
-Words: break / brake
-Meaning: break = ломать; перерыв; brake = тормоз; тормозить
-Rule: break = to damage, or a rest · brake = the part that stops a vehicle
+### fabric-factory (level B2)
+Words: fabric / factory
+Meaning: fabric = ткань; factory = фабрика, завод
+Rule: "фабрика" is a factory · fabric is ткань
 Existing sentences (do not repeat these ideas):
-    - Press the ___ gently when the road is wet.  [brake]
-    - Let's take a short ___ and have some coffee.  [break]
-    - Be careful not to ___ the glass on the shelf.  [break]
-    - The ___ on my bike does not work well.  [brake]
-    - I don't know when I can take a ___.  [break]
-    - I had to ___ a window to get in.  [break]
-    - He put his foot on the ___ suddenly.  [brake]
-    - He didn't ___ in time, and ran into a tree.  [brake]
+    - This dress is made of soft cotton ___.  [fabric]
+    - My uncle works in a car ___.  [factory]
+    - The sofa ___ feels rough.  [fabric]
+    - The old ___ closed last winter.  [factory]
+    - Silk is an expensive ___.  [fabric]
+    - This soft ___ is perfect for summer dresses.  [fabric]
+    - My uncle works at a car ___ near the city.  [factory]
+    - Cotton is a light ___.  [fabric]
 
-### piece-peace (level B1)
-Words: piece / peace
-Meaning: piece = кусок, кусочек; peace = мир; покой
-Rule: piece = a part of something · peace = no war, or calm and quiet
+### learn-find-out (level B1)
+Words: learn / find out
+Meaning: learn = учить, научиться; find out = узнать, выяснить
+Rule: learn = get knowledge or a skill · find out = discover a fact
 Existing sentences (do not repeat these ideas):
-    - Would you like a ___ of cake with your tea?  [piece]
-    - The two countries finally made ___ after a long war.  [peace]
-    - I need some ___ and quiet to study today.  [peace]
-    - She gave me a small ___ of paper with her number.  [piece]
-    - He wrote a letter on a ___ of paper.  [piece]
-    - I'd like to give you a ___ of advice.  [piece]
-    - She loves the ___ and quiet of the town.  [peace]
-    - People all over the world are anxious for ___.  [peace]
+    - I want to ___ Spanish before my trip.  [learn]
+    - We need to ___ who broke the vase.  [find out]
+    - Did you ever ___ why he was upset?  [find out]
+    - Children ___ quickly through songs and games.  [learn]
+    - Children ___ to read at about six years old.  [learn]
+    - Please ___ what time the museum opens.  [find out]
+    - I will call the office and ___ if the shop is open.  [find out]
+    - She is going to ___ Spanish next year.  [learn]
 
-### meat-meet (level A2)
-Words: meat / meet
-Meaning: meat = мясо; meet = встречать(ся), знакомиться
-Rule: meat = food from animals · meet = see or come together with someone
+### discover-invent (level B1)
+Words: discover / invent
+Meaning: discover = открыть, обнаружить (то, что уже было); invent = изобрести (новое)
+Rule: discover = find something that already exists · invent = make something new
 Existing sentences (do not repeat these ideas):
-    - She does not eat ___ or fish at all.  [meat]
-    - Let's ___ in front of the cinema at six.  [meet]
-    - It is nice to ___ you at last.  [meet]
-    - This ___ is too salty for me.  [meat]
-    - Are you sure there's no ___ in this soup?  [meat]
-    - Do you have many friends who don't eat ___?  [meat]
-    - We used to ___ on our way to school.  [meet]
-    - Come on. There's someone I want you to ___.  [meet]
+    - Scientists hope to ___ a better battery.  [invent]
+    - We were surprised to ___ an old photo album in the loft.  [discover]
+    - She wants to ___ something useful one day.  [invent]
+    - Divers hope to ___ the wreck of an old ship.  [discover]
+    - Who was the first person to ___ the telephone?  [invent]
+    - Scientists hope to ___ a new kind of plant in the forest.  [discover]
+    - Some day I would like to ___ a machine that cleans my room.  [invent]
+    - You may ___ a lovely cafe if you walk down this street.  [discover]
 
-### whole-hole (level B1)
-Words: whole / hole
-Meaning: whole = целый, весь; hole = дыра, яма
-Rule: whole = all of something · hole = an empty space in something
+### borrow-rent (level B1)
+Words: borrow / rent
+Meaning: borrow = взять на время (бесплатно); rent = арендовать, снимать (за деньги)
+Rule: borrow = use and give back, free · rent = pay to use
 Existing sentences (do not repeat these ideas):
-    - He ate the ___ pizza by himself last night.  [whole]
-    - There is a big ___ in my left sock.  [hole]
-    - The dog dug a deep ___ in the garden.  [hole]
-    - I spent the ___ day reading in the library.  [whole]
-    - We are going to stay there the ___ week.  [whole]
-    - I just want to forget about the ___ thing.  [whole]
-    - Be careful. There's a ___ in the floor.  [hole]
-    - We've got to fill this ___ with something.  [hole]
+    - Can I ___ your bike this afternoon?  [borrow]
+    - We decided to ___ a car in Glasgow.  [rent]
+    - They ___ a flat near the station.  [rent]
+    - May I ___ your pen for a minute?  [borrow]
+    - We ___ a flat in the city for four hundred euros a month.  [rent]
+    - May I ___ your bike? Mine has a flat tyre.  [borrow]
+    - Tourists can ___ bicycles at the station for ten euros a day.  [rent]
+    - Can I ___ a book from you? I will return it on Monday.  [borrow]
 
 ## Rules for every sentence
 

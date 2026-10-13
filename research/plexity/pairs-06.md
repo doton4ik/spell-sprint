@@ -8,93 +8,117 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### look-see-watch (level A2)
-Words: look / see / watch
-Meaning: look = смотреть (направить взгляд); see = видеть; watch = смотреть, наблюдать (за чем-то движущимся)
-Rule: look at = turn your eyes to · see = notice with your eyes · watch = look for a time (TV, a match)
+### economic-economical (level B2)
+Words: economic / economical
+Meaning: economic = экономический; economical = экономный, выгодный
+Rule: economic = about the economy · economical = saving money or fuel
 Existing sentences (do not repeat these ideas):
-    - Can you ___ at my screen for a second?  [look]
-    - I can't ___ anything without my glasses.  [see]
-    - We usually ___ a film on Fridays.  [watch]
-    - Did you ___ the man in the blue coat?  [see]
-    - Please ___ the soup so it doesn't boil over.  [watch]
+    - The country has serious ___ problems at the moment.  [economic]
+    - It is more ___ to buy food in large packs.  [economical]
+    - She studies ___ history at university.  [economic]
+    - A small car is cheaper and more ___ to run.  [economical]
+    - The small car is very ___ because it uses little petrol.  [economical]
+    - The country faces serious ___ problems this year.  [economic]
+    - Buying food in large packs is more ___.  [economical]
+    - She studies ___ growth in European countries.  [economic]
 
-### other-another (level A2)
-Words: other / another
-Meaning: other = другой, другие, остальные; another = ещё один; другой (один)
-Rule: another = one more, + singular (another cup) · other = + plural, or after the/my
+### sensible-sensitive (level B1)
+Words: sensible / sensitive
+Meaning: sensible = разумный, здравомыслящий; sensitive = чувствительный
+Rule: sensible = showing good judgement · sensitive = easily hurt or affected
 Existing sentences (do not repeat these ideas):
-    - Can I have ___ cup of tea?  [another]
-    - My ___ shoes are under the bed.  [other]
-    - Let's try ___ restaurant tonight.  [another]
-    - Where are the ___ children?  [other]
-    - She needs ___ minute to finish.  [another]
+    - It is ___ to take a warm coat in winter.  [sensible]
+    - My skin is very ___ to the sun.  [sensitive]
+    - He is a ___ person who always thinks before acting.  [sensible]
+    - Be kind to her, because she is very ___.  [sensitive]
+    - It is ___ to take a coat when it is cold.  [sensible]
+    - My skin is ___ to the sun, so I wear a hat.  [sensitive]
+    - Be kind to Dan; he is very ___ about his accent.  [sensitive]
+    - Wearing a helmet is a ___ choice for cyclists.  [sensible]
 
-### still-yet-already (level B1)
-Words: still / yet / already
-Meaning: still = всё ещё; yet = ещё (в отрицаниях); уже (в вопросах); already = уже
-Rule: still = continuing · yet = not yet / …yet? at the end · already = sooner than expected
+### lose-miss (level B1)
+Words: lose / miss
+Meaning: lose = терять; проигрывать; miss = пропустить; скучать по
+Rule: lose = cannot find or not win · miss = be too late for, or feel sad without someone
 Existing sentences (do not repeat these ideas):
-    - Are you ready to go ___?  [yet]
-    - I have ___ done my homework.  [already]
-    - She is ___ waiting outside.  [still]
-    - He hasn't called me ___.  [yet]
-    - We were ___ eating when they arrived.  [still]
+    - Hurry up, or we will ___ the last bus.  [miss]
+    - Don't ___ your wallet on the crowded train.  [lose]
+    - We will ___ you very much when you leave.  [miss]
+    - I always ___ my keys when I am in a hurry.  [lose]
+    - Hurry, or you will ___ the last bus.  [miss]
+    - Be careful not to ___ your phone at the airport.  [lose]
+    - I really ___ my friends when I am abroad.  [miss]
+    - If you press this button, you may ___ all your work.  [lose]
 
-### dictionary-vocabulary (level B1)
-Words: dictionary / vocabulary
-Meaning: dictionary = словарь (книга, приложение); vocabulary = словарный запас
-Rule: dictionary = a book or app of words · vocabulary = the words you know
+### hope-wait (level A2)
+Words: hope / wait
+Meaning: hope = надеяться; wait = ждать
+Rule: hope = want something to happen · wait = stay until something happens
 Existing sentences (do not repeat these ideas):
-    - My English ___ is better than last year.  [vocabulary]
-    - Use a ___ if you don't know the word.  [dictionary]
-    - This app helps you build your ___.  [vocabulary]
-    - I checked the spelling in my ___.  [dictionary]
-    - Her scientific ___ is very strong.  [vocabulary]
+    - I ___ you feel better very soon.  [hope]
+    - Please ___ here until I come back.  [wait]
+    - I can't ___ to see you again in June.  [wait]
+    - We ___ that the weather will be good on Saturday.  [hope]
+    - Please ___ here until the doctor calls you.  [wait]
+    - I ___ you feel better soon.  [hope]
+    - I ___ it will not rain on Saturday.  [hope]
+    - Can you ___ a minute while I find my keys?  [wait]
 
-### possibility-opportunity (level B1)
-Words: possibility / opportunity
-Meaning: possibility = возможность, вероятность (что-то может случиться); opportunity = возможность, шанс (сделать что-то)
-Rule: possibility = something might happen · opportunity = a good chance to do something
+### fewer-less (level B1)
+Words: fewer / less
+Meaning: fewer = меньше (о том, что можно посчитать); less = меньше (о том, что нельзя посчитать)
+Rule: fewer = a smaller number of things you can count · less = a smaller amount
 Existing sentences (do not repeat these ideas):
-    - There is a real ___ of snow tonight.  [possibility]
-    - This job is a great ___ for graduates.  [opportunity]
-    - We should discuss every ___ before deciding.  [possibility]
-    - She had the ___ to work abroad.  [opportunity]
-    - Is there any ___ the train will be late?  [possibility]
+    - There are ___ students in our class than last year.  [fewer]
+    - I drink ___ coffee than I used to.  [less]
+    - We made ___ mistakes in this test than in the last one.  [fewer]
+    - You should spend ___ time on your phone every day.  [less]
+    - There are ___ cars on the road on Sundays.  [fewer]
+    - I drink ___ coffee than my brother.  [less]
+    - We have ___ homework this week than last week.  [less]
+    - ___ people came to the cinema because of the storm.  [fewer]
 
-### homework-housework (level A2)
-Words: homework / housework
-Meaning: homework = домашнее задание; housework = работа по дому
-Rule: homework = tasks from school · housework = cleaning, washing, ironing
+### adapt-adopt (level B1)
+Words: adapt / adopt
+Meaning: adapt = приспосабливать(ся); adopt = принять (решение, правило); усыновить
+Rule: adapt = change to fit · adopt = take and start using; take a child into your family
 Existing sentences (do not repeat these ideas):
-    - I can't go out until I finish my ___.  [homework]
-    - She does most of the ___ on Saturdays.  [housework]
-    - Our maths ___ took two hours last night.  [homework]
-    - Nobody enjoys ironing and other ___.  [housework]
-    - The teacher checked our ___ this morning.  [homework]
+    - We had to ___ quickly to the new timetable.  [adapt]
+    - They want to ___ a child next year.  [adopt]
+    - This recipe is easy to ___ for vegetarians.  [adapt]
+    - Our school plans to ___ a new rule about phones.  [adopt]
+    - Animals slowly ___ to colder winters.  [adapt]
+    - It takes time to ___ to a new school.  [adapt]
+    - The family wants to ___ a small dog from the shelter.  [adopt]
+    - Chefs often ___ old recipes for modern kitchens.  [adapt]
 
-### for-during (level B1)
-Words: for / during
-Meaning: for = в течение (сколько времени); during = во время (чего)
-Rule: for + how long (for three weeks) · during + when, an event (during the lesson)
+### during-while (level B1)
+Words: during / while
+Meaning: during = во время (+ существительное); while = пока, в то время как (+ предложение)
+Rule: during + noun (during the film) · while + subject and verb (while he cooked)
 Existing sentences (do not repeat these ideas):
-    - We stayed there ___ three weeks.  [for]
-    - Nobody answered my calls ___ the meeting.  [during]
-    - She lived in Leeds ___ a year.  [for]
-    - He fell asleep ___ the lesson.  [during]
-    - I waited outside ___ ten minutes.  [for]
+    - Nobody spoke ___ the film.  [during]
+    - I washed up ___ he cooked dinner.  [while]
+    - She hurt her knee ___ the match.  [during]
+    - Please wait here ___ I check the booking.  [while]
+    - I met Tom ___ my lunch break.  [during]
+    - Please do not talk ___ the film.  [during]
+    - I listen to music ___ I cook dinner.  [while]
+    - He fell asleep ___ the long lesson.  [during]
 
-### good-well (level A2)
-Words: good / well
-Meaning: good = хороший; well = хорошо; здоров
-Rule: good = adjective (a good idea, smells good) · well = adverb (speaks well), or healthy
+### job-work (level A2)
+Words: job / work
+Meaning: job = работа, должность (одна, конкретная); work = работа, труд (вообще, неисчисляемое)
+Rule: a job = a position you have · work = what you do, uncountable (no "a work")
 Existing sentences (do not repeat these ideas):
-    - She speaks English very ___.  [well]
-    - It was a really ___ idea.  [good]
-    - I'm not feeling very ___ today.  [well]
-    - The soup smells really ___ today.  [good]
-    - You did the exercise quite ___.  [well]
+    - She found a new ___ in a bookshop.  [job]
+    - I have too much ___ this week.  [work]
+    - Please turn off your phone and ___ quietly.  [work]
+    - Cleaning windows is hard ___.  [work]
+    - My sister found a new ___ at a bakery.  [job]
+    - I have a lot of ___ to finish today.  [work]
+    - Dad leaves for ___ at seven every morning.  [work]
+    - Being a nurse is a hard ___.  [job]
 
 ## Rules for every sentence
 

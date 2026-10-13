@@ -8,75 +8,61 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### flour-flower (level B1)
-Words: flour / flower
-Meaning: flour = мука; flower = цветок
-Rule: flour = powder for baking bread · flower = the colourful part of a plant
+### suit-fit (level A2)
+Words: suit / fit
+Meaning: suit = идти (кому-то), подходить (по времени); fit = подходить по размеру
+Rule: fit = the right size · suit = look good on you, or be convenient
 Existing sentences (do not repeat these ideas):
-    - Mix the eggs with ___ and sugar in a bowl.  [flour]
-    - She put a red ___ in her hair.  [flower]
-    - We need more ___ to bake bread tonight.  [flour]
-    - Every ___ in the garden was open this morning.  [flower]
-    - This cake contains ___, milk, eggs and sugar.  [flour]
-    - There was no ___ in the shop.  [flour]
-    - My uncle has a ___ shop near the station.  [flower]
-    - That red ___ over there is very pretty.  [flower]
+    - These shoes don't ___ me any more.  [fit]
+    - Friday would ___ us better than Thursday.  [suit]
+    - Does this jacket ___ across the shoulders?  [fit]
+    - A later time might ___ everyone.  [suit]
+    - This blue jacket does not ___ me; it is too small.  [fit]
+    - A short haircut would ___ you.  [suit]
+    - Will all our bags ___ in the boot?  [fit]
+    - Blue and green ___ you, but yellow does not.  [suit]
 
-### allowed-aloud (level B2)
-Words: allowed / aloud
-Meaning: allowed = разрешённый; aloud = вслух
-Rule: allowed = permitted · aloud = in a voice that people can hear
+### policy-politics (level B2)
+Words: policy / politics
+Meaning: policy = политика, правила (организации); politics = политика (государство, партии)
+Rule: policy = a plan or rules (refund policy) · politics = government and parties
 Existing sentences (do not repeat these ideas):
-    - Phones are not ___ in the exam room.  [allowed]
-    - She read the letter ___ to her grandfather.  [aloud]
-    - He laughed ___ at the joke in the film.  [aloud]
-    - Children are not ___ to swim here without adults.  [allowed]
-    - Will we be ___ to eat during the meeting?  [allowed]
-    - My father ___ me to go to the concert.  [allowed]
-    - Please read it ___ so that everyone can hear.  [aloud]
-    - Read ___ what you have written.  [aloud]
+    - The company changed its holiday ___.  [policy]
+    - He never talks about ___ at family dinners.  [politics]
+    - What's your school's phone-use ___?  [policy]
+    - She studied ___ at university.  [politics]
+    - Our refund ___ is printed on the receipt.  [policy]
+    - The school has a strict ___ on mobile phones.  [policy]
+    - She is studying ___ and history at university.  [politics]
+    - The company has a new ___ about working from home.  [policy]
 
-### passed-past (level B1)
-Words: passed / past
-Meaning: passed = сдал; прошёл; передал; past = мимо; прошлое
-Rule: passed = verb (went by, handed, succeeded) · past = beyond, or earlier time
+### choice-chance (level B1)
+Words: choice / chance
+Meaning: choice = выбор; chance = шанс, вероятность
+Rule: choice = choosing between options · chance = a possibility
 Existing sentences (do not repeat these ideas):
-    - He ___ his driving test on Friday morning.  [passed]
-    - We walked ___ the old church on our way home.  [past]
-    - In the ___, people wrote many more letters.  [past]
-    - She ___ me the salt without saying a word.  [passed]
-    - Five years have ___ since they came to Japan.  [passed]
-    - The story lived on, ___ from person to person.  [passed]
-    - I've been studying French for the ___ three years.  [past]
-    - I need to understand what happened in the ___.  [past]
+    - You have no ___ but to apologise.  [choice]
+    - There's a good ___ of rain later.  [chance]
+    - Blue was an easy ___ for the walls.  [choice]
+    - Is there any ___ I can change my seat?  [chance]
+    - The menu offers plenty of ___ for vegetarians.  [choice]
+    - You have a ___ between tea and coffee.  [choice]
+    - There is a good ___ of rain tomorrow.  [chance]
+    - It was a hard ___ because I liked both shirts.  [choice]
 
-### desert-dessert (level B1)
-Words: desert / dessert
-Meaning: desert = пустыня; dessert = десерт
-Rule: desert = dry land with little water · dessert = sweet food after a meal (double s)
+### offer-suggest (level B1)
+Words: offer / suggest
+Meaning: offer = предлагать (дать что-то); suggest = предлагать (идею), советовать
+Rule: offer = say you will give or do something · suggest = give an idea
 Existing sentences (do not repeat these ideas):
-    - Camels can live for days in the hot ___.  [desert]
-    - We had ice cream for ___ after dinner.  [dessert]
-    - Would you like a ___ after the main course?  [dessert]
-    - There is almost no rain in this ___.  [desert]
-    - He knows how to find water in the ___.  [desert]
-    - The last part of the trip was across the ___.  [desert]
-    - You can't have ___ until you finish your meal.  [dessert]
-    - I think that you'll like the ___.  [dessert]
-
-### breath-breathe (level B1)
-Words: breath / breathe
-Meaning: breath = вдох, дыхание (сущ.); breathe = дышать (глагол)
-Rule: breath = air you take in (noun) · breathe = to take air in and out (verb, with e)
-Existing sentences (do not repeat these ideas):
-    - Take a deep ___ and try to relax.  [breath]
-    - It is hard to ___ in this thick smoke.  [breathe]
-    - After the race, he was out of ___.  [breath]
-    - Open the window so that we can ___ fresh air.  [breathe]
-    - He went outside for a ___ of fresh air.  [breath]
-    - He was out of ___. He had been running.  [breath]
-    - It was hard for me to ___.  [breathe]
-    - The smoke-filled room made it difficult to ___.  [breathe]
+    - Can I ___ you some tea?  [offer]
+    - I ___ taking the earlier train.  [suggest]
+    - The waiter will ___ dessert later.  [offer]
+    - Can you ___ a good place for lunch near here?  [suggest]
+    - Can I ___ you a cup of tea?  [offer]
+    - I ___ going to the cinema on Friday.  [suggest]
+    - The shop will ___ a ten percent discount.  [offer]
+    - Can you ___ a good place to eat?  [suggest]
 
 ### weather-whether (level A2)
 Words: weather / whether
@@ -122,6 +108,21 @@ Existing sentences (do not repeat these ideas):
     - I tried to be as ___ as I could.  [quiet]
     - It's ___ cold here, so I wear a hat.  [quite]
     - It's ___ a bit more expensive than I thought.  [quite]
+
+### affect-effect (level B2)
+Words: affect / effect
+Meaning: affect = влиять на; effect = эффект, влияние
+Rule: affect = to influence (verb) · effect = a result (noun)
+Existing sentences (do not repeat these ideas):
+    - Stress can ___ your sleep and your health.  [affect]
+    - The medicine had a strange ___ on him.  [effect]
+    - Bad weather may ___ the time of our flight.  [affect]
+    - The new law had a big ___ on small businesses.  [effect]
+    - I hope that this doesn't ___ our friendship.  [affect]
+    - We must not allow these problems to ___ the project.  [affect]
+    - The medicine seemed to have no ___ on the patient.  [effect]
+    - His words had a great ___ on my life.  [effect]
+    - The storm had a serious ___ on the economy.  [effect]
 
 ## Rules for every sentence
 

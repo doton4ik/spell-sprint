@@ -8,21 +8,6 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### affect-effect (level B2)
-Words: affect / effect
-Meaning: affect = влиять на; effect = эффект, влияние
-Rule: affect = to influence (verb) · effect = a result (noun)
-Existing sentences (do not repeat these ideas):
-    - Stress can ___ your sleep and your health.  [affect]
-    - The medicine had a strange ___ on him.  [effect]
-    - Bad weather may ___ the time of our flight.  [affect]
-    - The new law had a big ___ on small businesses.  [effect]
-    - I hope that this doesn't ___ our friendship.  [affect]
-    - We must not allow these problems to ___ the project.  [affect]
-    - The medicine seemed to have no ___ on the patient.  [effect]
-    - His words had a great ___ on my life.  [effect]
-    - The storm had a serious ___ on the economy.  [effect]
-
 ### advice-advise (level B1)
 Words: advice / advise
 Meaning: advice = совет; advise = советовать
@@ -112,6 +97,21 @@ Existing sentences (do not repeat these ideas):
     - His business in New York was a great ___.  [success]
     - If you want to ___, use your time well.  [succeed]
     - We believe he will ___, for he has talent.  [succeed]
+
+### say-speak (level A2)
+Words: say / speak
+Meaning: say = сказать (слова); speak = говорить (языком, с кем-то)
+Rule: say + the words (say hello) · speak + a language, or speak to someone
+Existing sentences (do not repeat these ideas):
+    - What did she ___ about the meeting?  [say]
+    - Could I ___ to Mr Brown now?  [speak]
+    - Don't ___ anything to upset him.  [say]
+    - He can ___ three languages well.  [speak]
+    - I didn't know what to ___.  [say]
+    - Can you ___ Slovak and German?  [speak]
+    - What did you ___ to the teacher?  [say]
+    - My grandfather can ___ three languages.  [speak]
+    - I will ___ goodbye to everyone.  [say]
 
 ### your-youre (level A2)
 Words: your / you're

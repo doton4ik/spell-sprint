@@ -8,93 +8,117 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### late-lately (level B1)
-Words: late / lately
-Meaning: late = поздно; опоздавший; lately = в последнее время
-Rule: late = not on time, near the end · lately = recently
+### for-during (level B1)
+Words: for / during
+Meaning: for = в течение (сколько времени); during = во время (чего)
+Rule: for + how long (for three weeks) · during + when, an event (during the lesson)
 Existing sentences (do not repeat these ideas):
-    - The bus was ___ again this morning.  [late]
-    - Have you seen Maria ___?  [lately]
-    - I stayed up ___ finishing the essay.  [late]
-    - Sales have improved ___ at our shop.  [lately]
-    - Sorry I'm ___; the traffic was awful.  [late]
+    - We stayed there ___ three weeks.  [for]
+    - Nobody answered my calls ___ the meeting.  [during]
+    - She lived in Leeds ___ a year.  [for]
+    - He fell asleep ___ the lesson.  [during]
+    - I waited outside ___ ten minutes.  [for]
+    - We stayed in Prague ___ three days.  [for]
+    - She woke up twice ___ the night.  [during]
+    - Nobody spoke ___ the concert.  [during]
 
-### hard-hardly (level B1)
-Words: hard / hardly
-Meaning: hard = усердно; твёрдый, трудный; hardly = едва, почти не
-Rule: hard = with effort (work hard) · hardly = almost not (I could hardly hear)
+### good-well (level A2)
+Words: good / well
+Meaning: good = хороший; well = хорошо; здоров
+Rule: good = adjective (a good idea, smells good) · well = adverb (speaks well), or healthy
 Existing sentences (do not repeat these ideas):
-    - She works very ___ before every exam.  [hard]
-    - I could ___ hear him on the phone.  [hardly]
-    - The ground was ___ after the frost.  [hard]
-    - We had ___ any milk left.  [hardly]
-    - They train ___ all winter.  [hard]
+    - She speaks English very ___.  [well]
+    - It was a really ___ idea.  [good]
+    - I'm not feeling very ___ today.  [well]
+    - The soup smells really ___ today.  [good]
+    - You did the exercise quite ___.  [well]
+    - She plays the guitar very ___.  [well]
+    - This soup tastes really ___.  [good]
+    - My grandmother is a ___ cook.  [good]
 
-### actual-topical (level B2)
-Words: actual / topical
-Meaning: actual = фактический, настоящий; topical = актуальный, злободневный
-Rule: "актуальный" is topical or current — never actual (= real)
+### what-that (level B1)
+Words: what / that
+Meaning: what = что (то, что); that = что (союз)
+Rule: what = "the thing that" · that = joins two parts (I think that…)
 Existing sentences (do not repeat these ideas):
-    - We need the ___ figures, not guesses.  [actual]
-    - The programme discussed several ___ issues.  [topical]
-    - The ___ distance was shorter than the map showed.  [actual]
-    - Climate change remains a highly ___ subject.  [topical]
-    - Tell me the ___ reason you left early.  [actual]
+    - I think ___ you're absolutely right.  [that]
+    - This is exactly ___ I wanted.  [what]
+    - She said ___ she was too tired.  [that]
+    - Can you explain ___ happened yesterday?  [what]
+    - I'm glad ___ you called me back.  [that]
+    - I do not know ___ she said.  [what]
+    - The book ___ you gave me is excellent.  [that]
+    - She told me ___ the shop closes at nine.  [that]
 
-### fabric-factory (level B2)
-Words: fabric / factory
-Meaning: fabric = ткань; factory = фабрика, завод
-Rule: "фабрика" is a factory · fabric is ткань
+### sink-drown (level B2)
+Words: sink / drown
+Meaning: sink = тонуть, идти ко дну (о предметах); drown = утонуть, погибнуть в воде
+Rule: sink = go down under water (boats, stones) · drown = die in water (people, animals)
 Existing sentences (do not repeat these ideas):
-    - This dress is made of soft cotton ___.  [fabric]
-    - My uncle works in a car ___.  [factory]
-    - The sofa ___ feels rough.  [fabric]
-    - The old ___ closed last winter.  [factory]
-    - Silk is an expensive ___.  [fabric]
+    - The boat began to ___ after the crash.  [sink]
+    - Heavy stones ___ straight to the bottom.  [sink]
+    - Lifeguards rescued the child before he could ___.  [drown]
+    - The damaged ship may ___ by morning.  [sink]
+    - Heavy stones ___ when you throw them in the lake.  [sink]
+    - Children must learn to swim so they do not ___.  [drown]
+    - A paper boat will ___ if it gets too wet.  [sink]
+    - Fish cannot ___ in water.  [drown]
 
-### custom-habit (level B2)
-Words: custom / habit
-Meaning: custom = обычай; habit = привычка
-Rule: custom = a tradition of a group · habit = something one person often does
+### sail-swim (level B1)
+Words: sail / swim
+Meaning: sail = плыть (на судне); swim = плавать (самому)
+Rule: sail = travel by boat · swim = move in water yourself
 Existing sentences (do not repeat these ideas):
-    - Drinking tea at four is a local ___.  [custom]
-    - Biting his nails is a bad ___.  [habit]
-    - In this village, it's a wedding ___.  [custom]
-    - She got into the ___ of running early.  [habit]
-    - Removing shoes indoors is a common ___.  [custom]
+    - We watched the yacht ___ into the harbour.  [sail]
+    - Can your little sister ___ yet?  [swim]
+    - They plan to ___ around the Greek islands.  [sail]
+    - I love to ___ in the sea in the morning.  [swim]
+    - The boat will ___ at first light.  [sail]
+    - We will ___ across the bay on a small boat.  [sail]
+    - The children love to ___ in the lake in summer.  [swim]
+    - My uncle will ___ his yacht around the islands.  [sail]
 
-### policy-politics (level B2)
-Words: policy / politics
-Meaning: policy = политика, правила (организации); politics = политика (государство, партии)
-Rule: policy = a plan or rules (refund policy) · politics = government and parties
+### travel-trip (level A2)
+Words: travel / trip
+Meaning: travel = путешествовать; trip = поездка
+Rule: travel = a verb (to travel) · a trip = one journey there and back (a school trip)
 Existing sentences (do not repeat these ideas):
-    - The company changed its holiday ___.  [policy]
-    - He never talks about ___ at family dinners.  [politics]
-    - What's your school's phone-use ___?  [policy]
-    - She studied ___ at university.  [politics]
-    - Our refund ___ is printed on the receipt.  [policy]
+    - I want to ___ around Europe next summer.  [travel]
+    - Our school ___ to York was brilliant.  [trip]
+    - Do you usually ___ by train or coach?  [travel]
+    - The business ___ lasted only one day.  [trip]
+    - We took a short ___ to the mountains.  [trip]
+    - I love to ___ by train across Europe.  [travel]
+    - How was your business ___ to Vienna?  [trip]
+    - It is cheaper to ___ outside the summer season.  [travel]
 
-### choice-chance (level B1)
-Words: choice / chance
-Meaning: choice = выбор; chance = шанс, вероятность
-Rule: choice = choosing between options · chance = a possibility
+### miss-fail (level B1)
+Words: miss / fail
+Meaning: miss = пропустить, опоздать; скучать; fail = провалить, не сдать
+Rule: miss = not catch, not attend, not have · fail = not pass, not succeed
 Existing sentences (do not repeat these ideas):
-    - You have no ___ but to apologise.  [choice]
-    - There's a good ___ of rain later.  [chance]
-    - Blue was an easy ___ for the walls.  [choice]
-    - Is there any ___ I can change my seat?  [chance]
-    - The menu offers plenty of ___ for vegetarians.  [choice]
+    - If we hurry, we won't ___ the bus.  [miss]
+    - He may ___ his driving test again.  [fail]
+    - I really ___ my grandparents.  [miss]
+    - Too many students ___ this exam every year.  [fail]
+    - She didn't ___ a single lesson last term.  [miss]
+    - If you do not study, you may ___ the exam.  [fail]
+    - Hurry up, or we will ___ the train.  [miss]
+    - If you leave now, you will not ___ the start of the film.  [miss]
 
-### say-speak (level A2)
-Words: say / speak
-Meaning: say = сказать (слова); speak = говорить (языком, с кем-то)
-Rule: say + the words (say hello) · speak + a language, or speak to someone
+### win-beat (level B1)
+Words: win / beat
+Meaning: win = выиграть (игру, приз); beat = победить (кого-то)
+Rule: win a game / a prize · beat a person or a team
 Existing sentences (do not repeat these ideas):
-    - What did she ___ about the meeting?  [say]
-    - Could I ___ to Mr Brown now?  [speak]
-    - Don't ___ anything to upset him.  [say]
-    - He can ___ three languages well.  [speak]
-    - I didn't know what to ___.  [say]
+    - Our team managed to ___ the champions.  [beat]
+    - She hopes to ___ the race this year.  [win]
+    - Nobody expected me to ___ Jake at chess.  [beat]
+    - He wants to ___ a scholarship.  [win]
+    - United ___ City two-nil last night.  [beat]
+    - Our team hopes to ___ the match on Saturday.  [win]
+    - I want to ___ my brother at chess.  [beat]
+    - Can you ___ the world record?  [beat]
 
 ## Rules for every sentence
 

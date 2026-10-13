@@ -8,85 +8,117 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### wait-expect (level B1)
-Words: wait / expect
-Meaning: wait = ждать (оставаться, пока); expect = ожидать, рассчитывать (что будет)
-Rule: wait (for) = stay until something happens · expect = think something will happen
+### piece-peace (level B1)
+Words: piece / peace
+Meaning: piece = кусок, кусочек; peace = мир; покой
+Rule: piece = a part of something · peace = no war, or calm and quiet
 Existing sentences (do not repeat these ideas):
-    - Please ___ here while I check the order.  [wait]
-    - I didn't ___ such a long reply.  [expect]
-    - We had to ___ outside the clinic.  [wait]
-    - I can't ___ any longer in this queue.  [wait]
+    - Would you like a ___ of cake with your tea?  [piece]
+    - The two countries finally made ___ after a long war.  [peace]
+    - I need some ___ and quiet to study today.  [peace]
+    - She gave me a small ___ of paper with her number.  [piece]
+    - He wrote a letter on a ___ of paper.  [piece]
+    - I'd like to give you a ___ of advice.  [piece]
+    - She loves the ___ and quiet of the town.  [peace]
+    - People all over the world are anxious for ___.  [peace]
 
-### worth-worthy (level B2)
-Words: worth / worthy
-Meaning: worth = стоящий (be worth + -ing / цена); worthy = достойный
-Rule: be worth + -ing or a price (worth reading) · worthy = deserving (a worthy cause)
+### meat-meet (level A2)
+Words: meat / meet
+Meaning: meat = мясо; meet = встречать(ся), знакомиться
+Rule: meat = food from animals · meet = see or come together with someone
 Existing sentences (do not repeat these ideas):
-    - This book is ___ reading twice.  [worth]
-    - The film wasn't ___ the ticket price.  [worth]
-    - They support several ___ charities.  [worthy]
-    - Is it ___ driving that far for lunch?  [worth]
+    - She does not eat ___ or fish at all.  [meat]
+    - Let's ___ in front of the cinema at six.  [meet]
+    - It is nice to ___ you at last.  [meet]
+    - This ___ is too salty for me.  [meat]
+    - Are you sure there's no ___ in this soup?  [meat]
+    - Do you have many friends who don't eat ___?  [meat]
+    - We used to ___ on our way to school.  [meet]
+    - Come on. There's someone I want you to ___.  [meet]
 
-### price-value (level B1)
-Words: price / value
-Meaning: price = цена (сколько платишь); value = ценность, стоимость (чего стоит)
-Rule: price = the money you pay · value = how much something is worth or how important
+### whole-hole (level B1)
+Words: whole / hole
+Meaning: whole = целый, весь; hole = дыра, яма
+Rule: whole = all of something · hole = an empty space in something
 Existing sentences (do not repeat these ideas):
-    - The ___ of petrol has gone up again.  [price]
-    - What was the ___ of your flight?  [price]
-    - Good friends add ___ to your life.  [value]
-    - The shop lowered the ___ by five pounds.  [price]
+    - He ate the ___ pizza by himself last night.  [whole]
+    - There is a big ___ in my left sock.  [hole]
+    - The dog dug a deep ___ in the garden.  [hole]
+    - I spent the ___ day reading in the library.  [whole]
+    - We are going to stay there the ___ week.  [whole]
+    - I just want to forget about the ___ thing.  [whole]
+    - Be careful. There's a ___ in the floor.  [hole]
+    - We've got to fill this ___ with something.  [hole]
 
-### economy-economics (level B2)
-Words: economy / economics
-Meaning: economy = экономика (страны); economics = экономика (наука, предмет)
-Rule: economy = the money system of a country · economics = the subject you study
+### flour-flower (level B1)
+Words: flour / flower
+Meaning: flour = мука; flower = цветок
+Rule: flour = powder for baking bread · flower = the colourful part of a plant
 Existing sentences (do not repeat these ideas):
-    - She is studying ___ at Bristol.  [economics]
-    - Tourism is important for the island's ___.  [economy]
-    - His degree in ___ helped him get the job.  [economics]
-    - The national ___ grew last quarter.  [economy]
+    - Mix the eggs with ___ and sugar in a bowl.  [flour]
+    - She put a red ___ in her hair.  [flower]
+    - We need more ___ to bake bread tonight.  [flour]
+    - Every ___ in the garden was open this morning.  [flower]
+    - This cake contains ___, milk, eggs and sugar.  [flour]
+    - There was no ___ in the shop.  [flour]
+    - My uncle has a ___ shop near the station.  [flower]
+    - That red ___ over there is very pretty.  [flower]
 
-### actual-current (level B2)
-Words: actual / current
-Meaning: actual = фактический, настоящий; current = текущий, нынешний (актуальный)
-Rule: actual = real (not "актуальный"!) · current = happening now
+### allowed-aloud (level B2)
+Words: allowed / aloud
+Meaning: allowed = разрешённый; aloud = вслух
+Rule: allowed = permitted · aloud = in a voice that people can hear
 Existing sentences (do not repeat these ideas):
-    - The ___ price is lower than we expected.  [actual]
-    - Who is the ___ manager of the shop?  [current]
-    - Please give the ___ number of guests.  [actual]
-    - Our ___ plan may change tomorrow.  [current]
+    - Phones are not ___ in the exam room.  [allowed]
+    - She read the letter ___ to her grandfather.  [aloud]
+    - He laughed ___ at the joke in the film.  [aloud]
+    - Children are not ___ to swim here without adults.  [allowed]
+    - Will we be ___ to eat during the meeting?  [allowed]
+    - My father ___ me to go to the concert.  [allowed]
+    - Please read it ___ so that everyone can hear.  [aloud]
+    - Read ___ what you have written.  [aloud]
 
-### learn-find-out (level B1)
-Words: learn / find out
-Meaning: learn = учить, научиться; find out = узнать, выяснить
-Rule: learn = get knowledge or a skill · find out = discover a fact
+### passed-past (level B1)
+Words: passed / past
+Meaning: passed = сдал; прошёл; передал; past = мимо; прошлое
+Rule: passed = verb (went by, handed, succeeded) · past = beyond, or earlier time
 Existing sentences (do not repeat these ideas):
-    - I want to ___ Spanish before my trip.  [learn]
-    - We need to ___ who broke the vase.  [find out]
-    - Did you ever ___ why he was upset?  [find out]
-    - Children ___ quickly through songs and games.  [learn]
+    - He ___ his driving test on Friday morning.  [passed]
+    - We walked ___ the old church on our way home.  [past]
+    - In the ___, people wrote many more letters.  [past]
+    - She ___ me the salt without saying a word.  [passed]
+    - Five years have ___ since they came to Japan.  [passed]
+    - The story lived on, ___ from person to person.  [passed]
+    - I've been studying French for the ___ three years.  [past]
+    - I need to understand what happened in the ___.  [past]
 
-### notice-note (level B2)
-Words: notice / note
-Meaning: notice = заметить; note = отметить, записать; обратить внимание
-Rule: notice = see, become aware · note = write down, or "please note" = pay attention
+### desert-dessert (level B1)
+Words: desert / dessert
+Meaning: desert = пустыня; dessert = десерт
+Rule: desert = dry land with little water · dessert = sweet food after a meal (double s)
 Existing sentences (do not repeat these ideas):
-    - Did you ___ her new haircut?  [notice]
-    - Please ___ your seat number on the form.  [note]
-    - I didn't ___ the sign by the gate.  [notice]
-    - Please ___ that the shop closes early on Sundays.  [note]
+    - Camels can live for days in the hot ___.  [desert]
+    - We had ice cream for ___ after dinner.  [dessert]
+    - Would you like a ___ after the main course?  [dessert]
+    - There is almost no rain in this ___.  [desert]
+    - He knows how to find water in the ___.  [desert]
+    - The last part of the trip was across the ___.  [desert]
+    - You can't have ___ until you finish your meal.  [dessert]
+    - I think that you'll like the ___.  [dessert]
 
-### discover-invent (level B1)
-Words: discover / invent
-Meaning: discover = открыть, обнаружить (то, что уже было); invent = изобрести (новое)
-Rule: discover = find something that already exists · invent = make something new
+### breath-breathe (level B1)
+Words: breath / breathe
+Meaning: breath = вдох, дыхание (сущ.); breathe = дышать (глагол)
+Rule: breath = air you take in (noun) · breathe = to take air in and out (verb, with e)
 Existing sentences (do not repeat these ideas):
-    - Scientists hope to ___ a better battery.  [invent]
-    - We were surprised to ___ an old photo album in the loft.  [discover]
-    - She wants to ___ something useful one day.  [invent]
-    - Divers hope to ___ the wreck of an old ship.  [discover]
+    - Take a deep ___ and try to relax.  [breath]
+    - It is hard to ___ in this thick smoke.  [breathe]
+    - After the race, he was out of ___.  [breath]
+    - Open the window so that we can ___ fresh air.  [breathe]
+    - He went outside for a ___ of fresh air.  [breath]
+    - He was out of ___. He had been running.  [breath]
+    - It was hard for me to ___.  [breathe]
+    - The smoke-filled room made it difficult to ___.  [breathe]
 
 ## Rules for every sentence
 

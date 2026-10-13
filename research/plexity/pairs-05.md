@@ -8,56 +8,6 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### borrow-rent (level B1)
-Words: borrow / rent
-Meaning: borrow = взять на время (бесплатно); rent = арендовать, снимать (за деньги)
-Rule: borrow = use and give back, free · rent = pay to use
-Existing sentences (do not repeat these ideas):
-    - Can I ___ your bike this afternoon?  [borrow]
-    - We decided to ___ a car in Glasgow.  [rent]
-    - They ___ a flat near the station.  [rent]
-    - May I ___ your pen for a minute?  [borrow]
-
-### suit-fit (level A2)
-Words: suit / fit
-Meaning: suit = идти (кому-то), подходить (по времени); fit = подходить по размеру
-Rule: fit = the right size · suit = look good on you, or be convenient
-Existing sentences (do not repeat these ideas):
-    - These shoes don't ___ me any more.  [fit]
-    - Friday would ___ us better than Thursday.  [suit]
-    - Does this jacket ___ across the shoulders?  [fit]
-    - A later time might ___ everyone.  [suit]
-
-### careful-caring (level B1)
-Words: careful / caring
-Meaning: careful = осторожный, аккуратный; caring = заботливый
-Rule: careful = paying attention to avoid danger · caring = kind, looking after others
-Existing sentences (do not repeat these ideas):
-    - Be ___ with that hot pan.  [careful]
-    - She's a very ___ nurse.  [caring]
-    - He is patient and ___ with children.  [caring]
-    - Workers must be ___ near the machines.  [careful]
-
-### offer-suggest (level B1)
-Words: offer / suggest
-Meaning: offer = предлагать (дать что-то); suggest = предлагать (идею), советовать
-Rule: offer = say you will give or do something · suggest = give an idea
-Existing sentences (do not repeat these ideas):
-    - Can I ___ you some tea?  [offer]
-    - I ___ taking the earlier train.  [suggest]
-    - The waiter will ___ dessert later.  [offer]
-    - Can you ___ a good place for lunch near here?  [suggest]
-
-### excuse-apologise (level B1)
-Words: excuse / apologise
-Meaning: excuse = извинить, простить; apologise = извиниться
-Rule: excuse me / excuse someone · apologise (to someone) = say sorry yourself
-Existing sentences (do not repeat these ideas):
-    - Please ___ me for being late.  [excuse]
-    - You should ___ to your sister.  [apologise]
-    - ___ me, is this seat free?  [excuse]
-    - He forgot to ___ after the mistake.  [apologise]
-
 ### stationary-stationery (level B2)
 Words: stationary / stationery
 Meaning: stationary = неподвижный; stationery = канцелярские товары
@@ -68,28 +18,107 @@ Existing sentences (do not repeat these ideas):
     - The office orders its ___ from a big online shop.  [stationery]
     - Stay ___ until the bus has stopped completely.  [stationary]
     - The department store also has a ___ department.  [stationery]
+    - The bus was ___ in traffic for twenty minutes.  [stationary]
+    - Our office orders new ___ every September.  [stationery]
+    - A ___ bike is useful when it rains outside.  [stationary]
 
-### adapt-adopt (level B1)
-Words: adapt / adopt
-Meaning: adapt = приспосабливать(ся); adopt = принять (решение, правило); усыновить
-Rule: adapt = change to fit · adopt = take and start using; take a child into your family
+### complement-compliment (level B2)
+Words: complement / compliment
+Meaning: complement = дополнять; дополнение; compliment = комплимент
+Rule: complement = goes well with, completes · compliment = a kind word about someone
 Existing sentences (do not repeat these ideas):
-    - We had to ___ quickly to the new timetable.  [adapt]
-    - They want to ___ a child next year.  [adopt]
-    - This recipe is easy to ___ for vegetarians.  [adapt]
-    - Our school plans to ___ a new rule about phones.  [adopt]
-    - Animals slowly ___ to colder winters.  [adapt]
+    - That red scarf will ___ your grey coat nicely.  [complement]
+    - She gave me a lovely ___ about my cooking.  [compliment]
+    - A glass of wine can ___ this dish very well.  [complement]
+    - He blushed when she paid him such a ___.  [compliment]
+    - I think that we ___ each other.  [complement]
+    - I'll take that as a ___.  [compliment]
+    - Was that supposed to be a ___?  [compliment]
+    - Thank you for the kind ___ about my cooking.  [compliment]
 
-### during-while (level B1)
-Words: during / while
-Meaning: during = во время (+ существительное); while = пока, в то время как (+ предложение)
-Rule: during + noun (during the film) · while + subject and verb (while he cooked)
+### principal-principle (level B2)
+Words: principal / principle
+Meaning: principal = директор (школы); главный; principle = принцип
+Rule: principal = head of a school, or main · principle = a rule or belief
 Existing sentences (do not repeat these ideas):
-    - Nobody spoke ___ the film.  [during]
-    - I washed up ___ he cooked dinner.  [while]
-    - She hurt her knee ___ the match.  [during]
-    - Please wait here ___ I check the booking.  [while]
-    - I met Tom ___ my lunch break.  [during]
+    - The ___ of the school spoke to the parents.  [principal]
+    - It is against my ___ to lie to friends.  [principle]
+    - Our ___ reason for moving was the new job.  [principal]
+    - He never breaks a ___ even when it is difficult.  [principle]
+    - The ___ walked into the classroom and everyone stood up.  [principal]
+    - For me, this is a matter of ___.  [principle]
+    - I agree to the proposal in ___.  [principle]
+    - The school ___ welcomed the new students this morning.  [principal]
+
+### conscious-conscience (level B2)
+Words: conscious / conscience
+Meaning: conscious = в сознании; осознающий; conscience = совесть
+Rule: conscious = awake, aware (adjective) · conscience = inner sense of right and wrong (noun)
+Existing sentences (do not repeat these ideas):
+    - The patient was ___ again after the operation.  [conscious]
+    - He had a guilty ___ about the lie.  [conscience]
+    - I was not ___ of the danger at that moment.  [conscious]
+    - Her ___ told her to give the money back.  [conscience]
+    - I wasn't ___ of anyone watching me.  [conscious]
+    - I was ___ that something was missing.  [conscious]
+    - I could not do this with an easy ___.  [conscience]
+    - After the fall, he was still ___ and could talk.  [conscious]
+
+### borrow-lend (level A2)
+Words: borrow / lend
+Meaning: borrow = брать взаймы, одолжить (у кого-то); lend = давать взаймы, одолжить (кому-то)
+Rule: borrow = take something for a short time · lend = give something for a short time
+Existing sentences (do not repeat these ideas):
+    - Can I ___ your pen for a minute?  [borrow]
+    - Could you ___ me some money until Friday?  [lend]
+    - I never ___ books from the library without a card.  [borrow]
+    - My uncle will ___ us his car for the weekend.  [lend]
+    - Could you ___ me ten euros until Friday?  [lend]
+    - May I ___ your umbrella for an hour?  [borrow]
+    - I never ___ money from my friends.  [borrow]
+    - Libraries ___ books to anyone with a card.  [lend]
+
+### say-tell (level A2)
+Words: say / tell
+Meaning: say = сказать; tell = сказать (кому-то), рассказать
+Rule: say = speak words (say hello) · tell = give information to someone (tell me)
+Existing sentences (do not repeat these ideas):
+    - Please ___ me the truth about the accident.  [tell]
+    - What did he ___ about the film last night?  [say]
+    - Did she ___ hello when she came in?  [say]
+    - Can you ___ us the way to the station?  [tell]
+    - Please ___ me the way to the station.  [tell]
+    - How do you ___ thank you in Slovak?  [say]
+    - Can you ___ me what time it is?  [tell]
+    - I want to ___ hello to your sister.  [say]
+
+### rob-steal (level B1)
+Words: rob / steal
+Meaning: rob = грабить (место, человека); steal = красть (вещь)
+Rule: rob = take things from a person or place · steal = take a thing that is not yours
+Existing sentences (do not repeat these ideas):
+    - Two men tried to ___ the bank on Monday.  [rob]
+    - Someone tried to ___ my bike yesterday.  [steal]
+    - It is a crime to ___ money from shops.  [steal]
+    - They planned to ___ an old lady in the street.  [rob]
+    - Someone tried to ___ my bicycle outside the shop.  [steal]
+    - A man tried to ___ the jewellery shop at night.  [rob]
+    - It is wrong to ___ other people's ideas.  [steal]
+    - Nobody should ___ a tourist on the street.  [rob]
+
+### remember-remind (level A2)
+Words: remember / remind
+Meaning: remember = помнить, вспоминать; remind = напоминать (кому-то)
+Rule: remember = keep in your mind · remind = make someone remember
+Existing sentences (do not repeat these ideas):
+    - I can't ___ where I parked the car.  [remember]
+    - Please ___ me to call my mother tonight.  [remind]
+    - Do you ___ the name of that restaurant?  [remember]
+    - This song always seems to ___ me of summer.  [remind]
+    - Please ___ me to call the dentist tomorrow.  [remind]
+    - I cannot ___ where I left my keys.  [remember]
+    - This song will ___ me of my school days.  [remind]
+    - Do you ___ your first day at school?  [remember]
 
 ## Rules for every sentence
 

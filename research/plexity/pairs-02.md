@@ -8,85 +8,109 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### lose-miss (level B1)
-Words: lose / miss
-Meaning: lose = терять; проигрывать; miss = пропустить; скучать по
-Rule: lose = cannot find or not win · miss = be too late for, or feel sad without someone
+### lend-borrow-loan (level B1)
+Words: lend / borrow / loan
+Meaning: lend = одолжить (дать); borrow = взять взаймы; loan = заём, кредит
+Rule: lend = give for a while · borrow = take for a while · a loan = money you borrow
 Existing sentences (do not repeat these ideas):
-    - Hurry up, or we will ___ the last bus.  [miss]
-    - Don't ___ your wallet on the crowded train.  [lose]
-    - We will ___ you very much when you leave.  [miss]
-    - I always ___ my keys when I am in a hurry.  [lose]
+    - Can I ___ your umbrella for tonight?  [borrow]
+    - I'll ___ you my charger after lunch.  [lend]
+    - The bank refused our home ___.  [loan]
+    - Never ___ money you can't afford to lose.  [lend]
+    - She used a student ___ to pay fees.  [loan]
+    - May I ___ a pen from you?  [borrow]
+    - The bank gave him a ___ to buy a car.  [loan]
 
-### hope-wait (level A2)
-Words: hope / wait
-Meaning: hope = надеяться; wait = ждать
-Rule: hope = want something to happen · wait = stay until something happens
+### road-way (level A2)
+Words: road / way
+Meaning: road = дорога (улица, шоссе); way = путь, дорога (куда); способ
+Rule: road = the real street · way = the route or the method (the way to the station)
 Existing sentences (do not repeat these ideas):
-    - I ___ you feel better very soon.  [hope]
-    - Please ___ here until I come back.  [wait]
-    - I can't ___ to see you again in June.  [wait]
-    - We ___ that the weather will be good on Saturday.  [hope]
+    - This ___ gets icy in winter.  [road]
+    - Is this the right ___ to the station?  [way]
+    - They live on a quiet country ___.  [road]
+    - Show me the easiest ___ to open it.  [way]
+    - The main ___ was closed after the storm.  [road]
+    - Cars drive slowly on this narrow ___.  [road]
+    - On the ___ home, I bought some bread.  [way]
 
-### fewer-less (level B1)
-Words: fewer / less
-Meaning: fewer = меньше (о том, что можно посчитать); less = меньше (о том, что нельзя посчитать)
-Rule: fewer = a smaller number of things you can count · less = a smaller amount
+### wait-expect (level B1)
+Words: wait / expect
+Meaning: wait = ждать (оставаться, пока); expect = ожидать, рассчитывать (что будет)
+Rule: wait (for) = stay until something happens · expect = think something will happen
 Existing sentences (do not repeat these ideas):
-    - There are ___ students in our class than last year.  [fewer]
-    - I drink ___ coffee than I used to.  [less]
-    - We made ___ mistakes in this test than in the last one.  [fewer]
-    - You should spend ___ time on your phone every day.  [less]
+    - Please ___ here while I check the order.  [wait]
+    - I didn't ___ such a long reply.  [expect]
+    - We had to ___ outside the clinic.  [wait]
+    - I can't ___ any longer in this queue.  [wait]
+    - I ___ a letter from my friend this week.  [expect]
+    - Do you ___ the exam to be difficult?  [expect]
+    - We have to ___ ten minutes for the next bus.  [wait]
 
-### job-work (level A2)
-Words: job / work
-Meaning: job = работа, должность (одна, конкретная); work = работа, труд (вообще, неисчисляемое)
-Rule: a job = a position you have · work = what you do, uncountable (no "a work")
+### price-prize (level A2)
+Words: price / prize
+Meaning: price = цена; prize = приз
+Rule: price = how much it costs · prize = what you get for winning
 Existing sentences (do not repeat these ideas):
-    - She found a new ___ in a bookshop.  [job]
-    - I have too much ___ this week.  [work]
-    - Please turn off your phone and ___ quietly.  [work]
-    - Cleaning windows is hard ___.  [work]
+    - What's the ___ of this blue jacket?  [price]
+    - She won first ___ in the art contest.  [prize]
+    - The shop reduced the ___ of milk.  [price]
+    - His ___ was a weekend in Edinburgh.  [prize]
+    - I checked the ___ before buying it.  [price]
+    - What is the ___ of this jacket?  [price]
+    - The ___ of bread went up last month.  [price]
 
-### house-home (level A2)
-Words: house / home
-Meaning: house = дом (здание); home = дом, где ты живёшь; домой
-Rule: house = the building · home = where you live (go home, at home — no "to", no "the")
+### economy-economics (level B2)
+Words: economy / economics
+Meaning: economy = экономика (страны); economics = экономика (наука, предмет)
+Rule: economy = the money system of a country · economics = the subject you study
 Existing sentences (do not repeat these ideas):
-    - I'm going ___ after class.  [home]
-    - She stayed at ___ with the baby.  [home]
-    - That old ___ needs a new roof.  [house]
-    - The builders are painting the ___ next to ours.  [house]
+    - She is studying ___ at Bristol.  [economics]
+    - Tourism is important for the island's ___.  [economy]
+    - His degree in ___ helped him get the job.  [economics]
+    - The national ___ grew last quarter.  [economy]
+    - She studies ___ at university.  [economics]
+    - The country's ___ grew slowly last year.  [economy]
+    - My brother has a degree in ___.  [economics]
 
-### all-whole (level B1)
-Words: all / whole
-Meaning: all = все, весь; whole = целый, весь (одна вещь целиком)
-Rule: the whole + singular (the whole day) · all + plural or all the (all the students)
+### notice-note (level B2)
+Words: notice / note
+Meaning: notice = заметить; note = отметить, записать; обратить внимание
+Rule: notice = see, become aware · note = write down, or "please note" = pay attention
 Existing sentences (do not repeat these ideas):
-    - I spent the ___ day cleaning the flat.  [whole]
-    - ___ the students passed the test.  [all]
-    - She ate the ___ cake by herself.  [whole]
-    - The ___ family came to dinner.  [whole]
+    - Did you ___ her new haircut?  [notice]
+    - Please ___ your seat number on the form.  [note]
+    - I didn't ___ the sign by the gate.  [notice]
+    - Please ___ that the shop closes early on Sundays.  [note]
+    - Did you ___ the new painting on the wall?  [notice]
+    - Please ___ the date of the meeting in your diary.  [note]
+    - I did not ___ that my bag was open.  [notice]
 
-### among-between (level B1)
-Words: among / between
-Meaning: among = среди (в группе); between = между (двумя, или каждым по отдельности)
-Rule: between = two things, or clear separate ones · among = in a group, a crowd
+### custom-habit (level B2)
+Words: custom / habit
+Meaning: custom = обычай; habit = привычка
+Rule: custom = a tradition of a group · habit = something one person often does
 Existing sentences (do not repeat these ideas):
-    - The bank is ___ the post office and the chemist's.  [between]
-    - She felt nervous ___ strangers.  [among]
-    - Please split the bill ___ you and me.  [between]
-    - Her house is hidden ___ the tall trees.  [among]
+    - Drinking tea at four is a local ___.  [custom]
+    - Biting his nails is a bad ___.  [habit]
+    - In this village, it's a wedding ___.  [custom]
+    - She got into the ___ of running early.  [habit]
+    - Removing shoes indoors is a common ___.  [custom]
+    - In some countries, it is a ___ to take off your shoes at the door.  [custom]
+    - Shaking hands is a common ___ when people meet.  [custom]
 
-### hear-listen (level A2)
-Words: hear / listen
-Meaning: hear = слышать; listen = слушать
-Rule: hear = sound reaches you · listen (to) = you pay attention
+### careful-caring (level B1)
+Words: careful / caring
+Meaning: careful = осторожный, аккуратный; caring = заботливый
+Rule: careful = paying attention to avoid danger · caring = kind, looking after others
 Existing sentences (do not repeat these ideas):
-    - Can you ___ the music next door?  [hear]
-    - Please ___ carefully to the instructions.  [listen]
-    - I didn't ___ my phone ring.  [hear]
-    - The children never ___ in class.  [listen]
+    - Be ___ with that hot pan.  [careful]
+    - She's a very ___ nurse.  [caring]
+    - He is patient and ___ with children.  [caring]
+    - Workers must be ___ near the machines.  [careful]
+    - Be ___ when you cross the busy road.  [careful]
+    - A ___ father helps with homework and cooks dinner.  [caring]
+    - Please be ___ with the glass; it breaks easily.  [careful]
 
 ## Rules for every sentence
 

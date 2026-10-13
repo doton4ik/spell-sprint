@@ -8,85 +8,116 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### teach-learn-study (level A2)
-Words: teach / learn / study
-Meaning: teach = учить (кого-то), преподавать; learn = учить, выучить (самому); study = учиться, заниматься, изучать
-Rule: teach = give knowledge · learn = get knowledge · study = spend time learning
+### excuse-apologise (level B1)
+Words: excuse / apologise
+Meaning: excuse = извинить, простить; apologise = извиниться
+Rule: excuse me / excuse someone · apologise (to someone) = say sorry yourself
 Existing sentences (do not repeat these ideas):
-    - My mum will ___ me how to cook rice.  [teach]
-    - I'm trying to ___ ten new words today.  [learn]
-    - She needs to ___ for her biology exam.  [study]
-    - We usually ___ in the library after lunch.  [study]
+    - Please ___ me for being late.  [excuse]
+    - You should ___ to your sister.  [apologise]
+    - ___ me, is this seat free?  [excuse]
+    - He forgot to ___ after the mistake.  [apologise]
+    - I want to ___ for being late.  [apologise]
+    - Please ___ my bad handwriting; I was in a hurry.  [excuse]
+    - We ___ for the long delay.  [apologise]
 
-### sink-drown (level B2)
-Words: sink / drown
-Meaning: sink = тонуть, идти ко дну (о предметах); drown = утонуть, погибнуть в воде
-Rule: sink = go down under water (boats, stones) · drown = die in water (people, animals)
+### then-than (level A2)
+Words: then / than
+Meaning: then = потом, тогда; than = чем (в сравнении)
+Rule: then = at that time or next · than = used to compare
 Existing sentences (do not repeat these ideas):
-    - The boat began to ___ after the crash.  [sink]
-    - Heavy stones ___ straight to the bottom.  [sink]
-    - Lifeguards rescued the child before he could ___.  [drown]
-    - The damaged ship may ___ by morning.  [sink]
+    - She is much taller ___ her older brother.  [than]
+    - Finish your dinner, and ___ you can watch TV.  [then]
+    - First wash the rice, and ___ cook it slowly.  [then]
+    - Travelling by train is cheaper ___ flying to Spain.  [than]
+    - I ate one and ___ I ate the other.  [then]
+    - No one could be sure what would happen ___.  [then]
+    - He has a lot more money ___ I have.  [than]
+    - I'm better at looking after children ___ you are.  [than]
 
-### travel-trip (level A2)
-Words: travel / trip
-Meaning: travel = путешествовать; trip = поездка
-Rule: travel = a verb (to travel) · a trip = one journey there and back (a school trip)
+### whose-whos (level B1)
+Words: whose / who's
+Meaning: whose = чей; who's = кто есть = who is / who has
+Rule: whose = belongs to which person · who's = who is or who has
 Existing sentences (do not repeat these ideas):
-    - I want to ___ around Europe next summer.  [travel]
-    - Our school ___ to York was brilliant.  [trip]
-    - Do you usually ___ by train or coach?  [travel]
-    - The business ___ lasted only one day.  [trip]
+    - Do you know ___ bag is left on the bus?  [whose]
+    - I don't know ___ coming to the party tonight.  [who's]
+    - ___ car is parked in front of my garage?  [whose]
+    - She is the girl ___ been living next door.  [who's]
+    - I know a girl ___ father is a lawyer.  [whose]
+    - ___ little child is this? Where are his parents?  [whose]
+    - I wonder ___ going to be at the party.  [who's]
+    - We need to know ___ going to be there.  [who's]
 
-### robber-thief (level B1)
-Words: robber / thief
-Meaning: robber = грабитель (с угрозой, силой); thief = вор (тайно)
-Rule: thief = steals secretly · robber = takes things by force or threat
+### accept-except (level B1)
+Words: accept / except
+Meaning: accept = принимать; except = кроме
+Rule: accept = take or agree to (verb) · except = not including
 Existing sentences (do not repeat these ideas):
-    - Police caught the bike ___ yesterday.  [thief]
-    - A masked ___ entered the bank.  [robber]
-    - Someone called me a ___ after the joke.  [thief]
-    - The ___ threatened the cashier with a knife.  [robber]
+    - Please ___ this small gift from all of us.  [accept]
+    - Everyone came to the party ___ Tom, who was ill.  [except]
+    - Do you ___ credit cards in your little shop?  [accept]
+    - The museum is open every day ___ Monday.  [except]
+    - I had no choice but to ___ the offer.  [accept]
+    - Are you too proud to ___ a little help?  [accept]
+    - I'll give you any of them ___ this one.  [except]
+    - ___ for the storm, I would have arrived earlier.  [except]
 
-### salary-wage (level B2)
-Words: salary / wage
-Meaning: salary = оклад (в месяц, в год); wage = зарплата (почасовая, недельная)
-Rule: salary = fixed pay per month or year · wage = pay per hour, day or week
+### write-right (level A2)
+Words: write / right
+Meaning: write = писать; right = правый; правильный; право
+Rule: write = put words on paper · right = correct, or the opposite of left
 Existing sentences (do not repeat these ideas):
-    - She earns a good ___ as an accountant.  [salary]
-    - Farm workers demanded a higher hourly ___.  [wage]
-    - His annual ___ increased in April.  [salary]
-    - The company promised to raise the minimum ___.  [wage]
+    - Please ___ your name at the top of the page.  [write]
+    - Turn ___ at the next traffic lights and go straight.  [right]
+    - You are ___ about the price of the tickets.  [right]
+    - I will ___ you a long letter next week.  [write]
+    - I know how to ___ a letter in English.  [write]
+    - All you have to do is ___ it down.  [write]
+    - Now that you say it, I think you're ___.  [right]
+    - She doesn't have a lot of money ___ now.  [right]
 
-### historic-historical (level B2)
-Words: historic / historical
-Meaning: historic = исторический (важный, знаменательный); historical = исторический (о прошлом, об истории)
-Rule: historic = very important in history · historical = about the past (historical novels)
+### hear-here (level A2)
+Words: hear / here
+Meaning: hear = слышать; here = здесь
+Rule: hear = listen with your ears · here = in this place
 Existing sentences (do not repeat these ideas):
-    - It was a ___ moment for the country.  [historic]
-    - She loves reading ___ novels.  [historical]
-    - The castle is a ___ building.  [historic]
-    - They signed a ___ peace agreement.  [historic]
+    - Can you ___ the music from your room?  [hear]
+    - Please sit ___ next to me on the sofa.  [here]
+    - I can't ___ you, so please speak louder.  [hear]
+    - Come ___ and look at these old photos.  [here]
+    - I would be very happy to ___ from her.  [hear]
+    - If you've got a better idea, let's ___ it.  [hear]
+    - We can go if you don't like it ___.  [here]
+    - What time did I tell you to get ___?  [here]
 
-### end-finish (level A2)
-Words: end / finish
-Meaning: end = заканчиваться (сам); finish = заканчивать (что-то делать)
-Rule: end = stop, come to the last part · finish = complete what you are doing
+### wear-where (level A2)
+Words: wear / where
+Meaning: wear = носить (одежду); where = где, куда
+Rule: wear = have clothes on · where = in or to which place
 Existing sentences (do not repeat these ideas):
-    - The film will ___ at half past nine.  [end]
-    - Please ___ your soup before dessert.  [finish]
-    - The summer holidays ___ next Monday.  [end]
-    - I must ___ this report tonight.  [finish]
+    - I like to ___ a hat when it is sunny.  [wear]
+    - ___ did you put my keys this morning?  [where]
+    - Do you know ___ the nearest bank is?  [where]
+    - You don't have to ___ a tie at this office.  [wear]
+    - He didn't have anything to ___ for the party.  [wear]
+    - If it is cold outside, we ___ warm clothes.  [wear]
+    - I need you to tell me ___ to go.  [where]
+    - No one asked me ___ I wanted to go.  [where]
 
-### win-earn (level B1)
-Words: win / earn
-Meaning: win = выиграть; earn = зарабатывать
-Rule: win = get by playing or luck · earn = get by working
+### break-brake (level B1)
+Words: break / brake
+Meaning: break = ломать; перерыв; brake = тормоз; тормозить
+Rule: break = to damage, or a rest · brake = the part that stops a vehicle
 Existing sentences (do not repeat these ideas):
-    - I hope we ___ the quiz tonight.  [win]
-    - Doctors often ___ more than teachers.  [earn]
-    - Our team can still ___ the match.  [win]
-    - Students can ___ some money in the summer holidays.  [earn]
+    - Press the ___ gently when the road is wet.  [brake]
+    - Let's take a short ___ and have some coffee.  [break]
+    - Be careful not to ___ the glass on the shelf.  [break]
+    - The ___ on my bike does not work well.  [brake]
+    - I don't know when I can take a ___.  [break]
+    - I had to ___ a window to get in.  [break]
+    - He put his foot on the ___ suddenly.  [brake]
+    - He didn't ___ in time, and ran into a tree.  [brake]
 
 ## Rules for every sentence
 

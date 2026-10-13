@@ -1,0 +1,304 @@
+[
+{"pairId":"stationary-stationery","add":[
+{"text":"The bus was ___ in traffic for twenty minutes.","answer":"stationary"},
+{"text":"Our office orders new ___ every September.","answer":"stationery"},
+{"text":"A ___ bike is useful when it rains outside.","answer":"stationary"}]},
+{"pairId":"complement-compliment","add":[
+{"text":"Thank you for the kind ___ about my cooking.","answer":"compliment"}]},
+{"pairId":"principal-principle","add":[
+{"text":"The school ___ welcomed the new students this morning.","answer":"principal"}]},
+{"pairId":"conscious-conscience","add":[
+{"text":"After the fall, he was still ___ and could talk.","answer":"conscious"}]},
+{"pairId":"borrow-lend","add":[
+{"text":"Could you ___ me ten euros until Friday?","answer":"lend"},
+{"text":"May I ___ your umbrella for an hour?","answer":"borrow"},
+{"text":"I never ___ money from my friends.","answer":"borrow"},
+{"text":"Libraries ___ books to anyone with a card.","answer":"lend"}]},
+{"pairId":"say-tell","add":[
+{"text":"Please ___ me the way to the station.","answer":"tell"},
+{"text":"How do you ___ thank you in Slovak?","answer":"say"},
+{"text":"Can you ___ me what time it is?","answer":"tell"},
+{"text":"I want to ___ hello to your sister.","answer":"say"}]},
+{"pairId":"rob-steal","add":[
+{"text":"Someone tried to ___ my bicycle outside the shop.","answer":"steal"},
+{"text":"A man tried to ___ the jewellery shop at night.","answer":"rob"},
+{"text":"It is wrong to ___ other people's ideas.","answer":"steal"},
+{"text":"Nobody should ___ a tourist on the street.","answer":"rob"}]},
+{"pairId":"remember-remind","add":[
+{"text":"Please ___ me to call the dentist tomorrow.","answer":"remind"},
+{"text":"I cannot ___ where I left my keys.","answer":"remember"},
+{"text":"This song will ___ me of my school days.","answer":"remind"},
+{"text":"Do you ___ your first day at school?","answer":"remember"}]},
+{"pairId":"bring-take","add":[
+{"text":"Can you ___ me a glass of water, please?","answer":"bring"},
+{"text":"___ this letter to the post office, please.","answer":"take"},
+{"text":"Please ___ a salad to my party on Saturday.","answer":"bring"},
+{"text":"I will ___ the dog for a walk after lunch.","answer":"take"}]},
+{"pairId":"fun-funny","add":[
+{"text":"We had a lot of ___ at the lake.","answer":"fun"},
+{"text":"The clown told a very ___ story.","answer":"funny"},
+{"text":"Skating with friends is great ___.","answer":"fun"},
+{"text":"That ___ video made everyone laugh out loud.","answer":"funny"}]},
+{"pairId":"economic-economical","add":[
+{"text":"The small car is very ___ because it uses little petrol.","answer":"economical"},
+{"text":"The country faces serious ___ problems this year.","answer":"economic"},
+{"text":"Buying food in large packs is more ___.","answer":"economical"},
+{"text":"She studies ___ growth in European countries.","answer":"economic"}]},
+{"pairId":"sensible-sensitive","add":[
+{"text":"It is ___ to take a coat when it is cold.","answer":"sensible"},
+{"text":"My skin is ___ to the sun, so I wear a hat.","answer":"sensitive"},
+{"text":"Be kind to Dan; he is very ___ about his accent.","answer":"sensitive"},
+{"text":"Wearing a helmet is a ___ choice for cyclists.","answer":"sensible"}]},
+{"pairId":"lose-miss","add":[
+{"text":"Hurry, or you will ___ the last bus.","answer":"miss"},
+{"text":"Be careful not to ___ your phone at the airport.","answer":"lose"},
+{"text":"I really ___ my friends when I am abroad.","answer":"miss"},
+{"text":"If you press this button, you may ___ all your work.","answer":"lose"}]},
+{"pairId":"hope-wait","add":[
+{"text":"Please ___ here until the doctor calls you.","answer":"wait"},
+{"text":"I ___ you feel better soon.","answer":"hope"},
+{"text":"I ___ it will not rain on Saturday.","answer":"hope"},
+{"text":"Can you ___ a minute while I find my keys?","answer":"wait"}]},
+{"pairId":"fewer-less","add":[
+{"text":"There are ___ cars on the road on Sundays.","answer":"fewer"},
+{"text":"I drink ___ coffee than my brother.","answer":"less"},
+{"text":"We have ___ homework this week than last week.","answer":"less"},
+{"text":"___ people came to the cinema because of the storm.","answer":"fewer"}]},
+{"pairId":"adapt-adopt","add":[
+{"text":"It takes time to ___ to a new school.","answer":"adapt"},
+{"text":"The family wants to ___ a small dog from the shelter.","answer":"adopt"},
+{"text":"Chefs often ___ old recipes for modern kitchens.","answer":"adapt"}]},
+{"pairId":"during-while","add":[
+{"text":"Please do not talk ___ the film.","answer":"during"},
+{"text":"I listen to music ___ I cook dinner.","answer":"while"},
+{"text":"He fell asleep ___ the long lesson.","answer":"during"}]},
+{"pairId":"job-work","add":[
+{"text":"My sister found a new ___ at a bakery.","answer":"job"},
+{"text":"I have a lot of ___ to finish today.","answer":"work"},
+{"text":"Dad leaves for ___ at seven every morning.","answer":"work"},
+{"text":"Being a nurse is a hard ___.","answer":"job"}]},
+{"pairId":"house-home","add":[
+{"text":"After a long trip, it is great to be back ___.","answer":"home"},
+{"text":"They bought a big ___ with a garden.","answer":"house"},
+{"text":"I walk ___ from school every day.","answer":"home"},
+{"text":"The ___ next door has a blue door.","answer":"house"}]},
+{"pairId":"look-see-watch","add":[
+{"text":"___ at the beautiful sky tonight!","answer":"look"},
+{"text":"I like to ___ football with my dad.","answer":"watch"},
+{"text":"Can you ___ the mountains from your window?","answer":"see"}]},
+{"pairId":"all-whole","add":[
+{"text":"I ate the ___ pizza by myself.","answer":"whole"},
+{"text":"___ the students passed the test.","answer":"all"},
+{"text":"She read the ___ book in one night.","answer":"whole"},
+{"text":"She spent ___ day cooking for the party.","answer":"all"}]},
+{"pairId":"other-another","add":[
+{"text":"Would you like ___ cup of tea?","answer":"another"},
+{"text":"One shoe is here, but where is the ___ one?","answer":"other"},
+{"text":"My ___ brother lives in Prague.","answer":"other"}]},
+{"pairId":"still-yet-already","add":[
+{"text":"I have not finished my homework ___.","answer":"yet"},
+{"text":"It is midnight, but Tom is ___ awake.","answer":"still"},
+{"text":"We arrived at six, but the film had ___ started.","answer":"already"}]},
+{"pairId":"among-between","add":[
+{"text":"The ball rolled ___ the two chairs.","answer":"between"},
+{"text":"She found her ring ___ the old papers in the box.","answer":"among"},
+{"text":"The path runs ___ the lake and the forest.","answer":"between"},
+{"text":"He was ___ the best students in his class.","answer":"among"}]},
+{"pairId":"hear-listen","add":[
+{"text":"I cannot ___ you because the music is too loud.","answer":"hear"},
+{"text":"Please ___ carefully to the teacher.","answer":"listen"},
+{"text":"Do you ___ to podcasts on the bus?","answer":"listen"},
+{"text":"Can you ___ that strange noise outside?","answer":"hear"}]},
+{"pairId":"teach-learn-study","add":[
+{"text":"My aunt will ___ me how to bake bread.","answer":"teach"},
+{"text":"Babies ___ to walk before they turn two.","answer":"learn"},
+{"text":"I ___ for the exam at the library every evening.","answer":"study"},
+{"text":"She wants to ___ English to young children.","answer":"teach"}]},
+{"pairId":"dictionary-vocabulary","add":[
+{"text":"I looked up the word in my ___.","answer":"dictionary"},
+{"text":"Reading books helps to build your ___.","answer":"vocabulary"},
+{"text":"My English ___ grew a lot after the trip to London.","answer":"vocabulary"}]},
+{"pairId":"possibility-opportunity","add":[
+{"text":"There is a ___ of snow in the mountains tonight.","answer":"possibility"},
+{"text":"Studying abroad is a great ___ to practise English.","answer":"opportunity"},
+{"text":"Is there any ___ that the train will be late?","answer":"possibility"}]},
+{"pairId":"homework-housework","add":[
+{"text":"I must finish my maths ___ before dinner.","answer":"homework"},
+{"text":"Doing the ___ is boring, but I like a clean flat.","answer":"housework"},
+{"text":"Mum and Dad share the ___ at weekends, like washing and cleaning.","answer":"housework"}]},
+{"pairId":"for-during","add":[
+{"text":"We stayed in Prague ___ three days.","answer":"for"},
+{"text":"She woke up twice ___ the night.","answer":"during"},
+{"text":"Nobody spoke ___ the concert.","answer":"during"}]},
+{"pairId":"good-well","add":[
+{"text":"She plays the guitar very ___.","answer":"well"},
+{"text":"This soup tastes really ___.","answer":"good"},
+{"text":"My grandmother is a ___ cook.","answer":"good"}]},
+{"pairId":"what-that","add":[
+{"text":"I do not know ___ she said.","answer":"what"},
+{"text":"The book ___ you gave me is excellent.","answer":"that"},
+{"text":"She told me ___ the shop closes at nine.","answer":"that"}]},
+{"pairId":"sink-drown","add":[
+{"text":"Heavy stones ___ when you throw them in the lake.","answer":"sink"},
+{"text":"Children must learn to swim so they do not ___.","answer":"drown"},
+{"text":"A paper boat will ___ if it gets too wet.","answer":"sink"},
+{"text":"Fish cannot ___ in water.","answer":"drown"}]},
+{"pairId":"sail-swim","add":[
+{"text":"We will ___ across the bay on a small boat.","answer":"sail"},
+{"text":"The children love to ___ in the lake in summer.","answer":"swim"},
+{"text":"My uncle will ___ his yacht around the islands.","answer":"sail"}]},
+{"pairId":"travel-trip","add":[
+{"text":"We took a short ___ to the mountains.","answer":"trip"},
+{"text":"I love to ___ by train across Europe.","answer":"travel"},
+{"text":"How was your business ___ to Vienna?","answer":"trip"},
+{"text":"It is cheaper to ___ outside the summer season.","answer":"travel"}]},
+{"pairId":"miss-fail","add":[
+{"text":"If you do not study, you may ___ the exam.","answer":"fail"},
+{"text":"Hurry up, or we will ___ the train.","answer":"miss"},
+{"text":"If you leave now, you will not ___ the start of the film.","answer":"miss"}]},
+{"pairId":"win-beat","add":[
+{"text":"Our team hopes to ___ the match on Saturday.","answer":"win"},
+{"text":"I want to ___ my brother at chess.","answer":"beat"},
+{"text":"Can you ___ the world record?","answer":"beat"}]},
+{"pairId":"robber-thief","add":[
+{"text":"The ___ quietly took my wallet from my pocket on the tram.","answer":"thief"},
+{"text":"The ___ made the shop owner give him all the money.","answer":"robber"},
+{"text":"A clever ___ stole the painting without a sound.","answer":"thief"},
+{"text":"The ___ demanded money from the taxi driver.","answer":"robber"}]},
+{"pairId":"salary-wage","add":[
+{"text":"My mum gets her ___ on the first day of each month.","answer":"salary"},
+{"text":"He earns a low hourly ___ at the café.","answer":"wage"},
+{"text":"She has a yearly ___ of thirty thousand euros.","answer":"salary"},
+{"text":"The workers asked for a higher ___ per hour.","answer":"wage"}]},
+{"pairId":"lend-borrow-loan","add":[
+{"text":"Could you ___ me your charger until tonight?","answer":"lend"},
+{"text":"May I ___ a pen from you?","answer":"borrow"},
+{"text":"The bank gave him a ___ to buy a car.","answer":"loan"}]},
+{"pairId":"historic-historical","add":[
+{"text":"Today is a ___ day for our town; the new bridge has opened.","answer":"historic"},
+{"text":"I love ___ novels set in the Middle Ages.","answer":"historical"},
+{"text":"The museum shows ___ photos of the city from 1900.","answer":"historical"},
+{"text":"The first moon landing was a ___ moment.","answer":"historic"}]},
+{"pairId":"story-history","add":[
+{"text":"Grandma told us a funny ___ before bed.","answer":"story"},
+{"text":"We study the ___ of Slovakia at school.","answer":"history"},
+{"text":"My favourite lesson at school is ___.","answer":"history"}]},
+{"pairId":"road-way","add":[
+{"text":"Excuse me, which ___ is the station?","answer":"way"},
+{"text":"Cars drive slowly on this narrow ___.","answer":"road"},
+{"text":"On the ___ home, I bought some bread.","answer":"way"}]},
+{"pairId":"end-finish","add":[
+{"text":"I want to ___ this book before the weekend.","answer":"finish"},
+{"text":"At the ___ of the street, there is a bakery.","answer":"end"},
+{"text":"Please ___ your soup before the main course.","answer":"finish"},
+{"text":"Stories for children often have a happy ___.","answer":"end"}]},
+{"pairId":"win-earn","add":[
+{"text":"She wants to ___ a lot of money as a pilot.","answer":"earn"},
+{"text":"I hope to ___ the first prize in the quiz.","answer":"win"},
+{"text":"How much do nurses ___ per month?","answer":"earn"},
+{"text":"Our school choir will ___ the singing contest!","answer":"win"}]},
+{"pairId":"wait-expect","add":[
+{"text":"Please ___ here until I come back.","answer":"wait"},
+{"text":"I ___ a letter from my friend this week.","answer":"expect"},
+{"text":"Do you ___ the exam to be difficult?","answer":"expect"},
+{"text":"We have to ___ ten minutes for the next bus.","answer":"wait"}]},
+{"pairId":"worth-worthy","add":[
+{"text":"This old book is ___ a lot of money.","answer":"worth"},
+{"text":"He is a ___ winner of the prize.","answer":"worthy"},
+{"text":"Is the film ___ watching twice?","answer":"worth"},
+{"text":"She is a ___ leader and everyone trusts her.","answer":"worthy"}]},
+{"pairId":"price-prize","add":[
+{"text":"What is the ___ of this jacket?","answer":"price"},
+{"text":"She won first ___ in the art contest.","answer":"prize"},
+{"text":"The ___ of bread went up last month.","answer":"price"}]},
+{"pairId":"quite-quit","add":[
+{"text":"I will ___ my job at the end of the month.","answer":"quit"}]},
+{"pairId":"price-value","add":[
+{"text":"The ___ of the ticket is twelve euros.","answer":"price"},
+{"text":"Old family photos have a lot of ___ for me.","answer":"value"},
+{"text":"The shop lowered its ___ for the summer sale.","answer":"price"},
+{"text":"Honesty is a key ___ in our family.","answer":"value"}]},
+{"pairId":"late-lately","add":[
+{"text":"I have been very tired ___.","answer":"lately"},
+{"text":"The train was twenty minutes ___.","answer":"late"},
+{"text":"Have you seen any good films ___?","answer":"lately"}]},
+{"pairId":"hard-hardly","add":[
+{"text":"She studied ___ for the test.","answer":"hard"},
+{"text":"I can ___ hear you, the room is so loud.","answer":"hardly"},
+{"text":"The ice was so ___ that we could walk on it.","answer":"hard"}]},
+{"pairId":"economy-economics","add":[
+{"text":"She studies ___ at university.","answer":"economics"},
+{"text":"The country's ___ grew slowly last year.","answer":"economy"},
+{"text":"Tourism is important for the local ___.","answer":"economy"},
+{"text":"My brother has a degree in ___.","answer":"economics"}]},
+{"pairId":"actual-current","add":[
+{"text":"What is the ___ time in Tokyo right now?","answer":"current"},
+{"text":"The ___ cost was lower than we expected.","answer":"actual"},
+{"text":"Her ___ address is different from the old one.","answer":"current"},
+{"text":"The ad said twenty minutes, but the ___ trip took an hour.","answer":"actual"}]},
+{"pairId":"actual-topical","add":[
+{"text":"Climate change is a very ___ subject in the news this week.","answer":"topical"},
+{"text":"I want the ___ facts, not what people think.","answer":"actual"},
+{"text":"Our podcast talks about ___ issues such as new school rules.","answer":"topical"}]},
+{"pairId":"fabric-factory","add":[
+{"text":"This soft ___ is perfect for summer dresses.","answer":"fabric"},
+{"text":"My uncle works at a car ___ near the city.","answer":"factory"},
+{"text":"Cotton is a light ___.","answer":"fabric"}]},
+{"pairId":"learn-find-out","add":[
+{"text":"Children ___ to read at about six years old.","answer":"learn"},
+{"text":"Please ___ what time the museum opens.","answer":"find out"},
+{"text":"I will call the office and ___ if the shop is open.","answer":"find out"},
+{"text":"She is going to ___ Spanish next year.","answer":"learn"}]},
+{"pairId":"notice-note","add":[
+{"text":"Did you ___ the new painting on the wall?","answer":"notice"},
+{"text":"Please ___ the date of the meeting in your diary.","answer":"note"},
+{"text":"I did not ___ that my bag was open.","answer":"notice"},
+{"text":"Students should ___ the key words while the teacher speaks.","answer":"note"}]},
+{"pairId":"discover-invent","add":[
+{"text":"Who was the first person to ___ the telephone?","answer":"invent"},
+{"text":"Scientists hope to ___ a new kind of plant in the forest.","answer":"discover"},
+{"text":"Some day I would like to ___ a machine that cleans my room.","answer":"invent"},
+{"text":"You may ___ a lovely cafe if you walk down this street.","answer":"discover"}]},
+{"pairId":"borrow-rent","add":[
+{"text":"We ___ a flat in the city for four hundred euros a month.","answer":"rent"},
+{"text":"May I ___ your bike? Mine has a flat tyre.","answer":"borrow"},
+{"text":"Tourists can ___ bicycles at the station for ten euros a day.","answer":"rent"},
+{"text":"Can I ___ a book from you? I will return it on Monday.","answer":"borrow"}]},
+{"pairId":"custom-habit","add":[
+{"text":"In some countries, it is a ___ to take off your shoes at the door.","answer":"custom"},
+{"text":"Biting your nails is a bad ___.","answer":"habit"},
+{"text":"Shaking hands is a common ___ when people meet.","answer":"custom"}]},
+{"pairId":"suit-fit","add":[
+{"text":"This blue jacket does not ___ me; it is too small.","answer":"fit"},
+{"text":"A short haircut would ___ you.","answer":"suit"},
+{"text":"Will all our bags ___ in the boot?","answer":"fit"},
+{"text":"Blue and green ___ you, but yellow does not.","answer":"suit"}]},
+{"pairId":"careful-caring","add":[
+{"text":"Be ___ when you cross the busy road.","answer":"careful"},
+{"text":"My nurse is kind and very ___.","answer":"caring"},
+{"text":"A ___ father helps with homework and cooks dinner.","answer":"caring"},
+{"text":"Please be ___ with the glass; it breaks easily.","answer":"careful"}]},
+{"pairId":"policy-politics","add":[
+{"text":"The school has a strict ___ on mobile phones.","answer":"policy"},
+{"text":"She is studying ___ and history at university.","answer":"politics"},
+{"text":"The company has a new ___ about working from home.","answer":"policy"}]},
+{"pairId":"choice-chance","add":[
+{"text":"You have a ___ between tea and coffee.","answer":"choice"},
+{"text":"There is a good ___ of rain tomorrow.","answer":"chance"},
+{"text":"It was a hard ___ because I liked both shirts.","answer":"choice"}]},
+{"pairId":"offer-suggest","add":[
+{"text":"Can I ___ you a cup of tea?","answer":"offer"},
+{"text":"I ___ going to the cinema on Friday.","answer":"suggest"},
+{"text":"The shop will ___ a ten percent discount.","answer":"offer"},
+{"text":"Can you ___ a good place to eat?","answer":"suggest"}]},
+{"pairId":"excuse-apologise","add":[
+{"text":"___ me, is this seat free?","answer":"excuse"},
+{"text":"I want to ___ for being late.","answer":"apologise"},
+{"text":"Please ___ my bad handwriting; I was in a hurry.","answer":"excuse"},
+{"text":"We ___ for the long delay.","answer":"apologise"}]},
+{"pairId":"say-speak","add":[
+{"text":"Can you ___ Slovak and German?","answer":"speak"},
+{"text":"What did you ___ to the teacher?","answer":"say"},
+{"text":"My grandfather can ___ three languages.","answer":"speak"},
+{"text":"I will ___ goodbye to everyone.","answer":"say"}]}
+]
