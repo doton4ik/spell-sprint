@@ -27,11 +27,12 @@ const paths: Record<IconName, ReactNode> = {
       <path d="m9 9 6 6m0-6-6 6" />
     </>
   ),
+  // A checklist: rules are things to tick off, and it looks nothing like the Libraries icon (books)
   rules: (
     <>
-      <path d="M5 4.5A2.5 2.5 0 0 1 7.5 2H20v17.5a2.5 2.5 0 0 0-2.5-2.5H5Z" />
-      <path d="M5 4.5v15A2.5 2.5 0 0 0 7.5 22H20" />
-      <path d="M9 7h7m-7 4h7" />
+      <rect x="4.5" y="3" width="15" height="18" rx="2.5" />
+      <path d="m8 8.4 1.4 1.4L12 7.2M8 14.2l1.4 1.4L12 13" />
+      <path d="M14.5 9h2.5M14.5 14.8H17" />
     </>
   ),
   topics: (
