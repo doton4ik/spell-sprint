@@ -1,3 +1,7 @@
+# NEW, SEPARATE TASK (words-07.md)
+Ignore every earlier message in this chat and do not repeat earlier answers. This round covers EXACTLY these items and nothing else: S25 (Food and Drinks / Meals and Cooking), S26 (General English / Active Vocabulary), S27 (General English / Commonly Misspelled), S28 (General English / Confusable Words).
+Your answer must contain these items only.
+
 You are writing content for "Spell Sprint", an English spelling and vocabulary trainer for Russian-speaking learners (levels A2-C1).
 Answer with JSON only: one JSON array, no text outside it, no comments. Write everything yourself; do not copy from dictionaries or websites.
 Avoid words and sentences where British and American English differ (colour/color, centre/center, apartment/flat).

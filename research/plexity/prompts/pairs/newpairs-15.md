@@ -1,3 +1,7 @@
+# NEW, SEPARATE TASK (newpairs-15)
+Ignore every earlier message in this chat and do not repeat earlier answers. This round covers EXACTLY these items and nothing else: prescribe-proscribe, respectfully-respectively, taught-taut, born-borne.
+Your answer must contain these items only.
+
 
 You are writing content for an English spelling trainer for Russian-speaking learners. The exercise is called
 "Pairs": one sentence with a gap `___`, and 2–3 look-alike or sound-alike English words to choose from

@@ -1,3 +1,7 @@
+# NEW, SEPARATE TASK (words-06.md)
+Ignore every earlier message in this chat and do not repeat earlier answers. This round covers EXACTLY these items and nothing else: S21 (Family and Relationships / Life Events), S22 (Family and Relationships / Relatives), S23 (Feelings / Feelings), S24 (Food and Drinks / Café and Restaurant).
+Your answer must contain these items only.
+
 You are writing content for "Spell Sprint", an English spelling and vocabulary trainer for Russian-speaking learners (levels A2-C1).
 Answer with JSON only: one JSON array, no text outside it, no comments. Write everything yourself; do not copy from dictionaries or websites.
 Avoid words and sentences where British and American English differ (colour/color, centre/center, apartment/flat).

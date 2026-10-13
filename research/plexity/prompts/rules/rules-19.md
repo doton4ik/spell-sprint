@@ -1,3 +1,7 @@
+# NEW, SEPARATE TASK (rules-19)
+Ignore every earlier message in this chat and do not repeat earlier answers. This round covers EXACTLY these items and nothing else: no-article-in-general, no-article-names-meals-languages.
+Your answer must contain these items only.
+
 You are writing content for "Spell Sprint", an English spelling trainer for Russian-speaking learners (levels A2-B2). Each spelling or grammar RULE has examples (shown on the rule page) and exercises (practice tasks).
 Answer with JSON only: one JSON array, no text outside it, no comments. Write everything yourself. Avoid British/American differences (colour/color, theatre/theater, practise as verb): use standard British spelling only when the rule itself is about it.
 

@@ -1,3 +1,7 @@
+# NEW, SEPARATE TASK (examples-03.md)
+Ignore every earlier message in this chat and do not repeat earlier answers. This round covers EXACTLY these items and nothing else: the 30 words from describing-things-size-and-shape-circular to phone-and-messages-calls-dial.
+Your answer must contain these items only.
+
 You are writing content for "Spell Sprint", an English spelling and vocabulary trainer for Russian-speaking learners (levels A2-C1).
 Answer with JSON only: one JSON array, no text outside it, no comments. Write everything yourself; do not copy from dictionaries or websites.
 Avoid words and sentences where British and American English differ (colour/color, centre/center, apartment/flat).

@@ -4,7 +4,7 @@
 // A merge only reports unless --apply. --apply adds the accepted rows to database/rules-import/more-practice-pack-2.json
 // and runs scripts/build-more-practice-pack.mjs, which writes database/content-pack-5-*.sql (the user runs these in the
 // Supabase SQL Editor) and the offline examples in src/data/builtInRules.json. A --skip list is a JSON array of texts/prompts to drop.
-import { readAnswer } from './plexity-json.mjs'
+import { checkRound, readAnswer } from './plexity-json.mjs'
 import { execFileSync } from 'node:child_process'
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 
@@ -43,6 +43,9 @@ function existingFor(rule) {
   return { examples, exercises }
 }
 
+// Every prompt starts with a banner: a chat that still holds an earlier task must not answer that one again.
+const banner = (name, covers) =>
+  `# NEW, SEPARATE TASK (${name})\nIgnore every earlier message in this chat and do not repeat earlier answers. This round covers EXACTLY these items and nothing else: ${covers}.\nYour answer must contain these items only.\n\n`
 const FOOTER = `
 
 ## How to answer (important)
@@ -128,13 +131,20 @@ Every exercise is independent: no "see the sentence above". Every answer must be
 ]
 
 Use the slug exactly as written. Before you answer, check every item against the rule above: wrong sentences must really be wrong, correct ones really correct, each exercise has exactly one answer.`
-    writeFileSync(`research/plexity/prompts/rules/rules-${pad(index + 1)}.md`, text + FOOTER + '\n')
+    writeFileSync(
+      `research/plexity/prompts/rules/rules-${pad(index + 1)}.md`,
+      banner(`rules-${pad(index + 1)}`, group.map((rule) => rule.slug).join(', ')) + text + FOOTER + '\n',
+    )
   })
   console.log(`rules: ${groups.length} prompts for ${builtIn.rules.length} rules -> research/plexity/prompts/rules/`)
 }
 
 function merge(file) {
   const answer = readAnswer(file)
+  checkRound(
+    file,
+    answer.map((item) => item.slug),
+  )
   const pack = readPack(PACK2)
   const rulesBySlug = new Map(builtIn.rules.map((rule) => [rule.slug, rule]))
   let rejected = 0

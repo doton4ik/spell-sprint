@@ -1,3 +1,7 @@
+# NEW, SEPARATE TASK (pairs-06)
+Ignore every earlier message in this chat and do not repeat earlier answers. This round covers EXACTLY these items and nothing else: price-value, late-lately, hard-hardly, actual-topical, fabric-factory, learn-find-out.
+Your answer must contain these items only.
+
 
 You are writing content for an English spelling trainer for Russian-speaking learners. The exercise is called
 "Pairs": one sentence with a gap `___`, and 2–3 look-alike or sound-alike English words to choose from

@@ -1,3 +1,7 @@
+# NEW, SEPARATE TASK (newpairs-16)
+Ignore every earlier message in this chat and do not repeat earlier answers. This round covers EXACTLY these items and nothing else: device-devise, licence-license, prophecy-prophesy, wander-wonder.
+Your answer must contain these items only.
+
 
 You are writing content for an English spelling trainer for Russian-speaking learners. The exercise is called
 "Pairs": one sentence with a gap `___`, and 2–3 look-alike or sound-alike English words to choose from

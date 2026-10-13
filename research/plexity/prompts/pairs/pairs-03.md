@@ -1,3 +1,7 @@
+# NEW, SEPARATE TASK (pairs-03)
+Ignore every earlier message in this chat and do not repeat earlier answers. This round covers EXACTLY these items and nothing else: whose-whos, accept-except, write-right, hear-here, wear-where, break-brake.
+Your answer must contain these items only.
+
 
 You are writing content for an English spelling trainer for Russian-speaking learners. The exercise is called
 "Pairs": one sentence with a gap `___`, and 2–3 look-alike or sound-alike English words to choose from

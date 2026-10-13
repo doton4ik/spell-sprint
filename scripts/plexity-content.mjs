@@ -7,7 +7,7 @@
 // examples  a second example sentence for words that have none (extra_example, source "written")
 // level     new level-check questions (src/data/levelCheckDeep.ts): gap-fill, find the mistake, collocations, word formation, dictation
 // Without --apply a merge only reports. A --skip list is a JSON array: words, word ids or sentences to drop after a review.
-import { readAnswer } from './plexity-json.mjs'
+import { checkRound, readAnswer } from './plexity-json.mjs'
 import { mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 
 const [command, kind, ...rest] = process.argv.slice(2)
@@ -79,8 +79,11 @@ function slots(rows) {
     .map((slot, index) => ({ ...slot, code: `S${String(index + 1).padStart(2, '0')}` }))
 }
 
-const writePrompt = (folder, name, text) => {
-  text += FOOTER
+// Every prompt starts with a banner: a chat that still holds an earlier task must not answer that one again.
+const banner = (name, covers) =>
+  `# NEW, SEPARATE TASK (${name})\nIgnore every earlier message in this chat and do not repeat earlier answers. This round covers EXACTLY these items and nothing else: ${covers}.\nYour answer must contain these items only.\n\n`
+const writePrompt = (folder, name, text, covers) => {
+  text = banner(name, covers) + text + FOOTER
   mkdirSync(url(`research/plexity/prompts/${folder}/`), { recursive: true })
   writeFileSync(url(`research/plexity/prompts/${folder}/${name}`), text.trimEnd() + '\n')
 }
@@ -161,7 +164,12 @@ ${list}
 ]
 
 Before you answer, check each entry: the slot code exists, the word is not in the list, the example contains the word in exactly this form, the definition does not contain the word, and the Russian translation is correct and specific.`
-    writePrompt('words', `words-${pad(index + 1)}.md`, text)
+    writePrompt(
+      'words',
+      `words-${pad(index + 1)}.md`,
+      text,
+      group.map((slot) => `${slot.code} (${slot.topic} / ${slot.subtopic})`).join(', '),
+    )
   })
   console.log(`words: ${chunk(all, 4).length} prompts for ${all.length} slots -> research/plexity/prompts/words/`)
 }
@@ -173,6 +181,10 @@ function wordsMerge(file) {
   const knownPrompt = new Set(rows.map((row) => row.translation.toLowerCase()))
   const knownId = new Set(rows.map((row) => row.word_id))
   const answer = readAnswer(file)
+  checkRound(
+    file,
+    answer.map((item) => item.slot),
+  )
   const added = []
   let rejected = 0
   const reject = (item, why) => {
@@ -281,7 +293,12 @@ ${list}
 ]
 
 Use the word_id exactly as written. Before you answer, check each sentence: it contains the word in the listed form and no other word could fill the gap.`
-    writePrompt('examples', `examples-${pad(index + 1)}.md`, text)
+    writePrompt(
+      'examples',
+      `examples-${pad(index + 1)}.md`,
+      text,
+      `the ${group.length} words from ${group[0].word_id} to ${group.at(-1).word_id}`,
+    )
   })
   console.log(
     `examples: ${chunk(need, 30).length} prompts for ${need.length} words without a second example -> research/plexity/prompts/examples/`,
@@ -292,6 +309,10 @@ function examplesMerge(file) {
   const { text, header, rows, eol } = library()
   const byId = new Map(rows.map((row) => [row.word_id, row]))
   const answer = readAnswer(file)
+  checkRound(
+    file,
+    answer.map((item) => item.word_id),
+  )
   const lines = text.split(/\r?\n/)
   const ok = new Map()
   let rejected = 0
@@ -375,7 +396,7 @@ Vary the grammar and vocabulary points and the topics (home, school, work, trave
 {"gap": [...], "mistake": [...], "phrase": [...], "formation": [...], "dictation": [...]}
 
 Before you answer, test every option of every gap and check that exactly one fits.`
-    writePrompt('level-check', `level-${level}-${LEVELS[level]}.md`, text)
+    writePrompt('level-check', `level-${level}-${LEVELS[level]}.md`, text, `level ${LEVELS[level]} questions only`)
   }
   console.log('level: 4 prompts (A2, B1, B2, C1) -> research/plexity/prompts/level-check/')
 }

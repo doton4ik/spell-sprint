@@ -24,6 +24,9 @@ const out = new URL('../research/plexity/prompts/pairs/', import.meta.url)
 mkdirSync(out, { recursive: true })
 for (const name of readdirSync(out)) if (/^(new)?pairs-\d+\.md$/.test(name)) rmSync(new URL(name, out), { force: true })
 const PER_PAIR = 20
+// Every prompt starts with a banner: a chat that still holds an earlier task must not answer that one again.
+const banner = (name, covers) =>
+  `# NEW, SEPARATE TASK (${name})\nIgnore every earlier message in this chat and do not repeat earlier answers. This round covers EXACTLY these items and nothing else: ${covers}.\nYour answer must contain these items only.\n\n`
 const FOOTER = `
 
 ## How to answer (important)
@@ -46,7 +49,10 @@ chunk(todo, 6).forEach((pairs, index) => {
     .join('\n\n')
   const task = `## Your task in this round\n\nWrite **${PER_PAIR} new sentences for each of these ${pairs.length} pairs**, ${pairs.length * PER_PAIR} sentences in total. Use the \`id\` exactly as written as \`pairId\` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.\n\n${list}`
   const text = [head, task, rules, output.split('\n## ')[0], check].join('\n\n') + FOOTER
-  writeFileSync(new URL(`pairs-${pad(index + 1)}.md`, out), text + '\n')
+  writeFileSync(
+    new URL(`pairs-${pad(index + 1)}.md`, out),
+    banner(`pairs-${pad(index + 1)}`, pairs.map((pair) => pair.id).join(', ')) + text + '\n',
+  )
 })
 
 // ---- new pairs ---------------------------------------------------------------------------------------------------------
@@ -139,7 +145,10 @@ chunk(fresh, 4).forEach((pairs, index) => {
     .replace(/^## New pairs.*\n/, () => intro)
     .replace('For a new pair give a full object instead of `add`:', 'One object per pair, like this:')
   const text = [head, task, rules, format, check].join('\n\n') + FOOTER
-  writeFileSync(new URL(`newpairs-${pad(index + 1)}.md`, out), text + '\n')
+  writeFileSync(
+    new URL(`newpairs-${pad(index + 1)}.md`, out),
+    banner(`newpairs-${pad(index + 1)}`, pairs.map((pair) => pair.id).join(', ')) + text + '\n',
+  )
 })
 console.log(
   `pairs rounds: ${chunk(todo, 6).length}, new pairs: ${fresh.length} in ${chunk(fresh, 4).length} rounds -> research/plexity/prompts/pairs/`,

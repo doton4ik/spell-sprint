@@ -1,3 +1,7 @@
+# NEW, SEPARATE TASK (words-05.md)
+Ignore every earlier message in this chat and do not repeat earlier answers. This round covers EXACTLY these items and nothing else: S17 (Describing Things / Size and Shape), S18 (Everyday Life / Daily Routines), S19 (Everyday Life / Home and Services), S20 (Family and Relationships / Friends and Partners).
+Your answer must contain these items only.
+
 You are writing content for "Spell Sprint", an English spelling and vocabulary trainer for Russian-speaking learners (levels A2-C1).
 Answer with JSON only: one JSON array, no text outside it, no comments. Write everything yourself; do not copy from dictionaries or websites.
 Avoid words and sentences where British and American English differ (colour/color, centre/center, apartment/flat).
