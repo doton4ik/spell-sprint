@@ -1,78 +1,91 @@
-// More examples and exercises for rules that already exist, from ONE source file:
-//   database/rules-import/more-practice-pack.json  ->  database/content-pack-4-more-practice.sql  (run by the user in Supabase)
-//                                                    ->  src/data/builtInRules.json               (the examples, offline copy)
-// The rules themselves are not touched; the new rows are attached by slug. Ids are derived from the slug and the
-// position, so running this again changes nothing. Exercises are not copied into the app: the app uses its bundled
-// exercises only for a rule the database has none for. Usage: node scripts/build-more-practice-pack.mjs
+// More examples and exercises for rules that already exist, from source files (one per pack):
+//   database/rules-import/more-practice-pack.json    -> database/content-pack-4-more-practice-part1/2.sql + content-pack-4-undo.sql
+//   database/rules-import/more-practice-pack-2.json  -> database/content-pack-5-more-practice-part1/2.sql + content-pack-5-undo.sql
+// and the examples also go to src/data/builtInRules.json (the offline copy). The rules themselves are not touched; the new
+// rows are attached by slug. Ids are derived from the pack, the slug and the position, so running this again changes
+// nothing. Exercises are not copied into the app: it uses its bundled exercises only for a rule the database has none for.
+// Usage: node scripts/build-more-practice-pack.mjs   (builds every pack whose source file exists)
 import { createHash } from 'node:crypto'
-import { readFileSync, writeFileSync } from 'node:fs'
+import { execFileSync } from 'node:child_process'
+import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 
-const pack = JSON.parse(readFileSync('database/rules-import/more-practice-pack.json', 'utf8'))
+// `idPrefix` of the first pack is the one its ids were made with: never change it, or the ids change.
+const packs = [
+  // frozen: the SQL of this pack was run by the user already and must not be rewritten (it is only read, to keep the offline copy)
+  { file: 'database/rules-import/more-practice-pack.json', number: 4, idPrefix: 'spellsprint-more-practice', frozen: true },
+  { file: 'database/rules-import/more-practice-pack-2.json', number: 5, idPrefix: 'spellsprint-more-practice-2' },
+]
+
 const builtIn = JSON.parse(readFileSync('src/data/builtInRules.json', 'utf8'))
-
-function uuid(key) {
-  const hex = createHash('sha1').update(`spellsprint-more-practice:${key}`).digest('hex')
-  const variant = ((parseInt(hex[16], 16) & 0x3) | 0x8).toString(16)
-  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-5${hex.slice(13, 16)}-${variant}${hex.slice(17, 20)}-${hex.slice(20, 32)}`
-}
 const q = (value) => (value === null || value === undefined ? 'null' : `'${String(value).replaceAll("'", "''")}'`)
 
-const examples = []
-const exercises = []
-for (const rule of pack.rules) {
-  const existing = builtIn.rules.find((item) => item.slug === rule.slug)
-  if (!existing) throw new Error(`no rule "${rule.slug}" in builtInRules.json`)
-  rule.examples.forEach((example, index) =>
-    examples.push({
-      id: uuid(`${rule.slug}|ex|${index}`),
-      rule_id: existing.id,
-      slug: rule.slug,
-      example_type: example.type,
-      text: example.text,
-      correction: example.correction ?? null,
-      note: example.note ?? null,
-    }),
-  )
-  rule.exercises.forEach((exercise, index) =>
-    exercises.push({
-      id: uuid(`${rule.slug}|exr|${index}`),
-      slug: rule.slug,
-      exercise_type: exercise.type,
-      prompt: exercise.prompt,
-      answer: exercise.answer,
-      choices: exercise.choices ?? null,
-      metadata: { set: pack.set },
-    }),
-  )
-}
+for (const config of packs) {
+  if (!existsSync(config.file)) continue
+  const pack = JSON.parse(readFileSync(config.file, 'utf8'))
+  const uuid = (key) => {
+    const hex = createHash('sha1').update(`${config.idPrefix}:${key}`).digest('hex')
+    const variant = ((parseInt(hex[16], 16) & 0x3) | 0x8).toString(16)
+    return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-5${hex.slice(13, 16)}-${variant}${hex.slice(17, 20)}-${hex.slice(20, 32)}`
+  }
 
-// ---- the offline copy: the new examples, replacing the ones this script added before ----
-const mine = new Set(examples.map((example) => example.id))
-const offline = examples.map(({ slug: _slug, ...example }) => example)
-builtIn.examples = [...builtIn.examples.filter((example) => !mine.has(example.id)), ...offline]
-writeFileSync('src/data/builtInRules.json', `${JSON.stringify(builtIn, null, 2)}\n`)
+  const examples = []
+  const exercises = []
+  for (const rule of pack.rules) {
+    const existing = builtIn.rules.find((item) => item.slug === rule.slug)
+    if (!existing) throw new Error(`no rule "${rule.slug}" in builtInRules.json`)
+    rule.examples.forEach((example, index) =>
+      examples.push({
+        id: uuid(`${rule.slug}|ex|${index}`),
+        rule_id: existing.id,
+        slug: rule.slug,
+        example_type: example.type,
+        text: example.text,
+        correction: example.correction ?? null,
+        note: example.note ?? null,
+      }),
+    )
+    rule.exercises.forEach((exercise, index) =>
+      exercises.push({
+        id: uuid(`${rule.slug}|exr|${index}`),
+        slug: rule.slug,
+        exercise_type: exercise.type,
+        prompt: exercise.prompt,
+        answer: exercise.answer,
+        choices: exercise.choices ?? null,
+        metadata: { set: pack.set },
+      }),
+    )
+  }
 
-// ---- the SQL file ----
-const exampleRows = examples
-  .map((e) => `  (${q(e.id)}, ${q(e.slug)}, ${q(e.example_type)}, ${q(e.text)}, ${q(e.correction)}, ${q(e.note)})`)
-  .join(',\n')
-const exerciseRows = exercises
-  .map(
-    (e) =>
-      `  (${q(e.id)}, ${q(e.slug)}, ${q(e.exercise_type)}, ${q(e.prompt)}, ${q(e.answer)}, ${e.choices ? q(JSON.stringify(e.choices)) : 'null'}, ${q(JSON.stringify(e.metadata))})`,
-  )
-  .join(',\n')
-const header = (part, what) => `-- Content pack 4, part ${part} of 2: ${what}. ${pack.rules.length} existing rules got more practice.
--- GENERATED by scripts/build-more-practice-pack.mjs from database/rules-import/more-practice-pack.json. Do not edit by
+  // ---- the offline copy: the new examples, replacing the ones this script added before ----
+  const mine = new Set(examples.map((example) => example.id))
+  const offline = examples.map(({ slug: _slug, ...example }) => example)
+  builtIn.examples = [...builtIn.examples.filter((example) => !mine.has(example.id)), ...offline]
+
+  // ---- the SQL files ----
+  const exampleRows = examples
+    .map((e) => `  (${q(e.id)}, ${q(e.slug)}, ${q(e.example_type)}, ${q(e.text)}, ${q(e.correction)}, ${q(e.note)})`)
+    .join(',\n')
+  const exerciseRows = exercises
+    .map(
+      (e) =>
+        `  (${q(e.id)}, ${q(e.slug)}, ${q(e.exercise_type)}, ${q(e.prompt)}, ${q(e.answer)}, ${e.choices ? q(JSON.stringify(e.choices)) : 'null'}, ${q(JSON.stringify(e.metadata))})`,
+    )
+    .join(',\n')
+  const header = (
+    part,
+    what,
+  ) => `-- Content pack ${config.number}, part ${part} of 2: ${what}. ${pack.rules.length} existing rules got more practice.
+-- GENERATED by scripts/build-more-practice-pack.mjs from ${config.file}. Do not edit by
 -- hand; edit the JSON and run the script again. The two parts are one pack, split to stay under the SQL Editor's size
 -- limit: run part 1, then part 2 (either order works).
 --
--- The rules had only 4-5 examples and 8 exercises; this adds more, attached by slug. The rules are not changed.
+-- The rules are not changed; the examples and exercises are attached to them by slug.
 -- Safe to run more than once: a row is skipped when the same text / prompt already exists for the rule.
--- Needs rules-schema.sql and the rules to be applied already. To undo, see content-pack-4-undo.sql.
+-- Needs rules-schema.sql and the rules to be applied already. To undo, see content-pack-${config.number}-undo.sql.
 `
 
-const part1 = `${header(1, `${examples.length} examples`)}
+  const part1 = `${header(1, `${examples.length} examples`)}
 begin;
 
 insert into public.rule_examples (id, rule_id, example_type, text, correction, note)
@@ -86,7 +99,7 @@ where not exists (select 1 from public.rule_examples e where e.rule_id = r.id an
 commit;
 `
 
-const part2 = `${header(2, `${exercises.length} exercises`)}
+  const part2 = `${header(2, `${exercises.length} exercises`)}
 begin;
 
 insert into public.rule_exercises (id, rule_id, exercise_type, prompt, answer, choices, metadata)
@@ -100,7 +113,7 @@ where not exists (select 1 from public.rule_exercises e where e.rule_id = r.id a
 commit;
 `
 
-const undo = `-- Undo for content pack 4 (run only if you want the new rows gone). It removes exactly what the generator added.
+  const undo = `-- Undo for content pack ${config.number} (run only if you want the new rows gone). It removes exactly what the generator added.
 -- GENERATED by scripts/build-more-practice-pack.mjs.
 
 begin;
@@ -113,8 +126,17 @@ ${examples.map((e) => `  ${q(e.id)}`).join(',\n')}
 
 commit;
 `
-
-writeFileSync('database/content-pack-4-more-practice-part1.sql', part1)
-writeFileSync('database/content-pack-4-more-practice-part2.sql', part2)
-writeFileSync('database/content-pack-4-undo.sql', undo)
-console.log(`${pack.rules.length} rules: ${examples.length} examples, ${exercises.length} exercises written (2 parts + undo)`)
+  if (config.frozen) {
+    console.log(`pack ${config.number} (${pack.set}): already applied, SQL files left as they are`)
+    continue
+  }
+  const base = `database/content-pack-${config.number}`
+  writeFileSync(`${base}-more-practice-part1.sql`, part1)
+  writeFileSync(`${base}-more-practice-part2.sql`, part2)
+  writeFileSync(`${base}-undo.sql`, undo)
+  console.log(
+    `pack ${config.number} (${pack.set}): ${pack.rules.length} rules, ${examples.length} examples, ${exercises.length} exercises written (2 parts + undo)`,
+  )
+}
+writeFileSync('src/data/builtInRules.json', `${JSON.stringify(builtIn, null, 2)}\n`)
+execFileSync('pnpm', ['exec', 'prettier', '--write', 'src/data/builtInRules.json'], { stdio: 'ignore', shell: true }) // keeps the file formatted the way pnpm check wants it

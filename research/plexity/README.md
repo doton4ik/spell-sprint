@@ -40,3 +40,11 @@ All three use one script: `scripts/plexity-content.mjs`.
 Rebuild the prompts after the data changed: `node scripts/plexity-content.mjs prompts words|examples|level`.
 After a merge Claude Code runs `pnpm check` and has the content reviewed (Russian translations and ambiguous questions need a second pair of eyes).
 Second examples are saved with the source `written`; they also give each such word a second gap sentence in "Fill the gap".
+
+## Rules: more examples and exercises
+
+`node scripts/plexity-rules.mjs prompts` makes `prompts/rules/rules-01.md … rules-11.md` (4 rules per round, 14 new examples and 14 new exercises each,
+with everything that exists listed so Plexity does not repeat it). Save the answer as `answers/rules/rules-NN.json`, then Claude Code runs
+`node scripts/plexity-rules.mjs merge <file> [--apply]`. `--apply` writes `database/rules-import/more-practice-pack-2.json`, builds
+`database/content-pack-5-more-practice-part1.sql`, `-part2.sql` and `-undo.sql` and the offline examples in `builtInRules.json`.
+**The SQL files are run by you in the Supabase SQL Editor** (part 1, then part 2); until then the site shows the new examples from the bundled copy only.
