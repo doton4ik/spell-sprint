@@ -791,6 +791,23 @@ const grammarItems: LevelItem[] = [
     'to reduce',
     'Use to reducing after committed to.',
   ),
+  gap('b03-1-01', 1, 'There ___ some milk in the fridge.', 'is', ['are', 'be', 'were'], 'Use is with an uncountable noun.'),
+  gap(
+    'b03-1-02',
+    1,
+    'This book is ___ than that one.',
+    'more interesting',
+    ['interestinger', 'most interesting', 'as interesting'],
+    'Use more with longer adjectives.',
+  ),
+  gap(
+    'b03-2-01',
+    2,
+    'The emails ___ by the assistant every morning.',
+    'are checked',
+    ['check', 'checked', 'are checking'],
+    'Use the present passive for a regular action.',
+  ),
 ]
 
 const formationItems: LevelItem[] = [
@@ -874,6 +891,9 @@ const formationItems: LevelItem[] = [
   formation('b03-4-09', 4, 'The new rules caused considerable ___ among employees. (ANXIOUS)', 'anxiety', 'Use the noun form of anxious.'),
   formation('b03-4-10', 4, 'The report was criticised for its lack of ___. (PRECISE)', 'precision', 'Use the noun form of precise.'),
   formation('b03-4-11', 4, 'Her analysis was remarkably ___. (INSIGHT)', 'insightful', 'Add -ful to make the adjective.'),
+  formation('b05-1-01', 1, 'My brother is a football ___. (PLAY)', 'player', 'Add -er for the person who plays.'),
+  formation('b05-1-02', 1, 'The weather was very ___ yesterday. (RAIN)', 'rainy', 'Add -y to make the adjective.'),
+  formation('b05-1-03', 1, 'She is a very good ___. (DANCE)', 'dancer', 'Add -er for the person who dances.'),
 ]
 
 // ---- Collocations and phrasal verbs --------------------------------------------------------
@@ -1174,6 +1194,14 @@ const vocabularyItems: LevelItem[] = [
     'fend',
     ['put', 'take', 'keep'],
     'Fend off means avoid or defend against.',
+  ),
+  phrase(
+    'b03-1-03',
+    1,
+    'Can you ___ the window open, please?',
+    'leave',
+    ['let', 'put', 'stay'],
+    'Leave something open means keep it open.',
   ),
 ]
 
@@ -1596,6 +1624,18 @@ const dictationItems: LevelItem[] = [
   dictation('b03-4-15', 4, 'The auditors looked into several irregular payments.'),
   dictation('b03-4-16', 4, 'The government plans to phase out outdated safety standards.'),
   dictation('b03-4-17', 4, 'The company is committed to reducing emissions.'),
+  dictation('b03-1-04', 1, 'My mother cooks dinner every evening.'),
+  dictation('b03-1-05', 1, 'We visited my grandparents last weekend.'),
+  dictation('b03-1-06', 1, 'There is a big park near my house.'),
+  dictation('b03-1-07', 1, 'I usually take the bus to school.'),
+  dictation('b03-1-08', 1, 'She bought a new dress yesterday.'),
+  dictation('b03-1-09', 1, 'My friends play basketball after school.'),
+  dictation('b05-1-04', 1, 'My sister studies English every day.'),
+  dictation('b05-1-05', 1, 'I usually have breakfast at eight o’clock.', [
+    'I usually have breakfast at 8 o’clock.',
+    'I usually have breakfast at eight o clock.',
+  ]),
+  dictation('b05-1-06', 1, 'He bought some fruit at the market.'),
 ]
 
 export const deepLevelItems: LevelItem[] = [...grammarItems, ...formationItems, ...vocabularyItems, ...readingItems, ...dictationItems]

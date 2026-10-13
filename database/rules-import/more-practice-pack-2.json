@@ -2394,6 +2394,1456 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "its-vs-its-contraction",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The cat licked its paw and fell asleep.",
+          "note": "Its = belongs to it, no apostrophe"
+        },
+        {
+          "type": "correct",
+          "text": "It's raining, so take an umbrella.",
+          "note": "It's = it is"
+        },
+        {
+          "type": "correct",
+          "text": "The house lost its roof in the storm.",
+          "note": "Its shows the roof belongs to the house"
+        },
+        {
+          "type": "correct",
+          "text": "I think it's time to go home.",
+          "note": "It's = it is"
+        },
+        {
+          "type": "incorrect",
+          "text": "The baby lost it's toy under the bed.",
+          "correction": "The baby lost its toy under the bed.",
+          "note": "Belonging = its, no apostrophe"
+        },
+        {
+          "type": "incorrect",
+          "text": "Its been a long day for everyone.",
+          "correction": "It's been a long day for everyone.",
+          "note": "It's = it has"
+        },
+        {
+          "type": "incorrect",
+          "text": "I like the film, but it's ending was sad.",
+          "correction": "I like the film, but its ending was sad.",
+          "note": "The ending belongs to the film: its"
+        },
+        {
+          "type": "incorrect",
+          "text": "Its too late to call him now.",
+          "correction": "It's too late to call him now.",
+          "note": "It's = it is"
+        },
+        {
+          "type": "incorrect",
+          "text": "The tree lost all it's leaves in autumn.",
+          "correction": "The tree lost all its leaves in autumn.",
+          "note": "Belonging = its, no apostrophe"
+        },
+        {
+          "type": "incorrect",
+          "text": "Its important to drink enough water.",
+          "correction": "It's important to drink enough water.",
+          "note": "It's = it is"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "The company is proud of ___ new office.",
+          "answer": "its"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "___ a beautiful day, so let's go outside.",
+          "answer": "It's"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct word: The dog wagged ___ tail.",
+          "answer": "its",
+          "choices": [
+            "its",
+            "it's"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct word: I think ___ going to rain.",
+          "answer": "it's",
+          "choices": [
+            "its",
+            "it's"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The bird built ___ nest in the old tree.",
+          "answer": "its"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "I cannot find my phone, and ___ almost time to leave.",
+          "answer": "it's"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct word: The city is famous for ___ old bridges.",
+          "answer": "its",
+          "choices": [
+            "its",
+            "it's"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct word: ___ been a great week for our team.",
+          "answer": "It's",
+          "choices": [
+            "Its",
+            "It's"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The museum closes ___ doors at five o'clock.",
+          "answer": "its"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct word: Look at the sky, ___ getting dark!",
+          "answer": "it's",
+          "choices": [
+            "its",
+            "it's"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "soft-c-and-g",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The schedule is manageable if we work together.",
+          "note": "Keep e after g: manage + able"
+        },
+        {
+          "type": "correct",
+          "text": "She is very knowledgeable about birds.",
+          "note": "Keep e after g: knowledge + able"
+        },
+        {
+          "type": "correct",
+          "text": "The weather here is changeable in spring.",
+          "note": "Keep e after g: change + able"
+        },
+        {
+          "type": "correct",
+          "text": "Every parcel is traceable online.",
+          "note": "Keep e after c: trace + able"
+        },
+        {
+          "type": "incorrect",
+          "text": "The task was not managable for one person.",
+          "correction": "The task was not manageable for one person.",
+          "note": "Keep e so g stays soft: manageable"
+        },
+        {
+          "type": "incorrect",
+          "text": "He is very knowlegable about history.",
+          "correction": "He is very knowledgeable about history.",
+          "note": "Keep e so g stays soft: knowledgeable"
+        },
+        {
+          "type": "incorrect",
+          "text": "The old phone is not replacable.",
+          "correction": "The old phone is not replaceable.",
+          "note": "Keep e so c stays soft: replaceable"
+        },
+        {
+          "type": "incorrect",
+          "text": "The weather is changable in April.",
+          "correction": "The weather is changeable in April.",
+          "note": "Keep e so g stays soft: changeable"
+        },
+        {
+          "type": "incorrect",
+          "text": "She wore a gorgous dress to the party.",
+          "correction": "She wore a gorgeous dress to the party.",
+          "note": "Keep e so g stays soft: gorgeous"
+        },
+        {
+          "type": "incorrect",
+          "text": "Every parcel is tracable online.",
+          "correction": "Every parcel is traceable online.",
+          "note": "Keep e so c stays soft: traceable"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "knowlegable",
+          "answer": "knowledgeable"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "replacable",
+          "answer": "replaceable"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "tracable",
+          "answer": "traceable"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "irreplacable",
+          "answer": "irreplaceable"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: able to be managed.",
+          "answer": "manageable"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: full of courage.",
+          "answer": "courageous"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: able to be changed.",
+          "answer": "changeable"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: able to be exchanged.",
+          "answer": "exchangeable",
+          "choices": [
+            "exchangable",
+            "exchangeable",
+            "exchangeible"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: in good enough condition to be used.",
+          "answer": "serviceable",
+          "choices": [
+            "servicable",
+            "serviceable",
+            "servicible"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: easy to see or notice.",
+          "answer": "noticeable",
+          "choices": [
+            "noticable",
+            "noticeable",
+            "noticible"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lose-vs-loose",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "I always lose my umbrella on rainy days.",
+          "note": "Lose = verb, to not have anymore"
+        },
+        {
+          "type": "correct",
+          "text": "The screw is loose, so the shelf shakes.",
+          "note": "Loose = adjective, not tight"
+        },
+        {
+          "type": "correct",
+          "text": "Do not lose hope, because things will get better.",
+          "note": "Lose is a verb: lose hope"
+        },
+        {
+          "type": "correct",
+          "text": "She wore a loose shirt in the hot weather.",
+          "note": "Loose = not tight"
+        },
+        {
+          "type": "incorrect",
+          "text": "I hope we do not loose the match tomorrow.",
+          "correction": "I hope we do not lose the match tomorrow.",
+          "note": "A verb needs lose"
+        },
+        {
+          "type": "incorrect",
+          "text": "My tooth is lose, and it hurts.",
+          "correction": "My tooth is loose, and it hurts.",
+          "note": "Not firmly fixed = loose (adjective)"
+        },
+        {
+          "type": "incorrect",
+          "text": "Did you loose your phone again?",
+          "correction": "Did you lose your phone again?",
+          "note": "A verb needs lose"
+        },
+        {
+          "type": "incorrect",
+          "text": "The dog got lose from its lead.",
+          "correction": "The dog got loose from its lead.",
+          "note": "Free, not tied = loose"
+        },
+        {
+          "type": "incorrect",
+          "text": "Be careful or you will loose your balance.",
+          "correction": "Be careful or you will lose your balance.",
+          "note": "Lose your balance: verb lose"
+        },
+        {
+          "type": "incorrect",
+          "text": "He wore a lose coat over his sweater.",
+          "correction": "He wore a loose coat over his sweater.",
+          "note": "Not tight = loose (adjective)"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "My tooth is ___, and it might fall out soon.",
+          "answer": "loose"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "I always ___ my keys when I am in a hurry.",
+          "answer": "lose"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: These trousers are too ___ around the waist.",
+          "answer": "loose",
+          "choices": [
+            "lose",
+            "loose"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: We will ___ the game if we do not defend.",
+          "answer": "lose",
+          "choices": [
+            "lose",
+            "loose"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The dog broke free and ran ___ in the park.",
+          "answer": "loose"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Do not ___ this paper, because it is your only copy.",
+          "answer": "lose"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: The bolt came ___ and fell on the floor.",
+          "answer": "loose",
+          "choices": [
+            "lose",
+            "loose"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: I do not want to ___ my place in the queue.",
+          "answer": "lose",
+          "choices": [
+            "lose",
+            "loose"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "A ___ cable can cause problems with the sound.",
+          "answer": "loose"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "If you ___ your passport abroad, tell the police at once.",
+          "answer": "lose"
+        }
+      ]
+    },
+    {
+      "slug": "ance-vs-ence",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Regular attendance is important for this course.",
+          "note": "Attendance ends in -ance"
+        },
+        {
+          "type": "correct",
+          "text": "She has a lot of confidence on stage.",
+          "note": "Confidence ends in -ence"
+        },
+        {
+          "type": "correct",
+          "text": "We sat in silence for a minute.",
+          "note": "Silence ends in -ence"
+        },
+        {
+          "type": "correct",
+          "text": "The distance between the two towns is short.",
+          "note": "Distance ends in -ance"
+        },
+        {
+          "type": "incorrect",
+          "text": "The insurence covers all the repairs.",
+          "correction": "The insurance covers all the repairs.",
+          "note": "Insurance ends in -ance"
+        },
+        {
+          "type": "incorrect",
+          "text": "Patiance is very useful for teachers.",
+          "correction": "Patience is very useful for teachers.",
+          "note": "Patience ends in -ence"
+        },
+        {
+          "type": "incorrect",
+          "text": "The conferance starts at ten o'clock.",
+          "correction": "The conference starts at ten o'clock.",
+          "note": "Conference ends in -ence"
+        },
+        {
+          "type": "incorrect",
+          "text": "Thank you for your assistence with the bags.",
+          "correction": "Thank you for your assistance with the bags.",
+          "note": "Assistance ends in -ance"
+        },
+        {
+          "type": "incorrect",
+          "text": "He has a lot of experiance with children.",
+          "correction": "He has a lot of experience with children.",
+          "note": "Experience ends in -ence"
+        },
+        {
+          "type": "incorrect",
+          "text": "Her absance was noticed by everyone.",
+          "correction": "Her absence was noticed by everyone.",
+          "note": "Absence ends in -ence"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "importence",
+          "answer": "importance"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "performence",
+          "answer": "performance"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "silance",
+          "answer": "silence"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "confidance",
+          "answer": "confidence"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "sentance",
+          "answer": "sentence"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: being away from school or work (-ence).",
+          "answer": "absence"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: a door or gate where you go into a building (-ance).",
+          "answer": "entrance"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: the place where a person lives (formal).",
+          "answer": "residence",
+          "choices": [
+            "residance",
+            "residence",
+            "residense"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: money paid so that a company protects you from loss.",
+          "answer": "insurance",
+          "choices": [
+            "insurence",
+            "insurance",
+            "insurense"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: the amount of space between two places.",
+          "answer": "distance",
+          "choices": [
+            "distence",
+            "distance",
+            "distanse"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "plural-f-to-ves",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "She cut the apple into two halves.",
+          "note": "Half becomes halves"
+        },
+        {
+          "type": "correct",
+          "text": "The baker made six loaves of bread.",
+          "note": "Loaf becomes loaves"
+        },
+        {
+          "type": "correct",
+          "text": "People say that cats have nine lives.",
+          "note": "Life becomes lives"
+        },
+        {
+          "type": "correct",
+          "text": "The thieves ran away before the police came.",
+          "note": "Thief becomes thieves"
+        },
+        {
+          "type": "incorrect",
+          "text": "He bought three loafs of bread.",
+          "correction": "He bought three loaves of bread.",
+          "note": "Loaf becomes loaves"
+        },
+        {
+          "type": "incorrect",
+          "text": "Cut the cake into two halfs.",
+          "correction": "Cut the cake into two halves.",
+          "note": "Half becomes halves"
+        },
+        {
+          "type": "incorrect",
+          "text": "Doctors save many lifes every day.",
+          "correction": "Doctors save many lives every day.",
+          "note": "Life becomes lives"
+        },
+        {
+          "type": "incorrect",
+          "text": "Please help yourselfs to some food.",
+          "correction": "Please help yourselves to some food.",
+          "note": "Self becomes selves: yourselves"
+        },
+        {
+          "type": "incorrect",
+          "text": "The two thiefs were caught later.",
+          "correction": "The two thieves were caught later.",
+          "note": "Thief becomes thieves"
+        },
+        {
+          "type": "incorrect",
+          "text": "Both calfs were born in spring.",
+          "correction": "Both calves were born in spring.",
+          "note": "Calf becomes calves"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "shelfs",
+          "answer": "shelves"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "wolfs",
+          "answer": "wolves"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "selfs",
+          "answer": "selves"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "halfs",
+          "answer": "halves"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: more than one loaf.",
+          "answer": "loaves"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: more than one wife.",
+          "answer": "wives"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct word: Please help ___ to some tea, everyone.",
+          "answer": "yourselves",
+          "choices": [
+            "yourself",
+            "yourselfs",
+            "yourselves"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct plural of thief.",
+          "answer": "thieves",
+          "choices": [
+            "thiefs",
+            "thieves",
+            "thievs"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Cut the sandwich into two ___.",
+          "answer": "halves"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The new safety rules saved many ___ last year.",
+          "answer": "lives"
+        }
+      ]
+    },
+    {
+      "slug": "plural-y-to-ies",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The babies slept quietly in the next room.",
+          "note": "Baby becomes babies"
+        },
+        {
+          "type": "correct",
+          "text": "Many families live in this building.",
+          "note": "Family becomes families"
+        },
+        {
+          "type": "correct",
+          "text": "He wrote three stories about his journey.",
+          "note": "Story becomes stories"
+        },
+        {
+          "type": "correct",
+          "text": "There were many parties last summer.",
+          "note": "Party becomes parties"
+        },
+        {
+          "type": "incorrect",
+          "text": "Both ladys left early.",
+          "correction": "Both ladies left early.",
+          "note": "Consonant + y: change y to ies"
+        },
+        {
+          "type": "incorrect",
+          "text": "My two babys are asleep.",
+          "correction": "My two babies are asleep.",
+          "note": "Baby becomes babies"
+        },
+        {
+          "type": "incorrect",
+          "text": "Which countrys have you visited?",
+          "correction": "Which countries have you visited?",
+          "note": "Country becomes countries"
+        },
+        {
+          "type": "incorrect",
+          "text": "There are many storys in this book.",
+          "correction": "There are many stories in this book.",
+          "note": "Story becomes stories"
+        },
+        {
+          "type": "incorrect",
+          "text": "Their familys came to the party.",
+          "correction": "Their families came to the party.",
+          "note": "Family becomes families"
+        },
+        {
+          "type": "incorrect",
+          "text": "The partyes were very noisy.",
+          "correction": "The parties were very noisy.",
+          "note": "Change y to i, then add es: parties"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "countrys",
+          "answer": "countries"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "storys",
+          "answer": "stories"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "ladys",
+          "answer": "ladies"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "familys",
+          "answer": "families"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: more than one party.",
+          "answer": "parties"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: more than one city.",
+          "answer": "cities"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the plural of day.",
+          "answer": "days",
+          "choices": [
+            "daies",
+            "days",
+            "dayes"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the plural of key.",
+          "answer": "keys",
+          "choices": [
+            "keies",
+            "keys",
+            "keyes"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the plural of monkey.",
+          "answer": "monkeys",
+          "choices": [
+            "monkies",
+            "monkeys",
+            "monkeyes"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the plural of boy.",
+          "answer": "boys",
+          "choices": [
+            "boies",
+            "boys",
+            "boyes"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "then-vs-than",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "He is more careful than his brother.",
+          "note": "Comparing two people: than"
+        },
+        {
+          "type": "correct",
+          "text": "We waited for an hour, and then the bus came.",
+          "note": "Next in time: then"
+        },
+        {
+          "type": "correct",
+          "text": "I would rather walk than take a taxi.",
+          "note": "Choosing between two things: than"
+        },
+        {
+          "type": "correct",
+          "text": "Wash your hands, then dry them well.",
+          "note": "Next step: then"
+        },
+        {
+          "type": "incorrect",
+          "text": "This test was harder then the last one.",
+          "correction": "This test was harder than the last one.",
+          "note": "Comparison: than"
+        },
+        {
+          "type": "incorrect",
+          "text": "Eat your lunch, than we will go out.",
+          "correction": "Eat your lunch, then we will go out.",
+          "note": "Next in time: then"
+        },
+        {
+          "type": "incorrect",
+          "text": "I got home and than had a shower.",
+          "correction": "I got home and then had a shower.",
+          "note": "Next in time: then"
+        },
+        {
+          "type": "incorrect",
+          "text": "She speaks English better then I do.",
+          "correction": "She speaks English better than I do.",
+          "note": "Comparison: than"
+        },
+        {
+          "type": "incorrect",
+          "text": "He earns more then his sister.",
+          "correction": "He earns more than his sister.",
+          "note": "Comparison: than"
+        },
+        {
+          "type": "incorrect",
+          "text": "Think first, than answer the question.",
+          "correction": "Think first, then answer the question.",
+          "note": "Next step: then"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "She is much happier ___ she was last year.",
+          "answer": "than"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Wash the apples first, and ___ cut them.",
+          "answer": "then"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: I would rather stay home ___ go out in the rain.",
+          "answer": "than",
+          "choices": [
+            "then",
+            "than"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Open the file, ___ click Save.",
+          "answer": "then",
+          "choices": [
+            "then",
+            "than"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Our new flat is bigger ___ the old one.",
+          "answer": "than"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "I thought about it for a minute, and ___ I said yes.",
+          "answer": "then"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: There were more people ___ we expected.",
+          "answer": "than",
+          "choices": [
+            "then",
+            "than"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: First we had dinner, ___ we watched a film.",
+          "answer": "then",
+          "choices": [
+            "then",
+            "than"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "It takes longer by bus ___ by train.",
+          "answer": "than"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "We had no mobile phones back ___.",
+          "answer": "then"
+        }
+      ]
+    },
+    {
+      "slug": "there-vs-their",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The children are in the garden with their dog.",
+          "note": "Their = belongs to them"
+        },
+        {
+          "type": "correct",
+          "text": "Look at the shelf over there.",
+          "note": "There = a place"
+        },
+        {
+          "type": "correct",
+          "text": "They're planning a trip to Spain this summer.",
+          "note": "They're = they are"
+        },
+        {
+          "type": "correct",
+          "text": "There is a problem with the printer.",
+          "note": "There is: starts the sentence"
+        },
+        {
+          "type": "incorrect",
+          "text": "The students forgot there books at home.",
+          "correction": "The students forgot their books at home.",
+          "note": "Belongs to them: their"
+        },
+        {
+          "type": "incorrect",
+          "text": "Their is no milk in the fridge.",
+          "correction": "There is no milk in the fridge.",
+          "note": "There is: starts the sentence"
+        },
+        {
+          "type": "incorrect",
+          "text": "I think they're car is outside.",
+          "correction": "I think their car is outside.",
+          "note": "Belongs to them: their"
+        },
+        {
+          "type": "incorrect",
+          "text": "Put the boxes over their, please.",
+          "correction": "Put the boxes over there, please.",
+          "note": "A place: there"
+        },
+        {
+          "type": "incorrect",
+          "text": "There coming to dinner tonight.",
+          "correction": "They're coming to dinner tonight.",
+          "note": "They're = they are"
+        },
+        {
+          "type": "incorrect",
+          "text": "Many people lost they're jobs last year.",
+          "correction": "Many people lost their jobs last year.",
+          "note": "Belongs to them: their"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "The neighbours painted ___ fence green.",
+          "answer": "their"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "I left my bag over ___ on the chair.",
+          "answer": "there"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: ___ are four apples in the bowl.",
+          "answer": "There",
+          "choices": [
+            "There",
+            "Their",
+            "They're"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: ___ late, so we should start without them.",
+          "answer": "They're",
+          "choices": [
+            "There",
+            "Their",
+            "They're"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "My parents sold ___ house last spring.",
+          "answer": "their"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Is ___ a post office near here?",
+          "answer": "there"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: The players are proud of ___ team.",
+          "answer": "their",
+          "choices": [
+            "there",
+            "their",
+            "they're"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: I know they are tired, but ___ still working.",
+          "answer": "they're",
+          "choices": [
+            "there",
+            "their",
+            "they're"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "We went to Italy and stayed ___ for two weeks.",
+          "answer": "there"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Can you see ___ car? It is the blue one.",
+          "answer": "their",
+          "choices": [
+            "there",
+            "their",
+            "they're"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "to-too-two",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "I would like to drink some water.",
+          "note": "To before a verb: to drink"
+        },
+        {
+          "type": "correct",
+          "text": "My brother is coming too.",
+          "note": "Too = also"
+        },
+        {
+          "type": "correct",
+          "text": "It is two o'clock, and the shop is closed.",
+          "note": "Two = the number 2"
+        },
+        {
+          "type": "correct",
+          "text": "He went to the shop to buy bread.",
+          "note": "To = direction; to buy = before a verb"
+        },
+        {
+          "type": "incorrect",
+          "text": "I have too brothers and a sister.",
+          "correction": "I have two brothers and a sister.",
+          "note": "The number 2 = two"
+        },
+        {
+          "type": "incorrect",
+          "text": "The coffee is to hot to drink.",
+          "correction": "The coffee is too hot to drink.",
+          "note": "Too = excessively"
+        },
+        {
+          "type": "incorrect",
+          "text": "We are going too the cinema tonight.",
+          "correction": "We are going to the cinema tonight.",
+          "note": "Direction: to"
+        },
+        {
+          "type": "incorrect",
+          "text": "Can I come to?",
+          "correction": "Can I come too?",
+          "note": "Too = also"
+        },
+        {
+          "type": "incorrect",
+          "text": "She waited for to hours.",
+          "correction": "She waited for two hours.",
+          "note": "The number 2 = two"
+        },
+        {
+          "type": "incorrect",
+          "text": "It is two late to change the plan.",
+          "correction": "It is too late to change the plan.",
+          "note": "Too = excessively"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "The bag is ___ heavy for a child.",
+          "answer": "too"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "I have ___ younger sisters.",
+          "answer": "two"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: We are driving ___ the coast tomorrow.",
+          "answer": "to",
+          "choices": [
+            "to",
+            "too",
+            "two"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Can I have some cake, ___?",
+          "answer": "too",
+          "choices": [
+            "to",
+            "too",
+            "two"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "She decided ___ call her friend.",
+          "answer": "to"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Give me ___ minutes, please.",
+          "answer": "two"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: It is ___ noisy to study here.",
+          "answer": "too",
+          "choices": [
+            "to",
+            "too",
+            "two"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: He is learning ___ drive.",
+          "answer": "to",
+          "choices": [
+            "to",
+            "too",
+            "two"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "My sister likes pizza, and I do ___.",
+          "answer": "too"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: A bicycle has ___ wheels.",
+          "answer": "two",
+          "choices": [
+            "to",
+            "too",
+            "two"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "vowel-order-ei-ie",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Please keep the receipt for your new shoes.",
+          "note": "After c: ei, as in receipt"
+        },
+        {
+          "type": "correct",
+          "text": "I believe that she will win the race.",
+          "note": "Not after c: ie, as in believe"
+        },
+        {
+          "type": "correct",
+          "text": "He ate a big piece of cake.",
+          "note": "Not after c: ie, as in piece"
+        },
+        {
+          "type": "correct",
+          "text": "Do not try to deceive your friends.",
+          "note": "After c: ei, as in deceive"
+        },
+        {
+          "type": "incorrect",
+          "text": "Keep the reciept in case you need to return it.",
+          "correction": "Keep the receipt in case you need to return it.",
+          "note": "After c: ei, receipt"
+        },
+        {
+          "type": "incorrect",
+          "text": "I beleive you are right.",
+          "correction": "I believe you are right.",
+          "note": "Not after c: ie, believe"
+        },
+        {
+          "type": "incorrect",
+          "text": "She ate a peice of pizza.",
+          "correction": "She ate a piece of pizza.",
+          "note": "Not after c: ie, piece"
+        },
+        {
+          "type": "incorrect",
+          "text": "The cows are in the feild.",
+          "correction": "The cows are in the field.",
+          "note": "Not after c: ie, field"
+        },
+        {
+          "type": "incorrect",
+          "text": "Please do not decieve me.",
+          "correction": "Please do not deceive me.",
+          "note": "After c: ei, deceive"
+        },
+        {
+          "type": "incorrect",
+          "text": "We saw the cheif of the village.",
+          "correction": "We saw the chief of the village.",
+          "note": "Not after c: ie, chief"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "neice",
+          "answer": "niece"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "acheive",
+          "answer": "achieve"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "reciept",
+          "answer": "receipt"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "decieve",
+          "answer": "deceive"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "breif",
+          "answer": "brief"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: a person you like and know well.",
+          "answer": "friend",
+          "choices": [
+            "freind",
+            "friend",
+            "frend"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: to get something that is given to you.",
+          "answer": "receive",
+          "choices": [
+            "recieve",
+            "receive",
+            "reseive"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: the top surface inside a room.",
+          "answer": "ceiling",
+          "choices": [
+            "cieling",
+            "ceiling",
+            "seiling"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: the leader of a group or a tribe.",
+          "answer": "chief",
+          "choices": [
+            "cheif",
+            "chief",
+            "cheaf"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: a part of a larger thing.",
+          "answer": "piece",
+          "choices": [
+            "peice",
+            "piece",
+            "pece"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "your-vs-youre",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Is this your umbrella?",
+          "note": "Your = belongs to you"
+        },
+        {
+          "type": "correct",
+          "text": "You're right about the time.",
+          "note": "You're = you are"
+        },
+        {
+          "type": "correct",
+          "text": "I think you're ready for the test.",
+          "note": "You're = you are"
+        },
+        {
+          "type": "correct",
+          "text": "Your teacher called while you were out.",
+          "note": "Your = belongs to you"
+        },
+        {
+          "type": "incorrect",
+          "text": "Your late again, and the lesson has started.",
+          "correction": "You're late again, and the lesson has started.",
+          "note": "You're = you are"
+        },
+        {
+          "type": "incorrect",
+          "text": "You're phone is ringing.",
+          "correction": "Your phone is ringing.",
+          "note": "Belongs to you: your"
+        },
+        {
+          "type": "incorrect",
+          "text": "I hope your enjoying the trip.",
+          "correction": "I hope you're enjoying the trip.",
+          "note": "You're = you are"
+        },
+        {
+          "type": "incorrect",
+          "text": "Do not forget you're ticket.",
+          "correction": "Do not forget your ticket.",
+          "note": "Belongs to you: your"
+        },
+        {
+          "type": "incorrect",
+          "text": "Your not allowed to park here.",
+          "correction": "You're not allowed to park here.",
+          "note": "You're = you are"
+        },
+        {
+          "type": "incorrect",
+          "text": "Is this you're first time in London?",
+          "correction": "Is this your first time in London?",
+          "note": "Belongs to you: your"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "___ going to love this film.",
+          "answer": "You're"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Please write ___ name on the form.",
+          "answer": "your"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: I think ___ right about the price.",
+          "answer": "you're",
+          "choices": [
+            "your",
+            "you're"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: What is ___ favourite colour?",
+          "answer": "your",
+          "choices": [
+            "your",
+            "you're"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Call me when ___ ready to leave.",
+          "answer": "you're"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Do not forget ___ keys on the table.",
+          "answer": "your"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: ___ very good at drawing.",
+          "answer": "You're",
+          "choices": [
+            "Your",
+            "You're"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Is this ___ first visit to our city?",
+          "answer": "your",
+          "choices": [
+            "your",
+            "you're"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "I can see that ___ tired after the trip.",
+          "answer": "you're"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Thank you for ___ help yesterday.",
+          "answer": "your",
+          "choices": [
+            "your",
+            "you're"
+          ]
+        }
+      ]
     }
   ]
 }

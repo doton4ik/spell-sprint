@@ -1,0 +1,52 @@
+[
+  {"slug": "plural-f-to-ves",
+   "examples": [
+     {"type": "correct", "text": "She cut the apple into two halves.", "note": "Half becomes halves"},
+     {"type": "correct", "text": "The baker made six loaves of bread.", "note": "Loaf becomes loaves"},
+     {"type": "correct", "text": "People say that cats have nine lives.", "note": "Life becomes lives"},
+     {"type": "correct", "text": "The thieves ran away before the police came.", "note": "Thief becomes thieves"},
+     {"type": "incorrect", "text": "He bought three loafs of bread.", "correction": "He bought three loaves of bread.", "note": "Loaf becomes loaves"},
+     {"type": "incorrect", "text": "Cut the cake into two halfs.", "correction": "Cut the cake into two halves.", "note": "Half becomes halves"},
+     {"type": "incorrect", "text": "Doctors save many lifes every day.", "correction": "Doctors save many lives every day.", "note": "Life becomes lives"},
+     {"type": "incorrect", "text": "Please help yourselfs to some food.", "correction": "Please help yourselves to some food.", "note": "Self becomes selves: yourselves"},
+     {"type": "incorrect", "text": "The two thiefs were caught later.", "correction": "The two thieves were caught later.", "note": "Thief becomes thieves"},
+     {"type": "incorrect", "text": "Both calfs were born in spring.", "correction": "Both calves were born in spring.", "note": "Calf becomes calves"}
+   ],
+   "exercises": [
+     {"type": "correct_word", "prompt": "shelfs", "answer": "shelves"},
+     {"type": "correct_word", "prompt": "wolfs", "answer": "wolves"},
+     {"type": "correct_word", "prompt": "selfs", "answer": "selves"},
+     {"type": "correct_word", "prompt": "halfs", "answer": "halves"},
+     {"type": "spell", "prompt": "Spell the word: more than one loaf.", "answer": "loaves"},
+     {"type": "spell", "prompt": "Spell the word: more than one wife.", "answer": "wives"},
+     {"type": "multiple_choice", "prompt": "Choose the correct word: Please help ___ to some tea, everyone.", "answer": "yourselves", "choices": ["yourself", "yourselfs", "yourselves"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct plural of thief.", "answer": "thieves", "choices": ["thiefs", "thieves", "thievs"]},
+     {"type": "fill_gap", "prompt": "Cut the sandwich into two ___.", "answer": "halves"},
+     {"type": "fill_gap", "prompt": "The new safety rules saved many ___ last year.", "answer": "lives"}
+   ]},
+  {"slug": "plural-y-to-ies",
+   "examples": [
+     {"type": "correct", "text": "The babies slept quietly in the next room.", "note": "Baby becomes babies"},
+     {"type": "correct", "text": "Many families live in this building.", "note": "Family becomes families"},
+     {"type": "correct", "text": "He wrote three stories about his journey.", "note": "Story becomes stories"},
+     {"type": "correct", "text": "There were many parties last summer.", "note": "Party becomes parties"},
+     {"type": "incorrect", "text": "Both ladys left early.", "correction": "Both ladies left early.", "note": "Consonant + y: change y to ies"},
+     {"type": "incorrect", "text": "My two babys are asleep.", "correction": "My two babies are asleep.", "note": "Baby becomes babies"},
+     {"type": "incorrect", "text": "Which countrys have you visited?", "correction": "Which countries have you visited?", "note": "Country becomes countries"},
+     {"type": "incorrect", "text": "There are many storys in this book.", "correction": "There are many stories in this book.", "note": "Story becomes stories"},
+     {"type": "incorrect", "text": "Their familys came to the party.", "correction": "Their families came to the party.", "note": "Family becomes families"},
+     {"type": "incorrect", "text": "The partyes were very noisy.", "correction": "The parties were very noisy.", "note": "Change y to i, then add es: parties"}
+   ],
+   "exercises": [
+     {"type": "correct_word", "prompt": "countrys", "answer": "countries"},
+     {"type": "correct_word", "prompt": "storys", "answer": "stories"},
+     {"type": "correct_word", "prompt": "ladys", "answer": "ladies"},
+     {"type": "correct_word", "prompt": "familys", "answer": "families"},
+     {"type": "spell", "prompt": "Spell the word: more than one party.", "answer": "parties"},
+     {"type": "spell", "prompt": "Spell the word: more than one city.", "answer": "cities"},
+     {"type": "multiple_choice", "prompt": "Choose the plural of day.", "answer": "days", "choices": ["daies", "days", "dayes"]},
+     {"type": "multiple_choice", "prompt": "Choose the plural of key.", "answer": "keys", "choices": ["keies", "keys", "keyes"]},
+     {"type": "multiple_choice", "prompt": "Choose the plural of monkey.", "answer": "monkeys", "choices": ["monkies", "monkeys", "monkeyes"]},
+     {"type": "multiple_choice", "prompt": "Choose the plural of boy.", "answer": "boys", "choices": ["boies", "boys", "boyes"]}
+   ]}
+]

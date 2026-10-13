@@ -1,0 +1,52 @@
+[
+  {"slug": "to-too-two",
+   "examples": [
+     {"type": "correct", "text": "I would like to drink some water.", "note": "To before a verb: to drink"},
+     {"type": "correct", "text": "My brother is coming too.", "note": "Too = also"},
+     {"type": "correct", "text": "It is two o'clock, and the shop is closed.", "note": "Two = the number 2"},
+     {"type": "correct", "text": "He went to the shop to buy bread.", "note": "To = direction; to buy = before a verb"},
+     {"type": "incorrect", "text": "I have too brothers and a sister.", "correction": "I have two brothers and a sister.", "note": "The number 2 = two"},
+     {"type": "incorrect", "text": "The coffee is to hot to drink.", "correction": "The coffee is too hot to drink.", "note": "Too = excessively"},
+     {"type": "incorrect", "text": "We are going too the cinema tonight.", "correction": "We are going to the cinema tonight.", "note": "Direction: to"},
+     {"type": "incorrect", "text": "Can I come to?", "correction": "Can I come too?", "note": "Too = also"},
+     {"type": "incorrect", "text": "She waited for to hours.", "correction": "She waited for two hours.", "note": "The number 2 = two"},
+     {"type": "incorrect", "text": "It is two late to change the plan.", "correction": "It is too late to change the plan.", "note": "Too = excessively"}
+   ],
+   "exercises": [
+     {"type": "fill_gap", "prompt": "The bag is ___ heavy for a child.", "answer": "too"},
+     {"type": "fill_gap", "prompt": "I have ___ younger sisters.", "answer": "two"},
+     {"type": "multiple_choice", "prompt": "Choose the word: We are driving ___ the coast tomorrow.", "answer": "to", "choices": ["to", "too", "two"]},
+     {"type": "multiple_choice", "prompt": "Choose the word: Can I have some cake, ___?", "answer": "too", "choices": ["to", "too", "two"]},
+     {"type": "fill_gap", "prompt": "She decided ___ call her friend.", "answer": "to"},
+     {"type": "fill_gap", "prompt": "Give me ___ minutes, please.", "answer": "two"},
+     {"type": "multiple_choice", "prompt": "Choose the word: It is ___ noisy to study here.", "answer": "too", "choices": ["to", "too", "two"]},
+     {"type": "multiple_choice", "prompt": "Choose the word: He is learning ___ drive.", "answer": "to", "choices": ["to", "too", "two"]},
+     {"type": "fill_gap", "prompt": "My sister likes pizza, and I do ___.", "answer": "too"},
+     {"type": "multiple_choice", "prompt": "Choose the word: A bicycle has ___ wheels.", "answer": "two", "choices": ["to", "too", "two"]}
+   ]},
+  {"slug": "vowel-order-ei-ie",
+   "examples": [
+     {"type": "correct", "text": "Please keep the receipt for your new shoes.", "note": "After c: ei, as in receipt"},
+     {"type": "correct", "text": "I believe that she will win the race.", "note": "Not after c: ie, as in believe"},
+     {"type": "correct", "text": "He ate a big piece of cake.", "note": "Not after c: ie, as in piece"},
+     {"type": "correct", "text": "Do not try to deceive your friends.", "note": "After c: ei, as in deceive"},
+     {"type": "incorrect", "text": "Keep the reciept in case you need to return it.", "correction": "Keep the receipt in case you need to return it.", "note": "After c: ei, receipt"},
+     {"type": "incorrect", "text": "I beleive you are right.", "correction": "I believe you are right.", "note": "Not after c: ie, believe"},
+     {"type": "incorrect", "text": "She ate a peice of pizza.", "correction": "She ate a piece of pizza.", "note": "Not after c: ie, piece"},
+     {"type": "incorrect", "text": "The cows are in the feild.", "correction": "The cows are in the field.", "note": "Not after c: ie, field"},
+     {"type": "incorrect", "text": "Please do not decieve me.", "correction": "Please do not deceive me.", "note": "After c: ei, deceive"},
+     {"type": "incorrect", "text": "We saw the cheif of the village.", "correction": "We saw the chief of the village.", "note": "Not after c: ie, chief"}
+   ],
+   "exercises": [
+     {"type": "correct_word", "prompt": "neice", "answer": "niece"},
+     {"type": "correct_word", "prompt": "acheive", "answer": "achieve"},
+     {"type": "correct_word", "prompt": "reciept", "answer": "receipt"},
+     {"type": "correct_word", "prompt": "decieve", "answer": "deceive"},
+     {"type": "correct_word", "prompt": "breif", "answer": "brief"},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling: a person you like and know well.", "answer": "friend", "choices": ["freind", "friend", "frend"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling: to get something that is given to you.", "answer": "receive", "choices": ["recieve", "receive", "reseive"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling: the top surface inside a room.", "answer": "ceiling", "choices": ["cieling", "ceiling", "seiling"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling: the leader of a group or a tribe.", "answer": "chief", "choices": ["cheif", "chief", "cheaf"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling: a part of a larger thing.", "answer": "piece", "choices": ["peice", "piece", "pece"]}
+   ]}
+]

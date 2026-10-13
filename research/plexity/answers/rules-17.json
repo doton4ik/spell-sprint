@@ -1,0 +1,27 @@
+[
+  {"slug": "your-vs-youre",
+   "examples": [
+     {"type": "correct", "text": "Is this your umbrella?", "note": "Your = belongs to you"},
+     {"type": "correct", "text": "You're right about the time.", "note": "You're = you are"},
+     {"type": "correct", "text": "I think you're ready for the test.", "note": "You're = you are"},
+     {"type": "correct", "text": "Your teacher called while you were out.", "note": "Your = belongs to you"},
+     {"type": "incorrect", "text": "Your late again, and the lesson has started.", "correction": "You're late again, and the lesson has started.", "note": "You're = you are"},
+     {"type": "incorrect", "text": "You're phone is ringing.", "correction": "Your phone is ringing.", "note": "Belongs to you: your"},
+     {"type": "incorrect", "text": "I hope your enjoying the trip.", "correction": "I hope you're enjoying the trip.", "note": "You're = you are"},
+     {"type": "incorrect", "text": "Do not forget you're ticket.", "correction": "Do not forget your ticket.", "note": "Belongs to you: your"},
+     {"type": "incorrect", "text": "Your not allowed to park here.", "correction": "You're not allowed to park here.", "note": "You're = you are"},
+     {"type": "incorrect", "text": "Is this you're first time in London?", "correction": "Is this your first time in London?", "note": "Belongs to you: your"}
+   ],
+   "exercises": [
+     {"type": "fill_gap", "prompt": "___ going to love this film.", "answer": "You're"},
+     {"type": "fill_gap", "prompt": "Please write ___ name on the form.", "answer": "your"},
+     {"type": "multiple_choice", "prompt": "Choose the word: I think ___ right about the price.", "answer": "you're", "choices": ["your", "you're"]},
+     {"type": "multiple_choice", "prompt": "Choose the word: What is ___ favourite colour?", "answer": "your", "choices": ["your", "you're"]},
+     {"type": "fill_gap", "prompt": "Call me when ___ ready to leave.", "answer": "you're"},
+     {"type": "fill_gap", "prompt": "Do not forget ___ keys on the table.", "answer": "your"},
+     {"type": "multiple_choice", "prompt": "Choose the word: ___ very good at drawing.", "answer": "You're", "choices": ["Your", "You're"]},
+     {"type": "multiple_choice", "prompt": "Choose the word: Is this ___ first visit to our city?", "answer": "your", "choices": ["your", "you're"]},
+     {"type": "fill_gap", "prompt": "I can see that ___ tired after the trip.", "answer": "you're"},
+     {"type": "multiple_choice", "prompt": "Choose the word: Thank you for ___ help yesterday.", "answer": "your", "choices": ["your", "you're"]}
+   ]}
+]

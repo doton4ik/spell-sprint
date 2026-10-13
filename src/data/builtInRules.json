@@ -4782,6 +4782,886 @@
       "text": "The new engine is very powerfull.",
       "correction": "The new engine is very powerful.",
       "note": "Suffix -ful has one l: powerful"
+    },
+    {
+      "id": "dce48aa7-ba51-5b8f-a8d9-8827a53bfb16",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "The cat licked its paw and fell asleep.",
+      "correction": null,
+      "note": "Its = belongs to it, no apostrophe"
+    },
+    {
+      "id": "b51f6ae1-4daf-594f-a7e3-59273de18932",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "It's raining, so take an umbrella.",
+      "correction": null,
+      "note": "It's = it is"
+    },
+    {
+      "id": "a07c82e1-54a7-5164-ac2f-a46da4e53737",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "The house lost its roof in the storm.",
+      "correction": null,
+      "note": "Its shows the roof belongs to the house"
+    },
+    {
+      "id": "aff227c0-83b1-5344-afa1-eb254af50aef",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "I think it's time to go home.",
+      "correction": null,
+      "note": "It's = it is"
+    },
+    {
+      "id": "48dd008a-918a-5fa2-83b7-156139471e09",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "The baby lost it's toy under the bed.",
+      "correction": "The baby lost its toy under the bed.",
+      "note": "Belonging = its, no apostrophe"
+    },
+    {
+      "id": "203cd410-d856-5acd-b7fd-3f1a058d4e06",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "Its been a long day for everyone.",
+      "correction": "It's been a long day for everyone.",
+      "note": "It's = it has"
+    },
+    {
+      "id": "735237cc-89ab-5f3f-ba71-0510c5e5a7f8",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "I like the film, but it's ending was sad.",
+      "correction": "I like the film, but its ending was sad.",
+      "note": "The ending belongs to the film: its"
+    },
+    {
+      "id": "ff8697fd-ca5e-523d-a6be-0d7015b9d5ab",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "Its too late to call him now.",
+      "correction": "It's too late to call him now.",
+      "note": "It's = it is"
+    },
+    {
+      "id": "2b21058e-c805-560e-90b2-50930d30e051",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "The tree lost all it's leaves in autumn.",
+      "correction": "The tree lost all its leaves in autumn.",
+      "note": "Belonging = its, no apostrophe"
+    },
+    {
+      "id": "3ed4835a-ec0a-5392-8e3f-40bf5bbca760",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "Its important to drink enough water.",
+      "correction": "It's important to drink enough water.",
+      "note": "It's = it is"
+    },
+    {
+      "id": "e6a68886-074e-57a6-beb6-8b75fb5d5ac8",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "correct",
+      "text": "The schedule is manageable if we work together.",
+      "correction": null,
+      "note": "Keep e after g: manage + able"
+    },
+    {
+      "id": "146511b0-4297-5161-adc3-fc629bc06cea",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "correct",
+      "text": "She is very knowledgeable about birds.",
+      "correction": null,
+      "note": "Keep e after g: knowledge + able"
+    },
+    {
+      "id": "d718a0e3-6728-5d91-8ed2-6b69b4bee45e",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "correct",
+      "text": "The weather here is changeable in spring.",
+      "correction": null,
+      "note": "Keep e after g: change + able"
+    },
+    {
+      "id": "1435547e-e245-529c-8cb5-c8cb7e063c35",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "correct",
+      "text": "Every parcel is traceable online.",
+      "correction": null,
+      "note": "Keep e after c: trace + able"
+    },
+    {
+      "id": "190b2712-9e3b-5bb4-a439-844d6dec2013",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "The task was not managable for one person.",
+      "correction": "The task was not manageable for one person.",
+      "note": "Keep e so g stays soft: manageable"
+    },
+    {
+      "id": "cddd2396-2039-5a01-a5a0-e26f5533909f",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "He is very knowlegable about history.",
+      "correction": "He is very knowledgeable about history.",
+      "note": "Keep e so g stays soft: knowledgeable"
+    },
+    {
+      "id": "47117aef-02aa-5651-a62a-9f0202131b51",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "The old phone is not replacable.",
+      "correction": "The old phone is not replaceable.",
+      "note": "Keep e so c stays soft: replaceable"
+    },
+    {
+      "id": "540b7c3a-f5c1-545e-b0f9-1bb5a8787266",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "The weather is changable in April.",
+      "correction": "The weather is changeable in April.",
+      "note": "Keep e so g stays soft: changeable"
+    },
+    {
+      "id": "fffcef47-7f18-5b74-a4dd-1c5a12423651",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "She wore a gorgous dress to the party.",
+      "correction": "She wore a gorgeous dress to the party.",
+      "note": "Keep e so g stays soft: gorgeous"
+    },
+    {
+      "id": "0abe4cad-7cf7-599f-88e8-94f8fb245901",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "Every parcel is tracable online.",
+      "correction": "Every parcel is traceable online.",
+      "note": "Keep e so c stays soft: traceable"
+    },
+    {
+      "id": "44d3c4a2-cbaf-5d2f-9766-bb422f4dab1b",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "I always lose my umbrella on rainy days.",
+      "correction": null,
+      "note": "Lose = verb, to not have anymore"
+    },
+    {
+      "id": "ea3ad96c-e385-5e4f-9610-a3c235c4ffd4",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "The screw is loose, so the shelf shakes.",
+      "correction": null,
+      "note": "Loose = adjective, not tight"
+    },
+    {
+      "id": "b6d1f224-e5bd-5223-8afc-1f66a65d255b",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "Do not lose hope, because things will get better.",
+      "correction": null,
+      "note": "Lose is a verb: lose hope"
+    },
+    {
+      "id": "ec279a03-d258-5175-9d02-5fbb1df5531e",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "She wore a loose shirt in the hot weather.",
+      "correction": null,
+      "note": "Loose = not tight"
+    },
+    {
+      "id": "f34d2e49-4b7d-54a8-be7d-bdaa0d9e572e",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "I hope we do not loose the match tomorrow.",
+      "correction": "I hope we do not lose the match tomorrow.",
+      "note": "A verb needs lose"
+    },
+    {
+      "id": "f39ea896-222a-5f4a-9ca7-e436f38e071b",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "My tooth is lose, and it hurts.",
+      "correction": "My tooth is loose, and it hurts.",
+      "note": "Not firmly fixed = loose (adjective)"
+    },
+    {
+      "id": "202741cf-a515-555e-b502-97bc1cfa7ab6",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "Did you loose your phone again?",
+      "correction": "Did you lose your phone again?",
+      "note": "A verb needs lose"
+    },
+    {
+      "id": "915e2b7b-8ea8-51f2-b3af-81a705acb7ff",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "The dog got lose from its lead.",
+      "correction": "The dog got loose from its lead.",
+      "note": "Free, not tied = loose"
+    },
+    {
+      "id": "d3881acd-ef65-56f0-8c11-c81a9d8af551",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "Be careful or you will loose your balance.",
+      "correction": "Be careful or you will lose your balance.",
+      "note": "Lose your balance: verb lose"
+    },
+    {
+      "id": "aa8f1a44-18c8-5974-98cd-0d383fa49f50",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "He wore a lose coat over his sweater.",
+      "correction": "He wore a loose coat over his sweater.",
+      "note": "Not tight = loose (adjective)"
+    },
+    {
+      "id": "b3840c0f-a73e-580e-b8e7-c70720f59e4f",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "Regular attendance is important for this course.",
+      "correction": null,
+      "note": "Attendance ends in -ance"
+    },
+    {
+      "id": "aff43b48-01b9-5c47-930e-62cd93e164cc",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "She has a lot of confidence on stage.",
+      "correction": null,
+      "note": "Confidence ends in -ence"
+    },
+    {
+      "id": "a65c2e70-f773-5cb9-8cb1-c6f92c8ba3aa",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "We sat in silence for a minute.",
+      "correction": null,
+      "note": "Silence ends in -ence"
+    },
+    {
+      "id": "a351b6e6-6c71-5f19-9bac-dbaaba5a5de6",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "The distance between the two towns is short.",
+      "correction": null,
+      "note": "Distance ends in -ance"
+    },
+    {
+      "id": "340f47f9-3051-57ed-92d7-d17711b01ffe",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "The insurence covers all the repairs.",
+      "correction": "The insurance covers all the repairs.",
+      "note": "Insurance ends in -ance"
+    },
+    {
+      "id": "5107884c-f63e-5c2e-bc83-ef8ec5ba885f",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "Patiance is very useful for teachers.",
+      "correction": "Patience is very useful for teachers.",
+      "note": "Patience ends in -ence"
+    },
+    {
+      "id": "317dff05-e295-513d-9783-461d397c9aa9",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "The conferance starts at ten o'clock.",
+      "correction": "The conference starts at ten o'clock.",
+      "note": "Conference ends in -ence"
+    },
+    {
+      "id": "e10627ea-10ee-54f1-9e43-76d169f748cb",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "Thank you for your assistence with the bags.",
+      "correction": "Thank you for your assistance with the bags.",
+      "note": "Assistance ends in -ance"
+    },
+    {
+      "id": "0c969d91-1b70-5123-a9e8-d143d27c61bd",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "He has a lot of experiance with children.",
+      "correction": "He has a lot of experience with children.",
+      "note": "Experience ends in -ence"
+    },
+    {
+      "id": "f53c5a2d-8fcf-5fbd-83f1-92a9db1cffc5",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "Her absance was noticed by everyone.",
+      "correction": "Her absence was noticed by everyone.",
+      "note": "Absence ends in -ence"
+    },
+    {
+      "id": "3ff89d93-1b93-5001-93f7-f63b3ef5609b",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "She cut the apple into two halves.",
+      "correction": null,
+      "note": "Half becomes halves"
+    },
+    {
+      "id": "55ca3b96-0886-5274-b259-2832db9e6533",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "The baker made six loaves of bread.",
+      "correction": null,
+      "note": "Loaf becomes loaves"
+    },
+    {
+      "id": "7b400ace-c295-5f43-998c-e0c7d3712da9",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "People say that cats have nine lives.",
+      "correction": null,
+      "note": "Life becomes lives"
+    },
+    {
+      "id": "abe04bf3-9560-5a04-8642-b3bde167decf",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "The thieves ran away before the police came.",
+      "correction": null,
+      "note": "Thief becomes thieves"
+    },
+    {
+      "id": "bdb5a84c-0a7d-595c-ac68-efff12f96083",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "He bought three loafs of bread.",
+      "correction": "He bought three loaves of bread.",
+      "note": "Loaf becomes loaves"
+    },
+    {
+      "id": "7798a96b-b8b8-51f4-bf8c-3f09fd5c8cc1",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "Cut the cake into two halfs.",
+      "correction": "Cut the cake into two halves.",
+      "note": "Half becomes halves"
+    },
+    {
+      "id": "ff607c1c-f06b-5be0-923d-bf1c872fc999",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "Doctors save many lifes every day.",
+      "correction": "Doctors save many lives every day.",
+      "note": "Life becomes lives"
+    },
+    {
+      "id": "4a025c2a-b059-5ce2-b88a-82e658b7f51e",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "Please help yourselfs to some food.",
+      "correction": "Please help yourselves to some food.",
+      "note": "Self becomes selves: yourselves"
+    },
+    {
+      "id": "4da46fe1-c06c-5f68-9387-2776e8760335",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "The two thiefs were caught later.",
+      "correction": "The two thieves were caught later.",
+      "note": "Thief becomes thieves"
+    },
+    {
+      "id": "3db3697d-b60f-5bfe-bb58-56352283dba9",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "Both calfs were born in spring.",
+      "correction": "Both calves were born in spring.",
+      "note": "Calf becomes calves"
+    },
+    {
+      "id": "793c00fe-bc12-5568-83f7-28c2d28dd619",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "The babies slept quietly in the next room.",
+      "correction": null,
+      "note": "Baby becomes babies"
+    },
+    {
+      "id": "afabb600-24a0-5e0e-bc8a-e734894389a7",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "Many families live in this building.",
+      "correction": null,
+      "note": "Family becomes families"
+    },
+    {
+      "id": "1da6d535-9ad5-5675-84b9-12895d6d1f5b",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "He wrote three stories about his journey.",
+      "correction": null,
+      "note": "Story becomes stories"
+    },
+    {
+      "id": "7fd7378b-5728-5e93-a898-77a199e7d796",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "There were many parties last summer.",
+      "correction": null,
+      "note": "Party becomes parties"
+    },
+    {
+      "id": "2d13f17c-4a3c-5a6e-86c6-83376fcee746",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "Both ladys left early.",
+      "correction": "Both ladies left early.",
+      "note": "Consonant + y: change y to ies"
+    },
+    {
+      "id": "89b2ed9e-d582-5790-ac6f-2d54e8f6d459",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "My two babys are asleep.",
+      "correction": "My two babies are asleep.",
+      "note": "Baby becomes babies"
+    },
+    {
+      "id": "d99524d6-0756-513b-9e99-66f7513933d3",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "Which countrys have you visited?",
+      "correction": "Which countries have you visited?",
+      "note": "Country becomes countries"
+    },
+    {
+      "id": "31c9e608-a2a9-5f24-a456-5c4888f53e51",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "There are many storys in this book.",
+      "correction": "There are many stories in this book.",
+      "note": "Story becomes stories"
+    },
+    {
+      "id": "ff0bac37-1d9d-547e-b233-ab0a3cf87f8f",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "Their familys came to the party.",
+      "correction": "Their families came to the party.",
+      "note": "Family becomes families"
+    },
+    {
+      "id": "cac45472-4044-59f7-ad93-dcbff374197a",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "The partyes were very noisy.",
+      "correction": "The parties were very noisy.",
+      "note": "Change y to i, then add es: parties"
+    },
+    {
+      "id": "64d6293c-21d7-5fe9-9e2f-039f73601242",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "He is more careful than his brother.",
+      "correction": null,
+      "note": "Comparing two people: than"
+    },
+    {
+      "id": "f46c96fe-212d-5be4-8507-9eed6e15d280",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "We waited for an hour, and then the bus came.",
+      "correction": null,
+      "note": "Next in time: then"
+    },
+    {
+      "id": "288a8a96-781b-5e5d-8d71-4990982ed586",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "I would rather walk than take a taxi.",
+      "correction": null,
+      "note": "Choosing between two things: than"
+    },
+    {
+      "id": "eb252ac6-d8fe-53e8-9d02-33c5974cff32",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "Wash your hands, then dry them well.",
+      "correction": null,
+      "note": "Next step: then"
+    },
+    {
+      "id": "c6ec0bbf-21f8-5af8-bc13-755b06019bc6",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "This test was harder then the last one.",
+      "correction": "This test was harder than the last one.",
+      "note": "Comparison: than"
+    },
+    {
+      "id": "85303982-79d8-59ab-a881-278e33452166",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "Eat your lunch, than we will go out.",
+      "correction": "Eat your lunch, then we will go out.",
+      "note": "Next in time: then"
+    },
+    {
+      "id": "b0766511-a5b5-58ff-8f2f-aa44b89c8e39",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "I got home and than had a shower.",
+      "correction": "I got home and then had a shower.",
+      "note": "Next in time: then"
+    },
+    {
+      "id": "f823c16c-b3d9-5525-a05b-21f04e781f75",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "She speaks English better then I do.",
+      "correction": "She speaks English better than I do.",
+      "note": "Comparison: than"
+    },
+    {
+      "id": "671d3b66-e689-5af7-a288-b5d3ccc0c5f2",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "He earns more then his sister.",
+      "correction": "He earns more than his sister.",
+      "note": "Comparison: than"
+    },
+    {
+      "id": "3d78144b-be57-5033-8232-7ef061e7a462",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "Think first, than answer the question.",
+      "correction": "Think first, then answer the question.",
+      "note": "Next step: then"
+    },
+    {
+      "id": "37e82f41-82ca-5205-b1ef-3fdf8fff57aa",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "The children are in the garden with their dog.",
+      "correction": null,
+      "note": "Their = belongs to them"
+    },
+    {
+      "id": "05a587d7-10c5-567d-bfaf-e101e88eda26",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "Look at the shelf over there.",
+      "correction": null,
+      "note": "There = a place"
+    },
+    {
+      "id": "461037a8-124f-5765-9f43-bb07abefd48f",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "They're planning a trip to Spain this summer.",
+      "correction": null,
+      "note": "They're = they are"
+    },
+    {
+      "id": "ee3b226f-f577-5d5e-9ef8-4eaefad22cc7",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "There is a problem with the printer.",
+      "correction": null,
+      "note": "There is: starts the sentence"
+    },
+    {
+      "id": "6d96c1df-fb32-5be1-b357-3d1403069545",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "The students forgot there books at home.",
+      "correction": "The students forgot their books at home.",
+      "note": "Belongs to them: their"
+    },
+    {
+      "id": "1bf65191-1cf7-5c0f-bb21-ee4b5cdb3e04",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "Their is no milk in the fridge.",
+      "correction": "There is no milk in the fridge.",
+      "note": "There is: starts the sentence"
+    },
+    {
+      "id": "9579ad04-f5c6-5bf0-a57c-132ff7eb38ad",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "I think they're car is outside.",
+      "correction": "I think their car is outside.",
+      "note": "Belongs to them: their"
+    },
+    {
+      "id": "0c3682f3-a18e-5a58-a9ee-e82dcdddd976",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "Put the boxes over their, please.",
+      "correction": "Put the boxes over there, please.",
+      "note": "A place: there"
+    },
+    {
+      "id": "c81bb382-a0b4-5148-8369-a18422a606b2",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "There coming to dinner tonight.",
+      "correction": "They're coming to dinner tonight.",
+      "note": "They're = they are"
+    },
+    {
+      "id": "0c6267f9-8ebb-5125-800c-500c21abf4a5",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "Many people lost they're jobs last year.",
+      "correction": "Many people lost their jobs last year.",
+      "note": "Belongs to them: their"
+    },
+    {
+      "id": "1fac01bb-b4ef-500f-930e-9741570c4dde",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "I would like to drink some water.",
+      "correction": null,
+      "note": "To before a verb: to drink"
+    },
+    {
+      "id": "21fa4ed1-4ecb-508a-b005-80a6de3f3907",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "My brother is coming too.",
+      "correction": null,
+      "note": "Too = also"
+    },
+    {
+      "id": "4b8ce108-bf05-5174-8e71-83655e25302a",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "It is two o'clock, and the shop is closed.",
+      "correction": null,
+      "note": "Two = the number 2"
+    },
+    {
+      "id": "1e7686da-5cc1-5f4a-a4fe-9e96d5cd090c",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "He went to the shop to buy bread.",
+      "correction": null,
+      "note": "To = direction; to buy = before a verb"
+    },
+    {
+      "id": "1d5095c5-30cd-5080-8ad4-5469d73da5f0",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "I have too brothers and a sister.",
+      "correction": "I have two brothers and a sister.",
+      "note": "The number 2 = two"
+    },
+    {
+      "id": "747d1f69-68f6-5a01-8af5-13bb5bae7fbf",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "The coffee is to hot to drink.",
+      "correction": "The coffee is too hot to drink.",
+      "note": "Too = excessively"
+    },
+    {
+      "id": "0585c097-bb87-5b51-ae93-1bb2741adb61",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "We are going too the cinema tonight.",
+      "correction": "We are going to the cinema tonight.",
+      "note": "Direction: to"
+    },
+    {
+      "id": "12fd957e-3eab-507c-b3b4-42e512480972",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "Can I come to?",
+      "correction": "Can I come too?",
+      "note": "Too = also"
+    },
+    {
+      "id": "22f0d495-b1df-57a9-a7f9-b4061fef1ef5",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "She waited for to hours.",
+      "correction": "She waited for two hours.",
+      "note": "The number 2 = two"
+    },
+    {
+      "id": "59855ae4-b0a5-51d0-88db-fd7d4a3242f2",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "It is two late to change the plan.",
+      "correction": "It is too late to change the plan.",
+      "note": "Too = excessively"
+    },
+    {
+      "id": "1e54e4f1-f10e-5ffd-9509-4fe92e3654b3",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "Please keep the receipt for your new shoes.",
+      "correction": null,
+      "note": "After c: ei, as in receipt"
+    },
+    {
+      "id": "ea918820-659b-5215-9179-5a451e14467c",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "I believe that she will win the race.",
+      "correction": null,
+      "note": "Not after c: ie, as in believe"
+    },
+    {
+      "id": "6016d872-15c7-5d0d-94b6-fa9af212b3b7",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "He ate a big piece of cake.",
+      "correction": null,
+      "note": "Not after c: ie, as in piece"
+    },
+    {
+      "id": "3880c931-4f20-5c72-9632-b96d8e5fd15d",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "Do not try to deceive your friends.",
+      "correction": null,
+      "note": "After c: ei, as in deceive"
+    },
+    {
+      "id": "12a003a7-30f2-573d-8223-de98c3d7d857",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "Keep the reciept in case you need to return it.",
+      "correction": "Keep the receipt in case you need to return it.",
+      "note": "After c: ei, receipt"
+    },
+    {
+      "id": "5b5be886-e02f-5a3c-8d0e-7c14e8289817",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "I beleive you are right.",
+      "correction": "I believe you are right.",
+      "note": "Not after c: ie, believe"
+    },
+    {
+      "id": "ba4518f4-1964-5731-99a1-09f1491e0a30",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "She ate a peice of pizza.",
+      "correction": "She ate a piece of pizza.",
+      "note": "Not after c: ie, piece"
+    },
+    {
+      "id": "70c506ba-a271-5540-b3fa-4c6102880744",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "The cows are in the feild.",
+      "correction": "The cows are in the field.",
+      "note": "Not after c: ie, field"
+    },
+    {
+      "id": "43b9587a-e078-53d4-9281-20aac36b969c",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "Please do not decieve me.",
+      "correction": "Please do not deceive me.",
+      "note": "After c: ei, deceive"
+    },
+    {
+      "id": "01da97be-9985-50d4-a116-6dfa51b655ad",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "We saw the cheif of the village.",
+      "correction": "We saw the chief of the village.",
+      "note": "Not after c: ie, chief"
+    },
+    {
+      "id": "d35e102c-fe80-5e4b-8f34-f24705304ff4",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "Is this your umbrella?",
+      "correction": null,
+      "note": "Your = belongs to you"
+    },
+    {
+      "id": "391eda73-976c-51dc-b307-55b2bdfe0599",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "You're right about the time.",
+      "correction": null,
+      "note": "You're = you are"
+    },
+    {
+      "id": "9162736b-1b52-574c-b9b7-fb983045ef57",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "I think you're ready for the test.",
+      "correction": null,
+      "note": "You're = you are"
+    },
+    {
+      "id": "b66fcf29-86ba-57e0-b395-8dde0fdf7169",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "Your teacher called while you were out.",
+      "correction": null,
+      "note": "Your = belongs to you"
+    },
+    {
+      "id": "13367bee-028a-5f9a-8355-2ebe9d98128e",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Your late again, and the lesson has started.",
+      "correction": "You're late again, and the lesson has started.",
+      "note": "You're = you are"
+    },
+    {
+      "id": "a24784d2-d3ee-5e24-a0fe-aff21d060f1e",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "You're phone is ringing.",
+      "correction": "Your phone is ringing.",
+      "note": "Belongs to you: your"
+    },
+    {
+      "id": "7d63d581-57d1-5178-8c72-f0cc451e5a9c",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "I hope your enjoying the trip.",
+      "correction": "I hope you're enjoying the trip.",
+      "note": "You're = you are"
+    },
+    {
+      "id": "e51f2694-2847-5417-8673-09fd304f3a8f",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Do not forget you're ticket.",
+      "correction": "Do not forget your ticket.",
+      "note": "Belongs to you: your"
+    },
+    {
+      "id": "e9f0f940-4c9d-5325-98ef-3bfce46e645d",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Your not allowed to park here.",
+      "correction": "You're not allowed to park here.",
+      "note": "You're = you are"
+    },
+    {
+      "id": "803b04c2-ed3c-519b-8a4d-8efd3d4934f7",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Is this you're first time in London?",
+      "correction": "Is this your first time in London?",
+      "note": "Belongs to you: your"
     }
   ]
 }

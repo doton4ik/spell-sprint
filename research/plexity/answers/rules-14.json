@@ -1,0 +1,52 @@
+[
+  {"slug": "then-vs-than",
+   "examples": [
+     {"type": "correct", "text": "He is more careful than his brother.", "note": "Comparing two people: than"},
+     {"type": "correct", "text": "We waited for an hour, and then the bus came.", "note": "Next in time: then"},
+     {"type": "correct", "text": "I would rather walk than take a taxi.", "note": "Choosing between two things: than"},
+     {"type": "correct", "text": "Wash your hands, then dry them well.", "note": "Next step: then"},
+     {"type": "incorrect", "text": "This test was harder then the last one.", "correction": "This test was harder than the last one.", "note": "Comparison: than"},
+     {"type": "incorrect", "text": "Eat your lunch, than we will go out.", "correction": "Eat your lunch, then we will go out.", "note": "Next in time: then"},
+     {"type": "incorrect", "text": "I got home and than had a shower.", "correction": "I got home and then had a shower.", "note": "Next in time: then"},
+     {"type": "incorrect", "text": "She speaks English better then I do.", "correction": "She speaks English better than I do.", "note": "Comparison: than"},
+     {"type": "incorrect", "text": "He earns more then his sister.", "correction": "He earns more than his sister.", "note": "Comparison: than"},
+     {"type": "incorrect", "text": "Think first, than answer the question.", "correction": "Think first, then answer the question.", "note": "Next step: then"}
+   ],
+   "exercises": [
+     {"type": "fill_gap", "prompt": "She is much happier ___ she was last year.", "answer": "than"},
+     {"type": "fill_gap", "prompt": "Wash the apples first, and ___ cut them.", "answer": "then"},
+     {"type": "multiple_choice", "prompt": "Choose the word: I would rather stay home ___ go out in the rain.", "answer": "than", "choices": ["then", "than"]},
+     {"type": "multiple_choice", "prompt": "Choose the word: Open the file, ___ click Save.", "answer": "then", "choices": ["then", "than"]},
+     {"type": "fill_gap", "prompt": "Our new flat is bigger ___ the old one.", "answer": "than"},
+     {"type": "fill_gap", "prompt": "I thought about it for a minute, and ___ I said yes.", "answer": "then"},
+     {"type": "multiple_choice", "prompt": "Choose the word: There were more people ___ we expected.", "answer": "than", "choices": ["then", "than"]},
+     {"type": "multiple_choice", "prompt": "Choose the word: First we had dinner, ___ we watched a film.", "answer": "then", "choices": ["then", "than"]},
+     {"type": "fill_gap", "prompt": "It takes longer by bus ___ by train.", "answer": "than"},
+     {"type": "fill_gap", "prompt": "We had no mobile phones back ___.", "answer": "then"}
+   ]},
+  {"slug": "there-vs-their",
+   "examples": [
+     {"type": "correct", "text": "The children are in the garden with their dog.", "note": "Their = belongs to them"},
+     {"type": "correct", "text": "Look at the shelf over there.", "note": "There = a place"},
+     {"type": "correct", "text": "They're planning a trip to Spain this summer.", "note": "They're = they are"},
+     {"type": "correct", "text": "There is a problem with the printer.", "note": "There is: starts the sentence"},
+     {"type": "incorrect", "text": "The students forgot there books at home.", "correction": "The students forgot their books at home.", "note": "Belongs to them: their"},
+     {"type": "incorrect", "text": "Their is no milk in the fridge.", "correction": "There is no milk in the fridge.", "note": "There is: starts the sentence"},
+     {"type": "incorrect", "text": "I think they're car is outside.", "correction": "I think their car is outside.", "note": "Belongs to them: their"},
+     {"type": "incorrect", "text": "Put the boxes over their, please.", "correction": "Put the boxes over there, please.", "note": "A place: there"},
+     {"type": "incorrect", "text": "There coming to dinner tonight.", "correction": "They're coming to dinner tonight.", "note": "They're = they are"},
+     {"type": "incorrect", "text": "Many people lost they're jobs last year.", "correction": "Many people lost their jobs last year.", "note": "Belongs to them: their"}
+   ],
+   "exercises": [
+     {"type": "fill_gap", "prompt": "The neighbours painted ___ fence green.", "answer": "their"},
+     {"type": "fill_gap", "prompt": "I left my bag over ___ on the chair.", "answer": "there"},
+     {"type": "multiple_choice", "prompt": "Choose the word: ___ are four apples in the bowl.", "answer": "There", "choices": ["There", "Their", "They're"]},
+     {"type": "multiple_choice", "prompt": "Choose the word: ___ late, so we should start without them.", "answer": "They're", "choices": ["There", "Their", "They're"]},
+     {"type": "fill_gap", "prompt": "My parents sold ___ house last spring.", "answer": "their"},
+     {"type": "fill_gap", "prompt": "Is ___ a post office near here?", "answer": "there"},
+     {"type": "multiple_choice", "prompt": "Choose the word: The players are proud of ___ team.", "answer": "their", "choices": ["there", "their", "they're"]},
+     {"type": "multiple_choice", "prompt": "Choose the word: I know they are tired, but ___ still working.", "answer": "they're", "choices": ["there", "their", "they're"]},
+     {"type": "fill_gap", "prompt": "We went to Italy and stayed ___ for two weeks.", "answer": "there"},
+     {"type": "multiple_choice", "prompt": "Choose the word: Can you see ___ car? It is the blue one.", "answer": "their", "choices": ["there", "their", "they're"]}
+   ]}
+]

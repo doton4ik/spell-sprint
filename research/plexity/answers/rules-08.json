@@ -1,0 +1,52 @@
+[
+  {"slug": "lose-vs-loose",
+   "examples": [
+     {"type": "correct", "text": "I always lose my umbrella on rainy days.", "note": "Lose = verb, to not have anymore"},
+     {"type": "correct", "text": "The screw is loose, so the shelf shakes.", "note": "Loose = adjective, not tight"},
+     {"type": "correct", "text": "Do not lose hope, because things will get better.", "note": "Lose is a verb: lose hope"},
+     {"type": "correct", "text": "She wore a loose shirt in the hot weather.", "note": "Loose = not tight"},
+     {"type": "incorrect", "text": "I hope we do not loose the match tomorrow.", "correction": "I hope we do not lose the match tomorrow.", "note": "A verb needs lose"},
+     {"type": "incorrect", "text": "My tooth is lose, and it hurts.", "correction": "My tooth is loose, and it hurts.", "note": "Not firmly fixed = loose (adjective)"},
+     {"type": "incorrect", "text": "Did you loose your phone again?", "correction": "Did you lose your phone again?", "note": "A verb needs lose"},
+     {"type": "incorrect", "text": "The dog got lose from its lead.", "correction": "The dog got loose from its lead.", "note": "Free, not tied = loose"},
+     {"type": "incorrect", "text": "Be careful or you will loose your balance.", "correction": "Be careful or you will lose your balance.", "note": "Lose your balance: verb lose"},
+     {"type": "incorrect", "text": "He wore a lose coat over his sweater.", "correction": "He wore a loose coat over his sweater.", "note": "Not tight = loose (adjective)"}
+   ],
+   "exercises": [
+     {"type": "fill_gap", "prompt": "My tooth is ___, and it might fall out soon.", "answer": "loose"},
+     {"type": "fill_gap", "prompt": "I always ___ my keys when I am in a hurry.", "answer": "lose"},
+     {"type": "multiple_choice", "prompt": "Choose the word: These trousers are too ___ around the waist.", "answer": "loose", "choices": ["lose", "loose"]},
+     {"type": "multiple_choice", "prompt": "Choose the word: We will ___ the game if we do not defend.", "answer": "lose", "choices": ["lose", "loose"]},
+     {"type": "fill_gap", "prompt": "The dog broke free and ran ___ in the park.", "answer": "loose"},
+     {"type": "fill_gap", "prompt": "Do not ___ this paper, because it is your only copy.", "answer": "lose"},
+     {"type": "multiple_choice", "prompt": "Choose the word: The bolt came ___ and fell on the floor.", "answer": "loose", "choices": ["lose", "loose"]},
+     {"type": "multiple_choice", "prompt": "Choose the word: I do not want to ___ my place in the queue.", "answer": "lose", "choices": ["lose", "loose"]},
+     {"type": "fill_gap", "prompt": "A ___ cable can cause problems with the sound.", "answer": "loose"},
+     {"type": "fill_gap", "prompt": "If you ___ your passport abroad, tell the police at once.", "answer": "lose"}
+   ]},
+  {"slug": "ance-vs-ence",
+   "examples": [
+     {"type": "correct", "text": "Regular attendance is important for this course.", "note": "Attendance ends in -ance"},
+     {"type": "correct", "text": "She has a lot of confidence on stage.", "note": "Confidence ends in -ence"},
+     {"type": "correct", "text": "We sat in silence for a minute.", "note": "Silence ends in -ence"},
+     {"type": "correct", "text": "The distance between the two towns is short.", "note": "Distance ends in -ance"},
+     {"type": "incorrect", "text": "The insurence covers all the repairs.", "correction": "The insurance covers all the repairs.", "note": "Insurance ends in -ance"},
+     {"type": "incorrect", "text": "Patiance is very useful for teachers.", "correction": "Patience is very useful for teachers.", "note": "Patience ends in -ence"},
+     {"type": "incorrect", "text": "The conferance starts at ten o'clock.", "correction": "The conference starts at ten o'clock.", "note": "Conference ends in -ence"},
+     {"type": "incorrect", "text": "Thank you for your assistence with the bags.", "correction": "Thank you for your assistance with the bags.", "note": "Assistance ends in -ance"},
+     {"type": "incorrect", "text": "He has a lot of experiance with children.", "correction": "He has a lot of experience with children.", "note": "Experience ends in -ence"},
+     {"type": "incorrect", "text": "Her absance was noticed by everyone.", "correction": "Her absence was noticed by everyone.", "note": "Absence ends in -ence"}
+   ],
+   "exercises": [
+     {"type": "correct_word", "prompt": "importence", "answer": "importance"},
+     {"type": "correct_word", "prompt": "performence", "answer": "performance"},
+     {"type": "correct_word", "prompt": "silance", "answer": "silence"},
+     {"type": "correct_word", "prompt": "confidance", "answer": "confidence"},
+     {"type": "correct_word", "prompt": "sentance", "answer": "sentence"},
+     {"type": "spell", "prompt": "Spell the word: being away from school or work (-ence).", "answer": "absence"},
+     {"type": "spell", "prompt": "Spell the word: a door or gate where you go into a building (-ance).", "answer": "entrance"},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling: the place where a person lives (formal).", "answer": "residence", "choices": ["residance", "residence", "residense"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling: money paid so that a company protects you from loss.", "answer": "insurance", "choices": ["insurence", "insurance", "insurense"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling: the amount of space between two places.", "answer": "distance", "choices": ["distence", "distance", "distanse"]}
+   ]}
+]

@@ -1,0 +1,52 @@
+[
+  {"slug": "its-vs-its-contraction",
+   "examples": [
+     {"type": "correct", "text": "The cat licked its paw and fell asleep.", "note": "Its = belongs to it, no apostrophe"},
+     {"type": "correct", "text": "It's raining, so take an umbrella.", "note": "It's = it is"},
+     {"type": "correct", "text": "The house lost its roof in the storm.", "note": "Its shows the roof belongs to the house"},
+     {"type": "correct", "text": "I think it's time to go home.", "note": "It's = it is"},
+     {"type": "incorrect", "text": "The baby lost it's toy under the bed.", "correction": "The baby lost its toy under the bed.", "note": "Belonging = its, no apostrophe"},
+     {"type": "incorrect", "text": "Its been a long day for everyone.", "correction": "It's been a long day for everyone.", "note": "It's = it has"},
+     {"type": "incorrect", "text": "I like the film, but it's ending was sad.", "correction": "I like the film, but its ending was sad.", "note": "The ending belongs to the film: its"},
+     {"type": "incorrect", "text": "Its too late to call him now.", "correction": "It's too late to call him now.", "note": "It's = it is"},
+     {"type": "incorrect", "text": "The tree lost all it's leaves in autumn.", "correction": "The tree lost all its leaves in autumn.", "note": "Belonging = its, no apostrophe"},
+     {"type": "incorrect", "text": "Its important to drink enough water.", "correction": "It's important to drink enough water.", "note": "It's = it is"}
+   ],
+   "exercises": [
+     {"type": "fill_gap", "prompt": "The company is proud of ___ new office.", "answer": "its"},
+     {"type": "fill_gap", "prompt": "___ a beautiful day, so let's go outside.", "answer": "It's"},
+     {"type": "multiple_choice", "prompt": "Choose the correct word: The dog wagged ___ tail.", "answer": "its", "choices": ["its", "it's"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct word: I think ___ going to rain.", "answer": "it's", "choices": ["its", "it's"]},
+     {"type": "fill_gap", "prompt": "The bird built ___ nest in the old tree.", "answer": "its"},
+     {"type": "fill_gap", "prompt": "I cannot find my phone, and ___ almost time to leave.", "answer": "it's"},
+     {"type": "multiple_choice", "prompt": "Choose the correct word: The city is famous for ___ old bridges.", "answer": "its", "choices": ["its", "it's"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct word: ___ been a great week for our team.", "answer": "It's", "choices": ["Its", "It's"]},
+     {"type": "fill_gap", "prompt": "The museum closes ___ doors at five o'clock.", "answer": "its"},
+     {"type": "multiple_choice", "prompt": "Choose the correct word: Look at the sky, ___ getting dark!", "answer": "it's", "choices": ["its", "it's"]}
+   ]},
+  {"slug": "soft-c-and-g",
+   "examples": [
+     {"type": "correct", "text": "The schedule is manageable if we work together.", "note": "Keep e after g: manage + able"},
+     {"type": "correct", "text": "She is very knowledgeable about birds.", "note": "Keep e after g: knowledge + able"},
+     {"type": "correct", "text": "The weather here is changeable in spring.", "note": "Keep e after g: change + able"},
+     {"type": "correct", "text": "Every parcel is traceable online.", "note": "Keep e after c: trace + able"},
+     {"type": "incorrect", "text": "The task was not managable for one person.", "correction": "The task was not manageable for one person.", "note": "Keep e so g stays soft: manageable"},
+     {"type": "incorrect", "text": "He is very knowlegable about history.", "correction": "He is very knowledgeable about history.", "note": "Keep e so g stays soft: knowledgeable"},
+     {"type": "incorrect", "text": "The old phone is not replacable.", "correction": "The old phone is not replaceable.", "note": "Keep e so c stays soft: replaceable"},
+     {"type": "incorrect", "text": "The weather is changable in April.", "correction": "The weather is changeable in April.", "note": "Keep e so g stays soft: changeable"},
+     {"type": "incorrect", "text": "She wore a gorgous dress to the party.", "correction": "She wore a gorgeous dress to the party.", "note": "Keep e so g stays soft: gorgeous"},
+     {"type": "incorrect", "text": "Every parcel is tracable online.", "correction": "Every parcel is traceable online.", "note": "Keep e so c stays soft: traceable"}
+   ],
+   "exercises": [
+     {"type": "correct_word", "prompt": "knowlegable", "answer": "knowledgeable"},
+     {"type": "correct_word", "prompt": "replacable", "answer": "replaceable"},
+     {"type": "correct_word", "prompt": "tracable", "answer": "traceable"},
+     {"type": "correct_word", "prompt": "irreplacable", "answer": "irreplaceable"},
+     {"type": "spell", "prompt": "Spell the word: able to be managed.", "answer": "manageable"},
+     {"type": "spell", "prompt": "Spell the word: full of courage.", "answer": "courageous"},
+     {"type": "spell", "prompt": "Spell the word: able to be changed.", "answer": "changeable"},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling: able to be exchanged.", "answer": "exchangeable", "choices": ["exchangable", "exchangeable", "exchangeible"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling: in good enough condition to be used.", "answer": "serviceable", "choices": ["servicable", "serviceable", "servicible"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling: easy to see or notice.", "answer": "noticeable", "choices": ["noticable", "noticeable", "noticible"]}
+   ]}
+]
