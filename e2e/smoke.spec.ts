@@ -23,6 +23,8 @@ const pages: Array<[string, RegExp]> = [
   ['proofreading', /Find the mistakes/],
   ['sprint', /60 seconds/],
   ['pairs', /Words that sound or look alike/],
+  ['privacy', /Privacy/],
+  ['terms', /Terms of use/],
 ]
 
 test('every page opens without an error', async ({ page }) => {

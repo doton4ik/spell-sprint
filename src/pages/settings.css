@@ -241,6 +241,19 @@
   column-fill: auto;
 }
 /* Account, backup and voice on the left; name and goal, text size and theme on the right: about the same height. */
-.settings-card:nth-child(3) {
-  break-after: column;
+@media (min-width: 801px) {
+  .settings-card:nth-child(3) {
+    break-after: column;
+  }
+}
+
+.settings-legal {
+  color: var(--ink-muted);
+  font-size: calc(13px * var(--fs));
+  margin: 8px 0 0;
+}
+.settings-legal a,
+.settings-card small a {
+  color: var(--teal-text);
+  font-weight: 600;
 }

@@ -301,6 +301,11 @@ export function SettingsPage() {
                   <Icon name="arrow" size={16} />
                 </button>
               </form>
+              {mode === 'sign-up' ? (
+                <small>
+                  By creating an account you accept the <a href="#terms">terms of use</a> and the <a href="#privacy">privacy notice</a>.
+                </small>
+              ) : null}
               <button className="settings-link" type="button" onClick={() => setMode(mode === 'sign-in' ? 'sign-up' : 'sign-in')}>
                 {mode === 'sign-in' ? 'Create a new account' : 'I already have an account'}
               </button>
@@ -435,6 +440,9 @@ export function SettingsPage() {
           </div>
         </article>
       </section>
+      <p className="settings-legal">
+        <a href="#privacy">Privacy</a> · <a href="#terms">Terms of use</a>
+      </p>
     </div>
   )
 }

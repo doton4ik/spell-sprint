@@ -45,6 +45,7 @@ const loaders = {
   Proofreading: () => import('./pages/ProofreadingPage'),
   Sprint: () => import('./pages/SprintPage'),
   Pairs: () => import('./pages/PairsPage'),
+  Privacy: () => import('./pages/LegalPage'),
 }
 const PracticePage = page(loaders.Practice, 'PracticePage')
 const MistakesPage = page(loaders.Mistakes, 'MistakesPage')
@@ -56,6 +57,8 @@ const TopicsPage = page(loaders.Topics, 'TopicsPage')
 const ProofreadingPage = page(loaders.Proofreading, 'ProofreadingPage')
 const SprintPage = page(loaders.Sprint, 'SprintPage')
 const PairsPage = page(loaders.Pairs, 'PairsPage')
+const PrivacyPage = page(loaders.Privacy, 'PrivacyPage')
+const TermsPage = page(loaders.Privacy, 'TermsPage')
 
 // Once the first page is on screen and the browser is idle, the other pages (and their styles) are
 // fetched in the background, so opening one later is instant.
@@ -78,6 +81,8 @@ const pages: Record<string, ComponentType> = {
   proofreading: ProofreadingPage,
   sprint: SprintPage,
   pairs: PairsPage,
+  privacy: PrivacyPage,
+  terms: TermsPage,
 }
 
 function getRoute() {
