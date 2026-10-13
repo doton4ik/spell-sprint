@@ -1,14 +1,14 @@
 # Промт для Perplexity: качество слов в Spell Sprint
 
 Как пользоваться (самый простой способ):
-1. Откройте файл `research/ready/prompt-01.txt` — в нём уже всё: задание + 40 слов.
+1. Откройте файл `research/plexity/prompts/word-quality/prompt-01.txt` — в нём уже всё: задание + 40 слов.
 2. Выделите всё (Ctrl+A), скопируйте (Ctrl+C).
 3. В Perplexity включите **Deep Research**, вставьте (Ctrl+V) и отправьте.
-4. Perplexity ответит таблицей. Скопируйте её в новый файл `research/answers/batch-01.csv`
+4. Perplexity ответит таблицей. Скопируйте её в новый файл `research/plexity/answers/word-quality/batch-01.csv`
    (или просто пришлите её мне в чат — я сохраню сам).
 5. Повторите с `prompt-02.txt`, `prompt-03.txt` … до `prompt-25.txt`.
 
-Ниже — тот же промт без слов (для справки; файлы в `research/ready/` собраны из него и из `research/batches/`).
+Ниже — тот же промт без слов (для справки; файлы в `research/plexity/prompts/word-quality/` собраны из него и из `research/plexity/inputs/word-quality-batches/`).
 5. Когда наберётся несколько файлов, скажите мне «влей ответы» — я проверю каждую строку (формат, длина, что слово стоит в примере, британское написание, нет ли копий из словарей) и только потом обновлю библиотеку.
 
 Один пакет за раз — так Perplexity не обрезает ответ и не придумывает данные.

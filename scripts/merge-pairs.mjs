@@ -1,6 +1,6 @@
 // Checks a batch of new Pairs sentences and (with --apply) adds the good ones to src/data/pairDrills.ts.
-//   node scripts/merge-pairs.mjs research/pairs/batch-01.json            -> report only
-//   node scripts/merge-pairs.mjs research/pairs/batch-01.json --apply    -> add the accepted sentences
+//   node scripts/merge-pairs.mjs research/plexity/answers/pairs/batch-01.json            -> report only
+//   node scripts/merge-pairs.mjs research/plexity/answers/pairs/batch-01.json --apply    -> add the accepted sentences
 // A batch is [{ pairId, add: [{ text, answer }] }]. Existing sentences are never changed.
 // A sentence is rejected when: the pair or answer is unknown, not exactly one ___, 5–16 words, bad capital/ending, double
 // spaces, another option of the pair appears in the sentence (a leak), it repeats a sentence anywhere in the file or in the batch,

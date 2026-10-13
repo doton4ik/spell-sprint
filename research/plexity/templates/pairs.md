@@ -1,7 +1,7 @@
 # Prompt for Perplexity (copy everything below the line into a new chat; attach `existing-pairs.txt`)
 
 Send it in rounds: one round = one batch of pairs. After each answer, copy the JSON into a file
-`research/pairs/batch-NN.json` and give it to Claude Code, who checks and merges it.
+`research/plexity/answers/pairs/batch-NN.json` and give it to Claude Code, who checks and merges it.
 
 ---
 

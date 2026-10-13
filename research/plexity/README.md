@@ -1,15 +1,28 @@
-# Ready prompts for Plexity (Perplexity)
+# Plexity (Perplexity) — everything for working with it in one place
 
-Each file is one complete prompt: open a new chat, paste the whole file, send. One file = one round.
+```
+research/plexity/
+  README.md              this file
+  templates/             the rules and the long prompts (the source the ready prompts are built from)
+    pairs.md             rules for Pairs sentences
+    word-quality.md      word-quality review prompt
+    deep-analysis.txt    deep analysis prompt
+  prompts/               READY prompts: open a file, copy it all, paste it into a new Plexity chat
+    pairs/               pairs-NN.md (more sentences for existing pairs), newpairs-NN.md (new pairs)
+    word-quality/        prompt-NN.txt (+ pairs.txt, grammar-errors.txt)
+  answers/               what Plexity answered, saved here; Claude Code checks and merges it
+    pairs/               batch-NN.json, review-*.json, skip-*.json, existing-pairs.txt
+    word-quality/        batch-NN.csv
+  inputs/                data that prompts were built from
+    word-quality-batches/
+```
 
-- `pairs-01.md … pairs-13.md` — 25 new sentences for each of 8 existing pairs (the pairs with the fewest sentences come first).
-- `newpairs-01.md … newpairs-12.md` — 6 brand-new pairs per round, 25 sentences each (68 new pairs: A2 16, B1 20, B2 32).
+## Pairs
 
-The answer is JSON only. Save it as `research/pairs/batch-NN.json` (continue the numbering: batch-02, batch-03 …; batch-01 is done)
-and tell Claude Code. It runs `node scripts/merge-pairs.mjs research/pairs/batch-NN.json`, shows what was rejected and why,
-reads the sentences for ambiguity, then adds the good ones.
+1. Paste a prompt from `prompts/pairs/` into a new chat. One file = one round.
+2. Save the JSON answer as `answers/pairs/batch-NN.json` (next free number) and tell Claude Code.
+3. Claude Code runs `node scripts/merge-pairs.mjs research/plexity/answers/pairs/batch-NN.json`, reads the rejects, has the sentences
+   reviewed for ambiguity, then adds the good ones.
+4. After the pairs change, rebuild the prompts: `node scripts/make-plexity-prompts.mjs`.
 
-Tips: if an answer is cut off or Plexity repeats itself, ask for "the remaining pairs only" in the same chat. If a pair has an unclear
-hint or meaning, Plexity should follow the rule line in the prompt.
-
-Regenerate the files (after the pairs changed): `node scripts/make-plexity-prompts.mjs`.
+New kinds of tasks get their own folder in `prompts/` and `answers/` (for example `words/`, `examples/`, `level-check/`).

@@ -1,7 +1,7 @@
-// Builds ready-to-paste prompts for Perplexity into research/plexity/ (one file per round):
+// Builds ready-to-paste prompts for Perplexity into research/plexity/prompts/pairs/ (one file per round):
 //   pairs-NN.md      more sentences for existing pairs, the pairs with the fewest sentences first
 //   newpairs-NN.md   brand-new pairs (ids and words are chosen here, the agent writes the rest)
-// The rules come from research/pairs/PERPLEXITY-PROMPT.md. Run: node scripts/make-plexity-prompts.mjs
+// The rules come from research/plexity/templates/pairs.md. Run: node scripts/make-plexity-prompts.mjs
 import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
@@ -11,7 +11,7 @@ const dir = mkdtempSync(join(tmpdir(), 'pairs-'))
 writeFileSync(join(dir, 'pairs.ts'), readFileSync(new URL('../src/data/pairDrills.ts', import.meta.url), 'utf8'))
 const { pairDrills } = await import(pathToFileURL(join(dir, 'pairs.ts')).href)
 
-const template = readFileSync(new URL('../research/pairs/PERPLEXITY-PROMPT.md', import.meta.url), 'utf8').split('\n---\n')[1]
+const template = readFileSync(new URL('../research/plexity/templates/pairs.md', import.meta.url), 'utf8').split('\n---\n')[1]
 const sections = template.split(/\n(?=## )/)
 const head = sections[0]
 const part = (title) => sections.find((section) => section.startsWith(`## ${title}`))
@@ -20,7 +20,7 @@ const output = part('Output format')
 const newPairs = part('New pairs')
 const check = part('Before you answer')
 
-const out = new URL('../research/plexity/', import.meta.url)
+const out = new URL('../research/plexity/prompts/pairs/', import.meta.url)
 mkdirSync(out, { recursive: true })
 const PER_PAIR = 25
 const chunk = (items, size) =>
@@ -133,4 +133,6 @@ chunk(fresh, 6).forEach((pairs, index) => {
   const text = [head, task, rules, format, check].join('\n\n')
   writeFileSync(new URL(`newpairs-${pad(index + 1)}.md`, out), text + '\n')
 })
-console.log(`pairs rounds: ${chunk(todo, 8).length}, new pairs: ${fresh.length} in ${chunk(fresh, 6).length} rounds -> research/plexity/`)
+console.log(
+  `pairs rounds: ${chunk(todo, 8).length}, new pairs: ${fresh.length} in ${chunk(fresh, 6).length} rounds -> research/plexity/prompts/pairs/`,
+)

@@ -33,8 +33,8 @@ Do the work in this order: (1) tooling and checks, (2) raise every existing pair
 
 ## 3. Work method — batches, not one huge file
 
-1. Create `research/pairs/` (not part of the site build; changes there do not trigger a Netlify build).
-2. Work in batches of **8–10 pairs**. For each batch write `research/pairs/batch-NN.json`:
+1. Create `research/plexity/answers/pairs/` (not part of the site build; changes there do not trigger a Netlify build).
+2. Work in batches of **8–10 pairs**. For each batch write `research/plexity/answers/pairs/batch-NN.json`:
    `{ "pairId": "...", "add": [ { "text": "...", "answer": "..." } ] }` for existing pairs, and a full pair object for new pairs.
 3. Write a merge script `scripts/merge-pairs.mjs` (run once per batch, idempotent): reads a batch file, appends new
    sentences to the matching pair in `src/data/pairDrills.ts` (skip a sentence whose normalised text already exists
@@ -175,5 +175,5 @@ minified, tell the user — a split by level (one file per level, loaded togethe
 1. Read `src/data/pairDrills.ts` (top 100 lines and the list of ids), `scripts/check-pairs.mjs`, `src/services/pairs.ts`.
 2. Write the new checks (section 7) in warning mode and run `pnpm check:pairs` to see the current numbers.
 3. Write `scripts/merge-pairs.mjs`, test it on a copy of a tiny batch.
-4. Make `research/pairs/plan.md` with the list of pairs you will touch, the target per pair, and the list of new pairs.
+4. Make `research/plexity/answers/pairs/plan.md` with the list of pairs you will touch, the target per pair, and the list of new pairs.
 5. Start batch 1 (the 8 pairs with the fewest sentences). After it call the reviewer.
