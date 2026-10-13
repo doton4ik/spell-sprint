@@ -4,44 +4,38 @@ Avoid words and sentences where British and American English differ (colour/colo
 
 ## Your task in this round
 
-For each of the 36 words below write **one new example sentence**. Each word already has one example (after "e.g."); yours must show the word in a DIFFERENT situation.
+For each of the 30 words below write **one new example sentence**. Each word already has one example (after "e.g."); yours must show the word in a DIFFERENT situation.
 
-- logistics-inventory-control-stock | stock | товарный запас | noun | e.g. The store keeps extra stock for busy weekends.
-- logistics-inventory-control-replenishment | replenishment | пополнение запасов | noun | e.g. The manager planned replenishment before the shelves became empty.
-- logistics-inventory-control-safety-stock | safety stock | страховой запас | noun | e.g. Safety stock protects the warehouse from unexpected demand.
-- logistics-inventory-control-demand-planning | demand planning | планирование спроса | noun | e.g. Good demand planning helps the company order materials early.
-- logistics-inventory-control-inventory-accuracy | inventory accuracy | точность учёта запасов | noun | e.g. Inventory accuracy improved after the team checked every shelf.
-- logistics-receiving-and-storage-storage-location | storage location | место хранения | noun | e.g. Each box has a clear storage location in the warehouse.
-- logistics-supply-chain-supplier | supplier | поставщик | noun | e.g. The supplier delivered the materials on time.
-- logistics-supply-chain-delivery | delivery | доставка | noun | e.g. The delivery reached our office before lunch.
-- logistics-receiving-and-storage-goods-receipt | goods receipt | приёмка товара | noun | e.g. The clerk recorded the goods receipt in the system.
-- logistics-order-fulfilment-order-picking | order picking | комплектация заказа | noun | e.g. Order picking becomes faster when products are well labelled.
-- logistics-receiving-and-storage-warehouse-layout | warehouse layout | планировка склада | noun | e.g. The new warehouse layout saves space and walking time.
-- logistics-supply-chain-distribution-center | distribution centre | распределительный центр | noun | e.g. The distribution centre sends products across the region.
-- logistics-supply-chain-lead-time | lead time | срок поставки | noun | e.g. The supplier reduced the lead time by two days.
-- logistics-supply-chain-transportation-cost | transportation cost | транспортные расходы | noun | e.g. Fuel prices increased the transportation cost this month.
-- warehouse-operations-sap-warehouse-processes-purchase-order | purchase order | заказ на поставку | noun | e.g. The buyer sent a purchase order to the supplier.
-- warehouse-operations-sap-warehouse-processes-goods-movement | goods movement | движение товара | noun | e.g. The system records every goods movement automatically.
-- warehouse-operations-sap-warehouse-processes-warehouse-task | warehouse task | складская задача | noun | e.g. The worker completed the warehouse task before noon.
-- warehouse-operations-sap-warehouse-processes-inbound-processing | inbound processing | входящая обработка | noun | e.g. Inbound processing begins when the truck reaches the dock.
-- warehouse-operations-sap-warehouse-processes-outbound-processing | outbound processing | исходящая обработка | noun | e.g. Outbound processing prepares customer orders for dispatch.
-- warehouse-operations-inventory-control-physical-inventory | physical inventory | физическая инвентаризация | noun | e.g. The team counted the physical inventory on Friday.
-- warehouse-operations-sap-warehouse-processes-material-document | material document | документ материала | noun | e.g. The system created a material document after the movement.
-- business-and-office-meetings-and-negotiation-agreement | agreement | соглашение | noun | e.g. Both companies signed the agreement after the meeting.
-- business-and-office-meetings-and-negotiation-recruitment | recruitment | подбор персонала | noun | e.g. The recruitment process starts with an online application.
-- business-and-office-finance-and-planning-target | target | цель | noun | e.g. Our team reached the monthly target in September.
-- business-and-office-meetings-and-negotiation-customer-satisfaction | customer satisfaction | удовлетворённость клиентов | noun | e.g. Customer satisfaction improved after delivery became faster.
-- business-and-office-finance-and-planning-market-demand | market demand | рыночный спрос | noun | e.g. Market demand changes when prices or seasons change.
-- travel-and-culture-travel-planning-delay | delay | задержка | noun | e.g. The flight had a short delay because of fog.
-- sport-and-fitness-training-and-competition-score | score | счёт (в игре) | noun | e.g. The final score was three goals to one.
-- transport-and-trade-road-freight-freight | freight | груз | noun | e.g. The company transports freight between several European cities.
-- transport-and-trade-road-freight-consignment | consignment | партия груза | noun | e.g. The carrier delivered the consignment without any damage.
-- transport-and-trade-road-freight-carrier | carrier | перевозчик | noun | e.g. The carrier called before arriving at the warehouse.
-- transport-and-trade-customs-and-trade-customs-clearance | customs clearance | таможенное оформление | noun | e.g. Customs clearance took longer because one document was missing.
-- transport-and-trade-customs-and-trade-bill-of-lading | bill of lading | коносамент | noun | e.g. The driver checked the bill of lading before departure.
-- food-and-drinks-meals-and-cooking-boil | boil | варить, кипятить | verb | e.g. Boil the vegetables for five minutes before serving.
-- food-and-drinks-meals-and-cooking-chop | chop | нарезать | verb | e.g. Please chop the onions before heating the pan.
-- food-and-drinks-caf-and-restaurant-order | order | заказывать; заказ | verb | e.g. We decided to order soup and sparkling water.
+- food-and-drinks-caf-and-restaurant-bill | bill | счёт (в кафе, ресторане) | noun | e.g. The waiter brought the bill after our coffee.
+- food-and-drinks-caf-and-restaurant-tip | tip | чаевые | noun | e.g. We left a small tip for the helpful waiter.
+- places-in-town-places-in-town-square | square | площадь | noun | e.g. People gathered in the square for the concert.
+- shopping-shopping-bargain | bargain | выгодная покупка | noun | e.g. This jacket was a real bargain during the sale.
+- health-and-body-at-the-doctor-check-up | check-up | медосмотр | noun | e.g. I visit the doctor for a yearly check-up.
+- technology-devices-and-software-storage | storage | память (устройства), хранилище | noun | e.g. The phone has enough storage for many photos.
+- technology-online-life-attachment | attachment | вложение | noun | e.g. The email included an attachment with the schedule.
+- technology-online-life-backup | backup | резервная копия | noun | e.g. I made a backup before updating the computer.
+- nature-and-animals-nature-and-animals-eagle | eagle | орёл | noun | e.g. We saw an eagle flying above the valley.
+- general-english-commonly-misspelled-rhythm | rhythm | ритм | noun | e.g. The drummer kept a steady rhythm during the song.
+- general-english-confusable-words-principal | principal | главный, основной | adjective | e.g. Cost was the principal reason for our decision to stay at home.
+- general-english-confusable-words-stationary | stationary | неподвижный | adjective | e.g. The bicycle remained stationary near the wall.
+- common-actions-everyday-phrasal-verbs-look-up | look up | искать (в словаре) | phrase | e.g. I used a dictionary to look up the new word.
+- common-actions-everyday-phrasal-verbs-set-up | set up | настроить, основать | phrase | e.g. We need to set up the new printer today.
+- travel-and-culture-at-the-airport-check-in-desk | check-in desk | стойка регистрации | noun | e.g. There was a long queue at the check-in desk.
+- travel-and-culture-at-the-airport-gate | gate | выход на посадку | noun | e.g. Our gate changed twenty minutes before departure.
+- travel-and-culture-at-the-airport-customs-officer | customs officer | таможенник | noun | e.g. A customs officer asked to see our documents.
+- travel-and-culture-at-the-airport-departure-lounge | departure lounge | зал ожидания вылета | noun | e.g. We had coffee in the departure lounge before boarding.
+- travel-and-culture-on-the-plane-cabin-crew | cabin crew | бортпроводники, экипаж самолёта | noun | e.g. The cabin crew served drinks after take-off.
+- jobs-and-career-job-interview-strength | strength | сильная сторона | noun | e.g. My main strength is working well under pressure.
+- jobs-and-career-job-interview-weakness | weakness | слабая сторона | noun | e.g. She mentioned time management as a weakness.
+- jobs-and-career-job-interview-reference | reference | рекомендация от работодателя | noun | e.g. He gave his former manager as a reference.
+- jobs-and-career-job-interview-shortlist | shortlist | список финалистов | noun | e.g. Only five candidates made the final shortlist.
+- jobs-and-career-at-work-annual-leave | annual leave | ежегодный отпуск | noun | e.g. I have ten days of annual leave left this year.
+- shopping-paying-change | change | сдача | noun | e.g. The cashier gave me the wrong change.
+- shopping-paying-currency | currency | валюта | noun | e.g. You should change your currency before the trip.
+- shopping-paying-loyalty-card | loyalty card | карта лояльности | noun | e.g. I collect points with my loyalty card.
+- shopping-paying-till | till | касса | noun | e.g. Please pay at the till near the door.
+- shopping-paying-overpay | overpay | переплатить | verb | e.g. I did not want to overpay for the tickets.
+- shopping-banking-deposit | deposit | внести деньги, депозит | verb | e.g. She plans to deposit her salary tomorrow.
 
 ## Rules for the sentence
 
@@ -58,3 +52,9 @@ For each of the 36 words below write **one new example sentence**. Each word alr
 ]
 
 Use the word_id exactly as written. Before you answer, check each sentence: it contains the word in the listed form and no other word could fill the gap.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

@@ -5,7 +5,7 @@ Avoid words and sentences where British and American English differ (colour/colo
 ## Your task in this round
 
 Write new questions for the **level check** of the app, all at level **C1**. Only this level: a learner who is C1 should be able to answer them and a weaker learner should not.
-Count: 8 gap-fills, 6 find-the-mistake, 6 word/collocation/phrasal-verb items, 4 word-formation, 6 dictation sentences.
+Count: 6 gap-fills, 5 find-the-mistake, 5 word/collocation/phrasal-verb items, 3 word-formation, 5 dictation sentences.
 Vary the grammar and vocabulary points and the topics (home, school, work, travel, health, technology, nature, shopping). Do not write questions about articles (a/an/the).
 
 ## Formats (answer with ONE JSON object with these five arrays)
@@ -37,3 +37,9 @@ Vary the grammar and vocabulary points and the topics (home, school, work, trave
 {"gap": [...], "mistake": [...], "phrase": [...], "formation": [...], "dictation": [...]}
 
 Before you answer, test every option of every gap and check that exactly one fits.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

@@ -6,7 +6,7 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 ## Your task in this round
 
-Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
+Write **20 new sentences for each of these 6 pairs**, 120 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
 ### actual-current (level B2)
 Words: actual / current
@@ -85,32 +85,6 @@ Existing sentences (do not repeat these ideas):
     - What is the ___ of this jacket?  [price]
     - The ___ of bread went up last month.  [price]
 
-### economy-economics (level B2)
-Words: economy / economics
-Meaning: economy = экономика (страны); economics = экономика (наука, предмет)
-Rule: economy = the money system of a country · economics = the subject you study
-Existing sentences (do not repeat these ideas):
-    - She is studying ___ at Bristol.  [economics]
-    - Tourism is important for the island's ___.  [economy]
-    - His degree in ___ helped him get the job.  [economics]
-    - The national ___ grew last quarter.  [economy]
-    - She studies ___ at university.  [economics]
-    - The country's ___ grew slowly last year.  [economy]
-    - My brother has a degree in ___.  [economics]
-
-### notice-note (level B2)
-Words: notice / note
-Meaning: notice = заметить; note = отметить, записать; обратить внимание
-Rule: notice = see, become aware · note = write down, or "please note" = pay attention
-Existing sentences (do not repeat these ideas):
-    - Did you ___ her new haircut?  [notice]
-    - Please ___ your seat number on the form.  [note]
-    - I didn't ___ the sign by the gate.  [notice]
-    - Please ___ that the shop closes early on Sundays.  [note]
-    - Did you ___ the new painting on the wall?  [notice]
-    - Please ___ the date of the meeting in your diary.  [note]
-    - I did not ___ that my bag was open.  [notice]
-
 ## Rules for every sentence
 
 1. **Exactly one `___`**, and exactly one option fits. Read the sentence with every option: if two sound natural, drop it.
@@ -156,3 +130,9 @@ Existing sentences (do not repeat these ideas):
 For each sentence: (a) test every option in the gap, (b) confirm only one works, (c) confirm no leak (rule 3), (d) count words
 (5–16), (e) confirm no sentence is a near copy of another one in your answer. Remove any sentence that fails.
 
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

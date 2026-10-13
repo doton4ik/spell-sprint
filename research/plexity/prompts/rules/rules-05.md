@@ -3,93 +3,46 @@ Answer with JSON only: one JSON array, no text outside it, no comments. Write ev
 
 ## Your task in this round
 
-For each of the 4 rules below write **14 new examples and 14 new exercises**. Do not repeat anything that is listed (the listing shows what exists). The rule text tells you what the rule teaches: every example and exercise must be provably right or wrong by THAT rule.
+For each of the 2 rules below write **10 new examples and 10 new exercises**. Do not repeat anything that is listed (the listing shows what exists). The rule text tells you what the rule teaches: every example and exercise must be provably right or wrong by THAT rule.
 
-### tion-vs-sion — Nouns ending in -tion or -sion
-Rule: Some nouns end in -tion, like information. Others end in -sion, like decision and discussion. Learn the ending with each word.
-Memory hint: Information takes tion; decision takes sion.
+### double-before-ing-ed — Doubling before -ing and -ed
+Rule: Short verbs that end in one vowel and one consonant often double the final consonant before -ing or -ed, as in plan becoming planning.
+Memory hint: One vowel, one consonant, double before you go on.
 Existing examples (do not repeat; 8):
-    - [correct] We had a discussion after the film.
-    - [incorrect] decition  ->  decision
-    - [incorrect] informasion  ->  information
-    - [correct] The information was easy to find.
-    - [correct] The instructions were clear.
-    - [correct] We watched a television show.
-    - [incorrect] They gave us permition.  ->  They gave us permission.
-    - [incorrect] The explanasion was short.  ->  The explanation was short.
-Existing exercises (do not repeat; showing 6 of 6):
-    - [correct_word] revition  =>  revision
-    - [correct_word] condision  =>  condition
-    - [spell] Spell the word: the place where a train stops for passengers (one word, -tion).  =>  station
-    - [spell] Spell the word: the answer to a problem.  =>  solution
-    - [fill_gap] Please answer the last ___. (вопрос)  =>  question
-    - [multiple_choice] Choose the correct spelling: entering a country by force.  =>  invasion  (choices: invation / invasion / invacion)
+    - [exception] fixing
+    - [correct] She dropped her phone on the floor.
+    - [correct] They are shopping for groceries this afternoon.
+    - [incorrect] stoped  ->  stopped
+    - [incorrect] planing  ->  planning
+    - [correct] They were running through the park together.
+    - [incorrect] sliped  ->  slipped
+    - [incorrect] runing  ->  running
+Existing exercises (do not repeat; showing 0 of 0):
 
-### plural-es — Plural nouns with -es
-Rule: Add -es to most nouns ending in s, x, z, ch or sh. Box becomes boxes.
-Memory hint: A hissing ending needs an extra e.
-Existing examples (do not repeat; 9):
-    - [correct] She wears two watches on special occasions.
-    - [incorrect] watchs  ->  watches
-    - [correct] We packed the boxes before lunch.
-    - [exception] stomach → stomachs
-    - [incorrect] boxs  ->  boxes
-    - [correct] I put two sandwiches in my bag.
-    - [correct] The churches in the town are old.
-    - [incorrect] She sliced two peachs.  ->  She sliced two peaches.
-    - [incorrect] The bosss met yesterday.  ->  The bosses met yesterday.
-Existing exercises (do not repeat; showing 6 of 6):
-    - [correct_word] benchs  =>  benches
-    - [correct_word] taxs  =>  taxes
-    - [spell] Spell the word: more than one wish.  =>  wishes
-    - [spell] Spell the word: more than one class.  =>  classes
-    - [fill_gap] Please wash the ___. (посуду)  =>  dishes
-    - [multiple_choice] Choose the correct plural of match.  =>  matches  (choices: matchs / matches / matchies)
 
-### plural-f-to-ves — Plural nouns with -ves
-Rule: Some nouns ending in f or fe change that ending to -ves in the plural. Knife becomes knives.
-Memory hint: A knife loses fe and gains ves.
-Existing examples (do not repeat; 9):
-    - [incorrect] wifes  ->  wives
-    - [exception] roof → roofs; chef → chefs
-    - [correct] The knives are in the kitchen drawer.
-    - [incorrect] knifes  ->  knives
-    - [correct] Several leaves fell from the tree.
-    - [correct] The two wives were sisters.
-    - [correct] The scarves hung by the door.
-    - [incorrect] The shelfs are full of books.  ->  The shelves are full of books.
-    - [incorrect] Three wolfs crossed the road.  ->  Three wolves crossed the road.
-Existing exercises (do not repeat; showing 6 of 6):
-    - [correct_word] calfs  =>  calves
-    - [correct_word] thiefs  =>  thieves
-    - [spell] Spell the word: more than one knife.  =>  knives
-    - [spell] Spell the word: more than one elf.  =>  elves
-    - [multiple_choice] Choose the correct plural of life.  =>  lives  (choices: lifes / lives / livs)
-    - [multiple_choice] Choose the correct plural of leaf.  =>  leaves  (choices: leafs / leaves / leavs)
-
-### plural-y-to-ies — Plural: y becomes ies
-Rule: When a noun ends in a consonant plus y, change y to i and add es to form the plural.
-Memory hint: Company to companies; one lonely y turns into two i's.
+### drop-silent-e — Dropping the silent e
+Rule: When a verb ends in a silent e, you usually drop the e before adding -ing or -ed. For example, make becomes making.
+Memory hint: The silent e steps aside to let -ing and -ed in.
 Existing examples (do not repeat; 8):
-    - [incorrect] companys  ->  companies
-    - [correct] delivery -> deliveries
-    - [incorrect] dairys  ->  dairies
-    - [correct] The berries were fresh and sweet.
-    - [incorrect] cherrys  ->  cherries
-    - [correct] The libraries open at nine.
-    - [correct] The bakeries sell fresh bread.
-    - [incorrect] The factorys closed early.  ->  The factories closed early.
-Existing exercises (do not repeat; showing 1 of 1):
-    - [multiple_choice] Choose the plural of hobby.  =>  hobbies  (choices: hobbys / hobbies / hobbyes)
+    - [exception] agreeing
+    - [correct] He danced all night at the party.
+    - [correct] She is writing a long letter to her cousin.
+    - [incorrect] hopeed  ->  hoped
+    - [incorrect] makeing  ->  making
+    - [incorrect] hopeing  ->  hoping
+    - [correct] She smiled while moving the chairs.
+    - [incorrect] moveing  ->  moving
+Existing exercises (do not repeat; showing 0 of 0):
 
-## Examples (14 per rule)
 
-- 6 of type "correct": a natural sentence that uses the rule correctly. 8 of type "incorrect": a sentence with the typical mistake learners make, and the same sentence corrected in "correction" (only the mistake changes). One mistake per sentence.
+## Examples (10 per rule)
+
+- 4 of type "correct": a natural sentence that uses the rule correctly. 6 of type "incorrect": a sentence with the typical mistake learners make, and the same sentence corrected in "correction" (only the mistake changes). One mistake per sentence.
 - "note": a short reason, at most 80 characters, naming the point of the rule ("Soft c before e: city, not sity").
 - Sentences of 5-14 words, everyday topics, different words and structures. Easy words except the target of the rule.
 - A word that is spelled wrongly must be a spelling mistake a real learner makes, not a random typo.
 
-## Exercises (14 per rule), mix of these types
+## Exercises (10 per rule), mix of these types
 
 - "fill_gap": a sentence with one ___ and one correct word as "answer". The context must allow exactly one answer.
 - "multiple_choice": a prompt with ___ (or "Choose the correct spelling: ...") and "choices" (2-4 options, all different, "answer" is exactly one of them).
@@ -109,3 +62,9 @@ Every exercise is independent: no "see the sentence above". Every answer must be
 ]
 
 Use the slug exactly as written. Before you answer, check every item against the rule above: wrong sentences must really be wrong, correct ones really correct, each exercise has exactly one answer.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

@@ -4,8 +4,9 @@
 // A merge only reports unless --apply. --apply adds the accepted rows to database/rules-import/more-practice-pack-2.json
 // and runs scripts/build-more-practice-pack.mjs, which writes database/content-pack-5-*.sql (the user runs these in the
 // Supabase SQL Editor) and the offline examples in src/data/builtInRules.json. A --skip list is a JSON array of texts/prompts to drop.
+import { readAnswer } from './plexity-json.mjs'
 import { execFileSync } from 'node:child_process'
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 
 const [command, ...rest] = process.argv.slice(2)
 const apply = rest.includes('--apply')
@@ -42,12 +43,21 @@ function existingFor(rule) {
   return { examples, exercises }
 }
 
+const FOOTER = `
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.`
 const chunk = (items, size) =>
   Array.from({ length: Math.ceil(items.length / size) }, (_, index) => items.slice(index * size, (index + 1) * size))
 const pad = (number) => String(number).padStart(2, '0')
 
 function prompts() {
   mkdirSync('research/plexity/prompts/rules', { recursive: true })
+  for (const name of readdirSync('research/plexity/prompts/rules'))
+    if (/^rules-.*\.md$/.test(name)) rmSync(`research/plexity/prompts/rules/${name}`, { force: true })
   const ARTICLES = new Set([
     'a-or-an',
     'a-or-the',
@@ -58,7 +68,7 @@ function prompts() {
     'no-article-routine-places',
     'a-with-jobs-and-quantities',
   ])
-  const groups = chunk(builtIn.rules, 4)
+  const groups = chunk(builtIn.rules, 2)
   groups.forEach((group, index) => {
     const list = group
       .map((rule) => {
@@ -87,18 +97,18 @@ Answer with JSON only: one JSON array, no text outside it, no comments. Write ev
 
 ## Your task in this round
 
-For each of the ${group.length} rules below write **14 new examples and 14 new exercises**. Do not repeat anything that is listed (the listing shows what exists). The rule text tells you what the rule teaches: every example and exercise must be provably right or wrong by THAT rule.
+For each of the ${group.length} rules below write **10 new examples and 10 new exercises**. Do not repeat anything that is listed (the listing shows what exists). The rule text tells you what the rule teaches: every example and exercise must be provably right or wrong by THAT rule.
 
 ${list}
 
-## Examples (14 per rule)
+## Examples (10 per rule)
 
-- 6 of type "correct": a natural sentence that uses the rule correctly. 8 of type "incorrect": a sentence with the typical mistake learners make, and the same sentence corrected in "correction" (only the mistake changes). One mistake per sentence.
+- 4 of type "correct": a natural sentence that uses the rule correctly. 6 of type "incorrect": a sentence with the typical mistake learners make, and the same sentence corrected in "correction" (only the mistake changes). One mistake per sentence.
 - "note": a short reason, at most 80 characters, naming the point of the rule ("Soft c before e: city, not sity").
 - Sentences of 5-14 words, everyday topics, different words and structures. Easy words except the target of the rule.
 - A word that is spelled wrongly must be a spelling mistake a real learner makes, not a random typo.
 
-## Exercises (14 per rule), mix of these types
+## Exercises (10 per rule), mix of these types
 
 - "fill_gap": a sentence with one ___ and one correct word as "answer". The context must allow exactly one answer.
 - "multiple_choice": a prompt with ___ (or "Choose the correct spelling: ...") and "choices" (2-4 options, all different, "answer" is exactly one of them).
@@ -118,13 +128,13 @@ Every exercise is independent: no "see the sentence above". Every answer must be
 ]
 
 Use the slug exactly as written. Before you answer, check every item against the rule above: wrong sentences must really be wrong, correct ones really correct, each exercise has exactly one answer.`
-    writeFileSync(`research/plexity/prompts/rules/rules-${pad(index + 1)}.md`, text + '\n')
+    writeFileSync(`research/plexity/prompts/rules/rules-${pad(index + 1)}.md`, text + FOOTER + '\n')
   })
   console.log(`rules: ${groups.length} prompts for ${builtIn.rules.length} rules -> research/plexity/prompts/rules/`)
 }
 
 function merge(file) {
-  const answer = JSON.parse(readFileSync(file, 'utf8'))
+  const answer = readAnswer(file)
   const pack = readPack(PACK2)
   const rulesBySlug = new Map(builtIn.rules.map((rule) => [rule.slug, rule]))
   let rejected = 0

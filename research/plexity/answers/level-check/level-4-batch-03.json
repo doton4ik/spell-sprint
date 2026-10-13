@@ -1,0 +1,262 @@
+{
+  "gap": [
+    {
+      "prompt": "The merger was called ___ after regulatory objections.",
+      "answer": "off",
+      "wrong": [
+        "out",
+        "over",
+        "down"
+      ],
+      "explain": "Call off means cancel."
+    },
+    {
+      "prompt": "Her account of events did not ___ with the official record.",
+      "answer": "tally",
+      "wrong": [
+        "match to",
+        "agree to",
+        "correspond to"
+      ],
+      "explain": "Tally with means match or agree with."
+    },
+    {
+      "prompt": "The findings should be treated ___ caution.",
+      "answer": "with",
+      "wrong": [
+        "by",
+        "under",
+        "at"
+      ],
+      "explain": "Treat something with caution."
+    },
+    {
+      "prompt": "He was ___ to making decisions without consultation.",
+      "answer": "prone",
+      "wrong": [
+        "likely",
+        "apt to",
+        "tendent"
+      ],
+      "explain": "Be prone to + -ing means tend to do something."
+    },
+    {
+      "prompt": "The proposal was rejected on the ___ that it was too costly.",
+      "answer": "grounds",
+      "wrong": [
+        "reasons",
+        "basis",
+        "causes"
+      ],
+      "explain": "On the grounds that means because of the stated reason."
+    },
+    {
+      "prompt": "The company is ___ to severe penalties if it breaches the rules.",
+      "answer": "liable",
+      "wrong": [
+        "responsible",
+        "accountable",
+        "answerable"
+      ],
+      "explain": "Be liable to means likely to receive or be subject to."
+    },
+    {
+      "prompt": "The evidence was ___ to suggest deliberate misconduct.",
+      "answer": "insufficient",
+      "wrong": [
+        "insufficiently",
+        "not enough",
+        "few"
+      ],
+      "explain": "Use an adjective before to + infinitive."
+    },
+    {
+      "prompt": "The committee urged that the deadline ___ extended.",
+      "answer": "be",
+      "wrong": [
+        "is",
+        "was",
+        "will be"
+      ],
+      "explain": "Use the subjunctive after urge that."
+    }
+  ],
+  "mistake": [
+    {
+      "sentence": "The report raises concerns about the project’s viability.",
+      "parts": [
+        "The report",
+        "raises concerns",
+        "about",
+        "the project’s viability"
+      ],
+      "answer": "",
+      "explain": "This sentence is correct."
+    },
+    {
+      "sentence": "She was dissatisfied with the explanation provided.",
+      "parts": [
+        "She was dissatisfied",
+        "with",
+        "the explanation",
+        "provided"
+      ],
+      "answer": "",
+      "explain": "This sentence is correct."
+    },
+    {
+      "sentence": "The findings are consistent to previous research.",
+      "parts": [
+        "The findings",
+        "are consistent",
+        "to previous research",
+        ""
+      ],
+      "answer": "to previous research",
+      "explain": "Use consistent with previous research."
+    },
+    {
+      "sentence": "He was charged with breach of contract.",
+      "parts": [
+        "He was charged",
+        "with breach",
+        "of contract",
+        ""
+      ],
+      "answer": "",
+      "explain": "This sentence is correct."
+    },
+    {
+      "sentence": "The manager objected the proposed changes.",
+      "parts": [
+        "The manager",
+        "objected",
+        "the proposed changes",
+        ""
+      ],
+      "answer": "objected",
+      "explain": "Use objected to the proposed changes."
+    },
+    {
+      "sentence": "The company is committed to reduce emissions.",
+      "parts": [
+        "The company",
+        "is committed",
+        "to reduce",
+        "emissions"
+      ],
+      "answer": "to reduce",
+      "explain": "Use to reducing after committed to."
+    }
+  ],
+  "phrase": [
+    {
+      "prompt": "The board decided to ___ up the search for a new director.",
+      "answer": "step",
+      "wrong": [
+        "take",
+        "put",
+        "bring"
+      ],
+      "explain": "Step up means increase or intensify."
+    },
+    {
+      "prompt": "The company had to ___ down its operations in the region.",
+      "answer": "wind",
+      "wrong": [
+        "put",
+        "take",
+        "bring"
+      ],
+      "explain": "Wind down means gradually close or reduce."
+    },
+    {
+      "prompt": "The auditors ___ into several irregular payments.",
+      "answer": "looked",
+      "wrong": [
+        "checked",
+        "watched",
+        "saw"
+      ],
+      "explain": "Look into means investigate."
+    },
+    {
+      "prompt": "The government plans to ___ out new safety standards.",
+      "answer": "phase",
+      "wrong": [
+        "put",
+        "take",
+        "bring"
+      ],
+      "explain": "Phase out means gradually stop using."
+    },
+    {
+      "prompt": "She managed to ___ off a difficult question during the interview.",
+      "answer": "fend",
+      "wrong": [
+        "put",
+        "take",
+        "keep"
+      ],
+      "explain": "Fend off means avoid or defend against."
+    },
+    {
+      "prompt": "The team needs to ___ up with changing customer demands.",
+      "answer": "keep",
+      "wrong": [
+        "catch",
+        "follow",
+        "match"
+      ],
+      "explain": "Keep up with means stay level with."
+    }
+  ],
+  "formation": [
+    {
+      "prompt": "The new rules caused considerable ___ among employees. (ANXIOUS)",
+      "answer": "anxiety",
+      "explain": "Use the noun form of anxious."
+    },
+    {
+      "prompt": "The report was criticised for its lack of ___. (PRECISE)",
+      "answer": "precision",
+      "explain": "Use the noun form of precise."
+    },
+    {
+      "prompt": "The proposal was viewed as economically ___. (SUSTAIN)",
+      "answer": "unsustainable",
+      "explain": "Add un- and -able for not sustainable."
+    },
+    {
+      "prompt": "Her analysis was remarkably ___. (INSIGHT)",
+      "answer": "insightful",
+      "explain": "Add -ful to make the adjective."
+    }
+  ],
+  "dictation": [
+    {
+      "sentence": "The merger was called off after regulatory objections.",
+      "alternatives": []
+    },
+    {
+      "sentence": "Her account of events did not tally with the official record.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The proposal was rejected on the grounds that it was too costly.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The auditors looked into several irregular payments.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The government plans to phase out outdated safety standards.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The company is committed to reducing emissions.",
+      "alternatives": []
+    }
+  ]
+}

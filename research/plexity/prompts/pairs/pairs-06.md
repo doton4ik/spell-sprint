@@ -6,125 +6,91 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 ## Your task in this round
 
-Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
+Write **20 new sentences for each of these 6 pairs**, 120 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### choice-chance (level B1)
-Words: choice / chance
-Meaning: choice = выбор; chance = шанс, вероятность
-Rule: choice = choosing between options · chance = a possibility
+### price-value (level B1)
+Words: price / value
+Meaning: price = цена (сколько платишь); value = ценность, стоимость (чего стоит)
+Rule: price = the money you pay · value = how much something is worth or how important
 Existing sentences (do not repeat these ideas):
-    - You have no ___ but to apologise.  [choice]
-    - There's a good ___ of rain later.  [chance]
-    - Blue was an easy ___ for the walls.  [choice]
-    - Is there any ___ I can change my seat?  [chance]
-    - The menu offers plenty of ___ for vegetarians.  [choice]
-    - You have a ___ between tea and coffee.  [choice]
-    - There is a good ___ of rain tomorrow.  [chance]
-    - It was a hard ___ because I liked both shirts.  [choice]
+    - The ___ of petrol has gone up again.  [price]
+    - What was the ___ of your flight?  [price]
+    - Good friends add ___ to your life.  [value]
+    - The shop lowered the ___ by five pounds.  [price]
+    - The ___ of the ticket is twelve euros.  [price]
+    - Old family photos have a lot of ___ for me.  [value]
+    - The shop lowered its ___ for the summer sale.  [price]
+    - Honesty is a key ___ in our family.  [value]
 
-### offer-suggest (level B1)
-Words: offer / suggest
-Meaning: offer = предлагать (дать что-то); suggest = предлагать (идею), советовать
-Rule: offer = say you will give or do something · suggest = give an idea
+### late-lately (level B1)
+Words: late / lately
+Meaning: late = поздно; опоздавший; lately = в последнее время
+Rule: late = not on time, near the end · lately = recently
 Existing sentences (do not repeat these ideas):
-    - Can I ___ you some tea?  [offer]
-    - I ___ taking the earlier train.  [suggest]
-    - The waiter will ___ dessert later.  [offer]
-    - Can you ___ a good place for lunch near here?  [suggest]
-    - Can I ___ you a cup of tea?  [offer]
-    - I ___ going to the cinema on Friday.  [suggest]
-    - The shop will ___ a ten percent discount.  [offer]
-    - Can you ___ a good place to eat?  [suggest]
+    - The bus was ___ again this morning.  [late]
+    - Have you seen Maria ___?  [lately]
+    - I stayed up ___ finishing the essay.  [late]
+    - Sales have improved ___ at our shop.  [lately]
+    - Sorry I'm ___; the traffic was awful.  [late]
+    - I have been very tired ___.  [lately]
+    - The train was twenty minutes ___.  [late]
+    - Have you seen any good films ___?  [lately]
 
-### weather-whether (level A2)
-Words: weather / whether
-Meaning: weather = погода; whether = ли
-Rule: weather = rain, sun, wind · whether = "if" after verbs like know or ask
+### hard-hardly (level B1)
+Words: hard / hardly
+Meaning: hard = усердно; твёрдый, трудный; hardly = едва, почти не
+Rule: hard = with effort (work hard) · hardly = almost not (I could hardly hear)
 Existing sentences (do not repeat these ideas):
-    - The ___ was terrible all weekend, so we stayed home.  [weather]
-    - I don't know ___ he will come to the meeting.  [whether]
-    - We will have a picnic if the ___ is good.  [weather]
-    - She asked ___ the shop was open on Sundays.  [whether]
-    - The ___ will change for the worse this afternoon.  [weather]
-    - No, I don't think the ___ will clear up.  [weather]
-    - I wonder ___ I should really become a teacher.  [whether]
-    - I don't know ___ you like her or not.  [whether]
-    - I couldn't care less ___ you stay or go.  [whether]
+    - She works very ___ before every exam.  [hard]
+    - I could ___ hear him on the phone.  [hardly]
+    - The ground was ___ after the frost.  [hard]
+    - We had ___ any milk left.  [hardly]
+    - They train ___ all winter.  [hard]
+    - She studied ___ for the test.  [hard]
+    - I can ___ hear you, the room is so loud.  [hardly]
+    - The ice was so ___ that we could walk on it.  [hard]
 
-### lose-loose (level B1)
-Words: lose / loose
-Meaning: lose = терять, проигрывать; loose = свободный, болтающийся
-Rule: lose = not win or not keep (verb) · loose = not tight (adjective)
+### actual-topical (level B2)
+Words: actual / topical
+Meaning: actual = фактический, настоящий; topical = актуальный, злободневный
+Rule: "актуальный" is topical or current — never actual (= real)
 Existing sentences (do not repeat these ideas):
-    - These trousers are too ___ for me now.  [loose]
-    - Be careful not to ___ your ticket on the train.  [lose]
-    - One of the screws on the chair is ___.  [loose]
-    - I am afraid we will ___ the match tomorrow.  [lose]
-    - I gave up trying to ___ weight years ago.  [lose]
-    - I was afraid I was going to ___ you.  [lose]
-    - He's got a ___ button on his coat.  [loose]
-    - Look for it among the ___ papers on my desk.  [loose]
-    - Please be careful not to let the dog ___.  [loose]
+    - We need the ___ figures, not guesses.  [actual]
+    - The programme discussed several ___ issues.  [topical]
+    - The ___ distance was shorter than the map showed.  [actual]
+    - Climate change remains a highly ___ subject.  [topical]
+    - Tell me the ___ reason you left early.  [actual]
+    - Climate change is a very ___ subject in the news this week.  [topical]
+    - I want the ___ facts, not what people think.  [actual]
+    - Our podcast talks about ___ issues such as new school rules.  [topical]
 
-### quiet-quite (level B1)
-Words: quiet / quite
-Meaning: quiet = тихий; quite = довольно, вполне
-Rule: quiet = with little noise · quite = fairly or rather
+### fabric-factory (level B2)
+Words: fabric / factory
+Meaning: fabric = ткань; factory = фабрика, завод
+Rule: "фабрика" is a factory · fabric is ткань
 Existing sentences (do not repeat these ideas):
-    - Please be ___, because the baby is sleeping upstairs.  [quiet]
-    - The film was ___ good, but a little too long.  [quite]
-    - We live in a very ___ street near the park.  [quiet]
-    - I am ___ tired after the long journey today.  [quite]
-    - She found a ___ place to read her book.  [quiet]
-    - Let's get out of here and go somewhere ___.  [quiet]
-    - I tried to be as ___ as I could.  [quiet]
-    - It's ___ cold here, so I wear a hat.  [quite]
-    - It's ___ a bit more expensive than I thought.  [quite]
+    - This dress is made of soft cotton ___.  [fabric]
+    - My uncle works in a car ___.  [factory]
+    - The sofa ___ feels rough.  [fabric]
+    - The old ___ closed last winter.  [factory]
+    - Silk is an expensive ___.  [fabric]
+    - This soft ___ is perfect for summer dresses.  [fabric]
+    - My uncle works at a car ___ near the city.  [factory]
+    - Cotton is a light ___.  [fabric]
 
-### affect-effect (level B2)
-Words: affect / effect
-Meaning: affect = влиять на; effect = эффект, влияние
-Rule: affect = to influence (verb) · effect = a result (noun)
+### learn-find-out (level B1)
+Words: learn / find out
+Meaning: learn = учить, научиться; find out = узнать, выяснить
+Rule: learn = get knowledge or a skill · find out = discover a fact
 Existing sentences (do not repeat these ideas):
-    - Stress can ___ your sleep and your health.  [affect]
-    - The medicine had a strange ___ on him.  [effect]
-    - Bad weather may ___ the time of our flight.  [affect]
-    - The new law had a big ___ on small businesses.  [effect]
-    - I hope that this doesn't ___ our friendship.  [affect]
-    - We must not allow these problems to ___ the project.  [affect]
-    - The medicine seemed to have no ___ on the patient.  [effect]
-    - His words had a great ___ on my life.  [effect]
-    - The storm had a serious ___ on the economy.  [effect]
-
-### advice-advise (level B1)
-Words: advice / advise
-Meaning: advice = совет; advise = советовать
-Rule: advice = a suggestion (noun, with c) · advise = to give advice (verb, with s)
-Existing sentences (do not repeat these ideas):
-    - She gave me some good ___ about finding a job.  [advice]
-    - Can you ___ me which train to take?  [advise]
-    - I would ___ you to book a table early.  [advise]
-    - Thank you for your ___; it really helped me.  [advice]
-    - I have no one to go to for ___.  [advice]
-    - All I can do is to give her ___.  [advice]
-    - What do you ___ me to do?  [advise]
-    - I'd ___ you not to eat it.  [advise]
-    - Can you ___ me on what I should do?  [advise]
-
-### buy-by-bye (level A2)
-Words: buy / by / bye
-Meaning: buy = покупать; by = у, рядом; (автор) — кем; на (транспорте); bye = пока
-Rule: buy = pay for something · by = near, or who did it · bye = goodbye
-Existing sentences (do not repeat these ideas):
-    - I want to ___ a new jacket for winter.  [buy]
-    - This book was written ___ a local teacher.  [by]
-    - She waved and said ___ at the station.  [bye]
-    - He was sitting ___ the window and reading.  [by]
-    - Where can I ___ stamps around here?  [buy]
-    - He doesn't have enough money to ___ a car.  [buy]
-    - Is this a good time to ___ a house?  [buy]
-    - He doesn't think he can do that ___ himself.  [by]
-    - I'll stop ___ your place on my way home.  [by]
+    - I want to ___ Spanish before my trip.  [learn]
+    - We need to ___ who broke the vase.  [find out]
+    - Did you ever ___ why he was upset?  [find out]
+    - Children ___ quickly through songs and games.  [learn]
+    - Children ___ to read at about six years old.  [learn]
+    - Please ___ what time the museum opens.  [find out]
+    - I will call the office and ___ if the shop is open.  [find out]
+    - She is going to ___ Spanish next year.  [learn]
 
 ## Rules for every sentence
 
@@ -171,3 +137,9 @@ Existing sentences (do not repeat these ideas):
 For each sentence: (a) test every option in the gap, (b) confirm only one works, (c) confirm no leak (rule 3), (d) count words
 (5–16), (e) confirm no sentence is a near copy of another one in your answer. Remove any sentence that fails.
 
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

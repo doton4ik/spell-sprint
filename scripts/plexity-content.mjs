@@ -7,7 +7,8 @@
 // examples  a second example sentence for words that have none (extra_example, source "written")
 // level     new level-check questions (src/data/levelCheckDeep.ts): gap-fill, find the mistake, collocations, word formation, dictation
 // Without --apply a merge only reports. A --skip list is a JSON array: words, word ids or sentences to drop after a review.
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { readAnswer } from './plexity-json.mjs'
+import { mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 
 const [command, kind, ...rest] = process.argv.slice(2)
 const flag = (name) => rest.find((item) => item.startsWith(`--${name}=`))?.slice(name.length + 3)
@@ -79,12 +80,21 @@ function slots(rows) {
 }
 
 const writePrompt = (folder, name, text) => {
+  text += FOOTER
   mkdirSync(url(`research/plexity/prompts/${folder}/`), { recursive: true })
   writeFileSync(url(`research/plexity/prompts/${folder}/${name}`), text.trimEnd() + '\n')
 }
 const chunk = (items, size) =>
   Array.from({ length: Math.ceil(items.length / size) }, (_, index) => items.slice(index * size, (index + 1) * size))
 const pad = (number) => String(number).padStart(2, '0')
+
+const FOOTER = `
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.`
 
 const INTRO = `You are writing content for "Spell Sprint", an English spelling and vocabulary trainer for Russian-speaking learners (levels A2-C1).
 Answer with JSON only: one JSON array, no text outside it, no comments. Write everything yourself; do not copy from dictionaries or websites.
@@ -111,7 +121,7 @@ function wordsPrompts() {
   const { rows } = library()
   const all = slots(rows)
   const PER_SLOT = 10
-  chunk(all, 6).forEach((group, index) => {
+  chunk(all, 4).forEach((group, index) => {
     const list = group
       .map((slot) => `### ${slot.code} — ${slot.topic} / ${slot.subtopic}\nWords already in it (do not repeat): ${slot.words.join(', ')}`)
       .join('\n\n')
@@ -153,7 +163,7 @@ ${list}
 Before you answer, check each entry: the slot code exists, the word is not in the list, the example contains the word in exactly this form, the definition does not contain the word, and the Russian translation is correct and specific.`
     writePrompt('words', `words-${pad(index + 1)}.md`, text)
   })
-  console.log(`words: ${chunk(all, 6).length} prompts for ${all.length} slots -> research/plexity/prompts/words/`)
+  console.log(`words: ${chunk(all, 4).length} prompts for ${all.length} slots -> research/plexity/prompts/words/`)
 }
 
 function wordsMerge(file) {
@@ -162,7 +172,7 @@ function wordsMerge(file) {
   const knownWord = new Set(rows.map((row) => row.word.toLowerCase()))
   const knownPrompt = new Set(rows.map((row) => row.translation.toLowerCase()))
   const knownId = new Set(rows.map((row) => row.word_id))
-  const answer = JSON.parse(readFileSync(file, 'utf8'))
+  const answer = readAnswer(file)
   const added = []
   let rejected = 0
   const reject = (item, why) => {
@@ -244,7 +254,7 @@ function wordsMerge(file) {
 function examplesPrompts() {
   const { rows } = library()
   const need = rows.filter((row) => !row.extra_example)
-  chunk(need, 36).forEach((group, index) => {
+  chunk(need, 30).forEach((group, index) => {
     const list = group
       .map((row) => `- ${row.word_id} | ${row.word} | ${row.translation} | ${row.part_of_speech} | e.g. ${row.example}`)
       .join('\n')
@@ -274,14 +284,14 @@ Use the word_id exactly as written. Before you answer, check each sentence: it c
     writePrompt('examples', `examples-${pad(index + 1)}.md`, text)
   })
   console.log(
-    `examples: ${chunk(need, 36).length} prompts for ${need.length} words without a second example -> research/plexity/prompts/examples/`,
+    `examples: ${chunk(need, 30).length} prompts for ${need.length} words without a second example -> research/plexity/prompts/examples/`,
   )
 }
 
 function examplesMerge(file) {
   const { text, header, rows, eol } = library()
   const byId = new Map(rows.map((row) => [row.word_id, row]))
-  const answer = JSON.parse(readFileSync(file, 'utf8'))
+  const answer = readAnswer(file)
   const lines = text.split(/\r?\n/)
   const ok = new Map()
   let rejected = 0
@@ -326,7 +336,7 @@ function examplesMerge(file) {
 // ======================================================================================================================
 const LEVELS = { 1: 'A2', 2: 'B1', 3: 'B2', 4: 'C1' }
 function levelPrompts() {
-  const per = { gap: 8, mistake: 6, phrase: 6, formation: 4, dictation: 6 }
+  const per = { gap: 6, mistake: 5, phrase: 5, formation: 3, dictation: 5 }
   for (const level of [1, 2, 3, 4]) {
     const text = `${INTRO}
 
@@ -379,7 +389,7 @@ function levelMerge(file) {
     process.exit(1)
   }
   const source = readFileSync(LEVEL_FILE, 'utf8')
-  const answer = JSON.parse(readFileSync(file, 'utf8'))
+  const answer = readAnswer(file)
   const existing = new Set([...source.matchAll(/'((?:[^'\\]|\\.)*)'/g)].map((match) => match[1].toLowerCase().replace(/\\'/g, "'")))
   const q = (text) => JSON.stringify(text)
   const out = { grammar: [], vocabulary: [], formation: [], dictation: [] }
@@ -474,6 +484,13 @@ function levelMerge(file) {
 const table = {
   prompts: { words: wordsPrompts, examples: examplesPrompts, level: levelPrompts },
   merge: { words: wordsMerge, examples: examplesMerge, level: levelMerge },
+}
+const folders = { words: 'words', examples: 'examples', level: 'level-check' }
+if (command === 'prompts' && folders[kind]) {
+  // old prompts of this kind are removed first, so a smaller number of rounds leaves no stale files
+  mkdirSync(url(`research/plexity/prompts/${folders[kind]}/`), { recursive: true })
+  for (const name of readdirSync(url(`research/plexity/prompts/${folders[kind]}/`)))
+    if (/\.md$/.test(name)) rmSync(url(`research/plexity/prompts/${folders[kind]}/${name}`), { force: true })
 }
 const run = table[command]?.[kind]
 if (!run) {

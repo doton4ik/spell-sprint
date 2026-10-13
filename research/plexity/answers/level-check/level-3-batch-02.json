@@ -1,0 +1,292 @@
+{
+  "gap": [
+    {
+      "prompt": "By the time we arrived, the train ___.",
+      "answer": "had left",
+      "wrong": [
+        "left",
+        "has left",
+        "was leaving"
+      ],
+      "explain": "Use past perfect for the earlier action."
+    },
+    {
+      "prompt": "I wish I ___ more time to prepare.",
+      "answer": "had",
+      "wrong": [
+        "have",
+        "will have",
+        "would have"
+      ],
+      "explain": "Use the past simple after wish."
+    },
+    {
+      "prompt": "She’s the woman ___ helped me yesterday.",
+      "answer": "who",
+      "wrong": [
+        "which",
+        "whose",
+        "whom"
+      ],
+      "explain": "Use who for a person."
+    },
+    {
+      "prompt": "You ___ smoke here; it is not allowed.",
+      "answer": "mustn’t",
+      "wrong": [
+        "don’t have to",
+        "shouldn’t have",
+        "needn’t"
+      ],
+      "explain": "Mustn’t means it is prohibited."
+    },
+    {
+      "prompt": "If I ___ you, I would apologise.",
+      "answer": "were",
+      "wrong": [
+        "am",
+        "was being",
+        "will be"
+      ],
+      "explain": "Use were in this second conditional."
+    },
+    {
+      "prompt": "The package ___ tomorrow morning.",
+      "answer": "will be delivered",
+      "wrong": [
+        "will deliver",
+        "is delivering",
+        "delivered"
+      ],
+      "explain": "Use the passive future for the package."
+    },
+    {
+      "prompt": "He denied ___ the money.",
+      "answer": "taking",
+      "wrong": [
+        "to take",
+        "take",
+        "took"
+      ],
+      "explain": "After deny, use the -ing form."
+    },
+    {
+      "prompt": "We’d rather ___ at home tonight.",
+      "answer": "stay",
+      "wrong": [
+        "to stay",
+        "staying",
+        "stayed"
+      ],
+      "explain": "After would rather, use the base verb."
+    },
+    {
+      "prompt": "The committee recommended that the rules ___ revised.",
+      "answer": "be",
+      "wrong": [
+        "are",
+        "were",
+        "will be"
+      ],
+      "explain": "Use the subjunctive after recommend that."
+    },
+    {
+      "prompt": "The contract is ___ to change without written agreement.",
+      "answer": "unlikely",
+      "wrong": [
+        "improbably",
+        "not probable",
+        "unprobable"
+      ],
+      "explain": "Unlikely is followed by to + infinitive."
+    }
+  ],
+  "mistake": [
+    {
+      "sentence": "She is used to wake up early.",
+      "parts": [
+        "She",
+        "is used to",
+        "wake up",
+        "early"
+      ],
+      "answer": "wake up",
+      "explain": "Use waking up after be used to."
+    },
+    {
+      "sentence": "I look forward to meet you soon.",
+      "parts": [
+        "I",
+        "look forward to",
+        "meet you",
+        "soon"
+      ],
+      "answer": "meet you",
+      "explain": "Use meeting after look forward to."
+    },
+    {
+      "sentence": "He has worked here since three years.",
+      "parts": [
+        "He",
+        "has worked",
+        "here",
+        "since three years"
+      ],
+      "answer": "since three years",
+      "explain": "Use for with a period of time."
+    },
+    {
+      "sentence": "The problem must to be solved today.",
+      "parts": [
+        "The problem",
+        "must",
+        "to be solved",
+        "today"
+      ],
+      "answer": "to be solved",
+      "explain": "After must, use be solved."
+    },
+    {
+      "sentence": "Despite of the rain, we went out.",
+      "parts": [
+        "Despite",
+        "of the rain,",
+        "we",
+        "went out"
+      ],
+      "answer": "of the rain,",
+      "explain": "Say despite the rain."
+    },
+    {
+      "sentence": "She suggested me to try again.",
+      "parts": [
+        "She",
+        "suggested me",
+        "to try again",
+        ""
+      ],
+      "answer": "suggested me",
+      "explain": "Say suggested that I try, or advised me."
+    }
+  ],
+  "phrase": [
+    {
+      "prompt": "We need to ___ up with a new plan.",
+      "answer": "come",
+      "wrong": [
+        "get",
+        "take",
+        "put"
+      ],
+      "explain": "Come up with means think of."
+    },
+    {
+      "prompt": "I can’t ___ up with this noise any longer.",
+      "answer": "put",
+      "wrong": [
+        "take",
+        "make",
+        "give"
+      ],
+      "explain": "Put up with means accept something unpleasant."
+    },
+    {
+      "prompt": "She decided to ___ up smoking last year.",
+      "answer": "give",
+      "wrong": [
+        "take",
+        "put",
+        "make"
+      ],
+      "explain": "Give up means stop doing something."
+    },
+    {
+      "prompt": "The meeting was ___ off because of the storm.",
+      "answer": "called",
+      "wrong": [
+        "put",
+        "taken",
+        "made"
+      ],
+      "explain": "Call off means cancel."
+    },
+    {
+      "prompt": "He wants to ___ for a new position at work.",
+      "answer": "apply",
+      "wrong": [
+        "ask",
+        "request",
+        "demand"
+      ],
+      "explain": "We apply for a job."
+    },
+    {
+      "prompt": "I need to ___ an eye on my luggage.",
+      "answer": "keep",
+      "wrong": [
+        "give",
+        "make",
+        "take"
+      ],
+      "explain": "Keep an eye on means watch carefully."
+    },
+    {
+      "prompt": "The new evidence ___ up several questions.",
+      "answer": "threw",
+      "wrong": [
+        "put",
+        "took",
+        "set"
+      ],
+      "explain": "Throw up means produce or reveal problems."
+    }
+  ],
+  "formation": [
+    {
+      "prompt": "Her ___ at the interview was excellent. (PERFORM)",
+      "answer": "performance",
+      "explain": "Use the noun form of perform."
+    },
+    {
+      "prompt": "The instructions were very ___. (CONFUSE)",
+      "answer": "confusing",
+      "explain": "Add -ing to describe something that causes confusion."
+    },
+    {
+      "prompt": "He spoke with great ___. (CONFIDENT)",
+      "answer": "confidence",
+      "explain": "Use the noun form of confident."
+    },
+    {
+      "prompt": "This decision was completely ___. (REASON)",
+      "answer": "unreasonable",
+      "explain": "Add un- and -able for not reasonable."
+    }
+  ],
+  "dictation": [
+    {
+      "sentence": "She had already left when I called her.",
+      "alternatives": []
+    },
+    {
+      "sentence": "If I were you, I would accept the offer.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The delivery will be made on Monday morning.",
+      "alternatives": []
+    },
+    {
+      "sentence": "He is used to working under pressure.",
+      "alternatives": []
+    },
+    {
+      "sentence": "We need to come up with a better solution.",
+      "alternatives": []
+    },
+    {
+      "sentence": "I wish I had more experience in this field.",
+      "alternatives": []
+    }
+  ]
+}

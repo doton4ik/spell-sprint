@@ -1,0 +1,264 @@
+{
+  "gap": [
+    {
+      "prompt": "If we had left earlier, we ___ the traffic.",
+      "answer": "would have avoided",
+      "wrong": [
+        "avoided",
+        "would avoid",
+        "had avoided"
+      ],
+      "explain": "Use the third conditional for an unreal past."
+    },
+    {
+      "prompt": "She suggested that he ___ the report before Friday.",
+      "answer": "submit",
+      "wrong": [
+        "submits",
+        "submitted",
+        "will submit"
+      ],
+      "explain": "Use the base form after suggest that."
+    },
+    {
+      "prompt": "The package ___ by the courier tomorrow.",
+      "answer": "will be collected",
+      "wrong": [
+        "will collect",
+        "is collecting",
+        "collected"
+      ],
+      "explain": "Use the future passive for the package."
+    },
+    {
+      "prompt": "I’d rather you ___ anyone about the change yet.",
+      "answer": "didn’t tell",
+      "wrong": [
+        "don’t tell",
+        "not tell",
+        "haven’t told"
+      ],
+      "explain": "Use the past form after would rather you."
+    },
+    {
+      "prompt": "He denied ___ the deadline deliberately.",
+      "answer": "missing",
+      "wrong": [
+        "to miss",
+        "miss",
+        "missed"
+      ],
+      "explain": "After deny, use the -ing form."
+    },
+    {
+      "prompt": "The company has been ___ to reduce costs this year.",
+      "answer": "trying",
+      "wrong": [
+        "tried",
+        "try",
+        "tries"
+      ],
+      "explain": "Use has been + -ing for an ongoing effort."
+    },
+    {
+      "prompt": "The new system is much ___ than the old one.",
+      "answer": "more efficient",
+      "wrong": [
+        "efficienter",
+        "most efficient",
+        "as efficient"
+      ],
+      "explain": "Use more with longer adjectives."
+    },
+    {
+      "prompt": "We need to ___ up with a solution before the meeting.",
+      "answer": "come",
+      "wrong": [
+        "catch",
+        "put",
+        "take"
+      ],
+      "explain": "Come up with means think of."
+    }
+  ],
+  "mistake": [
+    {
+      "sentence": "She has worked here since five years.",
+      "parts": [
+        "She",
+        "has worked",
+        "here",
+        "since five years"
+      ],
+      "answer": "since five years",
+      "explain": "Use for with a period of time."
+    },
+    {
+      "sentence": "He suggested to postpone the meeting.",
+      "parts": [
+        "He",
+        "suggested",
+        "to postpone",
+        "the meeting"
+      ],
+      "answer": "to postpone",
+      "explain": "Use suggest postponing."
+    },
+    {
+      "sentence": "If I will see her, I will give her the message.",
+      "parts": [
+        "If I",
+        "will see",
+        "her,",
+        "I will give her the message"
+      ],
+      "answer": "will see",
+      "explain": "Use the present simple after if."
+    },
+    {
+      "sentence": "The number of applicants have increased this year.",
+      "parts": [
+        "The number of applicants",
+        "have increased",
+        "this year",
+        ""
+      ],
+      "answer": "have increased",
+      "explain": "Use has with the number."
+    },
+    {
+      "sentence": "She is used to work under pressure.",
+      "parts": [
+        "She",
+        "is used to",
+        "work",
+        "under pressure"
+      ],
+      "answer": "work",
+      "explain": "Use working after be used to."
+    },
+    {
+      "sentence": "I look forward to hear from you soon.",
+      "parts": [
+        "I",
+        "look forward to",
+        "hear from you",
+        "soon"
+      ],
+      "answer": "hear from you",
+      "explain": "Use hearing after look forward to."
+    }
+  ],
+  "phrase": [
+    {
+      "prompt": "They decided to ___ off the launch until next month.",
+      "answer": "put",
+      "wrong": [
+        "take",
+        "set",
+        "bring"
+      ],
+      "explain": "Put off means postpone."
+    },
+    {
+      "prompt": "We need to ___ down the main points before writing the report.",
+      "answer": "note",
+      "wrong": [
+        "write",
+        "put",
+        "take"
+      ],
+      "explain": "Note down means write something quickly."
+    },
+    {
+      "prompt": "She managed to ___ over a difficult period at work.",
+      "answer": "get",
+      "wrong": [
+        "take",
+        "put",
+        "come"
+      ],
+      "explain": "Get over means recover from."
+    },
+    {
+      "prompt": "Can you ___ me up at the airport?",
+      "answer": "pick",
+      "wrong": [
+        "take",
+        "bring",
+        "collect"
+      ],
+      "explain": "Pick up means collect someone by car."
+    },
+    {
+      "prompt": "He wants to ___ for a management position.",
+      "answer": "apply",
+      "wrong": [
+        "ask",
+        "request",
+        "demand"
+      ],
+      "explain": "Apply for a job or position."
+    },
+    {
+      "prompt": "I need to ___ an eye on the delivery schedule.",
+      "answer": "keep",
+      "wrong": [
+        "give",
+        "make",
+        "take"
+      ],
+      "explain": "Keep an eye on means watch carefully."
+    }
+  ],
+  "formation": [
+    {
+      "prompt": "Her ___ during the interview was impressive. (PERFORM)",
+      "answer": "performance",
+      "explain": "Use the noun form of perform."
+    },
+    {
+      "prompt": "The instructions were very ___. (CONFUSE)",
+      "answer": "confusing",
+      "explain": "Add -ing to describe something that causes confusion."
+    },
+    {
+      "prompt": "He spoke with great ___. (CONFIDENT)",
+      "answer": "confidence",
+      "explain": "Use the noun form of confident."
+    },
+    {
+      "prompt": "The decision seemed completely ___. (REASON)",
+      "answer": "unreasonable",
+      "explain": "Add un- and -able for not reasonable."
+    }
+  ],
+  "dictation": [
+    {
+      "sentence": "If we had left earlier, we would have avoided the traffic.",
+      "alternatives": []
+    },
+    {
+      "sentence": "She suggested that he submit the report before Friday.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The package will be collected by the courier tomorrow.",
+      "alternatives": []
+    },
+    {
+      "sentence": "I’d rather you didn’t tell anyone about the change yet.",
+      "alternatives": [
+        "I would rather you didn’t tell anyone about the change yet."
+      ]
+    },
+    {
+      "sentence": "We need to come up with a solution before the meeting.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The new system is much more efficient than the old one.",
+      "alternatives": []
+    }
+  ]
+}

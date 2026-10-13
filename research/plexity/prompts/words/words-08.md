@@ -4,25 +4,19 @@ Avoid words and sentences where British and American English differ (colour/colo
 
 ## Your task in this round
 
-Write **10 NEW words for each of these 6 slots** (60 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
+Write **10 NEW words for each of these 4 slots** (40 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
 
-### S43 — Nature and Animals / Nature and Animals
-Words already in it (do not repeat): forest, mountain, valley, island, wildlife, insect, butterfly, squirrel, eagle, pollution, recycle, cliff, volcano, earthquake, ocean, meadow
+### S29 — General English / Professional Communication
+Words already in it (do not repeat): deadline, research, responsibility, achievement, presentation, communication
 
-### S44 — Nature and Animals / Weather and Seasons
-Words already in it (do not repeat): thunder, fog, hail, frost, rainbow
+### S30 — Health and Body / At the Doctor
+Words already in it (do not repeat): appointment, prescription, symptom, treatment, recover, vaccine, dentist, ambulance, painkiller, check-up, allergy, insurance, bandage, pill, nurse, thermometer
 
-### S45 — People and Family / Family and Friends
-Words already in it (do not repeat): relative, neighbour, colleague, friendship, grandparents, sibling, stranger, guest, generation, marriage, generous, honest, polite, rude, shy, stubborn
+### S31 — Health and Body / Body and Symptoms
+Words already in it (do not repeat): stomach, throat, shoulder, knee, headache, fever, cough, sneeze, dizzy, sore, bruise, injury, ankle, wrist, elbow, rash, chest, wound, painful
 
-### S46 — People and Family / Feelings
-Words already in it (do not repeat): upset, confused, furious, cheerful
-
-### S47 — Phone and Messages / Calls
-Words already in it (do not repeat): call back, hang up, voicemail, ring, reception, ringtone, conversation, mobile, dial, caller
-
-### S48 — Phone and Messages / Phone Basics
-Words already in it (do not repeat): signal, switch off, silent, contact, settings, speaker, headphones, passcode, unlock
+### S32 — Hobbies and Free Time / Creative Hobbies
+Words already in it (do not repeat): paint, knit, sew, hobby, photography, guitar, instrument, gardening, collect, craft, poetry, sketch, rehearsal
 
 ## What a good word is
 
@@ -52,3 +46,9 @@ Words already in it (do not repeat): signal, switch off, silent, contact, settin
 ]
 
 Before you answer, check each entry: the slot code exists, the word is not in the list, the example contains the word in exactly this form, the definition does not contain the word, and the Russian translation is correct and specific.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

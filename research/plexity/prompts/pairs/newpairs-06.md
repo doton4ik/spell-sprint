@@ -6,14 +6,12 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 ## Your task in this round
 
-Create **6 NEW pairs** with **25 sentences each** (150 sentences). Use exactly these ids, levels and words (the options in `words` are separated by " / "; for a pair like "all together" the option is two words):
+Create **4 NEW pairs** with **20 sentences each** (80 sentences). Use exactly these ids, levels and words (the options in `words` are separated by " / "; for a pair like "all together" the option is two words):
 
-- id `patience-patients`, level B1, words: patience / patients
-- id `stake-steak`, level B1, words: stake / steak
-- id `soul-sole`, level B1, words: soul / sole
-- id `die-dye`, level B1, words: die / dye
-- id `flu-flew`, level B1, words: flu / flew
-- id `pole-poll`, level B1, words: pole / poll
+- id `roll-role`, level B1, words: roll / role
+- id `board-bored`, level B1, words: board / bored
+- id `course-coarse`, level B1, words: course / coarse
+- id `scene-seen`, level B1, words: scene / seen
 
 The level tells how hard the other words in the sentences may be (A2 / B1 / B2). Meanings are Russian glosses (a few words), the hint is one line in English.
 
@@ -67,3 +65,9 @@ historic / historical, principal / principle, desert / dessert).
 For each sentence: (a) test every option in the gap, (b) confirm only one works, (c) confirm no leak (rule 3), (d) count words
 (5–16), (e) confirm no sentence is a near copy of another one in your answer. Remove any sentence that fails.
 
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

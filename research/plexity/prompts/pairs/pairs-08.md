@@ -6,188 +6,97 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 ## Your task in this round
 
-Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
+Write **20 new sentences for each of these 6 pairs**, 120 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### their-there-theyre (level A2)
-Words: their / there / they're
-Meaning: their = их; there = там; there is — есть; they're = они (есть) = they are
-Rule: their = belongs to them · there = place, or "there is" · they're = they are
+### weather-whether (level A2)
+Words: weather / whether
+Meaning: weather = погода; whether = ли
+Rule: weather = rain, sun, wind · whether = "if" after verbs like know or ask
 Existing sentences (do not repeat these ideas):
-    - The children forgot ___ lunch boxes at school.  [their]
-    - Put the bags over ___, next to the door.  [there]
-    - ___ going to be late again today.  [they're]
-    - Is ___ a chemist near here?  [there]
-    - My neighbours sold ___ car last month.  [their]
-    - I told them what I thought of ___ plan.  [their]
-    - The parents are playing a game with ___ children.  [their]
-    - Each person knows ___ situation better than anyone else.  [their]
-    - Do you think we can get ___ in time?  [there]
-    - I'll be home by the time you get ___.  [there]
-    - ___ are still things that we need to do.  [there]
-    - Do you have any idea what ___ talking about?  [they're]
-    - There's no one in the house. ___ all outside.  [they're]
-    - What else do you think ___ planning to do?  [they're]
+    - The ___ was terrible all weekend, so we stayed home.  [weather]
+    - I don't know ___ he will come to the meeting.  [whether]
+    - We will have a picnic if the ___ is good.  [weather]
+    - She asked ___ the shop was open on Sundays.  [whether]
+    - The ___ will change for the worse this afternoon.  [weather]
+    - No, I don't think the ___ will clear up.  [weather]
+    - I wonder ___ I should really become a teacher.  [whether]
+    - I don't know ___ you like her or not.  [whether]
+    - I couldn't care less ___ you stay or go.  [whether]
 
-### last-latest (level B1)
-Words: last / latest
-Meaning: last = последний (финальный); прошлый; latest = последний (самый новый)
-Rule: last = final, or the one before this one (last week, the last bus) · latest = the newest, just released or most recent (the latest news, the latest update)
+### lose-loose (level B1)
+Words: lose / loose
+Meaning: lose = терять, проигрывать; loose = свободный, болтающийся
+Rule: lose = not win or not keep (verb) · loose = not tight (adjective)
 Existing sentences (do not repeat these ideas):
-    - Please turn off the lights; you are the ___ person to leave.  [last]
-    - My phone is the ___ model, released this week.  [latest]
-    - We watched the ___ episode, and the series ended.  [last]
-    - She always reads the ___ news on her phone.  [latest]
-    - That was the ___ piece of cake, and now it's gone.  [last]
-    - I saw her ___ month in Prague.  [last]
-    - He ran the ___ lap and won the race.  [last]
-    - Check the ___ version of the app for new features.  [latest]
-    - Who was the ___ to arrive at school?  [last]
-    - It was the ___ day of our holiday.  [last]
-    - Sunday was the ___ time we saw each other.  [last]
-    - She bought the ___ laptop with the newest processor.  [latest]
-    - We missed the ___ train and walked home.  [last]
-    - What is the ___ news about the weather?  [latest]
-    - This is my ___ chance to pass the exam.  [last]
+    - These trousers are too ___ for me now.  [loose]
+    - Be careful not to ___ your ticket on the train.  [lose]
+    - One of the screws on the chair is ___.  [loose]
+    - I am afraid we will ___ the match tomorrow.  [lose]
+    - I gave up trying to ___ weight years ago.  [lose]
+    - I was afraid I was going to ___ you.  [lose]
+    - He's got a ___ button on his coat.  [loose]
+    - Look for it among the ___ papers on my desk.  [loose]
+    - Please be careful not to let the dog ___.  [loose]
 
-### lonely-alone (level B1)
-Words: lonely / alone
-Meaning: lonely = одинокий (грустно без людей); alone = один (без других людей)
-Rule: lonely = sad because you have no company (also: a remote place) · alone = without other people, not always sad
+### quiet-quite (level B1)
+Words: quiet / quite
+Meaning: quiet = тихий; quite = довольно, вполне
+Rule: quiet = with little noise · quite = fairly or rather
 Existing sentences (do not repeat these ideas):
-    - She lives ___ in a small flat but she loves it.  [alone]
-    - The ___ boy sat on a bench, hoping someone would talk to him.  [lonely]
-    - I like to walk ___ in the forest.  [alone]
-    - A ___ student may join a club to meet people.  [lonely]
-    - Please do not leave the child ___ at home.  [alone]
-    - The ___ old man had no friends to visit him.  [lonely]
-    - I need to be ___ to finish this essay.  [alone]
-    - He travelled ___ across Europe by bike.  [alone]
-    - A ___ child may need a friend to talk to.  [lonely]
-    - Leave me ___ for ten minutes, please.  [alone]
-    - Moving to a big city can be a ___ experience.  [lonely]
-    - I can do it ___; I do not need help.  [alone]
-    - Do not walk home ___ at night.  [alone]
-    - She wrote a sad song about a ___ girl.  [lonely]
-    - I prefer to study ___ in a quiet room.  [alone]
-    - Can you stay here ___ for a while?  [alone]
+    - Please be ___, because the baby is sleeping upstairs.  [quiet]
+    - The film was ___ good, but a little too long.  [quite]
+    - We live in a very ___ street near the park.  [quiet]
+    - I am ___ tired after the long journey today.  [quite]
+    - She found a ___ place to read her book.  [quiet]
+    - Let's get out of here and go somewhere ___.  [quiet]
+    - I tried to be as ___ as I could.  [quiet]
+    - It's ___ cold here, so I wear a hat.  [quite]
+    - It's ___ a bit more expensive than I thought.  [quite]
 
-### each-every (level B1)
-Words: each / every
-Meaning: each = каждый (по отдельности); every = каждый, все без исключения
-Rule: each = one by one, used with 'of', after the verb, or before a noun (each child) · every = all without exception, before a singular noun (every day) · fixed: each other, every now and then
+### affect-effect (level B2)
+Words: affect / effect
+Meaning: affect = влиять на; effect = эффект, влияние
+Rule: affect = to influence (verb) · effect = a result (noun)
 Existing sentences (do not repeat these ideas):
-    - ___ of the children got a small present.  [each]
-    - I go running almost ___ morning before school.  [every]
-    - Nearly ___ shop in town was closed on Monday.  [every]
-    - She gave a pen to ___ of the guests.  [each]
-    - The bus comes ___ ten minutes.  [every]
-    - The two boys carried three bags ___.  [each]
-    - Not ___ student passed the test.  [every]
-    - ___ of us brought a different dish to the picnic.  [each]
-    - I changed my password ___ three months.  [every]
-    - The teacher spoke to ___ of the parents separately.  [each]
-    - Almost ___ person in the room smiled.  [every]
-    - I visit my grandparents ___ other weekend.  [every]
-    - The tickets cost ten euros ___.  [each]
-    - I water the plants ___ second day.  [every]
-    - He gave ___ of us a map.  [each]
-    - She writes to her mother ___ two days.  [every]
+    - Stress can ___ your sleep and your health.  [affect]
+    - The medicine had a strange ___ on him.  [effect]
+    - Bad weather may ___ the time of our flight.  [affect]
+    - The new law had a big ___ on small businesses.  [effect]
+    - I hope that this doesn't ___ our friendship.  [affect]
+    - We must not allow these problems to ___ the project.  [affect]
+    - The medicine seemed to have no ___ on the patient.  [effect]
+    - His words had a great ___ on my life.  [effect]
+    - The storm had a serious ___ on the economy.  [effect]
 
-### like-as (level B1)
-Words: like / as
-Meaning: like = как, похожий на; as = как (в роли), в качестве
-Rule: like = similar to, before a noun · as = in the role of, or before a clause
+### advice-advise (level B1)
+Words: advice / advise
+Meaning: advice = совет; advise = советовать
+Rule: advice = a suggestion (noun, with c) · advise = to give advice (verb, with s)
 Existing sentences (do not repeat these ideas):
-    - She works ___ a nurse in a small hospital.  [as]
-    - My brother looks just ___ our father.  [like]
-    - He used an old box ___ a table.  [as]
-    - This soup tastes ___ chicken.  [like]
-    - ___ a child, I lived near the sea.  [as]
-    - That building looks ___ a giant ship.  [like]
-    - Many people see the park ___ a perfect place to relax.  [as]
-    - He runs ___ the wind.  [like]
-    - Use this cloth ___ a bandage if you need to.  [as]
-    - What does your new flat look ___?  [like]
-    - She was famous ___ a singer before she became an actress.  [as]
-    - Do not behave ___ a spoiled child.  [like]
-    - ___ a student, I get cheaper train tickets.  [as]
-    - Your phone is ___ mine, but a little bigger.  [like]
-    - It feels ___ summer in the middle of October.  [like]
-    - Please act ___ our guide for the day.  [as]
-    - She sings ___ an angel.  [like]
+    - She gave me some good ___ about finding a job.  [advice]
+    - Can you ___ me which train to take?  [advise]
+    - I would ___ you to book a table early.  [advise]
+    - Thank you for your ___; it really helped me.  [advice]
+    - I have no one to go to for ___.  [advice]
+    - All I can do is to give her ___.  [advice]
+    - What do you ___ me to do?  [advise]
+    - I'd ___ you not to eat it.  [advise]
+    - Can you ___ me on what I should do?  [advise]
 
-### few-little (level B1)
-Words: few / little
-Meaning: few = мало (исчисляемое); little = мало (неисчисляемое)
-Rule: few = not many, countable things (few books) · little = not much, uncountable things (little water)
+### buy-by-bye (level A2)
+Words: buy / by / bye
+Meaning: buy = покупать; by = у, рядом; (автор) — кем; на (транспорте); bye = пока
+Rule: buy = pay for something · by = near, or who did it · bye = goodbye
 Existing sentences (do not repeat these ideas):
-    - We have very ___ time before the train leaves.  [little]
-    - Only a ___ students passed the hard test.  [few]
-    - I put a ___ sugar in my tea.  [little]
-    - ___ people know how to repair old watches.  [few]
-    - She has ___ money, so she cooks at home.  [little]
-    - Add a ___ milk if the soup is too thick.  [little]
-    - A ___ friends are coming over tonight.  [few]
-    - We had ___ snow in the city this winter.  [little]
-    - I have only a ___ euros in my pocket.  [few]
-    - Please give me a ___ help with this box.  [little]
-    - Quite a ___ shops are closed on Sunday.  [few]
-    - The town has ___ interest in new buses.  [little]
-    - Very ___ tourists visit this village in winter.  [few]
-    - There was ___ hope of finding the lost ring.  [little]
-    - Only a ___ minutes are left in the lesson.  [few]
-    - I know ___ about cars, so ask someone else.  [little]
-    - Just a ___ days ago, it was sunny.  [few]
-    - She speaks ___ English, but she tries her best.  [little]
-
-### been-gone (level B1)
-Words: been / gone
-Meaning: been = был (и вернулся); gone = ушёл (и ещё не вернулся); исчез
-Rule: been = went and came back (been to Rome) · gone = went and is still away, or disappeared
-Existing sentences (do not repeat these ideas):
-    - I have ___ to Vienna twice.  [been]
-    - Where is Anna? She has ___ to the shop.  [gone]
-    - Have you ever ___ to Japan?  [been]
-    - Dad is not here; he has ___ to work.  [gone]
-    - We have never ___ to a concert like that.  [been]
-    - My keys have ___; I cannot find them anywhere.  [gone]
-    - She has ___ to the dentist, and her tooth feels fine now.  [been]
-    - I have just ___ to the post office, so the parcel is sent.  [been]
-    - All the cake has ___! Who ate it?  [gone]
-    - They have ___ to this café many times.  [been]
-    - The tourists have ___ and the beach is quiet again.  [gone]
-    - He has ___ to Prague and loved the old town.  [been]
-    - Everybody has ___ home, and the classroom is empty.  [gone]
-    - Jana has ___ out; please call back later.  [gone]
-    - Has your sister ever ___ to a farm?  [been]
-    - His fever has ___ and he feels better.  [gone]
-    - We have ___ here before, haven't we?  [been]
-    - The birds have ___ south for the winter.  [gone]
-
-### since-for (level B1)
-Words: since / for
-Meaning: since = с (какого-то момента); for = в течение (какого-то времени)
-Rule: since = from a starting point in time · for = how long, a period of time
-Existing sentences (do not repeat these ideas):
-    - I have lived here ___ 2019.  [since]
-    - She has been ill ___ three days.  [for]
-    - We have known each other ___ we were children.  [since]
-    - He has worked at the bakery ___ ten years.  [for]
-    - It has rained ___ Monday morning.  [since]
-    - They have been married ___ a long time.  [for]
-    - I have not eaten anything ___ breakfast.  [since]
-    - My phone has been broken ___ two weeks.  [for]
-    - ___ I moved to Košice, I have made many friends.  [since]
-    - Have you been waiting ___ long?  [for]
-    - We have been friends ___ almost a decade.  [for]
-    - He has not called me ___ the party.  [since]
-    - The shop has been closed ___ a month.  [for]
-    - I have played the guitar ___ I was twelve.  [since]
-    - Anna has lived abroad ___ several years.  [for]
-    - The road has been blocked ___ the storm.  [since]
-    - I have not seen them ___ ages.  [for]
-    - Nothing has changed ___ yesterday.  [since]
-    - They have studied together ___ two hours.  [for]
+    - I want to ___ a new jacket for winter.  [buy]
+    - This book was written ___ a local teacher.  [by]
+    - She waved and said ___ at the station.  [bye]
+    - He was sitting ___ the window and reading.  [by]
+    - Where can I ___ stamps around here?  [buy]
+    - He doesn't have enough money to ___ a car.  [buy]
+    - Is this a good time to ___ a house?  [buy]
+    - He doesn't think he can do that ___ himself.  [by]
+    - I'll stop ___ your place on my way home.  [by]
 
 ## Rules for every sentence
 
@@ -234,3 +143,9 @@ Existing sentences (do not repeat these ideas):
 For each sentence: (a) test every option in the gap, (b) confirm only one works, (c) confirm no leak (rule 3), (d) count words
 (5–16), (e) confirm no sentence is a near copy of another one in your answer. Remove any sentence that fails.
 
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

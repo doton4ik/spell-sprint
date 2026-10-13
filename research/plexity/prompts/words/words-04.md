@@ -4,25 +4,19 @@ Avoid words and sentences where British and American English differ (colour/colo
 
 ## Your task in this round
 
-Write **10 NEW words for each of these 6 slots** (60 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
+Write **10 NEW words for each of these 4 slots** (40 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
 
-### S19 — Everyday Life / Home and Services
-Words already in it (do not repeat): appointment, receipt, rubbish, recycling, plumber, electrician, tenant, repair, leak, heating, electricity, dishwasher, washing machine, broom, bucket, doorbell, key, kettle, microwave, sink
+### S13 — Common Actions / Everyday Phrasal Verbs
+Words already in it (do not repeat): look up, give up, turn on, turn off, find out, figure out, carry on, break down, run out of, put off, set up, take off, get along with, come across, work out, show up, call off, look forward to, pick up, put up with, look for, get up, fill in, check in, check out, run into, turn down, turn up, give back, take after, look into, set off, get over, hold on, go on, come back, wake up, sort out
 
-### S20 — Family and Relationships / Friends and Partners
-Words already in it (do not repeat): flatmate, acquaintance, engaged, trust, argue, fall out with, boyfriend, girlfriend, relationship
+### S14 — Common Actions / Out and About
+Words already in it (do not repeat): queue up, run errands, drop by, hang out, catch up with, get lost, rush hour, knock, hurry, wander, carry, borrow, lend, fetch, greet, waste
 
-### S21 — Family and Relationships / Life Events
-Words already in it (do not repeat): wedding, divorce, anniversary, funeral, celebrate, adopt, bring up, look after, bride, groom, honeymoon, widow
+### S15 — Describing Things / Material and Texture
+Words already in it (do not repeat): wooden, leather, cotton, plastic, smooth, rough, sticky, shiny, transparent, fragile
 
-### S22 — Family and Relationships / Relatives
-Words already in it (do not repeat): cousin, nephew, niece, aunt, uncle, twins, elderly, ancestor, stepmother, stepfather, grandchild, toddler, teenager, adult, babysitter
-
-### S23 — Feelings / Feelings
-Words already in it (do not repeat): happy, anxious, embarrassed, jealous, grateful, disappointed, confident, exhausted, curious, proud, lonely, relieved, frustrated, excited
-
-### S24 — Food and Drinks / Café and Restaurant
-Words already in it (do not repeat): menu, order, bill, tip, waiter, reservation, beverage, sparkling water, allergic, vegetarian, takeaway, portion, biscuit, spicy
+### S16 — Describing Things / Quality and Colour
+Words already in it (do not repeat): beige, turquoise, grey, excellent, terrible, ordinary, unusual, carefully, extremely, pale, colourful, ancient, modern, comfortable
 
 ## What a good word is
 
@@ -52,3 +46,9 @@ Words already in it (do not repeat): menu, order, bill, tip, waiter, reservation
 ]
 
 Before you answer, check each entry: the slot code exists, the word is not in the list, the example contains the word in exactly this form, the definition does not contain the word, and the Russian translation is correct and specific.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

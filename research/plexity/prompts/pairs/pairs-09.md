@@ -6,189 +6,98 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 ## Your task in this round
 
-Write **25 new sentences for each of these 7 pairs**, 175 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
+Write **20 new sentences for each of these 6 pairs**, 120 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### also-too (level B1)
-Words: also / too
-Meaning: also = также, ещё; too = тоже (в конце); слишком
-Rule: also = before the main verb, after 'be', or 'and also + noun' · too = at the end of a clause (me too), or 'too + adjective' = more than needed
+### week-weak (level A2)
+Words: week / weak
+Meaning: week = неделя; weak = слабый
+Rule: week = seven days · weak = not strong
 Existing sentences (do not repeat these ideas):
-    - She speaks French and ___ German.  [also]
-    - I want to come ___.  [too]
-    - The soup is ___ salty for me.  [too]
-    - Tom is a teacher and ___ a writer.  [also]
-    - Can I have a coffee, ___?  [too]
-    - We visited the museum and ___ the old castle.  [also]
-    - She plays tennis and ___ swims every week.  [also]
-    - You are ___ young to drive a car.  [too]
-    - The hotel has a pool and ___ a small gym.  [also]
-    - I am tired, and my brother is tired ___.  [too]
-    - This bag is ___ heavy to carry.  [too]
-    - Our teacher ___ helps us after class.  [also]
-    - Please be careful, and ___ remember to lock the door.  [also]
-    - The shop sells books and ___ sells coffee.  [also]
-    - She can sing, and she can dance ___.  [too]
-    - It is ___ late to call him now.  [too]
-    - They have two dogs and ___ a cat.  [also]
-    - I love this song, and my friends love it ___.  [too]
-    - He bought bread, and ___ some cheese.  [also]
+    - We have a team meeting every ___ on Monday.  [week]
+    - After the illness, he felt very ___ for days.  [weak]
+    - She was too ___ to lift the heavy bag.  [weak]
+    - Next ___ we are going on holiday to Greece.  [week]
+    - All I know is that she left last ___.  [week]
+    - What will we be doing this time next ___?  [week]
+    - He will be up and about in a ___.  [week]
+    - I was too ___ to get out of bed.  [weak]
+    - I'm not as ___ as you think I am.  [weak]
 
-### interested-interesting (level B1)
-Words: interested / interesting
-Meaning: interested = заинтересованный (человек); interesting = интересный (вещь, человек)
-Rule: interested = how a person feels (I am interested) · interesting = what causes the interest (an interesting book)
+### sea-see (level A2)
+Words: sea / see
+Meaning: sea = море; see = видеть
+Rule: sea = salt water · see = use your eyes
 Existing sentences (do not repeat these ideas):
-    - This book is really ___ and I can't stop reading.  [interesting]
-    - Are you ___ in learning to cook?  [interested]
-    - We saw an ___ film about space last night.  [interesting]
-    - My brother is very ___ in old cars.  [interested]
-    - That is a very ___ idea.  [interesting]
-    - She was ___ in the news about the new bridge.  [interested]
-    - The museum has some ___ paintings from Italy.  [interesting]
-    - I am not ___ in football.  [interested]
-    - The teacher asked who was ___ in the trip.  [interested]
-    - It was an ___ trip with lots of surprises.  [interesting]
-    - Many students are ___ in studying abroad.  [interested]
-    - He told us something ___ about his village.  [interesting]
-    - Tom looks ___ in everything the guide says.  [interested]
-    - Her job sounds really ___.  [interesting]
-    - I was so ___ that I asked ten questions.  [interested]
-    - Do you know any ___ websites for learning English?  [interesting]
-    - The visitors seemed ___ in our old photos.  [interested]
-    - The lesson was ___ because we played a game.  [interesting]
-    - I'm ___ in buying a used bike if it is cheap.  [interested]
+    - We swam in the warm ___ every afternoon.  [sea]
+    - Can you ___ the mountains from your window?  [see]
+    - I will ___ you at the station tomorrow.  [see]
+    - The ___ was calm and blue this morning.  [sea]
+    - There are a lot of fish in the ___.  [sea]
+    - You will have a wonderful view of the ___.  [sea]
+    - The town is located twelve miles from the ___.  [sea]
+    - I would very much like to ___ her again.  [see]
+    - This is something that we don't ___ every day.  [see]
 
-### so-such (level B1)
-Words: so / such
-Meaning: so = так, настолько (+ прилагательное); such = такой (+ существительное)
-Rule: so = before an adjective or adverb (so happy) · such = before a noun (such a nice day)
+### magazine-shop (level A2)
+Words: magazine / shop
+Meaning: magazine = журнал; shop = магазин
+Rule: "магазин" is a shop · a magazine is a журнал
 Existing sentences (do not repeat these ideas):
-    - It was ___ a hot day that we stayed indoors.  [such]
-    - The soup is ___ delicious!  [so]
-    - She has ___ a kind heart.  [such]
-    - I am ___ tired that I can't think.  [so]
-    - We had ___ nice weather on our trip.  [such]
-    - He speaks ___ quickly that I cannot follow.  [so]
-    - You have ___ lovely children.  [such]
-    - Thank you, you are ___ helpful.  [so]
-    - I have never seen ___ a big dog.  [such]
-    - Why are you walking ___ slowly today?  [so]
-    - They live in ___ a small flat that guests sleep in the hall.  [such]
-    - The film was ___ boring that I fell asleep.  [so]
-    - It was ___ an exciting match!  [such]
-    - Don't speak ___ loudly in the library.  [so]
-    - She told ___ funny stories that everyone laughed.  [such]
-    - I'm ___ glad you came to the party.  [so]
-    - He gave me ___ good advice that I wrote it down.  [such]
-    - The road was ___ icy that we turned back.  [so]
-    - The coffee is ___ strong that I cannot sleep.  [so]
+    - I bought a fashion ___ at the station.  [magazine]
+    - There's a new shoe ___ near my flat.  [shop]
+    - She reads one cooking ___ every month.  [magazine]
+    - The ___ closes at six on Sundays.  [shop]
+    - He left the ___ with two bags.  [shop]
+    - Dad always reads a ___ at the breakfast table.  [magazine]
+    - Here is a new ___ for you to read.  [magazine]
+    - There's a book ___ across the road from me.  [shop]
+    - If you turn left, you'll see a coffee ___.  [shop]
 
-### ago-before (level B1)
-Words: ago / before
-Meaning: ago = назад (от сегодняшнего дня); before = до, раньше
-Rule: ago = counted back from now (three days ago) · before = earlier than a moment or an event
+### success-succeed (level A2)
+Words: success / succeed
+Meaning: success = успех; succeed = преуспеть, добиться успеха
+Rule: success = noun (a big success) · succeed = verb (to succeed)
 Existing sentences (do not repeat these ideas):
-    - We moved to this town two years ___.  [ago]
-    - Please call me ___ you leave the office.  [before]
-    - I met my best friend ten years ___.  [ago]
-    - She had never seen the sea ___.  [before]
-    - The film started five minutes ___.  [ago]
-    - Wash your hands ___ dinner.  [before]
-    - How long ___ did you buy this laptop?  [ago]
-    - He said he had been to Rome ___.  [before]
-    - My grandfather was born eighty years ___.  [ago]
-    - The store opens an hour ___ the concert starts.  [before]
-    - A week ___, it was snowing here.  [ago]
-    - I felt tired the day ___ the exam.  [before]
-    - It happened a long time ___.  [ago]
-    - She called twice ___ lunch.  [before]
-    - Tom left the party an hour ___.  [ago]
-    - Read the rules ___ you start the game.  [before]
-    - The bakery was here fifty years ___.  [ago]
-    - Have we met ___? You look familiar.  [before]
-    - The letter arrived two days ___, but nobody read it.  [ago]
-    - Turn off the lights ___ going to bed.  [before]
+    - Her small café became a real ___.  [success]
+    - I hope you ___ in your new job.  [succeed]
+    - The play was an overnight ___.  [success]
+    - Few people ___ without hard work.  [succeed]
+    - Winning the cup was a huge ___.  [success]
+    - Our ___ was due in part to good luck.  [success]
+    - His business in New York was a great ___.  [success]
+    - If you want to ___, use your time well.  [succeed]
+    - We believe he will ___, for he has talent.  [succeed]
 
-### much-many (level A2)
-Words: much / many
-Meaning: much = много (неисчисляемое); many = много (исчисляемое)
-Rule: many = countable things (many books) · much = uncountable things (much water)
+### say-speak (level A2)
+Words: say / speak
+Meaning: say = сказать (слова); speak = говорить (языком, с кем-то)
+Rule: say + the words (say hello) · speak + a language, or speak to someone
 Existing sentences (do not repeat these ideas):
-    - How ___ books did you read this year?  [many]
-    - There isn't ___ milk left in the fridge.  [much]
-    - Not ___ people came to the meeting.  [many]
-    - Do you have ___ free time on Sundays?  [much]
-    - I do not see ___ bikes in this town.  [many]
-    - I don't eat ___ sugar.  [much]
-    - There aren't ___ tomatoes in the shop today.  [many]
-    - How ___ does this jacket cost?  [much]
-    - ___ of my friends live abroad.  [many]
-    - We did not have ___ rain last summer.  [much]
-    - She speaks so ___ languages that I lose count.  [many]
-    - He does not drink ___ coffee in the evening.  [much]
-    - Too ___ cars drive through our street.  [many]
-    - There is not ___ traffic at night.  [much]
-    - I don't know how ___ days we will stay.  [many]
-    - Thank you very ___ for your help.  [much]
-    - Were there ___ passengers on the bus?  [many]
-    - Don't put too ___ salt in the soup.  [much]
-    - I haven't met ___ of her friends.  [many]
-    - She doesn't have ___ homework today.  [much]
+    - What did she ___ about the meeting?  [say]
+    - Could I ___ to Mr Brown now?  [speak]
+    - Don't ___ anything to upset him.  [say]
+    - He can ___ three languages well.  [speak]
+    - I didn't know what to ___.  [say]
+    - Can you ___ Slovak and German?  [speak]
+    - What did you ___ to the teacher?  [say]
+    - My grandfather can ___ three languages.  [speak]
+    - I will ___ goodbye to everyone.  [say]
 
-### make-do (level A2)
-Words: make / do
-Meaning: make = делать (создавать, производить); do = делать (выполнять действие, задание)
-Rule: make = create or produce (make a cake) · do = perform an action, task or activity (do homework) · fixed phrases: make a decision, a phone call, friends, a mistake; do the dishes, a favour, your best
+### your-youre (level A2)
+Words: your / you're
+Meaning: your = твой, ваш; you're = ты есть = you are
+Rule: your = belongs to you · you're = you are
 Existing sentences (do not repeat these ideas):
-    - Can you ___ a cup of tea for me?  [make]
-    - I need to ___ my homework before dinner.  [do]
-    - Please try not to ___ so much noise.  [make]
-    - Let's ___ the dishes together.  [do]
-    - She wants to ___ a cake for the party.  [make]
-    - What are you going to ___ this weekend?  [do]
-    - Try not to ___ mistakes in the dictation.  [make]
-    - Could you ___ me a favour?  [do]
-    - Dad will ___ a decision tomorrow.  [make]
-    - She likes to ___ yoga every morning.  [do]
-    - We need to ___ a plan for the trip.  [make]
-    - My brother will ___ the shopping today.  [do]
-    - Mix the eggs and flour to ___ dough.  [make]
-    - I have a lot of work to ___ today.  [do]
-    - Children ___ friends easily at the beach.  [make]
-    - Please ___ your best on the test.  [do]
-    - Can you ___ a phone call for me?  [make]
-    - I will ___ the laundry on Saturday.  [do]
-    - Good habits ___ a big difference.  [make]
-    - Would you ___ the cleaning while I cook?  [do]
-
-### lend-borrow-loan (level B1)
-Words: lend / borrow / loan
-Meaning: lend = одолжить (дать); borrow = взять взаймы; loan = заём, кредит
-Rule: lend = give for a while · borrow = take for a while · a loan = money you borrow
-Existing sentences (do not repeat these ideas):
-    - Can I ___ your umbrella for tonight?  [borrow]
-    - I'll ___ you my charger after lunch.  [lend]
-    - The bank refused our home ___.  [loan]
-    - Never ___ money you can't afford to lose.  [lend]
-    - She used a student ___ to pay fees.  [loan]
-    - May I ___ a pen from you?  [borrow]
-    - The bank gave him a ___ to buy a car.  [loan]
-    - I would like to ___ a book from the library.  [borrow]
-    - They took out a ___ to start a small business.  [loan]
-    - May I ___ your scissors for a minute?  [borrow]
-    - The student ___ must be paid back after graduation.  [loan]
-    - She had to ___ money from her parents.  [borrow]
-    - A bank ___ with low interest is cheaper.  [loan]
-    - Can I ___ your dictionary for the exam?  [borrow]
-    - These paintings are here on ___ from another museum.  [loan]
-    - We want to ___ some chairs from the neighbours.  [borrow]
-    - He is still paying off a car ___.  [loan]
-    - I forgot my pen; can I ___ yours?  [borrow]
-    - They got a ___ of twenty thousand to renovate the kitchen.  [loan]
-    - Students often ___ money to pay for university.  [borrow]
-    - Thanks for the ___ of your jacket.  [loan]
-    - Why do you always ___ my charger and never return it?  [borrow]
-    - The bank refused her ___ application.  [loan]
+    - Is this ___ phone on the table?  [your]
+    - I think ___ right about the exam date.  [you're]
+    - Don't forget to bring ___ passport tomorrow.  [your]
+    - ___ very kind to help us with the bags.  [you're]
+    - Is there enough room for me in ___ car?  [your]
+    - We might not have found it without ___ help.  [your]
+    - You will soon get used to ___ new life.  [your]
+    - ___ the best thing that's ever happened to me.  [you're]
+    - You should make sure that ___ there on time.  [you're]
+    - ___ in love, aren't you? I can see it.  [you're]
 
 ## Rules for every sentence
 
@@ -235,3 +144,9 @@ Existing sentences (do not repeat these ideas):
 For each sentence: (a) test every option in the gap, (b) confirm only one works, (c) confirm no leak (rule 3), (d) count words
 (5–16), (e) confirm no sentence is a near copy of another one in your answer. Remove any sentence that fails.
 
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

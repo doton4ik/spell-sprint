@@ -5,6 +5,7 @@
 // A sentence is rejected when: the pair or answer is unknown, not exactly one ___, 5–16 words, bad capital/ending, double
 // spaces, another option of the pair appears in the sentence (a leak), it repeats a sentence anywhere in the file or in the batch,
 // or it differs from another sentence of the same pair by one word only (a template copy).
+import { readAnswer } from './plexity-json.mjs'
 import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
@@ -22,7 +23,7 @@ const source = readFileSync(dataPath, 'utf8')
 const dir = mkdtempSync(join(tmpdir(), 'pairs-'))
 writeFileSync(join(dir, 'pairs.ts'), source)
 const { pairDrills } = await import(pathToFileURL(join(dir, 'pairs.ts')).href)
-const batch = JSON.parse(readFileSync(file, 'utf8'))
+const batch = readAnswer(file)
 const skip = new Set((skipFile ? JSON.parse(readFileSync(skipFile, 'utf8')) : []).map((text) => text.toLowerCase()))
 
 const norm = (text) =>

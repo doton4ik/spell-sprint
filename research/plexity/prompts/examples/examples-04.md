@@ -4,26 +4,8 @@ Avoid words and sentences where British and American English differ (colour/colo
 
 ## Your task in this round
 
-For each of the 36 words below write **one new example sentence**. Each word already has one example (after "e.g."); yours must show the word in a DIFFERENT situation.
+For each of the 18 words below write **one new example sentence**. Each word already has one example (after "e.g."); yours must show the word in a DIFFERENT situation.
 
-- study-and-career-career-development-part-time | part-time | неполный рабочий день | adjective | e.g. She has a part-time job in a café.
-- travel-and-culture-travel-planning-customs | customs | таможня | noun | e.g. We waited an hour to go through customs.
-- common-actions-out-and-about-knock | knock | стучать | verb | e.g. Please knock before you come in.
-- common-actions-out-and-about-hurry | hurry | спешить, торопиться | verb | e.g. We must hurry or we will be late.
-- common-actions-at-home-dust | dust | вытирать пыль | verb | e.g. I dust the shelves once a week.
-- common-actions-everyday-phrasal-verbs-check-in | check in | регистрироваться (в отеле, аэропорту) | phrase | e.g. We can check in after two o'clock.
-- common-actions-everyday-phrasal-verbs-check-out | check out | выписываться (из отеля) | phrase | e.g. We have to check out by eleven.
-- common-actions-everyday-phrasal-verbs-turn-up | turn up | прибавлять (громкость) | phrase | e.g. Can you turn up the radio?
-- common-actions-everyday-phrasal-verbs-go-on | go on | продолжаться, происходить | phrase | e.g. Please go on, I'm listening.
-- general-english-commonly-misspelled-maintenance | maintenance | техническое обслуживание | noun | e.g. The lift is closed for maintenance.
-- general-english-commonly-misspelled-existence | existence | существование | noun | e.g. Do you believe in the existence of ghosts?
-- general-english-commonly-misspelled-height | height | рост, высота | noun | e.g. What is the height of that tower?
-- general-english-commonly-misspelled-humorous | humorous | юмористический, смешной | adjective | e.g. He wrote a humorous story about his cat.
-- general-english-commonly-misspelled-guarantee | guarantee | гарантия | noun | e.g. The phone comes with a two-year guarantee.
-- phone-and-messages-phone-basics-contact | contact | контакт (в телефоне) | noun | e.g. Save her number as a new contact.
-- phone-and-messages-phone-basics-speaker | speaker | динамик | noun | e.g. Put the call on speaker so we can all hear.
-- phone-and-messages-phone-basics-unlock | unlock | разблокировать | verb | e.g. Use your fingerprint to unlock the screen.
-- phone-and-messages-calls-dial | dial | набирать (номер) | verb | e.g. Dial the number slowly and carefully.
 - phone-and-messages-texting-and-online-unread | unread | непрочитанный | adjective | e.g. I have twenty unread messages.
 - phone-and-messages-texting-and-online-block | block | блокировать | verb | e.g. You can block people who send spam.
 - travel-and-culture-on-the-plane-landing | landing | приземление | noun | e.g. The landing was very smooth.
@@ -58,3 +40,9 @@ For each of the 36 words below write **one new example sentence**. Each word alr
 ]
 
 Use the word_id exactly as written. Before you answer, check each sentence: it contains the word in the listed form and no other word could fill the gap.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

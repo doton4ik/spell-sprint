@@ -6,14 +6,12 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 ## Your task in this round
 
-Create **6 NEW pairs** with **25 sentences each** (150 sentences). Use exactly these ids, levels and words (the options in `words` are separated by " / "; for a pair like "all together" the option is two words):
+Create **4 NEW pairs** with **20 sentences each** (80 sentences). Use exactly these ids, levels and words (the options in `words` are separated by " / "; for a pair like "all together" the option is two words):
 
-- id `alter-altar`, level B2, words: alter / altar
-- id `assure-ensure-insure`, level B2, words: assure / ensure / insure
-- id `council-counsel`, level B2, words: council / counsel
-- id `elicit-illicit`, level B2, words: elicit / illicit
-- id `emigrate-immigrate`, level B2, words: emigrate / immigrate
-- id `later-latter`, level B2, words: later / latter
+- id `heard-herd`, level B1, words: heard / herd
+- id `knight-night`, level B1, words: knight / night
+- id `patience-patients`, level B1, words: patience / patients
+- id `stake-steak`, level B1, words: stake / steak
 
 The level tells how hard the other words in the sentences may be (A2 / B1 / B2). Meanings are Russian glosses (a few words), the hint is one line in English.
 
@@ -67,3 +65,9 @@ historic / historical, principal / principle, desert / dessert).
 For each sentence: (a) test every option in the gap, (b) confirm only one works, (c) confirm no leak (rule 3), (d) count words
 (5–16), (e) confirm no sentence is a near copy of another one in your answer. Remove any sentence that fails.
 
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

@@ -3,86 +3,51 @@ Answer with JSON only: one JSON array, no text outside it, no comments. Write ev
 
 ## Your task in this round
 
-For each of the 4 rules below write **14 new examples and 14 new exercises**. Do not repeat anything that is listed (the listing shows what exists). The rule text tells you what the rule teaches: every example and exercise must be provably right or wrong by THAT rule.
+For each of the 2 rules below write **10 new examples and 10 new exercises**. Do not repeat anything that is listed (the listing shows what exists). The rule text tells you what the rule teaches: every example and exercise must be provably right or wrong by THAT rule.
 
-### stationary-vs-stationery — Stationary or stationery
-Rule: Stationary means not moving. Stationery means paper and writing supplies.
-Memory hint: Stationery has e for envelopes.
+### its-vs-its-contraction — Its vs it's
+Rule: Its (no apostrophe) shows that something belongs to it. It's is short for it is or it has.
+Memory hint: If you can say "it is", use it's.
 Existing examples (do not repeat; 8):
-    - [correct] The train remained stationary at the platform.
-    - [incorrect] The car stayed stationery.  ->  The car stayed stationary.
-    - [incorrect] We need more stationary for the office.  ->  We need more stationery for the office.
-    - [correct] I bought stationery for my class.
-    - [correct] The shop sells pens and other stationery.
-    - [correct] The car was stationary at the lights.
-    - [incorrect] He bought some stationary for school.  ->  He bought some stationery for school.
-    - [incorrect] The stationery bike stood in the corner.  ->  The stationary bike stood in the corner.
-Existing exercises (do not repeat; showing 6 of 6):
-    - [fill_gap] Please order more ___ for the office.  =>  stationery
-    - [fill_gap] The traffic was ___ for ten minutes.  =>  stationary
-    - [multiple_choice] Choose the word: Envelopes and paper are ___.  =>  stationery  (choices: stationery / stationary)
-    - [multiple_choice] Choose the word: The satellite looks ___ in the sky.  =>  stationary  (choices: stationery / stationary)
-    - [fill_gap] She keeps her ___ in a blue box.  =>  stationery
-    - [fill_gap] The plane was ___ on the runway.  =>  stationary
-
-### suffix-ful — The suffix -ful has one L
-Rule: The suffix -ful always has a single l, as in useful and careful, even though the word full has two.
-Memory hint: Ful is never full of extra Ls.
-Existing examples (do not repeat; 8):
-    - [exception] carefully
-    - [correct] He gave a truthful answer to the question.
-    - [correct] It was a helpful suggestion from my colleague.
-    - [incorrect] carefull  ->  careful
-    - [incorrect] usefull  ->  useful
-    - [correct] Her cheerful voice made everyone smile.
-    - [incorrect] hopefull  ->  hopeful
-    - [incorrect] cheerfull  ->  cheerful
-Existing exercises (do not repeat; showing 0 of 0):
-
-
-### then-vs-than — Then or than
-Rule: Then refers to time or the next step. Than is used when comparing things.
-Memory hint: Then is time; than compares.
-Existing examples (do not repeat; 8):
-    - [correct] This coat is warmer than mine.
-    - [incorrect] We ate and than left.  ->  We ate and then left.
-    - [correct] We finished dinner, then went home.
-    - [incorrect] She is taller then me.  ->  She is taller than me.
-    - [correct] Add the flour, then mix well.
-    - [correct] Tea is cheaper than coffee here.
-    - [incorrect] I would rather read then watch TV.  ->  I would rather read than watch TV.
-    - [incorrect] First we eat, than we go out.  ->  First we eat, then we go out.
-Existing exercises (do not repeat; showing 6 of 6):
-    - [fill_gap] My brother is older ___ me.  =>  than
-    - [fill_gap] Finish your homework, ___ you can play.  =>  then
-    - [multiple_choice] Choose the word: She runs faster ___ I do.  =>  than  (choices: then / than)
-    - [multiple_choice] Choose the word: Turn left, ___ go straight.  =>  then  (choices: then / than)
-    - [fill_gap] It was better ___ nothing.  =>  than
-    - [fill_gap] If you are tired, ___ rest.  =>  then
-
-### there-vs-their — There vs their vs they're
-Rule: There points to a place or starts a sentence (there is). Their shows that something belongs to them. They're is short for they are.
-Memory hint: Their has "heir" in it: it belongs to someone.
-Existing examples (do not repeat; 8):
-    - [incorrect] Their is a meeting at noon.  ->  There is a meeting at noon.
-    - [correct] Their truck arrived late.
-    - [correct] They left their coats there by the door.
-    - [incorrect] The coats are over their.  ->  The coats are over there.
-    - [incorrect] There house is small.  ->  Their house is small.
-    - [correct] There are three chairs in the room.
-    - [correct] They said they're ready to start.
-    - [incorrect] Their going to be late.  ->  They're going to be late.
+    - [incorrect] The company changed it's name.  ->  The company changed its name.
+    - [correct] It's a large warehouse.
+    - [incorrect] The dog ate it's food.  ->  The dog ate its food.
+    - [incorrect] Its a sunny day.  ->  It's a sunny day.
+    - [correct] The bird opened its wings because it's ready to fly.
+    - [correct] The company announced its new plan.
+    - [correct] It's a pleasure to meet you.
+    - [incorrect] The team lost it's last game.  ->  The team lost its last game.
 Existing exercises (do not repeat; showing 1 of 1):
-    - [fill_gap] Do you know where ___ house is?  =>  their
+    - [fill_gap] The old bridge lost ___ charm.  =>  its
 
-## Examples (14 per rule)
+### soft-c-and-g — Keep e after soft c and g
+Rule: Keep e after soft c or g before a suffix beginning with a or o. Notice becomes noticeable, and courage becomes courageous.
+Memory hint: Keep e so c and g stay soft.
+Existing examples (do not repeat; 8):
+    - [correct] The change was noticeable after a week.
+    - [incorrect] noticable  ->  noticeable
+    - [correct] It was courageous of her to speak up.
+    - [incorrect] couragous  ->  courageous
+    - [correct] The price was outrageous.
+    - [correct] The stain is hardly noticeable.
+    - [incorrect] It was an advantagous deal.  ->  It was an advantageous deal.
+    - [incorrect] The rule is not enforcable.  ->  The rule is not enforceable.
+Existing exercises (do not repeat; showing 6 of 6):
+    - [correct_word] outragous  =>  outrageous
+    - [correct_word] peacable  =>  peaceable
+    - [spell] Spell the word: giving you an advantage.  =>  advantageous
+    - [spell] Spell the word: able to be charged to an account.  =>  chargeable
+    - [multiple_choice] Choose the correct spelling: able to be pronounced.  =>  pronounceable  (choices: pronouncable / pronounceable / pronounciable)
+    - [multiple_choice] Choose the correct spelling: very beautiful.  =>  gorgeous  (choices: gorgous / gorgeous / gorgius)
 
-- 6 of type "correct": a natural sentence that uses the rule correctly. 8 of type "incorrect": a sentence with the typical mistake learners make, and the same sentence corrected in "correction" (only the mistake changes). One mistake per sentence.
+## Examples (10 per rule)
+
+- 4 of type "correct": a natural sentence that uses the rule correctly. 6 of type "incorrect": a sentence with the typical mistake learners make, and the same sentence corrected in "correction" (only the mistake changes). One mistake per sentence.
 - "note": a short reason, at most 80 characters, naming the point of the rule ("Soft c before e: city, not sity").
 - Sentences of 5-14 words, everyday topics, different words and structures. Easy words except the target of the rule.
 - A word that is spelled wrongly must be a spelling mistake a real learner makes, not a random typo.
 
-## Exercises (14 per rule), mix of these types
+## Exercises (10 per rule), mix of these types
 
 - "fill_gap": a sentence with one ___ and one correct word as "answer". The context must allow exactly one answer.
 - "multiple_choice": a prompt with ___ (or "Choose the correct spelling: ...") and "choices" (2-4 options, all different, "answer" is exactly one of them).
@@ -102,3 +67,9 @@ Every exercise is independent: no "see the sentence above". Every answer must be
 ]
 
 Use the slug exactly as written. Before you answer, check every item against the rule above: wrong sentences must really be wrong, correct ones really correct, each exercise has exactly one answer.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

@@ -4,25 +4,19 @@ Avoid words and sentences where British and American English differ (colour/colo
 
 ## Your task in this round
 
-Write **10 NEW words for each of these 6 slots** (60 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
+Write **10 NEW words for each of these 4 slots** (40 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
 
-### S25 — Food and Drinks / Meals and Cooking
-Words already in it (do not repeat): lunch, dinner, ingredient, recipe, vegetable, fruit, delicious, bake, boil, chop, fry, seasoning, dessert, flour, cucumber, cabbage, mushroom, garlic, lettuce, sausage, yoghurt
+### S17 — Describing Things / Size and Shape
+Words already in it (do not repeat): enormous, tiny, narrow, rectangular, circular, straight, flat, thick, shallow, slightly, heavy, wide, deep, oval, curved
 
-### S26 — General English / Active Vocabulary
-Words already in it (do not repeat): environment, opportunity, society, technology, culture, avoid, consider, decide, describe, explain, improve, include, increase, reduce, prefer, provide, suggest, solve, compare, require, depend, mention, notice, opinion, reason, choice, purpose, chance, amount, situation, decision, difference, condition, possible, available, similar, recent, certain, especially, actually
+### S18 — Everyday Life / Daily Routines
+Words already in it (do not repeat): breakfast, commute, alarm, shower, toothbrush, toothpaste, towel, nap, routine, habit, oversleep, pillow, blanket, mirror
 
-### S27 — General English / Commonly Misspelled
-Words already in it (do not repeat): accommodation, receive, separate, definitely, occasionally, necessary, embarrass, environment, government, restaurant, calendar, library, February, Wednesday, knowledge, achieve, believe, foreign, weird, neighbour, privilege, conscience, rhythm, answer, occurrence, maintenance, noticeable, possession, questionnaire, millennium, pronunciation, independent, immediately, existence, height, humorous, lightning, misspell, tongue, sincerely, cemetery, exaggerate, grammar, guarantee
+### S19 — Everyday Life / Home and Services
+Words already in it (do not repeat): appointment, receipt, rubbish, recycling, plumber, electrician, tenant, repair, leak, heating, electricity, dishwasher, washing machine, broom, bucket, doorbell, key, kettle, microwave, sink
 
-### S28 — General English / Confusable Words
-Words already in it (do not repeat): their, there, affect, effect, principal, principle, stationary, stationery, advice, advise, loose, lose, quiet, quite, weather, whether
-
-### S29 — General English / Professional Communication
-Words already in it (do not repeat): deadline, research, responsibility, achievement, presentation, communication
-
-### S30 — Health and Body / At the Doctor
-Words already in it (do not repeat): appointment, prescription, symptom, treatment, recover, vaccine, dentist, ambulance, painkiller, check-up, allergy, insurance, bandage, pill, nurse, thermometer
+### S20 — Family and Relationships / Friends and Partners
+Words already in it (do not repeat): flatmate, acquaintance, engaged, trust, argue, fall out with, boyfriend, girlfriend, relationship
 
 ## What a good word is
 
@@ -52,3 +46,9 @@ Words already in it (do not repeat): appointment, prescription, symptom, treatme
 ]
 
 Before you answer, check each entry: the slot code exists, the word is not in the list, the example contains the word in exactly this form, the definition does not contain the word, and the Russian translation is correct and specific.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

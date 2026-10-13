@@ -6,119 +6,91 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 ## Your task in this round
 
-Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
+Write **20 new sentences for each of these 6 pairs**, 120 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### hard-hardly (level B1)
-Words: hard / hardly
-Meaning: hard = усердно; твёрдый, трудный; hardly = едва, почти не
-Rule: hard = with effort (work hard) · hardly = almost not (I could hardly hear)
+### desert-dessert (level B1)
+Words: desert / dessert
+Meaning: desert = пустыня; dessert = десерт
+Rule: desert = dry land with little water · dessert = sweet food after a meal (double s)
 Existing sentences (do not repeat these ideas):
-    - She works very ___ before every exam.  [hard]
-    - I could ___ hear him on the phone.  [hardly]
-    - The ground was ___ after the frost.  [hard]
-    - We had ___ any milk left.  [hardly]
-    - They train ___ all winter.  [hard]
-    - She studied ___ for the test.  [hard]
-    - I can ___ hear you, the room is so loud.  [hardly]
-    - The ice was so ___ that we could walk on it.  [hard]
+    - Camels can live for days in the hot ___.  [desert]
+    - We had ice cream for ___ after dinner.  [dessert]
+    - Would you like a ___ after the main course?  [dessert]
+    - There is almost no rain in this ___.  [desert]
+    - He knows how to find water in the ___.  [desert]
+    - The last part of the trip was across the ___.  [desert]
+    - You can't have ___ until you finish your meal.  [dessert]
+    - I think that you'll like the ___.  [dessert]
 
-### actual-topical (level B2)
-Words: actual / topical
-Meaning: actual = фактический, настоящий; topical = актуальный, злободневный
-Rule: "актуальный" is topical or current — never actual (= real)
+### breath-breathe (level B1)
+Words: breath / breathe
+Meaning: breath = вдох, дыхание (сущ.); breathe = дышать (глагол)
+Rule: breath = air you take in (noun) · breathe = to take air in and out (verb, with e)
 Existing sentences (do not repeat these ideas):
-    - We need the ___ figures, not guesses.  [actual]
-    - The programme discussed several ___ issues.  [topical]
-    - The ___ distance was shorter than the map showed.  [actual]
-    - Climate change remains a highly ___ subject.  [topical]
-    - Tell me the ___ reason you left early.  [actual]
-    - Climate change is a very ___ subject in the news this week.  [topical]
-    - I want the ___ facts, not what people think.  [actual]
-    - Our podcast talks about ___ issues such as new school rules.  [topical]
+    - Take a deep ___ and try to relax.  [breath]
+    - It is hard to ___ in this thick smoke.  [breathe]
+    - After the race, he was out of ___.  [breath]
+    - Open the window so that we can ___ fresh air.  [breathe]
+    - He went outside for a ___ of fresh air.  [breath]
+    - He was out of ___. He had been running.  [breath]
+    - It was hard for me to ___.  [breathe]
+    - The smoke-filled room made it difficult to ___.  [breathe]
 
-### fabric-factory (level B2)
-Words: fabric / factory
-Meaning: fabric = ткань; factory = фабрика, завод
-Rule: "фабрика" is a factory · fabric is ткань
+### end-finish (level A2)
+Words: end / finish
+Meaning: end = заканчиваться (сам); finish = заканчивать (что-то делать)
+Rule: end = stop, come to the last part · finish = complete what you are doing
 Existing sentences (do not repeat these ideas):
-    - This dress is made of soft cotton ___.  [fabric]
-    - My uncle works in a car ___.  [factory]
-    - The sofa ___ feels rough.  [fabric]
-    - The old ___ closed last winter.  [factory]
-    - Silk is an expensive ___.  [fabric]
-    - This soft ___ is perfect for summer dresses.  [fabric]
-    - My uncle works at a car ___ near the city.  [factory]
-    - Cotton is a light ___.  [fabric]
+    - The film will ___ at half past nine.  [end]
+    - Please ___ your soup before dessert.  [finish]
+    - The summer holidays ___ next Monday.  [end]
+    - I must ___ this report tonight.  [finish]
+    - I want to ___ this book before the weekend.  [finish]
+    - At the ___ of the street, there is a bakery.  [end]
+    - Please ___ your soup before the main course.  [finish]
+    - Stories for children often have a happy ___.  [end]
 
-### learn-find-out (level B1)
-Words: learn / find out
-Meaning: learn = учить, научиться; find out = узнать, выяснить
-Rule: learn = get knowledge or a skill · find out = discover a fact
+### win-earn (level B1)
+Words: win / earn
+Meaning: win = выиграть; earn = зарабатывать
+Rule: win = get by playing or luck · earn = get by working
 Existing sentences (do not repeat these ideas):
-    - I want to ___ Spanish before my trip.  [learn]
-    - We need to ___ who broke the vase.  [find out]
-    - Did you ever ___ why he was upset?  [find out]
-    - Children ___ quickly through songs and games.  [learn]
-    - Children ___ to read at about six years old.  [learn]
-    - Please ___ what time the museum opens.  [find out]
-    - I will call the office and ___ if the shop is open.  [find out]
-    - She is going to ___ Spanish next year.  [learn]
+    - I hope we ___ the quiz tonight.  [win]
+    - Doctors often ___ more than teachers.  [earn]
+    - Our team can still ___ the match.  [win]
+    - Students can ___ some money in the summer holidays.  [earn]
+    - She wants to ___ a lot of money as a pilot.  [earn]
+    - I hope to ___ the first prize in the quiz.  [win]
+    - How much do nurses ___ per month?  [earn]
+    - Our school choir will ___ the singing contest!  [win]
 
-### discover-invent (level B1)
-Words: discover / invent
-Meaning: discover = открыть, обнаружить (то, что уже было); invent = изобрести (новое)
-Rule: discover = find something that already exists · invent = make something new
+### worth-worthy (level B2)
+Words: worth / worthy
+Meaning: worth = стоящий (be worth + -ing / цена); worthy = достойный
+Rule: be worth + -ing or a price (worth reading) · worthy = deserving (a worthy cause)
 Existing sentences (do not repeat these ideas):
-    - Scientists hope to ___ a better battery.  [invent]
-    - We were surprised to ___ an old photo album in the loft.  [discover]
-    - She wants to ___ something useful one day.  [invent]
-    - Divers hope to ___ the wreck of an old ship.  [discover]
-    - Who was the first person to ___ the telephone?  [invent]
-    - Scientists hope to ___ a new kind of plant in the forest.  [discover]
-    - Some day I would like to ___ a machine that cleans my room.  [invent]
-    - You may ___ a lovely cafe if you walk down this street.  [discover]
+    - This book is ___ reading twice.  [worth]
+    - The film wasn't ___ the ticket price.  [worth]
+    - They support several ___ charities.  [worthy]
+    - Is it ___ driving that far for lunch?  [worth]
+    - This old book is ___ a lot of money.  [worth]
+    - He is a ___ winner of the prize.  [worthy]
+    - Is the film ___ watching twice?  [worth]
+    - She is a ___ leader and everyone trusts her.  [worthy]
 
-### borrow-rent (level B1)
-Words: borrow / rent
-Meaning: borrow = взять на время (бесплатно); rent = арендовать, снимать (за деньги)
-Rule: borrow = use and give back, free · rent = pay to use
+### quite-quit (level A2)
+Words: quite / quit
+Meaning: quite = довольно, вполне; quit = бросить, уйти
+Rule: quite = fairly (quite cold) · quit = stop doing (quit smoking)
 Existing sentences (do not repeat these ideas):
-    - Can I ___ your bike this afternoon?  [borrow]
-    - We decided to ___ a car in Glasgow.  [rent]
-    - They ___ a flat near the station.  [rent]
-    - May I ___ your pen for a minute?  [borrow]
-    - We ___ a flat in the city for four hundred euros a month.  [rent]
-    - May I ___ your bike? Mine has a flat tyre.  [borrow]
-    - Tourists can ___ bicycles at the station for ten euros a day.  [rent]
-    - Can I ___ a book from you? I will return it on Monday.  [borrow]
-
-### suit-fit (level A2)
-Words: suit / fit
-Meaning: suit = идти (кому-то), подходить (по времени); fit = подходить по размеру
-Rule: fit = the right size · suit = look good on you, or be convenient
-Existing sentences (do not repeat these ideas):
-    - These shoes don't ___ me any more.  [fit]
-    - Friday would ___ us better than Thursday.  [suit]
-    - Does this jacket ___ across the shoulders?  [fit]
-    - A later time might ___ everyone.  [suit]
-    - This blue jacket does not ___ me; it is too small.  [fit]
-    - A short haircut would ___ you.  [suit]
-    - Will all our bags ___ in the boot?  [fit]
-    - Blue and green ___ you, but yellow does not.  [suit]
-
-### policy-politics (level B2)
-Words: policy / politics
-Meaning: policy = политика, правила (организации); politics = политика (государство, партии)
-Rule: policy = a plan or rules (refund policy) · politics = government and parties
-Existing sentences (do not repeat these ideas):
-    - The company changed its holiday ___.  [policy]
-    - He never talks about ___ at family dinners.  [politics]
-    - What's your school's phone-use ___?  [policy]
-    - She studied ___ at university.  [politics]
-    - Our refund ___ is printed on the receipt.  [policy]
-    - The school has a strict ___ on mobile phones.  [policy]
-    - She is studying ___ and history at university.  [politics]
-    - The company has a new ___ about working from home.  [policy]
+    - The café was ___ empty after lunch.  [quite]
+    - He decided to ___ smoking last year.  [quit]
+    - I'm ___ sure I locked the door.  [quite]
+    - She wants to ___ her job soon.  [quit]
+    - That exam was ___ difficult for me.  [quite]
+    - I don't have the will power to ___ smoking.  [quit]
+    - If you don't like it, then you can ___.  [quit]
+    - I will ___ my job at the end of the month.  [quit]
 
 ## Rules for every sentence
 
@@ -165,3 +137,9 @@ Existing sentences (do not repeat these ideas):
 For each sentence: (a) test every option in the gap, (b) confirm only one works, (c) confirm no leak (rule 3), (d) count words
 (5–16), (e) confirm no sentence is a near copy of another one in your answer. Remove any sentence that fails.
 
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

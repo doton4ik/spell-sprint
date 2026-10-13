@@ -4,25 +4,19 @@ Avoid words and sentences where British and American English differ (colour/colo
 
 ## Your task in this round
 
-Write **10 NEW words for each of these 6 slots** (60 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
+Write **10 NEW words for each of these 4 slots** (40 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
 
-### S37 — Jobs and Career / Job Interview
-Words already in it (do not repeat): cover letter, curriculum vitae, strength, weakness, reference, shortlist, job offer, body language, eye contact, candidate, applicant, vacancy, interviewer, hire
+### S25 — Food and Drinks / Meals and Cooking
+Words already in it (do not repeat): lunch, dinner, ingredient, recipe, vegetable, fruit, delicious, bake, boil, chop, fry, seasoning, dessert, flour, cucumber, cabbage, mushroom, garlic, lettuce, sausage, yoghurt
 
-### S38 — Logistics / Inventory Control
-Words already in it (do not repeat): inventory, stock, replenishment, safety stock, demand planning, inventory accuracy
+### S26 — General English / Active Vocabulary
+Words already in it (do not repeat): environment, opportunity, society, technology, culture, avoid, consider, decide, describe, explain, improve, include, increase, reduce, prefer, provide, suggest, solve, compare, require, depend, mention, notice, opinion, reason, choice, purpose, chance, amount, situation, decision, difference, condition, possible, available, similar, recent, certain, especially, actually
 
-### S39 — Logistics / Order Fulfilment
-Words already in it (do not repeat): order picking
+### S27 — General English / Commonly Misspelled
+Words already in it (do not repeat): accommodation, receive, separate, definitely, occasionally, necessary, embarrass, environment, government, restaurant, calendar, library, February, Wednesday, knowledge, achieve, believe, foreign, weird, neighbour, privilege, conscience, rhythm, answer, occurrence, maintenance, noticeable, possession, questionnaire, millennium, pronunciation, independent, immediately, existence, height, humorous, lightning, misspell, tongue, sincerely, cemetery, exaggerate, grammar, guarantee
 
-### S40 — Logistics / Receiving and Storage
-Words already in it (do not repeat): storage location
-
-### S41 — Logistics / Receiving and Storage
-Words already in it (do not repeat): goods receipt, warehouse layout
-
-### S42 — Logistics / Supply Chain
-Words already in it (do not repeat): supplier, shipment, delivery, distribution centre, lead time, transportation cost
+### S28 — General English / Confusable Words
+Words already in it (do not repeat): their, there, affect, effect, principal, principle, stationary, stationery, advice, advise, loose, lose, quiet, quite, weather, whether
 
 ## What a good word is
 
@@ -52,3 +46,9 @@ Words already in it (do not repeat): supplier, shipment, delivery, distribution 
 ]
 
 Before you answer, check each entry: the slot code exists, the word is not in the list, the example contains the word in exactly this form, the definition does not contain the word, and the Russian translation is correct and specific.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

@@ -1,0 +1,262 @@
+{
+  "gap": [
+    {
+      "prompt": "The scheme was abandoned ___ widespread criticism.",
+      "answer": "in the face of",
+      "wrong": [
+        "at the face of",
+        "on the face of",
+        "under the face of"
+      ],
+      "explain": "In the face of means despite or when facing."
+    },
+    {
+      "prompt": "Not until the audit was completed ___ the extent of the losses.",
+      "answer": "did they realise",
+      "wrong": [
+        "they realised",
+        "they did realise",
+        "realised they"
+      ],
+      "explain": "Use inversion after not until."
+    },
+    {
+      "prompt": "The contract is subject ___ approval by the board.",
+      "answer": "to",
+      "wrong": [
+        "for",
+        "of",
+        "on"
+      ],
+      "explain": "Subject to means dependent on."
+    },
+    {
+      "prompt": "He was ___ of any wrongdoing.",
+      "answer": "cleared",
+      "wrong": [
+        "excused",
+        "pardoned",
+        "absolved"
+      ],
+      "explain": "Be cleared of means be found not guilty."
+    },
+    {
+      "prompt": "The evidence points ___ a systemic failure.",
+      "answer": "to",
+      "wrong": [
+        "at",
+        "on",
+        "for"
+      ],
+      "explain": "Point to means indicate."
+    },
+    {
+      "prompt": "She was ___ to accept the terms under pressure.",
+      "answer": "compelled",
+      "wrong": [
+        "compelling",
+        "compel",
+        "compulsion"
+      ],
+      "explain": "Be compelled to means be forced to."
+    },
+    {
+      "prompt": "The initiative, ___ ambitious, lacked funding.",
+      "answer": "however",
+      "wrong": [
+        "despite",
+        "although",
+        "moreover"
+      ],
+      "explain": "However can mean in whatever way here."
+    },
+    {
+      "prompt": "The findings call ___ an immediate review.",
+      "answer": "for",
+      "wrong": [
+        "on",
+        "at",
+        "up"
+      ],
+      "explain": "Call for means demand or require."
+    }
+  ],
+  "mistake": [
+    {
+      "sentence": "The committee is comprised of five members.",
+      "parts": [
+        "The committee",
+        "is comprised",
+        "of five members",
+        ""
+      ],
+      "answer": "is comprised",
+      "explain": "Use comprises, or is composed of."
+    },
+    {
+      "sentence": "He was accused for falsifying the records.",
+      "parts": [
+        "He was accused",
+        "for falsifying",
+        "the records",
+        ""
+      ],
+      "answer": "for falsifying",
+      "explain": "Use accused of falsifying."
+    },
+    {
+      "sentence": "The results corroborate with earlier studies.",
+      "parts": [
+        "The results",
+        "corroborate",
+        "with earlier studies",
+        ""
+      ],
+      "answer": "with earlier studies",
+      "explain": "Corroborate takes a direct object."
+    },
+    {
+      "sentence": "She objected to the proposal to be delayed.",
+      "parts": [
+        "She objected",
+        "to the proposal",
+        "to be delayed",
+        ""
+      ],
+      "answer": "to be delayed",
+      "explain": "Use being delayed after object to."
+    },
+    {
+      "sentence": "The phenomenon is widely attributable for climate change.",
+      "parts": [
+        "The phenomenon",
+        "is widely",
+        "attributable for",
+        "climate change"
+      ],
+      "answer": "attributable for",
+      "explain": "Use attributable to climate change."
+    },
+    {
+      "sentence": "The policy aims at reducing administrative burdens.",
+      "parts": [
+        "The policy",
+        "aims",
+        "at reducing",
+        "administrative burdens"
+      ],
+      "answer": "at reducing",
+      "explain": "Use aims to reduce, or targets reducing."
+    }
+  ],
+  "phrase": [
+    {
+      "prompt": "The company sought to ___ off its underperforming division.",
+      "answer": "spin",
+      "wrong": [
+        "put",
+        "take",
+        "set"
+      ],
+      "explain": "Spin off means separate part of a company."
+    },
+    {
+      "prompt": "The team had to ___ up with an unexpected delay.",
+      "answer": "come",
+      "wrong": [
+        "put",
+        "take",
+        "make"
+      ],
+      "explain": "Come up with means produce a response or idea."
+    },
+    {
+      "prompt": "The regulator promised to ___ down on misleading advertising.",
+      "answer": "crack",
+      "wrong": [
+        "put",
+        "take",
+        "bring"
+      ],
+      "explain": "Crack down on means act strongly against."
+    },
+    {
+      "prompt": "The project was ___ off due to funding problems.",
+      "answer": "shelved",
+      "wrong": [
+        "put",
+        "taken",
+        "set"
+      ],
+      "explain": "Shelve something means postpone it indefinitely."
+    },
+    {
+      "prompt": "The report ___ out several inconsistencies in the accounts.",
+      "answer": "pointed",
+      "wrong": [
+        "showed",
+        "told",
+        "spoke"
+      ],
+      "explain": "Point out means draw attention to."
+    },
+    {
+      "prompt": "They decided to ___ up the search after finding no evidence.",
+      "answer": "call",
+      "wrong": [
+        "put",
+        "take",
+        "give"
+      ],
+      "explain": "Call off means cancel."
+    }
+  ],
+  "formation": [
+    {
+      "prompt": "The report questioned the ___ of the new procedure. (VIABLE)",
+      "answer": "viability",
+      "explain": "Use the noun form of viable."
+    },
+    {
+      "prompt": "The manager’s response was seen as ___. (EVADE)",
+      "answer": "evasive",
+      "explain": "Add -ive to make the adjective."
+    },
+    {
+      "prompt": "The study provides strong ___ for the theory. (SUPPORT)",
+      "answer": "support",
+      "explain": "Use the noun form of support."
+    },
+    {
+      "prompt": "The decision was criticised for its lack of ___. (INCLUDE)",
+      "answer": "inclusivity",
+      "explain": "Use the noun form meaning the quality of including people."
+    }
+  ],
+  "dictation": [
+    {
+      "sentence": "The scheme was abandoned in the face of widespread criticism.",
+      "alternatives": []
+    },
+    {
+      "sentence": "Not until the audit was completed did they realise the extent of the losses.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The contract is subject to approval by the board.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The report pointed out several inconsistencies in the accounts.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The company sought to spin off its underperforming division.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The findings call for an immediate review.",
+      "alternatives": []
+    }
+  ]
+}

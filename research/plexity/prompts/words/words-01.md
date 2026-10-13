@@ -4,7 +4,7 @@ Avoid words and sentences where British and American English differ (colour/colo
 
 ## Your task in this round
 
-Write **10 NEW words for each of these 6 slots** (60 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
+Write **10 NEW words for each of these 4 slots** (40 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
 
 ### S01 — Animals / Animal Life
 Words already in it (do not repeat): tail, feather, fur, paw, hunt, bite, migrate, wild, extinct, endangered
@@ -17,12 +17,6 @@ Words already in it (do not repeat): elephant, giraffe, crocodile, monkey, dolph
 
 ### S04 — Business and Office / Finance and Planning
 Words already in it (do not repeat): revenue, expenses, profit, profit margin, invoice, target, market demand, cash flow
-
-### S05 — Business and Office / Meetings and Negotiation
-Words already in it (do not repeat): negotiation, agreement, recruitment, customer satisfaction, complaint
-
-### S06 — City and Transport / Getting Around
-Words already in it (do not repeat): platform, passenger, underground, journey, catch, miss, get off, bus stop, tram, fare, route, taxi, cyclist, motorway
 
 ## What a good word is
 
@@ -52,3 +46,9 @@ Words already in it (do not repeat): platform, passenger, underground, journey, 
 ]
 
 Before you answer, check each entry: the slot code exists, the word is not in the list, the example contains the word in exactly this form, the definition does not contain the word, and the Russian translation is correct and specific.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

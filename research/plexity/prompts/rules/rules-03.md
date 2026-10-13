@@ -3,76 +3,56 @@ Answer with JSON only: one JSON array, no text outside it, no comments. Write ev
 
 ## Your task in this round
 
-For each of the 4 rules below write **14 new examples and 14 new exercises**. Do not repeat anything that is listed (the listing shows what exists). The rule text tells you what the rule teaches: every example and exercise must be provably right or wrong by THAT rule.
+For each of the 2 rules below write **10 new examples and 10 new exercises**. Do not repeat anything that is listed (the listing shows what exists). The rule text tells you what the rule teaches: every example and exercise must be provably right or wrong by THAT rule.
 
-### double-before-ing-ed — Doubling before -ing and -ed
-Rule: Short verbs that end in one vowel and one consonant often double the final consonant before -ing or -ed, as in plan becoming planning.
-Memory hint: One vowel, one consonant, double before you go on.
+### irregular-past-common — Common irregular past verbs
+Rule: Many common verbs change spelling in the past. Buy becomes bought, teach becomes taught, and think becomes thought.
+Memory hint: Bought, brought and thought share ought.
 Existing examples (do not repeat; 8):
-    - [exception] fixing
-    - [correct] She dropped her phone on the floor.
-    - [correct] They are shopping for groceries this afternoon.
-    - [incorrect] stoped  ->  stopped
-    - [incorrect] planing  ->  planning
-    - [correct] They were running through the park together.
-    - [incorrect] sliped  ->  slipped
-    - [incorrect] runing  ->  running
-Existing exercises (do not repeat; showing 0 of 0):
+    - [incorrect] buyed  ->  bought
+    - [correct] She bought some bread yesterday.
+    - [incorrect] teached  ->  taught
+    - [correct] The teacher taught us a new song.
+    - [correct] He told me the news yesterday.
+    - [correct] We found the keys under the sofa.
+    - [incorrect] She tolded me a secret.  ->  She told me a secret.
+    - [incorrect] I finded my wallet.  ->  I found my wallet.
+Existing exercises (do not repeat; showing 6 of 6):
+    - [correct_word] sayed  =>  said
+    - [correct_word] maked  =>  made
+    - [spell] Spell the word: the past form of leave.  =>  left
+    - [spell] Spell the word: the past form of keep.  =>  kept
+    - [fill_gap] She ___ me a postcard from Paris. (прислала)  =>  sent
+    - [multiple_choice] Choose the correct past form of meet.  =>  met  (choices: meeted / met / meat)
 
-
-### drop-silent-e — Dropping the silent e
-Rule: When a verb ends in a silent e, you usually drop the e before adding -ing or -ed. For example, make becomes making.
-Memory hint: The silent e steps aside to let -ing and -ed in.
+### irregular-plurals — Common irregular plurals
+Rule: Some plural nouns do not use -s or -es. Child becomes children, mouse becomes mice and person becomes people.
+Memory hint: Child becomes children; mouse becomes mice.
 Existing examples (do not repeat; 8):
-    - [exception] agreeing
-    - [correct] He danced all night at the party.
-    - [correct] She is writing a long letter to her cousin.
-    - [incorrect] hopeed  ->  hoped
-    - [incorrect] makeing  ->  making
-    - [incorrect] hopeing  ->  hoping
-    - [correct] She smiled while moving the chairs.
-    - [incorrect] moveing  ->  moving
-Existing exercises (do not repeat; showing 0 of 0):
+    - [incorrect] mouses  ->  mice
+    - [correct] Two mice ran across the floor.
+    - [incorrect] childs  ->  children
+    - [correct] The children played outside all afternoon.
+    - [correct] The women met at the station.
+    - [correct] The geese flew over the lake.
+    - [incorrect] The childs are in the garden.  ->  The children are in the garden.
+    - [incorrect] Two sheeps stood by the gate.  ->  Two sheep stood by the gate.
+Existing exercises (do not repeat; showing 6 of 6):
+    - [correct_word] oxes  =>  oxen
+    - [correct_word] mouses  =>  mice
+    - [spell] Spell the word: more than one man.  =>  men
+    - [correct_word] feets  =>  feet
+    - [multiple_choice] Choose the correct plural of child.  =>  children  (choices: childs / childen / children)
+    - [fill_gap] Look at those ___ in the field. (овцы)  =>  sheep
 
+## Examples (10 per rule)
 
-### adverbs-ly — Forming adverbs with -ly
-Rule: Most adverbs are formed by adding -ly to an adjective, but adjectives ending in y usually change to i before -ly, as in happy becoming happily.
-Memory hint: Happy waves goodbye to y and says hi to ily.
-Existing examples (do not repeat; 8):
-    - [exception] simply
-    - [correct] He easily finished the puzzle in ten minutes.
-    - [correct] She spoke quietly during the meeting.
-    - [incorrect] finaly  ->  finally
-    - [incorrect] happyly  ->  happily
-    - [incorrect] slowley  ->  slowly
-    - [incorrect] quickley  ->  quickly
-    - [correct] She answered the question quickly and clearly.
-Existing exercises (do not repeat; showing 0 of 0):
-
-
-### irregular-past-go — Irregular past: go / went
-Rule: Go does not take -ed in the past tense. Its past form is the irregular word went.
-Memory hint: Go, went, gone — learn the whole set together.
-Existing examples (do not repeat; 8):
-    - [incorrect] We goed to the warehouse.  ->  We went to the warehouse.
-    - [correct] She went to the meeting.
-    - [incorrect] She goed home.  ->  She went home.
-    - [correct] After lunch, they went to the park.
-    - [incorrect] He has went home.  ->  He has gone home.
-    - [correct] We went swimming yesterday.
-    - [correct] She has gone to the shop.
-    - [incorrect] They have went to bed.  ->  They have gone to bed.
-Existing exercises (do not repeat; showing 1 of 1):
-    - [fill_gap] Tom is not here. He has ___ to the shop.  =>  gone
-
-## Examples (14 per rule)
-
-- 6 of type "correct": a natural sentence that uses the rule correctly. 8 of type "incorrect": a sentence with the typical mistake learners make, and the same sentence corrected in "correction" (only the mistake changes). One mistake per sentence.
+- 4 of type "correct": a natural sentence that uses the rule correctly. 6 of type "incorrect": a sentence with the typical mistake learners make, and the same sentence corrected in "correction" (only the mistake changes). One mistake per sentence.
 - "note": a short reason, at most 80 characters, naming the point of the rule ("Soft c before e: city, not sity").
 - Sentences of 5-14 words, everyday topics, different words and structures. Easy words except the target of the rule.
 - A word that is spelled wrongly must be a spelling mistake a real learner makes, not a random typo.
 
-## Exercises (14 per rule), mix of these types
+## Exercises (10 per rule), mix of these types
 
 - "fill_gap": a sentence with one ___ and one correct word as "answer". The context must allow exactly one answer.
 - "multiple_choice": a prompt with ___ (or "Choose the correct spelling: ...") and "choices" (2-4 options, all different, "answer" is exactly one of them).
@@ -92,3 +72,9 @@ Every exercise is independent: no "see the sentence above". Every answer must be
 ]
 
 Use the slug exactly as written. Before you answer, check every item against the rule above: wrong sentences must really be wrong, correct ones really correct, each exercise has exactly one answer.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

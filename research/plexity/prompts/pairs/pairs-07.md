@@ -6,132 +6,91 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 ## Your task in this round
 
-Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
+Write **20 new sentences for each of these 6 pairs**, 120 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
 
-### week-weak (level A2)
-Words: week / weak
-Meaning: week = неделя; weak = слабый
-Rule: week = seven days · weak = not strong
+### discover-invent (level B1)
+Words: discover / invent
+Meaning: discover = открыть, обнаружить (то, что уже было); invent = изобрести (новое)
+Rule: discover = find something that already exists · invent = make something new
 Existing sentences (do not repeat these ideas):
-    - We have a team meeting every ___ on Monday.  [week]
-    - After the illness, he felt very ___ for days.  [weak]
-    - She was too ___ to lift the heavy bag.  [weak]
-    - Next ___ we are going on holiday to Greece.  [week]
-    - All I know is that she left last ___.  [week]
-    - What will we be doing this time next ___?  [week]
-    - He will be up and about in a ___.  [week]
-    - I was too ___ to get out of bed.  [weak]
-    - I'm not as ___ as you think I am.  [weak]
+    - Scientists hope to ___ a better battery.  [invent]
+    - We were surprised to ___ an old photo album in the loft.  [discover]
+    - She wants to ___ something useful one day.  [invent]
+    - Divers hope to ___ the wreck of an old ship.  [discover]
+    - Who was the first person to ___ the telephone?  [invent]
+    - Scientists hope to ___ a new kind of plant in the forest.  [discover]
+    - Some day I would like to ___ a machine that cleans my room.  [invent]
+    - You may ___ a lovely cafe if you walk down this street.  [discover]
 
-### sea-see (level A2)
-Words: sea / see
-Meaning: sea = море; see = видеть
-Rule: sea = salt water · see = use your eyes
+### borrow-rent (level B1)
+Words: borrow / rent
+Meaning: borrow = взять на время (бесплатно); rent = арендовать, снимать (за деньги)
+Rule: borrow = use and give back, free · rent = pay to use
 Existing sentences (do not repeat these ideas):
-    - We swam in the warm ___ every afternoon.  [sea]
-    - Can you ___ the mountains from your window?  [see]
-    - I will ___ you at the station tomorrow.  [see]
-    - The ___ was calm and blue this morning.  [sea]
-    - There are a lot of fish in the ___.  [sea]
-    - You will have a wonderful view of the ___.  [sea]
-    - The town is located twelve miles from the ___.  [sea]
-    - I would very much like to ___ her again.  [see]
-    - This is something that we don't ___ every day.  [see]
+    - Can I ___ your bike this afternoon?  [borrow]
+    - We decided to ___ a car in Glasgow.  [rent]
+    - They ___ a flat near the station.  [rent]
+    - May I ___ your pen for a minute?  [borrow]
+    - We ___ a flat in the city for four hundred euros a month.  [rent]
+    - May I ___ your bike? Mine has a flat tyre.  [borrow]
+    - Tourists can ___ bicycles at the station for ten euros a day.  [rent]
+    - Can I ___ a book from you? I will return it on Monday.  [borrow]
 
-### magazine-shop (level A2)
-Words: magazine / shop
-Meaning: magazine = журнал; shop = магазин
-Rule: "магазин" is a shop · a magazine is a журнал
+### suit-fit (level A2)
+Words: suit / fit
+Meaning: suit = идти (кому-то), подходить (по времени); fit = подходить по размеру
+Rule: fit = the right size · suit = look good on you, or be convenient
 Existing sentences (do not repeat these ideas):
-    - I bought a fashion ___ at the station.  [magazine]
-    - There's a new shoe ___ near my flat.  [shop]
-    - She reads one cooking ___ every month.  [magazine]
-    - The ___ closes at six on Sundays.  [shop]
-    - He left the ___ with two bags.  [shop]
-    - Dad always reads a ___ at the breakfast table.  [magazine]
-    - Here is a new ___ for you to read.  [magazine]
-    - There's a book ___ across the road from me.  [shop]
-    - If you turn left, you'll see a coffee ___.  [shop]
+    - These shoes don't ___ me any more.  [fit]
+    - Friday would ___ us better than Thursday.  [suit]
+    - Does this jacket ___ across the shoulders?  [fit]
+    - A later time might ___ everyone.  [suit]
+    - This blue jacket does not ___ me; it is too small.  [fit]
+    - A short haircut would ___ you.  [suit]
+    - Will all our bags ___ in the boot?  [fit]
+    - Blue and green ___ you, but yellow does not.  [suit]
 
-### success-succeed (level A2)
-Words: success / succeed
-Meaning: success = успех; succeed = преуспеть, добиться успеха
-Rule: success = noun (a big success) · succeed = verb (to succeed)
+### policy-politics (level B2)
+Words: policy / politics
+Meaning: policy = политика, правила (организации); politics = политика (государство, партии)
+Rule: policy = a plan or rules (refund policy) · politics = government and parties
 Existing sentences (do not repeat these ideas):
-    - Her small café became a real ___.  [success]
-    - I hope you ___ in your new job.  [succeed]
-    - The play was an overnight ___.  [success]
-    - Few people ___ without hard work.  [succeed]
-    - Winning the cup was a huge ___.  [success]
-    - Our ___ was due in part to good luck.  [success]
-    - His business in New York was a great ___.  [success]
-    - If you want to ___, use your time well.  [succeed]
-    - We believe he will ___, for he has talent.  [succeed]
+    - The company changed its holiday ___.  [policy]
+    - He never talks about ___ at family dinners.  [politics]
+    - What's your school's phone-use ___?  [policy]
+    - She studied ___ at university.  [politics]
+    - Our refund ___ is printed on the receipt.  [policy]
+    - The school has a strict ___ on mobile phones.  [policy]
+    - She is studying ___ and history at university.  [politics]
+    - The company has a new ___ about working from home.  [policy]
 
-### say-speak (level A2)
-Words: say / speak
-Meaning: say = сказать (слова); speak = говорить (языком, с кем-то)
-Rule: say + the words (say hello) · speak + a language, or speak to someone
+### choice-chance (level B1)
+Words: choice / chance
+Meaning: choice = выбор; chance = шанс, вероятность
+Rule: choice = choosing between options · chance = a possibility
 Existing sentences (do not repeat these ideas):
-    - What did she ___ about the meeting?  [say]
-    - Could I ___ to Mr Brown now?  [speak]
-    - Don't ___ anything to upset him.  [say]
-    - He can ___ three languages well.  [speak]
-    - I didn't know what to ___.  [say]
-    - Can you ___ Slovak and German?  [speak]
-    - What did you ___ to the teacher?  [say]
-    - My grandfather can ___ three languages.  [speak]
-    - I will ___ goodbye to everyone.  [say]
+    - You have no ___ but to apologise.  [choice]
+    - There's a good ___ of rain later.  [chance]
+    - Blue was an easy ___ for the walls.  [choice]
+    - Is there any ___ I can change my seat?  [chance]
+    - The menu offers plenty of ___ for vegetarians.  [choice]
+    - You have a ___ between tea and coffee.  [choice]
+    - There is a good ___ of rain tomorrow.  [chance]
+    - It was a hard ___ because I liked both shirts.  [choice]
 
-### your-youre (level A2)
-Words: your / you're
-Meaning: your = твой, ваш; you're = ты есть = you are
-Rule: your = belongs to you · you're = you are
+### offer-suggest (level B1)
+Words: offer / suggest
+Meaning: offer = предлагать (дать что-то); suggest = предлагать (идею), советовать
+Rule: offer = say you will give or do something · suggest = give an idea
 Existing sentences (do not repeat these ideas):
-    - Is this ___ phone on the table?  [your]
-    - I think ___ right about the exam date.  [you're]
-    - Don't forget to bring ___ passport tomorrow.  [your]
-    - ___ very kind to help us with the bags.  [you're]
-    - Is there enough room for me in ___ car?  [your]
-    - We might not have found it without ___ help.  [your]
-    - You will soon get used to ___ new life.  [your]
-    - ___ the best thing that's ever happened to me.  [you're]
-    - You should make sure that ___ there on time.  [you're]
-    - ___ in love, aren't you? I can see it.  [you're]
-
-### its-its (level A2)
-Words: its / it's
-Meaning: its = его, её (о предмете, животном); it's = это есть = it is / it has
-Rule: its = belongs to it · it's = it is or it has
-Existing sentences (do not repeat these ideas):
-    - The dog hurt ___ leg while playing in the park.  [its]
-    - ___ raining again, so take an umbrella.  [it's]
-    - The company is moving ___ office to a new city.  [its]
-    - I think ___ time for us to go home.  [it's]
-    - It looks like a storm is on ___ way.  [its]
-    - A place for everything and everything in ___ place.  [its]
-    - It'll go away on ___ own in two weeks.  [its]
-    - I think now ___ time for us to leave.  [it's]
-    - I can't find it. Are you sure ___ here?  [it's]
-    - My job is the same as ___ always been.  [it's]
-
-### to-too-two (level A2)
-Words: to / too / two
-Meaning: to = к, в, чтобы; too = слишком; тоже; two = два
-Rule: to = direction or before a verb · too = more than needed, or also · two = the number 2
-Existing sentences (do not repeat these ideas):
-    - We waited ___ hours for the train yesterday.  [two]
-    - It is far ___ hot to walk in the afternoon.  [too]
-    - I am going ___ the market with my mother.  [to]
-    - You like this band, and I like them, ___.  [too]
-    - She has ___ brothers and one younger sister.  [two]
-    - I need time ___ think about all of this.  [to]
-    - I see why you don't want ___ go there.  [to]
-    - Tell him you love him before it's ___ late!  [too]
-    - I couldn't do that because I was ___ busy.  [too]
-    - He will be back in a day or ___.  [two]
-    - Don't try doing ___ things at the same time.  [two]
-    - May I have this for ___ or three days?  [two]
+    - Can I ___ you some tea?  [offer]
+    - I ___ taking the earlier train.  [suggest]
+    - The waiter will ___ dessert later.  [offer]
+    - Can you ___ a good place for lunch near here?  [suggest]
+    - Can I ___ you a cup of tea?  [offer]
+    - I ___ going to the cinema on Friday.  [suggest]
+    - The shop will ___ a ten percent discount.  [offer]
+    - Can you ___ a good place to eat?  [suggest]
 
 ## Rules for every sentence
 
@@ -178,3 +137,9 @@ Existing sentences (do not repeat these ideas):
 For each sentence: (a) test every option in the gap, (b) confirm only one works, (c) confirm no leak (rule 3), (d) count words
 (5–16), (e) confirm no sentence is a near copy of another one in your answer. Remove any sentence that fails.
 
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

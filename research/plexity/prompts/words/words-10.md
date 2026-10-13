@@ -4,25 +4,19 @@ Avoid words and sentences where British and American English differ (colour/colo
 
 ## Your task in this round
 
-Write **10 NEW words for each of these 6 slots** (60 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
+Write **10 NEW words for each of these 4 slots** (40 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
 
-### S55 — Shopping / Paying
-Words already in it (do not repeat): surcharge
+### S37 — Jobs and Career / Job Interview
+Words already in it (do not repeat): cover letter, curriculum vitae, strength, weakness, reference, shortlist, job offer, body language, eye contact, candidate, applicant, vacancy, interviewer, hire
 
-### S56 — Shopping / Paying
-Words already in it (do not repeat): cash, credit card, debit card, change, price tag, instalment, currency, voucher, loyalty card, till, overpay, coin, purse, expensive, cheap, shopkeeper
+### S38 — Logistics / Inventory Control
+Words already in it (do not repeat): inventory, stock, replenishment, safety stock, demand planning, inventory accuracy
 
-### S57 — Shopping / Shopping
-Words already in it (do not repeat): refund, discount, cashier, customer, bargain, afford, exchange, fitting room, sold out
+### S39 — Logistics / Order Fulfilment
+Words already in it (do not repeat): order picking
 
-### S58 — Sport and Fitness / Health and Recovery
-Words already in it (do not repeat): injury
-
-### S59 — Sport and Fitness / Training and Competition
-Words already in it (do not repeat): training, match, tournament, goalkeeper, defender, score
-
-### S60 — Study and Career / Career Development
-Words already in it (do not repeat): interview, qualification, experience, internship, mentor, workshop, ambition, employer, employee, resign, skill, apprentice, part-time, retire
+### S40 — Logistics / Receiving and Storage
+Words already in it (do not repeat): storage location
 
 ## What a good word is
 
@@ -52,3 +46,9 @@ Words already in it (do not repeat): interview, qualification, experience, inter
 ]
 
 Before you answer, check each entry: the slot code exists, the word is not in the list, the example contains the word in exactly this form, the definition does not contain the word, and the Russian translation is correct and specific.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

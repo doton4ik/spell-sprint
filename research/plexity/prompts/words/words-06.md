@@ -4,25 +4,19 @@ Avoid words and sentences where British and American English differ (colour/colo
 
 ## Your task in this round
 
-Write **10 NEW words for each of these 6 slots** (60 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
+Write **10 NEW words for each of these 4 slots** (40 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
 
-### S31 — Health and Body / Body and Symptoms
-Words already in it (do not repeat): stomach, throat, shoulder, knee, headache, fever, cough, sneeze, dizzy, sore, bruise, injury, ankle, wrist, elbow, rash, chest, wound, painful
+### S21 — Family and Relationships / Life Events
+Words already in it (do not repeat): wedding, divorce, anniversary, funeral, celebrate, adopt, bring up, look after, bride, groom, honeymoon, widow
 
-### S32 — Hobbies and Free Time / Creative Hobbies
-Words already in it (do not repeat): paint, knit, sew, hobby, photography, guitar, instrument, gardening, collect, craft, poetry, sketch, rehearsal
+### S22 — Family and Relationships / Relatives
+Words already in it (do not repeat): cousin, nephew, niece, aunt, uncle, twins, elderly, ancestor, stepmother, stepfather, grandchild, toddler, teenager, adult, babysitter
 
-### S33 — Hobbies and Free Time / Relaxing and Going Out
-Words already in it (do not repeat): cinema, concert, audience, festival, board game, relax, enjoyable, exciting, chess, puzzle, novel, fishing
+### S23 — Feelings / Feelings
+Words already in it (do not repeat): happy, anxious, embarrassed, jealous, grateful, disappointed, confident, exhausted, curious, proud, lonely, relieved, frustrated, excited
 
-### S34 — Hobbies and Free Time / Sport and Exercise
-Words already in it (do not repeat): gym, jog, exercise, equipment, competition, champion, referee, stadium, take part in, hiking, cycling
-
-### S35 — Home / Around the House
-Words already in it (do not repeat): kitchen, bedroom, bathroom, furniture, curtain, staircase, neighbourhood, rent, landlord, appliance, laundry, cupboard, attic, basement, balcony, garage, ceiling, chimney, fence, hallway
-
-### S36 — Jobs and Career / At Work
-Words already in it (do not repeat): supervisor, workload, overtime, promotion, resignation, teamwork, punctual, workplace, annual leave, sick leave, contract, shift, client, agenda, boss, unemployed, colleagues, receptionist, payslip, manager
+### S24 — Food and Drinks / Café and Restaurant
+Words already in it (do not repeat): menu, order, bill, tip, waiter, reservation, beverage, sparkling water, allergic, vegetarian, takeaway, portion, biscuit, spicy
 
 ## What a good word is
 
@@ -52,3 +46,9 @@ Words already in it (do not repeat): supervisor, workload, overtime, promotion, 
 ]
 
 Before you answer, check each entry: the slot code exists, the word is not in the list, the example contains the word in exactly this form, the definition does not contain the word, and the Russian translation is correct and specific.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

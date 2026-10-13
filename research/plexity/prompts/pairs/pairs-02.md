@@ -6,7 +6,33 @@ You are writing content for an English spelling trainer for Russian-speaking lea
 
 ## Your task in this round
 
-Write **25 new sentences for each of these 8 pairs**, 200 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
+Write **20 new sentences for each of these 6 pairs**, 120 sentences in total. Use the `id` exactly as written as `pairId` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.
+
+### economy-economics (level B2)
+Words: economy / economics
+Meaning: economy = экономика (страны); economics = экономика (наука, предмет)
+Rule: economy = the money system of a country · economics = the subject you study
+Existing sentences (do not repeat these ideas):
+    - She is studying ___ at Bristol.  [economics]
+    - Tourism is important for the island's ___.  [economy]
+    - His degree in ___ helped him get the job.  [economics]
+    - The national ___ grew last quarter.  [economy]
+    - She studies ___ at university.  [economics]
+    - The country's ___ grew slowly last year.  [economy]
+    - My brother has a degree in ___.  [economics]
+
+### notice-note (level B2)
+Words: notice / note
+Meaning: notice = заметить; note = отметить, записать; обратить внимание
+Rule: notice = see, become aware · note = write down, or "please note" = pay attention
+Existing sentences (do not repeat these ideas):
+    - Did you ___ her new haircut?  [notice]
+    - Please ___ your seat number on the form.  [note]
+    - I didn't ___ the sign by the gate.  [notice]
+    - Please ___ that the shop closes early on Sundays.  [note]
+    - Did you ___ the new painting on the wall?  [notice]
+    - Please ___ the date of the meeting in your diary.  [note]
+    - I did not ___ that my bag was open.  [notice]
 
 ### custom-habit (level B2)
 Words: custom / habit
@@ -61,62 +87,6 @@ Existing sentences (do not repeat these ideas):
     - He has a lot more money ___ I have.  [than]
     - I'm better at looking after children ___ you are.  [than]
 
-### whose-whos (level B1)
-Words: whose / who's
-Meaning: whose = чей; who's = кто есть = who is / who has
-Rule: whose = belongs to which person · who's = who is or who has
-Existing sentences (do not repeat these ideas):
-    - Do you know ___ bag is left on the bus?  [whose]
-    - I don't know ___ coming to the party tonight.  [who's]
-    - ___ car is parked in front of my garage?  [whose]
-    - She is the girl ___ been living next door.  [who's]
-    - I know a girl ___ father is a lawyer.  [whose]
-    - ___ little child is this? Where are his parents?  [whose]
-    - I wonder ___ going to be at the party.  [who's]
-    - We need to know ___ going to be there.  [who's]
-
-### accept-except (level B1)
-Words: accept / except
-Meaning: accept = принимать; except = кроме
-Rule: accept = take or agree to (verb) · except = not including
-Existing sentences (do not repeat these ideas):
-    - Please ___ this small gift from all of us.  [accept]
-    - Everyone came to the party ___ Tom, who was ill.  [except]
-    - Do you ___ credit cards in your little shop?  [accept]
-    - The museum is open every day ___ Monday.  [except]
-    - I had no choice but to ___ the offer.  [accept]
-    - Are you too proud to ___ a little help?  [accept]
-    - I'll give you any of them ___ this one.  [except]
-    - ___ for the storm, I would have arrived earlier.  [except]
-
-### write-right (level A2)
-Words: write / right
-Meaning: write = писать; right = правый; правильный; право
-Rule: write = put words on paper · right = correct, or the opposite of left
-Existing sentences (do not repeat these ideas):
-    - Please ___ your name at the top of the page.  [write]
-    - Turn ___ at the next traffic lights and go straight.  [right]
-    - You are ___ about the price of the tickets.  [right]
-    - I will ___ you a long letter next week.  [write]
-    - I know how to ___ a letter in English.  [write]
-    - All you have to do is ___ it down.  [write]
-    - Now that you say it, I think you're ___.  [right]
-    - She doesn't have a lot of money ___ now.  [right]
-
-### hear-here (level A2)
-Words: hear / here
-Meaning: hear = слышать; here = здесь
-Rule: hear = listen with your ears · here = in this place
-Existing sentences (do not repeat these ideas):
-    - Can you ___ the music from your room?  [hear]
-    - Please sit ___ next to me on the sofa.  [here]
-    - I can't ___ you, so please speak louder.  [hear]
-    - Come ___ and look at these old photos.  [here]
-    - I would be very happy to ___ from her.  [hear]
-    - If you've got a better idea, let's ___ it.  [hear]
-    - We can go if you don't like it ___.  [here]
-    - What time did I tell you to get ___?  [here]
-
 ## Rules for every sentence
 
 1. **Exactly one `___`**, and exactly one option fits. Read the sentence with every option: if two sound natural, drop it.
@@ -162,3 +132,9 @@ Existing sentences (do not repeat these ideas):
 For each sentence: (a) test every option in the gap, (b) confirm only one works, (c) confirm no leak (rule 3), (d) count words
 (5–16), (e) confirm no sentence is a near copy of another one in your answer. Remove any sentence that fails.
 
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

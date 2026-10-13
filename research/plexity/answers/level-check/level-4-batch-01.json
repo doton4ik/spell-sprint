@@ -1,0 +1,262 @@
+{
+  "gap": [
+    {
+      "prompt": "Had it not been for her intervention, the project ___.",
+      "answer": "would have collapsed",
+      "wrong": [
+        "would collapse",
+        "had collapsed",
+        "will collapse"
+      ],
+      "explain": "Use the third conditional for an unreal past."
+    },
+    {
+      "prompt": "The findings are ___ with previous research.",
+      "answer": "at odds",
+      "wrong": [
+        "in odds",
+        "on odds",
+        "by odds"
+      ],
+      "explain": "At odds with means in disagreement with."
+    },
+    {
+      "prompt": "Scarcely ___ the announcement when objections began.",
+      "answer": "had they made",
+      "wrong": [
+        "they had made",
+        "did they make",
+        "they made"
+      ],
+      "explain": "Use inversion after scarcely."
+    },
+    {
+      "prompt": "The proposal was rejected ___ its potential benefits.",
+      "answer": "notwithstanding",
+      "wrong": [
+        "despite of",
+        "although",
+        "however"
+      ],
+      "explain": "Notwithstanding can introduce a noun phrase."
+    },
+    {
+      "prompt": "He is said ___ influential in the negotiations.",
+      "answer": "to have been",
+      "wrong": [
+        "being",
+        "to be",
+        "have been"
+      ],
+      "explain": "Use a perfect infinitive for an earlier action."
+    },
+    {
+      "prompt": "The committee recommended that the policy ___ immediately.",
+      "answer": "be suspended",
+      "wrong": [
+        "is suspended",
+        "was suspended",
+        "will be suspended"
+      ],
+      "explain": "Use the subjunctive after recommend that."
+    },
+    {
+      "prompt": "Her argument was compelling, ___ somewhat speculative.",
+      "answer": "if",
+      "wrong": [
+        "despite",
+        "unless",
+        "whether"
+      ],
+      "explain": "If can mean although in formal English."
+    },
+    {
+      "prompt": "The company’s decision was widely ___ as risky.",
+      "answer": "perceived",
+      "wrong": [
+        "regarded to",
+        "considered as",
+        "viewed to"
+      ],
+      "explain": "Perceive something as something."
+    }
+  ],
+  "mistake": [
+    {
+      "sentence": "The data suggests that the trend is irreversible.",
+      "parts": [
+        "The data",
+        "suggests",
+        "that the trend",
+        "is irreversible"
+      ],
+      "answer": "suggests",
+      "explain": "Use suggest with data in formal writing."
+    },
+    {
+      "sentence": "He was reluctant in accepting the offer.",
+      "parts": [
+        "He was",
+        "reluctant",
+        "in accepting",
+        "the offer"
+      ],
+      "answer": "in accepting",
+      "explain": "Use reluctant to accept."
+    },
+    {
+      "sentence": "The report highlights on several systemic issues.",
+      "parts": [
+        "The report",
+        "highlights",
+        "on several",
+        "systemic issues"
+      ],
+      "answer": "on several",
+      "explain": "Do not use on after highlights."
+    },
+    {
+      "sentence": "Despite the fact that the evidence was clear, they rejected it.",
+      "parts": [
+        "Despite the fact that",
+        "the evidence was clear,",
+        "they",
+        "rejected it"
+      ],
+      "answer": "Despite the fact that",
+      "explain": "This is correct; no mistake here."
+    },
+    {
+      "sentence": "She is alleged to had misled investors.",
+      "parts": [
+        "She is alleged",
+        "to had",
+        "misled",
+        "investors"
+      ],
+      "answer": "to had",
+      "explain": "Use to have misled."
+    },
+    {
+      "sentence": "The number of complaints have risen sharply.",
+      "parts": [
+        "The number of complaints",
+        "have risen",
+        "sharply",
+        ""
+      ],
+      "answer": "have risen",
+      "explain": "Use has with the number."
+    }
+  ],
+  "phrase": [
+    {
+      "prompt": "The board decided to ___ ahead with the acquisition.",
+      "answer": "go",
+      "wrong": [
+        "put",
+        "take",
+        "bring"
+      ],
+      "explain": "Go ahead with means proceed with."
+    },
+    {
+      "prompt": "The government is under pressure to ___ down on tax avoidance.",
+      "answer": "crack",
+      "wrong": [
+        "put",
+        "take",
+        "bring"
+      ],
+      "explain": "Crack down on means deal strictly with."
+    },
+    {
+      "prompt": "The company had to ___ back its expansion plans.",
+      "answer": "scale",
+      "wrong": [
+        "put",
+        "take",
+        "bring"
+      ],
+      "explain": "Scale back means reduce the size of."
+    },
+    {
+      "prompt": "The negotiations finally ___ off after months of delay.",
+      "answer": "kicked",
+      "wrong": [
+        "put",
+        "took",
+        "set"
+      ],
+      "explain": "Kick off means begin."
+    },
+    {
+      "prompt": "She managed to ___ around the bureaucratic obstacles.",
+      "answer": "work",
+      "wrong": [
+        "go",
+        "take",
+        "put"
+      ],
+      "explain": "Work around means find a way past a problem."
+    },
+    {
+      "prompt": "The report ___ light on previously unknown risks.",
+      "answer": "shed",
+      "wrong": [
+        "gave",
+        "put",
+        "made"
+      ],
+      "explain": "Shed light on means make something clearer."
+    }
+  ],
+  "formation": [
+    {
+      "prompt": "The policy was widely criticised for its lack of ___. (TRANSPARENT)",
+      "answer": "transparency",
+      "explain": "Use the noun form of transparent."
+    },
+    {
+      "prompt": "The evidence was considered highly ___. (RELIABLE)",
+      "answer": "unreliable",
+      "explain": "Add un- for the opposite meaning."
+    },
+    {
+      "prompt": "His comments were seen as unnecessarily ___. (PROVOKE)",
+      "answer": "provocative",
+      "explain": "Add -ative to make the adjective."
+    },
+    {
+      "prompt": "The reform was implemented with remarkable ___. (SWIFT)",
+      "answer": "swiftness",
+      "explain": "Use the noun form of swift."
+    }
+  ],
+  "dictation": [
+    {
+      "sentence": "Had it not been for her intervention, the project would have collapsed.",
+      "alternatives": []
+    },
+    {
+      "sentence": "Scarcely had they made the announcement when objections began.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The committee recommended that the policy be suspended immediately.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The government is under pressure to crack down on tax avoidance.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The report shed light on previously unknown risks.",
+      "alternatives": []
+    },
+    {
+      "sentence": "The company had to scale back its expansion plans.",
+      "alternatives": []
+    }
+  ]
+}

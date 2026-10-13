@@ -4,13 +4,19 @@ Avoid words and sentences where British and American English differ (colour/colo
 
 ## Your task in this round
 
-Write **10 NEW words for each of these 2 slots** (20 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
+Write **10 NEW words for each of these 4 slots** (40 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
 
-### S73 — Warehouse Operations / SAP Warehouse Processes
-Words already in it (do not repeat): material, purchase order, goods movement, warehouse task, inbound processing, outbound processing, material document
+### S49 — Phone and Messages / Texting and Online
+Words already in it (do not repeat): message, text, reply, forward, screenshot, log in, online, emoji, unread, mute, block, selfie, upload, follower
 
-### S74 — Weather and Seasons / Weather and Seasons
-Words already in it (do not repeat): weather, temperature, forecast, thunderstorm, breeze, drizzle, humid, freezing, autumn, spring, flood, drought
+### S50 — Places in Town / Places in Town
+Words already in it (do not repeat): pharmacy, library, post office, bakery, crossroads, pavement, bridge, square, supermarket, station
+
+### S51 — School and Learning / Exams
+Words already in it (do not repeat): multiple choice, revision, pass, fail, grade, mark, cheat, certificate, resit
+
+### S52 — School and Learning / In Class
+Words already in it (do not repeat): classmate, textbook, blackboard, whiteboard, homework, lesson, lecture, syllabus, attendance, participate, discussion, notebook, pupil, headteacher, subject, ruler, rubber, calculator, uniform, absent, playground, dictionary, pencil, classroom, term
 
 ## What a good word is
 
@@ -40,3 +46,9 @@ Words already in it (do not repeat): weather, temperature, forecast, thunderstor
 ]
 
 Before you answer, check each entry: the slot code exists, the word is not in the list, the example contains the word in exactly this form, the definition does not contain the word, and the Russian translation is correct and specific.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

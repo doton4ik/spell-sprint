@@ -48,3 +48,11 @@ with everything that exists listed so Plexity does not repeat it). Save the answ
 `node scripts/plexity-rules.mjs merge <file> [--apply]`. `--apply` writes `database/rules-import/more-practice-pack-2.json`, builds
 `database/content-pack-5-more-practice-part1.sql`, `-part2.sql` and `-undo.sql` and the offline examples in `builtInRules.json`.
 **The SQL files are run by you in the Supabase SQL Editor** (part 1, then part 2); until then the site shows the new examples from the bundled copy only.
+
+## When Plexity cuts the answer off or eats the underscores
+
+- Prompts are now shorter (about 120 sentences, 40 words, 20 rule items per round) and end with "How to answer": the whole answer in ONE code block,
+  compact JSON, never stop mid-item. Use the NEW prompt files; rebuild them any time with the `prompts` commands above.
+- If an answer is still cut off, copy what you have into the answer file anyway. The merge scripts keep the complete items and tell you
+  ("NOTE ... cut off"). Then write to Plexity "Continue from the next item, same JSON format" and save the second part as another file.
+- If the chat shows a gap as `_` instead of `___` (it happens outside a code block), the scripts restore it.

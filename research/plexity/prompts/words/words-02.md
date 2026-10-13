@@ -4,25 +4,19 @@ Avoid words and sentences where British and American English differ (colour/colo
 
 ## Your task in this round
 
-Write **10 NEW words for each of these 6 slots** (60 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
+Write **10 NEW words for each of these 4 slots** (40 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
+
+### S05 — Business and Office / Meetings and Negotiation
+Words already in it (do not repeat): negotiation, agreement, recruitment, customer satisfaction, complaint
+
+### S06 — City and Transport / Getting Around
+Words already in it (do not repeat): platform, passenger, underground, journey, catch, miss, get off, bus stop, tram, fare, route, taxi, cyclist, motorway
 
 ### S07 — City and Transport / Places in the City
 Words already in it (do not repeat): skyscraper, suburb, crowded, district, avenue, fountain, statue, bench
 
 ### S08 — City and Transport / Traffic and Directions
 Words already in it (do not repeat): traffic, roundabout, junction, pedestrian, traffic lights, straight on, opposite, cross, park, lost, signpost, lane, parking, subway
-
-### S09 — Clothes and Appearance / Accessories
-Words already in it (do not repeat): scarf, gloves, necklace, bracelet, sunglasses, umbrella, wallet, put on, belt, earrings, zip
-
-### S10 — Clothes and Appearance / Clothing Items
-Words already in it (do not repeat): trousers, sweater, underwear, sleeve, collar, pocket, button, wear, fit, try on, jumper, blouse, skirt, trainers, slippers, pyjamas, sandals
-
-### S11 — Clothes and Appearance / Looks and Grooming
-Words already in it (do not repeat): hairstyle, beard, moustache, perfume, shave, comb, fashionable, elegant, casual, scruffy
-
-### S12 — Common Actions / At Home
-Words already in it (do not repeat): tidy up, vacuum, iron, put away, plug in, unplug, wipe, fold, pour, stir, rinse, hang, lock, sweep, unpack, scrub, dust
 
 ## What a good word is
 
@@ -52,3 +46,9 @@ Words already in it (do not repeat): tidy up, vacuum, iron, put away, plug in, u
 ]
 
 Before you answer, check each entry: the slot code exists, the word is not in the list, the example contains the word in exactly this form, the definition does not contain the word, and the Russian translation is correct and specific.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

@@ -2,7 +2,7 @@
 //   pairs-NN.md      more sentences for existing pairs, the pairs with the fewest sentences first
 //   newpairs-NN.md   brand-new pairs (ids and words are chosen here, the agent writes the rest)
 // The rules come from research/plexity/templates/pairs.md. Run: node scripts/make-plexity-prompts.mjs
-import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs'
+import { mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { pathToFileURL } from 'node:url'
@@ -22,14 +22,22 @@ const check = part('Before you answer')
 
 const out = new URL('../research/plexity/prompts/pairs/', import.meta.url)
 mkdirSync(out, { recursive: true })
-const PER_PAIR = 25
+for (const name of readdirSync(out)) if (/^(new)?pairs-\d+\.md$/.test(name)) rmSync(new URL(name, out), { force: true })
+const PER_PAIR = 20
+const FOOTER = `
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.`
 const chunk = (items, size) =>
   Array.from({ length: Math.ceil(items.length / size) }, (_, index) => items.slice(index * size, (index + 1) * size))
 const pad = (number) => String(number).padStart(2, '0')
 
 // ---- existing pairs: those with the fewest sentences first -----------------------------------------------------------
 const todo = [...pairDrills].filter((pair) => pair.sentences.length < 25).sort((a, b) => a.sentences.length - b.sentences.length)
-chunk(todo, 8).forEach((pairs, index) => {
+chunk(todo, 6).forEach((pairs, index) => {
   const list = pairs
     .map((pair) => {
       const sample = pair.sentences.map((sentence) => `    - ${sentence.text}  [${sentence.answer}]`).join('\n')
@@ -37,7 +45,7 @@ chunk(todo, 8).forEach((pairs, index) => {
     })
     .join('\n\n')
   const task = `## Your task in this round\n\nWrite **${PER_PAIR} new sentences for each of these ${pairs.length} pairs**, ${pairs.length * PER_PAIR} sentences in total. Use the \`id\` exactly as written as \`pairId\` in the answer. Where the rule above and a sentence pull in different directions, follow the rule.\n\n${list}`
-  const text = [head, task, rules, output.split('\n## ')[0], check].join('\n\n')
+  const text = [head, task, rules, output.split('\n## ')[0], check].join('\n\n') + FOOTER
   writeFileSync(new URL(`pairs-${pad(index + 1)}.md`, out), text + '\n')
 })
 
@@ -122,7 +130,7 @@ const have = new Set(pairDrills.map((pair) => pair.id))
 const fresh = Object.entries(wanted).flatMap(([level, pairs]) =>
   pairs.filter(([id]) => !have.has(id)).map(([id, words]) => ({ id, level, words })),
 )
-chunk(fresh, 6).forEach((pairs, index) => {
+chunk(fresh, 4).forEach((pairs, index) => {
   const list = pairs.map((pair) => `- id \`${pair.id}\`, level ${pair.level}, words: ${pair.words}`).join('\n')
   const task = `## Your task in this round\n\nCreate **${pairs.length} NEW pairs** with **${PER_PAIR} sentences each** (${pairs.length * PER_PAIR} sentences). Use exactly these ids, levels and words (the options in \`words\` are separated by " / "; for a pair like "all together" the option is two words):\n\n${list}\n\nThe level tells how hard the other words in the sentences may be (A2 / B1 / B2). Meanings are Russian glosses (a few words), the hint is one line in English.`
   const intro =
@@ -130,9 +138,9 @@ chunk(fresh, 6).forEach((pairs, index) => {
   const format = newPairs
     .replace(/^## New pairs.*\n/, () => intro)
     .replace('For a new pair give a full object instead of `add`:', 'One object per pair, like this:')
-  const text = [head, task, rules, format, check].join('\n\n')
+  const text = [head, task, rules, format, check].join('\n\n') + FOOTER
   writeFileSync(new URL(`newpairs-${pad(index + 1)}.md`, out), text + '\n')
 })
 console.log(
-  `pairs rounds: ${chunk(todo, 8).length}, new pairs: ${fresh.length} in ${chunk(fresh, 6).length} rounds -> research/plexity/prompts/pairs/`,
+  `pairs rounds: ${chunk(todo, 6).length}, new pairs: ${fresh.length} in ${chunk(fresh, 4).length} rounds -> research/plexity/prompts/pairs/`,
 )

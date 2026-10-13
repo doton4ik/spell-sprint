@@ -4,32 +4,8 @@ Avoid words and sentences where British and American English differ (colour/colo
 
 ## Your task in this round
 
-For each of the 36 words below write **one new example sentence**. Each word already has one example (after "e.g."); yours must show the word in a DIFFERENT situation.
+For each of the 30 words below write **one new example sentence**. Each word already has one example (after "e.g."); yours must show the word in a DIFFERENT situation.
 
-- school-and-learning-exams-revision | revision | повторение материала | noun | e.g. I spent the weekend doing revision for maths.
-- school-and-learning-exams-pass | pass | сдать экзамен | verb | e.g. She worked hard to pass the final exam.
-- school-and-learning-exams-fail | fail | провалить экзамен | verb | e.g. He was worried he might fail the driving test.
-- school-and-learning-exams-mark | mark | оценка, отметка | noun | e.g. The teacher gave a good mark for the essay.
-- school-and-learning-exams-cheat | cheat | списывать на экзамене | verb | e.g. Students who cheat can lose all their marks.
-- school-and-learning-exams-certificate | certificate | сертификат, аттестат | noun | e.g. She proudly framed her graduation certificate on the wall.
-- common-actions-at-home-vacuum | vacuum | пылесосить | verb | e.g. I usually vacuum the carpet on Saturday morning.
-- common-actions-out-and-about-catch-up-with | catch up with | пообщаться, узнать новости (друг друга); догнать | phrase | e.g. Let's meet soon to catch up with each other.
-- clothes-and-appearance-clothing-items-collar | collar | воротник | noun | e.g. He turned up his collar because the wind was so cold.
-- clothes-and-appearance-clothing-items-button | button | пуговица | noun | e.g. One button on my coat came off yesterday.
-- clothes-and-appearance-clothing-items-fit | fit | подходить по размеру, сидеть (об одежде) | verb | e.g. These shoes are too small and they do not fit me.
-- clothes-and-appearance-looks-and-grooming-casual | casual | повседневный | adjective | e.g. I prefer casual clothes to formal ones at weekends.
-- clothes-and-appearance-looks-and-grooming-scruffy | scruffy | неопрятный, потрёпанный | adjective | e.g. His scruffy jacket had a big hole in the elbow.
-- family-and-relationships-friends-and-partners-fall-out-with | fall out with | поссориться с | phrase | e.g. I never want to fall out with my best friend.
-- family-and-relationships-life-events-adopt | adopt | усыновить, удочерить; взять (питомца) | verb | e.g. They decided to adopt a little girl from another country.
-- hobbies-and-free-time-creative-hobbies-craft | craft | ремесло, рукоделие | noun | e.g. We made a paper bird in the craft lesson at school.
-- city-and-transport-traffic-and-directions-pedestrian | pedestrian | пешеход | noun | e.g. A pedestrian must use the crossing to get over the road safely.
-- city-and-transport-traffic-and-directions-opposite | opposite | напротив | preposition | e.g. The bank is opposite the supermarket, next to the bus stop.
-- city-and-transport-traffic-and-directions-park | park | парковать(ся) | verb | e.g. You cannot park here because there is a sign.
-- animals-pets-and-farm-animals-sheep | sheep | овца, овцы | noun | e.g. One sheep escaped from the farm and walked down the road.
-- animals-pets-and-farm-animals-lead | lead | поводок | noun | e.g. Keep your dog on a lead near the busy road.
-- animals-animal-life-tail | tail | хвост | noun | e.g. The dog wagged its tail when it saw me.
-- animals-animal-life-hunt | hunt | охотиться | verb | e.g. Lions hunt at night when it is cooler.
-- animals-animal-life-bite | bite | кусать | verb | e.g. Be careful, that dog might bite you if you touch it.
 - describing-things-size-and-shape-circular | circular | круглый | adjective | e.g. We had dinner at a small circular table by the window.
 - describing-things-size-and-shape-straight | straight | прямой | adjective | e.g. Draw a straight line from this point to the edge.
 - describing-things-material-and-texture-sticky | sticky | липкий | adjective | e.g. My fingers are sticky because I ate a lot of honey.
@@ -42,6 +18,24 @@ For each of the 36 words below write **one new example sentence**. Each word alr
 - study-and-career-learning-and-research-tutor | tutor | репетитор, преподаватель | noun | e.g. My tutor helps me with my writing.
 - study-and-career-learning-and-research-handout | handout | раздаточный материал | noun | e.g. The teacher gave us a handout with the main rules.
 - study-and-career-career-development-workshop | workshop | мастер-класс, семинар | noun | e.g. I went to a writing workshop on Saturday.
+- study-and-career-career-development-part-time | part-time | неполный рабочий день | adjective | e.g. She has a part-time job in a café.
+- travel-and-culture-travel-planning-customs | customs | таможня | noun | e.g. We waited an hour to go through customs.
+- common-actions-out-and-about-knock | knock | стучать | verb | e.g. Please knock before you come in.
+- common-actions-out-and-about-hurry | hurry | спешить, торопиться | verb | e.g. We must hurry or we will be late.
+- common-actions-at-home-dust | dust | вытирать пыль | verb | e.g. I dust the shelves once a week.
+- common-actions-everyday-phrasal-verbs-check-in | check in | регистрироваться (в отеле, аэропорту) | phrase | e.g. We can check in after two o'clock.
+- common-actions-everyday-phrasal-verbs-check-out | check out | выписываться (из отеля) | phrase | e.g. We have to check out by eleven.
+- common-actions-everyday-phrasal-verbs-turn-up | turn up | прибавлять (громкость) | phrase | e.g. Can you turn up the radio?
+- common-actions-everyday-phrasal-verbs-go-on | go on | продолжаться, происходить | phrase | e.g. Please go on, I'm listening.
+- general-english-commonly-misspelled-maintenance | maintenance | техническое обслуживание | noun | e.g. The lift is closed for maintenance.
+- general-english-commonly-misspelled-existence | existence | существование | noun | e.g. Do you believe in the existence of ghosts?
+- general-english-commonly-misspelled-height | height | рост, высота | noun | e.g. What is the height of that tower?
+- general-english-commonly-misspelled-humorous | humorous | юмористический, смешной | adjective | e.g. He wrote a humorous story about his cat.
+- general-english-commonly-misspelled-guarantee | guarantee | гарантия | noun | e.g. The phone comes with a two-year guarantee.
+- phone-and-messages-phone-basics-contact | contact | контакт (в телефоне) | noun | e.g. Save her number as a new contact.
+- phone-and-messages-phone-basics-speaker | speaker | динамик | noun | e.g. Put the call on speaker so we can all hear.
+- phone-and-messages-phone-basics-unlock | unlock | разблокировать | verb | e.g. Use your fingerprint to unlock the screen.
+- phone-and-messages-calls-dial | dial | набирать (номер) | verb | e.g. Dial the number slowly and carefully.
 
 ## Rules for the sentence
 
@@ -58,3 +52,9 @@ For each of the 36 words below write **one new example sentence**. Each word alr
 ]
 
 Use the word_id exactly as written. Before you answer, check each sentence: it contains the word in the listed form and no other word could fill the gap.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

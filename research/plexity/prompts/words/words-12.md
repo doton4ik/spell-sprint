@@ -4,25 +4,19 @@ Avoid words and sentences where British and American English differ (colour/colo
 
 ## Your task in this round
 
-Write **10 NEW words for each of these 6 slots** (60 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
+Write **10 NEW words for each of these 4 slots** (40 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
 
-### S67 — Transport and Trade / Road Freight
-Words already in it (do not repeat): freight, consignment, carrier
+### S45 — People and Family / Family and Friends
+Words already in it (do not repeat): relative, neighbour, colleague, friendship, grandparents, sibling, stranger, guest, generation, marriage, generous, honest, polite, rude, shy, stubborn
 
-### S68 — Travel and Culture / At the Airport
-Words already in it (do not repeat): boarding pass, passport control, baggage claim, check-in desk, gate, terminal, customs officer, departure lounge, connecting flight, immigration, suitcase, trolley, airline, layover, flight, boarding, passport, carousel, scanner
+### S46 — People and Family / Feelings
+Words already in it (do not repeat): upset, confused, furious, cheerful
 
-### S69 — Travel and Culture / At the Destination
-Words already in it (do not repeat): accommodation, directions, sightseeing, souvenir, museum, gallery, monument, cathedral, castle, landmark, tradition, local, tourist, excursion, crowd, architecture
+### S47 — Phone and Messages / Calls
+Words already in it (do not repeat): call back, hang up, voicemail, ring, reception, ringtone, conversation, mobile, dial, caller
 
-### S70 — Travel and Culture / On the Plane
-Words already in it (do not repeat): seatbelt, cabin crew, aisle, turbulence, emergency exit, announcement, jet lag, runway, pilot, landing, cockpit, lifejacket, jet, crew
-
-### S71 — Travel and Culture / Travel Planning
-Words already in it (do not repeat): luggage, departure, arrival, ticket, reservation, delay, border, itinerary, guidebook, visa, hostel, campsite, backpack, abroad, destination, brochure, customs, ferry, cruise
-
-### S72 — Warehouse Operations / Inventory Control
-Words already in it (do not repeat): physical inventory
+### S48 — Phone and Messages / Phone Basics
+Words already in it (do not repeat): signal, switch off, silent, contact, settings, speaker, headphones, passcode, unlock
 
 ## What a good word is
 
@@ -52,3 +46,9 @@ Words already in it (do not repeat): physical inventory
 ]
 
 Before you answer, check each entry: the slot code exists, the word is not in the list, the example contains the word in exactly this form, the definition does not contain the word, and the Russian translation is correct and specific.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.

@@ -4,25 +4,19 @@ Avoid words and sentences where British and American English differ (colour/colo
 
 ## Your task in this round
 
-Write **10 NEW words for each of these 6 slots** (60 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
+Write **10 NEW words for each of these 4 slots** (40 words). A slot is a topic and subtopic of the word library. Put each word in the slot where it fits best; use the slot code in `slot`.
 
-### S61 — Study and Career / Learning and Research
-Words already in it (do not repeat): assignment, essay, thesis, degree, graduate, scholarship, semester, tutor, revise, summary, source, experiment, analysis, evidence, conclusion, handout, campus, enrol, tuition, professor
+### S41 — Logistics / Receiving and Storage
+Words already in it (do not repeat): goods receipt, warehouse layout
 
-### S62 — Technology / Devices and Software
-Words already in it (do not repeat): device, screen, keyboard, battery, charger, software, update, install, download, password, storage, wireless, laptop, printer, router, virus, folder, cursor, tablet, cable, icon
+### S42 — Logistics / Supply Chain
+Words already in it (do not repeat): supplier, shipment, delivery, distribution centre, lead time, transportation cost
 
-### S63 — Technology / Online Life
-Words already in it (do not repeat): website, browser, attachment, username, notification, subscribe, account, privacy, search engine, social media, delete, backup, spam
+### S43 — Nature and Animals / Nature and Animals
+Words already in it (do not repeat): forest, mountain, valley, island, wildlife, insect, butterfly, squirrel, eagle, pollution, recycle, cliff, volcano, earthquake, ocean, meadow
 
-### S64 — Time and Dates / Days and Months
-Words already in it (do not repeat): Monday, Tuesday, Thursday, Friday, Saturday, Sunday, January, March, April, June, August, September, December, decade, century, midnight, noon, dawn, era
-
-### S65 — Time and Dates / Planning Time
-Words already in it (do not repeat): schedule, timetable, postpone, in advance, on time, punctuality, reminder, duration, beforehand, nowadays, fortnight, weekday, annual, weekly, meanwhile, afterwards
-
-### S66 — Transport and Trade / Customs and Trade
-Words already in it (do not repeat): customs clearance, bill of lading
+### S44 — Nature and Animals / Weather and Seasons
+Words already in it (do not repeat): thunder, fog, hail, frost, rainbow
 
 ## What a good word is
 
@@ -52,3 +46,9 @@ Words already in it (do not repeat): customs clearance, bill of lading
 ]
 
 Before you answer, check each entry: the slot code exists, the word is not in the list, the example contains the word in exactly this form, the definition does not contain the word, and the Russian translation is correct and specific.
+
+## How to answer (important)
+
+- Put the WHOLE answer in ONE code block (three backticks + json). Outside a code block the chat removes the underscores of the gaps (___) and breaks the JSON.
+- Compact JSON: one item per line, no comments, no text before or after the code block.
+- Never stop in the middle of an item. If you run out of room, end after the last COMPLETE item and close all brackets; I will ask you to continue.
