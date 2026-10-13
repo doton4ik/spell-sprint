@@ -1,5 +1,5 @@
 // More examples and exercises for the RULES, written by Plexity and merged here:
-//   node scripts/plexity-rules.mjs prompts                         ready prompts -> research/plexity/prompts/rules/
+//   node scripts/plexity-rules.mjs prompts                         ready prompts -> research/plexity/prompts/
 //   node scripts/plexity-rules.mjs merge <answer.json> [--apply] [--skip=list.json]
 // A merge only reports unless --apply. --apply adds the accepted rows to database/rules-import/more-practice-pack-2.json
 // and runs scripts/build-more-practice-pack.mjs, which writes database/content-pack-5-*.sql (the user runs these in the
@@ -58,9 +58,9 @@ const chunk = (items, size) =>
 const pad = (number) => String(number).padStart(2, '0')
 
 function prompts() {
-  mkdirSync('research/plexity/prompts/rules', { recursive: true })
-  for (const name of readdirSync('research/plexity/prompts/rules'))
-    if (/^rules-.*\.md$/.test(name)) rmSync(`research/plexity/prompts/rules/${name}`, { force: true })
+  mkdirSync('research/plexity/prompts', { recursive: true })
+  for (const name of readdirSync('research/plexity/prompts'))
+    if (/^rules-.*\.md$/.test(name)) rmSync(`research/plexity/prompts/${name}`, { force: true })
   const ARTICLES = new Set([
     'a-or-an',
     'a-or-the',
@@ -134,11 +134,11 @@ One array with one object per rule listed in this round. The shape (the values a
 
 Use the slug exactly as written. Before you answer, check every item against the rule above: wrong sentences must really be wrong, correct ones really correct, each exercise has exactly one answer.`
     writeFileSync(
-      `research/plexity/prompts/rules/rules-${pad(index + 1)}.md`,
+      `research/plexity/prompts/rules-${pad(index + 1)}.md`,
       banner(`rules-${pad(index + 1)}`, group.map((rule) => rule.slug).join(', ')) + text + FOOTER + '\n',
     )
   })
-  console.log(`rules: ${groups.length} prompts for ${builtIn.rules.length} rules -> research/plexity/prompts/rules/`)
+  console.log(`rules: ${groups.length} prompts for ${builtIn.rules.length} rules -> research/plexity/prompts/`)
 }
 
 function merge(file) {

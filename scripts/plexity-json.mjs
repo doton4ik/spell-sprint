@@ -73,17 +73,17 @@ export function readAnswer(file) {
 // Warns when an answer file does not belong to the prompt with the same number (a repeated answer, or a chat that kept
 // answering an earlier task). `found` are the ids the answer covers: rule slugs, slot codes S01.., or word ids.
 const PROMPTS = {
-  rules: ['rules', /^### ([a-z0-9-]+) —/gm],
-  words: ['words', /^### (S\d+) —/gm],
-  examples: ['examples', /^- ([a-z0-9-]+) \|/gm],
+  rules: /^### ([a-z0-9-]+) —/gm,
+  words: /^### (S\d+) —/gm,
+  examples: /^- ([a-z0-9-]+) \|/gm,
 }
 export function checkRound(file, found) {
   const match = /(rules|words|examples)-(\d+)\.json$/.exec(file.replace(/\\/g, '/'))
   if (!match) return
-  const [folder, pattern] = PROMPTS[match[1]]
+  const pattern = PROMPTS[match[1]]
   let prompt
   try {
-    prompt = readFileSync(new URL(`../research/plexity/prompts/${folder}/${match[1]}-${match[2]}.md`, import.meta.url), 'utf8')
+    prompt = readFileSync(new URL(`../research/plexity/prompts/${match[1]}-${match[2]}.md`, import.meta.url), 'utf8')
   } catch {
     return
   }

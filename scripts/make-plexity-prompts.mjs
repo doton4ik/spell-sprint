@@ -1,4 +1,4 @@
-// Builds ready-to-paste prompts for Perplexity into research/plexity/prompts/pairs/ (one file per round):
+// Builds ready-to-paste prompts for Perplexity into research/plexity/prompts/ (one file per round):
 //   pairs-NN.md      more sentences for existing pairs, the pairs with the fewest sentences first
 //   newpairs-NN.md   brand-new pairs (ids and words are chosen here, the agent writes the rest)
 // The rules come from research/plexity/templates/pairs.md. Run: node scripts/make-plexity-prompts.mjs
@@ -20,7 +20,7 @@ const output = part('Output format')
 const newPairs = part('New pairs')
 const check = part('Before you answer')
 
-const out = new URL('../research/plexity/prompts/pairs/', import.meta.url)
+const out = new URL('../research/plexity/prompts/', import.meta.url)
 mkdirSync(out, { recursive: true })
 for (const name of readdirSync(out)) if (/^(new)?pairs-\d+\.md$/.test(name)) rmSync(new URL(name, out), { force: true })
 const PER_PAIR = 20
@@ -151,5 +151,5 @@ chunk(fresh, 4).forEach((pairs, index) => {
   )
 })
 console.log(
-  `pairs rounds: ${chunk(todo, 6).length}, new pairs: ${fresh.length} in ${chunk(fresh, 4).length} rounds -> research/plexity/prompts/pairs/`,
+  `pairs rounds: ${chunk(todo, 6).length}, new pairs: ${fresh.length} in ${chunk(fresh, 4).length} rounds -> research/plexity/prompts/`,
 )

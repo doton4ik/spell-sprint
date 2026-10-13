@@ -1,0 +1,272 @@
+[
+  {
+    "slug": "accept-vs-except",
+    "examples": [
+      {
+        "type": "correct",
+        "text": "The company accepted my request for a refund.",
+        "note": "Accept = agree to a request"
+      },
+      {
+        "type": "correct",
+        "text": "The park is open every day except Christmas.",
+        "note": "Except = not including"
+      },
+      {
+        "type": "correct",
+        "text": "He accepted the change to his work schedule.",
+        "note": "Accept = agree to something"
+      },
+      {
+        "type": "correct",
+        "text": "Every student had a book except Leo.",
+        "note": "Except = not including"
+      },
+      {
+        "type": "incorrect",
+        "text": "She excepted the prize at the ceremony.",
+        "correction": "She accepted the prize at the ceremony.",
+        "note": "Accept = receive something"
+      },
+      {
+        "type": "incorrect",
+        "text": "The bus goes everywhere accept the old town.",
+        "correction": "The bus goes everywhere except the old town.",
+        "note": "Except = not including"
+      },
+      {
+        "type": "incorrect",
+        "text": "The shop accepted the damaged box from the sale.",
+        "correction": "The shop excepted the damaged box from the sale.",
+        "note": "Except = leave out"
+      },
+      {
+        "type": "incorrect",
+        "text": "Please except my thanks for your help.",
+        "correction": "Please accept my thanks for your help.",
+        "note": "Accept = receive willingly"
+      },
+      {
+        "type": "incorrect",
+        "text": "The children were happy accept after bedtime.",
+        "correction": "The children were happy except after bedtime.",
+        "note": "Except = not including"
+      },
+      {
+        "type": "incorrect",
+        "text": "The website does not except new users today.",
+        "correction": "The website does not accept new users today.",
+        "note": "Accept = allow or take"
+      }
+    ],
+    "exercises": [
+      {
+        "type": "fill_gap",
+        "prompt": "The manager will ___ your application tomorrow.",
+        "answer": "accept"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The pool is open every day ___ Friday.",
+        "answer": "except"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "I cannot ___ this plan without more information.",
+        "answer": "accept"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "All the plates were clean ___ this one.",
+        "answer": "except"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: He ___ the letter from the postman.",
+        "answer": "accepted",
+        "choices": [
+          "accepted",
+          "excepted"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The market sells fruit every day ___ winter.",
+        "answer": "except",
+        "choices": [
+          "accept",
+          "except"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The school does not ___ visitors after six.",
+        "answer": "accept",
+        "choices": [
+          "accept",
+          "except"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Every cup was broken ___ the blue one.",
+        "answer": "except",
+        "choices": [
+          "accept",
+          "except"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: She was ready to ___ the offer.",
+        "answer": "accept",
+        "choices": [
+          "accept",
+          "except"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The shop accepts all coins ___ this one.",
+        "answer": "except",
+        "choices": [
+          "accept",
+          "except"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "able-vs-ible",
+    "examples": [
+      {
+        "type": "correct",
+        "text": "The repair guide is available in the office.",
+        "note": "Available ends in -able"
+      },
+      {
+        "type": "correct",
+        "text": "The sign was readable from across the street.",
+        "note": "Readable ends in -able"
+      },
+      {
+        "type": "correct",
+        "text": "The stars were visible after midnight.",
+        "note": "Visible ends in -ible"
+      },
+      {
+        "type": "correct",
+        "text": "The forest road is passable with a good car.",
+        "note": "Passable ends in -able"
+      },
+      {
+        "type": "incorrect",
+        "text": "The tickets are availible at the entrance.",
+        "correction": "The tickets are available at the entrance.",
+        "note": "Available, not availible"
+      },
+      {
+        "type": "incorrect",
+        "text": "The map was not readible without glasses.",
+        "correction": "The map was not readable without glasses.",
+        "note": "Readable, not readible"
+      },
+      {
+        "type": "incorrect",
+        "text": "The number was visable on the delivery box.",
+        "correction": "The number was visible on the delivery box.",
+        "note": "Visible, not visable"
+      },
+      {
+        "type": "incorrect",
+        "text": "The meeting room is accessable by lift.",
+        "correction": "The meeting room is accessible by lift.",
+        "note": "Accessible, not accessable"
+      },
+      {
+        "type": "incorrect",
+        "text": "The old chair is still useable in the garden.",
+        "correction": "The old chair is still usable in the garden.",
+        "note": "Usable ends in -able"
+      },
+      {
+        "type": "incorrect",
+        "text": "The difference was barely noticable.",
+        "correction": "The difference was barely noticeable.",
+        "note": "Noticeable ends in -able"
+      }
+    ],
+    "exercises": [
+      {
+        "type": "correct_word",
+        "prompt": "availible",
+        "answer": "available"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "readible",
+        "answer": "readable"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "visable",
+        "answer": "visible"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "accessable",
+        "answer": "accessible"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "useable",
+        "answer": "usable"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling: The difference was hardly ___.",
+        "answer": "noticeable",
+        "choices": [
+          "noticeable",
+          "noticable"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling: The old bike is still ___.",
+        "answer": "usable",
+        "choices": [
+          "usable",
+          "useable"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling: The tickets are ___ at the door.",
+        "answer": "available",
+        "choices": [
+          "available",
+          "availible"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling: The room is ___ from the corridor.",
+        "answer": "accessible",
+        "choices": [
+          "accessible",
+          "accessable"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling: The poster was large and ___.",
+        "answer": "readable",
+        "choices": [
+          "readable",
+          "readible"
+        ]
+      }
+    ]
+  }
+]

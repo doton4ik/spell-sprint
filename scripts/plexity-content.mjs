@@ -1,5 +1,5 @@
 // Content for Plexity (Perplexity): ready prompts and checked merging, for three kinds of content.
-//   node scripts/plexity-content.mjs prompts words|examples|level      writes prompts into research/plexity/prompts/<kind>/
+//   node scripts/plexity-content.mjs prompts words|examples|level      writes prompts into research/plexity/prompts/
 //   node scripts/plexity-content.mjs merge words <answer.json> [--apply] [--skip=list.json]
 //   node scripts/plexity-content.mjs merge examples <answer.json> [--apply] [--skip=list.json]
 //   node scripts/plexity-content.mjs merge level <answer.json> --batch=NN [--apply] [--skip=list.json]
@@ -84,8 +84,8 @@ const banner = (name, covers) =>
   `# NEW, SEPARATE TASK (${name})\nIgnore every earlier message in this chat and do not repeat earlier answers. This round covers EXACTLY these items and nothing else: ${covers}.\nYour answer must contain these items only.\n\n`
 const writePrompt = (folder, name, text, covers) => {
   text = banner(name, covers) + text + FOOTER
-  mkdirSync(url(`research/plexity/prompts/${folder}/`), { recursive: true })
-  writeFileSync(url(`research/plexity/prompts/${folder}/${name}`), text.trimEnd() + '\n')
+  mkdirSync(url('research/plexity/prompts/'), { recursive: true })
+  writeFileSync(url(`research/plexity/prompts/${name}`), text.trimEnd() + '\n')
 }
 const chunk = (items, size) =>
   Array.from({ length: Math.ceil(items.length / size) }, (_, index) => items.slice(index * size, (index + 1) * size))
@@ -171,7 +171,7 @@ Before you answer, check each entry: the slot code exists, the word is not in th
       group.map((slot) => `${slot.code} (${slot.topic} / ${slot.subtopic})`).join(', '),
     )
   })
-  console.log(`words: ${chunk(all, 4).length} prompts for ${all.length} slots -> research/plexity/prompts/words/`)
+  console.log(`words: ${chunk(all, 4).length} prompts for ${all.length} slots -> research/plexity/prompts/`)
 }
 
 function wordsMerge(file) {
@@ -300,9 +300,7 @@ Use the word_id exactly as written. Before you answer, check each sentence: it c
       `the ${group.length} words from ${group[0].word_id} to ${group.at(-1).word_id}`,
     )
   })
-  console.log(
-    `examples: ${chunk(need, 30).length} prompts for ${need.length} words without a second example -> research/plexity/prompts/examples/`,
-  )
+  console.log(`examples: ${chunk(need, 30).length} prompts for ${need.length} words without a second example -> research/plexity/prompts/`)
 }
 
 function examplesMerge(file) {
@@ -398,7 +396,7 @@ Vary the grammar and vocabulary points and the topics (home, school, work, trave
 Before you answer, test every option of every gap and check that exactly one fits.`
     writePrompt('level-check', `level-${level}-${LEVELS[level]}.md`, text, `level ${LEVELS[level]} questions only`)
   }
-  console.log('level: 4 prompts (A2, B1, B2, C1) -> research/plexity/prompts/level-check/')
+  console.log('level: 4 prompts (A2, B1, B2, C1) -> research/plexity/prompts/')
 }
 
 function levelMerge(file) {
@@ -506,12 +504,12 @@ const table = {
   prompts: { words: wordsPrompts, examples: examplesPrompts, level: levelPrompts },
   merge: { words: wordsMerge, examples: examplesMerge, level: levelMerge },
 }
-const folders = { words: 'words', examples: 'examples', level: 'level-check' }
-if (command === 'prompts' && folders[kind]) {
+const prefixes = { words: /^words-.*\.md$/, examples: /^examples-.*\.md$/, level: /^level-.*\.md$/ }
+if (command === 'prompts' && prefixes[kind]) {
   // old prompts of this kind are removed first, so a smaller number of rounds leaves no stale files
-  mkdirSync(url(`research/plexity/prompts/${folders[kind]}/`), { recursive: true })
-  for (const name of readdirSync(url(`research/plexity/prompts/${folders[kind]}/`)))
-    if (/\.md$/.test(name)) rmSync(url(`research/plexity/prompts/${folders[kind]}/${name}`), { force: true })
+  mkdirSync(url('research/plexity/prompts/'), { recursive: true })
+  for (const name of readdirSync(url('research/plexity/prompts/')))
+    if (prefixes[kind].test(name)) rmSync(url(`research/plexity/prompts/${name}`), { force: true })
 }
 const run = table[command]?.[kind]
 if (!run) {
