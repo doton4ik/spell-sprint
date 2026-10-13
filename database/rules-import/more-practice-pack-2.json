@@ -658,6 +658,1231 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "advice-vs-advise",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "She always gives me sensible advice.",
+          "note": "Advice is a noun: a suggestion"
+        },
+        {
+          "type": "correct",
+          "text": "The doctor will advise him to rest.",
+          "note": "Advise is a verb: to give a suggestion"
+        },
+        {
+          "type": "correct",
+          "text": "Thanks for the advice about the interview.",
+          "note": "After the, advice is the thing"
+        },
+        {
+          "type": "correct",
+          "text": "I would advise you to leave early.",
+          "note": "Would advise: an action"
+        },
+        {
+          "type": "incorrect",
+          "text": "Can I ask you for some advise?",
+          "correction": "Can I ask you for some advice?",
+          "note": "Some ___ is a noun: advice"
+        },
+        {
+          "type": "incorrect",
+          "text": "He advices me to study every day.",
+          "correction": "He advises me to study every day.",
+          "note": "The verb is advise, so advises"
+        },
+        {
+          "type": "incorrect",
+          "text": "My brother never takes my advise.",
+          "correction": "My brother never takes my advice.",
+          "note": "My ___ is a thing: advice"
+        },
+        {
+          "type": "incorrect",
+          "text": "Please advice us what to do next.",
+          "correction": "Please advise us what to do next.",
+          "note": "Please ___ us is an action: advise"
+        },
+        {
+          "type": "incorrect",
+          "text": "The lawyer gave us free advise.",
+          "correction": "The lawyer gave us free advice.",
+          "note": "Gave us advice: a noun"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "We need some ___ about which phone to buy.",
+          "answer": "advice"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "She will ___ him to see a doctor.",
+          "answer": "advise"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Can you give me a piece of ___ about my CV?",
+          "answer": "advice"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "I strongly ___ you to read the contract.",
+          "answer": "advise"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: My grandmother always gives good ___.",
+          "answer": "advice",
+          "choices": [
+            "advice",
+            "advise"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: The coach will ___ the team before the match.",
+          "answer": "advise",
+          "choices": [
+            "advice",
+            "advise"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: I took her ___ and stayed at home.",
+          "answer": "advice",
+          "choices": [
+            "advice",
+            "advise"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: What would you ___ me to do?",
+          "answer": "advise",
+          "choices": [
+            "advice",
+            "advise"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: His ___ saved me a lot of money.",
+          "answer": "advice",
+          "choices": [
+            "advice",
+            "advise"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: The bank can ___ you on loans.",
+          "answer": "advise",
+          "choices": [
+            "advice",
+            "advise"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "affect-vs-effect",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Lack of sleep affects my memory.",
+          "note": "Affect is a verb: to influence"
+        },
+        {
+          "type": "correct",
+          "text": "The medicine had no effect on her cough.",
+          "note": "Effect is a noun: a result"
+        },
+        {
+          "type": "correct",
+          "text": "Rain will affect the football match tomorrow.",
+          "note": "Will affect: an action"
+        },
+        {
+          "type": "correct",
+          "text": "The film had a strong effect on the audience.",
+          "note": "A strong effect: a result"
+        },
+        {
+          "type": "incorrect",
+          "text": "Bad weather can effect the flight times.",
+          "correction": "Bad weather can affect the flight times.",
+          "note": "Can ___ is a verb: affect"
+        },
+        {
+          "type": "incorrect",
+          "text": "Stress has a bad affect on health.",
+          "correction": "Stress has a bad effect on health.",
+          "note": "A bad ___ is a result: effect"
+        },
+        {
+          "type": "incorrect",
+          "text": "The price rise did not effect sales.",
+          "correction": "The price rise did not affect sales.",
+          "note": "Did not ___ is a verb: affect"
+        },
+        {
+          "type": "incorrect",
+          "text": "What is the affect of coffee on sleep?",
+          "correction": "What is the effect of coffee on sleep?",
+          "note": "The ___ of is a result: effect"
+        },
+        {
+          "type": "incorrect",
+          "text": "How will the new rule effect us?",
+          "correction": "How will the new rule affect us?",
+          "note": "Will ___ us is a verb: affect"
+        },
+        {
+          "type": "incorrect",
+          "text": "The side affects of the pill are mild.",
+          "correction": "The side effects of the pill are mild.",
+          "note": "Side effects: a noun"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "Pollution can ___ the health of children.",
+          "answer": "affect"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The new tax will have a big ___ on prices.",
+          "answer": "effect"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "How did the news ___ you?",
+          "answer": "affect"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The ___ of the storm lasted for days.",
+          "answer": "effect"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Cold weather can ___ your mood.",
+          "answer": "affect",
+          "choices": [
+            "affect",
+            "effect"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: The teacher's praise had a great ___.",
+          "answer": "effect",
+          "choices": [
+            "affect",
+            "effect"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Does coffee ___ you at night?",
+          "answer": "affect",
+          "choices": [
+            "affect",
+            "effect"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: There was no visible ___ after the treatment.",
+          "answer": "effect",
+          "choices": [
+            "affect",
+            "effect"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Late trains ___ thousands of workers.",
+          "answer": "affect",
+          "choices": [
+            "affect",
+            "effect"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: The special ___ in the film were amazing.",
+          "answer": "effects",
+          "choices": [
+            "affects",
+            "effects"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "irregular-past-common",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "She brought a cake to the party.",
+          "note": "Bring becomes brought"
+        },
+        {
+          "type": "correct",
+          "text": "I thought about it all night.",
+          "note": "Think becomes thought"
+        },
+        {
+          "type": "correct",
+          "text": "He caught the last train home.",
+          "note": "Catch becomes caught"
+        },
+        {
+          "type": "correct",
+          "text": "We fought hard but lost the game.",
+          "note": "Fight becomes fought"
+        },
+        {
+          "type": "incorrect",
+          "text": "I thinked about you yesterday.",
+          "correction": "I thought about you yesterday.",
+          "note": "Think becomes thought, not thinked"
+        },
+        {
+          "type": "incorrect",
+          "text": "She bringed her sister to the concert.",
+          "correction": "She brought her sister to the concert.",
+          "note": "Bring becomes brought"
+        },
+        {
+          "type": "incorrect",
+          "text": "The cat catched a mouse.",
+          "correction": "The cat caught a mouse.",
+          "note": "Catch becomes caught"
+        },
+        {
+          "type": "incorrect",
+          "text": "He teached English for ten years.",
+          "correction": "He taught English for ten years.",
+          "note": "Teach becomes taught"
+        },
+        {
+          "type": "incorrect",
+          "text": "They buyed a new sofa last week.",
+          "correction": "They bought a new sofa last week.",
+          "note": "Buy becomes bought"
+        },
+        {
+          "type": "incorrect",
+          "text": "I standed in the queue for an hour.",
+          "correction": "I stood in the queue for an hour.",
+          "note": "Stand becomes stood"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "bringed",
+          "answer": "brought"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "catched",
+          "answer": "caught"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "thinked",
+          "answer": "thought"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "standed",
+          "answer": "stood"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the past form of buy.",
+          "answer": "bought"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the past form of teach.",
+          "answer": "taught"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the past form of sell.",
+          "answer": "sold"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct past form of bring.",
+          "answer": "brought",
+          "choices": [
+            "bringed",
+            "brought",
+            "broughten"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct past form of fight.",
+          "answer": "fought",
+          "choices": [
+            "fighted",
+            "fought",
+            "faught"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Yesterday I ___ about my old school. (думал)",
+          "answer": "thought"
+        }
+      ]
+    },
+    {
+      "slug": "irregular-plurals",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The dentist checked the children's teeth.",
+          "note": "Child becomes children; tooth becomes teeth"
+        },
+        {
+          "type": "correct",
+          "text": "Many people were waiting outside.",
+          "note": "People is the plural of person"
+        },
+        {
+          "type": "correct",
+          "text": "She has two sheep on her farm.",
+          "note": "Sheep stays the same in the plural"
+        },
+        {
+          "type": "correct",
+          "text": "Both of his feet were wet.",
+          "note": "Foot becomes feet"
+        },
+        {
+          "type": "incorrect",
+          "text": "The mans are repairing the road.",
+          "correction": "The men are repairing the road.",
+          "note": "Man becomes men"
+        },
+        {
+          "type": "incorrect",
+          "text": "I saw three mouses in the kitchen.",
+          "correction": "I saw three mice in the kitchen.",
+          "note": "Mouse becomes mice"
+        },
+        {
+          "type": "incorrect",
+          "text": "My tooths hurt after the sweets.",
+          "correction": "My teeth hurt after the sweets.",
+          "note": "Tooth becomes teeth"
+        },
+        {
+          "type": "incorrect",
+          "text": "There were many womans at the meeting.",
+          "correction": "There were many women at the meeting.",
+          "note": "Woman becomes women"
+        },
+        {
+          "type": "incorrect",
+          "text": "The childrens are asleep.",
+          "correction": "The children are asleep.",
+          "note": "Children is already plural"
+        },
+        {
+          "type": "incorrect",
+          "text": "Five peoples came to the lesson.",
+          "correction": "Five people came to the lesson.",
+          "note": "People is already plural"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "tooths",
+          "answer": "teeth"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "womans",
+          "answer": "women"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: more than one woman.",
+          "answer": "women"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: more than one tooth.",
+          "answer": "teeth"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: more than one goose.",
+          "answer": "geese"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct plural of foot.",
+          "answer": "feet",
+          "choices": [
+            "foots",
+            "feet",
+            "feets"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct plural of man.",
+          "answer": "men",
+          "choices": [
+            "mans",
+            "men",
+            "mens"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The baby already has six ___. (зубы)",
+          "answer": "teeth"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Many ___ visit this museum every year. (люди)",
+          "answer": "people"
+        }
+      ]
+    },
+    {
+      "slug": "comparatives-er-est",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "This is the coldest winter I remember.",
+          "note": "Cold + est: the coldest"
+        },
+        {
+          "type": "correct",
+          "text": "Her handwriting is neater than mine.",
+          "note": "Neat + er: neater"
+        },
+        {
+          "type": "correct",
+          "text": "He is the fastest runner in the school.",
+          "note": "Fast + est: the fastest"
+        },
+        {
+          "type": "correct",
+          "text": "A mouse is smaller than a cat.",
+          "note": "Small + er: smaller"
+        },
+        {
+          "type": "incorrect",
+          "text": "This road is wideer than the old one.",
+          "correction": "This road is wider than the old one.",
+          "note": "Wide ends in e, so add only r"
+        },
+        {
+          "type": "incorrect",
+          "text": "She is the prettyest girl in the class.",
+          "correction": "She is the prettiest girl in the class.",
+          "note": "Pretty changes y to i: prettiest"
+        },
+        {
+          "type": "incorrect",
+          "text": "The new phone is thiner than the old one.",
+          "correction": "The new phone is thinner than the old one.",
+          "note": "Thin doubles the n: thinner"
+        },
+        {
+          "type": "incorrect",
+          "text": "This soup is the tastyest in town.",
+          "correction": "This soup is the tastiest in town.",
+          "note": "Tasty changes y to i: tastiest"
+        },
+        {
+          "type": "incorrect",
+          "text": "My bag is heavyer than yours.",
+          "correction": "My bag is heavier than yours.",
+          "note": "Heavy changes y to i: heavier"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "easyer",
+          "answer": "easier"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "wetest",
+          "answer": "wettest"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "crazyest",
+          "answer": "craziest"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "sadest",
+          "answer": "saddest"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the comparative form of fat.",
+          "answer": "fatter"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the superlative form of nice.",
+          "answer": "nicest"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the comparative of thin.",
+          "answer": "thinner",
+          "choices": [
+            "thiner",
+            "thinner",
+            "thinnner"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the superlative of late.",
+          "answer": "latest",
+          "choices": [
+            "lattest",
+            "latest",
+            "latetest"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "My bag is ___ than yours. (тяжелее)",
+          "answer": "heavier"
+        }
+      ]
+    },
+    {
+      "slug": "double-consonants",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "It is necessary to book a table early.",
+          "note": "Necessary: one c, two s"
+        },
+        {
+          "type": "correct",
+          "text": "I felt embarrassed when I forgot his name.",
+          "note": "Embarrassed: double r and double s"
+        },
+        {
+          "type": "correct",
+          "text": "The committee made its decision on Friday.",
+          "note": "Committee: double m and double t"
+        },
+        {
+          "type": "correct",
+          "text": "We stayed in cheap accommodation near the station.",
+          "note": "Accommodation: double c and double m"
+        },
+        {
+          "type": "incorrect",
+          "text": "She was embarassed by the question.",
+          "correction": "She was embarrassed by the question.",
+          "note": "Embarrassed: double r and double s"
+        },
+        {
+          "type": "incorrect",
+          "text": "It is neccessary to bring your passport.",
+          "correction": "It is necessary to bring your passport.",
+          "note": "Necessary: one c, two s"
+        },
+        {
+          "type": "incorrect",
+          "text": "I see her ocasionally at the gym.",
+          "correction": "I see her occasionally at the gym.",
+          "note": "Occasionally: double c, one s"
+        },
+        {
+          "type": "incorrect",
+          "text": "He disapeared after the show.",
+          "correction": "He disappeared after the show.",
+          "note": "Disappear: double p after dis-"
+        },
+        {
+          "type": "incorrect",
+          "text": "It is a great oportunity for us.",
+          "correction": "It is a great opportunity for us.",
+          "note": "Opportunity: double p"
+        },
+        {
+          "type": "incorrect",
+          "text": "The comittee meets every month.",
+          "correction": "The committee meets every month.",
+          "note": "Committee: double m and double t"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "acommodation",
+          "answer": "accommodation"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "aparent",
+          "answer": "apparent"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "begining",
+          "answer": "beginning"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "ocurred",
+          "answer": "occurred"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "dissapear",
+          "answer": "disappear"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "embarasing",
+          "answer": "embarrassing"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling of the word that means a chance.",
+          "answer": "opportunity",
+          "choices": [
+            "oportunity",
+            "opportunity",
+            "opportunnity"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: It is ___ to wear a helmet.",
+          "answer": "necessary",
+          "choices": [
+            "necessary",
+            "neccessary",
+            "necesary"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling of the adverb that means sometimes.",
+          "answer": "occasionally",
+          "choices": [
+            "ocasionally",
+            "occasionally",
+            "occassionally"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Please write your home ___ below. (адрес)",
+          "answer": "address"
+        }
+      ]
+    },
+    {
+      "slug": "double-before-ing-ed",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "She is swimming in the sea.",
+          "note": "Swim doubles the m: swimming"
+        },
+        {
+          "type": "correct",
+          "text": "We were chatting for hours.",
+          "note": "Chat doubles the t: chatting"
+        },
+        {
+          "type": "correct",
+          "text": "The bus stopped at the corner.",
+          "note": "Stop doubles the p: stopped"
+        },
+        {
+          "type": "correct",
+          "text": "He is getting tired of waiting.",
+          "note": "Get doubles the t: getting"
+        },
+        {
+          "type": "incorrect",
+          "text": "They were geting ready to leave.",
+          "correction": "They were getting ready to leave.",
+          "note": "One vowel and one consonant: get, getting"
+        },
+        {
+          "type": "incorrect",
+          "text": "He is siting on the floor.",
+          "correction": "He is sitting on the floor.",
+          "note": "Sit doubles the t: sitting"
+        },
+        {
+          "type": "incorrect",
+          "text": "She was swiming in the lake.",
+          "correction": "She was swimming in the lake.",
+          "note": "Swim doubles the m: swimming"
+        },
+        {
+          "type": "incorrect",
+          "text": "The boy was hiting the ball.",
+          "correction": "The boy was hitting the ball.",
+          "note": "Hit doubles the t: hitting"
+        },
+        {
+          "type": "incorrect",
+          "text": "The thief was grabing her bag.",
+          "correction": "The thief was grabbing her bag.",
+          "note": "Grab doubles the b: grabbing"
+        },
+        {
+          "type": "incorrect",
+          "text": "We were chating online all night.",
+          "correction": "We were chatting online all night.",
+          "note": "Chat doubles the t: chatting"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "beged",
+          "answer": "begged"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "shoping",
+          "answer": "shopping"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "cuting",
+          "answer": "cutting"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "joged",
+          "answer": "jogged"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the -ing form of put.",
+          "answer": "putting"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the -ed form of stop.",
+          "answer": "stopped"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the -ing form of swim.",
+          "answer": "swimming"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct -ing form of visit.",
+          "answer": "visiting",
+          "choices": [
+            "visitting",
+            "visiting",
+            "visitng"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct -ing form of play.",
+          "answer": "playing",
+          "choices": [
+            "plaiing",
+            "playing",
+            "plapping"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The dog was ___ its tail happily. (wag)",
+          "answer": "wagging"
+        }
+      ]
+    },
+    {
+      "slug": "drop-silent-e",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "She is baking a chocolate cake.",
+          "note": "Bake drops the e: baking"
+        },
+        {
+          "type": "correct",
+          "text": "We decided to leave early.",
+          "note": "Decide drops the e: decided"
+        },
+        {
+          "type": "correct",
+          "text": "The baby was smiling at me.",
+          "note": "Smile drops the e: smiling"
+        },
+        {
+          "type": "correct",
+          "text": "They were using my laptop.",
+          "note": "Use drops the e: using"
+        },
+        {
+          "type": "incorrect",
+          "text": "She is takeing a photo.",
+          "correction": "She is taking a photo.",
+          "note": "Take drops the e: taking"
+        },
+        {
+          "type": "incorrect",
+          "text": "He liveed there for years.",
+          "correction": "He lived there for years.",
+          "note": "Live ends in e, so add only d"
+        },
+        {
+          "type": "incorrect",
+          "text": "I am writeing an email.",
+          "correction": "I am writing an email.",
+          "note": "Write drops the e: writing"
+        },
+        {
+          "type": "incorrect",
+          "text": "They were chaseing the dog.",
+          "correction": "They were chasing the dog.",
+          "note": "Chase drops the e: chasing"
+        },
+        {
+          "type": "incorrect",
+          "text": "She arriveed at the station late.",
+          "correction": "She arrived at the station late.",
+          "note": "Arrive ends in e, so add only d"
+        },
+        {
+          "type": "incorrect",
+          "text": "He is comeing home tomorrow.",
+          "correction": "He is coming home tomorrow.",
+          "note": "Come drops the e: coming"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "closeing",
+          "answer": "closing"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "hateing",
+          "answer": "hating"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "likeed",
+          "answer": "liked"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "rideing",
+          "answer": "riding"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the -ing form of write.",
+          "answer": "writing"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the -ed form of love.",
+          "answer": "loved"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the -ing form of leave.",
+          "answer": "leaving"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct -ing form of have.",
+          "answer": "having",
+          "choices": [
+            "haveing",
+            "having",
+            "haveng"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct -ing form of see.",
+          "answer": "seeing",
+          "choices": [
+            "seing",
+            "seeing",
+            "seeeing"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The sun was ___ above the hills. (shine)",
+          "answer": "shining"
+        }
+      ]
+    },
+    {
+      "slug": "adverbs-ly",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The children waited patiently outside.",
+          "note": "Patient + ly: patiently"
+        },
+        {
+          "type": "correct",
+          "text": "He carefully opened the box.",
+          "note": "Careful + ly: carefully"
+        },
+        {
+          "type": "correct",
+          "text": "She spoke angrily to the driver.",
+          "note": "Angry changes y to i: angrily"
+        },
+        {
+          "type": "correct",
+          "text": "It rained heavily all night.",
+          "note": "Heavy changes y to i: heavily"
+        },
+        {
+          "type": "incorrect",
+          "text": "She sang beautifuly at the concert.",
+          "correction": "She sang beautifully at the concert.",
+          "note": "Beautiful + ly: two l, beautifully"
+        },
+        {
+          "type": "incorrect",
+          "text": "She ate her lunch hungryly.",
+          "correction": "She ate her lunch hungrily.",
+          "note": "Hungry changes y to i: hungrily"
+        },
+        {
+          "type": "incorrect",
+          "text": "The baby slept peacefuly.",
+          "correction": "The baby slept peacefully.",
+          "note": "Peaceful + ly: two l, peacefully"
+        },
+        {
+          "type": "incorrect",
+          "text": "He lazyly opened his eyes.",
+          "correction": "He lazily opened his eyes.",
+          "note": "Lazy changes y to i: lazily"
+        },
+        {
+          "type": "incorrect",
+          "text": "He completly forgot the date.",
+          "correction": "He completely forgot the date.",
+          "note": "Complete keeps its e: completely"
+        },
+        {
+          "type": "incorrect",
+          "text": "He is truely sorry.",
+          "correction": "He is truly sorry.",
+          "note": "True drops the e: truly"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "angryly",
+          "answer": "angrily"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "noisyly",
+          "answer": "noisily"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "politly",
+          "answer": "politely"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "dayly",
+          "answer": "daily"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the adverb from easy.",
+          "answer": "easily"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the adverb from true.",
+          "answer": "truly"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the adverb from careful.",
+          "answer": "carefully"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct adverb from gentle.",
+          "answer": "gently",
+          "choices": [
+            "gentlely",
+            "gently",
+            "gentily"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct adverb from busy.",
+          "answer": "busily",
+          "choices": [
+            "busyly",
+            "busily",
+            "busly"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "She walked ___ so she would not wake the baby. (quiet)",
+          "answer": "quietly"
+        }
+      ]
+    },
+    {
+      "slug": "irregular-past-go",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Last summer we went to Italy.",
+          "note": "The past of go is went"
+        },
+        {
+          "type": "correct",
+          "text": "He has gone to work already.",
+          "note": "After has or have, use gone"
+        },
+        {
+          "type": "correct",
+          "text": "They went home after the film.",
+          "note": "The past of go is went"
+        },
+        {
+          "type": "incorrect",
+          "text": "Yesterday I goed to the dentist.",
+          "correction": "Yesterday I went to the dentist.",
+          "note": "Go becomes went, not goed"
+        },
+        {
+          "type": "incorrect",
+          "text": "My parents have went on holiday.",
+          "correction": "My parents have gone on holiday.",
+          "note": "After have, use gone"
+        },
+        {
+          "type": "incorrect",
+          "text": "We goed shopping on Saturday.",
+          "correction": "We went shopping on Saturday.",
+          "note": "Go becomes went, not goed"
+        },
+        {
+          "type": "incorrect",
+          "text": "Tom has not went to school today.",
+          "correction": "Tom has not gone to school today.",
+          "note": "After has, use gone"
+        },
+        {
+          "type": "incorrect",
+          "text": "They go to the beach last Sunday.",
+          "correction": "They went to the beach last Sunday.",
+          "note": "A finished time needs the past: went"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "goed",
+          "answer": "went"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "goned",
+          "answer": "gone"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "wented",
+          "answer": "went"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the past form of go.",
+          "answer": "went"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the past participle of go (I have ...).",
+          "answer": "gone"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct form: Yesterday we ___ to the museum.",
+          "answer": "went",
+          "choices": [
+            "goed",
+            "went",
+            "gone"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct form: She has ___ to the airport.",
+          "answer": "gone",
+          "choices": [
+            "went",
+            "gone",
+            "goed"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct form: Last week they ___ to a concert.",
+          "answer": "went",
+          "choices": [
+            "gone",
+            "went",
+            "goed"
+          ]
+        }
+      ]
     }
   ]
 }

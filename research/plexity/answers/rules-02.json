@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "advice-vs-advise",
+    "examples": [
+      {"type": "correct", "text": "She always gives me sensible advice.", "note": "Advice is a noun: a suggestion"},
+      {"type": "correct", "text": "The doctor will advise him to rest.", "note": "Advise is a verb: to give a suggestion"},
+      {"type": "correct", "text": "Thanks for the advice about the interview.", "note": "After the, advice is the thing"},
+      {"type": "correct", "text": "I would advise you to leave early.", "note": "Would advise: an action"},
+      {"type": "incorrect", "text": "Can I ask you for some advise?", "correction": "Can I ask you for some advice?", "note": "Some ___ is a noun: advice"},
+      {"type": "incorrect", "text": "He advices me to study every day.", "correction": "He advises me to study every day.", "note": "The verb is advise, so advises"},
+      {"type": "incorrect", "text": "My brother never takes my advise.", "correction": "My brother never takes my advice.", "note": "My ___ is a thing: advice"},
+      {"type": "incorrect", "text": "Please advice us what to do next.", "correction": "Please advise us what to do next.", "note": "Please ___ us is an action: advise"},
+      {"type": "incorrect", "text": "The lawyer gave us free advise.", "correction": "The lawyer gave us free advice.", "note": "Gave us advice: a noun"},
+      {"type": "incorrect", "text": "I advice you not to drive in the snow.", "correction": "I advise you not to drive in the snow.", "note": "I advise: a verb with an s"}
+    ],
+    "exercises": [
+      {"type": "fill_gap", "prompt": "We need some ___ about which phone to buy.", "answer": "advice"},
+      {"type": "fill_gap", "prompt": "She will ___ him to see a doctor.", "answer": "advise"},
+      {"type": "fill_gap", "prompt": "Can you give me a piece of ___ about my CV?", "answer": "advice"},
+      {"type": "fill_gap", "prompt": "I strongly ___ you to read the contract.", "answer": "advise"},
+      {"type": "multiple_choice", "prompt": "Choose the word: My grandmother always gives good ___.", "answer": "advice", "choices": ["advice", "advise"]},
+      {"type": "multiple_choice", "prompt": "Choose the word: The coach will ___ the team before the match.", "answer": "advise", "choices": ["advice", "advise"]},
+      {"type": "multiple_choice", "prompt": "Choose the word: I took her ___ and stayed at home.", "answer": "advice", "choices": ["advice", "advise"]},
+      {"type": "multiple_choice", "prompt": "Choose the word: What would you ___ me to do?", "answer": "advise", "choices": ["advice", "advise"]},
+      {"type": "multiple_choice", "prompt": "Choose the word: His ___ saved me a lot of money.", "answer": "advice", "choices": ["advice", "advise"]},
+      {"type": "multiple_choice", "prompt": "Choose the word: The bank can ___ you on loans.", "answer": "advise", "choices": ["advice", "advise"]}
+    ]
+  },
+  {
+    "slug": "affect-vs-effect",
+    "examples": [
+      {"type": "correct", "text": "Lack of sleep affects my memory.", "note": "Affect is a verb: to influence"},
+      {"type": "correct", "text": "The medicine had no effect on her cough.", "note": "Effect is a noun: a result"},
+      {"type": "correct", "text": "Rain will affect the football match tomorrow.", "note": "Will affect: an action"},
+      {"type": "correct", "text": "The film had a strong effect on the audience.", "note": "A strong effect: a result"},
+      {"type": "incorrect", "text": "Bad weather can effect the flight times.", "correction": "Bad weather can affect the flight times.", "note": "Can ___ is a verb: affect"},
+      {"type": "incorrect", "text": "Stress has a bad affect on health.", "correction": "Stress has a bad effect on health.", "note": "A bad ___ is a result: effect"},
+      {"type": "incorrect", "text": "The price rise did not effect sales.", "correction": "The price rise did not affect sales.", "note": "Did not ___ is a verb: affect"},
+      {"type": "incorrect", "text": "What is the affect of coffee on sleep?", "correction": "What is the effect of coffee on sleep?", "note": "The ___ of is a result: effect"},
+      {"type": "incorrect", "text": "How will the new rule effect us?", "correction": "How will the new rule affect us?", "note": "Will ___ us is a verb: affect"},
+      {"type": "incorrect", "text": "The side affects of the pill are mild.", "correction": "The side effects of the pill are mild.", "note": "Side effects: a noun"}
+    ],
+    "exercises": [
+      {"type": "fill_gap", "prompt": "Pollution can ___ the health of children.", "answer": "affect"},
+      {"type": "fill_gap", "prompt": "The new tax will have a big ___ on prices.", "answer": "effect"},
+      {"type": "fill_gap", "prompt": "How did the news ___ you?", "answer": "affect"},
+      {"type": "fill_gap", "prompt": "The ___ of the storm lasted for days.", "answer": "effect"},
+      {"type": "multiple_choice", "prompt": "Choose the word: Cold weather can ___ your mood.", "answer": "affect", "choices": ["affect", "effect"]},
+      {"type": "multiple_choice", "prompt": "Choose the word: The teacher's praise had a great ___.", "answer": "effect", "choices": ["affect", "effect"]},
+      {"type": "multiple_choice", "prompt": "Choose the word: Does coffee ___ you at night?", "answer": "affect", "choices": ["affect", "effect"]},
+      {"type": "multiple_choice", "prompt": "Choose the word: There was no visible ___ after the treatment.", "answer": "effect", "choices": ["affect", "effect"]},
+      {"type": "multiple_choice", "prompt": "Choose the word: Late trains ___ thousands of workers.", "answer": "affect", "choices": ["affect", "effect"]},
+      {"type": "multiple_choice", "prompt": "Choose the word: The special ___ in the film were amazing.", "answer": "effects", "choices": ["affects", "effects"]}
+    ]
+  }
+]

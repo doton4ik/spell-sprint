@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "adverbs-ly",
+    "examples": [
+      {"type": "correct", "text": "The children waited patiently outside.", "note": "Patient + ly: patiently"},
+      {"type": "correct", "text": "He carefully opened the box.", "note": "Careful + ly: carefully"},
+      {"type": "correct", "text": "She spoke angrily to the driver.", "note": "Angry changes y to i: angrily"},
+      {"type": "correct", "text": "It rained heavily all night.", "note": "Heavy changes y to i: heavily"},
+      {"type": "incorrect", "text": "She sang beautifuly at the concert.", "correction": "She sang beautifully at the concert.", "note": "Beautiful + ly: two l, beautifully"},
+      {"type": "incorrect", "text": "She ate her lunch hungryly.", "correction": "She ate her lunch hungrily.", "note": "Hungry changes y to i: hungrily"},
+      {"type": "incorrect", "text": "The baby slept peacefuly.", "correction": "The baby slept peacefully.", "note": "Peaceful + ly: two l, peacefully"},
+      {"type": "incorrect", "text": "He lazyly opened his eyes.", "correction": "He lazily opened his eyes.", "note": "Lazy changes y to i: lazily"},
+      {"type": "incorrect", "text": "He completly forgot the date.", "correction": "He completely forgot the date.", "note": "Complete keeps its e: completely"},
+      {"type": "incorrect", "text": "He is truely sorry.", "correction": "He is truly sorry.", "note": "True drops the e: truly"}
+    ],
+    "exercises": [
+      {"type": "correct_word", "prompt": "angryly", "answer": "angrily"},
+      {"type": "correct_word", "prompt": "noisyly", "answer": "noisily"},
+      {"type": "correct_word", "prompt": "politly", "answer": "politely"},
+      {"type": "correct_word", "prompt": "dayly", "answer": "daily"},
+      {"type": "spell", "prompt": "Spell the word: the adverb from easy.", "answer": "easily"},
+      {"type": "spell", "prompt": "Spell the word: the adverb from true.", "answer": "truly"},
+      {"type": "spell", "prompt": "Spell the word: the adverb from careful.", "answer": "carefully"},
+      {"type": "multiple_choice", "prompt": "Choose the correct adverb from gentle.", "answer": "gently", "choices": ["gentlely", "gently", "gentily"]},
+      {"type": "multiple_choice", "prompt": "Choose the correct adverb from busy.", "answer": "busily", "choices": ["busyly", "busily", "busly"]},
+      {"type": "fill_gap", "prompt": "She walked ___ so she would not wake the baby. (quiet)", "answer": "quietly"}
+    ]
+  },
+  {
+    "slug": "irregular-past-go",
+    "examples": [
+      {"type": "correct", "text": "Last summer we went to Italy.", "note": "The past of go is went"},
+      {"type": "correct", "text": "He has gone to work already.", "note": "After has or have, use gone"},
+      {"type": "correct", "text": "They went home after the film.", "note": "The past of go is went"},
+      {"type": "correct", "text": "Have you ever gone camping?", "note": "After have, use gone"},
+      {"type": "incorrect", "text": "Yesterday I goed to the dentist.", "correction": "Yesterday I went to the dentist.", "note": "Go becomes went, not goed"},
+      {"type": "incorrect", "text": "My parents have went on holiday.", "correction": "My parents have gone on holiday.", "note": "After have, use gone"},
+      {"type": "incorrect", "text": "We goed shopping on Saturday.", "correction": "We went shopping on Saturday.", "note": "Go becomes went, not goed"},
+      {"type": "incorrect", "text": "Tom has not went to school today.", "correction": "Tom has not gone to school today.", "note": "After has, use gone"},
+      {"type": "incorrect", "text": "They go to the beach last Sunday.", "correction": "They went to the beach last Sunday.", "note": "A finished time needs the past: went"},
+      {"type": "incorrect", "text": "I have never went abroad.", "correction": "I have never gone abroad.", "note": "After have, use gone"}
+    ],
+    "exercises": [
+      {"type": "correct_word", "prompt": "goed", "answer": "went"},
+      {"type": "correct_word", "prompt": "goned", "answer": "gone"},
+      {"type": "correct_word", "prompt": "wented", "answer": "went"},
+      {"type": "spell", "prompt": "Spell the word: the past form of go.", "answer": "went"},
+      {"type": "spell", "prompt": "Spell the word: the past participle of go (I have ...).", "answer": "gone"},
+      {"type": "multiple_choice", "prompt": "Choose the correct form: Yesterday we ___ to the museum.", "answer": "went", "choices": ["goed", "went", "gone"]},
+      {"type": "multiple_choice", "prompt": "Choose the correct form: She has ___ to the airport.", "answer": "gone", "choices": ["went", "gone", "goed"]},
+      {"type": "multiple_choice", "prompt": "Choose the correct form: Last week they ___ to a concert.", "answer": "went", "choices": ["gone", "went", "goed"]},
+      {"type": "fill_gap", "prompt": "My brother has ___ to Spain for a week.", "answer": "gone"},
+      {"type": "fill_gap", "prompt": "We ___ for a walk after dinner.", "answer": "went"}
+    ]
+  }
+]

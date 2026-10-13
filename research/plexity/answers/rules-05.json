@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "double-before-ing-ed",
+    "examples": [
+      {"type": "correct", "text": "She is swimming in the sea.", "note": "Swim doubles the m: swimming"},
+      {"type": "correct", "text": "We were chatting for hours.", "note": "Chat doubles the t: chatting"},
+      {"type": "correct", "text": "The bus stopped at the corner.", "note": "Stop doubles the p: stopped"},
+      {"type": "correct", "text": "He is getting tired of waiting.", "note": "Get doubles the t: getting"},
+      {"type": "incorrect", "text": "They were geting ready to leave.", "correction": "They were getting ready to leave.", "note": "One vowel and one consonant: get, getting"},
+      {"type": "incorrect", "text": "He is siting on the floor.", "correction": "He is sitting on the floor.", "note": "Sit doubles the t: sitting"},
+      {"type": "incorrect", "text": "She was swiming in the lake.", "correction": "She was swimming in the lake.", "note": "Swim doubles the m: swimming"},
+      {"type": "incorrect", "text": "The boy was hiting the ball.", "correction": "The boy was hitting the ball.", "note": "Hit doubles the t: hitting"},
+      {"type": "incorrect", "text": "The thief was grabing her bag.", "correction": "The thief was grabbing her bag.", "note": "Grab doubles the b: grabbing"},
+      {"type": "incorrect", "text": "We were chating online all night.", "correction": "We were chatting online all night.", "note": "Chat doubles the t: chatting"}
+    ],
+    "exercises": [
+      {"type": "correct_word", "prompt": "beged", "answer": "begged"},
+      {"type": "correct_word", "prompt": "shoping", "answer": "shopping"},
+      {"type": "correct_word", "prompt": "cuting", "answer": "cutting"},
+      {"type": "correct_word", "prompt": "joged", "answer": "jogged"},
+      {"type": "spell", "prompt": "Spell the word: the -ing form of put.", "answer": "putting"},
+      {"type": "spell", "prompt": "Spell the word: the -ed form of stop.", "answer": "stopped"},
+      {"type": "spell", "prompt": "Spell the word: the -ing form of swim.", "answer": "swimming"},
+      {"type": "multiple_choice", "prompt": "Choose the correct -ing form of visit.", "answer": "visiting", "choices": ["visitting", "visiting", "visitng"]},
+      {"type": "multiple_choice", "prompt": "Choose the correct -ing form of play.", "answer": "playing", "choices": ["plaiing", "playing", "plapping"]},
+      {"type": "fill_gap", "prompt": "The dog was ___ its tail happily. (wag)", "answer": "wagging"}
+    ]
+  },
+  {
+    "slug": "drop-silent-e",
+    "examples": [
+      {"type": "correct", "text": "She is baking a chocolate cake.", "note": "Bake drops the e: baking"},
+      {"type": "correct", "text": "We decided to leave early.", "note": "Decide drops the e: decided"},
+      {"type": "correct", "text": "The baby was smiling at me.", "note": "Smile drops the e: smiling"},
+      {"type": "correct", "text": "They were using my laptop.", "note": "Use drops the e: using"},
+      {"type": "incorrect", "text": "She is takeing a photo.", "correction": "She is taking a photo.", "note": "Take drops the e: taking"},
+      {"type": "incorrect", "text": "He liveed there for years.", "correction": "He lived there for years.", "note": "Live ends in e, so add only d"},
+      {"type": "incorrect", "text": "I am writeing an email.", "correction": "I am writing an email.", "note": "Write drops the e: writing"},
+      {"type": "incorrect", "text": "They were chaseing the dog.", "correction": "They were chasing the dog.", "note": "Chase drops the e: chasing"},
+      {"type": "incorrect", "text": "She arriveed at the station late.", "correction": "She arrived at the station late.", "note": "Arrive ends in e, so add only d"},
+      {"type": "incorrect", "text": "He is comeing home tomorrow.", "correction": "He is coming home tomorrow.", "note": "Come drops the e: coming"}
+    ],
+    "exercises": [
+      {"type": "correct_word", "prompt": "closeing", "answer": "closing"},
+      {"type": "correct_word", "prompt": "hateing", "answer": "hating"},
+      {"type": "correct_word", "prompt": "likeed", "answer": "liked"},
+      {"type": "correct_word", "prompt": "rideing", "answer": "riding"},
+      {"type": "spell", "prompt": "Spell the word: the -ing form of write.", "answer": "writing"},
+      {"type": "spell", "prompt": "Spell the word: the -ed form of love.", "answer": "loved"},
+      {"type": "spell", "prompt": "Spell the word: the -ing form of leave.", "answer": "leaving"},
+      {"type": "multiple_choice", "prompt": "Choose the correct -ing form of have.", "answer": "having", "choices": ["haveing", "having", "haveng"]},
+      {"type": "multiple_choice", "prompt": "Choose the correct -ing form of see.", "answer": "seeing", "choices": ["seing", "seeing", "seeeing"]},
+      {"type": "fill_gap", "prompt": "The sun was ___ above the hills. (shine)", "answer": "shining"}
+    ]
+  }
+]

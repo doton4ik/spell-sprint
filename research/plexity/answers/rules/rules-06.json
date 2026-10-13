@@ -1,271 +1,259 @@
 [
   {
-    "slug": "accept-vs-except",
+    "slug": "advice-vs-advise",
     "examples": [
       {
         "type": "correct",
-        "text": "The hotel accepted our booking for two nights.",
-        "note": "Accept = agree to a booking"
+        "text": "The shop assistant gave me useful advice about the camera.",
+        "note": "Advice is a noun"
       },
       {
         "type": "correct",
-        "text": "The office is open every day except Saturday.",
-        "note": "Except = not including"
+        "text": "I advise you to check the weather before the trip.",
+        "note": "Advise is a verb"
       },
       {
         "type": "correct",
-        "text": "She accepted the advice from her teacher.",
-        "note": "Accept = agree to take advice"
+        "text": "Her advice saved me a lot of time.",
+        "note": "Advice is a thing"
       },
       {
         "type": "correct",
-        "text": "All the students passed except Anna.",
-        "note": "Except = not including"
+        "text": "Can you advise me about the best route?",
+        "note": "Advise is an action"
       },
       {
         "type": "incorrect",
-        "text": "He excepted the job after the interview.",
-        "correction": "He accepted the job after the interview.",
-        "note": "Accept a job offer"
+        "text": "He asked for my advise about the flat.",
+        "correction": "He asked for my advice about the flat.",
+        "note": "Advice is the noun"
       },
       {
         "type": "incorrect",
-        "text": "The shop sells everything accept fresh bread.",
-        "correction": "The shop sells everything except fresh bread.",
-        "note": "Except = not including"
+        "text": "Please advice me before I make the payment.",
+        "correction": "Please advise me before I make the payment.",
+        "note": "Advise is the verb"
       },
       {
         "type": "incorrect",
-        "text": "The school accepted the old books from the list.",
-        "correction": "The school excepted the old books from the list.",
-        "note": "Except = leave out"
+        "text": "The doctor gave me clear advise.",
+        "correction": "The doctor gave me clear advice.",
+        "note": "Advice is a thing"
       },
       {
         "type": "incorrect",
-        "text": "Please except this invitation to our party.",
-        "correction": "Please accept this invitation to our party.",
-        "note": "Accept an invitation"
+        "text": "I advice you to start the project early.",
+        "correction": "I advise you to start the project early.",
+        "note": "Advise is an action"
       },
       {
         "type": "incorrect",
-        "text": "The workers were ready accept the new driver.",
-        "correction": "The workers were ready except the new driver.",
-        "note": "Except = not including"
+        "text": "Can you give me advise about learning German?",
+        "correction": "Can you give me some advice about learning German?",
+        "note": "Advice is the noun"
       },
       {
         "type": "incorrect",
-        "text": "The restaurant does not except reservations online.",
-        "correction": "The restaurant does not accept reservations online.",
-        "note": "Accept = agree to take"
+        "text": "The lawyer will advice us about the contract.",
+        "correction": "The lawyer will advise us about the contract.",
+        "note": "Advise is the verb"
       }
     ],
     "exercises": [
       {
         "type": "fill_gap",
-        "prompt": "The company will ___ your request next week.",
-        "answer": "accept"
+        "prompt": "My friend gave me good ___ about the trip.",
+        "answer": "advice"
       },
       {
         "type": "fill_gap",
-        "prompt": "The gym is open every day ___ Sunday.",
-        "answer": "except"
+        "prompt": "Can you ___ me on the best phone plan?",
+        "answer": "advise"
       },
       {
         "type": "fill_gap",
-        "prompt": "I cannot ___ this price without a discount.",
-        "answer": "accept"
+        "prompt": "I need your ___ about the exam.",
+        "answer": "advice"
       },
       {
         "type": "fill_gap",
-        "prompt": "Every chair was free ___ the red one.",
-        "answer": "except"
+        "prompt": "The teacher can ___ you about the essay.",
+        "answer": "advise"
       },
       {
         "type": "multiple_choice",
-        "prompt": "Choose the word: She ___ the gift from her cousin.",
-        "answer": "accepted",
+        "prompt": "Choose the word: Thank you for your ___.",
+        "answer": "advice",
         "choices": [
-          "accepted",
-          "excepted"
+          "advice",
+          "advise"
         ]
       },
       {
         "type": "multiple_choice",
-        "prompt": "Choose the word: The bus runs every day ___ Monday.",
-        "answer": "except",
+        "prompt": "Choose the word: The doctor will ___ you to rest.",
+        "answer": "advise",
         "choices": [
-          "accept",
-          "except"
+          "advice",
+          "advise"
         ]
       },
       {
         "type": "multiple_choice",
-        "prompt": "Choose the word: The hotel does not ___ small dogs.",
-        "answer": "accept",
+        "prompt": "Choose the word: That was useful ___.",
+        "answer": "advice",
         "choices": [
-          "accept",
-          "except"
+          "advice",
+          "advise"
         ]
       },
       {
         "type": "multiple_choice",
-        "prompt": "Choose the word: All the rooms were clean ___ number 7.",
-        "answer": "except",
+        "prompt": "Choose the word: Please ___ me if the price changes.",
+        "answer": "advise",
         "choices": [
-          "accept",
-          "except"
+          "advice",
+          "advise"
         ]
       },
       {
-        "type": "multiple_choice",
-        "prompt": "Choose the word: He was ready to ___ the challenge.",
-        "answer": "accept",
-        "choices": [
-          "accept",
-          "except"
-        ]
+        "type": "fill_gap",
+        "prompt": "She asked for ___ about renting a car.",
+        "answer": "advice"
       },
       {
-        "type": "multiple_choice",
-        "prompt": "Choose the word: The shop sells all drinks ___ tea.",
-        "answer": "except",
-        "choices": [
-          "accept",
-          "except"
-        ]
+        "type": "fill_gap",
+        "prompt": "Who can ___ me about the best bank?",
+        "answer": "advise"
       }
     ]
   },
   {
-    "slug": "able-vs-ible",
+    "slug": "affect-vs-effect",
     "examples": [
       {
         "type": "correct",
-        "text": "The city map is available at the station.",
-        "note": "Available ends in -able"
+        "text": "The new timetable may affect the morning classes.",
+        "note": "Affect is a verb"
       },
       {
         "type": "correct",
-        "text": "The recipe was simple and readable.",
-        "note": "Readable ends in -able"
+        "text": "The new rule had a small effect on prices.",
+        "note": "Effect is a noun"
       },
       {
         "type": "correct",
-        "text": "The tower was visible from the park.",
-        "note": "Visible ends in -ible"
+        "text": "The cold can affect the plants in the garden.",
+        "note": "Affect is an action"
       },
       {
         "type": "correct",
-        "text": "The beach road is passable in summer.",
-        "note": "Passable ends in -able"
+        "text": "The campaign had a positive effect on sales.",
+        "note": "Effect is the result"
       },
       {
         "type": "incorrect",
-        "text": "The brochure is availible at the hotel.",
-        "correction": "The brochure is available at the hotel.",
-        "note": "Available, not availible"
+        "text": "The delay will effect the whole team.",
+        "correction": "The delay will affect the whole team.",
+        "note": "Affect is the verb"
       },
       {
         "type": "incorrect",
-        "text": "The menu was not readible in the café.",
-        "correction": "The menu was not readable in the café.",
-        "note": "Readable, not readible"
+        "text": "The song had a strong affect on the crowd.",
+        "correction": "The song had a strong effect on the crowd.",
+        "note": "Effect is the noun"
       },
       {
         "type": "incorrect",
-        "text": "The logo was visable on the shopping bag.",
-        "correction": "The logo was visible on the shopping bag.",
-        "note": "Visible, not visable"
+        "text": "Too much sugar can effect your teeth.",
+        "correction": "Too much sugar can affect your teeth.",
+        "note": "Affect is an action"
       },
       {
         "type": "incorrect",
-        "text": "The library is accessable from the main square.",
-        "correction": "The library is accessible from the main square.",
-        "note": "Accessible, not accessable"
+        "text": "The change had no affect on the results.",
+        "correction": "The change had no effect on the results.",
+        "note": "Effect is a result"
       },
       {
         "type": "incorrect",
-        "text": "The old table is still useable in the kitchen.",
-        "correction": "The old table is still usable in the kitchen.",
-        "note": "Usable ends in -able"
+        "text": "The news may effect his decision.",
+        "correction": "The news may affect his decision.",
+        "note": "Affect is the verb"
       },
       {
         "type": "incorrect",
-        "text": "The change in colour was noticable.",
-        "correction": "The change in colour was noticeable.",
-        "note": "Noticeable ends in -able"
+        "text": "The special affect in the film was beautiful.",
+        "correction": "The special effect in the film was beautiful.",
+        "note": "Effect is a result"
       }
     ],
     "exercises": [
       {
-        "type": "correct_word",
-        "prompt": "availible",
-        "answer": "available"
+        "type": "fill_gap",
+        "prompt": "The heat can ___ the chocolate.",
+        "answer": "affect"
       },
       {
-        "type": "correct_word",
-        "prompt": "readible",
-        "answer": "readable"
+        "type": "fill_gap",
+        "prompt": "The new law takes ___ in May.",
+        "answer": "effect"
       },
       {
-        "type": "correct_word",
-        "prompt": "visable",
-        "answer": "visible"
+        "type": "fill_gap",
+        "prompt": "The storm may ___ the trains.",
+        "answer": "affect"
       },
       {
-        "type": "correct_word",
-        "prompt": "accessable",
-        "answer": "accessible"
-      },
-      {
-        "type": "correct_word",
-        "prompt": "useable",
-        "answer": "usable"
+        "type": "fill_gap",
+        "prompt": "The main ___ of the rain was a flood.",
+        "answer": "effect"
       },
       {
         "type": "multiple_choice",
-        "prompt": "Choose the correct spelling: The change was ___ after the rain.",
-        "answer": "noticeable",
+        "prompt": "Choose the word: Stress can ___ your health.",
+        "answer": "affect",
         "choices": [
-          "noticeable",
-          "noticable"
+          "affect",
+          "effect"
         ]
       },
       {
         "type": "multiple_choice",
-        "prompt": "Choose the correct spelling: The old desk is still ___.",
-        "answer": "usable",
+        "prompt": "Choose the word: The film had a strong ___ on me.",
+        "answer": "effect",
         "choices": [
-          "usable",
-          "useable"
+          "affect",
+          "effect"
         ]
       },
       {
         "type": "multiple_choice",
-        "prompt": "Choose the correct spelling: The brochure is ___ at the desk.",
-        "answer": "available",
+        "prompt": "Choose the word: Noise can ___ your focus.",
+        "answer": "affect",
         "choices": [
-          "available",
-          "availible"
+          "affect",
+          "effect"
         ]
       },
       {
         "type": "multiple_choice",
-        "prompt": "Choose the correct spelling: The library is ___ from the square.",
-        "answer": "accessible",
+        "prompt": "Choose the word: The law came into ___ today.",
+        "answer": "effect",
         "choices": [
-          "accessible",
-          "accessable"
+          "affect",
+          "effect"
         ]
       },
       {
-        "type": "multiple_choice",
-        "prompt": "Choose the correct spelling: The menu was clear and ___.",
-        "answer": "readable",
-        "choices": [
-          "readable",
-          "readible"
-        ]
+        "type": "fill_gap",
+        "prompt": "The delay will ___ the delivery time.",
+        "answer": "affect"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The side ___ of the medicine is sleepiness.",
+        "answer": "effect"
       }
     ]
   }

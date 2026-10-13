@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "comparatives-er-est",
+    "examples": [
+      {"type": "correct", "text": "This is the coldest winter I remember.", "note": "Cold + est: the coldest"},
+      {"type": "correct", "text": "Her handwriting is neater than mine.", "note": "Neat + er: neater"},
+      {"type": "correct", "text": "He is the fastest runner in the school.", "note": "Fast + est: the fastest"},
+      {"type": "correct", "text": "A mouse is smaller than a cat.", "note": "Small + er: smaller"},
+      {"type": "incorrect", "text": "This road is wideer than the old one.", "correction": "This road is wider than the old one.", "note": "Wide ends in e, so add only r"},
+      {"type": "incorrect", "text": "She is the prettyest girl in the class.", "correction": "She is the prettiest girl in the class.", "note": "Pretty changes y to i: prettiest"},
+      {"type": "incorrect", "text": "The new phone is thiner than the old one.", "correction": "The new phone is thinner than the old one.", "note": "Thin doubles the n: thinner"},
+      {"type": "incorrect", "text": "This soup is the tastyest in town.", "correction": "This soup is the tastiest in town.", "note": "Tasty changes y to i: tastiest"},
+      {"type": "incorrect", "text": "The shape was the largeest in the room.", "correction": "The shape was the largest in the room.", "note": "Large ends in e, so add only st"},
+      {"type": "incorrect", "text": "My bag is heavyer than yours.", "correction": "My bag is heavier than yours.", "note": "Heavy changes y to i: heavier"}
+    ],
+    "exercises": [
+      {"type": "correct_word", "prompt": "easyer", "answer": "easier"},
+      {"type": "correct_word", "prompt": "wetest", "answer": "wettest"},
+      {"type": "correct_word", "prompt": "crazyest", "answer": "craziest"},
+      {"type": "correct_word", "prompt": "sadest", "answer": "saddest"},
+      {"type": "spell", "prompt": "Spell the word: the comparative form of fat.", "answer": "fatter"},
+      {"type": "spell", "prompt": "Spell the word: the superlative form of nice.", "answer": "nicest"},
+      {"type": "spell", "prompt": "Spell the word: the comparative form of dry.", "answer": "drier"},
+      {"type": "multiple_choice", "prompt": "Choose the comparative of thin.", "answer": "thinner", "choices": ["thiner", "thinner", "thinnner"]},
+      {"type": "multiple_choice", "prompt": "Choose the superlative of late.", "answer": "latest", "choices": ["lattest", "latest", "latetest"]},
+      {"type": "fill_gap", "prompt": "My bag is ___ than yours. (тяжелее)", "answer": "heavier"}
+    ]
+  },
+  {
+    "slug": "double-consonants",
+    "examples": [
+      {"type": "correct", "text": "It is necessary to book a table early.", "note": "Necessary: one c, two s"},
+      {"type": "correct", "text": "I felt embarrassed when I forgot his name.", "note": "Embarrassed: double r and double s"},
+      {"type": "correct", "text": "The committee made its decision on Friday.", "note": "Committee: double m and double t"},
+      {"type": "correct", "text": "We stayed in cheap accommodation near the station.", "note": "Accommodation: double c and double m"},
+      {"type": "incorrect", "text": "She was embarassed by the question.", "correction": "She was embarrassed by the question.", "note": "Embarrassed: double r and double s"},
+      {"type": "incorrect", "text": "It is neccessary to bring your passport.", "correction": "It is necessary to bring your passport.", "note": "Necessary: one c, two s"},
+      {"type": "incorrect", "text": "I see her ocasionally at the gym.", "correction": "I see her occasionally at the gym.", "note": "Occasionally: double c, one s"},
+      {"type": "incorrect", "text": "He disapeared after the show.", "correction": "He disappeared after the show.", "note": "Disappear: double p after dis-"},
+      {"type": "incorrect", "text": "It is a great oportunity for us.", "correction": "It is a great opportunity for us.", "note": "Opportunity: double p"},
+      {"type": "incorrect", "text": "The comittee meets every month.", "correction": "The committee meets every month.", "note": "Committee: double m and double t"}
+    ],
+    "exercises": [
+      {"type": "correct_word", "prompt": "acommodation", "answer": "accommodation"},
+      {"type": "correct_word", "prompt": "aparent", "answer": "apparent"},
+      {"type": "correct_word", "prompt": "begining", "answer": "beginning"},
+      {"type": "correct_word", "prompt": "ocurred", "answer": "occurred"},
+      {"type": "correct_word", "prompt": "dissapear", "answer": "disappear"},
+      {"type": "correct_word", "prompt": "embarasing", "answer": "embarrassing"},
+      {"type": "multiple_choice", "prompt": "Choose the correct spelling of the word that means a chance.", "answer": "opportunity", "choices": ["oportunity", "opportunity", "opportunnity"]},
+      {"type": "multiple_choice", "prompt": "Choose the correct spelling: It is ___ to wear a helmet.", "answer": "necessary", "choices": ["necessary", "neccessary", "necesary"]},
+      {"type": "multiple_choice", "prompt": "Choose the correct spelling of the adverb that means sometimes.", "answer": "occasionally", "choices": ["ocasionally", "occasionally", "occassionally"]},
+      {"type": "fill_gap", "prompt": "Please write your home ___ below. (адрес)", "answer": "address"}
+    ]
+  }
+]

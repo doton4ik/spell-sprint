@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "irregular-past-common",
+    "examples": [
+      {"type": "correct", "text": "She brought a cake to the party.", "note": "Bring becomes brought"},
+      {"type": "correct", "text": "I thought about it all night.", "note": "Think becomes thought"},
+      {"type": "correct", "text": "He caught the last train home.", "note": "Catch becomes caught"},
+      {"type": "correct", "text": "We fought hard but lost the game.", "note": "Fight becomes fought"},
+      {"type": "incorrect", "text": "I thinked about you yesterday.", "correction": "I thought about you yesterday.", "note": "Think becomes thought, not thinked"},
+      {"type": "incorrect", "text": "She bringed her sister to the concert.", "correction": "She brought her sister to the concert.", "note": "Bring becomes brought"},
+      {"type": "incorrect", "text": "The cat catched a mouse.", "correction": "The cat caught a mouse.", "note": "Catch becomes caught"},
+      {"type": "incorrect", "text": "He teached English for ten years.", "correction": "He taught English for ten years.", "note": "Teach becomes taught"},
+      {"type": "incorrect", "text": "They buyed a new sofa last week.", "correction": "They bought a new sofa last week.", "note": "Buy becomes bought"},
+      {"type": "incorrect", "text": "I standed in the queue for an hour.", "correction": "I stood in the queue for an hour.", "note": "Stand becomes stood"}
+    ],
+    "exercises": [
+      {"type": "correct_word", "prompt": "bringed", "answer": "brought"},
+      {"type": "correct_word", "prompt": "catched", "answer": "caught"},
+      {"type": "correct_word", "prompt": "thinked", "answer": "thought"},
+      {"type": "correct_word", "prompt": "standed", "answer": "stood"},
+      {"type": "spell", "prompt": "Spell the word: the past form of buy.", "answer": "bought"},
+      {"type": "spell", "prompt": "Spell the word: the past form of teach.", "answer": "taught"},
+      {"type": "spell", "prompt": "Spell the word: the past form of sell.", "answer": "sold"},
+      {"type": "multiple_choice", "prompt": "Choose the correct past form of bring.", "answer": "brought", "choices": ["bringed", "brought", "broughten"]},
+      {"type": "multiple_choice", "prompt": "Choose the correct past form of fight.", "answer": "fought", "choices": ["fighted", "fought", "faught"]},
+      {"type": "fill_gap", "prompt": "Yesterday I ___ about my old school. (думал)", "answer": "thought"}
+    ]
+  },
+  {
+    "slug": "irregular-plurals",
+    "examples": [
+      {"type": "correct", "text": "The dentist checked the children's teeth.", "note": "Child becomes children; tooth becomes teeth"},
+      {"type": "correct", "text": "Many people were waiting outside.", "note": "People is the plural of person"},
+      {"type": "correct", "text": "She has two sheep on her farm.", "note": "Sheep stays the same in the plural"},
+      {"type": "correct", "text": "Both of his feet were wet.", "note": "Foot becomes feet"},
+      {"type": "incorrect", "text": "The mans are repairing the road.", "correction": "The men are repairing the road.", "note": "Man becomes men"},
+      {"type": "incorrect", "text": "I saw three mouses in the kitchen.", "correction": "I saw three mice in the kitchen.", "note": "Mouse becomes mice"},
+      {"type": "incorrect", "text": "My tooths hurt after the sweets.", "correction": "My teeth hurt after the sweets.", "note": "Tooth becomes teeth"},
+      {"type": "incorrect", "text": "There were many womans at the meeting.", "correction": "There were many women at the meeting.", "note": "Woman becomes women"},
+      {"type": "incorrect", "text": "The childrens are asleep.", "correction": "The children are asleep.", "note": "Children is already plural"},
+      {"type": "incorrect", "text": "Five peoples came to the lesson.", "correction": "Five people came to the lesson.", "note": "People is already plural"}
+    ],
+    "exercises": [
+      {"type": "correct_word", "prompt": "tooths", "answer": "teeth"},
+      {"type": "correct_word", "prompt": "womans", "answer": "women"},
+      {"type": "correct_word", "prompt": "gooses", "answer": "geese"},
+      {"type": "spell", "prompt": "Spell the word: more than one woman.", "answer": "women"},
+      {"type": "spell", "prompt": "Spell the word: more than one tooth.", "answer": "teeth"},
+      {"type": "spell", "prompt": "Spell the word: more than one goose.", "answer": "geese"},
+      {"type": "multiple_choice", "prompt": "Choose the correct plural of foot.", "answer": "feet", "choices": ["foots", "feet", "feets"]},
+      {"type": "multiple_choice", "prompt": "Choose the correct plural of man.", "answer": "men", "choices": ["mans", "men", "mens"]},
+      {"type": "fill_gap", "prompt": "The baby already has six ___. (зубы)", "answer": "teeth"},
+      {"type": "fill_gap", "prompt": "Many ___ visit this museum every year. (люди)", "answer": "people"}
+    ]
+  }
+]
