@@ -72,6 +72,8 @@ export function CheckRunner({
       expected: item.answer.split('|')[0],
       prompt: item.prompt,
       wordId: item.wordId,
+      kind: item.kind ?? 'type',
+      options: item.kind === 'choice' ? item.choices?.length : undefined,
     }
     const done = [...answers, entry]
     setAnswers(done)

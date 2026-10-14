@@ -26,9 +26,11 @@ export type CheckAnswer = {
   expected: string
   prompt: string
   wordId?: string
+  kind?: ItemKind // how it was asked: a multiple-choice answer can be a guess, a typed one hardly ever is
+  options?: number // for a choice: how many options there were
 }
 // range: set when the answers do not settle the level (e.g. "B1–B2"); level is then the best single guess.
-export type SkillResult = { ability: number; level: string; percent: number; correct: number; total: number; range?: string }
+export type SkillResult = { ability: number; level: string; percent: number; correct: number; total: number; range?: string; sd?: number }
 export type LevelCheckResult = {
   id: string
   completedAt: string
@@ -36,6 +38,7 @@ export type LevelCheckResult = {
   skills: Partial<Record<Skill, SkillResult>>
   overall: { ability: number; level: string; range?: string }
   answers: CheckAnswer[]
+  scoring?: number // which way of scoring made the levels; a check without it is from the first, more generous one
 }
 
 export const skillOrder: Skill[] = ['spelling', 'vocabulary', 'grammar', 'reading', 'listening']
@@ -159,45 +162,95 @@ export function abilityChange(current: LevelCheckResult, previous: LevelCheckRes
 }
 
 // How far the estimate can be trusted: with few answers it can sit on either side of a level boundary.
-// Then the level is shown as a range (e.g. B1–B2).
-export function rangeFor(ability: number, answers: number): string | undefined {
-  const spread = 0.6 / Math.sqrt(Math.max(1, answers))
+// Then the level is shown as a range (e.g. B1–B2). `sd` is the spread of the estimate when it is known.
+export function rangeFor(ability: number, answers: number, sd?: number): string | undefined {
+  const spread = sd === undefined ? 0.6 / Math.sqrt(Math.max(1, answers)) : sd * 0.6
   const low = cefrFor(Math.max(0.5, ability - spread))
   const high = cefrFor(Math.min(4.5, ability + spread))
   return low === high ? undefined : `${low}–${high}`
 }
 
-// Ability: each answer is evidence that the level is a bit above (right) or below (wrong) that item.
+// ---- Scoring ---------------------------------------------------------------------------------
+// The way of scoring that made a result. 1 (no marker): a right answer meant "a little above this question",
+// averaged over a handful of answers: two lucky answers put someone at B2 and a B1 learner got B2 two times in three.
+// 2: each answer is weighed by how likely a learner of each level would give it, and the estimate starts from a
+// modest guess (between A2 and B1) that only real evidence moves. The rules it follows:
+//  - A level needs most of its own questions answered right (about 3 of 4 for B2), not one lucky answer.
+//  - A right multiple-choice answer (four options) says little: a quarter of them are guessed.
+//  - Questions answered right at a level below do not make up for questions missed at the level itself.
+export const SCORING_VERSION = 2
+const GRID = Array.from({ length: 81 }, (_, index) => 0.5 + index * 0.05) // abilities from 0.5 to 4.5
+const SLOPE = 2 // how sharply a question separates learners below its level from those above it
+const EDGE = 0.5 // a question of level L is a coin toss for someone at the bottom edge of L (L - 0.5)
+const SLIP = 0.03 // even a strong learner mistypes now and then
+const PRIOR_MEAN = 1.7
+const PRIOR_SD = 1.4
+
+const chanceOf = (answer: CheckAnswer) => (answer.kind === 'choice' ? 1 / Math.max(2, answer.options ?? 4) : 0)
+function probabilityRight(ability: number, answer: CheckAnswer) {
+  const guess = chanceOf(answer)
+  return guess + (1 - guess - SLIP) / (1 + Math.exp(-SLOPE * (ability - (answer.level - EDGE))))
+}
+
+// The average ability that fits the answers, and how far it can be trusted (a grid over every ability from A2 to C1).
+export function estimateAbility(answers: CheckAnswer[]): { ability: number; sd: number } {
+  if (!answers.length) return { ability: START_LEVEL, sd: PRIOR_SD }
+  const logs = GRID.map((ability) => {
+    let log = -((ability - PRIOR_MEAN) ** 2) / (2 * PRIOR_SD ** 2)
+    for (const answer of answers) {
+      const p = probabilityRight(ability, answer)
+      log += Math.log(answer.correct ? p : 1 - p)
+    }
+    return log
+  })
+  const top = Math.max(...logs)
+  const weights = logs.map((log) => Math.exp(log - top))
+  const total = weights.reduce((sum, weight) => sum + weight, 0)
+  const mean = GRID.reduce((sum, ability, index) => sum + ability * weights[index], 0) / total
+  const variance = GRID.reduce((sum, ability, index) => sum + (ability - mean) ** 2 * weights[index], 0) / total
+  return { ability: mean, sd: Math.sqrt(variance) }
+}
+
 function scoreSkill(answers: CheckAnswer[]): SkillResult {
-  const ability = answers.length
-    ? Math.min(4.5, Math.max(0.5, answers.reduce((sum, answer) => sum + answer.level + (answer.correct ? 0.5 : -0.5), 0) / answers.length))
-    : START_LEVEL
+  const { ability, sd } = estimateAbility(answers)
   return {
     ability: Math.round(ability * 10) / 10,
     level: cefrFor(ability),
     percent: percentFor(ability),
     correct: answers.filter((answer) => answer.correct).length,
     total: answers.length,
-    range: rangeFor(ability, answers.length),
+    range: rangeFor(ability, answers.length, sd),
+    sd: Math.round(sd * 100) / 100,
   }
 }
 
-// The result of a set of answers, without saving it. Only skills that were asked about are in it.
+// The result of a set of answers, without saving it. Only skills that were asked about are in it. The overall level is the
+// average of the skills, so it can never run ahead of every single skill.
 export function scoreCheck(answers: CheckAnswer[]): Pick<LevelCheckResult, 'skills' | 'overall'> {
   const skills: Partial<Record<Skill, SkillResult>> = {}
+  const exact: Array<{ ability: number; sd: number }> = []
   for (const skill of skillOrder) {
     const own = answers.filter((answer) => answer.skill === skill)
-    if (own.length) skills[skill] = scoreSkill(own)
+    if (!own.length) continue
+    skills[skill] = scoreSkill(own)
+    exact.push(estimateAbility(own))
   }
-  const measured = Object.values(skills)
-  const ability = measured.length
-    ? Math.round((measured.reduce((sum, value) => sum + value.ability, 0) / measured.length) * 10) / 10
-    : START_LEVEL
-  return { skills, overall: { ability, level: cefrFor(ability), range: rangeFor(ability, answers.length) } }
+  const ability = exact.length ? exact.reduce((sum, value) => sum + value.ability, 0) / exact.length : START_LEVEL
+  const sd = exact.length ? Math.sqrt(exact.reduce((sum, value) => sum + value.sd ** 2, 0)) / exact.length : PRIOR_SD
+  return {
+    skills,
+    overall: { ability: Math.round(ability * 10) / 10, level: cefrFor(ability), range: rangeFor(ability, answers.length, sd) },
+  }
 }
 
 export function finishCheck(answers: CheckAnswer[]): LevelCheckResult {
-  const result = { id: crypto.randomUUID(), completedAt: new Date().toISOString(), ...scoreCheck(answers), answers }
+  const result = {
+    id: crypto.randomUUID(),
+    completedAt: new Date().toISOString(),
+    ...scoreCheck(answers),
+    answers,
+    scoring: SCORING_VERSION,
+  }
   saveLevelCheck(result)
   return result
 }
@@ -299,7 +352,8 @@ export function loadRun(now = Date.now()): SavedRun | null {
 const HISTORY_KEY = 'spell-sprint.level-checks'
 const MAX_HISTORY = 36
 
-export function getLevelChecks(): LevelCheckResult[] {
+// What is stored, exactly as it was saved (this is what is synced to the cloud and what a new result is added to).
+export function getStoredLevelChecks(): LevelCheckResult[] {
   try {
     const stored = JSON.parse(window.localStorage.getItem(HISTORY_KEY) ?? '[]') as LevelCheckResult[]
     return Array.isArray(stored)
@@ -311,6 +365,19 @@ export function getLevelChecks(): LevelCheckResult[] {
     return []
   }
 }
+
+// A check saved before the stricter scoring is scored again from its answers when it is read (nothing is rewritten), so a
+// retake is compared with an older check on the same scale, and the history does not show levels from two different rulers.
+// The kind of each question comes from the bank (the ids are stable); a question the bank no longer has counts as typed.
+let kindsById: Map<string, { kind: ItemKind; options?: number }> | null = null
+const kindsOfBank = () =>
+  (kindsById ??= new Map(buildLevelBank([]).map((item) => [item.id, { kind: item.kind ?? 'type', options: item.choices?.length }])))
+function rescored(check: LevelCheckResult): LevelCheckResult {
+  if (check.scoring === SCORING_VERSION || !Array.isArray(check.answers)) return check
+  const answers = check.answers.map((answer) => (answer.kind ? answer : { ...answer, ...kindsOfBank().get(answer.itemId) }))
+  return { ...check, answers, ...scoreCheck(answers), scoring: SCORING_VERSION }
+}
+export const getLevelChecks = (): LevelCheckResult[] => getStoredLevelChecks().map(rescored)
 
 function writeChecks(checks: LevelCheckResult[]) {
   try {
@@ -325,13 +392,13 @@ function writeChecks(checks: LevelCheckResult[]) {
 }
 
 function saveLevelCheck(result: LevelCheckResult) {
-  writeChecks([result, ...getLevelChecks()])
+  writeChecks([result, ...getStoredLevelChecks()])
 }
 
 // Cloud restore: add checks this device has not seen (by id); never removes any.
 export function mergeLevelChecks(incoming: unknown) {
   if (!Array.isArray(incoming)) return 0
-  const current = getLevelChecks()
+  const current = getStoredLevelChecks()
   const known = new Set(current.map((item) => item.id))
   const fresh = incoming.filter(
     (item): item is LevelCheckResult =>

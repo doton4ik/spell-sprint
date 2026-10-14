@@ -2,7 +2,7 @@ import { getImportedLibraries, mergeImportedLibraries } from './libraryStorage'
 import { loadDiagnosticResult, saveDiagnosticResult } from './diagnosticStorage'
 import { getReviewStates, getRuleReviewIds, mergeReviewData } from './learningData'
 import { getPracticeAttempts, mergePracticeAttempts } from './practiceStorage'
-import { getLevelChecks, mergeLevelChecks } from './levelCheck'
+import { getStoredLevelChecks, mergeLevelChecks } from './levelCheck'
 import { flushMistakeOutbox, getOutboxSize } from './mistakeOutbox'
 import { flushWordReports } from './wordReports'
 import { flushFeedback } from './feedback'
@@ -110,7 +110,7 @@ async function pullThenPush() {
     reviewStates: getReviewStates(),
     savedRuleIds: getRuleReviewIds(),
     importedLibraries: getImportedLibraries(),
-    levelChecks: getLevelChecks(),
+    levelChecks: getStoredLevelChecks(),
     profile: getProfile(),
     libraryPrefs: getLibraryPrefs(),
     pairAttempts: getPairAttempts(),
