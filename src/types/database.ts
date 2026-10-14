@@ -351,6 +351,31 @@ export type Database = {
         }
         Update: never
       }
+      // Added by hand: database/feedback.sql
+      feedback: {
+        Row: {
+          id: string
+          user_id: string
+          kind: string
+          message: string
+          page: string
+          app_version: string
+          user_agent: string | null
+          status: string
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          user_id: string
+          kind: string
+          message: string
+          page: string
+          app_version: string
+          user_agent?: string | null
+          created_at?: string
+        }
+        Update: never
+      }
     }
   }
 }

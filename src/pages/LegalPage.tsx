@@ -25,6 +25,7 @@ const privacy: Section[] = [
         'your progress (answers, mistakes, review dates, settings, your own words and libraries)',
         'mistakes linked to rules, your progress on rules, your notes on rules and your rule practice results',
         'reports you send about a word that looks wrong (the word and your note)',
+        'messages you send with the Feedback button (your text, the kind of message, the page you were on, the app version and the browser)',
         'technical error reports: the error message, the page name, the app version and the browser. Never your answers, your words or the full address of the page',
       ],
       'Only your own account can read this data; other learners cannot.',

@@ -5,6 +5,7 @@ import { getMistakeEntries, isDueToday, subscribeToLearningData } from '../../se
 import { getProfile, subscribeToProfile } from '../../services/profileStorage'
 import type { IconName } from '../../types/dashboard'
 import { Icon } from '../icons/Icon'
+import { FeedbackDialog } from '../FeedbackDialog'
 import { BrandMark } from './BrandMark'
 import './app-shell.css'
 
@@ -62,6 +63,7 @@ export function AppShell({ children, activePage }: AppShellProps) {
   useEffect(() => subscribeToProfile(() => setProfile(getProfile())), [])
   // A save that failed (browser storage full or blocked): say so once, so answers are not lost unnoticed.
   const [storageFailed, setStorageFailed] = useState(false)
+  const [feedbackOpen, setFeedbackOpen] = useState(false)
   useEffect(() => {
     const onFail = () => setStorageFailed(true)
     window.addEventListener(STORAGE_FAILED_EVENT, onFail)
@@ -98,6 +100,10 @@ export function AppShell({ children, activePage }: AppShellProps) {
             <Icon name="settings" size={19} />
             <span>Settings</span>
           </a>
+          <button className="nav-link nav-link--button" type="button" onClick={() => setFeedbackOpen(true)}>
+            <Icon name="lightbulb" size={19} />
+            <span>Feedback</span>
+          </button>
           <a className="profile-mini" href="#settings">
             <div className="profile-avatar">{(profile.name.trim()[0] ?? 'S').toLocaleUpperCase()}</div>
             <div>
@@ -165,9 +171,22 @@ export function AppShell({ children, activePage }: AppShellProps) {
                 </div>
               </section>
             ))}
+            <button
+              className="mobile-more__feedback"
+              type="button"
+              onClick={() => {
+                setMoreOpen(false)
+                setFeedbackOpen(true)
+              }}
+            >
+              <Icon name="lightbulb" size={19} />
+              <span>Send feedback</span>
+            </button>
           </nav>
         </>
       ) : null}
+
+      {feedbackOpen ? <FeedbackDialog onClose={() => setFeedbackOpen(false)} /> : null}
 
       <nav className="mobile-nav" aria-label="Mobile navigation">
         {navigationItems

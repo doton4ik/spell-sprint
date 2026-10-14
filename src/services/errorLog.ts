@@ -47,6 +47,8 @@ export function reportError(error: unknown, where = 'app') {
       error instanceof Error
         ? error
         : new Error(typeof error === 'string' ? error : (JSON.stringify(error)?.slice(0, 300) ?? 'Unknown error'))
+    // A browser extension that fails inside the page is not our bug.
+    if (/(chrome|moz|safari-web)-extension:\/\//.test(err.stack ?? '')) return
     const message = scrub(err.message || String(err)).slice(0, 500)
     const items = read()
     const today = new Date().toISOString().slice(0, 10)
@@ -75,6 +77,8 @@ export function flushErrors() {
   if (flushing) return flushing
   flushing = (async () => {
     try {
+      // A developer's own machine (the dev server) does not send: it would fill the table with half-saved edits.
+      if (version === 'dev') return
       const pending = read().filter((item) => !item.sent)
       if (!pending.length || !isSupabaseConfigured()) return
       const session = await getActiveCloudSession()

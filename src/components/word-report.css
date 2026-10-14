@@ -134,3 +134,20 @@
 .mistake-when .word-hide {
   margin-top: 6px;
 }
+
+/* Feedback dialog: a message box instead of a one-line comment. */
+.word-report .word-report__comment--multiline {
+  line-height: 1.45;
+  min-height: 96px;
+  resize: vertical;
+}
+.word-report__hint {
+  color: var(--ink-muted);
+  font-size: calc(12px * var(--fs));
+  line-height: 1.5;
+  margin: 0;
+}
+.word-report__hint a {
+  color: inherit;
+  text-decoration: underline;
+}

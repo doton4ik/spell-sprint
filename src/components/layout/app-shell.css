@@ -363,3 +363,30 @@
   background-image: radial-gradient(circle, color-mix(in srgb, var(--line-strong) 70%, transparent) 1px, transparent 1.4px);
   background-size: 24px 24px;
 }
+
+/* "Feedback" opens a dialog, so it is a button that looks like the links around it. */
+.nav-link--button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  width: 100%;
+}
+.mobile-more__feedback {
+  align-items: center;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  display: flex;
+  font-family: inherit;
+  font-size: calc(15px * var(--fs));
+  font-weight: 600;
+  gap: 10px;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  width: 100%;
+}
