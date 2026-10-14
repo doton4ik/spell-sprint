@@ -5662,6 +5662,486 @@
       "text": "Is this you're first time in London?",
       "correction": "Is this your first time in London?",
       "note": "Belongs to you: your"
+    },
+    {
+      "id": "e761b500-cdd5-590c-a4d6-b6ee3576a998",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "The population of our town is growing fast.",
+      "correction": null,
+      "note": "Population takes -tion"
+    },
+    {
+      "id": "9e9cef00-cec4-5773-8b75-90e220332118",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "We came to the conclusion that the plan was good.",
+      "correction": null,
+      "note": "Conclusion takes -sion"
+    },
+    {
+      "id": "c54d43a8-a261-506b-8a94-94ddc8b40163",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "Please pay attention to the teacher.",
+      "correction": null,
+      "note": "Attention takes -tion"
+    },
+    {
+      "id": "f12b0f23-d211-5fc4-9f8e-edb9674e6b74",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "The new version of the app is faster.",
+      "correction": null,
+      "note": "Version takes -sion"
+    },
+    {
+      "id": "16e592ea-1732-591e-89dd-413fb7baaf42",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "I want to pay more attension to details.",
+      "correction": "I want to pay more attention to details.",
+      "note": "Attention takes -tion"
+    },
+    {
+      "id": "9efc3987-90ad-56b8-9f4c-982e72ac7b8d",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "We came to the conclution very quickly.",
+      "correction": "We came to the conclusion very quickly.",
+      "note": "Conclusion takes -sion"
+    },
+    {
+      "id": "5a473e52-fcc1-5b94-8804-243ccb2aa53b",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "The new vertion is ready for everyone.",
+      "correction": "The new version is ready for everyone.",
+      "note": "Version takes -sion"
+    },
+    {
+      "id": "38685f92-61b0-511a-ac1c-3f597d4f8a2d",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "He has a big collecsion of old coins.",
+      "correction": "He has a big collection of old coins.",
+      "note": "Collection takes -tion"
+    },
+    {
+      "id": "ce81e4f1-c348-56e2-ad77-abe2a3cf2799",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "Her expretion showed surprise.",
+      "correction": "Her expression showed surprise.",
+      "note": "Expression takes -sion"
+    },
+    {
+      "id": "c478a44b-17e2-588a-b12f-8987724c0115",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "The educasion system is changing.",
+      "correction": "The education system is changing.",
+      "note": "Education takes -tion"
+    },
+    {
+      "id": "2a08ae53-de51-54d8-b4cb-195c144720a2",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "correct",
+      "text": "Put the glasses on the top shelf.",
+      "correction": null,
+      "note": "Glass ends in s: add -es"
+    },
+    {
+      "id": "b0c022d8-1248-518a-9649-32ac92c5bc12",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "correct",
+      "text": "The foxes hid in the bushes.",
+      "correction": null,
+      "note": "Fox ends in x, bush in sh: add -es"
+    },
+    {
+      "id": "740bc0d5-7897-5718-8600-f82dbf81d026",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "correct",
+      "text": "Two buses were late this morning.",
+      "correction": null,
+      "note": "Bus ends in s: add -es"
+    },
+    {
+      "id": "280ed051-3fd9-5ff8-8d43-f576c0dc88e1",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "correct",
+      "text": "The painters bought new brushes.",
+      "correction": null,
+      "note": "Brush ends in sh: add -es"
+    },
+    {
+      "id": "ec399b9a-14e3-596d-9585-850701c2c20c",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "I bought two dresss for the party.",
+      "correction": "I bought two dresses for the party.",
+      "note": "Dress ends in s: add -es"
+    },
+    {
+      "id": "2c6cb36e-7004-588c-832f-ea86766789a1",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "Many businesss close in winter.",
+      "correction": "Many businesses close in winter.",
+      "note": "Business ends in s: add -es"
+    },
+    {
+      "id": "399dfd3f-a93a-5185-a4a9-8f1cf9359e75",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "She cleaned her glasss with a cloth.",
+      "correction": "She cleaned her glasses with a cloth.",
+      "note": "Glass ends in s: add -es"
+    },
+    {
+      "id": "570e5456-03a6-5e90-bee0-9accc2be2ab1",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "I need three brushs for painting.",
+      "correction": "I need three brushes for painting.",
+      "note": "Brush ends in sh: add -es"
+    },
+    {
+      "id": "b16427fb-bc9c-5102-8027-ce3aa7cba17c",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "The foxs live in the forest.",
+      "correction": "The foxes live in the forest.",
+      "note": "Fox ends in x: add -es"
+    },
+    {
+      "id": "a8e1623f-0b6a-5502-a6da-39db64798507",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "We eat our lunchs outside in summer.",
+      "correction": "We eat our lunches outside in summer.",
+      "note": "Lunch ends in ch: add -es"
+    },
+    {
+      "id": "d912d866-f4b5-5014-a422-0b54555108b4",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "The team has football practice every Friday.",
+      "correction": null,
+      "note": "Practice with c is the noun"
+    },
+    {
+      "id": "864ace96-702e-52e1-bc36-d10baaa53634",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "You should practise the words every day.",
+      "correction": null,
+      "note": "Practise with s is the verb"
+    },
+    {
+      "id": "252224cc-4fb2-5e15-ac95-2c77ad841d87",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "She needs a lot of practice before the exam.",
+      "correction": null,
+      "note": "Practice with c is the noun"
+    },
+    {
+      "id": "092e87cb-9829-5942-a3d5-c8c55ba2e513",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "I practise the guitar after school.",
+      "correction": null,
+      "note": "Practise with s is the verb"
+    },
+    {
+      "id": "f5ec4959-9ec1-5911-9bfe-0ee95506d4a5",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "I need to practice more before the test.",
+      "correction": "I need to practise more before the test.",
+      "note": "A verb takes practise (s)"
+    },
+    {
+      "id": "cde42eba-3b32-5a71-bda2-86c9cf943af7",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "Daily practise helps you learn faster.",
+      "correction": "Daily practice helps you learn faster.",
+      "note": "A noun takes practice (c)"
+    },
+    {
+      "id": "35201ff3-69b2-5b33-9ba5-c6c4ffa35875",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "He will practice his speech tonight.",
+      "correction": "He will practise his speech tonight.",
+      "note": "A verb takes practise (s)"
+    },
+    {
+      "id": "f5908895-efec-5560-923b-957c0b326a3d",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "The band has a practise on Monday.",
+      "correction": "The band has a practice on Monday.",
+      "note": "A noun takes practice (c)"
+    },
+    {
+      "id": "4de4f748-864c-57dc-827a-f2597c06c57a",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "We practice English with a teacher.",
+      "correction": "We practise English with a teacher.",
+      "note": "A verb takes practise (s)"
+    },
+    {
+      "id": "3cd1aa0b-7122-5d3f-a72e-35b0f40d82b4",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "After much practise, she won the race.",
+      "correction": "After much practice, she won the race.",
+      "note": "A noun takes practice (c)"
+    },
+    {
+      "id": "4f49bc43-6bcc-52fd-b94c-c82849dc1662",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "The school principal welcomed the new students.",
+      "correction": null,
+      "note": "Principal = head of a school"
+    },
+    {
+      "id": "0e4d4abd-118c-588e-9cb8-feffa9796516",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "Her principal job is to train the staff.",
+      "correction": null,
+      "note": "Principal = main"
+    },
+    {
+      "id": "5847907f-e569-58a5-8397-c9073e1acbbe",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "He never breaks his principles.",
+      "correction": null,
+      "note": "Principle = a basic belief"
+    },
+    {
+      "id": "3b2856f5-2e2c-5bda-a662-b7aee8009d6f",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "It is a basic principle of physics.",
+      "correction": null,
+      "note": "Principle = a basic rule"
+    },
+    {
+      "id": "28e45aec-036c-525d-a162-f0df5fc5e267",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "Our principle goal is to save money.",
+      "correction": "Our principal goal is to save money.",
+      "note": "Main goal = principal"
+    },
+    {
+      "id": "48302a7f-f5b5-53da-8aa8-44e5491acc7b",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "The principal of equality is important.",
+      "correction": "The principle of equality is important.",
+      "note": "A basic belief = principle"
+    },
+    {
+      "id": "be8ee6e4-0cc5-5c93-90cc-50558bd97cb7",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "She is the principle of a large school.",
+      "correction": "She is the principal of a large school.",
+      "note": "Head of a school = principal"
+    },
+    {
+      "id": "0400d55e-ae7e-5f05-bbe5-1932c404dcfa",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "He is a man of high principals.",
+      "correction": "He is a man of high principles.",
+      "note": "Beliefs about right and wrong = principles"
+    },
+    {
+      "id": "76fd41b2-8570-57f9-aead-c6943bcf26d1",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "Rain is the principle reason we stayed home.",
+      "correction": "Rain is the principal reason we stayed home.",
+      "note": "Main reason = principal"
+    },
+    {
+      "id": "cf82185e-e7c5-5ddc-b95b-38f1049cd110",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "I never lie, on principal.",
+      "correction": "I never lie, on principle.",
+      "note": "On principle: a basic belief"
+    },
+    {
+      "id": "cdce4272-0bdb-5bd8-a9c3-a38533689801",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "The weather was warm during our trip.",
+      "correction": null,
+      "note": "Weather = conditions outside"
+    },
+    {
+      "id": "376b7abe-2324-5c29-92d0-a4e30ccf1ad0",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "I do not know whether to go or stay.",
+      "correction": null,
+      "note": "Whether introduces a choice"
+    },
+    {
+      "id": "3887e202-d75f-5ae7-9606-07a9ba087cba",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "Check the weather before you leave.",
+      "correction": null,
+      "note": "Weather = rain, sun, wind"
+    },
+    {
+      "id": "f68fb997-968c-5e1a-a1a1-2170e2ee913d",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "She asked whether I wanted some tea.",
+      "correction": null,
+      "note": "Whether introduces a question"
+    },
+    {
+      "id": "a7868fd9-a907-51b5-9525-2b66ab9ddb94",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "I am not sure weather he is ready.",
+      "correction": "I am not sure whether he is ready.",
+      "note": "A choice or question: whether"
+    },
+    {
+      "id": "f7248cff-dd29-5330-b1aa-8629557b58df",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "The whether forecast says snow.",
+      "correction": "The weather forecast says snow.",
+      "note": "Conditions outside: weather"
+    },
+    {
+      "id": "9c763e91-64cb-5d3c-a603-de5d7f16a281",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "Nobody knows weather the shop is open.",
+      "correction": "Nobody knows whether the shop is open.",
+      "note": "A question: whether"
+    },
+    {
+      "id": "2af0fae1-ab7d-50db-bbaf-3d9b2df44fc1",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "We enjoyed the sunny whether on holiday.",
+      "correction": "We enjoyed the sunny weather on holiday.",
+      "note": "Sun and rain: weather"
+    },
+    {
+      "id": "d8a7662c-5148-59a4-9ab8-2b73589d5f36",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "She cannot decide weather to buy it.",
+      "correction": "She cannot decide whether to buy it.",
+      "note": "A choice: whether"
+    },
+    {
+      "id": "cb9cbcf6-81b6-5fd5-b8e1-dddf7a8cdc97",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "Bad whether stopped the flights.",
+      "correction": "Bad weather stopped the flights.",
+      "note": "Conditions outside: weather"
+    },
+    {
+      "id": "f69dc7f7-5976-54c7-bf5a-6069c05165bd",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "Where are my keys?",
+      "correction": null,
+      "note": "Where asks about a place"
+    },
+    {
+      "id": "954d1d96-977a-57e7-b54f-f1b0503b8717",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "They were at school all day.",
+      "correction": null,
+      "note": "Were = past of be"
+    },
+    {
+      "id": "70c57636-a85d-53c9-9a5c-ac62765d7414",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "I wear glasses to read.",
+      "correction": null,
+      "note": "Wear = have clothes on"
+    },
+    {
+      "id": "b10fdd89-ba01-5ac0-8298-82a40f442576",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "We were not sure where to go.",
+      "correction": null,
+      "note": "Were = past of be; where = place"
+    },
+    {
+      "id": "bd8f8427-ea20-5f60-9c40-1d0024684b6e",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "Were is the nearest bank?",
+      "correction": "Where is the nearest bank?",
+      "note": "Asking about a place: where"
+    },
+    {
+      "id": "7b701f33-4e18-50c3-ba0f-f644b141224b",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "They where late for the meeting.",
+      "correction": "They were late for the meeting.",
+      "note": "Past of be: were"
+    },
+    {
+      "id": "b2f90a8e-479a-51a9-8e49-73892e4d3e37",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "I always were a hat in summer.",
+      "correction": "I always wear a hat in summer.",
+      "note": "Clothes: wear"
+    },
+    {
+      "id": "47367c76-a3ff-5650-bb86-85477a931397",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "Do you know were he lives?",
+      "correction": "Do you know where he lives?",
+      "note": "A place: where"
+    },
+    {
+      "id": "a6a26767-81d8-5ac5-9871-2a8a3550ad76",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "She will where her new dress tonight.",
+      "correction": "She will wear her new dress tonight.",
+      "note": "Clothes: wear"
+    },
+    {
+      "id": "cf822302-f974-57dd-abba-4f7fdd4d25f6",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "We wear very happy yesterday.",
+      "correction": "We were very happy yesterday.",
+      "note": "Past of be: were"
     }
   ]
 }

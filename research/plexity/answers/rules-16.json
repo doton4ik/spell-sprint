@@ -1,0 +1,52 @@
+[
+  {"slug": "weather-vs-whether",
+   "examples": [
+     {"type": "correct", "text": "The weather was warm during our trip.", "note": "Weather = conditions outside"},
+     {"type": "correct", "text": "I do not know whether to go or stay.", "note": "Whether introduces a choice"},
+     {"type": "correct", "text": "Check the weather before you leave.", "note": "Weather = rain, sun, wind"},
+     {"type": "correct", "text": "She asked whether I wanted some tea.", "note": "Whether introduces a question"},
+     {"type": "incorrect", "text": "I am not sure weather he is ready.", "correction": "I am not sure whether he is ready.", "note": "A choice or question: whether"},
+     {"type": "incorrect", "text": "The whether forecast says snow.", "correction": "The weather forecast says snow.", "note": "Conditions outside: weather"},
+     {"type": "incorrect", "text": "Nobody knows weather the shop is open.", "correction": "Nobody knows whether the shop is open.", "note": "A question: whether"},
+     {"type": "incorrect", "text": "We enjoyed the sunny whether on holiday.", "correction": "We enjoyed the sunny weather on holiday.", "note": "Sun and rain: weather"},
+     {"type": "incorrect", "text": "She cannot decide weather to buy it.", "correction": "She cannot decide whether to buy it.", "note": "A choice: whether"},
+     {"type": "incorrect", "text": "Bad whether stopped the flights.", "correction": "Bad weather stopped the flights.", "note": "Conditions outside: weather"}
+   ],
+   "exercises": [
+     {"type": "fill_gap", "prompt": "Ask her ___ she needs a lift.", "answer": "whether"},
+     {"type": "fill_gap", "prompt": "Cold ___ makes me sleepy.", "answer": "weather"},
+     {"type": "multiple_choice", "prompt": "Choose the word: I wonder ___ it will snow tomorrow.", "answer": "whether", "choices": ["weather", "whether"]},
+     {"type": "multiple_choice", "prompt": "Choose the word: The ___ was lovely at the beach.", "answer": "weather", "choices": ["weather", "whether"]},
+     {"type": "fill_gap", "prompt": "He is not sure ___ to call or write.", "answer": "whether"},
+     {"type": "fill_gap", "prompt": "We stayed inside because of the stormy ___.", "answer": "weather"},
+     {"type": "multiple_choice", "prompt": "Choose the word: Tell me ___ you like the film.", "answer": "whether", "choices": ["weather", "whether"]},
+     {"type": "multiple_choice", "prompt": "Choose the word: What is the ___ like in Spain in July?", "answer": "weather", "choices": ["weather", "whether"]},
+     {"type": "fill_gap", "prompt": "She asked ___ the bus was late.", "answer": "whether"},
+     {"type": "fill_gap", "prompt": "The ___ report says it will be hot.", "answer": "weather"}
+   ]},
+  {"slug": "were-where-wear",
+   "examples": [
+     {"type": "correct", "text": "Where are my keys?", "note": "Where asks about a place"},
+     {"type": "correct", "text": "They were at school all day.", "note": "Were = past of be"},
+     {"type": "correct", "text": "I wear glasses to read.", "note": "Wear = have clothes on"},
+     {"type": "correct", "text": "We were not sure where to go.", "note": "Were = past of be; where = place"},
+     {"type": "incorrect", "text": "Were is the nearest bank?", "correction": "Where is the nearest bank?", "note": "Asking about a place: where"},
+     {"type": "incorrect", "text": "They where late for the meeting.", "correction": "They were late for the meeting.", "note": "Past of be: were"},
+     {"type": "incorrect", "text": "I always were a hat in summer.", "correction": "I always wear a hat in summer.", "note": "Clothes: wear"},
+     {"type": "incorrect", "text": "Do you know were he lives?", "correction": "Do you know where he lives?", "note": "A place: where"},
+     {"type": "incorrect", "text": "She will where her new dress tonight.", "correction": "She will wear her new dress tonight.", "note": "Clothes: wear"},
+     {"type": "incorrect", "text": "We wear very happy yesterday.", "correction": "We were very happy yesterday.", "note": "Past of be: were"}
+   ],
+   "exercises": [
+     {"type": "fill_gap", "prompt": "___ did you buy that bag?", "answer": "Where"},
+     {"type": "fill_gap", "prompt": "My shoes ___ wet after the rain.", "answer": "were"},
+     {"type": "multiple_choice", "prompt": "Choose the word: I never ___ a tie at work.", "answer": "wear", "choices": ["were", "where", "wear"]},
+     {"type": "multiple_choice", "prompt": "Choose the word: Nobody knows ___ he went.", "answer": "where", "choices": ["were", "where", "wear"]},
+     {"type": "fill_gap", "prompt": "You should ___ a coat today; it is cold.", "answer": "wear"},
+     {"type": "fill_gap", "prompt": "The children ___ very quiet in the library.", "answer": "were"},
+     {"type": "multiple_choice", "prompt": "Choose the word: ___ is the station?", "answer": "Where", "choices": ["Were", "Where", "Wear"]},
+     {"type": "multiple_choice", "prompt": "Choose the word: They ___ here an hour ago.", "answer": "were", "choices": ["were", "where", "wear"]},
+     {"type": "fill_gap", "prompt": "What will you ___ to the party?", "answer": "wear"},
+     {"type": "multiple_choice", "prompt": "Choose the word: This is the town ___ I was born.", "answer": "where", "choices": ["were", "where", "wear"]}
+   ]}
+]

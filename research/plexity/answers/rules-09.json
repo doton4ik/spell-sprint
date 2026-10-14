@@ -1,0 +1,52 @@
+[
+  {"slug": "tion-vs-sion",
+   "examples": [
+     {"type": "correct", "text": "The population of our town is growing fast.", "note": "Population takes -tion"},
+     {"type": "correct", "text": "We came to the conclusion that the plan was good.", "note": "Conclusion takes -sion"},
+     {"type": "correct", "text": "Please pay attention to the teacher.", "note": "Attention takes -tion"},
+     {"type": "correct", "text": "The new version of the app is faster.", "note": "Version takes -sion"},
+     {"type": "incorrect", "text": "I want to pay more attension to details.", "correction": "I want to pay more attention to details.", "note": "Attention takes -tion"},
+     {"type": "incorrect", "text": "We came to the conclution very quickly.", "correction": "We came to the conclusion very quickly.", "note": "Conclusion takes -sion"},
+     {"type": "incorrect", "text": "The new vertion is ready for everyone.", "correction": "The new version is ready for everyone.", "note": "Version takes -sion"},
+     {"type": "incorrect", "text": "He has a big collecsion of old coins.", "correction": "He has a big collection of old coins.", "note": "Collection takes -tion"},
+     {"type": "incorrect", "text": "Her expretion showed surprise.", "correction": "Her expression showed surprise.", "note": "Expression takes -sion"},
+     {"type": "incorrect", "text": "The educasion system is changing.", "correction": "The education system is changing.", "note": "Education takes -tion"}
+   ],
+   "exercises": [
+     {"type": "correct_word", "prompt": "nasion", "answer": "nation"},
+     {"type": "correct_word", "prompt": "extention", "answer": "extension"},
+     {"type": "correct_word", "prompt": "confution", "answer": "confusion"},
+     {"type": "correct_word", "prompt": "acsion", "answer": "action"},
+     {"type": "correct_word", "prompt": "direcsion", "answer": "direction"},
+     {"type": "spell", "prompt": "Spell the word: when two vehicles hit each other (-sion).", "answer": "collision"},
+     {"type": "spell", "prompt": "Spell the word: the process of teaching and learning in schools (-tion).", "answer": "education"},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling: the ability to see; also a clear idea of the future.", "answer": "vision", "choices": ["vition", "vision", "vizion"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling: a party for a birthday or a special event.", "answer": "celebration", "choices": ["celebrasion", "celebration", "celebracion"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct spelling: the opinion you form about a person when you first meet.", "answer": "impression", "choices": ["impretion", "impression", "impresion"]}
+   ]},
+  {"slug": "plural-es",
+   "examples": [
+     {"type": "correct", "text": "Put the glasses on the top shelf.", "note": "Glass ends in s: add -es"},
+     {"type": "correct", "text": "The foxes hid in the bushes.", "note": "Fox ends in x, bush in sh: add -es"},
+     {"type": "correct", "text": "Two buses were late this morning.", "note": "Bus ends in s: add -es"},
+     {"type": "correct", "text": "The painters bought new brushes.", "note": "Brush ends in sh: add -es"},
+     {"type": "incorrect", "text": "I bought two dresss for the party.", "correction": "I bought two dresses for the party.", "note": "Dress ends in s: add -es"},
+     {"type": "incorrect", "text": "Many businesss close in winter.", "correction": "Many businesses close in winter.", "note": "Business ends in s: add -es"},
+     {"type": "incorrect", "text": "She cleaned her glasss with a cloth.", "correction": "She cleaned her glasses with a cloth.", "note": "Glass ends in s: add -es"},
+     {"type": "incorrect", "text": "I need three brushs for painting.", "correction": "I need three brushes for painting.", "note": "Brush ends in sh: add -es"},
+     {"type": "incorrect", "text": "The foxs live in the forest.", "correction": "The foxes live in the forest.", "note": "Fox ends in x: add -es"},
+     {"type": "incorrect", "text": "We eat our lunchs outside in summer.", "correction": "We eat our lunches outside in summer.", "note": "Lunch ends in ch: add -es"}
+   ],
+   "exercises": [
+     {"type": "correct_word", "prompt": "kisss", "answer": "kisses"},
+     {"type": "correct_word", "prompt": "addresss", "answer": "addresses"},
+     {"type": "correct_word", "prompt": "bushs", "answer": "bushes"},
+     {"type": "correct_word", "prompt": "scratchs", "answer": "scratches"},
+     {"type": "spell", "prompt": "Spell the word: more than one dress.", "answer": "dresses"},
+     {"type": "spell", "prompt": "Spell the word: more than one lunch.", "answer": "lunches"},
+     {"type": "spell", "prompt": "Spell the word: more than one business.", "answer": "businesses"},
+     {"type": "multiple_choice", "prompt": "Choose the correct plural of brush.", "answer": "brushes", "choices": ["brushs", "brushes", "brushies"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct plural of fox.", "answer": "foxes", "choices": ["foxs", "foxes", "foxies"]},
+     {"type": "multiple_choice", "prompt": "Choose the correct plural of glass.", "answer": "glasses", "choices": ["glasss", "glasses", "glassies"]}
+   ]}
+]

@@ -3844,6 +3844,787 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "tion-vs-sion",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The population of our town is growing fast.",
+          "note": "Population takes -tion"
+        },
+        {
+          "type": "correct",
+          "text": "We came to the conclusion that the plan was good.",
+          "note": "Conclusion takes -sion"
+        },
+        {
+          "type": "correct",
+          "text": "Please pay attention to the teacher.",
+          "note": "Attention takes -tion"
+        },
+        {
+          "type": "correct",
+          "text": "The new version of the app is faster.",
+          "note": "Version takes -sion"
+        },
+        {
+          "type": "incorrect",
+          "text": "I want to pay more attension to details.",
+          "correction": "I want to pay more attention to details.",
+          "note": "Attention takes -tion"
+        },
+        {
+          "type": "incorrect",
+          "text": "We came to the conclution very quickly.",
+          "correction": "We came to the conclusion very quickly.",
+          "note": "Conclusion takes -sion"
+        },
+        {
+          "type": "incorrect",
+          "text": "The new vertion is ready for everyone.",
+          "correction": "The new version is ready for everyone.",
+          "note": "Version takes -sion"
+        },
+        {
+          "type": "incorrect",
+          "text": "He has a big collecsion of old coins.",
+          "correction": "He has a big collection of old coins.",
+          "note": "Collection takes -tion"
+        },
+        {
+          "type": "incorrect",
+          "text": "Her expretion showed surprise.",
+          "correction": "Her expression showed surprise.",
+          "note": "Expression takes -sion"
+        },
+        {
+          "type": "incorrect",
+          "text": "The educasion system is changing.",
+          "correction": "The education system is changing.",
+          "note": "Education takes -tion"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "nasion",
+          "answer": "nation"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "extention",
+          "answer": "extension"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "confution",
+          "answer": "confusion"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "acsion",
+          "answer": "action"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "direcsion",
+          "answer": "direction"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: when two vehicles hit each other (-sion).",
+          "answer": "collision"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: the process of teaching and learning in schools (-tion).",
+          "answer": "education"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: the ability to see; also a clear idea of the future.",
+          "answer": "vision",
+          "choices": [
+            "vition",
+            "vision",
+            "vizion"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: a party for a birthday or a special event.",
+          "answer": "celebration",
+          "choices": [
+            "celebrasion",
+            "celebration",
+            "celebracion"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct spelling: the opinion you form about a person when you first meet.",
+          "answer": "impression",
+          "choices": [
+            "impretion",
+            "impression",
+            "impresion"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "plural-es",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Put the glasses on the top shelf.",
+          "note": "Glass ends in s: add -es"
+        },
+        {
+          "type": "correct",
+          "text": "The foxes hid in the bushes.",
+          "note": "Fox ends in x, bush in sh: add -es"
+        },
+        {
+          "type": "correct",
+          "text": "Two buses were late this morning.",
+          "note": "Bus ends in s: add -es"
+        },
+        {
+          "type": "correct",
+          "text": "The painters bought new brushes.",
+          "note": "Brush ends in sh: add -es"
+        },
+        {
+          "type": "incorrect",
+          "text": "I bought two dresss for the party.",
+          "correction": "I bought two dresses for the party.",
+          "note": "Dress ends in s: add -es"
+        },
+        {
+          "type": "incorrect",
+          "text": "Many businesss close in winter.",
+          "correction": "Many businesses close in winter.",
+          "note": "Business ends in s: add -es"
+        },
+        {
+          "type": "incorrect",
+          "text": "She cleaned her glasss with a cloth.",
+          "correction": "She cleaned her glasses with a cloth.",
+          "note": "Glass ends in s: add -es"
+        },
+        {
+          "type": "incorrect",
+          "text": "I need three brushs for painting.",
+          "correction": "I need three brushes for painting.",
+          "note": "Brush ends in sh: add -es"
+        },
+        {
+          "type": "incorrect",
+          "text": "The foxs live in the forest.",
+          "correction": "The foxes live in the forest.",
+          "note": "Fox ends in x: add -es"
+        },
+        {
+          "type": "incorrect",
+          "text": "We eat our lunchs outside in summer.",
+          "correction": "We eat our lunches outside in summer.",
+          "note": "Lunch ends in ch: add -es"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "correct_word",
+          "prompt": "kisss",
+          "answer": "kisses"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "addresss",
+          "answer": "addresses"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "bushs",
+          "answer": "bushes"
+        },
+        {
+          "type": "correct_word",
+          "prompt": "scratchs",
+          "answer": "scratches"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: more than one dress.",
+          "answer": "dresses"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: more than one lunch.",
+          "answer": "lunches"
+        },
+        {
+          "type": "spell",
+          "prompt": "Spell the word: more than one business.",
+          "answer": "businesses"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct plural of brush.",
+          "answer": "brushes",
+          "choices": [
+            "brushs",
+            "brushes",
+            "brushies"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct plural of fox.",
+          "answer": "foxes",
+          "choices": [
+            "foxs",
+            "foxes",
+            "foxies"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the correct plural of glass.",
+          "answer": "glasses",
+          "choices": [
+            "glasss",
+            "glasses",
+            "glassies"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "practice-vs-practise",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The team has football practice every Friday.",
+          "note": "Practice with c is the noun"
+        },
+        {
+          "type": "correct",
+          "text": "You should practise the words every day.",
+          "note": "Practise with s is the verb"
+        },
+        {
+          "type": "correct",
+          "text": "She needs a lot of practice before the exam.",
+          "note": "Practice with c is the noun"
+        },
+        {
+          "type": "correct",
+          "text": "I practise the guitar after school.",
+          "note": "Practise with s is the verb"
+        },
+        {
+          "type": "incorrect",
+          "text": "I need to practice more before the test.",
+          "correction": "I need to practise more before the test.",
+          "note": "A verb takes practise (s)"
+        },
+        {
+          "type": "incorrect",
+          "text": "Daily practise helps you learn faster.",
+          "correction": "Daily practice helps you learn faster.",
+          "note": "A noun takes practice (c)"
+        },
+        {
+          "type": "incorrect",
+          "text": "He will practice his speech tonight.",
+          "correction": "He will practise his speech tonight.",
+          "note": "A verb takes practise (s)"
+        },
+        {
+          "type": "incorrect",
+          "text": "The band has a practise on Monday.",
+          "correction": "The band has a practice on Monday.",
+          "note": "A noun takes practice (c)"
+        },
+        {
+          "type": "incorrect",
+          "text": "We practice English with a teacher.",
+          "correction": "We practise English with a teacher.",
+          "note": "A verb takes practise (s)"
+        },
+        {
+          "type": "incorrect",
+          "text": "After much practise, she won the race.",
+          "correction": "After much practice, she won the race.",
+          "note": "A noun takes practice (c)"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "The choir has ___ every Tuesday evening.",
+          "answer": "practice"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "You must ___ the piano every day.",
+          "answer": "practise"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: It takes years of ___ to speak well.",
+          "answer": "practice",
+          "choices": [
+            "practice",
+            "practise"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Please ___ the dialogue with your partner.",
+          "answer": "practise",
+          "choices": [
+            "practice",
+            "practise"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The doctor's ___ is near the station.",
+          "answer": "practice"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "She wants to ___ her English in London.",
+          "answer": "practise"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: We need more ___ before the match.",
+          "answer": "practice",
+          "choices": [
+            "practice",
+            "practise"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: He likes to ___ his speech in the mirror.",
+          "answer": "practise",
+          "choices": [
+            "practice",
+            "practise"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Good ___ makes you faster at typing.",
+          "answer": "practice"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "I ___ my spelling with this app.",
+          "answer": "practise"
+        }
+      ]
+    },
+    {
+      "slug": "principal-vs-principle",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The school principal welcomed the new students.",
+          "note": "Principal = head of a school"
+        },
+        {
+          "type": "correct",
+          "text": "Her principal job is to train the staff.",
+          "note": "Principal = main"
+        },
+        {
+          "type": "correct",
+          "text": "He never breaks his principles.",
+          "note": "Principle = a basic belief"
+        },
+        {
+          "type": "correct",
+          "text": "It is a basic principle of physics.",
+          "note": "Principle = a basic rule"
+        },
+        {
+          "type": "incorrect",
+          "text": "Our principle goal is to save money.",
+          "correction": "Our principal goal is to save money.",
+          "note": "Main goal = principal"
+        },
+        {
+          "type": "incorrect",
+          "text": "The principal of equality is important.",
+          "correction": "The principle of equality is important.",
+          "note": "A basic belief = principle"
+        },
+        {
+          "type": "incorrect",
+          "text": "She is the principle of a large school.",
+          "correction": "She is the principal of a large school.",
+          "note": "Head of a school = principal"
+        },
+        {
+          "type": "incorrect",
+          "text": "He is a man of high principals.",
+          "correction": "He is a man of high principles.",
+          "note": "Beliefs about right and wrong = principles"
+        },
+        {
+          "type": "incorrect",
+          "text": "Rain is the principle reason we stayed home.",
+          "correction": "Rain is the principal reason we stayed home.",
+          "note": "Main reason = principal"
+        },
+        {
+          "type": "incorrect",
+          "text": "I never lie, on principal.",
+          "correction": "I never lie, on principle.",
+          "note": "On principle: a basic belief"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "The school ___ phoned my parents yesterday.",
+          "answer": "principal"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "It is a matter of ___ for me.",
+          "answer": "principle"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: The ___ entrance is on the left.",
+          "answer": "principal",
+          "choices": [
+            "principal",
+            "principle"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Equality is a basic ___ of our club.",
+          "answer": "principle",
+          "choices": [
+            "principal",
+            "principle"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The ___ ingredient of bread is flour.",
+          "answer": "principal"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "In ___, I agree with your idea.",
+          "answer": "principle"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Fairness is a basic ___ of the game.",
+          "answer": "principle",
+          "choices": [
+            "principal",
+            "principle"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: She wants to be a school ___ one day.",
+          "answer": "principal",
+          "choices": [
+            "principal",
+            "principle"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Money is the ___ problem for many families.",
+          "answer": "principal"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Do you understand the ___ behind this machine?",
+          "answer": "principle"
+        }
+      ]
+    },
+    {
+      "slug": "weather-vs-whether",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The weather was warm during our trip.",
+          "note": "Weather = conditions outside"
+        },
+        {
+          "type": "correct",
+          "text": "I do not know whether to go or stay.",
+          "note": "Whether introduces a choice"
+        },
+        {
+          "type": "correct",
+          "text": "Check the weather before you leave.",
+          "note": "Weather = rain, sun, wind"
+        },
+        {
+          "type": "correct",
+          "text": "She asked whether I wanted some tea.",
+          "note": "Whether introduces a question"
+        },
+        {
+          "type": "incorrect",
+          "text": "I am not sure weather he is ready.",
+          "correction": "I am not sure whether he is ready.",
+          "note": "A choice or question: whether"
+        },
+        {
+          "type": "incorrect",
+          "text": "The whether forecast says snow.",
+          "correction": "The weather forecast says snow.",
+          "note": "Conditions outside: weather"
+        },
+        {
+          "type": "incorrect",
+          "text": "Nobody knows weather the shop is open.",
+          "correction": "Nobody knows whether the shop is open.",
+          "note": "A question: whether"
+        },
+        {
+          "type": "incorrect",
+          "text": "We enjoyed the sunny whether on holiday.",
+          "correction": "We enjoyed the sunny weather on holiday.",
+          "note": "Sun and rain: weather"
+        },
+        {
+          "type": "incorrect",
+          "text": "She cannot decide weather to buy it.",
+          "correction": "She cannot decide whether to buy it.",
+          "note": "A choice: whether"
+        },
+        {
+          "type": "incorrect",
+          "text": "Bad whether stopped the flights.",
+          "correction": "Bad weather stopped the flights.",
+          "note": "Conditions outside: weather"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "Ask her ___ she needs a lift.",
+          "answer": "whether"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "Cold ___ makes me sleepy.",
+          "answer": "weather"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: I wonder ___ it will snow tomorrow.",
+          "answer": "whether",
+          "choices": [
+            "weather",
+            "whether"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: The ___ was lovely at the beach.",
+          "answer": "weather",
+          "choices": [
+            "weather",
+            "whether"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "He is not sure ___ to call or write.",
+          "answer": "whether"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "We stayed inside because of the stormy ___.",
+          "answer": "weather"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Tell me ___ you like the film.",
+          "answer": "whether",
+          "choices": [
+            "weather",
+            "whether"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: What is the ___ like in Spain in July?",
+          "answer": "weather",
+          "choices": [
+            "weather",
+            "whether"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "She asked ___ the bus was late.",
+          "answer": "whether"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The ___ report says it will be hot.",
+          "answer": "weather"
+        }
+      ]
+    },
+    {
+      "slug": "were-where-wear",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Where are my keys?",
+          "note": "Where asks about a place"
+        },
+        {
+          "type": "correct",
+          "text": "They were at school all day.",
+          "note": "Were = past of be"
+        },
+        {
+          "type": "correct",
+          "text": "I wear glasses to read.",
+          "note": "Wear = have clothes on"
+        },
+        {
+          "type": "correct",
+          "text": "We were not sure where to go.",
+          "note": "Were = past of be; where = place"
+        },
+        {
+          "type": "incorrect",
+          "text": "Were is the nearest bank?",
+          "correction": "Where is the nearest bank?",
+          "note": "Asking about a place: where"
+        },
+        {
+          "type": "incorrect",
+          "text": "They where late for the meeting.",
+          "correction": "They were late for the meeting.",
+          "note": "Past of be: were"
+        },
+        {
+          "type": "incorrect",
+          "text": "I always were a hat in summer.",
+          "correction": "I always wear a hat in summer.",
+          "note": "Clothes: wear"
+        },
+        {
+          "type": "incorrect",
+          "text": "Do you know were he lives?",
+          "correction": "Do you know where he lives?",
+          "note": "A place: where"
+        },
+        {
+          "type": "incorrect",
+          "text": "She will where her new dress tonight.",
+          "correction": "She will wear her new dress tonight.",
+          "note": "Clothes: wear"
+        },
+        {
+          "type": "incorrect",
+          "text": "We wear very happy yesterday.",
+          "correction": "We were very happy yesterday.",
+          "note": "Past of be: were"
+        }
+      ],
+      "exercises": [
+        {
+          "type": "fill_gap",
+          "prompt": "___ did you buy that bag?",
+          "answer": "Where"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "My shoes ___ wet after the rain.",
+          "answer": "were"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: I never ___ a tie at work.",
+          "answer": "wear",
+          "choices": [
+            "were",
+            "where",
+            "wear"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: Nobody knows ___ he went.",
+          "answer": "where",
+          "choices": [
+            "were",
+            "where",
+            "wear"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "You should ___ a coat today; it is cold.",
+          "answer": "wear"
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "The children ___ very quiet in the library.",
+          "answer": "were"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: ___ is the station?",
+          "answer": "Where",
+          "choices": [
+            "Were",
+            "Where",
+            "Wear"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: They ___ here an hour ago.",
+          "answer": "were",
+          "choices": [
+            "were",
+            "where",
+            "wear"
+          ]
+        },
+        {
+          "type": "fill_gap",
+          "prompt": "What will you ___ to the party?",
+          "answer": "wear"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Choose the word: This is the town ___ I was born.",
+          "answer": "where",
+          "choices": [
+            "were",
+            "where",
+            "wear"
+          ]
+        }
+      ]
     }
   ]
 }
