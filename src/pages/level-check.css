@@ -75,7 +75,7 @@
 }
 .level-hero__last {
   align-content: start;
-  background: var(--teal);
+  background: var(--accent);
   border: 0;
   border-radius: var(--radius-lg);
   color: var(--on-accent);
@@ -145,7 +145,7 @@
   stroke-width: 2.5;
 }
 .level-chart__line--spelling {
-  color: var(--teal-text);
+  color: var(--accent-text);
 }
 .level-chart__line--vocabulary {
   color: var(--amber-text);
@@ -154,7 +154,7 @@
   color: var(--ink-soft);
 }
 .level-chart__line--reading {
-  color: var(--teal-text);
+  color: var(--accent-text);
 }
 .level-chart__line--listening {
   color: var(--ink-soft);
@@ -194,16 +194,16 @@
   width: 14px;
 }
 .level-legend--spelling::before {
-  background: var(--teal);
+  background: var(--accent);
 }
 .level-legend--vocabulary::before {
   background: var(--amber);
 }
 .level-legend--grammar::before {
-  background: var(--teal-muted);
+  background: var(--accent-muted);
 }
 .level-legend--reading::before {
-  background: repeating-linear-gradient(to right, var(--teal) 0 6px, transparent 6px 10px);
+  background: repeating-linear-gradient(to right, var(--accent) 0 6px, transparent 6px 10px);
 }
 .level-legend--listening::before {
   background: repeating-linear-gradient(to right, var(--ink-soft) 0 2px, transparent 2px 6px);
@@ -234,7 +234,7 @@
   border-bottom: 0;
 }
 .level-history__row:hover {
-  background: var(--teal-soft);
+  background: var(--accent-soft);
 }
 .level-history__row > svg {
   color: var(--ink-faint);
@@ -244,9 +244,9 @@
   font-size: calc(13px * var(--fs));
 }
 .level-badge {
-  background: var(--teal-soft);
+  background: var(--accent-soft);
   border-radius: 8px;
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   font-size: calc(16px * var(--fs));
   padding: 3px 0;
   text-align: center;
@@ -268,8 +268,8 @@
   white-space: nowrap;
 }
 .level-delta--up {
-  background: var(--teal-soft);
-  color: var(--teal-text-strong);
+  background: var(--accent-soft);
+  color: var(--accent-text-strong);
 }
 .level-delta--down {
   background: var(--danger-soft);
@@ -307,7 +307,7 @@
   overflow: hidden;
 }
 .level-run__track i {
-  background: var(--teal);
+  background: var(--accent);
   border-radius: 999px;
   display: block;
   height: 100%;
@@ -322,9 +322,9 @@
   padding: 26px 28px;
 }
 .level-question__skill {
-  background: var(--teal-soft);
+  background: var(--accent-soft);
   border-radius: 8px;
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   font-size: calc(13px * var(--fs));
   font-weight: 700;
   padding: 4px 9px;
@@ -360,7 +360,7 @@
   width: 100%;
 }
 .level-question input:focus {
-  border-color: var(--teal);
+  border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(29, 133, 119, 0.25);
 }
 .level-actions {
@@ -380,8 +380,8 @@
   padding: 12px 14px;
 }
 .level-feedback--correct {
-  background: var(--teal-soft);
-  color: var(--teal-text-strong);
+  background: var(--good-soft);
+  color: var(--good-text);
 }
 .level-feedback--incorrect {
   background: var(--danger-soft);
@@ -402,7 +402,7 @@
   align-items: center;
   background: transparent;
   border: 0;
-  color: var(--teal-text);
+  color: var(--accent-text);
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
@@ -472,7 +472,7 @@
   text-align: center;
 }
 .level-skill__step--on {
-  background: var(--teal);
+  background: var(--accent);
   border-radius: 8px;
   color: var(--on-accent);
 }
@@ -504,9 +504,9 @@
 }
 .level-plan__number {
   align-items: center;
-  background: var(--teal-soft);
+  background: var(--accent-soft);
   border-radius: 50%;
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   display: inline-flex;
   font-size: calc(14px * var(--fs));
   font-weight: 700;
@@ -566,7 +566,7 @@
   color: var(--ink-faint);
 }
 .level-mistakes__diff strong {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
 }
 .level-result-actions {
   display: flex;
@@ -695,7 +695,7 @@
   overflow: hidden;
 }
 .level-skillbars__fill {
-  background: var(--teal);
+  background: var(--accent);
   border-radius: 999px;
   display: block;
   height: 100%;
@@ -729,7 +729,7 @@
   white-space: nowrap;
 }
 .level-picture__link {
-  color: var(--teal-text);
+  color: var(--accent-text);
   display: inline-block;
   font-size: calc(13px * var(--fs));
   font-weight: 700;
@@ -813,8 +813,8 @@
     border-color 0.15s ease;
 }
 .level-choice:hover:not(:disabled) {
-  background: var(--teal-soft);
-  border-color: var(--teal-muted);
+  background: var(--accent-soft);
+  border-color: var(--accent-muted);
 }
 .level-choice kbd {
   align-items: center;
@@ -834,9 +834,9 @@
   cursor: default;
 }
 .level-choice--right {
-  background: var(--teal-soft);
-  border-color: var(--teal);
-  color: var(--teal-text-strong);
+  background: var(--good-soft);
+  border-color: var(--good);
+  color: var(--good-text);
 }
 .level-choice--wrong {
   background: var(--danger-soft);
@@ -901,7 +901,7 @@
   text-decoration-color: var(--danger-line);
 }
 .sentence-diff__missing {
-  background: var(--teal-muted);
+  background: var(--accent-muted);
   border-radius: 4px;
   color: var(--ink);
   font-weight: 600;

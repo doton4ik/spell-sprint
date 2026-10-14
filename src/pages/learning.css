@@ -101,7 +101,7 @@
   color: var(--amber-text);
 }
 .learning-summary > div:nth-child(3) strong {
-  color: var(--teal-text);
+  color: var(--accent-text);
 }
 .empty-learning-state {
   align-items: center;
@@ -118,9 +118,9 @@
 }
 .empty-learning-state > span {
   align-items: center;
-  background: var(--teal-soft);
+  background: var(--accent-soft);
   border-radius: 50%;
-  color: var(--teal-text);
+  color: var(--accent-text);
   display: inline-flex;
   height: 58px;
   justify-content: center;
@@ -169,7 +169,7 @@
   text-decoration-color: #e2ada7;
 }
 .mistake-answer strong {
-  color: var(--teal-text);
+  color: var(--accent-text);
 }
 .mistake-answer small,
 .mistake-progress small {
@@ -193,8 +193,8 @@
   color: var(--ink-soft);
 }
 .learning-status--learning {
-  background: var(--teal-soft);
-  color: var(--teal-text-strong);
+  background: var(--accent-soft);
+  color: var(--accent-text-strong);
 }
 .learning-status--review {
   background: var(--surface-muted);
@@ -244,11 +244,11 @@
 }
 .rule-save:hover {
   background: var(--surface-muted);
-  color: var(--teal-text);
+  color: var(--accent-text);
 }
 .rule-save--active {
-  background: var(--teal-soft);
-  color: var(--teal-text-strong);
+  background: var(--accent-soft);
+  color: var(--accent-text-strong);
 }
 .rule-card h2 {
   color: var(--ink);
@@ -293,7 +293,7 @@
   text-decoration-color: #e2ada7;
 }
 .wrong-right strong {
-  color: var(--teal-text);
+  color: var(--good-text);
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: calc(13px * var(--fs));
 }
@@ -337,7 +337,7 @@
 }
 .rule-practice {
   align-items: center;
-  color: var(--teal-text);
+  color: var(--accent-text);
   display: inline-flex;
   font-size: calc(13px * var(--fs));
   font-weight: 700;
@@ -442,7 +442,7 @@
 .mistakes-view-switch .mistakes-view-switch__active {
   background: var(--surface);
   box-shadow: var(--shadow-sm);
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
 }
 .patterns-empty {
   color: var(--ink-muted);
@@ -519,7 +519,7 @@
   font-weight: 600;
 }
 .pattern-trend--better {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
 }
 .pattern-trend--worse {
   color: var(--danger-text);
@@ -561,7 +561,7 @@
   width: 7px;
 }
 .good-days i.good-days__on {
-  background: var(--teal);
+  background: var(--good);
 }
 
 /* ---- Problems & rules (My Mistakes) ---- */
@@ -570,15 +570,15 @@
   gap: 14px;
 }
 .report-step {
-  color: var(--teal-text);
+  color: var(--accent-text);
   font-size: calc(12px * var(--fs));
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 .report-sheet {
-  background: var(--teal-soft);
-  border: 1px solid var(--teal-line);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   padding: 20px 22px;
@@ -617,7 +617,7 @@
 }
 .report-sheet li::before {
   align-items: center;
-  background: var(--teal);
+  background: var(--accent);
   border-radius: 50%;
   color: var(--on-accent);
   content: counter(rule);
@@ -643,7 +643,7 @@
   align-items: center;
   background: none;
   border: 0;
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
@@ -674,14 +674,14 @@
   white-space: nowrap;
 }
 .problem-rule {
-  background: var(--teal-soft);
-  border-left: 3px solid var(--teal);
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
   border-radius: 8px;
   padding: 10px 12px;
 }
 .problem-rule span,
 .problem-words > span {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   display: block;
   font-size: calc(12px * var(--fs));
   font-weight: 700;
@@ -693,7 +693,7 @@
   color: var(--ink-muted);
 }
 .problem-rule p {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   font-size: calc(14px * var(--fs));
   font-weight: 600;
   line-height: 1.5;
@@ -706,7 +706,7 @@
 }
 .problem-explain summary,
 .report-slips summary {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   cursor: pointer;
   font-size: calc(14px * var(--fs));
   font-weight: 700;
@@ -825,7 +825,7 @@
   padding: 2px 16px 14px;
 }
 .mistakes-more summary {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   cursor: pointer;
   font-size: calc(14px * var(--fs));
   font-weight: 700;
@@ -864,9 +864,9 @@
 
 /* My Mistakes: today's mistakes, where they came from, yellow cards (possible mistakes) */
 .mistake-new {
-  background: var(--teal-soft, var(--teal-soft));
+  background: var(--accent-soft, var(--accent-soft));
   border-radius: 999px;
-  color: var(--teal-text, var(--teal-text-strong));
+  color: var(--accent-text, var(--accent-text-strong));
   font-size: 0.85em;
   font-weight: 700;
   margin-right: 6px;
@@ -935,7 +935,7 @@
   text-align: center;
 }
 .mistake-history__right .mistake-history__mark {
-  color: var(--teal-text, var(--teal-text));
+  color: var(--accent-text, var(--good-text));
 }
 .mistake-history__wrong .mistake-history__mark {
   color: var(--danger, var(--danger-text));

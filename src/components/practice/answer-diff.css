@@ -23,7 +23,7 @@
   font-weight: 700;
 }
 .diff-char--fix {
-  background: var(--teal-muted);
+  background: var(--accent-muted);
   color: var(--ink);
   font-weight: 700;
 }

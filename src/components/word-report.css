@@ -83,8 +83,8 @@
   width: auto;
 }
 .word-report--done {
-  background: var(--teal-soft);
-  border-color: var(--teal-line);
+  background: var(--good-soft);
+  border-color: var(--good-line);
 }
 .word-report--done p {
   color: var(--ink);
@@ -93,7 +93,7 @@
   margin: 0;
 }
 .word-report--done svg {
-  color: var(--teal-text);
+  color: var(--good-text);
   vertical-align: -2px;
 }
 

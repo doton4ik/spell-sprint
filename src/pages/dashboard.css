@@ -113,9 +113,9 @@
   line-height: 1;
   margin: 14px 0 0;
 }
-.metric-card--teal .metric-card__icon {
-  background: var(--teal-soft);
-  color: var(--teal-text);
+.metric-card--accent .metric-card__icon {
+  background: var(--accent-soft);
+  color: var(--accent-text);
 }
 .metric-card--amber .metric-card__icon {
   background: var(--amber-soft);
@@ -199,7 +199,7 @@
   margin: 0;
 }
 .text-action {
-  color: var(--teal-text);
+  color: var(--accent-text);
   font-size: calc(13px * var(--fs));
   font-weight: 700;
   margin-top: 3px;
@@ -229,8 +229,8 @@
   white-space: nowrap;
 }
 .status--strong {
-  background: var(--teal-soft);
-  color: var(--teal-text-strong);
+  background: var(--accent-soft);
+  color: var(--accent-text-strong);
 }
 .status--developing {
   background: var(--surface-muted);
@@ -247,12 +247,12 @@
   overflow: hidden;
 }
 .progress-fill {
-  background: var(--teal);
+  background: var(--accent);
   border-radius: 999px;
   height: 100%;
 }
 .topic-row:nth-child(2) .progress-fill {
-  background: var(--teal-muted);
+  background: var(--accent-muted);
 }
 .topic-row:nth-child(3) .progress-fill {
   background: var(--ink-muted);
@@ -266,7 +266,7 @@
 }
 .weak-focus {
   align-items: center;
-  background: var(--teal-soft);
+  background: var(--accent-soft);
   border-radius: 12px;
   display: flex;
   gap: 11px;
@@ -294,10 +294,10 @@
   color: var(--ink-soft);
 }
 .weak-focus a {
-  color: var(--teal-text);
+  color: var(--accent-text);
 }
 .weekly-total {
-  color: var(--teal-text);
+  color: var(--accent-text);
   font-size: calc(18px * var(--fs));
   font-weight: 700;
   line-height: 1;
@@ -336,15 +336,15 @@
   width: 19px;
 }
 .bar-chart__bar {
-  background: var(--teal-muted);
+  background: var(--accent-muted);
   border-radius: 6px;
   width: 100%;
 }
 .bar-chart__bar--today {
-  background: var(--teal);
+  background: var(--accent);
 }
 .today-label {
-  color: var(--teal-text);
+  color: var(--accent-text);
   font-weight: 700;
 }
 .chart-caption {
@@ -356,7 +356,7 @@
   margin: 18px 0 0;
 }
 .chart-caption span {
-  background: var(--teal);
+  background: var(--accent);
   border-radius: 50%;
   height: 6px;
   width: 6px;
@@ -379,8 +379,8 @@
     border-color 0.15s ease;
 }
 .recent-row:hover {
-  background: var(--teal-soft);
-  border-color: var(--teal-line);
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
 }
 .recent-row__icon {
   align-items: center;
@@ -413,7 +413,7 @@
   color: var(--ink-faint);
 }
 .recent-row__words strong {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
 }
 .recent-row__meta {
   color: var(--ink-muted);
@@ -429,8 +429,8 @@
   white-space: nowrap;
 }
 .review-card {
-  background: var(--teal-soft);
-  border: 1px solid var(--teal-line);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
   border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
@@ -440,9 +440,9 @@
 }
 .review-card__symbol {
   align-items: center;
-  background: var(--teal-muted);
+  background: var(--accent-muted);
   border-radius: 10px;
-  color: var(--teal-text);
+  color: var(--accent-text);
   display: inline-flex;
   height: 34px;
   justify-content: center;
@@ -467,7 +467,7 @@
   margin: 8px 0 17px;
 }
 .secondary-button {
-  background: var(--teal);
+  background: var(--accent);
   color: var(--on-accent);
   padding: 10px 13px;
   width: fit-content;
@@ -575,7 +575,7 @@
 }
 .today-card {
   align-items: center;
-  background: var(--teal);
+  background: var(--accent);
   border-radius: var(--radius-lg);
   color: var(--on-accent);
   display: flex;
@@ -668,10 +668,10 @@
 .today-button--primary {
   background: var(--surface);
   border-color: var(--line);
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
 }
 .today-button--primary:hover {
-  background: var(--teal-soft);
+  background: var(--accent-soft);
 }
 .today-card__goal {
   align-items: center;
@@ -695,7 +695,7 @@
 }
 .goal-ring > div {
   align-content: center;
-  background: var(--teal-dark);
+  background: var(--accent-dark);
   border-radius: 50%;
   display: grid;
   height: 88px;
@@ -716,13 +716,13 @@
   color: var(--ink-faint);
 }
 .bar-chart__bar--goal {
-  background: var(--teal);
+  background: var(--accent);
 }
 .bar-chart__bar--today.bar-chart__bar--goal {
-  background: var(--teal);
+  background: var(--accent);
 }
 .chart-caption a {
-  color: var(--teal-text);
+  color: var(--accent-text);
   font-weight: 700;
 }
 .panel-empty {
@@ -774,7 +774,7 @@
 .level-nudge {
   align-items: center;
   background: var(--surface);
-  border: 1px solid var(--teal-line);
+  border: 1px solid var(--accent-line);
   border-radius: 14px;
   color: var(--ink);
   display: flex;
@@ -784,7 +784,7 @@
   text-decoration: none;
 }
 .level-nudge:hover {
-  background: var(--teal-soft);
+  background: var(--accent-soft);
 }
 .level-nudge > span:nth-child(2) {
   display: grid;
@@ -799,13 +799,13 @@
   font-size: calc(13px * var(--fs));
 }
 .level-nudge > svg {
-  color: var(--teal-text);
+  color: var(--accent-text);
 }
 .level-nudge__icon {
   align-items: center;
-  background: var(--teal-soft);
+  background: var(--accent-soft);
   border-radius: 10px;
-  color: var(--teal-text);
+  color: var(--accent-text);
   display: inline-flex;
   height: 34px;
   justify-content: center;
@@ -936,9 +936,9 @@
 }
 .welcome-step__icon {
   align-items: center;
-  background: var(--teal-soft);
+  background: var(--accent-soft);
   border-radius: 10px;
-  color: var(--teal-text);
+  color: var(--accent-text);
   display: inline-flex;
   height: 36px;
   justify-content: center;
@@ -965,7 +965,7 @@
 }
 .welcome-step a {
   align-items: center;
-  color: var(--teal-text);
+  color: var(--accent-text);
   display: inline-flex;
   font-size: calc(13px * var(--fs));
   font-weight: 700;
@@ -1030,10 +1030,10 @@
   }
   .day-card__speak {
     align-items: center;
-    background: var(--teal-soft);
+    background: var(--accent-soft);
     border: 0;
     border-radius: 50%;
-    color: var(--teal-text);
+    color: var(--accent-text);
     cursor: pointer;
     display: inline-flex;
     height: 32px;
@@ -1094,4 +1094,103 @@
   .metrics-grid > :last-child {
     grid-column: 1 / -1;
   }
+}
+
+/* ---- Paper design: the page opens like a book page ---- */
+.page-header {
+  border-bottom: 3px double var(--line-strong);
+  margin-bottom: 28px;
+  padding-bottom: 22px;
+}
+.date-line {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.page-header h1 {
+  font-size: calc(clamp(32px, 3.6vw, 46px) * var(--fs));
+  letter-spacing: -0.5px;
+}
+.page-subtitle {
+  font-family: var(--font-serif);
+  font-size: calc(18px * var(--fs));
+  font-style: italic;
+}
+/* The streak is a bookmark ribbon with a notch at the bottom. */
+.header-streak {
+  align-content: start;
+  background: var(--amber-line);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 12px), 0 100%);
+  grid-template-columns: 1fr;
+  justify-items: center;
+  min-width: 76px;
+  padding: 12px 14px 26px;
+  row-gap: 2px;
+  text-align: center;
+}
+.header-streak span {
+  background: none;
+  color: var(--amber-text);
+  grid-row: auto;
+  height: auto;
+  width: auto;
+}
+.header-streak strong {
+  align-self: auto;
+  font-family: var(--font-serif);
+  font-size: calc(28px * var(--fs));
+  line-height: 1;
+}
+.header-streak small {
+  align-self: auto;
+  color: var(--ink-soft);
+  text-align: center;
+}
+.header-streak--pending {
+  background: var(--surface-strong);
+}
+.header-streak--pending span {
+  color: var(--ink-soft);
+}
+/* The three steps are numbered like chapters; "Step 1" stays in the page for screen readers. */
+.welcome {
+  counter-reset: step;
+}
+.welcome-step {
+  border-radius: 10px;
+  box-shadow: none;
+  counter-increment: step;
+  padding: 20px 22px;
+}
+.welcome-step::before {
+  color: var(--accent-muted);
+  content: counter(step);
+  font-family: var(--font-serif);
+  font-size: calc(40px * var(--fs));
+  font-weight: 600;
+  line-height: 1;
+}
+.welcome-step__icon {
+  display: none;
+}
+.welcome-step small {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.welcome-step h2 {
+  font-family: var(--font-serif);
+  font-size: calc(20px * var(--fs));
+}
+.section-header h2,
+.review-card h2 {
+  font-family: var(--font-serif);
+  font-size: calc(20px * var(--fs));
+  font-weight: 600;
+  letter-spacing: -0.2px;
 }

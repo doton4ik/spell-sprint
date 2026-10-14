@@ -101,7 +101,7 @@
   padding: 9px 10px;
 }
 .settings-card input:focus {
-  border-color: var(--teal);
+  border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(29, 133, 119, 0.25);
 }
 .settings-card form .check-button {
@@ -111,7 +111,7 @@
 .settings-link {
   background: transparent;
   border: 0;
-  color: var(--teal-text);
+  color: var(--accent-text);
   font-size: calc(13px * var(--fs));
   font-weight: 700;
   margin-top: 0;
@@ -128,9 +128,9 @@
   margin-top: 12px;
 }
 .settings-message {
-  background: var(--teal-soft);
+  background: var(--accent-soft);
   border-radius: 10px;
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   font-size: calc(13px * var(--fs));
   margin: 18px 0 0;
   padding: 12px 14px;
@@ -175,12 +175,12 @@
   padding: 10px 4px;
 }
 .settings-card .font-scale-option:hover {
-  border-color: var(--teal-muted);
+  border-color: var(--accent-muted);
 }
 .settings-card .font-scale-option--active {
-  background: var(--teal-soft);
-  border-color: var(--teal);
-  color: var(--teal-text-strong);
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent-text-strong);
 }
 .font-scale-preview {
   background: var(--surface-soft);
@@ -197,7 +197,7 @@
   letter-spacing: -0.4px;
 }
 .font-scale-preview span {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   font-size: calc(16px * var(--fs));
 }
 .settings-card .font-scale-preview small {
@@ -254,6 +254,6 @@
 }
 .settings-legal a,
 .settings-card small a {
-  color: var(--teal-text);
+  color: var(--accent-text);
   font-weight: 600;
 }

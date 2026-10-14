@@ -36,7 +36,7 @@
   overflow-wrap: anywhere;
 }
 .rail-row strong {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   font-weight: 600;
 }
 .rail-row--button {
@@ -44,7 +44,7 @@
   width: 100%;
 }
 .rail-row--button:hover span {
-  color: var(--teal-text);
+  color: var(--accent-text);
 }
 
 .sprint-page,

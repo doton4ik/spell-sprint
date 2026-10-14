@@ -24,9 +24,9 @@
   max-width: 630px;
 }
 .library-total {
-  background: var(--teal-soft);
+  background: var(--accent-soft);
   border-radius: 12px;
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   display: grid;
   gap: 2px;
   padding: 11px 16px;
@@ -42,8 +42,8 @@
 }
 .import-panel {
   align-items: center;
-  background: var(--teal-soft);
-  border: 1px solid var(--teal-line);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
   border-radius: var(--radius-lg);
   display: grid;
   gap: 20px;
@@ -53,7 +53,7 @@
 }
 .import-panel__copy > span {
   align-items: center;
-  color: var(--teal-text);
+  color: var(--accent-text);
   display: flex;
   font-size: calc(12px * var(--fs));
   font-weight: 700;
@@ -62,7 +62,7 @@
   text-transform: uppercase;
 }
 .import-panel h2 {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   font-size: calc(18px * var(--fs));
   letter-spacing: -0.35px;
   margin: 7px 0 4px;
@@ -104,8 +104,8 @@
   padding-left: 16px;
 }
 .import-report--success {
-  background: var(--teal-soft);
-  color: var(--teal-text);
+  background: var(--good-soft);
+  color: var(--good-text);
 }
 .import-report--error {
   background: var(--danger-soft);
@@ -131,9 +131,9 @@
 }
 .library-icon {
   align-items: center;
-  background: var(--teal-soft);
+  background: var(--accent-soft);
   border-radius: 8px;
-  color: var(--teal-text);
+  color: var(--accent-text);
   display: inline-flex;
   height: 33px;
   justify-content: center;
@@ -154,7 +154,7 @@
   color: var(--ink-soft);
 }
 .library-topic {
-  color: var(--teal-text);
+  color: var(--accent-text);
   font-size: calc(12px * var(--fs));
   font-weight: 700;
   margin-top: 17px;
@@ -201,7 +201,7 @@
 }
 .library-card a {
   align-items: center;
-  color: var(--teal-text);
+  color: var(--accent-text);
   display: inline-flex;
   font-size: calc(12px * var(--fs));
   font-weight: 700;
@@ -328,8 +328,8 @@
 }
 .library-tabs button:hover,
 .library-tabs__active {
-  background: var(--teal-soft) !important;
-  color: var(--teal-text-strong) !important;
+  background: var(--accent-soft) !important;
+  color: var(--accent-text-strong) !important;
 }
 .library-groups {
   display: grid;
@@ -347,7 +347,7 @@
   padding: 25px;
 }
 .group-card__eyebrow {
-  color: var(--teal-text);
+  color: var(--accent-text);
   font-size: calc(12px * var(--fs));
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -377,7 +377,7 @@
   margin: 22px 0 16px;
 }
 .group-card__stats strong {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   font-size: calc(24px * var(--fs));
 }
 .group-card__stats small {
@@ -405,7 +405,7 @@
 .back-button {
   background: transparent;
   border: 0;
-  color: var(--teal-text);
+  color: var(--accent-text);
   font-size: calc(13px * var(--fs));
   font-weight: 700;
   margin: 0 0 18px;
@@ -465,7 +465,7 @@
   margin: 0 0 3px;
 }
 .word-row p {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   font-size: calc(14px * var(--fs));
 }
 .word-row small {
@@ -510,7 +510,7 @@
   gap: 7px;
 }
 .personal-library > div:first-child > span {
-  color: var(--teal-text);
+  color: var(--accent-text);
   font-size: calc(12px * var(--fs));
   font-weight: 700;
   text-transform: uppercase;
@@ -524,7 +524,7 @@
   text-align: center;
 }
 .libraries-empty svg {
-  color: var(--teal-text);
+  color: var(--accent-text);
 }
 .global-word-search {
   align-items: center;
@@ -539,8 +539,8 @@
   padding: 0 14px;
 }
 .global-word-search:focus-within {
-  border-color: var(--teal);
-  box-shadow: 0 0 0 3px rgba(17, 118, 106, 0.25);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent);
 }
 .global-word-search input {
   background: transparent;
@@ -565,10 +565,10 @@
 }
 .word-rule-chip {
   align-items: center;
-  background: var(--teal-soft);
+  background: var(--accent-soft);
   border: 0;
   border-radius: 999px;
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   display: inline-flex;
   font-size: calc(12px * var(--fs));
   font-weight: 700;
@@ -576,7 +576,7 @@
   padding: 5px 9px;
 }
 .word-rule-chip:hover {
-  background: var(--teal-muted);
+  background: var(--accent-muted);
 }
 .word-row__actions {
   display: flex;
@@ -658,7 +658,7 @@
 }
 .import-preview {
   background: var(--surface);
-  border: 1px solid var(--teal-line);
+  border: 1px solid var(--accent-line);
   border-radius: 14px;
   display: grid;
   gap: 10px;
@@ -695,11 +695,11 @@
   color: var(--ink);
 }
 .import-count--ready {
-  background: var(--teal-soft);
-  color: var(--teal-text-strong);
+  background: var(--accent-soft);
+  color: var(--accent-text-strong);
 }
 .import-count--ready b {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
 }
 .import-count--bad {
   background: var(--danger-soft);
@@ -799,9 +799,9 @@
 /* Hide a word, add-on packs, hidden words */
 .library-notice {
   align-items: center;
-  background: var(--teal-soft);
+  background: var(--accent-soft);
   border-radius: 10px;
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   display: flex;
   flex-wrap: wrap;
   font-size: calc(13px * var(--fs));
@@ -812,7 +812,7 @@
 .library-notice button {
   background: transparent;
   border: 0;
-  color: var(--teal-text);
+  color: var(--accent-text);
   font-size: inherit;
   font-weight: 700;
   min-height: 32px;
@@ -845,11 +845,11 @@
   padding: 20px 22px;
 }
 .pack-card--on {
-  background: var(--teal-soft);
-  border-color: var(--teal-line);
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
 }
 .pack-card__eyebrow {
-  color: var(--teal-text);
+  color: var(--accent-text);
   font-size: calc(12px * var(--fs));
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -878,7 +878,7 @@
   gap: 8px;
 }
 .pack-card__actions strong {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   font-size: calc(20px * var(--fs));
   margin-right: 8px;
   text-align: center;
@@ -935,7 +935,7 @@
   background: var(--surface);
   border: 1px solid var(--line-strong);
   border-radius: 6px;
-  color: var(--teal-text);
+  color: var(--accent-text);
   font-size: calc(12px * var(--fs));
   font-weight: 700;
   min-height: 30px;
@@ -963,7 +963,7 @@
 }
 .add-word__head > span {
   align-items: center;
-  color: var(--teal-text);
+  color: var(--accent-text);
   display: flex;
   font-size: calc(12px * var(--fs));
   font-weight: 700;
@@ -1002,7 +1002,7 @@
 }
 .add-word__search input:focus,
 .add-word__form input:focus {
-  border-color: var(--teal);
+  border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(29, 133, 119, 0.25);
 }
 .add-word__search .check-button {
@@ -1018,9 +1018,9 @@
 }
 .add-word__saved {
   align-items: center;
-  background: var(--teal-soft);
+  background: var(--accent-soft);
   border-radius: 10px;
-  color: var(--teal-text);
+  color: var(--accent-text);
   display: flex;
   flex-wrap: wrap;
   font-size: calc(13px * var(--fs));
@@ -1031,7 +1031,7 @@
 .add-word__saved button {
   background: transparent;
   border: 0;
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   font-weight: 700;
   margin-left: auto;
 }
@@ -1056,8 +1056,8 @@
   text-align: left;
 }
 .add-word__sense:hover {
-  background: var(--teal-soft);
-  border-color: var(--teal-muted);
+  background: var(--accent-soft);
+  border-color: var(--accent-muted);
 }
 .add-word__sense small {
   color: var(--ink-muted);
@@ -1066,7 +1066,7 @@
   text-transform: uppercase;
 }
 .add-word__sense strong {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   font-size: calc(16px * var(--fs));
 }
 .add-word__sense span {

@@ -1,7 +1,7 @@
 /* ---------- Rule practice panel (one exercise at a time) ---------- */
 .rule-practice-panel {
-  background: var(--teal-soft);
-  border: 1px solid var(--teal-line);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
   border-radius: var(--radius-lg);
   margin-bottom: 18px;
   padding: 18px 22px;
@@ -13,7 +13,7 @@
 }
 .rule-practice-panel__eyebrow {
   align-items: center;
-  color: var(--teal-text);
+  color: var(--accent-text);
   display: inline-flex;
   font-size: calc(12px * var(--fs));
   font-weight: 700;
@@ -34,7 +34,7 @@
   margin: 8px 0 0;
 }
 .rule-practice-panel__text strong {
-  color: var(--teal-text);
+  color: var(--accent-text);
 }
 .rule-practice-panel__start {
   align-items: center;
@@ -65,7 +65,7 @@
 .rule-runner__rule {
   background: color-mix(in srgb, var(--surface) 70%, transparent);
   border-radius: 999px;
-  color: var(--teal-text);
+  color: var(--accent-text);
   letter-spacing: 0;
   padding: 3px 9px;
   text-transform: none;
@@ -74,7 +74,7 @@
   margin-left: auto;
 }
 .rule-runner__prompt {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   font-size: calc(18px * var(--fs));
   font-weight: 600;
   letter-spacing: -0.3px;
@@ -87,7 +87,7 @@
 }
 .rule-runner__form input {
   background: var(--surface);
-  border: 1px solid var(--teal-muted);
+  border: 1px solid var(--accent-muted);
   border-radius: 10px;
   color: var(--ink);
   flex: 1;
@@ -97,7 +97,7 @@
   padding: 11px 13px;
 }
 .rule-runner__form input:focus {
-  border-color: var(--teal);
+  border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(40, 139, 125, 0.12);
 }
 .rule-runner__choices {
@@ -107,15 +107,15 @@
 }
 .rule-runner__choice {
   background: var(--surface);
-  border: 1px solid var(--teal-muted);
+  border: 1px solid var(--accent-muted);
   border-radius: 10px;
   color: var(--ink);
   font-size: calc(16px * var(--fs));
   padding: 10px 16px;
 }
 .rule-runner__choice:hover {
-  background: var(--teal-soft);
-  border-color: var(--teal);
+  background: var(--accent-soft);
+  border-color: var(--accent);
 }
 .rule-runner__feedback {
   align-items: center;
@@ -131,8 +131,8 @@
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 .rule-runner__feedback--correct {
-  background: var(--teal-soft);
-  color: var(--teal-text-strong);
+  background: var(--good-soft);
+  color: var(--good-text);
 }
 .rule-runner__feedback--incorrect {
   background: var(--danger-soft);
@@ -183,7 +183,7 @@
   width: 9px;
 }
 .rule-mastery-bar__dot--filled {
-  background: var(--teal);
+  background: var(--good);
 }
 .rule-mastery-bar small {
   color: var(--ink-muted);
@@ -215,10 +215,10 @@
   color: var(--danger-text);
 }
 .rule-linked-mistakes strong {
-  color: var(--teal-text);
+  color: var(--accent-text);
 }
 .rule-mini-practice {
-  background: var(--teal-soft);
+  background: var(--accent-soft);
   border-radius: 10px;
   padding: 13px 14px;
 }
@@ -278,7 +278,7 @@
   color: var(--danger-text);
 }
 .rule-create-form__hint strong {
-  color: var(--teal-text);
+  color: var(--accent-text);
 }
 .rule-create-form form {
   display: grid;
@@ -376,7 +376,7 @@
   color: var(--danger-text);
 }
 .rule-unclassified__item strong {
-  color: var(--teal-text);
+  color: var(--accent-text);
 }
 .rule-unclassified__error {
   color: var(--danger-text);
@@ -478,8 +478,8 @@
   background: var(--surface-strong);
 }
 .rules-nav__item--active {
-  background: var(--teal-soft);
-  color: var(--teal-text-strong);
+  background: var(--accent-soft);
+  color: var(--accent-text-strong);
 }
 .rules-main {
   display: grid;
@@ -518,7 +518,7 @@
   margin: 0 0 4px;
 }
 .rule-unclassified__note a {
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   font-weight: 700;
 }
 
@@ -562,8 +562,8 @@
 }
 .rules-row--active,
 .rules-row--active:hover {
-  background: var(--teal-soft);
-  color: var(--teal-text-strong);
+  background: var(--accent-soft);
+  color: var(--accent-text-strong);
 }
 .rules-row__title {
   flex: 1;
@@ -582,7 +582,7 @@
   background: var(--amber);
 }
 .rules-row__dot--done {
-  background: var(--teal);
+  background: var(--good);
 }
 .rules-detail-col {
   min-width: 0;
@@ -641,8 +641,8 @@
 }
 .rules-tab--active,
 .rules-tab--active:hover {
-  border-bottom-color: var(--teal);
-  color: var(--teal-text-strong);
+  border-bottom-color: var(--accent);
+  color: var(--accent-text-strong);
 }
 .rules-pane {
   display: grid;
@@ -712,7 +712,7 @@
     align-items: center;
     background: none;
     border: 0;
-    color: var(--teal-text);
+    color: var(--accent-text);
     cursor: pointer;
     display: inline-flex;
     font: inherit;

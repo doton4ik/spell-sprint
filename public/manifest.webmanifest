@@ -5,8 +5,8 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#f7f8f5",
-  "theme_color": "#0e6a5c",
+  "background_color": "#f5f0e6",
+  "theme_color": "#2d4f80",
   "lang": "en",
   "icons": [{ "src": "/icons/spell-sprint-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
 }

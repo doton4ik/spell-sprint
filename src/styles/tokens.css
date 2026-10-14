@@ -1,5 +1,5 @@
 /* The whole palette. Stylesheets use only these names (no hex colours), so the dark theme below is
-   just a second set of values. Light is the default; dark follows the system, or the choice in
+   just a second set of values. Light is the default (warm paper and ink); dark follows the system, or the choice in
    Settings → Appearance (data-theme on <html>, see services/appearanceStorage.ts). */
 :root {
   /* Text size multiplier, set from Settings (see services/appearanceStorage.ts).
@@ -7,124 +7,143 @@
   --fs: 1;
   color-scheme: light;
 
-  /* Surfaces, from the page background up */
-  --canvas: #f5f7f4;
-  --surface: #ffffff;
-  --surface-soft: #fafbf9;
-  --surface-muted: #eff3f1;
-  --surface-strong: #e3e9e6;
+  /* Surfaces, from the page background up: warm paper */
+  --canvas: #f5f0e6;
+  --surface: #fffdf8;
+  --surface-soft: #faf5ea;
+  --surface-muted: #efe8da;
+  --surface-strong: #e3dac8;
 
-  /* Text */
-  --ink: #24403a;
-  --ink-soft: #3d5650;
-  --ink-muted: #51645f;
-  --ink-faint: #5d706b;
-  --on-accent: #ffffff; /* text on teal, red or other strong colours */
+  /* Text: warm near-black ink */
+  --ink: #2b2620;
+  --ink-soft: #463f35;
+  --ink-muted: #5b5246;
+  --ink-faint: #685e51;
+  --on-accent: #ffffff; /* text on the accent, red or other strong colours */
 
   /* Lines */
-  --line: #e4eae6;
-  --line-strong: #d3ddd9;
+  --line: #e5dccb;
+  --line-strong: #d3c8b2;
 
-  /* Teal: the brand and "good" colour */
-  --teal: #11766a; /* buttons and fills (white text on top) */
-  --teal-dark: #0b5c52;
-  --teal-text: #11766a; /* teal words on a light surface */
-  --teal-text-strong: #0e5a4d;
-  --teal-soft: #e2f3ed;
-  --teal-muted: #a6cec5;
-  --teal-line: #d4e7e0;
+  /* Accent: ink blue, the brand colour (links, the main button, the current page) */
+  --accent: #2d4f80; /* buttons and fills (white text on top) */
+  --accent-dark: #1f3a60;
+  --accent-text: #2d4f80; /* accent words on a light surface */
+  --accent-text-strong: #1f3a60;
+  --accent-soft: #e6ecf5;
+  --accent-muted: #a8b9d3;
+  --accent-line: #d2dcec;
+
+  /* Good: sage green. Only for "right", "done", "mastered"; never for decoration */
+  --good: #3c7a55;
+  --good-text: #2d6747;
+  --good-soft: #e3efe6;
+  --good-line: #c9e0d1;
 
   /* Amber: warnings, streaks, yellow cards */
-  --amber: #b67819;
-  --amber-text: #8a5d0c;
-  --amber-soft: #fbf1dc;
-  --amber-line: #ecdcbc;
-  --yellow: #f2c230;
+  --amber: #b0701a;
+  --amber-text: #86570f;
+  --amber-soft: #fbf0d9;
+  --amber-line: #ecdbb7;
+  --yellow: #e9b72a;
 
-  /* Red: mistakes */
-  --danger: #c0533a;
-  --danger-text: #a4473a;
-  --danger-soft: #fbe3de;
-  --danger-line: #e7b9aa;
+  /* Red: mistakes (terracotta) */
+  --danger: #b9462f;
+  --danger-text: #9c3b28;
+  --danger-soft: #f9e3dc;
+  --danger-line: #e3b8a8;
 
-  /* Logo: deep teal square, coral mistake line, mint tick (see components/layout/BrandMark.tsx). */
-  --brand: #0e6a5c;
+  /* Logo: ink-blue square, coral mistake line, sage tick (see components/layout/BrandMark.tsx). */
+  --brand: #2d4f80;
   --coral-light: #f0997b;
-  --mint: #9fe1cb;
+  --mint: #b9dfc6;
 
-  --shadow-sm: 0 1px 2px rgba(31, 51, 47, 0.03), 0 4px 14px rgba(31, 51, 47, 0.04);
-  --shadow-md: 0 12px 32px rgba(26, 61, 53, 0.08);
-  --radius-lg: 20px;
-  --radius-md: 14px;
+  /* Headings and the word to translate: a book serif from the system (no font files to load) */
+  --font-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, 'Times New Roman', serif;
+
+  --shadow-sm: 0 1px 0 rgba(60, 45, 20, 0.04), 0 3px 10px rgba(60, 45, 20, 0.05);
+  --shadow-md: 0 10px 28px rgba(60, 45, 20, 0.1);
+  --radius-lg: 16px;
+  --radius-md: 12px;
 }
 
-/* Dark theme: the same names with dark values. Written twice: once for "follow the system" and once
-   for an explicit choice. Keep the two blocks identical. */
+/* Dark theme: the same names with dark values (warm dark brown, not blue-black). Written twice: once for "follow the system"
+   and once for an explicit choice. Keep the two blocks identical. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
     color-scheme: dark;
-    --canvas: #0f1715;
-    --surface: #17211e;
-    --surface-soft: #1b2623;
-    --surface-muted: #212e2a;
-    --surface-strong: #2a3934;
-    --ink: #e3ece9;
-    --ink-soft: #c0cdc9;
-    --ink-muted: #95a5a0;
-    --ink-faint: #8a9a95;
+    --canvas: #16130f;
+    --surface: #1f1b16;
+    --surface-soft: #241f1a;
+    --surface-muted: #2c2620;
+    --surface-strong: #38312a;
+    --ink: #efe8dc;
+    --ink-soft: #d1c8b9;
+    --ink-muted: #a79d8d;
+    --ink-faint: #9a9081;
     --on-accent: #ffffff;
-    --line: #2a3733;
-    --line-strong: #384843;
-    --teal: #16806f;
-    --teal-dark: #0f6458;
-    --teal-text: #5cc4b2;
-    --teal-text-strong: #8ad9ca;
-    --teal-soft: #173731;
-    --teal-muted: #2f6a5f;
-    --teal-line: #26493f;
+    --line: #332d26;
+    --line-strong: #443c33;
+    --accent: #4d73ad;
+    --accent-dark: #3b5a8c;
+    --accent-text: #9db9e3;
+    --accent-text-strong: #bfd2ee;
+    --accent-soft: #1f2a3d;
+    --accent-muted: #3d5686;
+    --accent-line: #2b3b57;
+    --good: #4f9a6c;
+    --good-text: #86c9a1;
+    --good-soft: #1d2b22;
+    --good-line: #2b4636;
     --amber: #c98a2a;
     --amber-text: #e7b45c;
     --amber-soft: #352b17;
     --amber-line: #5d4a24;
     --yellow: #e0b52c;
-    --danger: #d0664c;
+    --danger: #be5640;
     --danger-text: #f0a291;
     --danger-soft: #3b221d;
     --danger-line: #6a3a30;
+    --brand: #4d73ad;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25), 0 4px 14px rgba(0, 0, 0, 0.2);
     --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.35);
   }
 }
 :root[data-theme='dark'] {
   color-scheme: dark;
-  --canvas: #0f1715;
-  --surface: #17211e;
-  --surface-soft: #1b2623;
-  --surface-muted: #212e2a;
-  --surface-strong: #2a3934;
-  --ink: #e3ece9;
-  --ink-soft: #c0cdc9;
-  --ink-muted: #95a5a0;
-  --ink-faint: #8a9a95;
+  --canvas: #16130f;
+  --surface: #1f1b16;
+  --surface-soft: #241f1a;
+  --surface-muted: #2c2620;
+  --surface-strong: #38312a;
+  --ink: #efe8dc;
+  --ink-soft: #d1c8b9;
+  --ink-muted: #a79d8d;
+  --ink-faint: #9a9081;
   --on-accent: #ffffff;
-  --line: #2a3733;
-  --line-strong: #384843;
-  --teal: #16806f;
-  --teal-dark: #0f6458;
-  --teal-text: #5cc4b2;
-  --teal-text-strong: #8ad9ca;
-  --teal-soft: #173731;
-  --teal-muted: #2f6a5f;
-  --teal-line: #26493f;
+  --line: #332d26;
+  --line-strong: #443c33;
+  --accent: #4d73ad;
+  --accent-dark: #3b5a8c;
+  --accent-text: #9db9e3;
+  --accent-text-strong: #bfd2ee;
+  --accent-soft: #1f2a3d;
+  --accent-muted: #3d5686;
+  --accent-line: #2b3b57;
+  --good: #4f9a6c;
+  --good-text: #86c9a1;
+  --good-soft: #1d2b22;
+  --good-line: #2b4636;
   --amber: #c98a2a;
   --amber-text: #e7b45c;
   --amber-soft: #352b17;
   --amber-line: #5d4a24;
   --yellow: #e0b52c;
-  --danger: #d0664c;
+  --danger: #be5640;
   --danger-text: #f0a291;
   --danger-soft: #3b221d;
   --danger-line: #6a3a30;
+  --brand: #4d73ad;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25), 0 4px 14px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.35);
 }

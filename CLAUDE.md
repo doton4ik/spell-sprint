@@ -58,6 +58,9 @@ This project runs with Sonnet as the main model, Opus as the advisor and Haiku f
 - `src/data/` — content: `spell-sprint-built-in-library.csv` (966 words), `proofreadingTexts.ts`,
   `pairDrills.ts`, `wordAliases.ts` (one id for a word in two libraries), `libraryTaxonomy.ts` (topic merges).
 - Styles: colours only from `src/styles/tokens.css` (light + dark theme); shared buttons in `styles/buttons.css`.
+  Palette (paper design, 14 Oct 2026): warm paper and ink; `--accent*` = ink blue (brand, links, the main button, the current page);
+  `--good*` = sage green, ONLY for right / done / mastered; `--danger*` = mistakes; headings and the word to translate use `--font-serif`
+  (system book serif, no font files).
   Every font size is `calc(Npx * var(--fs))`.
 - Content checks: `scripts/check-*.mjs` (part of `pnpm check`).
 

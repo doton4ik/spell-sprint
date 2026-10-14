@@ -56,8 +56,8 @@
 
 .topics-focus {
   align-items: center;
-  background: var(--teal-soft);
-  border: 1px solid var(--teal-line);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
   border-radius: 14px;
   display: flex;
   gap: 14px;
@@ -104,7 +104,7 @@
   padding: 0 12px;
 }
 .topics-search:focus-within {
-  border-color: var(--teal);
+  border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(29, 133, 119, 0.25);
 }
 .topics-search input {
@@ -159,8 +159,8 @@
   background: var(--surface-muted);
 }
 .topics-tabs .topics-tabs__active {
-  background: var(--teal-soft);
-  color: var(--teal-text-strong);
+  background: var(--accent-soft);
+  color: var(--accent-text-strong);
 }
 
 .topics-section {
@@ -228,7 +228,7 @@
   text-align: left;
 }
 .topic-line__toggle:hover {
-  background: var(--teal-soft);
+  background: var(--accent-soft);
 }
 .topic-dot {
   border-radius: 50%;
@@ -242,10 +242,10 @@
   background: var(--amber);
 }
 .topic-dot--developing {
-  background: var(--teal-muted);
+  background: var(--accent-muted);
 }
 .topic-dot--strong {
-  background: var(--teal);
+  background: var(--accent);
 }
 .topic-line__name {
   color: var(--ink);
@@ -287,10 +287,10 @@
   top: 0;
 }
 .topic-line__bar-practised {
-  background: var(--teal-muted);
+  background: var(--accent-muted);
 }
 .topic-line__bar-known {
-  background: var(--teal);
+  background: var(--good);
 }
 .topic-line__due {
   background: var(--amber-soft);
@@ -316,10 +316,10 @@
 }
 .topic-line__play {
   align-items: center;
-  background: var(--teal-soft);
+  background: var(--accent-soft);
   border: 0;
   border-radius: 10px;
-  color: var(--teal-text-strong);
+  color: var(--accent-text-strong);
   cursor: pointer;
   display: inline-flex;
   flex-shrink: 0;
@@ -329,7 +329,7 @@
   width: 38px;
 }
 .topic-line__play:hover {
-  background: var(--teal-muted);
+  background: var(--accent-muted);
 }
 
 .topic-line__subtopics {
@@ -351,8 +351,8 @@
   padding: 8px 11px;
 }
 .subtopic-chip:hover {
-  background: var(--teal-soft);
-  border-color: var(--teal-muted);
+  background: var(--accent-soft);
+  border-color: var(--accent-muted);
 }
 .subtopic-chip span {
   font-size: calc(14px * var(--fs));
@@ -432,5 +432,5 @@
   }
 }
 .topic-dot--preliminary {
-  background: var(--teal-muted);
+  background: var(--accent-muted);
 }

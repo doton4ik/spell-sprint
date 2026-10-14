@@ -54,7 +54,7 @@ button {
 
 /* Keyboard focus is always visible; mouse clicks do not show the ring. */
 :where(button, a, input, select, textarea, [role='radio']):focus-visible {
-  outline: 2px solid var(--teal);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -69,9 +69,9 @@ button {
   animation:
     page-loading-in 0.2s ease 0.3s both,
     page-loading-spin 0.8s linear infinite;
-  border: 3px solid var(--teal-soft);
+  border: 3px solid var(--accent-soft);
   border-radius: 50%;
-  border-top-color: var(--teal);
+  border-top-color: var(--accent);
   content: '';
   height: 30px;
   width: 30px;
@@ -131,4 +131,13 @@ button {
 }
 .error-screen__actions .check-button {
   width: auto;
+}
+
+/* ---- Paper design (14 Oct 2026): ink on warm paper, a book serif for headings ---- */
+:root {
+  accent-color: var(--accent); /* native checkboxes and radios take the brand colour */
+}
+h1 {
+  font-family: var(--font-serif);
+  font-weight: 600;
 }
