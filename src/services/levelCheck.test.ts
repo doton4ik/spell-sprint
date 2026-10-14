@@ -250,7 +250,8 @@ describe('dictation and contractions', () => {
 })
 
 // What a set of answers earns. These pin the meaning of the levels, whatever the maths behind them:
-//  - A level needs most of the questions of that level answered right (about 3 of 4 for B2), not one lucky answer.
+//  - A level needs a real share of its own questions right, on top of the ones a level below: for B2 about half of the B2
+//    questions when typed (about 3 of 4 when they are multiple choice), for C1 about 7 of 8. Not one lucky answer.
 //  - A right answer to a multiple-choice question (four options) says little: a quarter of them are guessed.
 //  - Questions answered right at a level below do not make up for questions missed at the level itself.
 describe('the level a set of answers earns', () => {

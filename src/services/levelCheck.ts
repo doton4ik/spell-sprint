@@ -175,7 +175,8 @@ export function rangeFor(ability: number, answers: number, sd?: number): string 
 // averaged over a handful of answers: two lucky answers put someone at B2 and a B1 learner got B2 two times in three.
 // 2: each answer is weighed by how likely a learner of each level would give it, and the estimate starts from a
 // modest guess (between A2 and B1) that only real evidence moves. The rules it follows:
-//  - A level needs most of its own questions answered right (about 3 of 4 for B2), not one lucky answer.
+//  - A level needs a real share of its own questions right, on top of the ones a level below: for B2 about half of the B2
+//    questions when typed (about 3 of 4 when they are multiple choice), for C1 about 7 of 8. Not one lucky answer.
 //  - A right multiple-choice answer (four options) says little: a quarter of them are guessed.
 //  - Questions answered right at a level below do not make up for questions missed at the level itself.
 export const SCORING_VERSION = 2
