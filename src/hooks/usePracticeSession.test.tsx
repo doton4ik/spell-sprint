@@ -1,4 +1,4 @@
-import { act } from 'react'
+import { act, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
 import { afterEach, describe, expect, it } from 'vitest'
 import { usePracticeSession } from './usePracticeSession'
@@ -9,9 +9,13 @@ const task = (id: string): PracticeTask =>
   ({ id, wordId: id, type: 'translate-ru-en', mode: 'write-en', prompt: `ru-${id}`, answer: id }) as PracticeTask
 const tasks = [task('one'), task('two'), task('three')]
 
-let session: ReturnType<typeof usePracticeSession>
+const latest: { current: ReturnType<typeof usePracticeSession> | null } = { current: null }
+const session = () => latest.current!
 function Harness() {
-  session = usePracticeSession(tasks, 'all')
+  const value = usePracticeSession(tasks, 'all')
+  useEffect(() => {
+    latest.current = value
+  })
   return null
 }
 
@@ -31,20 +35,20 @@ describe('usePracticeSession', () => {
 
   it('walks through the tasks and then reports the session as completed', async () => {
     await mount()
-    expect(session.completed).toBe(false)
-    expect(session.currentTask).toBeDefined()
-    for (let step = 0; step < 3; step += 1) await act(async () => session.advance())
-    expect(session.completed).toBe(true)
+    expect(session().completed).toBe(false)
+    expect(session().currentTask).toBeDefined()
+    for (let step = 0; step < 3; step += 1) await act(async () => session().advance())
+    expect(session().completed).toBe(true)
   })
 
   it('treats two moves forward at once at the end as completed, never as a missing task', async () => {
     await mount()
     await act(async () => {
-      session.advance() // to the second task
-      session.advance() // a second call from the same render: the stale one steps past the last task
-      session.advance()
+      session().advance() // to the second task
+      session().advance() // a second call from the same render: the stale one steps past the last task
+      session().advance()
     })
-    expect(session.completed).toBe(true)
-    expect(session.currentTask).toBeUndefined()
+    expect(session().completed).toBe(true)
+    expect(session().currentTask).toBeUndefined()
   })
 })
