@@ -21,6 +21,7 @@ import './practice.css'
 import { setPackEnabled, setWordHidden } from '../services/libraryPrefs'
 import { packForLibrary } from '../data/libraryPacks'
 import { getEveryWord } from '../services/libraryStorage'
+import { answerHint as describeAnswer } from '../services/answerHint'
 
 const scopeLabels: Record<PracticeScope, string> = {
   all: 'All libraries',
@@ -261,6 +262,7 @@ export function PracticePage() {
           otherMeaning={session.otherMeaning}
           reason={session.currentTask?.wordId ? reasons.get(session.currentTask.id) : undefined}
           task={session.currentTask}
+          answerHint={current ? describeAnswer(current.answer, currentWord) : undefined}
           answer={session.answer}
           result={session.result}
           attemptsOnTask={session.attemptsOnTask}

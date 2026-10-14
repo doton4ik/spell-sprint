@@ -38,6 +38,7 @@ type TaskCardProps = {
   pack?: { name: string; onTurnOff: () => void } | null
   onMeet?: (typed: string) => void
   onClaimCorrect?: () => void
+  answerHint?: string // "Write in English": how many words and what kind of word the answer is
 }
 
 const labels = {
@@ -85,6 +86,7 @@ export function TaskCard({
   pack,
   onMeet,
   onClaimCorrect,
+  answerHint,
 }: TaskCardProps) {
   // The Russian meaning: the prompt, or the note under a Fill-the-gap sentence.
   const meaning = task.promptNote ?? task.prompt
@@ -269,6 +271,7 @@ export function TaskCard({
           <span className="prompt-label">{mode === 'translate-ru' ? 'English' : mode === 'fill-gap' ? 'Sentence' : 'Russian'}</span>
           <p lang={mode === 'fill-gap' ? 'en' : undefined}>{task.prompt}</p>
           {task.promptNote ? <small className="task-prompt__note">{task.promptNote}</small> : null}
+          {mode === 'write-en' && answerHint ? <small className="task-prompt__hint">{answerHint}</small> : null}
         </div>
       )}
       {hintStep ? (

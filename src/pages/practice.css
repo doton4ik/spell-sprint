@@ -1528,3 +1528,16 @@
     width: 40px;
   }
 }
+/* Write in English: how many words and what kind of word, quieter than the Russian word itself. */
+.task-prompt__hint {
+  color: var(--ink-muted);
+  font-size: calc(13px * var(--fs));
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.task-prompt--write-en {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+}
