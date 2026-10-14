@@ -148,6 +148,8 @@ export function PracticePage() {
         </div>
       </div>
     )
+  // The session list and the task list are replaced one render apart; for that one render there is nothing to show.
+  if (!session.completed && !session.currentTask) return null
   if (session.completed)
     return (
       <div className="practice-page practice-page--complete" id="practice">

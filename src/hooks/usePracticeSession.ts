@@ -87,6 +87,9 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
   const [lastAttemptId, setLastAttemptId] = useState<string | null>(null)
 
   const currentTask = shuffledTasks[taskIndex]
+  // Two moves forward at once (a late timer and a click) can step past the last word: that is the end of the session,
+  // not a page with no task to show.
+  const finished = completed || (shuffledTasks.length > 0 && taskIndex >= shuffledTasks.length)
   const progress = useMemo(() => Math.round((taskIndex / shuffledTasks.length) * 100), [taskIndex, shuffledTasks.length])
 
   useEffect(() => {
@@ -300,7 +303,7 @@ export function usePracticeSession(tasks: PracticeTask[], taskLimit: number | 'a
     hintStep,
     audioUsed,
     markAudioUsed,
-    completed,
+    completed: finished,
     settings,
     setSettings,
     checkAnswer,
