@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { answerHint, wordCount } from './answerHint'
+import { answerHint, looksPhrasal, wordCount } from './answerHint'
 
 describe('answerHint', () => {
   it('counts words, and a hyphenated word is one word', () => {
@@ -26,5 +26,15 @@ describe('answerHint', () => {
 
   it('shows nothing for an empty answer', () => {
     expect(answerHint('   ')).toBe('')
+  })
+
+  it('also recognises a phrasal verb filed outside the phrasal verbs subtopic, but not look-alikes', () => {
+    for (const word of ['tidy up', 'hang out', 'try on', 'catch up with', 'fall out with', 'switch off'])
+      expect(answerHint(word, { partOfSpeech: 'phrase', subtopic: 'Around the House' })).toBe(
+        `${word.split(' ').length} words · phrasal verb`,
+      )
+    for (const word of ['sold out', 'straight on', 'in advance', 'on time', 'run errands', 'get lost', 'bus stop'])
+      expect(looksPhrasal(word)).toBe(false)
+    expect(answerHint('bus stop', { partOfSpeech: 'noun' })).toBe('2 words · noun') // only a "phrase" is guessed at
   })
 })

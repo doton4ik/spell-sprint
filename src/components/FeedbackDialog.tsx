@@ -30,14 +30,19 @@ export function FeedbackDialog({ onClose }: { onClose: () => void }) {
   const [result, setResult] = useState<SubmitResult>('saved')
   const field = useRef<HTMLTextAreaElement>(null)
 
+  // The parent passes a new onClose on every render; keeping it in a ref means focus is set once, when the dialog opens.
+  const close = useRef(onClose)
+  useEffect(() => {
+    close.current = onClose
+  })
   useEffect(() => {
     field.current?.focus()
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') onClose()
+      if (event.key === 'Escape') close.current()
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [onClose])
+  }, [])
 
   async function send() {
     if (!isMessageLongEnough(message) || state === 'sending') return
