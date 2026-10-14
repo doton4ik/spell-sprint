@@ -40,14 +40,11 @@ export function parseTranslations(section: string): Array<Pick<LookupSense, 'par
       partOfSpeech = heading[1].toLocaleLowerCase()
       continue
     }
-    const top = /^\{\{trans-top(?:-also)?\|([^}]*)\}\}/.exec(line) // checktrans-top (unchecked) is skipped on purpose
+    // {{trans-top-see|gloss|entry}} is a table copied from another entry: its gloss comes first, the entry name last.
+    const top = /^\{\{trans-top(-also|-see)?\|([^}]*)\}\}/.exec(line) // checktrans-top (unchecked) is skipped on purpose
     if (top) {
-      gloss =
-        top[1]
-          .split('|')
-          .filter((part) => !part.includes('='))
-          .at(-1)
-          ?.trim() ?? ''
+      const parts = top[2].split('|').filter((part) => !part.includes('='))
+      gloss = ((top[1] === '-see' ? parts[0] : parts.at(-1)) ?? '').trim()
       continue
     }
     if (/^\{\{trans-bottom/.test(line)) {
@@ -56,7 +53,10 @@ export function parseTranslations(section: string): Array<Pick<LookupSense, 'par
     }
     if (gloss === null || !/^\*\s*Russian\s*:/.test(line)) continue
     const words = [...line.matchAll(/\{\{tt?\+?\|ru\|([^|}]+)/g)].map((match) => stripStress(match[1].trim())).filter(Boolean)
-    if (words.length) senses.push({ partOfSpeech, gloss, translations: [...new Set(words)] })
+    const translations = [...new Set(words)]
+    // Copied tables repeat the same translations under another gloss: show each list once.
+    const repeated = senses.some((sense) => sense.partOfSpeech === partOfSpeech && sense.translations.join('|') === translations.join('|'))
+    if (words.length && !repeated) senses.push({ partOfSpeech, gloss, translations })
   }
   return senses
 }
@@ -133,12 +133,14 @@ export async function lookupWord(input: string): Promise<LookupResult> {
     let section = englishSection(page)
     if (!section) return { status: 'not-found' }
     let senses = parseTranslations(section)
-    // Long entries keep their translations on a separate page, "fortune/translations".
-    if (!senses.length && /translation subpage|\/translations/.test(section)) {
+    // Long entries keep their main translations on a separate page, "love/translations"; the entry itself may hold only a stray
+    // table (love: "zero"), so the subpage is read whenever it exists and its meanings come first.
+    if (/translation subpage|\/translations/.test(section)) {
       const subpage = await wikitext(`${word}/translations`, controller.signal).catch(() => null)
       if (subpage) {
-        section = englishSection(subpage) || subpage
-        senses = parseTranslations(section)
+        const fromSubpage = parseTranslations(englishSection(subpage) || subpage)
+        const seen = new Set(fromSubpage.map((sense) => `${sense.partOfSpeech}|${sense.gloss}`))
+        senses = [...fromSubpage, ...senses.filter((sense) => !seen.has(`${sense.partOfSpeech}|${sense.gloss}`))]
       }
     }
     if (!senses.length) return { status: 'not-found' }
