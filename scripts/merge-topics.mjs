@@ -57,6 +57,12 @@ if (process.argv.includes('--apply')) {
     if (FIX_LEVEL[w]) entry.level = FIX_LEVEL[w]
     if (MERGE_TOPIC[entry.topic]) entry.topic = MERGE_TOPIC[entry.topic]
   }
+  // second Opus pass over every level: "word_id | level" lines, made after the word fixes above
+  const changes = readFileSync(new URL('../research/plexity/level-changes.txt', import.meta.url), 'utf8')
+  for (const line of changes.split(/\r?\n/)) {
+    const [id, level] = line.split('|').map((part) => part.trim())
+    if (map.has(id) && LEVELS.includes(level)) map.get(id).level = level
+  }
   writeFileSync(new URL('../research/plexity/topic-map.json', import.meta.url), JSON.stringify(Object.fromEntries(map), null, 1) + '\n')
   console.log('written research/plexity/topic-map.json')
 }

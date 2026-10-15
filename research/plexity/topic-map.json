@@ -33,7 +33,7 @@
  },
  "general-english-professional-communication-research": {
   "topic": "school",
-  "level": "B2"
+  "level": "B1"
  },
  "general-english-professional-communication-responsibility": {
   "topic": "office",
@@ -41,7 +41,7 @@
  },
  "general-english-professional-communication-achievement": {
   "topic": "ideas",
-  "level": "B2"
+  "level": "B1"
  },
  "general-english-professional-communication-presentation": {
   "topic": "office",
@@ -153,7 +153,7 @@
  },
  "business-and-office-finance-and-planning-target": {
   "topic": "office",
-  "level": "B2"
+  "level": "B1"
  },
  "business-and-office-meetings-and-negotiation-customer-satisfaction": {
   "topic": "office",
@@ -169,7 +169,7 @@
  },
  "business-and-office-meetings-and-negotiation-complaint": {
   "topic": "shopping",
-  "level": "B2"
+  "level": "B1"
  },
  "general-english-active-vocabulary-environment": {
   "topic": "nature",
@@ -181,7 +181,7 @@
  },
  "general-english-active-vocabulary-society": {
   "topic": "ideas",
-  "level": "B2"
+  "level": "B1"
  },
  "general-english-active-vocabulary-technology": {
   "topic": "tech",
@@ -193,7 +193,7 @@
  },
  "study-and-career-learning-and-research-assignment": {
   "topic": "school",
-  "level": "B2"
+  "level": "B1"
  },
  "study-and-career-career-development-interview": {
   "topic": "jobs",
@@ -205,7 +205,7 @@
  },
  "study-and-career-career-development-experience": {
   "topic": "jobs",
-  "level": "B1"
+  "level": "A2"
  },
  "travel-and-culture-travel-planning-luggage": {
   "topic": "airport",
@@ -213,15 +213,15 @@
  },
  "travel-and-culture-travel-planning-departure": {
   "topic": "airport",
-  "level": "B2"
+  "level": "B1"
  },
  "travel-and-culture-travel-planning-arrival": {
   "topic": "airport",
-  "level": "B2"
+  "level": "B1"
  },
  "travel-and-culture-at-the-destination-accommodation": {
   "topic": "travel",
-  "level": "B2"
+  "level": "B1"
  },
  "travel-and-culture-at-the-destination-directions": {
   "topic": "city",
@@ -237,15 +237,15 @@
  },
  "travel-and-culture-travel-planning-delay": {
   "topic": "transport",
-  "level": "B2"
+  "level": "B1"
  },
  "travel-and-culture-travel-planning-border": {
   "topic": "airport",
-  "level": "B2"
+  "level": "B1"
  },
  "travel-and-culture-at-the-destination-sightseeing": {
   "topic": "travel",
-  "level": "B2"
+  "level": "B1"
  },
  "sport-and-fitness-training-and-competition-training": {
   "topic": "sport",
@@ -273,7 +273,7 @@
  },
  "sport-and-fitness-health-and-recovery-injury": {
   "topic": "health",
-  "level": "B2"
+  "level": "B1"
  },
  "everyday-life-daily-routines-breakfast": {
   "topic": "food",
@@ -425,7 +425,7 @@
  },
  "people-and-family-family-and-friends-friendship": {
   "topic": "family",
-  "level": "B2"
+  "level": "B1"
  },
  "people-and-family-family-and-friends-grandparents": {
   "topic": "family",
@@ -445,7 +445,7 @@
  },
  "people-and-family-family-and-friends-generation": {
   "topic": "family",
-  "level": "B2"
+  "level": "B1"
  },
  "people-and-family-family-and-friends-marriage": {
   "topic": "family",
@@ -461,7 +461,7 @@
  },
  "feelings-feelings-embarrassed": {
   "topic": "feelings",
-  "level": "B2"
+  "level": "B1"
  },
  "feelings-feelings-jealous": {
   "topic": "feelings",
@@ -533,7 +533,7 @@
  },
  "home-around-the-house-neighbourhood": {
   "topic": "city",
-  "level": "B2"
+  "level": "B1"
  },
  "home-around-the-house-rent": {
   "topic": "home",
@@ -661,7 +661,7 @@
  },
  "health-and-body-body-and-symptoms-sneeze": {
   "topic": "health",
-  "level": "C1"
+  "level": "B2"
  },
  "health-and-body-body-and-symptoms-dizzy": {
   "topic": "health",
@@ -677,7 +677,7 @@
  },
  "health-and-body-body-and-symptoms-injury": {
   "topic": "health",
-  "level": "B2"
+  "level": "B1"
  },
  "health-and-body-at-the-doctor-appointment": {
   "topic": "health",
@@ -729,7 +729,7 @@
  },
  "technology-devices-and-software-device": {
   "topic": "tech",
-  "level": "B2"
+  "level": "B1"
  },
  "technology-devices-and-software-screen": {
   "topic": "tech",
@@ -917,7 +917,7 @@
  },
  "general-english-commonly-misspelled-accommodation": {
   "topic": "misspelled",
-  "level": "B2"
+  "level": "B1"
  },
  "general-english-commonly-misspelled-receive": {
   "topic": "misspelled",
@@ -925,11 +925,11 @@
  },
  "general-english-commonly-misspelled-separate": {
   "topic": "misspelled",
-  "level": "B2"
+  "level": "B1"
  },
  "general-english-commonly-misspelled-definitely": {
   "topic": "misspelled",
-  "level": "B2"
+  "level": "B1"
  },
  "general-english-commonly-misspelled-occasionally": {
   "topic": "misspelled",
@@ -949,7 +949,7 @@
  },
  "general-english-commonly-misspelled-government": {
   "topic": "misspelled",
-  "level": "B2"
+  "level": "B1"
  },
  "general-english-commonly-misspelled-restaurant": {
   "topic": "misspelled",
@@ -1021,11 +1021,11 @@
  },
  "general-english-confusable-words-affect": {
   "topic": "confusable",
-  "level": "B2"
+  "level": "B1"
  },
  "general-english-confusable-words-effect": {
   "topic": "confusable",
-  "level": "B2"
+  "level": "B1"
  },
  "general-english-confusable-words-principal": {
   "topic": "confusable",
@@ -1033,7 +1033,7 @@
  },
  "general-english-confusable-words-principle": {
   "topic": "confusable",
-  "level": "C1"
+  "level": "B2"
  },
  "general-english-confusable-words-stationary": {
   "topic": "confusable",
@@ -1049,7 +1049,7 @@
  },
  "general-english-confusable-words-advise": {
   "topic": "confusable",
-  "level": "B2"
+  "level": "B1"
  },
  "general-english-confusable-words-loose": {
   "topic": "confusable",
@@ -1145,7 +1145,7 @@
  },
  "common-actions-everyday-phrasal-verbs-look-forward-to": {
   "topic": "phrasal",
-  "level": "B2"
+  "level": "B1"
  },
  "travel-and-culture-at-the-airport-boarding-pass": {
   "topic": "airport",
@@ -1173,7 +1173,7 @@
  },
  "travel-and-culture-at-the-airport-customs-officer": {
   "topic": "airport",
-  "level": "C1"
+  "level": "B2"
  },
  "travel-and-culture-at-the-airport-departure-lounge": {
   "topic": "airport",
@@ -1481,7 +1481,7 @@
  },
  "shopping-banking-mortgage": {
   "topic": "shopping",
-  "level": "C1"
+  "level": "B2"
  },
  "shopping-banking-pin-code": {
   "topic": "shopping",
@@ -2085,7 +2085,7 @@
  },
  "animals-wild-animals-fierce": {
   "topic": "nature",
-  "level": "B1"
+  "level": "B2"
  },
  "animals-animal-life-tail": {
   "topic": "nature",
@@ -2113,7 +2113,7 @@
  },
  "animals-animal-life-migrate": {
   "topic": "nature",
-  "level": "B1"
+  "level": "B2"
  },
  "animals-animal-life-wild": {
   "topic": "nature",
@@ -2121,11 +2121,11 @@
  },
  "animals-animal-life-extinct": {
   "topic": "nature",
-  "level": "B1"
+  "level": "B2"
  },
  "animals-animal-life-endangered": {
   "topic": "nature",
-  "level": "B1"
+  "level": "B2"
  },
  "describing-things-size-and-shape-enormous": {
   "topic": "describing",
@@ -2137,7 +2137,7 @@
  },
  "describing-things-size-and-shape-narrow": {
   "topic": "describing",
-  "level": "B2"
+  "level": "B1"
  },
  "describing-things-size-and-shape-rectangular": {
   "topic": "describing",
@@ -2165,7 +2165,7 @@
  },
  "describing-things-size-and-shape-slightly": {
   "topic": "describing",
-  "level": "A2"
+  "level": "B1"
  },
  "describing-things-material-and-texture-wooden": {
   "topic": "describing",
@@ -2189,7 +2189,7 @@
  },
  "describing-things-material-and-texture-rough": {
   "topic": "describing",
-  "level": "A2"
+  "level": "B1"
  },
  "describing-things-material-and-texture-sticky": {
   "topic": "describing",
@@ -2197,7 +2197,7 @@
  },
  "describing-things-material-and-texture-shiny": {
   "topic": "describing",
-  "level": "A2"
+  "level": "B1"
  },
  "describing-things-material-and-texture-transparent": {
   "topic": "describing",
@@ -2213,7 +2213,7 @@
  },
  "describing-things-quality-and-colour-turquoise": {
   "topic": "describing",
-  "level": "B1"
+  "level": "B2"
  },
  "describing-things-quality-and-colour-grey": {
   "topic": "describing",
@@ -2245,7 +2245,7 @@
  },
  "phone-and-messages-phone-basics-signal": {
   "topic": "phone",
-  "level": "A2"
+  "level": "B1"
  },
  "phone-and-messages-phone-basics-switch-off": {
   "topic": "phrasal",
@@ -2265,7 +2265,7 @@
  },
  "phone-and-messages-calls-voicemail": {
   "topic": "phone",
-  "level": "A2"
+  "level": "B1"
  },
  "phone-and-messages-calls-ring": {
   "topic": "phone",
@@ -2317,11 +2317,11 @@
  },
  "general-english-active-vocabulary-avoid": {
   "topic": "actions",
-  "level": "B2"
+  "level": "B1"
  },
  "general-english-active-vocabulary-consider": {
   "topic": "actions",
-  "level": "A2"
+  "level": "B1"
  },
  "general-english-active-vocabulary-decide": {
   "topic": "actions",
@@ -2349,7 +2349,7 @@
  },
  "general-english-active-vocabulary-reduce": {
   "topic": "actions",
-  "level": "A2"
+  "level": "B1"
  },
  "general-english-active-vocabulary-prefer": {
   "topic": "actions",
@@ -2473,7 +2473,7 @@
  },
  "study-and-career-learning-and-research-scholarship": {
   "topic": "school",
-  "level": "C1"
+  "level": "B2"
  },
  "study-and-career-learning-and-research-semester": {
   "topic": "school",
@@ -2481,7 +2481,7 @@
  },
  "study-and-career-learning-and-research-tutor": {
   "topic": "school",
-  "level": "A2"
+  "level": "B1"
  },
  "study-and-career-learning-and-research-revise": {
   "topic": "school",
@@ -2493,7 +2493,7 @@
  },
  "study-and-career-learning-and-research-source": {
   "topic": "school",
-  "level": "A2"
+  "level": "B1"
  },
  "study-and-career-learning-and-research-experiment": {
   "topic": "school",
@@ -2797,15 +2797,15 @@
  },
  "common-actions-at-home-wipe": {
   "topic": "home",
-  "level": "A2"
+  "level": "B1"
  },
  "common-actions-at-home-fold": {
   "topic": "home",
-  "level": "A2"
+  "level": "B1"
  },
  "common-actions-at-home-pour": {
   "topic": "food",
-  "level": "A2"
+  "level": "B1"
  },
  "common-actions-at-home-stir": {
   "topic": "food",
@@ -2877,11 +2877,11 @@
  },
  "common-actions-everyday-phrasal-verbs-put-up-with": {
   "topic": "phrasal",
-  "level": "C1"
+  "level": "B2"
  },
  "common-actions-everyday-phrasal-verbs-look-for": {
   "topic": "phrasal",
-  "level": "B1"
+  "level": "A2"
  },
  "common-actions-everyday-phrasal-verbs-get-up": {
   "topic": "phrasal",
@@ -2917,7 +2917,7 @@
  },
  "common-actions-everyday-phrasal-verbs-take-after": {
   "topic": "phrasal",
-  "level": "B1"
+  "level": "B2"
  },
  "common-actions-everyday-phrasal-verbs-look-into": {
   "topic": "phrasal",
@@ -2941,11 +2941,11 @@
  },
  "common-actions-everyday-phrasal-verbs-come-back": {
   "topic": "phrasal",
-  "level": "B1"
+  "level": "A2"
  },
  "common-actions-everyday-phrasal-verbs-wake-up": {
   "topic": "phrasal",
-  "level": "B1"
+  "level": "A2"
  },
  "common-actions-everyday-phrasal-verbs-sort-out": {
   "topic": "phrasal",
@@ -2953,7 +2953,7 @@
  },
  "general-english-commonly-misspelled-occurrence": {
   "topic": "misspelled",
-  "level": "B1"
+  "level": "C1"
  },
  "general-english-commonly-misspelled-maintenance": {
   "topic": "misspelled",
@@ -2961,15 +2961,15 @@
  },
  "general-english-commonly-misspelled-noticeable": {
   "topic": "misspelled",
-  "level": "B1"
+  "level": "B2"
  },
  "general-english-commonly-misspelled-possession": {
   "topic": "misspelled",
-  "level": "B1"
+  "level": "B2"
  },
  "general-english-commonly-misspelled-questionnaire": {
   "topic": "misspelled",
-  "level": "C1"
+  "level": "B2"
  },
  "general-english-commonly-misspelled-millennium": {
   "topic": "misspelled",
@@ -2977,7 +2977,7 @@
  },
  "general-english-commonly-misspelled-pronunciation": {
   "topic": "misspelled",
-  "level": "B2"
+  "level": "B1"
  },
  "general-english-commonly-misspelled-independent": {
   "topic": "misspelled",
@@ -2989,11 +2989,11 @@
  },
  "general-english-commonly-misspelled-existence": {
   "topic": "ideas",
-  "level": "C1"
+  "level": "B2"
  },
  "general-english-commonly-misspelled-height": {
   "topic": "misspelled",
-  "level": "B2"
+  "level": "B1"
  },
  "general-english-commonly-misspelled-humorous": {
   "topic": "misspelled",
@@ -3125,15 +3125,15 @@
  },
  "travel-and-culture-on-the-plane-jet": {
   "topic": "airport",
-  "level": "A2"
+  "level": "B1"
  },
  "travel-and-culture-on-the-plane-crew": {
   "topic": "airport",
-  "level": "A2"
+  "level": "B1"
  },
  "travel-and-culture-at-the-airport-flight": {
   "topic": "airport",
-  "level": "B1"
+  "level": "A2"
  },
  "travel-and-culture-at-the-airport-boarding": {
   "topic": "airport",
@@ -3141,7 +3141,7 @@
  },
  "travel-and-culture-at-the-airport-passport": {
   "topic": "airport",
-  "level": "B1"
+  "level": "A2"
  },
  "travel-and-culture-at-the-airport-carousel": {
   "topic": "airport",
@@ -3157,7 +3157,7 @@
  },
  "jobs-and-career-job-interview-applicant": {
   "topic": "jobs",
-  "level": "C1"
+  "level": "B2"
  },
  "jobs-and-career-job-interview-vacancy": {
   "topic": "jobs",
@@ -3317,7 +3317,7 @@
  },
  "family-and-relationships-friends-and-partners-relationship": {
   "topic": "family",
-  "level": "B2"
+  "level": "B1"
  },
  "family-and-relationships-relatives-babysitter": {
   "topic": "family",
@@ -3385,7 +3385,7 @@
  },
  "people-and-family-feelings-upset": {
   "topic": "feelings",
-  "level": "A2"
+  "level": "B1"
  },
  "people-and-family-feelings-confused": {
   "topic": "feelings",
@@ -3413,7 +3413,7 @@
  },
  "people-and-family-feelings-furious": {
   "topic": "feelings",
-  "level": "B1"
+  "level": "B2"
  },
  "people-and-family-feelings-cheerful": {
   "topic": "feelings",
@@ -3421,7 +3421,7 @@
  },
  "people-and-family-family-and-friends-stubborn": {
   "topic": "feelings",
-  "level": "B1"
+  "level": "B2"
  },
  "health-and-body-body-and-symptoms-ankle": {
   "topic": "health",
@@ -3433,7 +3433,7 @@
  },
  "health-and-body-body-and-symptoms-elbow": {
   "topic": "health",
-  "level": "A2"
+  "level": "B1"
  },
  "health-and-body-body-and-symptoms-rash": {
   "topic": "health",
@@ -3793,7 +3793,7 @@
  },
  "describing-things-size-and-shape-oval": {
   "topic": "describing",
-  "level": "A2"
+  "level": "B1"
  },
  "describing-things-size-and-shape-curved": {
   "topic": "describing",
@@ -3801,7 +3801,7 @@
  },
  "describing-things-quality-and-colour-pale": {
   "topic": "describing",
-  "level": "A2"
+  "level": "B1"
  },
  "describing-things-quality-and-colour-colourful": {
   "topic": "describing",
@@ -3809,7 +3809,7 @@
  },
  "describing-things-quality-and-colour-ancient": {
   "topic": "describing",
-  "level": "B2"
+  "level": "B1"
  },
  "describing-things-quality-and-colour-modern": {
   "topic": "describing",
