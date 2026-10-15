@@ -454,24 +454,39 @@
   font-family: var(--font-serif);
 }
 
-/* A short window (a laptop, a browser with toolbars): the menu must fit, or at least scroll, so the profile and Feedback
-   are never cut off. Two steps of tighter spacing, then the menu scrolls. */
+/* The side bar always fits: every menu item (the main ones and Settings / Feedback) has the same height, taken from the
+   height of the window (between 36 and 64 px), and the same gap. A very short window (a high browser zoom) scrolls the side
+   bar instead of letting the items run over each other. */
 .sidebar {
   overflow-y: auto;
   scrollbar-width: thin;
 }
+@media (min-width: 801px) {
+  .sidebar {
+    --nav-h: clamp(36px, calc((100vh - 185px) / 13), 64px);
+  }
+  .sidebar .nav-link {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    height: var(--nav-h);
+    min-height: 0;
+  }
+  .main-nav,
+  .sidebar-bottom {
+    display: grid;
+    gap: 4px;
+  }
+  .sidebar-bottom {
+    margin-top: auto;
+  }
+}
 @media (min-width: 801px) and (max-height: 960px) {
   .sidebar {
+    --nav-h: clamp(36px, calc((100vh - 165px) / 13), 64px);
     padding-top: 20px;
   }
   .brand {
     margin-bottom: 22px;
-  }
-  .main-nav {
-    gap: 2px;
-  }
-  .nav-link {
-    min-height: 38px;
   }
   .profile-mini {
     margin-top: 8px;
@@ -485,8 +500,32 @@
   .brand {
     margin-bottom: 14px;
   }
-  .nav-link {
+  .sidebar .nav-link {
     font-size: calc(15px * var(--fs));
-    min-height: 34px;
   }
+}
+
+/* Menu hidden: the pages are centred. All of them move by the same amount (as if they stood in one common column of the
+   widest page), so the titles still start at the same place on every page. */
+.app-shell--menu-hidden
+  .page-content
+  :is(
+    .practice-page,
+    .learning-page,
+    .level-page,
+    .topics-page,
+    .proof-page,
+    .sprint-page,
+    .pairs-page,
+    .libraries-page,
+    .settings-page,
+    .legal-page
+  ) {
+  margin-left: max(0px, calc((100% - 1330px) / 2));
+  margin-right: 0;
+}
+/* The dashboard stands in a grid with its day column, which centres itself: it is moved by the same amount instead. */
+.app-shell--menu-hidden .page-content .dashboard-wrap {
+  justify-content: start;
+  padding-left: max(0px, calc((100% - 1330px) / 2));
 }

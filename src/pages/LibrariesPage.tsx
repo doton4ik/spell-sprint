@@ -15,7 +15,7 @@ import { partOfSpeechOptions, type LibraryDifficulty, type LibraryWord, type Wor
 import type { Rule } from '../types/rules'
 import './libraries.css'
 
-type Details = { title: string; description: string; words: LibraryWord[]; library?: WordLibrary }
+type Details = { title: string; description: string; words: LibraryWord[]; library?: WordLibrary; restorable?: boolean }
 type Tab = LibraryGroup['id'] | 'packs'
 
 function HideButton({ word, onHide }: { word: LibraryWord; onHide: (word: LibraryWord) => void }) {
@@ -249,6 +249,11 @@ export function LibrariesPage() {
         onPractice={beginPractice}
         onDelete={remove}
         onHide={hideWord}
+        onRestore={(word) => {
+          setWordHidden(word.wordId, false)
+          setDetails({ ...details, words: details.words.filter((entry) => entry.wordId !== word.wordId) })
+          refresh()
+        }}
       />
     )
   return (
@@ -372,8 +377,16 @@ export function LibrariesPage() {
               />
               <HiddenWords
                 libraries={libraries}
-                onRestore={(word) => {
-                  setWordHidden(word.wordId, false)
+                onOpen={(words) =>
+                  setDetails({
+                    title: 'Hidden words',
+                    description: 'These words do not appear in practice or in your daily plan. Restore a word to bring it back.',
+                    words,
+                    restorable: true,
+                  })
+                }
+                onRestoreAll={(words) => {
+                  for (const word of words) setWordHidden(word.wordId, false)
                   refresh()
                 }}
               />
@@ -543,6 +556,7 @@ function LibraryDetails({
   onPractice,
   onDelete,
   onHide,
+  onRestore,
 }: {
   details: Details
   ruleMap: Map<string, Rule[]>
@@ -551,6 +565,7 @@ function LibraryDetails({
   onPractice: (words: LibraryWord[], label: string) => void
   onDelete: (library: WordLibrary) => void
   onHide: (word: LibraryWord) => void
+  onRestore: (word: LibraryWord) => void
 }) {
   const [topic, setTopic] = useState('All')
   const [subtopic, setSubtopic] = useState('All')
@@ -610,9 +625,11 @@ function LibraryDetails({
         </div>
       </header>
       <div className="details-actions">
-        <button className="check-button" type="button" onClick={() => onPractice(visible, details.title)}>
-          Start practice
-        </button>
+        {details.restorable ? null : (
+          <button className="check-button" type="button" onClick={() => onPractice(visible, details.title)}>
+            Start practice
+          </button>
+        )}
         {details.library?.source === 'imported' ? (
           <button className="quiet-button" type="button" onClick={() => onDelete(details.library!)}>
             Delete library
@@ -651,7 +668,13 @@ function LibraryDetails({
                 <span>{word.topic}</span>
                 <span>{word.subtopic}</span>
                 <span>{word.partOfSpeech}</span>
-                <HideButton word={word} onHide={onHide} />
+                {details.restorable ? (
+                  <button className="quiet-action" type="button" onClick={() => onRestore(word)}>
+                    Restore
+                  </button>
+                ) : (
+                  <HideButton word={word} onHide={onHide} />
+                )}
               </aside>
             </article>
           ))}
@@ -746,26 +769,35 @@ function PackList({
   )
 }
 
-function HiddenWords({ libraries, onRestore }: { libraries: WordLibrary[]; onRestore: (word: LibraryWord) => void }) {
+// The words the learner hid, as one card like a library: open it to see them and bring them back.
+function HiddenWords({
+  libraries,
+  onOpen,
+  onRestoreAll,
+}: {
+  libraries: WordLibrary[]
+  onOpen: (words: LibraryWord[]) => void
+  onRestoreAll: (words: LibraryWord[]) => void
+}) {
   void libraries // re-render after a change
   const hidden = getHiddenWordIds()
   const words = getEveryWord().filter((word) => hidden.has(word.wordId))
   if (!words.length) return null
   return (
     <section className="hidden-words">
-      <h2>
-        Hidden words <small>{words.length}</small>
-      </h2>
-      <p>These words do not appear in practice or in your daily plan.</p>
-      <div className="hidden-words__list">
-        {words.map((word) => (
-          <span className="hidden-word" key={word.wordId}>
-            <strong>{word.word}</strong> {word.translation}
-            <button type="button" onClick={() => onRestore(word)}>
-              Restore
-            </button>
-          </span>
-        ))}
+      <div>
+        <h2>
+          Hidden words <small>{words.length}</small>
+        </h2>
+        <p>These words do not appear in practice or in your daily plan.</p>
+      </div>
+      <div className="hidden-words__actions">
+        <button className="outline-action" type="button" onClick={() => onOpen(words)}>
+          Open <Icon name="arrow" size={16} />
+        </button>
+        <button className="quiet-button" type="button" onClick={() => onRestoreAll(words)}>
+          Restore all
+        </button>
       </div>
     </section>
   )

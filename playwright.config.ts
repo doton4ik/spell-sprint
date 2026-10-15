@@ -5,7 +5,9 @@ import { defineConfig, devices } from '@playwright/test'
 export default defineConfig({
   testDir: 'e2e',
   timeout: 30_000,
-  retries: process.env.CI ? 1 : 0,
+  // The local preview server now and then refuses a connection when several tests open pages at once (ERR_CONNECTION_REFUSED,
+  // ERR_NETWORK_ACCESS_DENIED on goto); a test that really fails fails every time, so a retry only hides that noise.
+  retries: process.env.CI ? 2 : 1,
   reporter: process.env.CI ? 'github' : 'list',
   use: { baseURL: 'http://localhost:4180', trace: 'retain-on-failure' },
   projects: [

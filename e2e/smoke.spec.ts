@@ -129,6 +129,57 @@ test('the side menu fits a short window: the profile at its bottom is not cut of
   }
 })
 
+test('hidden words are one card that opens a list with Restore', async ({ page }) => {
+  const errors = watchErrors(page)
+  await page.goto('/#libraries')
+  await page.evaluate(
+    `localStorage.setItem('spell-sprint.library-prefs', JSON.stringify({ hidden: { 'everyday-life-daily-routines-breakfast': { on: true, at: '2026-10-01T10:00:00.000Z' } }, packs: {}, removed: {}, notes: {} }))`,
+  )
+  await page.reload()
+  await page.getByRole('button', { name: 'My Libraries' }).click()
+  await expect(page.locator('.hidden-words')).toContainText('Hidden words')
+  await expect(page.locator('.hidden-word')).toHaveCount(0) // no heap of chips on the page
+  await page.locator('.hidden-words').getByRole('button', { name: /^Open/ }).click()
+  await expect(page.getByRole('heading', { name: 'Hidden words' })).toBeVisible()
+  await expect(page.locator('.word-row', { hasText: 'breakfast' })).toBeVisible()
+  await page.locator('.word-row', { hasText: 'breakfast' }).getByRole('button', { name: 'Restore' }).click()
+  await expect(page.locator('.word-row', { hasText: 'breakfast' })).toHaveCount(0)
+  expect(errors).toEqual([])
+})
+
+test('in a very short window the menu items do not run over each other', async ({ page }) => {
+  for (const height of [900, 420, 320]) {
+    await page.setViewportSize({ width: 1300, height })
+    await page.goto('/#dashboard')
+    await expect(page.locator('.sidebar .profile-mini')).toBeAttached()
+    const boxes = (await page.locator('.sidebar .nav-link, .sidebar .profile-mini').evaluateAll((nodes) =>
+      nodes.map((node) => {
+        const r = node.getBoundingClientRect()
+        return [r.top, r.bottom]
+      }),
+    )) as number[][]
+    for (let i = 1; i < boxes.length; i += 1) expect(boxes[i][0], `item ${i} at ${height} px`).toBeGreaterThanOrEqual(boxes[i - 1][1] - 1)
+  }
+})
+
+test('with the menu hidden the pages are centred and their titles still start at the same place', async ({ page }) => {
+  await page.setViewportSize({ width: 1915, height: 870 })
+  const leftOf = async () => (await page.evaluate(`Math.round(document.querySelector('main h1').getBoundingClientRect().left)`)) as number
+  await page.goto('/#dashboard')
+  const withMenu = await leftOf()
+  await page.evaluate("localStorage.setItem('spell-sprint.menu-hidden', '1')")
+  await page.reload()
+  const lefts = new Set<number>()
+  for (const [route] of pages) {
+    await page.goto(`/#${route}`)
+    await expect(page.locator('main h1').first()).toBeVisible()
+    lefts.add(await leftOf())
+  }
+  expect([...lefts]).toHaveLength(1)
+  // centred: more space on the left than with the menu (which takes 244 px) would leave
+  expect([...lefts][0]).toBeGreaterThan(withMenu - 244 + 100)
+})
+
 test('Enter after an answer starts the next word', async ({ page }) => {
   const errors = watchErrors(page)
   await page.goto('/#practice')

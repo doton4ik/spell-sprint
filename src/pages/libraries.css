@@ -893,11 +893,21 @@
   min-height: 42px;
 }
 .hidden-words {
+  align-items: center;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 24px;
+  justify-content: space-between;
   margin-top: 18px;
   padding: 20px 22px;
+}
+.hidden-words__actions {
+  align-items: center;
+  display: flex;
+  gap: 10px;
 }
 .hidden-words h2 {
   color: var(--ink);
@@ -911,7 +921,7 @@
 .hidden-words p {
   color: var(--ink-muted);
   font-size: calc(13px * var(--fs));
-  margin: 0 0 12px;
+  margin: 0;
 }
 .hidden-words__list {
   display: flex;
