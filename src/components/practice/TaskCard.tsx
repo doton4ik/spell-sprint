@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type FormEvent } from 'react'
+import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
 import { noAutocorrect } from '../noAutocorrect'
 import type { CheckResult, PracticeTask } from '../../types/practice'
 import { Icon } from '../icons/Icon'
@@ -116,6 +116,12 @@ export function TaskCard({
     setCopy('')
     setCopyWrong(false)
   }, [task.id]) // eslint-disable-line react-hooks/exhaustive-deps
+  // The box is disabled after a right answer, which drops the focus; `autoFocus` only works when the box first appears.
+  // So the next word (and a fresh start of the same word) puts the cursor back in the box.
+  const answerBox = useRef<HTMLInputElement>(null)
+  useEffect(() => {
+    if (result === 'idle') answerBox.current?.focus({ preventScroll: true })
+  }, [task.id, result])
   const isDefaultRule = /^Review .+ in the .+ topic.$/.test(task.rule)
   const spellingTask = mode !== 'translate-ru' && task.type !== 'correct-sentence'
   // A new random order for every task, kept while the task is on screen.
@@ -305,6 +311,7 @@ export function TaskCard({
             <input
               {...noAutocorrect}
               id="practice-answer"
+              ref={answerBox}
               autoFocus
               value={answer}
               onChange={(event) => onAnswerChange(event.target.value)}

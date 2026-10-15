@@ -1,7 +1,7 @@
 .pairs-page {
   margin: 0 auto;
   max-width: 900px;
-  padding: 49px 56px 70px;
+  padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
 }
 .pairs-header h1 {
   color: var(--ink);
@@ -196,7 +196,7 @@
 }
 @media (max-width: 800px) {
   .pairs-page {
-    padding: 24px 16px 40px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .pair-sentence {
     font-size: calc(18px * var(--fs));

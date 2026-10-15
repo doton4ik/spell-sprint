@@ -1,7 +1,7 @@
 .settings-page {
   margin: 0 auto;
   max-width: 1100px;
-  padding: 49px 56px 70px;
+  padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
 }
 .settings-header h1 {
   color: var(--ink);
@@ -137,7 +137,7 @@
 }
 @media (max-width: 800px) {
   .settings-page {
-    padding: 30px 18px 40px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .settings-grid {
     column-count: 1;

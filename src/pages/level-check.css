@@ -1,7 +1,7 @@
 .level-page {
   margin: 0 auto;
   max-width: 900px;
-  padding: 49px 56px 70px;
+  padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
 }
 .level-page h1 {
   color: var(--ink);
@@ -576,12 +576,12 @@
 
 @media (max-width: 1060px) {
   .level-page {
-    padding: 41px 34px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
 }
 @media (max-width: 800px) {
   .level-page {
-    padding: 30px 18px 40px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .level-hero {
     grid-template-columns: 1fr;
@@ -592,7 +592,7 @@
 }
 @media (max-width: 570px) {
   .level-page {
-    padding: 24px 14px 35px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .level-question {
     padding: 20px 16px;

@@ -1,13 +1,13 @@
 .libraries-page {
   margin: 0 auto;
   max-width: 1330px;
-  padding: 49px 56px 70px;
+  padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
 }
 .libraries-header {
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 28px;
+  margin-bottom: var(--page-head-gap);
 }
 .libraries-header h1 {
   color: var(--ink);
@@ -236,12 +236,12 @@
 }
 @media (max-width: 1060px) {
   .libraries-page {
-    padding: 41px 34px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
 }
 @media (max-width: 800px) {
   .libraries-page {
-    padding: 30px 18px 40px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .import-panel {
     grid-template-columns: 1fr;
@@ -252,7 +252,7 @@
 }
 @media (max-width: 570px) {
   .libraries-page {
-    padding: 24px 14px calc(35px + env(safe-area-inset-bottom));
+    padding: var(--page-pad-top) var(--page-pad-x) calc(var(--page-pad-bottom) + env(safe-area-inset-bottom));
   }
   .libraries-header > div > p:last-child {
     font-size: calc(13px * var(--fs));
@@ -595,7 +595,7 @@
 }
 @media (max-width: 768px) {
   .libraries-page {
-    padding: 30px 18px calc(45px + env(safe-area-inset-bottom));
+    padding: var(--page-pad-top) var(--page-pad-x) calc(var(--page-pad-bottom) + env(safe-area-inset-bottom));
   }
   .library-groups {
     grid-template-columns: 1fr;

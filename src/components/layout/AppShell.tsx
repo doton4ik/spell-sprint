@@ -40,8 +40,27 @@ const moreGroups: Array<{ title: string; items: Array<{ label: string; icon: Ico
 ]
 const mobileMoreItems = [...moreGroups.flatMap((group) => group.items), { label: 'Settings' }]
 
+const MENU_HIDDEN_KEY = 'spell-sprint.menu-hidden'
+function readMenuHidden() {
+  try {
+    return window.localStorage.getItem(MENU_HIDDEN_KEY) === '1'
+  } catch {
+    return false
+  }
+}
+
 export function AppShell({ children, activePage }: AppShellProps) {
   const [moreOpen, setMoreOpen] = useState(false)
+  // The side menu can be hidden to give the page the whole width. A per-device choice, not part of the account.
+  const [menuHidden, setMenuHidden] = useState(readMenuHidden)
+  const setMenu = (hidden: boolean) => {
+    setMenuHidden(hidden)
+    try {
+      window.localStorage.setItem(MENU_HIDDEN_KEY, hidden ? '1' : '0')
+    } catch {
+      // the choice then lasts until the page is closed
+    }
+  }
   const moreActive = mobileMoreItems.some((item) => pageId(item.label) === activePage)
 
   useEffect(() => {
@@ -72,14 +91,23 @@ export function AppShell({ children, activePage }: AppShellProps) {
   const badgeFor = (label: string) => (label === 'My Mistakes' && openMistakes ? openMistakes : null)
 
   return (
-    <div className="app-shell">
-      <aside className="sidebar" aria-label="Main navigation">
+    <div className={`app-shell${menuHidden ? ' app-shell--menu-hidden' : ''}`}>
+      <aside className="sidebar" aria-label="Main navigation" inert={menuHidden}>
         <a className="brand" href="#dashboard" aria-label="Spell Sprint dashboard">
           <BrandMark />
           <span>
             Spell<span>Sprint</span>
           </span>
         </a>
+        <button
+          className="menu-toggle menu-toggle--hide"
+          type="button"
+          onClick={() => setMenu(true)}
+          aria-label="Hide the menu"
+          title="Hide the menu"
+        >
+          <Icon name="sidebar" size={19} />
+        </button>
 
         <nav className="main-nav">
           {navigationItems.map((item) => (
@@ -114,6 +142,18 @@ export function AppShell({ children, activePage }: AppShellProps) {
           </a>
         </div>
       </aside>
+
+      {menuHidden ? (
+        <button
+          className="menu-toggle menu-toggle--show"
+          type="button"
+          onClick={() => setMenu(false)}
+          aria-label="Show the menu"
+          title="Show the menu"
+        >
+          <Icon name="sidebar" size={19} />
+        </button>
+      ) : null}
 
       <main className="page-content">
         {storageFailed ? (

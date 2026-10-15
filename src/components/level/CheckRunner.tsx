@@ -20,7 +20,7 @@ import {
   type SavedRun,
 } from '../../services/levelCheck'
 import { loadPracticeSettings } from '../../services/practiceStorage'
-import { canSpeak, speakEnglish } from '../../services/speech'
+import { canSpeak, speakEnglish, stopSpeaking } from '../../services/speech'
 import { shuffled } from '../../services/spellingDistractors'
 
 const MAX_PLAYS = 3
@@ -105,6 +105,10 @@ export function CheckRunner({
     setFeedback(null)
     setPlays(0)
   }
+
+  // Leaving a question (the next one, or the page) stops a sentence that is still being read.
+  const itemId = item?.id
+  useEffect(() => stopSpeaking, [itemId])
 
   function listen(slow: boolean) {
     if (!item || plays >= MAX_PLAYS) return

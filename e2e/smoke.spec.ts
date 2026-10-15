@@ -37,6 +37,21 @@ test('every page opens without an error', async ({ page }) => {
   expect(errors).toEqual([])
 })
 
+test('every page has the same space around its content', async ({ page }) => {
+  const seen = new Map<string, string[]>()
+  for (const [route] of pages) {
+    await page.goto(`/#${route}`)
+    await expect(page.locator('main h1').first()).toBeVisible()
+    // (a string: the e2e project has no DOM types)
+    const padding = (await page.evaluate(
+      `(() => { const s = getComputedStyle(document.querySelector('main .dashboard, main [class$="-page"], main [class*="-page "]')); return [s.paddingTop, s.paddingRight, s.paddingBottom, s.paddingLeft].join(' ') })()`,
+    )) as string
+    seen.set(padding, [...(seen.get(padding) ?? []), route])
+  }
+  // One value for all pages (the tokens --page-pad-* in styles/tokens.css); a page with its own padding shows up here.
+  expect(Object.fromEntries(seen)).toEqual({ [[...seen.keys()][0]]: pages.map(([route]) => route) })
+})
+
 test('a wrong answer in practice becomes a mistake', async ({ page }) => {
   const errors = watchErrors(page)
   await page.goto('/#practice')
@@ -69,6 +84,29 @@ test('Enter after an answer starts the next word', async ({ page }) => {
   await expect(page.locator('.mistake-row')).toHaveCount(1)
   expect(errors).toEqual([])
 })
+
+for (const mode of ['Write in English', 'Listen and write']) {
+  test(`after a right answer and Enter the cursor is back in the answer box for the next word (${mode})`, async ({ page }) => {
+    const errors = watchErrors(page)
+    await page.goto('/#practice')
+    const modeBox = page.locator('.practice-select', { hasText: 'Mode' }).locator('select')
+    if (!(await modeBox.isVisible())) await page.getByRole('button', { name: 'Change' }).click()
+    await modeBox.selectOption({ label: mode })
+    const answer = page.locator('#practice-answer')
+    await answer.fill('zzzz')
+    await answer.press('Enter')
+    await expect(page.getByText('Not quite')).toBeVisible()
+    const right = await page.locator('.session-missed strong').first().innerText()
+    await answer.fill(right)
+    await answer.press('Enter') // checks the right answer: the box is switched off now
+    await expect(page.getByText('Not quite')).toHaveCount(0)
+    await page.keyboard.press('Enter') // next word (the box is switched off, so the key goes to the page)
+    await expect(answer).toHaveValue('')
+    await expect(answer).toBeEnabled()
+    await expect(answer).toBeFocused() // typing can go on at once, without a click into the box
+    expect(errors).toEqual([])
+  })
+}
 
 test('a proofreading text can be opened and checked', async ({ page }) => {
   const errors = watchErrors(page)

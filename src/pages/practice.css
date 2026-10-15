@@ -2,14 +2,14 @@
 .practice-page {
   margin: 0 auto;
   max-width: 1440px;
-  padding: 49px 56px 70px;
+  padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
 }
 .practice-header {
   align-items: flex-start;
   display: flex;
   gap: 24px;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: var(--page-head-gap);
 }
 .practice-header h1 {
   color: var(--ink);
@@ -677,7 +677,7 @@
 }
 @media (max-width: 1060px) {
   .practice-page {
-    padding: 41px 34px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .practice-workspace {
     grid-template-columns: 1fr;
@@ -702,7 +702,7 @@
 }
 @media (max-width: 800px) {
   .practice-page {
-    padding: 30px 18px 40px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .practice-header {
     margin-bottom: 23px;
@@ -728,7 +728,7 @@
 }
 @media (max-width: 570px) {
   .practice-page {
-    padding: 24px 14px 35px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .practice-header > div > p:last-child {
     font-size: calc(13px * var(--fs));

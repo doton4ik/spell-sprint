@@ -2,6 +2,12 @@
    just a second set of values. Light is the default (warm paper and ink); dark follows the system, or the choice in
    Settings → Appearance (data-theme on <html>, see services/appearanceStorage.ts). */
 :root {
+  /* Page layout: every page uses these, so the space around the content is the same everywhere. */
+  --page-pad-x: 56px;
+  --page-pad-top: 48px;
+  --page-pad-bottom: 64px;
+  --page-head-gap: 32px; /* between the page header and the first block */
+  --section-gap: 24px; /* between blocks of a page */
   /* Text size multiplier, set from Settings (see services/appearanceStorage.ts).
      Write every font size as calc(Npx * var(--fs)) so it follows the setting. */
   --fs: 1;
@@ -146,4 +152,25 @@
   --brand: #4d73ad;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25), 0 4px 14px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 1120px) {
+  :root {
+    --page-pad-x: 34px;
+    --page-pad-top: 40px;
+    --page-pad-bottom: 56px;
+  }
+}
+@media (max-width: 800px) {
+  :root {
+    --page-pad-x: 18px;
+    --page-pad-top: 24px;
+    --page-pad-bottom: 40px;
+    --page-head-gap: 24px;
+  }
+}
+@media (max-width: 570px) {
+  :root {
+    --page-pad-x: 14px;
+  }
 }

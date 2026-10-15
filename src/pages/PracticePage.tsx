@@ -13,7 +13,7 @@ import {
   getTasksForWordIds,
   type PracticeScope,
 } from '../services/libraryPractice'
-import { speakEnglish } from '../services/speech'
+import { speakEnglish, stopSpeaking } from '../services/speech'
 import { getWordProgress, reasonForWord } from '../services/dailyPlan'
 import { markServed } from '../services/mistakePicker'
 import type { PracticeMode } from '../types/practice'
@@ -117,7 +117,10 @@ export function PracticePage() {
   useEffect(() => {
     if (mode !== 'listen-write' || !currentId || session.completed) return
     const timer = window.setTimeout(playAudio, 350)
-    return () => window.clearTimeout(timer)
+    return () => {
+      window.clearTimeout(timer)
+      stopSpeaking()
+    }
   }, [mode, currentId, session.completed])
   if (!tasks.length)
     return (

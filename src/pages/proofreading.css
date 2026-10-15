@@ -1,7 +1,7 @@
 .proof-page {
   margin: 0 auto;
   max-width: 900px;
-  padding: 49px 56px 70px;
+  padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
 }
 .proof-header h1,
 .proof-reading-head h1 {
@@ -434,17 +434,17 @@
 
 @media (max-width: 1060px) {
   .proof-page {
-    padding: 41px 34px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
 }
 @media (max-width: 800px) {
   .proof-page {
-    padding: 30px 18px 40px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
 }
 @media (max-width: 570px) {
   .proof-page {
-    padding: 24px 14px 35px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .proof-text {
     font-size: calc(18px * var(--fs));

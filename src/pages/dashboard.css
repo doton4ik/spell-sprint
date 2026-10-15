@@ -1,13 +1,13 @@
 .dashboard {
   margin: 0 auto;
   max-width: 1420px;
-  padding: 49px 56px 60px;
+  padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
 }
 .page-header {
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 31px;
+  margin-bottom: var(--page-head-gap);
 }
 .date-line,
 .eyebrow {
@@ -475,7 +475,7 @@
 
 @media (max-width: 1120px) {
   .dashboard {
-    padding: 41px 34px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .dashboard-hero {
     grid-template-columns: 1fr;
@@ -493,7 +493,7 @@
 }
 @media (max-width: 800px) {
   .dashboard {
-    padding: 30px 18px 28px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .page-header {
     margin-bottom: 25px;
@@ -517,7 +517,7 @@
 }
 @media (max-width: 530px) {
   .dashboard {
-    padding: 24px 14px 26px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .page-header {
     display: block;
@@ -827,7 +827,7 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
-    padding: 18px 14px 24px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .dashboard > * {
     margin: 0 !important;

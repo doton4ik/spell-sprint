@@ -1,14 +1,14 @@
 .learning-page {
   margin: 0 auto;
   max-width: 1330px;
-  padding: 49px 56px 70px;
+  padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
 }
 .learning-header {
   align-items: flex-start;
   display: flex;
   gap: 25px;
   justify-content: space-between;
-  margin-bottom: 29px;
+  margin-bottom: var(--page-head-gap);
 }
 .learning-header__actions {
   align-items: center;
@@ -347,7 +347,7 @@
 }
 @media (max-width: 1060px) {
   .learning-page {
-    padding: 41px 34px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .rules-grid {
     grid-template-columns: 1fr;
@@ -355,7 +355,7 @@
 }
 @media (max-width: 800px) {
   .learning-page {
-    padding: 30px 18px 40px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .learning-header {
     margin-bottom: 23px;
@@ -379,7 +379,7 @@
 }
 @media (max-width: 570px) {
   .learning-page {
-    padding: 24px 14px 35px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .learning-header {
     align-items: flex-start;

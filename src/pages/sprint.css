@@ -1,7 +1,7 @@
 .sprint-page {
   margin: 0 auto;
   max-width: 780px;
-  padding: 49px 56px 70px;
+  padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
 }
 .sprint-header h1 {
   color: var(--ink);
@@ -330,7 +330,7 @@
 }
 @media (max-width: 800px) {
   .sprint-page {
-    padding: 24px 16px 40px;
+    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .sprint-card h2 {
     font-size: calc(24px * var(--fs));

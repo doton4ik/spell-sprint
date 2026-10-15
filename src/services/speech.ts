@@ -27,6 +27,11 @@ function pickVoice(locale: string) {
   return { voice: english, exact: false }
 }
 
+// A word or sentence that is still being read must not go on over the next question or page.
+export function stopSpeaking() {
+  if (canSpeak()) window.speechSynthesis.cancel()
+}
+
 export function speakEnglish(text: string, locale: 'en-US' | 'en-GB', rate = 1) {
   if (!canSpeak()) return { ok: false, fallback: false }
   const utterance = new SpeechSynthesisUtterance(text)
