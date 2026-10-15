@@ -55,8 +55,13 @@ This project runs with Sonnet as the main model, Opus as the advisor and Haiku f
   `learningData.ts` (My Mistakes entries, history, archive), `practiceStorage.ts` (answer log, max 5000),
   `cloudSync.ts` (pull → merge → save over the merged version), `libraryPractice.ts` (tasks per mode),
   `proofreadingEngine.ts`, `pairs.ts`, `yellowCards.ts`, `rulesService.ts` (falls back to `data/builtInRules.json`).
-- `src/data/` — content: `spell-sprint-built-in-library.csv` (966 words), `proofreadingTexts.ts`,
-  `pairDrills.ts`, `wordAliases.ts` (one id for a word in two libraries), `libraryTaxonomy.ts` (topic merges).
+- `src/data/` — content: `spell-sprint-built-in-library.csv` (every word has a topic, a `level` A2–C1 and a stable `word_id`: never change an id),
+  `libraryTopics.ts` (the 26 topics and the 8 sections; the same list is in `scripts/library-topics.mjs`, a test keeps them equal),
+  `libraryPacks.ts` (the one optional pack, Logistics and Trade), `proofreadingTexts.ts`, `pairDrills.ts`,
+  `wordAliases.ts` (one id for a word in two libraries), `libraryTaxonomy.ts`; the level check bank is `levelCheck*.ts`
+  (`levelCheckBank.ts` joins `Deep`, `Usage`, `Short`, `Cloze`, `Reading`; retired questions stay so old results can be read).
+- Level check: `services/levelCheck.ts` (plan, adaptive choice, scoring v2, quick check of 16 questions), `components/level/`, `pages/DiagnosticPage.tsx`.
+- Layout: `components/layout/AppShell.tsx` (side menu that can be hidden), page spacing comes from the `--page-*` tokens in `styles/tokens.css`.
 - Styles: colours only from `src/styles/tokens.css` (light + dark theme); shared buttons in `styles/buttons.css`.
   Palette (paper design, 14 Oct 2026): warm paper and ink; `--accent*` = ink blue (brand, links, the main button, the current page);
   `--good*` = sage green, ONLY for right / done / mastered; `--danger*` = mistakes; headings and the word to translate use `--font-serif`

@@ -11,7 +11,7 @@ function watchErrors(page: Page) {
 }
 
 const pages: Array<[string, RegExp]> = [
-  ['dashboard', /Good (morning|afternoon|evening)/],
+  ['dashboard', /Good (night|morning|afternoon|evening)/],
   ['practice', /Build accuracy/],
   ['my-mistakes', /My mistakes/],
   ['rules', /Rules that stick/],
