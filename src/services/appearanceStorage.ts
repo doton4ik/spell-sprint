@@ -21,9 +21,21 @@ export function getFontScale(): FontScale {
   }
 }
 
+// A wide screen shows the same text small and leaves much of the page empty, so the whole app is a little larger there. The
+// learner's own choice (above) is applied on top of this. Phones and laptops (under 1400 px) are not changed.
+export function screenFactor(width: number) {
+  return width >= 2200 ? 1.2 : width >= 1700 ? 1.1 : width >= 1400 ? 1.05 : 1
+}
+
+let watching = false
 export function applyFontScale(scale: FontScale = getFontScale()) {
   const factor = fontScaleOptions.find((option) => option.value === scale)?.factor ?? 1
-  document.documentElement.style.setProperty('--fs', String(factor))
+  document.documentElement.style.setProperty('--fs', String(Math.round(factor * screenFactor(window.innerWidth) * 1000) / 1000))
+  // The window can be resized or moved to another screen: the size follows it.
+  if (!watching) {
+    watching = true
+    window.addEventListener('resize', () => applyFontScale())
+  }
 }
 
 export function setFontScale(scale: FontScale) {

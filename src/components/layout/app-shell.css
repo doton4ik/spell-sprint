@@ -453,3 +453,40 @@
 .profile-avatar {
   font-family: var(--font-serif);
 }
+
+/* A short window (a laptop, a browser with toolbars): the menu must fit, or at least scroll, so the profile and Feedback
+   are never cut off. Two steps of tighter spacing, then the menu scrolls. */
+.sidebar {
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+@media (min-width: 801px) and (max-height: 960px) {
+  .sidebar {
+    padding-top: 20px;
+  }
+  .brand {
+    margin-bottom: 22px;
+  }
+  .main-nav {
+    gap: 2px;
+  }
+  .nav-link {
+    min-height: 38px;
+  }
+  .profile-mini {
+    margin-top: 8px;
+    padding-top: 12px;
+  }
+  .menu-toggle--hide {
+    top: 20px;
+  }
+}
+@media (min-width: 801px) and (max-height: 800px) {
+  .brand {
+    margin-bottom: 14px;
+  }
+  .nav-link {
+    font-size: calc(15px * var(--fs));
+    min-height: 34px;
+  }
+}

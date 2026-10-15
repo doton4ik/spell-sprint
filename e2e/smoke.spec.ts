@@ -118,6 +118,17 @@ test('dictation reads the word only when Play is pressed', async ({ page }) => {
   expect(await page.evaluate('window.__spoken')).toBe(1)
 })
 
+test('the side menu fits a short window: the profile at its bottom is not cut off', async ({ page }) => {
+  for (const height of [900, 768, 700]) {
+    await page.setViewportSize({ width: 1300, height })
+    await page.goto('/#dashboard')
+    const profile = page.locator('.sidebar .profile-mini')
+    await expect(profile).toBeVisible()
+    const bottom = (await profile.boundingBox())!.y + (await profile.boundingBox())!.height
+    expect(bottom, `window ${height} px high`).toBeLessThanOrEqual(height)
+  }
+})
+
 test('Enter after an answer starts the next word', async ({ page }) => {
   const errors = watchErrors(page)
   await page.goto('/#practice')
