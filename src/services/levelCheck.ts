@@ -8,10 +8,10 @@ import { plain, sameText } from './contractions'
 import { pickPracticeWords } from './topicStats'
 
 // ---- The adaptive check ----------------------------------------------------------------------
-// 29 questions across five skills (the pace of the online placement tests: many short tasks, about 40 seconds each). Each skill runs its own staircase: start at B1,
+// 30 questions across five skills (the pace of the online placement tests: many short tasks, about 40 seconds each). Each skill runs its own staircase: start at B1,
 // one level up after a right answer, one down after a wrong one, so every skill quickly settles
 // around the learner's real level instead of spending questions on things far too easy or hard.
-export const QUESTIONS_PER_SKILL: Record<Skill, number> = { spelling: 3, vocabulary: 5, grammar: 8, reading: 9, listening: 4 }
+export const QUESTIONS_PER_SKILL: Record<Skill, number> = { spelling: 4, vocabulary: 5, grammar: 8, reading: 9, listening: 4 }
 // Reading is not one long text with all the questions: as in the Oxford and Cambridge tests it mixes short tasks (a notice or a
 // message, two lines of conversation) with a text and a gapped text, three questions each. Where they stand in the check:
 const READING_GROUPS: Array<[position: number, size: number]> = [

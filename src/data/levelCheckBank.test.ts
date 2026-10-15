@@ -266,3 +266,28 @@ describe('the second reading set', () => {
     }
   })
 })
+
+// A gap in a conversation must not be answered by the other speaker's line (A asks "...good at sport?", B says "good ___ football").
+describe('conversations with a gap', () => {
+  const words = (text: string) => text.toLocaleLowerCase().match(/[a-z’']+/g) ?? []
+  const dialogues = bank.filter((item) => item.kind === 'choice' && !item.stimulus && /^A: .*\nB: /s.test(item.prompt))
+
+  it('are there (the Oxford style: a short conversation, one gap)', () => {
+    expect(dialogues.length).toBeGreaterThanOrEqual(20)
+  })
+
+  it('do not print the answer in the first speaker’s line', () => {
+    for (const item of dialogues) {
+      const first = new Set(words(item.prompt.split('\n')[0]))
+      const answer = words(item.answer).filter((word) => word.length > 1)
+      expect(
+        answer.filter((word) => first.has(word)),
+        item.id,
+      ).toEqual([])
+    }
+  })
+
+  it('have the gap in the second speaker’s line', () => {
+    for (const item of dialogues) expect(item.prompt.split('\n')[1], item.id).toContain('___')
+  })
+})

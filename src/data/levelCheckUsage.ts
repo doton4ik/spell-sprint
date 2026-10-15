@@ -30,7 +30,7 @@ export const usageItems: LevelItem[] = [
   phrase(
     'n15-1-05',
     1,
-    'A: Is your brother good at sport?\nB: Yes, he is very good ___ football.',
+    'A: Does your brother like sport?\nB: Yes, he is very good ___ football.',
     'at',
     ['in', 'on', 'for'],
     'Good at + activity.',
@@ -111,7 +111,7 @@ export const usageItems: LevelItem[] = [
   phrase(
     'n15-2-07',
     2,
-    'A: Would you like to see my cats?\nB: I’d love to, but I’m allergic ___ cats.',
+    'A: Come and meet my cats!\nB: I’d love to, but I’m allergic ___ cats.',
     'to',
     ['of', 'with', 'at'],
     'Allergic to something.',
