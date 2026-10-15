@@ -1,9 +1,23 @@
 import { grammar, spelling, vocabulary } from './diagnostic'
 import type { LibraryWord } from '../types/library'
 import { extraLevelItems } from './levelCheckExtra'
-import { deepLevelItems, levelPassages } from './levelCheckDeep'
+import { deepLevelItems, levelPassages as deepPassages } from './levelCheckDeep'
+import { meaningItems, meaningPassages } from './levelCheckReading'
+import { clozeItems, clozePassages } from './levelCheckCloze'
+import { shortItems } from './levelCheckShort'
+import { formationItems, grammarItems as usageGrammarItems, usageItems } from './levelCheckUsage'
 
-export { levelPassages }
+// Questions taken out of the check but kept in the bank: old results are scored again from their answers by looking each
+// question up here, so a question that disappeared would change how an old check is read. Retired = never asked any more.
+//  - "translate the word" vocabulary questions (typed, from a Russian word): the vocabulary part now tests word use;
+//  - the first reading texts of B1 to C1: their questions could be answered by finding a phrase in the text.
+const RETIRED_PASSAGES = new Set(['library', 'remote', 'late-train', 'bees', 'nights', 'home-work', 'silence', 'translation', 'experts'])
+const isTranslationQuestion = (item: { id: string }) => /^lc-(vocabulary|extra-vocabulary|word)-/.test(item.id)
+export const levelPassages: LevelPassage[] = [
+  ...deepPassages.map((passage) => (RETIRED_PASSAGES.has(passage.id) ? { ...passage, retired: true } : passage)),
+  ...meaningPassages,
+  ...clozePassages,
+]
 
 // Question bank for the adaptive level check. Levels: 1 = A2, 2 = B1, 3 = B2, 4 = C1.
 export type Skill = 'spelling' | 'vocabulary' | 'grammar' | 'reading' | 'listening'
@@ -24,9 +38,12 @@ export type LevelItem = {
   logAs?: string // choice items only: a wrong answer is logged with this category, e.g. 'Grammar · Articles'
   wordId?: string // set when the item is a library word, so the result feeds that word's progress
   translation?: string
+  retired?: boolean // kept in the bank (old results look it up) but never asked in a new check
+  stimulus?: string // a short text or conversation shown above the question (a notice, an e-mail, two lines of dialogue)
+  format?: 'text' | 'cloze' | 'notice' | 'meaning' // reading: what the question is about; picks which kind comes when
 }
 // A reading text: its questions are the items with this id in `passage`, asked together.
-export type LevelPassage = { id: string; level: 1 | 2 | 3 | 4; title: string; text: string }
+export type LevelPassage = { id: string; level: 1 | 2 | 3 | 4; title: string; text: string; retired?: boolean }
 
 export const skillLabels: Record<Skill, string> = {
   spelling: 'Spelling',
@@ -37,7 +54,7 @@ export const skillLabels: Record<Skill, string> = {
 }
 export const skillInstructions: Record<Skill, string> = {
   spelling: 'Write the word correctly. Some are already right — then just copy them.',
-  vocabulary: 'Write the English word.',
+  vocabulary: 'Choose the word or phrase that fits.',
   grammar: 'Rewrite the sentence correctly. If it is already right, copy it.',
   reading: 'Read the text, then choose the best answer.',
   listening: 'Listen, then type exactly what you hear.',
@@ -154,5 +171,32 @@ export function buildLevelBank(words: LibraryWord[]): LevelItem[] {
       answer,
     }))
     .filter((item) => item.prompt.trim() && item.answer.trim() && !known.has(item.id))
-  return [...spellingItems, ...vocabularyItems, ...grammarItems, ...extra, ...deepLevelItems]
+  return (
+    [
+      ...spellingItems,
+      ...vocabularyItems,
+      ...grammarItems,
+      ...extra,
+      ...deepLevelItems,
+      ...usageItems,
+      ...usageGrammarItems,
+      ...formationItems,
+      ...meaningItems,
+      ...clozeItems,
+      ...shortItems,
+    ]
+      .map((item) => (isTranslationQuestion(item) || RETIRED_PASSAGES.has(item.passage ?? '') ? { ...item, retired: true } : item))
+      // a question that is a conversation with a gap says so (the first part of the Oxford test)
+      .map((item) =>
+        item.kind === 'choice' && !item.stimulus && /^A: .*\nB: /s.test(item.prompt)
+          ? {
+              ...item,
+              instruction:
+                item.skill === 'vocabulary'
+                  ? 'Choose the word or phrase that fits the conversation.'
+                  : 'Choose the best option to complete the conversation.',
+            }
+          : item,
+      )
+  )
 }

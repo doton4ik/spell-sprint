@@ -907,3 +907,50 @@
   font-weight: 600;
   padding: 0 3px;
 }
+
+/* Reading texts: a book serif, and a dialogue reads line by line with the speaker's name in front. */
+.level-passage p {
+  font-family: var(--font-serif);
+  font-size: calc(17px * var(--fs));
+}
+.level-passage p + p {
+  margin-top: 8px;
+}
+.level-passage__line strong {
+  color: var(--accent-text-strong);
+  font-family: inherit;
+  font-weight: 700;
+}
+
+/* Every line of a text or a conversation starts on a new line; a short text sits closer to its question. */
+.level-line {
+  display: block;
+}
+.level-line + .level-line {
+  margin-top: 8px;
+}
+.level-line--speaker strong {
+  color: var(--accent-text-strong);
+  font-weight: 700;
+}
+.level-passage--short {
+  margin-bottom: -4px;
+}
+.level-question__prompt .level-line--speaker strong {
+  font-family: inherit;
+}
+
+/* Every line of a text or a conversation starts on a new line; a short text sits closer to its question. */
+.level-line {
+  display: block;
+}
+.level-line + .level-line {
+  margin-top: 8px;
+}
+.level-line--speaker strong {
+  color: var(--accent-text-strong);
+  font-weight: 700;
+}
+.level-passage--short {
+  margin-bottom: -4px;
+}

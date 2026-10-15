@@ -6,6 +6,7 @@ import { isSentence } from '../../services/sentenceDiff'
 import { SentenceDiff } from './SentenceDiff'
 import { defaultPracticeSettings } from '../../data/practice'
 import { levelPassages, skillInstructions, skillLabels, type LevelItem } from '../../data/levelCheckBank'
+import { LevelLines } from './LevelLines'
 import {
   clearRun,
   createCheck,
@@ -135,7 +136,17 @@ export function CheckRunner({
       {passage ? (
         <article className="level-passage">
           <h3>{passage.title}</h3>
-          <p>{passage.text}</p>
+          <p>
+            <LevelLines text={passage.text} />
+          </p>
+        </article>
+      ) : null}
+
+      {item.stimulus ? (
+        <article className="level-passage level-passage--short" aria-label="Text">
+          <p>
+            <LevelLines text={item.stimulus} />
+          </p>
         </article>
       ) : null}
 
@@ -161,7 +172,7 @@ export function CheckRunner({
                 : 'level-question__prompt'
             }
           >
-            {item.prompt}
+            <LevelLines text={item.prompt} />
           </h2>
         )}
 

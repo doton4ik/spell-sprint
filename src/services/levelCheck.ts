@@ -8,11 +8,24 @@ import { plain, sameText } from './contractions'
 import { pickPracticeWords } from './topicStats'
 
 // ---- The adaptive check ----------------------------------------------------------------------
-// 25 questions across five skills. Each skill runs its own staircase: start at B1,
+// 29 questions across five skills (the pace of the online placement tests: many short tasks, about 40 seconds each). Each skill runs its own staircase: start at B1,
 // one level up after a right answer, one down after a wrong one, so every skill quickly settles
 // around the learner's real level instead of spending questions on things far too easy or hard.
-export const QUESTIONS_PER_SKILL: Record<Skill, number> = { spelling: 4, vocabulary: 5, grammar: 6, reading: 6, listening: 4 }
-const READING_BLOCK = 3 // a text is asked together: three questions
+export const QUESTIONS_PER_SKILL: Record<Skill, number> = { spelling: 3, vocabulary: 5, grammar: 8, reading: 9, listening: 4 }
+// Reading is not one long text with all the questions: as in the Oxford and Cambridge tests it mixes short tasks (a notice or a
+// message, two lines of conversation) with a text and a gapped text, three questions each. Where they stand in the check:
+const READING_GROUPS: Array<[position: number, size: number]> = [
+  [0.12, 2],
+  [0.38, 3],
+  [0.62, 1],
+  [0.85, 3],
+]
+// A group of three is a text (its questions are asked together); smaller groups are single short tasks.
+const READING_SHAPE: Array<'single' | 'block'> = READING_GROUPS.flatMap(([, size]) =>
+  Array<'single' | 'block'>(size).fill(size >= 3 ? 'block' : 'single'),
+)
+const SINGLE_FORMATS = ['notice', 'meaning', 'meaning'] // the kind of short task, in order
+const BLOCK_FORMATS = ['text', 'cloze'] // the kind of text, in order
 export const TOTAL_QUESTIONS = Object.values(QUESTIONS_PER_SKILL).reduce((sum, value) => sum + value, 0)
 const START_LEVEL = 2
 export const RECHECK_AFTER_DAYS = 30
@@ -46,8 +59,8 @@ export const skillOrder: Skill[] = ['spelling', 'vocabulary', 'grammar', 'readin
 // What kind of question each skill asks, in order, so a check is not 25 of the same thing.
 const KIND_PLAN: Record<Skill, ItemKind[]> = {
   spelling: ['type', 'type', 'type', 'type'],
-  vocabulary: ['type', 'choice', 'choice', 'type', 'choice'],
-  grammar: ['choice', 'choice', 'type', 'choice', 'choice', 'type'],
+  vocabulary: ['choice', 'choice', 'choice', 'choice', 'choice'], // word use: choose the word, no translating
+  grammar: ['choice', 'choice', 'type', 'choice', 'choice', 'type', 'choice', 'choice'],
   reading: [],
   listening: ['dictation', 'dictation', 'dictation', 'dictation'],
 }
@@ -64,7 +77,7 @@ export function createCheck(options: { listening?: boolean; bank?: LevelItem[] }
   const left = { ...QUESTIONS_PER_SKILL }
   if (options.listening === false) left.listening = 0
   // a skill the bank has no questions for is left out instead of ending the check early
-  for (const skill of skillOrder) if (!bank.some((item) => item.skill === skill)) left[skill] = 0
+  for (const skill of skillOrder) if (!bank.some((item) => item.skill === skill && !item.retired)) left[skill] = 0
   const others: Skill[] = []
   const rest = skillOrder.filter((skill) => skill !== 'reading')
   while (rest.some((skill) => left[skill] > 0))
@@ -73,9 +86,18 @@ export function createCheck(options: { listening?: boolean; bank?: LevelItem[] }
         others.push(skill)
         left[skill] -= 1
       }
-  const block = left.reading > 0 ? Array<Skill>(READING_BLOCK).fill('reading') : []
-  const cut = Math.round(others.length * 0.45)
-  const plan = [...others.slice(0, cut), ...block, ...others.slice(cut), ...block]
+  // The reading groups go in at fixed places among the other questions.
+  const insertAt = new Map<number, number>()
+  if (left.reading > 0)
+    for (const [position, size] of READING_GROUPS) {
+      const index = Math.round(others.length * position)
+      insertAt.set(index, (insertAt.get(index) ?? 0) + size)
+    }
+  const plan: Skill[] = []
+  others.forEach((skill, index) => {
+    plan.push(...Array<Skill>(insertAt.get(index) ?? 0).fill('reading'))
+    plan.push(skill)
+  })
   return { bank, plan }
 }
 
@@ -89,8 +111,9 @@ function targetLevel(answers: CheckAnswer[], skill: Skill) {
 const DISTANCES = [0, 1, -1, 2, -2, 3, -3]
 const pickOne = <T>(items: T[]) => items[Math.floor(Math.random() * items.length)]
 
-// Reading goes text by text: finish the text being read; then the next text's level follows the block
-// (2 or 3 of 3 right goes up, 0 or 1 goes down), not the last single answer.
+// Reading: a text that was started is finished first. Otherwise the shape says whether a short task or a text comes next, and the
+// level follows the answers: after a short task the last answer decides (right goes up, wrong goes down); after a text 2 or 3 of 3
+// right goes up, 0 or 1 goes down.
 function nextReadingItem(bank: LevelItem[], answers: CheckAnswer[], pool: LevelItem[]): LevelItem | null {
   const passageOf = (id: string) => bank.find((item) => item.id === id)?.passage
   const mine = answers.filter((answer) => answer.skill === 'reading')
@@ -101,27 +124,46 @@ function nextReadingItem(bank: LevelItem[], answers: CheckAnswer[], pool: LevelI
     if (same.length) return same[0]
   }
   let target = START_LEVEL
-  if (last && lastPassage) {
-    const block = mine.filter((answer) => passageOf(answer.itemId) === lastPassage)
-    const right = block.filter((answer) => answer.correct).length
-    target = Math.min(4, Math.max(1, last.level + (right * 2 >= block.length + 1 ? 1 : -1)))
+  if (last) {
+    if (lastPassage) {
+      const block = mine.filter((answer) => passageOf(answer.itemId) === lastPassage)
+      const right = block.filter((answer) => answer.correct).length
+      target = Math.min(4, Math.max(1, last.level + (right * 2 >= block.length + 1 ? 1 : -1)))
+    } else target = Math.min(4, Math.max(1, last.level + (last.correct ? 1 : -1)))
   }
-  for (const distance of DISTANCES) {
-    const firsts = pool.filter((item) => item.level === target + distance)
-    // the first question of a text that has not been started
-    const unstarted = firsts.filter((item) => !answers.some((answer) => passageOf(answer.itemId) === item.passage))
-    // one entry per text (its first question), and not always the same text on a retake
-    const firstOfEach = unstarted.filter((item, index) => unstarted.findIndex((other) => other.passage === item.passage) === index)
-    if (firstOfEach.length) return pickOne(firstOfEach)
+  const singles = pool.filter((item) => !item.passage)
+  const texts = pool.filter((item) => item.passage)
+  const singlesDone = mine.filter((answer) => !passageOf(answer.itemId)).length
+  const textsDone = new Set(mine.map((answer) => passageOf(answer.itemId)).filter(Boolean)).size
+  const wantsSingle = (READING_SHAPE[mine.length] ?? 'block') === 'single'
+
+  const pickSingle = () => {
+    for (const wanted of [SINGLE_FORMATS[singlesDone] ?? 'meaning', undefined])
+      for (const distance of DISTANCES) {
+        const candidates = singles.filter((item) => item.level === target + distance && (!wanted || item.format === wanted))
+        if (candidates.length) return pickOne(candidates)
+      }
+    return null
   }
-  return null
+  const pickText = () => {
+    for (const wanted of [BLOCK_FORMATS[textsDone] ?? 'text', undefined])
+      for (const distance of DISTANCES) {
+        const firsts = texts.filter((item) => item.level === target + distance && (!wanted || (item.format ?? 'text') === wanted))
+        // the first question of a text that has not been started, one entry per text, not always the same text on a retake
+        const unstarted = firsts.filter((item) => !answers.some((answer) => passageOf(answer.itemId) === item.passage))
+        const firstOfEach = unstarted.filter((item, index) => unstarted.findIndex((other) => other.passage === item.passage) === index)
+        if (firstOfEach.length) return pickOne(firstOfEach)
+      }
+    return null
+  }
+  return (wantsSingle ? (pickSingle() ?? pickText()) : (pickText() ?? pickSingle())) ?? null
 }
 
 // Next question: the target level for its skill, or the nearest level that still has unused items; the
 // kind of question follows KIND_PLAN, and falls back to any kind when none is left.
 export function nextItem(bank: LevelItem[], skill: Skill, answers: CheckAnswer[]): LevelItem | null {
   const used = new Set(answers.map((answer) => answer.itemId))
-  const pool = bank.filter((item) => item.skill === skill && !used.has(item.id))
+  const pool = bank.filter((item) => item.skill === skill && !used.has(item.id) && !item.retired)
   if (skill === 'reading') return nextReadingItem(bank, answers, pool)
   const target = targetLevel(answers, skill)
   const wanted = KIND_PLAN[skill][answers.filter((answer) => answer.skill === skill).length]

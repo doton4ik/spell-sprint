@@ -7,7 +7,7 @@ import type { LevelItem, LevelPassage, Skill } from './levelCheckBank'
 // Usage the two main kinds of English disagree on (hospital / the hospital, colour / color) is avoided.
 type Level = 1 | 2 | 3 | 4
 
-const pick = (
+export const pick = (
   id: string,
   skill: Skill,
   level: Level,
@@ -23,8 +23,15 @@ const MISTAKE = 'Choose the part of the sentence that has the mistake.'
 const PHRASE = 'Choose the word or phrase that fits.'
 const ARTICLE = { logAs: 'Grammar · Articles' }
 
-const gap = (id: string, level: Level, prompt: string, answer: string, wrong: string[], explain: string, extra: Partial<LevelItem> = {}) =>
-  pick(`lcd-gr-${id}`, 'grammar', level, prompt, answer, wrong, explain, { instruction: GAP, ...extra })
+export const gap = (
+  id: string,
+  level: Level,
+  prompt: string,
+  answer: string,
+  wrong: string[],
+  explain: string,
+  extra: Partial<LevelItem> = {},
+) => pick(`lcd-gr-${id}`, 'grammar', level, prompt, answer, wrong, explain, { instruction: GAP, ...extra })
 const mistake = (id: string, level: Level, sentence: string, parts: string[], answer: string, explain: string) =>
   pick(
     `lcd-gr-${id}`,
@@ -36,9 +43,9 @@ const mistake = (id: string, level: Level, sentence: string, parts: string[], an
     explain,
     { instruction: MISTAKE },
   )
-const phrase = (id: string, level: Level, prompt: string, answer: string, wrong: string[], explain: string) =>
+export const phrase = (id: string, level: Level, prompt: string, answer: string, wrong: string[], explain: string) =>
   pick(`lcd-vc-${id}`, 'vocabulary', level, prompt, answer, wrong, explain, { instruction: PHRASE })
-const formation = (id: string, level: Level, prompt: string, answer: string, explain: string): LevelItem => ({
+export const formation = (id: string, level: Level, prompt: string, answer: string, explain: string): LevelItem => ({
   id: `lcd-wf-${id}`,
   skill: 'grammar',
   level,
@@ -1207,7 +1214,7 @@ const vocabularyItems: LevelItem[] = [
 
 // ---- Reading -------------------------------------------------------------------------------
 type Question = [prompt: string, answer: string, wrong: [string, string, string], explain: string]
-const reading = (passage: string, level: Level, questions: Question[]): LevelItem[] =>
+export const reading = (passage: string, level: Level, questions: Question[]): LevelItem[] =>
   questions.map(([prompt, answer, wrong, explain], index) =>
     pick(`lcd-rd-${passage}-${index + 1}`, 'reading', level, prompt, answer, wrong, explain, {
       passage,
@@ -1577,9 +1584,9 @@ const dictationItems: LevelItem[] = [
   dictation('b02-1-25', 1, 'I bought a present for my friend.'),
   dictation('b01-2-18', 2, 'I have lived in this city for three years.', ["I've lived in this city for three years."]),
   dictation('b01-2-19', 2, 'She said she would send the report tomorrow.'),
-  dictation('b01-2-20', 2, 'The meeting was cancelled because of heavy rain.'),
+  dictation('b01-2-20', 2, 'The meeting was cancelled because of heavy rain.', ['The meeting was canceled because of heavy rain.']),
   dictation('b01-2-21', 2, 'We should leave early to avoid traffic.'),
-  dictation('b01-2-22', 2, 'He is looking for a job in logistics.'),
+  dictation('b01-2-22', 2, 'He is looking for a job in a hospital.'),
   dictation('b01-2-23', 2, 'This is the most interesting course I have taken.', ["This is the most interesting course I've taken."]),
   dictation('b02-2-22', 2, 'She had already left when I called her.'),
   dictation('b02-2-23', 2, 'If I were you, I would accept the offer.'),

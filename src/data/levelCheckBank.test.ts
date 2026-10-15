@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { buildLevelBank, levelPassages, type LevelItem } from './levelCheckBank'
+import { meaningItems } from './levelCheckReading'
 import { createCheck, scoreCheck, isCorrectAnswer, nextItem, QUESTIONS_PER_SKILL, type CheckAnswer } from '../services/levelCheck'
 
 const bank = buildLevelBank([])
@@ -13,11 +14,13 @@ describe('the deeper questions', () => {
     expect(new Set(ids).size).toBe(ids.length)
   })
 
-  it('every choice has four different options, and exactly one of them is the answer', () => {
+  it('every choice has three or four different options, and exactly one of them is the answer', () => {
     for (const item of choices) {
       const options = item.choices ?? []
-      expect(options, item.id).toHaveLength(4)
-      expect(new Set(options.map((option) => option.toLocaleLowerCase())).size, item.id).toBe(4)
+      // the short tasks (a notice, a conversation) have three options, as in the Oxford and Cambridge tests; the rest have four
+      expect([3, 4], item.id).toContain(options.length)
+      if (!item.stimulus) expect(options, item.id).toHaveLength(4)
+      expect(new Set(options.map((option) => option.toLocaleLowerCase())).size, item.id).toBe(options.length)
       expect(
         options.filter((option) => option === item.answer),
         item.id,
@@ -80,7 +83,10 @@ describe('the deeper questions', () => {
         at((item) => item.kind === 'dictation'),
         `dictation L${level}`,
       ).toBeGreaterThanOrEqual(4)
-      expect(levelPassages.filter((passage) => passage.level === level).length, `passages L${level}`).toBeGreaterThanOrEqual(2)
+      expect(
+        levelPassages.filter((passage) => passage.level === level && !passage.retired).length,
+        `active passages L${level}`,
+      ).toBeGreaterThanOrEqual(2)
     }
   })
 
@@ -91,11 +97,14 @@ describe('the deeper questions', () => {
       for (const item of own) expect(item.level, item.id).toBe(passage.level)
       expect(passage.text.split(/\s+/).length, passage.id).toBeGreaterThanOrEqual(60)
     }
+    // every reading question belongs to a text, or is a short task that carries its own text
     for (const item of deep.filter((entry) => entry.skill === 'reading')) {
-      expect(
-        levelPassages.some((passage) => passage.id === item.passage),
-        item.id,
-      ).toBe(true)
+      if (item.stimulus) expect(item.passage, item.id).toBeUndefined()
+      else
+        expect(
+          levelPassages.some((passage) => passage.id === item.passage),
+          item.id,
+        ).toBe(true)
     }
   })
 })
@@ -132,13 +141,26 @@ describe('a whole check on the real questions', () => {
     expect([...kinds].sort()).toEqual(['choice', 'dictation', 'type'])
   })
 
-  it('asks each reading text as one block of three', () => {
-    const { asked } = simulate(false)
-    const reading = asked.filter((item) => item.skill === 'reading')
-    expect(reading).toHaveLength(6)
-    expect(new Set(reading.slice(0, 3).map((item) => item.passage)).size).toBe(1)
-    expect(new Set(reading.slice(3).map((item) => item.passage)).size).toBe(1)
-    expect(reading[0].passage).not.toBe(reading[3].passage)
+  it('mixes short reading tasks with one text and one gapped text of three questions each', () => {
+    for (const knows of [true, false]) {
+      const { asked } = simulate(knows)
+      const reading = asked.filter((item) => item.skill === 'reading')
+      expect(reading).toHaveLength(9)
+      const singles = reading.filter((item) => !item.passage)
+      const blocks = reading.filter((item) => item.passage)
+      expect(singles).toHaveLength(3)
+      expect(
+        singles.every((item) => item.stimulus),
+        'a short task shows its text or conversation',
+      ).toBe(true)
+      expect(new Set(blocks.map((item) => item.passage)).size).toBe(2)
+      // a text is asked together, and the first is a text, the second a gapped text
+      const order = blocks.map((item) => item.passage)
+      expect(order.slice(0, 3).every((id) => id === order[0])).toBe(true)
+      expect(order.slice(3).every((id) => id === order[3])).toBe(true)
+      expect(blocks[0].format ?? 'text').toBe('text')
+      expect(blocks[3].format).toBe('cloze')
+    }
   })
 
   it('puts someone who knows everything high, and someone who knows nothing low', () => {
@@ -166,5 +188,81 @@ describe('dictation', () => {
   it('does not accept a digit that was not said', () => {
     const item = bank.find((entry) => entry.id === 'lcd-ls-1-02')!
     expect(isCorrectAnswer(item, 'The shop opens at 10 oclock.')).toBe(false)
+  })
+})
+
+describe('what a check no longer asks', () => {
+  it('never asks a translation question or a question about a retired text', () => {
+    for (const knows of [true, false]) {
+      const { asked } = simulate(knows)
+      expect(asked.filter((item) => item.retired).map((item) => item.id)).toEqual([])
+      expect(asked.filter((item) => item.skill === 'vocabulary').every((item) => item.kind === 'choice')).toBe(true)
+      expect(asked.filter((item) => item.skill === 'vocabulary')).toHaveLength(5)
+    }
+  })
+
+  it('keeps the retired questions in the bank, because old results are scored again by looking them up', () => {
+    expect(bank.filter((item) => item.retired).length).toBeGreaterThan(60)
+    expect(levelPassages.filter((passage) => passage.retired).length).toBeGreaterThanOrEqual(9)
+  })
+
+  it('has new word-use, grammar and word-form questions to choose from at every level', () => {
+    for (const level of levels) {
+      expect(
+        bank.filter((item) => item.id.startsWith('lcd-vc-n15') && item.level === level).length,
+        `word use L${level}`,
+      ).toBeGreaterThanOrEqual(6)
+      expect(
+        bank.filter((item) => item.id.startsWith('lcd-gr-n15') && item.level === level).length,
+        `grammar L${level}`,
+      ).toBeGreaterThanOrEqual(2)
+      expect(
+        bank.filter((item) => item.id.startsWith('lcd-wf-n15') && item.level === level).length,
+        `word forms L${level}`,
+      ).toBeGreaterThanOrEqual(1)
+    }
+  })
+})
+
+// The second reading set must not be answerable by finding a phrase in the text, and the right option must not give itself away.
+describe('the second reading set', () => {
+  const passageOf = (item: LevelItem) => levelPassages.find((passage) => passage.id === item.passage)!
+  const harder = meaningItems.filter((item) => item.level >= 2)
+  const norm = (text: string) =>
+    text
+      .toLocaleLowerCase()
+      .replace(/[“”"’']/g, '')
+      .replace(/s+/g, ' ')
+
+  it('has a right answer that is a paraphrase, not a sentence copied from the text', () => {
+    for (const item of harder) expect(norm(passageOf(item).text), item.id).not.toContain(norm(item.answer))
+  })
+
+  it('does not make the right option the longest one by a wide margin', () => {
+    let longest = 0
+    for (const item of harder) {
+      const others = (item.choices ?? []).filter((option) => option !== item.answer)
+      if (item.answer.length > Math.max(...others.map((option) => option.length)) * 1.35) longest += 1
+    }
+    expect(longest, 'questions where the right option is clearly the longest').toBeLessThanOrEqual(Math.floor(harder.length * 0.2))
+  })
+
+  it('has a spread of right options over the four places, after the options are shuffled by the page nothing is learnt from the order', () => {
+    expect(new Set(meaningItems.map((item) => item.choices?.[0])).size).toBeGreaterThan(30) // answers differ: no repeated stock answer
+  })
+
+  it('has at least one question per text that asks for meaning, not for a detail', () => {
+    const meaningWords = /mean|imply|suggest|feel|attitude|why|purpose|sum up|NOT true|react|view/i
+    const texts = levelPassages.filter(
+      (entry) => !entry.retired && entry.level >= 2 && meaningItems.some((item) => item.passage === entry.id),
+    )
+    expect(texts.length).toBeGreaterThanOrEqual(8)
+    for (const passage of texts) {
+      const own = meaningItems.filter((item) => item.passage === passage.id)
+      expect(
+        own.some((item) => meaningWords.test(item.prompt)),
+        passage.id,
+      ).toBe(true)
+    }
   })
 })

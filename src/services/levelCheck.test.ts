@@ -103,10 +103,22 @@ describe('choosing the next question', () => {
     item('v4', 'vocabulary', 3, { kind: 'choice', choices: ['x', 'y'] }),
   ]
   it('follows the kind plan of the skill', () => {
-    const first = nextItem(bank, 'vocabulary', [])
-    expect(first?.kind ?? 'type').toBe('type')
-    const second = nextItem(bank, 'vocabulary', [answer(bank[0], true)])
-    expect(second?.kind).toBe('choice')
+    // Vocabulary is word use: always a choice, never a typed translation, even when a typed question is nearer in level.
+    expect(nextItem(bank, 'vocabulary', [])?.kind).toBe('choice')
+    // Grammar: the third question is typed.
+    const grammar = [
+      item('g1', 'grammar', 2, { kind: 'choice', choices: ['x', 'y'] }),
+      item('g2', 'grammar', 2, { kind: 'choice', choices: ['x', 'y'] }),
+      item('g3', 'grammar', 2),
+      item('g4', 'grammar', 2, { kind: 'choice', choices: ['x', 'y'] }),
+    ]
+    const third = nextItem(grammar, 'grammar', [answer(grammar[0], true), answer(grammar[1], true)])
+    expect(third?.kind ?? 'type').toBe('type')
+  })
+  it('never asks a retired question, even when it is the only one left', () => {
+    const only = [item('old', 'vocabulary', 2, { retired: true }), item('new', 'vocabulary', 2, { kind: 'choice', choices: ['x', 'y'] })]
+    expect(nextItem(only, 'vocabulary', [])?.id).toBe('new')
+    expect(nextItem([only[0]], 'vocabulary', [])).toBeNull()
   })
   it('falls back to another kind when the wanted kind is used up', () => {
     const only = [item('v1', 'vocabulary', 2), item('v9', 'vocabulary', 2)]
