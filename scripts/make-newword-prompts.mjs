@@ -16,7 +16,7 @@ for (let n = 1; n <= 10; n++) {
 const have = {}
 for (const [id, { topic }] of Object.entries(map)) (have[topic] ??= new Set()).add(word[id].toLowerCase())
 
-const TARGET = { customs: 60, logistics: 70, misspelled: 70, confusable: 50, phone: 80 }
+const TARGET = { logistics: 80, weather: 60, misspelled: 70, confusable: 50, phone: 80, ideas: 80 }
 const DEFAULT_TARGET = 90
 const PER_TASK = 60
 const out = new URL('../research/plexity/prompts/', import.meta.url)
@@ -36,9 +36,9 @@ const SPECIAL = {
   confusable:
     'Entries are words that learners confuse with a look-alike or sound-alike word (e.g. "complement", "lay", "council"). Write the word itself; put the word it is confused with in the definition after a semicolon: "to praise; not compliment... ". Do NOT add the partner word as a separate entry unless it is also not yet listed and also useful on its own.',
   logistics:
-    'Narrow professional words from warehouses and supply chains (e.g. "pallet", "forklift", "dispatch"). Words a learner meets at work, not general English.',
-  customs:
-    'Narrow professional words about import, export, customs and trade (e.g. "tariff", "duty", "quota"). Words a learner meets at work, not general English.',
+    'Narrow professional words from warehouses, supply chains, import, export and customs (e.g. "pallet", "forklift", "tariff", "quota"). Words a learner meets at work, not general English.',
+  ideas:
+    'Abstract everyday nouns for talking about society and opinions (e.g. "policy", "attitude", "democracy", "evidence", "trend"). Mostly nouns; common, not academic jargon.',
 }
 
 const tasks = []

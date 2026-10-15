@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-30.md)
 Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Describing Things" (describing).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 39 NEW words for the topic **Describing Things**: adjectives and adverbs for size, quality, manner, degree.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 40 NEW words for the topic **Describing Things**: adjectives and adverbs for size, quality, manner, degree.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,7 +16,7 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 39 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 40 entries.
 
 ```json
 [
@@ -25,7 +25,7 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 ]
 ```
 
-Before you answer, check: exactly 39 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
+Before you answer, check: exactly 40 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
 
-## Already in this topic (51 words, do not repeat)
-actually, ancient, beige, carefully, certain, circular, colourful, comfortable, condition, cotton, crowded, curved, deep, difference, enjoyable, especially, excellent, exciting, extremely, flat, fragile, grey, heavy, leather, lost, modern, narrow, ordinary, oval, pale, plastic, possible, rectangular, rough, shallow, shiny, signal, similar, situation, slightly, smooth, sticky, straight, switch off, terrible, thick, transparent, turquoise, unusual, wide, wooden
+## Already in this topic (50 words, do not repeat)
+actually, ancient, available, beige, carefully, certain, circular, colourful, comfortable, cotton, crowded, curved, deep, enjoyable, enormous, especially, excellent, exciting, extremely, flat, fragile, grey, heavy, leather, lost, modern, narrow, ordinary, oval, pale, plastic, possible, rectangular, rough, scary, shallow, shiny, similar, slightly, smooth, sticky, straight, terrible, thick, tiny, transparent, turquoise, unusual, wide, wooden

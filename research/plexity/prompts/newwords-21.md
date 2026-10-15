@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-21.md)
 Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Nature and Animals" (nature).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 32 NEW words for the topic **Nature and Animals**: animals, plants, landscape, environment.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 35 NEW words for the topic **Nature and Animals**: animals, plants, landscape, environment.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -15,7 +15,7 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 32 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 35 entries.
 
 ```json
 [
@@ -24,7 +24,7 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 ]
 ```
 
-Before you answer, check: exactly 32 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
+Before you answer, check: exactly 35 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
 
-## Already in this topic (58 words, do not repeat)
-bite, butterfly, cage, chase, chicken, cliff, crocodile, deer, dolphin, eagle, earthquake, elephant, endangered, enormous, environment, extinct, feather, feed, fierce, forest, frog, fur, giraffe, hamster, hedgehog, hunt, insect, island, kitten, lead, meadow, migrate, monkey, mosquito, mountain, ocean, owl, parrot, paw, penguin, pollution, puppy, rabbit, recycle, scary, shark, sheep, squirrel, stroke, tail, tiny, tortoise, valley, volcano, wasp, whale, wild, wildlife
+## Already in this topic (55 words, do not repeat)
+bite, butterfly, cage, chase, chicken, cliff, crocodile, deer, dolphin, eagle, earthquake, elephant, endangered, environment, extinct, feather, feed, fierce, forest, frog, fur, giraffe, hamster, hedgehog, hunt, insect, island, kitten, lead, meadow, migrate, monkey, mosquito, mountain, ocean, owl, parrot, paw, penguin, pollution, puppy, rabbit, recycle, shark, sheep, squirrel, stroke, tail, tortoise, valley, volcano, wasp, whale, wild, wildlife

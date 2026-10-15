@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-01.md)
 Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Home and Housework" (home).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 35 NEW words for the topic **Home and Housework**: rooms, furniture, chores, cleaning, repairs, rent.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 39 NEW words for the topic **Home and Housework**: rooms, furniture, chores, cleaning, repairs, rent.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -15,7 +15,7 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 35 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 39 entries.
 
 ```json
 [
@@ -24,7 +24,7 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 ]
 ```
 
-Before you answer, check: exactly 35 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
+Before you answer, check: exactly 39 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
 
-## Already in this topic (55 words, do not repeat)
-appliance, attic, balcony, basement, bathroom, bedroom, blanket, broom, bucket, ceiling, chimney, cupboard, curtain, dishwasher, doorbell, dust, electrician, electricity, fence, fold, furniture, garage, guidebook, hallway, hang, heating, hostel, iron, itinerary, kettle, key, kitchen, landlord, laundry, leak, lock, microwave, mirror, pillow, plumber, recycling, rent, repair, rubbish, scrub, sew, sink, staircase, sweep, tenant, unplug, vacuum, visa, washing machine, wipe
+## Already in this topic (51 words, do not repeat)
+appliance, attic, balcony, basement, bathroom, bedroom, blanket, broom, bucket, ceiling, chimney, cupboard, curtain, dishwasher, doorbell, dust, electrician, electricity, fence, fold, furniture, garage, hallway, hang, heating, iron, kettle, key, kitchen, landlord, laundry, leak, lock, microwave, mirror, pillow, plumber, recycling, rent, repair, rubbish, scrub, sew, sink, staircase, sweep, tenant, unplug, vacuum, washing machine, wipe

@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-22.md)
 Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "School and Studying" (school).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 33 NEW words for the topic **School and Studying**: lessons, exams, university, learning, education.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 34 NEW words for the topic **School and Studying**: lessons, exams, university, learning, education.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -15,7 +15,7 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 33 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 34 entries.
 
 ```json
 [
@@ -24,7 +24,7 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 ]
 ```
 
-Before you answer, check: exactly 33 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
+Before you answer, check: exactly 34 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
 
-## Already in this topic (57 words, do not repeat)
-absent, analysis, assignment, attendance, blackboard, calculator, campus, certificate, cheat, classmate, classroom, conclusion, degree, dictionary, discussion, duration, enrol, essay, evidence, experiment, fail, grade, graduate, handout, headteacher, homework, internship, lecture, lesson, mark, multiple choice, notebook, participate, pass, pencil, playground, professor, pupil, research, resit, revise, revision, rubber, ruler, scholarship, semester, source, subject, summary, syllabus, term, textbook, thesis, tuition, tutor, uniform, whiteboard
+## Already in this topic (56 words, do not repeat)
+absent, analysis, assignment, attendance, blackboard, calculator, campus, certificate, cheat, classmate, classroom, conclusion, degree, dictionary, discussion, enrol, essay, evidence, experiment, fail, grade, graduate, handout, headteacher, homework, internship, lecture, lesson, mark, multiple choice, notebook, participate, pass, pencil, playground, professor, pupil, research, resit, revise, revision, rubber, ruler, scholarship, semester, source, subject, summary, syllabus, term, textbook, thesis, tuition, tutor, uniform, whiteboard

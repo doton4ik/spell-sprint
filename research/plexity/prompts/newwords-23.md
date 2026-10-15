@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-23.md)
 Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Jobs and Interviews" (jobs).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 53 NEW words for the topic **Jobs and Interviews**: professions, applying, CV, interview, salary, career.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 55 NEW words for the topic **Jobs and Interviews**: professions, applying, CV, interview, salary, career.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -15,7 +15,7 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 53 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 55 entries.
 
 ```json
 [
@@ -24,7 +24,7 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 ]
 ```
 
-Before you answer, check: exactly 53 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
+Before you answer, check: exactly 55 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
 
-## Already in this topic (37 words, do not repeat)
-achievement, ambition, applicant, apprentice, body language, candidate, contract, cover letter, curriculum vitae, employee, employer, experience, eye contact, hire, interview, interviewer, job offer, mentor, opportunity, part-time, payslip, promotion, qualification, receptionist, recruitment, reference, resign, resignation, retire, shift, shortlist, skill, strength, unemployed, vacancy, weakness, workshop
+## Already in this topic (35 words, do not repeat)
+ambition, applicant, apprentice, body language, candidate, contract, cover letter, curriculum vitae, employee, employer, experience, eye contact, hire, interview, interviewer, job offer, mentor, part-time, payslip, promotion, qualification, receptionist, recruitment, reference, resign, resignation, retire, shift, shortlist, skill, strength, unemployed, vacancy, weakness, workshop

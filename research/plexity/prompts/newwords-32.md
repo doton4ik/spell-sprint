@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-32.md)
 Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Confusable Words" (confusable).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 34 NEW words for the topic **Confusable Words**: look-alike and sound-alike words (affect/effect, principal/principle).
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 33 NEW words for the topic **Confusable Words**: look-alike and sound-alike words (affect/effect, principal/principle).
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,7 +16,7 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 34 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 33 entries.
 
 ```json
 [
@@ -25,7 +25,7 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 ]
 ```
 
-Before you answer, check: exactly 34 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
+Before you answer, check: exactly 33 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
 
-## Already in this topic (16 words, do not repeat)
-advice, advise, affect, effect, loose, lose, principal, principle, quiet, quite, stationary, stationery, their, there, weather, whether
+## Already in this topic (17 words, do not repeat)
+advice, advise, affect, effect, lightning, loose, lose, principal, principle, quiet, quite, stationary, stationery, their, there, weather, whether

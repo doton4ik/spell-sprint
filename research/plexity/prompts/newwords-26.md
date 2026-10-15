@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-26.md)
 Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Technology and Internet" (tech).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 53 NEW words for the topic **Technology and Internet**: computers, phones, apps, the web, social media, gadgets.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 51 NEW words for the topic **Technology and Internet**: computers, phones, apps, the web, social media, gadgets.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -15,7 +15,7 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 53 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 51 entries.
 
 ```json
 [
@@ -24,7 +24,7 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 ]
 ```
 
-Before you answer, check: exactly 53 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
+Before you answer, check: exactly 51 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
 
-## Already in this topic (37 words, do not repeat)
-account, attachment, backup, battery, browser, cable, charger, cursor, decide, delete, device, download, folder, icon, install, keyboard, laptop, notification, password, printer, privacy, reminder, router, screen, search engine, social media, software, spam, storage, subscribe, tablet, technology, update, username, virus, website, wireless
+## Already in this topic (39 words, do not repeat)
+account, attachment, backup, battery, browser, cable, charger, cursor, delete, device, download, folder, headphones, icon, install, keyboard, laptop, notification, password, printer, privacy, reminder, router, screen, search engine, settings, social media, software, spam, speaker, storage, subscribe, tablet, technology, update, username, virus, website, wireless

@@ -9,7 +9,8 @@ export const TOPICS = [
   ['weather', 'Weather and Seasons', 'Everyday life', 'weather, seasons, climate, natural events'],
   ['phone', 'Phone and Messages', 'Everyday life', 'calls, texts, letters, e-mail, post'],
   ['family', 'Family and Relationships', 'People', 'relatives, friends, dating, marriage, life stages'],
-  ['feelings', 'Feelings and Character', 'People', 'emotions, personality, behaviour, opinions'],
+  ['feelings', 'Feelings and Character', 'People', 'emotions, personality, behaviour'],
+  ['ideas', 'Ideas and Society', 'People', 'opinions, society, reasons, choices, abstract everyday words'],
   ['city', 'City and Directions', 'Places and travel', 'buildings, streets, places in town, giving directions'],
   ['transport', 'Transport', 'Places and travel', 'cars, buses, trains, driving, public transport'],
   ['travel', 'Travel and Hotels', 'Places and travel', 'holidays, booking, hotels, sightseeing, luggage'],
@@ -26,7 +27,8 @@ export const TOPICS = [
   ['describing', 'Describing Things', 'Language', 'adjectives and adverbs for size, quality, manner, degree'],
   ['misspelled', 'Commonly Misspelled Words', 'Language', 'words with tricky spelling that do not belong to a topic above'],
   ['confusable', 'Confusable Words', 'Language', 'look-alike and sound-alike words (affect/effect, principal/principle)'],
-  ['logistics', 'Logistics and Warehouse', 'Professional', 'warehouse, stock, shipping, supply chain'],
-  ['customs', 'Customs and Trade', 'Professional', 'import, export, tariffs, customs documents, freight'],
+  ['logistics', 'Logistics and Trade', 'Professional', 'warehouse, stock, shipping, supply chain, import, export, tariffs, freight'],
 ]
+// the answers still use the old id 'customs'; it is merged into 'logistics' (scripts/topic-fixes.mjs)
+export const OLD_TOPIC_IDS = ['customs']
 export const LEVELS = ['A2', 'B1', 'B2', 'C1']

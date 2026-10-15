@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-05.md)
 Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Daily Routine and Time" (routine).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 49 NEW words for the topic **Daily Routine and Time**: daily habits, days, dates, frequency, time expressions.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 45 NEW words for the topic **Daily Routine and Time**: daily habits, days, dates, frequency, time expressions.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -15,7 +15,7 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 49 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 45 entries.
 
 ```json
 [
@@ -24,7 +24,7 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 ]
 ```
 
-Before you answer, check: exactly 49 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
+Before you answer, check: exactly 45 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
 
-## Already in this topic (41 words, do not repeat)
-afterwards, alarm, annual, april, august, beforehand, century, dawn, decade, december, era, fortnight, friday, habit, in advance, january, june, march, meanwhile, midnight, monday, nap, noon, nowadays, on time, oversleep, recent, routine, saturday, schedule, september, shower, sunday, thursday, timetable, toothbrush, toothpaste, towel, tuesday, weekday, weekly
+## Already in this topic (45 words, do not repeat)
+afterwards, alarm, annual, april, august, beforehand, century, dawn, decade, december, duration, era, february, fortnight, friday, habit, in advance, january, june, march, meanwhile, midnight, monday, nap, noon, nowadays, on time, oversleep, recent, relax, routine, saturday, schedule, september, shower, sunday, thursday, timetable, toothbrush, toothpaste, towel, tuesday, wednesday, weekday, weekly

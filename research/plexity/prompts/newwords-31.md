@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-31.md)
 Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Commonly Misspelled Words" (misspelled).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 26 NEW words for the topic **Commonly Misspelled Words**: words with tricky spelling that do not belong to a topic above.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 30 NEW words for the topic **Commonly Misspelled Words**: words with tricky spelling that do not belong to a topic above.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,7 +16,7 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 26 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 30 entries.
 
 ```json
 [
@@ -25,7 +25,7 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 ]
 ```
 
-Before you answer, check: exactly 26 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
+Before you answer, check: exactly 30 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
 
-## Already in this topic (44 words, do not repeat)
-accommodation, achieve, answer, believe, calendar, cemetery, conscience, contact, definitely, embarrass, environment, exaggerate, existence, february, foreign, government, grammar, guarantee, headphones, height, humorous, immediately, independent, knowledge, library, lightning, millennium, misspell, necessary, neighbour, occasionally, privilege, pronunciation, questionnaire, receive, restaurant, rhythm, separate, settings, sincerely, speaker, tongue, wednesday, weird
+## Already in this topic (40 words, do not repeat)
+accommodation, achieve, answer, believe, calendar, cemetery, conscience, definitely, embarrass, environment, exaggerate, foreign, government, grammar, guarantee, height, humorous, immediately, independent, knowledge, library, maintenance, millennium, misspell, necessary, neighbour, noticeable, occasionally, occurrence, possession, privilege, pronunciation, questionnaire, receive, restaurant, rhythm, separate, sincerely, tongue, weird

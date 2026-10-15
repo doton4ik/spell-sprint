@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-08.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Phone and Messages" (phone).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Family and Relationships" (family).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 50 NEW words for the topic **Phone and Messages**: calls, texts, letters, e-mail, post.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 49 NEW words for the topic **Family and Relationships**: relatives, friends, dating, marriage, life stages.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -15,7 +15,7 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 50 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 49 entries.
 
 ```json
 [
@@ -24,7 +24,7 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 ]
 ```
 
-Before you answer, check: exactly 50 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
+Before you answer, check: exactly 49 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
 
-## Already in this topic (30 words, do not repeat)
-airline, avoid, block, caller, conversation, dial, emoji, follower, forward, hang up, log in, message, mobile, mute, online, passcode, reception, reply, ring, ringtone, screenshot, selfie, silent, suitcase, text, trolley, unlock, unread, upload, voicemail
+## Already in this topic (41 words, do not repeat)
+acquaintance, adopt, adult, ancestor, anniversary, argue, aunt, babysitter, boyfriend, bride, celebrate, cousin, divorce, elderly, engaged, flatmate, friendship, funeral, generation, girlfriend, grandchild, grandparents, groom, honeymoon, marriage, neighbour, nephew, niece, relationship, relative, sibling, stepfather, stepmother, stranger, teenager, toddler, trust, twins, uncle, wedding, widow

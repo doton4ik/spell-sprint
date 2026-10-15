@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-18.md)
 Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "At the Airport" (airport).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 59 NEW words for the topic **At the Airport**: flights, check-in, security, passport control.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 52 NEW words for the topic **At the Airport**: flights, check-in, security, passport control.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -15,7 +15,7 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 59 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 52 entries.
 
 ```json
 [
@@ -24,7 +24,7 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 ]
 ```
 
-Before you answer, check: exactly 59 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
+Before you answer, check: exactly 52 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
 
-## Already in this topic (31 words, do not repeat)
-aisle, announcement, arrival, baggage claim, boarding, boarding pass, cabin crew, carousel, check-in desk, cockpit, connecting flight, crew, departure, departure lounge, emergency exit, flight, gate, immigration, jet, landing, layover, lifejacket, luggage, passport, passport control, pilot, runway, scanner, seatbelt, terminal, turbulence
+## Already in this topic (38 words, do not repeat)
+airline, aisle, announcement, arrival, baggage claim, boarding, boarding pass, border, cabin crew, carousel, check-in desk, cockpit, connecting flight, crew, customs, customs officer, departure, departure lounge, emergency exit, flight, gate, immigration, jet, landing, layover, lifejacket, luggage, passport, passport control, pilot, runway, scanner, seatbelt, suitcase, terminal, trolley, turbulence, visa

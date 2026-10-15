@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-27.md)
 Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Phrasal Verbs" (phrasal).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 35 NEW words for the topic **Phrasal Verbs**: verb + particle (give up, look after, turn down).
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 39 NEW words for the topic **Phrasal Verbs**: verb + particle (give up, look after, turn down).
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,7 +16,7 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 35 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 39 entries.
 
 ```json
 [
@@ -25,7 +25,7 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 ]
 ```
 
-Before you answer, check: exactly 35 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
+Before you answer, check: exactly 39 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
 
-## Already in this topic (55 words, do not repeat)
-break down, bring up, call back, call off, carry on, catch up with, come across, come back, consider, drop by, fall out with, figure out, fill in, find out, get along with, get off, get over, get up, give back, give up, go on, hang out, hold on, look after, look for, look forward to, look into, look up, maintenance, noticeable, occurrence, pick up, plug in, possession, put away, put off, put on, put up with, queue up, run into, run out of, set off, set up, show up, sort out, take after, take off, tidy up, try on, turn down, turn off, turn on, turn up, wake up, work out
+## Already in this topic (51 words, do not repeat)
+break down, bring up, call back, call off, carry on, catch up with, come across, come back, drop by, fall out with, figure out, fill in, find out, get along with, get off, get over, get up, give back, give up, go on, hang out, hold on, look after, look for, look forward to, look into, look up, pick up, plug in, put away, put off, put on, put up with, queue up, run into, run out of, set off, set up, show up, sort out, switch off, take after, take off, tidy up, try on, turn down, turn off, turn on, turn up, wake up, work out

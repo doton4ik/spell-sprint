@@ -29,4 +29,4 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 Before you answer, check: exactly 32 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
 
 ## Already in this topic (26 words, do not repeat)
-borrow, carry, compare, decision, depend, describe, explain, greet, hurry, improve, include, increase, knock, lend, mention, notice, prefer, provide, purpose, reason, reduce, require, run errands, solve, suggest, wander
+avoid, borrow, carry, compare, consider, decide, depend, describe, explain, greet, hurry, improve, include, increase, knock, lend, mention, notice, prefer, provide, reduce, require, run errands, solve, suggest, wander

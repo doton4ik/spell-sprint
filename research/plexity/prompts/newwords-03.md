@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-03.md)
 Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Shopping and Money" (shopping).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 36 NEW words for the topic **Shopping and Money**: shops, prices, paying, banks, saving, spending, debt.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 40 NEW words for the topic **Shopping and Money**: shops, prices, paying, banks, saving, spending, debt.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -15,7 +15,7 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 36 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 40 entries.
 
 ```json
 [
@@ -24,7 +24,7 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 ]
 ```
 
-Before you answer, check: exactly 36 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
+Before you answer, check: exactly 40 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
 
-## Already in this topic (54 words, do not repeat)
-afford, amount, available, balance, bank account, bargain, budget, cash, cashier, chance, change, cheap, choice, coin, complaint, credit card, customer, debit card, debt, delivery, deposit, discount, exchange, expenses, expensive, instalment, insurance, interest rate, loan, loyalty card, mortgage, overdraft, overpay, pin code, price tag, purse, receipt, refund, savings, savings account, shopkeeper, sold out, statement, stock, supermarket, surcharge, tax, till, transfer, voucher, wage, wallet, waste, withdraw
+## Already in this topic (50 words, do not repeat)
+afford, balance, bank account, bargain, budget, cash, cashier, change, cheap, coin, complaint, credit card, customer, debit card, debt, delivery, deposit, discount, exchange, expenses, expensive, instalment, insurance, interest rate, loan, loyalty card, mortgage, overdraft, overpay, pin code, price tag, purse, receipt, refund, savings, savings account, shopkeeper, sold out, statement, stock, supermarket, surcharge, tax, till, transfer, voucher, wage, wallet, waste, withdraw

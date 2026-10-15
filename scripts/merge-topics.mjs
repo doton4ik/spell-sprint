@@ -2,12 +2,14 @@
 // in a ```json block) against the library and writes research/plexity/topic-map.json with --apply.
 // Run: node scripts/merge-topics.mjs [--apply]
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
-import { TOPICS, LEVELS } from './library-topics.mjs'
+import { TOPICS, LEVELS, OLD_TOPIC_IDS } from './library-topics.mjs'
+import { FIX_TOPIC, FIX_LEVEL, MERGE_TOPIC } from './topic-fixes.mjs'
 
 const csv = readFileSync(new URL('../src/data/spell-sprint-built-in-library.csv', import.meta.url), 'utf8')
 const ids = [...csv.matchAll(/^([a-z0-9][a-z0-9-]*),/gm)].map((m) => m[1]).filter((id) => id !== 'word_id')
 const known = new Set(ids)
-const topicIds = new Set(TOPICS.map((t) => t[0]))
+const topicIds = new Set([...TOPICS.map((t) => t[0]), ...OLD_TOPIC_IDS])
+const wordOf = new Map([...csv.matchAll(/^([a-z0-9][a-z0-9-]*),([^,\n]*),/gm)].map((m) => [m[1], m[2].toLowerCase()]))
 const map = new Map()
 const problems = []
 let missingFiles = 0
@@ -48,6 +50,12 @@ if (process.argv.includes('--apply')) {
   if (problems.length || left.length) {
     console.log('Not applied: fix the problems and place every word first.')
     process.exit(1)
+  }
+  for (const [id, entry] of map) {
+    const w = wordOf.get(id)
+    if (FIX_TOPIC[w]) entry.topic = FIX_TOPIC[w]
+    if (FIX_LEVEL[w]) entry.level = FIX_LEVEL[w]
+    if (MERGE_TOPIC[entry.topic]) entry.topic = MERGE_TOPIC[entry.topic]
   }
   writeFileSync(new URL('../research/plexity/topic-map.json', import.meta.url), JSON.stringify(Object.fromEntries(map), null, 1) + '\n')
   console.log('written research/plexity/topic-map.json')
