@@ -1,16 +1,9 @@
 import builtInCsv from './spell-sprint-built-in-library.csv?raw'
 import { canonicalTopic, libraryKindForName } from './libraryTaxonomy'
 import { parseCsvRows } from '../services/csv'
+import { isCefrLevel } from './libraryTopics'
 import { canonicalWordId } from './wordAliases'
 import { normalisePartOfSpeech, type LibraryDifficulty, type LibraryWord, type WordLibrary } from '../types/library'
-
-const includesByLibrary: Record<string, string[]> = {
-  'Supply Chain Core': ['shared-inventory-fundamentals'],
-  'Warehouse Operations — SAP': ['shared-inventory-fundamentals'],
-  'Business and Office Core': ['shared-professional-essentials'],
-  'General English — Active Vocabulary': ['shared-professional-essentials'],
-  'Study and Career Core': ['shared-professional-essentials'],
-}
 
 function parseRows(text: string) {
   const rows = parseCsvRows(text)
@@ -43,6 +36,7 @@ function builtInWord(row: Record<string, string>): LibraryWord {
     definition: row.definition || undefined,
     alternatives: alternativesOf(row.alternatives),
     partOfSpeech: normalisePartOfSpeech(row.part_of_speech),
+    level: isCefrLevel(row.level) ? row.level : undefined,
     library: row.library,
     source: row.source || 'legacy-migrated',
   }
@@ -62,5 +56,5 @@ export const builtInLibraries: WordLibrary[] = Object.entries(
   words,
   source: 'built-in',
   kind: libraryKindForName(name),
-  includes: includesByLibrary[name] ?? [],
+  includes: [],
 }))

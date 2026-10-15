@@ -8,7 +8,7 @@ import '../../pages/libraries.css'
 
 // The first-run (and later "tune my library") choice: which parts of the vocabulary this learner studies.
 // Unchecked groups are hidden (not deleted), packs are switched on or off. Everything can be changed in Libraries.
-const choosable = libraryGroups.filter((group) => ['core-english', 'study-work', 'topics-interests'].includes(group.id))
+const choosable = libraryGroups.filter((group) => !group.personal && group.id !== 'all' && group.id !== 'professional')
 
 export function LibrarySetup({ onDone, title = 'Set up your library' }: { onDone: () => void; title?: string }) {
   const everyLibrary = getEveryLibrary()

@@ -38,9 +38,19 @@ describe('getPracticeAttempts cache', () => {
     expect(read.wordId).toBe('places-in-town-places-in-town-library')
     expect(read.taskId).toBe('library-places-in-town-places-in-town-library-write-en')
   })
-  it('answers from a topic that was merged count under the new topic', () => {
-    window.localStorage.setItem(KEY, JSON.stringify([{ ...attempt('a', '2026-01-01'), topicId: 'animals', topic: 'Animals' }]))
-    expect(getPracticeAttempts()[0]).toMatchObject({ topicId: 'nature-and-animals', topic: 'Nature and Animals' })
+  it('an answer about a built-in word counts under the topic that word has today', () => {
+    window.localStorage.setItem(
+      KEY,
+      JSON.stringify([
+        {
+          ...attempt('a', '2026-01-01'),
+          wordId: 'everyday-life-daily-routines-breakfast',
+          topicId: 'food-and-drinks',
+          topic: 'Food and Drinks',
+        },
+      ]),
+    )
+    expect(getPracticeAttempts()[0]).toMatchObject({ topicId: 'food', topic: 'Food and Cooking' })
   })
   it('an answer marked "right too" is right here and on another device', () => {
     const wrong = { ...attempt('a', '2026-01-01T10:00:00.000Z'), isCorrect: false }

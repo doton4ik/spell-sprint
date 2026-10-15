@@ -1,3 +1,5 @@
+import type { CefrLevel } from '../data/libraryTopics'
+
 export type LibraryDifficulty = 'easy' | 'medium' | 'hard'
 export type LibraryKind = 'core' | 'topic' | 'shared'
 export const partOfSpeechOptions = [
@@ -46,6 +48,7 @@ export type LibraryWord = {
   definition?: string
   alternatives?: string[] // other correct English answers for the same Russian prompt (rubbish → trash, garbage)
   partOfSpeech: PartOfSpeech
+  level?: CefrLevel // A2–C1 for built-in words (words you add or import have none)
   library: string
   source: string
 }

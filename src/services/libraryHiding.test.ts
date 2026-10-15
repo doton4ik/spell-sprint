@@ -8,20 +8,20 @@ beforeEach(() => window.localStorage.clear())
 
 describe('hiding a whole library', () => {
   it('keeps a pack that is switched on when its topic name is also in a hidden group', () => {
-    const pack = libraryPacks.find((item) => item.id === 'business-office')!
-    const group = libraryGroups.find((item) => item.id === 'study-work')!
+    const pack = libraryPacks.find((item) => item.id === 'logistics')!
+    const group = libraryGroups.find((item) => item.id === 'professional')!
     setPackEnabled(pack.id, true)
-    const packSize = getLibraries().find((library) => library.name === 'Business and Office Core')?.words.length ?? 0
+    const packSize = getLibraries().find((library) => library.name === 'Logistics and Trade')?.words.length ?? 0
     expect(packSize).toBeGreaterThan(0)
     setWordHidden(hideKey.group(group.id), true)
     const after = getLibraries()
-    expect(after.find((library) => library.name === 'Business and Office Core')?.words.length).toBe(packSize)
+    expect(after.find((library) => library.name === 'Logistics and Trade')?.words.length).toBe(packSize)
     const base = after.filter(isBaseLibrary).flatMap((library) => library.words)
     expect(base.some((word) => group.topics.includes(word.topic))).toBe(false)
   })
 
   it('hides and restores a group', () => {
-    const group = libraryGroups.find((item) => item.id === 'topics-interests')!
+    const group = libraryGroups.find((item) => item.id === 'health-free-time')!
     const before = getAllWords().length
     setWordHidden(hideKey.group(group.id), true)
     expect(getAllWords().length).toBeLessThan(before)

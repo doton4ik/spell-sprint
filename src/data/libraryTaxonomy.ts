@@ -1,32 +1,10 @@
+import { libraryTopics } from './libraryTopics'
+
 export type CanonicalTopic = { id: string; name: string; subtopics: string[] }
 
-export const canonicalTopics: CanonicalTopic[] = [
-  { id: 'general-english', name: 'General English', subtopics: ['Active Vocabulary', 'Professional Communication'] },
-  { id: 'everyday-life', name: 'Everyday Life', subtopics: ['Daily Routines', 'Home and Services'] },
-  { id: 'logistics', name: 'Logistics', subtopics: ['Supply Chain', 'Receiving and Storage', 'Order Fulfilment'] },
-  { id: 'warehouse-operations', name: 'Warehouse Operations', subtopics: ['SAP Warehouse Processes', 'Inventory Control'] },
-  { id: 'transport-and-trade', name: 'Transport and Trade', subtopics: ['Road Freight', 'Customs and Trade'] },
-  { id: 'business-and-office', name: 'Business and Office', subtopics: ['Finance and Planning', 'Meetings and Negotiation'] },
-  { id: 'travel-and-culture', name: 'Travel and Culture', subtopics: ['Travel Planning', 'At the Destination'] },
-  { id: 'study-and-career', name: 'Study and Career', subtopics: ['Learning and Research', 'Career Development'] },
-  { id: 'sport-and-fitness', name: 'Sport and Fitness', subtopics: ['Training and Competition', 'Health and Recovery'] },
-  { id: 'nature-and-animals', name: 'Nature and Animals', subtopics: [] },
-  { id: 'people-and-family', name: 'People and Family', subtopics: [] },
-  { id: 'city-and-transport', name: 'City and Transport', subtopics: [] },
-]
+// The topics of the built-in library (see libraryTopics.ts). A topic id of an imported file that matches one gets its name.
+export const canonicalTopics: CanonicalTopic[] = libraryTopics.map((topic) => ({ id: topic.id, name: topic.name, subtopics: [] }))
 
-const topicAliases: Record<string, string> = {
-  business: 'business-and-office',
-  travel: 'travel-and-culture',
-  sports: 'sport-and-fitness',
-  'sap-professional-logistics': 'warehouse-operations',
-  // Topics that overlapped (October 2026): one topic each, the words keep their subtopics.
-  animals: 'nature-and-animals',
-  'family-and-relationships': 'people-and-family',
-  'jobs-and-career': 'study-and-career',
-  home: 'everyday-life',
-  'places-in-town': 'city-and-transport',
-}
 const key = (value: string) =>
   value
     .trim()
@@ -34,7 +12,7 @@ const key = (value: string) =>
     .replaceAll(/[^a-z0-9]+/g, '-')
 
 export function canonicalTopic(topicId: string, topic: string) {
-  const id = topicAliases[key(topicId || topic)] ?? key(topicId || topic)
+  const id = key(topicId || topic)
   const match = canonicalTopics.find((item) => item.id === id)
   return match ? { topicId: match.id, topic: match.name } : { topicId: id, topic: topic.trim() }
 }

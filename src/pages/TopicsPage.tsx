@@ -15,7 +15,7 @@ const groupNames: Record<string, string> = {
   ...Object.fromEntries(libraryGroups.map((group) => [group.id, group.name])),
   other: 'My topics',
 }
-const groupOrder = ['core-english', 'study-work', 'topics-interests', 'professional-vocabulary', 'other']
+const groupOrder = [...libraryGroups.filter((group) => !group.personal && group.id !== 'all').map((group) => group.id), 'other']
 
 function practise(words: LibraryWord[], label: string) {
   setPendingPracticeSelection({ wordIds: pickPracticeWords(words).map((word) => word.wordId), label, mode: 'write-en' })

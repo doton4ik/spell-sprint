@@ -7,24 +7,13 @@ export type LibraryPack = {
   libraries: string[] // built-in library names, as in the "library" column of the CSV
 }
 
+// Business, office and sport are ordinary topics now; only the narrow professional vocabulary stays an add-on.
 export const libraryPacks: LibraryPack[] = [
   {
     id: 'logistics',
-    name: 'Logistics and Warehouse',
-    description: 'Supply chain, inventory, SAP warehouse processes and road freight.',
-    libraries: ['Supply Chain Core', 'Warehouse Operations — SAP', 'Transport and Trade — Road Freight', 'Shared — Inventory Fundamentals'],
-  },
-  {
-    id: 'business-office',
-    name: 'Business and Office',
-    description: 'Finance, planning, meetings and negotiation at work.',
-    libraries: ['Business and Office Core'],
-  },
-  {
-    id: 'sport-fitness',
-    name: 'Sport and Fitness',
-    description: 'Training, competitions, health and recovery.',
-    libraries: ['Sport and Fitness Core'],
+    name: 'Logistics and Trade',
+    description: 'Warehouse, stock, shipping, supply chain, import, export and freight.',
+    libraries: ['Logistics and Trade'],
   },
 ]
 

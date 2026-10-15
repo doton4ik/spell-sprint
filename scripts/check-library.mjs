@@ -5,6 +5,7 @@
 // that do not accept each other as an answer.
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { TOPICS } from './library-topics.mjs'
 
 const root = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')
 const text = readFileSync(join(root, 'src/data/spell-sprint-built-in-library.csv'), 'utf8')
@@ -51,6 +52,8 @@ const latin = /^[A-Za-zÀ-ÿ][A-Za-zÀ-ÿ '’-]*$/
 const cyrillic = /[а-яё]/i
 const limits = { word: 60, translation: 120, example: 200, rule: 120 }
 
+const topicNames = Object.fromEntries(TOPICS.map(([id, name]) => [id, name]))
+const topicIds = new Set(Object.keys(topicNames))
 const ids = new Set()
 for (const row of rows) {
   for (const key of ['word_id', 'word', 'translation', 'topic_id', 'topic', 'library', 'difficulty'])
@@ -64,6 +67,9 @@ for (const row of rows) {
   if (row.word && !latin.test(row.word)) fail(row, `word "${row.word}" has characters that are not English letters`)
   if (row.translation && !cyrillic.test(row.translation)) fail(row, `translation "${row.translation}" has no Russian letters`)
   if (row.difficulty && !['easy', 'medium', 'hard'].includes(row.difficulty)) fail(row, `difficulty "${row.difficulty}"`)
+  if (!topicIds.has(row.topic_id) || topicNames[row.topic_id] !== row.topic || row.library !== row.topic)
+    fail(row, `topic "${row.topic_id}" / "${row.topic}" / library "${row.library}" is not one of the topics in scripts/library-topics.mjs`)
+  if (!['A2', 'B1', 'B2', 'C1'].includes(row.level)) fail(row, `level "${row.level}" is not A2, B1, B2 or C1`)
   if (row.risk && !/^[1-5]$/.test(row.risk)) fail(row, `risk "${row.risk}" is not 1–5`)
   for (const [key, max] of Object.entries(limits)) if ((row[key] ?? '').length > max) fail(row, `${key} is longer than ${max} characters`)
   if (row.extra_example && !/^(tatoeba:\d+|written)$/.test(row.extra_example_source ?? ''))

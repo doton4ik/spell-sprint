@@ -1,71 +1,18 @@
 import type { LibraryWord, WordLibrary } from '../types/library'
+import { libraryTopics, librarySections, type LibrarySectionId } from '../data/libraryTopics'
 
-export type LibraryGroupId = 'all' | 'core-english' | 'study-work' | 'topics-interests' | 'professional-vocabulary' | 'my-libraries'
+// A "group" is a section of topics (Everyday life, People, …) plus two special tabs: all words and the learner's own.
+export type LibraryGroupId = 'all' | LibrarySectionId | 'my-libraries'
 export type LibraryGroup = { id: LibraryGroupId; name: string; description: string; topics: string[]; personal?: boolean }
 
 export const libraryGroups: LibraryGroup[] = [
   { id: 'all', name: 'All', description: 'Every available vocabulary set.', topics: [] },
-  {
-    id: 'core-english',
-    name: 'Core English',
-    description: 'Essential English for everyday communication.',
-    topics: [
-      'General English',
-      'Everyday Life',
-      'People and Family',
-      'Home',
-      'Food and Drinks',
-      'Shopping',
-      'Daily Routine',
-      'Common Actions',
-      'Feelings',
-      'Time and Dates',
-      'Basic Descriptions',
-      'Clothes and Appearance',
-      'Family and Relationships',
-      'Describing Things',
-      'Phone and Messages',
-    ],
-  },
-  {
-    id: 'study-work',
-    name: 'Study and Work',
-    description: 'English for learning, work, and communication.',
-    topics: [
-      'School and Learning',
-      'Study and Career',
-      'Business and Office',
-      'Jobs and Career',
-      'Communication',
-      'Professional Email',
-      'Meetings',
-      'Projects',
-    ],
-  },
-  {
-    id: 'topics-interests',
-    name: 'Topics and Interests',
-    description: 'Travel, health, technology, and interests.',
-    topics: [
-      'Travel and Culture',
-      'Health and Body',
-      'Sport and Fitness',
-      'Technology',
-      'Environment',
-      'Nature and Animals',
-      'Places in Town',
-      'Weather and Seasons',
-      'Hobbies and Free Time',
-      'City and Transport',
-      'Animals',
-    ],
-  },
-  {
-    id: 'professional-vocabulary',
-    name: 'Professional Vocabulary',
-    description: 'Optional vocabulary for professional fields.',
-    topics: ['Logistics', 'Warehouse Operations', 'Transport and Trade', 'Supply Chain'],
-  },
+  ...librarySections.map((section) => ({
+    id: section.id,
+    name: section.name,
+    description: section.description,
+    topics: libraryTopics.filter((topic) => topic.section === section.id).map((topic) => topic.name),
+  })),
   { id: 'my-libraries', name: 'My Libraries', description: 'Vocabulary imported or created by you.', topics: [], personal: true },
 ]
 

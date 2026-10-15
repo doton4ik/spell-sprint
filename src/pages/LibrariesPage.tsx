@@ -115,7 +115,7 @@ function RuleChips({ rules }: { rules?: Rule[] }) {
 
 export function LibrariesPage() {
   const [libraries, setLibraries] = useState(getLibraries)
-  const [activeGroup, setActiveGroup] = useState<Tab>('core-english')
+  const [activeGroup, setActiveGroup] = useState<Tab>('everyday-life')
   const [notice, setNotice] = useState<{ text: string; undo?: () => void } | null>(null)
   const [details, setDetails] = useState<Details | null>(null)
   const [query, setQuery] = useState('')
@@ -457,7 +457,7 @@ function GroupCard({
         <button className="outline-action" type="button" onClick={() => onPractice(words, group.name)}>
           Practise
         </button>
-        {group.id === 'professional-vocabulary' ? null : (
+        {group.id === 'professional' ? null : (
           <button className="quiet-button" type="button" onClick={() => onSetHidden(true)}>
             Hide
           </button>

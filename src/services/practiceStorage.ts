@@ -4,6 +4,7 @@ import { sanitizeAttempt } from './validate'
 import { safeSetItem } from './safeStorage'
 import { wordAliases } from '../data/wordAliases'
 import { canonicalTopic } from '../data/libraryTaxonomy'
+import { builtInLibraries } from '../data/libraries'
 
 const SETTINGS_KEY = 'spell-sprint.practice-settings'
 const ATTEMPTS_KEY = 'spell-sprint.practice-attempts'
@@ -93,13 +94,26 @@ export function getPracticeAttempts(): readonly PracticeAttempt[] {
   return cached.attempts
 }
 
+let topicOfBuiltInWord: Map<string, { topicId: string; topic: string }> | null = null
+function builtInTopic(wordId: string) {
+  topicOfBuiltInWord ??= new Map(
+    builtInLibraries.flatMap((library) =>
+      library.words.flatMap((word) => [word.id, word.wordId].map((id) => [id, { topicId: word.topicId, topic: word.topic }] as const)),
+    ),
+  )
+  return topicOfBuiltInWord.get(wordId)
+}
+
 // Older answers are read with today's ids: a word that is in two libraries has one id
-// (data/wordAliases.ts), and a merged topic has one name (data/libraryTaxonomy.ts).
+// (data/wordAliases.ts), and a topic is the one the word has today.
 function withSharedWordId(attempt: PracticeAttempt): PracticeAttempt {
   if (!attempt || typeof attempt !== 'object') return attempt
   const shared = attempt.wordId ? wordAliases[attempt.wordId] : undefined
   let result = shared ? { ...attempt, wordId: shared, taskId: attempt.taskId.replace(attempt.wordId!, shared) } : attempt
-  if (result.topicId && typeof result.topic === 'string') {
+  // The topics were reorganised in October 2026: an answer about a built-in word counts under that word's topic today.
+  const own = result.wordId ? builtInTopic(result.wordId) : undefined
+  if (own && own.topicId !== result.topicId) result = { ...result, topicId: own.topicId, topic: own.topic }
+  else if (result.topicId && typeof result.topic === 'string') {
     const topic = canonicalTopic(result.topicId, result.topic)
     if (topic.topicId !== result.topicId) result = { ...result, topicId: topic.topicId, topic: topic.topic }
   }

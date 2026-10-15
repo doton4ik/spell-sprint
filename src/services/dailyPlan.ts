@@ -39,7 +39,7 @@ export type DailyPlan = { items: PlanItem[]; due: number; weak: number; fresh: n
 
 export const PLAN_SIZE = 10
 const NEW_WORDS_WHEN_BUSY = 2 // even on a heavy review day, a couple of new words keep things moving
-const professionalTopics = new Set(libraryGroups.find((group) => group.id === 'professional-vocabulary')?.topics ?? [])
+const professionalTopics = new Set(libraryGroups.find((group) => group.id === 'professional')?.topics ?? [])
 
 // Stable pseudo-random order for one day: the plan must not reshuffle every time the page re-renders.
 function dayHash(text: string) {
