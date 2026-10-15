@@ -54,7 +54,7 @@
 .settings-page {
   position: relative;
 }
-/* The page and its rail are one group, centred together; when the window is narrower the group moves left and the page
+/* The page starts at the same left edge as every other page and its rail sits beside it; when the window is narrower the page
    gets a little narrower, so the rail stays. Below 1200px (a narrow window or a high zoom) the rail goes. */
 .sprint-page {
   --page-w: 780px;
@@ -73,7 +73,7 @@
   .proof-page:has(> .page-rail),
   .topics-page:has(> .page-rail),
   .settings-page:has(> .page-rail) {
-    margin-left: max(0px, calc((100% - var(--page-w) - 228px) / 2));
+    margin-left: 0;
     margin-right: 0;
     max-width: none;
     width: min(var(--page-w), 100% - 228px);

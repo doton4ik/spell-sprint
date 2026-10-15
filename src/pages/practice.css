@@ -1,6 +1,6 @@
 /* ---------- Page and header ---------- */
 .practice-page {
-  margin: 0 auto;
+  margin: 0;
   max-width: 1440px;
   padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
 }
@@ -1389,7 +1389,7 @@
 }
 @media (min-width: 1200px) {
   .practice-page:has(.session-rail) {
-    margin-left: max(0px, calc((100% - 780px - 200px) / 2));
+    margin-left: 0;
     margin-right: 0;
     max-width: none;
     width: min(780px, 100% - 200px);

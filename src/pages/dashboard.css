@@ -1,5 +1,5 @@
 .dashboard {
-  margin: 0 auto;
+  margin: 0;
   max-width: 1420px;
   padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
 }

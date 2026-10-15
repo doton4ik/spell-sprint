@@ -52,6 +52,19 @@ test('every page has the same space around its content', async ({ page }) => {
   expect(Object.fromEntries(seen)).toEqual({ [[...seen.keys()][0]]: pages.map(([route]) => route) })
 })
 
+test('on a wide screen the page titles start at the same left edge', async ({ page }) => {
+  await page.setViewportSize({ width: 1915, height: 870 })
+  const lefts = new Map<number, string[]>()
+  for (const [route] of pages) {
+    await page.goto(`/#${route}`)
+    await expect(page.locator('main h1').first()).toBeVisible()
+    const left = (await page.evaluate(`Math.round(document.querySelector('main h1').getBoundingClientRect().left)`)) as number
+    lefts.set(left, [...(lefts.get(left) ?? []), route])
+  }
+  // Pages used to be centred at their own widths, so the title jumped sideways from page to page.
+  expect(Object.fromEntries(lefts)).toEqual({ [[...lefts.keys()][0]]: pages.map(([route]) => route) })
+})
+
 test('a wrong answer in practice becomes a mistake', async ({ page }) => {
   const errors = watchErrors(page)
   await page.goto('/#practice')

@@ -1,5 +1,5 @@
 .learning-page {
-  margin: 0 auto;
+  margin: 0;
   max-width: 1330px;
   padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
 }

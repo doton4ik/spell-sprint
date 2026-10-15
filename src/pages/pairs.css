@@ -1,5 +1,5 @@
 .pairs-page {
-  margin: 0 auto;
+  margin: 0;
   max-width: 900px;
   padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
 }
