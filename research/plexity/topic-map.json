@@ -1,0 +1,3858 @@
+{
+ "logistics-inventory-control-inventory": {
+  "topic": "logistics",
+  "level": "B2"
+ },
+ "logistics-inventory-control-stock": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "logistics-inventory-control-replenishment": {
+  "topic": "logistics",
+  "level": "C1"
+ },
+ "logistics-inventory-control-safety-stock": {
+  "topic": "logistics",
+  "level": "C1"
+ },
+ "logistics-inventory-control-demand-planning": {
+  "topic": "logistics",
+  "level": "C1"
+ },
+ "logistics-inventory-control-inventory-accuracy": {
+  "topic": "logistics",
+  "level": "C1"
+ },
+ "logistics-receiving-and-storage-storage-location": {
+  "topic": "logistics",
+  "level": "B2"
+ },
+ "general-english-professional-communication-deadline": {
+  "topic": "office",
+  "level": "B1"
+ },
+ "general-english-professional-communication-research": {
+  "topic": "school",
+  "level": "B2"
+ },
+ "general-english-professional-communication-responsibility": {
+  "topic": "office",
+  "level": "B1"
+ },
+ "general-english-professional-communication-achievement": {
+  "topic": "jobs",
+  "level": "B2"
+ },
+ "general-english-professional-communication-presentation": {
+  "topic": "office",
+  "level": "B1"
+ },
+ "general-english-professional-communication-communication": {
+  "topic": "office",
+  "level": "B1"
+ },
+ "logistics-supply-chain-supplier": {
+  "topic": "logistics",
+  "level": "B2"
+ },
+ "logistics-supply-chain-shipment": {
+  "topic": "logistics",
+  "level": "B2"
+ },
+ "logistics-supply-chain-delivery": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "logistics-receiving-and-storage-goods-receipt": {
+  "topic": "logistics",
+  "level": "B2"
+ },
+ "logistics-order-fulfilment-order-picking": {
+  "topic": "logistics",
+  "level": "B2"
+ },
+ "logistics-receiving-and-storage-warehouse-layout": {
+  "topic": "logistics",
+  "level": "B2"
+ },
+ "logistics-supply-chain-distribution-center": {
+  "topic": "logistics",
+  "level": "B2"
+ },
+ "logistics-supply-chain-lead-time": {
+  "topic": "logistics",
+  "level": "C1"
+ },
+ "logistics-supply-chain-transportation-cost": {
+  "topic": "logistics",
+  "level": "B2"
+ },
+ "warehouse-operations-sap-warehouse-processes-material": {
+  "topic": "logistics",
+  "level": "B1"
+ },
+ "warehouse-operations-sap-warehouse-processes-purchase-order": {
+  "topic": "logistics",
+  "level": "B2"
+ },
+ "warehouse-operations-sap-warehouse-processes-goods-movement": {
+  "topic": "logistics",
+  "level": "B2"
+ },
+ "warehouse-operations-sap-warehouse-processes-warehouse-task": {
+  "topic": "logistics",
+  "level": "B2"
+ },
+ "warehouse-operations-sap-warehouse-processes-inbound-processing": {
+  "topic": "logistics",
+  "level": "C1"
+ },
+ "warehouse-operations-sap-warehouse-processes-outbound-processing": {
+  "topic": "logistics",
+  "level": "C1"
+ },
+ "warehouse-operations-inventory-control-physical-inventory": {
+  "topic": "logistics",
+  "level": "C1"
+ },
+ "warehouse-operations-sap-warehouse-processes-material-document": {
+  "topic": "logistics",
+  "level": "C1"
+ },
+ "business-and-office-finance-and-planning-revenue": {
+  "topic": "office",
+  "level": "B2"
+ },
+ "business-and-office-finance-and-planning-expenses": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "business-and-office-finance-and-planning-profit": {
+  "topic": "office",
+  "level": "B1"
+ },
+ "business-and-office-finance-and-planning-profit-margin": {
+  "topic": "office",
+  "level": "C1"
+ },
+ "business-and-office-finance-and-planning-invoice": {
+  "topic": "office",
+  "level": "B2"
+ },
+ "business-and-office-meetings-and-negotiation-negotiation": {
+  "topic": "office",
+  "level": "B2"
+ },
+ "business-and-office-meetings-and-negotiation-agreement": {
+  "topic": "office",
+  "level": "B1"
+ },
+ "business-and-office-meetings-and-negotiation-recruitment": {
+  "topic": "jobs",
+  "level": "C1"
+ },
+ "business-and-office-finance-and-planning-target": {
+  "topic": "office",
+  "level": "B2"
+ },
+ "business-and-office-meetings-and-negotiation-customer-satisfaction": {
+  "topic": "office",
+  "level": "B2"
+ },
+ "business-and-office-finance-and-planning-market-demand": {
+  "topic": "office",
+  "level": "B2"
+ },
+ "business-and-office-finance-and-planning-cash-flow": {
+  "topic": "office",
+  "level": "C1"
+ },
+ "business-and-office-meetings-and-negotiation-complaint": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "general-english-active-vocabulary-environment": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-opportunity": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-society": {
+  "topic": "family",
+  "level": "B2"
+ },
+ "general-english-active-vocabulary-technology": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-culture": {
+  "topic": "travel",
+  "level": "B1"
+ },
+ "study-and-career-learning-and-research-assignment": {
+  "topic": "school",
+  "level": "B2"
+ },
+ "study-and-career-career-development-interview": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "study-and-career-career-development-qualification": {
+  "topic": "jobs",
+  "level": "B2"
+ },
+ "study-and-career-career-development-experience": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "travel-and-culture-travel-planning-luggage": {
+  "topic": "airport",
+  "level": "B1"
+ },
+ "travel-and-culture-travel-planning-departure": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "travel-and-culture-travel-planning-arrival": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "travel-and-culture-at-the-destination-accommodation": {
+  "topic": "travel",
+  "level": "B2"
+ },
+ "travel-and-culture-at-the-destination-directions": {
+  "topic": "city",
+  "level": "B1"
+ },
+ "travel-and-culture-travel-planning-ticket": {
+  "topic": "transport",
+  "level": "A2"
+ },
+ "travel-and-culture-travel-planning-reservation": {
+  "topic": "travel",
+  "level": "B2"
+ },
+ "travel-and-culture-travel-planning-delay": {
+  "topic": "transport",
+  "level": "B2"
+ },
+ "travel-and-culture-travel-planning-border": {
+  "topic": "customs",
+  "level": "B2"
+ },
+ "travel-and-culture-at-the-destination-sightseeing": {
+  "topic": "travel",
+  "level": "B2"
+ },
+ "sport-and-fitness-training-and-competition-training": {
+  "topic": "sport",
+  "level": "B1"
+ },
+ "sport-and-fitness-training-and-competition-match": {
+  "topic": "sport",
+  "level": "A2"
+ },
+ "sport-and-fitness-training-and-competition-tournament": {
+  "topic": "sport",
+  "level": "B2"
+ },
+ "sport-and-fitness-training-and-competition-goalkeeper": {
+  "topic": "sport",
+  "level": "B2"
+ },
+ "sport-and-fitness-training-and-competition-defender": {
+  "topic": "sport",
+  "level": "B2"
+ },
+ "sport-and-fitness-training-and-competition-score": {
+  "topic": "sport",
+  "level": "B1"
+ },
+ "sport-and-fitness-health-and-recovery-injury": {
+  "topic": "health",
+  "level": "B2"
+ },
+ "everyday-life-daily-routines-breakfast": {
+  "topic": "food",
+  "level": "A2"
+ },
+ "everyday-life-daily-routines-commute": {
+  "topic": "transport",
+  "level": "B2"
+ },
+ "everyday-life-home-and-services-appointment": {
+  "topic": "health",
+  "level": "B1"
+ },
+ "everyday-life-home-and-services-receipt": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "transport-and-trade-road-freight-freight": {
+  "topic": "customs",
+  "level": "C1"
+ },
+ "transport-and-trade-road-freight-consignment": {
+  "topic": "customs",
+  "level": "C1"
+ },
+ "transport-and-trade-road-freight-carrier": {
+  "topic": "logistics",
+  "level": "C1"
+ },
+ "transport-and-trade-customs-and-trade-customs-clearance": {
+  "topic": "customs",
+  "level": "C1"
+ },
+ "transport-and-trade-customs-and-trade-bill-of-lading": {
+  "topic": "customs",
+  "level": "C1"
+ },
+ "food-and-drinks-meals-and-cooking-lunch": {
+  "topic": "food",
+  "level": "A2"
+ },
+ "food-and-drinks-meals-and-cooking-dinner": {
+  "topic": "food",
+  "level": "A2"
+ },
+ "food-and-drinks-meals-and-cooking-ingredient": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-meals-and-cooking-recipe": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-meals-and-cooking-vegetable": {
+  "topic": "food",
+  "level": "A2"
+ },
+ "food-and-drinks-meals-and-cooking-fruit": {
+  "topic": "food",
+  "level": "A2"
+ },
+ "food-and-drinks-meals-and-cooking-delicious": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-meals-and-cooking-bake": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-meals-and-cooking-boil": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-meals-and-cooking-chop": {
+  "topic": "food",
+  "level": "B2"
+ },
+ "food-and-drinks-meals-and-cooking-fry": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-meals-and-cooking-seasoning": {
+  "topic": "food",
+  "level": "C1"
+ },
+ "food-and-drinks-meals-and-cooking-dessert": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-caf-and-restaurant-menu": {
+  "topic": "food",
+  "level": "A2"
+ },
+ "food-and-drinks-caf-and-restaurant-order": {
+  "topic": "food",
+  "level": "A2"
+ },
+ "food-and-drinks-caf-and-restaurant-bill": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-caf-and-restaurant-tip": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-caf-and-restaurant-waiter": {
+  "topic": "food",
+  "level": "A2"
+ },
+ "food-and-drinks-caf-and-restaurant-reservation": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-caf-and-restaurant-beverage": {
+  "topic": "food",
+  "level": "B2"
+ },
+ "food-and-drinks-caf-and-restaurant-sparkling-water": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-caf-and-restaurant-allergic": {
+  "topic": "health",
+  "level": "B2"
+ },
+ "food-and-drinks-caf-and-restaurant-vegetarian": {
+  "topic": "food",
+  "level": "B2"
+ },
+ "food-and-drinks-caf-and-restaurant-takeaway": {
+  "topic": "food",
+  "level": "B2"
+ },
+ "food-and-drinks-caf-and-restaurant-portion": {
+  "topic": "food",
+  "level": "B2"
+ },
+ "people-and-family-family-and-friends-relative": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "people-and-family-family-and-friends-neighbour": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "people-and-family-family-and-friends-colleague": {
+  "topic": "office",
+  "level": "B2"
+ },
+ "people-and-family-family-and-friends-friendship": {
+  "topic": "family",
+  "level": "B2"
+ },
+ "people-and-family-family-and-friends-grandparents": {
+  "topic": "family",
+  "level": "A2"
+ },
+ "people-and-family-family-and-friends-sibling": {
+  "topic": "family",
+  "level": "C1"
+ },
+ "people-and-family-family-and-friends-stranger": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "people-and-family-family-and-friends-guest": {
+  "topic": "travel",
+  "level": "B1"
+ },
+ "people-and-family-family-and-friends-generation": {
+  "topic": "family",
+  "level": "B2"
+ },
+ "people-and-family-family-and-friends-marriage": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "feelings-feelings-happy": {
+  "topic": "feelings",
+  "level": "A2"
+ },
+ "feelings-feelings-anxious": {
+  "topic": "feelings",
+  "level": "B2"
+ },
+ "feelings-feelings-embarrassed": {
+  "topic": "feelings",
+  "level": "B2"
+ },
+ "feelings-feelings-jealous": {
+  "topic": "feelings",
+  "level": "B2"
+ },
+ "feelings-feelings-grateful": {
+  "topic": "feelings",
+  "level": "B2"
+ },
+ "feelings-feelings-disappointed": {
+  "topic": "feelings",
+  "level": "B1"
+ },
+ "feelings-feelings-confident": {
+  "topic": "feelings",
+  "level": "B1"
+ },
+ "feelings-feelings-exhausted": {
+  "topic": "feelings",
+  "level": "B2"
+ },
+ "feelings-feelings-curious": {
+  "topic": "feelings",
+  "level": "B1"
+ },
+ "feelings-feelings-proud": {
+  "topic": "feelings",
+  "level": "B1"
+ },
+ "feelings-feelings-lonely": {
+  "topic": "feelings",
+  "level": "B1"
+ },
+ "feelings-feelings-relieved": {
+  "topic": "feelings",
+  "level": "B2"
+ },
+ "feelings-feelings-frustrated": {
+  "topic": "feelings",
+  "level": "B2"
+ },
+ "feelings-feelings-excited": {
+  "topic": "feelings",
+  "level": "A2"
+ },
+ "home-around-the-house-kitchen": {
+  "topic": "home",
+  "level": "A2"
+ },
+ "home-around-the-house-bedroom": {
+  "topic": "home",
+  "level": "A2"
+ },
+ "home-around-the-house-bathroom": {
+  "topic": "home",
+  "level": "A2"
+ },
+ "home-around-the-house-furniture": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "home-around-the-house-curtain": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "home-around-the-house-staircase": {
+  "topic": "home",
+  "level": "B2"
+ },
+ "home-around-the-house-neighbourhood": {
+  "topic": "city",
+  "level": "B2"
+ },
+ "home-around-the-house-rent": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "home-around-the-house-landlord": {
+  "topic": "home",
+  "level": "B2"
+ },
+ "home-around-the-house-appliance": {
+  "topic": "home",
+  "level": "C1"
+ },
+ "home-around-the-house-laundry": {
+  "topic": "home",
+  "level": "B2"
+ },
+ "home-around-the-house-cupboard": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "places-in-town-places-in-town-pharmacy": {
+  "topic": "city",
+  "level": "B1"
+ },
+ "places-in-town-places-in-town-library": {
+  "topic": "city",
+  "level": "A2"
+ },
+ "places-in-town-places-in-town-post-office": {
+  "topic": "city",
+  "level": "A2"
+ },
+ "places-in-town-places-in-town-bakery": {
+  "topic": "city",
+  "level": "B1"
+ },
+ "places-in-town-places-in-town-crossroads": {
+  "topic": "city",
+  "level": "B2"
+ },
+ "places-in-town-places-in-town-pavement": {
+  "topic": "city",
+  "level": "B2"
+ },
+ "places-in-town-places-in-town-bridge": {
+  "topic": "city",
+  "level": "B1"
+ },
+ "places-in-town-places-in-town-square": {
+  "topic": "city",
+  "level": "B1"
+ },
+ "places-in-town-places-in-town-supermarket": {
+  "topic": "shopping",
+  "level": "A2"
+ },
+ "places-in-town-places-in-town-station": {
+  "topic": "transport",
+  "level": "A2"
+ },
+ "shopping-shopping-refund": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "shopping-shopping-discount": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "shopping-shopping-cashier": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "shopping-shopping-customer": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "shopping-shopping-bargain": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "shopping-shopping-afford": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "shopping-shopping-exchange": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "shopping-shopping-fitting-room": {
+  "topic": "clothes",
+  "level": "B2"
+ },
+ "shopping-shopping-sold-out": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "health-and-body-body-and-symptoms-stomach": {
+  "topic": "health",
+  "level": "B1"
+ },
+ "health-and-body-body-and-symptoms-throat": {
+  "topic": "health",
+  "level": "B1"
+ },
+ "health-and-body-body-and-symptoms-shoulder": {
+  "topic": "health",
+  "level": "B1"
+ },
+ "health-and-body-body-and-symptoms-knee": {
+  "topic": "health",
+  "level": "B1"
+ },
+ "health-and-body-body-and-symptoms-headache": {
+  "topic": "health",
+  "level": "A2"
+ },
+ "health-and-body-body-and-symptoms-fever": {
+  "topic": "health",
+  "level": "B2"
+ },
+ "health-and-body-body-and-symptoms-cough": {
+  "topic": "health",
+  "level": "B1"
+ },
+ "health-and-body-body-and-symptoms-sneeze": {
+  "topic": "health",
+  "level": "C1"
+ },
+ "health-and-body-body-and-symptoms-dizzy": {
+  "topic": "health",
+  "level": "B2"
+ },
+ "health-and-body-body-and-symptoms-sore": {
+  "topic": "health",
+  "level": "B2"
+ },
+ "health-and-body-body-and-symptoms-bruise": {
+  "topic": "health",
+  "level": "C1"
+ },
+ "health-and-body-body-and-symptoms-injury": {
+  "topic": "health",
+  "level": "B2"
+ },
+ "health-and-body-at-the-doctor-appointment": {
+  "topic": "health",
+  "level": "B1"
+ },
+ "health-and-body-at-the-doctor-prescription": {
+  "topic": "health",
+  "level": "B2"
+ },
+ "health-and-body-at-the-doctor-symptom": {
+  "topic": "health",
+  "level": "B2"
+ },
+ "health-and-body-at-the-doctor-treatment": {
+  "topic": "health",
+  "level": "B2"
+ },
+ "health-and-body-at-the-doctor-recover": {
+  "topic": "health",
+  "level": "B2"
+ },
+ "health-and-body-at-the-doctor-vaccine": {
+  "topic": "health",
+  "level": "C1"
+ },
+ "health-and-body-at-the-doctor-dentist": {
+  "topic": "health",
+  "level": "A2"
+ },
+ "health-and-body-at-the-doctor-ambulance": {
+  "topic": "health",
+  "level": "B2"
+ },
+ "health-and-body-at-the-doctor-painkiller": {
+  "topic": "health",
+  "level": "B2"
+ },
+ "health-and-body-at-the-doctor-check-up": {
+  "topic": "health",
+  "level": "B2"
+ },
+ "health-and-body-at-the-doctor-allergy": {
+  "topic": "health",
+  "level": "B2"
+ },
+ "health-and-body-at-the-doctor-insurance": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "technology-devices-and-software-device": {
+  "topic": "tech",
+  "level": "B2"
+ },
+ "technology-devices-and-software-screen": {
+  "topic": "tech",
+  "level": "A2"
+ },
+ "technology-devices-and-software-keyboard": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-devices-and-software-battery": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-devices-and-software-charger": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-devices-and-software-software": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-devices-and-software-update": {
+  "topic": "tech",
+  "level": "B2"
+ },
+ "technology-devices-and-software-install": {
+  "topic": "tech",
+  "level": "B2"
+ },
+ "technology-devices-and-software-download": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-devices-and-software-password": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-devices-and-software-storage": {
+  "topic": "tech",
+  "level": "B2"
+ },
+ "technology-devices-and-software-wireless": {
+  "topic": "tech",
+  "level": "B2"
+ },
+ "technology-online-life-website": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-online-life-browser": {
+  "topic": "tech",
+  "level": "B2"
+ },
+ "technology-online-life-attachment": {
+  "topic": "tech",
+  "level": "B2"
+ },
+ "technology-online-life-username": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-online-life-notification": {
+  "topic": "tech",
+  "level": "B2"
+ },
+ "technology-online-life-subscribe": {
+  "topic": "tech",
+  "level": "B2"
+ },
+ "technology-online-life-account": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-online-life-privacy": {
+  "topic": "tech",
+  "level": "B2"
+ },
+ "technology-online-life-search-engine": {
+  "topic": "tech",
+  "level": "B2"
+ },
+ "technology-online-life-social-media": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-online-life-delete": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-online-life-backup": {
+  "topic": "tech",
+  "level": "B2"
+ },
+ "nature-and-animals-nature-and-animals-forest": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "nature-and-animals-nature-and-animals-mountain": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "nature-and-animals-nature-and-animals-valley": {
+  "topic": "nature",
+  "level": "B2"
+ },
+ "nature-and-animals-nature-and-animals-island": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "nature-and-animals-nature-and-animals-wildlife": {
+  "topic": "nature",
+  "level": "B2"
+ },
+ "nature-and-animals-nature-and-animals-insect": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "nature-and-animals-nature-and-animals-butterfly": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "nature-and-animals-nature-and-animals-squirrel": {
+  "topic": "nature",
+  "level": "B2"
+ },
+ "nature-and-animals-nature-and-animals-eagle": {
+  "topic": "nature",
+  "level": "B2"
+ },
+ "nature-and-animals-nature-and-animals-pollution": {
+  "topic": "nature",
+  "level": "B2"
+ },
+ "nature-and-animals-nature-and-animals-recycle": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "weather-and-seasons-weather-and-seasons-weather": {
+  "topic": "weather",
+  "level": "A2"
+ },
+ "weather-and-seasons-weather-and-seasons-temperature": {
+  "topic": "weather",
+  "level": "B1"
+ },
+ "weather-and-seasons-weather-and-seasons-forecast": {
+  "topic": "weather",
+  "level": "B2"
+ },
+ "weather-and-seasons-weather-and-seasons-thunderstorm": {
+  "topic": "weather",
+  "level": "B2"
+ },
+ "weather-and-seasons-weather-and-seasons-breeze": {
+  "topic": "weather",
+  "level": "B2"
+ },
+ "weather-and-seasons-weather-and-seasons-drizzle": {
+  "topic": "weather",
+  "level": "C1"
+ },
+ "weather-and-seasons-weather-and-seasons-humid": {
+  "topic": "weather",
+  "level": "B2"
+ },
+ "weather-and-seasons-weather-and-seasons-freezing": {
+  "topic": "weather",
+  "level": "B1"
+ },
+ "weather-and-seasons-weather-and-seasons-autumn": {
+  "topic": "weather",
+  "level": "A2"
+ },
+ "weather-and-seasons-weather-and-seasons-spring": {
+  "topic": "weather",
+  "level": "A2"
+ },
+ "weather-and-seasons-weather-and-seasons-flood": {
+  "topic": "weather",
+  "level": "B2"
+ },
+ "weather-and-seasons-weather-and-seasons-drought": {
+  "topic": "weather",
+  "level": "C1"
+ },
+ "general-english-commonly-misspelled-accommodation": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-receive": {
+  "topic": "misspelled",
+  "level": "B1"
+ },
+ "general-english-commonly-misspelled-separate": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-definitely": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-occasionally": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-necessary": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-embarrass": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-environment": {
+  "topic": "misspelled",
+  "level": "B1"
+ },
+ "general-english-commonly-misspelled-government": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-restaurant": {
+  "topic": "misspelled",
+  "level": "A2"
+ },
+ "general-english-commonly-misspelled-calendar": {
+  "topic": "misspelled",
+  "level": "B1"
+ },
+ "general-english-commonly-misspelled-library": {
+  "topic": "misspelled",
+  "level": "B1"
+ },
+ "general-english-commonly-misspelled-february": {
+  "topic": "misspelled",
+  "level": "A2"
+ },
+ "general-english-commonly-misspelled-wednesday": {
+  "topic": "misspelled",
+  "level": "A2"
+ },
+ "general-english-commonly-misspelled-knowledge": {
+  "topic": "misspelled",
+  "level": "B1"
+ },
+ "general-english-commonly-misspelled-achieve": {
+  "topic": "misspelled",
+  "level": "B1"
+ },
+ "general-english-commonly-misspelled-believe": {
+  "topic": "misspelled",
+  "level": "B1"
+ },
+ "general-english-commonly-misspelled-foreign": {
+  "topic": "misspelled",
+  "level": "B1"
+ },
+ "general-english-commonly-misspelled-weird": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-neighbour": {
+  "topic": "misspelled",
+  "level": "B1"
+ },
+ "general-english-commonly-misspelled-privilege": {
+  "topic": "misspelled",
+  "level": "C1"
+ },
+ "general-english-commonly-misspelled-conscience": {
+  "topic": "misspelled",
+  "level": "C1"
+ },
+ "general-english-commonly-misspelled-rhythm": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-answer": {
+  "topic": "misspelled",
+  "level": "A2"
+ },
+ "general-english-confusable-words-their": {
+  "topic": "confusable",
+  "level": "A2"
+ },
+ "general-english-confusable-words-there": {
+  "topic": "confusable",
+  "level": "A2"
+ },
+ "general-english-confusable-words-affect": {
+  "topic": "confusable",
+  "level": "B2"
+ },
+ "general-english-confusable-words-effect": {
+  "topic": "confusable",
+  "level": "B2"
+ },
+ "general-english-confusable-words-principal": {
+  "topic": "confusable",
+  "level": "C1"
+ },
+ "general-english-confusable-words-principle": {
+  "topic": "confusable",
+  "level": "C1"
+ },
+ "general-english-confusable-words-stationary": {
+  "topic": "confusable",
+  "level": "C1"
+ },
+ "general-english-confusable-words-stationery": {
+  "topic": "confusable",
+  "level": "C1"
+ },
+ "general-english-confusable-words-advice": {
+  "topic": "confusable",
+  "level": "B1"
+ },
+ "general-english-confusable-words-advise": {
+  "topic": "confusable",
+  "level": "B2"
+ },
+ "general-english-confusable-words-loose": {
+  "topic": "confusable",
+  "level": "B2"
+ },
+ "general-english-confusable-words-lose": {
+  "topic": "confusable",
+  "level": "B1"
+ },
+ "general-english-confusable-words-quiet": {
+  "topic": "confusable",
+  "level": "A2"
+ },
+ "general-english-confusable-words-quite": {
+  "topic": "confusable",
+  "level": "B1"
+ },
+ "general-english-confusable-words-weather": {
+  "topic": "confusable",
+  "level": "A2"
+ },
+ "general-english-confusable-words-whether": {
+  "topic": "confusable",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-look-up": {
+  "topic": "phrasal",
+  "level": "A2"
+ },
+ "common-actions-everyday-phrasal-verbs-give-up": {
+  "topic": "phrasal",
+  "level": "A2"
+ },
+ "common-actions-everyday-phrasal-verbs-turn-on": {
+  "topic": "phrasal",
+  "level": "A2"
+ },
+ "common-actions-everyday-phrasal-verbs-turn-off": {
+  "topic": "phrasal",
+  "level": "A2"
+ },
+ "common-actions-everyday-phrasal-verbs-find-out": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-figure-out": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-carry-on": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-break-down": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-run-out-of": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-put-off": {
+  "topic": "phrasal",
+  "level": "B2"
+ },
+ "common-actions-everyday-phrasal-verbs-set-up": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-take-off": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-get-along-with": {
+  "topic": "phrasal",
+  "level": "B2"
+ },
+ "common-actions-everyday-phrasal-verbs-come-across": {
+  "topic": "phrasal",
+  "level": "B2"
+ },
+ "common-actions-everyday-phrasal-verbs-work-out": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-show-up": {
+  "topic": "phrasal",
+  "level": "B2"
+ },
+ "common-actions-everyday-phrasal-verbs-call-off": {
+  "topic": "phrasal",
+  "level": "B2"
+ },
+ "common-actions-everyday-phrasal-verbs-look-forward-to": {
+  "topic": "phrasal",
+  "level": "B2"
+ },
+ "travel-and-culture-at-the-airport-boarding-pass": {
+  "topic": "airport",
+  "level": "B1"
+ },
+ "travel-and-culture-at-the-airport-passport-control": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "travel-and-culture-at-the-airport-baggage-claim": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "travel-and-culture-at-the-airport-check-in-desk": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "travel-and-culture-at-the-airport-gate": {
+  "topic": "airport",
+  "level": "A2"
+ },
+ "travel-and-culture-at-the-airport-terminal": {
+  "topic": "airport",
+  "level": "B1"
+ },
+ "travel-and-culture-at-the-airport-customs-officer": {
+  "topic": "customs",
+  "level": "C1"
+ },
+ "travel-and-culture-at-the-airport-departure-lounge": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "travel-and-culture-at-the-airport-connecting-flight": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "travel-and-culture-at-the-airport-immigration": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "travel-and-culture-on-the-plane-seatbelt": {
+  "topic": "airport",
+  "level": "B1"
+ },
+ "travel-and-culture-on-the-plane-cabin-crew": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "travel-and-culture-on-the-plane-aisle": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "travel-and-culture-on-the-plane-turbulence": {
+  "topic": "airport",
+  "level": "C1"
+ },
+ "travel-and-culture-on-the-plane-emergency-exit": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "travel-and-culture-on-the-plane-announcement": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "travel-and-culture-on-the-plane-jet-lag": {
+  "topic": "travel",
+  "level": "B2"
+ },
+ "travel-and-culture-on-the-plane-runway": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "jobs-and-career-job-interview-cover-letter": {
+  "topic": "jobs",
+  "level": "B2"
+ },
+ "jobs-and-career-job-interview-curriculum-vitae": {
+  "topic": "jobs",
+  "level": "C1"
+ },
+ "jobs-and-career-job-interview-strength": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "jobs-and-career-job-interview-weakness": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "jobs-and-career-job-interview-reference": {
+  "topic": "jobs",
+  "level": "B2"
+ },
+ "jobs-and-career-job-interview-shortlist": {
+  "topic": "jobs",
+  "level": "C1"
+ },
+ "jobs-and-career-job-interview-job-offer": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "jobs-and-career-job-interview-body-language": {
+  "topic": "jobs",
+  "level": "B2"
+ },
+ "jobs-and-career-job-interview-eye-contact": {
+  "topic": "jobs",
+  "level": "B2"
+ },
+ "jobs-and-career-at-work-supervisor": {
+  "topic": "office",
+  "level": "B2"
+ },
+ "jobs-and-career-at-work-workload": {
+  "topic": "office",
+  "level": "B2"
+ },
+ "jobs-and-career-at-work-overtime": {
+  "topic": "office",
+  "level": "B2"
+ },
+ "jobs-and-career-at-work-promotion": {
+  "topic": "jobs",
+  "level": "B2"
+ },
+ "jobs-and-career-at-work-resignation": {
+  "topic": "jobs",
+  "level": "C1"
+ },
+ "jobs-and-career-at-work-teamwork": {
+  "topic": "office",
+  "level": "B1"
+ },
+ "jobs-and-career-at-work-punctual": {
+  "topic": "office",
+  "level": "B2"
+ },
+ "jobs-and-career-at-work-workplace": {
+  "topic": "office",
+  "level": "B1"
+ },
+ "jobs-and-career-at-work-annual-leave": {
+  "topic": "office",
+  "level": "B2"
+ },
+ "jobs-and-career-at-work-sick-leave": {
+  "topic": "health",
+  "level": "B2"
+ },
+ "time-and-dates-days-and-months-monday": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "time-and-dates-days-and-months-tuesday": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "time-and-dates-days-and-months-thursday": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "time-and-dates-days-and-months-friday": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "time-and-dates-days-and-months-saturday": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "time-and-dates-days-and-months-sunday": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "time-and-dates-days-and-months-january": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "time-and-dates-days-and-months-march": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "time-and-dates-days-and-months-april": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "time-and-dates-days-and-months-june": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "time-and-dates-days-and-months-august": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "time-and-dates-days-and-months-september": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "time-and-dates-days-and-months-december": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "time-and-dates-planning-time-schedule": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "time-and-dates-planning-time-timetable": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "time-and-dates-planning-time-postpone": {
+  "topic": "office",
+  "level": "B2"
+ },
+ "time-and-dates-planning-time-in-advance": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "time-and-dates-planning-time-on-time": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "time-and-dates-planning-time-punctuality": {
+  "topic": "office",
+  "level": "B2"
+ },
+ "time-and-dates-planning-time-reminder": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "time-and-dates-planning-time-duration": {
+  "topic": "school",
+  "level": "B2"
+ },
+ "time-and-dates-planning-time-beforehand": {
+  "topic": "routine",
+  "level": "B2"
+ },
+ "time-and-dates-planning-time-nowadays": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "time-and-dates-planning-time-fortnight": {
+  "topic": "routine",
+  "level": "B2"
+ },
+ "time-and-dates-planning-time-weekday": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "shopping-paying-cash": {
+  "topic": "shopping",
+  "level": "A2"
+ },
+ "shopping-paying-credit-card": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "shopping-paying-debit-card": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "shopping-paying-change": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "shopping-paying-price-tag": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "shopping-paying-instalment": {
+  "topic": "shopping",
+  "level": "C1"
+ },
+ "shopping-paying-currency": {
+  "topic": "travel",
+  "level": "B1"
+ },
+ "shopping-paying-surcharge": {
+  "topic": "shopping",
+  "level": "C1"
+ },
+ "shopping-paying-voucher": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "shopping-paying-loyalty-card": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "shopping-paying-till": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "shopping-paying-overpay": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "shopping-banking-bank-account": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "shopping-banking-withdraw": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "shopping-banking-deposit": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "shopping-banking-balance": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "shopping-banking-overdraft": {
+  "topic": "shopping",
+  "level": "C1"
+ },
+ "shopping-banking-transfer": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "shopping-banking-savings-account": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "shopping-banking-interest-rate": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "shopping-banking-loan": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "shopping-banking-mortgage": {
+  "topic": "shopping",
+  "level": "C1"
+ },
+ "shopping-banking-pin-code": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "shopping-banking-statement": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "school-and-learning-in-class-classmate": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-in-class-textbook": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-in-class-blackboard": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-in-class-whiteboard": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-in-class-homework": {
+  "topic": "school",
+  "level": "A2"
+ },
+ "school-and-learning-in-class-lesson": {
+  "topic": "school",
+  "level": "A2"
+ },
+ "school-and-learning-in-class-lecture": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-in-class-syllabus": {
+  "topic": "school",
+  "level": "C1"
+ },
+ "school-and-learning-in-class-attendance": {
+  "topic": "school",
+  "level": "B2"
+ },
+ "school-and-learning-in-class-participate": {
+  "topic": "school",
+  "level": "B2"
+ },
+ "school-and-learning-in-class-discussion": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-exams-multiple-choice": {
+  "topic": "school",
+  "level": "B2"
+ },
+ "school-and-learning-exams-revision": {
+  "topic": "school",
+  "level": "B2"
+ },
+ "school-and-learning-exams-pass": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-exams-fail": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-exams-grade": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-exams-mark": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-exams-cheat": {
+  "topic": "school",
+  "level": "B2"
+ },
+ "school-and-learning-exams-certificate": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-exams-resit": {
+  "topic": "school",
+  "level": "C1"
+ },
+ "common-actions-at-home-tidy-up": {
+  "topic": "phrasal",
+  "level": "A2"
+ },
+ "common-actions-at-home-vacuum": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "common-actions-at-home-iron": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "common-actions-at-home-put-away": {
+  "topic": "phrasal",
+  "level": "A2"
+ },
+ "common-actions-at-home-plug-in": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-at-home-unplug": {
+  "topic": "home",
+  "level": "B2"
+ },
+ "common-actions-out-and-about-queue-up": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-out-and-about-run-errands": {
+  "topic": "actions",
+  "level": "B2"
+ },
+ "common-actions-out-and-about-drop-by": {
+  "topic": "phrasal",
+  "level": "B2"
+ },
+ "common-actions-out-and-about-hang-out": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-out-and-about-catch-up-with": {
+  "topic": "phrasal",
+  "level": "B2"
+ },
+ "common-actions-out-and-about-get-lost": {
+  "topic": "city",
+  "level": "A2"
+ },
+ "common-actions-out-and-about-rush-hour": {
+  "topic": "transport",
+  "level": "B1"
+ },
+ "clothes-and-appearance-clothing-items-trousers": {
+  "topic": "clothes",
+  "level": "A2"
+ },
+ "clothes-and-appearance-clothing-items-sweater": {
+  "topic": "clothes",
+  "level": "A2"
+ },
+ "clothes-and-appearance-clothing-items-underwear": {
+  "topic": "clothes",
+  "level": "B1"
+ },
+ "clothes-and-appearance-clothing-items-sleeve": {
+  "topic": "clothes",
+  "level": "B1"
+ },
+ "clothes-and-appearance-clothing-items-collar": {
+  "topic": "clothes",
+  "level": "B2"
+ },
+ "clothes-and-appearance-clothing-items-pocket": {
+  "topic": "clothes",
+  "level": "A2"
+ },
+ "clothes-and-appearance-clothing-items-button": {
+  "topic": "clothes",
+  "level": "A2"
+ },
+ "clothes-and-appearance-clothing-items-wear": {
+  "topic": "clothes",
+  "level": "A2"
+ },
+ "clothes-and-appearance-clothing-items-fit": {
+  "topic": "clothes",
+  "level": "A2"
+ },
+ "clothes-and-appearance-clothing-items-try-on": {
+  "topic": "phrasal",
+  "level": "A2"
+ },
+ "clothes-and-appearance-accessories-scarf": {
+  "topic": "clothes",
+  "level": "A2"
+ },
+ "clothes-and-appearance-accessories-gloves": {
+  "topic": "clothes",
+  "level": "A2"
+ },
+ "clothes-and-appearance-accessories-necklace": {
+  "topic": "clothes",
+  "level": "B1"
+ },
+ "clothes-and-appearance-accessories-bracelet": {
+  "topic": "clothes",
+  "level": "B1"
+ },
+ "clothes-and-appearance-accessories-sunglasses": {
+  "topic": "clothes",
+  "level": "A2"
+ },
+ "clothes-and-appearance-accessories-umbrella": {
+  "topic": "clothes",
+  "level": "A2"
+ },
+ "clothes-and-appearance-accessories-wallet": {
+  "topic": "shopping",
+  "level": "A2"
+ },
+ "clothes-and-appearance-accessories-put-on": {
+  "topic": "phrasal",
+  "level": "A2"
+ },
+ "clothes-and-appearance-looks-and-grooming-hairstyle": {
+  "topic": "clothes",
+  "level": "B1"
+ },
+ "clothes-and-appearance-looks-and-grooming-beard": {
+  "topic": "clothes",
+  "level": "A2"
+ },
+ "clothes-and-appearance-looks-and-grooming-moustache": {
+  "topic": "clothes",
+  "level": "B1"
+ },
+ "clothes-and-appearance-looks-and-grooming-perfume": {
+  "topic": "clothes",
+  "level": "B1"
+ },
+ "clothes-and-appearance-looks-and-grooming-shave": {
+  "topic": "clothes",
+  "level": "B1"
+ },
+ "clothes-and-appearance-looks-and-grooming-comb": {
+  "topic": "clothes",
+  "level": "B1"
+ },
+ "clothes-and-appearance-looks-and-grooming-fashionable": {
+  "topic": "clothes",
+  "level": "B1"
+ },
+ "clothes-and-appearance-looks-and-grooming-elegant": {
+  "topic": "clothes",
+  "level": "B2"
+ },
+ "clothes-and-appearance-looks-and-grooming-casual": {
+  "topic": "clothes",
+  "level": "B2"
+ },
+ "clothes-and-appearance-looks-and-grooming-scruffy": {
+  "topic": "clothes",
+  "level": "C1"
+ },
+ "family-and-relationships-relatives-cousin": {
+  "topic": "family",
+  "level": "A2"
+ },
+ "family-and-relationships-relatives-nephew": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "family-and-relationships-relatives-niece": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "family-and-relationships-relatives-aunt": {
+  "topic": "family",
+  "level": "A2"
+ },
+ "family-and-relationships-relatives-uncle": {
+  "topic": "family",
+  "level": "A2"
+ },
+ "family-and-relationships-relatives-twins": {
+  "topic": "family",
+  "level": "A2"
+ },
+ "family-and-relationships-relatives-elderly": {
+  "topic": "family",
+  "level": "B2"
+ },
+ "family-and-relationships-friends-and-partners-flatmate": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "family-and-relationships-friends-and-partners-acquaintance": {
+  "topic": "family",
+  "level": "C1"
+ },
+ "family-and-relationships-friends-and-partners-engaged": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "family-and-relationships-friends-and-partners-trust": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "family-and-relationships-friends-and-partners-argue": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "family-and-relationships-friends-and-partners-fall-out-with": {
+  "topic": "phrasal",
+  "level": "B2"
+ },
+ "family-and-relationships-life-events-wedding": {
+  "topic": "family",
+  "level": "A2"
+ },
+ "family-and-relationships-life-events-divorce": {
+  "topic": "family",
+  "level": "B2"
+ },
+ "family-and-relationships-life-events-anniversary": {
+  "topic": "family",
+  "level": "B2"
+ },
+ "family-and-relationships-life-events-funeral": {
+  "topic": "family",
+  "level": "B2"
+ },
+ "family-and-relationships-life-events-celebrate": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "family-and-relationships-life-events-adopt": {
+  "topic": "family",
+  "level": "B2"
+ },
+ "family-and-relationships-life-events-bring-up": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "family-and-relationships-life-events-look-after": {
+  "topic": "phrasal",
+  "level": "A2"
+ },
+ "hobbies-and-free-time-sport-and-exercise-gym": {
+  "topic": "sport",
+  "level": "A2"
+ },
+ "hobbies-and-free-time-sport-and-exercise-jog": {
+  "topic": "sport",
+  "level": "B1"
+ },
+ "hobbies-and-free-time-sport-and-exercise-exercise": {
+  "topic": "sport",
+  "level": "A2"
+ },
+ "hobbies-and-free-time-sport-and-exercise-equipment": {
+  "topic": "sport",
+  "level": "B1"
+ },
+ "hobbies-and-free-time-sport-and-exercise-competition": {
+  "topic": "sport",
+  "level": "A2"
+ },
+ "hobbies-and-free-time-sport-and-exercise-champion": {
+  "topic": "sport",
+  "level": "B1"
+ },
+ "hobbies-and-free-time-sport-and-exercise-referee": {
+  "topic": "sport",
+  "level": "B2"
+ },
+ "hobbies-and-free-time-sport-and-exercise-stadium": {
+  "topic": "sport",
+  "level": "B1"
+ },
+ "hobbies-and-free-time-sport-and-exercise-take-part-in": {
+  "topic": "sport",
+  "level": "A2"
+ },
+ "hobbies-and-free-time-creative-hobbies-paint": {
+  "topic": "sport",
+  "level": "A2"
+ },
+ "hobbies-and-free-time-creative-hobbies-knit": {
+  "topic": "sport",
+  "level": "B2"
+ },
+ "hobbies-and-free-time-creative-hobbies-sew": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "hobbies-and-free-time-creative-hobbies-hobby": {
+  "topic": "sport",
+  "level": "A2"
+ },
+ "hobbies-and-free-time-creative-hobbies-photography": {
+  "topic": "sport",
+  "level": "B1"
+ },
+ "hobbies-and-free-time-creative-hobbies-guitar": {
+  "topic": "sport",
+  "level": "A2"
+ },
+ "hobbies-and-free-time-creative-hobbies-instrument": {
+  "topic": "sport",
+  "level": "B1"
+ },
+ "hobbies-and-free-time-creative-hobbies-gardening": {
+  "topic": "sport",
+  "level": "A2"
+ },
+ "hobbies-and-free-time-creative-hobbies-collect": {
+  "topic": "sport",
+  "level": "A2"
+ },
+ "hobbies-and-free-time-creative-hobbies-craft": {
+  "topic": "sport",
+  "level": "B2"
+ },
+ "hobbies-and-free-time-relaxing-and-going-out-cinema": {
+  "topic": "sport",
+  "level": "A2"
+ },
+ "hobbies-and-free-time-relaxing-and-going-out-concert": {
+  "topic": "sport",
+  "level": "A2"
+ },
+ "hobbies-and-free-time-relaxing-and-going-out-audience": {
+  "topic": "sport",
+  "level": "B1"
+ },
+ "hobbies-and-free-time-relaxing-and-going-out-festival": {
+  "topic": "sport",
+  "level": "A2"
+ },
+ "hobbies-and-free-time-relaxing-and-going-out-board-game": {
+  "topic": "sport",
+  "level": "A2"
+ },
+ "hobbies-and-free-time-relaxing-and-going-out-relax": {
+  "topic": "feelings",
+  "level": "A2"
+ },
+ "hobbies-and-free-time-relaxing-and-going-out-enjoyable": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "hobbies-and-free-time-relaxing-and-going-out-exciting": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "city-and-transport-places-in-the-city-skyscraper": {
+  "topic": "city",
+  "level": "B1"
+ },
+ "city-and-transport-places-in-the-city-suburb": {
+  "topic": "city",
+  "level": "B2"
+ },
+ "city-and-transport-places-in-the-city-crowded": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "city-and-transport-getting-around-platform": {
+  "topic": "transport",
+  "level": "A2"
+ },
+ "city-and-transport-getting-around-passenger": {
+  "topic": "transport",
+  "level": "B1"
+ },
+ "city-and-transport-getting-around-underground": {
+  "topic": "transport",
+  "level": "B1"
+ },
+ "city-and-transport-getting-around-journey": {
+  "topic": "transport",
+  "level": "B1"
+ },
+ "city-and-transport-getting-around-catch": {
+  "topic": "transport",
+  "level": "A2"
+ },
+ "city-and-transport-getting-around-miss": {
+  "topic": "transport",
+  "level": "A2"
+ },
+ "city-and-transport-getting-around-get-off": {
+  "topic": "phrasal",
+  "level": "A2"
+ },
+ "city-and-transport-getting-around-bus-stop": {
+  "topic": "transport",
+  "level": "A2"
+ },
+ "city-and-transport-traffic-and-directions-traffic": {
+  "topic": "transport",
+  "level": "B1"
+ },
+ "city-and-transport-traffic-and-directions-roundabout": {
+  "topic": "city",
+  "level": "B1"
+ },
+ "city-and-transport-traffic-and-directions-junction": {
+  "topic": "city",
+  "level": "B2"
+ },
+ "city-and-transport-traffic-and-directions-pedestrian": {
+  "topic": "city",
+  "level": "B2"
+ },
+ "city-and-transport-traffic-and-directions-traffic-lights": {
+  "topic": "city",
+  "level": "A2"
+ },
+ "city-and-transport-traffic-and-directions-straight-on": {
+  "topic": "city",
+  "level": "A2"
+ },
+ "city-and-transport-traffic-and-directions-opposite": {
+  "topic": "city",
+  "level": "A2"
+ },
+ "city-and-transport-traffic-and-directions-cross": {
+  "topic": "city",
+  "level": "A2"
+ },
+ "city-and-transport-traffic-and-directions-park": {
+  "topic": "transport",
+  "level": "A2"
+ },
+ "city-and-transport-traffic-and-directions-lost": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "animals-pets-and-farm-animals-rabbit": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-pets-and-farm-animals-hamster": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-pets-and-farm-animals-puppy": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-pets-and-farm-animals-kitten": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-pets-and-farm-animals-sheep": {
+  "topic": "nature",
+  "level": "A2"
+ },
+ "animals-pets-and-farm-animals-chicken": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-pets-and-farm-animals-cage": {
+  "topic": "nature",
+  "level": "A2"
+ },
+ "animals-pets-and-farm-animals-lead": {
+  "topic": "nature",
+  "level": "A2"
+ },
+ "animals-pets-and-farm-animals-feed": {
+  "topic": "nature",
+  "level": "A2"
+ },
+ "animals-pets-and-farm-animals-stroke": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-wild-animals-elephant": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-wild-animals-giraffe": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-wild-animals-crocodile": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-wild-animals-monkey": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-wild-animals-dolphin": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-wild-animals-penguin": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-wild-animals-chase": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-wild-animals-scary": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-wild-animals-fierce": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-animal-life-tail": {
+  "topic": "nature",
+  "level": "A2"
+ },
+ "animals-animal-life-feather": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-animal-life-fur": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-animal-life-paw": {
+  "topic": "nature",
+  "level": "A2"
+ },
+ "animals-animal-life-hunt": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-animal-life-bite": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-animal-life-migrate": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-animal-life-wild": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-animal-life-extinct": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-animal-life-endangered": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "describing-things-size-and-shape-enormous": {
+  "topic": "nature",
+  "level": "C1"
+ },
+ "describing-things-size-and-shape-tiny": {
+  "topic": "nature",
+  "level": "B2"
+ },
+ "describing-things-size-and-shape-narrow": {
+  "topic": "describing",
+  "level": "B2"
+ },
+ "describing-things-size-and-shape-rectangular": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-size-and-shape-circular": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "describing-things-size-and-shape-straight": {
+  "topic": "describing",
+  "level": "B2"
+ },
+ "describing-things-size-and-shape-flat": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "describing-things-size-and-shape-thick": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-size-and-shape-shallow": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-size-and-shape-slightly": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-material-and-texture-wooden": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "describing-things-material-and-texture-leather": {
+  "topic": "describing",
+  "level": "B2"
+ },
+ "describing-things-material-and-texture-cotton": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-material-and-texture-plastic": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "describing-things-material-and-texture-smooth": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "describing-things-material-and-texture-rough": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-material-and-texture-sticky": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-material-and-texture-shiny": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-material-and-texture-transparent": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "describing-things-material-and-texture-fragile": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-quality-and-colour-beige": {
+  "topic": "describing",
+  "level": "B2"
+ },
+ "describing-things-quality-and-colour-turquoise": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "describing-things-quality-and-colour-grey": {
+  "topic": "describing",
+  "level": "B2"
+ },
+ "describing-things-quality-and-colour-excellent": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-quality-and-colour-terrible": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-quality-and-colour-ordinary": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "describing-things-quality-and-colour-unusual": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "describing-things-quality-and-colour-carefully": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "describing-things-quality-and-colour-extremely": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "phone-and-messages-phone-basics-signal": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "phone-and-messages-phone-basics-switch-off": {
+  "topic": "describing",
+  "level": "B2"
+ },
+ "phone-and-messages-phone-basics-silent": {
+  "topic": "phone",
+  "level": "B1"
+ },
+ "phone-and-messages-calls-call-back": {
+  "topic": "phrasal",
+  "level": "A2"
+ },
+ "phone-and-messages-calls-hang-up": {
+  "topic": "phone",
+  "level": "B1"
+ },
+ "phone-and-messages-calls-voicemail": {
+  "topic": "phone",
+  "level": "A2"
+ },
+ "phone-and-messages-calls-ring": {
+  "topic": "phone",
+  "level": "A2"
+ },
+ "phone-and-messages-calls-reception": {
+  "topic": "phone",
+  "level": "B1"
+ },
+ "phone-and-messages-calls-ringtone": {
+  "topic": "phone",
+  "level": "A2"
+ },
+ "phone-and-messages-calls-conversation": {
+  "topic": "phone",
+  "level": "B1"
+ },
+ "phone-and-messages-calls-mobile": {
+  "topic": "phone",
+  "level": "B1"
+ },
+ "phone-and-messages-texting-and-online-message": {
+  "topic": "phone",
+  "level": "B1"
+ },
+ "phone-and-messages-texting-and-online-text": {
+  "topic": "phone",
+  "level": "A2"
+ },
+ "phone-and-messages-texting-and-online-reply": {
+  "topic": "phone",
+  "level": "B1"
+ },
+ "phone-and-messages-texting-and-online-forward": {
+  "topic": "phone",
+  "level": "A2"
+ },
+ "phone-and-messages-texting-and-online-screenshot": {
+  "topic": "phone",
+  "level": "A2"
+ },
+ "phone-and-messages-texting-and-online-log-in": {
+  "topic": "phone",
+  "level": "B1"
+ },
+ "phone-and-messages-texting-and-online-online": {
+  "topic": "phone",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-avoid": {
+  "topic": "phone",
+  "level": "B2"
+ },
+ "general-english-active-vocabulary-consider": {
+  "topic": "phrasal",
+  "level": "A2"
+ },
+ "general-english-active-vocabulary-decide": {
+  "topic": "tech",
+  "level": "A2"
+ },
+ "general-english-active-vocabulary-describe": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-explain": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-improve": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-include": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-increase": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-reduce": {
+  "topic": "actions",
+  "level": "A2"
+ },
+ "general-english-active-vocabulary-prefer": {
+  "topic": "actions",
+  "level": "A2"
+ },
+ "general-english-active-vocabulary-provide": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-suggest": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-solve": {
+  "topic": "actions",
+  "level": "A2"
+ },
+ "general-english-active-vocabulary-compare": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-require": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-depend": {
+  "topic": "actions",
+  "level": "A2"
+ },
+ "general-english-active-vocabulary-mention": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-notice": {
+  "topic": "actions",
+  "level": "A2"
+ },
+ "general-english-active-vocabulary-opinion": {
+  "topic": "feelings",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-reason": {
+  "topic": "actions",
+  "level": "A2"
+ },
+ "general-english-active-vocabulary-choice": {
+  "topic": "shopping",
+  "level": "A2"
+ },
+ "general-english-active-vocabulary-purpose": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-chance": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-amount": {
+  "topic": "shopping",
+  "level": "A2"
+ },
+ "general-english-active-vocabulary-situation": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-decision": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-difference": {
+  "topic": "describing",
+  "level": "B2"
+ },
+ "general-english-active-vocabulary-condition": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-possible": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-available": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-similar": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-recent": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-certain": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-especially": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "general-english-active-vocabulary-actually": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "study-and-career-learning-and-research-essay": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "study-and-career-learning-and-research-thesis": {
+  "topic": "school",
+  "level": "C1"
+ },
+ "study-and-career-learning-and-research-degree": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "study-and-career-learning-and-research-graduate": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "study-and-career-learning-and-research-scholarship": {
+  "topic": "school",
+  "level": "C1"
+ },
+ "study-and-career-learning-and-research-semester": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "study-and-career-learning-and-research-tutor": {
+  "topic": "school",
+  "level": "A2"
+ },
+ "study-and-career-learning-and-research-revise": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "study-and-career-learning-and-research-summary": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "study-and-career-learning-and-research-source": {
+  "topic": "school",
+  "level": "A2"
+ },
+ "study-and-career-learning-and-research-experiment": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "study-and-career-learning-and-research-analysis": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "study-and-career-learning-and-research-evidence": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "study-and-career-learning-and-research-conclusion": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "study-and-career-learning-and-research-handout": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "study-and-career-career-development-internship": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "study-and-career-career-development-mentor": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "study-and-career-career-development-workshop": {
+  "topic": "jobs",
+  "level": "B2"
+ },
+ "study-and-career-career-development-ambition": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "study-and-career-career-development-employer": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "study-and-career-career-development-employee": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "study-and-career-career-development-resign": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "study-and-career-career-development-skill": {
+  "topic": "jobs",
+  "level": "B2"
+ },
+ "study-and-career-career-development-apprentice": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "study-and-career-career-development-part-time": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "study-and-career-learning-and-research-campus": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "study-and-career-learning-and-research-enrol": {
+  "topic": "school",
+  "level": "B2"
+ },
+ "study-and-career-learning-and-research-tuition": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "study-and-career-learning-and-research-professor": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "study-and-career-career-development-retire": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "everyday-life-daily-routines-alarm": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "everyday-life-daily-routines-shower": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "everyday-life-daily-routines-toothbrush": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "everyday-life-daily-routines-toothpaste": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "everyday-life-daily-routines-towel": {
+  "topic": "routine",
+  "level": "A2"
+ },
+ "everyday-life-daily-routines-nap": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "everyday-life-daily-routines-routine": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "everyday-life-daily-routines-habit": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "everyday-life-daily-routines-oversleep": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "everyday-life-home-and-services-rubbish": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "everyday-life-home-and-services-recycling": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "everyday-life-home-and-services-plumber": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "everyday-life-home-and-services-electrician": {
+  "topic": "home",
+  "level": "B2"
+ },
+ "everyday-life-home-and-services-tenant": {
+  "topic": "home",
+  "level": "B2"
+ },
+ "everyday-life-home-and-services-repair": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "everyday-life-home-and-services-leak": {
+  "topic": "home",
+  "level": "A2"
+ },
+ "everyday-life-home-and-services-heating": {
+  "topic": "home",
+  "level": "A2"
+ },
+ "everyday-life-home-and-services-electricity": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "everyday-life-home-and-services-dishwasher": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "everyday-life-home-and-services-washing-machine": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "everyday-life-home-and-services-broom": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "everyday-life-home-and-services-bucket": {
+  "topic": "home",
+  "level": "A2"
+ },
+ "everyday-life-home-and-services-doorbell": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "everyday-life-home-and-services-key": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "everyday-life-daily-routines-pillow": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "everyday-life-daily-routines-blanket": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "everyday-life-home-and-services-kettle": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "everyday-life-home-and-services-microwave": {
+  "topic": "home",
+  "level": "A2"
+ },
+ "everyday-life-daily-routines-mirror": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "everyday-life-home-and-services-sink": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "travel-and-culture-travel-planning-itinerary": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "travel-and-culture-travel-planning-guidebook": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "travel-and-culture-travel-planning-visa": {
+  "topic": "home",
+  "level": "A2"
+ },
+ "travel-and-culture-travel-planning-hostel": {
+  "topic": "home",
+  "level": "A2"
+ },
+ "travel-and-culture-travel-planning-campsite": {
+  "topic": "travel",
+  "level": "B2"
+ },
+ "travel-and-culture-travel-planning-backpack": {
+  "topic": "travel",
+  "level": "B1"
+ },
+ "travel-and-culture-travel-planning-abroad": {
+  "topic": "travel",
+  "level": "A2"
+ },
+ "travel-and-culture-travel-planning-destination": {
+  "topic": "travel",
+  "level": "B2"
+ },
+ "travel-and-culture-travel-planning-brochure": {
+  "topic": "travel",
+  "level": "B2"
+ },
+ "travel-and-culture-at-the-destination-souvenir": {
+  "topic": "travel",
+  "level": "B1"
+ },
+ "travel-and-culture-at-the-destination-museum": {
+  "topic": "travel",
+  "level": "A2"
+ },
+ "travel-and-culture-at-the-destination-gallery": {
+  "topic": "travel",
+  "level": "B1"
+ },
+ "travel-and-culture-at-the-destination-monument": {
+  "topic": "travel",
+  "level": "B1"
+ },
+ "travel-and-culture-at-the-destination-cathedral": {
+  "topic": "travel",
+  "level": "B1"
+ },
+ "travel-and-culture-at-the-destination-castle": {
+  "topic": "travel",
+  "level": "A2"
+ },
+ "travel-and-culture-at-the-destination-landmark": {
+  "topic": "travel",
+  "level": "B2"
+ },
+ "travel-and-culture-at-the-destination-tradition": {
+  "topic": "travel",
+  "level": "B1"
+ },
+ "travel-and-culture-at-the-destination-local": {
+  "topic": "travel",
+  "level": "A2"
+ },
+ "travel-and-culture-at-the-destination-tourist": {
+  "topic": "travel",
+  "level": "B1"
+ },
+ "travel-and-culture-at-the-destination-excursion": {
+  "topic": "travel",
+  "level": "B2"
+ },
+ "travel-and-culture-at-the-destination-crowd": {
+  "topic": "travel",
+  "level": "A2"
+ },
+ "travel-and-culture-at-the-destination-architecture": {
+  "topic": "travel",
+  "level": "C1"
+ },
+ "travel-and-culture-travel-planning-customs": {
+  "topic": "customs",
+  "level": "B2"
+ },
+ "travel-and-culture-travel-planning-ferry": {
+  "topic": "transport",
+  "level": "B1"
+ },
+ "travel-and-culture-travel-planning-cruise": {
+  "topic": "travel",
+  "level": "B1"
+ },
+ "common-actions-at-home-wipe": {
+  "topic": "home",
+  "level": "A2"
+ },
+ "common-actions-at-home-fold": {
+  "topic": "home",
+  "level": "A2"
+ },
+ "common-actions-at-home-pour": {
+  "topic": "food",
+  "level": "A2"
+ },
+ "common-actions-at-home-stir": {
+  "topic": "food",
+  "level": "A2"
+ },
+ "common-actions-at-home-rinse": {
+  "topic": "food",
+  "level": "A2"
+ },
+ "common-actions-at-home-hang": {
+  "topic": "home",
+  "level": "A2"
+ },
+ "common-actions-at-home-lock": {
+  "topic": "home",
+  "level": "A2"
+ },
+ "common-actions-out-and-about-knock": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "common-actions-out-and-about-hurry": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "common-actions-out-and-about-wander": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "common-actions-out-and-about-carry": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "common-actions-out-and-about-borrow": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "common-actions-out-and-about-lend": {
+  "topic": "actions",
+  "level": "A2"
+ },
+ "common-actions-out-and-about-greet": {
+  "topic": "actions",
+  "level": "B1"
+ },
+ "common-actions-out-and-about-waste": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "common-actions-at-home-sweep": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "common-actions-at-home-unpack": {
+  "topic": "travel",
+  "level": "A2"
+ },
+ "common-actions-at-home-scrub": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "common-actions-at-home-dust": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-pick-up": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-put-up-with": {
+  "topic": "phrasal",
+  "level": "C1"
+ },
+ "common-actions-everyday-phrasal-verbs-look-for": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-get-up": {
+  "topic": "phrasal",
+  "level": "A2"
+ },
+ "common-actions-everyday-phrasal-verbs-fill-in": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-check-in": {
+  "topic": "travel",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-check-out": {
+  "topic": "travel",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-run-into": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-turn-down": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-turn-up": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-give-back": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-take-after": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-look-into": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-set-off": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-get-over": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-hold-on": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-go-on": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-come-back": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-wake-up": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "common-actions-everyday-phrasal-verbs-sort-out": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "general-english-commonly-misspelled-occurrence": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "general-english-commonly-misspelled-maintenance": {
+  "topic": "phrasal",
+  "level": "A2"
+ },
+ "general-english-commonly-misspelled-noticeable": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "general-english-commonly-misspelled-possession": {
+  "topic": "phrasal",
+  "level": "B1"
+ },
+ "general-english-commonly-misspelled-questionnaire": {
+  "topic": "misspelled",
+  "level": "C1"
+ },
+ "general-english-commonly-misspelled-millennium": {
+  "topic": "misspelled",
+  "level": "C1"
+ },
+ "general-english-commonly-misspelled-pronunciation": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-independent": {
+  "topic": "misspelled",
+  "level": "C1"
+ },
+ "general-english-commonly-misspelled-immediately": {
+  "topic": "misspelled",
+  "level": "C1"
+ },
+ "general-english-commonly-misspelled-existence": {
+  "topic": "misspelled",
+  "level": "C1"
+ },
+ "general-english-commonly-misspelled-height": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-humorous": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-lightning": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-misspell": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-tongue": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-sincerely": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-cemetery": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-exaggerate": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "general-english-commonly-misspelled-grammar": {
+  "topic": "misspelled",
+  "level": "B1"
+ },
+ "general-english-commonly-misspelled-guarantee": {
+  "topic": "misspelled",
+  "level": "B1"
+ },
+ "phone-and-messages-phone-basics-contact": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "phone-and-messages-phone-basics-settings": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "phone-and-messages-phone-basics-speaker": {
+  "topic": "misspelled",
+  "level": "B1"
+ },
+ "phone-and-messages-phone-basics-headphones": {
+  "topic": "misspelled",
+  "level": "B2"
+ },
+ "phone-and-messages-phone-basics-passcode": {
+  "topic": "phone",
+  "level": "B1"
+ },
+ "phone-and-messages-phone-basics-unlock": {
+  "topic": "phone",
+  "level": "B1"
+ },
+ "phone-and-messages-calls-dial": {
+  "topic": "phone",
+  "level": "B1"
+ },
+ "phone-and-messages-calls-caller": {
+  "topic": "phone",
+  "level": "B1"
+ },
+ "phone-and-messages-texting-and-online-emoji": {
+  "topic": "phone",
+  "level": "B1"
+ },
+ "phone-and-messages-texting-and-online-unread": {
+  "topic": "phone",
+  "level": "A2"
+ },
+ "phone-and-messages-texting-and-online-mute": {
+  "topic": "phone",
+  "level": "A2"
+ },
+ "phone-and-messages-texting-and-online-block": {
+  "topic": "phone",
+  "level": "B1"
+ },
+ "phone-and-messages-texting-and-online-selfie": {
+  "topic": "phone",
+  "level": "A2"
+ },
+ "phone-and-messages-texting-and-online-upload": {
+  "topic": "phone",
+  "level": "A2"
+ },
+ "phone-and-messages-texting-and-online-follower": {
+  "topic": "phone",
+  "level": "A2"
+ },
+ "travel-and-culture-at-the-airport-suitcase": {
+  "topic": "phone",
+  "level": "A2"
+ },
+ "travel-and-culture-at-the-airport-trolley": {
+  "topic": "phone",
+  "level": "B1"
+ },
+ "travel-and-culture-at-the-airport-airline": {
+  "topic": "phone",
+  "level": "A2"
+ },
+ "travel-and-culture-on-the-plane-pilot": {
+  "topic": "airport",
+  "level": "A2"
+ },
+ "travel-and-culture-on-the-plane-landing": {
+  "topic": "airport",
+  "level": "B1"
+ },
+ "travel-and-culture-on-the-plane-cockpit": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "travel-and-culture-at-the-airport-layover": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "travel-and-culture-on-the-plane-lifejacket": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "travel-and-culture-on-the-plane-jet": {
+  "topic": "airport",
+  "level": "A2"
+ },
+ "travel-and-culture-on-the-plane-crew": {
+  "topic": "airport",
+  "level": "A2"
+ },
+ "travel-and-culture-at-the-airport-flight": {
+  "topic": "airport",
+  "level": "B1"
+ },
+ "travel-and-culture-at-the-airport-boarding": {
+  "topic": "airport",
+  "level": "B1"
+ },
+ "travel-and-culture-at-the-airport-passport": {
+  "topic": "airport",
+  "level": "B1"
+ },
+ "travel-and-culture-at-the-airport-carousel": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "travel-and-culture-at-the-airport-scanner": {
+  "topic": "airport",
+  "level": "B2"
+ },
+ "jobs-and-career-job-interview-candidate": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "jobs-and-career-job-interview-applicant": {
+  "topic": "jobs",
+  "level": "C1"
+ },
+ "jobs-and-career-job-interview-vacancy": {
+  "topic": "jobs",
+  "level": "B2"
+ },
+ "jobs-and-career-job-interview-interviewer": {
+  "topic": "jobs",
+  "level": "C1"
+ },
+ "jobs-and-career-job-interview-hire": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "jobs-and-career-at-work-contract": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "jobs-and-career-at-work-shift": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "jobs-and-career-at-work-client": {
+  "topic": "office",
+  "level": "B1"
+ },
+ "jobs-and-career-at-work-boss": {
+  "topic": "office",
+  "level": "B1"
+ },
+ "jobs-and-career-at-work-unemployed": {
+  "topic": "jobs",
+  "level": "B1"
+ },
+ "jobs-and-career-at-work-colleagues": {
+  "topic": "office",
+  "level": "B1"
+ },
+ "jobs-and-career-at-work-receptionist": {
+  "topic": "jobs",
+  "level": "B2"
+ },
+ "jobs-and-career-at-work-payslip": {
+  "topic": "jobs",
+  "level": "B2"
+ },
+ "jobs-and-career-at-work-manager": {
+  "topic": "office",
+  "level": "B1"
+ },
+ "school-and-learning-in-class-notebook": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-in-class-pupil": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-in-class-headteacher": {
+  "topic": "school",
+  "level": "B2"
+ },
+ "school-and-learning-in-class-subject": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-in-class-ruler": {
+  "topic": "school",
+  "level": "A2"
+ },
+ "school-and-learning-in-class-rubber": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-in-class-calculator": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-in-class-uniform": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-in-class-absent": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-in-class-playground": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-in-class-dictionary": {
+  "topic": "school",
+  "level": "A2"
+ },
+ "school-and-learning-in-class-pencil": {
+  "topic": "school",
+  "level": "A2"
+ },
+ "school-and-learning-in-class-classroom": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "school-and-learning-in-class-term": {
+  "topic": "school",
+  "level": "B1"
+ },
+ "family-and-relationships-life-events-bride": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "family-and-relationships-life-events-groom": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "family-and-relationships-life-events-honeymoon": {
+  "topic": "family",
+  "level": "B2"
+ },
+ "family-and-relationships-life-events-widow": {
+  "topic": "family",
+  "level": "B2"
+ },
+ "family-and-relationships-relatives-ancestor": {
+  "topic": "family",
+  "level": "B2"
+ },
+ "family-and-relationships-relatives-stepmother": {
+  "topic": "family",
+  "level": "B2"
+ },
+ "family-and-relationships-relatives-stepfather": {
+  "topic": "family",
+  "level": "B2"
+ },
+ "family-and-relationships-relatives-grandchild": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "family-and-relationships-relatives-toddler": {
+  "topic": "family",
+  "level": "B2"
+ },
+ "family-and-relationships-relatives-teenager": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "family-and-relationships-relatives-adult": {
+  "topic": "family",
+  "level": "A2"
+ },
+ "family-and-relationships-friends-and-partners-boyfriend": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "family-and-relationships-friends-and-partners-girlfriend": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "family-and-relationships-friends-and-partners-relationship": {
+  "topic": "family",
+  "level": "B2"
+ },
+ "family-and-relationships-relatives-babysitter": {
+  "topic": "family",
+  "level": "B1"
+ },
+ "city-and-transport-getting-around-tram": {
+  "topic": "transport",
+  "level": "A2"
+ },
+ "city-and-transport-getting-around-fare": {
+  "topic": "transport",
+  "level": "B1"
+ },
+ "city-and-transport-getting-around-route": {
+  "topic": "transport",
+  "level": "A2"
+ },
+ "city-and-transport-getting-around-taxi": {
+  "topic": "transport",
+  "level": "A2"
+ },
+ "city-and-transport-getting-around-cyclist": {
+  "topic": "transport",
+  "level": "B1"
+ },
+ "city-and-transport-getting-around-motorway": {
+  "topic": "transport",
+  "level": "B1"
+ },
+ "city-and-transport-places-in-the-city-district": {
+  "topic": "city",
+  "level": "B1"
+ },
+ "city-and-transport-places-in-the-city-avenue": {
+  "topic": "city",
+  "level": "B1"
+ },
+ "city-and-transport-places-in-the-city-fountain": {
+  "topic": "city",
+  "level": "B1"
+ },
+ "city-and-transport-places-in-the-city-statue": {
+  "topic": "city",
+  "level": "B1"
+ },
+ "city-and-transport-places-in-the-city-bench": {
+  "topic": "city",
+  "level": "A2"
+ },
+ "city-and-transport-traffic-and-directions-signpost": {
+  "topic": "city",
+  "level": "B1"
+ },
+ "city-and-transport-traffic-and-directions-lane": {
+  "topic": "transport",
+  "level": "B1"
+ },
+ "city-and-transport-traffic-and-directions-parking": {
+  "topic": "transport",
+  "level": "B1"
+ },
+ "city-and-transport-traffic-and-directions-subway": {
+  "topic": "city",
+  "level": "B1"
+ },
+ "people-and-family-feelings-upset": {
+  "topic": "feelings",
+  "level": "A2"
+ },
+ "people-and-family-feelings-confused": {
+  "topic": "feelings",
+  "level": "B1"
+ },
+ "people-and-family-family-and-friends-generous": {
+  "topic": "feelings",
+  "level": "B1"
+ },
+ "people-and-family-family-and-friends-honest": {
+  "topic": "feelings",
+  "level": "A2"
+ },
+ "people-and-family-family-and-friends-polite": {
+  "topic": "feelings",
+  "level": "A2"
+ },
+ "people-and-family-family-and-friends-rude": {
+  "topic": "feelings",
+  "level": "A2"
+ },
+ "people-and-family-family-and-friends-shy": {
+  "topic": "feelings",
+  "level": "A2"
+ },
+ "people-and-family-feelings-furious": {
+  "topic": "feelings",
+  "level": "B1"
+ },
+ "people-and-family-feelings-cheerful": {
+  "topic": "feelings",
+  "level": "B1"
+ },
+ "people-and-family-family-and-friends-stubborn": {
+  "topic": "feelings",
+  "level": "B1"
+ },
+ "health-and-body-body-and-symptoms-ankle": {
+  "topic": "health",
+  "level": "B1"
+ },
+ "health-and-body-body-and-symptoms-wrist": {
+  "topic": "health",
+  "level": "B1"
+ },
+ "health-and-body-body-and-symptoms-elbow": {
+  "topic": "health",
+  "level": "A2"
+ },
+ "health-and-body-body-and-symptoms-rash": {
+  "topic": "health",
+  "level": "B1"
+ },
+ "health-and-body-at-the-doctor-bandage": {
+  "topic": "health",
+  "level": "B1"
+ },
+ "health-and-body-body-and-symptoms-chest": {
+  "topic": "health",
+  "level": "A2"
+ },
+ "health-and-body-at-the-doctor-pill": {
+  "topic": "health",
+  "level": "B1"
+ },
+ "health-and-body-at-the-doctor-nurse": {
+  "topic": "health",
+  "level": "A2"
+ },
+ "health-and-body-at-the-doctor-thermometer": {
+  "topic": "health",
+  "level": "B2"
+ },
+ "health-and-body-body-and-symptoms-wound": {
+  "topic": "health",
+  "level": "B1"
+ },
+ "technology-devices-and-software-laptop": {
+  "topic": "tech",
+  "level": "A2"
+ },
+ "technology-devices-and-software-printer": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-devices-and-software-router": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-devices-and-software-virus": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-devices-and-software-folder": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-devices-and-software-cursor": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-devices-and-software-tablet": {
+  "topic": "tech",
+  "level": "A2"
+ },
+ "technology-devices-and-software-cable": {
+  "topic": "tech",
+  "level": "B1"
+ },
+ "technology-devices-and-software-icon": {
+  "topic": "tech",
+  "level": "A2"
+ },
+ "technology-online-life-spam": {
+  "topic": "tech",
+  "level": "A2"
+ },
+ "nature-and-animals-weather-and-seasons-thunder": {
+  "topic": "weather",
+  "level": "B1"
+ },
+ "nature-and-animals-weather-and-seasons-fog": {
+  "topic": "weather",
+  "level": "A2"
+ },
+ "nature-and-animals-weather-and-seasons-hail": {
+  "topic": "weather",
+  "level": "B1"
+ },
+ "nature-and-animals-weather-and-seasons-frost": {
+  "topic": "weather",
+  "level": "B1"
+ },
+ "nature-and-animals-weather-and-seasons-rainbow": {
+  "topic": "weather",
+  "level": "B1"
+ },
+ "nature-and-animals-nature-and-animals-cliff": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "nature-and-animals-nature-and-animals-volcano": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "nature-and-animals-nature-and-animals-earthquake": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "nature-and-animals-nature-and-animals-ocean": {
+  "topic": "nature",
+  "level": "A2"
+ },
+ "nature-and-animals-nature-and-animals-meadow": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "time-and-dates-days-and-months-decade": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "time-and-dates-days-and-months-century": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "time-and-dates-days-and-months-midnight": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "time-and-dates-days-and-months-noon": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "time-and-dates-days-and-months-dawn": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "time-and-dates-planning-time-annual": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "time-and-dates-days-and-months-era": {
+  "topic": "routine",
+  "level": "B2"
+ },
+ "time-and-dates-planning-time-weekly": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "time-and-dates-planning-time-meanwhile": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "time-and-dates-planning-time-afterwards": {
+  "topic": "routine",
+  "level": "B1"
+ },
+ "shopping-paying-coin": {
+  "topic": "shopping",
+  "level": "A2"
+ },
+ "shopping-banking-budget": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "shopping-banking-debt": {
+  "topic": "shopping",
+  "level": "B2"
+ },
+ "shopping-banking-tax": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "shopping-paying-purse": {
+  "topic": "shopping",
+  "level": "A2"
+ },
+ "shopping-paying-expensive": {
+  "topic": "shopping",
+  "level": "A2"
+ },
+ "shopping-paying-cheap": {
+  "topic": "shopping",
+  "level": "A2"
+ },
+ "shopping-banking-wage": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "shopping-banking-savings": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "shopping-paying-shopkeeper": {
+  "topic": "shopping",
+  "level": "B1"
+ },
+ "food-and-drinks-meals-and-cooking-flour": {
+  "topic": "food",
+  "level": "A2"
+ },
+ "food-and-drinks-meals-and-cooking-cucumber": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-meals-and-cooking-cabbage": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-meals-and-cooking-mushroom": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-meals-and-cooking-garlic": {
+  "topic": "food",
+  "level": "A2"
+ },
+ "food-and-drinks-meals-and-cooking-lettuce": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-meals-and-cooking-sausage": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-caf-and-restaurant-biscuit": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "food-and-drinks-caf-and-restaurant-spicy": {
+  "topic": "food",
+  "level": "A2"
+ },
+ "food-and-drinks-meals-and-cooking-yoghurt": {
+  "topic": "food",
+  "level": "B1"
+ },
+ "hobbies-and-free-time-relaxing-and-going-out-chess": {
+  "topic": "sport",
+  "level": "B1"
+ },
+ "hobbies-and-free-time-relaxing-and-going-out-puzzle": {
+  "topic": "sport",
+  "level": "B1"
+ },
+ "hobbies-and-free-time-relaxing-and-going-out-novel": {
+  "topic": "sport",
+  "level": "B1"
+ },
+ "hobbies-and-free-time-creative-hobbies-poetry": {
+  "topic": "sport",
+  "level": "B1"
+ },
+ "hobbies-and-free-time-creative-hobbies-sketch": {
+  "topic": "sport",
+  "level": "B2"
+ },
+ "hobbies-and-free-time-sport-and-exercise-hiking": {
+  "topic": "sport",
+  "level": "A2"
+ },
+ "hobbies-and-free-time-sport-and-exercise-cycling": {
+  "topic": "sport",
+  "level": "B1"
+ },
+ "hobbies-and-free-time-relaxing-and-going-out-fishing": {
+  "topic": "sport",
+  "level": "B1"
+ },
+ "hobbies-and-free-time-creative-hobbies-rehearsal": {
+  "topic": "sport",
+  "level": "B2"
+ },
+ "clothes-and-appearance-clothing-items-jumper": {
+  "topic": "clothes",
+  "level": "A2"
+ },
+ "clothes-and-appearance-clothing-items-blouse": {
+  "topic": "clothes",
+  "level": "A2"
+ },
+ "clothes-and-appearance-clothing-items-skirt": {
+  "topic": "clothes",
+  "level": "A2"
+ },
+ "clothes-and-appearance-clothing-items-trainers": {
+  "topic": "clothes",
+  "level": "B1"
+ },
+ "clothes-and-appearance-clothing-items-slippers": {
+  "topic": "clothes",
+  "level": "B1"
+ },
+ "clothes-and-appearance-clothing-items-pyjamas": {
+  "topic": "clothes",
+  "level": "B1"
+ },
+ "clothes-and-appearance-clothing-items-sandals": {
+  "topic": "clothes",
+  "level": "B1"
+ },
+ "clothes-and-appearance-accessories-belt": {
+  "topic": "clothes",
+  "level": "A2"
+ },
+ "clothes-and-appearance-accessories-earrings": {
+  "topic": "clothes",
+  "level": "B1"
+ },
+ "clothes-and-appearance-accessories-zip": {
+  "topic": "clothes",
+  "level": "A2"
+ },
+ "animals-wild-animals-hedgehog": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-wild-animals-owl": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-pets-and-farm-animals-parrot": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-pets-and-farm-animals-tortoise": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-wild-animals-frog": {
+  "topic": "nature",
+  "level": "A2"
+ },
+ "animals-wild-animals-wasp": {
+  "topic": "nature",
+  "level": "A2"
+ },
+ "animals-wild-animals-mosquito": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "animals-wild-animals-whale": {
+  "topic": "nature",
+  "level": "A2"
+ },
+ "animals-wild-animals-shark": {
+  "topic": "nature",
+  "level": "A2"
+ },
+ "animals-wild-animals-deer": {
+  "topic": "nature",
+  "level": "B1"
+ },
+ "describing-things-size-and-shape-heavy": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-size-and-shape-wide": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-size-and-shape-deep": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-size-and-shape-oval": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-size-and-shape-curved": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-quality-and-colour-pale": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-quality-and-colour-colourful": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "describing-things-quality-and-colour-ancient": {
+  "topic": "describing",
+  "level": "B2"
+ },
+ "describing-things-quality-and-colour-modern": {
+  "topic": "describing",
+  "level": "A2"
+ },
+ "describing-things-quality-and-colour-comfortable": {
+  "topic": "describing",
+  "level": "B1"
+ },
+ "home-around-the-house-attic": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "home-around-the-house-basement": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "home-around-the-house-balcony": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "home-around-the-house-garage": {
+  "topic": "home",
+  "level": "A2"
+ },
+ "home-around-the-house-ceiling": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "home-around-the-house-chimney": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "home-around-the-house-fence": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "home-around-the-house-hallway": {
+  "topic": "home",
+  "level": "B1"
+ },
+ "health-and-body-body-and-symptoms-painful": {
+  "topic": "health",
+  "level": "B1"
+ }
+}

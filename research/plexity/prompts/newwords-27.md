@@ -1,0 +1,31 @@
+# NEW, SEPARATE TASK (newwords-27.md)
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Phrasal Verbs" (phrasal).
+
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 35 NEW words for the topic **Phrasal Verbs**: verb + particle (give up, look after, turn down).
+
+## Rules
+- British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
+- Every word must be new: it must NOT be in the list "Already in this topic" below (check each word, also other forms of it: "tidy" vs "tidying").
+- Useful for a Russian-speaking learner: words they will meet and want to use in this topic; useful and common first, interesting later.
+- Topic note: Every entry is a phrasal verb (verb + particle, e.g. "give up", "look after", "turn down"), the commonest and most useful ones; one meaning per entry, the commonest. Do not repeat a verb+particle already listed, even with another meaning.
+- Levels (CEFR, by the Oxford 3000/5000 lists and the word's frequency): A2 basic, B1 intermediate, B2 upper-intermediate, C1 advanced. No A1 or C2: give A1 words A2 and C2 words C1. Aim for roughly: A2 20%, B1 40%, B2 30%, C1 10% (professional topics: B1 20%, B2 50%, C1 30%).
+- translation: the main Russian translation (one or two words, commonly used for that meaning; if a second meaning matters, add it after a comma, max 2).
+- pos: noun, verb, adjective, adverb, phrase or phrasal verb.
+- definition: one simple English definition of 6–14 words (B1 vocabulary, no use of the word itself).
+- example: ONE natural sentence of 6–14 words in everyday British English that shows the topic. The word appears in it EXACTLY as written in "word" (for a verb, write the base form in "word" and use that same form in the sentence: "tidy" → "I must tidy my room before dinner").
+- The example must be correct grammar, with no typos.
+
+## Output format
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 35 entries.
+
+```json
+[
+["...","...","noun","B1","...","..."],
+...
+]
+```
+
+Before you answer, check: exactly 35 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
+
+## Already in this topic (55 words, do not repeat)
+break down, bring up, call back, call off, carry on, catch up with, come across, come back, consider, drop by, fall out with, figure out, fill in, find out, get along with, get off, get over, get up, give back, give up, go on, hang out, hold on, look after, look for, look forward to, look into, look up, maintenance, noticeable, occurrence, pick up, plug in, possession, put away, put off, put on, put up with, queue up, run into, run out of, set off, set up, show up, sort out, take after, take off, tidy up, try on, turn down, turn off, turn on, turn up, wake up, work out

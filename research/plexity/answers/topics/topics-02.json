@@ -1,0 +1,487 @@
+[
+  {
+    "word_id": "food-and-drinks-caf-and-restaurant-beverage",
+    "topic_id": "food",
+    "level": "B2"
+  },
+  {
+    "word_id": "food-and-drinks-caf-and-restaurant-sparkling-water",
+    "topic_id": "food",
+    "level": "B1"
+  },
+  {
+    "word_id": "food-and-drinks-caf-and-restaurant-allergic",
+    "topic_id": "health",
+    "level": "B2"
+  },
+  {
+    "word_id": "food-and-drinks-caf-and-restaurant-vegetarian",
+    "topic_id": "food",
+    "level": "B2"
+  },
+  {
+    "word_id": "food-and-drinks-caf-and-restaurant-takeaway",
+    "topic_id": "food",
+    "level": "B2"
+  },
+  {
+    "word_id": "food-and-drinks-caf-and-restaurant-portion",
+    "topic_id": "food",
+    "level": "B2"
+  },
+  {
+    "word_id": "people-and-family-family-and-friends-relative",
+    "topic_id": "family",
+    "level": "B1"
+  },
+  {
+    "word_id": "people-and-family-family-and-friends-neighbour",
+    "topic_id": "family",
+    "level": "B1"
+  },
+  {
+    "word_id": "people-and-family-family-and-friends-colleague",
+    "topic_id": "office",
+    "level": "B2"
+  },
+  {
+    "word_id": "people-and-family-family-and-friends-friendship",
+    "topic_id": "family",
+    "level": "B2"
+  },
+  {
+    "word_id": "people-and-family-family-and-friends-grandparents",
+    "topic_id": "family",
+    "level": "A2"
+  },
+  {
+    "word_id": "people-and-family-family-and-friends-sibling",
+    "topic_id": "family",
+    "level": "C1"
+  },
+  {
+    "word_id": "people-and-family-family-and-friends-stranger",
+    "topic_id": "family",
+    "level": "B1"
+  },
+  {
+    "word_id": "people-and-family-family-and-friends-guest",
+    "topic_id": "travel",
+    "level": "B1"
+  },
+  {
+    "word_id": "people-and-family-family-and-friends-generation",
+    "topic_id": "family",
+    "level": "B2"
+  },
+  {
+    "word_id": "people-and-family-family-and-friends-marriage",
+    "topic_id": "family",
+    "level": "B1"
+  },
+  {
+    "word_id": "feelings-feelings-happy",
+    "topic_id": "feelings",
+    "level": "A2"
+  },
+  {
+    "word_id": "feelings-feelings-anxious",
+    "topic_id": "feelings",
+    "level": "B2"
+  },
+  {
+    "word_id": "feelings-feelings-embarrassed",
+    "topic_id": "feelings",
+    "level": "B2"
+  },
+  {
+    "word_id": "feelings-feelings-jealous",
+    "topic_id": "feelings",
+    "level": "B2"
+  },
+  {
+    "word_id": "feelings-feelings-grateful",
+    "topic_id": "feelings",
+    "level": "B2"
+  },
+  {
+    "word_id": "feelings-feelings-disappointed",
+    "topic_id": "feelings",
+    "level": "B1"
+  },
+  {
+    "word_id": "feelings-feelings-confident",
+    "topic_id": "feelings",
+    "level": "B1"
+  },
+  {
+    "word_id": "feelings-feelings-exhausted",
+    "topic_id": "feelings",
+    "level": "B2"
+  },
+  {
+    "word_id": "feelings-feelings-curious",
+    "topic_id": "feelings",
+    "level": "B1"
+  },
+  {
+    "word_id": "feelings-feelings-proud",
+    "topic_id": "feelings",
+    "level": "B1"
+  },
+  {
+    "word_id": "feelings-feelings-lonely",
+    "topic_id": "feelings",
+    "level": "B1"
+  },
+  {
+    "word_id": "feelings-feelings-relieved",
+    "topic_id": "feelings",
+    "level": "B2"
+  },
+  {
+    "word_id": "feelings-feelings-frustrated",
+    "topic_id": "feelings",
+    "level": "B2"
+  },
+  {
+    "word_id": "feelings-feelings-excited",
+    "topic_id": "feelings",
+    "level": "A2"
+  },
+  {
+    "word_id": "home-around-the-house-kitchen",
+    "topic_id": "home",
+    "level": "A2"
+  },
+  {
+    "word_id": "home-around-the-house-bedroom",
+    "topic_id": "home",
+    "level": "A2"
+  },
+  {
+    "word_id": "home-around-the-house-bathroom",
+    "topic_id": "home",
+    "level": "A2"
+  },
+  {
+    "word_id": "home-around-the-house-furniture",
+    "topic_id": "home",
+    "level": "B1"
+  },
+  {
+    "word_id": "home-around-the-house-curtain",
+    "topic_id": "home",
+    "level": "B1"
+  },
+  {
+    "word_id": "home-around-the-house-staircase",
+    "topic_id": "home",
+    "level": "B2"
+  },
+  {
+    "word_id": "home-around-the-house-neighbourhood",
+    "topic_id": "city",
+    "level": "B2"
+  },
+  {
+    "word_id": "home-around-the-house-rent",
+    "topic_id": "home",
+    "level": "B1"
+  },
+  {
+    "word_id": "home-around-the-house-landlord",
+    "topic_id": "home",
+    "level": "B2"
+  },
+  {
+    "word_id": "home-around-the-house-appliance",
+    "topic_id": "home",
+    "level": "C1"
+  },
+  {
+    "word_id": "home-around-the-house-laundry",
+    "topic_id": "home",
+    "level": "B2"
+  },
+  {
+    "word_id": "home-around-the-house-cupboard",
+    "topic_id": "home",
+    "level": "B1"
+  },
+  {
+    "word_id": "places-in-town-places-in-town-pharmacy",
+    "topic_id": "city",
+    "level": "B1"
+  },
+  {
+    "word_id": "places-in-town-places-in-town-library",
+    "topic_id": "city",
+    "level": "A2"
+  },
+  {
+    "word_id": "places-in-town-places-in-town-post-office",
+    "topic_id": "city",
+    "level": "A2"
+  },
+  {
+    "word_id": "places-in-town-places-in-town-bakery",
+    "topic_id": "city",
+    "level": "B1"
+  },
+  {
+    "word_id": "places-in-town-places-in-town-crossroads",
+    "topic_id": "city",
+    "level": "B2"
+  },
+  {
+    "word_id": "places-in-town-places-in-town-pavement",
+    "topic_id": "city",
+    "level": "B2"
+  },
+  {
+    "word_id": "places-in-town-places-in-town-bridge",
+    "topic_id": "city",
+    "level": "B1"
+  },
+  {
+    "word_id": "places-in-town-places-in-town-square",
+    "topic_id": "city",
+    "level": "B1"
+  },
+  {
+    "word_id": "places-in-town-places-in-town-supermarket",
+    "topic_id": "shopping",
+    "level": "A2"
+  },
+  {
+    "word_id": "places-in-town-places-in-town-station",
+    "topic_id": "transport",
+    "level": "A2"
+  },
+  {
+    "word_id": "shopping-shopping-refund",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "shopping-shopping-discount",
+    "topic_id": "shopping",
+    "level": "B1"
+  },
+  {
+    "word_id": "shopping-shopping-cashier",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "shopping-shopping-customer",
+    "topic_id": "shopping",
+    "level": "B1"
+  },
+  {
+    "word_id": "shopping-shopping-bargain",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "shopping-shopping-afford",
+    "topic_id": "shopping",
+    "level": "B1"
+  },
+  {
+    "word_id": "shopping-shopping-exchange",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "shopping-shopping-fitting-room",
+    "topic_id": "clothes",
+    "level": "B2"
+  },
+  {
+    "word_id": "shopping-shopping-sold-out",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "health-and-body-body-and-symptoms-stomach",
+    "topic_id": "health",
+    "level": "B1"
+  },
+  {
+    "word_id": "health-and-body-body-and-symptoms-throat",
+    "topic_id": "health",
+    "level": "B1"
+  },
+  {
+    "word_id": "health-and-body-body-and-symptoms-shoulder",
+    "topic_id": "health",
+    "level": "B1"
+  },
+  {
+    "word_id": "health-and-body-body-and-symptoms-knee",
+    "topic_id": "health",
+    "level": "B1"
+  },
+  {
+    "word_id": "health-and-body-body-and-symptoms-headache",
+    "topic_id": "health",
+    "level": "A2"
+  },
+  {
+    "word_id": "health-and-body-body-and-symptoms-fever",
+    "topic_id": "health",
+    "level": "B2"
+  },
+  {
+    "word_id": "health-and-body-body-and-symptoms-cough",
+    "topic_id": "health",
+    "level": "B1"
+  },
+  {
+    "word_id": "health-and-body-body-and-symptoms-sneeze",
+    "topic_id": "health",
+    "level": "C1"
+  },
+  {
+    "word_id": "health-and-body-body-and-symptoms-dizzy",
+    "topic_id": "health",
+    "level": "B2"
+  },
+  {
+    "word_id": "health-and-body-body-and-symptoms-sore",
+    "topic_id": "health",
+    "level": "B2"
+  },
+  {
+    "word_id": "health-and-body-body-and-symptoms-bruise",
+    "topic_id": "health",
+    "level": "C1"
+  },
+  {
+    "word_id": "health-and-body-body-and-symptoms-injury",
+    "topic_id": "health",
+    "level": "B2"
+  },
+  {
+    "word_id": "health-and-body-at-the-doctor-appointment",
+    "topic_id": "health",
+    "level": "B1"
+  },
+  {
+    "word_id": "health-and-body-at-the-doctor-prescription",
+    "topic_id": "health",
+    "level": "B2"
+  },
+  {
+    "word_id": "health-and-body-at-the-doctor-symptom",
+    "topic_id": "health",
+    "level": "B2"
+  },
+  {
+    "word_id": "health-and-body-at-the-doctor-treatment",
+    "topic_id": "health",
+    "level": "B2"
+  },
+  {
+    "word_id": "health-and-body-at-the-doctor-recover",
+    "topic_id": "health",
+    "level": "B2"
+  },
+  {
+    "word_id": "health-and-body-at-the-doctor-vaccine",
+    "topic_id": "health",
+    "level": "C1"
+  },
+  {
+    "word_id": "health-and-body-at-the-doctor-dentist",
+    "topic_id": "health",
+    "level": "A2"
+  },
+  {
+    "word_id": "health-and-body-at-the-doctor-ambulance",
+    "topic_id": "health",
+    "level": "B2"
+  },
+  {
+    "word_id": "health-and-body-at-the-doctor-painkiller",
+    "topic_id": "health",
+    "level": "B2"
+  },
+  {
+    "word_id": "health-and-body-at-the-doctor-check-up",
+    "topic_id": "health",
+    "level": "B2"
+  },
+  {
+    "word_id": "health-and-body-at-the-doctor-allergy",
+    "topic_id": "health",
+    "level": "B2"
+  },
+  {
+    "word_id": "health-and-body-at-the-doctor-insurance",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "technology-devices-and-software-device",
+    "topic_id": "tech",
+    "level": "B2"
+  },
+  {
+    "word_id": "technology-devices-and-software-screen",
+    "topic_id": "tech",
+    "level": "A2"
+  },
+  {
+    "word_id": "technology-devices-and-software-keyboard",
+    "topic_id": "tech",
+    "level": "B1"
+  },
+  {
+    "word_id": "technology-devices-and-software-battery",
+    "topic_id": "tech",
+    "level": "B1"
+  },
+  {
+    "word_id": "technology-devices-and-software-charger",
+    "topic_id": "tech",
+    "level": "B1"
+  },
+  {
+    "word_id": "technology-devices-and-software-software",
+    "topic_id": "tech",
+    "level": "B1"
+  },
+  {
+    "word_id": "technology-devices-and-software-update",
+    "topic_id": "tech",
+    "level": "B2"
+  },
+  {
+    "word_id": "technology-devices-and-software-install",
+    "topic_id": "tech",
+    "level": "B2"
+  },
+  {
+    "word_id": "technology-devices-and-software-download",
+    "topic_id": "tech",
+    "level": "B1"
+  },
+  {
+    "word_id": "technology-devices-and-software-password",
+    "topic_id": "tech",
+    "level": "B1"
+  },
+  {
+    "word_id": "technology-devices-and-software-storage",
+    "topic_id": "tech",
+    "level": "B2"
+  },
+  {
+    "word_id": "technology-devices-and-software-wireless",
+    "topic_id": "tech",
+    "level": "B2"
+  }
+]

@@ -1,0 +1,487 @@
+[
+  {
+    "word_id": "logistics-inventory-control-inventory",
+    "topic_id": "logistics",
+    "level": "B2"
+  },
+  {
+    "word_id": "logistics-inventory-control-stock",
+    "topic_id": "shopping",
+    "level": "B1"
+  },
+  {
+    "word_id": "logistics-inventory-control-replenishment",
+    "topic_id": "logistics",
+    "level": "C1"
+  },
+  {
+    "word_id": "logistics-inventory-control-safety-stock",
+    "topic_id": "logistics",
+    "level": "C1"
+  },
+  {
+    "word_id": "logistics-inventory-control-demand-planning",
+    "topic_id": "logistics",
+    "level": "C1"
+  },
+  {
+    "word_id": "logistics-inventory-control-inventory-accuracy",
+    "topic_id": "logistics",
+    "level": "C1"
+  },
+  {
+    "word_id": "logistics-receiving-and-storage-storage-location",
+    "topic_id": "logistics",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-professional-communication-deadline",
+    "topic_id": "office",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-professional-communication-research",
+    "topic_id": "school",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-professional-communication-responsibility",
+    "topic_id": "office",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-professional-communication-achievement",
+    "topic_id": "jobs",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-professional-communication-presentation",
+    "topic_id": "office",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-professional-communication-communication",
+    "topic_id": "office",
+    "level": "B1"
+  },
+  {
+    "word_id": "logistics-supply-chain-supplier",
+    "topic_id": "logistics",
+    "level": "B2"
+  },
+  {
+    "word_id": "logistics-supply-chain-shipment",
+    "topic_id": "logistics",
+    "level": "B2"
+  },
+  {
+    "word_id": "logistics-supply-chain-delivery",
+    "topic_id": "shopping",
+    "level": "B1"
+  },
+  {
+    "word_id": "logistics-receiving-and-storage-goods-receipt",
+    "topic_id": "logistics",
+    "level": "B2"
+  },
+  {
+    "word_id": "logistics-order-fulfilment-order-picking",
+    "topic_id": "logistics",
+    "level": "B2"
+  },
+  {
+    "word_id": "logistics-receiving-and-storage-warehouse-layout",
+    "topic_id": "logistics",
+    "level": "B2"
+  },
+  {
+    "word_id": "logistics-supply-chain-distribution-center",
+    "topic_id": "logistics",
+    "level": "B2"
+  },
+  {
+    "word_id": "logistics-supply-chain-lead-time",
+    "topic_id": "logistics",
+    "level": "C1"
+  },
+  {
+    "word_id": "logistics-supply-chain-transportation-cost",
+    "topic_id": "logistics",
+    "level": "B2"
+  },
+  {
+    "word_id": "warehouse-operations-sap-warehouse-processes-material",
+    "topic_id": "logistics",
+    "level": "B1"
+  },
+  {
+    "word_id": "warehouse-operations-sap-warehouse-processes-purchase-order",
+    "topic_id": "logistics",
+    "level": "B2"
+  },
+  {
+    "word_id": "warehouse-operations-sap-warehouse-processes-goods-movement",
+    "topic_id": "logistics",
+    "level": "B2"
+  },
+  {
+    "word_id": "warehouse-operations-sap-warehouse-processes-warehouse-task",
+    "topic_id": "logistics",
+    "level": "B2"
+  },
+  {
+    "word_id": "warehouse-operations-sap-warehouse-processes-inbound-processing",
+    "topic_id": "logistics",
+    "level": "C1"
+  },
+  {
+    "word_id": "warehouse-operations-sap-warehouse-processes-outbound-processing",
+    "topic_id": "logistics",
+    "level": "C1"
+  },
+  {
+    "word_id": "warehouse-operations-inventory-control-physical-inventory",
+    "topic_id": "logistics",
+    "level": "C1"
+  },
+  {
+    "word_id": "warehouse-operations-sap-warehouse-processes-material-document",
+    "topic_id": "logistics",
+    "level": "C1"
+  },
+  {
+    "word_id": "business-and-office-finance-and-planning-revenue",
+    "topic_id": "office",
+    "level": "B2"
+  },
+  {
+    "word_id": "business-and-office-finance-and-planning-expenses",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "business-and-office-finance-and-planning-profit",
+    "topic_id": "office",
+    "level": "B1"
+  },
+  {
+    "word_id": "business-and-office-finance-and-planning-profit-margin",
+    "topic_id": "office",
+    "level": "C1"
+  },
+  {
+    "word_id": "business-and-office-finance-and-planning-invoice",
+    "topic_id": "office",
+    "level": "B2"
+  },
+  {
+    "word_id": "business-and-office-meetings-and-negotiation-negotiation",
+    "topic_id": "office",
+    "level": "B2"
+  },
+  {
+    "word_id": "business-and-office-meetings-and-negotiation-agreement",
+    "topic_id": "office",
+    "level": "B1"
+  },
+  {
+    "word_id": "business-and-office-meetings-and-negotiation-recruitment",
+    "topic_id": "jobs",
+    "level": "C1"
+  },
+  {
+    "word_id": "business-and-office-finance-and-planning-target",
+    "topic_id": "office",
+    "level": "B2"
+  },
+  {
+    "word_id": "business-and-office-meetings-and-negotiation-customer-satisfaction",
+    "topic_id": "office",
+    "level": "B2"
+  },
+  {
+    "word_id": "business-and-office-finance-and-planning-market-demand",
+    "topic_id": "office",
+    "level": "B2"
+  },
+  {
+    "word_id": "business-and-office-finance-and-planning-cash-flow",
+    "topic_id": "office",
+    "level": "C1"
+  },
+  {
+    "word_id": "business-and-office-meetings-and-negotiation-complaint",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-active-vocabulary-environment",
+    "topic_id": "nature",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-active-vocabulary-opportunity",
+    "topic_id": "jobs",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-active-vocabulary-society",
+    "topic_id": "family",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-active-vocabulary-technology",
+    "topic_id": "tech",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-active-vocabulary-culture",
+    "topic_id": "travel",
+    "level": "B1"
+  },
+  {
+    "word_id": "study-and-career-learning-and-research-assignment",
+    "topic_id": "school",
+    "level": "B2"
+  },
+  {
+    "word_id": "study-and-career-career-development-interview",
+    "topic_id": "jobs",
+    "level": "B1"
+  },
+  {
+    "word_id": "study-and-career-career-development-qualification",
+    "topic_id": "jobs",
+    "level": "B2"
+  },
+  {
+    "word_id": "study-and-career-career-development-experience",
+    "topic_id": "jobs",
+    "level": "B1"
+  },
+  {
+    "word_id": "travel-and-culture-travel-planning-luggage",
+    "topic_id": "airport",
+    "level": "B1"
+  },
+  {
+    "word_id": "travel-and-culture-travel-planning-departure",
+    "topic_id": "airport",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-travel-planning-arrival",
+    "topic_id": "airport",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-at-the-destination-accommodation",
+    "topic_id": "travel",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-at-the-destination-directions",
+    "topic_id": "city",
+    "level": "B1"
+  },
+  {
+    "word_id": "travel-and-culture-travel-planning-ticket",
+    "topic_id": "transport",
+    "level": "A2"
+  },
+  {
+    "word_id": "travel-and-culture-travel-planning-reservation",
+    "topic_id": "travel",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-travel-planning-delay",
+    "topic_id": "transport",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-travel-planning-border",
+    "topic_id": "customs",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-at-the-destination-sightseeing",
+    "topic_id": "travel",
+    "level": "B2"
+  },
+  {
+    "word_id": "sport-and-fitness-training-and-competition-training",
+    "topic_id": "sport",
+    "level": "B1"
+  },
+  {
+    "word_id": "sport-and-fitness-training-and-competition-match",
+    "topic_id": "sport",
+    "level": "A2"
+  },
+  {
+    "word_id": "sport-and-fitness-training-and-competition-tournament",
+    "topic_id": "sport",
+    "level": "B2"
+  },
+  {
+    "word_id": "sport-and-fitness-training-and-competition-goalkeeper",
+    "topic_id": "sport",
+    "level": "B2"
+  },
+  {
+    "word_id": "sport-and-fitness-training-and-competition-defender",
+    "topic_id": "sport",
+    "level": "B2"
+  },
+  {
+    "word_id": "sport-and-fitness-training-and-competition-score",
+    "topic_id": "sport",
+    "level": "B1"
+  },
+  {
+    "word_id": "sport-and-fitness-health-and-recovery-injury",
+    "topic_id": "health",
+    "level": "B2"
+  },
+  {
+    "word_id": "everyday-life-daily-routines-breakfast",
+    "topic_id": "food",
+    "level": "A2"
+  },
+  {
+    "word_id": "everyday-life-daily-routines-commute",
+    "topic_id": "transport",
+    "level": "B2"
+  },
+  {
+    "word_id": "everyday-life-home-and-services-appointment",
+    "topic_id": "health",
+    "level": "B1"
+  },
+  {
+    "word_id": "everyday-life-home-and-services-receipt",
+    "topic_id": "shopping",
+    "level": "B1"
+  },
+  {
+    "word_id": "transport-and-trade-road-freight-freight",
+    "topic_id": "customs",
+    "level": "C1"
+  },
+  {
+    "word_id": "transport-and-trade-road-freight-consignment",
+    "topic_id": "customs",
+    "level": "C1"
+  },
+  {
+    "word_id": "transport-and-trade-road-freight-carrier",
+    "topic_id": "logistics",
+    "level": "C1"
+  },
+  {
+    "word_id": "transport-and-trade-customs-and-trade-customs-clearance",
+    "topic_id": "customs",
+    "level": "C1"
+  },
+  {
+    "word_id": "transport-and-trade-customs-and-trade-bill-of-lading",
+    "topic_id": "customs",
+    "level": "C1"
+  },
+  {
+    "word_id": "food-and-drinks-meals-and-cooking-lunch",
+    "topic_id": "food",
+    "level": "A2"
+  },
+  {
+    "word_id": "food-and-drinks-meals-and-cooking-dinner",
+    "topic_id": "food",
+    "level": "A2"
+  },
+  {
+    "word_id": "food-and-drinks-meals-and-cooking-ingredient",
+    "topic_id": "food",
+    "level": "B1"
+  },
+  {
+    "word_id": "food-and-drinks-meals-and-cooking-recipe",
+    "topic_id": "food",
+    "level": "B1"
+  },
+  {
+    "word_id": "food-and-drinks-meals-and-cooking-vegetable",
+    "topic_id": "food",
+    "level": "A2"
+  },
+  {
+    "word_id": "food-and-drinks-meals-and-cooking-fruit",
+    "topic_id": "food",
+    "level": "A2"
+  },
+  {
+    "word_id": "food-and-drinks-meals-and-cooking-delicious",
+    "topic_id": "food",
+    "level": "B1"
+  },
+  {
+    "word_id": "food-and-drinks-meals-and-cooking-bake",
+    "topic_id": "food",
+    "level": "B1"
+  },
+  {
+    "word_id": "food-and-drinks-meals-and-cooking-boil",
+    "topic_id": "food",
+    "level": "B1"
+  },
+  {
+    "word_id": "food-and-drinks-meals-and-cooking-chop",
+    "topic_id": "food",
+    "level": "B2"
+  },
+  {
+    "word_id": "food-and-drinks-meals-and-cooking-fry",
+    "topic_id": "food",
+    "level": "B1"
+  },
+  {
+    "word_id": "food-and-drinks-meals-and-cooking-seasoning",
+    "topic_id": "food",
+    "level": "C1"
+  },
+  {
+    "word_id": "food-and-drinks-meals-and-cooking-dessert",
+    "topic_id": "food",
+    "level": "B1"
+  },
+  {
+    "word_id": "food-and-drinks-caf-and-restaurant-menu",
+    "topic_id": "food",
+    "level": "A2"
+  },
+  {
+    "word_id": "food-and-drinks-caf-and-restaurant-order",
+    "topic_id": "food",
+    "level": "A2"
+  },
+  {
+    "word_id": "food-and-drinks-caf-and-restaurant-bill",
+    "topic_id": "food",
+    "level": "B1"
+  },
+  {
+    "word_id": "food-and-drinks-caf-and-restaurant-tip",
+    "topic_id": "food",
+    "level": "B1"
+  },
+  {
+    "word_id": "food-and-drinks-caf-and-restaurant-waiter",
+    "topic_id": "food",
+    "level": "A2"
+  },
+  {
+    "word_id": "food-and-drinks-caf-and-restaurant-reservation",
+    "topic_id": "food",
+    "level": "B1"
+  }
+]

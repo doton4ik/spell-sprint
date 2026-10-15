@@ -12,8 +12,11 @@ const map = new Map()
 const problems = []
 let missingFiles = 0
 for (let n = 1; n <= 10; n++) {
-  const file = new URL(`../research/plexity/answers/topics-${String(n).padStart(2, '0')}.json`, import.meta.url)
-  if (!existsSync(file)) {
+  const name = `topics-${String(n).padStart(2, '0')}.json`
+  const file = [`../research/plexity/answers/${name}`, `../research/plexity/answers/topics/${name}`]
+    .map((path) => new URL(path, import.meta.url))
+    .find((url) => existsSync(url))
+  if (!file) {
     missingFiles++
     continue
   }
@@ -26,7 +29,7 @@ for (let n = 1; n <= 10; n++) {
     continue
   }
   for (const entry of entries) {
-    const [id, topic, level] = entry
+    const [id, topic, level] = Array.isArray(entry) ? entry : [entry.word_id, entry.topic_id, entry.level]
     if (!known.has(id)) problems.push(`topics-${n}: unknown word_id ${id}`)
     else if (!topicIds.has(topic)) problems.push(`topics-${n}: ${id} has topic "${topic}" which is not in the list`)
     else if (!LEVELS.includes(level)) problems.push(`topics-${n}: ${id} has level "${level}"`)

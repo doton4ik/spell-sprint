@@ -1,0 +1,487 @@
+[
+  {
+    "word_id": "travel-and-culture-at-the-airport-gate",
+    "topic_id": "airport",
+    "level": "A2"
+  },
+  {
+    "word_id": "travel-and-culture-at-the-airport-terminal",
+    "topic_id": "airport",
+    "level": "B1"
+  },
+  {
+    "word_id": "travel-and-culture-at-the-airport-customs-officer",
+    "topic_id": "customs",
+    "level": "C1"
+  },
+  {
+    "word_id": "travel-and-culture-at-the-airport-departure-lounge",
+    "topic_id": "airport",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-at-the-airport-connecting-flight",
+    "topic_id": "airport",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-at-the-airport-immigration",
+    "topic_id": "airport",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-on-the-plane-seatbelt",
+    "topic_id": "airport",
+    "level": "B1"
+  },
+  {
+    "word_id": "travel-and-culture-on-the-plane-cabin-crew",
+    "topic_id": "airport",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-on-the-plane-aisle",
+    "topic_id": "airport",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-on-the-plane-turbulence",
+    "topic_id": "airport",
+    "level": "C1"
+  },
+  {
+    "word_id": "travel-and-culture-on-the-plane-emergency-exit",
+    "topic_id": "airport",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-on-the-plane-announcement",
+    "topic_id": "airport",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-on-the-plane-jet-lag",
+    "topic_id": "travel",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-on-the-plane-runway",
+    "topic_id": "airport",
+    "level": "B2"
+  },
+  {
+    "word_id": "jobs-and-career-job-interview-cover-letter",
+    "topic_id": "jobs",
+    "level": "B2"
+  },
+  {
+    "word_id": "jobs-and-career-job-interview-curriculum-vitae",
+    "topic_id": "jobs",
+    "level": "C1"
+  },
+  {
+    "word_id": "jobs-and-career-job-interview-strength",
+    "topic_id": "jobs",
+    "level": "B1"
+  },
+  {
+    "word_id": "jobs-and-career-job-interview-weakness",
+    "topic_id": "jobs",
+    "level": "B1"
+  },
+  {
+    "word_id": "jobs-and-career-job-interview-reference",
+    "topic_id": "jobs",
+    "level": "B2"
+  },
+  {
+    "word_id": "jobs-and-career-job-interview-shortlist",
+    "topic_id": "jobs",
+    "level": "C1"
+  },
+  {
+    "word_id": "jobs-and-career-job-interview-job-offer",
+    "topic_id": "jobs",
+    "level": "B1"
+  },
+  {
+    "word_id": "jobs-and-career-job-interview-body-language",
+    "topic_id": "jobs",
+    "level": "B2"
+  },
+  {
+    "word_id": "jobs-and-career-job-interview-eye-contact",
+    "topic_id": "jobs",
+    "level": "B2"
+  },
+  {
+    "word_id": "jobs-and-career-at-work-supervisor",
+    "topic_id": "office",
+    "level": "B2"
+  },
+  {
+    "word_id": "jobs-and-career-at-work-workload",
+    "topic_id": "office",
+    "level": "B2"
+  },
+  {
+    "word_id": "jobs-and-career-at-work-overtime",
+    "topic_id": "office",
+    "level": "B2"
+  },
+  {
+    "word_id": "jobs-and-career-at-work-promotion",
+    "topic_id": "jobs",
+    "level": "B2"
+  },
+  {
+    "word_id": "jobs-and-career-at-work-resignation",
+    "topic_id": "jobs",
+    "level": "C1"
+  },
+  {
+    "word_id": "jobs-and-career-at-work-teamwork",
+    "topic_id": "office",
+    "level": "B1"
+  },
+  {
+    "word_id": "jobs-and-career-at-work-punctual",
+    "topic_id": "office",
+    "level": "B2"
+  },
+  {
+    "word_id": "jobs-and-career-at-work-workplace",
+    "topic_id": "office",
+    "level": "B1"
+  },
+  {
+    "word_id": "jobs-and-career-at-work-annual-leave",
+    "topic_id": "office",
+    "level": "B2"
+  },
+  {
+    "word_id": "jobs-and-career-at-work-sick-leave",
+    "topic_id": "health",
+    "level": "B2"
+  },
+  {
+    "word_id": "time-and-dates-days-and-months-monday",
+    "topic_id": "routine",
+    "level": "A2"
+  },
+  {
+    "word_id": "time-and-dates-days-and-months-tuesday",
+    "topic_id": "routine",
+    "level": "A2"
+  },
+  {
+    "word_id": "time-and-dates-days-and-months-thursday",
+    "topic_id": "routine",
+    "level": "A2"
+  },
+  {
+    "word_id": "time-and-dates-days-and-months-friday",
+    "topic_id": "routine",
+    "level": "A2"
+  },
+  {
+    "word_id": "time-and-dates-days-and-months-saturday",
+    "topic_id": "routine",
+    "level": "A2"
+  },
+  {
+    "word_id": "time-and-dates-days-and-months-sunday",
+    "topic_id": "routine",
+    "level": "A2"
+  },
+  {
+    "word_id": "time-and-dates-days-and-months-january",
+    "topic_id": "routine",
+    "level": "A2"
+  },
+  {
+    "word_id": "time-and-dates-days-and-months-march",
+    "topic_id": "routine",
+    "level": "A2"
+  },
+  {
+    "word_id": "time-and-dates-days-and-months-april",
+    "topic_id": "routine",
+    "level": "A2"
+  },
+  {
+    "word_id": "time-and-dates-days-and-months-june",
+    "topic_id": "routine",
+    "level": "A2"
+  },
+  {
+    "word_id": "time-and-dates-days-and-months-august",
+    "topic_id": "routine",
+    "level": "A2"
+  },
+  {
+    "word_id": "time-and-dates-days-and-months-september",
+    "topic_id": "routine",
+    "level": "A2"
+  },
+  {
+    "word_id": "time-and-dates-days-and-months-december",
+    "topic_id": "routine",
+    "level": "A2"
+  },
+  {
+    "word_id": "time-and-dates-planning-time-schedule",
+    "topic_id": "routine",
+    "level": "B1"
+  },
+  {
+    "word_id": "time-and-dates-planning-time-timetable",
+    "topic_id": "routine",
+    "level": "B1"
+  },
+  {
+    "word_id": "time-and-dates-planning-time-postpone",
+    "topic_id": "office",
+    "level": "B2"
+  },
+  {
+    "word_id": "time-and-dates-planning-time-in-advance",
+    "topic_id": "routine",
+    "level": "B1"
+  },
+  {
+    "word_id": "time-and-dates-planning-time-on-time",
+    "topic_id": "routine",
+    "level": "A2"
+  },
+  {
+    "word_id": "time-and-dates-planning-time-punctuality",
+    "topic_id": "office",
+    "level": "B2"
+  },
+  {
+    "word_id": "time-and-dates-planning-time-reminder",
+    "topic_id": "tech",
+    "level": "B1"
+  },
+  {
+    "word_id": "time-and-dates-planning-time-duration",
+    "topic_id": "school",
+    "level": "B2"
+  },
+  {
+    "word_id": "time-and-dates-planning-time-beforehand",
+    "topic_id": "routine",
+    "level": "B2"
+  },
+  {
+    "word_id": "time-and-dates-planning-time-nowadays",
+    "topic_id": "routine",
+    "level": "B1"
+  },
+  {
+    "word_id": "time-and-dates-planning-time-fortnight",
+    "topic_id": "routine",
+    "level": "B2"
+  },
+  {
+    "word_id": "time-and-dates-planning-time-weekday",
+    "topic_id": "routine",
+    "level": "B1"
+  },
+  {
+    "word_id": "shopping-paying-cash",
+    "topic_id": "shopping",
+    "level": "A2"
+  },
+  {
+    "word_id": "shopping-paying-credit-card",
+    "topic_id": "shopping",
+    "level": "B1"
+  },
+  {
+    "word_id": "shopping-paying-debit-card",
+    "topic_id": "shopping",
+    "level": "B1"
+  },
+  {
+    "word_id": "shopping-paying-change",
+    "topic_id": "shopping",
+    "level": "B1"
+  },
+  {
+    "word_id": "shopping-paying-price-tag",
+    "topic_id": "shopping",
+    "level": "B1"
+  },
+  {
+    "word_id": "shopping-paying-instalment",
+    "topic_id": "shopping",
+    "level": "C1"
+  },
+  {
+    "word_id": "shopping-paying-currency",
+    "topic_id": "travel",
+    "level": "B1"
+  },
+  {
+    "word_id": "shopping-paying-surcharge",
+    "topic_id": "shopping",
+    "level": "C1"
+  },
+  {
+    "word_id": "shopping-paying-voucher",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "shopping-paying-loyalty-card",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "shopping-paying-till",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "shopping-paying-overpay",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "shopping-banking-bank-account",
+    "topic_id": "shopping",
+    "level": "B1"
+  },
+  {
+    "word_id": "shopping-banking-withdraw",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "shopping-banking-deposit",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "shopping-banking-balance",
+    "topic_id": "shopping",
+    "level": "B1"
+  },
+  {
+    "word_id": "shopping-banking-overdraft",
+    "topic_id": "shopping",
+    "level": "C1"
+  },
+  {
+    "word_id": "shopping-banking-transfer",
+    "topic_id": "shopping",
+    "level": "B1"
+  },
+  {
+    "word_id": "shopping-banking-savings-account",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "shopping-banking-interest-rate",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "shopping-banking-loan",
+    "topic_id": "shopping",
+    "level": "B1"
+  },
+  {
+    "word_id": "shopping-banking-mortgage",
+    "topic_id": "shopping",
+    "level": "C1"
+  },
+  {
+    "word_id": "shopping-banking-pin-code",
+    "topic_id": "shopping",
+    "level": "B1"
+  },
+  {
+    "word_id": "shopping-banking-statement",
+    "topic_id": "shopping",
+    "level": "B2"
+  },
+  {
+    "word_id": "school-and-learning-in-class-classmate",
+    "topic_id": "school",
+    "level": "B1"
+  },
+  {
+    "word_id": "school-and-learning-in-class-textbook",
+    "topic_id": "school",
+    "level": "B1"
+  },
+  {
+    "word_id": "school-and-learning-in-class-blackboard",
+    "topic_id": "school",
+    "level": "B1"
+  },
+  {
+    "word_id": "school-and-learning-in-class-whiteboard",
+    "topic_id": "school",
+    "level": "B1"
+  },
+  {
+    "word_id": "school-and-learning-in-class-homework",
+    "topic_id": "school",
+    "level": "A2"
+  },
+  {
+    "word_id": "school-and-learning-in-class-lesson",
+    "topic_id": "school",
+    "level": "A2"
+  },
+  {
+    "word_id": "school-and-learning-in-class-lecture",
+    "topic_id": "school",
+    "level": "B1"
+  },
+  {
+    "word_id": "school-and-learning-in-class-syllabus",
+    "topic_id": "school",
+    "level": "C1"
+  },
+  {
+    "word_id": "school-and-learning-in-class-attendance",
+    "topic_id": "school",
+    "level": "B2"
+  },
+  {
+    "word_id": "school-and-learning-in-class-participate",
+    "topic_id": "school",
+    "level": "B2"
+  },
+  {
+    "word_id": "school-and-learning-in-class-discussion",
+    "topic_id": "school",
+    "level": "B1"
+  },
+  {
+    "word_id": "school-and-learning-exams-multiple-choice",
+    "topic_id": "school",
+    "level": "B2"
+  },
+  {
+    "word_id": "school-and-learning-exams-revision",
+    "topic_id": "school",
+    "level": "B2"
+  },
+  {
+    "word_id": "school-and-learning-exams-pass",
+    "topic_id": "school",
+    "level": "B1"
+  },
+  {
+    "word_id": "school-and-learning-exams-fail",
+    "topic_id": "school",
+    "level": "B1"
+  }
+]

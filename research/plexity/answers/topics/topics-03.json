@@ -1,0 +1,487 @@
+[
+  {
+    "word_id": "technology-online-life-website",
+    "topic_id": "tech",
+    "level": "B1"
+  },
+  {
+    "word_id": "technology-online-life-browser",
+    "topic_id": "tech",
+    "level": "B2"
+  },
+  {
+    "word_id": "technology-online-life-attachment",
+    "topic_id": "tech",
+    "level": "B2"
+  },
+  {
+    "word_id": "technology-online-life-username",
+    "topic_id": "tech",
+    "level": "B1"
+  },
+  {
+    "word_id": "technology-online-life-notification",
+    "topic_id": "tech",
+    "level": "B2"
+  },
+  {
+    "word_id": "technology-online-life-subscribe",
+    "topic_id": "tech",
+    "level": "B2"
+  },
+  {
+    "word_id": "technology-online-life-account",
+    "topic_id": "tech",
+    "level": "B1"
+  },
+  {
+    "word_id": "technology-online-life-privacy",
+    "topic_id": "tech",
+    "level": "B2"
+  },
+  {
+    "word_id": "technology-online-life-search-engine",
+    "topic_id": "tech",
+    "level": "B2"
+  },
+  {
+    "word_id": "technology-online-life-social-media",
+    "topic_id": "tech",
+    "level": "B1"
+  },
+  {
+    "word_id": "technology-online-life-delete",
+    "topic_id": "tech",
+    "level": "B1"
+  },
+  {
+    "word_id": "technology-online-life-backup",
+    "topic_id": "tech",
+    "level": "B2"
+  },
+  {
+    "word_id": "nature-and-animals-nature-and-animals-forest",
+    "topic_id": "nature",
+    "level": "B1"
+  },
+  {
+    "word_id": "nature-and-animals-nature-and-animals-mountain",
+    "topic_id": "nature",
+    "level": "B1"
+  },
+  {
+    "word_id": "nature-and-animals-nature-and-animals-valley",
+    "topic_id": "nature",
+    "level": "B2"
+  },
+  {
+    "word_id": "nature-and-animals-nature-and-animals-island",
+    "topic_id": "nature",
+    "level": "B1"
+  },
+  {
+    "word_id": "nature-and-animals-nature-and-animals-wildlife",
+    "topic_id": "nature",
+    "level": "B2"
+  },
+  {
+    "word_id": "nature-and-animals-nature-and-animals-insect",
+    "topic_id": "nature",
+    "level": "B1"
+  },
+  {
+    "word_id": "nature-and-animals-nature-and-animals-butterfly",
+    "topic_id": "nature",
+    "level": "B1"
+  },
+  {
+    "word_id": "nature-and-animals-nature-and-animals-squirrel",
+    "topic_id": "nature",
+    "level": "B2"
+  },
+  {
+    "word_id": "nature-and-animals-nature-and-animals-eagle",
+    "topic_id": "nature",
+    "level": "B2"
+  },
+  {
+    "word_id": "nature-and-animals-nature-and-animals-pollution",
+    "topic_id": "nature",
+    "level": "B2"
+  },
+  {
+    "word_id": "nature-and-animals-nature-and-animals-recycle",
+    "topic_id": "nature",
+    "level": "B1"
+  },
+  {
+    "word_id": "weather-and-seasons-weather-and-seasons-weather",
+    "topic_id": "weather",
+    "level": "A2"
+  },
+  {
+    "word_id": "weather-and-seasons-weather-and-seasons-temperature",
+    "topic_id": "weather",
+    "level": "B1"
+  },
+  {
+    "word_id": "weather-and-seasons-weather-and-seasons-forecast",
+    "topic_id": "weather",
+    "level": "B2"
+  },
+  {
+    "word_id": "weather-and-seasons-weather-and-seasons-thunderstorm",
+    "topic_id": "weather",
+    "level": "B2"
+  },
+  {
+    "word_id": "weather-and-seasons-weather-and-seasons-breeze",
+    "topic_id": "weather",
+    "level": "B2"
+  },
+  {
+    "word_id": "weather-and-seasons-weather-and-seasons-drizzle",
+    "topic_id": "weather",
+    "level": "C1"
+  },
+  {
+    "word_id": "weather-and-seasons-weather-and-seasons-humid",
+    "topic_id": "weather",
+    "level": "B2"
+  },
+  {
+    "word_id": "weather-and-seasons-weather-and-seasons-freezing",
+    "topic_id": "weather",
+    "level": "B1"
+  },
+  {
+    "word_id": "weather-and-seasons-weather-and-seasons-autumn",
+    "topic_id": "weather",
+    "level": "A2"
+  },
+  {
+    "word_id": "weather-and-seasons-weather-and-seasons-spring",
+    "topic_id": "weather",
+    "level": "A2"
+  },
+  {
+    "word_id": "weather-and-seasons-weather-and-seasons-flood",
+    "topic_id": "weather",
+    "level": "B2"
+  },
+  {
+    "word_id": "weather-and-seasons-weather-and-seasons-drought",
+    "topic_id": "weather",
+    "level": "C1"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-accommodation",
+    "topic_id": "misspelled",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-receive",
+    "topic_id": "misspelled",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-separate",
+    "topic_id": "misspelled",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-definitely",
+    "topic_id": "misspelled",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-occasionally",
+    "topic_id": "misspelled",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-necessary",
+    "topic_id": "misspelled",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-embarrass",
+    "topic_id": "misspelled",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-environment",
+    "topic_id": "misspelled",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-government",
+    "topic_id": "misspelled",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-restaurant",
+    "topic_id": "misspelled",
+    "level": "A2"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-calendar",
+    "topic_id": "misspelled",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-library",
+    "topic_id": "misspelled",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-february",
+    "topic_id": "misspelled",
+    "level": "A2"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-wednesday",
+    "topic_id": "misspelled",
+    "level": "A2"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-knowledge",
+    "topic_id": "misspelled",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-achieve",
+    "topic_id": "misspelled",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-believe",
+    "topic_id": "misspelled",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-foreign",
+    "topic_id": "misspelled",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-weird",
+    "topic_id": "misspelled",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-neighbour",
+    "topic_id": "misspelled",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-privilege",
+    "topic_id": "misspelled",
+    "level": "C1"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-conscience",
+    "topic_id": "misspelled",
+    "level": "C1"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-rhythm",
+    "topic_id": "misspelled",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-commonly-misspelled-answer",
+    "topic_id": "misspelled",
+    "level": "A2"
+  },
+  {
+    "word_id": "general-english-confusable-words-their",
+    "topic_id": "confusable",
+    "level": "A2"
+  },
+  {
+    "word_id": "general-english-confusable-words-there",
+    "topic_id": "confusable",
+    "level": "A2"
+  },
+  {
+    "word_id": "general-english-confusable-words-affect",
+    "topic_id": "confusable",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-confusable-words-effect",
+    "topic_id": "confusable",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-confusable-words-principal",
+    "topic_id": "confusable",
+    "level": "C1"
+  },
+  {
+    "word_id": "general-english-confusable-words-principle",
+    "topic_id": "confusable",
+    "level": "C1"
+  },
+  {
+    "word_id": "general-english-confusable-words-stationary",
+    "topic_id": "confusable",
+    "level": "C1"
+  },
+  {
+    "word_id": "general-english-confusable-words-stationery",
+    "topic_id": "confusable",
+    "level": "C1"
+  },
+  {
+    "word_id": "general-english-confusable-words-advice",
+    "topic_id": "confusable",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-confusable-words-advise",
+    "topic_id": "confusable",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-confusable-words-loose",
+    "topic_id": "confusable",
+    "level": "B2"
+  },
+  {
+    "word_id": "general-english-confusable-words-lose",
+    "topic_id": "confusable",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-confusable-words-quiet",
+    "topic_id": "confusable",
+    "level": "A2"
+  },
+  {
+    "word_id": "general-english-confusable-words-quite",
+    "topic_id": "confusable",
+    "level": "B1"
+  },
+  {
+    "word_id": "general-english-confusable-words-weather",
+    "topic_id": "confusable",
+    "level": "A2"
+  },
+  {
+    "word_id": "general-english-confusable-words-whether",
+    "topic_id": "confusable",
+    "level": "B1"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-look-up",
+    "topic_id": "phrasal",
+    "level": "A2"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-give-up",
+    "topic_id": "phrasal",
+    "level": "A2"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-turn-on",
+    "topic_id": "phrasal",
+    "level": "A2"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-turn-off",
+    "topic_id": "phrasal",
+    "level": "A2"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-find-out",
+    "topic_id": "phrasal",
+    "level": "B1"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-figure-out",
+    "topic_id": "phrasal",
+    "level": "B1"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-carry-on",
+    "topic_id": "phrasal",
+    "level": "B1"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-break-down",
+    "topic_id": "phrasal",
+    "level": "B1"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-run-out-of",
+    "topic_id": "phrasal",
+    "level": "B1"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-put-off",
+    "topic_id": "phrasal",
+    "level": "B2"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-set-up",
+    "topic_id": "phrasal",
+    "level": "B1"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-take-off",
+    "topic_id": "phrasal",
+    "level": "B1"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-get-along-with",
+    "topic_id": "phrasal",
+    "level": "B2"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-come-across",
+    "topic_id": "phrasal",
+    "level": "B2"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-work-out",
+    "topic_id": "phrasal",
+    "level": "B1"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-show-up",
+    "topic_id": "phrasal",
+    "level": "B2"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-call-off",
+    "topic_id": "phrasal",
+    "level": "B2"
+  },
+  {
+    "word_id": "common-actions-everyday-phrasal-verbs-look-forward-to",
+    "topic_id": "phrasal",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-at-the-airport-boarding-pass",
+    "topic_id": "airport",
+    "level": "B1"
+  },
+  {
+    "word_id": "travel-and-culture-at-the-airport-passport-control",
+    "topic_id": "airport",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-at-the-airport-baggage-claim",
+    "topic_id": "airport",
+    "level": "B2"
+  },
+  {
+    "word_id": "travel-and-culture-at-the-airport-check-in-desk",
+    "topic_id": "airport",
+    "level": "B2"
+  }
+]
