@@ -46,11 +46,14 @@ for (const name of files) {
   }
   const entry = bySlug.get(rule.slug) ?? { rule, examples: [], exercises: [], files: [] }
   entry.files.push(name)
-  entry.examples.push(...(data.examples ?? []))
-  entry.exercises.push(...(data.exercises ?? []))
+  // an item is an example when it has a "text" and an example type, wherever the assistant put it
+  const all = [...(data.examples ?? []), ...(data.exercises ?? [])]
+  entry.examples.push(...all.filter((item) => exampleTypes.has(item.type) && typeof item.text === 'string'))
+  entry.exercises.push(...all.filter((item) => !(exampleTypes.has(item.type) && typeof item.text === 'string')))
   bySlug.set(rule.slug, entry)
 }
 
+const wanted = JSON.parse(readFileSync('research/plexity/rule-counts.json', 'utf8'))
 const result = []
 let dropped = 0
 for (const { rule, examples, exercises } of bySlug.values()) {
@@ -167,6 +170,10 @@ for (const { rule, examples, exercises } of bySlug.values()) {
   })
 }
 
+const table = result.map((item) => {
+  const want = wanted[item.slug]
+  return `${item.slug}: examples ${item.examples.length}/${(want?.ex ?? 0) * 2}, exercises ${item.exercises.length}/${(want?.exr ?? 0) * 2}`
+})
 const total = result.reduce(
   (sum, item) => ({ examples: sum.examples + item.examples.length, exercises: sum.exercises + item.exercises.length }),
   { examples: 0, exercises: 0 },
@@ -176,6 +183,8 @@ console.log(
   `answers read: ${files.length} files, ${result.length} of ${rules.rules.length} rules; kept ${total.examples} examples and ${total.exercises} exercises; dropped ${dropped}`,
 )
 if (missingRules.length) console.log(`rules without an answer yet: ${missingRules.length}`)
+console.log('kept / wanted per rule:')
+for (const line of table) console.log('  ' + line)
 for (const message of problems.slice(0, 40)) console.log('DROPPED', message)
 if (problems.length > 40) console.log(`… and ${problems.length - 40} more`)
 if (process.argv.includes('--apply')) {
