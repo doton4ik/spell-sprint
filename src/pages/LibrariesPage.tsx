@@ -1,3 +1,4 @@
+import { cefrLevels } from '../data/libraryTopics'
 import { useEffect, useMemo, useState } from 'react'
 import { ImportLibraryPanel } from '../components/libraries/ImportLibraryPanel'
 import { AddWordPanel } from '../components/libraries/AddWordPanel'
@@ -553,6 +554,7 @@ function LibraryDetails({
 }) {
   const [topic, setTopic] = useState('All')
   const [subtopic, setSubtopic] = useState('All')
+  const [level, setLevel] = useState('All')
   const [difficulty, setDifficulty] = useState<'All' | LibraryDifficulty>('All')
   const [partOfSpeech, setPartOfSpeech] = useState('All')
   const [search, setSearch] = useState('')
@@ -563,6 +565,7 @@ function LibraryDetails({
     (word) =>
       (topic === 'All' || word.topic === topic) &&
       (subtopic === 'All' || word.subtopic === subtopic) &&
+      (level === 'All' || word.level === level) &&
       (difficulty === 'All' || word.difficulty === difficulty) &&
       (partOfSpeech === 'All' || word.partOfSpeech === partOfSpeech) &&
       `${word.word} ${word.translation}`.toLocaleLowerCase().includes(search.trim().toLocaleLowerCase()),
@@ -579,8 +582,9 @@ function LibraryDetails({
         }}
       />
       <Select label="Subtopic" value={subtopic} values={subtopics} onChange={setSubtopic} />
+      <Select label="Level" value={level} values={['All', ...cefrLevels]} onChange={setLevel} />
       <Select
-        label="Difficulty"
+        label="Spelling difficulty"
         value={difficulty}
         values={['All', 'easy', 'medium', 'hard']}
         onChange={(value) => setDifficulty(value as 'All' | LibraryDifficulty)}
