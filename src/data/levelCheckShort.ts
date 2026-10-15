@@ -386,7 +386,7 @@ export const shortItems: LevelItem[] = [
     4,
     'Don’t bother with the minutes. Priya’s covering. Just make sure the room’s set up by nine.',
     'The reader should prepare the room; Priya will take the minutes.',
-    ['Priya will arrange the room.', 'The reader must take the minutes before nine.'],
+    ['Priya will set up the room and the reader takes the minutes.', 'The reader must take the minutes and set up the room by nine.'],
     'Don’t bother with the minutes: Priya does them.',
   ),
   notice(
@@ -407,7 +407,7 @@ export const shortItems: LevelItem[] = [
   ),
 
   // ---- Write ONE word -----------------------------------------------------------------------------
-  openGap('1-01', 1, 'They have been married ___ twenty years.', 'for', 'For + a period of time.'),
+  openGap('1-01', 1, 'Where have you been? I’ve been waiting ___ ages!', 'for', 'For + a period of time: for ages.'),
   openGap('1-02', 1, 'My sister is afraid ___ dogs.', 'of', 'Afraid of something.'),
   openGap('1-03', 1, 'How ___ brothers and sisters have you got?', 'many', 'Many goes with countable nouns.'),
   openGap('1-04', 1, 'He doesn’t like fish and I don’t like it ___.', 'either', 'Either follows a negative sentence.'),
@@ -415,9 +415,9 @@ export const shortItems: LevelItem[] = [
   openGap('2-02', 2, 'How long does it ___ you to get to work?', 'take', 'It takes + person + time.'),
   openGap('2-03', 2, 'Neither the teacher ___ the students knew the answer.', 'nor', 'Neither… nor… links two negatives.'),
   openGap('3-03', 3, 'The more you practise, ___ better you will become.', 'the', 'The more… the better… compares two changes.'),
-  openGap('3-01', 3, 'She is used ___ working at night.', 'to', 'Be used to + the -ing form.'),
-  openGap('3-02', 3, 'No matter ___ hard she tried, she could not open the jar.', 'how', 'No matter how + adjective means however.'),
-  openGap('4-01', 4, 'Try as he ___, he could not open the door.', 'might|may', 'Try as he might means however hard he tried.'),
+  openGap('3-01', 2, 'Who is in charge ___ this department?', 'of', 'In charge of something.'),
+  openGap('3-02', 3, 'No matter ___ much it costs, we have to repair the roof.', 'how', 'No matter how much means however much.'),
+  openGap('4-01', 4, 'Try as he ___, he could not open the door.', 'might|may|would', 'Try as he might means however hard he tried.'),
   openGap('4-03', 4, 'She is said to ___ left the country last week.', 'have', 'An earlier action: to have + past participle.'),
   openGap('4-04', 4, 'She talks ___ if she owned the place.', 'as', 'As if introduces an unreal comparison.'),
 ]

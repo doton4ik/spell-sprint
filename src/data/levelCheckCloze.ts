@@ -27,8 +27,8 @@ export const clozePassages: LevelPassage[] = [
   {
     id: 'cz-market',
     level: 1,
-    title: 'A wet Saturday',
-    text: 'Last Saturday I went to the market (1) ___ my mother. We bought some vegetables and a cake with candles on it for my grandmother’s birthday. It was very crowded, (2) ___ we did not stay long. On the way home it started to rain, and because we had no umbrellas, we got very (3) ___. My grandmother laughed when she saw us at the door.',
+    title: 'Market day',
+    text: 'Last Saturday I went to the market (1) ___ my mother. We bought some vegetables and a birthday cake for my grandmother. It was very crowded, (2) ___ we did not stay long. On the way home it started to rain, and because we had no umbrellas, we got very (3) ___. My grandmother laughed when she saw us at the door.',
   },
   {
     id: 'cz-gym',
@@ -40,7 +40,7 @@ export const clozePassages: LevelPassage[] = [
     id: 'cz-edinburgh',
     level: 2,
     title: 'A day in Edinburgh',
-    text: 'Last month we took the train to Edinburgh. The journey was long, but it was worth it (1) ___ the views from the window. When we arrived, it was (2) ___ a wet afternoon that we spent the first hour in a café. In the end the sun came out, and we (3) ___ at the castle just before it closed. It was the perfect end to a long day.',
+    text: 'Last month we took the train to Edinburgh. The journey was long, but it was worth it (1) ___ the views from the window. When we got off the train, it was (2) ___ a wet afternoon that we spent the first hour in a café. In the end the sun came out, and we (3) ___ at the castle just before it closed. It was the perfect end to a long day.',
   },
   {
     id: 'cz-noise',
@@ -52,7 +52,7 @@ export const clozePassages: LevelPassage[] = [
     id: 'cz-volunteer',
     level: 3,
     title: 'Volunteering abroad',
-    text: 'Volunteering abroad is often described as a life-changing experience. Since our programme (1) ___ in 2010, more than five thousand people have taken part in twelve countries. Some give up after a week, (2) ___ others stay for months. (3) ___ the difficulties, most say they would do it again, and many return as team leaders. The work is unpaid, and volunteers usually have to pay for their own flights.',
+    text: 'Volunteering abroad is often described as a life-changing experience. Since our programme (1) ___ in 2010, it has grown to twelve countries, and more than five thousand people have taken part. Some give up after a week, (2) ___ others stay for months. (3) ___ the difficulties, most say they would do it again, and many return as team leaders. The work is unpaid, and volunteers usually have to pay for their own flights.',
   },
   {
     id: 'cz-attention',
@@ -76,11 +76,11 @@ export const clozeItems: LevelItem[] = [
   ]),
   ...cloze('cz-market', 1, [
     ['with', ['to', 'at', 'by'], 'Go with someone.'],
-    ['so', ['because', 'but', 'or'], 'So gives the result.'],
+    ['so', ['because', 'if', 'or'], 'So gives the result.'],
     ['wet', ['wetly', 'water', 'wetting'], 'Get + adjective: get wet.'],
   ]),
   ...cloze('cz-gym', 2, [
-    ['turned', ['came', 'worked', 'found'], 'Turn out to be means prove to be in the end.'],
+    ['turned', ['came', 'showed', 'found'], 'Turn out to be means prove to be in the end.'],
     ['to', ['for', 'at', 'on'], 'Look forward to + noun.'],
     ['made', ['done', 'taken', 'kept'], 'We make friends.'],
   ]),

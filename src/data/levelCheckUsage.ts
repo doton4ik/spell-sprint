@@ -12,7 +12,7 @@ export const usageItems: LevelItem[] = [
   phrase(
     'n15-1-01',
     1,
-    'A: Why can’t you come out tonight?\nB: I need to ___ my homework before dinner.',
+    'A: Why can’t you come out tonight?\nB: Sorry, I need to ___ my homework this evening.',
     'do',
     ['make', 'take', 'play'],
     'We do homework; we make a mistake.',
@@ -78,7 +78,7 @@ export const usageItems: LevelItem[] = [
   phrase(
     'n15-1-12',
     1,
-    'A: What did you say?\nB: It is too noisy. I can’t ___ you.',
+    'A: Hello? Can you understand what I’m saying?\nB: Sorry, it’s too noisy here. I can’t ___ you.',
     'hear',
     ['listen', 'look', 'sound'],
     'Hear is to notice a sound; listen is to try to hear.',
@@ -137,7 +137,7 @@ export const usageItems: LevelItem[] = [
   phrase(
     'n15-3-01',
     3,
-    'A: Does the new rule affect me? I’m a manager.\nB: It ___ to all staff, not just managers.',
+    'A: Does the new rule affect me? I’m only part-time.\nB: Yes, it ___ to all staff, not just full-time staff.',
     'applies',
     ['depends', 'belongs', 'attaches'],
     'Apply to means be relevant for.',
@@ -145,7 +145,7 @@ export const usageItems: LevelItem[] = [
   phrase(
     'n15-3-02',
     3,
-    'A: How was the meeting?\nB: Quiet. There were ___ people than last week.',
+    'The report shows that ___ accidents happened on this road than last year.',
     'fewer',
     ['less', 'lesser', 'little'],
     'Fewer goes with countable nouns.',
@@ -169,7 +169,7 @@ export const usageItems: LevelItem[] = [
   phrase('n15-3-06', 2, 'The film was ___ boring that we left halfway.', 'so', ['such', 'too', 'very'], 'So + adjective + that.'),
   phrase(
     'n15-3-08',
-    3,
+    2,
     'A: Did he say sorry?\nB: Yes, he apologised ___ being late.',
     'for',
     ['of', 'to', 'by'],
@@ -214,7 +214,7 @@ export const usageItems: LevelItem[] = [
   phrase('n15-4-06', 3, 'She insisted ___ paying for the meal.', 'on', ['to', 'for', 'at'], 'Insist on + -ing.'),
   phrase(
     'n15-4-07',
-    4,
+    3,
     'A: Do you think the team can win?\nB: Yes, I think they’re ___ of beating the champions.',
     'capable',
     ['able', 'possible', 'likely'],
@@ -244,6 +244,14 @@ export const usageItems: LevelItem[] = [
     ['composes', 'consists', 'constitutes'],
     'Comprise means consist of; it needs no “of”.',
   ),
+  phrase(
+    'n15-4-11',
+    4,
+    'The two accounts are impossible to ___ because they contradict each other.',
+    'reconcile',
+    ['reflect', 'remind', 'retire'],
+    'Reconcile means make two things fit together.',
+  ),
 ]
 
 // ---- Grammar: choose the right form ---------------------------------------------------------
@@ -251,7 +259,7 @@ export const grammarItems: LevelItem[] = [
   gap(
     'n15-1-01',
     1,
-    'A: Does she play any sport?\nB: Yes, she ___ to the gym every Tuesday.',
+    'A: Does she do any exercise?\nB: Yes, she ___ to the gym every Tuesday.',
     'goes',
     ['go', 'going', 'is go'],
     'Use the -s form with she.',
@@ -317,7 +325,7 @@ export const grammarItems: LevelItem[] = [
   gap(
     'n15-3-04',
     3,
-    'A: What happened about the meeting?\nB: She suggested ___ it to Friday.',
+    'A: What did Anna say about the meeting?\nB: She suggested ___ it to Friday.',
     'moving',
     ['to move', 'move', 'moved'],
     'Suggest is followed by the -ing form.',
@@ -348,20 +356,20 @@ export const grammarItems: LevelItem[] = [
     'Which refers to a thing in a non-defining clause.',
   ),
   gap(
-    'n15-4-05',
-    4,
-    'A: Why didn’t you give up?\nB: Were it not for her support, I ___ given up.',
-    'would have',
-    ['would', 'will have', 'had'],
-    'Past unreal result: would have + past participle.',
-  ),
-  gap(
     'n15-4-08',
     3,
     'Despite ___ twice, he refused to give up.',
     'failing',
     ['to fail', 'fail', 'he failed'],
     'Despite is followed by a noun or the -ing form.',
+  ),
+  gap(
+    'n15-4-09',
+    4,
+    'A: Do you miss Paris?\nB: Yes. If I had taken the job there, I ___ there now.',
+    'would be living',
+    ['would have lived', 'will be living', 'had lived'],
+    'Past condition, present result: would + be + -ing.',
   ),
 ]
 
