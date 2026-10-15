@@ -1211,3 +1211,12 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Wide screens: the words of a library in two columns. */
+@media (min-width: 1380px) {
+  .word-list {
+    column-gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

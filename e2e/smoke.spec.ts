@@ -82,6 +82,42 @@ test('a wrong answer in practice becomes a mistake', async ({ page }) => {
   expect(errors).toEqual([])
 })
 
+test('on a wide screen the feedback on an answer is in the side panel, on a narrow one under the card', async ({ page }) => {
+  for (const [width, inPanel] of [
+    [1700, true],
+    [1300, false],
+  ] as const) {
+    await page.setViewportSize({ width, height: 900 })
+    await page.goto('/#practice')
+    await page.reload() // a fresh session, so the first word is new again
+    const answer = page.locator('#practice-answer')
+    await answer.fill('zzzz')
+    await answer.press('Enter')
+    await expect(page.getByText('Not quite')).toBeVisible()
+    const feedback = page.locator('.task-feedback')
+    await expect(page.locator('.session-rail .task-feedback')).toHaveCount(inPanel ? 1 : 0)
+    await expect(page.locator('.task-card .task-feedback')).toHaveCount(inPanel ? 0 : 1)
+    await expect(feedback).toHaveCount(1)
+    await page.evaluate('localStorage.clear()')
+  }
+})
+
+test('dictation reads the word only when Play is pressed', async ({ page }) => {
+  // counts every call to speechSynthesis.speak (a string: the e2e project has no DOM types)
+  await page.addInitScript(
+    `window.__spoken = 0; const speak = window.speechSynthesis.speak.bind(window.speechSynthesis); window.speechSynthesis.speak = (utterance) => { window.__spoken += 1; speak(utterance) }`,
+  )
+  await page.goto('/#practice')
+  const modeBox = page.locator('.practice-select', { hasText: 'Mode' }).locator('select')
+  if (!(await modeBox.isVisible())) await page.getByRole('button', { name: 'Change' }).click()
+  await modeBox.selectOption({ label: 'Listen and write' })
+  await expect(page.locator('.dictation-play')).toBeVisible()
+  await page.waitForTimeout(1000) // it used to start after about a third of a second
+  expect(await page.evaluate('window.__spoken')).toBe(0)
+  await page.locator('.dictation-play').click()
+  expect(await page.evaluate('window.__spoken')).toBe(1)
+})
+
 test('Enter after an answer starts the next word', async ({ page }) => {
   const errors = watchErrors(page)
   await page.goto('/#practice')

@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
+import { createPortal } from 'react-dom'
+import { useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode } from 'react'
 import { noAutocorrect } from '../noAutocorrect'
 import type { CheckResult, PracticeTask } from '../../types/practice'
 import { Icon } from '../icons/Icon'
@@ -39,6 +40,12 @@ type TaskCardProps = {
   onMeet?: (typed: string) => void
   onClaimCorrect?: () => void
   answerHint?: string // "Write in English": how many words and what kind of word the answer is
+  feedbackSlot?: HTMLElement | null // wide screens: the answer feedback is drawn here (the side panel) instead of under the card
+}
+
+// The feedback after an answer, drawn into another element when there is one: the card then keeps its height.
+function InSlot({ slot, children }: { slot?: HTMLElement | null; children: ReactNode }) {
+  return slot ? createPortal(children, slot) : <>{children}</>
 }
 
 const labels = {
@@ -87,6 +94,7 @@ export function TaskCard({
   onMeet,
   onClaimCorrect,
   answerHint,
+  feedbackSlot,
 }: TaskCardProps) {
   // The Russian meaning: the prompt, or the note under a Fill-the-gap sentence.
   const meaning = task.promptNote ?? task.prompt
@@ -267,7 +275,7 @@ export function TaskCard({
           <button className="dictation-play" type="button" onClick={onPlayAudio}>
             <Icon name="volume" size={22} />
             <span>
-              <strong>Play the word again</strong>
+              <strong>Play the word</strong>
               <small>Listen, then type what you hear.</small>
             </span>
           </button>
@@ -331,102 +339,104 @@ export function TaskCard({
             </span>
           </div>
         ) : null}
-        {result !== 'idle' ? (
-          <div className={`task-feedback task-feedback--${correct ? 'correct' : 'incorrect'}`} role="status">
-            <p className="task-feedback__title">
-              <Icon name={correct ? 'check' : 'refresh'} size={17} />
-              {correct ? (hintStep > 0 ? 'Correct — with a hint' : audioUsed ? 'Correct — with audio' : 'Correct') : 'Not quite'}
-            </p>
-            {correct && (hintStep > 0 || audioUsed) ? (
-              <p className="task-feedback__note">It comes back tomorrow, so you can write it without help.</p>
-            ) : null}
-            {!correct ? (
-              <dl className="task-feedback__compare">
-                <div>
-                  <dt>You wrote</dt>
-                  <dd className="task-feedback__wrote">{checkedAnswer || 'Skipped'}</dd>
-                </div>
-                <div>
-                  <dt>Correct</dt>
-                  <dd className="task-feedback__right">
-                    {target} <span>— {meaning}</span>
-                    <button
-                      className="task-feedback__listen"
-                      type="button"
-                      onClick={onPlayAudio}
-                      aria-label="Listen to the word"
-                      title="Listen"
-                    >
-                      <Icon name="volume" size={16} />
-                    </button>
-                  </dd>
-                </div>
-              </dl>
-            ) : (
-              <p className="task-feedback__right">
-                {target} <span>— {meaning}</span>
-                <button
-                  className="task-feedback__listen"
-                  type="button"
-                  onClick={onPlayAudio}
-                  aria-label="Listen to the word"
-                  title="Listen"
-                >
-                  <Icon name="volume" size={16} />
-                </button>
+        <InSlot slot={feedbackSlot}>
+          {result !== 'idle' ? (
+            <div className={`task-feedback task-feedback--${correct ? 'correct' : 'incorrect'}`} role="status">
+              <p className="task-feedback__title">
+                <Icon name={correct ? 'check' : 'refresh'} size={17} />
+                {correct ? (hintStep > 0 ? 'Correct — with a hint' : audioUsed ? 'Correct — with audio' : 'Correct') : 'Not quite'}
               </p>
-            )}
-            {!correct && mode === 'translate-ru' && checkedAnswer.trim() && onClaimCorrect ? (
-              <button className="claim-correct" type="button" onClick={onClaimCorrect}>
-                My translation is right too
-              </button>
-            ) : null}
-            {correct &&
-            mode === 'translate-ru' &&
-            checkedAnswer.trim() &&
-            !acceptedAnswers(task).some((option) => comparable(option) === comparable(checkedAnswer)) ? (
-              <p className="task-feedback__note">Counted as right. Thanks — we will check this translation and add it to the list.</p>
-            ) : null}
-            {others.length ? <p className="task-feedback__note">Also correct: {others.join(', ')}</p> : null}
-            {task.example ? (
-              <p className="task-feedback__example">{task.example}</p>
-            ) : task.extraExample ? (
-              <p className="task-feedback__example">
-                {task.extraExample}{' '}
-                {task.extraExampleSource === 'written' ? null : (
-                  <a
-                    href={
-                      task.extraExampleSource?.startsWith('tatoeba:')
-                        ? `https://tatoeba.org/en/sentences/show/${task.extraExampleSource.slice(8)}`
-                        : 'https://tatoeba.org'
-                    }
-                    target="_blank"
-                    rel="noreferrer"
-                    title="Sentence from Tatoeba, CC BY 2.0 FR"
+              {correct && (hintStep > 0 || audioUsed) ? (
+                <p className="task-feedback__note">It comes back tomorrow, so you can write it without help.</p>
+              ) : null}
+              {!correct ? (
+                <dl className="task-feedback__compare">
+                  <div>
+                    <dt>You wrote</dt>
+                    <dd className="task-feedback__wrote">{checkedAnswer || 'Skipped'}</dd>
+                  </div>
+                  <div>
+                    <dt>Correct</dt>
+                    <dd className="task-feedback__right">
+                      {target} <span>— {meaning}</span>
+                      <button
+                        className="task-feedback__listen"
+                        type="button"
+                        onClick={onPlayAudio}
+                        aria-label="Listen to the word"
+                        title="Listen"
+                      >
+                        <Icon name="volume" size={16} />
+                      </button>
+                    </dd>
+                  </div>
+                </dl>
+              ) : (
+                <p className="task-feedback__right">
+                  {target} <span>— {meaning}</span>
+                  <button
+                    className="task-feedback__listen"
+                    type="button"
+                    onClick={onPlayAudio}
+                    aria-label="Listen to the word"
+                    title="Listen"
                   >
-                    Tatoeba
-                  </a>
-                )}
-              </p>
-            ) : null}
-          </div>
-        ) : null}
-        {result !== 'idle' && task.wordId ? <WordTip wordId={task.wordId} wrong={!correct} key={task.wordId} /> : null}
-        {result === 'incorrect' && spellingTask && checkedAnswer.trim() ? (
-          <MistakeBreakdown
-            expected={target}
-            submitted={checkedAnswer}
-            taskType={task.type}
-            wordId={task.wordId}
-            showRules={showRuleAfterMistake}
-            onChallenge={setChallengeRules}
-          />
-        ) : null}
-        {result === 'incorrect' && showRuleAfterMistake && task.rule && !isDefaultRule ? (
-          <p className="related-rule">
-            <Icon name="lightbulb" size={16} /> {task.rule}
-          </p>
-        ) : null}
+                    <Icon name="volume" size={16} />
+                  </button>
+                </p>
+              )}
+              {!correct && mode === 'translate-ru' && checkedAnswer.trim() && onClaimCorrect ? (
+                <button className="claim-correct" type="button" onClick={onClaimCorrect}>
+                  My translation is right too
+                </button>
+              ) : null}
+              {correct &&
+              mode === 'translate-ru' &&
+              checkedAnswer.trim() &&
+              !acceptedAnswers(task).some((option) => comparable(option) === comparable(checkedAnswer)) ? (
+                <p className="task-feedback__note">Counted as right. Thanks — we will check this translation and add it to the list.</p>
+              ) : null}
+              {others.length ? <p className="task-feedback__note">Also correct: {others.join(', ')}</p> : null}
+              {task.example ? (
+                <p className="task-feedback__example">{task.example}</p>
+              ) : task.extraExample ? (
+                <p className="task-feedback__example">
+                  {task.extraExample}{' '}
+                  {task.extraExampleSource === 'written' ? null : (
+                    <a
+                      href={
+                        task.extraExampleSource?.startsWith('tatoeba:')
+                          ? `https://tatoeba.org/en/sentences/show/${task.extraExampleSource.slice(8)}`
+                          : 'https://tatoeba.org'
+                      }
+                      target="_blank"
+                      rel="noreferrer"
+                      title="Sentence from Tatoeba, CC BY 2.0 FR"
+                    >
+                      Tatoeba
+                    </a>
+                  )}
+                </p>
+              ) : null}
+            </div>
+          ) : null}
+          {result !== 'idle' && task.wordId ? <WordTip wordId={task.wordId} wrong={!correct} key={task.wordId} /> : null}
+          {result === 'incorrect' && spellingTask && checkedAnswer.trim() ? (
+            <MistakeBreakdown
+              expected={target}
+              submitted={checkedAnswer}
+              taskType={task.type}
+              wordId={task.wordId}
+              showRules={showRuleAfterMistake}
+              onChallenge={setChallengeRules}
+            />
+          ) : null}
+          {result === 'incorrect' && showRuleAfterMistake && task.rule && !isDefaultRule ? (
+            <p className="related-rule">
+              <Icon name="lightbulb" size={16} /> {task.rule}
+            </p>
+          ) : null}
+        </InSlot>
         {revealed && result === 'idle' ? (
           <div className="revealed-answer">
             <span>Answer</span>

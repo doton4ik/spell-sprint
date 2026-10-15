@@ -1387,6 +1387,12 @@
 .session-rail {
   display: none;
 }
+.session-rail__block--today {
+  display: none;
+}
+.session-rail__feedback:empty {
+  display: none;
+}
 @media (min-width: 1200px) {
   .practice-page:has(.session-rail) {
     margin-left: 0;
@@ -1466,9 +1472,51 @@
   padding: 4px 2px;
 }
 @media (min-width: 1480px) {
-  /* The panel beside the task carries the progress, so the bar above it goes. */
+  /* The panel beside the task carries the progress, so the bar above it goes; it is wider, because the feedback on an answer
+     (what was written, the right word, an example, the letter breakdown) is drawn in it instead of under the card. */
   .practice-workspace .session-sidebar {
     display: none;
+  }
+  .practice-page:has(.session-rail) {
+    width: min(780px, 100% - 376px);
+  }
+  .session-rail {
+    width: 320px;
+  }
+  .session-rail__block--today {
+    display: block;
+  }
+  .session-rail__today {
+    display: grid;
+    gap: 8px;
+  }
+  .session-rail__today strong {
+    font-size: calc(16px * var(--fs));
+  }
+  .session-rail__today small {
+    color: var(--ink-muted);
+    font-size: calc(13px * var(--fs));
+    font-weight: 400;
+  }
+  .session-rail__today > span {
+    color: var(--ink-muted);
+    font-size: calc(13px * var(--fs));
+  }
+  .session-rail__feedback {
+    display: grid;
+    gap: 12px;
+  }
+  .session-rail__feedback > * {
+    margin: 0;
+  }
+  /* the panel is the card: the feedback in it keeps only its coloured edge */
+  .session-rail__feedback .task-feedback {
+    background: transparent;
+    border-bottom: 0;
+    border-radius: 0;
+    border-right: 0;
+    border-top: 0;
+    padding: 2px 0 2px 12px;
   }
   .session-rail__head {
     display: grid;

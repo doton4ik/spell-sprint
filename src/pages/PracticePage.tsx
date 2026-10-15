@@ -42,6 +42,15 @@ const modeLabels: Record<PracticeMode, string> = {
 }
 
 export function PracticePage() {
+  // On a wide screen the answer feedback is shown in the side panel; the panel gives the card a place to draw it.
+  const [feedbackSlot, setFeedbackSlot] = useState<HTMLElement | null>(null)
+  const [wideRail, setWideRail] = useState(() => window.matchMedia('(min-width: 1480px)').matches)
+  useEffect(() => {
+    const query = window.matchMedia('(min-width: 1480px)')
+    const update = () => setWideRail(query.matches)
+    query.addEventListener('change', update)
+    return () => query.removeEventListener('change', update)
+  }, [])
   const options = useMemo(getPracticeOptions, [])
   const [pendingSelection, setPendingSelection] = useState(consumePendingPracticeSelection)
   const [scope, setScope] = useState<PracticeScope>('all')
@@ -112,16 +121,10 @@ export function PracticePage() {
     const progress = getWordProgress()
     return new Map(session.sessionTasks.map((task) => [task.id, reasonForWord(task.wordId ? progress.get(task.wordId) : undefined)]))
   }, [session.sessionTasks])
-  // Dictation: each new word is read out by itself, so the learner only has to listen and type.
+  // Dictation: the word is read out only when the learner presses Play (it used to start by itself on every word, which
+  // surprised people entering the page). A word that is still being read stops when the task changes.
   const currentId = session.currentTask?.id
-  useEffect(() => {
-    if (mode !== 'listen-write' || !currentId || session.completed) return
-    const timer = window.setTimeout(playAudio, 350)
-    return () => {
-      window.clearTimeout(timer)
-      stopSpeaking()
-    }
-  }, [mode, currentId, session.completed])
+  useEffect(() => stopSpeaking, [currentId])
   if (!tasks.length)
     return (
       <div className="practice-page" id="practice">
@@ -262,13 +265,20 @@ export function PracticePage() {
           tasks={session.sessionTasks}
           outcomes={session.outcomes}
         />
-        <SessionRails mode={mode} taskIndex={session.taskIndex} tasks={session.sessionTasks} outcomes={session.outcomes} />
+        <SessionRails
+          mode={mode}
+          taskIndex={session.taskIndex}
+          tasks={session.sessionTasks}
+          outcomes={session.outcomes}
+          feedbackRef={setFeedbackSlot}
+        />
         <TaskCard
           otherMeaning={session.otherMeaning}
           reason={session.currentTask?.wordId ? reasons.get(session.currentTask.id) : undefined}
           task={session.currentTask}
           answerHint={current ? describeAnswer(current.answer, currentWord) : undefined}
           answer={session.answer}
+          feedbackSlot={wideRail ? feedbackSlot : null}
           result={session.result}
           attemptsOnTask={session.attemptsOnTask}
           answerRevealed={session.answerRevealed}

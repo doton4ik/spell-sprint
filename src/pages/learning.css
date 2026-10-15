@@ -1014,3 +1014,30 @@
 .report {
   grid-template-columns: minmax(0, 1fr);
 }
+
+/* Wide screens: the list of mistakes in two columns (a row is a word, its progress and its next review). An opened row,
+   with its history, takes the whole width. */
+@media (min-width: 1380px) {
+  .mistake-list {
+    column-gap: 28px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .mistake-row {
+    grid-template-columns: minmax(0, 1fr) 150px;
+    row-gap: 6px;
+  }
+  .mistake-row .mistake-answer {
+    grid-row: span 2;
+  }
+  .mistake-row .mistake-progress,
+  .mistake-row .mistake-when {
+    grid-column: 2;
+  }
+  .mistake-row .mistake-when {
+    justify-items: start;
+  }
+  .mistake-row--open {
+    grid-column: 1 / -1;
+  }
+}

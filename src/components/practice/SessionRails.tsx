@@ -1,4 +1,8 @@
+import { useMemo } from 'react'
 import type { TaskOutcome } from '../../hooks/usePracticeSession'
+import { getStreak, getTodayCount } from '../../services/dailyPlan'
+import { getMistakeEntries, isDueToday } from '../../services/learningData'
+import { getProfile } from '../../services/profileStorage'
 import type { PracticeMode, PracticeTask } from '../../types/practice'
 
 type SessionRailsProps = {
@@ -6,6 +10,7 @@ type SessionRailsProps = {
   taskIndex: number
   tasks: PracticeTask[]
   outcomes: Record<string, TaskOutcome>
+  feedbackRef?: (element: HTMLDivElement | null) => void // the answer feedback is drawn here on wide screens
 }
 
 const MAX_MAP_TASKS = 40
@@ -20,7 +25,18 @@ function pairOf(task: PracticeTask, mode: PracticeMode) {
 
 // Wide screens only (CSS): one quiet panel beside the task with the session map and the words missed
 // so far. The same things as the slim bar above the task, never hints.
-export function SessionRails({ mode, taskIndex, tasks, outcomes }: SessionRailsProps) {
+export function SessionRails({ mode, taskIndex, tasks, outcomes, feedbackRef }: SessionRailsProps) {
+  // Today, beyond this session: the daily goal, what is waiting for review, the streak. Read again after every answer.
+  const today = useMemo(
+    () => ({
+      done: getTodayCount(),
+      goal: getProfile().dailyGoal,
+      due: getMistakeEntries().filter(isDueToday).length,
+      streak: getStreak().streak,
+    }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [outcomes],
+  )
   const results = tasks.map((task) => outcomes[task.id])
   const correct = results.filter((outcome) => outcome === 'correct').length
   const missed = results.filter((outcome) => outcome === 'incorrect' || outcome === 'skipped').length
@@ -28,6 +44,7 @@ export function SessionRails({ mode, taskIndex, tasks, outcomes }: SessionRailsP
 
   return (
     <aside className="session-rail" aria-label="Session">
+      <div className="session-rail__feedback" ref={feedbackRef} />
       <div className="session-rail__head">
         <strong>
           Word {taskIndex + 1} <small>of {tasks.length}</small>
@@ -62,6 +79,20 @@ export function SessionRails({ mode, taskIndex, tasks, outcomes }: SessionRailsP
           </div>
         </div>
       ) : null}
+      <div className="session-rail__block session-rail__block--today">
+        <span className="session-rail__label">Today</span>
+        <div className="session-rail__today">
+          <strong>
+            {today.done} <small>of {today.goal} tasks</small>
+          </strong>
+          <div className="session-rail__track">
+            <div style={{ width: `${Math.min(100, (today.done / Math.max(1, today.goal)) * 100)}%` }} />
+          </div>
+          <span>
+            {today.due} due for review{today.streak > 0 ? ` · ${today.streak}-day streak` : ''}
+          </span>
+        </div>
+      </div>
       {missedTasks.length ? (
         <div className="session-rail__block">
           <span className="session-rail__label">Missed so far</span>
