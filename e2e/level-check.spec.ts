@@ -46,6 +46,25 @@ test('the whole level check can be answered, and ends with a result', async ({ p
   expect(errors).toEqual([])
 })
 
+test('the quick check has about half the questions and ends with a result', async ({ page }) => {
+  const errors = watchErrors(page)
+  await page.goto('/#level-check')
+  await page.getByRole('button', { name: /Quick check/ }).click()
+  await expect(page.getByText(/Question 1 of 1[0-9]/)).toBeVisible() // 12 to 19: far fewer than the full check
+  for (let step = 0; step < 25; step += 1) {
+    await expect(page.locator('.level-question')).toBeVisible()
+    await answerOne(page)
+    const last = page.getByRole('button', { name: /See my level/ })
+    if (await last.count()) {
+      await last.click()
+      break
+    }
+    await page.getByRole('button', { name: /^Next/ }).click()
+  }
+  await expect(page.locator('main h1')).toHaveText(/Your level/)
+  expect(errors).toEqual([])
+})
+
 test('a check that was left half way can be continued after a reload', async ({ page }) => {
   const errors = watchErrors(page)
   await page.goto('/#level-check')

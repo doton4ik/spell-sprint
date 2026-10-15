@@ -5,9 +5,12 @@ import {
   createCheck,
   fillGap,
   isCorrectAnswer,
+  levelHalf,
   nextItem,
   normaliseAnswer,
   QUESTIONS_PER_SKILL,
+  QUICK_PER_SKILL,
+  QUICK_TOTAL,
   rangeFor,
   scoreCheck,
   TOTAL_QUESTIONS,
@@ -412,5 +415,66 @@ describe('checks saved before the stricter scoring', () => {
     const { getLevelChecks } = await import('./levelCheck')
     expect(getLevelChecks()[0].answers[0].kind).toBe('choice')
     expect(getLevelChecks()[0].answers[1].kind).toBeUndefined() // not in the bank any more: counted as typed
+  })
+})
+
+describe('the quick check', () => {
+  const fullBank = (['spelling', 'vocabulary', 'grammar', 'reading', 'listening'] as const).map((skill) => item(`any-${skill}`, skill, 2))
+  it('has 16 questions with its own quota of every skill, about half of the full check', () => {
+    const { plan } = createCheck({ bank: fullBank, quick: true })
+    expect(plan).toHaveLength(QUICK_TOTAL)
+    expect(QUICK_TOTAL).toBeGreaterThanOrEqual(12)
+    expect(QUICK_TOTAL).toBeLessThanOrEqual(16)
+    for (const [skill, count] of Object.entries(QUICK_PER_SKILL)) expect(plan.filter((s) => s === skill)).toHaveLength(count)
+  })
+  it('has two short reading tasks and one text of three questions', () => {
+    const { plan } = createCheck({ bank: fullBank, quick: true })
+    expect(plan.join(',').match(/(?:reading,){2}reading/g)).toHaveLength(1)
+    expect(plan.filter((skill) => skill === 'reading')).toHaveLength(5)
+  })
+  it('asks the short tasks first and the text after them, in the reading part', () => {
+    const bank: LevelItem[] = [
+      ...fullBank,
+      item('n', 'reading', 2, { format: 'notice' }),
+      item('m', 'reading', 2, { format: 'meaning' }),
+      item('t1', 'reading', 2, { passage: 'p1', format: 'text' }),
+      item('t2', 'reading', 2, { passage: 'p1', format: 'text' }),
+      item('t3', 'reading', 2, { passage: 'p1', format: 'text' }),
+    ]
+    const asked: CheckAnswer[] = []
+    for (let step = 0; step < 5; step += 1) {
+      const next = nextItem(bank, 'reading', asked, true)!
+      expect(next, `step ${step}`).toBeTruthy()
+      asked.push(answer(next, true))
+    }
+    expect(asked.map((entry) => entry.itemId)).toEqual(['n', 'm', 't1', 't2', 't3'])
+  })
+  it('gives a wider range than the full check for the same share of right answers', () => {
+    const run = (count: number) => {
+      const answers = Array.from({ length: count }, (_, index) => ({
+        itemId: `g${index}`,
+        skill: 'grammar',
+        level: 2,
+        correct: index % 4 !== 3,
+        kind: 'type',
+        expected: 'x',
+        prompt: 'x',
+      })) as CheckAnswer[]
+      return scoreCheck(answers).skills.grammar!.sd!
+    }
+    expect(run(4)).toBeGreaterThan(run(8))
+  })
+})
+
+describe('the lower and upper half of a level', () => {
+  it('says which side of the level number the ability falls on', () => {
+    expect(levelHalf({ level: 'B1', ability: 2.3 })).toBe('upper B1')
+    expect(levelHalf({ level: 'B1', ability: 1.7 })).toBe('lower B1')
+    expect(levelHalf({ level: 'B2', ability: 3 })).toBe('upper B2')
+  })
+  it('says nothing when the result is already a range, or at the ends of the scale', () => {
+    expect(levelHalf({ level: 'B1', ability: 2.3, range: 'B1–B2' })).toBeUndefined()
+    expect(levelHalf({ level: 'A2', ability: 1.1 })).toBeUndefined()
+    expect(levelHalf({ level: 'C1', ability: 4.3 })).toBeUndefined()
   })
 })

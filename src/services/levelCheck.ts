@@ -21,9 +21,17 @@ const READING_GROUPS: Array<[position: number, size: number]> = [
   [0.85, 3],
 ]
 // A group of three is a text (its questions are asked together); smaller groups are single short tasks.
-const READING_SHAPE: Array<'single' | 'block'> = READING_GROUPS.flatMap(([, size]) =>
-  Array<'single' | 'block'>(size).fill(size >= 3 ? 'block' : 'single'),
-)
+const shapeOf = (groups: Array<[number, number]>): Array<'single' | 'block'> =>
+  groups.flatMap(([, size]) => Array<'single' | 'block'>(size).fill(size >= 3 ? 'block' : 'single'))
+const READING_SHAPE = shapeOf(READING_GROUPS)
+// The quick check: about half as long (like the short version of EF SET). Fewer answers, so the range of the result is wider.
+export const QUICK_PER_SKILL: Record<Skill, number> = { spelling: 2, vocabulary: 3, grammar: 4, reading: 5, listening: 2 }
+const QUICK_READING_GROUPS: Array<[position: number, size: number]> = [
+  [0.3, 2],
+  [0.72, 3],
+]
+const QUICK_READING_SHAPE = shapeOf(QUICK_READING_GROUPS)
+export const QUICK_TOTAL = Object.values(QUICK_PER_SKILL).reduce((sum, value) => sum + value, 0)
 const SINGLE_FORMATS = ['notice', 'meaning', 'meaning'] // the kind of short task, in order
 const BLOCK_FORMATS = ['text', 'cloze'] // the kind of text, in order
 export const TOTAL_QUESTIONS = Object.values(QUESTIONS_PER_SKILL).reduce((sum, value) => sum + value, 0)
@@ -72,9 +80,9 @@ export const normaliseAnswer = plain
 
 // The order of the questions: the skills interleaved, with the reading questions in two blocks of three
 // (a text is read once and asked together). Without speech in the browser there is no listening part.
-export function createCheck(options: { listening?: boolean; bank?: LevelItem[] } = {}) {
+export function createCheck(options: { listening?: boolean; bank?: LevelItem[]; quick?: boolean } = {}) {
   const bank = options.bank ?? buildLevelBank(getAllWords())
-  const left = { ...QUESTIONS_PER_SKILL }
+  const left = { ...(options.quick ? QUICK_PER_SKILL : QUESTIONS_PER_SKILL) }
   if (options.listening === false) left.listening = 0
   // a skill the bank has no questions for is left out instead of ending the check early
   for (const skill of skillOrder) if (!bank.some((item) => item.skill === skill && !item.retired)) left[skill] = 0
@@ -89,7 +97,7 @@ export function createCheck(options: { listening?: boolean; bank?: LevelItem[] }
   // The reading groups go in at fixed places among the other questions.
   const insertAt = new Map<number, number>()
   if (left.reading > 0)
-    for (const [position, size] of READING_GROUPS) {
+    for (const [position, size] of options.quick ? QUICK_READING_GROUPS : READING_GROUPS) {
       const index = Math.round(others.length * position)
       insertAt.set(index, (insertAt.get(index) ?? 0) + size)
     }
@@ -114,7 +122,7 @@ const pickOne = <T>(items: T[]) => items[Math.floor(Math.random() * items.length
 // Reading: a text that was started is finished first. Otherwise the shape says whether a short task or a text comes next, and the
 // level follows the answers: after a short task the last answer decides (right goes up, wrong goes down); after a text 2 or 3 of 3
 // right goes up, 0 or 1 goes down.
-function nextReadingItem(bank: LevelItem[], answers: CheckAnswer[], pool: LevelItem[]): LevelItem | null {
+function nextReadingItem(bank: LevelItem[], answers: CheckAnswer[], pool: LevelItem[], quick: boolean): LevelItem | null {
   const passageOf = (id: string) => bank.find((item) => item.id === id)?.passage
   const mine = answers.filter((answer) => answer.skill === 'reading')
   const last = mine.at(-1)
@@ -135,7 +143,7 @@ function nextReadingItem(bank: LevelItem[], answers: CheckAnswer[], pool: LevelI
   const texts = pool.filter((item) => item.passage)
   const singlesDone = mine.filter((answer) => !passageOf(answer.itemId)).length
   const textsDone = new Set(mine.map((answer) => passageOf(answer.itemId)).filter(Boolean)).size
-  const wantsSingle = (READING_SHAPE[mine.length] ?? 'block') === 'single'
+  const wantsSingle = ((quick ? QUICK_READING_SHAPE : READING_SHAPE)[mine.length] ?? 'block') === 'single'
 
   const pickSingle = () => {
     for (const wanted of [SINGLE_FORMATS[singlesDone] ?? 'meaning', undefined])
@@ -161,10 +169,10 @@ function nextReadingItem(bank: LevelItem[], answers: CheckAnswer[], pool: LevelI
 
 // Next question: the target level for its skill, or the nearest level that still has unused items; the
 // kind of question follows KIND_PLAN, and falls back to any kind when none is left.
-export function nextItem(bank: LevelItem[], skill: Skill, answers: CheckAnswer[]): LevelItem | null {
+export function nextItem(bank: LevelItem[], skill: Skill, answers: CheckAnswer[], quick = false): LevelItem | null {
   const used = new Set(answers.map((answer) => answer.itemId))
   const pool = bank.filter((item) => item.skill === skill && !used.has(item.id) && !item.retired)
-  if (skill === 'reading') return nextReadingItem(bank, answers, pool)
+  if (skill === 'reading') return nextReadingItem(bank, answers, pool, quick)
   const target = targetLevel(answers, skill)
   const wanted = KIND_PLAN[skill][answers.filter((answer) => answer.skill === skill).length]
   for (const kind of [wanted, undefined])
@@ -192,6 +200,17 @@ export function levelLabel(result: { level: string; ability: number; range?: str
   if (result.level === 'A2' && result.ability <= 1.2) return 'A2 or below'
   if (result.level === 'C1' && result.ability >= 4.2) return 'C1 or above'
   return result.level
+}
+
+// The lower or upper half of a level ("upper B1"), for a result that is not already shown as a range. The ability is the
+// level number (A2 = 1 … C1 = 4): the half is which side of that number it falls on. Not for the two ends of the scale,
+// where the questions stop (levelLabel says "A2 or below" and "C1 or above" there).
+export function levelHalf(result: { level: string; ability: number; range?: string }) {
+  if (result.range) return undefined
+  if ((result.level === 'A2' && result.ability <= 1.2) || (result.level === 'C1' && result.ability >= 4.2)) return undefined
+  const centre = { A2: 1, B1: 2, B2: 3, C1: 4 }[result.level]
+  if (centre === undefined) return undefined
+  return `${result.ability >= centre ? 'upper' : 'lower'} ${result.level}`
 }
 
 // How much better (or worse) the learner is than in the previous check, over the skills both checks measured.

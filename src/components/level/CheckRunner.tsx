@@ -10,6 +10,7 @@ import { LevelLines } from './LevelLines'
 import {
   clearRun,
   createCheck,
+  QUICK_TOTAL,
   finishCheck,
   isCorrectAnswer,
   nextItem,
@@ -31,19 +32,23 @@ type Feedback = { correct: boolean; answer: string }
 // Enter, and after an answer Enter goes on. The progress is saved after every answer, so a reload continues.
 export function CheckRunner({
   resume,
+  quick: startQuick = false,
   onQuit,
   onFinish,
 }: {
   resume: SavedRun | null
+  quick?: boolean
   onQuit: () => void
   onFinish: (result: LevelCheckResult) => void
 }) {
+  // A check that is continued is quick when its saved plan is as short as the quick one.
+  const quick = resume ? resume.plan.length <= QUICK_TOTAL : startQuick
   const [{ bank, plan }] = useState(() => {
-    const created = createCheck({ listening: canSpeak() })
+    const created = createCheck({ listening: canSpeak(), quick })
     return resume ? { bank: created.bank, plan: resume.plan } : created
   })
   const [answers, setAnswers] = useState<CheckAnswer[]>(resume?.answers ?? [])
-  const [item, setItem] = useState<LevelItem | null>(() => nextItem(bank, plan[resume?.answers.length ?? 0], resume?.answers ?? []))
+  const [item, setItem] = useState<LevelItem | null>(() => nextItem(bank, plan[resume?.answers.length ?? 0], resume?.answers ?? [], quick))
   const [input, setInput] = useState('')
   const [feedback, setFeedback] = useState<Feedback | null>(null)
   const [plays, setPlays] = useState(0)
@@ -94,7 +99,7 @@ export function CheckRunner({
   })
 
   function next() {
-    const upcoming = answers.length >= plan.length ? null : nextItem(bank, plan[answers.length], answers)
+    const upcoming = answers.length >= plan.length ? null : nextItem(bank, plan[answers.length], answers, quick)
     if (!upcoming) {
       clearRun()
       onFinish(finishCheck(answers))

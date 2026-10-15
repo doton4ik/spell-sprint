@@ -17,6 +17,8 @@ import {
   nextCheckDue,
   skillOrder,
   TOTAL_QUESTIONS,
+  QUICK_TOTAL,
+  levelHalf,
   type LevelCheckResult,
   type PlanStep,
   type SavedRun,
@@ -35,7 +37,7 @@ function daysAgo(value: string) {
   return days <= 0 ? 'today' : days === 1 ? 'yesterday' : `${days} days ago`
 }
 
-type View = { kind: 'home' } | { kind: 'running'; resume: SavedRun | null } | { kind: 'result'; id: string }
+type View = { kind: 'home' } | { kind: 'running'; resume: SavedRun | null; quick?: boolean } | { kind: 'result'; id: string }
 
 export function DiagnosticPage() {
   const [revision, setRevision] = useState(0)
@@ -47,6 +49,7 @@ export function DiagnosticPage() {
     return (
       <CheckRunner
         resume={view.resume}
+        quick={view.quick}
         onQuit={() => setView({ kind: 'home' })}
         onFinish={(result) => {
           setRevision((value) => value + 1)
@@ -72,9 +75,9 @@ export function DiagnosticPage() {
     <HomeView
       checks={checks}
       saved={saved}
-      onStart={() => {
+      onStart={(quick) => {
         clearRun()
-        setView({ kind: 'running', resume: null })
+        setView({ kind: 'running', resume: null, quick })
       }}
       onResume={() => setView({ kind: 'running', resume: saved })}
       onOpen={(id) => setView({ kind: 'result', id })}
@@ -92,7 +95,7 @@ function HomeView({
 }: {
   checks: LevelCheckResult[]
   saved: SavedRun | null
-  onStart: () => void
+  onStart: (quick?: boolean) => void
   onResume: () => void
   onOpen: (id: string) => void
 }) {
@@ -119,14 +122,24 @@ function HomeView({
               <button className="check-button level-hero__start" type="button" onClick={onResume}>
                 <Icon name="practice" size={17} /> Continue · {saved.answers.length} of {saved.plan.length}
               </button>
-              <button className="quiet-button" type="button" onClick={onStart}>
+              <button className="quiet-button" type="button" onClick={() => onStart()}>
                 Start over
               </button>
             </div>
           ) : (
-            <button className="check-button level-hero__start" type="button" onClick={onStart}>
-              <Icon name="practice" size={17} /> {last ? 'Start a new check' : 'Start the check'}
-            </button>
+            <>
+              <div className="level-hero__resume">
+                <button className="check-button level-hero__start" type="button" onClick={() => onStart()}>
+                  <Icon name="practice" size={17} /> {last ? 'Start a new check' : 'Start the check'}
+                </button>
+                <button className="quiet-button" type="button" onClick={() => onStart(true)}>
+                  Quick check · {QUICK_TOTAL} questions
+                </button>
+              </div>
+              <p className="level-hero__next">
+                The quick check takes about half the time. With fewer answers the level is shown as a wider range.
+              </p>
+            </>
           )}
           {last ? (
             <p className="level-hero__next">
@@ -303,6 +316,7 @@ function ResultView({
         <div>
           <p className="eyebrow">Level check · {formatDate(result.completedAt)}</p>
           <h1>Your level: {levelLabel(result.overall)}</h1>
+          {levelHalf(result.overall) ? <p className="level-result-half">{levelHalf(result.overall)}</p> : null}
           <p>
             {previous ? (
               <>
