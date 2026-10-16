@@ -154,9 +154,9 @@ const detectVerbEndings: Detector = ({ expected, ops }) => {
 // A whole-mistake detector: consonant + y turning into -ies / -ied (company → companies).
 const detectYToIes: Detector = ({ expected, submitted, ctx }) => {
   const asVerb = ctx.partOfSpeech === 'verb'
-  if (/ies$/.test(expected) && /ys$/.test(submitted) && expected.slice(0, -3) === submitted.slice(0, -2))
+  if (expected.endsWith('ies') && submitted.endsWith('ys') && expected.slice(0, -3) === submitted.slice(0, -2))
     return [hit(asVerb ? 'verb_ending_error' : 'plural_ending_error', 1, 'y→ies')]
-  if (/ied$/.test(expected) && /yed$/.test(submitted) && expected.slice(0, -3) === submitted.slice(0, -3))
+  if (expected.endsWith('ied') && submitted.endsWith('yed') && expected.slice(0, -3) === submitted.slice(0, -3))
     return [hit('verb_ending_error', 1, 'y→ied')]
   return []
 }

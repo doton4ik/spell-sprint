@@ -1,0 +1,534 @@
+{
+  "slug": "able-vs-ible",
+  "examples": [
+    {
+      "type": "correct",
+      "text": "The hotel room was comfortable and clean.",
+      "note": "Comfortable ends in -able."
+    },
+    {
+      "type": "incorrect",
+      "text": "The chair was confortable for long journeys.",
+      "correction": "The chair was comfortable for long journeys.",
+      "note": "Comfortable has -able."
+    },
+    {
+      "type": "correct",
+      "text": "The price of the flat was reasonable.",
+      "note": "Reasonable means fair or sensible."
+    },
+    {
+      "type": "incorrect",
+      "text": "The taxi price was reasonible for students.",
+      "correction": "The taxi price was reasonable for students.",
+      "note": "Reasonable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The old bridge is still usable after repairs.",
+      "note": "Usable means it can be used."
+    },
+    {
+      "type": "incorrect",
+      "text": "The broken printer is not useable today.",
+      "correction": "The broken printer is not usable today.",
+      "note": "Usable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The new timetable is changeable if needed.",
+      "note": "Changeable means able to change."
+    },
+    {
+      "type": "incorrect",
+      "text": "The weather here is very changeible.",
+      "correction": "The weather here is very changeable.",
+      "note": "Changeable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The teacher gave us a manageable amount of homework.",
+      "note": "Manageable means easy to control."
+    },
+    {
+      "type": "incorrect",
+      "text": "The workload was manageible after training.",
+      "correction": "The workload was manageable after training.",
+      "note": "Manageable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The bus stop is reachable in ten minutes.",
+      "note": "Reachable means possible to reach."
+    },
+    {
+      "type": "incorrect",
+      "text": "The airport is reachible by train.",
+      "correction": "The airport is reachable by train.",
+      "note": "Reachable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The recipe is simple and adaptable for vegetarians.",
+      "note": "Adaptable means able to change."
+    },
+    {
+      "type": "incorrect",
+      "text": "The plan is adaptible for different teams.",
+      "correction": "The plan is adaptable for different teams.",
+      "note": "Adaptable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The rules are flexible for part-time workers.",
+      "note": "Flexible means able to bend or change."
+    },
+    {
+      "type": "incorrect",
+      "text": "Our manager is very flexable about hours.",
+      "correction": "Our manager is very flexible about hours.",
+      "note": "Flexible ends in -ible."
+    },
+    {
+      "type": "correct",
+      "text": "The museum is open to the general public.",
+      "note": "Public means for everyone."
+    },
+    {
+      "type": "incorrect",
+      "text": "The park is open to the general publlic.",
+      "correction": "The park is open to the general public.",
+      "note": "Public has one l before ic."
+    },
+    {
+      "type": "correct",
+      "text": "The contract was signed by both companies.",
+      "note": "Contract is a formal agreement."
+    },
+    {
+      "type": "incorrect",
+      "text": "The contact was signed by both companies.",
+      "correction": "The contract was signed by both companies.",
+      "note": "Contract means agreement, not contact."
+    },
+    {
+      "type": "correct",
+      "text": "The manager gave a clear explanation of the task.",
+      "note": "Explanation means making something clear."
+    },
+    {
+      "type": "incorrect",
+      "text": "The teacher gave a clear explaination of grammar.",
+      "correction": "The teacher gave a clear explanation of grammar.",
+      "note": "Explanation has no extra e."
+    },
+    {
+      "type": "correct",
+      "text": "The delivery was delayed by heavy traffic.",
+      "note": "Delayed means later than planned."
+    },
+    {
+      "type": "incorrect",
+      "text": "The parcel was delayd by bad weather.",
+      "correction": "The parcel was delayed by bad weather.",
+      "note": "Delayed ends in -ed."
+    },
+    {
+      "type": "correct",
+      "text": "The information was reliable and up to date.",
+      "note": "Reliable means trusted."
+    },
+    {
+      "type": "incorrect",
+      "text": "The website gave reliible travel advice.",
+      "correction": "The website gave reliable travel advice.",
+      "note": "Reliable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The old sofa was still comfortable after cleaning.",
+      "note": "Comfortable ends in -able."
+    },
+    {
+      "type": "incorrect",
+      "text": "The hotel bed was not confortible at all.",
+      "correction": "The hotel bed was not comfortable at all.",
+      "note": "Comfortable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The meeting time is suitable for everyone.",
+      "note": "Suitable means right for a purpose."
+    },
+    {
+      "type": "incorrect",
+      "text": "The early class is not suitible for commuters.",
+      "correction": "The early class is not suitable for commuters.",
+      "note": "Suitable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The error was visible on the invoice.",
+      "note": "Visible means able to be seen."
+    },
+    {
+      "type": "incorrect",
+      "text": "The discount was not visable at checkout.",
+      "correction": "The discount was not visible at checkout.",
+      "note": "Visible ends in -ible."
+    },
+    {
+      "type": "correct",
+      "text": "The instructions were understandable for new staff.",
+      "note": "Understandable means easy to understand."
+    },
+    {
+      "type": "incorrect",
+      "text": "The safety guide was understandible for visitors.",
+      "correction": "The safety guide was understandable for visitors.",
+      "note": "Understandable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The office is accessible by lift and stairs.",
+      "note": "Accessible means easy to enter or use."
+    },
+    {
+      "type": "incorrect",
+      "text": "The library is accessable during holidays.",
+      "correction": "The library is accessible during holidays.",
+      "note": "Accessible ends in -ible."
+    },
+    {
+      "type": "correct",
+      "text": "The train tickets are available from the machine.",
+      "note": "Available means ready to get or use."
+    },
+    {
+      "type": "incorrect",
+      "text": "The guidebooks are availible in the shop.",
+      "correction": "The guidebooks are available in the shop.",
+      "note": "Available ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The mountain road is passable in summer.",
+      "note": "Passable means possible to travel on."
+    },
+    {
+      "type": "incorrect",
+      "text": "The forest track is passible after rain.",
+      "correction": "The forest track is passable after rain.",
+      "note": "Passable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The schedule is workable for a small team.",
+      "note": "Workable means practical or possible."
+    },
+    {
+      "type": "incorrect",
+      "text": "The new rota is workible for night staff.",
+      "correction": "The new rota is workable for night staff.",
+      "note": "Workable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The delay was predictable because of the storm.",
+      "note": "Predictable means expected."
+    },
+    {
+      "type": "incorrect",
+      "text": "The queue was predictible on Friday evening.",
+      "correction": "The queue was predictable on Friday evening.",
+      "note": "Predictable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "Most accidents are preventable with care.",
+      "note": "Preventable means able to be stopped."
+    },
+    {
+      "type": "incorrect",
+      "text": "Some delivery errors are preventible with checks.",
+      "correction": "Some delivery errors are preventable with checks.",
+      "note": "Preventable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The machine is durable and easy to clean.",
+      "note": "Durable means strong and long-lasting."
+    },
+    {
+      "type": "incorrect",
+      "text": "The plastic box is durible for outdoor use.",
+      "correction": "The plastic box is durable for outdoor use.",
+      "note": "Durable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The letter was legible despite the rain.",
+      "note": "Legible means clear enough to read."
+    },
+    {
+      "type": "incorrect",
+      "text": "The address was not legable on the parcel.",
+      "correction": "The address was not legible on the parcel.",
+      "note": "Legible ends in -ible."
+    },
+    {
+      "type": "correct",
+      "text": "The answer was plausible after checking the data.",
+      "note": "Plausible means believable."
+    },
+    {
+      "type": "incorrect",
+      "text": "His excuse sounded plausable to the manager.",
+      "correction": "His excuse sounded plausible to the manager.",
+      "note": "Plausible ends in -ible."
+    },
+    {
+      "type": "correct",
+      "text": "The risk of damage was negligible.",
+      "note": "Negligible means very small."
+    },
+    {
+      "type": "incorrect",
+      "text": "The extra cost was negligable for the project.",
+      "correction": "The extra cost was negligible for the project.",
+      "note": "Negligible ends in -ible."
+    },
+    {
+      "type": "correct",
+      "text": "The smell from the kitchen was terrible.",
+      "note": "Terrible means very bad."
+    },
+    {
+      "type": "incorrect",
+      "text": "The traffic this morning was terrable.",
+      "correction": "The traffic this morning was terrible.",
+      "note": "Terrible ends in -ible."
+    },
+    {
+      "type": "correct",
+      "text": "The old computer is still usable for simple tasks.",
+      "note": "Usable means able to be used."
+    },
+    {
+      "type": "incorrect",
+      "text": "The tablet is useable without a charger.",
+      "correction": "The tablet is usable without a charger.",
+      "note": "Usable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The hotel offers comfortable rooms near the station.",
+      "note": "Comfortable ends in -able."
+    },
+    {
+      "type": "incorrect",
+      "text": "The hostel has confortable beds for guests.",
+      "correction": "The hostel has comfortable beds for guests.",
+      "note": "Comfortable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The coach is accessible for passengers with luggage.",
+      "note": "Accessible means easy to use or enter."
+    },
+    {
+      "type": "incorrect",
+      "text": "The platform is accessable from the main hall.",
+      "correction": "The platform is accessible from the main hall.",
+      "note": "Accessible ends in -ible."
+    },
+    {
+      "type": "correct",
+      "text": "Fresh bread is available every morning.",
+      "note": "Available means ready to buy or use."
+    },
+    {
+      "type": "incorrect",
+      "text": "Fresh fruit is availible at the corner shop.",
+      "correction": "Fresh fruit is available at the corner shop.",
+      "note": "Available ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The recipe is adaptable if you have no butter.",
+      "note": "Adaptable means able to be changed."
+    },
+    {
+      "type": "incorrect",
+      "text": "The dish is adaptible for a smaller oven.",
+      "correction": "The dish is adaptable for a smaller oven.",
+      "note": "Adaptable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The queue was manageable before lunchtime.",
+      "note": "Manageable means easy to deal with."
+    },
+    {
+      "type": "incorrect",
+      "text": "The workload was manageible during the sale.",
+      "correction": "The workload was manageable during the sale.",
+      "note": "Manageable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The handwriting on the form was legible.",
+      "note": "Legible means clear enough to read."
+    },
+    {
+      "type": "incorrect",
+      "text": "The signature was barely legable on the receipt.",
+      "correction": "The signature was barely legible on the receipt.",
+      "note": "Legible ends in -ible."
+    },
+    {
+      "type": "correct",
+      "text": "The service was terrible during the busy hour.",
+      "note": "Terrible means very bad."
+    },
+    {
+      "type": "incorrect",
+      "text": "The connection was terrable in the mountains.",
+      "correction": "The connection was terrible in the mountains.",
+      "note": "Terrible ends in -ible."
+    },
+    {
+      "type": "correct",
+      "text": "The route is passable only with a four-wheel drive.",
+      "note": "Passable means possible to travel on."
+    },
+    {
+      "type": "incorrect",
+      "text": "The narrow lane is passible for delivery vans.",
+      "correction": "The narrow lane is passable for delivery vans.",
+      "note": "Passable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The price increase was reasonable this year.",
+      "note": "Reasonable means fair or sensible."
+    },
+    {
+      "type": "incorrect",
+      "text": "The parking fee was reasonible near the centre.",
+      "correction": "The parking fee was reasonable near the centre.",
+      "note": "Reasonable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The forecast was reliable before the trip.",
+      "note": "Reliable means trusted or dependable."
+    },
+    {
+      "type": "incorrect",
+      "text": "The bus app is reliible for live updates.",
+      "correction": "The bus app is reliable for live updates.",
+      "note": "Reliable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The damage was negligible after the small crash.",
+      "note": "Negligible means very small."
+    },
+    {
+      "type": "incorrect",
+      "text": "The repair cost was negligable for the company.",
+      "correction": "The repair cost was negligible for the company.",
+      "note": "Negligible ends in -ible."
+    },
+    {
+      "type": "correct",
+      "text": "The story was plausible but a little strange.",
+      "note": "Plausible means believable."
+    },
+    {
+      "type": "incorrect",
+      "text": "The explanation was plausable for the missing keys.",
+      "correction": "The explanation was plausible for the missing keys.",
+      "note": "Plausible ends in -ible."
+    },
+    {
+      "type": "correct",
+      "text": "The plan is workable if we start early.",
+      "note": "Workable means practical or possible."
+    },
+    {
+      "type": "incorrect",
+      "text": "The budget is workible for a short project.",
+      "correction": "The budget is workable for a short project.",
+      "note": "Workable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The mistake was preventable with a second check.",
+      "note": "Preventable means able to be avoided."
+    },
+    {
+      "type": "incorrect",
+      "text": "The delay was preventible with better planning.",
+      "correction": "The delay was preventable with better planning.",
+      "note": "Preventable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The suitcase is durable enough for frequent travel.",
+      "note": "Durable means strong and long-lasting."
+    },
+    {
+      "type": "incorrect",
+      "text": "The shoes are durible for long walks.",
+      "correction": "The shoes are durable for long walks.",
+      "note": "Durable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The timetable is changeable before the term starts.",
+      "note": "Changeable means able to be changed."
+    },
+    {
+      "type": "incorrect",
+      "text": "The meeting is changeible until Friday afternoon.",
+      "correction": "The meeting is changeable until Friday afternoon.",
+      "note": "Changeable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The station is reachable on foot from here.",
+      "note": "Reachable means possible to reach."
+    },
+    {
+      "type": "incorrect",
+      "text": "The warehouse is reachible by local bus.",
+      "correction": "The warehouse is reachable by local bus.",
+      "note": "Reachable ends in -able."
+    },
+    {
+      "type": "correct",
+      "text": "The policy is flexible for parents and carers.",
+      "note": "Flexible means able to change easily."
+    },
+    {
+      "type": "incorrect",
+      "text": "The shift system is flexable for students.",
+      "correction": "The shift system is flexible for students.",
+      "note": "Flexible ends in -ible."
+    },
+    {
+      "type": "correct",
+      "text": "The label was visible after we cleaned the jar.",
+      "note": "Visible means able to be seen."
+    },
+    {
+      "type": "incorrect",
+      "text": "The stamp was visable under bright light.",
+      "correction": "The stamp was visible under bright light.",
+      "note": "Visible ends in -ible."
+    }
+  ],
+  "exercises": []
+}

@@ -1,0 +1,497 @@
+{
+  "slug": "ance-vs-ence",
+  "examples": [
+    {
+      "type": "correct",
+      "text": "The audience enjoyed the puppet show.",
+      "note": "Audience ends in -ence."
+    },
+    {
+      "type": "correct",
+      "text": "The police collected evidence at the scene.",
+      "note": "Evidence ends in -ence."
+    },
+    {
+      "type": "correct",
+      "text": "Her performance in the school play was excellent.",
+      "note": "Performance ends in -ance."
+    },
+    {
+      "type": "correct",
+      "text": "Please use the side entrance after six.",
+      "note": "Entrance ends in -ance."
+    },
+    {
+      "type": "correct",
+      "text": "He spoke with confidence during the interview.",
+      "note": "Confidence ends in -ence."
+    },
+    {
+      "type": "correct",
+      "text": "Write one sentence about your weekend.",
+      "note": "Sentence ends in -ence."
+    },
+    {
+      "type": "correct",
+      "text": "Thank you for your assistance with the boxes.",
+      "note": "Assistance ends in -ance."
+    },
+    {
+      "type": "correct",
+      "text": "She has a lot of experience in customer service.",
+      "note": "Experience ends in -ence."
+    },
+    {
+      "type": "correct",
+      "text": "Good balance helps you ride a bicycle.",
+      "note": "Balance ends in -ance."
+    },
+    {
+      "type": "correct",
+      "text": "The ambulance arrived within five minutes.",
+      "note": "Ambulance ends in -ance."
+    },
+    {
+      "type": "correct",
+      "text": "Her patience with the children impressed us.",
+      "note": "Patience ends in -ence."
+    },
+    {
+      "type": "correct",
+      "text": "There is a big difference in price.",
+      "note": "Difference ends in -ence."
+    },
+    {
+      "type": "correct",
+      "text": "Attendance at the lesson is free.",
+      "note": "Attendance ends in -ance."
+    },
+    {
+      "type": "correct",
+      "text": "We need your presence at the meeting.",
+      "note": "Presence ends in -ence."
+    },
+    {
+      "type": "correct",
+      "text": "Silence filled the room after the news.",
+      "note": "Silence ends in -ence."
+    },
+    {
+      "type": "correct",
+      "text": "The hotel is a short distance from the station.",
+      "note": "Distance ends in -ance."
+    },
+    {
+      "type": "incorrect",
+      "text": "The audiance enjoyed the puppet show.",
+      "correction": "The audience enjoyed the puppet show.",
+      "note": "Audience ends in -ence."
+    },
+    {
+      "type": "incorrect",
+      "text": "The police collected evidance at the scene.",
+      "correction": "The police collected evidence at the scene.",
+      "note": "Evidence ends in -ence."
+    },
+    {
+      "type": "incorrect",
+      "text": "Her performence in the school play was excellent.",
+      "correction": "Her performance in the school play was excellent.",
+      "note": "Performance ends in -ance."
+    },
+    {
+      "type": "incorrect",
+      "text": "Please use the side entrence after six.",
+      "correction": "Please use the side entrance after six.",
+      "note": "Entrance ends in -ance."
+    },
+    {
+      "type": "incorrect",
+      "text": "He spoke with confidance during the interview.",
+      "correction": "He spoke with confidence during the interview.",
+      "note": "Confidence ends in -ence."
+    },
+    {
+      "type": "incorrect",
+      "text": "Write one sentance about your weekend.",
+      "correction": "Write one sentence about your weekend.",
+      "note": "Sentence ends in -ence."
+    },
+    {
+      "type": "incorrect",
+      "text": "Thank you for your assistence with the boxes.",
+      "correction": "Thank you for your assistance with the boxes.",
+      "note": "Assistance ends in -ance."
+    },
+    {
+      "type": "incorrect",
+      "text": "She has a lot of experiance in customer service.",
+      "correction": "She has a lot of experience in customer service.",
+      "note": "Experience ends in -ence."
+    },
+    {
+      "type": "incorrect",
+      "text": "Good balence helps you ride a bicycle.",
+      "correction": "Good balance helps you ride a bicycle.",
+      "note": "Balance ends in -ance."
+    },
+    {
+      "type": "incorrect",
+      "text": "The ambulence arrived within five minutes.",
+      "correction": "The ambulance arrived within five minutes.",
+      "note": "Ambulance ends in -ance."
+    },
+    {
+      "type": "incorrect",
+      "text": "Her patiance with the children impressed us.",
+      "correction": "Her patience with the children impressed us.",
+      "note": "Patience ends in -ence."
+    },
+    {
+      "type": "incorrect",
+      "text": "There is a big differance in price.",
+      "correction": "There is a big difference in price.",
+      "note": "Difference ends in -ence."
+    },
+    {
+      "type": "incorrect",
+      "text": "Attendence at the lesson is free.",
+      "correction": "Attendance at the lesson is free.",
+      "note": "Attendance ends in -ance."
+    },
+    {
+      "type": "incorrect",
+      "text": "We need your presance at the meeting.",
+      "correction": "We need your presence at the meeting.",
+      "note": "Presence ends in -ence."
+    },
+    {
+      "type": "incorrect",
+      "text": "Silance filled the room after the news.",
+      "correction": "Silence filled the room after the news.",
+      "note": "Silence ends in -ence."
+    },
+    {
+      "type": "incorrect",
+      "text": "The hotel is a short distence from the station.",
+      "correction": "The hotel is a short distance from the station.",
+      "note": "Distance ends in -ance."
+    },
+    {
+      "type": "incorrect",
+      "text": "The sience lesson starts at nine.",
+      "correction": "The science lesson starts at nine.",
+      "note": "Science ends in -ence."
+    },
+    {
+      "type": "incorrect",
+      "text": "The insurence form is on the desk.",
+      "correction": "The insurance form is on the desk.",
+      "note": "Insurance ends in -ance."
+    },
+    {
+      "type": "incorrect",
+      "text": "The new resedence has a small garden.",
+      "correction": "The new residence has a small garden.",
+      "note": "Residence ends in -ence."
+    },
+    {
+      "type": "incorrect",
+      "text": "Regular maintenence keeps the car safe.",
+      "correction": "Regular maintenance keeps the car safe.",
+      "note": "Maintenance ends in -ance."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "fill_gap",
+      "prompt": "The ___ took the injured man to hospital. (скорая помощь)",
+      "answer": "ambulance"
+    },
+    {
+      "type": "fill_gap",
+      "prompt": "It takes ___ to wait in a long queue. (терпение)",
+      "answer": "patience"
+    },
+    {
+      "type": "fill_gap",
+      "prompt": "Her ___ in the theatre company is long. (опыт)",
+      "answer": "experience"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: The ___ was very quiet during the film.",
+      "answer": "audience",
+      "choices": [
+        "audiance",
+        "audience",
+        "audiense"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: Good ___ helps you ride a bicycle.",
+      "answer": "balance",
+      "choices": [
+        "balence",
+        "balance",
+        "balanse"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: The ___ arrived within five minutes.",
+      "answer": "ambulance",
+      "choices": [
+        "ambulence",
+        "ambulance",
+        "ambulanse"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: The doctor showed great ___ with the children.",
+      "answer": "patience",
+      "choices": [
+        "patiance",
+        "patience",
+        "patiense"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: Her ___ in the shop is useful for the job.",
+      "answer": "experience",
+      "choices": [
+        "experiance",
+        "experience",
+        "experiense"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: There is a big ___ in price between the two shops.",
+      "answer": "difference",
+      "choices": [
+        "differance",
+        "difference",
+        "differense"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: Regular ___ at lessons helps you learn faster.",
+      "answer": "attendance",
+      "choices": [
+        "attendence",
+        "attendance",
+        "attendanse"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: The police found clear ___ at the house.",
+      "answer": "evidence",
+      "choices": [
+        "evidance",
+        "evidence",
+        "evidense"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: The ___ of the hotel is on the left side.",
+      "answer": "entrance",
+      "choices": [
+        "entrence",
+        "entrance",
+        "entranse"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: The teacher gave us extra ___ with the homework.",
+      "answer": "assistance",
+      "choices": [
+        "assistence",
+        "assistance",
+        "assistanse"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: We have a ___ lesson on Tuesday morning.",
+      "answer": "science",
+      "choices": [
+        "sience",
+        "science",
+        "sciense"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: The ___ for the car costs fifty euros a month.",
+      "answer": "insurance",
+      "choices": [
+        "insurence",
+        "insurance",
+        "insuranse"
+      ]
+    },
+    {
+      "type": "correct_word",
+      "prompt": "ambulence",
+      "answer": "ambulance"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "balence",
+      "answer": "balance"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "elegence",
+      "answer": "elegance"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "violance",
+      "answer": "violence"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "patiance",
+      "answer": "patience"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "experiance",
+      "answer": "experience"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "differance",
+      "answer": "difference"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "attendence",
+      "answer": "attendance"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "assistence",
+      "answer": "assistance"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "evidance",
+      "answer": "evidence"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "audiance",
+      "answer": "audience"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "absance",
+      "answer": "absence"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "residance",
+      "answer": "residence"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "insurence",
+      "answer": "insurance"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "maintenence",
+      "answer": "maintenance"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "distence",
+      "answer": "distance"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "entrence",
+      "answer": "entrance"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "conferance",
+      "answer": "conference"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "appearence",
+      "answer": "appearance"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: a vehicle that takes sick people to hospital.",
+      "answer": "ambulance"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: the ability to stay calm while waiting.",
+      "answer": "patience"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: knowledge you get from doing a job.",
+      "answer": "experience"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: help given to someone.",
+      "answer": "assistance"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: a large meeting to discuss ideas.",
+      "answer": "conference"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: being present at a lesson.",
+      "answer": "attendance"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: the way someone looks.",
+      "answer": "appearance"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: being free from control.",
+      "answer": "independence"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: the way two things are not the same.",
+      "answer": "difference"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: staying steady without falling.",
+      "answer": "balance"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: the study of nature and the world.",
+      "answer": "science"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: using force to hurt people.",
+      "answer": "violence"
+    }
+  ]
+}

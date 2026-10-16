@@ -1,6 +1,6 @@
 // Checks the rule content that ships with the app (src/data/builtInRules.json and builtInRuleExercises.json)
 // and that the article SQL file still matches it. Run by `pnpm check`.
-import { existsSync, readFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync } from 'node:fs'
 
 const rules = JSON.parse(readFileSync('src/data/builtInRules.json', 'utf8'))
 const exercisesByRule = JSON.parse(readFileSync('src/data/builtInRuleExercises.json', 'utf8'))
@@ -71,11 +71,28 @@ let moreExercises = 0
 const morePacks = [
   ['database/rules-import/more-practice-pack.json', 'database/content-pack-4-more-practice'],
   ['database/rules-import/more-practice-pack-2.json', 'database/content-pack-5-more-practice'],
-].filter(([json]) => existsSync(json))
-for (const [json, sqlBase] of morePacks) {
+  ['database/rules-import/more-practice-pack-3.json', 'database/content-pack-6-part-', true], // built in many small parts
+]
+  // later batches: pack 4 is content pack 7, and so on
+  .concat(
+    Array.from({ length: 20 }, (_, index) => [
+      `database/rules-import/more-practice-pack-${index + 4}.json`,
+      `database/content-pack-${index + 7}-part-`,
+      true,
+    ]),
+  )
+  .filter(([json]) => existsSync(json))
+for (const [json, sqlBase, chunked] of morePacks) {
   const morePack = JSON.parse(readFileSync(json, 'utf8'))
-  const moreExamplesSql = readFileSync(`${sqlBase}-part1.sql`, 'utf8')
-  const moreExercisesSql = readFileSync(`${sqlBase}-part2.sql`, 'utf8')
+  // a pack built in parts: every part file together
+  const allParts = chunked
+    ? readdirSync('database')
+        .filter((name) => `database/${name}`.startsWith(sqlBase) && name.endsWith('.sql'))
+        .map((name) => readFileSync(`database/${name}`, 'utf8'))
+        .join('\n')
+    : null
+  const moreExamplesSql = allParts ?? readFileSync(`${sqlBase}-part1.sql`, 'utf8')
+  const moreExercisesSql = allParts ?? readFileSync(`${sqlBase}-part2.sql`, 'utf8')
   for (const item of morePack.rules) {
     const rule = rules.rules.find((entry) => entry.slug === item.slug)
     if (!rule) {

@@ -1,15 +1,25 @@
 // Checks the assistant's answers (research/plexity/answers/rules3/*.json, one JSON object per rule: slug, examples, exercises;
 // a rule asked in two parts has two files) against the rules and what already exists, and with --apply writes the good
 // items into database/rules-import/more-practice-pack-3.json (the source of content pack 6). Bad items are left out and listed.
-// Run: node scripts/merge-rule-answers.mjs [--apply]
+// The answers come in batches: batch N (--pack N, default 3) keeps only what no earlier pack has (packs 1, 2, 3 … N-1), so
+// a second batch never repeats the first. Run: node scripts/merge-rule-answers.mjs [--apply] [--pack N]
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 
 const rules = JSON.parse(readFileSync('src/data/builtInRules.json', 'utf8'))
 const bundled = JSON.parse(readFileSync('src/data/builtInRuleExercises.json', 'utf8'))
-const earlier = ['database/rules-import/more-practice-pack.json', 'database/rules-import/more-practice-pack-2.json']
+const batch = Number(process.argv[process.argv.indexOf('--pack') + 1]) || 3
+const earlier = [
+  'database/rules-import/more-practice-pack.json',
+  'database/rules-import/more-practice-pack-2.json',
+  ...Array.from({ length: batch - 3 }, (_, index) => `database/rules-import/more-practice-pack-${index + 3}.json`),
+]
   .filter((file) => existsSync(file))
   .map((file) => JSON.parse(readFileSync(file, 'utf8')))
 
+// texts the review rejected (scripts/apply-rule-drops.mjs): never taken again
+const rejected = existsSync('research/plexity/rules3-rejected.json')
+  ? JSON.parse(readFileSync('research/plexity/rules3-rejected.json', 'utf8'))
+  : {}
 const dir = 'research/plexity/answers/rules3/'
 const files = existsSync(dir)
   ? readdirSync(dir)
@@ -65,6 +75,7 @@ for (const { rule, examples, exercises } of bySlug.values()) {
     ),
   ])
   const seen = new Set()
+  const rejectedHere = new Set(rejected[rule.slug] ?? [])
   const goodExamples = []
   for (const example of examples) {
     const label = `example "${example.text}"`
@@ -97,6 +108,10 @@ for (const { rule, examples, exercises } of bySlug.values()) {
       continue
     }
     const key = norm(example.text)
+    if (rejectedHere.has(key)) {
+      bad('rejected by the review')
+      continue
+    }
     if (knownExamples.has(key) || seen.has(key)) {
       bad('already exists')
       continue
@@ -150,6 +165,10 @@ for (const { rule, examples, exercises } of bySlug.values()) {
       continue
     }
     const key = norm(exercise.prompt)
+    if (rejectedHere.has(key)) {
+      bad('rejected by the review')
+      continue
+    }
     if (knownExercises.has(key) || seenPrompts.has(key)) {
       bad('already exists')
       continue
@@ -189,7 +208,8 @@ for (const message of problems.slice(0, 40)) console.log('DROPPED', message)
 if (problems.length > 40) console.log(`… and ${problems.length - 40} more`)
 if (process.argv.includes('--apply')) {
   mkdirSync('database/rules-import', { recursive: true })
-  const pack = { set: 'more-practice-v3', rules: result.map(({ slug, examples, exercises }) => ({ slug, examples, exercises })) }
-  writeFileSync('database/rules-import/more-practice-pack-3.json', JSON.stringify(pack, null, 1) + '\n')
-  console.log('written database/rules-import/more-practice-pack-3.json')
+  const pack = { set: `more-practice-v${batch}`, rules: result.map(({ slug, examples, exercises }) => ({ slug, examples, exercises })) }
+  const out = `database/rules-import/more-practice-pack-${batch}.json`
+  writeFileSync(out, JSON.stringify(pack, null, 1) + '\n')
+  console.log(`written ${out}`)
 }

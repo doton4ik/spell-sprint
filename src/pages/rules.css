@@ -512,15 +512,6 @@
   font-size: calc(13px * var(--fs));
   margin: 3px 0 0;
 }
-.rule-unclassified__note {
-  color: var(--ink-muted);
-  font-size: calc(13px * var(--fs));
-  margin: 0 0 4px;
-}
-.rule-unclassified__note a {
-  color: var(--accent-text-strong);
-  font-weight: 700;
-}
 
 /* ---------- Rules: the list on the left, the selected rule on the right ---------- */
 .rules-split {

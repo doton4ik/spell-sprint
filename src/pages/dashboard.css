@@ -113,10 +113,6 @@
   line-height: 1;
   margin: 14px 0 0;
 }
-.metric-card--accent .metric-card__icon {
-  background: var(--accent-soft);
-  color: var(--accent-text);
-}
 .metric-card--amber .metric-card__icon {
   background: var(--amber-soft);
   color: var(--amber-text);
@@ -153,25 +149,11 @@
 .secondary-button:hover {
   transform: translateY(-1px);
 }
-.word-chip {
-  backdrop-filter: blur(5px);
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 10px;
-  color: rgba(255, 255, 255, 0.87);
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: calc(13px * var(--fs));
-  padding: 8px 11px;
-  position: absolute;
-}
 .dashboard-columns {
   display: grid;
   gap: 23px;
   grid-template-columns: minmax(0, 1.48fr) minmax(320px, 0.9fr);
   margin-top: 23px;
-}
-.dashboard-columns--lower {
-  grid-template-columns: minmax(0, 1.48fr) minmax(320px, 0.9fr);
 }
 .panel {
   background: var(--surface);
@@ -480,8 +462,7 @@
   .dashboard-hero {
     grid-template-columns: 1fr;
   }
-  .dashboard-columns,
-  .dashboard-columns--lower {
+  .dashboard-columns {
     grid-template-columns: 1fr;
   }
   .review-card {
@@ -506,9 +487,6 @@
   }
   .dashboard-columns {
     gap: 17px;
-    margin-top: 17px;
-  }
-  .dashboard-columns--lower {
     margin-top: 17px;
   }
   .panel {

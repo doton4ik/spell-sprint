@@ -290,24 +290,6 @@
   font-size: calc(12px * var(--fs));
 }
 
-.session-note {
-  align-items: flex-start;
-  border-top: 1px solid var(--accent-line);
-  color: var(--accent-text);
-  display: flex;
-  gap: 11px;
-  padding-top: 20px;
-}
-.session-note p {
-  color: var(--ink-muted);
-  font-size: calc(12px * var(--fs));
-  line-height: 1.55;
-  margin: 0;
-}
-.session-note strong {
-  color: var(--accent-text);
-}
-
 /* ---------- Task card ---------- */
 .task-card {
   background: var(--surface);
@@ -691,12 +673,10 @@
   }
   .session-stats,
   .session-map,
-  .session-missed,
-  .session-note {
+  .session-missed {
     grid-column: 1 / -1;
   }
-  .session-missed,
-  .session-note {
+  .session-missed {
     padding-top: 18px;
   }
 }

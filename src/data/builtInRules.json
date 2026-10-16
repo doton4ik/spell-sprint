@@ -6142,6 +6142,4630 @@
       "text": "We wear very happy yesterday.",
       "correction": "We were very happy yesterday.",
       "note": "Past of be: were"
+    },
+    {
+      "id": "4c06867f-63ff-5e0e-8f5c-0ed86278cc2e",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The hotel room was comfortable and clean.",
+      "correction": null,
+      "note": "Comfortable ends in -able."
+    },
+    {
+      "id": "9c21969b-1188-584d-b556-e8d9adaa08a2",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The price of the flat was reasonable.",
+      "correction": null,
+      "note": "Reasonable means fair or sensible."
+    },
+    {
+      "id": "3e699243-0812-5c36-956b-d08c3b25d92a",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The taxi price was reasonible for students.",
+      "correction": "The taxi price was reasonable for students.",
+      "note": "Reasonable ends in -able."
+    },
+    {
+      "id": "fa2ed321-12ff-5145-894a-9e09d0169920",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The old bridge is still usable after repairs.",
+      "correction": null,
+      "note": "Usable means it can be used."
+    },
+    {
+      "id": "26dea444-c2b7-5309-87db-529e7ee3f22c",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The weather here is very changeible.",
+      "correction": "The weather here is very changeable.",
+      "note": "Changeable ends in -able."
+    },
+    {
+      "id": "9be1c58a-b7e1-5574-ba31-9cb5206e2599",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The teacher gave us a manageable amount of homework.",
+      "correction": null,
+      "note": "Manageable means easy to control."
+    },
+    {
+      "id": "a50643c8-b026-5bee-91e2-620232613ae9",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The workload was manageible after training.",
+      "correction": "The workload was manageable after training.",
+      "note": "Manageable ends in -able."
+    },
+    {
+      "id": "bb1a4482-6471-5477-8259-a8ea72d5bccd",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The bus stop is reachable in ten minutes.",
+      "correction": null,
+      "note": "Reachable means possible to reach."
+    },
+    {
+      "id": "86a7c93c-419c-5564-a71e-0f84013e0cdf",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The airport is reachible by train.",
+      "correction": "The airport is reachable by train.",
+      "note": "Reachable ends in -able."
+    },
+    {
+      "id": "59783eed-917b-5682-8085-1df8efe35dea",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The recipe is simple and adaptable for vegetarians.",
+      "correction": null,
+      "note": "Adaptable means able to change."
+    },
+    {
+      "id": "592e1107-6aaf-58a3-b74f-dc3a85e239d0",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The plan is adaptible for different teams.",
+      "correction": "The plan is adaptable for different teams.",
+      "note": "Adaptable ends in -able."
+    },
+    {
+      "id": "498b9931-9b7f-5220-93d7-138ad60ba455",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The rules are flexible for part-time workers.",
+      "correction": null,
+      "note": "Flexible means able to bend or change."
+    },
+    {
+      "id": "672468d1-8d75-531b-bee9-34b81a86147c",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "Our manager is very flexable about hours.",
+      "correction": "Our manager is very flexible about hours.",
+      "note": "Flexible ends in -ible."
+    },
+    {
+      "id": "49be237d-0580-5400-91ec-7a1254591d5a",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The information was reliable and up to date.",
+      "correction": null,
+      "note": "Reliable means trusted."
+    },
+    {
+      "id": "41c3e859-03b3-5ced-b498-6e368507265b",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The website gave reliible travel advice.",
+      "correction": "The website gave reliable travel advice.",
+      "note": "Reliable ends in -able."
+    },
+    {
+      "id": "f2b805a2-bdd6-544f-89f3-736a0b285c4e",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The old sofa was still comfortable after cleaning.",
+      "correction": null,
+      "note": "Comfortable ends in -able."
+    },
+    {
+      "id": "419fc3b2-2100-51a1-b79c-030f005ecfe2",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The meeting time is suitable for everyone.",
+      "correction": null,
+      "note": "Suitable means right for a purpose."
+    },
+    {
+      "id": "7774407d-b2e0-56b1-9ad2-c1fb43709db6",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The early class is not suitible for commuters.",
+      "correction": "The early class is not suitable for commuters.",
+      "note": "Suitable ends in -able."
+    },
+    {
+      "id": "71088f0b-dcee-543f-a774-774506c73666",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The error was visible on the invoice.",
+      "correction": null,
+      "note": "Visible means able to be seen."
+    },
+    {
+      "id": "43ffddd4-8ad8-5e1d-97e9-003d120b8d06",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The discount was not visable at checkout.",
+      "correction": "The discount was not visible at checkout.",
+      "note": "Visible ends in -ible."
+    },
+    {
+      "id": "ac9cdd13-0498-5550-91c1-5fe5e6593e30",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The instructions were understandable for new staff.",
+      "correction": null,
+      "note": "Understandable means easy to understand."
+    },
+    {
+      "id": "389067fa-5f71-542a-9346-1e3975a0502a",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The safety guide was understandible for visitors.",
+      "correction": "The safety guide was understandable for visitors.",
+      "note": "Understandable ends in -able."
+    },
+    {
+      "id": "f201544b-a565-5af2-a092-b225fdbdf228",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The office is accessible by lift and stairs.",
+      "correction": null,
+      "note": "Accessible means easy to enter or use."
+    },
+    {
+      "id": "ad61700d-4b96-5fd0-9ab5-d2339debfd7a",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The library is accessable during holidays.",
+      "correction": "The library is accessible during holidays.",
+      "note": "Accessible ends in -ible."
+    },
+    {
+      "id": "c49af4b5-7389-5498-b189-13943d527af7",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The train tickets are available from the machine.",
+      "correction": null,
+      "note": "Available means ready to get or use."
+    },
+    {
+      "id": "2664c8a4-a962-5709-b9a3-723fb8e86b21",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The guidebooks are availible in the shop.",
+      "correction": "The guidebooks are available in the shop.",
+      "note": "Available ends in -able."
+    },
+    {
+      "id": "04fb5999-0a00-5ca1-91a0-67812e48b799",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The mountain road is passable in summer.",
+      "correction": null,
+      "note": "Passable means possible to travel on."
+    },
+    {
+      "id": "8b673618-43b7-5cc7-baaf-c104987f5cd8",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The schedule is workable for a small team.",
+      "correction": null,
+      "note": "Workable means practical or possible."
+    },
+    {
+      "id": "2224c7b7-dabc-5f20-a09f-f0692ce40a74",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The new rota is workible for night staff.",
+      "correction": "The new rota is workable for night staff.",
+      "note": "Workable ends in -able."
+    },
+    {
+      "id": "23942c59-f50b-56ff-9be6-4e3c86acd8df",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The delay was predictable because of the storm.",
+      "correction": null,
+      "note": "Predictable means expected."
+    },
+    {
+      "id": "ea30fe6b-33e9-543b-87ba-59eb75bf571d",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The queue was predictible on Friday evening.",
+      "correction": "The queue was predictable on Friday evening.",
+      "note": "Predictable ends in -able."
+    },
+    {
+      "id": "82b05cc6-7585-57aa-93e3-ae2608f4fa01",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "Most accidents are preventable with care.",
+      "correction": null,
+      "note": "Preventable means able to be stopped."
+    },
+    {
+      "id": "bdfe3e1f-0743-5a3b-8365-99115ca70bef",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "Some delivery errors are preventible with checks.",
+      "correction": "Some delivery errors are preventable with checks.",
+      "note": "Preventable ends in -able."
+    },
+    {
+      "id": "85003681-cb1d-5fae-a48a-28622d3c66ff",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The machine is durable and easy to clean.",
+      "correction": null,
+      "note": "Durable means strong and long-lasting."
+    },
+    {
+      "id": "e6f573b0-f360-5ba4-830f-0470a3660ea3",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The plastic box is durible for outdoor use.",
+      "correction": "The plastic box is durable for outdoor use.",
+      "note": "Durable ends in -able."
+    },
+    {
+      "id": "9a42485d-626c-5045-9e39-94298b209a1f",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The address was not legable on the parcel.",
+      "correction": "The address was not legible on the parcel.",
+      "note": "Legible ends in -ible."
+    },
+    {
+      "id": "bf82dd22-5f61-53d6-8308-b49c98f47811",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The smell from the kitchen was terrible.",
+      "correction": null,
+      "note": "Terrible means very bad."
+    },
+    {
+      "id": "e01965d4-655f-59e6-ad4e-c3521f4099e8",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The traffic this morning was terrable.",
+      "correction": "The traffic this morning was terrible.",
+      "note": "Terrible ends in -ible."
+    },
+    {
+      "id": "38a4a077-6e02-57c3-829e-605040119c08",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The old computer is still usable for simple tasks.",
+      "correction": null,
+      "note": "Usable means able to be used."
+    },
+    {
+      "id": "0cacc0fd-bef2-533d-bef2-651dbb3e052c",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The hotel offers comfortable rooms near the station.",
+      "correction": null,
+      "note": "Comfortable ends in -able."
+    },
+    {
+      "id": "7155d878-334e-5623-8994-36b67c954d7a",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The coach is accessible for passengers with luggage.",
+      "correction": null,
+      "note": "Accessible means easy to use or enter."
+    },
+    {
+      "id": "3e526ed8-248a-51b9-a445-3ed7375b6543",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The platform is accessable from the main hall.",
+      "correction": "The platform is accessible from the main hall.",
+      "note": "Accessible ends in -ible."
+    },
+    {
+      "id": "8239898a-059b-59fe-922d-d990431d891e",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "Fresh bread is available every morning.",
+      "correction": null,
+      "note": "Available means ready to buy or use."
+    },
+    {
+      "id": "0b808b1c-f8aa-5320-9c40-e8238b695106",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "Fresh fruit is availible at the corner shop.",
+      "correction": "Fresh fruit is available at the corner shop.",
+      "note": "Available ends in -able."
+    },
+    {
+      "id": "18f97be7-9658-5182-9aea-412b4fe2e491",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The recipe is adaptable if you have no butter.",
+      "correction": null,
+      "note": "Adaptable means able to be changed."
+    },
+    {
+      "id": "2271b18f-e51f-5d4b-aa0b-e7153ea26948",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The queue was manageable before lunchtime.",
+      "correction": null,
+      "note": "Manageable means easy to deal with."
+    },
+    {
+      "id": "3f0826c5-5e78-537d-a006-33c69b18aea0",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The workload was manageible during the sale.",
+      "correction": "The workload was manageable during the sale.",
+      "note": "Manageable ends in -able."
+    },
+    {
+      "id": "96f5ef73-1a5a-59a3-bafd-4c4290b185d3",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The handwriting on the form was legible.",
+      "correction": null,
+      "note": "Legible means clear enough to read."
+    },
+    {
+      "id": "90446247-4eb2-5261-b001-bab80c037f13",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The signature was barely legable on the receipt.",
+      "correction": "The signature was barely legible on the receipt.",
+      "note": "Legible ends in -ible."
+    },
+    {
+      "id": "d202ddff-b9f3-5ec7-b20b-a8b8417fca3f",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The service was terrible during the busy hour.",
+      "correction": null,
+      "note": "Terrible means very bad."
+    },
+    {
+      "id": "886a97ca-fb29-5bab-8baa-f7f30381bee2",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The connection was terrable in the mountains.",
+      "correction": "The connection was terrible in the mountains.",
+      "note": "Terrible ends in -ible."
+    },
+    {
+      "id": "4b82dac5-12f3-51b0-ab9d-7f73dd4b9cb1",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The route is passable only with a four-wheel drive.",
+      "correction": null,
+      "note": "Passable means possible to travel on."
+    },
+    {
+      "id": "6fd70613-bfa8-52a0-b6fe-7d0ef48cf768",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The price increase was reasonable this year.",
+      "correction": null,
+      "note": "Reasonable means fair or sensible."
+    },
+    {
+      "id": "f4de6b54-1ead-531b-afd4-97eec8186462",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The parking fee was reasonible near the centre.",
+      "correction": "The parking fee was reasonable near the centre.",
+      "note": "Reasonable ends in -able."
+    },
+    {
+      "id": "ce715bd4-219d-50bb-966e-37c1d9546b0c",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The forecast was reliable before the trip.",
+      "correction": null,
+      "note": "Reliable means trusted or dependable."
+    },
+    {
+      "id": "a36e1b49-e3d9-5d64-a456-7c002adff4e7",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The bus app is reliible for live updates.",
+      "correction": "The bus app is reliable for live updates.",
+      "note": "Reliable ends in -able."
+    },
+    {
+      "id": "6583d821-c37a-5264-bf36-a227594ed168",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The plan is workable if we start early.",
+      "correction": null,
+      "note": "Workable means practical or possible."
+    },
+    {
+      "id": "d8476e11-36ed-53ae-84fb-0e22122a3488",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The budget is workible for a short project.",
+      "correction": "The budget is workable for a short project.",
+      "note": "Workable ends in -able."
+    },
+    {
+      "id": "061ceb39-888e-56c1-bbce-6ccd8160c2a6",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The mistake was preventable with a second check.",
+      "correction": null,
+      "note": "Preventable means able to be avoided."
+    },
+    {
+      "id": "15487af0-fbe7-5fcb-96aa-90e52addf2f8",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The delay was preventible with better planning.",
+      "correction": "The delay was preventable with better planning.",
+      "note": "Preventable ends in -able."
+    },
+    {
+      "id": "96c62e45-800c-5803-83e4-b23b75f9ec72",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The suitcase is durable enough for frequent travel.",
+      "correction": null,
+      "note": "Durable means strong and long-lasting."
+    },
+    {
+      "id": "22ae235b-57d8-50ff-8f12-db2615aa8c24",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The shoes are durible for long walks.",
+      "correction": "The shoes are durable for long walks.",
+      "note": "Durable ends in -able."
+    },
+    {
+      "id": "291ed63b-8b33-53e9-b1dd-49abf93560b9",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The station is reachable on foot from here.",
+      "correction": null,
+      "note": "Reachable means possible to reach."
+    },
+    {
+      "id": "cb8a46fe-d6b3-57e8-9759-1409ff6af3f9",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The warehouse is reachible by local bus.",
+      "correction": "The warehouse is reachable by local bus.",
+      "note": "Reachable ends in -able."
+    },
+    {
+      "id": "247acb2a-3529-5e49-89d2-1cd9da58a263",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The policy is flexible for parents and carers.",
+      "correction": null,
+      "note": "Flexible means able to change easily."
+    },
+    {
+      "id": "f5d65f87-3dfa-5ca0-9d1d-4e01974421c0",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The shift system is flexable for students.",
+      "correction": "The shift system is flexible for students.",
+      "note": "Flexible ends in -ible."
+    },
+    {
+      "id": "ed72f8bd-e8ae-5b8d-a7cc-f9fa546fe3e8",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "correct",
+      "text": "The label was visible after we cleaned the jar.",
+      "correction": null,
+      "note": "Visible means able to be seen."
+    },
+    {
+      "id": "3ec26e90-fb6b-54ef-8290-f8e9afb4e6c5",
+      "rule_id": "179d3801-4c7d-45d0-9bbe-a62d76dc4f25",
+      "example_type": "incorrect",
+      "text": "The stamp was visable under bright light.",
+      "correction": "The stamp was visible under bright light.",
+      "note": "Visible ends in -ible."
+    },
+    {
+      "id": "66b18d0f-3601-5f8a-9323-f769cb83f6f8",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "We accept card payments at the front desk.",
+      "correction": null,
+      "note": "Accept = agree to take."
+    },
+    {
+      "id": "aad2b19a-a494-58b4-9506-179971d09413",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "The library is open every day except Sunday.",
+      "correction": null,
+      "note": "Except = not including."
+    },
+    {
+      "id": "4ffc1098-e960-5805-8814-d63f16ed0a7e",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "He accepted the invitation to the wedding.",
+      "correction": null,
+      "note": "Accept an invitation."
+    },
+    {
+      "id": "de6d4c04-0c82-5a65-b2af-57676112d639",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "All the pupils enjoyed the trip except Sam.",
+      "correction": null,
+      "note": "Except one person."
+    },
+    {
+      "id": "d77f2288-1eec-540b-8885-90f166a86a58",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "Please accept this small present from us.",
+      "correction": null,
+      "note": "Accept = take willingly."
+    },
+    {
+      "id": "181c4f4d-f8cb-524f-b10b-9eb081f67a7d",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "The shop sells everything except fresh fish.",
+      "correction": null,
+      "note": "Except one item."
+    },
+    {
+      "id": "01160d6a-2dab-57dd-983f-00a6d1f1845a",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "She accepted the apology and smiled again.",
+      "correction": null,
+      "note": "Accept an apology."
+    },
+    {
+      "id": "0e66a2e5-4549-55d9-a008-594bd0fbbb0b",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "The bus goes to every stop except the museum.",
+      "correction": null,
+      "note": "Except one place."
+    },
+    {
+      "id": "dd27420a-3ae3-5dd9-864e-538840c8e131",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "They accepted our offer after a short talk.",
+      "correction": null,
+      "note": "Accept an offer."
+    },
+    {
+      "id": "4c99d68d-a160-51c5-bdd1-ad537659c633",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "Everyone was ready except the youngest child.",
+      "correction": null,
+      "note": "Except one person."
+    },
+    {
+      "id": "80c07d77-ac56-5732-8fed-be37c446e312",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "The café accepts orders online until midnight.",
+      "correction": null,
+      "note": "Accept orders."
+    },
+    {
+      "id": "921bcc09-1cff-5716-90fd-c8989e266f17",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "I like all kinds of music except loud rock.",
+      "correction": null,
+      "note": "Except one type."
+    },
+    {
+      "id": "f1156f53-4be3-5583-8864-a26eccbfa70a",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "He accepted the keys and thanked the landlord.",
+      "correction": null,
+      "note": "Accept = take something."
+    },
+    {
+      "id": "9a40623e-63f4-5767-8966-ddde55c30e1b",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "The office is closed every day except Friday.",
+      "correction": null,
+      "note": "Except one day."
+    },
+    {
+      "id": "6f130cc4-da1f-566a-860b-ef01ecfd51df",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "We accepted the changes to the travel plan.",
+      "correction": null,
+      "note": "Accept changes."
+    },
+    {
+      "id": "c13d1ab4-be16-5368-8631-480598292941",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "All the guests left except the birthday girl.",
+      "correction": null,
+      "note": "Except one guest."
+    },
+    {
+      "id": "a6b806c5-ce53-5b16-917c-a83ff695c807",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "The company accepts applications until June.",
+      "correction": null,
+      "note": "Accept applications."
+    },
+    {
+      "id": "4c43da74-e2aa-5b16-a527-37cbbbaf5485",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "She likes every season except cold winter.",
+      "correction": null,
+      "note": "Except one season."
+    },
+    {
+      "id": "85837d3e-80e1-5568-93da-a0fc4f5adfb0",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "I accept that the first attempt was difficult.",
+      "correction": null,
+      "note": "Accept = agree something is true."
+    },
+    {
+      "id": "3d89a484-e551-5fa6-be37-63e1e1f0d949",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "The train stops at all stations except Central.",
+      "correction": null,
+      "note": "Except one station."
+    },
+    {
+      "id": "bb751ed6-534d-527f-8cdc-d967486f5532",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "They accepted the delivery without any problems.",
+      "correction": null,
+      "note": "Accept a delivery."
+    },
+    {
+      "id": "70dedc49-786c-5bf3-bfcc-192497b4b18f",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "The shop is busy every day except Monday morning.",
+      "correction": null,
+      "note": "Except one time."
+    },
+    {
+      "id": "866dc54f-b9f7-5d8f-a872-8efedcd37ee4",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "Please accept my thanks for your help.",
+      "correction": null,
+      "note": "Accept thanks."
+    },
+    {
+      "id": "b3e931fc-4f2e-5a1f-bb9f-939c388537f8",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "Everyone passed the driving test except one learner.",
+      "correction": null,
+      "note": "Except one person."
+    },
+    {
+      "id": "af4acdf2-7b78-5638-a78b-b175285b1c16",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "The hotel accepts small pets in some rooms.",
+      "correction": null,
+      "note": "Accept pets."
+    },
+    {
+      "id": "7ad5e71c-9d45-555f-a453-2b00361cbfde",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "We visited every room except the old attic.",
+      "correction": null,
+      "note": "Except one room."
+    },
+    {
+      "id": "ac8e7ef6-09b0-5ff3-9b1a-f39dfe3ba0a6",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "She accepted the challenge and started training.",
+      "correction": null,
+      "note": "Accept a challenge."
+    },
+    {
+      "id": "f22c2c03-2465-5dda-8277-3fbbaea26fd7",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "The market is open every day except Christmas Day.",
+      "correction": null,
+      "note": "Except one day."
+    },
+    {
+      "id": "1e02863b-26c3-5fd1-86e9-4e71602ee427",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "I accept your advice about the new job.",
+      "correction": null,
+      "note": "Accept advice."
+    },
+    {
+      "id": "2464c0b5-cc17-5c56-a222-89d379d41578",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "All the children were quiet except the twins.",
+      "correction": null,
+      "note": "Except some people."
+    },
+    {
+      "id": "44d1e5dc-a060-5326-9292-abf04880a06d",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "The restaurant accepts bookings for large groups.",
+      "correction": null,
+      "note": "Accept bookings."
+    },
+    {
+      "id": "03d84461-8dee-59b5-bcbc-6b49370ba280",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "correct",
+      "text": "The garden is beautiful except for the old shed.",
+      "correction": null,
+      "note": "Except one part."
+    },
+    {
+      "id": "b50834aa-7ae3-5982-8406-c6f6620ea65b",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "I except your kind offer of help.",
+      "correction": "I accept your kind offer of help.",
+      "note": "Accept an offer."
+    },
+    {
+      "id": "1cf6f597-cfff-5c71-af4a-7e9769feb60f",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "Everyone came to class accept Anna.",
+      "correction": "Everyone came to class except Anna.",
+      "note": "Except = not including."
+    },
+    {
+      "id": "95bf30b8-506d-5872-9172-bf018b0a0f30",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "The hotel does not except bookings by email.",
+      "correction": "The hotel does not accept bookings by email.",
+      "note": "Accept bookings."
+    },
+    {
+      "id": "50f63a6b-63e9-5e3e-b4f7-3dbfad34af3b",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "We except the invitation with pleasure.",
+      "correction": "We accept the invitation with pleasure.",
+      "note": "Accept an invitation."
+    },
+    {
+      "id": "14cdc5b3-8857-5ff9-a7b4-ded761b9dc26",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "The shop is open every day accept Christmas.",
+      "correction": "The shop is open every day except Christmas.",
+      "note": "Except one day."
+    },
+    {
+      "id": "2c50e01f-b7e2-5485-917e-fb4c179005d3",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "He could not except the referee's decision.",
+      "correction": "He could not accept the referee's decision.",
+      "note": "Accept a decision."
+    },
+    {
+      "id": "b8fd5fd2-3133-5e66-9cbb-45e4633a4db7",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "All the students arrived accept the new boy.",
+      "correction": "All the students arrived except the new boy.",
+      "note": "Except one student."
+    },
+    {
+      "id": "8a87f572-ecd0-5af8-b2b1-5b0e16fc9801",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "The café excepts orders by phone only.",
+      "correction": "The café accepts orders by phone only.",
+      "note": "Accept orders."
+    },
+    {
+      "id": "d91f64f2-49de-5a52-9c19-7ce2aaac7b40",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "I like every subject accept history.",
+      "correction": "I like every subject except history.",
+      "note": "Except one subject."
+    },
+    {
+      "id": "bf295dac-6e5a-5f76-93f9-f1f94c1d2fe4",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "Please except my apology for being late.",
+      "correction": "Please accept my apology for being late.",
+      "note": "Accept an apology."
+    },
+    {
+      "id": "7d7f0d05-d9f5-58ab-a8a6-5aded990b32c",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "The bus stops everywhere accept the station.",
+      "correction": "The bus stops everywhere except the station.",
+      "note": "Except one place."
+    },
+    {
+      "id": "86b1879f-3a6c-5e7d-a6d0-79f663bdbe01",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "She excepted the prize at the ceremony.",
+      "correction": "She accepted the prize at the ceremony.",
+      "note": "Accept a prize."
+    },
+    {
+      "id": "9977a179-2e27-5e68-9c03-3574ff34052a",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "The team was happy accept the goalkeeper.",
+      "correction": "The team was happy except the goalkeeper.",
+      "note": "Except one player."
+    },
+    {
+      "id": "8adb4f9a-99e7-589e-a9f3-12b7df2444cf",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "The bank excepts payments in euros.",
+      "correction": "The bank accepts payments in euros.",
+      "note": "Accept payments."
+    },
+    {
+      "id": "abdc704e-c016-504e-ab6e-f6c78ff0be7b",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "Everyone enjoyed the film accept my brother.",
+      "correction": "Everyone enjoyed the film except my brother.",
+      "note": "Except one person."
+    },
+    {
+      "id": "a7ac7089-2ef5-5098-a849-40f42c363b99",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "We except the terms before using the website.",
+      "correction": "We accept the terms before using the website.",
+      "note": "Accept the terms."
+    },
+    {
+      "id": "156c00f0-92ae-55ab-a323-729baee52ebf",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "The garden is lovely accept in heavy rain.",
+      "correction": "The garden is lovely except in heavy rain.",
+      "note": "Except in one condition."
+    },
+    {
+      "id": "4590f7b7-ce1d-534a-af46-5c911115b309",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "The office accepts visitors accept on Sundays.",
+      "correction": "The office accepts visitors except on Sundays.",
+      "note": "Except one day."
+    },
+    {
+      "id": "a30a0e52-10b6-5426-aad0-32a47de38b62",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "She excepted the job after thinking carefully.",
+      "correction": "She accepted the job after thinking carefully.",
+      "note": "Accept a job."
+    },
+    {
+      "id": "917af3b2-23f1-5c55-9abe-129414a91385",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "All the children played outside accept Tom.",
+      "correction": "All the children played outside except Tom.",
+      "note": "Except one child."
+    },
+    {
+      "id": "25edd2fb-e4aa-59f8-975a-b4fbdc65a472",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "The school excepts new pupils in September.",
+      "correction": "The school accepts new pupils in September.",
+      "note": "Accept pupils."
+    },
+    {
+      "id": "11da3fdb-d9c6-51a5-bddf-48db7108ac0d",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "I could not except the news about the flight.",
+      "correction": "I could not accept the news about the flight.",
+      "note": "Accept news."
+    },
+    {
+      "id": "26834722-4231-5072-b7d3-dba0c28c3222",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "The museum is open every day accept Tuesday.",
+      "correction": "The museum is open every day except Tuesday.",
+      "note": "Except one day."
+    },
+    {
+      "id": "68df4c7b-06a5-5006-a425-6d4d1f5e3101",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "They accepted the plan accept the final cost.",
+      "correction": "They accepted the plan except the final cost.",
+      "note": "Except one detail."
+    },
+    {
+      "id": "be32ef6a-2fb7-5d80-9d03-4699e10ac902",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "Please except this ticket for the concert.",
+      "correction": "Please accept this ticket for the concert.",
+      "note": "Accept a ticket."
+    },
+    {
+      "id": "a9eeb3f1-1110-53ab-a974-6751eb7d4b80",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "Everyone was tired accept the guide.",
+      "correction": "Everyone was tired except the guide.",
+      "note": "Except one person."
+    },
+    {
+      "id": "91c8663c-4aa8-519b-83c8-f46d52194544",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "The shop excepts returns within two weeks.",
+      "correction": "The shop accepts returns within two weeks.",
+      "note": "Accept returns."
+    },
+    {
+      "id": "4907716b-4ce6-5a30-85ba-a730f3deaa4b",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "I like all the colours accept bright green.",
+      "correction": "I like all the colours except bright green.",
+      "note": "Except one colour."
+    },
+    {
+      "id": "d7da3463-13d0-55f0-a9bb-0119cdaf0c00",
+      "rule_id": "ffe2948c-b6b1-4b4b-b3ff-54f23404c98e",
+      "example_type": "incorrect",
+      "text": "The hotel accepts guests accept during repairs.",
+      "correction": "The hotel accepts guests except during repairs.",
+      "note": "Except one period."
+    },
+    {
+      "id": "328dc857-4b3f-501f-9280-f9421ff07f92",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "My uncle gave me practical advice about cycling.",
+      "correction": null,
+      "note": "Advice is a noun."
+    },
+    {
+      "id": "a70f7b73-0e73-50c1-bc15-be8d97f913a4",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "Can you advise me about trains to London?",
+      "correction": null,
+      "note": "Advise is a verb."
+    },
+    {
+      "id": "65daef8a-d2a0-5726-928a-60f29d9db710",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "The nurse advised him to drink more water.",
+      "correction": null,
+      "note": "Advise = give a suggestion."
+    },
+    {
+      "id": "fc5a280c-aa55-598b-9ef3-aef1af913760",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "Her advice about the interview was helpful.",
+      "correction": null,
+      "note": "Advice is a thing."
+    },
+    {
+      "id": "0fdb574b-387e-5987-b828-d7ca60ddcf0e",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "I advise you to book the tickets early.",
+      "correction": null,
+      "note": "Advise is an action."
+    },
+    {
+      "id": "a186b92d-41f4-542d-ac9f-6b2bb2e4d378",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "We received good advice from the tourist office.",
+      "correction": null,
+      "note": "Advice is a noun."
+    },
+    {
+      "id": "f1224e7b-0c6c-5cb6-98c4-ddd35b995731",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "The coach advised the players to rest.",
+      "correction": null,
+      "note": "Advise = give a suggestion."
+    },
+    {
+      "id": "ac3033c1-2809-5d53-bfa9-a84705250e67",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "His advice helped me fix my bicycle.",
+      "correction": null,
+      "note": "Advice is a thing."
+    },
+    {
+      "id": "143602eb-ec41-56f6-b554-e2426907f5b6",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "Please advise us if the delivery is late.",
+      "correction": null,
+      "note": "Advise is a verb."
+    },
+    {
+      "id": "ec3a2b35-9bde-5e69-83b8-adf3947a60a8",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "She took my advice and packed an umbrella.",
+      "correction": null,
+      "note": "Advice is a noun."
+    },
+    {
+      "id": "9ec48415-3207-50b9-9922-eeae7a4fd782",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "The bank can advise you about savings.",
+      "correction": null,
+      "note": "Advise is an action."
+    },
+    {
+      "id": "a0187ac9-ceed-511e-8788-31b2265ed18a",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "My mother always gives sensible advice.",
+      "correction": null,
+      "note": "Advice is a thing."
+    },
+    {
+      "id": "e0d843e9-15eb-587f-a3bc-9e4bf518af6f",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "The teacher advised us to practise every day.",
+      "correction": null,
+      "note": "Advise is a verb."
+    },
+    {
+      "id": "008f0853-07ec-5399-ad48-da7848fa6cc5",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "Thank you for your advice about the recipe.",
+      "correction": null,
+      "note": "Advice is a noun."
+    },
+    {
+      "id": "aeaa170b-05ee-554f-be23-a1b363547b91",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "I would advise you not to swim alone.",
+      "correction": null,
+      "note": "Advise is an action."
+    },
+    {
+      "id": "f3576fe9-51ce-5094-98af-e90f9dc5fc87",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "correct",
+      "text": "Their advice made the move much easier.",
+      "correction": null,
+      "note": "Advice is a thing."
+    },
+    {
+      "id": "80c346df-89e7-575c-bc15-cc136735ae56",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "Can you give me some advise about cooking?",
+      "correction": "Can you give me some advice about cooking?",
+      "note": "Advice is a noun."
+    },
+    {
+      "id": "74889849-d4c8-5d35-9bc8-9f0f0c343441",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "I advice you to take an earlier train.",
+      "correction": "I advise you to take an earlier train.",
+      "note": "Advise is a verb."
+    },
+    {
+      "id": "ef68008c-e845-5cff-8996-240024f2d481",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "The doctor gave me useful advise.",
+      "correction": "The doctor gave me useful advice.",
+      "note": "Advice is a noun."
+    },
+    {
+      "id": "84b4ec8d-e666-5699-af45-dd68635befe9",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "Please advice me before I sign the form.",
+      "correction": "Please advise me before I sign the form.",
+      "note": "Advise is a verb."
+    },
+    {
+      "id": "7fcf861b-b4e7-5005-ade5-848e5a803b9d",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "She always gives me good advise.",
+      "correction": "She always gives me good advice.",
+      "note": "Advice is a noun."
+    },
+    {
+      "id": "d10d821a-fd59-5a5c-b36c-293a68e6d781",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "He adviced me to wear warmer clothes.",
+      "correction": "He advised me to wear warmer clothes.",
+      "note": "Advise is a verb."
+    },
+    {
+      "id": "5375781d-4f39-5ffe-85a2-819a0d4dd652",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "I need your advise about the new job.",
+      "correction": "I need your advice about the new job.",
+      "note": "Advice is a noun."
+    },
+    {
+      "id": "e04533e3-6cd5-590f-9f26-7dfa2f7f87c0",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "The guide will advice you about the route.",
+      "correction": "The guide will advise you about the route.",
+      "note": "Advise is a verb."
+    },
+    {
+      "id": "dc941e36-1542-5df7-acb1-ad1210cbe2e8",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "Her advise saved me a lot of time.",
+      "correction": "Her advice saved me a lot of time.",
+      "note": "Advice is a noun."
+    },
+    {
+      "id": "f1195f1c-cfa2-5864-b2e7-fd23807d4016",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "Can you advice me which laptop to buy?",
+      "correction": "Can you advise me which laptop to buy?",
+      "note": "Advise is a verb."
+    },
+    {
+      "id": "43a91118-58cc-522c-b078-4dd8bf331b1b",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "My friend never takes my advise.",
+      "correction": "My friend never takes my advice.",
+      "note": "Advice is a noun."
+    },
+    {
+      "id": "2ee16d3d-6326-590e-aa9d-2c6f261f055d",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "We asked for advise at the travel agency.",
+      "correction": "We asked for advice at the travel agency.",
+      "note": "Advice is a noun."
+    },
+    {
+      "id": "1dc47538-7a79-56e6-8e9d-c82b875f0fa4",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "I would advice you to check the timetable.",
+      "correction": "I would advise you to check the timetable.",
+      "note": "Advise is a verb."
+    },
+    {
+      "id": "6f5dd98e-7401-5c58-8208-ffe60c469328",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "His advise about saving money was clear.",
+      "correction": "His advice about saving money was clear.",
+      "note": "Advice is a noun."
+    },
+    {
+      "id": "81b5f769-e6d8-5fef-9f26-2173137c369f",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "Please advice us when the parcel arrives.",
+      "correction": "Please advise us when the parcel arrives.",
+      "note": "Advise is a verb."
+    },
+    {
+      "id": "23677f22-5685-502b-bb2a-1aebb6a95880",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "The coach gave the team useful advise.",
+      "correction": "The coach gave the team useful advice.",
+      "note": "Advice is a noun."
+    },
+    {
+      "id": "a8ac34c2-f2f3-5b6e-aaaf-1d6e791b0992",
+      "rule_id": "9e69efa0-5835-4473-bad0-af8c62974b86",
+      "example_type": "incorrect",
+      "text": "She advices customers about mobile plans.",
+      "correction": "She advises customers about mobile plans.",
+      "note": "Advise is a verb."
+    },
+    {
+      "id": "f102fa72-a0f3-59e6-9582-bcb08c8589be",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "I bought a present for my sister.",
+      "correction": null,
+      "note": "Buy becomes bought."
+    },
+    {
+      "id": "fc48003a-cf44-5c39-af4d-0eea46fd22f5",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "She taught me how to cook rice.",
+      "correction": null,
+      "note": "Teach becomes taught."
+    },
+    {
+      "id": "b9c46fdb-0d47-52d0-a8d6-ca8ed8961b49",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "We thought the film was excellent.",
+      "correction": null,
+      "note": "Think becomes thought."
+    },
+    {
+      "id": "4afc4129-29b0-5c0b-99df-655c62ae3956",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "He brought his camera to the party.",
+      "correction": null,
+      "note": "Bring becomes brought."
+    },
+    {
+      "id": "a5bf5733-6feb-51a8-811e-448f06d7f76f",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "The dog caught the ball in the garden.",
+      "correction": null,
+      "note": "Catch becomes caught."
+    },
+    {
+      "id": "4772125d-c83a-57a8-9c2d-df63aeb666cf",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "They fought bravely in the final match.",
+      "correction": null,
+      "note": "Fight becomes fought."
+    },
+    {
+      "id": "089eb847-2629-5b2d-add3-105c3570a6e4",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "I sold my old bike last month.",
+      "correction": null,
+      "note": "Sell becomes sold."
+    },
+    {
+      "id": "65b013b9-ef13-554c-b7eb-142248648244",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "She kept the ticket as a memory.",
+      "correction": null,
+      "note": "Keep becomes kept."
+    },
+    {
+      "id": "548ae566-f070-5ec0-a5df-09558c39eab4",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "We left the hotel before breakfast.",
+      "correction": null,
+      "note": "Leave becomes left."
+    },
+    {
+      "id": "d7e8084d-5e7d-58ec-9d90-459aa27963f0",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "He made a cake for his mother.",
+      "correction": null,
+      "note": "Make becomes made."
+    },
+    {
+      "id": "cfef309b-96b1-5303-bb80-3917b503bdd0",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "They met at the station after work.",
+      "correction": null,
+      "note": "Meet becomes met."
+    },
+    {
+      "id": "cf75326f-ba89-5602-b0d6-0348603489f1",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "I said goodbye at the airport.",
+      "correction": null,
+      "note": "Say becomes said."
+    },
+    {
+      "id": "fd9ab052-02a4-57c5-bff5-7727f8da903e",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "The children built a sandcastle together.",
+      "correction": null,
+      "note": "Build becomes built."
+    },
+    {
+      "id": "1f7947cf-6284-5a5d-a247-49c8d5328097",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "She sent an email to her teacher.",
+      "correction": null,
+      "note": "Send becomes sent."
+    },
+    {
+      "id": "f6344846-2325-51c9-9d11-8692973a6e7d",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "We spent the weekend by the sea.",
+      "correction": null,
+      "note": "Spend becomes spent."
+    },
+    {
+      "id": "19dd569e-e86e-50de-92bd-edfc7a9aa7b3",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "correct",
+      "text": "He understood the instructions quickly.",
+      "correction": null,
+      "note": "Understand becomes understood."
+    },
+    {
+      "id": "6e02ea27-2cd0-57fb-b7eb-266cc2f09344",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "I buyed a new phone case yesterday.",
+      "correction": "I bought a new phone case yesterday.",
+      "note": "Buy becomes bought."
+    },
+    {
+      "id": "4a588f70-74be-5348-9663-f958a7bc1b74",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "She teached me some Spanish words.",
+      "correction": "She taught me some Spanish words.",
+      "note": "Teach becomes taught."
+    },
+    {
+      "id": "0d13d437-6dde-591f-8730-270364102668",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "We thinked the plan was too expensive.",
+      "correction": "We thought the plan was too expensive.",
+      "note": "Think becomes thought."
+    },
+    {
+      "id": "cebca9d3-dfb9-5e80-908a-f43607185825",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "He bringed his homework this morning.",
+      "correction": "He brought his homework this morning.",
+      "note": "Bring becomes brought."
+    },
+    {
+      "id": "a7887e25-5de4-59a1-a2e4-e3b7748eef5d",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "The boy catched the bus to school.",
+      "correction": "The boy caught the bus to school.",
+      "note": "Catch becomes caught."
+    },
+    {
+      "id": "49d1eff0-a7ee-5ce9-8fe9-d55adf83ce18",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "They fighted about the TV remote.",
+      "correction": "They fought about the TV remote.",
+      "note": "Fight becomes fought."
+    },
+    {
+      "id": "b8c2930f-65fe-53b8-94f3-d5221e457ab3",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "She keeped the receipt in her bag.",
+      "correction": "She kept the receipt in her bag.",
+      "note": "Keep becomes kept."
+    },
+    {
+      "id": "75a9ad56-aafa-5f93-8db1-828ae1afef63",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "We leaved the party at ten o'clock.",
+      "correction": "We left the party at ten o'clock.",
+      "note": "Leave becomes left."
+    },
+    {
+      "id": "42638816-eb51-5311-bc01-b3c4abf384ae",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "He maked a paper plane in class.",
+      "correction": "He made a paper plane in class.",
+      "note": "Make becomes made."
+    },
+    {
+      "id": "93ad3593-c5ca-5d01-9ffa-0e9b4eb9f0d0",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "They meeted their cousins at the airport.",
+      "correction": "They met their cousins at the airport.",
+      "note": "Meet becomes met."
+    },
+    {
+      "id": "8356c902-66c9-5569-97d3-9ad02ce063bb",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "I sayed nothing during the meeting.",
+      "correction": "I said nothing during the meeting.",
+      "note": "Say becomes said."
+    },
+    {
+      "id": "436af6f5-f2e0-504d-9cf6-9a089e28d712",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "The children builded a den in the garden.",
+      "correction": "The children built a den in the garden.",
+      "note": "Build becomes built."
+    },
+    {
+      "id": "27e36589-6786-5056-b9f7-e38112c57c36",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "She sended a message to her friend.",
+      "correction": "She sent a message to her friend.",
+      "note": "Send becomes sent."
+    },
+    {
+      "id": "2ae7529a-6f33-5000-a36d-20824b42c6a1",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "We spended all our money on tickets.",
+      "correction": "We spent all our money on tickets.",
+      "note": "Spend becomes spent."
+    },
+    {
+      "id": "b2294a31-0d05-58d0-97dd-7bc7f29c8633",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "He understanded the question easily.",
+      "correction": "He understood the question easily.",
+      "note": "Understand becomes understood."
+    },
+    {
+      "id": "83682b5a-9a86-596d-995e-70ddab7eb05f",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "My dad buyed flowers for my mum.",
+      "correction": "My dad bought flowers for my mum.",
+      "note": "Buy becomes bought."
+    },
+    {
+      "id": "1b8951c0-b217-503b-b3c0-eb11b6bc8583",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "The coach teached us a new warm-up.",
+      "correction": "The coach taught us a new warm-up.",
+      "note": "Teach becomes taught."
+    },
+    {
+      "id": "d60edf10-a698-530c-b6d5-23f06ff066ce",
+      "rule_id": "94d7062a-bd0c-4593-968a-f61b469bcd75",
+      "example_type": "incorrect",
+      "text": "I thinked the train was at six.",
+      "correction": "I thought the train was at six.",
+      "note": "Think becomes thought."
+    },
+    {
+      "id": "3a8bea96-ba46-5d58-adab-36f110ceb74e",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "Several children were drawing in the park.",
+      "correction": null,
+      "note": "Child becomes children."
+    },
+    {
+      "id": "3d8edc96-54ce-5638-895a-a2230da8ac54",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "The farmer keeps twenty sheep near the village.",
+      "correction": null,
+      "note": "Sheep has no plural -s."
+    },
+    {
+      "id": "8caa73b2-b5b4-5608-8239-a2f751f27de5",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "Three mice ran behind the kitchen cupboard.",
+      "correction": null,
+      "note": "Mouse becomes mice."
+    },
+    {
+      "id": "ad166e32-b4f2-5417-b128-655ccd14c648",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "Many people enjoy walking by the river.",
+      "correction": null,
+      "note": "Person becomes people."
+    },
+    {
+      "id": "ffd4131c-d87b-5fff-95ab-ab79cebe8249",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "The dentist cleaned two teeth this morning.",
+      "correction": null,
+      "note": "Tooth becomes teeth."
+    },
+    {
+      "id": "9c08ac43-9642-539e-a92b-072bd1dee048",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "Both men carried heavy boxes upstairs.",
+      "correction": null,
+      "note": "Man becomes men."
+    },
+    {
+      "id": "dbf5b411-416c-5471-9ff1-38e826f92fd0",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "Several women joined the evening class.",
+      "correction": null,
+      "note": "Woman becomes women."
+    },
+    {
+      "id": "11f351e8-be56-5628-8021-deb0050f349d",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "The geese landed beside the small pond.",
+      "correction": null,
+      "note": "Goose becomes geese."
+    },
+    {
+      "id": "ad9fa94a-b22c-504c-81aa-d5aac00d7955",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "His feet hurt after the long walk.",
+      "correction": null,
+      "note": "Foot becomes feet."
+    },
+    {
+      "id": "2c70cd40-db2f-5c53-8252-19781aade5ca",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "The farmer used two oxen to pull the cart.",
+      "correction": null,
+      "note": "Ox becomes oxen."
+    },
+    {
+      "id": "b9539e3c-991e-578e-a3df-3c705039386c",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "A few mice live under the old shed.",
+      "correction": null,
+      "note": "Mouse becomes mice."
+    },
+    {
+      "id": "f8680344-09d6-5b9d-b11f-578134276a71",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "The children visited the farm with their teacher.",
+      "correction": null,
+      "note": "Child becomes children."
+    },
+    {
+      "id": "0c5389e0-febb-5b33-bc7b-6e2e60598107",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "Many people queued for the new exhibition.",
+      "correction": null,
+      "note": "Person becomes people."
+    },
+    {
+      "id": "55fe6e2e-e88e-508c-b093-482634cf9094",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "The sheep stayed close to their lambs.",
+      "correction": null,
+      "note": "Sheep has no plural -s."
+    },
+    {
+      "id": "0fc3b81f-7498-5ace-978d-8053ff901467",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "Two teeth were broken after the accident.",
+      "correction": null,
+      "note": "Tooth becomes teeth."
+    },
+    {
+      "id": "af5d9c0e-4ede-5243-90b9-098f3ed65cfe",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "correct",
+      "text": "The women prepared food for the festival.",
+      "correction": null,
+      "note": "Woman becomes women."
+    },
+    {
+      "id": "97bee396-4d99-5a10-bc74-31daa89d6db6",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "Three childs were playing in the garden.",
+      "correction": "Three children were playing in the garden.",
+      "note": "Child becomes children."
+    },
+    {
+      "id": "c79fcea4-ccd8-5f2b-bcbe-cceb35747100",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "The farmer has five sheeps on his land.",
+      "correction": "The farmer has five sheep on his land.",
+      "note": "Sheep has no plural -s."
+    },
+    {
+      "id": "397d04d3-ef1e-553e-adf8-5d51aa95353a",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "I saw two mouses behind the fridge.",
+      "correction": "I saw two mice behind the fridge.",
+      "note": "Mouse becomes mice."
+    },
+    {
+      "id": "70b6ad1a-6b82-5b87-8030-a4517db08e54",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "The baby has four tooths already.",
+      "correction": "The baby has four teeth already.",
+      "note": "Tooth becomes teeth."
+    },
+    {
+      "id": "5fee29c8-5bce-5783-8a4b-60cd27ef955f",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "Two mans waited outside the office.",
+      "correction": "Two men waited outside the office.",
+      "note": "Man becomes men."
+    },
+    {
+      "id": "31a82c96-6551-56a5-99dd-fa171a77a494",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "Several womans joined the walking group.",
+      "correction": "Several women joined the walking group.",
+      "note": "Woman becomes women."
+    },
+    {
+      "id": "9d03710f-66ec-5d92-9779-1c443401fd8b",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "The gooses swam across the pond.",
+      "correction": "The geese swam across the pond.",
+      "note": "Goose becomes geese."
+    },
+    {
+      "id": "62b42d59-e94a-5c35-b242-ea243011483d",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "My feets were cold in the snow.",
+      "correction": "My feet were cold in the snow.",
+      "note": "Foot becomes feet."
+    },
+    {
+      "id": "429d0a68-7183-5bb3-8e99-78bf2a405d43",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "The farmer bought two oxes last spring.",
+      "correction": "The farmer bought two oxen last spring.",
+      "note": "Ox becomes oxen."
+    },
+    {
+      "id": "fab1d690-5a75-5827-a16b-032e963e8562",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "The childrens enjoyed the school trip.",
+      "correction": "The children enjoyed the school trip.",
+      "note": "Children is already plural."
+    },
+    {
+      "id": "1e64fe93-d653-5959-8d28-1bffd2824e4e",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "Those sheeps belong to our neighbour.",
+      "correction": "Those sheep belong to our neighbour.",
+      "note": "Sheep has no plural -s."
+    },
+    {
+      "id": "a42c1b96-88ad-505b-b644-f1aafc83cf54",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "The dentist checked my tooths carefully.",
+      "correction": "The dentist checked my teeth carefully.",
+      "note": "Tooth becomes teeth."
+    },
+    {
+      "id": "bab2bef4-5f79-54a1-bc27-4288bef545ae",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "The mans helped carry the furniture.",
+      "correction": "The men helped carry the furniture.",
+      "note": "Man becomes men."
+    },
+    {
+      "id": "d81fcbc3-73fb-5ccd-83d8-5b65d04ca51f",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "Several womans were waiting at the clinic.",
+      "correction": "Several women were waiting at the clinic.",
+      "note": "Woman becomes women."
+    },
+    {
+      "id": "5e40fcdc-ebf2-5e19-9935-1e9d81a26ba2",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "We fed the gooses by the river.",
+      "correction": "We fed the geese by the river.",
+      "note": "Goose becomes geese."
+    },
+    {
+      "id": "b15d7900-505f-5d35-a22f-892f8279955c",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "His feets hurt after the football match.",
+      "correction": "His feet hurt after the football match.",
+      "note": "Foot becomes feet."
+    },
+    {
+      "id": "2bd80dcc-c135-5308-ad40-e5c58f714d30",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "Two oxes pulled the heavy cart uphill.",
+      "correction": "Two oxen pulled the heavy cart uphill.",
+      "note": "Ox becomes oxen."
+    },
+    {
+      "id": "61439c55-77be-5db7-bfe6-fe42fab55048",
+      "rule_id": "e9fe5786-6d6f-494e-9593-c82e1b4f1427",
+      "example_type": "incorrect",
+      "text": "The farmer keeps sheeps and cows.",
+      "correction": "The farmer keeps sheep and cows.",
+      "note": "Sheep has no plural -s."
+    },
+    {
+      "id": "ec4ab0a1-93b8-5f76-9609-418f29fc2f09",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "My brother is taller than my father.",
+      "correction": null,
+      "note": "Tall adds -er."
+    },
+    {
+      "id": "7d7894de-2049-53d0-87f5-8f227a7bb56c",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "This is the tallest building in our street.",
+      "correction": null,
+      "note": "Tall adds -est."
+    },
+    {
+      "id": "3c40764c-cefb-518b-9842-d3a1fc6ed992",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "The blue bag is heavier than the red one.",
+      "correction": null,
+      "note": "Happy-type y changes to i."
+    },
+    {
+      "id": "3a923eb8-3d5f-5bb0-a0f1-810745475501",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "She is the youngest player in the team.",
+      "correction": null,
+      "note": "Young adds -est."
+    },
+    {
+      "id": "f4520fa0-1cb3-5b3c-8460-7ccc4500935a",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "Today is warmer than yesterday.",
+      "correction": null,
+      "note": "Warm adds -er."
+    },
+    {
+      "id": "e45ee67e-d4a6-5b35-8b3d-3af29b7b05cd",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "That was the warmest day this month.",
+      "correction": null,
+      "note": "Warm adds -est."
+    },
+    {
+      "id": "79dc3e52-59de-58a8-a98a-eb8258561b93",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "My new shoes are cleaner than my old ones.",
+      "correction": null,
+      "note": "Clean adds -er."
+    },
+    {
+      "id": "239652f6-078f-51c5-b72e-2d628bd7ea99",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "This is the cleanest kitchen in the house.",
+      "correction": null,
+      "note": "Clean adds -est."
+    },
+    {
+      "id": "737f2925-9f75-567b-b710-9a6f6c608d1d",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "The black cat is smaller than the grey one.",
+      "correction": null,
+      "note": "Small adds -er."
+    },
+    {
+      "id": "40104307-d031-5fbd-92f7-18d64dfaf9cb",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "It is the smallest room in the flat.",
+      "correction": null,
+      "note": "Small adds -est."
+    },
+    {
+      "id": "9393bd49-1344-5376-b76a-3a0b3584a682",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "The road is wider after the repairs.",
+      "correction": null,
+      "note": "Wide drops e before -er."
+    },
+    {
+      "id": "e62c130a-6764-527f-a1ee-6c64eceadf50",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "This is the widest path in the park.",
+      "correction": null,
+      "note": "Wide drops e before -est."
+    },
+    {
+      "id": "4311c9ad-e2a8-50f5-b254-4d2b00376681",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "My coffee is stronger than yours.",
+      "correction": null,
+      "note": "Strong adds -er."
+    },
+    {
+      "id": "b41eddb9-9e69-591f-a36d-f5d6622d1709",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "This is the strongest tea in the café.",
+      "correction": null,
+      "note": "Strong adds -est."
+    },
+    {
+      "id": "d0008d16-b6f3-5358-b5c0-dbc26dc03cb4",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "The test was easier than the last one.",
+      "correction": null,
+      "note": "Easy changes y to i."
+    },
+    {
+      "id": "586ae72f-7ca6-557c-8d68-638927bc1038",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "correct",
+      "text": "It was the easiest question on the paper.",
+      "correction": null,
+      "note": "Easy changes y to i."
+    },
+    {
+      "id": "467ab54a-b933-54e9-9559-6b1624aa04f6",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "My brother is more tall than my father.",
+      "correction": "My brother is taller than my father.",
+      "note": "Tall adds -er."
+    },
+    {
+      "id": "1fb01816-ea73-5995-8da0-eafe734a1ba3",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "This is the most tall building in our street.",
+      "correction": "This is the tallest building in our street.",
+      "note": "Tall adds -est."
+    },
+    {
+      "id": "96030e71-acc3-50b5-a1f7-5c651a41f136",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "The blue bag is heavyer than the red one.",
+      "correction": "The blue bag is heavier than the red one.",
+      "note": "Y changes to i."
+    },
+    {
+      "id": "580f59ea-c307-5598-b79d-c6c4badd2adf",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "She is the younguest player in the team.",
+      "correction": "She is the youngest player in the team.",
+      "note": "Young adds -est."
+    },
+    {
+      "id": "8819234b-63a3-5cc7-915b-313ce0a0d94d",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "Today is more warm than yesterday.",
+      "correction": "Today is warmer than yesterday.",
+      "note": "Warm adds -er."
+    },
+    {
+      "id": "ead747c9-fa5e-5ce6-b586-3bdda383ccd9",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "My new shoes are more clean than my old ones.",
+      "correction": "My new shoes are cleaner than my old ones.",
+      "note": "Clean adds -er."
+    },
+    {
+      "id": "a8bf3172-9df7-5009-8093-7177a5bfc244",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "The black cat is more small than the grey one.",
+      "correction": "The black cat is smaller than the grey one.",
+      "note": "Small adds -er."
+    },
+    {
+      "id": "e7aa51cd-03ec-59d9-bd7a-82e1da3d39ea",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "The road is wideer after the repairs.",
+      "correction": "The road is wider after the repairs.",
+      "note": "Wide drops e."
+    },
+    {
+      "id": "8f63ae59-8d56-5726-a667-7a53aea5e089",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "This is the most wide path in the park.",
+      "correction": "This is the widest path in the park.",
+      "note": "Wide drops e."
+    },
+    {
+      "id": "9f2ee005-b2c5-5363-88e7-f87f20c5c2ad",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "My coffee is more strong than yours.",
+      "correction": "My coffee is stronger than yours.",
+      "note": "Strong adds -er."
+    },
+    {
+      "id": "5f37e8d2-599f-5285-9b0e-6287fac80079",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "The test was more easy than the last one.",
+      "correction": "The test was easier than the last one.",
+      "note": "Y changes to i."
+    },
+    {
+      "id": "97998880-5ff6-559b-8480-2aba07bd7998",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "It was the easyest question on the paper.",
+      "correction": "It was the easiest question on the paper.",
+      "note": "Y changes to i."
+    },
+    {
+      "id": "3932f64c-5220-5f67-a624-eadc54d5653a",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "incorrect",
+      "text": "My sister is happyer than me today.",
+      "correction": "My sister is happier than me today.",
+      "note": "Y changes to i."
+    },
+    {
+      "id": "c846ff23-3447-5334-b3fa-4f6f138fc320",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "exception",
+      "text": "This book is more interesting than that one.",
+      "correction": null,
+      "note": "Long adjectives use more, not -er."
+    },
+    {
+      "id": "3efe8d83-e0c7-5615-b284-965d0df3f069",
+      "rule_id": "3a77543e-045e-4daf-bb84-70acf8fc2355",
+      "example_type": "exception",
+      "text": "This is the most interesting book in the library.",
+      "correction": null,
+      "note": "Long adjectives use most, not -est."
+    },
+    {
+      "id": "101bd3d2-e537-5637-ac7c-d175340e0d0b",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "correct",
+      "text": "We will discuss the plan tomorrow morning.",
+      "correction": null,
+      "note": "Tomorrow has a double r."
+    },
+    {
+      "id": "b1a0cf47-17fe-578d-8772-ff2006023161",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "correct",
+      "text": "She sent a letter to the wrong address.",
+      "correction": null,
+      "note": "Address has a double d and s."
+    },
+    {
+      "id": "bc64cf32-4274-5317-bb7f-7a768edb9cdc",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "correct",
+      "text": "The meeting was a great success.",
+      "correction": null,
+      "note": "Success has a double c and s."
+    },
+    {
+      "id": "0ecf9573-329b-5494-b20e-cdbb302c9b72",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "correct",
+      "text": "He was embarrassed by his old photo.",
+      "correction": null,
+      "note": "Embarrassed has a double r and s."
+    },
+    {
+      "id": "04f01738-ba06-5378-8ba4-75ccaead9346",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "correct",
+      "text": "The committee meets every Thursday.",
+      "correction": null,
+      "note": "Committee has double m, t and e."
+    },
+    {
+      "id": "dc220604-4b69-5b69-8f5e-47d913cddbd8",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "correct",
+      "text": "They found cheap accommodation near the beach.",
+      "correction": null,
+      "note": "Accommodation has double c and m."
+    },
+    {
+      "id": "00c6eaec-1e69-5659-a537-d06b1a68ff2f",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "correct",
+      "text": "I occasionally work at the weekend.",
+      "correction": null,
+      "note": "Occasionally has a double c and l."
+    },
+    {
+      "id": "c77b92d6-6f31-5b7e-bc56-e8a020ad56e0",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "correct",
+      "text": "The dog disappeared behind the garden wall.",
+      "correction": null,
+      "note": "Disappeared has a double p."
+    },
+    {
+      "id": "129688b4-32f4-57aa-b41e-d5e3c776ff84",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "correct",
+      "text": "Please write your full name on the form.",
+      "correction": null,
+      "note": "Full has a double l."
+    },
+    {
+      "id": "3130d24f-68e6-5f26-b275-cae8c712bb3a",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "correct",
+      "text": "She wore a yellow coat in the rain.",
+      "correction": null,
+      "note": "Yellow has a double l."
+    },
+    {
+      "id": "0aab0884-0918-52ba-b9ea-fe4dc522c984",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "correct",
+      "text": "The little shop sells fresh bread.",
+      "correction": null,
+      "note": "Little has a double t."
+    },
+    {
+      "id": "521a9674-9e27-5c76-99f9-0640d9b5798d",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "incorrect",
+      "text": "We will discuss the plan tomorow morning.",
+      "correction": "We will discuss the plan tomorrow morning.",
+      "note": "Tomorrow has a double r."
+    },
+    {
+      "id": "307c0fb6-ceed-5460-9483-1f91950c4720",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "incorrect",
+      "text": "She sent a letter to the wrong adress.",
+      "correction": "She sent a letter to the wrong address.",
+      "note": "Address has double d and s."
+    },
+    {
+      "id": "1e105a7f-09c0-57a7-903c-bb6cafa92812",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "incorrect",
+      "text": "The meeting was a great succes.",
+      "correction": "The meeting was a great success.",
+      "note": "Success has double c and s."
+    },
+    {
+      "id": "c56e99e2-656f-5a60-85ab-79b7c3249471",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "incorrect",
+      "text": "He was embarassed by his old photo.",
+      "correction": "He was embarrassed by his old photo.",
+      "note": "Embarrassed has double r and s."
+    },
+    {
+      "id": "7d7387fa-75a5-565e-99b8-989df3dd0f04",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "incorrect",
+      "text": "The comittee meets every Thursday.",
+      "correction": "The committee meets every Thursday.",
+      "note": "Committee has double m and t."
+    },
+    {
+      "id": "15d262b5-0ca3-550e-ab8e-4cb1872cdb91",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "incorrect",
+      "text": "They found cheap acommodation near the beach.",
+      "correction": "They found cheap accommodation near the beach.",
+      "note": "Accommodation has double c and m."
+    },
+    {
+      "id": "5ecd5b9e-4587-5cb1-8431-97c6e06c7340",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "incorrect",
+      "text": "I ocasionally work at the weekend.",
+      "correction": "I occasionally work at the weekend.",
+      "note": "Occasionally has double c and l."
+    },
+    {
+      "id": "38b5dc68-7e8e-5352-9589-6dee687c1d45",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "incorrect",
+      "text": "The dog disapeared behind the garden wall.",
+      "correction": "The dog disappeared behind the garden wall.",
+      "note": "Disappeared has double p."
+    },
+    {
+      "id": "e2040f06-7f08-5cb2-9c93-dbcf4bf413b9",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "incorrect",
+      "text": "Please write your ful name on the form.",
+      "correction": "Please write your full name on the form.",
+      "note": "Full has a double l."
+    },
+    {
+      "id": "9fdd38ba-16a2-5be0-a7bb-44f560297ec4",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "incorrect",
+      "text": "She wore a yelow coat in the rain.",
+      "correction": "She wore a yellow coat in the rain.",
+      "note": "Yellow has a double l."
+    },
+    {
+      "id": "106b2501-115b-5d8b-a66d-dc1f1f4c6c00",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "incorrect",
+      "text": "The litle shop sells fresh bread.",
+      "correction": "The little shop sells fresh bread.",
+      "note": "Little has a double t."
+    },
+    {
+      "id": "663015ef-6cee-515a-b710-13f470897f73",
+      "rule_id": "bfcf1892-0969-4244-bfcb-ede2d178b7cc",
+      "example_type": "correct",
+      "text": "The puppy followed me around the garden.",
+      "correction": null,
+      "note": "Followed has a double l."
+    },
+    {
+      "id": "7ed38c19-7127-596d-bee4-95d1ea44c1aa",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "correct",
+      "text": "He was mopping the kitchen floor.",
+      "correction": null,
+      "note": "Mop doubles p before -ing."
+    },
+    {
+      "id": "f3064d37-4cea-5f8b-bc87-b4091881a43a",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "correct",
+      "text": "She was jogging in the park this morning.",
+      "correction": null,
+      "note": "Jog doubles g before -ing."
+    },
+    {
+      "id": "38fbde40-1304-52a1-833a-80cacf4dd75e",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "correct",
+      "text": "He jogged along the river after work.",
+      "correction": null,
+      "note": "Jog doubles g before -ed."
+    },
+    {
+      "id": "13f4fffe-2e4e-599f-96f1-e3bcb6fafced",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "correct",
+      "text": "The children were skipping rope in the yard.",
+      "correction": null,
+      "note": "Skip doubles p before -ing."
+    },
+    {
+      "id": "7ae79703-8672-54b5-a15e-052ea2bd611f",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "correct",
+      "text": "She skipped breakfast because she was late.",
+      "correction": null,
+      "note": "Skip doubles p before -ed."
+    },
+    {
+      "id": "e25f108b-c196-5185-be63-4ac8f88e5bb3",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "correct",
+      "text": "They are digging a hole for the new tree.",
+      "correction": null,
+      "note": "Dig doubles g before -ing."
+    },
+    {
+      "id": "e864c009-6212-553d-bb6b-3908bcb6a8b8",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "correct",
+      "text": "The baby was clapping her hands loudly.",
+      "correction": null,
+      "note": "Clap doubles p before -ing."
+    },
+    {
+      "id": "c9070596-82a2-5ecb-8503-c066e1edc10d",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "correct",
+      "text": "Everyone clapped at the end of the show.",
+      "correction": null,
+      "note": "Clap doubles p before -ed."
+    },
+    {
+      "id": "ea9c9233-b9f3-5a6d-b27c-dd16ff2c060e",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "correct",
+      "text": "I am knitting a scarf for my cousin.",
+      "correction": null,
+      "note": "Knit doubles t before -ing."
+    },
+    {
+      "id": "54aef614-25cb-5856-b62d-3c506a4842a4",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "correct",
+      "text": "She knitted a warm hat last winter.",
+      "correction": null,
+      "note": "Knit doubles t before -ed."
+    },
+    {
+      "id": "e6c2b632-a5ab-5abf-a0f1-0a6d1029dede",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "correct",
+      "text": "We were travelling around Spain last summer.",
+      "correction": null,
+      "note": "Travel doubles l in British English."
+    },
+    {
+      "id": "9013c46b-9ff2-5cc1-ba17-ad2ea3b7b533",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "correct",
+      "text": "The team was winning the match easily.",
+      "correction": null,
+      "note": "Win doubles n before -ing."
+    },
+    {
+      "id": "21285569-67e3-56d3-b72e-c9a87bc22bfb",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "correct",
+      "text": "He begged for another chance.",
+      "correction": null,
+      "note": "Beg doubles g before -ed."
+    },
+    {
+      "id": "19c9235c-abd6-5fd4-9c88-94145b082c3e",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "She was joging in the park this morning.",
+      "correction": "She was jogging in the park this morning.",
+      "note": "Jog doubles g before -ing."
+    },
+    {
+      "id": "448f9399-daee-59e0-af1d-5261737daaa1",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "He joged along the river after work.",
+      "correction": "He jogged along the river after work.",
+      "note": "Jog doubles g before -ed."
+    },
+    {
+      "id": "52d4bb39-f909-5abf-9b5b-384544a812e1",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "The children were skiping rope in the yard.",
+      "correction": "The children were skipping rope in the yard.",
+      "note": "Skip doubles p before -ing."
+    },
+    {
+      "id": "4bc0c618-c137-5ebf-9927-b133ebe9b5c3",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "She skiped breakfast because she was late.",
+      "correction": "She skipped breakfast because she was late.",
+      "note": "Skip doubles p before -ed."
+    },
+    {
+      "id": "f44a2354-9267-5afd-9186-2b3280c87711",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "They are diging a hole for the new tree.",
+      "correction": "They are digging a hole for the new tree.",
+      "note": "Dig doubles g before -ing."
+    },
+    {
+      "id": "806282eb-d528-58c1-a2e6-9a1aa5c775e2",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "The baby was claping her hands loudly.",
+      "correction": "The baby was clapping her hands loudly.",
+      "note": "Clap doubles p before -ing."
+    },
+    {
+      "id": "5df0f851-5f3c-5f57-bcec-5fb96430fff5",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "Everyone claped at the end of the show.",
+      "correction": "Everyone clapped at the end of the show.",
+      "note": "Clap doubles p before -ed."
+    },
+    {
+      "id": "4cfed807-11a4-5a62-9bf6-f05efdbb13ad",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "She knited a warm hat last winter.",
+      "correction": "She knitted a warm hat last winter.",
+      "note": "Knit doubles t before -ed."
+    },
+    {
+      "id": "3651cf0b-ea9b-55ea-9eb8-3cc75f56d28a",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "They traveled by train to the coast.",
+      "correction": "They travelled by train to the coast.",
+      "note": "Travel doubles l in British English."
+    },
+    {
+      "id": "5857cb9c-2652-5ecc-84aa-4b950a9fc15e",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "He beged for another chance.",
+      "correction": "He begged for another chance.",
+      "note": "Beg doubles g before -ed."
+    },
+    {
+      "id": "908897d3-38b8-5687-a28b-92d472a9a7e6",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "She was cuting vegetables for dinner.",
+      "correction": "She was cutting vegetables for dinner.",
+      "note": "Cut doubles t before -ing."
+    },
+    {
+      "id": "314486a4-6f29-5752-ae8c-bd39f9e727b4",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "He stoped at the shop for milk.",
+      "correction": "He stopped at the shop for milk.",
+      "note": "Stop doubles p before -ed."
+    },
+    {
+      "id": "e8a5d7ba-7040-5b2d-9383-030870af0a66",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "incorrect",
+      "text": "She sliped on the wet floor.",
+      "correction": "She slipped on the wet floor.",
+      "note": "Slip doubles p before -ed."
+    },
+    {
+      "id": "ed41b0c8-002f-5ca9-b265-7d7ace81149f",
+      "rule_id": "c27e8e72-68e2-42c6-92cb-fb89bb0baab6",
+      "example_type": "exception",
+      "text": "We were visiting our grandparents on Sunday.",
+      "correction": null,
+      "note": "Visit does not double t before -ing."
+    },
+    {
+      "id": "b2f1d841-3a4e-5aa8-8ca3-9f28121d33b4",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "correct",
+      "text": "They are riding their bikes in the park.",
+      "correction": null,
+      "note": "Ride drops e before -ing."
+    },
+    {
+      "id": "36fc9b9b-7756-53ad-a88b-63618a381935",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "correct",
+      "text": "The shop is closing at six o'clock.",
+      "correction": null,
+      "note": "Close drops e before -ing."
+    },
+    {
+      "id": "9f8fb9a8-5e7d-5675-8c38-127a8ef357bf",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "correct",
+      "text": "She closed the window before the rain.",
+      "correction": null,
+      "note": "Close drops e before -ed."
+    },
+    {
+      "id": "b982eb57-dd9b-5420-a5c5-7d9f573e9f52",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "correct",
+      "text": "I am saving money for a new phone.",
+      "correction": null,
+      "note": "Save drops e before -ing."
+    },
+    {
+      "id": "6a8fed8a-f200-5c3b-92eb-7805930ab5e4",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "correct",
+      "text": "He saved enough money for the trip.",
+      "correction": null,
+      "note": "Save drops e before -ed."
+    },
+    {
+      "id": "374aa1fa-3342-56c1-a56e-e720fe2b8a73",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "correct",
+      "text": "The children were dancing in the hall.",
+      "correction": null,
+      "note": "Dance drops e before -ing."
+    },
+    {
+      "id": "16d97299-93a6-5f38-a85b-70a2973cc267",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "correct",
+      "text": "They danced until the music stopped.",
+      "correction": null,
+      "note": "Dance drops e before -ed."
+    },
+    {
+      "id": "1c626985-e824-5b82-91f3-72cd780873a7",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "correct",
+      "text": "She is hoping to visit Spain this year.",
+      "correction": null,
+      "note": "Hope drops e before -ing."
+    },
+    {
+      "id": "4b90bee8-5186-5001-985d-5596ff23f990",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "correct",
+      "text": "We hoped the weather would improve.",
+      "correction": null,
+      "note": "Hope drops e before -ed."
+    },
+    {
+      "id": "8bf16578-8d85-570b-b279-c2290c407d40",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "correct",
+      "text": "He is making a model aeroplane.",
+      "correction": null,
+      "note": "Make drops e before -ing."
+    },
+    {
+      "id": "a785d2a5-a7a6-522e-973d-31fcc515e261",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "correct",
+      "text": "The cat was hiding under the table.",
+      "correction": null,
+      "note": "Hide drops e before -ing."
+    },
+    {
+      "id": "2375989f-e307-5555-8d7c-fa4aa237fe05",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "She is bakeing bread for breakfast.",
+      "correction": "She is baking bread for breakfast.",
+      "note": "Bake drops e before -ing."
+    },
+    {
+      "id": "5860983a-dd26-5b06-a52b-4a46b5ef1a74",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "He bakeed a cake for my birthday.",
+      "correction": "He baked a cake for my birthday.",
+      "note": "Bake drops e before -ed."
+    },
+    {
+      "id": "ce97339e-7be8-55d8-931b-76315135b063",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "They are rideing their bikes in the park.",
+      "correction": "They are riding their bikes in the park.",
+      "note": "Ride drops e before -ing."
+    },
+    {
+      "id": "e0db2e45-d39b-5af0-a4df-c76828bc9b99",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "The shop is closeing at six o'clock.",
+      "correction": "The shop is closing at six o'clock.",
+      "note": "Close drops e before -ing."
+    },
+    {
+      "id": "08ddfad1-2596-573e-a146-e42b6c8a8cf8",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "I am saveing money for a new phone.",
+      "correction": "I am saving money for a new phone.",
+      "note": "Save drops e before -ing."
+    },
+    {
+      "id": "d1737587-a5d3-5b26-af04-5b5d25bb61f2",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "He saveed enough money for the trip.",
+      "correction": "He saved enough money for the trip.",
+      "note": "Save drops e before -ed."
+    },
+    {
+      "id": "1d788c18-b15b-5ffc-abfc-c74b8ef5f732",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "The children were danceing in the hall.",
+      "correction": "The children were dancing in the hall.",
+      "note": "Dance drops e before -ing."
+    },
+    {
+      "id": "8be84952-7b60-5b48-80ee-f28c039f98e0",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "They danceed until the music stopped.",
+      "correction": "They danced until the music stopped.",
+      "note": "Dance drops e before -ed."
+    },
+    {
+      "id": "b56edf2a-5b67-5eb5-9413-04a9ed659ed2",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "She is hopeing to visit Spain this year.",
+      "correction": "She is hoping to visit Spain this year.",
+      "note": "Hope drops e before -ing."
+    },
+    {
+      "id": "4c9f8ceb-0736-52d6-baeb-ee867a40d2e4",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "We hopeed the weather would improve.",
+      "correction": "We hoped the weather would improve.",
+      "note": "Hope drops e before -ed."
+    },
+    {
+      "id": "a7039ff5-fbc0-58da-9037-87a25ed10c80",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "He is makeing a model aeroplane.",
+      "correction": "He is making a model aeroplane.",
+      "note": "Make drops e before -ing."
+    },
+    {
+      "id": "88d270ad-e47e-51f9-9594-cc5d80b99876",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "The cat was hideing under the table.",
+      "correction": "The cat was hiding under the table.",
+      "note": "Hide drops e before -ing."
+    },
+    {
+      "id": "3b9ecc69-de09-507a-a5b7-c9b8ef927ab6",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "They are liveing in a small flat.",
+      "correction": "They are living in a small flat.",
+      "note": "Live drops e before -ing."
+    },
+    {
+      "id": "09100a84-728c-5bfa-9149-3fecf9544dd9",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "He liveed in Prague for two years.",
+      "correction": "He lived in Prague for two years.",
+      "note": "Live drops e before -ed."
+    },
+    {
+      "id": "8b6d10fe-bcab-5599-9b44-20d0c3560748",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "She is moveing to a new house.",
+      "correction": "She is moving to a new house.",
+      "note": "Move drops e before -ing."
+    },
+    {
+      "id": "359e7061-6bb6-53b1-8676-1bb9fd1a8a3d",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "incorrect",
+      "text": "We moveed the table into the kitchen.",
+      "correction": "We moved the table into the kitchen.",
+      "note": "Move drops e before -ed."
+    },
+    {
+      "id": "7213ef18-50bf-5573-9ed6-a93476ddfa72",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "exception",
+      "text": "She is seeing her friend tomorrow.",
+      "correction": null,
+      "note": "See keeps its e before -ing."
+    },
+    {
+      "id": "c430f054-b24c-5d9e-94ee-b90c828e88ef",
+      "rule_id": "4a1264cb-4b1e-4d21-b116-d409aea93c02",
+      "example_type": "exception",
+      "text": "He is being very helpful today.",
+      "correction": null,
+      "note": "Be keeps its e before -ing."
+    },
+    {
+      "id": "233c8099-d31f-5175-9cd0-d12d33ba0551",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "correct",
+      "text": "She smiled happily at her friend.",
+      "correction": null,
+      "note": "Happy changes y to i."
+    },
+    {
+      "id": "0ffd0b14-fda7-5b45-9b17-c3222c267d7a",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "correct",
+      "text": "He quickly finished his homework.",
+      "correction": null,
+      "note": "Quick adds -ly."
+    },
+    {
+      "id": "c6d66d46-04ab-538c-9d01-27474b5be26b",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "correct",
+      "text": "The children played noisily in the garden.",
+      "correction": null,
+      "note": "Noisy changes y to i."
+    },
+    {
+      "id": "65b72f0d-4f3d-5ea6-bea2-9db0ed97eb06",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "correct",
+      "text": "He calmly explained the problem.",
+      "correction": null,
+      "note": "Calm adds -ly."
+    },
+    {
+      "id": "51f19c92-534a-5356-ad29-0a9cd8938044",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "correct",
+      "text": "The dog waited patiently by the door.",
+      "correction": null,
+      "note": "Patient adds -ly."
+    },
+    {
+      "id": "33c736eb-7090-530d-960e-2005f0a67941",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "correct",
+      "text": "She carefully packed her suitcase.",
+      "correction": null,
+      "note": "Careful adds -ly."
+    },
+    {
+      "id": "690ea1fd-a0a4-55be-9921-265606fb94b2",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "correct",
+      "text": "They happily agreed to help us.",
+      "correction": null,
+      "note": "Happy changes y to i."
+    },
+    {
+      "id": "3c217f0c-8419-56e4-9c8f-976d7c8f5531",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "correct",
+      "text": "The bus stopped suddenly at the corner.",
+      "correction": null,
+      "note": "Sudden adds -ly."
+    },
+    {
+      "id": "8d2403cb-711f-51d6-85a9-c707f9005c2e",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "correct",
+      "text": "He badly needed a new pair of shoes.",
+      "correction": null,
+      "note": "Bad adds -ly."
+    },
+    {
+      "id": "279c4cb3-806d-5b1a-b3c7-891acf9a738d",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "correct",
+      "text": "She gently closed the door behind her.",
+      "correction": null,
+      "note": "Gentle drops e before -ly."
+    },
+    {
+      "id": "f8fdf3c6-4ec5-5643-8e02-61b559788c86",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "He quickley finished his homework.",
+      "correction": "He quickly finished his homework.",
+      "note": "Quick adds -ly."
+    },
+    {
+      "id": "7e193a92-28be-5a99-92f5-88050c90c420",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "The children played noisyly in the garden.",
+      "correction": "The children played noisily in the garden.",
+      "note": "Noisy changes y to i."
+    },
+    {
+      "id": "30297c75-a73b-5831-8480-019a8c435fc3",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "He calmley explained the problem.",
+      "correction": "He calmly explained the problem.",
+      "note": "Calm adds -ly."
+    },
+    {
+      "id": "03b0b6a1-be8a-585a-9558-e6f4607f0538",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "The dog waited patientley by the door.",
+      "correction": "The dog waited patiently by the door.",
+      "note": "Patient adds -ly."
+    },
+    {
+      "id": "ed5e0fe5-34fc-50f5-8122-aaca6d4ebf6e",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "They happyly agreed to help us.",
+      "correction": "They happily agreed to help us.",
+      "note": "Happy changes y to i."
+    },
+    {
+      "id": "677d1c59-84a9-5703-a0fa-71f0c37ae1a0",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "The bus stopped suddenley at the corner.",
+      "correction": "The bus stopped suddenly at the corner.",
+      "note": "Sudden adds -ly."
+    },
+    {
+      "id": "54414606-0c8d-57c7-8851-a612e1637510",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "He badley needed a new pair of shoes.",
+      "correction": "He badly needed a new pair of shoes.",
+      "note": "Bad adds -ly."
+    },
+    {
+      "id": "dd31489e-7211-5672-8285-75100dea2895",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "She gentle closed the door behind her.",
+      "correction": "She gently closed the door behind her.",
+      "note": "Gentle drops e before -ly."
+    },
+    {
+      "id": "3969792a-68ed-5223-bb4c-2da7f66eb493",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "She sang beautiful at the concert.",
+      "correction": "She sang beautifully at the concert.",
+      "note": "Beautiful adds -ly."
+    },
+    {
+      "id": "717f1882-5fb7-5611-a853-8a3c51cff9af",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "She spoke angry to the driver.",
+      "correction": "She spoke angrily to the driver.",
+      "note": "Angry changes y to i."
+    },
+    {
+      "id": "4f4860e1-da84-5a5b-9cd1-be657c1a9417",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "It rained heavy all night.",
+      "correction": "It rained heavily all night.",
+      "note": "Heavy changes y to i."
+    },
+    {
+      "id": "f2c7b48e-6d61-59e4-b2ed-54936cff07e4",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "He is true sorry for being late.",
+      "correction": "He is truly sorry for being late.",
+      "note": "True drops e before -ly."
+    },
+    {
+      "id": "a4d8e072-16ef-51ab-b452-705e3dd7d0fa",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "incorrect",
+      "text": "He lazy opened his eyes.",
+      "correction": "He lazily opened his eyes.",
+      "note": "Lazy changes y to i."
+    },
+    {
+      "id": "dd165347-8a6b-5db1-9d00-c675622746a7",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "exception",
+      "text": "He is a fast runner.",
+      "correction": null,
+      "note": "Fast is both an adjective and an adverb."
+    },
+    {
+      "id": "aa77e361-a5b1-5ffe-ae37-e39b086e4118",
+      "rule_id": "3d3efe92-5613-47c2-96bf-71df12cb175f",
+      "example_type": "exception",
+      "text": "She works hard every day.",
+      "correction": null,
+      "note": "Hard is the adverb form; hardly means almost not."
+    },
+    {
+      "id": "733003a1-c899-521b-8983-91180469ad63",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "correct",
+      "text": "We went to the cinema last night.",
+      "correction": null,
+      "note": "Go becomes went in the past."
+    },
+    {
+      "id": "47bb9a01-63ba-5a80-abef-dbd0ed6cd9df",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "correct",
+      "text": "She has gone to visit her grandmother.",
+      "correction": null,
+      "note": "Gone is the past participle."
+    },
+    {
+      "id": "71eefcfc-cc00-5054-ae14-27d6b6276c8b",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "correct",
+      "text": "They went to the beach on Saturday.",
+      "correction": null,
+      "note": "Go becomes went in the past."
+    },
+    {
+      "id": "a93dd088-ef4b-5256-8083-df380323ac4e",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "correct",
+      "text": "I went to the bank this morning.",
+      "correction": null,
+      "note": "Go becomes went in the past."
+    },
+    {
+      "id": "82e4b96f-5d79-5fe1-8294-f50486caaf39",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "correct",
+      "text": "We went to a concert last weekend.",
+      "correction": null,
+      "note": "Go becomes went in the past."
+    },
+    {
+      "id": "2324b934-e9e0-5d85-baf1-218296034af2",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "correct",
+      "text": "They have gone on holiday to Spain.",
+      "correction": null,
+      "note": "Gone is used with have."
+    },
+    {
+      "id": "235a7118-5b09-5fb1-8787-dd2d6f13535b",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "correct",
+      "text": "He went to bed early last night.",
+      "correction": null,
+      "note": "Go becomes went in the past."
+    },
+    {
+      "id": "270109c3-d135-5289-9418-b8b7e71eacf2",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "correct",
+      "text": "She has gone to the library already.",
+      "correction": null,
+      "note": "Gone is the past participle."
+    },
+    {
+      "id": "f5fb0fb3-fba8-5abf-9ccd-7da1b0edf2a1",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "correct",
+      "text": "We went shopping after work.",
+      "correction": null,
+      "note": "Go becomes went in the past."
+    },
+    {
+      "id": "90293a8d-ed55-5d7a-b7e0-74ae95c4cfd6",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "correct",
+      "text": "They have gone to the airport by taxi.",
+      "correction": null,
+      "note": "Gone is used with have."
+    },
+    {
+      "id": "8dec7e00-6f7c-519e-ade2-b57ac808b7c5",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "correct",
+      "text": "I went to the gym before breakfast.",
+      "correction": null,
+      "note": "Go becomes went in the past."
+    },
+    {
+      "id": "3aa5c068-b279-5ec6-a3e2-76cbc5dc3ec0",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "correct",
+      "text": "She has gone to meet her friends.",
+      "correction": null,
+      "note": "Gone is the past participle."
+    },
+    {
+      "id": "5d014d4d-5bb0-5ef7-9968-7c990db6b767",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "We goed to the cinema last night.",
+      "correction": "We went to the cinema last night.",
+      "note": "Go becomes went in the past."
+    },
+    {
+      "id": "3262249a-298c-59c0-be59-cce821948f68",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "She has went to visit her grandmother.",
+      "correction": "She has gone to visit her grandmother.",
+      "note": "Gone is the past participle."
+    },
+    {
+      "id": "55874203-b2e8-5da3-9062-1e7562c083f5",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "They goed to the beach on Saturday.",
+      "correction": "They went to the beach on Saturday.",
+      "note": "Go becomes went in the past."
+    },
+    {
+      "id": "99b4fedb-53de-59cb-a5ee-6331aeff66c9",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "I goed to the bank this morning.",
+      "correction": "I went to the bank this morning.",
+      "note": "Go becomes went in the past."
+    },
+    {
+      "id": "960e3817-df56-54ac-b3b4-f73974eb8050",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "We goed to a concert last weekend.",
+      "correction": "We went to a concert last weekend.",
+      "note": "Go becomes went in the past."
+    },
+    {
+      "id": "f82a3ace-8518-5f4a-b0aa-c18cf5fe42a6",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "They have went on holiday to Spain.",
+      "correction": "They have gone on holiday to Spain.",
+      "note": "Gone is used with have."
+    },
+    {
+      "id": "53291410-5f35-58ab-a5da-2e06747c9190",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "He goed to bed early last night.",
+      "correction": "He went to bed early last night.",
+      "note": "Go becomes went in the past."
+    },
+    {
+      "id": "38d3b3be-607a-5783-b5fc-f9ca67735e85",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "She has went to the library already.",
+      "correction": "She has gone to the library already.",
+      "note": "Gone is the past participle."
+    },
+    {
+      "id": "78c56df0-5aa2-5b74-af09-11d5f55f4f1c",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "We goed shopping after work.",
+      "correction": "We went shopping after work.",
+      "note": "Go becomes went in the past."
+    },
+    {
+      "id": "8abbbc84-67bd-56fe-819e-4d7c7df98bef",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "They have went to the airport by taxi.",
+      "correction": "They have gone to the airport by taxi.",
+      "note": "Gone is used with have."
+    },
+    {
+      "id": "1b88c682-6f6e-54c6-99f5-7ec8c2058ddf",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "I goed to the gym before breakfast.",
+      "correction": "I went to the gym before breakfast.",
+      "note": "Go becomes went in the past."
+    },
+    {
+      "id": "b7982908-9d87-5952-b254-9119b605bff9",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "She has went to meet her friends.",
+      "correction": "She has gone to meet her friends.",
+      "note": "Gone is the past participle."
+    },
+    {
+      "id": "d73dfb6c-64a4-57ce-b2df-37029ec6e9a0",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "They goed home after the film.",
+      "correction": "They went home after the film.",
+      "note": "Go becomes went in the past."
+    },
+    {
+      "id": "de4b4012-48a4-5e62-9b04-e3f14eb30257",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "He has went to work already.",
+      "correction": "He has gone to work already.",
+      "note": "Gone is used with have."
+    },
+    {
+      "id": "525d671c-7e44-5cf5-a073-e7a78ccf7fc6",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "We goed to the museum yesterday.",
+      "correction": "We went to the museum yesterday.",
+      "note": "Go becomes went in the past."
+    },
+    {
+      "id": "645442a7-473d-5a47-99b7-db64af3a5d23",
+      "rule_id": "f24e103c-9c72-4143-8657-414346787d18",
+      "example_type": "incorrect",
+      "text": "She has went to the station.",
+      "correction": "She has gone to the station.",
+      "note": "Gone is the past participle."
+    },
+    {
+      "id": "6663ae0d-7450-5773-985f-0984573ca7fa",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "The school changed its timetable last week.",
+      "correction": null,
+      "note": "Its shows possession."
+    },
+    {
+      "id": "f02a4dee-4f67-543f-b939-c3c762898b78",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "It's cold outside, so wear a coat.",
+      "correction": null,
+      "note": "It's means it is."
+    },
+    {
+      "id": "cdcfce09-49ed-58d3-bc91-28d69c72c577",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "The cat drank all its water.",
+      "correction": null,
+      "note": "Its shows possession."
+    },
+    {
+      "id": "1e18da5d-2b4b-596b-8486-bcf3ad4383ba",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "It's nearly time for the film to start.",
+      "correction": null,
+      "note": "It's means it is."
+    },
+    {
+      "id": "bc52dca5-49f8-59ea-ac7b-23d25b089728",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "The shop closed its doors at seven.",
+      "correction": null,
+      "note": "Its shows possession."
+    },
+    {
+      "id": "ca77bd7f-70cb-5f5e-b458-34d240cf291c",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "It's been a busy morning at work.",
+      "correction": null,
+      "note": "It's means it has."
+    },
+    {
+      "id": "1d992c53-dcc3-59ec-87dd-748454ec9bd8",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "The car lost one of its wheels.",
+      "correction": null,
+      "note": "Its shows possession."
+    },
+    {
+      "id": "3ffe3f67-44d9-5538-bb03-b6ffe516e534",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "It's important to check the timetable.",
+      "correction": null,
+      "note": "It's means it is."
+    },
+    {
+      "id": "acacfd1b-1ef8-58c4-844f-e416b1953903",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "The bird returned to its nest.",
+      "correction": null,
+      "note": "Its shows possession."
+    },
+    {
+      "id": "b4f2f230-6d09-58f8-a606-fcea5e4f812f",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "It's a good idea to bring water.",
+      "correction": null,
+      "note": "It's means it is."
+    },
+    {
+      "id": "bd19f03b-528c-5c0e-9b6e-63bb8f72db57",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "The team celebrated its first victory.",
+      "correction": null,
+      "note": "Its shows possession."
+    },
+    {
+      "id": "442f8c7b-a82c-5e6e-95d3-16e6ef6bed10",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "It's raining heavily in the mountains.",
+      "correction": null,
+      "note": "It's means it is."
+    },
+    {
+      "id": "588cc40a-9c90-5ba1-9342-bf3a34a77631",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "The hotel kept its old wooden stairs.",
+      "correction": null,
+      "note": "Its shows possession."
+    },
+    {
+      "id": "16e7145c-bb77-522f-afb9-9742054a9e52",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "It's almost eight o'clock already.",
+      "correction": null,
+      "note": "It's means it is."
+    },
+    {
+      "id": "4473ae76-43c2-584e-9d6e-1f2828ebbef7",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "The library increased its opening hours.",
+      "correction": null,
+      "note": "Its shows possession."
+    },
+    {
+      "id": "910661f0-c608-5904-b570-2a23ce653f22",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "correct",
+      "text": "It's better to book tickets in advance.",
+      "correction": null,
+      "note": "It's means it is."
+    },
+    {
+      "id": "28178e6f-ab1c-58cb-8696-ff9aec4b185c",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "The school changed it's timetable last week.",
+      "correction": "The school changed its timetable last week.",
+      "note": "Its shows possession."
+    },
+    {
+      "id": "cc5c140a-b506-52e2-80f5-c63b3b070f0a",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "Its cold outside, so wear a coat.",
+      "correction": "It's cold outside, so wear a coat.",
+      "note": "It's means it is."
+    },
+    {
+      "id": "7e5e6abd-1451-5e40-9e4e-a4645d918368",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "The cat drank all it's water.",
+      "correction": "The cat drank all its water.",
+      "note": "Its shows possession."
+    },
+    {
+      "id": "f1df706a-29cb-5c28-84bd-8015bc75157d",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "Its nearly time for the film to start.",
+      "correction": "It's nearly time for the film to start.",
+      "note": "It's means it is."
+    },
+    {
+      "id": "9f387840-65c2-5613-a38d-aab5ad790164",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "The shop closed it's doors at seven.",
+      "correction": "The shop closed its doors at seven.",
+      "note": "Its shows possession."
+    },
+    {
+      "id": "caad169f-7d08-570f-8a93-6970e98612e5",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "Its been a busy morning at work.",
+      "correction": "It's been a busy morning at work.",
+      "note": "It's means it has."
+    },
+    {
+      "id": "818acaeb-b1df-5f1d-9501-a40d51bfd25a",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "The car lost one of it's wheels.",
+      "correction": "The car lost one of its wheels.",
+      "note": "Its shows possession."
+    },
+    {
+      "id": "5493ede7-59dd-5d4d-bf78-fb80eb7c3a6a",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "Its important to check the timetable.",
+      "correction": "It's important to check the timetable.",
+      "note": "It's means it is."
+    },
+    {
+      "id": "1f96eeb9-b506-51a2-b97a-6e1d1364a3ae",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "The bird returned to it's nest.",
+      "correction": "The bird returned to its nest.",
+      "note": "Its shows possession."
+    },
+    {
+      "id": "46142848-6014-5df9-b300-f819023d4d86",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "Its a good idea to bring water.",
+      "correction": "It's a good idea to bring water.",
+      "note": "It's means it is."
+    },
+    {
+      "id": "943db635-2d71-5998-a49a-65c49c3a7f1a",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "The team celebrated it's first victory.",
+      "correction": "The team celebrated its first victory.",
+      "note": "Its shows possession."
+    },
+    {
+      "id": "1355d99d-91f3-5889-8359-1bdd16186902",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "Its raining heavily in the mountains.",
+      "correction": "It's raining heavily in the mountains.",
+      "note": "It's means it is."
+    },
+    {
+      "id": "e84eeacc-63b0-5e37-91d1-644eef737f1c",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "The hotel kept it's old wooden stairs.",
+      "correction": "The hotel kept its old wooden stairs.",
+      "note": "Its shows possession."
+    },
+    {
+      "id": "59263a57-f1b8-584c-bb0c-33714cdc349a",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "Its almost eight o'clock already.",
+      "correction": "It's almost eight o'clock already.",
+      "note": "It's means it is."
+    },
+    {
+      "id": "4b3a4685-b17b-51c6-9950-fcb1b95c5e92",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "The library increased it's opening hours.",
+      "correction": "The library increased its opening hours.",
+      "note": "Its shows possession."
+    },
+    {
+      "id": "167f0677-45f3-5cb3-a137-35528eb111c7",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "Its better to book tickets in advance.",
+      "correction": "It's better to book tickets in advance.",
+      "note": "It's means it is."
+    },
+    {
+      "id": "908a3089-7a4f-52e8-88a0-2adbb5802ea1",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "The dog wagged it's tail happily.",
+      "correction": "The dog wagged its tail happily.",
+      "note": "Its shows possession."
+    },
+    {
+      "id": "92f1cab4-8137-5b97-8cf7-7baed7bbd59b",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "Its time to leave for the station.",
+      "correction": "It's time to leave for the station.",
+      "note": "It's means it is."
+    },
+    {
+      "id": "0b0f4931-84e3-5c60-b4e2-d94d7e9be7c6",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "The garden lost it's flowers in the storm.",
+      "correction": "The garden lost its flowers in the storm.",
+      "note": "Its shows possession."
+    },
+    {
+      "id": "79a28a86-329c-52ac-a74e-c53e2097870d",
+      "rule_id": "e114ca4d-4085-4b5a-a7e0-c864c96a14b8",
+      "example_type": "incorrect",
+      "text": "Its a shame that the shop is closed.",
+      "correction": "It's a shame that the shop is closed.",
+      "note": "It's means it is."
+    },
+    {
+      "id": "8c1d38e3-898f-576c-a553-0afc88a402d7",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "correct",
+      "text": "The new sign was immediately noticeable.",
+      "correction": null,
+      "note": "Notice keeps e before -able."
+    },
+    {
+      "id": "fdd58247-62ff-59f6-a8fe-f41b8af56214",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "correct",
+      "text": "Her speech was confident and courageous.",
+      "correction": null,
+      "note": "Courage keeps e before -ous."
+    },
+    {
+      "id": "d4f17f40-812c-51e4-a5ba-8bf657f86095",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "correct",
+      "text": "The old machine is still serviceable.",
+      "correction": null,
+      "note": "Service keeps e before -able."
+    },
+    {
+      "id": "5071f3e8-05d4-5e22-b4f1-a3dfa41a4669",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "correct",
+      "text": "This jacket is exchangeable at any shop.",
+      "correction": null,
+      "note": "Exchange keeps e before -able."
+    },
+    {
+      "id": "3ee9a214-bc3e-581a-95ea-8daffda8fb68",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "correct",
+      "text": "The guide gave us very knowledgeable advice.",
+      "correction": null,
+      "note": "Knowledge keeps e before -able."
+    },
+    {
+      "id": "54456788-a94e-5491-a326-d49ae0cdb9e5",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "correct",
+      "text": "The parcel is traceable through the website.",
+      "correction": null,
+      "note": "Trace keeps e before -able."
+    },
+    {
+      "id": "6b5e1db7-0aa4-507d-b19d-2ee46aea7e4d",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "correct",
+      "text": "The price of the ticket was outrageous.",
+      "correction": null,
+      "note": "Outrage keeps e before -ous."
+    },
+    {
+      "id": "8d480e5b-3d6b-5679-8f15-0cd3e36202c4",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "correct",
+      "text": "The guide was knowledgeable about local trains.",
+      "correction": null,
+      "note": "Knowledge keeps e before -able."
+    },
+    {
+      "id": "8f315fa2-dbc4-5e72-acf8-bee86f42593e",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "The new sign was immediately noticable.",
+      "correction": "The new sign was immediately noticeable.",
+      "note": "Notice keeps e before -able."
+    },
+    {
+      "id": "959098d7-1fb6-5537-9e07-7f35cd65c8a9",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "Her speech was confident and couragous.",
+      "correction": "Her speech was confident and courageous.",
+      "note": "Courage keeps e before -ous."
+    },
+    {
+      "id": "62873eb1-f0fd-52fc-a3d2-0171581dbf29",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "This jacket is exchangable at any shop.",
+      "correction": "This jacket is exchangeable at any shop.",
+      "note": "Exchange keeps e before -able."
+    },
+    {
+      "id": "19aad62d-bb2a-5da7-a4d1-1540e9c70fbd",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "The guide gave us very knowledgable advice.",
+      "correction": "The guide gave us very knowledgeable advice.",
+      "note": "Knowledge keeps e before -able."
+    },
+    {
+      "id": "9356adb9-fe83-559c-a6b2-ca0f187a3e14",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "The parcel is tracable through the website.",
+      "correction": "The parcel is traceable through the website.",
+      "note": "Trace keeps e before -able."
+    },
+    {
+      "id": "5f58ffb8-683b-54fe-bbe8-2063eb3c2c4c",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "The price of the ticket was outragous.",
+      "correction": "The price of the ticket was outrageous.",
+      "note": "Outrage keeps e before -ous."
+    },
+    {
+      "id": "db7922f2-a44d-5eb4-8b5a-4f9973782c27",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "The rules are not enforcable in this case.",
+      "correction": "The rules are not enforceable in this case.",
+      "note": "Enforce keeps e before -able."
+    },
+    {
+      "id": "eac24b4a-9043-53e8-9257-6c252372e136",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "The schedule is managable if we work together.",
+      "correction": "The schedule is manageable if we work together.",
+      "note": "Manage keeps e before -able."
+    },
+    {
+      "id": "4db2f1f1-47dc-56a6-80ba-37152b7e51b5",
+      "rule_id": "93b24004-5fe9-44e6-93b4-8daa94655988",
+      "example_type": "incorrect",
+      "text": "It was an advantagous deal for the company.",
+      "correction": "It was an advantageous deal for the company.",
+      "note": "Advantage keeps e before -ous."
+    },
+    {
+      "id": "05edb6d1-8e8c-5d1e-b848-fa15bfa49f85",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "I often lose my pens at school.",
+      "correction": null,
+      "note": "Lose means not have something anymore."
+    },
+    {
+      "id": "0ac9d1cb-68e8-5eb7-9a83-15e73dfe66a7",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "The knot on the rope is loose.",
+      "correction": null,
+      "note": "Loose means not tight."
+    },
+    {
+      "id": "94d4fafc-f636-554e-a18e-cd71fc08c86f",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "She does not want to lose her job.",
+      "correction": null,
+      "note": "Lose is a verb."
+    },
+    {
+      "id": "3ba6f5a6-ef43-5a6c-91b1-3393bba8e5f2",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "The screw is loose, so tighten it.",
+      "correction": null,
+      "note": "Loose describes the screw."
+    },
+    {
+      "id": "e9f1731f-f5de-5dac-8d2a-c8fe8be66ac4",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "They might lose the match on Saturday.",
+      "correction": null,
+      "note": "Lose is a verb."
+    },
+    {
+      "id": "9b80c3bd-6dea-5a85-bd3a-6bea9561ef44",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "Do not lose the receipt for the return.",
+      "correction": null,
+      "note": "Lose means not have anymore."
+    },
+    {
+      "id": "4d8b1f52-4274-5546-9f17-e9e7de4450a9",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "The dog got loose in the garden.",
+      "correction": null,
+      "note": "Loose means free or not tied."
+    },
+    {
+      "id": "4e957f8b-a257-5803-94ef-16970a10292a",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "He will lose his keys again.",
+      "correction": null,
+      "note": "Lose is a verb."
+    },
+    {
+      "id": "32ad6a06-3942-541c-a74f-5b9c7430af36",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "The lid is loose on this jar.",
+      "correction": null,
+      "note": "Loose describes the lid."
+    },
+    {
+      "id": "9907f6d2-fe6e-504f-ba3f-e945d67bcd7f",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "We could lose our seats if we arrive late.",
+      "correction": null,
+      "note": "Lose is a verb."
+    },
+    {
+      "id": "fc94fe50-d587-53d0-a860-f01879008b98",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "The knot came loose during the walk.",
+      "correction": null,
+      "note": "Loose means not tight."
+    },
+    {
+      "id": "c4fcd944-4268-5669-8410-0b9e996aae82",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "She does not want to lose her place in the queue.",
+      "correction": null,
+      "note": "Lose is a verb."
+    },
+    {
+      "id": "e77bbe10-2ca1-5ce2-9a6b-66e6cc025fa8",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "correct",
+      "text": "The wire is loose behind the television.",
+      "correction": null,
+      "note": "Loose describes the wire."
+    },
+    {
+      "id": "2f65ae3b-890e-5fed-a71d-a7dafd984046",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "I often loose my pens at school.",
+      "correction": "I often lose my pens at school.",
+      "note": "Lose is a verb."
+    },
+    {
+      "id": "458c541c-b663-5a55-b023-1746426461df",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "The knot on the rope is lose.",
+      "correction": "The knot on the rope is loose.",
+      "note": "Loose means not tight."
+    },
+    {
+      "id": "299f9e1e-2f6b-54c7-b38a-1aff0995a56b",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "She does not want to loose her job.",
+      "correction": "She does not want to lose her job.",
+      "note": "Lose is a verb."
+    },
+    {
+      "id": "7da7c88e-c9ae-51a0-87d6-3cb95d3ef812",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "The screw is lose, so tighten it.",
+      "correction": "The screw is loose, so tighten it.",
+      "note": "Loose describes the screw."
+    },
+    {
+      "id": "bd389654-5128-58aa-b2a0-82c24c0328d5",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "They might loose the match on Saturday.",
+      "correction": "They might lose the match on Saturday.",
+      "note": "Lose is a verb."
+    },
+    {
+      "id": "dade7155-3dcf-5c80-a6d4-a4f73e50a2be",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "Do not loose the receipt for the return.",
+      "correction": "Do not lose the receipt for the return.",
+      "note": "Lose is a verb."
+    },
+    {
+      "id": "540862b7-9723-551f-a057-e1623dfca330",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "The dog got lose in the garden.",
+      "correction": "The dog got loose in the garden.",
+      "note": "Loose means free or not tied."
+    },
+    {
+      "id": "77ba2174-b9ed-5848-9423-f105c548c05a",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "He will loose his keys again.",
+      "correction": "He will lose his keys again.",
+      "note": "Lose is a verb."
+    },
+    {
+      "id": "d21cf3c8-13ce-5183-8bfe-e215bd9e93a7",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "The lid is lose on this jar.",
+      "correction": "The lid is loose on this jar.",
+      "note": "Loose describes the lid."
+    },
+    {
+      "id": "4fe67dde-48dc-5999-bd3a-09914dfeab6b",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "We could loose our seats if we arrive late.",
+      "correction": "We could lose our seats if we arrive late.",
+      "note": "Lose is a verb."
+    },
+    {
+      "id": "406cffc3-5478-5739-88ed-a2438eba49dd",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "The knot came lose during the walk.",
+      "correction": "The knot came loose during the walk.",
+      "note": "Loose means not tight."
+    },
+    {
+      "id": "8616cac7-ecf8-52b8-81db-d08261618b88",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "She does not want to loose her place in the queue.",
+      "correction": "She does not want to lose her place in the queue.",
+      "note": "Lose is a verb."
+    },
+    {
+      "id": "4ceacba4-1ee3-5eeb-b24a-b89ccfa8bd6c",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "The wire is lose behind the television.",
+      "correction": "The wire is loose behind the television.",
+      "note": "Loose describes the wire."
+    },
+    {
+      "id": "aaa61ee3-eb4a-5116-a255-6541c95ccd8c",
+      "rule_id": "d2108f0a-32cd-47e7-ac0d-bc9b2dc9cdd5",
+      "example_type": "incorrect",
+      "text": "These jeans are too lose.",
+      "correction": "These jeans are too loose.",
+      "note": "Loose means not tight."
+    },
+    {
+      "id": "11cf9d3a-f7dd-5ac1-906a-79031acbf732",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "The audience enjoyed the puppet show.",
+      "correction": null,
+      "note": "Audience ends in -ence."
+    },
+    {
+      "id": "71fb0d4e-6651-5ee9-b713-560ce7fda778",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "The police collected evidence at the scene.",
+      "correction": null,
+      "note": "Evidence ends in -ence."
+    },
+    {
+      "id": "a7d7f8c0-69db-5263-9f95-50ed5214e6ef",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "Her performance in the school play was excellent.",
+      "correction": null,
+      "note": "Performance ends in -ance."
+    },
+    {
+      "id": "49262822-7072-5494-ab2b-7135d858c2d2",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "Please use the side entrance after six.",
+      "correction": null,
+      "note": "Entrance ends in -ance."
+    },
+    {
+      "id": "ba027437-293d-5a16-8f99-56ed69d8dbf2",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "He spoke with confidence during the interview.",
+      "correction": null,
+      "note": "Confidence ends in -ence."
+    },
+    {
+      "id": "21c0215f-e2a7-5b36-9e0c-02c85061890c",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "Write one sentence about your weekend.",
+      "correction": null,
+      "note": "Sentence ends in -ence."
+    },
+    {
+      "id": "c843e3a9-e1a7-52fc-af65-70adef147fd5",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "Thank you for your assistance with the boxes.",
+      "correction": null,
+      "note": "Assistance ends in -ance."
+    },
+    {
+      "id": "0c901b9f-e2f6-5340-8b85-7d09582d5068",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "She has a lot of experience in customer service.",
+      "correction": null,
+      "note": "Experience ends in -ence."
+    },
+    {
+      "id": "c3a7a092-fd9d-5540-bfde-382faeece586",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "Good balance helps you ride a bicycle.",
+      "correction": null,
+      "note": "Balance ends in -ance."
+    },
+    {
+      "id": "1d7f251e-8ae2-5232-9110-d1bf72cc7a0f",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "The ambulance arrived within five minutes.",
+      "correction": null,
+      "note": "Ambulance ends in -ance."
+    },
+    {
+      "id": "83512026-0e2e-599f-bd68-c2a0eee6308a",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "Her patience with the children impressed us.",
+      "correction": null,
+      "note": "Patience ends in -ence."
+    },
+    {
+      "id": "1cbbc447-e028-5304-a240-77bf24183262",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "There is a big difference in price.",
+      "correction": null,
+      "note": "Difference ends in -ence."
+    },
+    {
+      "id": "86103996-4907-5d7f-b089-c2b7523a3b10",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "We need your presence at the meeting.",
+      "correction": null,
+      "note": "Presence ends in -ence."
+    },
+    {
+      "id": "dd9fb7d7-fab4-5dce-bc12-742dd59ce046",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "Silence filled the room after the news.",
+      "correction": null,
+      "note": "Silence ends in -ence."
+    },
+    {
+      "id": "7ef956d1-4c63-56d1-aa0b-184a1a33adc2",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "correct",
+      "text": "The hotel is a short distance from the station.",
+      "correction": null,
+      "note": "Distance ends in -ance."
+    },
+    {
+      "id": "f5c7dbae-b6eb-5801-aa4b-f7e60f787798",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "The audiance enjoyed the puppet show.",
+      "correction": "The audience enjoyed the puppet show.",
+      "note": "Audience ends in -ence."
+    },
+    {
+      "id": "2457ed5a-136e-512d-9453-0b80ef4fa425",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "The police collected evidance at the scene.",
+      "correction": "The police collected evidence at the scene.",
+      "note": "Evidence ends in -ence."
+    },
+    {
+      "id": "d435deba-87fc-564e-bf36-e00593c70e34",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "Her performence in the school play was excellent.",
+      "correction": "Her performance in the school play was excellent.",
+      "note": "Performance ends in -ance."
+    },
+    {
+      "id": "54f9eaab-7c0e-5fdc-87e9-55b910565f29",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "Please use the side entrence after six.",
+      "correction": "Please use the side entrance after six.",
+      "note": "Entrance ends in -ance."
+    },
+    {
+      "id": "33b1c32a-80a4-50c2-b7e6-49656036932b",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "He spoke with confidance during the interview.",
+      "correction": "He spoke with confidence during the interview.",
+      "note": "Confidence ends in -ence."
+    },
+    {
+      "id": "ae31d7f7-b079-55d3-a80a-1e9330c3f35e",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "Write one sentance about your weekend.",
+      "correction": "Write one sentence about your weekend.",
+      "note": "Sentence ends in -ence."
+    },
+    {
+      "id": "9ebf006d-531e-57eb-8c6f-325d5f3aadba",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "Thank you for your assistence with the boxes.",
+      "correction": "Thank you for your assistance with the boxes.",
+      "note": "Assistance ends in -ance."
+    },
+    {
+      "id": "c1b02cdc-aa96-5cb4-84fa-a6ccfa2a8bf5",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "She has a lot of experiance in customer service.",
+      "correction": "She has a lot of experience in customer service.",
+      "note": "Experience ends in -ence."
+    },
+    {
+      "id": "f1cf5b67-f6ac-5a08-a023-11facef0aee7",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "Good balence helps you ride a bicycle.",
+      "correction": "Good balance helps you ride a bicycle.",
+      "note": "Balance ends in -ance."
+    },
+    {
+      "id": "7701a557-92f0-57f0-abba-6c5cdc0871e0",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "The ambulence arrived within five minutes.",
+      "correction": "The ambulance arrived within five minutes.",
+      "note": "Ambulance ends in -ance."
+    },
+    {
+      "id": "1ade9b0f-aea8-5f28-9e24-396590896cee",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "Her patiance with the children impressed us.",
+      "correction": "Her patience with the children impressed us.",
+      "note": "Patience ends in -ence."
+    },
+    {
+      "id": "00e039bf-1f66-5bbf-a7e8-a6d4c8f9a711",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "There is a big differance in price.",
+      "correction": "There is a big difference in price.",
+      "note": "Difference ends in -ence."
+    },
+    {
+      "id": "fe8383e8-7d60-5f0e-9442-2789fa96d7c1",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "We need your presance at the meeting.",
+      "correction": "We need your presence at the meeting.",
+      "note": "Presence ends in -ence."
+    },
+    {
+      "id": "f6e9a5d5-7609-5df7-86fe-6dac1e3eb441",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "Silance filled the room after the news.",
+      "correction": "Silence filled the room after the news.",
+      "note": "Silence ends in -ence."
+    },
+    {
+      "id": "5b1184e3-4d48-5a48-9dd8-556f3aa2271d",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "The hotel is a short distence from the station.",
+      "correction": "The hotel is a short distance from the station.",
+      "note": "Distance ends in -ance."
+    },
+    {
+      "id": "374a2422-48d4-5cde-9aae-377df6d64c5f",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "The insurence form is on the desk.",
+      "correction": "The insurance form is on the desk.",
+      "note": "Insurance ends in -ance."
+    },
+    {
+      "id": "bc500540-5cd8-5b2f-8885-d20fd727e802",
+      "rule_id": "c97ff3b1-2fed-4e9c-81d1-d5be4976b362",
+      "example_type": "incorrect",
+      "text": "Regular maintenence keeps the car safe.",
+      "correction": "Regular maintenance keeps the car safe.",
+      "note": "Maintenance ends in -ance."
+    },
+    {
+      "id": "11bcf461-62a4-52a8-a12f-0842b9a379e9",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "The teacher gave us clear instructions.",
+      "correction": null,
+      "note": "Instruction ends in -tion."
+    },
+    {
+      "id": "92670bb1-349e-5721-85c4-8261b795ffec",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "We made a decision after a long discussion.",
+      "correction": null,
+      "note": "Decision ends in -sion."
+    },
+    {
+      "id": "ecd55e0d-3d7c-55c8-a0fa-93574cbb362a",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "The station was busy at rush hour.",
+      "correction": null,
+      "note": "Station ends in -tion."
+    },
+    {
+      "id": "15fb5c70-8a12-58bc-abaf-e93675798cfc",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "Her explanation helped me understand the problem.",
+      "correction": null,
+      "note": "Explanation ends in -tion."
+    },
+    {
+      "id": "03d68338-f0d6-54b5-bc14-e99271352a18",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "They watched an exciting football match on television.",
+      "correction": null,
+      "note": "Television ends in -sion."
+    },
+    {
+      "id": "5bb0e25c-f769-55b5-b7a3-905e4bd15e3b",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "The museum has a large collection of paintings.",
+      "correction": null,
+      "note": "Collection ends in -tion."
+    },
+    {
+      "id": "f8197c9a-760d-5d76-999b-86bc1ecac506",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "Please pay attention to the safety rules.",
+      "correction": null,
+      "note": "Attention ends in -tion."
+    },
+    {
+      "id": "984511a9-9c1e-56e7-9020-9171d18eac20",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "The new version of the app works better.",
+      "correction": null,
+      "note": "Version ends in -sion."
+    },
+    {
+      "id": "855abfcd-aa28-5e80-b4a0-ce032b76f96e",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "The invasion of the city happened long ago.",
+      "correction": null,
+      "note": "Invasion ends in -sion."
+    },
+    {
+      "id": "7ca5b8c8-0867-5803-b9fa-af3a0632b2c6",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "Her expression showed that she was surprised.",
+      "correction": null,
+      "note": "Expression ends in -sion."
+    },
+    {
+      "id": "712c605a-1a6a-5bd6-8e2b-d848efec68d0",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "The education system is changing quickly.",
+      "correction": null,
+      "note": "Education ends in -tion."
+    },
+    {
+      "id": "cb2fbd1f-e05d-5c9d-8124-600dadd3c841",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "We need a solution to this transport problem.",
+      "correction": null,
+      "note": "Solution ends in -tion."
+    },
+    {
+      "id": "c0c20b17-e4b5-5c77-8dc4-b2815e79eed9",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "The collision damaged both cars.",
+      "correction": null,
+      "note": "Collision ends in -sion."
+    },
+    {
+      "id": "b7d3423d-6e82-5f3f-8990-a619888ffef8",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "The celebration lasted until midnight.",
+      "correction": null,
+      "note": "Celebration ends in -tion."
+    },
+    {
+      "id": "8ad37336-0d09-5874-b273-6cf2d08111c7",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "The question was difficult for everyone.",
+      "correction": null,
+      "note": "Question ends in -tion."
+    },
+    {
+      "id": "0a03ed78-24cf-544c-85f5-fa80cfc35f85",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "correct",
+      "text": "The extension of the railway will take years.",
+      "correction": null,
+      "note": "Extension ends in -sion."
+    },
+    {
+      "id": "7571deb0-b337-5194-8f43-d985efd43e91",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "We made a decition after a long discussion.",
+      "correction": "We made a decision after a long discussion.",
+      "note": "Decision ends in -sion."
+    },
+    {
+      "id": "ff53ea41-e0f8-555b-8cb2-2426710d3770",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "Her explanasion helped me understand the problem.",
+      "correction": "Her explanation helped me understand the problem.",
+      "note": "Explanation ends in -tion."
+    },
+    {
+      "id": "99474b8a-dbdf-5e26-935b-64552708d6df",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "They watched an exciting football match on televizion.",
+      "correction": "They watched an exciting football match on television.",
+      "note": "Television ends in -sion."
+    },
+    {
+      "id": "f5e7958b-323d-5bc9-bd6c-47f15295d421",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "Please pay attension to the safety rules.",
+      "correction": "Please pay attention to the safety rules.",
+      "note": "Attention ends in -tion."
+    },
+    {
+      "id": "10f376ba-c5fe-55df-8e67-3b17e7fc14bf",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "The new vertion of the app works better.",
+      "correction": "The new version of the app works better.",
+      "note": "Version ends in -sion."
+    },
+    {
+      "id": "0506597b-4e82-5615-90bc-a6bc2c747ff2",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "The invation of the city happened long ago.",
+      "correction": "The invasion of the city happened long ago.",
+      "note": "Invasion ends in -sion."
+    },
+    {
+      "id": "9e7eee36-2644-5f88-987f-c8618f7ef23d",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "The educasion system is changing quickly.",
+      "correction": "The education system is changing quickly.",
+      "note": "Education ends in -tion."
+    },
+    {
+      "id": "527c0e01-496a-5548-9a26-89392e8354c6",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "We need a solusion to this transport problem.",
+      "correction": "We need a solution to this transport problem.",
+      "note": "Solution ends in -tion."
+    },
+    {
+      "id": "16e8b735-99a6-5b21-a3aa-41a0237fb82e",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "The extention of the railway will take years.",
+      "correction": "The extension of the railway will take years.",
+      "note": "Extension ends in -sion."
+    },
+    {
+      "id": "275d5b4a-7e67-50af-b054-fae5c2052f95",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "The nacion has many beautiful cities.",
+      "correction": "The nation has many beautiful cities.",
+      "note": "Nation ends in -tion."
+    },
+    {
+      "id": "9348c6e7-0588-5f4e-844f-afe2f7ab0fdd",
+      "rule_id": "52c7bef8-f644-4e09-b42b-31434d49d38e",
+      "example_type": "incorrect",
+      "text": "The confution at the airport was terrible.",
+      "correction": "The confusion at the airport was terrible.",
+      "note": "Confusion ends in -sion."
+    },
+    {
+      "id": "cf320399-95f8-51ff-9d5b-a60d8d1d111a",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "correct",
+      "text": "The boxes were too heavy to carry.",
+      "correction": null,
+      "note": "Box adds -es."
+    },
+    {
+      "id": "6f062ad7-f9d4-5ce7-9ad4-e71dd1301e59",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "correct",
+      "text": "She bought two dresses for the wedding.",
+      "correction": null,
+      "note": "Dress adds -es."
+    },
+    {
+      "id": "6aa0b103-a38f-55fd-91c0-89a15657ee00",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "correct",
+      "text": "The buses leave every ten minutes.",
+      "correction": null,
+      "note": "Bus adds -es."
+    },
+    {
+      "id": "fc0173eb-28fd-5c30-b0ba-ab2d1e6c73c7",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "correct",
+      "text": "The glasses are on the kitchen table.",
+      "correction": null,
+      "note": "Glass adds -es."
+    },
+    {
+      "id": "1fb72514-cb27-5c7c-9bd4-c7f4bc7d25c1",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "correct",
+      "text": "The foxes hid behind the old fence.",
+      "correction": null,
+      "note": "Fox adds -es."
+    },
+    {
+      "id": "34826b3e-03f8-52aa-b1d5-dddeb314994a",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "correct",
+      "text": "The churches in the village are very old.",
+      "correction": null,
+      "note": "Church adds -es."
+    },
+    {
+      "id": "b94968da-7fcd-544b-b768-3ca1892ad9b2",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "The boxs were too heavy to carry.",
+      "correction": "The boxes were too heavy to carry.",
+      "note": "Box adds -es."
+    },
+    {
+      "id": "8bf9de90-7be4-5917-83fa-d36a1ce5e138",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "She bought two dresss for the wedding.",
+      "correction": "She bought two dresses for the wedding.",
+      "note": "Dress adds -es."
+    },
+    {
+      "id": "f8b1e004-ec47-52f0-9512-c32b3050a4ae",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "The buss leave every ten minutes.",
+      "correction": "The buses leave every ten minutes.",
+      "note": "Bus adds -es."
+    },
+    {
+      "id": "0fbb4315-eaef-574e-9a8c-29ac27835ca3",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "The glasss are on the kitchen table.",
+      "correction": "The glasses are on the kitchen table.",
+      "note": "Glass adds -es."
+    },
+    {
+      "id": "c4f61b34-1c3e-5212-8862-f043d44e03c9",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "The foxs hid behind the old fence.",
+      "correction": "The foxes hid behind the old fence.",
+      "note": "Fox adds -es."
+    },
+    {
+      "id": "055f9086-75ca-538f-8c09-875ab017a5ea",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "The churchs in the village are very old.",
+      "correction": "The churches in the village are very old.",
+      "note": "Church adds -es."
+    },
+    {
+      "id": "5af406be-2128-5200-8b67-c7f708b3f9d1",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "The benchs in the park are wet.",
+      "correction": "The benches in the park are wet.",
+      "note": "Bench adds -es."
+    },
+    {
+      "id": "7df8174a-c2da-58fc-9aa5-66fafbe8d129",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "The taxs went up this year.",
+      "correction": "The taxes went up this year.",
+      "note": "Tax adds -es."
+    },
+    {
+      "id": "a3e579f4-2f7d-5ff6-8a7b-3d2b9feee26a",
+      "rule_id": "dc0cb3cb-22ce-4729-8535-7509718e85d5",
+      "example_type": "incorrect",
+      "text": "She made three wishs before blowing out the candles.",
+      "correction": "She made three wishes before blowing out the candles.",
+      "note": "Wish adds -es."
+    },
+    {
+      "id": "3d737a32-66fe-5f71-abc6-177b9269b4de",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "The baker sold six loaves before noon.",
+      "correction": null,
+      "note": "Loaf becomes loaves."
+    },
+    {
+      "id": "56dbf702-0e7c-514b-9e3c-e02e3e7586f8",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "The children collected leaves in the park.",
+      "correction": null,
+      "note": "Leaf becomes leaves."
+    },
+    {
+      "id": "8d80023c-896b-50ee-aa35-4cfb6eacb604",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "She sharpened the knives before dinner.",
+      "correction": null,
+      "note": "Knife becomes knives."
+    },
+    {
+      "id": "344e9b0e-6310-5e56-bdf0-be309d1ca4b5",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "The farmer fed the calves in the morning.",
+      "correction": null,
+      "note": "Calf becomes calves."
+    },
+    {
+      "id": "a89294f2-4cd7-5578-94fc-9f2041ee2fbd",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "The thieves ran away before the police arrived.",
+      "correction": null,
+      "note": "Thief becomes thieves."
+    },
+    {
+      "id": "02dc04dd-fa6c-50fb-9e4d-151dd32da318",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "The shelves in the shop were full of toys.",
+      "correction": null,
+      "note": "Shelf becomes shelves."
+    },
+    {
+      "id": "1397fdac-0434-5926-b918-144ee9df3aea",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "The wolves howled in the mountains.",
+      "correction": null,
+      "note": "Wolf becomes wolves."
+    },
+    {
+      "id": "0a421fcc-3bdd-5ef1-8467-d664317394a9",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "She cut the cake into two halves.",
+      "correction": null,
+      "note": "Half becomes halves."
+    },
+    {
+      "id": "7c3dc772-90b1-586b-a632-0a3cacd7c432",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "Doctors save many lives every day.",
+      "correction": null,
+      "note": "Life becomes lives."
+    },
+    {
+      "id": "92dcca43-9ecf-584b-bb4e-307b4c366804",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "The elves helped Father Christmas make toys.",
+      "correction": null,
+      "note": "Elf becomes elves."
+    },
+    {
+      "id": "f3493285-d6f0-52d8-8812-4d5ad331be2b",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "The scarves were hanging by the door.",
+      "correction": null,
+      "note": "Scarf becomes scarves."
+    },
+    {
+      "id": "ae124157-77de-54c6-b2c0-9e0d1f747f40",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "The library bought several new bookshelves.",
+      "correction": null,
+      "note": "Bookshelf becomes bookshelves."
+    },
+    {
+      "id": "dd3ade14-5a7d-5e0e-9fb6-7ad7e3d7a756",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "The leaves turned yellow in autumn.",
+      "correction": null,
+      "note": "Leaf becomes leaves."
+    },
+    {
+      "id": "8106456d-1ab0-5d7d-bcf2-72bc9445f840",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "correct",
+      "text": "The knives and forks were on the table.",
+      "correction": null,
+      "note": "Knife becomes knives."
+    },
+    {
+      "id": "59657792-f39c-5707-a63a-071bf03622ae",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "The baker sold six loafs before noon.",
+      "correction": "The baker sold six loaves before noon.",
+      "note": "Loaf becomes loaves."
+    },
+    {
+      "id": "353f0eb2-a686-52c5-a746-d0479c0a26f9",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "The children collected leafs in the park.",
+      "correction": "The children collected leaves in the park.",
+      "note": "Leaf becomes leaves."
+    },
+    {
+      "id": "63d11d8e-63c5-542d-8e9d-766bec667938",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "She sharpened the knifes before dinner.",
+      "correction": "She sharpened the knives before dinner.",
+      "note": "Knife becomes knives."
+    },
+    {
+      "id": "ce2235a8-3ca6-578f-a16c-5f2eb5824b25",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "The farmer fed the calfs in the morning.",
+      "correction": "The farmer fed the calves in the morning.",
+      "note": "Calf becomes calves."
+    },
+    {
+      "id": "aa6c1809-4be3-5f46-ace6-5d07385f0798",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "The thiefs ran away before the police arrived.",
+      "correction": "The thieves ran away before the police arrived.",
+      "note": "Thief becomes thieves."
+    },
+    {
+      "id": "b607d13a-231d-55e8-b6b3-ed8aa457c75c",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "The shelfs in the shop were full of toys.",
+      "correction": "The shelves in the shop were full of toys.",
+      "note": "Shelf becomes shelves."
+    },
+    {
+      "id": "a2474372-c56b-5a33-af6c-ab2b1577f87f",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "The wolfs howled in the mountains.",
+      "correction": "The wolves howled in the mountains.",
+      "note": "Wolf becomes wolves."
+    },
+    {
+      "id": "3a4d288f-9301-5121-8733-9d30695d8fa3",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "She cut the cake into two halfs.",
+      "correction": "She cut the cake into two halves.",
+      "note": "Half becomes halves."
+    },
+    {
+      "id": "9c169e2b-1d85-53b2-b346-4f4780181d34",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "The elfs helped Father Christmas make toys.",
+      "correction": "The elves helped Father Christmas make toys.",
+      "note": "Elf becomes elves."
+    },
+    {
+      "id": "b7bffcd9-dedb-5dcb-8438-91b26222a105",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "The library bought several new bookshelfs.",
+      "correction": "The library bought several new bookshelves.",
+      "note": "Bookshelf becomes bookshelves."
+    },
+    {
+      "id": "86720315-9fd2-5751-92c2-2b5b0c07e17d",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "The leafs turned yellow in autumn.",
+      "correction": "The leaves turned yellow in autumn.",
+      "note": "Leaf becomes leaves."
+    },
+    {
+      "id": "2df2f97f-0a9c-52a9-be9f-712447890fd0",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "The knifes and forks were on the table.",
+      "correction": "The knives and forks were on the table.",
+      "note": "Knife becomes knives."
+    },
+    {
+      "id": "874ee620-abe0-5fd6-89a7-74630a02310c",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "The baker made three loafs of bread.",
+      "correction": "The baker made three loaves of bread.",
+      "note": "Loaf becomes loaves."
+    },
+    {
+      "id": "ba315c59-0fcf-5d2f-858c-cd390d7c11ac",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "The calfs were born in spring.",
+      "correction": "The calves were born in spring.",
+      "note": "Calf becomes calves."
+    },
+    {
+      "id": "fe131c61-e95b-5e22-b25d-d1d819f3fed9",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "incorrect",
+      "text": "The thiefs were caught by the police.",
+      "correction": "The thieves were caught by the police.",
+      "note": "Thief becomes thieves."
+    },
+    {
+      "id": "024a924b-4720-5216-88d8-80bb76d12cc4",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "exception",
+      "text": "The roof of the house needs repairs.",
+      "correction": null,
+      "note": "Roof has a regular plural."
+    },
+    {
+      "id": "3ea68640-40a4-5820-8742-5d0e93d8e6fb",
+      "rule_id": "3905b27e-e9a7-4ce4-ae19-325d839b66a9",
+      "example_type": "exception",
+      "text": "The chef cooked a special meal for us.",
+      "correction": null,
+      "note": "Chef has a regular plural."
     }
   ]
 }

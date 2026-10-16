@@ -1,0 +1,477 @@
+{
+  "slug": "plural-f-to-ves",
+  "examples": [
+    {
+      "type": "correct",
+      "text": "The baker sold six loaves before noon.",
+      "note": "Loaf becomes loaves."
+    },
+    {
+      "type": "correct",
+      "text": "The children collected leaves in the park.",
+      "note": "Leaf becomes leaves."
+    },
+    {
+      "type": "correct",
+      "text": "She sharpened the knives before dinner.",
+      "note": "Knife becomes knives."
+    },
+    {
+      "type": "correct",
+      "text": "The two wives cooked together on Sunday.",
+      "note": "Wife becomes wives."
+    },
+    {
+      "type": "correct",
+      "text": "The farmer fed the calves in the morning.",
+      "note": "Calf becomes calves."
+    },
+    {
+      "type": "correct",
+      "text": "The thieves ran away before the police arrived.",
+      "note": "Thief becomes thieves."
+    },
+    {
+      "type": "correct",
+      "text": "The shelves in the shop were full of toys.",
+      "note": "Shelf becomes shelves."
+    },
+    {
+      "type": "correct",
+      "text": "The wolves howled in the mountains.",
+      "note": "Wolf becomes wolves."
+    },
+    {
+      "type": "correct",
+      "text": "She cut the cake into two halves.",
+      "note": "Half becomes halves."
+    },
+    {
+      "type": "correct",
+      "text": "Doctors save many lives every day.",
+      "note": "Life becomes lives."
+    },
+    {
+      "type": "correct",
+      "text": "The elves helped Father Christmas make toys.",
+      "note": "Elf becomes elves."
+    },
+    {
+      "type": "correct",
+      "text": "The scarves were hanging by the door.",
+      "note": "Scarf becomes scarves."
+    },
+    {
+      "type": "correct",
+      "text": "The children helped themselves to some fruit.",
+      "note": "Yourself becomes yourselves."
+    },
+    {
+      "type": "correct",
+      "text": "The library bought several new bookshelves.",
+      "note": "Bookshelf becomes bookshelves."
+    },
+    {
+      "type": "correct",
+      "text": "The leaves turned yellow in autumn.",
+      "note": "Leaf becomes leaves."
+    },
+    {
+      "type": "correct",
+      "text": "The knives and forks were on the table.",
+      "note": "Knife becomes knives."
+    },
+    {
+      "type": "incorrect",
+      "text": "The baker sold six loafs before noon.",
+      "correction": "The baker sold six loaves before noon.",
+      "note": "Loaf becomes loaves."
+    },
+    {
+      "type": "incorrect",
+      "text": "The children collected leafs in the park.",
+      "correction": "The children collected leaves in the park.",
+      "note": "Leaf becomes leaves."
+    },
+    {
+      "type": "incorrect",
+      "text": "She sharpened the knifes before dinner.",
+      "correction": "She sharpened the knives before dinner.",
+      "note": "Knife becomes knives."
+    },
+    {
+      "type": "incorrect",
+      "text": "The two wifes cooked together on Sunday.",
+      "correction": "The two wives cooked together on Sunday.",
+      "note": "Wife becomes wives."
+    },
+    {
+      "type": "incorrect",
+      "text": "The farmer fed the calfs in the morning.",
+      "correction": "The farmer fed the calves in the morning.",
+      "note": "Calf becomes calves."
+    },
+    {
+      "type": "incorrect",
+      "text": "The thiefs ran away before the police arrived.",
+      "correction": "The thieves ran away before the police arrived.",
+      "note": "Thief becomes thieves."
+    },
+    {
+      "type": "incorrect",
+      "text": "The shelfs in the shop were full of toys.",
+      "correction": "The shelves in the shop were full of toys.",
+      "note": "Shelf becomes shelves."
+    },
+    {
+      "type": "incorrect",
+      "text": "The wolfs howled in the mountains.",
+      "correction": "The wolves howled in the mountains.",
+      "note": "Wolf becomes wolves."
+    },
+    {
+      "type": "incorrect",
+      "text": "She cut the cake into two halfs.",
+      "correction": "She cut the cake into two halves.",
+      "note": "Half becomes halves."
+    },
+    {
+      "type": "incorrect",
+      "text": "Doctors save many lifes every day.",
+      "correction": "Doctors save many lives every day.",
+      "note": "Life becomes lives."
+    },
+    {
+      "type": "incorrect",
+      "text": "The elfs helped Father Christmas make toys.",
+      "correction": "The elves helped Father Christmas make toys.",
+      "note": "Elf becomes elves."
+    },
+    {
+      "type": "incorrect",
+      "text": "The scarfs were hanging by the door.",
+      "correction": "The scarves were hanging by the door.",
+      "note": "Scarf becomes scarves."
+    },
+    {
+      "type": "incorrect",
+      "text": "The children helped themselfs to some fruit.",
+      "correction": "The children helped themselves to some fruit.",
+      "note": "Yourself becomes yourselves."
+    },
+    {
+      "type": "incorrect",
+      "text": "The library bought several new bookshelfs.",
+      "correction": "The library bought several new bookshelves.",
+      "note": "Bookshelf becomes bookshelves."
+    },
+    {
+      "type": "incorrect",
+      "text": "The leafs turned yellow in autumn.",
+      "correction": "The leaves turned yellow in autumn.",
+      "note": "Leaf becomes leaves."
+    },
+    {
+      "type": "incorrect",
+      "text": "The knifes and forks were on the table.",
+      "correction": "The knives and forks were on the table.",
+      "note": "Knife becomes knives."
+    },
+    {
+      "type": "incorrect",
+      "text": "The baker made three loafs of bread.",
+      "correction": "The baker made three loaves of bread.",
+      "note": "Loaf becomes loaves."
+    },
+    {
+      "type": "incorrect",
+      "text": "The two wifes were sisters.",
+      "correction": "The two wives were sisters.",
+      "note": "Wife becomes wives."
+    },
+    {
+      "type": "incorrect",
+      "text": "The calfs were born in spring.",
+      "correction": "The calves were born in spring.",
+      "note": "Calf becomes calves."
+    },
+    {
+      "type": "incorrect",
+      "text": "The thiefs were caught by the police.",
+      "correction": "The thieves were caught by the police.",
+      "note": "Thief becomes thieves."
+    },
+    {
+      "type": "exception",
+      "text": "The roof of the house needs repairs.",
+      "note": "Roof has a regular plural."
+    },
+    {
+      "type": "exception",
+      "text": "The chef cooked a special meal for us.",
+      "note": "Chef has a regular plural."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "fill_gap",
+      "prompt": "Cut the sandwich into two ___. (половинки)",
+      "answer": "halves"
+    },
+    {
+      "type": "fill_gap",
+      "prompt": "The new safety rules saved many ___ last year. (жизни)",
+      "answer": "lives"
+    },
+    {
+      "type": "fill_gap",
+      "prompt": "The baker made six ___ of bread. (буханки)",
+      "answer": "loaves"
+    },
+    {
+      "type": "fill_gap",
+      "prompt": "The farmer fed the ___ in the field. (телят)",
+      "answer": "calves"
+    },
+    {
+      "type": "fill_gap",
+      "prompt": "The children helped ___ to some juice. (себе)",
+      "answer": "themselves"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of life.",
+      "answer": "lives",
+      "choices": [
+        "lifes",
+        "lives",
+        "livs"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of leaf.",
+      "answer": "leaves",
+      "choices": [
+        "leafs",
+        "leaves",
+        "leavs"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of knife.",
+      "answer": "knives",
+      "choices": [
+        "knifes",
+        "knives",
+        "kniveies"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of wife.",
+      "answer": "wives",
+      "choices": [
+        "wifes",
+        "wives",
+        "wiveies"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of calf.",
+      "answer": "calves",
+      "choices": [
+        "calfs",
+        "calves",
+        "calfes"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of thief.",
+      "answer": "thieves",
+      "choices": [
+        "thiefs",
+        "thieves",
+        "thifeies"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of shelf.",
+      "answer": "shelves",
+      "choices": [
+        "shelfs",
+        "shelves",
+        "shelfes"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of wolf.",
+      "answer": "wolves",
+      "choices": [
+        "wolfs",
+        "wolves",
+        "wolveies"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of half.",
+      "answer": "halves",
+      "choices": [
+        "halfs",
+        "halves",
+        "halfes"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of elf.",
+      "answer": "elves",
+      "choices": [
+        "elfs",
+        "elves",
+        "elfes"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of scarf.",
+      "answer": "scarves",
+      "choices": [
+        "scarfs",
+        "scarves",
+        "scarfeies"
+      ]
+    },
+    {
+      "type": "correct_word",
+      "prompt": "loafs",
+      "answer": "loaves"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "leafs",
+      "answer": "leaves"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "knifes",
+      "answer": "knives"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "wifes",
+      "answer": "wives"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "calfs",
+      "answer": "calves"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "thiefs",
+      "answer": "thieves"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "shelfs",
+      "answer": "shelves"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "wolfs",
+      "answer": "wolves"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "halfs",
+      "answer": "halves"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "lifes",
+      "answer": "lives"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "elfs",
+      "answer": "elves"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "scarfs",
+      "answer": "scarves"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "themselfs",
+      "answer": "themselves"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "bookshelfs",
+      "answer": "bookshelves"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one loaf.",
+      "answer": "loaves"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one leaf.",
+      "answer": "leaves"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one knife.",
+      "answer": "knives"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one wife.",
+      "answer": "wives"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one calf.",
+      "answer": "calves"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one thief.",
+      "answer": "thieves"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one shelf.",
+      "answer": "shelves"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one wolf.",
+      "answer": "wolves"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one half.",
+      "answer": "halves"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one life.",
+      "answer": "lives"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one elf.",
+      "answer": "elves"
+    }
+  ]
+}

@@ -44,11 +44,6 @@
 .pairs-start .check-button {
   min-height: 46px;
 }
-.pairs-note {
-  color: var(--ink-muted);
-  font-size: calc(13px * var(--fs));
-  margin: 10px 0 0;
-}
 .pairs-group {
   margin-top: 24px;
 }

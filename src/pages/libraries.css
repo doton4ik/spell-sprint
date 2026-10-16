@@ -111,9 +111,6 @@
   background: var(--danger-soft);
   color: var(--danger-text);
 }
-.library-filter {
-  margin: 0 0 18px;
-}
 .library-card {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -209,12 +206,6 @@
   margin-top: auto;
   width: fit-content;
 }
-.library-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 0 0 18px;
-}
 .library-select {
   display: grid;
   gap: 3px;
@@ -275,10 +266,6 @@
   .template-button {
     justify-content: center;
     width: 100%;
-  }
-  .library-filters {
-    display: grid;
-    grid-template-columns: 1fr;
   }
   .library-select select {
     font-size: max(16px, calc(16px * var(--fs)));
@@ -922,34 +909,6 @@
   color: var(--ink-muted);
   font-size: calc(13px * var(--fs));
   margin: 0;
-}
-.hidden-words__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.hidden-word {
-  align-items: center;
-  background: var(--surface-muted);
-  border-radius: 8px;
-  color: var(--ink-muted);
-  display: inline-flex;
-  font-size: calc(13px * var(--fs));
-  gap: 6px;
-  padding: 4px 4px 4px 9px;
-}
-.hidden-word strong {
-  color: var(--ink-soft);
-}
-.hidden-word button {
-  background: var(--surface);
-  border: 1px solid var(--line-strong);
-  border-radius: 6px;
-  color: var(--accent-text);
-  font-size: calc(12px * var(--fs));
-  font-weight: 700;
-  min-height: 30px;
-  padding: 0 8px;
 }
 @media (max-width: 800px) {
   .pack-card {

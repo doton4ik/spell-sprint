@@ -1,0 +1,6663 @@
+{
+ "set": "more-practice-v3",
+ "rules": [
+  {
+   "slug": "able-vs-ible",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "The hotel room was comfortable and clean.",
+     "note": "Comfortable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The price of the flat was reasonable.",
+     "note": "Reasonable means fair or sensible."
+    },
+    {
+     "type": "incorrect",
+     "text": "The taxi price was reasonible for students.",
+     "correction": "The taxi price was reasonable for students.",
+     "note": "Reasonable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The old bridge is still usable after repairs.",
+     "note": "Usable means it can be used."
+    },
+    {
+     "type": "incorrect",
+     "text": "The weather here is very changeible.",
+     "correction": "The weather here is very changeable.",
+     "note": "Changeable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The teacher gave us a manageable amount of homework.",
+     "note": "Manageable means easy to control."
+    },
+    {
+     "type": "incorrect",
+     "text": "The workload was manageible after training.",
+     "correction": "The workload was manageable after training.",
+     "note": "Manageable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The bus stop is reachable in ten minutes.",
+     "note": "Reachable means possible to reach."
+    },
+    {
+     "type": "incorrect",
+     "text": "The airport is reachible by train.",
+     "correction": "The airport is reachable by train.",
+     "note": "Reachable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The recipe is simple and adaptable for vegetarians.",
+     "note": "Adaptable means able to change."
+    },
+    {
+     "type": "incorrect",
+     "text": "The plan is adaptible for different teams.",
+     "correction": "The plan is adaptable for different teams.",
+     "note": "Adaptable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The rules are flexible for part-time workers.",
+     "note": "Flexible means able to bend or change."
+    },
+    {
+     "type": "incorrect",
+     "text": "Our manager is very flexable about hours.",
+     "correction": "Our manager is very flexible about hours.",
+     "note": "Flexible ends in -ible."
+    },
+    {
+     "type": "correct",
+     "text": "The information was reliable and up to date.",
+     "note": "Reliable means trusted."
+    },
+    {
+     "type": "incorrect",
+     "text": "The website gave reliible travel advice.",
+     "correction": "The website gave reliable travel advice.",
+     "note": "Reliable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The old sofa was still comfortable after cleaning.",
+     "note": "Comfortable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The meeting time is suitable for everyone.",
+     "note": "Suitable means right for a purpose."
+    },
+    {
+     "type": "incorrect",
+     "text": "The early class is not suitible for commuters.",
+     "correction": "The early class is not suitable for commuters.",
+     "note": "Suitable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The error was visible on the invoice.",
+     "note": "Visible means able to be seen."
+    },
+    {
+     "type": "incorrect",
+     "text": "The discount was not visable at checkout.",
+     "correction": "The discount was not visible at checkout.",
+     "note": "Visible ends in -ible."
+    },
+    {
+     "type": "correct",
+     "text": "The instructions were understandable for new staff.",
+     "note": "Understandable means easy to understand."
+    },
+    {
+     "type": "incorrect",
+     "text": "The safety guide was understandible for visitors.",
+     "correction": "The safety guide was understandable for visitors.",
+     "note": "Understandable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The office is accessible by lift and stairs.",
+     "note": "Accessible means easy to enter or use."
+    },
+    {
+     "type": "incorrect",
+     "text": "The library is accessable during holidays.",
+     "correction": "The library is accessible during holidays.",
+     "note": "Accessible ends in -ible."
+    },
+    {
+     "type": "correct",
+     "text": "The train tickets are available from the machine.",
+     "note": "Available means ready to get or use."
+    },
+    {
+     "type": "incorrect",
+     "text": "The guidebooks are availible in the shop.",
+     "correction": "The guidebooks are available in the shop.",
+     "note": "Available ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The mountain road is passable in summer.",
+     "note": "Passable means possible to travel on."
+    },
+    {
+     "type": "correct",
+     "text": "The schedule is workable for a small team.",
+     "note": "Workable means practical or possible."
+    },
+    {
+     "type": "incorrect",
+     "text": "The new rota is workible for night staff.",
+     "correction": "The new rota is workable for night staff.",
+     "note": "Workable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The delay was predictable because of the storm.",
+     "note": "Predictable means expected."
+    },
+    {
+     "type": "incorrect",
+     "text": "The queue was predictible on Friday evening.",
+     "correction": "The queue was predictable on Friday evening.",
+     "note": "Predictable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "Most accidents are preventable with care.",
+     "note": "Preventable means able to be stopped."
+    },
+    {
+     "type": "incorrect",
+     "text": "Some delivery errors are preventible with checks.",
+     "correction": "Some delivery errors are preventable with checks.",
+     "note": "Preventable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The machine is durable and easy to clean.",
+     "note": "Durable means strong and long-lasting."
+    },
+    {
+     "type": "incorrect",
+     "text": "The plastic box is durible for outdoor use.",
+     "correction": "The plastic box is durable for outdoor use.",
+     "note": "Durable ends in -able."
+    },
+    {
+     "type": "incorrect",
+     "text": "The address was not legable on the parcel.",
+     "correction": "The address was not legible on the parcel.",
+     "note": "Legible ends in -ible."
+    },
+    {
+     "type": "correct",
+     "text": "The smell from the kitchen was terrible.",
+     "note": "Terrible means very bad."
+    },
+    {
+     "type": "incorrect",
+     "text": "The traffic this morning was terrable.",
+     "correction": "The traffic this morning was terrible.",
+     "note": "Terrible ends in -ible."
+    },
+    {
+     "type": "correct",
+     "text": "The old computer is still usable for simple tasks.",
+     "note": "Usable means able to be used."
+    },
+    {
+     "type": "correct",
+     "text": "The hotel offers comfortable rooms near the station.",
+     "note": "Comfortable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The coach is accessible for passengers with luggage.",
+     "note": "Accessible means easy to use or enter."
+    },
+    {
+     "type": "incorrect",
+     "text": "The platform is accessable from the main hall.",
+     "correction": "The platform is accessible from the main hall.",
+     "note": "Accessible ends in -ible."
+    },
+    {
+     "type": "correct",
+     "text": "Fresh bread is available every morning.",
+     "note": "Available means ready to buy or use."
+    },
+    {
+     "type": "incorrect",
+     "text": "Fresh fruit is availible at the corner shop.",
+     "correction": "Fresh fruit is available at the corner shop.",
+     "note": "Available ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The recipe is adaptable if you have no butter.",
+     "note": "Adaptable means able to be changed."
+    },
+    {
+     "type": "correct",
+     "text": "The queue was manageable before lunchtime.",
+     "note": "Manageable means easy to deal with."
+    },
+    {
+     "type": "incorrect",
+     "text": "The workload was manageible during the sale.",
+     "correction": "The workload was manageable during the sale.",
+     "note": "Manageable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The handwriting on the form was legible.",
+     "note": "Legible means clear enough to read."
+    },
+    {
+     "type": "incorrect",
+     "text": "The signature was barely legable on the receipt.",
+     "correction": "The signature was barely legible on the receipt.",
+     "note": "Legible ends in -ible."
+    },
+    {
+     "type": "correct",
+     "text": "The service was terrible during the busy hour.",
+     "note": "Terrible means very bad."
+    },
+    {
+     "type": "incorrect",
+     "text": "The connection was terrable in the mountains.",
+     "correction": "The connection was terrible in the mountains.",
+     "note": "Terrible ends in -ible."
+    },
+    {
+     "type": "correct",
+     "text": "The route is passable only with a four-wheel drive.",
+     "note": "Passable means possible to travel on."
+    },
+    {
+     "type": "correct",
+     "text": "The price increase was reasonable this year.",
+     "note": "Reasonable means fair or sensible."
+    },
+    {
+     "type": "incorrect",
+     "text": "The parking fee was reasonible near the centre.",
+     "correction": "The parking fee was reasonable near the centre.",
+     "note": "Reasonable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The forecast was reliable before the trip.",
+     "note": "Reliable means trusted or dependable."
+    },
+    {
+     "type": "incorrect",
+     "text": "The bus app is reliible for live updates.",
+     "correction": "The bus app is reliable for live updates.",
+     "note": "Reliable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The plan is workable if we start early.",
+     "note": "Workable means practical or possible."
+    },
+    {
+     "type": "incorrect",
+     "text": "The budget is workible for a short project.",
+     "correction": "The budget is workable for a short project.",
+     "note": "Workable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The mistake was preventable with a second check.",
+     "note": "Preventable means able to be avoided."
+    },
+    {
+     "type": "incorrect",
+     "text": "The delay was preventible with better planning.",
+     "correction": "The delay was preventable with better planning.",
+     "note": "Preventable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The suitcase is durable enough for frequent travel.",
+     "note": "Durable means strong and long-lasting."
+    },
+    {
+     "type": "incorrect",
+     "text": "The shoes are durible for long walks.",
+     "correction": "The shoes are durable for long walks.",
+     "note": "Durable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The station is reachable on foot from here.",
+     "note": "Reachable means possible to reach."
+    },
+    {
+     "type": "incorrect",
+     "text": "The warehouse is reachible by local bus.",
+     "correction": "The warehouse is reachable by local bus.",
+     "note": "Reachable ends in -able."
+    },
+    {
+     "type": "correct",
+     "text": "The policy is flexible for parents and carers.",
+     "note": "Flexible means able to change easily."
+    },
+    {
+     "type": "incorrect",
+     "text": "The shift system is flexable for students.",
+     "correction": "The shift system is flexible for students.",
+     "note": "Flexible ends in -ible."
+    },
+    {
+     "type": "correct",
+     "text": "The label was visible after we cleaned the jar.",
+     "note": "Visible means able to be seen."
+    },
+    {
+     "type": "incorrect",
+     "text": "The stamp was visable under bright light.",
+     "correction": "The stamp was visible under bright light.",
+     "note": "Visible ends in -ible."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The hotel bed was very ___ last night.",
+     "answer": "comfortable",
+     "choices": [
+      "comfortible",
+      "comfortable"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The price of the ticket was ___.",
+     "answer": "reasonable",
+     "choices": [
+      "reasonible",
+      "reasonable"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: My manager is ___ about start times.",
+     "answer": "flexible",
+     "choices": [
+      "flexable",
+      "flexible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Her handwriting is hardly ___ on this note.",
+     "answer": "legible",
+     "choices": [
+      "legible",
+      "legable"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: We had ___ weather on the whole trip.",
+     "answer": "terrible",
+     "choices": [
+      "terrable",
+      "terrible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Is it ___ to cook dinner in ten minutes?",
+     "answer": "possible",
+     "choices": [
+      "possible",
+      "possable"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: His idea sounded ___ to the whole class.",
+     "answer": "sensible",
+     "choices": [
+      "sensable",
+      "sensible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The music was barely ___ from the street.",
+     "answer": "audible",
+     "choices": [
+      "audable",
+      "audible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The new phone case is very ___.",
+     "answer": "durable",
+     "choices": [
+      "durable",
+      "durible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The seats at the cinema were ___.",
+     "answer": "comfortable",
+     "choices": [
+      "comfortable",
+      "comfortible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Who is ___ for cleaning the kitchen today?",
+     "answer": "responsible",
+     "choices": [
+      "responsible",
+      "responsable"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The water from this tap is ___.",
+     "answer": "drinkable",
+     "choices": [
+      "drinkable",
+      "drinkible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: This coat is ___ in the washing machine.",
+     "answer": "washable",
+     "choices": [
+      "washible",
+      "washable"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The cup was ___, so we wrapped it carefully.",
+     "answer": "breakable",
+     "choices": [
+      "breakible",
+      "breakable"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The train to the airport is ___ for students.",
+     "answer": "affordable",
+     "choices": [
+      "affordable",
+      "affordible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Her singing was ___ to a professional's.",
+     "answer": "comparable",
+     "choices": [
+      "comparable",
+      "comparible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The smell from the old fridge was ___.",
+     "answer": "horrible",
+     "choices": [
+      "horrible",
+      "horrable"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The film was ___ and we enjoyed it.",
+     "answer": "enjoyable",
+     "choices": [
+      "enjoyable",
+      "enjoyible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: This laptop is small and ___ for travel.",
+     "answer": "portable",
+     "choices": [
+      "portible",
+      "portable"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The new shop sells ___ clothes for teenagers.",
+     "answer": "fashionable",
+     "choices": [
+      "fashionible",
+      "fashionable"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The old bike is still ___ for short rides.",
+     "answer": "usable",
+     "choices": [
+      "usible",
+      "usable"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: That mountain view was almost ___.",
+     "answer": "incredible",
+     "choices": [
+      "incredable",
+      "incredible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The new software is ___ with my old computer.",
+     "answer": "compatible",
+     "choices": [
+      "compatable",
+      "compatible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: She is ___ to apply for the scholarship.",
+     "answer": "eligible",
+     "choices": [
+      "eligable",
+      "eligible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The bill is ___ by the end of the month.",
+     "answer": "payable",
+     "choices": [
+      "payable",
+      "payible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The painting is very ___ and kept in a safe.",
+     "answer": "valuable",
+     "choices": [
+      "valuible",
+      "valuable"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The pile of homework was ___ this week.",
+     "answer": "manageable",
+     "choices": [
+      "manageable",
+      "manageible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The village is ___ only by a narrow road.",
+     "answer": "reachable",
+     "choices": [
+      "reachible",
+      "reachable"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The weather in spring is often ___.",
+     "answer": "changeable",
+     "choices": [
+      "changeable",
+      "changeible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: It is ___ to read in such dim light.",
+     "answer": "impossible",
+     "choices": [
+      "impossible",
+      "impossable"
+     ]
+    },
+    {
+     "type": "correct_word",
+     "prompt": "comfortible",
+     "answer": "comfortable"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "reasonible",
+     "answer": "reasonable"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "flexable",
+     "answer": "flexible"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "legable",
+     "answer": "legible"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "terrable",
+     "answer": "terrible"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "edable",
+     "answer": "edible"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "possable",
+     "answer": "possible"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "sensable",
+     "answer": "sensible"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "audable",
+     "answer": "audible"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "reliible",
+     "answer": "reliable"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "durible",
+     "answer": "durable"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "responsable",
+     "answer": "responsible"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "drinkible",
+     "answer": "drinkable"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "washible",
+     "answer": "washable"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "affordible",
+     "answer": "affordable"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "horrable",
+     "answer": "horrible"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "enjoyible",
+     "answer": "enjoyable"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "portible",
+     "answer": "portable"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "incredable",
+     "answer": "incredible"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "compatable",
+     "answer": "compatible"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "eligable",
+     "answer": "eligible"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "valuible",
+     "answer": "valuable"
+    }
+   ]
+  },
+  {
+   "slug": "accept-vs-except",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "We accept card payments at the front desk.",
+     "note": "Accept = agree to take."
+    },
+    {
+     "type": "correct",
+     "text": "The library is open every day except Sunday.",
+     "note": "Except = not including."
+    },
+    {
+     "type": "correct",
+     "text": "He accepted the invitation to the wedding.",
+     "note": "Accept an invitation."
+    },
+    {
+     "type": "correct",
+     "text": "All the pupils enjoyed the trip except Sam.",
+     "note": "Except one person."
+    },
+    {
+     "type": "correct",
+     "text": "Please accept this small present from us.",
+     "note": "Accept = take willingly."
+    },
+    {
+     "type": "correct",
+     "text": "The shop sells everything except fresh fish.",
+     "note": "Except one item."
+    },
+    {
+     "type": "correct",
+     "text": "She accepted the apology and smiled again.",
+     "note": "Accept an apology."
+    },
+    {
+     "type": "correct",
+     "text": "The bus goes to every stop except the museum.",
+     "note": "Except one place."
+    },
+    {
+     "type": "correct",
+     "text": "They accepted our offer after a short talk.",
+     "note": "Accept an offer."
+    },
+    {
+     "type": "correct",
+     "text": "Everyone was ready except the youngest child.",
+     "note": "Except one person."
+    },
+    {
+     "type": "correct",
+     "text": "The café accepts orders online until midnight.",
+     "note": "Accept orders."
+    },
+    {
+     "type": "correct",
+     "text": "I like all kinds of music except loud rock.",
+     "note": "Except one type."
+    },
+    {
+     "type": "correct",
+     "text": "He accepted the keys and thanked the landlord.",
+     "note": "Accept = take something."
+    },
+    {
+     "type": "correct",
+     "text": "The office is closed every day except Friday.",
+     "note": "Except one day."
+    },
+    {
+     "type": "correct",
+     "text": "We accepted the changes to the travel plan.",
+     "note": "Accept changes."
+    },
+    {
+     "type": "correct",
+     "text": "All the guests left except the birthday girl.",
+     "note": "Except one guest."
+    },
+    {
+     "type": "correct",
+     "text": "The company accepts applications until June.",
+     "note": "Accept applications."
+    },
+    {
+     "type": "correct",
+     "text": "She likes every season except cold winter.",
+     "note": "Except one season."
+    },
+    {
+     "type": "correct",
+     "text": "I accept that the first attempt was difficult.",
+     "note": "Accept = agree something is true."
+    },
+    {
+     "type": "correct",
+     "text": "The train stops at all stations except Central.",
+     "note": "Except one station."
+    },
+    {
+     "type": "correct",
+     "text": "They accepted the delivery without any problems.",
+     "note": "Accept a delivery."
+    },
+    {
+     "type": "correct",
+     "text": "The shop is busy every day except Monday morning.",
+     "note": "Except one time."
+    },
+    {
+     "type": "correct",
+     "text": "Please accept my thanks for your help.",
+     "note": "Accept thanks."
+    },
+    {
+     "type": "correct",
+     "text": "Everyone passed the driving test except one learner.",
+     "note": "Except one person."
+    },
+    {
+     "type": "correct",
+     "text": "The hotel accepts small pets in some rooms.",
+     "note": "Accept pets."
+    },
+    {
+     "type": "correct",
+     "text": "We visited every room except the old attic.",
+     "note": "Except one room."
+    },
+    {
+     "type": "correct",
+     "text": "She accepted the challenge and started training.",
+     "note": "Accept a challenge."
+    },
+    {
+     "type": "correct",
+     "text": "The market is open every day except Christmas Day.",
+     "note": "Except one day."
+    },
+    {
+     "type": "correct",
+     "text": "I accept your advice about the new job.",
+     "note": "Accept advice."
+    },
+    {
+     "type": "correct",
+     "text": "All the children were quiet except the twins.",
+     "note": "Except some people."
+    },
+    {
+     "type": "correct",
+     "text": "The restaurant accepts bookings for large groups.",
+     "note": "Accept bookings."
+    },
+    {
+     "type": "correct",
+     "text": "The garden is beautiful except for the old shed.",
+     "note": "Except one part."
+    },
+    {
+     "type": "incorrect",
+     "text": "I except your kind offer of help.",
+     "correction": "I accept your kind offer of help.",
+     "note": "Accept an offer."
+    },
+    {
+     "type": "incorrect",
+     "text": "Everyone came to class accept Anna.",
+     "correction": "Everyone came to class except Anna.",
+     "note": "Except = not including."
+    },
+    {
+     "type": "incorrect",
+     "text": "The hotel does not except bookings by email.",
+     "correction": "The hotel does not accept bookings by email.",
+     "note": "Accept bookings."
+    },
+    {
+     "type": "incorrect",
+     "text": "We except the invitation with pleasure.",
+     "correction": "We accept the invitation with pleasure.",
+     "note": "Accept an invitation."
+    },
+    {
+     "type": "incorrect",
+     "text": "The shop is open every day accept Christmas.",
+     "correction": "The shop is open every day except Christmas.",
+     "note": "Except one day."
+    },
+    {
+     "type": "incorrect",
+     "text": "He could not except the referee's decision.",
+     "correction": "He could not accept the referee's decision.",
+     "note": "Accept a decision."
+    },
+    {
+     "type": "incorrect",
+     "text": "All the students arrived accept the new boy.",
+     "correction": "All the students arrived except the new boy.",
+     "note": "Except one student."
+    },
+    {
+     "type": "incorrect",
+     "text": "The café excepts orders by phone only.",
+     "correction": "The café accepts orders by phone only.",
+     "note": "Accept orders."
+    },
+    {
+     "type": "incorrect",
+     "text": "I like every subject accept history.",
+     "correction": "I like every subject except history.",
+     "note": "Except one subject."
+    },
+    {
+     "type": "incorrect",
+     "text": "Please except my apology for being late.",
+     "correction": "Please accept my apology for being late.",
+     "note": "Accept an apology."
+    },
+    {
+     "type": "incorrect",
+     "text": "The bus stops everywhere accept the station.",
+     "correction": "The bus stops everywhere except the station.",
+     "note": "Except one place."
+    },
+    {
+     "type": "incorrect",
+     "text": "She excepted the prize at the ceremony.",
+     "correction": "She accepted the prize at the ceremony.",
+     "note": "Accept a prize."
+    },
+    {
+     "type": "incorrect",
+     "text": "The team was happy accept the goalkeeper.",
+     "correction": "The team was happy except the goalkeeper.",
+     "note": "Except one player."
+    },
+    {
+     "type": "incorrect",
+     "text": "The bank excepts payments in euros.",
+     "correction": "The bank accepts payments in euros.",
+     "note": "Accept payments."
+    },
+    {
+     "type": "incorrect",
+     "text": "Everyone enjoyed the film accept my brother.",
+     "correction": "Everyone enjoyed the film except my brother.",
+     "note": "Except one person."
+    },
+    {
+     "type": "incorrect",
+     "text": "We except the terms before using the website.",
+     "correction": "We accept the terms before using the website.",
+     "note": "Accept the terms."
+    },
+    {
+     "type": "incorrect",
+     "text": "The garden is lovely accept in heavy rain.",
+     "correction": "The garden is lovely except in heavy rain.",
+     "note": "Except in one condition."
+    },
+    {
+     "type": "incorrect",
+     "text": "The office accepts visitors accept on Sundays.",
+     "correction": "The office accepts visitors except on Sundays.",
+     "note": "Except one day."
+    },
+    {
+     "type": "incorrect",
+     "text": "She excepted the job after thinking carefully.",
+     "correction": "She accepted the job after thinking carefully.",
+     "note": "Accept a job."
+    },
+    {
+     "type": "incorrect",
+     "text": "All the children played outside accept Tom.",
+     "correction": "All the children played outside except Tom.",
+     "note": "Except one child."
+    },
+    {
+     "type": "incorrect",
+     "text": "The school excepts new pupils in September.",
+     "correction": "The school accepts new pupils in September.",
+     "note": "Accept pupils."
+    },
+    {
+     "type": "incorrect",
+     "text": "I could not except the news about the flight.",
+     "correction": "I could not accept the news about the flight.",
+     "note": "Accept news."
+    },
+    {
+     "type": "incorrect",
+     "text": "The museum is open every day accept Tuesday.",
+     "correction": "The museum is open every day except Tuesday.",
+     "note": "Except one day."
+    },
+    {
+     "type": "incorrect",
+     "text": "They accepted the plan accept the final cost.",
+     "correction": "They accepted the plan except the final cost.",
+     "note": "Except one detail."
+    },
+    {
+     "type": "incorrect",
+     "text": "Please except this ticket for the concert.",
+     "correction": "Please accept this ticket for the concert.",
+     "note": "Accept a ticket."
+    },
+    {
+     "type": "incorrect",
+     "text": "Everyone was tired accept the guide.",
+     "correction": "Everyone was tired except the guide.",
+     "note": "Except one person."
+    },
+    {
+     "type": "incorrect",
+     "text": "The shop excepts returns within two weeks.",
+     "correction": "The shop accepts returns within two weeks.",
+     "note": "Accept returns."
+    },
+    {
+     "type": "incorrect",
+     "text": "I like all the colours accept bright green.",
+     "correction": "I like all the colours except bright green.",
+     "note": "Except one colour."
+    },
+    {
+     "type": "incorrect",
+     "text": "The hotel accepts guests accept during repairs.",
+     "correction": "The hotel accepts guests except during repairs.",
+     "note": "Except one period."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "fill_gap",
+     "prompt": "Can you ___ this parcel at the office?",
+     "answer": "accept"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The whole family came ___ my cousin.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "She was proud to ___ the medal.",
+     "answer": "accept"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The café is closed every day ___ Sunday.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "They ___ our booking by email this morning.",
+     "answer": "accepted"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "All the pupils passed ___ one boy.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Please ___ this letter from the postman.",
+     "answer": "accept"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The shop sells every drink ___ lemonade.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "He could not ___ the referee's decision.",
+     "answer": "accept"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Everyone enjoyed the picnic ___ my sister.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The train stops at every stop ___ the airport.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "I am happy to ___ your kind invitation.",
+     "answer": "accept"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "We visited every room ___ the locked office.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "She ___ the money and thanked him.",
+     "answer": "accepted"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The library is open every day ___ Friday.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Can the restaurant ___ large groups?",
+     "answer": "accept"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "I like all the colours ___ bright orange.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "They ___ the new rules after a long meeting.",
+     "answer": "accepted"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "All the guests left ___ the birthday boy.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Please ___ my thanks for your help.",
+     "answer": "accept"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The bus goes to town every day ___ Christmas Day.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "He was ready to ___ the difficult task.",
+     "answer": "accept"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The shop accepts all cards ___ this old one.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "She could not ___ the news about the delay.",
+     "answer": "accept"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Everyone was ready ___ the youngest player.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The school ___ new pupils every September.",
+     "answer": "accepts"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The garden looks lovely ___ the broken fence.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "I ___ that we need more time for this project.",
+     "answer": "accept"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "All the children were quiet ___ the twins.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "We packed everything ___ the heavy books.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "He ___ the challenge and began training.",
+     "answer": "accepted"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The market is busy every day ___ Monday morning.",
+     "answer": "except"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Please ___ this small gift from all of us.",
+     "answer": "accept"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "They ___ my complaint and gave me a refund.",
+     "answer": "accepted"
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: We work every day ___ Saturday.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: She was glad to ___ the award.",
+     "answer": "accept",
+     "choices": [
+      "accept",
+      "except"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: All the shops were open ___ one.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: They ___ the delivery without problems.",
+     "answer": "accepted",
+     "choices": [
+      "accepted",
+      "excepted"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: I know everyone here ___ Nina.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The hotel ___ small dogs.",
+     "answer": "accepts",
+     "choices": [
+      "accepts",
+      "excepts"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Every room ___ number 8 is free.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: We sell everything ___ old magazines.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: I had to ___ the changes to my flight.",
+     "answer": "accept",
+     "choices": [
+      "accept",
+      "except"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The office is quiet every day ___ Wednesday.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Can you ___ this package for me?",
+     "answer": "accept",
+     "choices": [
+      "accept",
+      "except"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: I enjoy every subject ___ geography.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: She ___ the prize at the ceremony.",
+     "answer": "accepted",
+     "choices": [
+      "accepted",
+      "excepted"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Does this shop ___ returns?",
+     "answer": "accept",
+     "choices": [
+      "accept",
+      "except"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: She was ready to ___ the challenge.",
+     "answer": "accept",
+     "choices": [
+      "accept",
+      "except"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: They ___ my application last week.",
+     "answer": "accepted",
+     "choices": [
+      "accepted",
+      "excepted"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The park is open every day ___ Christmas.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: I am happy to ___ your suggestion.",
+     "answer": "accept",
+     "choices": [
+      "accept",
+      "except"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: All the students arrived ___ the speaker.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The restaurant ___ reservations by phone.",
+     "answer": "accepts",
+     "choices": [
+      "accepts",
+      "excepts"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The museum is closed every day ___ Tuesday.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: He could not ___ the bad result.",
+     "answer": "accept",
+     "choices": [
+      "accept",
+      "except"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Everyone liked the film ___ my father.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Please ___ the terms before you continue.",
+     "answer": "accept",
+     "choices": [
+      "accept",
+      "except"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The bus stops everywhere ___ the station.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: She ___ the apology after their argument.",
+     "answer": "accepted",
+     "choices": [
+      "accepted",
+      "excepted"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The hotel does not ___ large dogs.",
+     "answer": "accept",
+     "choices": [
+      "accept",
+      "except"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: All the workers were present ___ Maria.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The café does not ___ cash payments.",
+     "answer": "accept",
+     "choices": [
+      "accept",
+      "except"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The team was ready ___ the goalkeeper.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: I like all fruit ___ bananas.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: They ___ the new timetable yesterday.",
+     "answer": "accepted",
+     "choices": [
+      "accepted",
+      "excepted"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The shop is open every day ___ Sunday.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: He was happy to ___ the ticket.",
+     "answer": "accept",
+     "choices": [
+      "accept",
+      "except"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Everybody ___ Anna joined the trip.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The library ___ returned books after 5 pm.",
+     "answer": "accepts",
+     "choices": [
+      "accepts",
+      "excepts"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: All the windows ___ this one were closed.",
+     "answer": "except",
+     "choices": [
+      "except",
+      "accept"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: She could not ___ the result of the match.",
+     "answer": "accept",
+     "choices": [
+      "accept",
+      "except"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The museum ___ school groups on weekdays.",
+     "answer": "accepts",
+     "choices": [
+      "accepts",
+      "excepts"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "advice-vs-advise",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "My uncle gave me practical advice about cycling.",
+     "note": "Advice is a noun."
+    },
+    {
+     "type": "correct",
+     "text": "Can you advise me about trains to London?",
+     "note": "Advise is a verb."
+    },
+    {
+     "type": "correct",
+     "text": "The nurse advised him to drink more water.",
+     "note": "Advise = give a suggestion."
+    },
+    {
+     "type": "correct",
+     "text": "Her advice about the interview was helpful.",
+     "note": "Advice is a thing."
+    },
+    {
+     "type": "correct",
+     "text": "I advise you to book the tickets early.",
+     "note": "Advise is an action."
+    },
+    {
+     "type": "correct",
+     "text": "We received good advice from the tourist office.",
+     "note": "Advice is a noun."
+    },
+    {
+     "type": "correct",
+     "text": "The coach advised the players to rest.",
+     "note": "Advise = give a suggestion."
+    },
+    {
+     "type": "correct",
+     "text": "His advice helped me fix my bicycle.",
+     "note": "Advice is a thing."
+    },
+    {
+     "type": "correct",
+     "text": "Please advise us if the delivery is late.",
+     "note": "Advise is a verb."
+    },
+    {
+     "type": "correct",
+     "text": "She took my advice and packed an umbrella.",
+     "note": "Advice is a noun."
+    },
+    {
+     "type": "correct",
+     "text": "The bank can advise you about savings.",
+     "note": "Advise is an action."
+    },
+    {
+     "type": "correct",
+     "text": "My mother always gives sensible advice.",
+     "note": "Advice is a thing."
+    },
+    {
+     "type": "correct",
+     "text": "The teacher advised us to practise every day.",
+     "note": "Advise is a verb."
+    },
+    {
+     "type": "correct",
+     "text": "Thank you for your advice about the recipe.",
+     "note": "Advice is a noun."
+    },
+    {
+     "type": "correct",
+     "text": "I would advise you not to swim alone.",
+     "note": "Advise is an action."
+    },
+    {
+     "type": "correct",
+     "text": "Their advice made the move much easier.",
+     "note": "Advice is a thing."
+    },
+    {
+     "type": "incorrect",
+     "text": "Can you give me some advise about cooking?",
+     "correction": "Can you give me some advice about cooking?",
+     "note": "Advice is a noun."
+    },
+    {
+     "type": "incorrect",
+     "text": "I advice you to take an earlier train.",
+     "correction": "I advise you to take an earlier train.",
+     "note": "Advise is a verb."
+    },
+    {
+     "type": "incorrect",
+     "text": "The doctor gave me useful advise.",
+     "correction": "The doctor gave me useful advice.",
+     "note": "Advice is a noun."
+    },
+    {
+     "type": "incorrect",
+     "text": "Please advice me before I sign the form.",
+     "correction": "Please advise me before I sign the form.",
+     "note": "Advise is a verb."
+    },
+    {
+     "type": "incorrect",
+     "text": "She always gives me good advise.",
+     "correction": "She always gives me good advice.",
+     "note": "Advice is a noun."
+    },
+    {
+     "type": "incorrect",
+     "text": "He adviced me to wear warmer clothes.",
+     "correction": "He advised me to wear warmer clothes.",
+     "note": "Advise is a verb."
+    },
+    {
+     "type": "incorrect",
+     "text": "I need your advise about the new job.",
+     "correction": "I need your advice about the new job.",
+     "note": "Advice is a noun."
+    },
+    {
+     "type": "incorrect",
+     "text": "The guide will advice you about the route.",
+     "correction": "The guide will advise you about the route.",
+     "note": "Advise is a verb."
+    },
+    {
+     "type": "incorrect",
+     "text": "Her advise saved me a lot of time.",
+     "correction": "Her advice saved me a lot of time.",
+     "note": "Advice is a noun."
+    },
+    {
+     "type": "incorrect",
+     "text": "Can you advice me which laptop to buy?",
+     "correction": "Can you advise me which laptop to buy?",
+     "note": "Advise is a verb."
+    },
+    {
+     "type": "incorrect",
+     "text": "My friend never takes my advise.",
+     "correction": "My friend never takes my advice.",
+     "note": "Advice is a noun."
+    },
+    {
+     "type": "incorrect",
+     "text": "We asked for advise at the travel agency.",
+     "correction": "We asked for advice at the travel agency.",
+     "note": "Advice is a noun."
+    },
+    {
+     "type": "incorrect",
+     "text": "I would advice you to check the timetable.",
+     "correction": "I would advise you to check the timetable.",
+     "note": "Advise is a verb."
+    },
+    {
+     "type": "incorrect",
+     "text": "His advise about saving money was clear.",
+     "correction": "His advice about saving money was clear.",
+     "note": "Advice is a noun."
+    },
+    {
+     "type": "incorrect",
+     "text": "Please advice us when the parcel arrives.",
+     "correction": "Please advise us when the parcel arrives.",
+     "note": "Advise is a verb."
+    },
+    {
+     "type": "incorrect",
+     "text": "The coach gave the team useful advise.",
+     "correction": "The coach gave the team useful advice.",
+     "note": "Advice is a noun."
+    },
+    {
+     "type": "incorrect",
+     "text": "She advices customers about mobile plans.",
+     "correction": "She advises customers about mobile plans.",
+     "note": "Advise is a verb."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "fill_gap",
+     "prompt": "My neighbour gave me useful ___ about gardening.",
+     "answer": "advice"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Can you ___ me how to apply for the job?",
+     "answer": "advise"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The doctor will ___ you to rest for two days.",
+     "answer": "advise"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "I took her ___ and arrived early.",
+     "answer": "advice"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Who can ___ me about visa documents?",
+     "answer": "advise"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "That was a good piece of ___.",
+     "answer": "advice"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The guide will ___ you about local buses.",
+     "answer": "advise"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "We need ___ about choosing a new fridge.",
+     "answer": "advice"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "I strongly ___ you to check the price first.",
+     "answer": "advise"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Her ___ helped me pass the driving test.",
+     "answer": "advice"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Please ___ me if the meeting changes.",
+     "answer": "advise"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "My father always gives calm ___.",
+     "answer": "advice"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The teacher will ___ you before the exam.",
+     "answer": "advise"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Can I ask for your ___ about this email?",
+     "answer": "advice"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The bank can ___ you about a mortgage.",
+     "answer": "advise"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "His ___ saved us a lot of money.",
+     "answer": "advice"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "I would ___ you not to buy that old car.",
+     "answer": "advise"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "She asked the librarian for ___ about books.",
+     "answer": "advice"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The coach will ___ the team before the match.",
+     "answer": "advise"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Thank you for your ___ about the interview.",
+     "answer": "advice"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Can you ___ me which train to take?",
+     "answer": "advise"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "We followed the doctor's ___ and stayed home.",
+     "answer": "advice"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The shop assistant can ___ you about sizes.",
+     "answer": "advise"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "My sister gave me helpful ___ about packing.",
+     "answer": "advice"
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: I need some ___ about my CV.",
+     "answer": "advice",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The lawyer can ___ you about the contract.",
+     "answer": "advise",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Can you ___ me on the best route?",
+     "answer": "advise",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: His ___ was very useful.",
+     "answer": "advice",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The nurse will ___ him to rest.",
+     "answer": "advise",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: We asked for ___ at the tourist office.",
+     "answer": "advice",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: I would ___ you to leave early.",
+     "answer": "advise",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Her ___ helped me choose a course.",
+     "answer": "advice",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Please give me a piece of ___.",
+     "answer": "advice",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The teacher will ___ us to revise.",
+     "answer": "advise",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: My brother never takes my ___.",
+     "answer": "advice",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Can you ___ me which phone to buy?",
+     "answer": "advise",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The coach gave the team useful ___.",
+     "answer": "advice",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: She will ___ you about the timetable.",
+     "answer": "advise",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: I appreciate your ___ about the move.",
+     "answer": "advice",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The guide can ___ you about the museum.",
+     "answer": "advise",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: His ___ made the trip easier.",
+     "answer": "advice",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: I strongly ___ you to read the rules.",
+     "answer": "advise",
+     "choices": [
+      "advice",
+      "advise"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "irregular-past-common",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "I bought a present for my sister.",
+     "note": "Buy becomes bought."
+    },
+    {
+     "type": "correct",
+     "text": "She taught me how to cook rice.",
+     "note": "Teach becomes taught."
+    },
+    {
+     "type": "correct",
+     "text": "We thought the film was excellent.",
+     "note": "Think becomes thought."
+    },
+    {
+     "type": "correct",
+     "text": "He brought his camera to the party.",
+     "note": "Bring becomes brought."
+    },
+    {
+     "type": "correct",
+     "text": "The dog caught the ball in the garden.",
+     "note": "Catch becomes caught."
+    },
+    {
+     "type": "correct",
+     "text": "They fought bravely in the final match.",
+     "note": "Fight becomes fought."
+    },
+    {
+     "type": "correct",
+     "text": "I sold my old bike last month.",
+     "note": "Sell becomes sold."
+    },
+    {
+     "type": "correct",
+     "text": "She kept the ticket as a memory.",
+     "note": "Keep becomes kept."
+    },
+    {
+     "type": "correct",
+     "text": "We left the hotel before breakfast.",
+     "note": "Leave becomes left."
+    },
+    {
+     "type": "correct",
+     "text": "He made a cake for his mother.",
+     "note": "Make becomes made."
+    },
+    {
+     "type": "correct",
+     "text": "They met at the station after work.",
+     "note": "Meet becomes met."
+    },
+    {
+     "type": "correct",
+     "text": "I said goodbye at the airport.",
+     "note": "Say becomes said."
+    },
+    {
+     "type": "correct",
+     "text": "The children built a sandcastle together.",
+     "note": "Build becomes built."
+    },
+    {
+     "type": "correct",
+     "text": "She sent an email to her teacher.",
+     "note": "Send becomes sent."
+    },
+    {
+     "type": "correct",
+     "text": "We spent the weekend by the sea.",
+     "note": "Spend becomes spent."
+    },
+    {
+     "type": "correct",
+     "text": "He understood the instructions quickly.",
+     "note": "Understand becomes understood."
+    },
+    {
+     "type": "incorrect",
+     "text": "I buyed a new phone case yesterday.",
+     "correction": "I bought a new phone case yesterday.",
+     "note": "Buy becomes bought."
+    },
+    {
+     "type": "incorrect",
+     "text": "She teached me some Spanish words.",
+     "correction": "She taught me some Spanish words.",
+     "note": "Teach becomes taught."
+    },
+    {
+     "type": "incorrect",
+     "text": "We thinked the plan was too expensive.",
+     "correction": "We thought the plan was too expensive.",
+     "note": "Think becomes thought."
+    },
+    {
+     "type": "incorrect",
+     "text": "He bringed his homework this morning.",
+     "correction": "He brought his homework this morning.",
+     "note": "Bring becomes brought."
+    },
+    {
+     "type": "incorrect",
+     "text": "The boy catched the bus to school.",
+     "correction": "The boy caught the bus to school.",
+     "note": "Catch becomes caught."
+    },
+    {
+     "type": "incorrect",
+     "text": "They fighted about the TV remote.",
+     "correction": "They fought about the TV remote.",
+     "note": "Fight becomes fought."
+    },
+    {
+     "type": "incorrect",
+     "text": "She keeped the receipt in her bag.",
+     "correction": "She kept the receipt in her bag.",
+     "note": "Keep becomes kept."
+    },
+    {
+     "type": "incorrect",
+     "text": "We leaved the party at ten o'clock.",
+     "correction": "We left the party at ten o'clock.",
+     "note": "Leave becomes left."
+    },
+    {
+     "type": "incorrect",
+     "text": "He maked a paper plane in class.",
+     "correction": "He made a paper plane in class.",
+     "note": "Make becomes made."
+    },
+    {
+     "type": "incorrect",
+     "text": "They meeted their cousins at the airport.",
+     "correction": "They met their cousins at the airport.",
+     "note": "Meet becomes met."
+    },
+    {
+     "type": "incorrect",
+     "text": "I sayed nothing during the meeting.",
+     "correction": "I said nothing during the meeting.",
+     "note": "Say becomes said."
+    },
+    {
+     "type": "incorrect",
+     "text": "The children builded a den in the garden.",
+     "correction": "The children built a den in the garden.",
+     "note": "Build becomes built."
+    },
+    {
+     "type": "incorrect",
+     "text": "She sended a message to her friend.",
+     "correction": "She sent a message to her friend.",
+     "note": "Send becomes sent."
+    },
+    {
+     "type": "incorrect",
+     "text": "We spended all our money on tickets.",
+     "correction": "We spent all our money on tickets.",
+     "note": "Spend becomes spent."
+    },
+    {
+     "type": "incorrect",
+     "text": "He understanded the question easily.",
+     "correction": "He understood the question easily.",
+     "note": "Understand becomes understood."
+    },
+    {
+     "type": "incorrect",
+     "text": "My dad buyed flowers for my mum.",
+     "correction": "My dad bought flowers for my mum.",
+     "note": "Buy becomes bought."
+    },
+    {
+     "type": "incorrect",
+     "text": "The coach teached us a new warm-up.",
+     "correction": "The coach taught us a new warm-up.",
+     "note": "Teach becomes taught."
+    },
+    {
+     "type": "incorrect",
+     "text": "I thinked the train was at six.",
+     "correction": "I thought the train was at six.",
+     "note": "Think becomes thought."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "fill_gap",
+     "prompt": "Yesterday I ___ a book about space. (buy)",
+     "answer": "bought"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "My uncle ___ me to swim. (teach)",
+     "answer": "taught"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "She ___ her umbrella at the café. (leave)",
+     "answer": "left"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "We ___ two hours in the museum. (spend)",
+     "answer": "spent"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "He ___ a funny story at dinner. (tell)",
+     "answer": "told"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "buyed",
+     "answer": "bought"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "teached",
+     "answer": "taught"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "fighted",
+     "answer": "fought"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "leaved",
+     "answer": "left"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "builded",
+     "answer": "built"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "sended",
+     "answer": "sent"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "spended",
+     "answer": "spent"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "understanded",
+     "answer": "understood"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the past form of make.",
+     "answer": "made"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the past form of meet.",
+     "answer": "met"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the past form of build.",
+     "answer": "built"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the past form of send.",
+     "answer": "sent"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the past form of spend.",
+     "answer": "spent"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the past form of understand.",
+     "answer": "understood"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the past form of say.",
+     "answer": "said"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the past form of fight.",
+     "answer": "fought"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the past form of catch.",
+     "answer": "caught"
+    }
+   ]
+  },
+  {
+   "slug": "irregular-plurals",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "Several children were drawing in the park.",
+     "note": "Child becomes children."
+    },
+    {
+     "type": "correct",
+     "text": "The farmer keeps twenty sheep near the village.",
+     "note": "Sheep has no plural -s."
+    },
+    {
+     "type": "correct",
+     "text": "Three mice ran behind the kitchen cupboard.",
+     "note": "Mouse becomes mice."
+    },
+    {
+     "type": "correct",
+     "text": "Many people enjoy walking by the river.",
+     "note": "Person becomes people."
+    },
+    {
+     "type": "correct",
+     "text": "The dentist cleaned two teeth this morning.",
+     "note": "Tooth becomes teeth."
+    },
+    {
+     "type": "correct",
+     "text": "Both men carried heavy boxes upstairs.",
+     "note": "Man becomes men."
+    },
+    {
+     "type": "correct",
+     "text": "Several women joined the evening class.",
+     "note": "Woman becomes women."
+    },
+    {
+     "type": "correct",
+     "text": "The geese landed beside the small pond.",
+     "note": "Goose becomes geese."
+    },
+    {
+     "type": "correct",
+     "text": "His feet hurt after the long walk.",
+     "note": "Foot becomes feet."
+    },
+    {
+     "type": "correct",
+     "text": "The farmer used two oxen to pull the cart.",
+     "note": "Ox becomes oxen."
+    },
+    {
+     "type": "correct",
+     "text": "A few mice live under the old shed.",
+     "note": "Mouse becomes mice."
+    },
+    {
+     "type": "correct",
+     "text": "The children visited the farm with their teacher.",
+     "note": "Child becomes children."
+    },
+    {
+     "type": "correct",
+     "text": "Many people queued for the new exhibition.",
+     "note": "Person becomes people."
+    },
+    {
+     "type": "correct",
+     "text": "The sheep stayed close to their lambs.",
+     "note": "Sheep has no plural -s."
+    },
+    {
+     "type": "correct",
+     "text": "Two teeth were broken after the accident.",
+     "note": "Tooth becomes teeth."
+    },
+    {
+     "type": "correct",
+     "text": "The women prepared food for the festival.",
+     "note": "Woman becomes women."
+    },
+    {
+     "type": "incorrect",
+     "text": "Three childs were playing in the garden.",
+     "correction": "Three children were playing in the garden.",
+     "note": "Child becomes children."
+    },
+    {
+     "type": "incorrect",
+     "text": "The farmer has five sheeps on his land.",
+     "correction": "The farmer has five sheep on his land.",
+     "note": "Sheep has no plural -s."
+    },
+    {
+     "type": "incorrect",
+     "text": "I saw two mouses behind the fridge.",
+     "correction": "I saw two mice behind the fridge.",
+     "note": "Mouse becomes mice."
+    },
+    {
+     "type": "incorrect",
+     "text": "The baby has four tooths already.",
+     "correction": "The baby has four teeth already.",
+     "note": "Tooth becomes teeth."
+    },
+    {
+     "type": "incorrect",
+     "text": "Two mans waited outside the office.",
+     "correction": "Two men waited outside the office.",
+     "note": "Man becomes men."
+    },
+    {
+     "type": "incorrect",
+     "text": "Several womans joined the walking group.",
+     "correction": "Several women joined the walking group.",
+     "note": "Woman becomes women."
+    },
+    {
+     "type": "incorrect",
+     "text": "The gooses swam across the pond.",
+     "correction": "The geese swam across the pond.",
+     "note": "Goose becomes geese."
+    },
+    {
+     "type": "incorrect",
+     "text": "My feets were cold in the snow.",
+     "correction": "My feet were cold in the snow.",
+     "note": "Foot becomes feet."
+    },
+    {
+     "type": "incorrect",
+     "text": "The farmer bought two oxes last spring.",
+     "correction": "The farmer bought two oxen last spring.",
+     "note": "Ox becomes oxen."
+    },
+    {
+     "type": "incorrect",
+     "text": "The childrens enjoyed the school trip.",
+     "correction": "The children enjoyed the school trip.",
+     "note": "Children is already plural."
+    },
+    {
+     "type": "incorrect",
+     "text": "Those sheeps belong to our neighbour.",
+     "correction": "Those sheep belong to our neighbour.",
+     "note": "Sheep has no plural -s."
+    },
+    {
+     "type": "incorrect",
+     "text": "The dentist checked my tooths carefully.",
+     "correction": "The dentist checked my teeth carefully.",
+     "note": "Tooth becomes teeth."
+    },
+    {
+     "type": "incorrect",
+     "text": "The mans helped carry the furniture.",
+     "correction": "The men helped carry the furniture.",
+     "note": "Man becomes men."
+    },
+    {
+     "type": "incorrect",
+     "text": "Several womans were waiting at the clinic.",
+     "correction": "Several women were waiting at the clinic.",
+     "note": "Woman becomes women."
+    },
+    {
+     "type": "incorrect",
+     "text": "We fed the gooses by the river.",
+     "correction": "We fed the geese by the river.",
+     "note": "Goose becomes geese."
+    },
+    {
+     "type": "incorrect",
+     "text": "His feets hurt after the football match.",
+     "correction": "His feet hurt after the football match.",
+     "note": "Foot becomes feet."
+    },
+    {
+     "type": "incorrect",
+     "text": "Two oxes pulled the heavy cart uphill.",
+     "correction": "Two oxen pulled the heavy cart uphill.",
+     "note": "Ox becomes oxen."
+    },
+    {
+     "type": "incorrect",
+     "text": "The farmer keeps sheeps and cows.",
+     "correction": "The farmer keeps sheep and cows.",
+     "note": "Sheep has no plural -s."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "fill_gap",
+     "prompt": "Two ___ ran across the kitchen floor. (мыши)",
+     "answer": "mice"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The farmer keeps ten ___ near the hill. (овцы)",
+     "answer": "sheep"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Several ___ were waiting at the bus stop. (женщины)",
+     "answer": "women"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The ___ pulled the heavy cart along the road. (волы)",
+     "answer": "oxen"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "childs",
+     "answer": "children"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "mans",
+     "answer": "men"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "gooses",
+     "answer": "geese"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "childrens",
+     "answer": "children"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "sheeps",
+     "answer": "sheep"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "teeths",
+     "answer": "teeth"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "mices",
+     "answer": "mice"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one child.",
+     "answer": "children"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one mouse.",
+     "answer": "mice"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one person.",
+     "answer": "people"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one foot.",
+     "answer": "feet"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one ox.",
+     "answer": "oxen"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one sheep.",
+     "answer": "sheep"
+    }
+   ]
+  },
+  {
+   "slug": "comparatives-er-est",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "My brother is taller than my father.",
+     "note": "Tall adds -er."
+    },
+    {
+     "type": "correct",
+     "text": "This is the tallest building in our street.",
+     "note": "Tall adds -est."
+    },
+    {
+     "type": "correct",
+     "text": "The blue bag is heavier than the red one.",
+     "note": "Happy-type y changes to i."
+    },
+    {
+     "type": "correct",
+     "text": "She is the youngest player in the team.",
+     "note": "Young adds -est."
+    },
+    {
+     "type": "correct",
+     "text": "Today is warmer than yesterday.",
+     "note": "Warm adds -er."
+    },
+    {
+     "type": "correct",
+     "text": "That was the warmest day this month.",
+     "note": "Warm adds -est."
+    },
+    {
+     "type": "correct",
+     "text": "My new shoes are cleaner than my old ones.",
+     "note": "Clean adds -er."
+    },
+    {
+     "type": "correct",
+     "text": "This is the cleanest kitchen in the house.",
+     "note": "Clean adds -est."
+    },
+    {
+     "type": "correct",
+     "text": "The black cat is smaller than the grey one.",
+     "note": "Small adds -er."
+    },
+    {
+     "type": "correct",
+     "text": "It is the smallest room in the flat.",
+     "note": "Small adds -est."
+    },
+    {
+     "type": "correct",
+     "text": "The road is wider after the repairs.",
+     "note": "Wide drops e before -er."
+    },
+    {
+     "type": "correct",
+     "text": "This is the widest path in the park.",
+     "note": "Wide drops e before -est."
+    },
+    {
+     "type": "correct",
+     "text": "My coffee is stronger than yours.",
+     "note": "Strong adds -er."
+    },
+    {
+     "type": "correct",
+     "text": "This is the strongest tea in the café.",
+     "note": "Strong adds -est."
+    },
+    {
+     "type": "correct",
+     "text": "The test was easier than the last one.",
+     "note": "Easy changes y to i."
+    },
+    {
+     "type": "correct",
+     "text": "It was the easiest question on the paper.",
+     "note": "Easy changes y to i."
+    },
+    {
+     "type": "incorrect",
+     "text": "My brother is more tall than my father.",
+     "correction": "My brother is taller than my father.",
+     "note": "Tall adds -er."
+    },
+    {
+     "type": "incorrect",
+     "text": "This is the most tall building in our street.",
+     "correction": "This is the tallest building in our street.",
+     "note": "Tall adds -est."
+    },
+    {
+     "type": "incorrect",
+     "text": "The blue bag is heavyer than the red one.",
+     "correction": "The blue bag is heavier than the red one.",
+     "note": "Y changes to i."
+    },
+    {
+     "type": "incorrect",
+     "text": "She is the younguest player in the team.",
+     "correction": "She is the youngest player in the team.",
+     "note": "Young adds -est."
+    },
+    {
+     "type": "incorrect",
+     "text": "Today is more warm than yesterday.",
+     "correction": "Today is warmer than yesterday.",
+     "note": "Warm adds -er."
+    },
+    {
+     "type": "incorrect",
+     "text": "My new shoes are more clean than my old ones.",
+     "correction": "My new shoes are cleaner than my old ones.",
+     "note": "Clean adds -er."
+    },
+    {
+     "type": "incorrect",
+     "text": "The black cat is more small than the grey one.",
+     "correction": "The black cat is smaller than the grey one.",
+     "note": "Small adds -er."
+    },
+    {
+     "type": "incorrect",
+     "text": "The road is wideer after the repairs.",
+     "correction": "The road is wider after the repairs.",
+     "note": "Wide drops e."
+    },
+    {
+     "type": "incorrect",
+     "text": "This is the most wide path in the park.",
+     "correction": "This is the widest path in the park.",
+     "note": "Wide drops e."
+    },
+    {
+     "type": "incorrect",
+     "text": "My coffee is more strong than yours.",
+     "correction": "My coffee is stronger than yours.",
+     "note": "Strong adds -er."
+    },
+    {
+     "type": "incorrect",
+     "text": "The test was more easy than the last one.",
+     "correction": "The test was easier than the last one.",
+     "note": "Y changes to i."
+    },
+    {
+     "type": "incorrect",
+     "text": "It was the easyest question on the paper.",
+     "correction": "It was the easiest question on the paper.",
+     "note": "Y changes to i."
+    },
+    {
+     "type": "incorrect",
+     "text": "My sister is happyer than me today.",
+     "correction": "My sister is happier than me today.",
+     "note": "Y changes to i."
+    },
+    {
+     "type": "exception",
+     "text": "This book is more interesting than that one.",
+     "note": "Long adjectives use more, not -er."
+    },
+    {
+     "type": "exception",
+     "text": "This is the most interesting book in the library.",
+     "note": "Long adjectives use most, not -est."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "fill_gap",
+     "prompt": "The ___ day of winter was in January. (самый холодный)",
+     "answer": "coldest"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "My suitcase is ___ than yours. (легче)",
+     "answer": "lighter"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The river is ___ here than near the bridge. (шире)",
+     "answer": "wider"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "My cousin is ___ than me. (моложе)",
+     "answer": "younger"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "That was the ___ film this year. (самый смешной)",
+     "answer": "funniest"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "talller",
+     "answer": "taller"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "younguest",
+     "answer": "youngest"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "warmmer",
+     "answer": "warmer"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "wideer",
+     "answer": "wider"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "strongger",
+     "answer": "stronger"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "happyer",
+     "answer": "happier"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "thiner",
+     "answer": "thinner"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "lattest",
+     "answer": "latest"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "sader",
+     "answer": "sadder"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "bigest",
+     "answer": "biggest"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "funnyer",
+     "answer": "funnier"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "tasteyest",
+     "answer": "tastiest"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the comparative form of tall.",
+     "answer": "taller"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the superlative form of young.",
+     "answer": "youngest"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the comparative form of warm.",
+     "answer": "warmer"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the superlative form of clean.",
+     "answer": "cleanest"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the comparative form of small.",
+     "answer": "smaller"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the superlative form of wide.",
+     "answer": "widest"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the comparative form of strong.",
+     "answer": "stronger"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the superlative form of easy.",
+     "answer": "easiest"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the comparative form of happy.",
+     "answer": "happier"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the superlative form of thin.",
+     "answer": "thinnest"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the comparative form of late.",
+     "answer": "later"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the superlative form of sad.",
+     "answer": "saddest"
+    }
+   ]
+  },
+  {
+   "slug": "double-consonants",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "We will discuss the plan tomorrow morning.",
+     "note": "Tomorrow has a double r."
+    },
+    {
+     "type": "correct",
+     "text": "She sent a letter to the wrong address.",
+     "note": "Address has a double d and s."
+    },
+    {
+     "type": "correct",
+     "text": "The meeting was a great success.",
+     "note": "Success has a double c and s."
+    },
+    {
+     "type": "correct",
+     "text": "He was embarrassed by his old photo.",
+     "note": "Embarrassed has a double r and s."
+    },
+    {
+     "type": "correct",
+     "text": "The committee meets every Thursday.",
+     "note": "Committee has double m, t and e."
+    },
+    {
+     "type": "correct",
+     "text": "They found cheap accommodation near the beach.",
+     "note": "Accommodation has double c and m."
+    },
+    {
+     "type": "correct",
+     "text": "I occasionally work at the weekend.",
+     "note": "Occasionally has a double c and l."
+    },
+    {
+     "type": "correct",
+     "text": "The dog disappeared behind the garden wall.",
+     "note": "Disappeared has a double p."
+    },
+    {
+     "type": "correct",
+     "text": "Please write your full name on the form.",
+     "note": "Full has a double l."
+    },
+    {
+     "type": "correct",
+     "text": "She wore a yellow coat in the rain.",
+     "note": "Yellow has a double l."
+    },
+    {
+     "type": "correct",
+     "text": "The little shop sells fresh bread.",
+     "note": "Little has a double t."
+    },
+    {
+     "type": "incorrect",
+     "text": "We will discuss the plan tomorow morning.",
+     "correction": "We will discuss the plan tomorrow morning.",
+     "note": "Tomorrow has a double r."
+    },
+    {
+     "type": "incorrect",
+     "text": "She sent a letter to the wrong adress.",
+     "correction": "She sent a letter to the wrong address.",
+     "note": "Address has double d and s."
+    },
+    {
+     "type": "incorrect",
+     "text": "The meeting was a great succes.",
+     "correction": "The meeting was a great success.",
+     "note": "Success has double c and s."
+    },
+    {
+     "type": "incorrect",
+     "text": "He was embarassed by his old photo.",
+     "correction": "He was embarrassed by his old photo.",
+     "note": "Embarrassed has double r and s."
+    },
+    {
+     "type": "incorrect",
+     "text": "The comittee meets every Thursday.",
+     "correction": "The committee meets every Thursday.",
+     "note": "Committee has double m and t."
+    },
+    {
+     "type": "incorrect",
+     "text": "They found cheap acommodation near the beach.",
+     "correction": "They found cheap accommodation near the beach.",
+     "note": "Accommodation has double c and m."
+    },
+    {
+     "type": "incorrect",
+     "text": "I ocasionally work at the weekend.",
+     "correction": "I occasionally work at the weekend.",
+     "note": "Occasionally has double c and l."
+    },
+    {
+     "type": "incorrect",
+     "text": "The dog disapeared behind the garden wall.",
+     "correction": "The dog disappeared behind the garden wall.",
+     "note": "Disappeared has double p."
+    },
+    {
+     "type": "incorrect",
+     "text": "Please write your ful name on the form.",
+     "correction": "Please write your full name on the form.",
+     "note": "Full has a double l."
+    },
+    {
+     "type": "incorrect",
+     "text": "She wore a yelow coat in the rain.",
+     "correction": "She wore a yellow coat in the rain.",
+     "note": "Yellow has a double l."
+    },
+    {
+     "type": "incorrect",
+     "text": "The litle shop sells fresh bread.",
+     "correction": "The little shop sells fresh bread.",
+     "note": "Little has a double t."
+    },
+    {
+     "type": "correct",
+     "text": "The puppy followed me around the garden.",
+     "note": "Followed has a double l."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "fill_gap",
+     "prompt": "We are leaving for the airport ___. (завтра)",
+     "answer": "tomorrow"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The concert was a complete ___. (успех)",
+     "answer": "success"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The hotel offers cheap ___ near the station. (жильё)",
+     "answer": "accommodation"
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct spelling: This job is a great ___.",
+     "answer": "opportunity",
+     "choices": [
+      "oportunity",
+      "opportunity",
+      "opportunnity"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct spelling: I ___ go to the cinema.",
+     "answer": "occasionally",
+     "choices": [
+      "ocasionally",
+      "occasionally",
+      "occassionally"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct spelling: The puppy ___ behind the sofa.",
+     "answer": "disappeared",
+     "choices": [
+      "disapeared",
+      "disappeared",
+      "dissapeared"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct spelling: The ___ meets once a month.",
+     "answer": "committee",
+     "choices": [
+      "comittee",
+      "committee",
+      "commitee"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct spelling: The coat was bright ___.",
+     "answer": "yellow",
+     "choices": [
+      "yelow",
+      "yellow",
+      "yelllow"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct spelling: The shop is very ___.",
+     "answer": "little",
+     "choices": [
+      "litle",
+      "little",
+      "littlle"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct spelling: The delay ___ at noon.",
+     "answer": "occurred",
+     "choices": [
+      "ocurred",
+      "occurred",
+      "occured"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct spelling: I felt ___ about the mistake.",
+     "answer": "embarrassed",
+     "choices": [
+      "embarassed",
+      "embarrassed",
+      "embarrased"
+     ]
+    },
+    {
+     "type": "correct_word",
+     "prompt": "tomorow",
+     "answer": "tomorrow"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "adress",
+     "answer": "address"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "succes",
+     "answer": "success"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "embarassed",
+     "answer": "embarrassed"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "comittee",
+     "answer": "committee"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "ocasionally",
+     "answer": "occasionally"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "disapeared",
+     "answer": "disappeared"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "ful",
+     "answer": "full"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "yelow",
+     "answer": "yellow"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "litle",
+     "answer": "little"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "neccessary",
+     "answer": "necessary"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "recomended",
+     "answer": "recommended"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "ocasion",
+     "answer": "occasion"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "oportunity",
+     "answer": "opportunity"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "accomodation",
+     "answer": "accommodation"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "folowed",
+     "answer": "followed"
+    }
+   ]
+  },
+  {
+   "slug": "double-before-ing-ed",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "He was mopping the kitchen floor.",
+     "note": "Mop doubles p before -ing."
+    },
+    {
+     "type": "correct",
+     "text": "She was jogging in the park this morning.",
+     "note": "Jog doubles g before -ing."
+    },
+    {
+     "type": "correct",
+     "text": "He jogged along the river after work.",
+     "note": "Jog doubles g before -ed."
+    },
+    {
+     "type": "correct",
+     "text": "The children were skipping rope in the yard.",
+     "note": "Skip doubles p before -ing."
+    },
+    {
+     "type": "correct",
+     "text": "She skipped breakfast because she was late.",
+     "note": "Skip doubles p before -ed."
+    },
+    {
+     "type": "correct",
+     "text": "They are digging a hole for the new tree.",
+     "note": "Dig doubles g before -ing."
+    },
+    {
+     "type": "correct",
+     "text": "The baby was clapping her hands loudly.",
+     "note": "Clap doubles p before -ing."
+    },
+    {
+     "type": "correct",
+     "text": "Everyone clapped at the end of the show.",
+     "note": "Clap doubles p before -ed."
+    },
+    {
+     "type": "correct",
+     "text": "I am knitting a scarf for my cousin.",
+     "note": "Knit doubles t before -ing."
+    },
+    {
+     "type": "correct",
+     "text": "She knitted a warm hat last winter.",
+     "note": "Knit doubles t before -ed."
+    },
+    {
+     "type": "correct",
+     "text": "We were travelling around Spain last summer.",
+     "note": "Travel doubles l in British English."
+    },
+    {
+     "type": "correct",
+     "text": "The team was winning the match easily.",
+     "note": "Win doubles n before -ing."
+    },
+    {
+     "type": "correct",
+     "text": "He begged for another chance.",
+     "note": "Beg doubles g before -ed."
+    },
+    {
+     "type": "incorrect",
+     "text": "She was joging in the park this morning.",
+     "correction": "She was jogging in the park this morning.",
+     "note": "Jog doubles g before -ing."
+    },
+    {
+     "type": "incorrect",
+     "text": "He joged along the river after work.",
+     "correction": "He jogged along the river after work.",
+     "note": "Jog doubles g before -ed."
+    },
+    {
+     "type": "incorrect",
+     "text": "The children were skiping rope in the yard.",
+     "correction": "The children were skipping rope in the yard.",
+     "note": "Skip doubles p before -ing."
+    },
+    {
+     "type": "incorrect",
+     "text": "She skiped breakfast because she was late.",
+     "correction": "She skipped breakfast because she was late.",
+     "note": "Skip doubles p before -ed."
+    },
+    {
+     "type": "incorrect",
+     "text": "They are diging a hole for the new tree.",
+     "correction": "They are digging a hole for the new tree.",
+     "note": "Dig doubles g before -ing."
+    },
+    {
+     "type": "incorrect",
+     "text": "The baby was claping her hands loudly.",
+     "correction": "The baby was clapping her hands loudly.",
+     "note": "Clap doubles p before -ing."
+    },
+    {
+     "type": "incorrect",
+     "text": "Everyone claped at the end of the show.",
+     "correction": "Everyone clapped at the end of the show.",
+     "note": "Clap doubles p before -ed."
+    },
+    {
+     "type": "incorrect",
+     "text": "She knited a warm hat last winter.",
+     "correction": "She knitted a warm hat last winter.",
+     "note": "Knit doubles t before -ed."
+    },
+    {
+     "type": "incorrect",
+     "text": "They traveled by train to the coast.",
+     "correction": "They travelled by train to the coast.",
+     "note": "Travel doubles l in British English."
+    },
+    {
+     "type": "incorrect",
+     "text": "He beged for another chance.",
+     "correction": "He begged for another chance.",
+     "note": "Beg doubles g before -ed."
+    },
+    {
+     "type": "incorrect",
+     "text": "She was cuting vegetables for dinner.",
+     "correction": "She was cutting vegetables for dinner.",
+     "note": "Cut doubles t before -ing."
+    },
+    {
+     "type": "incorrect",
+     "text": "He stoped at the shop for milk.",
+     "correction": "He stopped at the shop for milk.",
+     "note": "Stop doubles p before -ed."
+    },
+    {
+     "type": "incorrect",
+     "text": "She sliped on the wet floor.",
+     "correction": "She slipped on the wet floor.",
+     "note": "Slip doubles p before -ed."
+    },
+    {
+     "type": "exception",
+     "text": "We were visiting our grandparents on Sunday.",
+     "note": "Visit does not double t before -ing."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "fill_gap",
+     "prompt": "He ___ for help when he lost his keys. (beg)",
+     "answer": "begged"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "They are ___ a hole for the new tree. (dig)",
+     "answer": "digging"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "She ___ on the wet floor yesterday. (slip)",
+     "answer": "slipped"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "joging",
+     "answer": "jogging"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "skiping",
+     "answer": "skipping"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "skiped",
+     "answer": "skipped"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "diging",
+     "answer": "digging"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "claping",
+     "answer": "clapping"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "claped",
+     "answer": "clapped"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "knited",
+     "answer": "knitted"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "traveled",
+     "answer": "travelled"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "stoped",
+     "answer": "stopped"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ing form of jog.",
+     "answer": "jogging"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ed form of skip.",
+     "answer": "skipped"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ing form of clap.",
+     "answer": "clapping"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ed form of knit.",
+     "answer": "knitted"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ing form of travel.",
+     "answer": "travelling"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ing form of win.",
+     "answer": "winning"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ed form of beg.",
+     "answer": "begged"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ing form of cut.",
+     "answer": "cutting"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ed form of slip.",
+     "answer": "slipped"
+    }
+   ]
+  },
+  {
+   "slug": "drop-silent-e",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "They are riding their bikes in the park.",
+     "note": "Ride drops e before -ing."
+    },
+    {
+     "type": "correct",
+     "text": "The shop is closing at six o'clock.",
+     "note": "Close drops e before -ing."
+    },
+    {
+     "type": "correct",
+     "text": "She closed the window before the rain.",
+     "note": "Close drops e before -ed."
+    },
+    {
+     "type": "correct",
+     "text": "I am saving money for a new phone.",
+     "note": "Save drops e before -ing."
+    },
+    {
+     "type": "correct",
+     "text": "He saved enough money for the trip.",
+     "note": "Save drops e before -ed."
+    },
+    {
+     "type": "correct",
+     "text": "The children were dancing in the hall.",
+     "note": "Dance drops e before -ing."
+    },
+    {
+     "type": "correct",
+     "text": "They danced until the music stopped.",
+     "note": "Dance drops e before -ed."
+    },
+    {
+     "type": "correct",
+     "text": "She is hoping to visit Spain this year.",
+     "note": "Hope drops e before -ing."
+    },
+    {
+     "type": "correct",
+     "text": "We hoped the weather would improve.",
+     "note": "Hope drops e before -ed."
+    },
+    {
+     "type": "correct",
+     "text": "He is making a model aeroplane.",
+     "note": "Make drops e before -ing."
+    },
+    {
+     "type": "correct",
+     "text": "The cat was hiding under the table.",
+     "note": "Hide drops e before -ing."
+    },
+    {
+     "type": "incorrect",
+     "text": "She is bakeing bread for breakfast.",
+     "correction": "She is baking bread for breakfast.",
+     "note": "Bake drops e before -ing."
+    },
+    {
+     "type": "incorrect",
+     "text": "He bakeed a cake for my birthday.",
+     "correction": "He baked a cake for my birthday.",
+     "note": "Bake drops e before -ed."
+    },
+    {
+     "type": "incorrect",
+     "text": "They are rideing their bikes in the park.",
+     "correction": "They are riding their bikes in the park.",
+     "note": "Ride drops e before -ing."
+    },
+    {
+     "type": "incorrect",
+     "text": "The shop is closeing at six o'clock.",
+     "correction": "The shop is closing at six o'clock.",
+     "note": "Close drops e before -ing."
+    },
+    {
+     "type": "incorrect",
+     "text": "I am saveing money for a new phone.",
+     "correction": "I am saving money for a new phone.",
+     "note": "Save drops e before -ing."
+    },
+    {
+     "type": "incorrect",
+     "text": "He saveed enough money for the trip.",
+     "correction": "He saved enough money for the trip.",
+     "note": "Save drops e before -ed."
+    },
+    {
+     "type": "incorrect",
+     "text": "The children were danceing in the hall.",
+     "correction": "The children were dancing in the hall.",
+     "note": "Dance drops e before -ing."
+    },
+    {
+     "type": "incorrect",
+     "text": "They danceed until the music stopped.",
+     "correction": "They danced until the music stopped.",
+     "note": "Dance drops e before -ed."
+    },
+    {
+     "type": "incorrect",
+     "text": "She is hopeing to visit Spain this year.",
+     "correction": "She is hoping to visit Spain this year.",
+     "note": "Hope drops e before -ing."
+    },
+    {
+     "type": "incorrect",
+     "text": "We hopeed the weather would improve.",
+     "correction": "We hoped the weather would improve.",
+     "note": "Hope drops e before -ed."
+    },
+    {
+     "type": "incorrect",
+     "text": "He is makeing a model aeroplane.",
+     "correction": "He is making a model aeroplane.",
+     "note": "Make drops e before -ing."
+    },
+    {
+     "type": "incorrect",
+     "text": "The cat was hideing under the table.",
+     "correction": "The cat was hiding under the table.",
+     "note": "Hide drops e before -ing."
+    },
+    {
+     "type": "incorrect",
+     "text": "They are liveing in a small flat.",
+     "correction": "They are living in a small flat.",
+     "note": "Live drops e before -ing."
+    },
+    {
+     "type": "incorrect",
+     "text": "He liveed in Prague for two years.",
+     "correction": "He lived in Prague for two years.",
+     "note": "Live drops e before -ed."
+    },
+    {
+     "type": "incorrect",
+     "text": "She is moveing to a new house.",
+     "correction": "She is moving to a new house.",
+     "note": "Move drops e before -ing."
+    },
+    {
+     "type": "incorrect",
+     "text": "We moveed the table into the kitchen.",
+     "correction": "We moved the table into the kitchen.",
+     "note": "Move drops e before -ed."
+    },
+    {
+     "type": "exception",
+     "text": "She is seeing her friend tomorrow.",
+     "note": "See keeps its e before -ing."
+    },
+    {
+     "type": "exception",
+     "text": "He is being very helpful today.",
+     "note": "Be keeps its e before -ing."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "correct_word",
+     "prompt": "bakeing",
+     "answer": "baking"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "bakeed",
+     "answer": "baked"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "saveing",
+     "answer": "saving"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "saveed",
+     "answer": "saved"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "danceing",
+     "answer": "dancing"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "danceed",
+     "answer": "danced"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "hopeing",
+     "answer": "hoping"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "hopeed",
+     "answer": "hoped"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "makeing",
+     "answer": "making"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "hideing",
+     "answer": "hiding"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "liveing",
+     "answer": "living"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "liveed",
+     "answer": "lived"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "moveing",
+     "answer": "moving"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ing form of bake.",
+     "answer": "baking"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ed form of hope.",
+     "answer": "hoped"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ing form of ride.",
+     "answer": "riding"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ed form of dance.",
+     "answer": "danced"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ing form of save.",
+     "answer": "saving"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ing form of make.",
+     "answer": "making"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ing form of hide.",
+     "answer": "hiding"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ing form of live.",
+     "answer": "living"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ing form of move.",
+     "answer": "moving"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the -ing form of come.",
+     "answer": "coming"
+    }
+   ]
+  },
+  {
+   "slug": "adverbs-ly",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "She smiled happily at her friend.",
+     "note": "Happy changes y to i."
+    },
+    {
+     "type": "correct",
+     "text": "He quickly finished his homework.",
+     "note": "Quick adds -ly."
+    },
+    {
+     "type": "correct",
+     "text": "The children played noisily in the garden.",
+     "note": "Noisy changes y to i."
+    },
+    {
+     "type": "correct",
+     "text": "He calmly explained the problem.",
+     "note": "Calm adds -ly."
+    },
+    {
+     "type": "correct",
+     "text": "The dog waited patiently by the door.",
+     "note": "Patient adds -ly."
+    },
+    {
+     "type": "correct",
+     "text": "She carefully packed her suitcase.",
+     "note": "Careful adds -ly."
+    },
+    {
+     "type": "correct",
+     "text": "They happily agreed to help us.",
+     "note": "Happy changes y to i."
+    },
+    {
+     "type": "correct",
+     "text": "The bus stopped suddenly at the corner.",
+     "note": "Sudden adds -ly."
+    },
+    {
+     "type": "correct",
+     "text": "He badly needed a new pair of shoes.",
+     "note": "Bad adds -ly."
+    },
+    {
+     "type": "correct",
+     "text": "She gently closed the door behind her.",
+     "note": "Gentle drops e before -ly."
+    },
+    {
+     "type": "incorrect",
+     "text": "He quickley finished his homework.",
+     "correction": "He quickly finished his homework.",
+     "note": "Quick adds -ly."
+    },
+    {
+     "type": "incorrect",
+     "text": "The children played noisyly in the garden.",
+     "correction": "The children played noisily in the garden.",
+     "note": "Noisy changes y to i."
+    },
+    {
+     "type": "incorrect",
+     "text": "He calmley explained the problem.",
+     "correction": "He calmly explained the problem.",
+     "note": "Calm adds -ly."
+    },
+    {
+     "type": "incorrect",
+     "text": "The dog waited patientley by the door.",
+     "correction": "The dog waited patiently by the door.",
+     "note": "Patient adds -ly."
+    },
+    {
+     "type": "incorrect",
+     "text": "They happyly agreed to help us.",
+     "correction": "They happily agreed to help us.",
+     "note": "Happy changes y to i."
+    },
+    {
+     "type": "incorrect",
+     "text": "The bus stopped suddenley at the corner.",
+     "correction": "The bus stopped suddenly at the corner.",
+     "note": "Sudden adds -ly."
+    },
+    {
+     "type": "incorrect",
+     "text": "He badley needed a new pair of shoes.",
+     "correction": "He badly needed a new pair of shoes.",
+     "note": "Bad adds -ly."
+    },
+    {
+     "type": "incorrect",
+     "text": "She gentle closed the door behind her.",
+     "correction": "She gently closed the door behind her.",
+     "note": "Gentle drops e before -ly."
+    },
+    {
+     "type": "incorrect",
+     "text": "She sang beautiful at the concert.",
+     "correction": "She sang beautifully at the concert.",
+     "note": "Beautiful adds -ly."
+    },
+    {
+     "type": "incorrect",
+     "text": "She spoke angry to the driver.",
+     "correction": "She spoke angrily to the driver.",
+     "note": "Angry changes y to i."
+    },
+    {
+     "type": "incorrect",
+     "text": "It rained heavy all night.",
+     "correction": "It rained heavily all night.",
+     "note": "Heavy changes y to i."
+    },
+    {
+     "type": "incorrect",
+     "text": "He is true sorry for being late.",
+     "correction": "He is truly sorry for being late.",
+     "note": "True drops e before -ly."
+    },
+    {
+     "type": "incorrect",
+     "text": "He lazy opened his eyes.",
+     "correction": "He lazily opened his eyes.",
+     "note": "Lazy changes y to i."
+    },
+    {
+     "type": "exception",
+     "text": "He is a fast runner.",
+     "note": "Fast is both an adjective and an adverb."
+    },
+    {
+     "type": "exception",
+     "text": "She works hard every day.",
+     "note": "Hard is the adverb form; hardly means almost not."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "fill_gap",
+     "prompt": "He ___ finished the test before lunch. (easy)",
+     "answer": "easily"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The children played ___ in the garden. (noisy)",
+     "answer": "noisily"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "She ___ asked for help with the bags. (polite)",
+     "answer": "politely"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "happyly",
+     "answer": "happily"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "quickley",
+     "answer": "quickly"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "normaly",
+     "answer": "normally"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "politeley",
+     "answer": "politely"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "calmley",
+     "answer": "calmly"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "patientley",
+     "answer": "patiently"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "suddenley",
+     "answer": "suddenly"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "badley",
+     "answer": "badly"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "gentlely",
+     "answer": "gently"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the adverb from happy.",
+     "answer": "happily"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the adverb from quick.",
+     "answer": "quickly"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the adverb from normal.",
+     "answer": "normally"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the adverb from polite.",
+     "answer": "politely"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the adverb from noisy.",
+     "answer": "noisily"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the adverb from calm.",
+     "answer": "calmly"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the adverb from patient.",
+     "answer": "patiently"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the adverb from sudden.",
+     "answer": "suddenly"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the adverb from bad.",
+     "answer": "badly"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the adverb from gentle.",
+     "answer": "gently"
+    }
+   ]
+  },
+  {
+   "slug": "irregular-past-go",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "We went to the cinema last night.",
+     "note": "Go becomes went in the past."
+    },
+    {
+     "type": "correct",
+     "text": "She has gone to visit her grandmother.",
+     "note": "Gone is the past participle."
+    },
+    {
+     "type": "correct",
+     "text": "They went to the beach on Saturday.",
+     "note": "Go becomes went in the past."
+    },
+    {
+     "type": "correct",
+     "text": "I went to the bank this morning.",
+     "note": "Go becomes went in the past."
+    },
+    {
+     "type": "correct",
+     "text": "We went to a concert last weekend.",
+     "note": "Go becomes went in the past."
+    },
+    {
+     "type": "correct",
+     "text": "They have gone on holiday to Spain.",
+     "note": "Gone is used with have."
+    },
+    {
+     "type": "correct",
+     "text": "He went to bed early last night.",
+     "note": "Go becomes went in the past."
+    },
+    {
+     "type": "correct",
+     "text": "She has gone to the library already.",
+     "note": "Gone is the past participle."
+    },
+    {
+     "type": "correct",
+     "text": "We went shopping after work.",
+     "note": "Go becomes went in the past."
+    },
+    {
+     "type": "correct",
+     "text": "They have gone to the airport by taxi.",
+     "note": "Gone is used with have."
+    },
+    {
+     "type": "correct",
+     "text": "I went to the gym before breakfast.",
+     "note": "Go becomes went in the past."
+    },
+    {
+     "type": "correct",
+     "text": "She has gone to meet her friends.",
+     "note": "Gone is the past participle."
+    },
+    {
+     "type": "incorrect",
+     "text": "We goed to the cinema last night.",
+     "correction": "We went to the cinema last night.",
+     "note": "Go becomes went in the past."
+    },
+    {
+     "type": "incorrect",
+     "text": "She has went to visit her grandmother.",
+     "correction": "She has gone to visit her grandmother.",
+     "note": "Gone is the past participle."
+    },
+    {
+     "type": "incorrect",
+     "text": "They goed to the beach on Saturday.",
+     "correction": "They went to the beach on Saturday.",
+     "note": "Go becomes went in the past."
+    },
+    {
+     "type": "incorrect",
+     "text": "I goed to the bank this morning.",
+     "correction": "I went to the bank this morning.",
+     "note": "Go becomes went in the past."
+    },
+    {
+     "type": "incorrect",
+     "text": "We goed to a concert last weekend.",
+     "correction": "We went to a concert last weekend.",
+     "note": "Go becomes went in the past."
+    },
+    {
+     "type": "incorrect",
+     "text": "They have went on holiday to Spain.",
+     "correction": "They have gone on holiday to Spain.",
+     "note": "Gone is used with have."
+    },
+    {
+     "type": "incorrect",
+     "text": "He goed to bed early last night.",
+     "correction": "He went to bed early last night.",
+     "note": "Go becomes went in the past."
+    },
+    {
+     "type": "incorrect",
+     "text": "She has went to the library already.",
+     "correction": "She has gone to the library already.",
+     "note": "Gone is the past participle."
+    },
+    {
+     "type": "incorrect",
+     "text": "We goed shopping after work.",
+     "correction": "We went shopping after work.",
+     "note": "Go becomes went in the past."
+    },
+    {
+     "type": "incorrect",
+     "text": "They have went to the airport by taxi.",
+     "correction": "They have gone to the airport by taxi.",
+     "note": "Gone is used with have."
+    },
+    {
+     "type": "incorrect",
+     "text": "I goed to the gym before breakfast.",
+     "correction": "I went to the gym before breakfast.",
+     "note": "Go becomes went in the past."
+    },
+    {
+     "type": "incorrect",
+     "text": "She has went to meet her friends.",
+     "correction": "She has gone to meet her friends.",
+     "note": "Gone is the past participle."
+    },
+    {
+     "type": "incorrect",
+     "text": "They goed home after the film.",
+     "correction": "They went home after the film.",
+     "note": "Go becomes went in the past."
+    },
+    {
+     "type": "incorrect",
+     "text": "He has went to work already.",
+     "correction": "He has gone to work already.",
+     "note": "Gone is used with have."
+    },
+    {
+     "type": "incorrect",
+     "text": "We goed to the museum yesterday.",
+     "correction": "We went to the museum yesterday.",
+     "note": "Go becomes went in the past."
+    },
+    {
+     "type": "incorrect",
+     "text": "She has went to the station.",
+     "correction": "She has gone to the station.",
+     "note": "Gone is the past participle."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "fill_gap",
+     "prompt": "Yesterday we ___ to the museum.",
+     "answer": "went"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Last week they ___ to a concert.",
+     "answer": "went"
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct form: He has ___ to work.",
+     "answer": "gone",
+     "choices": [
+      "went",
+      "gone",
+      "goed"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct form: We ___ shopping on Saturday.",
+     "answer": "went",
+     "choices": [
+      "goed",
+      "went",
+      "gone"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct form: They have ___ to bed.",
+     "answer": "gone",
+     "choices": [
+      "went",
+      "gone",
+      "goed"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct form: I ___ to the dentist yesterday.",
+     "answer": "went",
+     "choices": [
+      "goed",
+      "went",
+      "gone"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct form: She has ___ to the library.",
+     "answer": "gone",
+     "choices": [
+      "went",
+      "gone",
+      "goed"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct form: They ___ home after the film.",
+     "answer": "went",
+     "choices": [
+      "goed",
+      "went",
+      "gone"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct form: He has ___ to school today.",
+     "answer": "gone",
+     "choices": [
+      "went",
+      "gone",
+      "goed"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct form: We ___ to the beach last Sunday.",
+     "answer": "went",
+     "choices": [
+      "goed",
+      "went",
+      "gone"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct form: She has ___ to meet her friends.",
+     "answer": "gone",
+     "choices": [
+      "went",
+      "gone",
+      "goed"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct form: I ___ to the gym this morning.",
+     "answer": "went",
+     "choices": [
+      "goed",
+      "went",
+      "gone"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct form: They have ___ on holiday.",
+     "answer": "gone",
+     "choices": [
+      "went",
+      "gone",
+      "goed"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "its-vs-its-contraction",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "The school changed its timetable last week.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "correct",
+     "text": "It's cold outside, so wear a coat.",
+     "note": "It's means it is."
+    },
+    {
+     "type": "correct",
+     "text": "The cat drank all its water.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "correct",
+     "text": "It's nearly time for the film to start.",
+     "note": "It's means it is."
+    },
+    {
+     "type": "correct",
+     "text": "The shop closed its doors at seven.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "correct",
+     "text": "It's been a busy morning at work.",
+     "note": "It's means it has."
+    },
+    {
+     "type": "correct",
+     "text": "The car lost one of its wheels.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "correct",
+     "text": "It's important to check the timetable.",
+     "note": "It's means it is."
+    },
+    {
+     "type": "correct",
+     "text": "The bird returned to its nest.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "correct",
+     "text": "It's a good idea to bring water.",
+     "note": "It's means it is."
+    },
+    {
+     "type": "correct",
+     "text": "The team celebrated its first victory.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "correct",
+     "text": "It's raining heavily in the mountains.",
+     "note": "It's means it is."
+    },
+    {
+     "type": "correct",
+     "text": "The hotel kept its old wooden stairs.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "correct",
+     "text": "It's almost eight o'clock already.",
+     "note": "It's means it is."
+    },
+    {
+     "type": "correct",
+     "text": "The library increased its opening hours.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "correct",
+     "text": "It's better to book tickets in advance.",
+     "note": "It's means it is."
+    },
+    {
+     "type": "incorrect",
+     "text": "The school changed it's timetable last week.",
+     "correction": "The school changed its timetable last week.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "incorrect",
+     "text": "Its cold outside, so wear a coat.",
+     "correction": "It's cold outside, so wear a coat.",
+     "note": "It's means it is."
+    },
+    {
+     "type": "incorrect",
+     "text": "The cat drank all it's water.",
+     "correction": "The cat drank all its water.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "incorrect",
+     "text": "Its nearly time for the film to start.",
+     "correction": "It's nearly time for the film to start.",
+     "note": "It's means it is."
+    },
+    {
+     "type": "incorrect",
+     "text": "The shop closed it's doors at seven.",
+     "correction": "The shop closed its doors at seven.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "incorrect",
+     "text": "Its been a busy morning at work.",
+     "correction": "It's been a busy morning at work.",
+     "note": "It's means it has."
+    },
+    {
+     "type": "incorrect",
+     "text": "The car lost one of it's wheels.",
+     "correction": "The car lost one of its wheels.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "incorrect",
+     "text": "Its important to check the timetable.",
+     "correction": "It's important to check the timetable.",
+     "note": "It's means it is."
+    },
+    {
+     "type": "incorrect",
+     "text": "The bird returned to it's nest.",
+     "correction": "The bird returned to its nest.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "incorrect",
+     "text": "Its a good idea to bring water.",
+     "correction": "It's a good idea to bring water.",
+     "note": "It's means it is."
+    },
+    {
+     "type": "incorrect",
+     "text": "The team celebrated it's first victory.",
+     "correction": "The team celebrated its first victory.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "incorrect",
+     "text": "Its raining heavily in the mountains.",
+     "correction": "It's raining heavily in the mountains.",
+     "note": "It's means it is."
+    },
+    {
+     "type": "incorrect",
+     "text": "The hotel kept it's old wooden stairs.",
+     "correction": "The hotel kept its old wooden stairs.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "incorrect",
+     "text": "Its almost eight o'clock already.",
+     "correction": "It's almost eight o'clock already.",
+     "note": "It's means it is."
+    },
+    {
+     "type": "incorrect",
+     "text": "The library increased it's opening hours.",
+     "correction": "The library increased its opening hours.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "incorrect",
+     "text": "Its better to book tickets in advance.",
+     "correction": "It's better to book tickets in advance.",
+     "note": "It's means it is."
+    },
+    {
+     "type": "incorrect",
+     "text": "The dog wagged it's tail happily.",
+     "correction": "The dog wagged its tail happily.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "incorrect",
+     "text": "Its time to leave for the station.",
+     "correction": "It's time to leave for the station.",
+     "note": "It's means it is."
+    },
+    {
+     "type": "incorrect",
+     "text": "The garden lost it's flowers in the storm.",
+     "correction": "The garden lost its flowers in the storm.",
+     "note": "Its shows possession."
+    },
+    {
+     "type": "incorrect",
+     "text": "Its a shame that the shop is closed.",
+     "correction": "It's a shame that the shop is closed.",
+     "note": "It's means it is."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "fill_gap",
+     "prompt": "The dog wagged ___ tail happily.",
+     "answer": "its"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "I think ___ going to rain later.",
+     "answer": "it's"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "___ been a great week for our team.",
+     "answer": "It's"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Look at the sky, ___ getting dark!",
+     "answer": "it's"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The school is proud of ___ new library.",
+     "answer": "its"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The cat licked ___ paw after dinner.",
+     "answer": "its"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "___ almost time to leave for the airport.",
+     "answer": "It's"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The company moved ___ office to another city.",
+     "answer": "its"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "___ important to drink enough water.",
+     "answer": "It's"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The garden lost ___ flowers in the storm.",
+     "answer": "its"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The hotel kept ___ old wooden stairs.",
+     "answer": "its"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "___ raining, so take an umbrella.",
+     "answer": "It's"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The team celebrated ___ first victory.",
+     "answer": "its"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "___ better to book tickets in advance.",
+     "answer": "It's"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The shop changed ___ opening hours.",
+     "answer": "its"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "___ been a long day for everyone.",
+     "answer": "It's"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "___ time to go home now.",
+     "answer": "It's"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The city is famous for ___ old bridges.",
+     "answer": "its"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The bridge lost ___ charm after the repairs.",
+     "answer": "its"
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: The bird built ___ nest.",
+     "answer": "its",
+     "choices": [
+      "its",
+      "it's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: ___ getting dark outside.",
+     "answer": "It's",
+     "choices": [
+      "Its",
+      "It's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: The school changed ___ timetable.",
+     "answer": "its",
+     "choices": [
+      "its",
+      "it's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: ___ a beautiful day today.",
+     "answer": "It's",
+     "choices": [
+      "Its",
+      "It's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: The cat drank all ___ water.",
+     "answer": "its",
+     "choices": [
+      "its",
+      "it's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: ___ nearly time for dinner.",
+     "answer": "It's",
+     "choices": [
+      "Its",
+      "It's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: The shop closed ___ doors.",
+     "answer": "its",
+     "choices": [
+      "its",
+      "it's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: ___ been a busy morning.",
+     "answer": "It's",
+     "choices": [
+      "Its",
+      "It's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: The car lost one of ___ wheels.",
+     "answer": "its",
+     "choices": [
+      "its",
+      "it's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: ___ important to check the timetable.",
+     "answer": "It's",
+     "choices": [
+      "Its",
+      "It's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: The bird returned to ___ nest.",
+     "answer": "its",
+     "choices": [
+      "its",
+      "it's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: ___ a good idea to bring water.",
+     "answer": "It's",
+     "choices": [
+      "Its",
+      "It's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: The team celebrated ___ victory.",
+     "answer": "its",
+     "choices": [
+      "its",
+      "it's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: ___ raining heavily now.",
+     "answer": "It's",
+     "choices": [
+      "Its",
+      "It's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: The hotel kept ___ wooden stairs.",
+     "answer": "its",
+     "choices": [
+      "its",
+      "it's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: ___ almost eight o'clock.",
+     "answer": "It's",
+     "choices": [
+      "Its",
+      "It's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: The library increased ___ hours.",
+     "answer": "its",
+     "choices": [
+      "its",
+      "it's"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the correct word: ___ better to book in advance.",
+     "answer": "It's",
+     "choices": [
+      "Its",
+      "It's"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "soft-c-and-g",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "The new sign was immediately noticeable.",
+     "note": "Notice keeps e before -able."
+    },
+    {
+     "type": "correct",
+     "text": "Her speech was confident and courageous.",
+     "note": "Courage keeps e before -ous."
+    },
+    {
+     "type": "correct",
+     "text": "The old machine is still serviceable.",
+     "note": "Service keeps e before -able."
+    },
+    {
+     "type": "correct",
+     "text": "This jacket is exchangeable at any shop.",
+     "note": "Exchange keeps e before -able."
+    },
+    {
+     "type": "correct",
+     "text": "The guide gave us very knowledgeable advice.",
+     "note": "Knowledge keeps e before -able."
+    },
+    {
+     "type": "correct",
+     "text": "The parcel is traceable through the website.",
+     "note": "Trace keeps e before -able."
+    },
+    {
+     "type": "correct",
+     "text": "The price of the ticket was outrageous.",
+     "note": "Outrage keeps e before -ous."
+    },
+    {
+     "type": "correct",
+     "text": "The guide was knowledgeable about local trains.",
+     "note": "Knowledge keeps e before -able."
+    },
+    {
+     "type": "incorrect",
+     "text": "The new sign was immediately noticable.",
+     "correction": "The new sign was immediately noticeable.",
+     "note": "Notice keeps e before -able."
+    },
+    {
+     "type": "incorrect",
+     "text": "Her speech was confident and couragous.",
+     "correction": "Her speech was confident and courageous.",
+     "note": "Courage keeps e before -ous."
+    },
+    {
+     "type": "incorrect",
+     "text": "This jacket is exchangable at any shop.",
+     "correction": "This jacket is exchangeable at any shop.",
+     "note": "Exchange keeps e before -able."
+    },
+    {
+     "type": "incorrect",
+     "text": "The guide gave us very knowledgable advice.",
+     "correction": "The guide gave us very knowledgeable advice.",
+     "note": "Knowledge keeps e before -able."
+    },
+    {
+     "type": "incorrect",
+     "text": "The parcel is tracable through the website.",
+     "correction": "The parcel is traceable through the website.",
+     "note": "Trace keeps e before -able."
+    },
+    {
+     "type": "incorrect",
+     "text": "The price of the ticket was outragous.",
+     "correction": "The price of the ticket was outrageous.",
+     "note": "Outrage keeps e before -ous."
+    },
+    {
+     "type": "incorrect",
+     "text": "The rules are not enforcable in this case.",
+     "correction": "The rules are not enforceable in this case.",
+     "note": "Enforce keeps e before -able."
+    },
+    {
+     "type": "incorrect",
+     "text": "The schedule is managable if we work together.",
+     "correction": "The schedule is manageable if we work together.",
+     "note": "Manage keeps e before -able."
+    },
+    {
+     "type": "incorrect",
+     "text": "It was an advantagous deal for the company.",
+     "correction": "It was an advantageous deal for the company.",
+     "note": "Advantage keeps e before -ous."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The new sign was immediately ___.",
+     "answer": "noticeable",
+     "choices": [
+      "noticable",
+      "noticeable",
+      "noticiable"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Her speech was confident and ___.",
+     "answer": "courageous",
+     "choices": [
+      "couragous",
+      "courageous",
+      "couragius"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The old machine is still ___.",
+     "answer": "serviceable",
+     "choices": [
+      "servicible",
+      "serviceable",
+      "serviceible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: This jacket is ___ at any shop.",
+     "answer": "exchangeable",
+     "choices": [
+      "exchangable",
+      "exchangeable",
+      "exchangeible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The guide gave us very ___ advice.",
+     "answer": "knowledgeable",
+     "choices": [
+      "knowledgable",
+      "knowledgeable",
+      "knowledgible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The parcel is ___ through the website.",
+     "answer": "traceable",
+     "choices": [
+      "tracable",
+      "traceable",
+      "traceible"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The price of the ticket was ___.",
+     "answer": "outrageous",
+     "choices": [
+      "outragous",
+      "outrageous",
+      "outragius"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The rules are not ___ in this case.",
+     "answer": "enforceable",
+     "choices": [
+      "enforcable",
+      "enforceable",
+      "enforcible"
+     ]
+    },
+    {
+     "type": "correct_word",
+     "prompt": "noticable",
+     "answer": "noticeable"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "couragous",
+     "answer": "courageous"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "servicible",
+     "answer": "serviceable"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "exchangable",
+     "answer": "exchangeable"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "enforcable",
+     "answer": "enforceable"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "managable",
+     "answer": "manageable"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: able to be noticed.",
+     "answer": "noticeable"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: able to be exchanged.",
+     "answer": "exchangeable"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: able to be traced.",
+     "answer": "traceable"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: able to be enforced.",
+     "answer": "enforceable"
+    }
+   ]
+  },
+  {
+   "slug": "lose-vs-loose",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "I often lose my pens at school.",
+     "note": "Lose means not have something anymore."
+    },
+    {
+     "type": "correct",
+     "text": "The knot on the rope is loose.",
+     "note": "Loose means not tight."
+    },
+    {
+     "type": "correct",
+     "text": "She does not want to lose her job.",
+     "note": "Lose is a verb."
+    },
+    {
+     "type": "correct",
+     "text": "The screw is loose, so tighten it.",
+     "note": "Loose describes the screw."
+    },
+    {
+     "type": "correct",
+     "text": "They might lose the match on Saturday.",
+     "note": "Lose is a verb."
+    },
+    {
+     "type": "correct",
+     "text": "Do not lose the receipt for the return.",
+     "note": "Lose means not have anymore."
+    },
+    {
+     "type": "correct",
+     "text": "The dog got loose in the garden.",
+     "note": "Loose means free or not tied."
+    },
+    {
+     "type": "correct",
+     "text": "He will lose his keys again.",
+     "note": "Lose is a verb."
+    },
+    {
+     "type": "correct",
+     "text": "The lid is loose on this jar.",
+     "note": "Loose describes the lid."
+    },
+    {
+     "type": "correct",
+     "text": "We could lose our seats if we arrive late.",
+     "note": "Lose is a verb."
+    },
+    {
+     "type": "correct",
+     "text": "The knot came loose during the walk.",
+     "note": "Loose means not tight."
+    },
+    {
+     "type": "correct",
+     "text": "She does not want to lose her place in the queue.",
+     "note": "Lose is a verb."
+    },
+    {
+     "type": "correct",
+     "text": "The wire is loose behind the television.",
+     "note": "Loose describes the wire."
+    },
+    {
+     "type": "incorrect",
+     "text": "I often loose my pens at school.",
+     "correction": "I often lose my pens at school.",
+     "note": "Lose is a verb."
+    },
+    {
+     "type": "incorrect",
+     "text": "The knot on the rope is lose.",
+     "correction": "The knot on the rope is loose.",
+     "note": "Loose means not tight."
+    },
+    {
+     "type": "incorrect",
+     "text": "She does not want to loose her job.",
+     "correction": "She does not want to lose her job.",
+     "note": "Lose is a verb."
+    },
+    {
+     "type": "incorrect",
+     "text": "The screw is lose, so tighten it.",
+     "correction": "The screw is loose, so tighten it.",
+     "note": "Loose describes the screw."
+    },
+    {
+     "type": "incorrect",
+     "text": "They might loose the match on Saturday.",
+     "correction": "They might lose the match on Saturday.",
+     "note": "Lose is a verb."
+    },
+    {
+     "type": "incorrect",
+     "text": "Do not loose the receipt for the return.",
+     "correction": "Do not lose the receipt for the return.",
+     "note": "Lose is a verb."
+    },
+    {
+     "type": "incorrect",
+     "text": "The dog got lose in the garden.",
+     "correction": "The dog got loose in the garden.",
+     "note": "Loose means free or not tied."
+    },
+    {
+     "type": "incorrect",
+     "text": "He will loose his keys again.",
+     "correction": "He will lose his keys again.",
+     "note": "Lose is a verb."
+    },
+    {
+     "type": "incorrect",
+     "text": "The lid is lose on this jar.",
+     "correction": "The lid is loose on this jar.",
+     "note": "Loose describes the lid."
+    },
+    {
+     "type": "incorrect",
+     "text": "We could loose our seats if we arrive late.",
+     "correction": "We could lose our seats if we arrive late.",
+     "note": "Lose is a verb."
+    },
+    {
+     "type": "incorrect",
+     "text": "The knot came lose during the walk.",
+     "correction": "The knot came loose during the walk.",
+     "note": "Loose means not tight."
+    },
+    {
+     "type": "incorrect",
+     "text": "She does not want to loose her place in the queue.",
+     "correction": "She does not want to lose her place in the queue.",
+     "note": "Lose is a verb."
+    },
+    {
+     "type": "incorrect",
+     "text": "The wire is lose behind the television.",
+     "correction": "The wire is loose behind the television.",
+     "note": "Loose describes the wire."
+    },
+    {
+     "type": "incorrect",
+     "text": "These jeans are too lose.",
+     "correction": "These jeans are too loose.",
+     "note": "Loose means not tight."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "fill_gap",
+     "prompt": "These trousers are too ___ around the waist.",
+     "answer": "loose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "We will ___ the game if we do not defend.",
+     "answer": "lose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The bolt came ___ and fell on the floor.",
+     "answer": "loose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "I do not want to ___ my place in the queue.",
+     "answer": "lose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The knot is ___; tie it again.",
+     "answer": "loose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "She does not want to ___ her job.",
+     "answer": "lose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The screw is ___, so the shelf shakes.",
+     "answer": "loose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Do not ___ hope, because things will get better.",
+     "answer": "lose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The lid is ___ on this jar.",
+     "answer": "loose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "We could ___ our seats if we arrive late.",
+     "answer": "lose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The wire is ___ behind the television.",
+     "answer": "loose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "He will ___ his keys again.",
+     "answer": "lose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "They might ___ the match on Saturday.",
+     "answer": "lose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The dog got ___ in the garden.",
+     "answer": "loose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Do not ___ the receipt for the return.",
+     "answer": "lose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The knot came ___ during the walk.",
+     "answer": "loose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "She does not want to ___ her place in the queue.",
+     "answer": "lose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The rope is ___; tie it again.",
+     "answer": "loose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "I often ___ my pens at school.",
+     "answer": "lose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "These jeans are too ___.",
+     "answer": "loose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Did you ___ your phone again?",
+     "answer": "lose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The dog got ___ from its lead.",
+     "answer": "loose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "Be careful or you will ___ your balance.",
+     "answer": "lose"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "He wore a ___ coat over his sweater.",
+     "answer": "loose"
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: A ___ cable can cause problems with the sound.",
+     "answer": "loose",
+     "choices": [
+      "lose",
+      "loose"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: If you ___ your passport abroad, tell the police at once.",
+     "answer": "lose",
+     "choices": [
+      "lose",
+      "loose"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The knot is ___; tie it again.",
+     "answer": "loose",
+     "choices": [
+      "lose",
+      "loose"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: She does not want to ___ her job.",
+     "answer": "lose",
+     "choices": [
+      "lose",
+      "loose"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The screw is ___, so the shelf shakes.",
+     "answer": "loose",
+     "choices": [
+      "lose",
+      "loose"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Do not ___ hope, because things will get better.",
+     "answer": "lose",
+     "choices": [
+      "lose",
+      "loose"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The lid is ___ on this jar.",
+     "answer": "loose",
+     "choices": [
+      "lose",
+      "loose"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: We could ___ our seats if we arrive late.",
+     "answer": "lose",
+     "choices": [
+      "lose",
+      "loose"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The wire is ___ behind the television.",
+     "answer": "loose",
+     "choices": [
+      "lose",
+      "loose"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: He will ___ his keys again.",
+     "answer": "lose",
+     "choices": [
+      "lose",
+      "loose"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: They might ___ the match on Saturday.",
+     "answer": "lose",
+     "choices": [
+      "lose",
+      "loose"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The dog got ___ in the garden.",
+     "answer": "loose",
+     "choices": [
+      "lose",
+      "loose"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Do not ___ the receipt for the return.",
+     "answer": "lose",
+     "choices": [
+      "lose",
+      "loose"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "ance-vs-ence",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "The audience enjoyed the puppet show.",
+     "note": "Audience ends in -ence."
+    },
+    {
+     "type": "correct",
+     "text": "The police collected evidence at the scene.",
+     "note": "Evidence ends in -ence."
+    },
+    {
+     "type": "correct",
+     "text": "Her performance in the school play was excellent.",
+     "note": "Performance ends in -ance."
+    },
+    {
+     "type": "correct",
+     "text": "Please use the side entrance after six.",
+     "note": "Entrance ends in -ance."
+    },
+    {
+     "type": "correct",
+     "text": "He spoke with confidence during the interview.",
+     "note": "Confidence ends in -ence."
+    },
+    {
+     "type": "correct",
+     "text": "Write one sentence about your weekend.",
+     "note": "Sentence ends in -ence."
+    },
+    {
+     "type": "correct",
+     "text": "Thank you for your assistance with the boxes.",
+     "note": "Assistance ends in -ance."
+    },
+    {
+     "type": "correct",
+     "text": "She has a lot of experience in customer service.",
+     "note": "Experience ends in -ence."
+    },
+    {
+     "type": "correct",
+     "text": "Good balance helps you ride a bicycle.",
+     "note": "Balance ends in -ance."
+    },
+    {
+     "type": "correct",
+     "text": "The ambulance arrived within five minutes.",
+     "note": "Ambulance ends in -ance."
+    },
+    {
+     "type": "correct",
+     "text": "Her patience with the children impressed us.",
+     "note": "Patience ends in -ence."
+    },
+    {
+     "type": "correct",
+     "text": "There is a big difference in price.",
+     "note": "Difference ends in -ence."
+    },
+    {
+     "type": "correct",
+     "text": "We need your presence at the meeting.",
+     "note": "Presence ends in -ence."
+    },
+    {
+     "type": "correct",
+     "text": "Silence filled the room after the news.",
+     "note": "Silence ends in -ence."
+    },
+    {
+     "type": "correct",
+     "text": "The hotel is a short distance from the station.",
+     "note": "Distance ends in -ance."
+    },
+    {
+     "type": "incorrect",
+     "text": "The audiance enjoyed the puppet show.",
+     "correction": "The audience enjoyed the puppet show.",
+     "note": "Audience ends in -ence."
+    },
+    {
+     "type": "incorrect",
+     "text": "The police collected evidance at the scene.",
+     "correction": "The police collected evidence at the scene.",
+     "note": "Evidence ends in -ence."
+    },
+    {
+     "type": "incorrect",
+     "text": "Her performence in the school play was excellent.",
+     "correction": "Her performance in the school play was excellent.",
+     "note": "Performance ends in -ance."
+    },
+    {
+     "type": "incorrect",
+     "text": "Please use the side entrence after six.",
+     "correction": "Please use the side entrance after six.",
+     "note": "Entrance ends in -ance."
+    },
+    {
+     "type": "incorrect",
+     "text": "He spoke with confidance during the interview.",
+     "correction": "He spoke with confidence during the interview.",
+     "note": "Confidence ends in -ence."
+    },
+    {
+     "type": "incorrect",
+     "text": "Write one sentance about your weekend.",
+     "correction": "Write one sentence about your weekend.",
+     "note": "Sentence ends in -ence."
+    },
+    {
+     "type": "incorrect",
+     "text": "Thank you for your assistence with the boxes.",
+     "correction": "Thank you for your assistance with the boxes.",
+     "note": "Assistance ends in -ance."
+    },
+    {
+     "type": "incorrect",
+     "text": "She has a lot of experiance in customer service.",
+     "correction": "She has a lot of experience in customer service.",
+     "note": "Experience ends in -ence."
+    },
+    {
+     "type": "incorrect",
+     "text": "Good balence helps you ride a bicycle.",
+     "correction": "Good balance helps you ride a bicycle.",
+     "note": "Balance ends in -ance."
+    },
+    {
+     "type": "incorrect",
+     "text": "The ambulence arrived within five minutes.",
+     "correction": "The ambulance arrived within five minutes.",
+     "note": "Ambulance ends in -ance."
+    },
+    {
+     "type": "incorrect",
+     "text": "Her patiance with the children impressed us.",
+     "correction": "Her patience with the children impressed us.",
+     "note": "Patience ends in -ence."
+    },
+    {
+     "type": "incorrect",
+     "text": "There is a big differance in price.",
+     "correction": "There is a big difference in price.",
+     "note": "Difference ends in -ence."
+    },
+    {
+     "type": "incorrect",
+     "text": "We need your presance at the meeting.",
+     "correction": "We need your presence at the meeting.",
+     "note": "Presence ends in -ence."
+    },
+    {
+     "type": "incorrect",
+     "text": "Silance filled the room after the news.",
+     "correction": "Silence filled the room after the news.",
+     "note": "Silence ends in -ence."
+    },
+    {
+     "type": "incorrect",
+     "text": "The hotel is a short distence from the station.",
+     "correction": "The hotel is a short distance from the station.",
+     "note": "Distance ends in -ance."
+    },
+    {
+     "type": "incorrect",
+     "text": "The insurence form is on the desk.",
+     "correction": "The insurance form is on the desk.",
+     "note": "Insurance ends in -ance."
+    },
+    {
+     "type": "incorrect",
+     "text": "Regular maintenence keeps the car safe.",
+     "correction": "Regular maintenance keeps the car safe.",
+     "note": "Maintenance ends in -ance."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "fill_gap",
+     "prompt": "The ___ took the injured man to hospital. (скорая помощь)",
+     "answer": "ambulance"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "It takes ___ to wait in a long queue. (терпение)",
+     "answer": "patience"
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The ___ was very quiet during the film.",
+     "answer": "audience",
+     "choices": [
+      "audiance",
+      "audience",
+      "audiense"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Good ___ helps you ride a bicycle.",
+     "answer": "balance",
+     "choices": [
+      "balence",
+      "balance",
+      "balanse"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The ___ arrived within five minutes.",
+     "answer": "ambulance",
+     "choices": [
+      "ambulence",
+      "ambulance",
+      "ambulanse"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The doctor showed great ___ with the children.",
+     "answer": "patience",
+     "choices": [
+      "patiance",
+      "patience",
+      "patiense"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: There is a big ___ in price between the two shops.",
+     "answer": "difference",
+     "choices": [
+      "differance",
+      "difference",
+      "differense"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Regular ___ at lessons helps you learn faster.",
+     "answer": "attendance",
+     "choices": [
+      "attendence",
+      "attendance",
+      "attendanse"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The police found clear ___ at the house.",
+     "answer": "evidence",
+     "choices": [
+      "evidance",
+      "evidence",
+      "evidense"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The ___ of the hotel is on the left side.",
+     "answer": "entrance",
+     "choices": [
+      "entrence",
+      "entrance",
+      "entranse"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The teacher gave us extra ___ with the homework.",
+     "answer": "assistance",
+     "choices": [
+      "assistence",
+      "assistance",
+      "assistanse"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The ___ for the car costs fifty euros a month.",
+     "answer": "insurance",
+     "choices": [
+      "insurence",
+      "insurance",
+      "insuranse"
+     ]
+    },
+    {
+     "type": "correct_word",
+     "prompt": "ambulence",
+     "answer": "ambulance"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "balence",
+     "answer": "balance"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "violance",
+     "answer": "violence"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "patiance",
+     "answer": "patience"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "experiance",
+     "answer": "experience"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "differance",
+     "answer": "difference"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "attendence",
+     "answer": "attendance"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "assistence",
+     "answer": "assistance"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "evidance",
+     "answer": "evidence"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "audiance",
+     "answer": "audience"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "absance",
+     "answer": "absence"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "insurence",
+     "answer": "insurance"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "maintenence",
+     "answer": "maintenance"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "distence",
+     "answer": "distance"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "entrence",
+     "answer": "entrance"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "conferance",
+     "answer": "conference"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "appearence",
+     "answer": "appearance"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: a vehicle that takes sick people to hospital.",
+     "answer": "ambulance"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the ability to stay calm while waiting.",
+     "answer": "patience"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: knowledge you get from doing a job.",
+     "answer": "experience"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: a large meeting to discuss ideas.",
+     "answer": "conference"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the way someone looks.",
+     "answer": "appearance"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the way two things are not the same.",
+     "answer": "difference"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: staying steady without falling.",
+     "answer": "balance"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: using force to hurt people.",
+     "answer": "violence"
+    }
+   ]
+  },
+  {
+   "slug": "tion-vs-sion",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "The teacher gave us clear instructions.",
+     "note": "Instruction ends in -tion."
+    },
+    {
+     "type": "correct",
+     "text": "We made a decision after a long discussion.",
+     "note": "Decision ends in -sion."
+    },
+    {
+     "type": "correct",
+     "text": "The station was busy at rush hour.",
+     "note": "Station ends in -tion."
+    },
+    {
+     "type": "correct",
+     "text": "Her explanation helped me understand the problem.",
+     "note": "Explanation ends in -tion."
+    },
+    {
+     "type": "correct",
+     "text": "They watched an exciting football match on television.",
+     "note": "Television ends in -sion."
+    },
+    {
+     "type": "correct",
+     "text": "The museum has a large collection of paintings.",
+     "note": "Collection ends in -tion."
+    },
+    {
+     "type": "correct",
+     "text": "Please pay attention to the safety rules.",
+     "note": "Attention ends in -tion."
+    },
+    {
+     "type": "correct",
+     "text": "The new version of the app works better.",
+     "note": "Version ends in -sion."
+    },
+    {
+     "type": "correct",
+     "text": "The invasion of the city happened long ago.",
+     "note": "Invasion ends in -sion."
+    },
+    {
+     "type": "correct",
+     "text": "Her expression showed that she was surprised.",
+     "note": "Expression ends in -sion."
+    },
+    {
+     "type": "correct",
+     "text": "The education system is changing quickly.",
+     "note": "Education ends in -tion."
+    },
+    {
+     "type": "correct",
+     "text": "We need a solution to this transport problem.",
+     "note": "Solution ends in -tion."
+    },
+    {
+     "type": "correct",
+     "text": "The collision damaged both cars.",
+     "note": "Collision ends in -sion."
+    },
+    {
+     "type": "correct",
+     "text": "The celebration lasted until midnight.",
+     "note": "Celebration ends in -tion."
+    },
+    {
+     "type": "correct",
+     "text": "The question was difficult for everyone.",
+     "note": "Question ends in -tion."
+    },
+    {
+     "type": "correct",
+     "text": "The extension of the railway will take years.",
+     "note": "Extension ends in -sion."
+    },
+    {
+     "type": "incorrect",
+     "text": "We made a decition after a long discussion.",
+     "correction": "We made a decision after a long discussion.",
+     "note": "Decision ends in -sion."
+    },
+    {
+     "type": "incorrect",
+     "text": "Her explanasion helped me understand the problem.",
+     "correction": "Her explanation helped me understand the problem.",
+     "note": "Explanation ends in -tion."
+    },
+    {
+     "type": "incorrect",
+     "text": "They watched an exciting football match on televizion.",
+     "correction": "They watched an exciting football match on television.",
+     "note": "Television ends in -sion."
+    },
+    {
+     "type": "incorrect",
+     "text": "Please pay attension to the safety rules.",
+     "correction": "Please pay attention to the safety rules.",
+     "note": "Attention ends in -tion."
+    },
+    {
+     "type": "incorrect",
+     "text": "The new vertion of the app works better.",
+     "correction": "The new version of the app works better.",
+     "note": "Version ends in -sion."
+    },
+    {
+     "type": "incorrect",
+     "text": "The invation of the city happened long ago.",
+     "correction": "The invasion of the city happened long ago.",
+     "note": "Invasion ends in -sion."
+    },
+    {
+     "type": "incorrect",
+     "text": "The educasion system is changing quickly.",
+     "correction": "The education system is changing quickly.",
+     "note": "Education ends in -tion."
+    },
+    {
+     "type": "incorrect",
+     "text": "We need a solusion to this transport problem.",
+     "correction": "We need a solution to this transport problem.",
+     "note": "Solution ends in -tion."
+    },
+    {
+     "type": "incorrect",
+     "text": "The extention of the railway will take years.",
+     "correction": "The extension of the railway will take years.",
+     "note": "Extension ends in -sion."
+    },
+    {
+     "type": "incorrect",
+     "text": "The nacion has many beautiful cities.",
+     "correction": "The nation has many beautiful cities.",
+     "note": "Nation ends in -tion."
+    },
+    {
+     "type": "incorrect",
+     "text": "The confution at the airport was terrible.",
+     "correction": "The confusion at the airport was terrible.",
+     "note": "Confusion ends in -sion."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "fill_gap",
+     "prompt": "We need a ___ to this problem. (решение)",
+     "answer": "solution"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The ___ of the city happened long ago. (вторжение)",
+     "answer": "invasion"
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The teacher gave us clear ___.",
+     "answer": "instructions",
+     "choices": [
+      "instrutions",
+      "instructions",
+      "instrucsions"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: We made a ___ after the meeting.",
+     "answer": "decision",
+     "choices": [
+      "decition",
+      "decision",
+      "decizion"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The ___ was busy at rush hour.",
+     "answer": "station",
+     "choices": [
+      "staton",
+      "station",
+      "stasion"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Her ___ helped me understand.",
+     "answer": "explanation",
+     "choices": [
+      "explanasion",
+      "explanation",
+      "explenation"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: They watched the match on ___.",
+     "answer": "television",
+     "choices": [
+      "televizion",
+      "television",
+      "televition"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The museum has a large ___ of paintings.",
+     "answer": "collection",
+     "choices": [
+      "colection",
+      "collection",
+      "collecsion"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: Please pay ___ to the rules.",
+     "answer": "attention",
+     "choices": [
+      "attension",
+      "attention",
+      "atention"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The new ___ works better.",
+     "answer": "version",
+     "choices": [
+      "vertion",
+      "version",
+      "verzion"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The ___ damaged both cars.",
+     "answer": "collision",
+     "choices": [
+      "colision",
+      "collision",
+      "collition"
+     ]
+    },
+    {
+     "type": "multiple_choice",
+     "prompt": "Choose the word: The ___ lasted until midnight.",
+     "answer": "celebration",
+     "choices": [
+      "celebrasion",
+      "celebration",
+      "celebracion"
+     ]
+    },
+    {
+     "type": "correct_word",
+     "prompt": "decition",
+     "answer": "decision"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "explanasion",
+     "answer": "explanation"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "televizion",
+     "answer": "television"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "attension",
+     "answer": "attention"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "vertion",
+     "answer": "version"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "invation",
+     "answer": "invasion"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "educasion",
+     "answer": "education"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "solusion",
+     "answer": "solution"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "celebrasion",
+     "answer": "celebration"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the place where a train stops.",
+     "answer": "station"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: entering a country by force.",
+     "answer": "invasion"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: a party for a special event.",
+     "answer": "celebration"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the process of teaching and learning.",
+     "answer": "education"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the opinion you form about someone.",
+     "answer": "impression"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: the act of choosing between options.",
+     "answer": "decision"
+    }
+   ]
+  },
+  {
+   "slug": "plural-es",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "The boxes were too heavy to carry.",
+     "note": "Box adds -es."
+    },
+    {
+     "type": "correct",
+     "text": "She bought two dresses for the wedding.",
+     "note": "Dress adds -es."
+    },
+    {
+     "type": "correct",
+     "text": "The buses leave every ten minutes.",
+     "note": "Bus adds -es."
+    },
+    {
+     "type": "correct",
+     "text": "The glasses are on the kitchen table.",
+     "note": "Glass adds -es."
+    },
+    {
+     "type": "correct",
+     "text": "The foxes hid behind the old fence.",
+     "note": "Fox adds -es."
+    },
+    {
+     "type": "correct",
+     "text": "The churches in the village are very old.",
+     "note": "Church adds -es."
+    },
+    {
+     "type": "incorrect",
+     "text": "The boxs were too heavy to carry.",
+     "correction": "The boxes were too heavy to carry.",
+     "note": "Box adds -es."
+    },
+    {
+     "type": "incorrect",
+     "text": "She bought two dresss for the wedding.",
+     "correction": "She bought two dresses for the wedding.",
+     "note": "Dress adds -es."
+    },
+    {
+     "type": "incorrect",
+     "text": "The buss leave every ten minutes.",
+     "correction": "The buses leave every ten minutes.",
+     "note": "Bus adds -es."
+    },
+    {
+     "type": "incorrect",
+     "text": "The glasss are on the kitchen table.",
+     "correction": "The glasses are on the kitchen table.",
+     "note": "Glass adds -es."
+    },
+    {
+     "type": "incorrect",
+     "text": "The foxs hid behind the old fence.",
+     "correction": "The foxes hid behind the old fence.",
+     "note": "Fox adds -es."
+    },
+    {
+     "type": "incorrect",
+     "text": "The churchs in the village are very old.",
+     "correction": "The churches in the village are very old.",
+     "note": "Church adds -es."
+    },
+    {
+     "type": "incorrect",
+     "text": "The benchs in the park are wet.",
+     "correction": "The benches in the park are wet.",
+     "note": "Bench adds -es."
+    },
+    {
+     "type": "incorrect",
+     "text": "The taxs went up this year.",
+     "correction": "The taxes went up this year.",
+     "note": "Tax adds -es."
+    },
+    {
+     "type": "incorrect",
+     "text": "She made three wishs before blowing out the candles.",
+     "correction": "She made three wishes before blowing out the candles.",
+     "note": "Wish adds -es."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "correct_word",
+     "prompt": "boxs",
+     "answer": "boxes"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "dresss",
+     "answer": "dresses"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "buss",
+     "answer": "buses"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "glasss",
+     "answer": "glasses"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "foxs",
+     "answer": "foxes"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "churchs",
+     "answer": "churches"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "brushs",
+     "answer": "brushes"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "wishs",
+     "answer": "wishes"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one box.",
+     "answer": "boxes"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one bus.",
+     "answer": "buses"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one glass.",
+     "answer": "glasses"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one fox.",
+     "answer": "foxes"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one church.",
+     "answer": "churches"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one brush.",
+     "answer": "brushes"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one bench.",
+     "answer": "benches"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one tax.",
+     "answer": "taxes"
+    }
+   ]
+  },
+  {
+   "slug": "plural-f-to-ves",
+   "examples": [
+    {
+     "type": "correct",
+     "text": "The baker sold six loaves before noon.",
+     "note": "Loaf becomes loaves."
+    },
+    {
+     "type": "correct",
+     "text": "The children collected leaves in the park.",
+     "note": "Leaf becomes leaves."
+    },
+    {
+     "type": "correct",
+     "text": "She sharpened the knives before dinner.",
+     "note": "Knife becomes knives."
+    },
+    {
+     "type": "correct",
+     "text": "The farmer fed the calves in the morning.",
+     "note": "Calf becomes calves."
+    },
+    {
+     "type": "correct",
+     "text": "The thieves ran away before the police arrived.",
+     "note": "Thief becomes thieves."
+    },
+    {
+     "type": "correct",
+     "text": "The shelves in the shop were full of toys.",
+     "note": "Shelf becomes shelves."
+    },
+    {
+     "type": "correct",
+     "text": "The wolves howled in the mountains.",
+     "note": "Wolf becomes wolves."
+    },
+    {
+     "type": "correct",
+     "text": "She cut the cake into two halves.",
+     "note": "Half becomes halves."
+    },
+    {
+     "type": "correct",
+     "text": "Doctors save many lives every day.",
+     "note": "Life becomes lives."
+    },
+    {
+     "type": "correct",
+     "text": "The elves helped Father Christmas make toys.",
+     "note": "Elf becomes elves."
+    },
+    {
+     "type": "correct",
+     "text": "The scarves were hanging by the door.",
+     "note": "Scarf becomes scarves."
+    },
+    {
+     "type": "correct",
+     "text": "The library bought several new bookshelves.",
+     "note": "Bookshelf becomes bookshelves."
+    },
+    {
+     "type": "correct",
+     "text": "The leaves turned yellow in autumn.",
+     "note": "Leaf becomes leaves."
+    },
+    {
+     "type": "correct",
+     "text": "The knives and forks were on the table.",
+     "note": "Knife becomes knives."
+    },
+    {
+     "type": "incorrect",
+     "text": "The baker sold six loafs before noon.",
+     "correction": "The baker sold six loaves before noon.",
+     "note": "Loaf becomes loaves."
+    },
+    {
+     "type": "incorrect",
+     "text": "The children collected leafs in the park.",
+     "correction": "The children collected leaves in the park.",
+     "note": "Leaf becomes leaves."
+    },
+    {
+     "type": "incorrect",
+     "text": "She sharpened the knifes before dinner.",
+     "correction": "She sharpened the knives before dinner.",
+     "note": "Knife becomes knives."
+    },
+    {
+     "type": "incorrect",
+     "text": "The farmer fed the calfs in the morning.",
+     "correction": "The farmer fed the calves in the morning.",
+     "note": "Calf becomes calves."
+    },
+    {
+     "type": "incorrect",
+     "text": "The thiefs ran away before the police arrived.",
+     "correction": "The thieves ran away before the police arrived.",
+     "note": "Thief becomes thieves."
+    },
+    {
+     "type": "incorrect",
+     "text": "The shelfs in the shop were full of toys.",
+     "correction": "The shelves in the shop were full of toys.",
+     "note": "Shelf becomes shelves."
+    },
+    {
+     "type": "incorrect",
+     "text": "The wolfs howled in the mountains.",
+     "correction": "The wolves howled in the mountains.",
+     "note": "Wolf becomes wolves."
+    },
+    {
+     "type": "incorrect",
+     "text": "She cut the cake into two halfs.",
+     "correction": "She cut the cake into two halves.",
+     "note": "Half becomes halves."
+    },
+    {
+     "type": "incorrect",
+     "text": "The elfs helped Father Christmas make toys.",
+     "correction": "The elves helped Father Christmas make toys.",
+     "note": "Elf becomes elves."
+    },
+    {
+     "type": "incorrect",
+     "text": "The library bought several new bookshelfs.",
+     "correction": "The library bought several new bookshelves.",
+     "note": "Bookshelf becomes bookshelves."
+    },
+    {
+     "type": "incorrect",
+     "text": "The leafs turned yellow in autumn.",
+     "correction": "The leaves turned yellow in autumn.",
+     "note": "Leaf becomes leaves."
+    },
+    {
+     "type": "incorrect",
+     "text": "The knifes and forks were on the table.",
+     "correction": "The knives and forks were on the table.",
+     "note": "Knife becomes knives."
+    },
+    {
+     "type": "incorrect",
+     "text": "The baker made three loafs of bread.",
+     "correction": "The baker made three loaves of bread.",
+     "note": "Loaf becomes loaves."
+    },
+    {
+     "type": "incorrect",
+     "text": "The calfs were born in spring.",
+     "correction": "The calves were born in spring.",
+     "note": "Calf becomes calves."
+    },
+    {
+     "type": "incorrect",
+     "text": "The thiefs were caught by the police.",
+     "correction": "The thieves were caught by the police.",
+     "note": "Thief becomes thieves."
+    },
+    {
+     "type": "exception",
+     "text": "The roof of the house needs repairs.",
+     "note": "Roof has a regular plural."
+    },
+    {
+     "type": "exception",
+     "text": "The chef cooked a special meal for us.",
+     "note": "Chef has a regular plural."
+    }
+   ],
+   "exercises": [
+    {
+     "type": "fill_gap",
+     "prompt": "The baker made six ___ of bread. (буханки)",
+     "answer": "loaves"
+    },
+    {
+     "type": "fill_gap",
+     "prompt": "The farmer fed the ___ in the field. (телят)",
+     "answer": "calves"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "loafs",
+     "answer": "loaves"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "leafs",
+     "answer": "leaves"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "knifes",
+     "answer": "knives"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "wifes",
+     "answer": "wives"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "lifes",
+     "answer": "lives"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "elfs",
+     "answer": "elves"
+    },
+    {
+     "type": "correct_word",
+     "prompt": "bookshelfs",
+     "answer": "bookshelves"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one leaf.",
+     "answer": "leaves"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one calf.",
+     "answer": "calves"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one thief.",
+     "answer": "thieves"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one shelf.",
+     "answer": "shelves"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one wolf.",
+     "answer": "wolves"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one half.",
+     "answer": "halves"
+    },
+    {
+     "type": "spell",
+     "prompt": "Spell the word: more than one life.",
+     "answer": "lives"
+    }
+   ]
+  }
+ ]
+}

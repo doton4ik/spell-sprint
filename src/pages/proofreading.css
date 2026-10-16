@@ -425,8 +425,7 @@
   line-height: 1.5;
   margin-top: 3px;
 }
-.proof-explain__alarms,
-.proof-explain__note {
+.proof-explain__alarms {
   color: var(--ink-muted);
   font-size: calc(14px * var(--fs));
   margin: 10px 2px 0;

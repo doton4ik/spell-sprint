@@ -1,0 +1,544 @@
+{
+  "slug": "plural-es",
+  "examples": [
+    {
+      "type": "correct",
+      "text": "The shops sell fresh loaves every morning.",
+      "note": "Loaf becomes loaves."
+    },
+    {
+      "type": "correct",
+      "text": "The children found three leaves in the park.",
+      "note": "Leaf becomes leaves."
+    },
+    {
+      "type": "correct",
+      "text": "The kitchen has two sharp knives.",
+      "note": "Knife becomes knives."
+    },
+    {
+      "type": "correct",
+      "text": "My wife made sandwiches for the trip.",
+      "note": "Wife becomes wives."
+    },
+    {
+      "type": "correct",
+      "text": "The shelves in the library are full.",
+      "note": "Shelf becomes shelves."
+    },
+    {
+      "type": "correct",
+      "text": "The wolves howled in the forest.",
+      "note": "Wolf becomes wolves."
+    },
+    {
+      "type": "correct",
+      "text": "The thief stole two wallets from the shop.",
+      "note": "Thief becomes thieves."
+    },
+    {
+      "type": "correct",
+      "text": "The roof of the house needs repairs.",
+      "note": "Roof has a regular plural."
+    },
+    {
+      "type": "correct",
+      "text": "The cliffs are dangerous in bad weather.",
+      "note": "Cliff has a regular plural."
+    },
+    {
+      "type": "correct",
+      "text": "The chiefs met to discuss the plan.",
+      "note": "Chief has a regular plural."
+    },
+    {
+      "type": "correct",
+      "text": "The boxes were too heavy to carry.",
+      "note": "Box adds -es."
+    },
+    {
+      "type": "correct",
+      "text": "She bought two dresses for the wedding.",
+      "note": "Dress adds -es."
+    },
+    {
+      "type": "correct",
+      "text": "The buses leave every ten minutes.",
+      "note": "Bus adds -es."
+    },
+    {
+      "type": "correct",
+      "text": "The glasses are on the kitchen table.",
+      "note": "Glass adds -es."
+    },
+    {
+      "type": "correct",
+      "text": "The foxes hid behind the old fence.",
+      "note": "Fox adds -es."
+    },
+    {
+      "type": "correct",
+      "text": "The churches in the village are very old.",
+      "note": "Church adds -es."
+    },
+    {
+      "type": "incorrect",
+      "text": "The shops sell fresh loafs every morning.",
+      "correction": "The shops sell fresh loaves every morning.",
+      "note": "Loaf becomes loaves."
+    },
+    {
+      "type": "incorrect",
+      "text": "The children found three leafs in the park.",
+      "correction": "The children found three leaves in the park.",
+      "note": "Leaf becomes leaves."
+    },
+    {
+      "type": "incorrect",
+      "text": "The kitchen has two knifes.",
+      "correction": "The kitchen has two knives.",
+      "note": "Knife becomes knives."
+    },
+    {
+      "type": "incorrect",
+      "text": "My wifes made sandwiches for the trip.",
+      "correction": "My wife made sandwiches for the trip.",
+      "note": "Wife becomes wives."
+    },
+    {
+      "type": "incorrect",
+      "text": "The shelfs in the library are full.",
+      "correction": "The shelves in the library are full.",
+      "note": "Shelf becomes shelves."
+    },
+    {
+      "type": "incorrect",
+      "text": "The wolfs howled in the forest.",
+      "correction": "The wolves howled in the forest.",
+      "note": "Wolf becomes wolves."
+    },
+    {
+      "type": "incorrect",
+      "text": "The thiefs stole two wallets from the shop.",
+      "correction": "The thieves stole two wallets from the shop.",
+      "note": "Thief becomes thieves."
+    },
+    {
+      "type": "incorrect",
+      "text": "The rooves of the house need repairs.",
+      "correction": "The roofs of the house need repairs.",
+      "note": "Roof has a regular plural."
+    },
+    {
+      "type": "incorrect",
+      "text": "The clifs are dangerous in bad weather.",
+      "correction": "The cliffs are dangerous in bad weather.",
+      "note": "Cliff has a regular plural."
+    },
+    {
+      "type": "incorrect",
+      "text": "The chiefes met to discuss the plan.",
+      "correction": "The chiefs met to discuss the plan.",
+      "note": "Chief has a regular plural."
+    },
+    {
+      "type": "incorrect",
+      "text": "The boxs were too heavy to carry.",
+      "correction": "The boxes were too heavy to carry.",
+      "note": "Box adds -es."
+    },
+    {
+      "type": "incorrect",
+      "text": "She bought two dresss for the wedding.",
+      "correction": "She bought two dresses for the wedding.",
+      "note": "Dress adds -es."
+    },
+    {
+      "type": "incorrect",
+      "text": "The buss leave every ten minutes.",
+      "correction": "The buses leave every ten minutes.",
+      "note": "Bus adds -es."
+    },
+    {
+      "type": "incorrect",
+      "text": "The glasss are on the kitchen table.",
+      "correction": "The glasses are on the kitchen table.",
+      "note": "Glass adds -es."
+    },
+    {
+      "type": "incorrect",
+      "text": "The foxs hid behind the old fence.",
+      "correction": "The foxes hid behind the old fence.",
+      "note": "Fox adds -es."
+    },
+    {
+      "type": "incorrect",
+      "text": "The churchs in the village are very old.",
+      "correction": "The churches in the village are very old.",
+      "note": "Church adds -es."
+    },
+    {
+      "type": "incorrect",
+      "text": "I need three brushs for painting.",
+      "correction": "I need three brushes for painting.",
+      "note": "Brush adds -es."
+    },
+    {
+      "type": "incorrect",
+      "text": "The benchs in the park are wet.",
+      "correction": "The benches in the park are wet.",
+      "note": "Bench adds -es."
+    },
+    {
+      "type": "incorrect",
+      "text": "The taxs went up this year.",
+      "correction": "The taxes went up this year.",
+      "note": "Tax adds -es."
+    },
+    {
+      "type": "incorrect",
+      "text": "She made three wishs before blowing out the candles.",
+      "correction": "She made three wishes before blowing out the candles.",
+      "note": "Wish adds -es."
+    },
+    {
+      "type": "exception",
+      "text": "The baby has two tooth.",
+      "correction": "The baby has two teeth.",
+      "note": "Tooth becomes teeth."
+    },
+    {
+      "type": "exception",
+      "text": "The man has two foot.",
+      "correction": "The man has two feet.",
+      "note": "Foot becomes feet."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "fill_gap",
+      "prompt": "Please wash the ___. (посуду)",
+      "answer": "dishes"
+    },
+    {
+      "type": "fill_gap",
+      "prompt": "The baker sells fresh ___. (буханки)",
+      "answer": "loaves"
+    },
+    {
+      "type": "fill_gap",
+      "prompt": "The cat chased two ___ in the garden. (мыши)",
+      "answer": "mice"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of match.",
+      "answer": "matches",
+      "choices": [
+        "matchs",
+        "matches",
+        "matchies"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of brush.",
+      "answer": "brushes",
+      "choices": [
+        "brushs",
+        "brushes",
+        "brushies"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of fox.",
+      "answer": "foxes",
+      "choices": [
+        "foxs",
+        "foxes",
+        "foxies"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of church.",
+      "answer": "churches",
+      "choices": [
+        "churchs",
+        "churches",
+        "churchies"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of bus.",
+      "answer": "buses",
+      "choices": [
+        "buss",
+        "buses",
+        "busies"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of glass.",
+      "answer": "glasses",
+      "choices": [
+        "glasss",
+        "glasses",
+        "glassies"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of dress.",
+      "answer": "dresses",
+      "choices": [
+        "dresss",
+        "dresses",
+        "dressies"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of bench.",
+      "answer": "benches",
+      "choices": [
+        "benchs",
+        "benches",
+        "benchies"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of tax.",
+      "answer": "taxes",
+      "choices": [
+        "taxs",
+        "taxes",
+        "taxies"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of leaf.",
+      "answer": "leaves",
+      "choices": [
+        "leafs",
+        "leaves",
+        "leafies"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the correct plural of knife.",
+      "answer": "knives",
+      "choices": [
+        "knifes",
+        "knives",
+        "kniveies"
+      ]
+    },
+    {
+      "type": "correct_word",
+      "prompt": "loafs",
+      "answer": "loaves"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "leafs",
+      "answer": "leaves"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "knifes",
+      "answer": "knives"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "wifes",
+      "answer": "wives"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "shelfs",
+      "answer": "shelves"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "wolfs",
+      "answer": "wolves"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "thiefs",
+      "answer": "thieves"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "rooves",
+      "answer": "roofs"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "clifs",
+      "answer": "cliffs"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "chiefes",
+      "answer": "chiefs"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "boxs",
+      "answer": "boxes"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "dresss",
+      "answer": "dresses"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "buss",
+      "answer": "buses"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "glasss",
+      "answer": "glasses"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "foxs",
+      "answer": "foxes"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "churchs",
+      "answer": "churches"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "brushs",
+      "answer": "brushes"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "benchs",
+      "answer": "benches"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "taxs",
+      "answer": "taxes"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "wishs",
+      "answer": "wishes"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one loaf.",
+      "answer": "loaves"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one leaf.",
+      "answer": "leaves"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one knife.",
+      "answer": "knives"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one wife.",
+      "answer": "wives"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one shelf.",
+      "answer": "shelves"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one wolf.",
+      "answer": "wolves"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one thief.",
+      "answer": "thieves"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one roof.",
+      "answer": "roofs"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one cliff.",
+      "answer": "cliffs"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one chief.",
+      "answer": "chiefs"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one box.",
+      "answer": "boxes"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one dress.",
+      "answer": "dresses"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one bus.",
+      "answer": "buses"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one glass.",
+      "answer": "glasses"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one fox.",
+      "answer": "foxes"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one church.",
+      "answer": "churches"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one brush.",
+      "answer": "brushes"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one bench.",
+      "answer": "benches"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one tax.",
+      "answer": "taxes"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: more than one wish.",
+      "answer": "wishes"
+    }
+  ]
+}

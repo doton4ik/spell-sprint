@@ -1,0 +1,487 @@
+{
+  "slug": "tion-vs-sion",
+  "examples": [
+    {
+      "type": "correct",
+      "text": "The teacher gave us clear instructions.",
+      "note": "Instruction ends in -tion."
+    },
+    {
+      "type": "correct",
+      "text": "We made a decision after a long discussion.",
+      "note": "Decision ends in -sion."
+    },
+    {
+      "type": "correct",
+      "text": "The station was busy at rush hour.",
+      "note": "Station ends in -tion."
+    },
+    {
+      "type": "correct",
+      "text": "Her explanation helped me understand the problem.",
+      "note": "Explanation ends in -tion."
+    },
+    {
+      "type": "correct",
+      "text": "They watched an exciting football match on television.",
+      "note": "Television ends in -sion."
+    },
+    {
+      "type": "correct",
+      "text": "The museum has a large collection of paintings.",
+      "note": "Collection ends in -tion."
+    },
+    {
+      "type": "correct",
+      "text": "Please pay attention to the safety rules.",
+      "note": "Attention ends in -tion."
+    },
+    {
+      "type": "correct",
+      "text": "The new version of the app works better.",
+      "note": "Version ends in -sion."
+    },
+    {
+      "type": "correct",
+      "text": "The invasion of the city happened long ago.",
+      "note": "Invasion ends in -sion."
+    },
+    {
+      "type": "correct",
+      "text": "Her expression showed that she was surprised.",
+      "note": "Expression ends in -sion."
+    },
+    {
+      "type": "correct",
+      "text": "The education system is changing quickly.",
+      "note": "Education ends in -tion."
+    },
+    {
+      "type": "correct",
+      "text": "We need a solution to this transport problem.",
+      "note": "Solution ends in -tion."
+    },
+    {
+      "type": "correct",
+      "text": "The collision damaged both cars.",
+      "note": "Collision ends in -sion."
+    },
+    {
+      "type": "correct",
+      "text": "The celebration lasted until midnight.",
+      "note": "Celebration ends in -tion."
+    },
+    {
+      "type": "correct",
+      "text": "The question was difficult for everyone.",
+      "note": "Question ends in -tion."
+    },
+    {
+      "type": "correct",
+      "text": "The extension of the railway will take years.",
+      "note": "Extension ends in -sion."
+    },
+    {
+      "type": "incorrect",
+      "text": "The teacher gave us clear instrutions.",
+      "correction": "The teacher gave us clear instructions.",
+      "note": "Instruction ends in -tion."
+    },
+    {
+      "type": "incorrect",
+      "text": "We made a decition after a long discussion.",
+      "correction": "We made a decision after a long discussion.",
+      "note": "Decision ends in -sion."
+    },
+    {
+      "type": "incorrect",
+      "text": "The staton was busy at rush hour.",
+      "correction": "The station was busy at rush hour.",
+      "note": "Station ends in -tion."
+    },
+    {
+      "type": "incorrect",
+      "text": "Her explanasion helped me understand the problem.",
+      "correction": "Her explanation helped me understand the problem.",
+      "note": "Explanation ends in -tion."
+    },
+    {
+      "type": "incorrect",
+      "text": "They watched an exciting football match on televizion.",
+      "correction": "They watched an exciting football match on television.",
+      "note": "Television ends in -sion."
+    },
+    {
+      "type": "incorrect",
+      "text": "The museum has a large colection of paintings.",
+      "correction": "The museum has a large collection of paintings.",
+      "note": "Collection ends in -tion."
+    },
+    {
+      "type": "incorrect",
+      "text": "Please pay attension to the safety rules.",
+      "correction": "Please pay attention to the safety rules.",
+      "note": "Attention ends in -tion."
+    },
+    {
+      "type": "incorrect",
+      "text": "The new vertion of the app works better.",
+      "correction": "The new version of the app works better.",
+      "note": "Version ends in -sion."
+    },
+    {
+      "type": "incorrect",
+      "text": "The invation of the city happened long ago.",
+      "correction": "The invasion of the city happened long ago.",
+      "note": "Invasion ends in -sion."
+    },
+    {
+      "type": "incorrect",
+      "text": "Her expresion showed that she was surprised.",
+      "correction": "Her expression showed that she was surprised.",
+      "note": "Expression ends in -sion."
+    },
+    {
+      "type": "incorrect",
+      "text": "The educasion system is changing quickly.",
+      "correction": "The education system is changing quickly.",
+      "note": "Education ends in -tion."
+    },
+    {
+      "type": "incorrect",
+      "text": "We need a solusion to this transport problem.",
+      "correction": "We need a solution to this transport problem.",
+      "note": "Solution ends in -tion."
+    },
+    {
+      "type": "incorrect",
+      "text": "The colision damaged both cars.",
+      "correction": "The collision damaged both cars.",
+      "note": "Collision ends in -sion."
+    },
+    {
+      "type": "incorrect",
+      "text": "The celebreation lasted until midnight.",
+      "correction": "The celebration lasted until midnight.",
+      "note": "Celebration ends in -tion."
+    },
+    {
+      "type": "incorrect",
+      "text": "The queston was difficult for everyone.",
+      "correction": "The question was difficult for everyone.",
+      "note": "Question ends in -tion."
+    },
+    {
+      "type": "incorrect",
+      "text": "The extention of the railway will take years.",
+      "correction": "The extension of the railway will take years.",
+      "note": "Extension ends in -sion."
+    },
+    {
+      "type": "incorrect",
+      "text": "The nacion has many beautiful cities.",
+      "correction": "The nation has many beautiful cities.",
+      "note": "Nation ends in -tion."
+    },
+    {
+      "type": "incorrect",
+      "text": "The confution at the airport was terrible.",
+      "correction": "The confusion at the airport was terrible.",
+      "note": "Confusion ends in -sion."
+    },
+    {
+      "type": "incorrect",
+      "text": "The acsion was taken after the meeting.",
+      "correction": "The action was taken after the meeting.",
+      "note": "Action ends in -tion."
+    },
+    {
+      "type": "incorrect",
+      "text": "The direcsion to the hotel was unclear.",
+      "correction": "The direction to the hotel was unclear.",
+      "note": "Direction ends in -tion."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "fill_gap",
+      "prompt": "Please answer the last ___. (вопрос)",
+      "answer": "question"
+    },
+    {
+      "type": "fill_gap",
+      "prompt": "We need a ___ to this problem. (решение)",
+      "answer": "solution"
+    },
+    {
+      "type": "fill_gap",
+      "prompt": "The ___ of the city happened long ago. (вторжение)",
+      "answer": "invasion"
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: The teacher gave us clear ___.",
+      "answer": "instructions",
+      "choices": [
+        "instrutions",
+        "instructions",
+        "instrucsions"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: We made a ___ after the meeting.",
+      "answer": "decision",
+      "choices": [
+        "decition",
+        "decision",
+        "decizion"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: The ___ was busy at rush hour.",
+      "answer": "station",
+      "choices": [
+        "staton",
+        "station",
+        "stasion"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: Her ___ helped me understand.",
+      "answer": "explanation",
+      "choices": [
+        "explanasion",
+        "explanation",
+        "explenation"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: They watched the match on ___.",
+      "answer": "television",
+      "choices": [
+        "televizion",
+        "television",
+        "televition"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: The museum has a large ___ of paintings.",
+      "answer": "collection",
+      "choices": [
+        "colection",
+        "collection",
+        "collecsion"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: Please pay ___ to the rules.",
+      "answer": "attention",
+      "choices": [
+        "attension",
+        "attention",
+        "atention"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: The new ___ works better.",
+      "answer": "version",
+      "choices": [
+        "vertion",
+        "version",
+        "verzion"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: The ___ damaged both cars.",
+      "answer": "collision",
+      "choices": [
+        "colision",
+        "collision",
+        "collition"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: The ___ lasted until midnight.",
+      "answer": "celebration",
+      "choices": [
+        "celebrasion",
+        "celebration",
+        "celebracion"
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "prompt": "Choose the word: The ___ was difficult for everyone.",
+      "answer": "question",
+      "choices": [
+        "queston",
+        "question",
+        "questian"
+      ]
+    },
+    {
+      "type": "correct_word",
+      "prompt": "instrution",
+      "answer": "instruction"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "decition",
+      "answer": "decision"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "staton",
+      "answer": "station"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "explanasion",
+      "answer": "explanation"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "televizion",
+      "answer": "television"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "colection",
+      "answer": "collection"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "attension",
+      "answer": "attention"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "vertion",
+      "answer": "version"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "invation",
+      "answer": "invasion"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "expresion",
+      "answer": "expression"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "educasion",
+      "answer": "education"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "solusion",
+      "answer": "solution"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "colision",
+      "answer": "collision"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "celebrasion",
+      "answer": "celebration"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "queston",
+      "answer": "question"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "extention",
+      "answer": "extension"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "nasion",
+      "answer": "nation"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "confution",
+      "answer": "confusion"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "acsion",
+      "answer": "action"
+    },
+    {
+      "type": "correct_word",
+      "prompt": "direcsion",
+      "answer": "direction"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: the place where a train stops.",
+      "answer": "station"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: the answer to a problem.",
+      "answer": "solution"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: entering a country by force.",
+      "answer": "invasion"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: the ability to see.",
+      "answer": "vision"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: a party for a special event.",
+      "answer": "celebration"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: when two vehicles hit each other.",
+      "answer": "collision"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: the process of teaching and learning.",
+      "answer": "education"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: the opinion you form about someone.",
+      "answer": "impression"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: a long talk about something.",
+      "answer": "discussion"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: permission to enter a place.",
+      "answer": "admission"
+    },
+    {
+      "type": "spell",
+      "prompt": "Spell the word: the act of choosing between options.",
+      "answer": "decision"
+    }
+  ]
+}
