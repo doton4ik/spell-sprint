@@ -1,0 +1,741 @@
+{
+  "category": "english_spelling",
+  "rules": [
+    {
+      "slug": "ck-after-short-vowel",
+      "title": "Short vowel + ck: back, pick, luck",
+      "rule_type": "language_rule",
+      "short_explanation": "At the end of a short word, write ck for the /k/ sound after a short vowel: back, pick, luck, clock, truck. After a long vowel, two vowels or a consonant, write just k: make, book, bank.",
+      "tts_text": "After a short vowel, the k sound is written ck.",
+      "mnemonic": "Short vowel, strong end: ck. Long vowel or consonant: just k.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "I need a quick answer today.",
+          "note": "Short vowel i: use ck."
+        },
+        {
+          "type": "correct",
+          "text": "He packed the boxes into the truck.",
+          "note": "Short vowel u: use ck."
+        },
+        {
+          "type": "correct",
+          "text": "Please look at the clock on the wall.",
+          "note": "Short vowel o: use ck."
+        },
+        {
+          "type": "correct",
+          "text": "She picked a ripe apple from the tree.",
+          "note": "Pick has a short vowel: use ck."
+        },
+        {
+          "type": "correct",
+          "text": "He has a sore neck after the flight.",
+          "note": "Short vowel e: use ck."
+        },
+        {
+          "type": "correct",
+          "text": "Good luck with your exam!",
+          "note": "Short vowel u: use ck."
+        },
+        {
+          "type": "correct",
+          "text": "The lock on the door is broken.",
+          "note": "Short vowel o: use ck."
+        },
+        {
+          "type": "correct",
+          "text": "She wore black shoes to work.",
+          "note": "Short vowel a: use ck."
+        },
+        {
+          "type": "correct",
+          "text": "Please make a list of the boxes.",
+          "note": "Long vowel a: use k, not ck."
+        },
+        {
+          "type": "correct",
+          "text": "The bank opens at nine o'clock.",
+          "note": "After the consonant n: use k."
+        },
+        {
+          "type": "correct",
+          "text": "I read a good book on the train.",
+          "note": "Two vowels oo: use k."
+        },
+        {
+          "type": "incorrect",
+          "text": "I need a quik answer today.",
+          "correction": "I need a quick answer today.",
+          "note": "Short vowel i: write ck."
+        },
+        {
+          "type": "incorrect",
+          "text": "He packed the boxes into the truk.",
+          "correction": "He packed the boxes into the truck.",
+          "note": "Short vowel u: write ck."
+        },
+        {
+          "type": "incorrect",
+          "text": "Please look at the clok on the wall.",
+          "correction": "Please look at the clock on the wall.",
+          "note": "Short vowel o: write ck."
+        },
+        {
+          "type": "incorrect",
+          "text": "She piked a ripe apple from the tree.",
+          "correction": "She picked a ripe apple from the tree.",
+          "note": "Short vowel i: write ck."
+        },
+        {
+          "type": "incorrect",
+          "text": "He has a sore nek after the flight.",
+          "correction": "He has a sore neck after the flight.",
+          "note": "Short vowel e: write ck."
+        },
+        {
+          "type": "incorrect",
+          "text": "Good luk with your exam!",
+          "correction": "Good luck with your exam!",
+          "note": "Short vowel u: write ck."
+        },
+        {
+          "type": "incorrect",
+          "text": "The lok on the door is broken.",
+          "correction": "The lock on the door is broken.",
+          "note": "Short vowel o: write ck."
+        },
+        {
+          "type": "incorrect",
+          "text": "She wore blak shoes to work.",
+          "correction": "She wore black shoes to work.",
+          "note": "Short vowel a: write ck."
+        },
+        {
+          "type": "incorrect",
+          "text": "Please mack a list of the boxes.",
+          "correction": "Please make a list of the boxes.",
+          "note": "Long vowel a: write just k."
+        },
+        {
+          "type": "incorrect",
+          "text": "The banck opens at nine o'clock.",
+          "correction": "The bank opens at nine o'clock.",
+          "note": "After a consonant: write just k."
+        },
+        {
+          "type": "incorrect",
+          "text": "I read a good boock on the train.",
+          "correction": "I read a good book on the train.",
+          "note": "Two vowels oo: write just k."
+        },
+        {
+          "type": "exception",
+          "text": "The trek lasted three days.",
+          "note": "Short vowel, but trek keeps a single k."
+        },
+        {
+          "type": "exception",
+          "text": "The yak lives high in the mountains.",
+          "note": "Short vowel, but yak keeps a single k."
+        },
+        {
+          "type": "exception",
+          "text": "My colleague is a Slovak citizen.",
+          "note": "Short vowel, but Slovak keeps a single k."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "I need a ___ answer today. (fast)",
+          "answer": "quick"
+        },
+        {
+          "prompt": "The delivery ___ is outside. (large vehicle)",
+          "answer": "truck"
+        },
+        {
+          "prompt": "Look at the ___ on the wall. (shows the time)",
+          "answer": "clock"
+        },
+        {
+          "prompt": "She ___ a ripe apple from the tree. (pick + ed)",
+          "answer": "picked"
+        },
+        {
+          "prompt": "He has a sore ___ after the flight. (between head and body)",
+          "answer": "neck"
+        },
+        {
+          "prompt": "Good ___ with your exam! (good fortune)",
+          "answer": "luck"
+        },
+        {
+          "prompt": "The ___ on the door is broken. (keeps it closed)",
+          "answer": "lock"
+        },
+        {
+          "prompt": "She wore ___ shoes to work. (the colour of coal)",
+          "answer": "black"
+        },
+        {
+          "prompt": "The bag is on the ___ seat. (opposite of front)",
+          "answer": "back"
+        },
+        {
+          "prompt": "He ___ the ball over the fence. (kick + ed)",
+          "answer": "kicked"
+        },
+        {
+          "prompt": "The shop is on the next ___.",
+          "answer": "block",
+          "choices": [
+            "blok",
+            "block",
+            "blokk",
+            "blokc"
+          ]
+        },
+        {
+          "prompt": "He put a clean ___ in his bag.",
+          "answer": "sock",
+          "choices": [
+            "sok",
+            "sock",
+            "socc",
+            "sokk"
+          ]
+        },
+        {
+          "prompt": "Use a ___ to hang the picture.",
+          "answer": "hook",
+          "choices": [
+            "hoock",
+            "hook",
+            "hooc",
+            "hoke"
+          ]
+        },
+        {
+          "prompt": "Please ___ some tea for the guests.",
+          "answer": "make",
+          "choices": [
+            "mack",
+            "make",
+            "mak",
+            "maik"
+          ]
+        },
+        {
+          "prompt": "Money is kept in the ___.",
+          "answer": "bank",
+          "choices": [
+            "banck",
+            "bank",
+            "bankk",
+            "banc"
+          ]
+        },
+        {
+          "prompt": "The runners are on the ___.",
+          "answer": "track",
+          "choices": [
+            "trak",
+            "track",
+            "trakk",
+            "trac"
+          ]
+        },
+        {
+          "prompt": "The ___ blanket kept me warm.",
+          "answer": "thick",
+          "choices": [
+            "thik",
+            "thick",
+            "thikk",
+            "thicc"
+          ]
+        },
+        {
+          "prompt": "That was a clever ___.",
+          "answer": "trick",
+          "choices": [
+            "trik",
+            "trick",
+            "trikk",
+            "tric"
+          ]
+        },
+        {
+          "prompt": "Hold the ___ with both hands.",
+          "answer": "stick",
+          "choices": [
+            "stik",
+            "stick",
+            "sticc",
+            "stikk"
+          ]
+        },
+        {
+          "prompt": "A ___ swam across the pond.",
+          "answer": "duck",
+          "choices": [
+            "duk",
+            "duck",
+            "ducc",
+            "dukk"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: quik",
+          "answer": "quick"
+        },
+        {
+          "prompt": "Fix the spelling: truk",
+          "answer": "truck"
+        },
+        {
+          "prompt": "Fix the spelling: clok",
+          "answer": "clock"
+        },
+        {
+          "prompt": "Fix the spelling: nek",
+          "answer": "neck"
+        },
+        {
+          "prompt": "Fix the spelling: luk",
+          "answer": "luck"
+        },
+        {
+          "prompt": "Fix the spelling: lok",
+          "answer": "lock"
+        },
+        {
+          "prompt": "Fix the spelling: blak",
+          "answer": "black"
+        },
+        {
+          "prompt": "Fix the spelling: sok",
+          "answer": "sock"
+        },
+        {
+          "prompt": "Fix the spelling: bak",
+          "answer": "back"
+        },
+        {
+          "prompt": "Fix the spelling: stik",
+          "answer": "stick"
+        },
+        {
+          "prompt": "Spell the word: a large vehicle for goods.",
+          "answer": "truck"
+        },
+        {
+          "prompt": "Spell the word: a word like 'fast' that starts with q.",
+          "answer": "quick"
+        },
+        {
+          "prompt": "Spell the word: the opposite of front.",
+          "answer": "back"
+        },
+        {
+          "prompt": "Spell the word: to choose or lift something with your fingers.",
+          "answer": "pick"
+        },
+        {
+          "prompt": "Spell the word: the colour of night.",
+          "answer": "black"
+        },
+        {
+          "prompt": "Spell the word: a small piece of clothing for your foot.",
+          "answer": "sock"
+        },
+        {
+          "prompt": "Spell the word: the part of the body between head and shoulders.",
+          "answer": "neck"
+        },
+        {
+          "prompt": "Spell the word: you open or close it with a key.",
+          "answer": "lock"
+        },
+        {
+          "prompt": "Spell the word: good fortune.",
+          "answer": "luck"
+        },
+        {
+          "prompt": "Spell the word: a hit with your foot.",
+          "answer": "kick"
+        }
+      ]
+    },
+    {
+      "slug": "ph-and-gh-f-sound",
+      "title": "The f sound as ph or gh: phone, laugh",
+      "rule_type": "language_rule",
+      "short_explanation": "The /f/ sound is not always written f. In many words from Greek it is ph: phone, photo, alphabet, physics, phrase. In a few common words it is gh: laugh, enough, tough, rough, cough.",
+      "tts_text": "The f sound can be written ph or gh.",
+      "mnemonic": "Phone and photo: ph. Laugh, enough, tough: gh.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Please call me on my phone.",
+          "note": "The /f/ sound in phone is ph."
+        },
+        {
+          "type": "correct",
+          "text": "She took a photo of the warehouse.",
+          "note": "The /f/ sound in photo is ph."
+        },
+        {
+          "type": "correct",
+          "text": "The alphabet has twenty-six letters.",
+          "note": "The /f/ sound in alphabet is ph."
+        },
+        {
+          "type": "correct",
+          "text": "He studies physics at university.",
+          "note": "The /f/ sound in physics is ph."
+        },
+        {
+          "type": "correct",
+          "text": "Write a short phrase on the card.",
+          "note": "The /f/ sound in phrase is ph."
+        },
+        {
+          "type": "correct",
+          "text": "The graph shows the sales in March.",
+          "note": "The /f/ sound in graph is ph."
+        },
+        {
+          "type": "correct",
+          "text": "We laughed at the funny story.",
+          "note": "The /f/ sound in laugh is gh."
+        },
+        {
+          "type": "correct",
+          "text": "Is the bread enough for everyone?",
+          "note": "The /f/ sound in enough is gh."
+        },
+        {
+          "type": "correct",
+          "text": "The steak was too tough to cut.",
+          "note": "The /f/ sound in tough is gh."
+        },
+        {
+          "type": "correct",
+          "text": "The road was rough after the storm.",
+          "note": "The /f/ sound in rough is gh."
+        },
+        {
+          "type": "correct",
+          "text": "She has a bad cough today.",
+          "note": "The /f/ sound in cough is gh."
+        },
+        {
+          "type": "incorrect",
+          "text": "Please call me on my fone.",
+          "correction": "Please call me on my phone.",
+          "note": "Write ph for /f/ in phone."
+        },
+        {
+          "type": "incorrect",
+          "text": "She took a foto of the warehouse.",
+          "correction": "She took a photo of the warehouse.",
+          "note": "Write ph for /f/ in photo."
+        },
+        {
+          "type": "incorrect",
+          "text": "The alfabet has twenty-six letters.",
+          "correction": "The alphabet has twenty-six letters.",
+          "note": "Write ph for /f/ in alphabet."
+        },
+        {
+          "type": "incorrect",
+          "text": "He studies fysics at university.",
+          "correction": "He studies physics at university.",
+          "note": "Write ph for /f/ in physics."
+        },
+        {
+          "type": "incorrect",
+          "text": "Write a short frase on the card.",
+          "correction": "Write a short phrase on the card.",
+          "note": "Write ph for /f/ in phrase."
+        },
+        {
+          "type": "incorrect",
+          "text": "The graf shows the sales in March.",
+          "correction": "The graph shows the sales in March.",
+          "note": "Write ph for /f/ in graph."
+        },
+        {
+          "type": "incorrect",
+          "text": "We lafed at the funny story.",
+          "correction": "We laughed at the funny story.",
+          "note": "Laugh keeps gh for /f/."
+        },
+        {
+          "type": "incorrect",
+          "text": "Is the bread enuf for everyone?",
+          "correction": "Is the bread enough for everyone?",
+          "note": "Enough keeps gh for /f/."
+        },
+        {
+          "type": "incorrect",
+          "text": "The steak was too tuf to cut.",
+          "correction": "The steak was too tough to cut.",
+          "note": "Tough keeps gh for /f/."
+        },
+        {
+          "type": "incorrect",
+          "text": "The road was ruf after the storm.",
+          "correction": "The road was rough after the storm.",
+          "note": "Rough keeps gh for /f/."
+        },
+        {
+          "type": "incorrect",
+          "text": "She has a bad cof today.",
+          "correction": "She has a bad cough today.",
+          "note": "Cough keeps gh for /f/."
+        },
+        {
+          "type": "exception",
+          "text": "The night shift starts at ten.",
+          "note": "Here gh is silent, not /f/."
+        },
+        {
+          "type": "exception",
+          "text": "Please turn on the light.",
+          "note": "Here gh is silent, not /f/."
+        },
+        {
+          "type": "exception",
+          "text": "Although it rained, we went out.",
+          "note": "Here gh is silent, not /f/."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Please call me on my ___. (you carry it)",
+          "answer": "phone"
+        },
+        {
+          "prompt": "She took a ___ of the building. (picture)",
+          "answer": "photo"
+        },
+        {
+          "prompt": "The ___ has twenty-six letters. (A to Z)",
+          "answer": "alphabet"
+        },
+        {
+          "prompt": "He studies ___ at university. (science of force and energy)",
+          "answer": "physics"
+        },
+        {
+          "prompt": "Write a short ___ on the card. (group of words)",
+          "answer": "phrase"
+        },
+        {
+          "prompt": "The ___ shows the sales in March. (chart)",
+          "answer": "graph"
+        },
+        {
+          "prompt": "We ___ at the funny story. (laugh + ed)",
+          "answer": "laughed"
+        },
+        {
+          "prompt": "Is the bread ___ for everyone? (as much as needed)",
+          "answer": "enough"
+        },
+        {
+          "prompt": "The steak was too ___ to cut. (hard)",
+          "answer": "tough"
+        },
+        {
+          "prompt": "The road was ___ after the storm. (not smooth)",
+          "answer": "rough"
+        },
+        {
+          "prompt": "He works as a ___ for a newspaper.",
+          "answer": "photographer",
+          "choices": [
+            "fotographer",
+            "photographer",
+            "photografer",
+            "photographar"
+          ]
+        },
+        {
+          "prompt": "I will ___ you tonight.",
+          "answer": "phone",
+          "choices": [
+            "fone",
+            "phone",
+            "phon",
+            "phoen"
+          ]
+        },
+        {
+          "prompt": "Her ___ is bad, so she stays at home.",
+          "answer": "cough",
+          "choices": [
+            "cof",
+            "cough",
+            "couff",
+            "cogh"
+          ]
+        },
+        {
+          "prompt": "He does ___ exercise every day.",
+          "answer": "physical",
+          "choices": [
+            "fisical",
+            "physical",
+            "phisical",
+            "fysical"
+          ]
+        },
+        {
+          "prompt": "We saw an ___ at the zoo.",
+          "answer": "elephant",
+          "choices": [
+            "elefant",
+            "elephant",
+            "elephent",
+            "eliphant"
+          ]
+        },
+        {
+          "prompt": "I bought medicine at the ___.",
+          "answer": "pharmacy",
+          "choices": [
+            "farmacy",
+            "pharmacy",
+            "pharmacey",
+            "pharmasy"
+          ]
+        },
+        {
+          "prompt": "The sound of her ___ was happy.",
+          "answer": "laugh",
+          "choices": [
+            "laf",
+            "laugh",
+            "lagh",
+            "laught"
+          ]
+        },
+        {
+          "prompt": "A ___ swam near the boat.",
+          "answer": "dolphin",
+          "choices": [
+            "dolfin",
+            "dolphin",
+            "dolphen",
+            "dolpin"
+          ]
+        },
+        {
+          "prompt": "He won a gold ___.",
+          "answer": "trophy",
+          "choices": [
+            "trofy",
+            "trophy",
+            "trophe",
+            "trophie"
+          ]
+        },
+        {
+          "prompt": "My sister's son is my ___.",
+          "answer": "nephew",
+          "choices": [
+            "nefew",
+            "nephew",
+            "nephue",
+            "nephiew"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: fone",
+          "answer": "phone"
+        },
+        {
+          "prompt": "Fix the spelling: foto",
+          "answer": "photo"
+        },
+        {
+          "prompt": "Fix the spelling: alfabet",
+          "answer": "alphabet"
+        },
+        {
+          "prompt": "Fix the spelling: fysics",
+          "answer": "physics"
+        },
+        {
+          "prompt": "Fix the spelling: frase",
+          "answer": "phrase"
+        },
+        {
+          "prompt": "Fix the spelling: graf",
+          "answer": "graph"
+        },
+        {
+          "prompt": "Fix the spelling: lafed",
+          "answer": "laughed"
+        },
+        {
+          "prompt": "Fix the spelling: enuf",
+          "answer": "enough"
+        },
+        {
+          "prompt": "Fix the spelling: tuf",
+          "answer": "tough"
+        },
+        {
+          "prompt": "Fix the spelling: cof",
+          "answer": "cough"
+        },
+        {
+          "prompt": "Spell the word: you talk to friends with it.",
+          "answer": "phone"
+        },
+        {
+          "prompt": "Spell the word: a picture taken with a camera.",
+          "answer": "photo"
+        },
+        {
+          "prompt": "Spell the word: all the letters from A to Z.",
+          "answer": "alphabet"
+        },
+        {
+          "prompt": "Spell the word: the science of heat, light and force.",
+          "answer": "physics"
+        },
+        {
+          "prompt": "Spell the word: a large animal with a long nose.",
+          "answer": "elephant"
+        },
+        {
+          "prompt": "Spell the word: a shop that sells medicine.",
+          "answer": "pharmacy"
+        },
+        {
+          "prompt": "Spell the word: a clever sea animal that jumps.",
+          "answer": "dolphin"
+        },
+        {
+          "prompt": "Spell the word: a cup you win in sport.",
+          "answer": "trophy"
+        },
+        {
+          "prompt": "Spell the word: to make a happy sound when something is funny.",
+          "answer": "laugh"
+        },
+        {
+          "prompt": "Spell the word: the sound you make when your throat is sore.",
+          "answer": "cough"
+        }
+      ]
+    }
+  ]
+}

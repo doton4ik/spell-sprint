@@ -1,0 +1,373 @@
+{
+  "category": "business_and_logistics_english",
+  "rules": [
+    {
+      "slug": "logistics-tricky-letters",
+      "title": "Logistics words: warehouse, receive, schedule",
+      "rule_type": "language_rule",
+      "short_explanation": "Common logistics words often have difficult letter patterns: warehouse, shipment, receive, invoice, delivery, schedule, equipment, receipt and inventory. Learn them as complete words and check the vowels carefully.",
+      "tts_text": "Learn logistics words like warehouse, receive and schedule.",
+      "mnemonic": "Receive: e before i, except after c.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The warehouse is full of new stock.",
+          "note": "Warehouse has hou in the middle."
+        },
+        {
+          "type": "correct",
+          "text": "The shipment left the factory today.",
+          "note": "Shipment has sh and ment."
+        },
+        {
+          "type": "correct",
+          "text": "Please receive the goods at the gate.",
+          "note": "After c, write ei."
+        },
+        {
+          "type": "correct",
+          "text": "The invoice must be paid this week.",
+          "note": "Invoice has oi in the middle."
+        },
+        {
+          "type": "correct",
+          "text": "The delivery arrives before noon.",
+          "note": "Delivery ends with ery."
+        },
+        {
+          "type": "correct",
+          "text": "Check the schedule for the next shift.",
+          "note": "Schedule begins with sch."
+        },
+        {
+          "type": "correct",
+          "text": "The equipment is stored on the ground floor.",
+          "note": "Equipment has qui in the middle."
+        },
+        {
+          "type": "correct",
+          "text": "Keep the receipt for the office.",
+          "note": "Receipt has ei after c."
+        },
+        {
+          "type": "correct",
+          "text": "The inventory list is in the system.",
+          "note": "Inventory has ent and ory."
+        },
+        {
+          "type": "correct",
+          "text": "The freight arrives by train.",
+          "note": "Freight has ei."
+        },
+        {
+          "type": "correct",
+          "text": "Please label every package clearly.",
+          "note": "Label has one l after b."
+        },
+        {
+          "type": "incorrect",
+          "text": "The warehose is full of new stock.",
+          "correction": "The warehouse is full of new stock.",
+          "note": "Warehouse ends with ouse."
+        },
+        {
+          "type": "incorrect",
+          "text": "The shipmant left the factory today.",
+          "correction": "The shipment left the factory today.",
+          "note": "Shipment ends with ment."
+        },
+        {
+          "type": "incorrect",
+          "text": "Please recieve the goods at the gate.",
+          "correction": "Please receive the goods at the gate.",
+          "note": "After c, write ei."
+        },
+        {
+          "type": "incorrect",
+          "text": "The invoise must be paid this week.",
+          "correction": "The invoice must be paid this week.",
+          "note": "Invoice ends with ice."
+        },
+        {
+          "type": "incorrect",
+          "text": "The deliverie arrives before noon.",
+          "correction": "The delivery arrives before noon.",
+          "note": "Delivery ends with ery."
+        },
+        {
+          "type": "incorrect",
+          "text": "Check the schedual for the next shift.",
+          "correction": "Check the schedule for the next shift.",
+          "note": "Schedule ends with ule."
+        },
+        {
+          "type": "incorrect",
+          "text": "The equpment is stored on the ground floor.",
+          "correction": "The equipment is stored on the ground floor.",
+          "note": "Equipment has qui in the middle."
+        },
+        {
+          "type": "incorrect",
+          "text": "Keep the reciept for the office.",
+          "correction": "Keep the receipt for the office.",
+          "note": "After c, write ei."
+        },
+        {
+          "type": "incorrect",
+          "text": "The inventery list is in the system.",
+          "correction": "The inventory list is in the system.",
+          "note": "Inventory ends with ory."
+        },
+        {
+          "type": "incorrect",
+          "text": "The freght arrives by train.",
+          "correction": "The freight arrives by train.",
+          "note": "Freight begins with fr and has ei."
+        },
+        {
+          "type": "incorrect",
+          "text": "Please lable every package clearly.",
+          "correction": "Please label every package clearly.",
+          "note": "Label has one l after b."
+        },
+        {
+          "type": "exception",
+          "text": "Neither driver was late.",
+          "note": "Neither has ei, but not after c."
+        },
+        {
+          "type": "exception",
+          "text": "The weird noise stopped suddenly.",
+          "note": "Weird has ei, but not after c."
+        },
+        {
+          "type": "exception",
+          "text": "Our foreign supplier called today.",
+          "note": "Foreign has ei, but not after c."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "The ___ is full of new stock. (warehouse)",
+          "answer": "warehouse"
+        },
+        {
+          "prompt": "The ___ left the factory today. (shipment)",
+          "answer": "shipment"
+        },
+        {
+          "prompt": "Please ___ the goods at the gate. (receive)",
+          "answer": "receive"
+        },
+        {
+          "prompt": "The ___ must be paid this week. (invoice)",
+          "answer": "invoice"
+        },
+        {
+          "prompt": "The ___ arrives before noon. (delivery)",
+          "answer": "delivery"
+        },
+        {
+          "prompt": "Check the ___ for the next shift. (schedule)",
+          "answer": "schedule"
+        },
+        {
+          "prompt": "The ___ is stored on the ground floor. (equipment)",
+          "answer": "equipment"
+        },
+        {
+          "prompt": "Keep the ___ for the office. (receipt)",
+          "answer": "receipt"
+        },
+        {
+          "prompt": "The ___ list is in the system. (inventory)",
+          "answer": "inventory"
+        },
+        {
+          "prompt": "Please ___ every package clearly. (label)",
+          "answer": "label"
+        },
+        {
+          "prompt": "The ___ is full of new stock.",
+          "answer": "warehouse",
+          "choices": [
+            "warehose",
+            "warehouse",
+            "wearhouse",
+            "warehous"
+          ]
+        },
+        {
+          "prompt": "The ___ left the factory today.",
+          "answer": "shipment",
+          "choices": [
+            "shipmant",
+            "shipment",
+            "shippment",
+            "shipmen"
+          ]
+        },
+        {
+          "prompt": "Please ___ the goods at the gate.",
+          "answer": "receive",
+          "choices": [
+            "recieve",
+            "receive",
+            "receve",
+            "reciev"
+          ]
+        },
+        {
+          "prompt": "The ___ must be paid this week.",
+          "answer": "invoice",
+          "choices": [
+            "invoise",
+            "invoice",
+            "invoce",
+            "envoice"
+          ]
+        },
+        {
+          "prompt": "The ___ arrives before noon.",
+          "answer": "delivery",
+          "choices": [
+            "deliverie",
+            "delivery",
+            "delivary",
+            "delivry"
+          ]
+        },
+        {
+          "prompt": "Check the ___ for the next shift.",
+          "answer": "schedule",
+          "choices": [
+            "schedual",
+            "schedule",
+            "shedule",
+            "schedulle"
+          ]
+        },
+        {
+          "prompt": "The ___ is stored on the ground floor.",
+          "answer": "equipment",
+          "choices": [
+            "equpment",
+            "equipment",
+            "equipement",
+            "ecuipment"
+          ]
+        },
+        {
+          "prompt": "Keep the ___ for the office.",
+          "answer": "receipt",
+          "choices": [
+            "reciept",
+            "receipt",
+            "receit",
+            "receapt"
+          ]
+        },
+        {
+          "prompt": "The ___ list is in the system.",
+          "answer": "inventory",
+          "choices": [
+            "inventery",
+            "inventory",
+            "inventry",
+            "invantory"
+          ]
+        },
+        {
+          "prompt": "Please ___ every package clearly.",
+          "answer": "label",
+          "choices": [
+            "lable",
+            "label",
+            "labbel",
+            "labell"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: warehose",
+          "answer": "warehouse"
+        },
+        {
+          "prompt": "Fix the spelling: shipmant",
+          "answer": "shipment"
+        },
+        {
+          "prompt": "Fix the spelling: recieve",
+          "answer": "receive"
+        },
+        {
+          "prompt": "Fix the spelling: invoise",
+          "answer": "invoice"
+        },
+        {
+          "prompt": "Fix the spelling: deliverie",
+          "answer": "delivery"
+        },
+        {
+          "prompt": "Fix the spelling: schedual",
+          "answer": "schedule"
+        },
+        {
+          "prompt": "Fix the spelling: equpment",
+          "answer": "equipment"
+        },
+        {
+          "prompt": "Fix the spelling: reciept",
+          "answer": "receipt"
+        },
+        {
+          "prompt": "Fix the spelling: inventery",
+          "answer": "inventory"
+        },
+        {
+          "prompt": "Fix the spelling: lable",
+          "answer": "label"
+        },
+        {
+          "prompt": "Spell the word: a large building for storing goods.",
+          "answer": "warehouse"
+        },
+        {
+          "prompt": "Spell the word: goods sent from one place to another.",
+          "answer": "shipment"
+        },
+        {
+          "prompt": "Spell the word: to accept or get something.",
+          "answer": "receive"
+        },
+        {
+          "prompt": "Spell the word: a document asking for payment.",
+          "answer": "invoice"
+        },
+        {
+          "prompt": "Spell the word: the act of bringing goods to someone.",
+          "answer": "delivery"
+        },
+        {
+          "prompt": "Spell the word: a plan of times and activities.",
+          "answer": "schedule"
+        },
+        {
+          "prompt": "Spell the word: tools and machines needed for work.",
+          "answer": "equipment"
+        },
+        {
+          "prompt": "Spell the word: a paper showing that you paid.",
+          "answer": "receipt"
+        },
+        {
+          "prompt": "Spell the word: a complete list of goods in stock.",
+          "answer": "inventory"
+        },
+        {
+          "prompt": "Spell the word: a piece of paper with information on a box.",
+          "answer": "label"
+        }
+      ]
+    }
+  ]
+}

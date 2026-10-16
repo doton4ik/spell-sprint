@@ -1,0 +1,741 @@
+{
+  "category": "vowels_and_letter_patterns",
+  "rules": [
+    {
+      "slug": "ea-vs-ee",
+      "title": "ea or ee: meat/meet, sea/see, week/weak",
+      "rule_type": "language_rule",
+      "short_explanation": "The sounds /iː/ can be spelled ea or ee: team, beach, meat, meet, teeth and speech. Some pairs sound the same but have different meanings, such as meat and meet or sea and see.",
+      "tts_text": "The long e sound can be spelled e a or e e.",
+      "mnemonic": "Eat meat at the beach; see the team this week.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "We eat meat for dinner on Sundays.",
+          "note": "Meat is food; it uses ea."
+        },
+        {
+          "type": "correct",
+          "text": "Please meet me at the station.",
+          "note": "Meet (come together) uses ee."
+        },
+        {
+          "type": "correct",
+          "text": "The sea was calm this morning.",
+          "note": "Sea is water; it uses ea."
+        },
+        {
+          "type": "correct",
+          "text": "I can see the warehouse from here.",
+          "note": "See uses ee."
+        },
+        {
+          "type": "correct",
+          "text": "She felt weak after the long shift.",
+          "note": "Weak means not strong; it uses ea."
+        },
+        {
+          "type": "correct",
+          "text": "We start work again next week.",
+          "note": "Week is seven days; it uses ee."
+        },
+        {
+          "type": "correct",
+          "text": "The team works on the new project.",
+          "note": "Team uses ea."
+        },
+        {
+          "type": "correct",
+          "text": "He brushed his teeth after breakfast.",
+          "note": "Teeth uses ee."
+        },
+        {
+          "type": "correct",
+          "text": "There is a nice beach near the hotel.",
+          "note": "Beach uses ea."
+        },
+        {
+          "type": "correct",
+          "text": "Please give a short speech at the meeting.",
+          "note": "Speech uses ee."
+        },
+        {
+          "type": "correct",
+          "text": "I read a book about supply chains.",
+          "note": "Read uses ea."
+        },
+        {
+          "type": "incorrect",
+          "text": "We eat meet for dinner on Sundays.",
+          "correction": "We eat meat for dinner on Sundays.",
+          "note": "Food is meat, with ea."
+        },
+        {
+          "type": "incorrect",
+          "text": "Please meat me at the station.",
+          "correction": "Please meet me at the station.",
+          "note": "Meet someone uses ee."
+        },
+        {
+          "type": "incorrect",
+          "text": "The see was calm this morning.",
+          "correction": "The sea was calm this morning.",
+          "note": "Sea uses ea."
+        },
+        {
+          "type": "incorrect",
+          "text": "I can sea the warehouse from here.",
+          "correction": "I can see the warehouse from here.",
+          "note": "See uses ee."
+        },
+        {
+          "type": "incorrect",
+          "text": "She felt week after the long shift.",
+          "correction": "She felt weak after the long shift.",
+          "note": "Not strong is weak, with ea."
+        },
+        {
+          "type": "incorrect",
+          "text": "We start work again next weak.",
+          "correction": "We start work again next week.",
+          "note": "Seven days is week, with ee."
+        },
+        {
+          "type": "incorrect",
+          "text": "The teem works on the new project.",
+          "correction": "The team works on the new project.",
+          "note": "Team uses ea."
+        },
+        {
+          "type": "incorrect",
+          "text": "He brushed his theeth after breakfast.",
+          "correction": "He brushed his teeth after breakfast.",
+          "note": "Teeth uses ee."
+        },
+        {
+          "type": "incorrect",
+          "text": "There is a nice bech near the hotel.",
+          "correction": "There is a nice beach near the hotel.",
+          "note": "Beach uses ea."
+        },
+        {
+          "type": "incorrect",
+          "text": "Please give a short speach at the meeting.",
+          "correction": "Please give a short speech at the meeting.",
+          "note": "Speech uses ee."
+        },
+        {
+          "type": "incorrect",
+          "text": "I reed a book about supply chains.",
+          "correction": "I read a book about supply chains.",
+          "note": "Read uses ea."
+        },
+        {
+          "type": "exception",
+          "text": "The view from the hotel was great.",
+          "note": "In great, ea sounds like ay."
+        },
+        {
+          "type": "exception",
+          "text": "Please take a short break.",
+          "note": "In break, ea sounds like ay."
+        },
+        {
+          "type": "exception",
+          "text": "We cooked steak for dinner.",
+          "note": "In steak, ea sounds like ay."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "We eat ___ for dinner on Sundays. (meat)",
+          "answer": "meat"
+        },
+        {
+          "prompt": "Please ___ me at the station. (meet)",
+          "answer": "meet"
+        },
+        {
+          "prompt": "The ___ was calm this morning. (sea)",
+          "answer": "sea"
+        },
+        {
+          "prompt": "I can ___ the warehouse from here. (see)",
+          "answer": "see"
+        },
+        {
+          "prompt": "She felt ___ after the long shift. (weak)",
+          "answer": "weak"
+        },
+        {
+          "prompt": "We start work again next ___. (week)",
+          "answer": "week"
+        },
+        {
+          "prompt": "The ___ works on the new project. (team)",
+          "answer": "team"
+        },
+        {
+          "prompt": "He brushed his ___ after breakfast. (teeth)",
+          "answer": "teeth"
+        },
+        {
+          "prompt": "There is a nice ___ near the hotel. (beach)",
+          "answer": "beach"
+        },
+        {
+          "prompt": "Please give a short ___ at the meeting. (speech)",
+          "answer": "speech"
+        },
+        {
+          "prompt": "We eat ___ for dinner on Sundays.",
+          "answer": "meat",
+          "choices": [
+            "meet",
+            "meat",
+            "meate",
+            "meatt"
+          ]
+        },
+        {
+          "prompt": "Please ___ me at the station.",
+          "answer": "meet",
+          "choices": [
+            "meat",
+            "meet",
+            "meete",
+            "meett"
+          ]
+        },
+        {
+          "prompt": "The ___ was calm this morning.",
+          "answer": "sea",
+          "choices": [
+            "see",
+            "sea",
+            "seah",
+            "cea"
+          ]
+        },
+        {
+          "prompt": "I can ___ the warehouse from here.",
+          "answer": "see",
+          "choices": [
+            "sea",
+            "see",
+            "sie",
+            "cee"
+          ]
+        },
+        {
+          "prompt": "She felt ___ after the long shift.",
+          "answer": "weak",
+          "choices": [
+            "week",
+            "weak",
+            "weake",
+            "weik"
+          ]
+        },
+        {
+          "prompt": "We start work again next ___.",
+          "answer": "week",
+          "choices": [
+            "weak",
+            "week",
+            "weeke",
+            "weik"
+          ]
+        },
+        {
+          "prompt": "The ___ works on the new project.",
+          "answer": "team",
+          "choices": [
+            "teem",
+            "team",
+            "teame",
+            "tiam"
+          ]
+        },
+        {
+          "prompt": "He brushed his ___ after breakfast.",
+          "answer": "teeth",
+          "choices": [
+            "teath",
+            "teeth",
+            "teeths",
+            "tieth"
+          ]
+        },
+        {
+          "prompt": "There is a nice ___ near the hotel.",
+          "answer": "beach",
+          "choices": [
+            "beeche",
+            "beach",
+            "beache",
+            "beche"
+          ]
+        },
+        {
+          "prompt": "Please give a short ___ at the meeting.",
+          "answer": "speech",
+          "choices": [
+            "speach",
+            "speech",
+            "speche",
+            "spech"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: sleap",
+          "answer": "sleep"
+        },
+        {
+          "prompt": "Fix the spelling: streem",
+          "answer": "stream"
+        },
+        {
+          "prompt": "Fix the spelling: feal",
+          "answer": "feel"
+        },
+        {
+          "prompt": "Fix the spelling: reech",
+          "answer": "reach"
+        },
+        {
+          "prompt": "Fix the spelling: speek",
+          "answer": "speak"
+        },
+        {
+          "prompt": "Fix the spelling: neet",
+          "answer": "neat"
+        },
+        {
+          "prompt": "Fix the spelling: teem",
+          "answer": "team"
+        },
+        {
+          "prompt": "Fix the spelling: theeth",
+          "answer": "teeth"
+        },
+        {
+          "prompt": "Fix the spelling: beche",
+          "answer": "beach"
+        },
+        {
+          "prompt": "Fix the spelling: speach",
+          "answer": "speech"
+        },
+        {
+          "prompt": "Spell the word: food from animals.",
+          "answer": "meat"
+        },
+        {
+          "prompt": "Spell the word: to come together with someone.",
+          "answer": "meet"
+        },
+        {
+          "prompt": "Spell the word: a large area of salt water.",
+          "answer": "sea"
+        },
+        {
+          "prompt": "Spell the word: to use your eyes.",
+          "answer": "see"
+        },
+        {
+          "prompt": "Spell the word: not strong.",
+          "answer": "weak"
+        },
+        {
+          "prompt": "Spell the word: seven days.",
+          "answer": "week"
+        },
+        {
+          "prompt": "Spell the word: a group of people working together.",
+          "answer": "team"
+        },
+        {
+          "prompt": "Spell the word: the white parts in your mouth.",
+          "answer": "teeth"
+        },
+        {
+          "prompt": "Spell the word: sand beside the sea.",
+          "answer": "beach"
+        },
+        {
+          "prompt": "Spell the word: a formal talk to people.",
+          "answer": "speech"
+        }
+      ]
+    },
+    {
+      "slug": "ai-ay-oi-oy",
+      "title": "ai/ay and oi/oy: rain, day, coin, boy",
+      "rule_type": "language_rule",
+      "short_explanation": "Use ai and oi inside a word: rain, wait, coin and noise. Use ay and oy at the end of a word or syllable: day, stay, boy and enjoy.",
+      "tts_text": "Use a i and o i inside words; a y and o y at the end.",
+      "mnemonic": "Inside: ai, oi. At the end: ay, oy.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "It often rains in autumn.",
+          "note": "Rain uses ai inside the word."
+        },
+        {
+          "type": "correct",
+          "text": "We waited for the train.",
+          "note": "Wait and train use ai."
+        },
+        {
+          "type": "correct",
+          "text": "The delivery will arrive today.",
+          "note": "Today ends with ay."
+        },
+        {
+          "type": "correct",
+          "text": "She painted the office wall blue.",
+          "note": "Painted uses ai inside the word."
+        },
+        {
+          "type": "correct",
+          "text": "We stayed at a small hotel.",
+          "note": "Stayed ends with ay."
+        },
+        {
+          "type": "correct",
+          "text": "He plays football after work.",
+          "note": "Plays ends with ay."
+        },
+        {
+          "type": "correct",
+          "text": "I found a coin on the floor.",
+          "note": "Coin uses oi inside the word."
+        },
+        {
+          "type": "correct",
+          "text": "The little boy likes trucks.",
+          "note": "Boy ends with oy."
+        },
+        {
+          "type": "correct",
+          "text": "The noise from the street was loud.",
+          "note": "Noise uses oi inside the word."
+        },
+        {
+          "type": "correct",
+          "text": "She enjoys working in logistics.",
+          "note": "Enjoys ends with oy."
+        },
+        {
+          "type": "correct",
+          "text": "The mail contains the invoice.",
+          "note": "Mail and contains use ai."
+        },
+        {
+          "type": "incorrect",
+          "text": "It often rians in autumn.",
+          "correction": "It often rains in autumn.",
+          "note": "Rain uses ai."
+        },
+        {
+          "type": "incorrect",
+          "text": "We wiated for the train.",
+          "correction": "We waited for the train.",
+          "note": "Wait uses ai."
+        },
+        {
+          "type": "incorrect",
+          "text": "We will staie for a week.",
+          "correction": "We will stay for a week.",
+          "note": "At the end, use ay."
+        },
+        {
+          "type": "incorrect",
+          "text": "She paynted the office wall blue.",
+          "correction": "She painted the office wall blue.",
+          "note": "Painted uses ai."
+        },
+        {
+          "type": "incorrect",
+          "text": "We staied at a small hotel.",
+          "correction": "We stayed at a small hotel.",
+          "note": "At the end, use ay."
+        },
+        {
+          "type": "incorrect",
+          "text": "He plaiys football after work.",
+          "correction": "He plays football after work.",
+          "note": "At the end, use ay."
+        },
+        {
+          "type": "incorrect",
+          "text": "I found a coyn on the floor.",
+          "correction": "I found a coin on the floor.",
+          "note": "Coin uses oi."
+        },
+        {
+          "type": "incorrect",
+          "text": "The little boi likes trucks.",
+          "correction": "The little boy likes trucks.",
+          "note": "At the end, use oy."
+        },
+        {
+          "type": "incorrect",
+          "text": "The noyce from the street was loud.",
+          "correction": "The noise from the street was loud.",
+          "note": "Noise uses oi."
+        },
+        {
+          "type": "incorrect",
+          "text": "She enjoies working in logistics.",
+          "correction": "She enjoys working in logistics.",
+          "note": "At the end, use oy."
+        },
+        {
+          "type": "incorrect",
+          "text": "The mail contians the invoice.",
+          "correction": "The mail contains the invoice.",
+          "note": "Contains uses ai."
+        },
+        {
+          "type": "exception",
+          "text": "He said the shipment was late.",
+          "note": "In said, ai does not sound like ay."
+        },
+        {
+          "type": "exception",
+          "text": "The captain checked the cargo.",
+          "note": "In captain, ai has a different sound."
+        },
+        {
+          "type": "exception",
+          "text": "The mountain road was narrow.",
+          "note": "In mountain, ai has a different sound."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "It often ___ in autumn. (rain + s)",
+          "answer": "rains"
+        },
+        {
+          "prompt": "We ___ for the train. (wait + ed)",
+          "answer": "waited"
+        },
+        {
+          "prompt": "We will ___ for a week. (stay)",
+          "answer": "stay"
+        },
+        {
+          "prompt": "She ___ the office wall blue. (paint + ed)",
+          "answer": "painted"
+        },
+        {
+          "prompt": "We ___ at a small hotel. (stay + ed)",
+          "answer": "stayed"
+        },
+        {
+          "prompt": "He ___ football after work. (play + s)",
+          "answer": "plays"
+        },
+        {
+          "prompt": "I found a ___ on the floor. (coin)",
+          "answer": "coin"
+        },
+        {
+          "prompt": "The little ___ likes trucks. (boy)",
+          "answer": "boy"
+        },
+        {
+          "prompt": "The ___ from the street was loud. (noise)",
+          "answer": "noise"
+        },
+        {
+          "prompt": "The mail ___ the invoice. (contain + s)",
+          "answer": "contains"
+        },
+        {
+          "prompt": "It often ___ in autumn.",
+          "answer": "rains",
+          "choices": [
+            "rians",
+            "rains",
+            "raines",
+            "rayns"
+          ]
+        },
+        {
+          "prompt": "We ___ for the train.",
+          "answer": "waited",
+          "choices": [
+            "wiatied",
+            "waited",
+            "wayted",
+            "waitid"
+          ]
+        },
+        {
+          "prompt": "We will ___ for a week.",
+          "answer": "stay",
+          "choices": [
+            "staie",
+            "stay",
+            "stai",
+            "staey"
+          ]
+        },
+        {
+          "prompt": "She ___ the office wall blue.",
+          "answer": "painted",
+          "choices": [
+            "paynted",
+            "painted",
+            "paintid",
+            "paintd"
+          ]
+        },
+        {
+          "prompt": "We ___ at a small hotel.",
+          "answer": "stayed",
+          "choices": [
+            "stade",
+            "stayed",
+            "staied",
+            "stayd"
+          ]
+        },
+        {
+          "prompt": "He ___ football after work.",
+          "answer": "plays",
+          "choices": [
+            "plaies",
+            "plays",
+            "playes",
+            "plais"
+          ]
+        },
+        {
+          "prompt": "I found a ___ on the floor.",
+          "answer": "coin",
+          "choices": [
+            "coyn",
+            "coin",
+            "coine",
+            "koin"
+          ]
+        },
+        {
+          "prompt": "The little ___ likes trucks.",
+          "answer": "boy",
+          "choices": [
+            "boi",
+            "boy",
+            "boye",
+            "baoy"
+          ]
+        },
+        {
+          "prompt": "The ___ from the street was loud.",
+          "answer": "noise",
+          "choices": [
+            "noyce",
+            "noise",
+            "noize",
+            "noyse"
+          ]
+        },
+        {
+          "prompt": "The mail ___ the invoice.",
+          "answer": "contains",
+          "choices": [
+            "contians",
+            "contains",
+            "contanes",
+            "containies"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: rians",
+          "answer": "rains"
+        },
+        {
+          "prompt": "Fix the spelling: wiated",
+          "answer": "waited"
+        },
+        {
+          "prompt": "Fix the spelling: staie",
+          "answer": "stay"
+        },
+        {
+          "prompt": "Fix the spelling: paynt",
+          "answer": "paint"
+        },
+        {
+          "prompt": "Fix the spelling: staied",
+          "answer": "stayed"
+        },
+        {
+          "prompt": "Fix the spelling: plaiys",
+          "answer": "plays"
+        },
+        {
+          "prompt": "Fix the spelling: coyn",
+          "answer": "coin"
+        },
+        {
+          "prompt": "Fix the spelling: boi",
+          "answer": "boy"
+        },
+        {
+          "prompt": "Fix the spelling: noyce",
+          "answer": "noise"
+        },
+        {
+          "prompt": "Fix the spelling: enjoies",
+          "answer": "enjoys"
+        },
+        {
+          "prompt": "Spell the word: water from the sky.",
+          "answer": "rain"
+        },
+        {
+          "prompt": "Spell the word: to wait for a bus or train.",
+          "answer": "wait"
+        },
+        {
+          "prompt": "Spell the word: to remain in a place.",
+          "answer": "stay"
+        },
+        {
+          "prompt": "Spell the word: to put colour on a surface.",
+          "answer": "paint"
+        },
+        {
+          "prompt": "Spell the word: past form of stay.",
+          "answer": "stayed"
+        },
+        {
+          "prompt": "Spell the word: he/she form of play.",
+          "answer": "plays"
+        },
+        {
+          "prompt": "Spell the word: a small round piece of money.",
+          "answer": "coin"
+        },
+        {
+          "prompt": "Spell the word: a male child.",
+          "answer": "boy"
+        },
+        {
+          "prompt": "Spell the word: a loud or unpleasant sound.",
+          "answer": "noise"
+        },
+        {
+          "prompt": "Spell the word: he/she form of enjoy.",
+          "answer": "enjoys"
+        }
+      ]
+    }
+  ]
+}

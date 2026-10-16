@@ -1,0 +1,741 @@
+{
+  "category": "silent_letters",
+  "rules": [
+    {
+      "slug": "silent-l",
+      "title": "Silent l: could, walk, half, calm",
+      "rule_type": "language_rule",
+      "short_explanation": "In some common words, the letter l is written but not pronounced. Examples: could, should, would, walk, talk, half, calm, chalk and folk.",
+      "tts_text": "In words like walk and half, the l is silent.",
+      "mnemonic": "Walk and talk: the l walks quietly.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "I could help you with the report.",
+          "note": "Could has a silent l."
+        },
+        {
+          "type": "correct",
+          "text": "You should check the invoice again.",
+          "note": "Should has a silent l."
+        },
+        {
+          "type": "correct",
+          "text": "We would like to book a table.",
+          "note": "Would has a silent l."
+        },
+        {
+          "type": "correct",
+          "text": "I walk to the warehouse every day.",
+          "note": "Walk has a silent l."
+        },
+        {
+          "type": "correct",
+          "text": "Please talk to the manager about it.",
+          "note": "Talk has a silent l."
+        },
+        {
+          "type": "correct",
+          "text": "She ate half of the sandwich.",
+          "note": "Half has a silent l."
+        },
+        {
+          "type": "correct",
+          "text": "The sea was calm this morning.",
+          "note": "Calm has a silent l."
+        },
+        {
+          "type": "correct",
+          "text": "He wrote the answer in chalk.",
+          "note": "Chalk has a silent l."
+        },
+        {
+          "type": "correct",
+          "text": "My family likes folk music.",
+          "note": "Folk has a silent l."
+        },
+        {
+          "type": "correct",
+          "text": "We had a calm journey home.",
+          "note": "Calm has a silent l."
+        },
+        {
+          "type": "correct",
+          "text": "I would walk with you to the station.",
+          "note": "Would and walk have silent l."
+        },
+        {
+          "type": "incorrect",
+          "text": "I coulld help you with the report.",
+          "correction": "I could help you with the report.",
+          "note": "Could has one silent l."
+        },
+        {
+          "type": "incorrect",
+          "text": "You shoud check the invoice again.",
+          "correction": "You should check the invoice again.",
+          "note": "Should needs the silent l."
+        },
+        {
+          "type": "incorrect",
+          "text": "We woud like to book a table.",
+          "correction": "We would like to book a table.",
+          "note": "Would needs the silent l."
+        },
+        {
+          "type": "incorrect",
+          "text": "I wak to the warehouse every day.",
+          "correction": "I walk to the warehouse every day.",
+          "note": "Walk needs the silent l."
+        },
+        {
+          "type": "incorrect",
+          "text": "Please tak to the manager about it.",
+          "correction": "Please talk to the manager about it.",
+          "note": "Talk needs the silent l."
+        },
+        {
+          "type": "incorrect",
+          "text": "She ate haf of the sandwich.",
+          "correction": "She ate half of the sandwich.",
+          "note": "Half needs the silent l."
+        },
+        {
+          "type": "incorrect",
+          "text": "The sea was cam this morning.",
+          "correction": "The sea was calm this morning.",
+          "note": "Calm needs the silent l."
+        },
+        {
+          "type": "incorrect",
+          "text": "He wrote the answer in chak.",
+          "correction": "He wrote the answer in chalk.",
+          "note": "Chalk needs the silent l."
+        },
+        {
+          "type": "incorrect",
+          "text": "My family likes fok music.",
+          "correction": "My family likes folk music.",
+          "note": "Folk needs the silent l."
+        },
+        {
+          "type": "incorrect",
+          "text": "We had a cam journey home.",
+          "correction": "We had a calm journey home.",
+          "note": "Calm needs the silent l."
+        },
+        {
+          "type": "incorrect",
+          "text": "I woud walk with you to the station.",
+          "correction": "I would walk with you to the station.",
+          "note": "Would needs the silent l."
+        },
+        {
+          "type": "exception",
+          "text": "Please solve this problem quickly.",
+          "note": "In solve, the l is pronounced."
+        },
+        {
+          "type": "exception",
+          "text": "The film was very interesting.",
+          "note": "In film, the l is pronounced."
+        },
+        {
+          "type": "exception",
+          "text": "She held the box with both hands.",
+          "note": "In held, the l is pronounced."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "I ___ help you with the report. (could)",
+          "answer": "could"
+        },
+        {
+          "prompt": "You ___ check the invoice again. (should)",
+          "answer": "should"
+        },
+        {
+          "prompt": "We ___ like to book a table. (would)",
+          "answer": "would"
+        },
+        {
+          "prompt": "I ___ to the warehouse every day. (walk)",
+          "answer": "walk"
+        },
+        {
+          "prompt": "Please ___ to the manager about it. (talk)",
+          "answer": "talk"
+        },
+        {
+          "prompt": "She ate ___ of the sandwich. (half)",
+          "answer": "half"
+        },
+        {
+          "prompt": "The sea was ___ this morning. (calm)",
+          "answer": "calm"
+        },
+        {
+          "prompt": "He wrote the answer in ___. (chalk)",
+          "answer": "chalk"
+        },
+        {
+          "prompt": "My family likes ___ music. (folk)",
+          "answer": "folk"
+        },
+        {
+          "prompt": "I ___ walk with you to the station. (would)",
+          "answer": "would"
+        },
+        {
+          "prompt": "I ___ help you with the report.",
+          "answer": "could",
+          "choices": [
+            "coull",
+            "could",
+            "coud",
+            "culd"
+          ]
+        },
+        {
+          "prompt": "You ___ check the invoice again.",
+          "answer": "should",
+          "choices": [
+            "shoud",
+            "should",
+            "shold",
+            "shoull"
+          ]
+        },
+        {
+          "prompt": "We ___ like to book a table.",
+          "answer": "would",
+          "choices": [
+            "woud",
+            "would",
+            "wold",
+            "woull"
+          ]
+        },
+        {
+          "prompt": "I ___ to the warehouse every day.",
+          "answer": "walk",
+          "choices": [
+            "wak",
+            "walk",
+            "walke",
+            "walkk"
+          ]
+        },
+        {
+          "prompt": "Please ___ to the manager about it.",
+          "answer": "talk",
+          "choices": [
+            "tak",
+            "talk",
+            "talke",
+            "talkk"
+          ]
+        },
+        {
+          "prompt": "She ate ___ of the sandwich.",
+          "answer": "half",
+          "choices": [
+            "haf",
+            "half",
+            "halve",
+            "haff"
+          ]
+        },
+        {
+          "prompt": "The sea was ___ this morning.",
+          "answer": "calm",
+          "choices": [
+            "cam",
+            "calm",
+            "carm",
+            "calme"
+          ]
+        },
+        {
+          "prompt": "He wrote the answer in ___.",
+          "answer": "chalk",
+          "choices": [
+            "chak",
+            "chalk",
+            "cholk",
+            "chalke"
+          ]
+        },
+        {
+          "prompt": "My family likes ___ music.",
+          "answer": "folk",
+          "choices": [
+            "fok",
+            "folk",
+            "folke",
+            "foulk"
+          ]
+        },
+        {
+          "prompt": "I ___ walk with you to the station.",
+          "answer": "would",
+          "choices": [
+            "woud",
+            "would",
+            "wold",
+            "woude"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: coulld",
+          "answer": "could"
+        },
+        {
+          "prompt": "Fix the spelling: shoud",
+          "answer": "should"
+        },
+        {
+          "prompt": "Fix the spelling: woud",
+          "answer": "would"
+        },
+        {
+          "prompt": "Fix the spelling: wak",
+          "answer": "walk"
+        },
+        {
+          "prompt": "Fix the spelling: tak",
+          "answer": "talk"
+        },
+        {
+          "prompt": "Fix the spelling: haf",
+          "answer": "half"
+        },
+        {
+          "prompt": "Fix the spelling: cam",
+          "answer": "calm"
+        },
+        {
+          "prompt": "Fix the spelling: chak",
+          "answer": "chalk"
+        },
+        {
+          "prompt": "Fix the spelling: fok",
+          "answer": "folk"
+        },
+        {
+          "prompt": "Fix the spelling: stak",
+          "answer": "stalk"
+        },
+        {
+          "prompt": "Spell the word: past form of can.",
+          "answer": "could"
+        },
+        {
+          "prompt": "Spell the word: it is a good idea to.",
+          "answer": "should"
+        },
+        {
+          "prompt": "Spell the word: past form of will.",
+          "answer": "would"
+        },
+        {
+          "prompt": "Spell the word: to move on foot.",
+          "answer": "walk"
+        },
+        {
+          "prompt": "Spell the word: to speak with someone.",
+          "answer": "talk"
+        },
+        {
+          "prompt": "Spell the word: one of two equal parts.",
+          "answer": "half"
+        },
+        {
+          "prompt": "Spell the word: quiet and without wind.",
+          "answer": "calm"
+        },
+        {
+          "prompt": "Spell the word: white material for writing on a board.",
+          "answer": "chalk"
+        },
+        {
+          "prompt": "Spell the word: traditional music of a country.",
+          "answer": "folk"
+        },
+        {
+          "prompt": "Spell the word: to go on foot, but not to run.",
+          "answer": "walk"
+        }
+      ]
+    },
+    {
+      "slug": "silent-c-s-n-u",
+      "title": "Silent c, s, n, u: science, island, autumn, guess",
+      "rule_type": "language_rule",
+      "short_explanation": "Some letters are written but not pronounced. Examples: science and scissors have a silent c; island has a silent s; autumn and column have a silent n; guess, build and guitar have a silent u.",
+      "tts_text": "Some letters are silent in words like island and autumn.",
+      "mnemonic": "I land on an island: the s is silent.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "We study science at school.",
+          "note": "Science has a silent c."
+        },
+        {
+          "type": "correct",
+          "text": "The island has a small port.",
+          "note": "Island has a silent s."
+        },
+        {
+          "type": "correct",
+          "text": "Autumn begins in September.",
+          "note": "Autumn has a silent n."
+        },
+        {
+          "type": "correct",
+          "text": "Write your name in the first column.",
+          "note": "Column has a silent n."
+        },
+        {
+          "type": "correct",
+          "text": "I guess the parcel will arrive today.",
+          "note": "Guess has a silent u."
+        },
+        {
+          "type": "correct",
+          "text": "The scene in the film was beautiful.",
+          "note": "Scene has a silent c."
+        },
+        {
+          "type": "correct",
+          "text": "She used scissors to open the box.",
+          "note": "Scissors has a silent c."
+        },
+        {
+          "type": "correct",
+          "text": "They plan to build a new warehouse.",
+          "note": "Build has a silent u."
+        },
+        {
+          "type": "correct",
+          "text": "Her guest arrived at noon.",
+          "note": "Guest has a silent u."
+        },
+        {
+          "type": "correct",
+          "text": "My muscle hurts after the gym.",
+          "note": "Muscle has a silent c."
+        },
+        {
+          "type": "correct",
+          "text": "He plays the guitar after class.",
+          "note": "Guitar has a silent u."
+        },
+        {
+          "type": "incorrect",
+          "text": "We study sience at school.",
+          "correction": "We study science at school.",
+          "note": "Science needs the silent c."
+        },
+        {
+          "type": "incorrect",
+          "text": "The iland has a small port.",
+          "correction": "The island has a small port.",
+          "note": "Island needs the silent s."
+        },
+        {
+          "type": "incorrect",
+          "text": "Autum begins in September.",
+          "correction": "Autumn begins in September.",
+          "note": "Autumn needs the silent n."
+        },
+        {
+          "type": "incorrect",
+          "text": "Write your name in the first colum.",
+          "correction": "Write your name in the first column.",
+          "note": "Column needs the silent n."
+        },
+        {
+          "type": "incorrect",
+          "text": "I gess the parcel will arrive today.",
+          "correction": "I guess the parcel will arrive today.",
+          "note": "Guess needs the silent u."
+        },
+        {
+          "type": "incorrect",
+          "text": "The scean in the film was beautiful.",
+          "correction": "The scene in the film was beautiful.",
+          "note": "Scene is spelled with sc."
+        },
+        {
+          "type": "incorrect",
+          "text": "She used sissors to open the box.",
+          "correction": "She used scissors to open the box.",
+          "note": "Scissors needs the silent c."
+        },
+        {
+          "type": "incorrect",
+          "text": "They plan to bild a new warehouse.",
+          "correction": "They plan to build a new warehouse.",
+          "note": "Build needs the silent u."
+        },
+        {
+          "type": "incorrect",
+          "text": "Her gest arrived at noon.",
+          "correction": "Her guest arrived at noon.",
+          "note": "Guest needs the silent u."
+        },
+        {
+          "type": "incorrect",
+          "text": "My mussle hurts after the gym.",
+          "correction": "My muscle hurts after the gym.",
+          "note": "Muscle needs the silent c."
+        },
+        {
+          "type": "incorrect",
+          "text": "He plays the gutar after class.",
+          "correction": "He plays the guitar after class.",
+          "note": "Guitar needs the silent u."
+        },
+        {
+          "type": "exception",
+          "text": "The cat sat under the table.",
+          "note": "In cat, the c is pronounced."
+        },
+        {
+          "type": "exception",
+          "text": "Please close the window.",
+          "note": "In close, the s is pronounced."
+        },
+        {
+          "type": "exception",
+          "text": "The sun is bright today.",
+          "note": "In sun, the n is pronounced."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "We study ___ at school. (science)",
+          "answer": "science"
+        },
+        {
+          "prompt": "The ___ has a small port. (island)",
+          "answer": "island"
+        },
+        {
+          "prompt": "___ begins in September. (autumn)",
+          "answer": "Autumn"
+        },
+        {
+          "prompt": "Write your name in the first ___. (column)",
+          "answer": "column"
+        },
+        {
+          "prompt": "I ___ the parcel will arrive today. (guess)",
+          "answer": "guess"
+        },
+        {
+          "prompt": "The ___ in the film was beautiful. (scene)",
+          "answer": "scene"
+        },
+        {
+          "prompt": "She used ___ to open the box. (scissors)",
+          "answer": "scissors"
+        },
+        {
+          "prompt": "They plan to ___ a new warehouse. (make)",
+          "answer": "build"
+        },
+        {
+          "prompt": "Her ___ arrived at noon. (visitor)",
+          "answer": "guest"
+        },
+        {
+          "prompt": "He plays the ___ after class. (guitar)",
+          "answer": "guitar"
+        },
+        {
+          "prompt": "We study ___ at school.",
+          "answer": "science",
+          "choices": [
+            "sience",
+            "science",
+            "scence",
+            "sciense"
+          ]
+        },
+        {
+          "prompt": "The ___ has a small port.",
+          "answer": "island",
+          "choices": [
+            "iland",
+            "island",
+            "islan",
+            "ilsand"
+          ]
+        },
+        {
+          "prompt": "___ begins in September.",
+          "answer": "Autumn",
+          "choices": [
+            "Autum",
+            "Autumn",
+            "Autumne",
+            "Autummn"
+          ]
+        },
+        {
+          "prompt": "Write your name in the first ___.",
+          "answer": "column",
+          "choices": [
+            "colum",
+            "column",
+            "collum",
+            "colom"
+          ]
+        },
+        {
+          "prompt": "I ___ the parcel will arrive today.",
+          "answer": "guess",
+          "choices": [
+            "gess",
+            "guess",
+            "guesse",
+            "gues"
+          ]
+        },
+        {
+          "prompt": "The ___ in the film was beautiful.",
+          "answer": "scene",
+          "choices": [
+            "scean",
+            "scene",
+            "sceen",
+            "seen"
+          ]
+        },
+        {
+          "prompt": "She used ___ to open the box.",
+          "answer": "scissors",
+          "choices": [
+            "sissors",
+            "scissors",
+            "scisors",
+            "sizzors"
+          ]
+        },
+        {
+          "prompt": "My ___ hurts after the gym.",
+          "answer": "muscle",
+          "choices": [
+            "mussle",
+            "muscle",
+            "muscel",
+            "musle"
+          ]
+        },
+        {
+          "prompt": "Her ___ arrived at noon.",
+          "answer": "guest",
+          "choices": [
+            "gest",
+            "guest",
+            "guesst",
+            "geust"
+          ]
+        },
+        {
+          "prompt": "He plays the ___ after class.",
+          "answer": "guitar",
+          "choices": [
+            "gutar",
+            "guitar",
+            "gittar",
+            "guitare"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: sience",
+          "answer": "science"
+        },
+        {
+          "prompt": "Fix the spelling: iland",
+          "answer": "island"
+        },
+        {
+          "prompt": "Fix the spelling: autum",
+          "answer": "autumn"
+        },
+        {
+          "prompt": "Fix the spelling: colum",
+          "answer": "column"
+        },
+        {
+          "prompt": "Fix the spelling: gess",
+          "answer": "guess"
+        },
+        {
+          "prompt": "Fix the spelling: scean",
+          "answer": "scene"
+        },
+        {
+          "prompt": "Fix the spelling: sissors",
+          "answer": "scissors"
+        },
+        {
+          "prompt": "Fix the spelling: bild",
+          "answer": "build"
+        },
+        {
+          "prompt": "Fix the spelling: gest",
+          "answer": "guest"
+        },
+        {
+          "prompt": "Fix the spelling: gutar",
+          "answer": "guitar"
+        },
+        {
+          "prompt": "Spell the word: biology, physics and chemistry.",
+          "answer": "science"
+        },
+        {
+          "prompt": "Spell the word: land with water around it.",
+          "answer": "island"
+        },
+        {
+          "prompt": "Spell the word: the season after summer.",
+          "answer": "autumn"
+        },
+        {
+          "prompt": "Spell the word: a vertical part of a table.",
+          "answer": "column"
+        },
+        {
+          "prompt": "Spell the word: to give an answer without knowing.",
+          "answer": "guess"
+        },
+        {
+          "prompt": "Spell the word: a view or part of a film.",
+          "answer": "scene"
+        },
+        {
+          "prompt": "Spell the word: a tool for cutting paper.",
+          "answer": "scissors"
+        },
+        {
+          "prompt": "Spell the word: to make something, like a house.",
+          "answer": "build"
+        },
+        {
+          "prompt": "Spell the word: a person you invite to your home.",
+          "answer": "guest"
+        },
+        {
+          "prompt": "Spell the word: a musical instrument with strings.",
+          "answer": "guitar"
+        }
+      ]
+    }
+  ]
+}

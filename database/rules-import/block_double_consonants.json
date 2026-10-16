@@ -1,0 +1,729 @@
+{
+  "category": "double_consonants",
+  "rules": [
+    {
+      "slug": "double-letters-in-common-words",
+      "title": "Double cc, mm, ss, rr: address, success, arrive",
+      "rule_type": "language_rule",
+      "short_explanation": "Many common words have double consonants that must be remembered: address, success, message, necessary, committee, arrived and tomorrow. Write the whole word carefully; one missing letter changes the spelling.",
+      "tts_text": "Some common words need double consonants.",
+      "mnemonic": "Address, success, message: double letters travel together.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Please write your address on the form.",
+          "note": "Address has double s."
+        },
+        {
+          "type": "correct",
+          "text": "The meeting was a great success.",
+          "note": "Success has cc and ss."
+        },
+        {
+          "type": "correct",
+          "text": "We discussed the shipment this morning.",
+          "note": "Discussed has double s."
+        },
+        {
+          "type": "correct",
+          "text": "I sent a message to the supplier.",
+          "note": "Message has double s."
+        },
+        {
+          "type": "correct",
+          "text": "It is necessary to check the invoice.",
+          "note": "Necessary has double s."
+        },
+        {
+          "type": "correct",
+          "text": "The committee meets every Monday.",
+          "note": "Committee has double m, t and e."
+        },
+        {
+          "type": "correct",
+          "text": "We arrived at the warehouse early.",
+          "note": "Arrived has double r."
+        },
+        {
+          "type": "correct",
+          "text": "I will call you tomorrow morning.",
+          "note": "Tomorrow has double r."
+        },
+        {
+          "type": "correct",
+          "text": "There was a small accident on the road.",
+          "note": "Accident has double c."
+        },
+        {
+          "type": "correct",
+          "text": "The lesson about logistics was useful.",
+          "note": "Lesson has double s."
+        },
+        {
+          "type": "correct",
+          "text": "She carried the boxes to the van.",
+          "note": "Carried has double r."
+        },
+        {
+          "type": "incorrect",
+          "text": "Please write your adres on the form.",
+          "correction": "Please write your address on the form.",
+          "note": "Address needs double s."
+        },
+        {
+          "type": "incorrect",
+          "text": "The meeting was a great sucsess.",
+          "correction": "The meeting was a great success.",
+          "note": "Success has cc and ss."
+        },
+        {
+          "type": "incorrect",
+          "text": "We discused the shipment this morning.",
+          "correction": "We discussed the shipment this morning.",
+          "note": "Discussed needs double s."
+        },
+        {
+          "type": "incorrect",
+          "text": "I sent a mesage to the supplier.",
+          "correction": "I sent a message to the supplier.",
+          "note": "Message has double s."
+        },
+        {
+          "type": "incorrect",
+          "text": "It is necesary to check the invoice.",
+          "correction": "It is necessary to check the invoice.",
+          "note": "Necessary has double s."
+        },
+        {
+          "type": "incorrect",
+          "text": "The comittee meets every Monday.",
+          "correction": "The committee meets every Monday.",
+          "note": "Committee needs double m and t."
+        },
+        {
+          "type": "incorrect",
+          "text": "We arived at the warehouse early.",
+          "correction": "We arrived at the warehouse early.",
+          "note": "Arrived has double r."
+        },
+        {
+          "type": "incorrect",
+          "text": "I will call you tommorow morning.",
+          "correction": "I will call you tomorrow morning.",
+          "note": "Tomorrow has one m and double r."
+        },
+        {
+          "type": "incorrect",
+          "text": "There was a small acident on the road.",
+          "correction": "There was a small accident on the road.",
+          "note": "Accident has double c."
+        },
+        {
+          "type": "incorrect",
+          "text": "The leson about logistics was useful.",
+          "correction": "The lesson about logistics was useful.",
+          "note": "Lesson has double s."
+        },
+        {
+          "type": "incorrect",
+          "text": "She caried the boxes to the van.",
+          "correction": "She carried the boxes to the van.",
+          "note": "Carried has double r."
+        },
+        {
+          "type": "exception",
+          "text": "I need some money for the trip.",
+          "note": "Money has one m and one n."
+        },
+        {
+          "type": "exception",
+          "text": "The city has a large port.",
+          "note": "City has single consonants."
+        },
+        {
+          "type": "exception",
+          "text": "Please stay busy with your studies.",
+          "note": "Busy has one s."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Please write your ___ on the form. (address)",
+          "answer": "address"
+        },
+        {
+          "prompt": "The meeting was a great ___. (success)",
+          "answer": "success"
+        },
+        {
+          "prompt": "We ___ the shipment this morning. (discuss + ed)",
+          "answer": "discussed"
+        },
+        {
+          "prompt": "I sent a ___ to the supplier. (message)",
+          "answer": "message"
+        },
+        {
+          "prompt": "It is ___ to check the invoice. (necessary)",
+          "answer": "necessary"
+        },
+        {
+          "prompt": "The ___ meets every Monday. (committee)",
+          "answer": "committee"
+        },
+        {
+          "prompt": "We ___ at the warehouse early. (arrive + d)",
+          "answer": "arrived"
+        },
+        {
+          "prompt": "I will call you ___ morning. (tomorrow)",
+          "answer": "tomorrow"
+        },
+        {
+          "prompt": "There was a small ___ on the road. (accident)",
+          "answer": "accident"
+        },
+        {
+          "prompt": "The ___ about logistics was useful. (lesson)",
+          "answer": "lesson"
+        },
+        {
+          "prompt": "Please write your ___ on the form.",
+          "answer": "address",
+          "choices": [
+            "adres",
+            "address",
+            "addres",
+            "adress"
+          ]
+        },
+        {
+          "prompt": "The meeting was a great ___.",
+          "answer": "success",
+          "choices": [
+            "sucsess",
+            "success",
+            "succes",
+            "sucess"
+          ]
+        },
+        {
+          "prompt": "We ___ the shipment this morning.",
+          "answer": "discussed",
+          "choices": [
+            "discused",
+            "discussed",
+            "discust",
+            "disscused"
+          ]
+        },
+        {
+          "prompt": "I sent a ___ to the supplier.",
+          "answer": "message",
+          "choices": [
+            "mesage",
+            "message",
+            "messag",
+            "messege"
+          ]
+        },
+        {
+          "prompt": "It is ___ to check the invoice.",
+          "answer": "necessary",
+          "choices": [
+            "necesary",
+            "necessary",
+            "neccessary",
+            "necessery"
+          ]
+        },
+        {
+          "prompt": "The ___ meets every Monday.",
+          "answer": "committee",
+          "choices": [
+            "comittee",
+            "committee",
+            "commitee",
+            "comitee"
+          ]
+        },
+        {
+          "prompt": "We ___ at the warehouse early.",
+          "answer": "arrived",
+          "choices": [
+            "arived",
+            "arrived",
+            "arrvied",
+            "arrieved"
+          ]
+        },
+        {
+          "prompt": "I will call you ___ morning.",
+          "answer": "tomorrow",
+          "choices": [
+            "tommorow",
+            "tomorrow",
+            "tomorow",
+            "tommorrow"
+          ]
+        },
+        {
+          "prompt": "There was a small ___ on the road.",
+          "answer": "accident",
+          "choices": [
+            "acident",
+            "accident",
+            "acciddent",
+            "accidant"
+          ]
+        },
+        {
+          "prompt": "The ___ about logistics was useful.",
+          "answer": "lesson",
+          "choices": [
+            "leson",
+            "lesson",
+            "lesonn",
+            "lessan"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: adres",
+          "answer": "address"
+        },
+        {
+          "prompt": "Fix the spelling: sucsess",
+          "answer": "success"
+        },
+        {
+          "prompt": "Fix the spelling: discused",
+          "answer": "discussed"
+        },
+        {
+          "prompt": "Fix the spelling: mesage",
+          "answer": "message"
+        },
+        {
+          "prompt": "Fix the spelling: necesary",
+          "answer": "necessary"
+        },
+        {
+          "prompt": "Fix the spelling: comittee",
+          "answer": "committee"
+        },
+        {
+          "prompt": "Fix the spelling: arived",
+          "answer": "arrived"
+        },
+        {
+          "prompt": "Fix the spelling: tommorow",
+          "answer": "tomorrow"
+        },
+        {
+          "prompt": "Fix the spelling: acident",
+          "answer": "accident"
+        },
+        {
+          "prompt": "Fix the spelling: leson",
+          "answer": "lesson"
+        },
+        {
+          "prompt": "Spell the word: where you live, with a street and number.",
+          "answer": "address"
+        },
+        {
+          "prompt": "Spell the word: a good result.",
+          "answer": "success"
+        },
+        {
+          "prompt": "Spell the word: past form of discuss.",
+          "answer": "discussed"
+        },
+        {
+          "prompt": "Spell the word: a short written note.",
+          "answer": "message"
+        },
+        {
+          "prompt": "Spell the word: needed; must be done.",
+          "answer": "necessary"
+        },
+        {
+          "prompt": "Spell the word: a group that makes decisions.",
+          "answer": "committee"
+        },
+        {
+          "prompt": "Spell the word: past form of arrive.",
+          "answer": "arrived"
+        },
+        {
+          "prompt": "Spell the word: the day after today.",
+          "answer": "tomorrow"
+        },
+        {
+          "prompt": "Spell the word: an unexpected bad event.",
+          "answer": "accident"
+        },
+        {
+          "prompt": "Spell the word: a time when you learn something.",
+          "answer": "lesson"
+        }
+      ]
+    },
+    {
+      "slug": "all-words-single-l",
+      "title": "all- compounds → one l: always, already, almost",
+      "rule_type": "language_rule",
+      "short_explanation": "When all is part of a longer word, it usually keeps only one l: always, already, almost, also, although and altogether. The word all by itself has two l letters.",
+      "tts_text": "In words with all, usually write only one l.",
+      "mnemonic": "All alone has two l letters; inside a word, drop one.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "I always check the delivery list.",
+          "note": "Always has one l."
+        },
+        {
+          "type": "correct",
+          "text": "She had already finished the report.",
+          "note": "Already has one l."
+        },
+        {
+          "type": "correct",
+          "text": "We almost missed the morning train.",
+          "note": "Almost has one l."
+        },
+        {
+          "type": "correct",
+          "text": "He also works at the warehouse.",
+          "note": "Also has one l."
+        },
+        {
+          "type": "correct",
+          "text": "Although it rained, the shipment arrived.",
+          "note": "Although has one l."
+        },
+        {
+          "type": "correct",
+          "text": "The boxes were altogether too heavy.",
+          "note": "Altogether has one l."
+        },
+        {
+          "type": "correct",
+          "text": "I almost forgot my laptop at home.",
+          "note": "Almost has one l."
+        },
+        {
+          "type": "correct",
+          "text": "She is always polite to customers.",
+          "note": "Always has one l."
+        },
+        {
+          "type": "correct",
+          "text": "We already booked the hotel.",
+          "note": "Already has one l."
+        },
+        {
+          "type": "correct",
+          "text": "Although the road was long, we arrived.",
+          "note": "Although has one l."
+        },
+        {
+          "type": "correct",
+          "text": "He also studies logistics at university.",
+          "note": "Also has one l."
+        },
+        {
+          "type": "incorrect",
+          "text": "I allways check the delivery list.",
+          "correction": "I always check the delivery list.",
+          "note": "Always has only one l."
+        },
+        {
+          "type": "incorrect",
+          "text": "She had allready finished the report.",
+          "correction": "She had already finished the report.",
+          "note": "Already has only one l."
+        },
+        {
+          "type": "incorrect",
+          "text": "We allmost missed the morning train.",
+          "correction": "We almost missed the morning train.",
+          "note": "Almost has only one l."
+        },
+        {
+          "type": "incorrect",
+          "text": "He alsso works at the warehouse.",
+          "correction": "He also works at the warehouse.",
+          "note": "Also has only one l."
+        },
+        {
+          "type": "incorrect",
+          "text": "Allthough it rained, the shipment arrived.",
+          "correction": "Although it rained, the shipment arrived.",
+          "note": "Although has only one l."
+        },
+        {
+          "type": "incorrect",
+          "text": "The boxes were alltogether too heavy.",
+          "correction": "The boxes were altogether too heavy.",
+          "note": "Altogether has only one l."
+        },
+        {
+          "type": "incorrect",
+          "text": "I allmost forgot my laptop at home.",
+          "correction": "I almost forgot my laptop at home.",
+          "note": "Almost has only one l."
+        },
+        {
+          "type": "incorrect",
+          "text": "She is allways polite to customers.",
+          "correction": "She is always polite to customers.",
+          "note": "Always has only one l."
+        },
+        {
+          "type": "incorrect",
+          "text": "We allready booked the hotel.",
+          "correction": "We already booked the hotel.",
+          "note": "Already has only one l."
+        },
+        {
+          "type": "incorrect",
+          "text": "Allthough the road was long, we arrived.",
+          "correction": "Although the road was long, we arrived.",
+          "note": "Although has only one l."
+        },
+        {
+          "type": "incorrect",
+          "text": "He alsso studies logistics at university.",
+          "correction": "He also studies logistics at university.",
+          "note": "Also has only one l."
+        },
+        {
+          "type": "exception",
+          "text": "The wall in the office is white.",
+          "note": "Wall is a separate word with double l."
+        },
+        {
+          "type": "exception",
+          "text": "Please call me after work.",
+          "note": "Call is a separate word with double l."
+        },
+        {
+          "type": "exception",
+          "text": "The hall was full of students.",
+          "note": "Hall and full have double l."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "I ___ check the delivery list. (always)",
+          "answer": "always"
+        },
+        {
+          "prompt": "She had ___ finished the report. (already)",
+          "answer": "already"
+        },
+        {
+          "prompt": "We ___ missed the morning train. (almost)",
+          "answer": "almost"
+        },
+        {
+          "prompt": "He ___ works at the warehouse. (also)",
+          "answer": "also"
+        },
+        {
+          "prompt": "___ it rained, the shipment arrived. (although)",
+          "answer": "Although"
+        },
+        {
+          "prompt": "The boxes were ___ too heavy. (altogether)",
+          "answer": "altogether"
+        },
+        {
+          "prompt": "I ___ forgot my laptop at home. (almost)",
+          "answer": "almost"
+        },
+        {
+          "prompt": "She is ___ polite to customers. (always)",
+          "answer": "always"
+        },
+        {
+          "prompt": "We ___ booked the hotel. (already)",
+          "answer": "already"
+        },
+        {
+          "prompt": "He ___ studies logistics at university. (also)",
+          "answer": "also"
+        },
+        {
+          "prompt": "I ___ check the delivery list.",
+          "answer": "always",
+          "choices": [
+            "allways",
+            "always",
+            "alwayes",
+            "allwayes"
+          ]
+        },
+        {
+          "prompt": "She had ___ finished the report.",
+          "answer": "already",
+          "choices": [
+            "allready",
+            "already",
+            "alredy",
+            "alreddy"
+          ]
+        },
+        {
+          "prompt": "We ___ missed the morning train.",
+          "answer": "almost",
+          "choices": [
+            "allmost",
+            "almost",
+            "almoust",
+            "allmoast"
+          ]
+        },
+        {
+          "prompt": "He ___ works at the warehouse.",
+          "answer": "also",
+          "choices": [
+            "alsso",
+            "also",
+            "alos",
+            "alsoo"
+          ]
+        },
+        {
+          "prompt": "___ it rained, the shipment arrived.",
+          "answer": "Although",
+          "choices": [
+            "Allthough",
+            "Although",
+            "Althoug",
+            "Allthogh"
+          ]
+        },
+        {
+          "prompt": "The boxes were ___ too heavy.",
+          "answer": "altogether",
+          "choices": [
+            "alltogether",
+            "altogether",
+            "alltogethr",
+            "altoghether"
+          ]
+        },
+        {
+          "prompt": "I ___ forgot my laptop at home.",
+          "answer": "almost",
+          "choices": [
+            "allmost",
+            "almost",
+            "almst",
+            "allmoast"
+          ]
+        },
+        {
+          "prompt": "She is ___ polite to customers.",
+          "answer": "always",
+          "choices": [
+            "allways",
+            "always",
+            "alwayes",
+            "allwais"
+          ]
+        },
+        {
+          "prompt": "We ___ booked the hotel.",
+          "answer": "already",
+          "choices": [
+            "allready",
+            "already",
+            "alredy",
+            "alreddy"
+          ]
+        },
+        {
+          "prompt": "He ___ studies logistics at university.",
+          "answer": "also",
+          "choices": [
+            "alsso",
+            "also",
+            "alsow",
+            "aloso"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: allways",
+          "answer": "always"
+        },
+        {
+          "prompt": "Fix the spelling: allready",
+          "answer": "already"
+        },
+        {
+          "prompt": "Fix the spelling: allmost",
+          "answer": "almost"
+        },
+        {
+          "prompt": "Fix the spelling: alsso",
+          "answer": "also"
+        },
+        {
+          "prompt": "Fix the spelling: Allthough",
+          "answer": "Although"
+        },
+        {
+          "prompt": "Fix the spelling: alltogether",
+          "answer": "altogether"
+        },
+        {
+          "prompt": "Spell the word: every time.",
+          "answer": "always"
+        },
+        {
+          "prompt": "Spell the word: before now.",
+          "answer": "already"
+        },
+        {
+          "prompt": "Spell the word: nearly.",
+          "answer": "almost"
+        },
+        {
+          "prompt": "Spell the word: too; in addition.",
+          "answer": "also"
+        },
+        {
+          "prompt": "Spell the word: even though.",
+          "answer": "although"
+        },
+        {
+          "prompt": "Spell the word: completely; in total.",
+          "answer": "altogether"
+        },
+        {
+          "prompt": "Spell the word: nearly; not quite.",
+          "answer": "almost"
+        },
+        {
+          "prompt": "Spell the word: earlier than now.",
+          "answer": "already"
+        },
+        {
+          "prompt": "Spell the word: in addition.",
+          "answer": "also"
+        },
+        {
+          "prompt": "Fix the spelling: allso",
+          "answer": "also"
+        },
+        {
+          "prompt": "Fix the spelling: allthough",
+          "answer": "although"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,741 @@
+{
+  "category": "verb_endings",
+  "rules": [
+    {
+      "slug": "es-after-s-sh-ch-x-z-o",
+      "title": "he/she + -es: watches, fixes, goes",
+      "rule_type": "language_rule",
+      "short_explanation": "After verbs ending in s, sh, ch, x, z or o, add es for he, she or it. Examples: watches, washes, fixes, goes and does.",
+      "tts_text": "After s, sh, ch, x, z or o, add e s.",
+      "mnemonic": "Sassy sounds need es: watch becomes watches.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "She watches the news every evening.",
+          "note": "Watch ends in ch, so add es."
+        },
+        {
+          "type": "correct",
+          "text": "He washes the van on Saturdays.",
+          "note": "Wash ends in sh, so add es."
+        },
+        {
+          "type": "correct",
+          "text": "The technician fixes the machines.",
+          "note": "Fix ends in x, so add es."
+        },
+        {
+          "type": "correct",
+          "text": "She goes to the warehouse by bus.",
+          "note": "Go ends in o, so add es."
+        },
+        {
+          "type": "correct",
+          "text": "He does the inventory every month.",
+          "note": "Do ends in o, so add es."
+        },
+        {
+          "type": "correct",
+          "text": "The train passes through the city.",
+          "note": "Pass ends in s, so add es."
+        },
+        {
+          "type": "correct",
+          "text": "She finishes work at six o'clock.",
+          "note": "Finish ends in sh, so add es."
+        },
+        {
+          "type": "correct",
+          "text": "He catches the early train.",
+          "note": "Catch ends in ch, so add es."
+        },
+        {
+          "type": "correct",
+          "text": "The teacher teaches English online.",
+          "note": "Teach ends in ch, so add es."
+        },
+        {
+          "type": "correct",
+          "text": "She pushes the trolley to the shelf.",
+          "note": "Push ends in sh, so add es."
+        },
+        {
+          "type": "correct",
+          "text": "The phone buzzes when a message arrives.",
+          "note": "Buzz ends in z, so add es."
+        },
+        {
+          "type": "incorrect",
+          "text": "She watchs the news every evening.",
+          "correction": "She watches the news every evening.",
+          "note": "Watch needs es after ch."
+        },
+        {
+          "type": "incorrect",
+          "text": "He washs the van on Saturdays.",
+          "correction": "He washes the van on Saturdays.",
+          "note": "Wash needs es after sh."
+        },
+        {
+          "type": "incorrect",
+          "text": "The technician fixs the machines.",
+          "correction": "The technician fixes the machines.",
+          "note": "Fix needs es after x."
+        },
+        {
+          "type": "incorrect",
+          "text": "She gos to the warehouse by bus.",
+          "correction": "She goes to the warehouse by bus.",
+          "note": "Go needs es."
+        },
+        {
+          "type": "incorrect",
+          "text": "He dos the inventory every month.",
+          "correction": "He does the inventory every month.",
+          "note": "Do becomes does."
+        },
+        {
+          "type": "incorrect",
+          "text": "The train passs through the city.",
+          "correction": "The train passes through the city.",
+          "note": "Pass needs es."
+        },
+        {
+          "type": "incorrect",
+          "text": "She finishs work at six o'clock.",
+          "correction": "She finishes work at six o'clock.",
+          "note": "Finish needs es."
+        },
+        {
+          "type": "incorrect",
+          "text": "He catchs the early train.",
+          "correction": "He catches the early train.",
+          "note": "Catch needs es."
+        },
+        {
+          "type": "incorrect",
+          "text": "The teacher teachs English online.",
+          "correction": "The teacher teaches English online.",
+          "note": "Teach needs es."
+        },
+        {
+          "type": "incorrect",
+          "text": "She pushs the trolley to the shelf.",
+          "correction": "She pushes the trolley to the shelf.",
+          "note": "Push needs es."
+        },
+        {
+          "type": "incorrect",
+          "text": "The phone buzs when a message arrives.",
+          "correction": "The phone buzzes when a message arrives.",
+          "note": "Buzz needs es."
+        },
+        {
+          "type": "exception",
+          "text": "He plays football after work.",
+          "note": "Play ends in a vowel plus y, so add s."
+        },
+        {
+          "type": "exception",
+          "text": "She enjoys her new job.",
+          "note": "Enjoy ends in a vowel plus y, so add s."
+        },
+        {
+          "type": "exception",
+          "text": "The shop opens at eight.",
+          "note": "Open ends in n, so add only s."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "She ___ the news every evening. (watch + es)",
+          "answer": "watches"
+        },
+        {
+          "prompt": "He ___ the van on Saturdays. (wash + es)",
+          "answer": "washes"
+        },
+        {
+          "prompt": "The technician ___ the machines. (fix + es)",
+          "answer": "fixes"
+        },
+        {
+          "prompt": "She ___ to the warehouse by bus. (go + es)",
+          "answer": "goes"
+        },
+        {
+          "prompt": "He ___ the inventory every month. (do + es)",
+          "answer": "does"
+        },
+        {
+          "prompt": "The train ___ through the city. (pass + es)",
+          "answer": "passes"
+        },
+        {
+          "prompt": "She ___ work at six o'clock. (finish + es)",
+          "answer": "finishes"
+        },
+        {
+          "prompt": "He ___ the early train. (catch + es)",
+          "answer": "catches"
+        },
+        {
+          "prompt": "The teacher ___ English online. (teach + es)",
+          "answer": "teaches"
+        },
+        {
+          "prompt": "The phone ___ when a message arrives. (buzz + es)",
+          "answer": "buzzes"
+        },
+        {
+          "prompt": "She ___ the news every evening.",
+          "answer": "watches",
+          "choices": [
+            "watchs",
+            "watches",
+            "watchies",
+            "wachtes"
+          ]
+        },
+        {
+          "prompt": "He ___ the van on Saturdays.",
+          "answer": "washes",
+          "choices": [
+            "washs",
+            "washes",
+            "washies",
+            "wasches"
+          ]
+        },
+        {
+          "prompt": "The technician ___ the machines.",
+          "answer": "fixes",
+          "choices": [
+            "fixs",
+            "fixes",
+            "fixies",
+            "fixez"
+          ]
+        },
+        {
+          "prompt": "She ___ to the warehouse by bus.",
+          "answer": "goes",
+          "choices": [
+            "gos",
+            "goes",
+            "goies",
+            "gose"
+          ]
+        },
+        {
+          "prompt": "He ___ the inventory every month.",
+          "answer": "does",
+          "choices": [
+            "dos",
+            "does",
+            "doies",
+            "dose"
+          ]
+        },
+        {
+          "prompt": "The train ___ through the city.",
+          "answer": "passes",
+          "choices": [
+            "passs",
+            "passes",
+            "passies",
+            "pases"
+          ]
+        },
+        {
+          "prompt": "She ___ work at six o'clock.",
+          "answer": "finishes",
+          "choices": [
+            "finishs",
+            "finishes",
+            "finishies",
+            "finnishes"
+          ]
+        },
+        {
+          "prompt": "He ___ the early train.",
+          "answer": "catches",
+          "choices": [
+            "catchs",
+            "catches",
+            "catchies",
+            "cachtes"
+          ]
+        },
+        {
+          "prompt": "The teacher ___ English online.",
+          "answer": "teaches",
+          "choices": [
+            "teachs",
+            "teaches",
+            "teachies",
+            "teches"
+          ]
+        },
+        {
+          "prompt": "The phone ___ when a message arrives.",
+          "answer": "buzzes",
+          "choices": [
+            "buzs",
+            "buzzes",
+            "buzzies",
+            "buzes"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: watchs",
+          "answer": "watches"
+        },
+        {
+          "prompt": "Fix the spelling: washs",
+          "answer": "washes"
+        },
+        {
+          "prompt": "Fix the spelling: fixs",
+          "answer": "fixes"
+        },
+        {
+          "prompt": "Fix the spelling: gos",
+          "answer": "goes"
+        },
+        {
+          "prompt": "Fix the spelling: dos",
+          "answer": "does"
+        },
+        {
+          "prompt": "Fix the spelling: passs",
+          "answer": "passes"
+        },
+        {
+          "prompt": "Fix the spelling: finishs",
+          "answer": "finishes"
+        },
+        {
+          "prompt": "Fix the spelling: catchs",
+          "answer": "catches"
+        },
+        {
+          "prompt": "Fix the spelling: teachs",
+          "answer": "teaches"
+        },
+        {
+          "prompt": "Fix the spelling: buzs",
+          "answer": "buzzes"
+        },
+        {
+          "prompt": "Spell the word: he/she form of watch.",
+          "answer": "watches"
+        },
+        {
+          "prompt": "Spell the word: he/she form of wash.",
+          "answer": "washes"
+        },
+        {
+          "prompt": "Spell the word: he/she form of fix.",
+          "answer": "fixes"
+        },
+        {
+          "prompt": "Spell the word: he/she form of go.",
+          "answer": "goes"
+        },
+        {
+          "prompt": "Spell the word: he/she form of do.",
+          "answer": "does"
+        },
+        {
+          "prompt": "Spell the word: he/she form of pass.",
+          "answer": "passes"
+        },
+        {
+          "prompt": "Spell the word: he/she form of finish.",
+          "answer": "finishes"
+        },
+        {
+          "prompt": "Spell the word: he/she form of catch.",
+          "answer": "catches"
+        },
+        {
+          "prompt": "Spell the word: he/she form of teach.",
+          "answer": "teaches"
+        },
+        {
+          "prompt": "Spell the word: he/she form of buzz.",
+          "answer": "buzzes"
+        }
+      ]
+    },
+    {
+      "slug": "s-after-y-verbs",
+      "title": "consonant + y → ies: studies, flies; vowel + y → ys: plays",
+      "rule_type": "language_rule",
+      "short_explanation": "For he, she or it, change y to ies after a consonant: study becomes studies and fly becomes flies. After a vowel plus y, simply add s: play becomes plays and enjoy becomes enjoys.",
+      "tts_text": "Consonant plus y becomes i e s; vowel plus y adds s.",
+      "mnemonic": "Consonant y? Change y to ies.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "She studies logistics at university.",
+          "note": "Study ends in consonant plus y, so use ies."
+        },
+        {
+          "type": "correct",
+          "text": "The plane flies to Prague every day.",
+          "note": "Fly becomes flies."
+        },
+        {
+          "type": "correct",
+          "text": "He carries the parcels to the van.",
+          "note": "Carry becomes carries."
+        },
+        {
+          "type": "correct",
+          "text": "She tries to finish the report today.",
+          "note": "Try becomes tries."
+        },
+        {
+          "type": "correct",
+          "text": "He hurries to catch the morning bus.",
+          "note": "Hurry becomes hurries."
+        },
+        {
+          "type": "correct",
+          "text": "She worries about the delayed shipment.",
+          "note": "Worry becomes worries."
+        },
+        {
+          "type": "correct",
+          "text": "The office copies the documents twice.",
+          "note": "Copy becomes copies."
+        },
+        {
+          "type": "correct",
+          "text": "He replies to customer emails quickly.",
+          "note": "Reply becomes replies."
+        },
+        {
+          "type": "correct",
+          "text": "The baby cries when she is hungry.",
+          "note": "Cry becomes cries."
+        },
+        {
+          "type": "correct",
+          "text": "She plays tennis after work.",
+          "note": "Play ends in vowel plus y, so add s."
+        },
+        {
+          "type": "correct",
+          "text": "He enjoys his job at the warehouse.",
+          "note": "Enjoy ends in vowel plus y, so add s."
+        },
+        {
+          "type": "incorrect",
+          "text": "She studys logistics at university.",
+          "correction": "She studies logistics at university.",
+          "note": "Study becomes studies."
+        },
+        {
+          "type": "incorrect",
+          "text": "The plane flys to Prague every day.",
+          "correction": "The plane flies to Prague every day.",
+          "note": "Fly becomes flies."
+        },
+        {
+          "type": "incorrect",
+          "text": "He carrys the parcels to the van.",
+          "correction": "He carries the parcels to the van.",
+          "note": "Carry becomes carries."
+        },
+        {
+          "type": "incorrect",
+          "text": "She trys to finish the report today.",
+          "correction": "She tries to finish the report today.",
+          "note": "Try becomes tries."
+        },
+        {
+          "type": "incorrect",
+          "text": "He hurrys to catch the morning bus.",
+          "correction": "He hurries to catch the morning bus.",
+          "note": "Hurry becomes hurries."
+        },
+        {
+          "type": "incorrect",
+          "text": "She worrys about the delayed shipment.",
+          "correction": "She worries about the delayed shipment.",
+          "note": "Worry becomes worries."
+        },
+        {
+          "type": "incorrect",
+          "text": "The office copys the documents twice.",
+          "correction": "The office copies the documents twice.",
+          "note": "Copy becomes copies."
+        },
+        {
+          "type": "incorrect",
+          "text": "He replys to customer emails quickly.",
+          "correction": "He replies to customer emails quickly.",
+          "note": "Reply becomes replies."
+        },
+        {
+          "type": "incorrect",
+          "text": "The baby crys when she is hungry.",
+          "correction": "The baby cries when she is hungry.",
+          "note": "Cry becomes cries."
+        },
+        {
+          "type": "incorrect",
+          "text": "She plaies tennis after work.",
+          "correction": "She plays tennis after work.",
+          "note": "Play only adds s."
+        },
+        {
+          "type": "incorrect",
+          "text": "He enjoyes his job at the warehouse.",
+          "correction": "He enjoys his job at the warehouse.",
+          "note": "Enjoy only adds s."
+        },
+        {
+          "type": "exception",
+          "text": "He ties the boxes with rope.",
+          "note": "Tie ends in ie, so add s: ties."
+        },
+        {
+          "type": "exception",
+          "text": "She lies on the sofa after work.",
+          "note": "Lie ends in ie, so add s: lies."
+        },
+        {
+          "type": "exception",
+          "text": "The company ties prices to demand.",
+          "note": "Tie becomes ties, not tieies."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "She ___ logistics at university. (study + s)",
+          "answer": "studies"
+        },
+        {
+          "prompt": "The plane ___ to Prague every day. (fly + s)",
+          "answer": "flies"
+        },
+        {
+          "prompt": "He ___ the parcels to the van. (carry + s)",
+          "answer": "carries"
+        },
+        {
+          "prompt": "She ___ to finish the report today. (try + s)",
+          "answer": "tries"
+        },
+        {
+          "prompt": "He ___ to catch the morning bus. (hurry + s)",
+          "answer": "hurries"
+        },
+        {
+          "prompt": "She ___ about the delayed shipment. (worry + s)",
+          "answer": "worries"
+        },
+        {
+          "prompt": "The office ___ the documents twice. (copy + s)",
+          "answer": "copies"
+        },
+        {
+          "prompt": "He ___ to customer emails quickly. (reply + s)",
+          "answer": "replies"
+        },
+        {
+          "prompt": "The baby ___ when she is hungry. (cry + s)",
+          "answer": "cries"
+        },
+        {
+          "prompt": "She ___ tennis after work. (play + s)",
+          "answer": "plays"
+        },
+        {
+          "prompt": "She ___ logistics at university.",
+          "answer": "studies",
+          "choices": [
+            "studys",
+            "studies",
+            "studyies",
+            "studyes"
+          ]
+        },
+        {
+          "prompt": "The plane ___ to Prague every day.",
+          "answer": "flies",
+          "choices": [
+            "flys",
+            "flies",
+            "flyes",
+            "fliies"
+          ]
+        },
+        {
+          "prompt": "He ___ the parcels to the van.",
+          "answer": "carries",
+          "choices": [
+            "carrys",
+            "carries",
+            "carryes",
+            "carriees"
+          ]
+        },
+        {
+          "prompt": "She ___ to finish the report today.",
+          "answer": "tries",
+          "choices": [
+            "trys",
+            "tries",
+            "tryes",
+            "triies"
+          ]
+        },
+        {
+          "prompt": "He ___ to catch the morning bus.",
+          "answer": "hurries",
+          "choices": [
+            "hurrys",
+            "hurries",
+            "hurryes",
+            "huries"
+          ]
+        },
+        {
+          "prompt": "She ___ about the delayed shipment.",
+          "answer": "worries",
+          "choices": [
+            "worrys",
+            "worries",
+            "worryes",
+            "wories"
+          ]
+        },
+        {
+          "prompt": "The office ___ the documents twice.",
+          "answer": "copies",
+          "choices": [
+            "copys",
+            "copies",
+            "copyes",
+            "copiies"
+          ]
+        },
+        {
+          "prompt": "He ___ to customer emails quickly.",
+          "answer": "replies",
+          "choices": [
+            "replys",
+            "replies",
+            "replyes",
+            "repliies"
+          ]
+        },
+        {
+          "prompt": "The baby ___ when she is hungry.",
+          "answer": "cries",
+          "choices": [
+            "crys",
+            "cries",
+            "cryes",
+            "criies"
+          ]
+        },
+        {
+          "prompt": "She ___ tennis after work.",
+          "answer": "plays",
+          "choices": [
+            "plaies",
+            "plays",
+            "playes",
+            "plais"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: studys",
+          "answer": "studies"
+        },
+        {
+          "prompt": "Fix the spelling: flys",
+          "answer": "flies"
+        },
+        {
+          "prompt": "Fix the spelling: carrys",
+          "answer": "carries"
+        },
+        {
+          "prompt": "Fix the spelling: trys",
+          "answer": "tries"
+        },
+        {
+          "prompt": "Fix the spelling: hurrys",
+          "answer": "hurries"
+        },
+        {
+          "prompt": "Fix the spelling: worrys",
+          "answer": "worries"
+        },
+        {
+          "prompt": "Fix the spelling: copys",
+          "answer": "copies"
+        },
+        {
+          "prompt": "Fix the spelling: replys",
+          "answer": "replies"
+        },
+        {
+          "prompt": "Fix the spelling: crys",
+          "answer": "cries"
+        },
+        {
+          "prompt": "Fix the spelling: plaies",
+          "answer": "plays"
+        },
+        {
+          "prompt": "Spell the word: he/she form of study.",
+          "answer": "studies"
+        },
+        {
+          "prompt": "Spell the word: he/she form of fly.",
+          "answer": "flies"
+        },
+        {
+          "prompt": "Spell the word: he/she form of carry.",
+          "answer": "carries"
+        },
+        {
+          "prompt": "Spell the word: he/she form of try.",
+          "answer": "tries"
+        },
+        {
+          "prompt": "Spell the word: he/she form of hurry.",
+          "answer": "hurries"
+        },
+        {
+          "prompt": "Spell the word: he/she form of worry.",
+          "answer": "worries"
+        },
+        {
+          "prompt": "Spell the word: he/she form of copy.",
+          "answer": "copies"
+        },
+        {
+          "prompt": "Spell the word: he/she form of reply.",
+          "answer": "replies"
+        },
+        {
+          "prompt": "Spell the word: he/she form of cry.",
+          "answer": "cries"
+        },
+        {
+          "prompt": "Spell the word: he/she form of play.",
+          "answer": "plays"
+        }
+      ]
+    }
+  ]
+}

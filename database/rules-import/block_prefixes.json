@@ -1,0 +1,373 @@
+{
+  "category": "prefixes_and_suffixes",
+  "rules": [
+    {
+      "slug": "ous-endings",
+      "title": "Adjectives with -ous: dangerous, famous, nervous",
+      "rule_type": "language_rule",
+      "short_explanation": "Many adjectives end in ous: dangerous, famous, nervous, serious, curious and delicious. Do not write ouse or us at the end.",
+      "tts_text": "Many adjectives end in o u s.",
+      "mnemonic": "Dangerous, famous, curious: they all finish with ous.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The wet floor is dangerous.",
+          "note": "Dangerous ends in ous."
+        },
+        {
+          "type": "correct",
+          "text": "She is a famous logistics expert.",
+          "note": "Famous ends in ous."
+        },
+        {
+          "type": "correct",
+          "text": "He felt nervous before the interview.",
+          "note": "Nervous ends in ous."
+        },
+        {
+          "type": "correct",
+          "text": "This is a serious problem with delivery.",
+          "note": "Serious ends in ous."
+        },
+        {
+          "type": "correct",
+          "text": "The child was curious about the robots.",
+          "note": "Curious ends in ous."
+        },
+        {
+          "type": "correct",
+          "text": "The restaurant serves delicious food.",
+          "note": "Delicious ends in ous."
+        },
+        {
+          "type": "correct",
+          "text": "The warehouse has an enormous parking area.",
+          "note": "Enormous ends in ous."
+        },
+        {
+          "type": "correct",
+          "text": "She gave a generous discount to customers.",
+          "note": "Generous ends in ous."
+        },
+        {
+          "type": "correct",
+          "text": "The road was dangerous in the fog.",
+          "note": "Dangerous ends in ous."
+        },
+        {
+          "type": "correct",
+          "text": "He was curious about the new system.",
+          "note": "Curious ends in ous."
+        },
+        {
+          "type": "correct",
+          "text": "The news made everyone nervous.",
+          "note": "Nervous ends in ous."
+        },
+        {
+          "type": "incorrect",
+          "text": "The wet floor is dangerus.",
+          "correction": "The wet floor is dangerous.",
+          "note": "Dangerous ends in ous."
+        },
+        {
+          "type": "incorrect",
+          "text": "She is a famus logistics expert.",
+          "correction": "She is a famous logistics expert.",
+          "note": "Famous ends in ous."
+        },
+        {
+          "type": "incorrect",
+          "text": "He felt nervus before the interview.",
+          "correction": "He felt nervous before the interview.",
+          "note": "Nervous ends in ous."
+        },
+        {
+          "type": "incorrect",
+          "text": "This is a seriouse problem with delivery.",
+          "correction": "This is a serious problem with delivery.",
+          "note": "Serious ends in ous, not ouse."
+        },
+        {
+          "type": "incorrect",
+          "text": "The child was curius about the robots.",
+          "correction": "The child was curious about the robots.",
+          "note": "Curious ends in ous."
+        },
+        {
+          "type": "incorrect",
+          "text": "The restaurant serves delicous food.",
+          "correction": "The restaurant serves delicious food.",
+          "note": "Delicious ends in ous."
+        },
+        {
+          "type": "incorrect",
+          "text": "The warehouse has an enormus parking area.",
+          "correction": "The warehouse has an enormous parking area.",
+          "note": "Enormous ends in ous."
+        },
+        {
+          "type": "incorrect",
+          "text": "She gave a generouse discount to customers.",
+          "correction": "She gave a generous discount to customers.",
+          "note": "Generous ends in ous, not ouse."
+        },
+        {
+          "type": "incorrect",
+          "text": "The road was dangerouse in the fog.",
+          "correction": "The road was dangerous in the fog.",
+          "note": "Dangerous ends in ous."
+        },
+        {
+          "type": "incorrect",
+          "text": "He was curiouse about the new system.",
+          "correction": "He was curious about the new system.",
+          "note": "Curious ends in ous."
+        },
+        {
+          "type": "incorrect",
+          "text": "The news made everyone nervouse.",
+          "correction": "The news made everyone nervous.",
+          "note": "Nervous ends in ous."
+        },
+        {
+          "type": "exception",
+          "text": "The bus arrives at seven.",
+          "note": "Bus ends in us, not ous."
+        },
+        {
+          "type": "exception",
+          "text": "The virus spread quickly last winter.",
+          "note": "Virus ends in us, not ous."
+        },
+        {
+          "type": "exception",
+          "text": "Please check the status of the order.",
+          "note": "Status ends in us, not ous."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "The wet floor is ___. (danger + ous)",
+          "answer": "dangerous"
+        },
+        {
+          "prompt": "She is a ___ logistics expert. (fame + ous)",
+          "answer": "famous"
+        },
+        {
+          "prompt": "He felt ___ before the interview. (nerve + ous)",
+          "answer": "nervous"
+        },
+        {
+          "prompt": "This is a ___ problem with delivery. (serious)",
+          "answer": "serious"
+        },
+        {
+          "prompt": "The child was ___ about the robots. (curious)",
+          "answer": "curious"
+        },
+        {
+          "prompt": "The restaurant serves ___ food. (delicious)",
+          "answer": "delicious"
+        },
+        {
+          "prompt": "The warehouse has an ___ parking area. (enormous)",
+          "answer": "enormous"
+        },
+        {
+          "prompt": "She gave a ___ discount to customers. (generous)",
+          "answer": "generous"
+        },
+        {
+          "prompt": "The road was ___ in the fog. (danger + ous)",
+          "answer": "dangerous"
+        },
+        {
+          "prompt": "The news made everyone ___. (nerve + ous)",
+          "answer": "nervous"
+        },
+        {
+          "prompt": "The wet floor is ___.",
+          "answer": "dangerous",
+          "choices": [
+            "dangerus",
+            "dangerous",
+            "dangerouse",
+            "dangrus"
+          ]
+        },
+        {
+          "prompt": "She is a ___ logistics expert.",
+          "answer": "famous",
+          "choices": [
+            "famus",
+            "famous",
+            "famouse",
+            "faymous"
+          ]
+        },
+        {
+          "prompt": "He felt ___ before the interview.",
+          "answer": "nervous",
+          "choices": [
+            "nervus",
+            "nervous",
+            "nervouse",
+            "nervos"
+          ]
+        },
+        {
+          "prompt": "This is a ___ problem with delivery.",
+          "answer": "serious",
+          "choices": [
+            "seriouse",
+            "serious",
+            "serius",
+            "seriose"
+          ]
+        },
+        {
+          "prompt": "The child was ___ about the robots.",
+          "answer": "curious",
+          "choices": [
+            "curius",
+            "curious",
+            "curiouse",
+            "cureous"
+          ]
+        },
+        {
+          "prompt": "The restaurant serves ___ food.",
+          "answer": "delicious",
+          "choices": [
+            "delicous",
+            "delicious",
+            "deliciouse",
+            "delishus"
+          ]
+        },
+        {
+          "prompt": "The warehouse has an ___ parking area.",
+          "answer": "enormous",
+          "choices": [
+            "enormus",
+            "enormous",
+            "enormouse",
+            "enormos"
+          ]
+        },
+        {
+          "prompt": "She gave a ___ discount to customers.",
+          "answer": "generous",
+          "choices": [
+            "generouse",
+            "generous",
+            "generus",
+            "genarous"
+          ]
+        },
+        {
+          "prompt": "The road was ___ in the fog.",
+          "answer": "dangerous",
+          "choices": [
+            "dangerouse",
+            "dangerous",
+            "dangerus",
+            "dangrous"
+          ]
+        },
+        {
+          "prompt": "The news made everyone ___.",
+          "answer": "nervous",
+          "choices": [
+            "nervus",
+            "nervous",
+            "nervouse",
+            "nervos"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: dangerus",
+          "answer": "dangerous"
+        },
+        {
+          "prompt": "Fix the spelling: famus",
+          "answer": "famous"
+        },
+        {
+          "prompt": "Fix the spelling: nervus",
+          "answer": "nervous"
+        },
+        {
+          "prompt": "Fix the spelling: seriouse",
+          "answer": "serious"
+        },
+        {
+          "prompt": "Fix the spelling: curius",
+          "answer": "curious"
+        },
+        {
+          "prompt": "Fix the spelling: delicous",
+          "answer": "delicious"
+        },
+        {
+          "prompt": "Fix the spelling: enormus",
+          "answer": "enormous"
+        },
+        {
+          "prompt": "Fix the spelling: generouse",
+          "answer": "generous"
+        },
+        {
+          "prompt": "Fix the spelling: dangerouse",
+          "answer": "dangerous"
+        },
+        {
+          "prompt": "Fix the spelling: nervouse",
+          "answer": "nervous"
+        },
+        {
+          "prompt": "Spell the word: not safe.",
+          "answer": "dangerous"
+        },
+        {
+          "prompt": "Spell the word: known by many people.",
+          "answer": "famous"
+        },
+        {
+          "prompt": "Spell the word: worried or afraid.",
+          "answer": "nervous"
+        },
+        {
+          "prompt": "Spell the word: important and needing attention.",
+          "answer": "serious"
+        },
+        {
+          "prompt": "Spell the word: wanting to know more.",
+          "answer": "curious"
+        },
+        {
+          "prompt": "Spell the word: tasting very good.",
+          "answer": "delicious"
+        },
+        {
+          "prompt": "Spell the word: extremely large.",
+          "answer": "enormous"
+        },
+        {
+          "prompt": "Spell the word: giving a lot.",
+          "answer": "generous"
+        },
+        {
+          "prompt": "Spell the word: the adjective for 'danger'.",
+          "answer": "dangerous"
+        },
+        {
+          "prompt": "Spell the word: the adjective for 'nerve'.",
+          "answer": "nervous"
+        }
+      ]
+    }
+  ]
+}
