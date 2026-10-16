@@ -41,26 +41,31 @@ const problems = []
 const report = (slug, message) => problems.push(`${slug}: ${message}`)
 
 for (const name of files) {
-  let data
+  let list
   try {
     const raw = readFileSync(dir + name, 'utf8').replace(/```(json)?/g, '')
-    data = JSON.parse(raw.slice(raw.indexOf('{'), raw.lastIndexOf('}') + 1))
+    // one rule ({...}), or several rules in one file ([{...}, {...}] or {"rules": [...]})
+    const first = Math.min(...['{', '['].map((mark) => (raw.indexOf(mark) < 0 ? Infinity : raw.indexOf(mark))))
+    const data = JSON.parse(raw.slice(first, Math.max(raw.lastIndexOf('}'), raw.lastIndexOf(']')) + 1))
+    list = Array.isArray(data) ? data : Array.isArray(data.rules) ? data.rules : [data]
   } catch (error) {
     problems.push(`${name}: not valid JSON (${error.message})`)
     continue
   }
-  const rule = rules.rules.find((item) => item.slug === data.slug)
-  if (!rule) {
-    problems.push(`${name}: unknown slug "${data.slug}"`)
-    continue
+  for (const data of list) {
+    const rule = rules.rules.find((item) => item.slug === data.slug)
+    if (!rule) {
+      problems.push(`${name}: unknown slug "${data.slug}"`)
+      continue
+    }
+    const entry = bySlug.get(rule.slug) ?? { rule, examples: [], exercises: [], files: [] }
+    entry.files.push(name)
+    // an item is an example when it has a "text" and an example type, wherever the assistant put it
+    const all = [...(data.examples ?? []), ...(data.exercises ?? [])]
+    entry.examples.push(...all.filter((item) => exampleTypes.has(item.type) && typeof item.text === 'string'))
+    entry.exercises.push(...all.filter((item) => !(exampleTypes.has(item.type) && typeof item.text === 'string')))
+    bySlug.set(rule.slug, entry)
   }
-  const entry = bySlug.get(rule.slug) ?? { rule, examples: [], exercises: [], files: [] }
-  entry.files.push(name)
-  // an item is an example when it has a "text" and an example type, wherever the assistant put it
-  const all = [...(data.examples ?? []), ...(data.exercises ?? [])]
-  entry.examples.push(...all.filter((item) => exampleTypes.has(item.type) && typeof item.text === 'string'))
-  entry.exercises.push(...all.filter((item) => !(exampleTypes.has(item.type) && typeof item.text === 'string')))
-  bySlug.set(rule.slug, entry)
 }
 
 const wanted = JSON.parse(readFileSync('research/plexity/rule-counts.json', 'utf8'))
@@ -204,7 +209,7 @@ console.log(
 if (missingRules.length) console.log(`rules without an answer yet: ${missingRules.length}`)
 console.log('kept / wanted per rule:')
 for (const line of table) console.log('  ' + line)
-for (const message of problems.slice(0, 40)) console.log('DROPPED', message)
+for (const message of problems.slice(0, process.argv.includes('--all-problems') ? Infinity : 40)) console.log('DROPPED', message)
 if (problems.length > 40) console.log(`… and ${problems.length - 40} more`)
 if (process.argv.includes('--apply')) {
   mkdirSync('database/rules-import', { recursive: true })

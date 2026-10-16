@@ -1,0 +1,3009 @@
+[
+  {
+    "slug": "practice-vs-practise",
+    "examples": [
+      {
+        "type": "correct",
+        "text": "The doctor's practice is near the station.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "correct",
+        "text": "Daily practice improves your spelling.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "correct",
+        "text": "She needs more practice before the concert.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "correct",
+        "text": "The football team has practice on Saturday.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "correct",
+        "text": "Good practice makes you faster at typing.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "correct",
+        "text": "Practice makes perfect, my teacher says.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "correct",
+        "text": "The band has a practice on Monday evening.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "correct",
+        "text": "He needs a lot of practice to drive well.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "correct",
+        "text": "The dance practice starts at half past six.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "correct",
+        "text": "Her piano practice lasts for an hour.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "correct",
+        "text": "The school has a practice room for music.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "correct",
+        "text": "Regular practice will help you learn faster.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "correct",
+        "text": "The choir has practice every Tuesday evening.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "correct",
+        "text": "He found a job at a medical practice.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "correct",
+        "text": "The tennis practice was cancelled because of rain.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "correct",
+        "text": "She keeps her practice notes in a folder.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "incorrect",
+        "text": "I want to practice speaking English.",
+        "correction": "I want to practise speaking English.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "We practice the dialogue together.",
+        "correction": "We practise the dialogue together.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "They practice the song before class.",
+        "correction": "They practise the song before class.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "You should practice the words every day.",
+        "correction": "You should practise the words every day.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "I practice the guitar after school.",
+        "correction": "I practise the guitar after school.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "She wants to practice her English in London.",
+        "correction": "She wants to practise her English in London.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "He will practice his speech tonight.",
+        "correction": "He will practise his speech tonight.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "We practice English with a teacher.",
+        "correction": "We practise English with a teacher.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "Please practice the new words daily.",
+        "correction": "Please practise the new words daily.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "I need to practice more before the test.",
+        "correction": "I need to practise more before the test.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "They practice spelling on the bus.",
+        "correction": "They practise spelling on the bus.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "You must practice the piano every day.",
+        "correction": "You must practise the piano every day.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "He likes to practice his speech in the mirror.",
+        "correction": "He likes to practise his speech in the mirror.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "I practice my spelling with this app.",
+        "correction": "I practise my spelling with this app.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "She will practice the dance steps tonight.",
+        "correction": "She will practise the dance steps tonight.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "We practice the song together every week.",
+        "correction": "We practise the song together every week.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "He needs to practice his pronunciation.",
+        "correction": "He needs to practise his pronunciation.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "They practice their lines before the play.",
+        "correction": "They practise their lines before the play.",
+        "note": "Practise is the verb."
+      },
+      {
+        "type": "incorrect",
+        "text": "Daily practise helps you learn faster.",
+        "correction": "Daily practice helps you learn faster.",
+        "note": "Practice is a noun."
+      },
+      {
+        "type": "incorrect",
+        "text": "After much practise, she won the race.",
+        "correction": "After much practice, she won the race.",
+        "note": "Practice is a noun."
+      }
+    ],
+    "exercises": [
+      {
+        "type": "fill_gap",
+        "prompt": "The football ___ starts at five.",
+        "answer": "practice"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "I ___ my English with a friend.",
+        "answer": "practise"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "After hours of ___, she played perfectly.",
+        "answer": "practice"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The choir has ___ every Tuesday evening.",
+        "answer": "practice"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "You must ___ the piano every day.",
+        "answer": "practise"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The doctor's ___ is near the station.",
+        "answer": "practice"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "She wants to ___ her English in London.",
+        "answer": "practise"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Good ___ makes you faster at typing.",
+        "answer": "practice"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "I ___ my spelling with this app.",
+        "answer": "practise"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The tennis ___ was cancelled because of rain.",
+        "answer": "practice"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "He needs to ___ his pronunciation.",
+        "answer": "practise"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The dance ___ starts at half past six.",
+        "answer": "practice"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "They ___ their lines before the play.",
+        "answer": "practise"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Her piano ___ lasts for an hour.",
+        "answer": "practice"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "We ___ the song together every week.",
+        "answer": "practise"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The school has a ___ room for music.",
+        "answer": "practice"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "He found a job at a medical ___.",
+        "answer": "practice"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "She will ___ the dance steps tonight.",
+        "answer": "practise"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Regular ___ will help you learn faster.",
+        "answer": "practice"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "They ___ spelling on the bus.",
+        "answer": "practise"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The band has a ___ on Monday evening.",
+        "answer": "practice"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "He needs a lot of ___ to drive well.",
+        "answer": "practice"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "I need to ___ more before the test.",
+        "answer": "practise"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The team has ___ on Saturday morning.",
+        "answer": "practice"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Please ___ the new words daily.",
+        "answer": "practise"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "He will ___ his speech tonight.",
+        "answer": "practise"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The ___ makes perfect, my teacher says.",
+        "answer": "practice"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "You should ___ the words every day.",
+        "answer": "practise"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "We ___ the dialogue together.",
+        "answer": "practise"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "She needs more ___ before the concert.",
+        "answer": "practice"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: It takes a lot of ___ to write well.",
+        "answer": "practice",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Please ___ the new words daily.",
+        "answer": "practise",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: It takes years of ___ to speak well.",
+        "answer": "practice",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Please ___ the dialogue with your partner.",
+        "answer": "practise",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: We need more ___ before the match.",
+        "answer": "practice",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: He likes to ___ his speech in the mirror.",
+        "answer": "practise",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The ___ of the doctor is near the station.",
+        "answer": "practice",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: I ___ my English with a friend.",
+        "answer": "practise",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The football ___ starts at five.",
+        "answer": "practice",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: You must ___ the piano every day.",
+        "answer": "practise",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: After hours of ___, she played perfectly.",
+        "answer": "practice",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: We ___ spelling on the bus.",
+        "answer": "practise",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The choir has ___ every Tuesday.",
+        "answer": "practice",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: She wants to ___ her English in London.",
+        "answer": "practise",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Good ___ makes you faster at typing.",
+        "answer": "practice",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: I ___ my spelling with this app.",
+        "answer": "practise",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The dance ___ starts at half past six.",
+        "answer": "practice",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: He needs to ___ his pronunciation.",
+        "answer": "practise",
+        "choices": [
+          "practice",
+          "practise"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "quiet-vs-quite",
+    "examples": [
+      {
+        "type": "correct",
+        "text": "The library is quiet in the morning.",
+        "note": "Quiet or quite fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The baby is quiet now.",
+        "note": "Quiet or quite fits here."
+      },
+      {
+        "type": "correct",
+        "text": "It was quite a long journey.",
+        "note": "Quiet or quite fits here."
+      },
+      {
+        "type": "correct",
+        "text": "Please speak in a quiet voice.",
+        "note": "Quiet or quite fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The soup is quite hot, so be careful.",
+        "note": "Quiet or quite fits here."
+      },
+      {
+        "type": "correct",
+        "text": "It was a quiet evening at home.",
+        "note": "Quiet or quite fits here."
+      },
+      {
+        "type": "correct",
+        "text": "She plays the piano quite well.",
+        "note": "Quiet or quite fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The village is very quiet at night.",
+        "note": "Quiet or quite fits here."
+      },
+      {
+        "type": "correct",
+        "text": "I was quite tired after the trip.",
+        "note": "Quiet or quite fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The children were quiet during the film.",
+        "note": "Quiet or quite fits here."
+      },
+      {
+        "type": "correct",
+        "text": "My bag is quite heavy today.",
+        "note": "Quiet or quite fits here."
+      },
+      {
+        "type": "correct",
+        "text": "He is a quiet boy who reads a lot.",
+        "note": "Quiet or quite fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The test was quite difficult.",
+        "note": "Quiet or quite fits here."
+      },
+      {
+        "type": "correct",
+        "text": "He spoke in a quiet voice.",
+        "note": "Quiet or quite fits here."
+      },
+      {
+        "type": "correct",
+        "text": "It is quite late, so let's go home.",
+        "note": "Quiet or quite fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The lake was calm and quiet in the morning.",
+        "note": "Quiet or quite fits here."
+      },
+      {
+        "type": "incorrect",
+        "text": "The film was quiet interesting.",
+        "correction": "The film was quite interesting.",
+        "note": "Quite means fairly."
+      },
+      {
+        "type": "incorrect",
+        "text": "The room was quite after lunch.",
+        "correction": "The room was quiet after lunch.",
+        "note": "Quiet means little noise."
+      },
+      {
+        "type": "incorrect",
+        "text": "Please be quite in the library.",
+        "correction": "Please be quiet in the library.",
+        "note": "Quiet means little noise."
+      },
+      {
+        "type": "incorrect",
+        "text": "The exam was quiet easy.",
+        "correction": "The exam was quite easy.",
+        "note": "Quite means fairly."
+      },
+      {
+        "type": "incorrect",
+        "text": "The street is quite at night.",
+        "correction": "The street is quiet at night.",
+        "note": "Quiet means little noise."
+      },
+      {
+        "type": "incorrect",
+        "text": "He is quiet good at chess.",
+        "correction": "He is quite good at chess.",
+        "note": "Quite means fairly."
+      },
+      {
+        "type": "incorrect",
+        "text": "Can you be quite while I work?",
+        "correction": "Can you be quiet while I work?",
+        "note": "Quiet means little noise."
+      },
+      {
+        "type": "incorrect",
+        "text": "The movie was quiet long.",
+        "correction": "The movie was quite long.",
+        "note": "Quite means fairly."
+      },
+      {
+        "type": "incorrect",
+        "text": "She gave a quite answer and left.",
+        "correction": "She gave a quiet answer and left.",
+        "note": "Quiet means little noise."
+      },
+      {
+        "type": "incorrect",
+        "text": "I felt quiet sure about my choice.",
+        "correction": "I felt quite sure about my choice.",
+        "note": "Quite means fairly."
+      },
+      {
+        "type": "incorrect",
+        "text": "The village is very quite at night.",
+        "correction": "The village is very quiet at night.",
+        "note": "Quiet means little noise."
+      },
+      {
+        "type": "incorrect",
+        "text": "I was quiet tired after the trip.",
+        "correction": "I was quite tired after the trip.",
+        "note": "Quite means fairly."
+      },
+      {
+        "type": "incorrect",
+        "text": "The children were quite during the film.",
+        "correction": "The children were quiet during the film.",
+        "note": "Quiet means little noise."
+      },
+      {
+        "type": "incorrect",
+        "text": "My bag is quiet heavy today.",
+        "correction": "My bag is quite heavy today.",
+        "note": "Quite means fairly."
+      },
+      {
+        "type": "incorrect",
+        "text": "The test was quiet difficult.",
+        "correction": "The test was quite difficult.",
+        "note": "Quite means fairly."
+      },
+      {
+        "type": "incorrect",
+        "text": "It is quiet late, so let's go home.",
+        "correction": "It is quite late, so let's go home.",
+        "note": "Quite means fairly."
+      },
+      {
+        "type": "incorrect",
+        "text": "The lake was calm and quite in the morning.",
+        "correction": "The lake was calm and quiet in the morning.",
+        "note": "Quiet means little noise."
+      },
+      {
+        "type": "incorrect",
+        "text": "She plays the piano quiet well.",
+        "correction": "She plays the piano quite well.",
+        "note": "Quite means fairly."
+      },
+      {
+        "type": "incorrect",
+        "text": "It was quiet a long journey.",
+        "correction": "It was quite a long journey.",
+        "note": "Quite means fairly."
+      },
+      {
+        "type": "incorrect",
+        "text": "The baby is quite now.",
+        "correction": "The baby is quiet now.",
+        "note": "Quiet means little noise."
+      }
+    ],
+    "exercises": [
+      {
+        "type": "fill_gap",
+        "prompt": "The village is very ___ at night.",
+        "answer": "quiet"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "I was ___ tired after the trip.",
+        "answer": "quite"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "It is ___ cold outside.",
+        "answer": "quite"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "He is a ___ boy who reads a lot.",
+        "answer": "quiet"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The children were ___ during the film.",
+        "answer": "quiet"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "My bag is ___ heavy today.",
+        "answer": "quite"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "He spoke in a ___ voice, so I could hardly hear him.",
+        "answer": "quiet"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "It is ___ late, so let's go home.",
+        "answer": "quite"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The baby finally went ___.",
+        "answer": "quiet"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "I am ___ sure that I locked the door.",
+        "answer": "quite"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The lake was calm and ___ in the early morning.",
+        "answer": "quiet"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Nobody was talking and the room was ___.",
+        "answer": "quiet"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The soup is ___ hot, so be careful.",
+        "answer": "quite"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "She plays the piano ___ well.",
+        "answer": "quite"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The library is ___ in the morning.",
+        "answer": "quiet"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "It was ___ a long journey.",
+        "answer": "quite"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The test was ___ difficult.",
+        "answer": "quite"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "He is ___ good at chess.",
+        "answer": "quite"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Please speak in a ___ voice.",
+        "answer": "quiet"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The street is ___ at night.",
+        "answer": "quiet"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The exam was ___ easy.",
+        "answer": "quite"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The film was ___ interesting.",
+        "answer": "quite"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The room was ___ after lunch.",
+        "answer": "quiet"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Please be ___ in the library.",
+        "answer": "quiet"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The movie was ___ long.",
+        "answer": "quite"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "She gave a ___ answer and left.",
+        "answer": "quiet"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "I felt ___ sure about my choice.",
+        "answer": "quite"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Keep ___, the neighbours are sleeping.",
+        "answer": "quiet",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: That is ___ a good idea.",
+        "answer": "quite",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: We need a ___ place to study.",
+        "answer": "quiet",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The test was ___ difficult.",
+        "answer": "quite",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The baby finally went ___.",
+        "answer": "quiet",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: I am ___ sure that I locked the door.",
+        "answer": "quite",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Nobody was talking and the room was ___.",
+        "answer": "quiet",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The soup is ___ hot, so be careful.",
+        "answer": "quite",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: She plays the piano ___ well.",
+        "answer": "quite",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The library is ___ in the morning.",
+        "answer": "quiet",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: It was ___ a long journey.",
+        "answer": "quite",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: He is ___ good at chess.",
+        "answer": "quite",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Please speak in a ___ voice.",
+        "answer": "quiet",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The street is ___ at night.",
+        "answer": "quiet",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The exam was ___ easy.",
+        "answer": "quite",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The film was ___ interesting.",
+        "answer": "quite",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The room was ___ after lunch.",
+        "answer": "quiet",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Please be ___ in the library.",
+        "answer": "quiet",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The movie was ___ long.",
+        "answer": "quite",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: She gave a ___ answer and left.",
+        "answer": "quiet",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: I felt ___ sure about my choice.",
+        "answer": "quite",
+        "choices": [
+          "quiet",
+          "quite"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "silent-letters",
+    "examples": [
+      {
+        "type": "correct",
+        "text": "She decided to write a letter to her friend.",
+        "note": "The word has a silent letter."
+      },
+      {
+        "type": "correct",
+        "text": "The chef used a sharp knife to cut the bread.",
+        "note": "The word has a silent letter."
+      },
+      {
+        "type": "correct",
+        "text": "The lamb slept beside the old fence.",
+        "note": "The word has a silent letter."
+      },
+      {
+        "type": "correct",
+        "text": "I always listen to music on the bus.",
+        "note": "The word has a silent letter."
+      },
+      {
+        "type": "correct",
+        "text": "She wrote her answer on the board.",
+        "note": "The word has a silent letter."
+      },
+      {
+        "type": "correct",
+        "text": "They live on a small island near the coast.",
+        "note": "The word has a silent letter."
+      },
+      {
+        "type": "correct",
+        "text": "We climb the hill every Sunday morning.",
+        "note": "The word has a silent letter."
+      },
+      {
+        "type": "correct",
+        "text": "He hurt his wrist playing tennis.",
+        "note": "The word has a silent letter."
+      },
+      {
+        "type": "correct",
+        "text": "I have no doubt about his plan.",
+        "note": "The word has a silent letter."
+      },
+      {
+        "type": "correct",
+        "text": "She shares her knowledge of music with us.",
+        "note": "The word has a silent letter."
+      },
+      {
+        "type": "correct",
+        "text": "Mum bought a guitar for my birthday.",
+        "note": "The word has a silent letter."
+      },
+      {
+        "type": "correct",
+        "text": "The castle stands on a high hill.",
+        "note": "The word has a silent letter."
+      },
+      {
+        "type": "correct",
+        "text": "He gave an honest answer to the question.",
+        "note": "The word has a silent letter."
+      },
+      {
+        "type": "correct",
+        "text": "The ghost story made us laugh.",
+        "note": "The word has a silent letter."
+      },
+      {
+        "type": "incorrect",
+        "text": "rite",
+        "correction": "write",
+        "note": "Write has a silent w."
+      },
+      {
+        "type": "incorrect",
+        "text": "nife",
+        "correction": "knife",
+        "note": "Knife has a silent k."
+      },
+      {
+        "type": "incorrect",
+        "text": "lam",
+        "correction": "lamb",
+        "note": "Lamb has a silent b."
+      },
+      {
+        "type": "incorrect",
+        "text": "lisen",
+        "correction": "listen",
+        "note": "Listen has a silent t."
+      },
+      {
+        "type": "incorrect",
+        "text": "iland",
+        "correction": "island",
+        "note": "Island has a silent s."
+      },
+      {
+        "type": "incorrect",
+        "text": "rist",
+        "correction": "wrist",
+        "note": "Wrist has a silent w."
+      },
+      {
+        "type": "incorrect",
+        "text": "dout",
+        "correction": "doubt",
+        "note": "Doubt has a silent b."
+      },
+      {
+        "type": "incorrect",
+        "text": "nowledge",
+        "correction": "knowledge",
+        "note": "Knowledge has a silent k."
+      },
+      {
+        "type": "incorrect",
+        "text": "gitar",
+        "correction": "guitar",
+        "note": "Guitar has a silent u."
+      },
+      {
+        "type": "incorrect",
+        "text": "rong",
+        "correction": "wrong",
+        "note": "Wrong has a silent w."
+      },
+      {
+        "type": "incorrect",
+        "text": "sord",
+        "correction": "sword",
+        "note": "Sword has a silent w."
+      },
+      {
+        "type": "incorrect",
+        "text": "colum",
+        "correction": "column",
+        "note": "Column has a silent n."
+      },
+      {
+        "type": "incorrect",
+        "text": "onest",
+        "correction": "honest",
+        "note": "Honest has a silent h."
+      },
+      {
+        "type": "incorrect",
+        "text": "casle",
+        "correction": "castle",
+        "note": "Castle has a silent t."
+      },
+      {
+        "type": "incorrect",
+        "text": "thum",
+        "correction": "thumb",
+        "note": "Thumb has a silent b."
+      },
+      {
+        "type": "incorrect",
+        "text": "gost",
+        "correction": "ghost",
+        "note": "Ghost has a silent h."
+      },
+      {
+        "type": "incorrect",
+        "text": "autum",
+        "correction": "autumn",
+        "note": "Autumn has a silent n."
+      },
+      {
+        "type": "incorrect",
+        "text": "wensday",
+        "correction": "Wednesday",
+        "note": "Wednesday has a silent d."
+      }
+    ],
+    "exercises": [
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the day between Tuesday and Thursday.",
+        "answer": "Wednesday",
+        "choices": [
+          "Wensday",
+          "Wednesday",
+          "Wedensday"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the place where you keep plates.",
+        "answer": "cupboard",
+        "choices": [
+          "cupbord",
+          "cupboard",
+          "cubboard"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the season after summer.",
+        "answer": "autumn",
+        "choices": [
+          "autum",
+          "autumn",
+          "autumne"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the word for a building with thick walls.",
+        "answer": "castle",
+        "choices": [
+          "casle",
+          "castle",
+          "castel"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the word for a person who tells the truth.",
+        "answer": "honest",
+        "choices": [
+          "onest",
+          "honest",
+          "honnest"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the word for a musical instrument with strings.",
+        "answer": "guitar",
+        "choices": [
+          "gitar",
+          "guitar",
+          "guitarr"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the word for a spirit of a dead person.",
+        "answer": "ghost",
+        "choices": [
+          "gost",
+          "ghost",
+          "ghoast"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the word for the short thick finger on your hand.",
+        "answer": "thumb",
+        "choices": [
+          "thum",
+          "thumb",
+          "thumbe"
+        ]
+      },
+      {
+        "type": "correct_word",
+        "prompt": "rong",
+        "answer": "wrong"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "sord",
+        "answer": "sword"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "colum",
+        "answer": "column"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "onest",
+        "answer": "honest"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "casle",
+        "answer": "castle"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "thum",
+        "answer": "thumb"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "gost",
+        "answer": "ghost"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "autum",
+        "answer": "autumn"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "wensday",
+        "answer": "Wednesday"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "cupbord",
+        "answer": "cupboard"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "rite",
+        "answer": "write"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "nife",
+        "answer": "knife"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "lam",
+        "answer": "lamb"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "lisen",
+        "answer": "listen"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "iland",
+        "answer": "island"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "rist",
+        "answer": "wrist"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "dout",
+        "answer": "doubt"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "nowledge",
+        "answer": "knowledge"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "gitar",
+        "answer": "guitar"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "islan",
+        "answer": "island"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "writ",
+        "answer": "write"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "knif",
+        "answer": "knife"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "lammb",
+        "answer": "lamb"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "listenn",
+        "answer": "listen"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "riste",
+        "answer": "wrist"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "doubtt",
+        "answer": "doubt"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "knowledg",
+        "answer": "knowledge"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "guitarr",
+        "answer": "guitar"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "castel",
+        "answer": "castle"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "honnest",
+        "answer": "honest"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "ghoast",
+        "answer": "ghost"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "autumne",
+        "answer": "autumn"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "wednesday",
+        "answer": "Wednesday"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "cupboardd",
+        "answer": "cupboard"
+      }
+    ]
+  },
+  {
+    "slug": "principal-vs-principle",
+    "examples": [
+      {
+        "type": "correct",
+        "text": "The principal reason was the price.",
+        "note": "Principal or principle fits here."
+      },
+      {
+        "type": "correct",
+        "text": "Fairness is an important principle.",
+        "note": "Principal or principle fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The principal thanked the students.",
+        "note": "Principal or principle fits here."
+      },
+      {
+        "type": "correct",
+        "text": "It is against my principles to cheat.",
+        "note": "Principal or principle fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The school principal welcomed the new students.",
+        "note": "Principal or principle fits here."
+      },
+      {
+        "type": "correct",
+        "text": "Her principal job is to train the staff.",
+        "note": "Principal or principle fits here."
+      },
+      {
+        "type": "correct",
+        "text": "He never breaks his principles.",
+        "note": "Principal or principle fits here."
+      },
+      {
+        "type": "correct",
+        "text": "It is a basic principle of physics.",
+        "note": "Principal or principle fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The principal entrance is on the left.",
+        "note": "Principal or principle fits here."
+      },
+      {
+        "type": "correct",
+        "text": "Honesty is an important principle.",
+        "note": "Principal or principle fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The principal cause of the delay was snow.",
+        "note": "Principal or principle fits here."
+      },
+      {
+        "type": "correct",
+        "text": "She refuses to lie as a matter of principle.",
+        "note": "Principal or principle fits here."
+      },
+      {
+        "type": "correct",
+        "text": "Our principal aim is to help beginners.",
+        "note": "Principal or principle fits here."
+      },
+      {
+        "type": "correct",
+        "text": "It is the same principle in every science.",
+        "note": "Principal or principle fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The principal ingredient of bread is flour.",
+        "note": "Principal or principle fits here."
+      },
+      {
+        "type": "correct",
+        "text": "In principle, I agree with your idea.",
+        "note": "Principal or principle fits here."
+      },
+      {
+        "type": "incorrect",
+        "text": "Honesty is an important principal.",
+        "correction": "Honesty is an important principle.",
+        "note": "Principle is a belief or rule."
+      },
+      {
+        "type": "incorrect",
+        "text": "The principle reason was cost.",
+        "correction": "The principal reason was cost.",
+        "note": "Principal means main."
+      },
+      {
+        "type": "incorrect",
+        "text": "The principle of the school is kind.",
+        "correction": "The principal of the school is kind.",
+        "note": "Principal is a head teacher."
+      },
+      {
+        "type": "incorrect",
+        "text": "He lives by strong principals.",
+        "correction": "He lives by strong principles.",
+        "note": "Principle is a belief or rule."
+      },
+      {
+        "type": "incorrect",
+        "text": "Our principle goal is to save money.",
+        "correction": "Our principal goal is to save money.",
+        "note": "Principal means main."
+      },
+      {
+        "type": "incorrect",
+        "text": "The principal of equality is important.",
+        "correction": "The principle of equality is important.",
+        "note": "Principle is a belief or rule."
+      },
+      {
+        "type": "incorrect",
+        "text": "She is the principle of a large school.",
+        "correction": "She is the principal of a large school.",
+        "note": "Principal is a head teacher."
+      },
+      {
+        "type": "incorrect",
+        "text": "He is a man of high principals.",
+        "correction": "He is a man of high principles.",
+        "note": "Principle is a belief or rule."
+      },
+      {
+        "type": "incorrect",
+        "text": "Rain is the principle reason we stayed home.",
+        "correction": "Rain is the principal reason we stayed home.",
+        "note": "Principal means main."
+      },
+      {
+        "type": "incorrect",
+        "text": "I never lie, on principal.",
+        "correction": "I never lie, on principle.",
+        "note": "Principle is a belief or rule."
+      },
+      {
+        "type": "incorrect",
+        "text": "The principle entrance is on the left.",
+        "correction": "The principal entrance is on the left.",
+        "note": "Principal means main."
+      },
+      {
+        "type": "incorrect",
+        "text": "It is against my principals to cheat.",
+        "correction": "It is against my principles to cheat.",
+        "note": "Principle is a belief or rule."
+      },
+      {
+        "type": "incorrect",
+        "text": "The principal cause of the delay was snow.",
+        "correction": "The principal cause of the delay was snow.",
+        "note": "Principal means main."
+      },
+      {
+        "type": "incorrect",
+        "text": "She refuses to lie as a matter of principal.",
+        "correction": "She refuses to lie as a matter of principle.",
+        "note": "Principle is a belief or rule."
+      },
+      {
+        "type": "incorrect",
+        "text": "Our principal aim is to help beginners.",
+        "correction": "Our principal aim is to help beginners.",
+        "note": "Principal means main."
+      },
+      {
+        "type": "incorrect",
+        "text": "It is the same principal in every science.",
+        "correction": "It is the same principle in every science.",
+        "note": "Principle is a belief or rule."
+      },
+      {
+        "type": "incorrect",
+        "text": "The principal ingredient of bread is flour.",
+        "correction": "The principal ingredient of bread is flour.",
+        "note": "Principal means main."
+      },
+      {
+        "type": "incorrect",
+        "text": "In principal, I agree with your idea.",
+        "correction": "In principle, I agree with your idea.",
+        "note": "Principle is a belief or rule."
+      },
+      {
+        "type": "incorrect",
+        "text": "The principle thanked the students.",
+        "correction": "The principal thanked the students.",
+        "note": "Principal is a head teacher."
+      },
+      {
+        "type": "incorrect",
+        "text": "Fairness is an important principal.",
+        "correction": "Fairness is an important principle.",
+        "note": "Principle is a belief or rule."
+      }
+    ],
+    "exercises": [
+      {
+        "type": "fill_gap",
+        "prompt": "The ___ cause of the delay was snow.",
+        "answer": "principal"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "She refuses to lie as a matter of ___.",
+        "answer": "principle"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Our ___ aim is to help beginners.",
+        "answer": "principal"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "It is the same ___ in every science.",
+        "answer": "principle"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The school ___ phoned my parents yesterday.",
+        "answer": "principal"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "It is a matter of ___ for me.",
+        "answer": "principle"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The ___ ingredient of bread is flour.",
+        "answer": "principal"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "In ___, I agree with your idea.",
+        "answer": "principle"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Fairness is a basic ___ of the game.",
+        "answer": "principle"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "She wants to be a school ___ one day.",
+        "answer": "principal"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Money is the ___ problem for many families.",
+        "answer": "principal"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Do you understand the ___ behind this machine?",
+        "answer": "principle"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The ___ reason was the price.",
+        "answer": "principal"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Honesty is an important ___.",
+        "answer": "principle"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The ___ thanked the students.",
+        "answer": "principal"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "It is against my ___ to cheat.",
+        "answer": "principle"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The ___ entrance is on the left.",
+        "answer": "principal"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "He never breaks his ___.",
+        "answer": "principle"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Her ___ job is to train the staff.",
+        "answer": "principal"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "It is a basic ___ of physics.",
+        "answer": "principle"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The ___ welcomed the new students.",
+        "answer": "principal"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "He lives by strong ___.",
+        "answer": "principle"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The ___ of the school is kind.",
+        "answer": "principal"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "He is a man of high ___.",
+        "answer": "principle"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Rain is the ___ reason we stayed home.",
+        "answer": "principal"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "I never lie, on ___.",
+        "answer": "principle"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Equality is a basic ___ of our club.",
+        "answer": "principle"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The ___ of the college gave a speech.",
+        "answer": "principal"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The ___ cause of the accident was ice.",
+        "answer": "principal"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "It is a matter of ___ for her.",
+        "answer": "principle"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The ___ of the college gave a speech.",
+        "answer": "principal",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Honesty is a basic ___.",
+        "answer": "principle",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The ___ entrance is on the left.",
+        "answer": "principal",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Equality is a basic ___ of our club.",
+        "answer": "principle",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The ___ cause of the delay was snow.",
+        "answer": "principal",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: She refuses to lie as a matter of ___.",
+        "answer": "principle",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Our ___ aim is to help beginners.",
+        "answer": "principal",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: It is the same ___ in every science.",
+        "answer": "principle",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The school ___ phoned my parents.",
+        "answer": "principal",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: It is a matter of ___ for me.",
+        "answer": "principle",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The ___ ingredient of bread is flour.",
+        "answer": "principal",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: In ___, I agree with your idea.",
+        "answer": "principle",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Fairness is a basic ___ of the game.",
+        "answer": "principle",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: She wants to be a school ___ one day.",
+        "answer": "principal",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Money is the ___ problem for many families.",
+        "answer": "principal",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Do you understand the ___ behind this machine?",
+        "answer": "principle",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The ___ reason was the price.",
+        "answer": "principal",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: He never breaks his ___.",
+        "answer": "principle",
+        "choices": [
+          "principal",
+          "principle"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "stationary-vs-stationery",
+    "examples": [
+      {
+        "type": "correct",
+        "text": "The train remained stationary at the platform.",
+        "note": "Stationary or stationery fits here."
+      },
+      {
+        "type": "correct",
+        "text": "I bought stationery for my class.",
+        "note": "Stationary or stationery fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The shop sells pens and other stationery.",
+        "note": "Stationary or stationery fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The car was stationary at the lights.",
+        "note": "Stationary or stationery fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The bus was stationary because of the accident.",
+        "note": "Stationary or stationery fits here."
+      },
+      {
+        "type": "correct",
+        "text": "We keep pens and paper in the stationery cupboard.",
+        "note": "Stationary or stationery fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The stationery shop opens at nine.",
+        "note": "Stationary or stationery fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The ship stayed stationary in the calm sea.",
+        "note": "Stationary or stationery fits here."
+      },
+      {
+        "type": "correct",
+        "text": "Please order more stationery for the office.",
+        "note": "Stationary or stationery fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The traffic was stationary for ten minutes.",
+        "note": "Stationary or stationery fits here."
+      },
+      {
+        "type": "correct",
+        "text": "She keeps her stationery in a blue box.",
+        "note": "Stationary or stationery fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The plane was stationary on the runway.",
+        "note": "Stationary or stationery fits here."
+      },
+      {
+        "type": "correct",
+        "text": "The lift was stationary, so we waited.",
+        "note": "Stationary or stationery fits here."
+      },
+      {
+        "type": "correct",
+        "text": "I need to buy some stationery for my new job.",
+        "note": "Stationary or stationery fits here."
+      },
+      {
+        "type": "correct",
+        "text": "Birds are easy to see when they are stationary.",
+        "note": "Stationary or stationery fits here."
+      },
+      {
+        "type": "correct",
+        "text": "Pens, paper and envelopes are all types of stationery.",
+        "note": "Stationary or stationery fits here."
+      },
+      {
+        "type": "incorrect",
+        "text": "The car stayed stationery.",
+        "correction": "The car stayed stationary.",
+        "note": "Stationary means not moving."
+      },
+      {
+        "type": "incorrect",
+        "text": "We need more stationary for the office.",
+        "correction": "We need more stationery for the office.",
+        "note": "Stationery is writing supplies."
+      },
+      {
+        "type": "incorrect",
+        "text": "He bought some stationary for school.",
+        "correction": "He bought some stationery for school.",
+        "note": "Stationery is writing supplies."
+      },
+      {
+        "type": "incorrect",
+        "text": "The stationery bike stood in the corner.",
+        "correction": "The stationary bike stood in the corner.",
+        "note": "Stationary means not moving."
+      },
+      {
+        "type": "incorrect",
+        "text": "She sells cards and stationary online.",
+        "correction": "She sells cards and stationery online.",
+        "note": "Stationery is writing supplies."
+      },
+      {
+        "type": "incorrect",
+        "text": "The cyclist stayed stationery at the red light.",
+        "correction": "The cyclist stayed stationary at the red light.",
+        "note": "Stationary means not moving."
+      },
+      {
+        "type": "incorrect",
+        "text": "Please buy envelopes and other stationary.",
+        "correction": "Please buy envelopes and other stationery.",
+        "note": "Stationery is writing supplies."
+      },
+      {
+        "type": "incorrect",
+        "text": "The queue was stationery for an hour.",
+        "correction": "The queue was stationary for an hour.",
+        "note": "Stationary means not moving."
+      },
+      {
+        "type": "incorrect",
+        "text": "My uncle owns a stationary shop in town.",
+        "correction": "My uncle owns a stationery shop in town.",
+        "note": "Stationery is writing supplies."
+      },
+      {
+        "type": "incorrect",
+        "text": "A stationery target is easy to hit.",
+        "correction": "A stationary target is easy to hit.",
+        "note": "Stationary means not moving."
+      },
+      {
+        "type": "incorrect",
+        "text": "The train remained stationery at the platform.",
+        "correction": "The train remained stationary at the platform.",
+        "note": "Stationary means not moving."
+      },
+      {
+        "type": "incorrect",
+        "text": "I bought stationary for my class.",
+        "correction": "I bought stationery for my class.",
+        "note": "Stationery is writing supplies."
+      },
+      {
+        "type": "incorrect",
+        "text": "The shop sells pens and other stationary.",
+        "correction": "The shop sells pens and other stationery.",
+        "note": "Stationery is writing supplies."
+      },
+      {
+        "type": "incorrect",
+        "text": "The car was stationery at the lights.",
+        "correction": "The car was stationary at the lights.",
+        "note": "Stationary means not moving."
+      },
+      {
+        "type": "incorrect",
+        "text": "The bus was stationery because of the accident.",
+        "correction": "The bus was stationary because of the accident.",
+        "note": "Stationary means not moving."
+      },
+      {
+        "type": "incorrect",
+        "text": "We keep pens and paper in the stationary cupboard.",
+        "correction": "We keep pens and paper in the stationery cupboard.",
+        "note": "Stationery is writing supplies."
+      },
+      {
+        "type": "incorrect",
+        "text": "The stationary shop opens at nine.",
+        "correction": "The stationery shop opens at nine.",
+        "note": "Stationery is writing supplies."
+      },
+      {
+        "type": "incorrect",
+        "text": "The ship stayed stationery in the calm sea.",
+        "correction": "The ship stayed stationary in the calm sea.",
+        "note": "Stationary means not moving."
+      },
+      {
+        "type": "incorrect",
+        "text": "Please order more stationary for the office.",
+        "correction": "Please order more stationery for the office.",
+        "note": "Stationery is writing supplies."
+      },
+      {
+        "type": "incorrect",
+        "text": "The traffic was stationery for ten minutes.",
+        "correction": "The traffic was stationary for ten minutes.",
+        "note": "Stationary means not moving."
+      }
+    ],
+    "exercises": [
+      {
+        "type": "fill_gap",
+        "prompt": "Please order more ___ for the office.",
+        "answer": "stationery"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The traffic was ___ for ten minutes.",
+        "answer": "stationary"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "She keeps her ___ in a blue box.",
+        "answer": "stationery"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The plane was ___ on the runway.",
+        "answer": "stationary"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The lift was ___, so we waited.",
+        "answer": "stationary"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "I need to buy some ___ for my new job.",
+        "answer": "stationery"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Birds are easy to see when they are ___.",
+        "answer": "stationary"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Pens, paper and envelopes are all types of ___.",
+        "answer": "stationery"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The train stood ___ in the tunnel.",
+        "answer": "stationary"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Our school sells ___ in the shop.",
+        "answer": "stationery"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Keep the camera ___ while you take the picture.",
+        "answer": "stationary"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "There is a ___ cupboard next to the printer.",
+        "answer": "stationery"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The car was ___ at the lights.",
+        "answer": "stationary"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The shop sells pens and other ___.",
+        "answer": "stationery"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The bus was ___ because of the accident.",
+        "answer": "stationary"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "We keep pens and paper in the ___ cupboard.",
+        "answer": "stationery"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The ___ shop opens at nine.",
+        "answer": "stationery"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The ship stayed ___ in the calm sea.",
+        "answer": "stationary"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "A ___ target is easy to hit.",
+        "answer": "stationary"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The cyclist stayed ___ at the red light.",
+        "answer": "stationary"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "Please buy envelopes and other ___.",
+        "answer": "stationery"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The queue was ___ for an hour.",
+        "answer": "stationary"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "My uncle owns a ___ shop in town.",
+        "answer": "stationery"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The car stayed ___ at the lights.",
+        "answer": "stationary"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "He bought some ___ for school.",
+        "answer": "stationery"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "The ___ bike stood in the corner.",
+        "answer": "stationary"
+      },
+      {
+        "type": "fill_gap",
+        "prompt": "She sells cards and ___ online.",
+        "answer": "stationery"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Envelopes and paper are ___.",
+        "answer": "stationery",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The satellite looks ___ in the sky.",
+        "answer": "stationary",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The car park is full of ___ cars.",
+        "answer": "stationary",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: She sells notebooks and other ___.",
+        "answer": "stationery",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The train stood ___ in the tunnel.",
+        "answer": "stationary",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Our school sells ___ in the shop.",
+        "answer": "stationery",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: There is a ___ cupboard next to the printer.",
+        "answer": "stationery",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The car was ___ at the lights.",
+        "answer": "stationary",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The shop sells pens and other ___.",
+        "answer": "stationery",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The bus was ___ because of the accident.",
+        "answer": "stationary",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: We keep pens and paper in the ___ cupboard.",
+        "answer": "stationery",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The ___ shop opens at nine.",
+        "answer": "stationery",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The ship stayed ___ in the calm sea.",
+        "answer": "stationary",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: A ___ target is easy to hit.",
+        "answer": "stationary",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The cyclist stayed ___ at the red light.",
+        "answer": "stationary",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: Please buy envelopes and other ___.",
+        "answer": "stationery",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The queue was ___ for an hour.",
+        "answer": "stationary",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: My uncle owns a ___ shop in town.",
+        "answer": "stationery",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The car stayed ___ at the lights.",
+        "answer": "stationary",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: He bought some ___ for school.",
+        "answer": "stationery",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the word: The ___ bike stood in the corner.",
+        "answer": "stationary",
+        "choices": [
+          "stationary",
+          "stationery"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "suffix-ful",
+    "examples": [
+      {
+        "type": "correct",
+        "text": "He gave a truthful answer to the question.",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "correct",
+        "text": "It was a helpful suggestion from my colleague.",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "correct",
+        "text": "Her cheerful voice made everyone smile.",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "correct",
+        "text": "The garden is beautiful in spring.",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "correct",
+        "text": "She was grateful for your help.",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "correct",
+        "text": "It was a peaceful walk by the river.",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "correct",
+        "text": "He is a very successful doctor.",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "correct",
+        "text": "The medicine can be harmful if you take too much.",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "correct",
+        "text": "She felt thankful for the gift.",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "correct",
+        "text": "He had a painful knee after the game.",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "correct",
+        "text": "Be respectful to your teachers.",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "correct",
+        "text": "The new engine is very powerful.",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "correct",
+        "text": "The view was wonderful.",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "correct",
+        "text": "That was a thoughtful thing to do.",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "beautifull",
+        "correction": "beautiful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "gratefull",
+        "correction": "grateful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "peacefull",
+        "correction": "peaceful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "successfull",
+        "correction": "successful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "forgetfull",
+        "correction": "forgetful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "gracefull",
+        "correction": "graceful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "wonderfull",
+        "correction": "wonderful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "harmfull",
+        "correction": "harmful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "thankfull",
+        "correction": "thankful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "painfull",
+        "correction": "painful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "respectfull",
+        "correction": "respectful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "powerfull",
+        "correction": "powerful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "usefull",
+        "correction": "useful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "carefull",
+        "correction": "careful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "hopefull",
+        "correction": "hopeful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "cheerfull",
+        "correction": "cheerful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "helpfull",
+        "correction": "helpful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "truthfull",
+        "correction": "truthful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "joyfull",
+        "correction": "joyful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "incorrect",
+        "text": "delightfull",
+        "correction": "delightful",
+        "note": "The suffix -ful has one l."
+      },
+      {
+        "type": "exception",
+        "text": "The box was full of old letters.",
+        "note": "Full is a separate word with two ls."
+      },
+      {
+        "type": "exception",
+        "text": "The glass was full of water.",
+        "note": "Full is a separate word with two ls."
+      }
+    ],
+    "exercises": [
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the adjective meaning 'full of pain'.",
+        "answer": "painful",
+        "choices": [
+          "painful",
+          "painfull",
+          "paineful"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the adjective meaning 'full of play'.",
+        "answer": "playful",
+        "choices": [
+          "playfull",
+          "playful",
+          "playeful"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the adjective meaning 'full of care'.",
+        "answer": "careful",
+        "choices": [
+          "carefull",
+          "careful",
+          "careeful"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the adjective meaning 'full of use'.",
+        "answer": "useful",
+        "choices": [
+          "usefull",
+          "useful",
+          "useeful"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the adjective meaning 'full of hope'.",
+        "answer": "hopeful",
+        "choices": [
+          "hopefull",
+          "hopeful",
+          "hopeeful"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the adjective meaning 'full of cheer'.",
+        "answer": "cheerful",
+        "choices": [
+          "cheerfull",
+          "cheerful",
+          "cheereful"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the adjective meaning 'full of help'.",
+        "answer": "helpful",
+        "choices": [
+          "helpfull",
+          "helpful",
+          "helpeful"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the adjective meaning 'full of truth'.",
+        "answer": "truthful",
+        "choices": [
+          "truthfull",
+          "truthful",
+          "trutheful"
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Choose the correct spelling of the adjective meaning 'full of joy'.",
+        "answer": "joyful",
+        "choices": [
+          "joyfull",
+          "joyful",
+          "joyeful"
+        ]
+      },
+      {
+        "type": "correct_word",
+        "prompt": "beautifull",
+        "answer": "beautiful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "gratefull",
+        "answer": "grateful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "peacefull",
+        "answer": "peaceful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "successfull",
+        "answer": "successful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "forgetfull",
+        "answer": "forgetful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "gracefull",
+        "answer": "graceful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "wonderfull",
+        "answer": "wonderful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "harmfull",
+        "answer": "harmful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "thankfull",
+        "answer": "thankful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "painfull",
+        "answer": "painful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "respectfull",
+        "answer": "respectful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "powerfull",
+        "answer": "powerful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "usefull",
+        "answer": "useful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "carefull",
+        "answer": "careful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "hopefull",
+        "answer": "hopeful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "cheerfull",
+        "answer": "cheerful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "helpfull",
+        "answer": "helpful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "truthfull",
+        "answer": "truthful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "joyfull",
+        "answer": "joyful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "delightfull",
+        "answer": "delightful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "playfull",
+        "answer": "playful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "colourfull",
+        "answer": "colourful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "meaningfull",
+        "answer": "meaningful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "respectfull",
+        "answer": "respectful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "successfull",
+        "answer": "successful"
+      },
+      {
+        "type": "correct_word",
+        "prompt": "wonderfull",
+        "answer": "wonderful"
+      },
+      {
+        "type": "spell",
+        "prompt": "Spell the word: add -ful to the noun 'joy'.",
+        "answer": "joyful"
+      },
+      {
+        "type": "spell",
+        "prompt": "Spell the word: add -ful to the noun 'delight'.",
+        "answer": "delightful"
+      },
+      {
+        "type": "spell",
+        "prompt": "Spell the word: add -ful to the noun 'care'.",
+        "answer": "careful"
+      },
+      {
+        "type": "spell",
+        "prompt": "Spell the word: add -ful to the noun 'use'.",
+        "answer": "useful"
+      },
+      {
+        "type": "spell",
+        "prompt": "Spell the word: add -ful to the noun 'hope'.",
+        "answer": "hopeful"
+      },
+      {
+        "type": "spell",
+        "prompt": "Spell the word: add -ful to the noun 'cheer'.",
+        "answer": "cheerful"
+      },
+      {
+        "type": "spell",
+        "prompt": "Spell the word: add -ful to the noun 'help'.",
+        "answer": "helpful"
+      },
+      {
+        "type": "spell",
+        "prompt": "Spell the word: add -ful to the noun 'truth'.",
+        "answer": "truthful"
+      },
+      {
+        "type": "spell",
+        "prompt": "Spell the word: add -ful to the noun 'play'.",
+        "answer": "playful"
+      }
+    ]
+  }
+]
