@@ -10766,6 +10766,5030 @@
       "text": "The chef cooked a special meal for us.",
       "correction": null,
       "note": "Chef has a regular plural."
+    },
+    {
+      "id": "f75ee6ea-5932-5c3b-967c-982392b7c99f",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "The loud music affected my sleep.",
+      "correction": null,
+      "note": "Affect = to influence (a verb)"
+    },
+    {
+      "id": "8bc40b76-9b27-5328-8876-1d71371bfdf7",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "The strike had a serious effect on the city.",
+      "correction": null,
+      "note": "Effect = a result (a noun)"
+    },
+    {
+      "id": "8b18f297-b280-5c97-a0f7-0424aa6a2bfd",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "Too little water can affect your concentration.",
+      "correction": null,
+      "note": "Can affect = can influence"
+    },
+    {
+      "id": "88356136-b41d-5a8c-9853-6b95810904d9",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "The effects of the storm were clear the next day.",
+      "correction": null,
+      "note": "Effects = results (a noun)"
+    },
+    {
+      "id": "cddb69f5-ff96-5d60-9de1-ca83adfd1fa7",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "How does homework affect your free time?",
+      "correction": null,
+      "note": "Does affect = does influence"
+    },
+    {
+      "id": "06085bfd-1dcc-5261-ab20-e71abe46ee85",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "The advertisement had little effect on sales.",
+      "correction": null,
+      "note": "Have an effect = cause a result"
+    },
+    {
+      "id": "d67495f4-32c9-545e-8e78-b18032be6b6d",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "The sad news affected everyone in the office.",
+      "correction": null,
+      "note": "Affected = influenced (past verb)"
+    },
+    {
+      "id": "63ecd86e-342e-5e4c-bf25-7455b1ea84f9",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "The medicine began to take effect after an hour.",
+      "correction": null,
+      "note": "Take effect = start to work"
+    },
+    {
+      "id": "f7204cd5-1e7f-59c7-bf4b-75c3c34de761",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "Bright light affects the way we feel.",
+      "correction": null,
+      "note": "Affects = influences (verb)"
+    },
+    {
+      "id": "e2c3c842-806e-5ac7-9622-340a8960b01c",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "The film's special effects were very good.",
+      "correction": null,
+      "note": "Special effects = tricks in a film"
+    },
+    {
+      "id": "466a9f06-1f22-559a-b338-354b433936af",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "Does exercise have a positive effect on sleep?",
+      "correction": null,
+      "note": "A positive effect = a good result"
+    },
+    {
+      "id": "1654350c-4196-581d-90ac-dfa38f9966f1",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "My brother was deeply affected by the story.",
+      "correction": null,
+      "note": "Be affected = be influenced"
+    },
+    {
+      "id": "becede96-bbbb-5fde-bbb1-1a7ae100821f",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "One effect of the heat is that people drink more water.",
+      "correction": null,
+      "note": "One effect = one result"
+    },
+    {
+      "id": "780f851d-c872-506e-96ab-325903aa583a",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "Changes in the weather often affect my mood.",
+      "correction": null,
+      "note": "Affect = influence (verb)"
+    },
+    {
+      "id": "96bb12fa-a583-5cf5-960d-78d46aab7e67",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "The teacher's advice had a strong effect on him.",
+      "correction": null,
+      "note": "A strong effect = a big result"
+    },
+    {
+      "id": "d75fddcb-ba88-5373-b01e-ae0adb83d4e4",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "correct",
+      "text": "Smoking can affect your health for many years.",
+      "correction": null,
+      "note": "Can affect = can influence"
+    },
+    {
+      "id": "d9e54f97-5b07-5822-a083-9ad6cd5d0032",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "The cold weather effected our holiday plans.",
+      "correction": "The cold weather affected our holiday plans.",
+      "note": "The verb is affect, not effect"
+    },
+    {
+      "id": "3f4b1444-9f31-5a1e-90a8-fd5177a35dc7",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "The new teacher had a good affect on the class.",
+      "correction": "The new teacher had a good effect on the class.",
+      "note": "A result is an effect (a noun)"
+    },
+    {
+      "id": "a7bfbbe8-caa0-5371-914b-2534224fdf1a",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "Loud noise can effect your hearing.",
+      "correction": "Loud noise can affect your hearing.",
+      "note": "After can, use the verb affect"
+    },
+    {
+      "id": "9aa9202e-0b6d-5d64-993c-248d82ddad44",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "The affects of the flood lasted for months.",
+      "correction": "The effects of the flood lasted for months.",
+      "note": "Results = effects (a noun)"
+    },
+    {
+      "id": "65981744-a3e5-5b2f-80da-aa87863e19cb",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "How will the new bus times effect you?",
+      "correction": "How will the new bus times affect you?",
+      "note": "After will, use the verb affect"
+    },
+    {
+      "id": "879ef450-056b-585c-b72c-57534d2c91f0",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "Reading before bed has a calming affect.",
+      "correction": "Reading before bed has a calming effect.",
+      "note": "Has a ... effect (a noun)"
+    },
+    {
+      "id": "5525866d-a4aa-53d5-9030-3c8c509360bd",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "The accident deeply effected his family.",
+      "correction": "The accident deeply affected his family.",
+      "note": "Affected = influenced"
+    },
+    {
+      "id": "dfea4837-ae79-5ab2-8d6c-8e46fca273dc",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "Sugar has a bad affect on children's teeth.",
+      "correction": "Sugar has a bad effect on children's teeth.",
+      "note": "A bad effect = a bad result"
+    },
+    {
+      "id": "2dd398f6-95e2-5992-be75-9a1bdac8aa63",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "Missing breakfast can effect your energy.",
+      "correction": "Missing breakfast can affect your energy.",
+      "note": "Can affect = can influence"
+    },
+    {
+      "id": "670b00b3-5ce0-5e87-be82-5560f5f1d371",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "The medicine took affect quickly.",
+      "correction": "The medicine took effect quickly.",
+      "note": "Take effect = start to work"
+    },
+    {
+      "id": "93f3be61-2e6b-5549-afea-f6b78b617879",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "Her speech had a big affect on me.",
+      "correction": "Her speech had a big effect on me.",
+      "note": "Have an effect on someone"
+    },
+    {
+      "id": "2e13a576-2891-5a6e-844a-50035066d1dd",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "The new rules will not effect students.",
+      "correction": "The new rules will not affect students.",
+      "note": "Will not affect = will not influence"
+    },
+    {
+      "id": "facbdbe1-6cdc-57a3-94ea-4d5448b68553",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "What affect did the news have on you?",
+      "correction": "What effect did the news have on you?",
+      "note": "What effect = what result"
+    },
+    {
+      "id": "79d14a07-9c03-5a61-ae07-4837caa23eda",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "The heavy rain effected the match.",
+      "correction": "The heavy rain affected the match.",
+      "note": "The verb is affected"
+    },
+    {
+      "id": "61cca032-8495-5c1c-ab8c-e4b6dba0d5e5",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "Computer games can have a bad affect on sleep.",
+      "correction": "Computer games can have a bad effect on sleep.",
+      "note": "Have a bad effect (a noun)"
+    },
+    {
+      "id": "5f9b6532-ca40-5b61-a517-d83ed53042cf",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "Stress can seriously effect your health.",
+      "correction": "Stress can seriously affect your health.",
+      "note": "Can affect = can influence"
+    },
+    {
+      "id": "55f3cd4d-2f2e-5ca0-a898-471cc199bb87",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "The changes had no affect on the price.",
+      "correction": "The changes had no effect on the price.",
+      "note": "No effect = no result"
+    },
+    {
+      "id": "0002ee1c-578f-56aa-bee0-fbff684158f9",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "I was badly effected by the cold.",
+      "correction": "I was badly affected by the cold.",
+      "note": "Be affected = be influenced"
+    },
+    {
+      "id": "b8089f32-01d3-5648-b51a-95977f4c42cc",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "The special affects in the film were great.",
+      "correction": "The special effects in the film were great.",
+      "note": "Special effects (a noun)"
+    },
+    {
+      "id": "158412d6-fdb5-5f54-964e-9c3166cbb6fd",
+      "rule_id": "28845a5a-5837-4e00-a597-c8f026a1582f",
+      "example_type": "incorrect",
+      "text": "Does music effect your mood?",
+      "correction": "Does music affect your mood?",
+      "note": "Does affect = does influence"
+    },
+    {
+      "id": "199c958d-2f4f-5a0a-88bc-3c201ad9a3f5",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "The doctor's practice is near the station.",
+      "correction": null,
+      "note": "Practice is a noun."
+    },
+    {
+      "id": "af6d86c4-b961-5515-9fe5-64b5a3a5b393",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "Daily practice improves your spelling.",
+      "correction": null,
+      "note": "Practice is a noun."
+    },
+    {
+      "id": "3e11d52e-39d4-589d-a3c0-1f744175b907",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "She needs more practice before the concert.",
+      "correction": null,
+      "note": "Practice is a noun."
+    },
+    {
+      "id": "1c1178ad-2b15-55b2-a5c4-a9cf7e3b6118",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "The football team has practice on Saturday.",
+      "correction": null,
+      "note": "Practice is a noun."
+    },
+    {
+      "id": "0d0097cb-559d-5054-84f7-3e2bce2e3afb",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "Good practice makes you faster at typing.",
+      "correction": null,
+      "note": "Practice is a noun."
+    },
+    {
+      "id": "aea317e3-9580-52bb-b0e5-acdfa83115d1",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "Practice makes perfect, my teacher says.",
+      "correction": null,
+      "note": "Practice is a noun."
+    },
+    {
+      "id": "eef82c0e-33f5-5c06-906b-feaafbd4be73",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "The band has a practice on Monday evening.",
+      "correction": null,
+      "note": "Practice is a noun."
+    },
+    {
+      "id": "07b6d610-9c6d-556e-9857-57134d2a61cd",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "He needs a lot of practice to drive well.",
+      "correction": null,
+      "note": "Practice is a noun."
+    },
+    {
+      "id": "6c505f33-5d9e-5f1a-95ab-727ad5451e25",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "The dance practice starts at half past six.",
+      "correction": null,
+      "note": "Practice is a noun."
+    },
+    {
+      "id": "15d2eeb0-5146-5e05-b9ae-819afd06b05d",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "Her piano practice lasts for an hour.",
+      "correction": null,
+      "note": "Practice is a noun."
+    },
+    {
+      "id": "bb68cdce-0a97-5da9-8458-91ec721a45d7",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "The school has a practice room for music.",
+      "correction": null,
+      "note": "Practice is a noun."
+    },
+    {
+      "id": "fb0f72bd-ef33-52a3-8581-63e7c9d32feb",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "Regular practice will help you learn faster.",
+      "correction": null,
+      "note": "Practice is a noun."
+    },
+    {
+      "id": "f433c954-807a-500f-b0d5-70979fd3380d",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "The choir has practice every Tuesday evening.",
+      "correction": null,
+      "note": "Practice is a noun."
+    },
+    {
+      "id": "1f3cb5c1-d273-5d7b-ad5e-582c8ca9a714",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "He found a job at a medical practice.",
+      "correction": null,
+      "note": "Practice is a noun."
+    },
+    {
+      "id": "fd871e5b-b59f-5dc5-9a2f-7bbf32f5cd65",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "The tennis practice was cancelled because of rain.",
+      "correction": null,
+      "note": "Practice is a noun."
+    },
+    {
+      "id": "d8b0a77e-736c-53cc-a15e-d8e2fc62ea27",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "She keeps her practice notes in a folder.",
+      "correction": null,
+      "note": "Practice is a noun."
+    },
+    {
+      "id": "2168c799-a677-56f3-9856-0c2ec9b88ece",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "I want to practice speaking English.",
+      "correction": "I want to practise speaking English.",
+      "note": "Practise is the verb."
+    },
+    {
+      "id": "c63c85e7-30e2-5291-90b3-a60d6c60beca",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "We practice the dialogue together.",
+      "correction": "We practise the dialogue together.",
+      "note": "Practise is the verb."
+    },
+    {
+      "id": "78e50ce5-d4eb-59a8-8592-a6c572f69241",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "You should practice the words every day.",
+      "correction": "You should practise the words every day.",
+      "note": "Practise is the verb."
+    },
+    {
+      "id": "82e01492-ad32-55ab-9130-f6d13e72e5cc",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "I practice the guitar after school.",
+      "correction": "I practise the guitar after school.",
+      "note": "Practise is the verb."
+    },
+    {
+      "id": "30bac97b-e14a-5ec1-88bf-80cc1b88d44f",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "She wants to practice her English in London.",
+      "correction": "She wants to practise her English in London.",
+      "note": "Practise is the verb."
+    },
+    {
+      "id": "d66aa286-4798-5fd4-b995-036cf0e3ba11",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "Please practice the new words daily.",
+      "correction": "Please practise the new words daily.",
+      "note": "Practise is the verb."
+    },
+    {
+      "id": "a9a7783a-de22-5cd2-9ef3-6b481d9b8856",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "They practice spelling on the bus.",
+      "correction": "They practise spelling on the bus.",
+      "note": "Practise is the verb."
+    },
+    {
+      "id": "66be96d9-e643-56ec-9bbc-1ea48e0e695b",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "You must practice the piano every day.",
+      "correction": "You must practise the piano every day.",
+      "note": "Practise is the verb."
+    },
+    {
+      "id": "87e8146b-a0d6-53eb-8373-03526f73706e",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "He likes to practice his speech in the mirror.",
+      "correction": "He likes to practise his speech in the mirror.",
+      "note": "Practise is the verb."
+    },
+    {
+      "id": "04ce4c49-b1cd-5f6f-8caa-d343d583304a",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "I practice my spelling with this app.",
+      "correction": "I practise my spelling with this app.",
+      "note": "Practise is the verb."
+    },
+    {
+      "id": "f7ce6bd6-697e-5cc2-a738-57ac03db411b",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "She will practice the dance steps tonight.",
+      "correction": "She will practise the dance steps tonight.",
+      "note": "Practise is the verb."
+    },
+    {
+      "id": "7838be19-ed22-523c-a134-39cb5d03d8b6",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "We practice the song together every week.",
+      "correction": "We practise the song together every week.",
+      "note": "Practise is the verb."
+    },
+    {
+      "id": "32aa5c52-c6fc-5c29-9e02-bbe25934f904",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "He needs to practice his pronunciation.",
+      "correction": "He needs to practise his pronunciation.",
+      "note": "Practise is the verb."
+    },
+    {
+      "id": "6f3d364c-f98c-557e-90db-dcca63f53eab",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "They practice their lines before the play.",
+      "correction": "They practise their lines before the play.",
+      "note": "Practise is the verb."
+    },
+    {
+      "id": "7fe0f1c9-fa63-5e74-8d12-d5d4dd746217",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "Daily practice makes you better at English.",
+      "correction": null,
+      "note": "practice is a noun (British)"
+    },
+    {
+      "id": "71e35a63-2ffe-5ab4-b2f4-291fbebcbe10",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "I practise the piano every evening.",
+      "correction": null,
+      "note": "practise is a verb (British)"
+    },
+    {
+      "id": "565a5d89-88e3-532a-8304-0a806f781816",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "correct",
+      "text": "Football practice starts at six.",
+      "correction": null,
+      "note": "practice is a noun"
+    },
+    {
+      "id": "f1c841a1-4d64-5ee1-abed-0dbb33b78717",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "I need more practise before the exam.",
+      "correction": "I need more practice before the exam.",
+      "note": "noun: practice (British)"
+    },
+    {
+      "id": "1423ee98-ee25-5c9a-bba9-e3a58ce22bbb",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "She likes to practice the guitar.",
+      "correction": "She likes to practise the guitar.",
+      "note": "verb: practise (British)"
+    },
+    {
+      "id": "9cda3ae2-a2c1-524d-b52c-075056bd4b81",
+      "rule_id": "ff88efdc-7271-499d-a538-f142e0e86f3f",
+      "example_type": "incorrect",
+      "text": "We have choir practise on Friday.",
+      "correction": "We have choir practice on Friday.",
+      "note": "noun: practice"
+    },
+    {
+      "id": "c4148046-06e7-5e6e-916d-d7c538cdc20d",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "The village is very quite at night.",
+      "correction": "The village is very quiet at night.",
+      "note": "Quiet means little noise."
+    },
+    {
+      "id": "5c4d3585-54ec-5c61-9fbc-d2798573a544",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "I was quiet tired after the trip.",
+      "correction": "I was quite tired after the trip.",
+      "note": "Quite means fairly."
+    },
+    {
+      "id": "0922893a-8494-5834-9c12-58190d9f128d",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "The children were quite during the film.",
+      "correction": "The children were quiet during the film.",
+      "note": "Quiet means little noise."
+    },
+    {
+      "id": "cfbe67c2-cba1-55db-b111-12c81587f4d1",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "My bag is quiet heavy today.",
+      "correction": "My bag is quite heavy today.",
+      "note": "Quite means fairly."
+    },
+    {
+      "id": "f4d1ca39-f737-5efc-a9e2-84635777a9ec",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "The test was quiet difficult.",
+      "correction": "The test was quite difficult.",
+      "note": "Quite means fairly."
+    },
+    {
+      "id": "eb9973fb-c4fb-586b-bbef-0ba0da2293bd",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "It is quiet late, so let's go home.",
+      "correction": "It is quite late, so let's go home.",
+      "note": "Quite means fairly."
+    },
+    {
+      "id": "eb526bbe-d474-5d2f-9ad3-55251cf9a5e2",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "The lake was calm and quite in the morning.",
+      "correction": "The lake was calm and quiet in the morning.",
+      "note": "Quiet means little noise."
+    },
+    {
+      "id": "6248ff55-f4fc-59fe-b061-f218b490faf3",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "She plays the piano quiet well.",
+      "correction": "She plays the piano quite well.",
+      "note": "Quite means fairly."
+    },
+    {
+      "id": "2f85438a-eb86-59b4-975e-9ec098f29b7e",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "It was quiet a long journey.",
+      "correction": "It was quite a long journey.",
+      "note": "Quite means fairly."
+    },
+    {
+      "id": "0b535472-21a4-51e2-a776-ede9835fc9fa",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "The baby is quite now.",
+      "correction": "The baby is quiet now.",
+      "note": "Quiet means little noise."
+    },
+    {
+      "id": "bd7e5af0-8516-54fe-9fa4-15f2d86e4cb5",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "correct",
+      "text": "Please be quiet in the library.",
+      "correction": null,
+      "note": "quiet = making no noise"
+    },
+    {
+      "id": "f103ab2a-cf14-5a48-9e2d-8de9fb6d908c",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "correct",
+      "text": "The exam was quite easy.",
+      "correction": null,
+      "note": "quite = fairly"
+    },
+    {
+      "id": "fc9eac1e-99cf-5c44-bdd9-382eeac454f4",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "correct",
+      "text": "It is a quiet street at night.",
+      "correction": null,
+      "note": "quiet = with little noise"
+    },
+    {
+      "id": "0bd7eaef-128a-5940-a122-8519bd92be23",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "correct",
+      "text": "I am not quite ready yet.",
+      "correction": null,
+      "note": "quite = completely"
+    },
+    {
+      "id": "56eddebf-d44c-59d8-b403-67e2156ee370",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "correct",
+      "text": "The baby is finally quiet.",
+      "correction": null,
+      "note": "quiet = not making noise"
+    },
+    {
+      "id": "24915fd9-534a-5f24-8634-e1cfc4838574",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "correct",
+      "text": "She was quite tired after the trip.",
+      "correction": null,
+      "note": "quite = fairly"
+    },
+    {
+      "id": "769088f4-2a1b-5f6b-b911-fee313642a00",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "correct",
+      "text": "We had a quiet evening at home.",
+      "correction": null,
+      "note": "quiet = calm"
+    },
+    {
+      "id": "12d3e1d1-23ee-5189-820a-686f6575d58b",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "correct",
+      "text": "That is quite a big house.",
+      "correction": null,
+      "note": "quite a = rather"
+    },
+    {
+      "id": "5aef149d-673e-5aaf-bd90-fdfbbd43f91e",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "Be quite, the baby is sleeping.",
+      "correction": "Be quiet, the baby is sleeping.",
+      "note": "quiet = no noise"
+    },
+    {
+      "id": "1f8dc6d0-0454-5c8b-bc50-337584e41f4b",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "The film was quiet good.",
+      "correction": "The film was quite good.",
+      "note": "quite = fairly"
+    },
+    {
+      "id": "7d49e09b-8cb4-5246-b07e-4f6340befcf9",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "We found a quite place to study.",
+      "correction": "We found a quiet place to study.",
+      "note": "quiet = not noisy"
+    },
+    {
+      "id": "089dad99-6c25-5b72-b4a1-f332289d4dc2",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "I am not quiet sure about this.",
+      "correction": "I am not quite sure about this.",
+      "note": "not quite = not completely"
+    },
+    {
+      "id": "17d1b915-da56-5622-9ea3-725cc67081a3",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "The room was very quite.",
+      "correction": "The room was very quiet.",
+      "note": "quiet = no noise"
+    },
+    {
+      "id": "caf31985-4162-5d33-a050-0ec64ea2159c",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "It is quiet cold today.",
+      "correction": "It is quite cold today.",
+      "note": "quite = fairly"
+    },
+    {
+      "id": "a7065c33-630e-5425-a7ad-99975df842f5",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "Please keep quite during the test.",
+      "correction": "Please keep quiet during the test.",
+      "note": "keep quiet"
+    },
+    {
+      "id": "92d4cd8f-1402-54fa-a8f0-7a5ab1e4c8cc",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "He is a quite boy.",
+      "correction": "He is a quiet boy.",
+      "note": "quiet = not talking much"
+    },
+    {
+      "id": "8c08d4d4-ca28-5b4a-9a99-ae04d1223593",
+      "rule_id": "ef029428-e99e-4dfe-9275-700b4311aa54",
+      "example_type": "incorrect",
+      "text": "They live in a quite village.",
+      "correction": "They live in a quiet village.",
+      "note": "quiet = peaceful"
+    },
+    {
+      "id": "920531f0-632a-5965-8524-9f9647de93fc",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "He hurt his wrist playing tennis.",
+      "correction": null,
+      "note": "The word has a silent letter."
+    },
+    {
+      "id": "266bdfb2-7c7c-5c58-b513-c32bc04110af",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "I have no doubt about his plan.",
+      "correction": null,
+      "note": "The word has a silent letter."
+    },
+    {
+      "id": "c393abbd-0e76-5168-9019-49a71e6f2cb5",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "She shares her knowledge of music with us.",
+      "correction": null,
+      "note": "The word has a silent letter."
+    },
+    {
+      "id": "c098442a-f3fa-5d99-aa99-d494a67b7aad",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "Mum bought a guitar for my birthday.",
+      "correction": null,
+      "note": "The word has a silent letter."
+    },
+    {
+      "id": "fc906d98-5843-51f0-896e-babdfed59a83",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "The castle stands on a high hill.",
+      "correction": null,
+      "note": "The word has a silent letter."
+    },
+    {
+      "id": "25789bdd-14c7-50e1-82f6-e0723ab076e6",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "He gave an honest answer to the question.",
+      "correction": null,
+      "note": "The word has a silent letter."
+    },
+    {
+      "id": "b1f296d9-3df2-5b0f-96e4-a4b42bacb250",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "The ghost story made us laugh.",
+      "correction": null,
+      "note": "The word has a silent letter."
+    },
+    {
+      "id": "59db962d-447a-5a1d-a18f-2a974f983a42",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "Please knock before you come in.",
+      "correction": null,
+      "note": "silent k in knock"
+    },
+    {
+      "id": "d8f8180b-ef51-506e-a6d9-b46be64a3ce0",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "I do not know the answer.",
+      "correction": null,
+      "note": "silent k in know"
+    },
+    {
+      "id": "0598d8ea-78b9-5121-9a56-f9af6d7044ee",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "She hurt her thumb in the door.",
+      "correction": null,
+      "note": "silent b in thumb"
+    },
+    {
+      "id": "4c8c908a-ce67-5672-9e5e-8a25ea8bfff8",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "We had no doubt about the result.",
+      "correction": null,
+      "note": "silent b in doubt"
+    },
+    {
+      "id": "89432c23-dee1-598d-b06d-84cf1529be3b",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "The ghost story scared the children.",
+      "correction": null,
+      "note": "silent h in ghost"
+    },
+    {
+      "id": "37f3aca1-4fc9-5f76-9584-33b68a636ec3",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "My birthday is in autumn.",
+      "correction": null,
+      "note": "silent n in autumn"
+    },
+    {
+      "id": "dd445832-1ad1-5f2d-aa2b-90d093460e70",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "We will meet on Wednesday.",
+      "correction": null,
+      "note": "silent d in Wednesday"
+    },
+    {
+      "id": "3b955dcd-f632-5c22-93ec-372639340d3f",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "He gave an honest answer.",
+      "correction": null,
+      "note": "silent h in honest"
+    },
+    {
+      "id": "8f299f77-9371-521b-a826-940cfec40f01",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "They climb the hill every Sunday.",
+      "correction": null,
+      "note": "silent b in climb"
+    },
+    {
+      "id": "f69b554d-a0f8-53bf-8a2f-c7120e973690",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "I wrote the answer on the board.",
+      "correction": null,
+      "note": "silent w in wrote"
+    },
+    {
+      "id": "1594d538-8897-5a42-9f7e-97d99a924fff",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "correct",
+      "text": "That knife is very sharp.",
+      "correction": null,
+      "note": "silent k in knife"
+    },
+    {
+      "id": "13608ea6-ef3d-5191-8c7f-0b37c22b6705",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "Please nock on the door.",
+      "correction": "Please knock on the door.",
+      "note": "silent k in knock"
+    },
+    {
+      "id": "62595248-cace-5e2d-891b-e87fd70dafaa",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "She hurt her thum.",
+      "correction": "She hurt her thumb.",
+      "note": "silent b in thumb"
+    },
+    {
+      "id": "2f167b98-c041-5f21-9bb9-6d161cdfbda5",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "I have no dout about it.",
+      "correction": "I have no doubt about it.",
+      "note": "silent b in doubt"
+    },
+    {
+      "id": "d7eadb96-01aa-5a84-8ee0-2964d148d3bb",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "The gost was only a joke.",
+      "correction": "The ghost was only a joke.",
+      "note": "silent h in ghost"
+    },
+    {
+      "id": "5d882b07-1e0f-5b1b-98c5-77b9c68faeac",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "Leaves fall in autum.",
+      "correction": "Leaves fall in autumn.",
+      "note": "silent n in autumn"
+    },
+    {
+      "id": "347db3e6-b6cf-55a1-a93c-6982e8ef73a4",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "We climed the mountain yesterday.",
+      "correction": "We climbed the mountain yesterday.",
+      "note": "silent b in climbed"
+    },
+    {
+      "id": "6b5690ce-dbf3-51d6-b857-2e9158f86259",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "He gave an onest answer.",
+      "correction": "He gave an honest answer.",
+      "note": "silent h in honest"
+    },
+    {
+      "id": "4498adf0-b0d8-5306-af1d-18586dd947a6",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "My nuckle hurts after the game.",
+      "correction": "My knuckle hurts after the game.",
+      "note": "silent k in knuckle"
+    },
+    {
+      "id": "9d89fa6d-c52e-5191-8509-f51627ea31ad",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "I cannot anser this question.",
+      "correction": "I cannot answer this question.",
+      "note": "silent w in answer"
+    },
+    {
+      "id": "f403558a-6c2a-5121-b068-e511e852cd28",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "She paid her det last month.",
+      "correction": "She paid her debt last month.",
+      "note": "silent b in debt"
+    },
+    {
+      "id": "9a7bc7b4-4106-5bcc-aba3-5c4ea966ee6e",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "The whisle was very loud.",
+      "correction": "The whistle was very loud.",
+      "note": "silent t in whistle"
+    },
+    {
+      "id": "b96ddac2-ef69-56a8-a5e7-4de52d482ff0",
+      "rule_id": "d0e42328-4ca0-40bf-aa80-839be9fc88ab",
+      "example_type": "incorrect",
+      "text": "Her answer was rong.",
+      "correction": "Her answer was wrong.",
+      "note": "silent w in wrong"
+    },
+    {
+      "id": "e5d4ce34-c0d3-547b-a3fa-0234f2311735",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "The principle entrance is on the left.",
+      "correction": "The principal entrance is on the left.",
+      "note": "Principal means main."
+    },
+    {
+      "id": "ab5876d7-24f3-5fe5-9e1e-51ee4954923d",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "It is against my principals to cheat.",
+      "correction": "It is against my principles to cheat.",
+      "note": "Principle is a belief or rule."
+    },
+    {
+      "id": "a29287ae-8e0f-56bd-baca-2793bb6e5417",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "She refuses to lie as a matter of principal.",
+      "correction": "She refuses to lie as a matter of principle.",
+      "note": "Principle is a belief or rule."
+    },
+    {
+      "id": "bb211cab-859c-5631-b0ff-14c3468319c5",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "It is the same principal in every science.",
+      "correction": "It is the same principle in every science.",
+      "note": "Principle is a belief or rule."
+    },
+    {
+      "id": "0c3781f9-cd72-5b91-9d16-7e57652a463d",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "In principal, I agree with your idea.",
+      "correction": "In principle, I agree with your idea.",
+      "note": "Principle is a belief or rule."
+    },
+    {
+      "id": "b5d3245d-b165-51f9-afe4-28b775c753bd",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "The principle thanked the students.",
+      "correction": "The principal thanked the students.",
+      "note": "Principal is a head teacher."
+    },
+    {
+      "id": "3b75a430-f5f1-5f6a-852d-cc472935ddec",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "Fairness is an important principal.",
+      "correction": "Fairness is an important principle.",
+      "note": "Principle is a belief or rule."
+    },
+    {
+      "id": "82295c28-e239-547a-a9b3-cb30ead2cd27",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "The principal of our school is very kind.",
+      "correction": null,
+      "note": "principal = head of a school"
+    },
+    {
+      "id": "0b874430-dea9-53bb-b656-5f27442b1a07",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "It is against my principles to tell a lie.",
+      "correction": null,
+      "note": "principle = a rule you follow"
+    },
+    {
+      "id": "715df2e2-a114-53f2-9e46-d308a448beaa",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "The principal reason for the delay was snow.",
+      "correction": null,
+      "note": "principal = main"
+    },
+    {
+      "id": "ad8737b3-a9bc-5cf4-ae26-672554feb393",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "She is a woman of strong principles.",
+      "correction": null,
+      "note": "principles = rules about right and wrong"
+    },
+    {
+      "id": "7e51ce92-0011-5366-9f08-7b4302c59b6e",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "The principal spoke to the students at nine.",
+      "correction": null,
+      "note": "principal = head of a school"
+    },
+    {
+      "id": "6dcf86ea-7d82-588d-91e5-494ca1c94713",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "Honesty is a basic principle of friendship.",
+      "correction": null,
+      "note": "principle = a basic rule"
+    },
+    {
+      "id": "dd5d7767-1e64-5aa3-9f9d-82489b154d7e",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "His principal aim is to pass the exam.",
+      "correction": null,
+      "note": "principal = main"
+    },
+    {
+      "id": "ae830072-bff1-5dfa-8aa1-d6fb63bff146",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "I refused on principle.",
+      "correction": null,
+      "note": "on principle = because of my beliefs"
+    },
+    {
+      "id": "950fd91f-75c1-568f-be7e-eca7e1d90152",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "correct",
+      "text": "The principal asked the pupils to sit down.",
+      "correction": null,
+      "note": "principal = head of a school"
+    },
+    {
+      "id": "453bb1a7-71ab-5319-bd31-cf849e4f1b15",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "The principle of the school welcomed us.",
+      "correction": "The principal of the school welcomed us.",
+      "note": "head of a school: principal"
+    },
+    {
+      "id": "edc15c84-f7ba-5c16-8e96-b9f94d14b2df",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "He has strong principals.",
+      "correction": "He has strong principles.",
+      "note": "rules he follows: principles"
+    },
+    {
+      "id": "03221c10-d7ab-5e27-ab44-ff07d86b6a7c",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "Money was the principle reason for the move.",
+      "correction": "Money was the principal reason for the move.",
+      "note": "main reason: principal"
+    },
+    {
+      "id": "54b7aed7-5034-5d0a-bcef-59c38552cace",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "It is a matter of principal.",
+      "correction": "It is a matter of principle.",
+      "note": "a rule or belief: principle"
+    },
+    {
+      "id": "41b838a6-7fd4-522f-afd2-16eb5bb6a0db",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "The principle called a meeting.",
+      "correction": "The principal called a meeting.",
+      "note": "head of a school: principal"
+    },
+    {
+      "id": "b33ef5fc-249f-50a1-95d0-9a081b884591",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "My principle goal is to learn English.",
+      "correction": "My principal goal is to learn English.",
+      "note": "main goal: principal"
+    },
+    {
+      "id": "73d910c7-e609-5b77-9091-d8e3b0c9ac32",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "He told us the principals of good writing.",
+      "correction": "He told us the principles of good writing.",
+      "note": "basic rules: principles"
+    },
+    {
+      "id": "4a4fbe84-df42-5434-a21c-62a8c829991d",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "The principle at my school is new.",
+      "correction": "The principal at my school is new.",
+      "note": "head of a school: principal"
+    },
+    {
+      "id": "0e6dda86-1e80-5afa-b8d3-042b3be4050c",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "I do not eat meat on principal.",
+      "correction": "I do not eat meat on principle.",
+      "note": "on principle = for my beliefs"
+    },
+    {
+      "id": "457c99b1-eefe-5eff-92fa-f7ca39e324b8",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "The principle cause of the fire was a candle.",
+      "correction": "The principal cause of the fire was a candle.",
+      "note": "main cause: principal"
+    },
+    {
+      "id": "ecb14215-5093-5140-a4d7-c59dda346ebb",
+      "rule_id": "72c3ee9b-38fb-46a4-9ac2-bf95a1cc4d7d",
+      "example_type": "incorrect",
+      "text": "Our company has clear principals.",
+      "correction": "Our company has clear principles.",
+      "note": "rules: principles"
+    },
+    {
+      "id": "2044b197-2521-5836-a6e5-b1f482cd82b6",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "The train remained stationery at the platform.",
+      "correction": "The train remained stationary at the platform.",
+      "note": "Stationary means not moving."
+    },
+    {
+      "id": "d80d30d0-cfed-5db4-add0-cca7d2112886",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "I bought stationary for my class.",
+      "correction": "I bought stationery for my class.",
+      "note": "Stationery is writing supplies."
+    },
+    {
+      "id": "b3cf451e-c7de-5288-9aff-91c284594184",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "The shop sells pens and other stationary.",
+      "correction": "The shop sells pens and other stationery.",
+      "note": "Stationery is writing supplies."
+    },
+    {
+      "id": "ec6c0920-33d1-5895-b968-c383878c017b",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "The car was stationery at the lights.",
+      "correction": "The car was stationary at the lights.",
+      "note": "Stationary means not moving."
+    },
+    {
+      "id": "c7868c80-cc8f-5402-ab71-b05cf60a1789",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "The bus was stationery because of the accident.",
+      "correction": "The bus was stationary because of the accident.",
+      "note": "Stationary means not moving."
+    },
+    {
+      "id": "1ceba001-35da-531d-a8fc-b49a4fa13b60",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "We keep pens and paper in the stationary cupboard.",
+      "correction": "We keep pens and paper in the stationery cupboard.",
+      "note": "Stationery is writing supplies."
+    },
+    {
+      "id": "9d3f9b9d-db3b-5709-a2a6-3a461d634aed",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "The stationary shop opens at nine.",
+      "correction": "The stationery shop opens at nine.",
+      "note": "Stationery is writing supplies."
+    },
+    {
+      "id": "0c8e339d-c869-5ba2-a9c1-6378389ebb51",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "The ship stayed stationery in the calm sea.",
+      "correction": "The ship stayed stationary in the calm sea.",
+      "note": "Stationary means not moving."
+    },
+    {
+      "id": "e8ce0e60-6cad-5bbe-8845-cb1f3aca2ea7",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "Please order more stationary for the office.",
+      "correction": "Please order more stationery for the office.",
+      "note": "Stationery is writing supplies."
+    },
+    {
+      "id": "6e00506a-aad6-5705-8b98-9976bc681c48",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "The traffic was stationery for ten minutes.",
+      "correction": "The traffic was stationary for ten minutes.",
+      "note": "Stationary means not moving."
+    },
+    {
+      "id": "f4bbdf89-666e-54e8-a20a-823b7e0c05c4",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "correct",
+      "text": "The car was stationary at the red light.",
+      "correction": null,
+      "note": "stationary = not moving"
+    },
+    {
+      "id": "3aaee996-fe7b-5c5f-884f-35267b303ab1",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "correct",
+      "text": "I bought pens and paper at the stationery shop.",
+      "correction": null,
+      "note": "stationery = paper, pens, envelopes"
+    },
+    {
+      "id": "1f9c9556-993e-5cb6-b7bf-985c8dd7debc",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "correct",
+      "text": "The bus stayed stationary for ten minutes.",
+      "correction": null,
+      "note": "stationary = not moving"
+    },
+    {
+      "id": "50ab7973-286e-5ac4-afe4-4858aa1516b7",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "correct",
+      "text": "She keeps her stationery in a small box.",
+      "correction": null,
+      "note": "stationery = writing materials"
+    },
+    {
+      "id": "09329fd7-2567-58e3-a358-2bd020a1eb07",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "correct",
+      "text": "A stationary bike stays in one place.",
+      "correction": null,
+      "note": "stationary = not moving"
+    },
+    {
+      "id": "f37cfbfc-dd16-5003-8688-8d932d5c6249",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "correct",
+      "text": "The school gave us new stationery.",
+      "correction": null,
+      "note": "stationery = pens and paper"
+    },
+    {
+      "id": "d8448305-a222-5817-a1a3-18e125579e8c",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "correct",
+      "text": "Traffic was almost stationary on the bridge.",
+      "correction": null,
+      "note": "stationary = not moving"
+    },
+    {
+      "id": "0c5145ba-fbf8-5a24-bea1-333f27d00ca0",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "The train was stationery outside the station.",
+      "correction": "The train was stationary outside the station.",
+      "note": "not moving: stationary"
+    },
+    {
+      "id": "17204521-fac2-5196-9121-145cb800ce7f",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "I need to buy some stationary for school.",
+      "correction": "I need to buy some stationery for school.",
+      "note": "pens and paper: stationery"
+    },
+    {
+      "id": "9ed77f01-2621-5070-af53-249d19dc7ecd",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "The lorry stayed stationery on the road.",
+      "correction": "The lorry stayed stationary on the road.",
+      "note": "not moving: stationary"
+    },
+    {
+      "id": "fc27117e-260f-5121-bce4-5ff11a545794",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "She works in a stationary shop.",
+      "correction": "She works in a stationery shop.",
+      "note": "a shop for paper and pens: stationery"
+    },
+    {
+      "id": "339e59ce-03eb-54fa-85cd-e168f456d179",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "Please keep the boat stationery.",
+      "correction": "Please keep the boat stationary.",
+      "note": "not moving: stationary"
+    },
+    {
+      "id": "d348913e-48b9-51b0-b702-b81e4cb446a7",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "Our office stationary is running out.",
+      "correction": "Our office stationery is running out.",
+      "note": "office supplies: stationery"
+    },
+    {
+      "id": "80f7fff6-1661-5e3e-98be-34f59b6647ee",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "The traffic was almost stationery.",
+      "correction": "The traffic was almost stationary.",
+      "note": "not moving: stationary"
+    },
+    {
+      "id": "af7694bd-ffd7-5af9-b6c3-ee7c5e297579",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "He bought a nice stationary set for his sister.",
+      "correction": "He bought a nice stationery set for his sister.",
+      "note": "paper and pens: stationery"
+    },
+    {
+      "id": "f19d39c1-d0cd-531d-95de-3e57d202f5fc",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "The cars stood stationery in the snow.",
+      "correction": "The cars stood stationary in the snow.",
+      "note": "not moving: stationary"
+    },
+    {
+      "id": "b0216c7a-7429-505b-b0c9-b8281b7ff78b",
+      "rule_id": "cafe46ce-4030-4641-8368-6ecad4693574",
+      "example_type": "incorrect",
+      "text": "I left my stationary in the classroom.",
+      "correction": "I left my stationery in the classroom.",
+      "note": "pens and paper: stationery"
+    },
+    {
+      "id": "5005d3b5-e257-5014-9434-b60a33fae8c1",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "The medicine can be harmful if you take too much.",
+      "correction": null,
+      "note": "The suffix -ful has one l."
+    },
+    {
+      "id": "fa8e37f7-c83f-582a-a82f-9c00dcc65257",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "She felt thankful for the gift.",
+      "correction": null,
+      "note": "The suffix -ful has one l."
+    },
+    {
+      "id": "b059f3b0-e594-52f5-96d2-bf95a82a585b",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "He had a painful knee after the game.",
+      "correction": null,
+      "note": "The suffix -ful has one l."
+    },
+    {
+      "id": "980d8f8e-957d-5b6c-962b-274ca16a52ab",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "Be respectful to your teachers.",
+      "correction": null,
+      "note": "The suffix -ful has one l."
+    },
+    {
+      "id": "aa89cd0a-dabf-58f8-9cb7-5a2515299f1a",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "The new engine is very powerful.",
+      "correction": null,
+      "note": "The suffix -ful has one l."
+    },
+    {
+      "id": "b75902fa-4a0f-5d95-b272-d9d6cb41f447",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "The view was wonderful.",
+      "correction": null,
+      "note": "The suffix -ful has one l."
+    },
+    {
+      "id": "d4c26271-c79b-5106-90ee-0dabfb00f9a1",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "That was a thoughtful thing to do.",
+      "correction": null,
+      "note": "The suffix -ful has one l."
+    },
+    {
+      "id": "f35b4df9-20b4-5238-99a6-b8d2f8fe5ce5",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "exception",
+      "text": "The box was full of old letters.",
+      "correction": null,
+      "note": "Full is a separate word with two ls."
+    },
+    {
+      "id": "cd78b705-18d7-5e18-b357-293687532374",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "exception",
+      "text": "The glass was full of water.",
+      "correction": null,
+      "note": "Full is a separate word with two ls."
+    },
+    {
+      "id": "78a85911-d891-587c-8df8-ce8725940e2d",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "The view from the hill was wonderful.",
+      "correction": null,
+      "note": "wonderful: one l"
+    },
+    {
+      "id": "3987fd2f-790b-5aa5-bd9b-87b8eada334f",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "She is a very helpful neighbour.",
+      "correction": null,
+      "note": "helpful: one l"
+    },
+    {
+      "id": "cc2d5c59-ba1a-5757-a124-560d9822389e",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "We had a peaceful weekend.",
+      "correction": null,
+      "note": "peaceful: one l"
+    },
+    {
+      "id": "44d8b40b-17e8-5060-bb47-226af1a45100",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "Be careful on the stairs.",
+      "correction": null,
+      "note": "careful: one l"
+    },
+    {
+      "id": "b15eae6c-6937-5fd3-834f-39a5385b843f",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "The flowers are colourful in spring.",
+      "correction": null,
+      "note": "colourful: one l"
+    },
+    {
+      "id": "bbeaa6d2-2995-5506-a16d-80cbc49509c6",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "He was thankful for the help.",
+      "correction": null,
+      "note": "thankful: one l"
+    },
+    {
+      "id": "f227c53b-ae84-5ab5-802a-98059b7d3181",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "It was a stressful day at work.",
+      "correction": null,
+      "note": "stressful: one l"
+    },
+    {
+      "id": "1ccc4503-73d4-517a-8470-52299e1cbf90",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "The doctor gave me useful advice.",
+      "correction": null,
+      "note": "useful: one l"
+    },
+    {
+      "id": "7eb94574-e3f3-5412-8097-ad8ed362c43e",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "She is a hopeful student.",
+      "correction": null,
+      "note": "hopeful: one l"
+    },
+    {
+      "id": "f97b5f2b-5807-5450-9391-5eb117634113",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "Add one spoonful of sugar.",
+      "correction": null,
+      "note": "spoonful: one l"
+    },
+    {
+      "id": "5788173d-8588-52cc-89f3-aafa5ed4d7a2",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "The film was powerful and sad.",
+      "correction": null,
+      "note": "powerful: one l"
+    },
+    {
+      "id": "6a375f0e-6001-5a9e-ae6e-225c73c30777",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "He is a thoughtful friend.",
+      "correction": null,
+      "note": "thoughtful: one l"
+    },
+    {
+      "id": "cc89dd7e-68dc-5ef5-8494-65be4bfc6497",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "correct",
+      "text": "The bird has a graceful flight.",
+      "correction": null,
+      "note": "graceful: one l"
+    },
+    {
+      "id": "5502ca66-aba2-51af-bb6e-e79f9b9f8873",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "The weather was beautifull today.",
+      "correction": "The weather was beautiful today.",
+      "note": "beautiful: one l"
+    },
+    {
+      "id": "5b680a13-197f-5351-921f-be7c898573e0",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "She was very gratefull for the gift.",
+      "correction": "She was very grateful for the gift.",
+      "note": "grateful: one l"
+    },
+    {
+      "id": "3d211197-9523-5961-a3c4-0ba8f9c00542",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "Please be carefull with the glass.",
+      "correction": "Please be careful with the glass.",
+      "note": "careful: one l"
+    },
+    {
+      "id": "7de1e5a6-1385-55be-9a99-1cd0c7147c49",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "It was a stressfull exam.",
+      "correction": "It was a stressful exam.",
+      "note": "stressful: one l"
+    },
+    {
+      "id": "89edc10d-553e-59fe-8fb5-1567ac8e54f2",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "They were very successfull last year.",
+      "correction": "They were very successful last year.",
+      "note": "successful: one l"
+    },
+    {
+      "id": "84f77e05-787d-5f7b-9f13-b14bc5d76e5b",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "He is a faithfull friend.",
+      "correction": "He is a faithful friend.",
+      "note": "faithful: one l"
+    },
+    {
+      "id": "cea65cff-9b8b-50a0-882a-c2a849f1fae7",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "The kids are playfull today.",
+      "correction": "The kids are playful today.",
+      "note": "playful: one l"
+    },
+    {
+      "id": "bb1e8842-5bf4-50a7-98b0-7bc50c34fd25",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "I felt very joyfull at the party.",
+      "correction": "I felt very joyful at the party.",
+      "note": "joyful: one l"
+    },
+    {
+      "id": "2ef89a06-36d5-5a40-92ec-7039aced729a",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "She gave me a thoughtfull present.",
+      "correction": "She gave me a thoughtful present.",
+      "note": "thoughtful: one l"
+    },
+    {
+      "id": "b97bf97c-6152-528b-9637-549567915bc2",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "The sea looked peacefull in the morning.",
+      "correction": "The sea looked peaceful in the morning.",
+      "note": "peaceful: one l"
+    },
+    {
+      "id": "8a6d92f7-ee14-5b61-936e-f5c6da8fe00d",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "He is very forgetfull.",
+      "correction": "He is very forgetful.",
+      "note": "forgetful: one l"
+    },
+    {
+      "id": "21979c01-3b20-5235-8fa5-89dc6ce46971",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "This is a very helpfull book.",
+      "correction": "This is a very helpful book.",
+      "note": "helpful: one l"
+    },
+    {
+      "id": "256304b3-18ae-5856-83c8-4e576e5d1a03",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "She had a dreadfull cold.",
+      "correction": "She had a dreadful cold.",
+      "note": "dreadful: one l"
+    },
+    {
+      "id": "dc0eacfe-5e98-5fa1-b422-06a047094255",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "He told me a truthfull story.",
+      "correction": "He told me a truthful story.",
+      "note": "truthful: one l"
+    },
+    {
+      "id": "ca830dc1-4f17-5548-bc67-b5eed2480fcb",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "We spent a restfull holiday by the sea.",
+      "correction": "We spent a restful holiday by the sea.",
+      "note": "restful: one l"
+    },
+    {
+      "id": "ff3dcafc-9c31-528a-a5ea-a04994bc08cd",
+      "rule_id": "0b51a18b-2f35-489d-bf3b-dbbbf10e6168",
+      "example_type": "incorrect",
+      "text": "What a colourfull dress!",
+      "correction": "What a colourful dress!",
+      "note": "colourful: one l"
+    },
+    {
+      "id": "090b50f5-83f2-5247-b660-85d067ba4c02",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "There are three bakeries on our street.",
+      "correction": null,
+      "note": "bakery to bakeries: y changes to ies"
+    },
+    {
+      "id": "600aece3-02e7-5871-98a9-4716bb0b9575",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "The children read many stories at school.",
+      "correction": null,
+      "note": "story to stories"
+    },
+    {
+      "id": "52c13a84-a75c-5bda-bd2a-cfa7b5ce9086",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "Big cities are noisy at night.",
+      "correction": null,
+      "note": "city to cities"
+    },
+    {
+      "id": "7dfd8bf2-6f7c-5b22-b145-9322991f4674",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "Both puppies sleep in my room.",
+      "correction": null,
+      "note": "puppy to puppies"
+    },
+    {
+      "id": "39febbca-9b86-51c1-9a06-e986b34f5bd9",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "She keeps her old diaries in a box.",
+      "correction": null,
+      "note": "diary to diaries"
+    },
+    {
+      "id": "b9f98f44-6c36-50ea-9f68-d18f972ada24",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "The factories closed for the summer.",
+      "correction": null,
+      "note": "factory to factories"
+    },
+    {
+      "id": "157b7477-fcb2-5fae-b1b3-74c8d180f293",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "Many countries speak English.",
+      "correction": null,
+      "note": "country to countries"
+    },
+    {
+      "id": "fad3bd8c-591f-5574-ad69-cf0d19d7e6c3",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "He sent me copies of the letters.",
+      "correction": null,
+      "note": "copy to copies"
+    },
+    {
+      "id": "82b8b925-eb2b-50a8-88b5-a88a83f96795",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "The ladies waited for the bus.",
+      "correction": null,
+      "note": "lady to ladies"
+    },
+    {
+      "id": "61d5ce69-2070-51bf-89b7-399cb8de62bf",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "The babies slept all afternoon.",
+      "correction": null,
+      "note": "baby to babies"
+    },
+    {
+      "id": "e447aedb-8163-5512-9af4-a8cf39e3300d",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "I have many hobbies, but music is my favourite.",
+      "correction": null,
+      "note": "hobby to hobbies"
+    },
+    {
+      "id": "f89b7987-2011-54fe-a396-89dfb050c804",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "The libraries in our city open at nine.",
+      "correction": null,
+      "note": "library to libraries"
+    },
+    {
+      "id": "45a7be1d-6e54-504e-9a2b-840b9786d762",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "The boys played football in the park.",
+      "correction": null,
+      "note": "vowel + y: boy to boys, just add s"
+    },
+    {
+      "id": "4ed10507-1f6d-503d-adbd-09b2ef5fbf6f",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "Two days later the parcels arrived.",
+      "correction": null,
+      "note": "vowel + y: day to days, just add s"
+    },
+    {
+      "id": "29c00027-af50-5631-813a-9e8a3eefef37",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "correct",
+      "text": "The monkeys ate all the bananas.",
+      "correction": null,
+      "note": "vowel + y: monkey to monkeys"
+    },
+    {
+      "id": "f77018ba-a5db-500d-b82f-529bdbfe54a5",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "There are many citys in Italy.",
+      "correction": "There are many cities in Italy.",
+      "note": "city to cities"
+    },
+    {
+      "id": "701e2eb9-96ea-5589-a356-589477ee90fd",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "She wrote two storys for the magazine.",
+      "correction": "She wrote two stories for the magazine.",
+      "note": "story to stories"
+    },
+    {
+      "id": "b3722976-0b81-5cf9-b3ee-0494121601b1",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "Both familys came to the party.",
+      "correction": "Both families came to the party.",
+      "note": "family to families"
+    },
+    {
+      "id": "c77c4a9e-03ce-5eff-a745-aae7c52fdba9",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "We had three partys last month.",
+      "correction": "We had three parties last month.",
+      "note": "party to parties"
+    },
+    {
+      "id": "d42d77e5-a7be-5779-b2b8-3a8b03da2eae",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "The ladys sat near the window.",
+      "correction": "The ladies sat near the window.",
+      "note": "lady to ladies"
+    },
+    {
+      "id": "107e247f-e261-5fe8-a8d3-52c9b34c809a",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "Please make two copys of this page.",
+      "correction": "Please make two copies of this page.",
+      "note": "copy to copies"
+    },
+    {
+      "id": "71a7128a-30ff-54c8-abb8-3b53c5c987c9",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "The berrys were sweet and red.",
+      "correction": "The berries were sweet and red.",
+      "note": "berry to berries"
+    },
+    {
+      "id": "6ee110cc-a2f0-50f4-8954-31b6e5bd6eb8",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "Flys are in the kitchen again.",
+      "correction": "Flies are in the kitchen again.",
+      "note": "fly to flies"
+    },
+    {
+      "id": "972a0e41-c74c-5468-af35-aa09417047fc",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "The spys hid behind the door.",
+      "correction": "The spies hid behind the door.",
+      "note": "spy to spies"
+    },
+    {
+      "id": "42d904d0-726b-5053-8747-78f314b5f92b",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "I put three pennys in the box.",
+      "correction": "I put three pennies in the box.",
+      "note": "penny to pennies"
+    },
+    {
+      "id": "0993ec18-9d15-554e-b20a-75c825c4a5df",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "He never sends any replys to my emails.",
+      "correction": "He never sends any replies to my emails.",
+      "note": "reply to replies"
+    },
+    {
+      "id": "85b9c237-ee8b-59ac-a206-78f8cd2ba576",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "The shop sells school supplys.",
+      "correction": "The shop sells school supplies.",
+      "note": "supply to supplies"
+    },
+    {
+      "id": "30daeb40-aafe-5af7-b4c0-7cc082e1c604",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "My dog and cat are not enemys.",
+      "correction": "My dog and cat are not enemies.",
+      "note": "enemy to enemies"
+    },
+    {
+      "id": "69f8e435-c4c5-5e1e-b0a1-4a80dd59b05e",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "She has many hobbys and no free time.",
+      "correction": "She has many hobbies and no free time.",
+      "note": "hobby to hobbies"
+    },
+    {
+      "id": "83d683fc-612c-510d-8b87-b8befc288049",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "The boies are in the garden.",
+      "correction": "The boys are in the garden.",
+      "note": "vowel + y: boy to boys"
+    },
+    {
+      "id": "abfb0826-f41e-5969-8c34-2b853f3cb13f",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "We stayed for three dayes.",
+      "correction": "We stayed for three days.",
+      "note": "vowel + y: day to days"
+    },
+    {
+      "id": "b7fb8fe0-b7f6-5a3c-aa34-438b04f4779a",
+      "rule_id": "37e8e8b0-7908-4313-8c27-1a221305a665",
+      "example_type": "incorrect",
+      "text": "The keies are on the table.",
+      "correction": "The keys are on the table.",
+      "note": "vowel + y: key to keys"
+    },
+    {
+      "id": "0ea9b48d-0d9e-51d5-a6e8-a3921fc515cc",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "First we ate dinner, and then we watched a film.",
+      "correction": null,
+      "note": "then = next, in time"
+    },
+    {
+      "id": "a086077f-5835-5526-864a-b0adb8887c00",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "My brother is taller than me.",
+      "correction": null,
+      "note": "than = used to compare"
+    },
+    {
+      "id": "296e3525-eb3f-5cb3-85ed-7c159ef1b885",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "This bag is cheaper than that one.",
+      "correction": null,
+      "note": "than compares two things"
+    },
+    {
+      "id": "93bad757-0340-5134-a6ea-b92d6d816cb6",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "Finish your homework, then you can play.",
+      "correction": null,
+      "note": "then = next step"
+    },
+    {
+      "id": "e8c76f00-1ed7-50c4-a964-6e1ccdc64816",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "I like tea more than coffee.",
+      "correction": null,
+      "note": "more than = comparing"
+    },
+    {
+      "id": "b7811541-bfa7-5677-af6d-ba35cd6baabe",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "If it rains, then we will stay at home.",
+      "correction": null,
+      "note": "then = in that case"
+    },
+    {
+      "id": "c97e9c5f-249f-5e6c-bbbc-600cc4b98b8e",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "The train was faster than the bus.",
+      "correction": null,
+      "note": "faster than = comparison"
+    },
+    {
+      "id": "1c98eb4f-beeb-582b-b97d-fe964a4a4186",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "We lived in Paris then, but now we live in Rome.",
+      "correction": null,
+      "note": "then = at that time"
+    },
+    {
+      "id": "38e83b32-4e16-590b-ad64-29511f1678ab",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "She runs better than anyone in her class.",
+      "correction": null,
+      "note": "better than = comparison"
+    },
+    {
+      "id": "21cf18d0-31b7-5072-9031-3b90ed8f4854",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "Turn left, and then go straight on.",
+      "correction": null,
+      "note": "then = next step"
+    },
+    {
+      "id": "9d8c0652-d40d-52e2-9ffa-6a0ea5399b8b",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "I have fewer books than my sister.",
+      "correction": null,
+      "note": "fewer than = comparison"
+    },
+    {
+      "id": "c4b6cc17-c626-56cf-95fc-d08301597624",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "He opened the door and then went inside.",
+      "correction": null,
+      "note": "then = after that"
+    },
+    {
+      "id": "82ae4cd6-1d34-575c-84da-ad06daff0728",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "Today is warmer than yesterday.",
+      "correction": null,
+      "note": "warmer than = comparison"
+    },
+    {
+      "id": "64ad1227-746e-56e7-9a58-be13ef36e02d",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "Wait here, and then I will call you.",
+      "correction": null,
+      "note": "then = after that"
+    },
+    {
+      "id": "3bcf9240-7622-5ecf-baee-402366bac043",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "correct",
+      "text": "English is easier for me than maths.",
+      "correction": null,
+      "note": "easier than = comparison"
+    },
+    {
+      "id": "b070e39a-bbfa-598b-9422-e0f76a5c31c6",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "My sister is older then me.",
+      "correction": "My sister is older than me.",
+      "note": "older than: comparison needs than"
+    },
+    {
+      "id": "d366c1c5-0ed5-51ea-ab11-5149e977e9dd",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "First we had lunch, than we went out.",
+      "correction": "First we had lunch, then we went out.",
+      "note": "then = next in time"
+    },
+    {
+      "id": "5bed8466-6219-58d9-9645-3df5184e5542",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "This film is better then the book.",
+      "correction": "This film is better than the book.",
+      "note": "better than: comparison"
+    },
+    {
+      "id": "60c0274e-4c14-5db0-8e41-bc9cea728706",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "Open the box and than read the card.",
+      "correction": "Open the box and then read the card.",
+      "note": "then = next step"
+    },
+    {
+      "id": "04e3f329-e3cc-5d8f-affb-18c7891efe58",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "I am more tired then my brother.",
+      "correction": "I am more tired than my brother.",
+      "note": "more tired than: comparison"
+    },
+    {
+      "id": "879bc278-2ec4-551f-8339-1f2c843143fc",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "We waited an hour, and than the bus came.",
+      "correction": "We waited an hour, and then the bus came.",
+      "note": "then = after that"
+    },
+    {
+      "id": "34e1017b-2701-57f6-b09c-9c5acd6e789d",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "He has less money then I do.",
+      "correction": "He has less money than I do.",
+      "note": "less than: comparison"
+    },
+    {
+      "id": "041a3fbd-9f4b-57fd-9b52-394e8bdcbc24",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "Wash your hands, than sit down.",
+      "correction": "Wash your hands, then sit down.",
+      "note": "then = next step"
+    },
+    {
+      "id": "c1dc26fe-0c63-569c-b482-30c6fc024df8",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "Winter is colder then autumn.",
+      "correction": "Winter is colder than autumn.",
+      "note": "colder than: comparison"
+    },
+    {
+      "id": "6ef20cee-52d5-5da6-ba29-d408b7324170",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "If you are hungry, than eat something.",
+      "correction": "If you are hungry, then eat something.",
+      "note": "then = in that case"
+    },
+    {
+      "id": "c2a92341-71b8-5acc-831c-d85de33f5bdd",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "The park is bigger then our garden.",
+      "correction": "The park is bigger than our garden.",
+      "note": "bigger than: comparison"
+    },
+    {
+      "id": "223ea185-74bc-5741-826f-b34f154d940e",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "I was young than and I had no money.",
+      "correction": "I was young then and I had no money.",
+      "note": "then = at that time"
+    },
+    {
+      "id": "369196dd-894c-5a17-8f83-5206af6ec29f",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "She speaks French more clearly then I do.",
+      "correction": "She speaks French more clearly than I do.",
+      "note": "more clearly than: comparison"
+    },
+    {
+      "id": "262cd9d5-eff3-505d-ab4b-59eef43548c5",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "Mix the eggs, and than add the flour.",
+      "correction": "Mix the eggs, and then add the flour.",
+      "note": "then = next step"
+    },
+    {
+      "id": "75b83f6d-bdd4-5843-a843-b5496e8ef77f",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "Her bag is heavier then mine.",
+      "correction": "Her bag is heavier than mine.",
+      "note": "heavier than: comparison"
+    },
+    {
+      "id": "bf24cf9e-98f6-5f7a-b509-67a38c9f1c4e",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "We went home and than we cooked dinner.",
+      "correction": "We went home and then we cooked dinner.",
+      "note": "then = after that"
+    },
+    {
+      "id": "8a35191e-3dfc-5010-96a8-29ee7e1d0bd9",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "There were more people then I expected.",
+      "correction": "There were more people than I expected.",
+      "note": "more than: comparison"
+    },
+    {
+      "id": "45d0ff55-2680-5c14-847f-ec16fe482776",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "My phone is newer then yours.",
+      "correction": "My phone is newer than yours.",
+      "note": "newer than: comparison"
+    },
+    {
+      "id": "f5b98e24-361a-5239-8081-e97dd08d9384",
+      "rule_id": "afae4966-aff1-4ad6-b163-99ae27ac3183",
+      "example_type": "incorrect",
+      "text": "Think carefully, than answer the question.",
+      "correction": "Think carefully, then answer the question.",
+      "note": "then = next step"
+    },
+    {
+      "id": "6c74b979-b825-596a-9e54-c53ff93ba49d",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "There is a cat on the roof.",
+      "correction": null,
+      "note": "there is: starts a sentence"
+    },
+    {
+      "id": "859e0199-34b1-5e2b-a997-df157a1e93c8",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "The students forgot their books.",
+      "correction": null,
+      "note": "their = belonging to them"
+    },
+    {
+      "id": "46a0ffdd-86ee-549a-a54b-7322e00e8e19",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "They're waiting for the bus outside.",
+      "correction": null,
+      "note": "they're = they are"
+    },
+    {
+      "id": "bc778f4f-f3a4-5656-bb59-e54a7ac29cc1",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "Put the box over there, please.",
+      "correction": null,
+      "note": "there = a place"
+    },
+    {
+      "id": "60ea3a02-8972-598e-9f28-8d875f6febe6",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "My neighbours painted their fence green.",
+      "correction": null,
+      "note": "their fence = the fence belongs to them"
+    },
+    {
+      "id": "6ebccff4-42d0-5600-8796-74629d659d1d",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "I think they're ready to leave.",
+      "correction": null,
+      "note": "they're = they are"
+    },
+    {
+      "id": "202a23ff-8cd4-5ffc-af5f-b457feb69c7e",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "Is there any milk in the fridge?",
+      "correction": null,
+      "note": "there = used to say something exists"
+    },
+    {
+      "id": "4eeb915b-4e9e-5cde-8caa-03e89a6c9a58",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "The children love their new teacher.",
+      "correction": null,
+      "note": "their = belonging to them"
+    },
+    {
+      "id": "49d3cd1b-0947-561b-a249-81ca85d6d6fb",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "We went to Rome, and we stayed there for a week.",
+      "correction": null,
+      "note": "there = a place"
+    },
+    {
+      "id": "36f01930-f6bd-5241-ab9f-7b05836d706f",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "They're late because of the traffic.",
+      "correction": null,
+      "note": "they're = they are"
+    },
+    {
+      "id": "5c2fe1d1-31cf-56fe-94c8-645ad5875ca3",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "Their house is near the river.",
+      "correction": null,
+      "note": "their house = it belongs to them"
+    },
+    {
+      "id": "57ccb087-3dfd-5c7a-bd88-671d80caa0e6",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "There are twenty students in the room.",
+      "correction": null,
+      "note": "there are: plural"
+    },
+    {
+      "id": "18a5b196-a2db-56c8-a473-38ef3df21105",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "The birds built their nest in a tree.",
+      "correction": null,
+      "note": "their nest = the nest of the birds"
+    },
+    {
+      "id": "86ed64ef-d8b3-5270-9797-c3376ca67fa4",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "Look over there, near the door.",
+      "correction": null,
+      "note": "there = a place"
+    },
+    {
+      "id": "4fd2827a-85ba-539d-bc63-a294b366d5be",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "They're happy with their results.",
+      "correction": null,
+      "note": "they're = they are; their = belonging"
+    },
+    {
+      "id": "fadf0de9-29cf-5d9d-976a-81e8f448c3af",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "correct",
+      "text": "There was a long queue at the shop.",
+      "correction": null,
+      "note": "there was: starts a sentence"
+    },
+    {
+      "id": "13e60850-ae69-5617-9b0c-5ab10d67080a",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "The players left there bags in the car.",
+      "correction": "The players left their bags in the car.",
+      "note": "belonging to them: their"
+    },
+    {
+      "id": "1a953631-297d-5808-b2c0-39b4d52ce5e8",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "Their is a spider on the wall.",
+      "correction": "There is a spider on the wall.",
+      "note": "there is: starts a sentence"
+    },
+    {
+      "id": "aa6370ce-674c-53db-bd9b-cec86d98cf1b",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "There going to the cinema tonight.",
+      "correction": "They're going to the cinema tonight.",
+      "note": "they are going: they're"
+    },
+    {
+      "id": "87def97b-f21f-5f04-9cc3-592468b1b259",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "Our friends sold there old car.",
+      "correction": "Our friends sold their old car.",
+      "note": "their = belonging to them"
+    },
+    {
+      "id": "a216dbf7-6451-5b36-adda-cc1d6b580636",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "I put the keys over their.",
+      "correction": "I put the keys over there.",
+      "note": "there = a place"
+    },
+    {
+      "id": "d9e1b7d8-e428-5c19-bf9b-28cf4d227b24",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "Their are many people in the square.",
+      "correction": "There are many people in the square.",
+      "note": "there are: plural"
+    },
+    {
+      "id": "003a010a-d3b2-5408-aa61-fe5a98f7138d",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "The kids washed there hands.",
+      "correction": "The kids washed their hands.",
+      "note": "their = belonging to them"
+    },
+    {
+      "id": "75179d53-a7e1-5909-99ce-a48f333aa715",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "Their very kind to everyone.",
+      "correction": "They're very kind to everyone.",
+      "note": "they are: they're"
+    },
+    {
+      "id": "443e1017-0654-51f4-8295-2117111d9647",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "Is their a post office near here?",
+      "correction": "Is there a post office near here?",
+      "note": "there = used to say something exists"
+    },
+    {
+      "id": "962b8a79-702b-52d2-8063-7d338e62ca94",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "My cousins have lost there tickets.",
+      "correction": "My cousins have lost their tickets.",
+      "note": "their tickets: belonging to them"
+    },
+    {
+      "id": "c2bb53bf-26e9-52e0-b2fc-4f7d7213b83c",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "We have never been their.",
+      "correction": "We have never been there.",
+      "note": "there = a place"
+    },
+    {
+      "id": "f23c51df-5097-5ef8-a2de-8dfd9c103ef7",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "There children are at school today.",
+      "correction": "Their children are at school today.",
+      "note": "their children: belonging to them"
+    },
+    {
+      "id": "3dc7f854-6a1a-5d06-be7a-1984d00955c6",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "Their tired after the long flight.",
+      "correction": "They're tired after the long flight.",
+      "note": "they are tired: they're"
+    },
+    {
+      "id": "7e686ae3-4c03-5424-8757-544e17f0b2a7",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "The team won there first match.",
+      "correction": "The team won their first match.",
+      "note": "their = belonging to the team"
+    },
+    {
+      "id": "b92f00a0-41ef-5156-89f8-2914fd34c197",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "Their was a loud noise outside.",
+      "correction": "There was a loud noise outside.",
+      "note": "there was: starts a sentence"
+    },
+    {
+      "id": "1dec24dd-fb74-5976-8098-8570477a6306",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "Everyone says there ready to start.",
+      "correction": "Everyone says they're ready to start.",
+      "note": "they are ready: they're"
+    },
+    {
+      "id": "5d215c5e-dc77-50f2-9708-4a86b475dc46",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "I like there new flat.",
+      "correction": "I like their new flat.",
+      "note": "their flat: belonging to them"
+    },
+    {
+      "id": "105ae71d-1ecd-5647-bd83-2896cdd3d3a4",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "Look at the sign over their.",
+      "correction": "Look at the sign over there.",
+      "note": "there = a place"
+    },
+    {
+      "id": "fde07447-a700-5136-ae74-6c6175f8ac51",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "They said there coming at eight.",
+      "correction": "They said they're coming at eight.",
+      "note": "they are coming: they're"
+    },
+    {
+      "id": "0fd0492e-0022-5695-b8da-8297145cd8b9",
+      "rule_id": "b2d5b24a-9ac3-451e-a085-36efd8454e35",
+      "example_type": "incorrect",
+      "text": "Their isn't any bread left.",
+      "correction": "There isn't any bread left.",
+      "note": "there isn't: starts a sentence"
+    },
+    {
+      "id": "468b5557-0ed3-518a-8f40-99d8d38d4316",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "I am going to the market.",
+      "correction": null,
+      "note": "to = direction"
+    },
+    {
+      "id": "6df46c37-cef6-5a7e-8262-9c14cdc1f3bd",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "This soup is too hot to eat.",
+      "correction": null,
+      "note": "too = more than needed"
+    },
+    {
+      "id": "17563e55-8b6c-5fb8-88d6-cc1c34ee11e0",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "I have two brothers and one sister.",
+      "correction": null,
+      "note": "two = the number 2"
+    },
+    {
+      "id": "374f8c4a-bd51-5fa6-9225-b6bc4bcab7a9",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "She wants to learn French.",
+      "correction": null,
+      "note": "to before a verb"
+    },
+    {
+      "id": "791f3be1-99c3-5cee-9386-be122a691867",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "Can I come too?",
+      "correction": null,
+      "note": "too = also"
+    },
+    {
+      "id": "b8fbd439-9c9d-580c-bfad-e657bed45071",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "We bought two tickets for the show.",
+      "correction": null,
+      "note": "two = the number 2"
+    },
+    {
+      "id": "8ee5cdcf-0128-5acc-a850-32605842171a",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "It is too late to call him.",
+      "correction": null,
+      "note": "too = more than needed"
+    },
+    {
+      "id": "6c1effb0-f206-5727-8660-73c9c0c30d2a",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "He walked to the station.",
+      "correction": null,
+      "note": "to = direction"
+    },
+    {
+      "id": "e16271e8-34fe-58ea-ae42-7f05a8b44327",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "My sister likes pizza too.",
+      "correction": null,
+      "note": "too = also"
+    },
+    {
+      "id": "4efba39e-b75a-590c-98bc-847570cdbfa2",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "Two of my friends live abroad.",
+      "correction": null,
+      "note": "two = the number 2"
+    },
+    {
+      "id": "24eaf610-d2ee-569e-b11c-9b7b52ecfacb",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "They are too young to drive.",
+      "correction": null,
+      "note": "too young = more than allowed"
+    },
+    {
+      "id": "dbcc6a9f-bb20-5ee5-9a8f-d00e51cfffcd",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "I want to see the doctor.",
+      "correction": null,
+      "note": "to before a verb"
+    },
+    {
+      "id": "899e799a-975c-5205-aae1-b63f76dfc713",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "The film was too long, but I liked it.",
+      "correction": null,
+      "note": "too long = longer than needed"
+    },
+    {
+      "id": "bb55962a-7cbf-5d4b-bfa1-27988bb6cce5",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "We went to the beach with two cousins.",
+      "correction": null,
+      "note": "to = direction; two = number"
+    },
+    {
+      "id": "8da5de04-95bc-59f4-aa6a-e1d2db3bec02",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "He gave a book to me.",
+      "correction": null,
+      "note": "to = who receives it"
+    },
+    {
+      "id": "ccd53174-beb9-5342-ad64-fd375fcece98",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "correct",
+      "text": "There are too many cars on the road.",
+      "correction": null,
+      "note": "too many = more than needed"
+    },
+    {
+      "id": "395352d0-c528-5d67-8d7a-9988475aecbc",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "I want too go home.",
+      "correction": "I want to go home.",
+      "note": "to before a verb"
+    },
+    {
+      "id": "4c292913-d871-55ca-8705-4b6ae0040cc4",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "It is to cold today.",
+      "correction": "It is too cold today.",
+      "note": "too cold = more than needed"
+    },
+    {
+      "id": "11d1991c-e0b3-5fe1-84e9-5da461d9bf5c",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "Come to my party to.",
+      "correction": "Come to my party too.",
+      "note": "too = also"
+    },
+    {
+      "id": "869b96b8-31b6-55d8-91aa-4f94184c8cc6",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "He bought too apples.",
+      "correction": "He bought two apples.",
+      "note": "two = the number 2"
+    },
+    {
+      "id": "30cf9f63-eb26-596d-90bd-0c0805ead7d3",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "We are going too London.",
+      "correction": "We are going to London.",
+      "note": "to = direction"
+    },
+    {
+      "id": "861d9e86-418d-5459-91bf-e861f86e3fd7",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "The bag is to heavy.",
+      "correction": "The bag is too heavy.",
+      "note": "too heavy = more than needed"
+    },
+    {
+      "id": "c0ab1c57-e127-568e-9bc6-bc618a28e7b5",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "They want too help us.",
+      "correction": "They want to help us.",
+      "note": "to before a verb"
+    },
+    {
+      "id": "01c415de-cce8-5979-bfc7-1afa2e1a4350",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "This exam is to difficult.",
+      "correction": "This exam is too difficult.",
+      "note": "too difficult = more than needed"
+    },
+    {
+      "id": "85760fbe-25ee-5ac6-b926-fa6d2f103874",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "Too of my friends are here.",
+      "correction": "Two of my friends are here.",
+      "note": "two = the number 2"
+    },
+    {
+      "id": "cd2576a8-16ec-5b1e-948c-e536dfe2fe5c",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "She went too the shop.",
+      "correction": "She went to the shop.",
+      "note": "to = direction"
+    },
+    {
+      "id": "6dc49cce-2040-5e7e-852e-3ca5127f491f",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "I ate to much cake.",
+      "correction": "I ate too much cake.",
+      "note": "too much = more than needed"
+    },
+    {
+      "id": "557785f9-41c4-56ba-8a17-809e81da79bc",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "It is two late to start.",
+      "correction": "It is too late to start.",
+      "note": "too late = later than needed"
+    },
+    {
+      "id": "aa98ea95-f908-5e84-a3b8-34dbb14044b1",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "We saw to dogs in the park.",
+      "correction": "We saw two dogs in the park.",
+      "note": "two = the number 2"
+    },
+    {
+      "id": "b9a8d4d9-94d5-51bd-9b88-90eb25f08fed",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "He is to tired to talk.",
+      "correction": "He is too tired to talk.",
+      "note": "too tired = more than needed"
+    },
+    {
+      "id": "0b9f8109-0e1c-5d99-b7be-dcfa2c9a64e0",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "Give the keys too him.",
+      "correction": "Give the keys to him.",
+      "note": "to = who receives it"
+    },
+    {
+      "id": "c8d5015b-8e9c-5a77-97b0-d9a3a40ba0be",
+      "rule_id": "f58ea62b-12e6-4335-8a7d-c446b4b2fc02",
+      "example_type": "incorrect",
+      "text": "There were to many people.",
+      "correction": "There were too many people.",
+      "note": "too many = more than needed"
+    },
+    {
+      "id": "5a74bbc2-03f7-503e-8a61-9fa7c2b8047f",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "I believe you are right.",
+      "correction": null,
+      "note": "ie in believe"
+    },
+    {
+      "id": "27a4447f-ffdf-5687-a6b1-9dd400aeb565",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "She is my best friend.",
+      "correction": null,
+      "note": "ie in friend"
+    },
+    {
+      "id": "27a10461-13a1-5498-b32a-8ce96baa8bac",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "He ate a piece of cake.",
+      "correction": null,
+      "note": "ie in piece"
+    },
+    {
+      "id": "3295c6a0-3aae-50d0-96a6-23a80240bb3f",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "There is a spider on the ceiling.",
+      "correction": null,
+      "note": "after c: ei in ceiling"
+    },
+    {
+      "id": "e7ab623c-6597-5f68-9f34-65186edb806e",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "They will achieve their goal.",
+      "correction": null,
+      "note": "ie in achieve"
+    },
+    {
+      "id": "28b85157-ba2e-56ae-a7fd-8caabe915137",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "Keep the receipt for the shoes.",
+      "correction": null,
+      "note": "after c: ei in receipt"
+    },
+    {
+      "id": "9c38448d-b873-553c-bd10-bf721ed20528",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "The thief ran out of the shop.",
+      "correction": null,
+      "note": "ie in thief"
+    },
+    {
+      "id": "5e32dcf5-37e4-59dd-bba5-d364a402265b",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "My niece is six years old.",
+      "correction": null,
+      "note": "ie in niece"
+    },
+    {
+      "id": "b6f8b68f-03f5-5567-91c0-93001a37053f",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "The cows are in the field.",
+      "correction": null,
+      "note": "ie in field"
+    },
+    {
+      "id": "dd8b6180-addc-5006-9b11-bb5fea380e75",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "Give me a brief answer, please.",
+      "correction": null,
+      "note": "ie in brief"
+    },
+    {
+      "id": "998505ff-1ea8-5973-84d2-8e0ffe7a209c",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "It was a relief to hear your voice.",
+      "correction": null,
+      "note": "ie in relief"
+    },
+    {
+      "id": "aa1d20eb-12a1-56ff-b022-8e12adee510b",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "The chief of the village spoke first.",
+      "correction": null,
+      "note": "ie in chief"
+    },
+    {
+      "id": "3cb389a1-1f5c-5bf1-b9ae-9450deccec72",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "The knight held a heavy shield.",
+      "correction": null,
+      "note": "ie in shield"
+    },
+    {
+      "id": "5c2260e3-aa36-5354-8cb4-56cca4c1593f",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "It is weird to be here alone.",
+      "correction": null,
+      "note": "exception: weird has ei"
+    },
+    {
+      "id": "20853123-dfd1-5e77-b4f4-147d7be56a99",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "Did you recieve my message?",
+      "correction": "Did you receive my message?",
+      "note": "after c: ei in receive"
+    },
+    {
+      "id": "f16bff39-8764-50ad-955b-a09a624cf0cd",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "I beleive it will rain.",
+      "correction": "I believe it will rain.",
+      "note": "ie in believe"
+    },
+    {
+      "id": "881b5aaf-0cf5-5199-95be-6ca7c677778e",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "He is my oldest freind.",
+      "correction": "He is my oldest friend.",
+      "note": "ie in friend"
+    },
+    {
+      "id": "0e593df3-2e56-566a-9ed6-6a9443320c30",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "Would you like a peice of pie?",
+      "correction": "Would you like a piece of pie?",
+      "note": "ie in piece"
+    },
+    {
+      "id": "7172dcd9-76c7-5bc0-b49e-fc931564646d",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "The cieling is very high.",
+      "correction": "The ceiling is very high.",
+      "note": "after c: ei in ceiling"
+    },
+    {
+      "id": "825a5bca-4193-5d95-a50f-ae2ac95732a0",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "She wants to acheive her dream.",
+      "correction": "She wants to achieve her dream.",
+      "note": "ie in achieve"
+    },
+    {
+      "id": "9f56ddda-2992-517f-95fd-2865de28b922",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "I lost the reciept for my phone.",
+      "correction": "I lost the receipt for my phone.",
+      "note": "after c: ei in receipt"
+    },
+    {
+      "id": "1962a096-5b2d-5a42-a6bc-dc01a93e81e4",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "A theif took my wallet.",
+      "correction": "A thief took my wallet.",
+      "note": "ie in thief"
+    },
+    {
+      "id": "6a8713dc-0a60-51aa-8352-068c742dd5d3",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "My neice lives in Spain.",
+      "correction": "My niece lives in Spain.",
+      "note": "ie in niece"
+    },
+    {
+      "id": "8b12b79e-96dc-558c-8416-0f3bdb3074d4",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "We walked across the feild.",
+      "correction": "We walked across the field.",
+      "note": "ie in field"
+    },
+    {
+      "id": "4157c7b0-3ea0-5f80-b5f2-d05e31582669",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "Please write a breif report.",
+      "correction": "Please write a brief report.",
+      "note": "ie in brief"
+    },
+    {
+      "id": "5f6585c0-79af-50c8-9b2b-f7b33d704378",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "I felt great releif after the test.",
+      "correction": "I felt great relief after the test.",
+      "note": "ie in relief"
+    },
+    {
+      "id": "0d7d1c22-61ea-5ad9-a024-e63c87fe9050",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "He tried to decieve the teacher.",
+      "correction": "He tried to deceive the teacher.",
+      "note": "after c: ei in deceive"
+    },
+    {
+      "id": "74031c28-6b7f-5fbc-80ef-522174c0bbd0",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "The cheif of police arrived.",
+      "correction": "The chief of police arrived.",
+      "note": "ie in chief"
+    },
+    {
+      "id": "baba5a9c-711c-5456-97ce-164b09f0bc1f",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "The soldier lifted his sheild.",
+      "correction": "The soldier lifted his shield.",
+      "note": "ie in shield"
+    },
+    {
+      "id": "22c4b066-b6e3-510e-8f16-60e6bc90c97d",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "That was a wierd noise.",
+      "correction": "That was a weird noise.",
+      "note": "weird is an exception: ei"
+    },
+    {
+      "id": "7106970d-90e8-5454-a6ac-39d32b96e11b",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "I recieved a gift yesterday.",
+      "correction": "I received a gift yesterday.",
+      "note": "after c: ei in received"
+    },
+    {
+      "id": "3b7fc677-490f-5684-bb56-0cb6c070cb7b",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "She beleived his story.",
+      "correction": "She believed his story.",
+      "note": "ie in believed"
+    },
+    {
+      "id": "011a6c61-8f15-5c8c-a409-5a9bc77d50f3",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "My nieghbour has a big dog.",
+      "correction": "My neighbour has a big dog.",
+      "note": "neighbour is an exception: ei"
+    },
+    {
+      "id": "211087c6-9ebc-505e-8968-beaf64c2ae31",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "incorrect",
+      "text": "What is the hieght of the tower?",
+      "correction": "What is the height of the tower?",
+      "note": "height is an exception: ei"
+    },
+    {
+      "id": "19492fae-b3a2-5ce3-a0ac-25665b55aaf0",
+      "rule_id": "a6aac34e-c57c-4947-b1ca-0dd1b11778ef",
+      "example_type": "correct",
+      "text": "My friend gave me a piece of cake.",
+      "correction": null,
+      "note": "ie in friend and piece"
+    },
+    {
+      "id": "d6a7b1ce-f32f-5b8e-8a84-6d59db78878a",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "The weather is lovely today.",
+      "correction": null,
+      "note": "weather = sun, rain, wind"
+    },
+    {
+      "id": "955757bc-654d-5ed6-9b52-d14e39b79b78",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "I do not know whether he is at home.",
+      "correction": null,
+      "note": "whether = if (a choice)"
+    },
+    {
+      "id": "4281cb19-bb70-5a99-b9eb-90a9659da9b1",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "We will go for a walk if the weather is good.",
+      "correction": null,
+      "note": "weather = conditions outside"
+    },
+    {
+      "id": "6e5fa239-bbb2-5e8b-9076-7d834d7cc9f6",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "She asked whether the shop was open.",
+      "correction": null,
+      "note": "whether = if"
+    },
+    {
+      "id": "91b9ed9b-fd36-568c-a3be-a7116e6add45",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "The weather in Scotland changes quickly.",
+      "correction": null,
+      "note": "weather = conditions outside"
+    },
+    {
+      "id": "f4af4a26-1939-5d96-8106-d948529696c0",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "Tell me whether you like the film.",
+      "correction": null,
+      "note": "whether = if"
+    },
+    {
+      "id": "5b0ae06f-64e5-552a-b638-6d179fa7d3c5",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "I cannot decide whether to stay or leave.",
+      "correction": null,
+      "note": "whether = a choice between two"
+    },
+    {
+      "id": "9ed8cbc6-12de-5694-b7d6-e2ae45e314b4",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "Bad weather stopped the flights.",
+      "correction": null,
+      "note": "weather = conditions outside"
+    },
+    {
+      "id": "cece8d57-70e1-56c9-92b1-4cf3a73a2dfe",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "Check the weather before you go out.",
+      "correction": null,
+      "note": "weather = conditions outside"
+    },
+    {
+      "id": "0aab24b5-1ea0-5f30-8268-f7678845b73c",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "He wondered whether anyone had called.",
+      "correction": null,
+      "note": "whether = if"
+    },
+    {
+      "id": "77e77fa9-21e6-563c-9fcd-58440bbe58e5",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "The weather forecast says it will snow.",
+      "correction": null,
+      "note": "weather forecast = about the sky"
+    },
+    {
+      "id": "496d027b-b551-52f6-8691-20a95ae3c34c",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "Whether you win or lose, try your best.",
+      "correction": null,
+      "note": "whether ... or = either way"
+    },
+    {
+      "id": "ac096708-ee2d-5406-bed0-3ce5778cd961",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "What is the weather like in Spain?",
+      "correction": null,
+      "note": "weather = conditions outside"
+    },
+    {
+      "id": "bab21d2b-fe08-5241-b800-b72b2972b2e9",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "I am not sure whether it is true.",
+      "correction": null,
+      "note": "whether = if"
+    },
+    {
+      "id": "6f7f32c7-b679-5cb5-919a-b7c9d23188db",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "We enjoyed the warm weather on holiday.",
+      "correction": null,
+      "note": "warm weather = conditions"
+    },
+    {
+      "id": "dc9bca0d-b2c0-5939-96d6-33312b7f5b85",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "correct",
+      "text": "Ask her whether she wants tea.",
+      "correction": null,
+      "note": "whether = if"
+    },
+    {
+      "id": "23a4e55b-6fb3-5b32-85f7-667b69db142c",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "The whether is cold and wet today.",
+      "correction": "The weather is cold and wet today.",
+      "note": "weather = conditions outside"
+    },
+    {
+      "id": "03c5bdad-5ba3-5cd3-aca3-9d65f749f621",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "I do not know weather he will come.",
+      "correction": "I do not know whether he will come.",
+      "note": "whether = if"
+    },
+    {
+      "id": "53eca9fe-5037-5b0a-867b-1d5800da6f32",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "We will play outside if the whether is nice.",
+      "correction": "We will play outside if the weather is nice.",
+      "note": "weather = conditions outside"
+    },
+    {
+      "id": "893dab80-df01-5485-a46b-361a71853749",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "She asked weather the train was late.",
+      "correction": "She asked whether the train was late.",
+      "note": "whether = if"
+    },
+    {
+      "id": "72c96444-2334-5a2f-9779-ad8354934195",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "I cannot decide weather to go.",
+      "correction": "I cannot decide whether to go.",
+      "note": "whether = a choice"
+    },
+    {
+      "id": "3247c6bd-c577-52af-b2e3-472f81632e10",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "The whether forecast is good for Sunday.",
+      "correction": "The weather forecast is good for Sunday.",
+      "note": "weather forecast"
+    },
+    {
+      "id": "6c86f0e9-782b-5972-b246-9848ec2977c0",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "Tell me weather you are ready.",
+      "correction": "Tell me whether you are ready.",
+      "note": "whether = if"
+    },
+    {
+      "id": "8497e282-45f5-5f92-b3a0-d966a0187f90",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "Bad whether kept us at home.",
+      "correction": "Bad weather kept us at home.",
+      "note": "weather = conditions outside"
+    },
+    {
+      "id": "a96a0209-f229-536a-83e1-e76c432de133",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "He is not sure weather it is safe.",
+      "correction": "He is not sure whether it is safe.",
+      "note": "whether = if"
+    },
+    {
+      "id": "adf1db48-170b-5102-a469-63620faedc42",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "The whether was hot all week.",
+      "correction": "The weather was hot all week.",
+      "note": "weather = conditions outside"
+    },
+    {
+      "id": "f51da47e-f506-54cc-9f61-653c817a9dcd",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "Weather you like it or not, we must go.",
+      "correction": "Whether you like it or not, we must go.",
+      "note": "whether ... or not"
+    },
+    {
+      "id": "e1756cf8-f4d9-5a3c-a160-8d51164186cb",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "I like cold whether in winter.",
+      "correction": "I like cold weather in winter.",
+      "note": "weather = conditions outside"
+    },
+    {
+      "id": "5c43a359-689e-57b0-b42d-35fc4c2af1a8",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "I wonder weather she knows.",
+      "correction": "I wonder whether she knows.",
+      "note": "whether = if"
+    },
+    {
+      "id": "560a8d22-71a7-5ddc-b298-6873f7beba06",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "We checked the whether on the radio.",
+      "correction": "We checked the weather on the radio.",
+      "note": "weather = conditions outside"
+    },
+    {
+      "id": "b3fd176f-688a-5976-af90-bb6a70842af3",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "She does not mind weather it rains.",
+      "correction": "She does not mind whether it rains.",
+      "note": "whether = if"
+    },
+    {
+      "id": "ee1e235c-4a77-57b9-9a7a-9acb223ba57a",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "The whether in autumn is wet.",
+      "correction": "The weather in autumn is wet.",
+      "note": "weather = conditions outside"
+    },
+    {
+      "id": "f046ece0-963b-5af8-903a-3dd7e7b600c9",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "Ask them weather they need help.",
+      "correction": "Ask them whether they need help.",
+      "note": "whether = if"
+    },
+    {
+      "id": "a5703973-90ea-50f8-a0f9-a17899d65435",
+      "rule_id": "0db36766-c6db-4bf7-bb88-de6249cd9788",
+      "example_type": "incorrect",
+      "text": "What awful whether we have!",
+      "correction": "What awful weather we have!",
+      "note": "weather = conditions outside"
+    },
+    {
+      "id": "44d9f36a-69ed-5189-86f5-a9d5b5140c02",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "We were at home all day.",
+      "correction": null,
+      "note": "were = past of be"
+    },
+    {
+      "id": "09e32ff7-decd-5207-be32-4890ee00bee2",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "I wear a coat in winter.",
+      "correction": null,
+      "note": "wear = have clothes on"
+    },
+    {
+      "id": "1b30a8a1-586c-5973-b67d-db7ebf98aab8",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "They were very tired after the trip.",
+      "correction": null,
+      "note": "were = past of be"
+    },
+    {
+      "id": "ab6fe3ab-e329-57f9-91f3-3302baa947c1",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "This is the town where I was born.",
+      "correction": null,
+      "note": "where = a place"
+    },
+    {
+      "id": "285f46db-e5f2-5724-936d-2da0cfd92040",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "She likes to wear red shoes.",
+      "correction": null,
+      "note": "wear = have clothes on"
+    },
+    {
+      "id": "9b3de7da-0c25-51c3-a054-257a4685b419",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "Where is the nearest bank?",
+      "correction": null,
+      "note": "where = asks about a place"
+    },
+    {
+      "id": "e3a7cf0d-bd67-5b2c-9814-f59755424292",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "You were right about the film.",
+      "correction": null,
+      "note": "were = past of be"
+    },
+    {
+      "id": "bd931afd-d3b2-52a3-a4ac-622f7c98c721",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "Do I have to wear a tie?",
+      "correction": null,
+      "note": "wear = have clothes on"
+    },
+    {
+      "id": "8fc211fe-a969-528a-bdd4-c756f930ce15",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "The kids were playing in the garden.",
+      "correction": null,
+      "note": "were playing = past of be + -ing"
+    },
+    {
+      "id": "2bb7343c-6f93-5f54-8739-f2bbddfc1dab",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "I do not know where she lives.",
+      "correction": null,
+      "note": "where = a place"
+    },
+    {
+      "id": "0de9d49e-a955-527e-b0fe-1046c77c7949",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "What will you wear to the party?",
+      "correction": null,
+      "note": "wear = have clothes on"
+    },
+    {
+      "id": "e722192a-626b-5b15-881a-fbcfc40aa24b",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "There were five books on the shelf.",
+      "correction": null,
+      "note": "were = past of be"
+    },
+    {
+      "id": "3223ebeb-c50c-56da-aa11-12e4057e1969",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "Where can I buy a ticket?",
+      "correction": null,
+      "note": "where = asks about a place"
+    },
+    {
+      "id": "7e781b8f-60b0-52e7-ac8d-65835a059850",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "My brother never wears a hat.",
+      "correction": null,
+      "note": "wears = has clothes on"
+    },
+    {
+      "id": "936c0d39-2812-5089-8368-26773a14036c",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "correct",
+      "text": "Tell me where you were last night.",
+      "correction": null,
+      "note": "where = place; were = past of be"
+    },
+    {
+      "id": "5aefbcad-18a9-58bc-a5b9-f56232baf8a0",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "Were do you live?",
+      "correction": "Where do you live?",
+      "note": "where = asks about a place"
+    },
+    {
+      "id": "bebb8f2e-0013-52f1-a689-e8c6c583f5ee",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "We where late for the bus.",
+      "correction": "We were late for the bus.",
+      "note": "were = past of be"
+    },
+    {
+      "id": "46ee27f5-b7ae-5d5b-bfc7-b1b79a9b4848",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "I like to were jeans.",
+      "correction": "I like to wear jeans.",
+      "note": "wear = have clothes on"
+    },
+    {
+      "id": "a8862510-7280-5213-84ab-051d9c17fda3",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "They wear at the cinema yesterday.",
+      "correction": "They were at the cinema yesterday.",
+      "note": "were = past of be"
+    },
+    {
+      "id": "6cabac1f-4ad2-5faf-92fd-eda27ecb72a4",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "Where you at school today?",
+      "correction": "Were you at school today?",
+      "note": "were = past of be"
+    },
+    {
+      "id": "81893d96-e615-55e3-95bd-d2caf92bd5fc",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "Do you know were he works?",
+      "correction": "Do you know where he works?",
+      "note": "where = a place"
+    },
+    {
+      "id": "fa03c925-f440-56e2-874f-e2345f4ef059",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "She does not where a coat.",
+      "correction": "She does not wear a coat.",
+      "note": "wear = have clothes on"
+    },
+    {
+      "id": "9540750d-9650-5daf-850e-f281b70998a4",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "The shops where closed on Sunday.",
+      "correction": "The shops were closed on Sunday.",
+      "note": "were = past of be"
+    },
+    {
+      "id": "77be77b5-f4cf-5830-9cef-3e2db9182c05",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "Wear is the library?",
+      "correction": "Where is the library?",
+      "note": "where = asks about a place"
+    },
+    {
+      "id": "4d756e91-1b74-5a8d-af15-ea43c688628b",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "We were not sure were to go.",
+      "correction": "We were not sure where to go.",
+      "note": "where = a place"
+    },
+    {
+      "id": "418f9320-de1b-58b0-8511-1d379c74c7c6",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "I will were my new dress.",
+      "correction": "I will wear my new dress.",
+      "note": "wear = have clothes on"
+    },
+    {
+      "id": "a2a0b860-9796-5e6c-8f52-fbbe12432287",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "You wear very kind to me.",
+      "correction": "You were very kind to me.",
+      "note": "were = past of be"
+    },
+    {
+      "id": "9e93285b-372d-51a7-a2b3-f35f7d5a06f3",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "Where the children happy?",
+      "correction": "Were the children happy?",
+      "note": "were = past of be"
+    },
+    {
+      "id": "9b801e09-3fe5-5d8a-a85f-4b6d55e1795e",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "This is were we first met.",
+      "correction": "This is where we first met.",
+      "note": "where = a place"
+    },
+    {
+      "id": "61bda05e-7026-54f1-844f-787ac9ae490f",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "Wear is my phone?",
+      "correction": "Where is my phone?",
+      "note": "where = asks about a place"
+    },
+    {
+      "id": "856908d7-ec2c-5af8-8029-c1e3c4c0446c",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "They always where uniforms to work.",
+      "correction": "They always wear uniforms to work.",
+      "note": "wear = have clothes on"
+    },
+    {
+      "id": "2a251f5d-53cc-5fc3-83e3-5e85eadd3c4f",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "Where you in London last week?",
+      "correction": "Were you in London last week?",
+      "note": "were = past of be"
+    },
+    {
+      "id": "04da08af-2e37-5c23-84fb-a351c69e90cb",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "Tell me were you found it.",
+      "correction": "Tell me where you found it.",
+      "note": "where = a place"
+    },
+    {
+      "id": "54c08924-cdf5-5103-a8d1-d917ed71036f",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "My shoes wear very old.",
+      "correction": "My shoes were very old.",
+      "note": "were = past of be"
+    },
+    {
+      "id": "7e5ed69e-6504-5514-9b80-f8ee6d69d150",
+      "rule_id": "6e073ed2-ac7f-49cc-a6e6-02c8a3723797",
+      "example_type": "incorrect",
+      "text": "She likes to were scarves.",
+      "correction": "She likes to wear scarves.",
+      "note": "wear = have clothes on"
+    },
+    {
+      "id": "e7ce2fcc-f02d-5244-b6fa-4306e04afeb9",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "Your bag is on the chair.",
+      "correction": null,
+      "note": "your = belonging to you"
+    },
+    {
+      "id": "e9c88a74-4808-5f67-903a-e94b0b56ba47",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "You're very kind to help me.",
+      "correction": null,
+      "note": "you're = you are"
+    },
+    {
+      "id": "5c8eec75-d97a-54da-94e1-184a8dae1047",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "Is this your phone?",
+      "correction": null,
+      "note": "your = belonging to you"
+    },
+    {
+      "id": "4d37ec02-1db3-5d3f-a4e0-38f67fad3f24",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "I think you're right about the answer.",
+      "correction": null,
+      "note": "you're = you are"
+    },
+    {
+      "id": "1ff52f5c-26bb-5b84-9e40-e466e7555f09",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "What is your favourite colour?",
+      "correction": null,
+      "note": "your favourite = it belongs to you"
+    },
+    {
+      "id": "dd62d45b-35e3-5507-a006-9a04f9607c76",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "You're welcome to stay for dinner.",
+      "correction": null,
+      "note": "you're = you are"
+    },
+    {
+      "id": "c7579523-2bf8-5292-b4a0-f232dd9b6a18",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "Please wash your hands before lunch.",
+      "correction": null,
+      "note": "your hands = belonging to you"
+    },
+    {
+      "id": "fd4a4968-cef7-5b70-a885-67b919b85c2e",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "Tell me when you're ready.",
+      "correction": null,
+      "note": "you're = you are"
+    },
+    {
+      "id": "f987534b-037d-592e-be5c-156b1edd8755",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "Your teacher called you this morning.",
+      "correction": null,
+      "note": "your teacher = belonging to you"
+    },
+    {
+      "id": "c529e1bc-48ce-5198-b160-54c6467983ac",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "I hope you're having a good time.",
+      "correction": null,
+      "note": "you're having = you are having"
+    },
+    {
+      "id": "4ad55467-daa3-589d-9036-8958790eaecb",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "Don't forget your umbrella.",
+      "correction": null,
+      "note": "your umbrella = belonging to you"
+    },
+    {
+      "id": "e6952b29-1602-5999-955a-09384a2ec91a",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "You're going to love this film.",
+      "correction": null,
+      "note": "you're going = you are going"
+    },
+    {
+      "id": "2da3684b-99db-57b2-b7ad-7ce4d2362b75",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "How was your weekend?",
+      "correction": null,
+      "note": "your weekend = belonging to you"
+    },
+    {
+      "id": "dc16fe1e-ae02-5ba7-8a52-23e572eba27a",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "If you're hungry, there is soup in the fridge.",
+      "correction": null,
+      "note": "you're = you are"
+    },
+    {
+      "id": "fb49c768-465e-5561-b0c2-6889088b8664",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "Where did you leave your keys?",
+      "correction": null,
+      "note": "your keys = belonging to you"
+    },
+    {
+      "id": "e2d2bc01-2b4f-57c4-8063-ea4252f08f5d",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "correct",
+      "text": "You're older than your brother.",
+      "correction": null,
+      "note": "you're = you are; your = belonging"
+    },
+    {
+      "id": "1c4c4ea0-d26e-5d77-a455-2fe11cc5e8bc",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Is that you're car outside?",
+      "correction": "Is that your car outside?",
+      "note": "belonging to you: your"
+    },
+    {
+      "id": "a83911b8-0129-5b0c-a274-ed0bfde62257",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Your very good at tennis.",
+      "correction": "You're very good at tennis.",
+      "note": "you are: you're"
+    },
+    {
+      "id": "67429eba-2f6e-54f2-8213-a2f030d9c0b8",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Please bring you're passport.",
+      "correction": "Please bring your passport.",
+      "note": "belonging to you: your"
+    },
+    {
+      "id": "fc8eed7d-c346-5947-a8e7-28c1ca255deb",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "I know your tired after the trip.",
+      "correction": "I know you're tired after the trip.",
+      "note": "you are tired: you're"
+    },
+    {
+      "id": "f9c7e636-da29-5aaa-a31e-38f91df06ec6",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "What is you're name?",
+      "correction": "What is your name?",
+      "note": "belonging to you: your"
+    },
+    {
+      "id": "d261b6ae-00b8-5a5c-a612-810f7170bab4",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Your going to be late for school.",
+      "correction": "You're going to be late for school.",
+      "note": "you are going: you're"
+    },
+    {
+      "id": "81b9ce8b-ae9f-5ac7-9e80-2d0bccb11892",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Where is you're jacket?",
+      "correction": "Where is your jacket?",
+      "note": "belonging to you: your"
+    },
+    {
+      "id": "9eec7332-e2ed-5c7a-8c1c-70cb4e85219d",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Tell me if your ready to leave.",
+      "correction": "Tell me if you're ready to leave.",
+      "note": "you are ready: you're"
+    },
+    {
+      "id": "92f7f075-e96c-5a02-abad-cfe4933b5986",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "I like you're new haircut.",
+      "correction": "I like your new haircut.",
+      "note": "belonging to you: your"
+    },
+    {
+      "id": "a2b29d90-8f0c-5f65-b56b-023fe99d2cc1",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Your always so busy.",
+      "correction": "You're always so busy.",
+      "note": "you are always: you're"
+    },
+    {
+      "id": "1c9def87-4928-5afe-809e-408d1f740435",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Can I borrow you're pen?",
+      "correction": "Can I borrow your pen?",
+      "note": "belonging to you: your"
+    },
+    {
+      "id": "9efe1162-6266-5889-bc04-90c10a2efb32",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "I think your wrong about this.",
+      "correction": "I think you're wrong about this.",
+      "note": "you are wrong: you're"
+    },
+    {
+      "id": "a1dab6f3-d846-500c-8dc7-6d244b736bdf",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Is this you're first visit?",
+      "correction": "Is this your first visit?",
+      "note": "belonging to you: your"
+    },
+    {
+      "id": "92c4b781-60f5-53af-bf6a-5aa98d3bc803",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Your welcome to join us.",
+      "correction": "You're welcome to join us.",
+      "note": "you are welcome: you're"
+    },
+    {
+      "id": "f243c01d-15e8-56e6-97e2-99b62918c9d2",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Don't forget you're lunch.",
+      "correction": "Don't forget your lunch.",
+      "note": "belonging to you: your"
+    },
+    {
+      "id": "0ae38421-c522-55f0-978c-091c1fed3c51",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Your lucky to have a garden.",
+      "correction": "You're lucky to have a garden.",
+      "note": "you are lucky: you're"
+    },
+    {
+      "id": "0bc27d0f-5ad1-55ed-9d9a-95f7258ef8c0",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "How is you're mother today?",
+      "correction": "How is your mother today?",
+      "note": "belonging to you: your"
+    },
+    {
+      "id": "3a5e78b8-f4c4-5e8d-8168-af01914ea117",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "When your finished, call me.",
+      "correction": "When you're finished, call me.",
+      "note": "you are finished: you're"
+    },
+    {
+      "id": "1facb3a4-ff74-5c64-b91d-7a018c63c95c",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "I met you're sister yesterday.",
+      "correction": "I met your sister yesterday.",
+      "note": "belonging to you: your"
+    },
+    {
+      "id": "7f264d57-1504-5ec3-af84-595454a8e273",
+      "rule_id": "e632b690-6cca-485f-a7ea-3997def76e0b",
+      "example_type": "incorrect",
+      "text": "Your not alone in this.",
+      "correction": "You're not alone in this.",
+      "note": "you are not: you're not"
+    },
+    {
+      "id": "5a209f54-4dab-5437-a669-be4ec984895c",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "correct",
+      "text": "She waited for an hour.",
+      "correction": null,
+      "note": "hour starts with a vowel sound: an"
+    },
+    {
+      "id": "b1b40679-4926-5a1f-bbe5-61a37dcf6635",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "correct",
+      "text": "He studies at a university.",
+      "correction": null,
+      "note": "university starts with the sound yoo: a"
+    },
+    {
+      "id": "0f8743ae-3def-56ff-b057-f56bea1823f7",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "correct",
+      "text": "I need an umbrella.",
+      "correction": null,
+      "note": "umbrella starts with a vowel sound: an"
+    },
+    {
+      "id": "acb15c69-39e6-5a30-9c94-54bfdb73852b",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "correct",
+      "text": "She is an honest girl.",
+      "correction": null,
+      "note": "honest: silent h, vowel sound: an"
+    },
+    {
+      "id": "31cc2739-6403-52a9-a5b8-2d77285196db",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "correct",
+      "text": "We saw a European film.",
+      "correction": null,
+      "note": "European starts with the sound yoo: a"
+    },
+    {
+      "id": "1d3b4a7f-6e20-5d42-9cb2-a1573d85990e",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "correct",
+      "text": "He ate an apple and a banana.",
+      "correction": null,
+      "note": "apple: an; banana: a"
+    },
+    {
+      "id": "71ff3d7a-e07a-592a-b0a3-973b50636436",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "correct",
+      "text": "It was an easy test.",
+      "correction": null,
+      "note": "easy starts with a vowel sound: an"
+    },
+    {
+      "id": "dd511a53-7e72-5682-a766-8445edffabc8",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "correct",
+      "text": "She bought a useful book.",
+      "correction": null,
+      "note": "useful starts with the sound yoo: a"
+    },
+    {
+      "id": "1fe5d839-e55c-5d5c-9163-87154c7541df",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "incorrect",
+      "text": "He is a honest man.",
+      "correction": "He is an honest man.",
+      "note": "honest has a silent h: an"
+    },
+    {
+      "id": "a0c0beab-1545-58fe-ba26-dc11e27b694d",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "incorrect",
+      "text": "We waited for a hour.",
+      "correction": "We waited for an hour.",
+      "note": "hour has a silent h: an"
+    },
+    {
+      "id": "617f044e-4089-52d8-bd2c-e4ead2013ff2",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "incorrect",
+      "text": "She has an university degree.",
+      "correction": "She has a university degree.",
+      "note": "university starts with yoo: a"
+    },
+    {
+      "id": "4255cc40-2bc6-519a-b0b2-6bbc1c838215",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "incorrect",
+      "text": "I want a orange.",
+      "correction": "I want an orange.",
+      "note": "orange starts with a vowel sound: an"
+    },
+    {
+      "id": "9d077323-2666-5147-97dd-4cbd0848b306",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "incorrect",
+      "text": "It is a old house.",
+      "correction": "It is an old house.",
+      "note": "old starts with a vowel sound: an"
+    },
+    {
+      "id": "f79b7641-c4c4-5537-8c90-de34b6c8cff7",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "incorrect",
+      "text": "He bought an uniform for school.",
+      "correction": "He bought a uniform for school.",
+      "note": "uniform starts with yoo: a"
+    },
+    {
+      "id": "e74f56ea-310a-548f-83f0-e30bb9255ecd",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "incorrect",
+      "text": "She is a engineer.",
+      "correction": "She is an engineer.",
+      "note": "engineer starts with a vowel sound: an"
+    },
+    {
+      "id": "96991e0c-d868-55e5-abe5-b1e7a2ccb2b4",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "incorrect",
+      "text": "This is an one-way street.",
+      "correction": "This is a one-way street.",
+      "note": "one starts with the sound w: a"
+    },
+    {
+      "id": "01d14389-63cd-560b-9315-0999bbfd9a4f",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "incorrect",
+      "text": "I saw a elephant at the zoo.",
+      "correction": "I saw an elephant at the zoo.",
+      "note": "elephant starts with a vowel sound: an"
+    },
+    {
+      "id": "6b339893-120e-55aa-8b1e-ffbf8c709e13",
+      "rule_id": "33b5bb10-2e28-53b8-ad5e-421088a82453",
+      "example_type": "incorrect",
+      "text": "It is a honour to meet you.",
+      "correction": "It is an honour to meet you.",
+      "note": "honour has a silent h: an"
+    },
+    {
+      "id": "71e882d7-2255-53e1-a0d2-53199e681581",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "I saw a bird in the garden. The bird was blue.",
+      "correction": null,
+      "note": "first a, then the: it was mentioned"
+    },
+    {
+      "id": "27217d1d-0d21-5269-9775-bc67eb1156a4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "Please close the window. It is cold.",
+      "correction": null,
+      "note": "both know which window"
+    },
+    {
+      "id": "83cc5b54-16e0-59d1-a71b-3825d76b147a",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "She wants to buy a car.",
+      "correction": null,
+      "note": "any car, not a particular one"
+    },
+    {
+      "id": "e37f417e-a78f-5139-bba8-9896910afd03",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "We had a nice dinner. The soup was excellent.",
+      "correction": null,
+      "note": "the soup: part of the dinner we know"
+    },
+    {
+      "id": "df59ea32-0429-569c-918c-9b2931cfc87a",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "Can you pass the salt, please?",
+      "correction": null,
+      "note": "the salt on the table: we both see it"
+    },
+    {
+      "id": "ab0698d0-c1c8-5f84-815f-cae9dd1c7912",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "He has a sister and a brother. The sister lives in Rome.",
+      "correction": null,
+      "note": "the sister: already mentioned"
+    },
+    {
+      "id": "d3e59c69-0bd4-501a-9bf4-3ce6dd9512f2",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "I need a pen.",
+      "correction": null,
+      "note": "any pen"
+    },
+    {
+      "id": "fe5aa5ed-b2bf-53aa-92a9-f78a1c321e81",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "The teacher gave us homework.",
+      "correction": null,
+      "note": "the teacher we both know"
+    },
+    {
+      "id": "4967fe72-bb98-51a5-813b-aa87167056ce",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "I bought a book. A book was very good.",
+      "correction": "I bought a book. The book was very good.",
+      "note": "the same book: the"
+    },
+    {
+      "id": "d386e6ee-3ee7-549f-a1da-ae373f52cbb5",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "Please open a door. It is hot.",
+      "correction": "Please open the door. It is hot.",
+      "note": "the door we both see: the"
+    },
+    {
+      "id": "0b95b2f5-f8e7-5f88-b5bf-8da4b74a3bfc",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "I am looking for the job.",
+      "correction": "I am looking for a job.",
+      "note": "any job, not a particular one: a"
+    },
+    {
+      "id": "fe391eab-5409-5f18-8ef6-ded4105d65ea",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "She has a dog. A dog is very friendly.",
+      "correction": "She has a dog. The dog is very friendly.",
+      "note": "the same dog: the"
+    },
+    {
+      "id": "0fbd7226-5007-510c-a52e-b6e47200c3a9",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "Can you turn off a light, please?",
+      "correction": "Can you turn off the light, please?",
+      "note": "the light in this room: the"
+    },
+    {
+      "id": "b021cad5-336c-52f8-bfb5-e5c26dbe136f",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "He is reading the interesting article.",
+      "correction": "He is reading an interesting article.",
+      "note": "new article, any one: an"
+    },
+    {
+      "id": "03f8ff8b-0b02-52ef-bc75-d02476e86779",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "correct",
+      "text": "She is the best player in our team.",
+      "correction": null,
+      "note": "superlative: the best"
+    },
+    {
+      "id": "244574fa-446d-5fff-a613-1a108065ffcb",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "correct",
+      "text": "This is the first time I have been to Paris.",
+      "correction": null,
+      "note": "ordinal: the first"
+    },
+    {
+      "id": "ba4aa102-2195-576b-8572-1770c2ed476c",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "correct",
+      "text": "We live on the second floor.",
+      "correction": null,
+      "note": "ordinal: the second"
+    },
+    {
+      "id": "eb760ad2-6824-52cf-83e0-3728c78b1519",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "correct",
+      "text": "What is the most beautiful city in the world?",
+      "correction": null,
+      "note": "superlative: the most beautiful"
+    },
+    {
+      "id": "d1b1d7f2-51c0-57a8-913e-64697bbb41de",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "correct",
+      "text": "Look at the moon tonight!",
+      "correction": null,
+      "note": "only one moon: the"
+    },
+    {
+      "id": "27d71160-c896-51b4-8ac1-8442df851b6a",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "correct",
+      "text": "He was the last person to leave.",
+      "correction": null,
+      "note": "the last"
+    },
+    {
+      "id": "7a6847a9-6597-57bd-b7a1-ea6f912867a9",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "correct",
+      "text": "I have the same phone as you.",
+      "correction": null,
+      "note": "the same"
+    },
+    {
+      "id": "72da8a34-b0b9-59de-9274-09507052b717",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "incorrect",
+      "text": "Sun is shining today.",
+      "correction": "The sun is shining today.",
+      "note": "only one sun: the"
+    },
+    {
+      "id": "0cba9e6b-485c-516e-b1a3-813ac6f22922",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "incorrect",
+      "text": "He is tallest boy in his class.",
+      "correction": "He is the tallest boy in his class.",
+      "note": "superlative: the tallest"
+    },
+    {
+      "id": "de3da931-29c6-5b03-b6cc-44f1047d606d",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "incorrect",
+      "text": "Maths is hardest subject for me.",
+      "correction": "Maths is the hardest subject for me.",
+      "note": "superlative: the hardest"
+    },
+    {
+      "id": "a052fc1c-db19-58ce-84f6-fbf6efb03148",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "incorrect",
+      "text": "Take a next train to Leeds.",
+      "correction": "Take the next train to Leeds.",
+      "note": "the next"
+    },
+    {
+      "id": "b4e15ec3-9b45-5f4d-b4a9-dcece9e4aeed",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "incorrect",
+      "text": "We watched moon rise over the sea.",
+      "correction": "We watched the moon rise over the sea.",
+      "note": "only one moon: the"
+    },
+    {
+      "id": "42f2400e-f45b-5d26-af2d-c56229c88a20",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "incorrect",
+      "text": "They live in a same street.",
+      "correction": "They live in the same street.",
+      "note": "the same"
+    },
+    {
+      "id": "f6bd54d7-482c-5762-9246-5c691fc6e9ae",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "incorrect",
+      "text": "She is a best singer in town.",
+      "correction": "She is the best singer in town.",
+      "note": "superlative: the best"
+    },
+    {
+      "id": "29fdf808-7ff7-56e7-a440-e97798648bc8",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "incorrect",
+      "text": "Internet makes life easier.",
+      "correction": "The Internet makes life easier.",
+      "note": "the Internet: the"
+    },
+    {
+      "id": "5250e0ba-a90f-5c14-943e-0456775ff5ad",
+      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "example_type": "incorrect",
+      "text": "He was an only person who knew.",
+      "correction": "He was the only person who knew.",
+      "note": "the only"
+    },
+    {
+      "id": "62bfee29-f1ef-5458-bec6-42f59f25dedb",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "correct",
+      "text": "Honesty is important in any friendship.",
+      "correction": null,
+      "note": "an idea in general: no article"
+    },
+    {
+      "id": "cc2b7e38-dd96-5b1b-9b54-d91530914499",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "correct",
+      "text": "Water is essential for life.",
+      "correction": null,
+      "note": "water in general: no article"
+    },
+    {
+      "id": "c97fa7f0-b63c-5fb8-acf6-df28555097c5",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "correct",
+      "text": "Money cannot buy happiness.",
+      "correction": null,
+      "note": "money and happiness in general"
+    },
+    {
+      "id": "f9a8fb75-21e7-5c00-a551-e00fc9b166b1",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "correct",
+      "text": "Rice is popular in many countries.",
+      "correction": null,
+      "note": "rice in general: no article"
+    },
+    {
+      "id": "8bad24d8-9342-55c9-b52b-148d49da2f8b",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "correct",
+      "text": "The water in this lake is very cold.",
+      "correction": null,
+      "note": "this particular water: the"
+    },
+    {
+      "id": "3351d68b-678f-5795-b379-9f111405b7b6",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "correct",
+      "text": "I prefer tea to coffee.",
+      "correction": null,
+      "note": "tea and coffee in general"
+    },
+    {
+      "id": "9e019150-de27-550c-ac52-0590b9ab20d6",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "correct",
+      "text": "The books on my desk are new.",
+      "correction": null,
+      "note": "particular books: the"
+    },
+    {
+      "id": "0c3ee0de-8cdd-5b17-ada6-2c9322a700e6",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "incorrect",
+      "text": "The dogs are loyal animals.",
+      "correction": "Dogs are loyal animals.",
+      "note": "dogs in general: no article"
+    },
+    {
+      "id": "5c6b4a42-5329-51b4-baa9-5193e5972656",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "incorrect",
+      "text": "The honesty is important.",
+      "correction": "Honesty is important.",
+      "note": "an idea in general: no article"
+    },
+    {
+      "id": "121dbbe9-85c8-55bf-95c7-8d4170ed73cf",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "incorrect",
+      "text": "The life is short.",
+      "correction": "Life is short.",
+      "note": "life in general: no article"
+    },
+    {
+      "id": "3848c8b2-d681-5b7c-8495-182b21a6c98e",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "incorrect",
+      "text": "The water is essential for all animals.",
+      "correction": "Water is essential for all animals.",
+      "note": "water in general: no article"
+    },
+    {
+      "id": "4522fb5a-3fcd-5998-93cc-5dfd234b13e0",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "incorrect",
+      "text": "He is afraid of the spiders.",
+      "correction": "He is afraid of spiders.",
+      "note": "spiders in general: no article"
+    },
+    {
+      "id": "3e4818ab-5e2e-5b26-b737-5d85407dfae5",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "incorrect",
+      "text": "A rice is popular in Asia.",
+      "correction": "Rice is popular in Asia.",
+      "note": "uncountable in general: no article"
+    },
+    {
+      "id": "25232e3c-0990-5341-b750-66f0a167aa1d",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "incorrect",
+      "text": "The time is precious.",
+      "correction": "Time is precious.",
+      "note": "time in general: no article"
+    },
+    {
+      "id": "8b7f329a-55f5-5d3e-8160-b1a4a4e972e3",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "incorrect",
+      "text": "She hates the violence.",
+      "correction": "She hates violence.",
+      "note": "violence in general: no article"
+    },
+    {
+      "id": "161364a0-a838-5a81-9a05-2a3b38ad66d4",
+      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "example_type": "incorrect",
+      "text": "I prefer the tea to the coffee.",
+      "correction": "I prefer tea to coffee.",
+      "note": "tea and coffee in general"
+    },
+    {
+      "id": "6d162ed3-203f-516d-b538-35d01ccdb8a5",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "correct",
+      "text": "She speaks Spanish and French.",
+      "correction": null,
+      "note": "languages: no article"
+    },
+    {
+      "id": "247e1552-398a-5f9c-9609-c30efb00e673",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "correct",
+      "text": "He plays tennis on Sundays.",
+      "correction": null,
+      "note": "sports: no article"
+    },
+    {
+      "id": "8dbc8456-83cc-55ee-92e6-1717b5a7399d",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "correct",
+      "text": "We had a wonderful dinner at the hotel.",
+      "correction": null,
+      "note": "adjective + meal: a"
+    },
+    {
+      "id": "5de4a1c1-4d2e-54b0-81c9-847ba18b9b25",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "correct",
+      "text": "My cousin lives in Berlin.",
+      "correction": null,
+      "note": "cities: no article"
+    },
+    {
+      "id": "2eb7230a-8193-5317-a4ad-e673a8f9e948",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "correct",
+      "text": "I eat breakfast at seven.",
+      "correction": null,
+      "note": "meals: no article"
+    },
+    {
+      "id": "bd704b06-5cda-5f46-92f2-e6bd9f8977ed",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "correct",
+      "text": "Anna is learning Italian.",
+      "correction": null,
+      "note": "languages: no article"
+    },
+    {
+      "id": "571db12b-e883-51e1-b518-993131c0ce8d",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "correct",
+      "text": "Canada is a very big country.",
+      "correction": null,
+      "note": "single countries: no article"
+    },
+    {
+      "id": "4ba61c56-9cb1-57bd-9c83-22d6755c5e8c",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "correct",
+      "text": "After lunch we went for a walk.",
+      "correction": null,
+      "note": "meals: no article"
+    },
+    {
+      "id": "ed0b0a65-a1b3-5414-8b2c-18c8e15f7b21",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "incorrect",
+      "text": "She speaks the Spanish very well.",
+      "correction": "She speaks Spanish very well.",
+      "note": "languages: no article"
+    },
+    {
+      "id": "0e63ec62-76db-57d4-9c35-031367209f90",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "incorrect",
+      "text": "He plays the tennis every week.",
+      "correction": "He plays tennis every week.",
+      "note": "sports: no article"
+    },
+    {
+      "id": "ac4f43be-d8ca-55e9-8270-668502506d08",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "incorrect",
+      "text": "We had lovely breakfast at the hotel.",
+      "correction": "We had a lovely breakfast at the hotel.",
+      "note": "adjective + meal: a"
+    },
+    {
+      "id": "77bb2bd8-f04e-5199-bbd4-b1951c3eded3",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "incorrect",
+      "text": "I had the lunch with my sister.",
+      "correction": "I had lunch with my sister.",
+      "note": "meals: no article"
+    },
+    {
+      "id": "62a6d4f8-e5a9-5f1f-975b-01e24d5bcf23",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "incorrect",
+      "text": "The Canada is a big country.",
+      "correction": "Canada is a big country.",
+      "note": "single countries: no article"
+    },
+    {
+      "id": "55bc9f9f-efb3-5ed4-bfbe-72f0710cc54c",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "incorrect",
+      "text": "My brother loves the football.",
+      "correction": "My brother loves football.",
+      "note": "sports: no article"
+    },
+    {
+      "id": "d3734f17-a083-5a55-97e9-49d39352417f",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "incorrect",
+      "text": "She cooked big dinner for everyone.",
+      "correction": "She cooked a big dinner for everyone.",
+      "note": "adjective + meal: a"
+    },
+    {
+      "id": "c61735ef-2ddb-5448-a3a6-7b64d5fb31c1",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "incorrect",
+      "text": "I am learning the English.",
+      "correction": "I am learning English.",
+      "note": "languages: no article"
+    },
+    {
+      "id": "846cc7d3-f71c-5c13-aff9-02aebec06429",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "incorrect",
+      "text": "He works in the Berlin.",
+      "correction": "He works in Berlin.",
+      "note": "cities: no article"
+    },
+    {
+      "id": "c4f6917f-9408-584a-a18f-9868fed3d5bb",
+      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "example_type": "incorrect",
+      "text": "We had an dinner at eight.",
+      "correction": "We had dinner at eight.",
+      "note": "meals: no article"
+    },
+    {
+      "id": "b8cd34ad-c229-5464-83f9-55d6637e62b9",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "correct",
+      "text": "The Nile is the longest river in Africa.",
+      "correction": null,
+      "note": "rivers: the"
+    },
+    {
+      "id": "d92ea3d4-a45a-5da9-a6b0-7c8a42dee17a",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "correct",
+      "text": "We sailed across the Black Sea.",
+      "correction": null,
+      "note": "seas: the"
+    },
+    {
+      "id": "529ecb6c-2efd-5380-adbc-4f781dbb5107",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "correct",
+      "text": "The Netherlands is a flat country.",
+      "correction": null,
+      "note": "plural name: the"
+    },
+    {
+      "id": "87f28aee-4d97-57c5-91eb-75ce27bd21d6",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "correct",
+      "text": "She climbed Mount Fuji last summer.",
+      "correction": null,
+      "note": "a single mountain: no article"
+    },
+    {
+      "id": "1ff9abf1-d632-55a0-8a88-a32c64fcb41c",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "correct",
+      "text": "The Rocky Mountains are in North America.",
+      "correction": null,
+      "note": "a mountain range: the"
+    },
+    {
+      "id": "618488e2-9f89-5138-9fda-6964125137c5",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "correct",
+      "text": "Switzerland is famous for its lakes.",
+      "correction": null,
+      "note": "single country: no article"
+    },
+    {
+      "id": "64c59852-88ad-539c-9fc2-708abc41b853",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "correct",
+      "text": "They live near the Thames.",
+      "correction": null,
+      "note": "river: the"
+    },
+    {
+      "id": "0d7725c5-8e99-50b2-b502-ed16b6578755",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "correct",
+      "text": "We swam in Lake Baikal.",
+      "correction": null,
+      "note": "a lake: no article"
+    },
+    {
+      "id": "81a4edc4-869a-528b-81bc-06695369445d",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "incorrect",
+      "text": "We sailed across Black Sea.",
+      "correction": "We sailed across the Black Sea.",
+      "note": "seas: the"
+    },
+    {
+      "id": "fd60db3c-c352-52a7-a55f-d815443c1676",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "incorrect",
+      "text": "Nile flows through Egypt.",
+      "correction": "The Nile flows through Egypt.",
+      "note": "rivers: the"
+    },
+    {
+      "id": "c1ddb440-a41c-50f9-9fac-bcb7c43abebc",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "incorrect",
+      "text": "I want to visit the India.",
+      "correction": "I want to visit India.",
+      "note": "single country: no article"
+    },
+    {
+      "id": "92b7a809-08a1-5937-b073-133a97def463",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "incorrect",
+      "text": "Alps are very beautiful in winter.",
+      "correction": "The Alps are very beautiful in winter.",
+      "note": "mountain range: the"
+    },
+    {
+      "id": "6fae92d5-faf1-547a-b868-17715be4c33d",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "incorrect",
+      "text": "She lives in Philippines.",
+      "correction": "She lives in the Philippines.",
+      "note": "plural name: the"
+    },
+    {
+      "id": "354fbe22-14e2-57c8-8473-abe5271ce943",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "incorrect",
+      "text": "He studies at the Oxford.",
+      "correction": "He studies at Oxford.",
+      "note": "city: no article"
+    },
+    {
+      "id": "ebd8b513-50e7-5731-973a-6338a22ab341",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "incorrect",
+      "text": "We flew over Pacific Ocean.",
+      "correction": "We flew over the Pacific Ocean.",
+      "note": "oceans: the"
+    },
+    {
+      "id": "0429282e-7c78-52bc-a2b6-e803d8267398",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "incorrect",
+      "text": "They climbed the Mount Elbrus.",
+      "correction": "They climbed Mount Elbrus.",
+      "note": "a single mountain: no article"
+    },
+    {
+      "id": "aa840ed1-1eb6-5c4d-bc46-2af5ba9db5ed",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "incorrect",
+      "text": "My uncle works in United Kingdom.",
+      "correction": "My uncle works in the United Kingdom.",
+      "note": "Kingdom in the name: the"
+    },
+    {
+      "id": "95871640-a5f5-5d1d-b97d-153feb58617b",
+      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "example_type": "incorrect",
+      "text": "The Lake Michigan is very big.",
+      "correction": "Lake Michigan is very big.",
+      "note": "a lake: no article"
+    },
+    {
+      "id": "5e5c8b93-2e9b-59b7-b769-bde8efb5a1db",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "correct",
+      "text": "The children are at school now.",
+      "correction": null,
+      "note": "pupils at school: no article"
+    },
+    {
+      "id": "e1c06fb0-cb6e-5ff2-8729-372ed07593ef",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "correct",
+      "text": "He goes to work by bus.",
+      "correction": null,
+      "note": "work and by bus: no article"
+    },
+    {
+      "id": "2979ed5c-d18d-562e-9d65-58b6c3b26919",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "correct",
+      "text": "I go to bed at eleven.",
+      "correction": null,
+      "note": "go to bed: no article"
+    },
+    {
+      "id": "c370756f-ba01-5dca-b53e-10f39f971a99",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "correct",
+      "text": "She is at home today.",
+      "correction": null,
+      "note": "at home: no article"
+    },
+    {
+      "id": "6946d23c-1278-5b93-942e-d74d4e93dcbb",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "correct",
+      "text": "We went to the school to see the headmaster.",
+      "correction": null,
+      "note": "visiting the building: the"
+    },
+    {
+      "id": "6507b763-649c-5375-9dd5-04d6d5eebab7",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "correct",
+      "text": "My father works at night.",
+      "correction": null,
+      "note": "at night: no article"
+    },
+    {
+      "id": "6a663ea0-2202-5283-b58f-2f1462589b92",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "correct",
+      "text": "We travelled by train.",
+      "correction": null,
+      "note": "by + transport: no article"
+    },
+    {
+      "id": "8d6be325-f429-56f4-a71c-30c175ed358c",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "correct",
+      "text": "How do I get to the station?",
+      "correction": null,
+      "note": "a particular place: the"
+    },
+    {
+      "id": "35c3d870-d36e-52ca-8dce-a2be0198e0a8",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "incorrect",
+      "text": "The children are at the school now.",
+      "correction": "The children are at school now.",
+      "note": "pupils at school: no article"
+    },
+    {
+      "id": "17ec7379-6806-5b4c-856d-839046d32c67",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "incorrect",
+      "text": "He goes to the work by bus.",
+      "correction": "He goes to work by bus.",
+      "note": "work as routine: no article"
+    },
+    {
+      "id": "a8e9bd2f-99b9-50db-ae5b-281a158d0865",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "incorrect",
+      "text": "I go to the bed at eleven.",
+      "correction": "I go to bed at eleven.",
+      "note": "go to bed: no article"
+    },
+    {
+      "id": "2ed54e96-05a7-5378-9207-48e84b765b9b",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "incorrect",
+      "text": "She is at the home today.",
+      "correction": "She is at home today.",
+      "note": "at home: no article"
+    },
+    {
+      "id": "2ca49f6f-eed1-569d-ab35-c4df1c5329fd",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "incorrect",
+      "text": "We travelled by a train.",
+      "correction": "We travelled by train.",
+      "note": "by + transport: no article"
+    },
+    {
+      "id": "571cd62e-b67b-52eb-aa6f-d970dcc24b8f",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "incorrect",
+      "text": "They came by the plane.",
+      "correction": "They came by plane.",
+      "note": "by + transport: no article"
+    },
+    {
+      "id": "d08a0fa2-488a-5493-872f-a0265f235f13",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "incorrect",
+      "text": "He left the home at eight.",
+      "correction": "He left home at eight.",
+      "note": "left home: no article"
+    },
+    {
+      "id": "18fd2dfe-26b6-5903-842b-128fa537e708",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "incorrect",
+      "text": "My sister goes to the school every day.",
+      "correction": "My sister goes to school every day.",
+      "note": "as a pupil: no article"
+    },
+    {
+      "id": "0ca731fe-00a1-5e37-b286-3b6bfecd922c",
+      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "example_type": "incorrect",
+      "text": "I am going to school to speak to her teacher.",
+      "correction": "I am going to the school to speak to her teacher.",
+      "note": "visiting the building: the"
+    },
+    {
+      "id": "4bb59469-b648-5ba1-8b44-f6cc16a65ed2",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "correct",
+      "text": "She is a teacher in a small school.",
+      "correction": null,
+      "note": "a job: a"
+    },
+    {
+      "id": "97ccb780-4de9-5edf-be93-959e77046443",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "correct",
+      "text": "I go swimming twice a week.",
+      "correction": null,
+      "note": "per: a week"
+    },
+    {
+      "id": "e6492f88-205e-5978-b0e9-059d3fc11e67",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "correct",
+      "text": "We waited for half an hour.",
+      "correction": null,
+      "note": "half an hour"
+    },
+    {
+      "id": "57d8aabc-38ef-512e-aa7e-a47a92a2a7ae",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "correct",
+      "text": "He earns ten pounds an hour.",
+      "correction": null,
+      "note": "per: an hour"
+    },
+    {
+      "id": "14d71af4-34d8-579a-ba46-6fd62bc9ef61",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "correct",
+      "text": "I have a few friends in London.",
+      "correction": null,
+      "note": "a few = some"
+    },
+    {
+      "id": "56d16ee6-1a2f-5c3e-a479-647dc9236e31",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "correct",
+      "text": "Would you like a little sugar?",
+      "correction": null,
+      "note": "a little = some"
+    },
+    {
+      "id": "f0d27cd3-e4df-5e09-abb4-ec4e902bbd4e",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "correct",
+      "text": "What a beautiful view!",
+      "correction": null,
+      "note": "what a: a"
+    },
+    {
+      "id": "877c2db8-c023-5d83-9599-23c1fa513f0a",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "correct",
+      "text": "It was such a nice day.",
+      "correction": null,
+      "note": "such a: a"
+    },
+    {
+      "id": "5beb09d2-cc76-5ea0-9b31-6212a05fda30",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "incorrect",
+      "text": "He works as engineer.",
+      "correction": "He works as an engineer.",
+      "note": "a job: an"
+    },
+    {
+      "id": "fbeeb71e-254d-524d-88b7-decceb90c735",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "incorrect",
+      "text": "I phone my mother three times week.",
+      "correction": "I phone my mother three times a week.",
+      "note": "per: a week"
+    },
+    {
+      "id": "a102d4b1-c301-5c61-8af4-fdff7567d881",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "incorrect",
+      "text": "Wait for half hour, please.",
+      "correction": "Wait for half an hour, please.",
+      "note": "half an hour"
+    },
+    {
+      "id": "e52f13a6-464a-55d5-847b-df123739a130",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "incorrect",
+      "text": "She is nurse in a big hospital.",
+      "correction": "She is a nurse in a big hospital.",
+      "note": "a job: a"
+    },
+    {
+      "id": "2caa74ab-dbf1-5de7-bceb-af268c961c82",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "incorrect",
+      "text": "What beautiful view!",
+      "correction": "What a beautiful view!",
+      "note": "what a: a"
+    },
+    {
+      "id": "5092a95f-1e49-53fd-b75f-0a88891e9d4b",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "incorrect",
+      "text": "It was such nice day.",
+      "correction": "It was such a nice day.",
+      "note": "such a: a"
+    },
+    {
+      "id": "e27fa314-f2b5-5494-ac04-1680de947af0",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "incorrect",
+      "text": "He wants to be pilot.",
+      "correction": "He wants to be a pilot.",
+      "note": "a job: a"
+    },
+    {
+      "id": "b5816e2d-3637-5969-b715-8d9b07bc15bc",
+      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "example_type": "incorrect",
+      "text": "There was lot of noise outside.",
+      "correction": "There was a lot of noise outside.",
+      "note": "a lot of"
     }
   ]
 }
