@@ -211,9 +211,15 @@ commit;
 `,
       )
     }
+    // one file with every part, for the SQL Editor that takes it; the parts stay as the fallback (all of them are safe to run again)
+    const everything = Array.from({ length: total }, (_, index) => readFileSync(`${base}-part-${pad(index + 1)}.sql`, 'utf8')).join('\n')
+    writeFileSync(
+      `${base}-all.sql`,
+      `-- Content pack ${config.number}: all ${total} parts in ONE file. Run this one file; if the SQL Editor refuses it as too big, run the part files one by one instead.\n\n${everything}`,
+    )
     writeFileSync(`${base}-undo.sql`, undo)
     console.log(
-      `pack ${config.number} (${pack.set}): ${pack.rules.length} rules, ${examples.length} examples, ${exercises.length} exercises written (${total} parts + undo)`,
+      `pack ${config.number} (${pack.set}): ${pack.rules.length} rules, ${examples.length} examples, ${exercises.length} exercises written (${total} parts, one file with all of them + undo)`,
     )
     continue
   }
