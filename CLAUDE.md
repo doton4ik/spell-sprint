@@ -9,6 +9,8 @@ Deployed on Netlify from GitHub `doton4ik/spell-sprint`, branch `main`.
 - The user is a student and writes in Russian. Answer in Russian; keep code, commands and file names in English.
 - Write content yourself (words, examples, texts); don't hand it off to another assistant.
 - Before a big or unclear task, say the plan in a few lines; for "делай" just do it.
+- Starting fresh? Read `docs/start-here.md`: the state of the work, what waits for the user, the commands for every job. The user watches the usage
+  limits: no Opus / subagents / full e2e on small tasks, short answers.
 
 ## Three models: Sonnet builds, Haiku explores, Opus reviews
 
