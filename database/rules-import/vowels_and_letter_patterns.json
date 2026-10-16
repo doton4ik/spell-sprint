@@ -1,0 +1,373 @@
+{
+  "category": "vowels_and_letter_patterns",
+  "rules": [
+    {
+      "slug": "ou-ow-au-aw-patterns",
+      "title": "ou / ow / au / aw letter patterns",
+      "rule_type": "language_rule",
+      "short_explanation": "The letters ou and ow often make the sound in house and how, while au and aw often make the sound in course and saw. Some common words are exceptions, such as soup, should, and daughter.",
+      "tts_text": "Learn common ou, ow, au and aw words as whole patterns.",
+      "mnemonic": "House and how; course and saw.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Our house is near the city park.",
+          "note": "ou often says /aʊ/ in house."
+        },
+        {
+          "type": "correct",
+          "text": "How do you get to the airport?",
+          "note": "ow often says /aʊ/ in how."
+        },
+        {
+          "type": "correct",
+          "text": "The course starts in September.",
+          "note": "au often says /ɔː/ in course."
+        },
+        {
+          "type": "correct",
+          "text": "We saw a beautiful sunset yesterday.",
+          "note": "aw says /ɔː/ in saw."
+        },
+        {
+          "type": "correct",
+          "text": "The mouse ran behind the sofa.",
+          "note": "ou says /aʊ/ in mouse."
+        },
+        {
+          "type": "correct",
+          "text": "She found her keys in her coat.",
+          "note": "ou says /aʊ/ in found."
+        },
+        {
+          "type": "correct",
+          "text": "The cow is standing near the fence.",
+          "note": "ow says /aʊ/ in cow."
+        },
+        {
+          "type": "correct",
+          "text": "The author wrote a book about travel.",
+          "note": "au says /ɔː/ in author."
+        },
+        {
+          "type": "correct",
+          "text": "She wore a brown dress to the party.",
+          "note": "ow says /aʊ/ in brown."
+        },
+        {
+          "type": "correct",
+          "text": "They bought fresh bread at the market.",
+          "note": "ou says /ɔː/ in bought."
+        },
+        {
+          "type": "correct",
+          "text": "The lawn needs water in summer.",
+          "note": "aw says /ɔː/ in lawn."
+        },
+        {
+          "type": "incorrect",
+          "text": "Our howse is near the city park.",
+          "correction": "Our house is near the city park.",
+          "note": "Use ou in house."
+        },
+        {
+          "type": "incorrect",
+          "text": "They sat on the grownd.",
+          "correction": "They sat on the ground.",
+          "note": "Use ou in ground."
+        },
+        {
+          "type": "incorrect",
+          "text": "The corse starts in September.",
+          "correction": "The course starts in September.",
+          "note": "Use au in course."
+        },
+        {
+          "type": "incorrect",
+          "text": "The baby crauled across the floor.",
+          "correction": "The baby crawled across the floor.",
+          "note": "Use aw in crawl."
+        },
+        {
+          "type": "incorrect",
+          "text": "The mous ran behind the sofa.",
+          "correction": "The mouse ran behind the sofa.",
+          "note": "Use ou in mouse."
+        },
+        {
+          "type": "incorrect",
+          "text": "I take a shouer every morning.",
+          "correction": "I take a shower every morning.",
+          "note": "Use ow in shower."
+        },
+        {
+          "type": "incorrect",
+          "text": "Dark clawds covered the sky.",
+          "correction": "Dark clouds covered the sky.",
+          "note": "Use ou in clouds."
+        },
+        {
+          "type": "incorrect",
+          "text": "The auther wrote a book about travel.",
+          "correction": "The author wrote a book about travel.",
+          "note": "Use au in author."
+        },
+        {
+          "type": "incorrect",
+          "text": "He drew a map of the old tawn.",
+          "correction": "He drew a map of the old town.",
+          "note": "Use ow in town."
+        },
+        {
+          "type": "incorrect",
+          "text": "They baught fresh bread at the market.",
+          "correction": "They bought fresh bread at the market.",
+          "note": "Use ou in bought."
+        },
+        {
+          "type": "incorrect",
+          "text": "The laun needs water in summer.",
+          "correction": "The lawn needs water in summer.",
+          "note": "Use aw in lawn."
+        },
+        {
+          "type": "exception",
+          "text": "The soup is hot and tasty.",
+          "note": "ou says /uː/ in soup."
+        },
+        {
+          "type": "exception",
+          "text": "You should take an umbrella.",
+          "note": "ou says /ʊ/ in should."
+        },
+        {
+          "type": "exception",
+          "text": "The daughter is learning to drive.",
+          "note": "au says /ɔː/ in daughter."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Our ___ is near the city park. (place to live)",
+          "answer": "house"
+        },
+        {
+          "prompt": "___ do you get to the airport? (in what way)",
+          "answer": "How"
+        },
+        {
+          "prompt": "The ___ starts in September. (lessons)",
+          "answer": "course"
+        },
+        {
+          "prompt": "We ___ a beautiful sunset yesterday. (past of see)",
+          "answer": "saw"
+        },
+        {
+          "prompt": "The ___ ran behind the sofa. (small animal)",
+          "answer": "mouse"
+        },
+        {
+          "prompt": "She ___ her keys in her coat. (past of find)",
+          "answer": "found"
+        },
+        {
+          "prompt": "The ___ is standing near the fence. (farm animal)",
+          "answer": "cow"
+        },
+        {
+          "prompt": "The ___ wrote a book about travel. (writer)",
+          "answer": "author"
+        },
+        {
+          "prompt": "A large ___ waited outside the shop. (many people)",
+          "answer": "crowd"
+        },
+        {
+          "prompt": "They ___ fresh bread at the market. (past of buy)",
+          "answer": "bought"
+        },
+        {
+          "prompt": "Our ___ is near the city park.",
+          "answer": "house",
+          "choices": [
+            "howse",
+            "house",
+            "hous",
+            "hose"
+          ]
+        },
+        {
+          "prompt": "The ___ starts in September.",
+          "answer": "course",
+          "choices": [
+            "corse",
+            "course",
+            "coarse",
+            "cors"
+          ]
+        },
+        {
+          "prompt": "The ___ ran behind the sofa.",
+          "answer": "mouse",
+          "choices": [
+            "mous",
+            "mouse",
+            "moose",
+            "mouce"
+          ]
+        },
+        {
+          "prompt": "She ___ her keys in her coat.",
+          "answer": "found",
+          "choices": [
+            "found",
+            "faund",
+            "fownd",
+            "founded"
+          ]
+        },
+        {
+          "prompt": "The ___ is standing near the fence.",
+          "answer": "cow",
+          "choices": [
+            "cou",
+            "cow",
+            "caw",
+            "kow"
+          ]
+        },
+        {
+          "prompt": "The ___ wrote a book about travel.",
+          "answer": "author",
+          "choices": [
+            "auther",
+            "author",
+            "autor",
+            "awthor"
+          ]
+        },
+        {
+          "prompt": "She wore a ___ dress to the party.",
+          "answer": "brown",
+          "choices": [
+            "broun",
+            "brown",
+            "brawn",
+            "browne"
+          ]
+        },
+        {
+          "prompt": "They ___ fresh bread at the market.",
+          "answer": "bought",
+          "choices": [
+            "baught",
+            "bought",
+            "bot",
+            "boughtt"
+          ]
+        },
+        {
+          "prompt": "The ___ needs water in summer.",
+          "answer": "lawn",
+          "choices": [
+            "laun",
+            "lawn",
+            "lorn",
+            "lown"
+          ]
+        },
+        {
+          "prompt": "___ do you get to the airport?",
+          "answer": "How",
+          "choices": [
+            "How",
+            "Hou",
+            "Haw",
+            "Houw"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: howse",
+          "answer": "house"
+        },
+        {
+          "prompt": "Fix the spelling: corse",
+          "answer": "course"
+        },
+        {
+          "prompt": "Fix the spelling: mous",
+          "answer": "mouse"
+        },
+        {
+          "prompt": "Fix the spelling: auther",
+          "answer": "author"
+        },
+        {
+          "prompt": "Fix the spelling: tawn",
+          "answer": "town"
+        },
+        {
+          "prompt": "Fix the spelling: baught",
+          "answer": "bought"
+        },
+        {
+          "prompt": "Fix the spelling: laun",
+          "answer": "lawn"
+        },
+        {
+          "prompt": "Fix the spelling: cou",
+          "answer": "cow"
+        },
+        {
+          "prompt": "Fix the spelling: daun",
+          "answer": "dawn"
+        },
+        {
+          "prompt": "Fix the spelling: saww",
+          "answer": "saw"
+        },
+        {
+          "prompt": "Spell the word: a place where people live.",
+          "answer": "house"
+        },
+        {
+          "prompt": "Spell the word: a series of lessons.",
+          "answer": "course"
+        },
+        {
+          "prompt": "Spell the word: a small animal with a long tail.",
+          "answer": "mouse"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'find'.",
+          "answer": "found"
+        },
+        {
+          "prompt": "Spell the word: a farm animal that gives milk.",
+          "answer": "cow"
+        },
+        {
+          "prompt": "Spell the word: a person who writes books.",
+          "answer": "author"
+        },
+        {
+          "prompt": "Spell the word: the opposite of 'up'.",
+          "answer": "down"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'buy'.",
+          "answer": "bought"
+        },
+        {
+          "prompt": "Spell the word: grass in a garden.",
+          "answer": "lawn"
+        },
+        {
+          "prompt": "Spell the word: the question word for 'in what way'.",
+          "answer": "how"
+        }
+      ]
+    }
+  ]
+}

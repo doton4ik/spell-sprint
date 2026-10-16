@@ -1,0 +1,741 @@
+{
+  "category": "double_consonants",
+  "rules": [
+    {
+      "slug": "double-final-consonant-before-suffix",
+      "title": "Double the last consonant: stop → stopped",
+      "rule_type": "language_rule",
+      "short_explanation": "If a word ends in one vowel + one consonant and the last syllable is stressed, double the consonant before -ed, -ing, -er or -est. For example: stop → stopped, begin → beginning.",
+      "tts_text": "Short stressed vowel plus one consonant: double the consonant before a suffix.",
+      "mnemonic": "One vowel, one consonant, stressed end: double it, friend.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The bus stopped outside the station.",
+          "note": "One-syllable word: stop → stopped."
+        },
+        {
+          "type": "correct",
+          "text": "She is planning a trip to Spain.",
+          "note": "plan + ing: double the n."
+        },
+        {
+          "type": "correct",
+          "text": "The company is beginning a new project.",
+          "note": "Stress on last syllable: begin → beginning."
+        },
+        {
+          "type": "correct",
+          "text": "He admitted his mistake to the manager.",
+          "note": "Stressed ending: admit → admitted."
+        },
+        {
+          "type": "correct",
+          "text": "The chef chopped onions for the soup.",
+          "note": "chop + ed: double the p."
+        },
+        {
+          "type": "correct",
+          "text": "They are shopping for fresh vegetables.",
+          "note": "shop + ing: double the p."
+        },
+        {
+          "type": "correct",
+          "text": "My brother is getting a new laptop.",
+          "note": "get + ing: double the t."
+        },
+        {
+          "type": "correct",
+          "text": "The student referred to her notes.",
+          "note": "Stress on -fer: refer → referred."
+        },
+        {
+          "type": "correct",
+          "text": "The waiter dropped a plate in the kitchen.",
+          "note": "drop + ed: double the p."
+        },
+        {
+          "type": "correct",
+          "text": "This hotel is bigger than the old one.",
+          "note": "big + er: double the g."
+        },
+        {
+          "type": "correct",
+          "text": "She regretted missing the last train.",
+          "note": "Stressed ending: regret → regretted."
+        },
+        {
+          "type": "incorrect",
+          "text": "The taxi stoped at the hotel.",
+          "correction": "The taxi stopped at the hotel.",
+          "note": "Double the p before -ed."
+        },
+        {
+          "type": "incorrect",
+          "text": "I am runing late for work.",
+          "correction": "I am running late for work.",
+          "note": "Double the n before -ing."
+        },
+        {
+          "type": "incorrect",
+          "text": "She planed her holiday in July.",
+          "correction": "She planned her holiday in July.",
+          "note": "Double the n before -ed."
+        },
+        {
+          "type": "incorrect",
+          "text": "He is swiming in the lake every summer.",
+          "correction": "He is swimming in the lake every summer.",
+          "note": "Double the m before -ing."
+        },
+        {
+          "type": "incorrect",
+          "text": "We shoped at the market yesterday.",
+          "correction": "We shopped at the market yesterday.",
+          "note": "Double the p before -ed."
+        },
+        {
+          "type": "incorrect",
+          "text": "The lesson is begining at nine o'clock.",
+          "correction": "The lesson is beginning at nine o'clock.",
+          "note": "Stressed -gin: double the n."
+        },
+        {
+          "type": "incorrect",
+          "text": "My sister is biger than me.",
+          "correction": "My sister is bigger than me.",
+          "note": "Double the g before -er."
+        },
+        {
+          "type": "incorrect",
+          "text": "He is cuting the bread for lunch.",
+          "correction": "He is cutting the bread for lunch.",
+          "note": "Double the t before -ing."
+        },
+        {
+          "type": "incorrect",
+          "text": "He admited he was late for class.",
+          "correction": "He admitted he was late for class.",
+          "note": "Stressed -mit: double the t."
+        },
+        {
+          "type": "incorrect",
+          "text": "The rabbit hoped across the garden.",
+          "correction": "The rabbit hopped across the garden.",
+          "note": "Double the p; hoped is another word."
+        },
+        {
+          "type": "incorrect",
+          "text": "She is geting a new passport.",
+          "correction": "She is getting a new passport.",
+          "note": "Double the t before -ing."
+        },
+        {
+          "type": "exception",
+          "text": "The mechanic fixed the car yesterday.",
+          "note": "Never double x."
+        },
+        {
+          "type": "exception",
+          "text": "They are showing the results today.",
+          "note": "Never double w."
+        },
+        {
+          "type": "exception",
+          "text": "She enjoyed the long train ride.",
+          "note": "Never double y."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "The train ___ at every small station. (stop + ed)",
+          "answer": "stopped"
+        },
+        {
+          "prompt": "We are ___ a new warehouse layout. (plan + ing)",
+          "answer": "planning"
+        },
+        {
+          "prompt": "She ___ the vegetables into small pieces. (chop + ed)",
+          "answer": "chopped"
+        },
+        {
+          "prompt": "The kids are ___ in the park. (run + ing)",
+          "answer": "running"
+        },
+        {
+          "prompt": "I ___ my coffee on the desk. (drop + ed)",
+          "answer": "dropped"
+        },
+        {
+          "prompt": "She is ___ her English course today. (begin + ing)",
+          "answer": "beginning"
+        },
+        {
+          "prompt": "The tourists ___ photos of the castle. (snap + ed)",
+          "answer": "snapped"
+        },
+        {
+          "prompt": "This suitcase is ___ than mine. (big + er)",
+          "answer": "bigger"
+        },
+        {
+          "prompt": "He ___ that he forgot the tickets. (admit + ed)",
+          "answer": "admitted"
+        },
+        {
+          "prompt": "It is ___ cold in the evenings. (get + ing)",
+          "answer": "getting"
+        },
+        {
+          "prompt": "She is ___ in the front row today.",
+          "answer": "sitting",
+          "choices": [
+            "siting",
+            "sitting",
+            "sittting",
+            "sitiing"
+          ]
+        },
+        {
+          "prompt": "Our team is ___ the match.",
+          "answer": "winning",
+          "choices": [
+            "wining",
+            "winning",
+            "winnning",
+            "winnig"
+          ]
+        },
+        {
+          "prompt": "Stop ___ the table with that spoon.",
+          "answer": "hitting",
+          "choices": [
+            "hiting",
+            "hitting",
+            "hittting",
+            "hitiing"
+          ]
+        },
+        {
+          "prompt": "Everyone ___ after the concert.",
+          "answer": "clapped",
+          "choices": [
+            "claped",
+            "clapped",
+            "clappd",
+            "clappped"
+          ]
+        },
+        {
+          "prompt": "She ___ her head and smiled.",
+          "answer": "nodded",
+          "choices": [
+            "noded",
+            "nodded",
+            "nodd",
+            "nodedd"
+          ]
+        },
+        {
+          "prompt": "He is ___ along the river every morning.",
+          "answer": "jogging",
+          "choices": [
+            "joging",
+            "jogging",
+            "joggin",
+            "jogginng"
+          ]
+        },
+        {
+          "prompt": "They ___ the heavy bag up the stairs.",
+          "answer": "dragged",
+          "choices": [
+            "draged",
+            "dragged",
+            "dragd",
+            "draggged"
+          ]
+        },
+        {
+          "prompt": "We ___ the holiday months ago.",
+          "answer": "planned",
+          "choices": [
+            "planed",
+            "planned",
+            "plannd",
+            "plannned"
+          ]
+        },
+        {
+          "prompt": "He is ___ in the hotel pool.",
+          "answer": "swimming",
+          "choices": [
+            "swiming",
+            "swimming",
+            "swimmming",
+            "swimmng"
+          ]
+        },
+        {
+          "prompt": "He is ___ the bread for dinner.",
+          "answer": "cutting",
+          "choices": [
+            "cuting",
+            "cutting",
+            "cuttting",
+            "cutteing"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: stoped",
+          "answer": "stopped"
+        },
+        {
+          "prompt": "Fix the spelling: runing",
+          "answer": "running"
+        },
+        {
+          "prompt": "Fix the spelling: begining",
+          "answer": "beginning"
+        },
+        {
+          "prompt": "Fix the spelling: shoped",
+          "answer": "shopped"
+        },
+        {
+          "prompt": "Fix the spelling: chating",
+          "answer": "chatting"
+        },
+        {
+          "prompt": "Fix the spelling: bigest",
+          "answer": "biggest"
+        },
+        {
+          "prompt": "Fix the spelling: admited",
+          "answer": "admitted"
+        },
+        {
+          "prompt": "Fix the spelling: swiming",
+          "answer": "swimming"
+        },
+        {
+          "prompt": "Fix the spelling: geting",
+          "answer": "getting"
+        },
+        {
+          "prompt": "Fix the spelling: droped",
+          "answer": "dropped"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'sit'.",
+          "answer": "sitting"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'win'.",
+          "answer": "winning"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'plan'.",
+          "answer": "planned"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'swim'.",
+          "answer": "swimming"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'clap'.",
+          "answer": "clapped"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'run'.",
+          "answer": "running"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'nod'.",
+          "answer": "nodded"
+        },
+        {
+          "prompt": "Spell the word: comparative of 'hot'.",
+          "answer": "hotter"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'put'.",
+          "answer": "putting"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'drag'.",
+          "answer": "dragged"
+        }
+      ]
+    },
+    {
+      "slug": "no-doubling-unstressed-ending",
+      "title": "Don't double: visit → visited, open → opened",
+      "rule_type": "language_rule",
+      "short_explanation": "Do not double the final consonant if the last syllable is not stressed, or if the word ends in two consonants or two vowels. For example: visit → visited, open → opened, wait → waiting.",
+      "tts_text": "If the last syllable is not stressed, do not double the consonant.",
+      "mnemonic": "Weak ending, no doubling.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "She visited her grandparents last summer.",
+          "note": "Stress is on VIS, so no doubling."
+        },
+        {
+          "type": "correct",
+          "text": "The shop opened at eight o'clock.",
+          "note": "Stress is on O, so no doubling."
+        },
+        {
+          "type": "correct",
+          "text": "We are listening to a podcast.",
+          "note": "Unstressed -ten: no doubling."
+        },
+        {
+          "type": "correct",
+          "text": "The waiter offered us a free dessert.",
+          "note": "Stress is on OF, so no doubling."
+        },
+        {
+          "type": "correct",
+          "text": "He is entering the contest tomorrow.",
+          "note": "Unstressed -ter: no doubling."
+        },
+        {
+          "type": "correct",
+          "text": "They finished the project before Friday.",
+          "note": "Unstressed -ish: no doubling."
+        },
+        {
+          "type": "correct",
+          "text": "My cousin worked at a bakery.",
+          "note": "Word ends in two consonants: rk."
+        },
+        {
+          "type": "correct",
+          "text": "The guide waited for us outside.",
+          "note": "Two vowels before t: no doubling."
+        },
+        {
+          "type": "correct",
+          "text": "She is learning Slovak at university.",
+          "note": "Ends in two consonants: rn."
+        },
+        {
+          "type": "correct",
+          "text": "We developed a new filing system.",
+          "note": "Stress is on -vel, not -op."
+        },
+        {
+          "type": "correct",
+          "text": "Tom is repairing his bike in the garage.",
+          "note": "Two vowels before r: no doubling."
+        },
+        {
+          "type": "incorrect",
+          "text": "We visitted the castle in May.",
+          "correction": "We visited the castle in May.",
+          "note": "Unstressed ending: do not double t."
+        },
+        {
+          "type": "incorrect",
+          "text": "The bank openned at nine.",
+          "correction": "The bank opened at nine.",
+          "note": "Unstressed ending: do not double n."
+        },
+        {
+          "type": "incorrect",
+          "text": "She is listenning to music.",
+          "correction": "She is listening to music.",
+          "note": "Unstressed ending: do not double n."
+        },
+        {
+          "type": "incorrect",
+          "text": "He offerred me a good job.",
+          "correction": "He offered me a good job.",
+          "note": "Stress is on OF: do not double r."
+        },
+        {
+          "type": "incorrect",
+          "text": "They are enterring the building.",
+          "correction": "They are entering the building.",
+          "note": "Unstressed ending: do not double r."
+        },
+        {
+          "type": "incorrect",
+          "text": "I workked in a hotel last year.",
+          "correction": "I worked in a hotel last year.",
+          "note": "Ends in two consonants: no doubling."
+        },
+        {
+          "type": "incorrect",
+          "text": "The train is waitting at platform two.",
+          "correction": "The train is waiting at platform two.",
+          "note": "Two vowels before t: no doubling."
+        },
+        {
+          "type": "incorrect",
+          "text": "We developped a small app together.",
+          "correction": "We developed a small app together.",
+          "note": "Stress is not on the last syllable."
+        },
+        {
+          "type": "incorrect",
+          "text": "She helpped her mother cook dinner.",
+          "correction": "She helped her mother cook dinner.",
+          "note": "Ends in lp: no doubling."
+        },
+        {
+          "type": "incorrect",
+          "text": "The soup is cookking on the stove.",
+          "correction": "The soup is cooking on the stove.",
+          "note": "Two vowels before k: no doubling."
+        },
+        {
+          "type": "incorrect",
+          "text": "He repairred the old printer.",
+          "correction": "He repaired the old printer.",
+          "note": "Two vowels before r: no doubling."
+        },
+        {
+          "type": "exception",
+          "text": "The report was submitted on Monday.",
+          "note": "Stress is on -mit, so double."
+        },
+        {
+          "type": "exception",
+          "text": "She preferred tea to coffee.",
+          "note": "Stress is on -fer, so double."
+        },
+        {
+          "type": "exception",
+          "text": "The agent controlled the budget.",
+          "note": "Stress is on -trol, so double."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "We ___ the old town on Sunday. (visit + ed)",
+          "answer": "visited"
+        },
+        {
+          "prompt": "She ___ the window to get fresh air. (open + ed)",
+          "answer": "opened"
+        },
+        {
+          "prompt": "They are ___ to the radio. (listen + ing)",
+          "answer": "listening"
+        },
+        {
+          "prompt": "The hotel ___ free breakfast. (offer + ed)",
+          "answer": "offered"
+        },
+        {
+          "prompt": "He ___ the code into the system. (enter + ed)",
+          "answer": "entered"
+        },
+        {
+          "prompt": "I am ___ for the bus now. (wait + ing)",
+          "answer": "waiting"
+        },
+        {
+          "prompt": "She ___ hard for her exam. (work + ed)",
+          "answer": "worked"
+        },
+        {
+          "prompt": "Our team ___ a new tool. (develop + ed)",
+          "answer": "developed"
+        },
+        {
+          "prompt": "He ___ me with my luggage. (help + ed)",
+          "answer": "helped"
+        },
+        {
+          "prompt": "The plumber ___ the leaking tap. (repair + ed)",
+          "answer": "repaired"
+        },
+        {
+          "prompt": "We ___ Prague last winter.",
+          "answer": "visited",
+          "choices": [
+            "visitted",
+            "visited",
+            "visitd",
+            "visiteed"
+          ]
+        },
+        {
+          "prompt": "The museum ___ in the spring.",
+          "answer": "opened",
+          "choices": [
+            "openned",
+            "opened",
+            "opend",
+            "oppened"
+          ]
+        },
+        {
+          "prompt": "She is ___ to an audiobook.",
+          "answer": "listening",
+          "choices": [
+            "listenning",
+            "listening",
+            "lisenning",
+            "listning"
+          ]
+        },
+        {
+          "prompt": "They ___ us a big discount.",
+          "answer": "offered",
+          "choices": [
+            "offerred",
+            "offered",
+            "offerd",
+            "offeered"
+          ]
+        },
+        {
+          "prompt": "He ___ the room quietly.",
+          "answer": "entered",
+          "choices": [
+            "enterred",
+            "entered",
+            "enterd",
+            "entterred"
+          ]
+        },
+        {
+          "prompt": "The cat is ___ by the door.",
+          "answer": "waiting",
+          "choices": [
+            "waitting",
+            "waiting",
+            "wating",
+            "waitng"
+          ]
+        },
+        {
+          "prompt": "We ___ in a small cafe last year.",
+          "answer": "worked",
+          "choices": [
+            "workked",
+            "worked",
+            "workd",
+            "wirked"
+          ]
+        },
+        {
+          "prompt": "She ___ her skills at college.",
+          "answer": "developed",
+          "choices": [
+            "developped",
+            "developed",
+            "develloped",
+            "developd"
+          ]
+        },
+        {
+          "prompt": "My friend ___ me with my homework.",
+          "answer": "helped",
+          "choices": [
+            "helpped",
+            "helped",
+            "helpd",
+            "hellped"
+          ]
+        },
+        {
+          "prompt": "He ___ the broken lamp himself.",
+          "answer": "repaired",
+          "choices": [
+            "repairred",
+            "repaired",
+            "repaird",
+            "reppaired"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: visitted",
+          "answer": "visited"
+        },
+        {
+          "prompt": "Fix the spelling: openned",
+          "answer": "opened"
+        },
+        {
+          "prompt": "Fix the spelling: listenning",
+          "answer": "listening"
+        },
+        {
+          "prompt": "Fix the spelling: offerred",
+          "answer": "offered"
+        },
+        {
+          "prompt": "Fix the spelling: enterring",
+          "answer": "entering"
+        },
+        {
+          "prompt": "Fix the spelling: workked",
+          "answer": "worked"
+        },
+        {
+          "prompt": "Fix the spelling: developped",
+          "answer": "developed"
+        },
+        {
+          "prompt": "Fix the spelling: helpped",
+          "answer": "helped"
+        },
+        {
+          "prompt": "Fix the spelling: waitting",
+          "answer": "waiting"
+        },
+        {
+          "prompt": "Fix the spelling: repairred",
+          "answer": "repaired"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'visit'.",
+          "answer": "visiting"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'open'.",
+          "answer": "opening"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'listen'.",
+          "answer": "listened"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'offer'.",
+          "answer": "offering"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'enter'.",
+          "answer": "entering"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'happen'.",
+          "answer": "happened"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'develop'.",
+          "answer": "developing"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'answer'.",
+          "answer": "answered"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'gather'.",
+          "answer": "gathering"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'wonder'.",
+          "answer": "wondered"
+        }
+      ]
+    }
+  ]
+}

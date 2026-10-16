@@ -1,0 +1,373 @@
+{
+  "category": "english_spelling",
+  "rules": [
+    {
+      "slug": "ch-tch-and-j-dge",
+      "title": "ch / tch and j / dge after vowels",
+      "rule_type": "language_rule",
+      "short_explanation": "After a short vowel, use -tch for the /ch/ sound (watch, catch) and -dge for the /j/ sound (bridge, badge). After a long vowel or a consonant, use -ch and -ge: beach, teach, age, large.",
+      "tts_text": "After a short vowel use tch and dge. Otherwise use ch and ge.",
+      "mnemonic": "Short vowel, strong ending: tch and dge.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "Please watch the luggage while I pay.",
+          "note": "Short vowel a: use tch."
+        },
+        {
+          "type": "correct",
+          "text": "He wants to catch the early train.",
+          "note": "Short vowel a: use tch."
+        },
+        {
+          "type": "correct",
+          "text": "The bridge over the river is old.",
+          "note": "Short vowel i: use dge."
+        },
+        {
+          "type": "correct",
+          "text": "We ate lunch on the beach.",
+          "note": "Long vowel sound (ea): use ch."
+        },
+        {
+          "type": "correct",
+          "text": "I cook dinner in a tiny kitchen.",
+          "note": "Short vowel i: use tch."
+        },
+        {
+          "type": "correct",
+          "text": "The teacher will teach us new words.",
+          "note": "Long vowel sound: use ch."
+        },
+        {
+          "type": "correct",
+          "text": "What is the age limit for this course?",
+          "note": "Long vowel a: use ge."
+        },
+        {
+          "type": "correct",
+          "text": "The judge listened to both sides.",
+          "note": "Short vowel u: use dge."
+        },
+        {
+          "type": "correct",
+          "text": "She wore a badge with her name.",
+          "note": "Short vowel a: use dge."
+        },
+        {
+          "type": "correct",
+          "text": "The hotel room has a huge window.",
+          "note": "Long vowel u: use ge."
+        },
+        {
+          "type": "correct",
+          "text": "We watched a tennis match on Sunday.",
+          "note": "Short vowel a: use tch."
+        },
+        {
+          "type": "incorrect",
+          "text": "We wachted the football game together.",
+          "correction": "We watched the football game together.",
+          "note": "Short vowel a: use tch."
+        },
+        {
+          "type": "incorrect",
+          "text": "The dog tried to cach the ball.",
+          "correction": "The dog tried to catch the ball.",
+          "note": "Short vowel a: use tch."
+        },
+        {
+          "type": "incorrect",
+          "text": "They walked over the bridg after lunch.",
+          "correction": "They walked over the bridge after lunch.",
+          "note": "Short vowel i: use dge."
+        },
+        {
+          "type": "incorrect",
+          "text": "She works in a small kichen at home.",
+          "correction": "She works in a small kitchen at home.",
+          "note": "Short vowel i: use tch."
+        },
+        {
+          "type": "incorrect",
+          "text": "The techer explained the exercise again.",
+          "correction": "The teacher explained the exercise again.",
+          "note": "Long vowel sound: use ch."
+        },
+        {
+          "type": "incorrect",
+          "text": "What is the ag limit for the course?",
+          "correction": "What is the age limit for the course?",
+          "note": "Long vowel a: use ge."
+        },
+        {
+          "type": "incorrect",
+          "text": "The judg gave a clear answer.",
+          "correction": "The judge gave a clear answer.",
+          "note": "Short vowel u: use dge."
+        },
+        {
+          "type": "incorrect",
+          "text": "He showed me his name badg.",
+          "correction": "He showed me his name badge.",
+          "note": "Short vowel a: use dge."
+        },
+        {
+          "type": "incorrect",
+          "text": "The room has a hug window.",
+          "correction": "The room has a huge window.",
+          "note": "Long vowel u: use ge."
+        },
+        {
+          "type": "incorrect",
+          "text": "We watched a tennis mach on Sunday.",
+          "correction": "We watched a tennis match on Sunday.",
+          "note": "Short vowel a: use tch."
+        },
+        {
+          "type": "incorrect",
+          "text": "We had a picnic on the bech.",
+          "correction": "We had a picnic on the beach.",
+          "note": "Long vowel sound (ea): use ch."
+        },
+        {
+          "type": "exception",
+          "text": "We have much to do today.",
+          "note": "Short vowel u, but much ends in ch, not tch."
+        },
+        {
+          "type": "exception",
+          "text": "It was such a nice day.",
+          "note": "Short vowel u, but such ends in ch, not tch."
+        },
+        {
+          "type": "exception",
+          "text": "Which bus goes to the airport?",
+          "note": "Short vowel i, but which ends in ch, not tch."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Please ___ the luggage while I pay. (look after)",
+          "answer": "watch"
+        },
+        {
+          "prompt": "He wants to ___ the early train. (get on time)",
+          "answer": "catch"
+        },
+        {
+          "prompt": "The ___ over the river is old. (structure)",
+          "answer": "bridge"
+        },
+        {
+          "prompt": "We ate lunch on the ___. (sand place)",
+          "answer": "beach"
+        },
+        {
+          "prompt": "I cook dinner in a tiny ___. (room for food)",
+          "answer": "kitchen"
+        },
+        {
+          "prompt": "The teacher will ___ us new words. (give lessons)",
+          "answer": "teach"
+        },
+        {
+          "prompt": "What is the ___ limit for this course? (years)",
+          "answer": "age"
+        },
+        {
+          "prompt": "The ___ listened to both sides. (court person)",
+          "answer": "judge"
+        },
+        {
+          "prompt": "She wore a ___ with her name. (small card)",
+          "answer": "badge"
+        },
+        {
+          "prompt": "We watched a tennis ___ on Sunday. (game)",
+          "answer": "match"
+        },
+        {
+          "prompt": "We ___ the football game together.",
+          "answer": "watched",
+          "choices": [
+            "wachted",
+            "watched",
+            "wacthed",
+            "watchd"
+          ]
+        },
+        {
+          "prompt": "The dog tried to ___ the ball.",
+          "answer": "catch",
+          "choices": [
+            "cach",
+            "catch",
+            "cattch",
+            "katch"
+          ]
+        },
+        {
+          "prompt": "They walked over the ___ after lunch.",
+          "answer": "bridge",
+          "choices": [
+            "bridg",
+            "bridge",
+            "brige",
+            "bridje"
+          ]
+        },
+        {
+          "prompt": "She works in a small ___ at home.",
+          "answer": "kitchen",
+          "choices": [
+            "kichen",
+            "kitchen",
+            "kitchin",
+            "kitchn"
+          ]
+        },
+        {
+          "prompt": "The ___ explained the exercise again.",
+          "answer": "teacher",
+          "choices": [
+            "techer",
+            "teacher",
+            "teatcher",
+            "teecher"
+          ]
+        },
+        {
+          "prompt": "What is the ___ limit for the course?",
+          "answer": "age",
+          "choices": [
+            "ag",
+            "age",
+            "adge",
+            "aige"
+          ]
+        },
+        {
+          "prompt": "The ___ gave a clear answer.",
+          "answer": "judge",
+          "choices": [
+            "judg",
+            "judge",
+            "judje",
+            "juge"
+          ]
+        },
+        {
+          "prompt": "He showed me his name ___.",
+          "answer": "badge",
+          "choices": [
+            "badg",
+            "badge",
+            "badje",
+            "bade"
+          ]
+        },
+        {
+          "prompt": "The room has a ___ window.",
+          "answer": "huge",
+          "choices": [
+            "hug",
+            "huge",
+            "hudje",
+            "hudge"
+          ]
+        },
+        {
+          "prompt": "We watched a tennis ___ on Sunday.",
+          "answer": "match",
+          "choices": [
+            "mach",
+            "match",
+            "mattch",
+            "matsh"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: wachted",
+          "answer": "watched"
+        },
+        {
+          "prompt": "Fix the spelling: cach",
+          "answer": "catch"
+        },
+        {
+          "prompt": "Fix the spelling: bridg",
+          "answer": "bridge"
+        },
+        {
+          "prompt": "Fix the spelling: kichen",
+          "answer": "kitchen"
+        },
+        {
+          "prompt": "Fix the spelling: techer",
+          "answer": "teacher"
+        },
+        {
+          "prompt": "Fix the spelling: ag",
+          "answer": "age"
+        },
+        {
+          "prompt": "Fix the spelling: judg",
+          "answer": "judge"
+        },
+        {
+          "prompt": "Fix the spelling: badg",
+          "answer": "badge"
+        },
+        {
+          "prompt": "Fix the spelling: hug",
+          "answer": "huge"
+        },
+        {
+          "prompt": "Fix the spelling: mach",
+          "answer": "match"
+        },
+        {
+          "prompt": "Spell the word: a game between two teams.",
+          "answer": "match"
+        },
+        {
+          "prompt": "Spell the word: a structure over a river.",
+          "answer": "bridge"
+        },
+        {
+          "prompt": "Spell the word: a room where you cook.",
+          "answer": "kitchen"
+        },
+        {
+          "prompt": "Spell the word: a person who teaches.",
+          "answer": "teacher"
+        },
+        {
+          "prompt": "Spell the word: a small card with your name.",
+          "answer": "badge"
+        },
+        {
+          "prompt": "Spell the word: a person in a court.",
+          "answer": "judge"
+        },
+        {
+          "prompt": "Spell the word: very big.",
+          "answer": "huge"
+        },
+        {
+          "prompt": "Spell the word: sand next to the sea.",
+          "answer": "beach"
+        },
+        {
+          "prompt": "Spell the word: the number of years you have lived.",
+          "answer": "age"
+        },
+        {
+          "prompt": "Spell the word: to look at something.",
+          "answer": "watch"
+        }
+      ]
+    }
+  ]
+}

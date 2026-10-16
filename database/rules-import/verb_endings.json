@@ -1,0 +1,741 @@
+{
+  "category": "verb_endings",
+  "rules": [
+    {
+      "slug": "ed-after-y",
+      "title": "Past tense after y: study → studied, play → played",
+      "rule_type": "language_rule",
+      "short_explanation": "If a verb ends in consonant + y, change y to i and add -ed: study → studied. If it ends in vowel + y, just add -ed: play → played.",
+      "tts_text": "After a consonant, change y to i before ed. After a vowel, keep y.",
+      "mnemonic": "Consonant plus y: say bye to y. Vowel plus y: keep it.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "She studied economics at a Slovak university.",
+          "note": "Consonant + y: y becomes i."
+        },
+        {
+          "type": "correct",
+          "text": "We played football after the lesson.",
+          "note": "Vowel + y: keep y."
+        },
+        {
+          "type": "correct",
+          "text": "He carried two heavy boxes upstairs.",
+          "note": "Consonant + y: y becomes i."
+        },
+        {
+          "type": "correct",
+          "text": "They enjoyed the dinner at a local restaurant.",
+          "note": "Vowel + y: keep y."
+        },
+        {
+          "type": "correct",
+          "text": "I tried the soup at the new cafe.",
+          "note": "Consonant + y: y becomes i."
+        },
+        {
+          "type": "correct",
+          "text": "The tourists stayed in a cheap hostel.",
+          "note": "Vowel + y: keep y."
+        },
+        {
+          "type": "correct",
+          "text": "She replied to the client's email quickly.",
+          "note": "Consonant + y: y becomes i."
+        },
+        {
+          "type": "correct",
+          "text": "The storm delayed our flight to Rome.",
+          "note": "Vowel + y: keep y."
+        },
+        {
+          "type": "correct",
+          "text": "He worried about the exam results.",
+          "note": "Consonant + y: y becomes i."
+        },
+        {
+          "type": "correct",
+          "text": "The cook fried the eggs in butter.",
+          "note": "Consonant + y: y becomes i."
+        },
+        {
+          "type": "correct",
+          "text": "She copied the notes from the board.",
+          "note": "Consonant + y: y becomes i."
+        },
+        {
+          "type": "incorrect",
+          "text": "He studyed logistics for three years.",
+          "correction": "He studied logistics for three years.",
+          "note": "Change y to i after a consonant."
+        },
+        {
+          "type": "incorrect",
+          "text": "We playied cards on the train.",
+          "correction": "We played cards on the train.",
+          "note": "Keep y after a vowel."
+        },
+        {
+          "type": "incorrect",
+          "text": "She carryed the shopping bags home.",
+          "correction": "She carried the shopping bags home.",
+          "note": "Change y to i after a consonant."
+        },
+        {
+          "type": "incorrect",
+          "text": "They enjoied the trip to the mountains.",
+          "correction": "They enjoyed the trip to the mountains.",
+          "note": "Keep y after a vowel."
+        },
+        {
+          "type": "incorrect",
+          "text": "I tryed a new recipe yesterday.",
+          "correction": "I tried a new recipe yesterday.",
+          "note": "Change y to i after a consonant."
+        },
+        {
+          "type": "incorrect",
+          "text": "The guests stayied for two nights.",
+          "correction": "The guests stayed for two nights.",
+          "note": "Keep y; do not add i."
+        },
+        {
+          "type": "incorrect",
+          "text": "He replyed to the message at noon.",
+          "correction": "He replied to the message at noon.",
+          "note": "Change y to i after a consonant."
+        },
+        {
+          "type": "incorrect",
+          "text": "The rain delaied the bus again.",
+          "correction": "The rain delayed the bus again.",
+          "note": "Keep y after a vowel."
+        },
+        {
+          "type": "incorrect",
+          "text": "She worryed about the long drive.",
+          "correction": "She worried about the long drive.",
+          "note": "Change y to i after a consonant."
+        },
+        {
+          "type": "incorrect",
+          "text": "My dad fryed the fish for lunch.",
+          "correction": "My dad fried the fish for lunch.",
+          "note": "Change y to i after a consonant."
+        },
+        {
+          "type": "incorrect",
+          "text": "I copyed the address into my phone.",
+          "correction": "I copied the address into my phone.",
+          "note": "Change y to i after a consonant."
+        },
+        {
+          "type": "exception",
+          "text": "He paid the bill in cash.",
+          "note": "Irregular: pay becomes paid, not payed."
+        },
+        {
+          "type": "exception",
+          "text": "She said hello to everyone.",
+          "note": "Irregular: say becomes said."
+        },
+        {
+          "type": "exception",
+          "text": "They laid the table for dinner.",
+          "note": "Irregular: lay becomes laid."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "He ___ English every evening. (study + ed)",
+          "answer": "studied"
+        },
+        {
+          "prompt": "The kids ___ in the garden. (play + ed)",
+          "answer": "played"
+        },
+        {
+          "prompt": "She ___ her bag to the car. (carry + ed)",
+          "answer": "carried"
+        },
+        {
+          "prompt": "We ___ our stay in Vienna. (enjoy + ed)",
+          "answer": "enjoyed"
+        },
+        {
+          "prompt": "He ___ to open the heavy door. (try + ed)",
+          "answer": "tried"
+        },
+        {
+          "prompt": "They ___ at a friend's flat. (stay + ed)",
+          "answer": "stayed"
+        },
+        {
+          "prompt": "I ___ to his invitation yesterday. (reply + ed)",
+          "answer": "replied"
+        },
+        {
+          "prompt": "Heavy snow ___ the train. (delay + ed)",
+          "answer": "delayed"
+        },
+        {
+          "prompt": "Mum ___ about my late return. (worry + ed)",
+          "answer": "worried"
+        },
+        {
+          "prompt": "The chef ___ the potatoes in oil. (fry + ed)",
+          "answer": "fried"
+        },
+        {
+          "prompt": "She ___ the form twice.",
+          "answer": "copied",
+          "choices": [
+            "copyed",
+            "copied",
+            "copiied",
+            "copid"
+          ]
+        },
+        {
+          "prompt": "He ___ the guitar at school.",
+          "answer": "played",
+          "choices": [
+            "plaied",
+            "played",
+            "playd",
+            "plaid"
+          ]
+        },
+        {
+          "prompt": "They ___ to the question politely.",
+          "answer": "replied",
+          "choices": [
+            "replyed",
+            "replied",
+            "replid",
+            "repllied"
+          ]
+        },
+        {
+          "prompt": "We ___ in a small hotel.",
+          "answer": "stayed",
+          "choices": [
+            "stayd",
+            "stayed",
+            "staied",
+            "stied"
+          ]
+        },
+        {
+          "prompt": "She ___ the map before the trip.",
+          "answer": "studied",
+          "choices": [
+            "studyed",
+            "studied",
+            "studdied",
+            "studid"
+          ]
+        },
+        {
+          "prompt": "The waiter ___ to our table.",
+          "answer": "hurried",
+          "choices": [
+            "huryed",
+            "hurried",
+            "hurrid",
+            "hurryd"
+          ]
+        },
+        {
+          "prompt": "He ___ the box into the van.",
+          "answer": "carried",
+          "choices": [
+            "carryed",
+            "carried",
+            "carred",
+            "caried"
+          ]
+        },
+        {
+          "prompt": "I ___ my best at the interview.",
+          "answer": "tried",
+          "choices": [
+            "tryed",
+            "tried",
+            "tryd",
+            "triyed"
+          ]
+        },
+        {
+          "prompt": "The long delay ___ everyone.",
+          "answer": "annoyed",
+          "choices": [
+            "anoyed",
+            "annoyed",
+            "annoied",
+            "annoyd"
+          ]
+        },
+        {
+          "prompt": "He ___ the bin in the kitchen.",
+          "answer": "emptied",
+          "choices": [
+            "emptyed",
+            "emptied",
+            "emtied",
+            "emptid"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: studyed",
+          "answer": "studied"
+        },
+        {
+          "prompt": "Fix the spelling: playied",
+          "answer": "played"
+        },
+        {
+          "prompt": "Fix the spelling: carryed",
+          "answer": "carried"
+        },
+        {
+          "prompt": "Fix the spelling: enjoied",
+          "answer": "enjoyed"
+        },
+        {
+          "prompt": "Fix the spelling: tryed",
+          "answer": "tried"
+        },
+        {
+          "prompt": "Fix the spelling: stayied",
+          "answer": "stayed"
+        },
+        {
+          "prompt": "Fix the spelling: replyed",
+          "answer": "replied"
+        },
+        {
+          "prompt": "Fix the spelling: delaied",
+          "answer": "delayed"
+        },
+        {
+          "prompt": "Fix the spelling: worryed",
+          "answer": "worried"
+        },
+        {
+          "prompt": "Fix the spelling: fryed",
+          "answer": "fried"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'marry'.",
+          "answer": "married"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'cry'.",
+          "answer": "cried"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'dry'.",
+          "answer": "dried"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'apply'.",
+          "answer": "applied"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'obey'.",
+          "answer": "obeyed"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'rely'.",
+          "answer": "relied"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'employ'.",
+          "answer": "employed"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'bury'.",
+          "answer": "buried"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'display'.",
+          "answer": "displayed"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'identify'.",
+          "answer": "identified"
+        }
+      ]
+    },
+    {
+      "slug": "ing-after-ie",
+      "title": "-ing after ie: die → dying, lie → lying",
+      "rule_type": "language_rule",
+      "short_explanation": "If a verb ends in -ie, change ie to y before -ing: die → dying, tie → tying. Never write -ieing.",
+      "tts_text": "For verbs ending in ie, change ie to y and add ing.",
+      "mnemonic": "I-E turns into Y before ING.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The flowers are dying without enough water.",
+          "note": "die → dying."
+        },
+        {
+          "type": "correct",
+          "text": "He is lying on the sofa now.",
+          "note": "lie → lying."
+        },
+        {
+          "type": "correct",
+          "text": "She is tying her shoelaces before the run.",
+          "note": "tie → tying."
+        },
+        {
+          "type": "correct",
+          "text": "My phone battery is dying again.",
+          "note": "die → dying."
+        },
+        {
+          "type": "correct",
+          "text": "Stop lying to your manager about deadlines.",
+          "note": "lie → lying, also for untruths."
+        },
+        {
+          "type": "correct",
+          "text": "The waiter is tying an apron around his waist.",
+          "note": "tie → tying."
+        },
+        {
+          "type": "correct",
+          "text": "They are lying on the beach in Croatia.",
+          "note": "lie → lying."
+        },
+        {
+          "type": "correct",
+          "text": "He is tying the boxes with strong string.",
+          "note": "tie → tying."
+        },
+        {
+          "type": "correct",
+          "text": "The plant is dying because of the cold.",
+          "note": "die → dying."
+        },
+        {
+          "type": "correct",
+          "text": "Some papers are lying on my desk.",
+          "note": "lie → lying."
+        },
+        {
+          "type": "correct",
+          "text": "She is untying the knot in her scarf.",
+          "note": "untie → untying."
+        },
+        {
+          "type": "incorrect",
+          "text": "The plants are dieing in the heat.",
+          "correction": "The plants are dying in the heat.",
+          "note": "Change ie to y."
+        },
+        {
+          "type": "incorrect",
+          "text": "He is lieing on the bed.",
+          "correction": "He is lying on the bed.",
+          "note": "Change ie to y."
+        },
+        {
+          "type": "incorrect",
+          "text": "She is tieing her scarf in the hall.",
+          "correction": "She is tying her scarf in the hall.",
+          "note": "Change ie to y."
+        },
+        {
+          "type": "incorrect",
+          "text": "The fish are dieing in the river.",
+          "correction": "The fish are dying in the river.",
+          "note": "Change ie to y."
+        },
+        {
+          "type": "incorrect",
+          "text": "Why are you lieing to me?",
+          "correction": "Why are you lying to me?",
+          "note": "Change ie to y."
+        },
+        {
+          "type": "incorrect",
+          "text": "He is tieing a ribbon on the gift.",
+          "correction": "He is tying a ribbon on the gift.",
+          "note": "Change ie to y."
+        },
+        {
+          "type": "incorrect",
+          "text": "The cat is lieing in the sun.",
+          "correction": "The cat is lying in the sun.",
+          "note": "Change ie to y."
+        },
+        {
+          "type": "incorrect",
+          "text": "My old laptop is dieing slowly.",
+          "correction": "My old laptop is dying slowly.",
+          "note": "Change ie to y."
+        },
+        {
+          "type": "incorrect",
+          "text": "They are lieing about the price.",
+          "correction": "They are lying about the price.",
+          "note": "Change ie to y."
+        },
+        {
+          "type": "incorrect",
+          "text": "She is untieing the rope at the dock.",
+          "correction": "She is untying the rope at the dock.",
+          "note": "Change ie to y."
+        },
+        {
+          "type": "incorrect",
+          "text": "The driver is tieing the load to the truck.",
+          "correction": "The driver is tying the load to the truck.",
+          "note": "Change ie to y."
+        },
+        {
+          "type": "exception",
+          "text": "She is dyeing her hair red.",
+          "note": "Dye keeps its e; it differs from die."
+        },
+        {
+          "type": "exception",
+          "text": "We are seeing the sights today.",
+          "note": "Verbs ending in ee keep both e letters."
+        },
+        {
+          "type": "exception",
+          "text": "They are agreeing on a fair price.",
+          "note": "Verbs ending in ee keep both e letters."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "The grass is ___ without rain. (die + ing)",
+          "answer": "dying"
+        },
+        {
+          "prompt": "He is ___ in bed with a cold. (lie + ing)",
+          "answer": "lying"
+        },
+        {
+          "prompt": "She is ___ her shoes. (tie + ing)",
+          "answer": "tying"
+        },
+        {
+          "prompt": "My phone is ___, so I need a charger. (die + ing)",
+          "answer": "dying"
+        },
+        {
+          "prompt": "Stop ___ about your age. (lie + ing)",
+          "answer": "lying"
+        },
+        {
+          "prompt": "The chef is ___ a string around the meat. (tie + ing)",
+          "answer": "tying"
+        },
+        {
+          "prompt": "The kids are ___ on the grass. (lie + ing)",
+          "answer": "lying"
+        },
+        {
+          "prompt": "He is ___ the knot on the bag. (untie + ing)",
+          "answer": "untying"
+        },
+        {
+          "prompt": "The old bakery is ___ out. (die + ing)",
+          "answer": "dying"
+        },
+        {
+          "prompt": "Dad is ___ the suitcase to the roof. (tie + ing)",
+          "answer": "tying"
+        },
+        {
+          "prompt": "The flowers are ___ in the vase.",
+          "answer": "dying",
+          "choices": [
+            "dieing",
+            "dying",
+            "diing",
+            "dyng"
+          ]
+        },
+        {
+          "prompt": "He is ___ on the sofa.",
+          "answer": "lying",
+          "choices": [
+            "lieing",
+            "lying",
+            "liing",
+            "lyng"
+          ]
+        },
+        {
+          "prompt": "She is ___ a ribbon in her hair.",
+          "answer": "tying",
+          "choices": [
+            "tieing",
+            "tying",
+            "tiing",
+            "tyng"
+          ]
+        },
+        {
+          "prompt": "They are ___ to the teacher.",
+          "answer": "lying",
+          "choices": [
+            "lieing",
+            "lying",
+            "liying",
+            "lyeing"
+          ]
+        },
+        {
+          "prompt": "Our dog is old and ___.",
+          "answer": "dying",
+          "choices": [
+            "diing",
+            "dieing",
+            "dying",
+            "dyiing"
+          ]
+        },
+        {
+          "prompt": "Mum is ___ the parcel with string.",
+          "answer": "tying",
+          "choices": [
+            "tieing",
+            "tying",
+            "tiying",
+            "tyeing"
+          ]
+        },
+        {
+          "prompt": "He is ___ his shoelaces.",
+          "answer": "untying",
+          "choices": [
+            "untieing",
+            "untying",
+            "untiing",
+            "untyeing"
+          ]
+        },
+        {
+          "prompt": "The old plant is ___ slowly.",
+          "answer": "dying",
+          "choices": [
+            "dieing",
+            "diying",
+            "dying",
+            "dyieng"
+          ]
+        },
+        {
+          "prompt": "Why is he ___ on the floor?",
+          "answer": "lying",
+          "choices": [
+            "lieing",
+            "lying",
+            "lyeing",
+            "liyng"
+          ]
+        },
+        {
+          "prompt": "The cables are ___ together.",
+          "answer": "tying",
+          "choices": [
+            "tieing",
+            "tying",
+            "tiying",
+            "tyeng"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: dieing",
+          "answer": "dying"
+        },
+        {
+          "prompt": "Fix the spelling: lieing",
+          "answer": "lying"
+        },
+        {
+          "prompt": "Fix the spelling: tieing",
+          "answer": "tying"
+        },
+        {
+          "prompt": "Fix the spelling: untieing",
+          "answer": "untying"
+        },
+        {
+          "prompt": "Fix the spelling: diing",
+          "answer": "dying"
+        },
+        {
+          "prompt": "Fix the spelling: liing",
+          "answer": "lying"
+        },
+        {
+          "prompt": "Fix the spelling: tiing",
+          "answer": "tying"
+        },
+        {
+          "prompt": "Fix the spelling: untiing",
+          "answer": "untying"
+        },
+        {
+          "prompt": "Fix the spelling: dyiing",
+          "answer": "dying"
+        },
+        {
+          "prompt": "Fix the spelling: liying",
+          "answer": "lying"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'die'.",
+          "answer": "dying"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'lie' (rest flat).",
+          "answer": "lying"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'tie'.",
+          "answer": "tying"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'untie'.",
+          "answer": "untying"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'dye'.",
+          "answer": "dyeing"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'see'.",
+          "answer": "seeing"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'agree'.",
+          "answer": "agreeing"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'flee'.",
+          "answer": "fleeing"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'lie' (say something untrue).",
+          "answer": "lying"
+        },
+        {
+          "prompt": "Spell the word: -ing form of 'tie' (use a rope).",
+          "answer": "tying"
+        }
+      ]
+    }
+  ]
+}

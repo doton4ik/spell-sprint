@@ -1,0 +1,741 @@
+{
+  "category": "silent_letters",
+  "rules": [
+    {
+      "slug": "silent-k-and-w",
+      "title": "Silent k and w: knife, write, wrong",
+      "rule_type": "language_rule",
+      "short_explanation": "At the start of a word, k before n (knife, know) and w before r (write, wrong) are not pronounced, but you must still write them. A silent w also appears in answer and sword.",
+      "tts_text": "Write the silent k in know and the silent w in write.",
+      "mnemonic": "Kn and wr: the first letter is silent, but still there.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "She cut the bread with a sharp knife.",
+          "note": "Silent k before n."
+        },
+        {
+          "type": "correct",
+          "text": "I need to write a short email.",
+          "note": "Silent w before r."
+        },
+        {
+          "type": "correct",
+          "text": "Please knock before you enter the office.",
+          "note": "Silent k before n."
+        },
+        {
+          "type": "correct",
+          "text": "He gave the wrong answer in class.",
+          "note": "Silent w in wrong and answer."
+        },
+        {
+          "type": "correct",
+          "text": "The waiter wrapped the leftover pizza.",
+          "note": "Silent w before r."
+        },
+        {
+          "type": "correct",
+          "text": "Do you know the way to the station?",
+          "note": "Silent k before n."
+        },
+        {
+          "type": "correct",
+          "text": "My wrist hurts after the gym.",
+          "note": "Silent w before r."
+        },
+        {
+          "type": "correct",
+          "text": "She knitted a warm scarf for winter.",
+          "note": "Silent k before n."
+        },
+        {
+          "type": "correct",
+          "text": "His knee hurts when he climbs stairs.",
+          "note": "Silent k before n."
+        },
+        {
+          "type": "correct",
+          "text": "Who wrote this report for the manager?",
+          "note": "Silent w before r."
+        },
+        {
+          "type": "correct",
+          "text": "The knot on my luggage strap came loose.",
+          "note": "Silent k before n."
+        },
+        {
+          "type": "incorrect",
+          "text": "She cut the cheese with a nife.",
+          "correction": "She cut the cheese with a knife.",
+          "note": "Write the silent k."
+        },
+        {
+          "type": "incorrect",
+          "text": "Please nock on the door first.",
+          "correction": "Please knock on the door first.",
+          "note": "Write the silent k."
+        },
+        {
+          "type": "incorrect",
+          "text": "He took the rong train to Vienna.",
+          "correction": "He took the wrong train to Vienna.",
+          "note": "Write the silent w."
+        },
+        {
+          "type": "incorrect",
+          "text": "My nee hurts after the long hike.",
+          "correction": "My knee hurts after the long hike.",
+          "note": "Write the silent k."
+        },
+        {
+          "type": "incorrect",
+          "text": "Can you anser this question for me?",
+          "correction": "Can you answer this question for me?",
+          "note": "Write the silent w."
+        },
+        {
+          "type": "incorrect",
+          "text": "She is riting a message to her boss.",
+          "correction": "She is writing a message to her boss.",
+          "note": "Write the silent w."
+        },
+        {
+          "type": "incorrect",
+          "text": "I want to now the price of the ticket.",
+          "correction": "I want to know the price of the ticket.",
+          "note": "Know has a silent k."
+        },
+        {
+          "type": "incorrect",
+          "text": "The waiter rapped the sandwich in paper.",
+          "correction": "The waiter wrapped the sandwich in paper.",
+          "note": "Wrap has a silent w."
+        },
+        {
+          "type": "incorrect",
+          "text": "My sister nits scarves for her friends.",
+          "correction": "My sister knits scarves for her friends.",
+          "note": "Write the silent k."
+        },
+        {
+          "type": "incorrect",
+          "text": "He broke his rist while skiing.",
+          "correction": "He broke his wrist while skiing.",
+          "note": "Write the silent w."
+        },
+        {
+          "type": "incorrect",
+          "text": "She tied a strong not on the rope.",
+          "correction": "She tied a strong knot on the rope.",
+          "note": "Knot has a silent k."
+        },
+        {
+          "type": "exception",
+          "text": "Who is waiting outside the door?",
+          "note": "In who, w is silent after wh."
+        },
+        {
+          "type": "exception",
+          "text": "Two tickets to the museum, please.",
+          "note": "Silent w in two, not before r."
+        },
+        {
+          "type": "exception",
+          "text": "The soldier drew his sword.",
+          "note": "Silent w in the middle of a word."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "She cut the cake with a ___. (kitchen tool)",
+          "answer": "knife"
+        },
+        {
+          "prompt": "Please ___ me an email later. (put words on a screen)",
+          "answer": "write"
+        },
+        {
+          "prompt": "That is the ___ address. (not correct)",
+          "answer": "wrong"
+        },
+        {
+          "prompt": "Do you ___ my phone number? (have the information)",
+          "answer": "know"
+        },
+        {
+          "prompt": "He hurt his ___ playing tennis. (leg joint)",
+          "answer": "knee"
+        },
+        {
+          "prompt": "I will ___ the gift in blue paper.",
+          "answer": "wrap"
+        },
+        {
+          "prompt": "Please ___ before you come in. (hit the door)",
+          "answer": "knock"
+        },
+        {
+          "prompt": "My grandma can ___ a warm hat. (make with wool)",
+          "answer": "knit"
+        },
+        {
+          "prompt": "He wears his watch on his ___. (hand joint)",
+          "answer": "wrist"
+        },
+        {
+          "prompt": "Please ___ my question. (reply to)",
+          "answer": "answer"
+        },
+        {
+          "prompt": "She has good ___ of English.",
+          "answer": "knowledge",
+          "choices": [
+            "nowledge",
+            "knowledge",
+            "knoledge",
+            "nolledge"
+          ]
+        },
+        {
+          "prompt": "I will ___ you a postcard.",
+          "answer": "write",
+          "choices": [
+            "rite",
+            "write",
+            "wrait",
+            "wryte"
+          ]
+        },
+        {
+          "prompt": "A ___ in the rope is hard to open.",
+          "answer": "knot",
+          "choices": [
+            "not",
+            "nott",
+            "knot",
+            "knott"
+          ]
+        },
+        {
+          "prompt": "I took the ___ bus this morning.",
+          "answer": "wrong",
+          "choices": [
+            "rong",
+            "wrong",
+            "wrung",
+            "wronng"
+          ]
+        },
+        {
+          "prompt": "She ___ the parcel in paper.",
+          "answer": "wrapped",
+          "choices": [
+            "rapped",
+            "wrapped",
+            "wraped",
+            "rapt"
+          ]
+        },
+        {
+          "prompt": "Our team can ___ the phone.",
+          "answer": "answer",
+          "choices": [
+            "anser",
+            "answer",
+            "answr",
+            "ansewr"
+          ]
+        },
+        {
+          "prompt": "Use a sharp ___ for the meat.",
+          "answer": "knife",
+          "choices": [
+            "nife",
+            "knife",
+            "knif",
+            "kniff"
+          ]
+        },
+        {
+          "prompt": "Who ___ this song?",
+          "answer": "wrote",
+          "choices": [
+            "rote",
+            "wrote",
+            "wroat",
+            "wrot"
+          ]
+        },
+        {
+          "prompt": "I ___ the capital of Slovakia.",
+          "answer": "know",
+          "choices": [
+            "no",
+            "know",
+            "kno",
+            "knoe"
+          ]
+        },
+        {
+          "prompt": "She ___ a sweater for me.",
+          "answer": "knitted",
+          "choices": [
+            "nitted",
+            "knitted",
+            "knited",
+            "knittd"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: nife",
+          "answer": "knife"
+        },
+        {
+          "prompt": "Fix the spelling: rong",
+          "answer": "wrong"
+        },
+        {
+          "prompt": "Fix the spelling: nock",
+          "answer": "knock"
+        },
+        {
+          "prompt": "Fix the spelling: nee",
+          "answer": "knee"
+        },
+        {
+          "prompt": "Fix the spelling: anser",
+          "answer": "answer"
+        },
+        {
+          "prompt": "Fix the spelling: riting",
+          "answer": "writing"
+        },
+        {
+          "prompt": "Fix the spelling: rist",
+          "answer": "wrist"
+        },
+        {
+          "prompt": "Fix the spelling: nowledge",
+          "answer": "knowledge"
+        },
+        {
+          "prompt": "Fix the spelling: ritten",
+          "answer": "written"
+        },
+        {
+          "prompt": "Fix the spelling: nown",
+          "answer": "known"
+        },
+        {
+          "prompt": "Spell the word: a tool used to cut food.",
+          "answer": "knife"
+        },
+        {
+          "prompt": "Spell the word: the opposite of right.",
+          "answer": "wrong"
+        },
+        {
+          "prompt": "Spell the word: to hit a door with your hand.",
+          "answer": "knock"
+        },
+        {
+          "prompt": "Spell the word: to put words on paper.",
+          "answer": "write"
+        },
+        {
+          "prompt": "Spell the word: the joint in the middle of your leg.",
+          "answer": "knee"
+        },
+        {
+          "prompt": "Spell the word: to put paper around a gift.",
+          "answer": "wrap"
+        },
+        {
+          "prompt": "Spell the word: what you give to a question.",
+          "answer": "answer"
+        },
+        {
+          "prompt": "Spell the word: past tense of 'know'.",
+          "answer": "knew"
+        },
+        {
+          "prompt": "Spell the word: the joint between hand and arm.",
+          "answer": "wrist"
+        },
+        {
+          "prompt": "Spell the word: to make clothes from wool.",
+          "answer": "knit"
+        }
+      ]
+    },
+    {
+      "slug": "silent-b-g-h-t",
+      "title": "Silent b, g, h, t: doubt, sign, hour",
+      "rule_type": "language_rule",
+      "short_explanation": "Some words contain letters you do not pronounce: b in doubt and climb, g in sign and foreign, h in hour and honest, t in listen and castle. Learn these words as whole shapes.",
+      "tts_text": "Some words keep a silent b, g, h or t, so learn them by sight.",
+      "mnemonic": "Climb the castle, listen to the honest sign.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "I have no doubt about the plan.",
+          "note": "Silent b before t."
+        },
+        {
+          "type": "correct",
+          "text": "They climb the hill every weekend.",
+          "note": "Silent b after m."
+        },
+        {
+          "type": "correct",
+          "text": "The meeting lasts one hour.",
+          "note": "Silent h at the start."
+        },
+        {
+          "type": "correct",
+          "text": "Please sign the contract at the bottom.",
+          "note": "Silent g before n."
+        },
+        {
+          "type": "correct",
+          "text": "He is an honest and reliable driver.",
+          "note": "Silent h at the start."
+        },
+        {
+          "type": "correct",
+          "text": "Listen carefully to the instructions.",
+          "note": "Silent t in -sten."
+        },
+        {
+          "type": "correct",
+          "text": "The old castle is open to visitors.",
+          "note": "Silent t in -stle."
+        },
+        {
+          "type": "correct",
+          "text": "She works for a foreign company.",
+          "note": "Silent g before n."
+        },
+        {
+          "type": "correct",
+          "text": "Don't forget to comb your hair.",
+          "note": "Silent b after m."
+        },
+        {
+          "type": "correct",
+          "text": "She will design the new office layout.",
+          "note": "Silent g before n."
+        },
+        {
+          "type": "correct",
+          "text": "She paid off her debt last year.",
+          "note": "Silent b before t."
+        },
+        {
+          "type": "incorrect",
+          "text": "I have no dout about his skills.",
+          "correction": "I have no doubt about his skills.",
+          "note": "Write the silent b."
+        },
+        {
+          "type": "incorrect",
+          "text": "We clim the mountain every summer.",
+          "correction": "We climb the mountain every summer.",
+          "note": "Write the silent b."
+        },
+        {
+          "type": "incorrect",
+          "text": "The train arrives in an our.",
+          "correction": "The train arrives in an hour.",
+          "note": "Write the silent h."
+        },
+        {
+          "type": "incorrect",
+          "text": "I lisen to music while I cook.",
+          "correction": "I listen to music while I cook.",
+          "note": "Write the silent t."
+        },
+        {
+          "type": "incorrect",
+          "text": "The shop is next to the old casle.",
+          "correction": "The shop is next to the old castle.",
+          "note": "Write the silent t."
+        },
+        {
+          "type": "incorrect",
+          "text": "Please sine the form here.",
+          "correction": "Please sign the form here.",
+          "note": "Write the silent g."
+        },
+        {
+          "type": "incorrect",
+          "text": "He is an onest man.",
+          "correction": "He is an honest man.",
+          "note": "Write the silent h."
+        },
+        {
+          "type": "incorrect",
+          "text": "She learns a forein language online.",
+          "correction": "She learns a foreign language online.",
+          "note": "Write the silent g."
+        },
+        {
+          "type": "incorrect",
+          "text": "He worked hard to pay his det.",
+          "correction": "He worked hard to pay his debt.",
+          "note": "Write the silent b."
+        },
+        {
+          "type": "incorrect",
+          "text": "The architect will desine a new school.",
+          "correction": "The architect will design a new school.",
+          "note": "Write the silent g."
+        },
+        {
+          "type": "incorrect",
+          "text": "I need to com my hair.",
+          "correction": "I need to comb my hair.",
+          "note": "Write the silent b."
+        },
+        {
+          "type": "exception",
+          "text": "Honey from this farm is delicious.",
+          "note": "The h in honey is pronounced."
+        },
+        {
+          "type": "exception",
+          "text": "Add your signature at the bottom.",
+          "note": "The g in signature is pronounced."
+        },
+        {
+          "type": "exception",
+          "text": "Her hobby is cooking Italian food.",
+          "note": "The h in hobby is pronounced."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "I have no ___ about it. (no uncertainty)",
+          "answer": "doubt"
+        },
+        {
+          "prompt": "They like to ___ rocks at the weekend. (go up)",
+          "answer": "climb"
+        },
+        {
+          "prompt": "One ___ has sixty minutes.",
+          "answer": "hour"
+        },
+        {
+          "prompt": "Please ___ here. (write your name)",
+          "answer": "sign"
+        },
+        {
+          "prompt": "He always tells the truth. He is ___.",
+          "answer": "honest"
+        },
+        {
+          "prompt": "I like to ___ to jazz in the evening.",
+          "answer": "listen"
+        },
+        {
+          "prompt": "A king lived in the old ___ on the hill.",
+          "answer": "castle"
+        },
+        {
+          "prompt": "She speaks a ___ language. (from another country)",
+          "answer": "foreign"
+        },
+        {
+          "prompt": "He used a ___ to fix his hair. (hair tool)",
+          "answer": "comb"
+        },
+        {
+          "prompt": "Who will ___ the poster? (create the look)",
+          "answer": "design"
+        },
+        {
+          "prompt": "We waited an ___ for the bus.",
+          "answer": "hour",
+          "choices": [
+            "our",
+            "hour",
+            "hore",
+            "houer"
+          ]
+        },
+        {
+          "prompt": "She is very ___ with customers.",
+          "answer": "honest",
+          "choices": [
+            "onest",
+            "honest",
+            "honnest",
+            "honist"
+          ]
+        },
+        {
+          "prompt": "The ___ is on a hill above the town.",
+          "answer": "castle",
+          "choices": [
+            "casle",
+            "castel",
+            "castle",
+            "cassle"
+          ]
+        },
+        {
+          "prompt": "I ___ that his story is true.",
+          "answer": "doubt",
+          "choices": [
+            "dout",
+            "doubt",
+            "doubbt",
+            "dowt"
+          ]
+        },
+        {
+          "prompt": "Kids often ___ the trees.",
+          "answer": "climb",
+          "choices": [
+            "clim",
+            "climb",
+            "climm",
+            "clime"
+          ]
+        },
+        {
+          "prompt": "They ___ a new app every year.",
+          "answer": "design",
+          "choices": [
+            "desine",
+            "design",
+            "desing",
+            "dezign"
+          ]
+        },
+        {
+          "prompt": "He is a ___ student from Asia.",
+          "answer": "foreign",
+          "choices": [
+            "foriegn",
+            "foreign",
+            "forein",
+            "foreing"
+          ]
+        },
+        {
+          "prompt": "Where is my ___? I need it for my hair.",
+          "answer": "comb",
+          "choices": [
+            "cumb",
+            "comb",
+            "coam",
+            "comm"
+          ]
+        },
+        {
+          "prompt": "Do you ___ to the radio?",
+          "answer": "listen",
+          "choices": [
+            "lisen",
+            "listen",
+            "listin",
+            "liston"
+          ]
+        },
+        {
+          "prompt": "He still has a student ___.",
+          "answer": "debt",
+          "choices": [
+            "det",
+            "debt",
+            "debbt",
+            "dept"
+          ]
+        },
+        {
+          "prompt": "Fix the spelling: dout",
+          "answer": "doubt"
+        },
+        {
+          "prompt": "Fix the spelling: clim",
+          "answer": "climb"
+        },
+        {
+          "prompt": "Fix the spelling: lisen",
+          "answer": "listen"
+        },
+        {
+          "prompt": "Fix the spelling: casle",
+          "answer": "castle"
+        },
+        {
+          "prompt": "Fix the spelling: onest",
+          "answer": "honest"
+        },
+        {
+          "prompt": "Fix the spelling: forein",
+          "answer": "foreign"
+        },
+        {
+          "prompt": "Fix the spelling: desine",
+          "answer": "design"
+        },
+        {
+          "prompt": "Fix the spelling: cumb",
+          "answer": "comb"
+        },
+        {
+          "prompt": "Fix the spelling: det",
+          "answer": "debt"
+        },
+        {
+          "prompt": "Fix the spelling: whisle",
+          "answer": "whistle"
+        },
+        {
+          "prompt": "Spell the word: a time of sixty minutes.",
+          "answer": "hour"
+        },
+        {
+          "prompt": "Spell the word: to write your name on a paper.",
+          "answer": "sign"
+        },
+        {
+          "prompt": "Spell the word: a big old building for a king.",
+          "answer": "castle"
+        },
+        {
+          "prompt": "Spell the word: to go up a mountain.",
+          "answer": "climb"
+        },
+        {
+          "prompt": "Spell the word: a person who tells the truth.",
+          "answer": "honest"
+        },
+        {
+          "prompt": "Spell the word: to pay attention to a sound.",
+          "answer": "listen"
+        },
+        {
+          "prompt": "Spell the word: from another country.",
+          "answer": "foreign"
+        },
+        {
+          "prompt": "Spell the word: money that you owe.",
+          "answer": "debt"
+        },
+        {
+          "prompt": "Spell the word: a tool for your hair.",
+          "answer": "comb"
+        },
+        {
+          "prompt": "Spell the word: a small instrument you blow.",
+          "answer": "whistle"
+        }
+      ]
+    }
+  ]
+}
