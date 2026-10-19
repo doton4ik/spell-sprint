@@ -1,4 +1,5 @@
-import { expect, test, type Page } from '@playwright/test'
+import type { Page } from '@playwright/test'
+import { expect, test } from './fixtures'
 
 // The whole level check, answered without thinking: the first option, "I don't know" for the typed ones.
 // It must reach the result without a console error. Audio is not needed (a typed dictation is skipped).

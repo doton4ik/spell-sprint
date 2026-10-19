@@ -1,4 +1,5 @@
-import { expect, test, type Page } from '@playwright/test'
+import type { Page } from '@playwright/test'
+import { expect, test } from './fixtures'
 
 // Errors in the browser console fail the test (network noise from an offline Supabase is allowed).
 function watchErrors(page: Page) {
@@ -54,15 +55,19 @@ test('every page has the same space around its content', async ({ page }) => {
 
 test('on a wide screen the page titles start at the same left edge', async ({ page }) => {
   await page.setViewportSize({ width: 1915, height: 870 })
-  const lefts = new Map<number, string[]>()
+  // (a string: the e2e project has no DOM types)
+  const titleLeft = async () =>
+    (await page.evaluate(`Math.round(document.querySelector('main h1')?.getBoundingClientRect().left ?? -1)`)) as number
+  let expected: number | undefined
   for (const [route] of pages) {
     await page.goto(`/#${route}`)
     await expect(page.locator('main h1').first()).toBeVisible()
-    const left = (await page.evaluate(`Math.round(document.querySelector('main h1').getBoundingClientRect().left)`)) as number
-    lefts.set(left, [...(lefts.get(left) ?? []), route])
+    // The first page sets the edge. A page may still be settling when its title appears (the Practice page builds its session a
+    // moment later), so a title that is elsewhere is measured again for up to 3 seconds before it counts as a difference.
+    if (expected === undefined) expected = await titleLeft()
+    // Pages used to be centred at their own widths, so the title jumped sideways from page to page.
+    await expect.poll(titleLeft, { timeout: 3000, message: `the title of "${route}" does not start at the same edge` }).toBe(expected)
   }
-  // Pages used to be centred at their own widths, so the title jumped sideways from page to page.
-  expect(Object.fromEntries(lefts)).toEqual({ [[...lefts.keys()][0]]: pages.map(([route]) => route) })
 })
 
 test('a wrong answer in practice becomes a mistake', async ({ page }) => {
