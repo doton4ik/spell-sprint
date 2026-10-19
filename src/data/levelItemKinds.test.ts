@@ -13,7 +13,7 @@ describe('the list of question kinds', () => {
     expect(listed.size).toBeGreaterThan(500)
     for (const [id, entry] of listed) {
       const item = byId.get(id)
-      expect(item, `${id} is not in the bank (run the command at the top of this file)`).toBeTruthy()
+      expect(item, `${id} is not in the bank (make the list again: see levelItemKindsGenerate.test.ts)`).toBeTruthy()
       expect(entry).toEqual({ kind: item!.kind ?? 'type', options: item!.choices?.length })
     }
   })
