@@ -1,7 +1,9 @@
-import { buildLevelBank, skillLabels, type ItemKind, type LevelItem, type Skill } from '../data/levelCheckBank'
+import type { ItemKind, LevelItem, Skill } from '../data/levelCheckBank'
+import { skillLabels } from '../data/levelCheckLabels'
+import { levelItemKinds } from '../data/levelItemKinds'
+import { getAllWords } from './libraryStorage'
 import type { LibraryWord } from '../types/library'
 import type { PracticeAttempt, PracticeMode } from '../types/practice'
-import { getAllWords } from './libraryStorage'
 import { savePracticeAttempt } from './practiceStorage'
 import { scheduleAfterAnswer } from './reviewSchedule'
 import { plain, sameText } from './contractions'
@@ -80,8 +82,8 @@ export const normaliseAnswer = plain
 
 // The order of the questions: the skills interleaved, with the reading questions in two blocks of three
 // (a text is read once and asked together). Without speech in the browser there is no listening part.
-export function createCheck(options: { listening?: boolean; bank?: LevelItem[]; quick?: boolean } = {}) {
-  const bank = options.bank ?? buildLevelBank(getAllWords())
+export function createCheck(options: { listening?: boolean; bank: LevelItem[]; quick?: boolean }) {
+  const { bank } = options
   const left = { ...(options.quick ? QUICK_PER_SKILL : QUESTIONS_PER_SKILL) }
   if (options.listening === false) left.listening = 0
   // a skill the bank has no questions for is left out instead of ending the check early
@@ -430,10 +432,10 @@ export function getStoredLevelChecks(): LevelCheckResult[] {
 
 // A check saved before the stricter scoring is scored again from its answers when it is read (nothing is rewritten), so a
 // retake is compared with an older check on the same scale, and the history does not show levels from two different rulers.
-// The kind of each question comes from the bank (the ids are stable); a question the bank no longer has counts as typed.
+// The kind of each question comes from levelItemKinds.ts (a list made from the bank, so reading a check does not load the
+// whole bank; the ids are stable); a question the bank no longer has counts as typed.
 let kindsById: Map<string, { kind: ItemKind; options?: number }> | null = null
-const kindsOfBank = () =>
-  (kindsById ??= new Map(buildLevelBank([]).map((item) => [item.id, { kind: item.kind ?? 'type', options: item.choices?.length }])))
+const kindsOfBank = () => (kindsById ??= levelItemKinds())
 function rescored(check: LevelCheckResult): LevelCheckResult {
   if (check.scoring === SCORING_VERSION || !Array.isArray(check.answers)) return check
   const answers = check.answers.map((answer) => (answer.kind ? answer : { ...answer, ...kindsOfBank().get(answer.itemId) }))

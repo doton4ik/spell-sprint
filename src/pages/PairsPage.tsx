@@ -1,16 +1,8 @@
 import { PairsRail } from '../components/ui/PageRails'
 import { useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
-import {
-  buildPairSession,
-  clearPairToOpen,
-  pairQuestions,
-  pairStatuses,
-  pairToOpen,
-  recordPairAnswer,
-  type PairQuestion,
-  type PairStatus,
-} from '../services/pairs'
+import { clearPairToOpen, pairStatuses, pairToOpen, recordPairAnswer, type PairStatus } from '../services/pairs'
+import { buildPairSession, pairQuestions, type PairQuestion } from '../services/pairSession'
 import './pairs.css'
 
 type Phase =

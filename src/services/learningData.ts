@@ -8,7 +8,8 @@ import { MASTERED_DAYS } from './reviewSchedule'
 import { getRemovedKeys, setRemoved } from './libraryPrefs'
 import { relevanceCheck } from './mistakeRelevance'
 import { safeSetItem } from './safeStorage'
-import { pairDrills } from '../data/pairDrills'
+import { threeWordAnswers } from '../data/pairIndex'
+import { sentenceKey } from '../data/sentenceKey'
 import { getPairAttempts, pairStatuses } from './pairs'
 import { getAllYellowCards } from './yellowCards'
 
@@ -54,8 +55,13 @@ function pairMistakeEntries(): MistakeEntry[] {
       const history = attempts.filter((attempt) => attempt.pairId === status.pair.id).sort((a, b) => a.createdAt.localeCompare(b.createdAt))
       const lastFailure = [...history].reverse().find((attempt) => !attempt.correct)!
       const latest = history.at(-1)!
-      const sentence = status.pair.sentences.find((item) => item.text === lastFailure.sentence)
-      const answer = sentence?.answer ?? status.pair.words.find((word) => word !== lastFailure.chosen) ?? status.pair.words[0]
+      // The right word: stored with the attempt; else the pair index (pairs of three or more words); else the other word of a pair of two.
+      const known = threeWordAnswers[status.pair.id]?.[sentenceKey(lastFailure.sentence)]
+      const answer =
+        lastFailure.answer ??
+        (known === undefined ? undefined : status.pair.words[known]) ??
+        status.pair.words.find((word) => word !== lastFailure.chosen) ??
+        status.pair.words[0]
       const result: MistakeEntry = {
         taskId: `pair:${status.pair.id}`,
         pairId: status.pair.id,
@@ -89,7 +95,6 @@ function pairMistakeEntries(): MistakeEntry[] {
         result.status !== 'mastered' && latest.correct && Date.now() - new Date(lastFailure.createdAt).getTime() > ARCHIVE_AFTER_MS
       return result
     })
-    .filter((entry) => pairDrills.some((pair) => pair.id === entry.pairId))
 }
 
 export function getMistakeEntries(): MistakeEntry[] {

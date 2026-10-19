@@ -5,7 +5,8 @@ import { AnswerDiff } from '../practice/AnswerDiff'
 import { isSentence } from '../../services/sentenceDiff'
 import { SentenceDiff } from './SentenceDiff'
 import { defaultPracticeSettings } from '../../data/practice'
-import { levelPassages, skillInstructions, skillLabels, type LevelItem } from '../../data/levelCheckBank'
+import { buildLevelBank, levelPassages, skillInstructions, skillLabels, type LevelItem } from '../../data/levelCheckBank'
+import { getAllWords } from '../../services/libraryStorage'
 import { LevelLines } from './LevelLines'
 import {
   clearRun,
@@ -44,7 +45,7 @@ export function CheckRunner({
   // A check that is continued is quick when its saved plan is as short as the quick one.
   const quick = resume ? resume.plan.length <= QUICK_TOTAL : startQuick
   const [{ bank, plan }] = useState(() => {
-    const created = createCheck({ listening: canSpeak(), quick })
+    const created = createCheck({ listening: canSpeak(), quick, bank: buildLevelBank(getAllWords()) })
     return resume ? { bank: created.bank, plan: resume.plan } : created
   })
   const [answers, setAnswers] = useState<CheckAnswer[]>(resume?.answers ?? [])

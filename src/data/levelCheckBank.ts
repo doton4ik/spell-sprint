@@ -45,20 +45,7 @@ export type LevelItem = {
 // A reading text: its questions are the items with this id in `passage`, asked together.
 export type LevelPassage = { id: string; level: 1 | 2 | 3 | 4; title: string; text: string; retired?: boolean }
 
-export const skillLabels: Record<Skill, string> = {
-  spelling: 'Spelling',
-  vocabulary: 'Vocabulary',
-  grammar: 'Grammar',
-  reading: 'Reading',
-  listening: 'Listening',
-}
-export const skillInstructions: Record<Skill, string> = {
-  spelling: 'Write the word correctly. Some are already right — then just copy them.',
-  vocabulary: 'Choose the word or phrase that fits.',
-  grammar: 'Rewrite the sentence correctly. If it is already right, copy it.',
-  reading: 'Read the text, then choose the best answer.',
-  listening: 'Listen, then type exactly what you hear.',
-}
+export { skillInstructions, skillLabels } from './levelCheckLabels'
 
 // Levels for the original diagnostic items, by how often B1–B2 learners get them wrong.
 const spellingLevels: Record<string, LevelItem['level']> = {
