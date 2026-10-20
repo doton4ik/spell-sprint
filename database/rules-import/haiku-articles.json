@@ -1,0 +1,861 @@
+{
+  "category": "english_grammar",
+  "rules": [
+    {
+      "slug": "the-with-adjectives-for-groups",
+      "title": "The + adjective for a group: the rich, the French",
+      "rule_type": "language_rule",
+      "short_explanation": "Use the + an adjective to mean a whole group of people: the rich, the elderly, the unemployed. Use the + a nationality ending in -ch, -sh, -ese or -ss to mean the people of that country: the French, the Swiss, the Chinese.",
+      "tts_text": "The rich and the French: the adjective or nationality means a whole group.",
+      "mnemonic": "The + adjective = a crowd of people.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "The rich often pay higher taxes in many countries.",
+          "note": "the + adjective means a group of people"
+        },
+        {
+          "type": "correct",
+          "text": "The elderly need more help at home.",
+          "note": "group of people, plural verb need"
+        },
+        {
+          "type": "correct",
+          "text": "The unemployed can get support from the local office.",
+          "note": "group of people, no single person"
+        },
+        {
+          "type": "correct",
+          "text": "The French are famous for their cheese and wine.",
+          "note": "-ch nationality: the people of France"
+        },
+        {
+          "type": "correct",
+          "text": "The young often learn new software faster than their parents.",
+          "note": "group of people: the young"
+        },
+        {
+          "type": "correct",
+          "text": "The Dutch cycle to work every morning.",
+          "note": "-ch nationality: the Dutch people"
+        },
+        {
+          "type": "correct",
+          "text": "The Swiss value punctuality and careful planning at work.",
+          "note": "-ss nationality: the people of Switzerland"
+        },
+        {
+          "type": "correct",
+          "text": "The blind can read books with special digital tools.",
+          "note": "group of people: the blind"
+        },
+        {
+          "type": "correct",
+          "text": "The British queue patiently at bus stops.",
+          "note": "-sh nationality: the British people"
+        },
+        {
+          "type": "correct",
+          "text": "The Spanish eat dinner very late in the evening.",
+          "note": "-sh nationality: the Spanish people"
+        },
+        {
+          "type": "correct",
+          "text": "The rich invest in warehouses and delivery companies.",
+          "note": "group of people as investors"
+        },
+        {
+          "type": "incorrect",
+          "text": "Rich tend to save more money than others.",
+          "correction": "The rich tend to save more money than others.",
+          "note": "group needs the before the adjective"
+        },
+        {
+          "type": "incorrect",
+          "text": "Elderly need more help at home.",
+          "correction": "The elderly need more help at home.",
+          "note": "group needs the before the adjective"
+        },
+        {
+          "type": "incorrect",
+          "text": "A French are very proud of their language.",
+          "correction": "The French are very proud of their language.",
+          "note": "a nation is not a/an; use the"
+        },
+        {
+          "type": "incorrect",
+          "text": "I met Frenchman at the trade fair yesterday.",
+          "correction": "I met a Frenchman at the trade fair yesterday.",
+          "note": "one person needs a before the noun"
+        },
+        {
+          "type": "incorrect",
+          "text": "A blind can read books with special digital tools.",
+          "correction": "The blind can read books with special digital tools.",
+          "note": "a group, not one person: use the"
+        },
+        {
+          "type": "incorrect",
+          "text": "Poor need access to free healthcare in every city.",
+          "correction": "The poor need access to free healthcare in every city.",
+          "note": "group needs the before the adjective"
+        },
+        {
+          "type": "incorrect",
+          "text": "Swiss value punctuality and careful planning at work.",
+          "correction": "The Swiss value punctuality and careful planning at work.",
+          "note": "people of a country take the"
+        },
+        {
+          "type": "incorrect",
+          "text": "She works with elderly every Friday morning.",
+          "correction": "She works with the elderly every Friday morning.",
+          "note": "group needs the before the adjective"
+        },
+        {
+          "type": "incorrect",
+          "text": "A young often learn new software faster than adults.",
+          "correction": "The young often learn new software faster than adults.",
+          "note": "a group, not a/an: use the"
+        },
+        {
+          "type": "incorrect",
+          "text": "Unemployed can get support from the local job centre.",
+          "correction": "The unemployed can get support from the local job centre.",
+          "note": "group needs the before the adjective"
+        },
+        {
+          "type": "incorrect",
+          "text": "Young are often hired for night shifts at warehouses.",
+          "correction": "The young are often hired for night shifts at warehouses.",
+          "note": "group needs the before the adjective"
+        },
+        {
+          "type": "exception",
+          "text": "Italians love pasta and eat it every day.",
+          "note": "plural nationality noun in a general statement: no the"
+        },
+        {
+          "type": "exception",
+          "text": "A Frenchman lives next door to my aunt.",
+          "note": "one person: a + nationality noun, not the"
+        },
+        {
+          "type": "exception",
+          "text": "A rich man bought the old factory last year.",
+          "note": "one person, not a group: a + adjective"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "We should help ___ poor in our city.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "She volunteers every weekend with ___ elderly.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "___ Dutch are famous for their bicycles.",
+          "answer": "The",
+          "choices": [
+            "A",
+            "An",
+            "The",
+            "No article"
+          ]
+        },
+        {
+          "prompt": "He is ___ Frenchman, not a German.",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "___ Spanish love long lunches and late dinners.",
+          "answer": "The",
+          "choices": [
+            "A",
+            "An",
+            "The",
+            "No article"
+          ]
+        },
+        {
+          "prompt": "___ rich are not always happy, a researcher said.",
+          "answer": "The",
+          "choices": [
+            "A",
+            "An",
+            "The",
+            "No article"
+          ]
+        },
+        {
+          "prompt": "Our charity feeds ___ homeless every Sunday.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "___ blind can use audio books and screen readers.",
+          "answer": "The",
+          "choices": [
+            "A",
+            "An",
+            "The",
+            "No article"
+          ]
+        },
+        {
+          "prompt": "We are reading a report about ___ unemployed in Europe.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "___ British queue for hours at popular museums.",
+          "answer": "The",
+          "choices": [
+            "A",
+            "An",
+            "The",
+            "No article"
+          ]
+        },
+        {
+          "prompt": "Could you explain why ___ young trust social media so much?",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "The museum offers free tours for ___ elderly.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "___ Chinese invented paper and printing centuries ago.",
+          "answer": "The",
+          "choices": [
+            "A",
+            "An",
+            "The",
+            "No article"
+          ]
+        },
+        {
+          "prompt": "___ Swiss are known for their watches and chocolate.",
+          "answer": "The",
+          "choices": [
+            "A",
+            "An",
+            "The",
+            "No article"
+          ]
+        },
+        {
+          "prompt": "___ poor often rely on food banks in winter.",
+          "answer": "The",
+          "choices": [
+            "A",
+            "An",
+            "The",
+            "No article"
+          ]
+        },
+        {
+          "prompt": "Warehouse managers are reading a report about ___ poor.",
+          "answer": "the",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "___ young are the main users of our delivery app.",
+          "answer": "The",
+          "choices": [
+            "A",
+            "An",
+            "The",
+            "No article"
+          ]
+        },
+        {
+          "prompt": "___ Italians love pasta and slow dinners.",
+          "answer": "No article",
+          "choices": [
+            "A",
+            "An",
+            "The",
+            "No article"
+          ]
+        },
+        {
+          "prompt": "I met ___ Frenchman at the trade fair yesterday.",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "___ Russians drink a lot of tea in winter.",
+          "answer": "No article",
+          "choices": [
+            "A",
+            "An",
+            "The",
+            "No article"
+          ]
+        },
+        {
+          "prompt": "___ rich should pay their fair share of taxes.",
+          "answer": "The"
+        },
+        {
+          "prompt": "___ elderly need someone to check on them daily.",
+          "answer": "The"
+        },
+        {
+          "prompt": "We help ___ unemployed find work in our city.",
+          "answer": "the"
+        },
+        {
+          "prompt": "___ Swiss keep their promises and arrive on time.",
+          "answer": "The"
+        },
+        {
+          "prompt": "___ Chinese value family and hard work highly.",
+          "answer": "The"
+        },
+        {
+          "prompt": "___ blind can ask the driver for help.",
+          "answer": "The"
+        },
+        {
+          "prompt": "___ British drive on the left side of the road.",
+          "answer": "The"
+        },
+        {
+          "prompt": "___ rich in this city own most of the flats.",
+          "answer": "The"
+        },
+        {
+          "prompt": "Delivery drivers often help ___ elderly carry their shopping.",
+          "answer": "the"
+        },
+        {
+          "prompt": "Our charity supports ___ homeless in winter.",
+          "answer": "the"
+        },
+        {
+          "prompt": "___ unemployed need better training, the report says.",
+          "answer": "The"
+        },
+        {
+          "prompt": "___ Japanese are known for their punctual trains.",
+          "answer": "The"
+        },
+        {
+          "prompt": "Many experts study how ___ poor manage money each month.",
+          "answer": "the"
+        },
+        {
+          "prompt": "___ Irish are famous for their music and friendly pubs.",
+          "answer": "The"
+        },
+        {
+          "prompt": "The city council is helping ___ unemployed find new jobs.",
+          "answer": "the"
+        },
+        {
+          "prompt": "She works with ___ elderly in a small clinic.",
+          "answer": "the"
+        },
+        {
+          "prompt": "___ Dutch ride to work in every weather.",
+          "answer": "The"
+        },
+        {
+          "prompt": "___ Spanish are proud of their long history.",
+          "answer": "The"
+        },
+        {
+          "prompt": "The news report describes how ___ poor suffer in winter.",
+          "answer": "the"
+        },
+        {
+          "prompt": "___ young often find it hard to save money.",
+          "answer": "The"
+        }
+      ]
+    },
+    {
+      "slug": "a-after-such-what-quite",
+      "title": "Such a, what a, quite a: the article comes after the word",
+      "rule_type": "language_rule",
+      "short_explanation": "After such, what, quite, rather and half, a singular countable noun takes a or an after that word: such a day, what a view, half an hour. With plural or uncountable nouns there is no article: such nice people, what beautiful weather.",
+      "tts_text": "Say: such a long day, what a view, half an hour.",
+      "mnemonic": "Such, what, quite: the article comes after, one thing only.",
+      "examples": [
+        {
+          "type": "correct",
+          "text": "We had such a long day at the warehouse.",
+          "note": "singular countable noun: a after such"
+        },
+        {
+          "type": "correct",
+          "text": "What a beautiful view from our hotel room!",
+          "note": "a after what, singular noun"
+        },
+        {
+          "type": "correct",
+          "text": "That was quite a lot of work.",
+          "note": "quite a lot: a after quite"
+        },
+        {
+          "type": "correct",
+          "text": "She is rather a good teacher, I think.",
+          "note": "a after rather, singular noun"
+        },
+        {
+          "type": "correct",
+          "text": "We waited half an hour for the delivery van.",
+          "note": "an before a vowel sound after half"
+        },
+        {
+          "type": "correct",
+          "text": "What a surprise to see you here!",
+          "note": "a after what, singular noun"
+        },
+        {
+          "type": "correct",
+          "text": "He made such an effort to learn Russian.",
+          "note": "an before a vowel sound after such"
+        },
+        {
+          "type": "correct",
+          "text": "It was such a cold night in the mountains.",
+          "note": "a after such, singular noun"
+        },
+        {
+          "type": "correct",
+          "text": "My brother is quite a good cook.",
+          "note": "a after quite, singular noun"
+        },
+        {
+          "type": "correct",
+          "text": "They live in quite an old house near the river.",
+          "note": "an before the vowel sound of old"
+        },
+        {
+          "type": "correct",
+          "text": "What an amazing idea for our next project!",
+          "note": "an before a vowel sound after what"
+        },
+        {
+          "type": "incorrect",
+          "text": "She had a such busy week at school.",
+          "correction": "She had such a busy week at school.",
+          "note": "the article goes after such, not before"
+        },
+        {
+          "type": "incorrect",
+          "text": "What beautiful view from our hotel room!",
+          "correction": "What a beautiful view from our hotel room!",
+          "note": "singular noun after what needs a"
+        },
+        {
+          "type": "incorrect",
+          "text": "It was quite lot of work for one day.",
+          "correction": "It was quite a lot of work for one day.",
+          "note": "quite a lot needs a"
+        },
+        {
+          "type": "incorrect",
+          "text": "She is rather good teacher, I think.",
+          "correction": "She is rather a good teacher, I think.",
+          "note": "singular noun after rather needs a"
+        },
+        {
+          "type": "incorrect",
+          "text": "We waited half hour for the delivery van.",
+          "correction": "We waited half an hour for the delivery van.",
+          "note": "half an hour: an before a vowel sound"
+        },
+        {
+          "type": "incorrect",
+          "text": "What surprise to see you here!",
+          "correction": "What a surprise to see you here!",
+          "note": "singular noun after what needs a"
+        },
+        {
+          "type": "incorrect",
+          "text": "He made such effort to learn Russian.",
+          "correction": "He made such an effort to learn Russian.",
+          "note": "singular noun after such needs an"
+        },
+        {
+          "type": "incorrect",
+          "text": "It was a such cold night in the mountains.",
+          "correction": "It was such a cold night in the mountains.",
+          "note": "no a before such"
+        },
+        {
+          "type": "incorrect",
+          "text": "My brother is quite good cook.",
+          "correction": "My brother is quite a good cook.",
+          "note": "singular noun after quite needs a"
+        },
+        {
+          "type": "incorrect",
+          "text": "They live in quite old house near the river.",
+          "correction": "They live in quite an old house near the river.",
+          "note": "an before the vowel sound of old"
+        },
+        {
+          "type": "incorrect",
+          "text": "We received such big parcel this morning.",
+          "correction": "We received such a big parcel this morning.",
+          "note": "singular noun after such needs a"
+        },
+        {
+          "type": "exception",
+          "text": "We have such nice people in our team.",
+          "note": "plural noun: no article after such"
+        },
+        {
+          "type": "exception",
+          "text": "What beautiful weather we had in June.",
+          "note": "uncountable noun: no article after what"
+        },
+        {
+          "type": "exception",
+          "text": "It was quite good news for the whole team.",
+          "note": "uncountable noun: no article after quite"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "It was such ___ long day at the warehouse.",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "What ___ amazing view from the hill!",
+          "answer": "an",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "We have had quite ___ busy week at work.",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "It was rather ___ expensive hotel for us.",
+          "answer": "an",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "We waited half ___ hour in the queue.",
+          "answer": "an",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "What ___ surprise to see you again!",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "It was such ___ easy test that everyone passed.",
+          "answer": "an",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "They have such ___ kind neighbours.",
+          "answer": "no article",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "What ___ beautiful weather we had in June!",
+          "answer": "no article",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "It was quite ___ good news for the whole team.",
+          "answer": "no article",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "She made such ___ mistake in the report.",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "Our new manager is quite ___ strict boss.",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "He bought rather ___ old car from his cousin.",
+          "answer": "an",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "We visited such ___ beautiful old town last year.",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "They gave us such ___ generous discount.",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "I had quite ___ hard time finding the warehouse.",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "The courier left such ___ heavy boxes at the door.",
+          "answer": "no article",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "What ___ good idea to ask the driver first!",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "The film was rather ___ long film for children.",
+          "answer": "a",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "It was such ___ amazing evening that nobody wanted to leave.",
+          "answer": "an",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        {
+          "prompt": "We had such ___ day at the warehouse.",
+          "answer": "a"
+        },
+        {
+          "prompt": "What ___ brilliant idea!",
+          "answer": "a"
+        },
+        {
+          "prompt": "It was quite ___ unusual request.",
+          "answer": "an"
+        },
+        {
+          "prompt": "The hotel was rather ___ noisy place.",
+          "answer": "a"
+        },
+        {
+          "prompt": "She waited half ___ hour at the station.",
+          "answer": "an"
+        },
+        {
+          "prompt": "He is such ___ honest man.",
+          "answer": "an"
+        },
+        {
+          "prompt": "It was such ___ hot day that we stayed inside.",
+          "answer": "a"
+        },
+        {
+          "prompt": "What ___ lovely garden you have!",
+          "answer": "a"
+        },
+        {
+          "prompt": "This is quite ___ expensive restaurant.",
+          "answer": "an"
+        },
+        {
+          "prompt": "We had quite ___ lot of boxes to deliver.",
+          "answer": "a"
+        },
+        {
+          "prompt": "They built such ___ tall tower in the city.",
+          "answer": "a"
+        },
+        {
+          "prompt": "My teacher gave me rather ___ difficult task.",
+          "answer": "a"
+        },
+        {
+          "prompt": "He lives in such ___ old house near the river.",
+          "answer": "an"
+        },
+        {
+          "prompt": "I had such ___ terrible cold last winter.",
+          "answer": "a"
+        },
+        {
+          "prompt": "What ___ easy question for the test!",
+          "answer": "an"
+        },
+        {
+          "prompt": "It was quite ___ long meeting for everyone.",
+          "answer": "a"
+        },
+        {
+          "prompt": "We ordered half ___ dozen pizzas.",
+          "answer": "a"
+        },
+        {
+          "prompt": "The parcel was such ___ heavy box that I needed help.",
+          "answer": "a"
+        },
+        {
+          "prompt": "The driver is rather ___ old man, but very fast.",
+          "answer": "an"
+        },
+        {
+          "prompt": "We had such ___ lovely holiday in Spain.",
+          "answer": "a"
+        }
+      ]
+    }
+  ]
+}
