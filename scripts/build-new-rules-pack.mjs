@@ -7,7 +7,7 @@
 import { createHash } from 'node:crypto'
 import { readFileSync, writeFileSync } from 'node:fs'
 
-// Usage: node scripts/build-new-rules-pack.mjs [8|9]   (8 is the default)
+// Usage: node scripts/build-new-rules-pack.mjs [8|9|10]   (8 is the default)
 const packs = {
   8: {
     files: ['double_consonants', 'english_spelling', 'silent_letters', 'verb_endings', 'vowels_and_letter_patterns'],
@@ -27,6 +27,11 @@ const packs = {
     set: 'new-rules-v2',
     blurb:
       'ck after a short vowel, ph and gh for /f/, double letters in common words, all- words, silent l, silent c-s-n-u, -es and -ies endings, ea/ee, ai/ay/oi/oy, -ous, logistics words',
+  },
+  10: {
+    files: ['haiku-articles'],
+    set: 'new-rules-v3',
+    blurb: 'the + adjective for a group (the rich, the French), such a / what a / quite a',
   },
 }
 const NUMBER = process.argv[2] ?? '8'

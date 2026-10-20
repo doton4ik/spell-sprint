@@ -606,112 +606,28 @@
       "metadata": {}
     },
     {
-      "id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
-      "slug": "double-final-consonant-before-suffix",
-      "title": "Double the last consonant: stop → stopped",
-      "category": "double_consonants",
+      "id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
+      "slug": "the-with-adjectives-for-groups",
+      "title": "The + adjective for a group: the rich, the French",
+      "category": "english_grammar",
       "rule_type": "language_rule",
-      "short_explanation": "If a word ends in one vowel + one consonant and the last syllable is stressed, double the consonant before -ed, -ing, -er or -est. For example: stop → stopped, begin → beginning.",
-      "tts_text": "Short stressed vowel plus one consonant: double the consonant before a suffix.",
-      "mnemonic": "One vowel, one consonant, stressed end: double it, friend.",
+      "short_explanation": "Use the + an adjective to mean a whole group of people: the rich, the elderly, the unemployed. Use the + a nationality ending in -ch, -sh, -ese or -ss to mean the people of that country: the French, the Swiss, the Chinese.",
+      "tts_text": "The rich and the French: the adjective or nationality means a whole group.",
+      "mnemonic": "The + adjective = a crowd of people.",
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
       "metadata": {}
     },
     {
-      "id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
-      "slug": "no-doubling-unstressed-ending",
-      "title": "Don't double: visit → visited, open → opened",
-      "category": "double_consonants",
+      "id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
+      "slug": "a-after-such-what-quite",
+      "title": "Such a, what a, quite a: the article comes after the word",
+      "category": "english_grammar",
       "rule_type": "language_rule",
-      "short_explanation": "Do not double the final consonant if the last syllable is not stressed, or if the word ends in two consonants or two vowels. For example: visit → visited, open → opened, wait → waiting.",
-      "tts_text": "If the last syllable is not stressed, do not double the consonant.",
-      "mnemonic": "Weak ending, no doubling.",
-      "source": "built-in",
-      "visibility": "public",
-      "is_active": true,
-      "metadata": {}
-    },
-    {
-      "id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "slug": "ch-tch-and-j-dge",
-      "title": "ch / tch and j / dge after vowels",
-      "category": "english_spelling",
-      "rule_type": "language_rule",
-      "short_explanation": "After a short vowel, use -tch for the /ch/ sound (watch, catch) and -dge for the /j/ sound (bridge, badge). After a long vowel or a consonant, use -ch and -ge: beach, teach, age, large.",
-      "tts_text": "After a short vowel use tch and dge. Otherwise use ch and ge.",
-      "mnemonic": "Short vowel, strong ending: tch and dge.",
-      "source": "built-in",
-      "visibility": "public",
-      "is_active": true,
-      "metadata": {}
-    },
-    {
-      "id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "slug": "silent-k-and-w",
-      "title": "Silent k and w: knife, write, wrong",
-      "category": "silent_letters",
-      "rule_type": "language_rule",
-      "short_explanation": "At the start of a word, k before n (knife, know) and w before r (write, wrong) are not pronounced, but you must still write them. A silent w also appears in answer and sword.",
-      "tts_text": "Write the silent k in know and the silent w in write.",
-      "mnemonic": "Kn and wr: the first letter is silent, but still there.",
-      "source": "built-in",
-      "visibility": "public",
-      "is_active": true,
-      "metadata": {}
-    },
-    {
-      "id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "slug": "silent-b-g-h-t",
-      "title": "Silent b, g, h, t: doubt, sign, hour",
-      "category": "silent_letters",
-      "rule_type": "language_rule",
-      "short_explanation": "Some words contain letters you do not pronounce: b in doubt and climb, g in sign and foreign, h in hour and honest, t in listen and castle. Learn these words as whole shapes.",
-      "tts_text": "Some words keep a silent b, g, h or t, so learn them by sight.",
-      "mnemonic": "Climb the castle, listen to the honest sign.",
-      "source": "built-in",
-      "visibility": "public",
-      "is_active": true,
-      "metadata": {}
-    },
-    {
-      "id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "slug": "ed-after-y",
-      "title": "Past tense after y: study → studied, play → played",
-      "category": "verb_endings",
-      "rule_type": "language_rule",
-      "short_explanation": "If a verb ends in consonant + y, change y to i and add -ed: study → studied. If it ends in vowel + y, just add -ed: play → played.",
-      "tts_text": "After a consonant, change y to i before ed. After a vowel, keep y.",
-      "mnemonic": "Consonant plus y: say bye to y. Vowel plus y: keep it.",
-      "source": "built-in",
-      "visibility": "public",
-      "is_active": true,
-      "metadata": {}
-    },
-    {
-      "id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "slug": "ing-after-ie",
-      "title": "-ing after ie: die → dying, lie → lying",
-      "category": "verb_endings",
-      "rule_type": "language_rule",
-      "short_explanation": "If a verb ends in -ie, change ie to y before -ing: die → dying, tie → tying. Never write -ieing.",
-      "tts_text": "For verbs ending in ie, change ie to y and add ing.",
-      "mnemonic": "I-E turns into Y before ING.",
-      "source": "built-in",
-      "visibility": "public",
-      "is_active": true,
-      "metadata": {}
-    },
-    {
-      "id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "slug": "ou-ow-au-aw-patterns",
-      "title": "ou / ow / au / aw letter patterns",
-      "category": "vowels_and_letter_patterns",
-      "rule_type": "language_rule",
-      "short_explanation": "The letters ou and ow often make the sound in house and how, while au and aw often make the sound in course and saw. Some common words are exceptions, such as soup, should, and daughter.",
-      "tts_text": "Learn common ou, ow, au and aw words as whole patterns.",
-      "mnemonic": "House and how; course and saw.",
+      "short_explanation": "After such, what, quite, rather and half, a singular countable noun takes a or an after that word: such a day, what a view, half an hour. With plural or uncountable nouns there is no article: such nice people, what beautiful weather.",
+      "tts_text": "Say: such a long day, what a view, half an hour.",
+      "mnemonic": "Such, what, quite: the article comes after, one thing only.",
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
@@ -880,6 +796,118 @@
       "short_explanation": "Common logistics words often have difficult letter patterns: warehouse, shipment, receive, invoice, delivery, schedule, equipment, receipt and inventory. Learn them as complete words and check the vowels carefully.",
       "tts_text": "Learn logistics words like warehouse, receive and schedule.",
       "mnemonic": "Receive: e before i, except after c.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "slug": "double-final-consonant-before-suffix",
+      "title": "Double the last consonant: stop → stopped",
+      "category": "double_consonants",
+      "rule_type": "language_rule",
+      "short_explanation": "If a word ends in one vowel + one consonant and the last syllable is stressed, double the consonant before -ed, -ing, -er or -est. For example: stop → stopped, begin → beginning.",
+      "tts_text": "Short stressed vowel plus one consonant: double the consonant before a suffix.",
+      "mnemonic": "One vowel, one consonant, stressed end: double it, friend.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "slug": "no-doubling-unstressed-ending",
+      "title": "Don't double: visit → visited, open → opened",
+      "category": "double_consonants",
+      "rule_type": "language_rule",
+      "short_explanation": "Do not double the final consonant if the last syllable is not stressed, or if the word ends in two consonants or two vowels. For example: visit → visited, open → opened, wait → waiting.",
+      "tts_text": "If the last syllable is not stressed, do not double the consonant.",
+      "mnemonic": "Weak ending, no doubling.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "slug": "ch-tch-and-j-dge",
+      "title": "ch / tch and j / dge after vowels",
+      "category": "english_spelling",
+      "rule_type": "language_rule",
+      "short_explanation": "After a short vowel, use -tch for the /ch/ sound (watch, catch) and -dge for the /j/ sound (bridge, badge). After a long vowel or a consonant, use -ch and -ge: beach, teach, age, large.",
+      "tts_text": "After a short vowel use tch and dge. Otherwise use ch and ge.",
+      "mnemonic": "Short vowel, strong ending: tch and dge.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "slug": "silent-k-and-w",
+      "title": "Silent k and w: knife, write, wrong",
+      "category": "silent_letters",
+      "rule_type": "language_rule",
+      "short_explanation": "At the start of a word, k before n (knife, know) and w before r (write, wrong) are not pronounced, but you must still write them. A silent w also appears in answer and sword.",
+      "tts_text": "Write the silent k in know and the silent w in write.",
+      "mnemonic": "Kn and wr: the first letter is silent, but still there.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "slug": "silent-b-g-h-t",
+      "title": "Silent b, g, h, t: doubt, sign, hour",
+      "category": "silent_letters",
+      "rule_type": "language_rule",
+      "short_explanation": "Some words contain letters you do not pronounce: b in doubt and climb, g in sign and foreign, h in hour and honest, t in listen and castle. Learn these words as whole shapes.",
+      "tts_text": "Some words keep a silent b, g, h or t, so learn them by sight.",
+      "mnemonic": "Climb the castle, listen to the honest sign.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "slug": "ed-after-y",
+      "title": "Past tense after y: study → studied, play → played",
+      "category": "verb_endings",
+      "rule_type": "language_rule",
+      "short_explanation": "If a verb ends in consonant + y, change y to i and add -ed: study → studied. If it ends in vowel + y, just add -ed: play → played.",
+      "tts_text": "After a consonant, change y to i before ed. After a vowel, keep y.",
+      "mnemonic": "Consonant plus y: say bye to y. Vowel plus y: keep it.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "slug": "ing-after-ie",
+      "title": "-ing after ie: die → dying, lie → lying",
+      "category": "verb_endings",
+      "rule_type": "language_rule",
+      "short_explanation": "If a verb ends in -ie, change ie to y before -ing: die → dying, tie → tying. Never write -ieing.",
+      "tts_text": "For verbs ending in ie, change ie to y and add ing.",
+      "mnemonic": "I-E turns into Y before ING.",
+      "source": "built-in",
+      "visibility": "public",
+      "is_active": true,
+      "metadata": {}
+    },
+    {
+      "id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "slug": "ou-ow-au-aw-patterns",
+      "title": "ou / ow / au / aw letter patterns",
+      "category": "vowels_and_letter_patterns",
+      "rule_type": "language_rule",
+      "short_explanation": "The letters ou and ow often make the sound in house and how, while au and aw often make the sound in course and saw. Some common words are exceptions, such as soup, should, and daughter.",
+      "tts_text": "Learn common ou, ow, au and aw words as whole patterns.",
+      "mnemonic": "House and how; course and saw.",
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
@@ -16072,1604 +16100,404 @@
       "note": "a lot of"
     },
     {
-      "id": "e381685a-02cc-555b-97f4-fce724e26d0d",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "a12c0415-cf3a-5992-b559-1d20a3f28c65",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "correct",
-      "text": "The bus stopped outside the station.",
+      "text": "The rich often pay higher taxes in many countries.",
       "correction": null,
-      "note": "One-syllable word: stop → stopped."
+      "note": "the + adjective means a group of people"
     },
     {
-      "id": "62adac0c-a7c6-5ba9-9a20-4a582faa5c7b",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "84f49126-f971-598d-804c-c576929b3813",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "correct",
-      "text": "She is planning a trip to Spain.",
+      "text": "The elderly need more help at home.",
       "correction": null,
-      "note": "plan + ing: double the n."
+      "note": "group of people, plural verb need"
     },
     {
-      "id": "9c756aef-c1c4-52ee-ae9f-020e1b52e1d1",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "04e0da0b-cebb-5f01-b289-ac28817edc82",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "correct",
-      "text": "The company is beginning a new project.",
+      "text": "The unemployed can get support from the local office.",
       "correction": null,
-      "note": "Stress on last syllable: begin → beginning."
+      "note": "group of people, no single person"
     },
     {
-      "id": "0b4ad0ae-e8bf-5766-98e3-986ead457a21",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "523f1395-8f2b-5655-a0e0-294763806c65",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "correct",
-      "text": "He admitted his mistake to the manager.",
+      "text": "The French are famous for their cheese and wine.",
       "correction": null,
-      "note": "Stressed ending: admit → admitted."
+      "note": "-ch nationality: the people of France"
     },
     {
-      "id": "474d6772-e57e-554b-9936-915cae17977f",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "a8543f18-c635-5b67-aa00-6222d37490c0",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "correct",
-      "text": "The chef chopped onions for the soup.",
+      "text": "The young often learn new software faster than their parents.",
       "correction": null,
-      "note": "chop + ed: double the p."
+      "note": "group of people: the young"
     },
     {
-      "id": "3c0ad118-a845-5fac-88d0-c44030064986",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "ae3c898b-56e6-585f-8d21-d8168ff3ec3c",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "correct",
-      "text": "They are shopping for fresh vegetables.",
+      "text": "The Dutch cycle to work every morning.",
       "correction": null,
-      "note": "shop + ing: double the p."
+      "note": "-ch nationality: the Dutch people"
     },
     {
-      "id": "a6957055-bcde-5ad9-8033-eb3c103a22cc",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "c456b5e5-54f2-547b-8c5f-694f6c493f76",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "correct",
-      "text": "My brother is getting a new laptop.",
+      "text": "The Swiss value punctuality and careful planning at work.",
       "correction": null,
-      "note": "get + ing: double the t."
+      "note": "-ss nationality: the people of Switzerland"
     },
     {
-      "id": "49d48573-5b79-5048-b309-e82cc608a0c2",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "6f7a36dd-45ed-5b5c-b2c8-116c47252ad7",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "correct",
-      "text": "The student referred to her notes.",
+      "text": "The blind can read books with special digital tools.",
       "correction": null,
-      "note": "Stress on -fer: refer → referred."
+      "note": "group of people: the blind"
     },
     {
-      "id": "58c5bf5e-d6e3-57ce-9521-3156e3b48005",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "72c41b66-c28f-5583-9a0e-428c80e315f5",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "correct",
-      "text": "The waiter dropped a plate in the kitchen.",
+      "text": "The British queue patiently at bus stops.",
       "correction": null,
-      "note": "drop + ed: double the p."
+      "note": "-sh nationality: the British people"
     },
     {
-      "id": "7dd7b198-fbcd-5cdc-a9cd-8c5d647ab718",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "ee071ebf-005a-5617-a8f3-f32fe5360fc0",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "correct",
-      "text": "This hotel is bigger than the old one.",
+      "text": "The Spanish eat dinner very late in the evening.",
       "correction": null,
-      "note": "big + er: double the g."
+      "note": "-sh nationality: the Spanish people"
     },
     {
-      "id": "c2e79e01-b1bb-57cd-883e-c8104ac329ab",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "94ec741b-cdb2-5909-8275-e67a84d2b50b",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "correct",
-      "text": "She regretted missing the last train.",
+      "text": "The rich invest in warehouses and delivery companies.",
       "correction": null,
-      "note": "Stressed ending: regret → regretted."
+      "note": "group of people as investors"
     },
     {
-      "id": "f70e4abe-207a-59a9-b45c-7d6a9377d7b5",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "0295a704-fe13-58e5-9171-2b01d1152c8d",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "incorrect",
-      "text": "The taxi stoped at the hotel.",
-      "correction": "The taxi stopped at the hotel.",
-      "note": "Double the p before -ed."
+      "text": "Rich tend to save more money than others.",
+      "correction": "The rich tend to save more money than others.",
+      "note": "group needs the before the adjective"
     },
     {
-      "id": "93c812bb-8371-55df-b97d-b082900579c1",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "c18a918f-2966-5f0e-b4c3-22fc58dcfbf1",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "incorrect",
-      "text": "I am runing late for work.",
-      "correction": "I am running late for work.",
-      "note": "Double the n before -ing."
+      "text": "Elderly need more help at home.",
+      "correction": "The elderly need more help at home.",
+      "note": "group needs the before the adjective"
     },
     {
-      "id": "4fb7f66e-cd74-551e-9734-ea69a9dcc2e4",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "bf0fee63-d17f-5611-a05f-afb4c8c8f7e9",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "incorrect",
-      "text": "She planed her holiday in July.",
-      "correction": "She planned her holiday in July.",
-      "note": "Double the n before -ed."
+      "text": "A French are very proud of their language.",
+      "correction": "The French are very proud of their language.",
+      "note": "a nation is not a/an; use the"
     },
     {
-      "id": "54d75411-850f-529b-bb18-b9f8e58f2eca",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "27d319fa-aacd-5eb5-afb1-c7b16db003a7",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "incorrect",
-      "text": "He is swiming in the lake every summer.",
-      "correction": "He is swimming in the lake every summer.",
-      "note": "Double the m before -ing."
+      "text": "I met Frenchman at the trade fair yesterday.",
+      "correction": "I met a Frenchman at the trade fair yesterday.",
+      "note": "one person needs a before the noun"
     },
     {
-      "id": "18dec9c2-0fd3-5c93-afcc-86d84835ab5b",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "cf57c1b0-3078-53e0-9cd0-b8acd46e40fa",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "incorrect",
-      "text": "We shoped at the market yesterday.",
-      "correction": "We shopped at the market yesterday.",
-      "note": "Double the p before -ed."
+      "text": "A blind can read books with special digital tools.",
+      "correction": "The blind can read books with special digital tools.",
+      "note": "a group, not one person: use the"
     },
     {
-      "id": "7954bf5d-c33e-5c75-9f03-bc8e115f80d6",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "c214e353-8b69-5aa0-a9c0-5ee6b04a2787",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "incorrect",
-      "text": "The lesson is begining at nine o'clock.",
-      "correction": "The lesson is beginning at nine o'clock.",
-      "note": "Stressed -gin: double the n."
+      "text": "Poor need access to free healthcare in every city.",
+      "correction": "The poor need access to free healthcare in every city.",
+      "note": "group needs the before the adjective"
     },
     {
-      "id": "584cea59-dec2-5a6a-800d-f0c3c0ac2f52",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "dd661ed1-37bd-5b5f-863f-ef0bf6f7deac",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "incorrect",
-      "text": "My sister is biger than me.",
-      "correction": "My sister is bigger than me.",
-      "note": "Double the g before -er."
+      "text": "Swiss value punctuality and careful planning at work.",
+      "correction": "The Swiss value punctuality and careful planning at work.",
+      "note": "people of a country take the"
     },
     {
-      "id": "32d236bf-8538-50c9-8477-b8199f07f0d9",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "df5bc2ba-a6f4-5544-b5a5-f83610c72671",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "incorrect",
-      "text": "He is cuting the bread for lunch.",
-      "correction": "He is cutting the bread for lunch.",
-      "note": "Double the t before -ing."
+      "text": "She works with elderly every Friday morning.",
+      "correction": "She works with the elderly every Friday morning.",
+      "note": "group needs the before the adjective"
     },
     {
-      "id": "be5055cc-ca78-5596-abf5-40ecb55b4369",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "c2de53ed-52c6-57d2-a10d-c081b88e2d1a",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "incorrect",
-      "text": "He admited he was late for class.",
-      "correction": "He admitted he was late for class.",
-      "note": "Stressed -mit: double the t."
+      "text": "A young often learn new software faster than adults.",
+      "correction": "The young often learn new software faster than adults.",
+      "note": "a group, not a/an: use the"
     },
     {
-      "id": "6790e5cd-fda4-512a-a875-50e32b9de419",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "50fad67e-20fe-5221-976f-fdc48a3e7231",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "incorrect",
-      "text": "The rabbit hoped across the garden.",
-      "correction": "The rabbit hopped across the garden.",
-      "note": "Double the p; hoped is another word."
+      "text": "Unemployed can get support from the local job centre.",
+      "correction": "The unemployed can get support from the local job centre.",
+      "note": "group needs the before the adjective"
     },
     {
-      "id": "1a06b8dd-e30f-5ee0-9fc8-e6346fe20b5e",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "9f5876bc-54df-58f3-bf5c-f4ed0fd9aef5",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "incorrect",
-      "text": "She is geting a new passport.",
-      "correction": "She is getting a new passport.",
-      "note": "Double the t before -ing."
+      "text": "Young are often hired for night shifts at warehouses.",
+      "correction": "The young are often hired for night shifts at warehouses.",
+      "note": "group needs the before the adjective"
     },
     {
-      "id": "b6056de5-6ebc-57ba-87a8-8ec613453bca",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "7b4c5ad1-bd7f-5b62-8ee7-970b183f322f",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "exception",
-      "text": "The mechanic fixed the car yesterday.",
+      "text": "Italians love pasta and eat it every day.",
       "correction": null,
-      "note": "Never double x."
+      "note": "plural nationality noun in a general statement: no the"
     },
     {
-      "id": "f5b504a4-3d77-5e46-96c0-1ee4791fdfdf",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "acda2674-5274-5760-a06a-7f5a525c1e69",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "exception",
-      "text": "They are showing the results today.",
+      "text": "A Frenchman lives next door to my aunt.",
       "correction": null,
-      "note": "Never double w."
+      "note": "one person: a + nationality noun, not the"
     },
     {
-      "id": "ea36937b-4ee9-5100-aa56-2ba67daa0112",
-      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "id": "96ca490f-42f5-58e8-8c90-2ccc249a4fd0",
+      "rule_id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
       "example_type": "exception",
-      "text": "She enjoyed the long train ride.",
+      "text": "A rich man bought the old factory last year.",
       "correction": null,
-      "note": "Never double y."
+      "note": "one person, not a group: a + adjective"
     },
     {
-      "id": "a99d5663-ed52-5f5e-af96-0f16c0e4c26b",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "c7878400-d77e-5cef-bc3b-a184f45d462e",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "correct",
-      "text": "She visited her grandparents last summer.",
+      "text": "We had such a long day at the warehouse.",
       "correction": null,
-      "note": "Stress is on VIS, so no doubling."
+      "note": "singular countable noun: a after such"
     },
     {
-      "id": "22680f54-a943-5214-b73f-126b2e1fb78b",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "9a439963-3c9d-520a-ba3d-e73983aba2b4",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "correct",
-      "text": "The shop opened at eight o'clock.",
+      "text": "What a beautiful view from our hotel room!",
       "correction": null,
-      "note": "Stress is on O, so no doubling."
+      "note": "a after what, singular noun"
     },
     {
-      "id": "7798756c-7a02-549e-a202-9b7ebbb192c0",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "b61cdbb8-c584-5eda-93ce-bd7d789b71dd",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "correct",
-      "text": "We are listening to a podcast.",
+      "text": "That was quite a lot of work.",
       "correction": null,
-      "note": "Unstressed -ten: no doubling."
+      "note": "quite a lot: a after quite"
     },
     {
-      "id": "f5144218-a51b-55c7-9e12-8057aedf5afa",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "a089d12e-fbb1-5a8b-b3ee-f864b3cf057a",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "correct",
-      "text": "The waiter offered us a free dessert.",
+      "text": "She is rather a good teacher, I think.",
       "correction": null,
-      "note": "Stress is on OF, so no doubling."
+      "note": "a after rather, singular noun"
     },
     {
-      "id": "9aaf2e2d-d16f-5910-95cc-d379572f6550",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "7b09210f-1597-5d7a-be07-c35dcd9c8782",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "correct",
-      "text": "He is entering the contest tomorrow.",
+      "text": "We waited half an hour for the delivery van.",
       "correction": null,
-      "note": "Unstressed -ter: no doubling."
+      "note": "an before a vowel sound after half"
     },
     {
-      "id": "ea9c4d21-dc2e-506f-8bd6-09a8d269716e",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "f1e40d28-4d89-542d-adfd-beaefaf126e2",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "correct",
-      "text": "They finished the project before Friday.",
+      "text": "What a surprise to see you here!",
       "correction": null,
-      "note": "Unstressed -ish: no doubling."
+      "note": "a after what, singular noun"
     },
     {
-      "id": "0925049b-cf19-5120-949a-282ebd85d8df",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "684f3b14-9bd3-5543-bb49-3f0df86976f4",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "correct",
-      "text": "My cousin worked at a bakery.",
+      "text": "He made such an effort to learn Russian.",
       "correction": null,
-      "note": "Word ends in two consonants: rk."
+      "note": "an before a vowel sound after such"
     },
     {
-      "id": "455c8bb3-3af8-574f-ae11-03b45d309d5f",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "fa5ab179-19c5-5d94-94b2-d02dc027cb0b",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "correct",
-      "text": "The guide waited for us outside.",
+      "text": "It was such a cold night in the mountains.",
       "correction": null,
-      "note": "Two vowels before t: no doubling."
+      "note": "a after such, singular noun"
     },
     {
-      "id": "8c125fc9-04a3-5619-ae3b-5da07ede7552",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "e099f269-e441-5040-9c44-532fe54c7ab1",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "correct",
-      "text": "She is learning Slovak at university.",
+      "text": "My brother is quite a good cook.",
       "correction": null,
-      "note": "Ends in two consonants: rn."
+      "note": "a after quite, singular noun"
     },
     {
-      "id": "02b8219c-4a57-5352-b442-fd1b0fe5b7b4",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "4c6d402a-4882-5a99-b717-a4050a087444",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "correct",
-      "text": "We developed a new filing system.",
+      "text": "They live in quite an old house near the river.",
       "correction": null,
-      "note": "Stress is on -vel, not -op."
+      "note": "an before the vowel sound of old"
     },
     {
-      "id": "61491d8d-28a8-57f3-81c3-ac752d76fa80",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "c95fe00a-0d46-5b37-a175-87f930771d6c",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "correct",
-      "text": "Tom is repairing his bike in the garage.",
+      "text": "What an amazing idea for our next project!",
       "correction": null,
-      "note": "Two vowels before r: no doubling."
+      "note": "an before a vowel sound after what"
     },
     {
-      "id": "de11f23c-67d4-5fc7-9ce3-afc91e680277",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "1e945556-5273-58ad-8255-45f9cf156c50",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "incorrect",
-      "text": "We visitted the castle in May.",
-      "correction": "We visited the castle in May.",
-      "note": "Unstressed ending: do not double t."
+      "text": "She had a such busy week at school.",
+      "correction": "She had such a busy week at school.",
+      "note": "the article goes after such, not before"
     },
     {
-      "id": "64e03c00-640c-5e7d-8b10-a95324564a7d",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "3615ea67-1efa-57fe-a0ca-8656980cf0ef",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "incorrect",
-      "text": "The bank openned at nine.",
-      "correction": "The bank opened at nine.",
-      "note": "Unstressed ending: do not double n."
+      "text": "What beautiful view from our hotel room!",
+      "correction": "What a beautiful view from our hotel room!",
+      "note": "singular noun after what needs a"
     },
     {
-      "id": "1c620e52-78ef-5fc3-a004-4b51738130cf",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "34974f5c-ee0f-552c-94ac-7c7bbd8aefad",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "incorrect",
-      "text": "She is listenning to music.",
-      "correction": "She is listening to music.",
-      "note": "Unstressed ending: do not double n."
+      "text": "It was quite lot of work for one day.",
+      "correction": "It was quite a lot of work for one day.",
+      "note": "quite a lot needs a"
     },
     {
-      "id": "dfa3258f-3354-5eab-a6c9-c57e3b8ee9eb",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "909aaec1-0697-52fc-bc2c-c1e6abdf13ad",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "incorrect",
-      "text": "He offerred me a good job.",
-      "correction": "He offered me a good job.",
-      "note": "Stress is on OF: do not double r."
+      "text": "She is rather good teacher, I think.",
+      "correction": "She is rather a good teacher, I think.",
+      "note": "singular noun after rather needs a"
     },
     {
-      "id": "133187aa-44ab-52ec-a363-afe3aa3a7c9c",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "45e7a10b-6578-5c70-8f3c-06876c3cc9dc",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "incorrect",
-      "text": "They are enterring the building.",
-      "correction": "They are entering the building.",
-      "note": "Unstressed ending: do not double r."
+      "text": "We waited half hour for the delivery van.",
+      "correction": "We waited half an hour for the delivery van.",
+      "note": "half an hour: an before a vowel sound"
     },
     {
-      "id": "efb1194b-1ce5-5a08-bbd8-2e35928a47c3",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "9993a85d-46d3-5a42-be0c-61e8fd532fc5",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "incorrect",
-      "text": "I workked in a hotel last year.",
-      "correction": "I worked in a hotel last year.",
-      "note": "Ends in two consonants: no doubling."
+      "text": "What surprise to see you here!",
+      "correction": "What a surprise to see you here!",
+      "note": "singular noun after what needs a"
     },
     {
-      "id": "c5f25224-4d13-513a-acb2-fdb408c796d2",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "6fb5e7bb-b73a-5367-8e46-037467c88629",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "incorrect",
-      "text": "The train is waitting at platform two.",
-      "correction": "The train is waiting at platform two.",
-      "note": "Two vowels before t: no doubling."
+      "text": "He made such effort to learn Russian.",
+      "correction": "He made such an effort to learn Russian.",
+      "note": "singular noun after such needs an"
     },
     {
-      "id": "48a6c4a9-28a0-503b-b812-6a551cadb707",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "8c0ac924-0ced-5c74-934e-b25e3412c6f6",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "incorrect",
-      "text": "We developped a small app together.",
-      "correction": "We developed a small app together.",
-      "note": "Stress is not on the last syllable."
+      "text": "It was a such cold night in the mountains.",
+      "correction": "It was such a cold night in the mountains.",
+      "note": "no a before such"
     },
     {
-      "id": "8dd589ac-d3ff-5bb5-a431-fc78c79751b9",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "d29f4a45-01b6-5b33-ab25-8acdac038695",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "incorrect",
-      "text": "She helpped her mother cook dinner.",
-      "correction": "She helped her mother cook dinner.",
-      "note": "Ends in lp: no doubling."
+      "text": "My brother is quite good cook.",
+      "correction": "My brother is quite a good cook.",
+      "note": "singular noun after quite needs a"
     },
     {
-      "id": "d459925d-00e4-5e6e-a67e-4cc58bcf8f67",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "5e157abc-cfe3-5f25-97e7-54909044f2ba",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "incorrect",
-      "text": "The soup is cookking on the stove.",
-      "correction": "The soup is cooking on the stove.",
-      "note": "Two vowels before k: no doubling."
+      "text": "They live in quite old house near the river.",
+      "correction": "They live in quite an old house near the river.",
+      "note": "an before the vowel sound of old"
     },
     {
-      "id": "a6f127bb-51f8-598f-9f8f-f5ad6680f6eb",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "8bdf3ffb-8368-58b3-9d2c-6f029e17c15c",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "incorrect",
-      "text": "He repairred the old printer.",
-      "correction": "He repaired the old printer.",
-      "note": "Two vowels before r: no doubling."
+      "text": "We received such big parcel this morning.",
+      "correction": "We received such a big parcel this morning.",
+      "note": "singular noun after such needs a"
     },
     {
-      "id": "2eae23d9-0b3d-5cc6-a949-04acecb1b86c",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "acf71da7-cb5c-536b-9438-58711045d70b",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "exception",
-      "text": "The report was submitted on Monday.",
+      "text": "We have such nice people in our team.",
       "correction": null,
-      "note": "Stress is on -mit, so double."
+      "note": "plural noun: no article after such"
     },
     {
-      "id": "d5aaee09-59b3-5219-be93-431bc80140e6",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "c173a704-1876-558b-8097-d09edabaab06",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "exception",
-      "text": "She preferred tea to coffee.",
+      "text": "What beautiful weather we had in June.",
       "correction": null,
-      "note": "Stress is on -fer, so double."
+      "note": "uncountable noun: no article after what"
     },
     {
-      "id": "ff28af12-1a00-5807-9cff-e27e2b201655",
-      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "id": "8f057577-035d-54f8-ad56-a431c8f078a6",
+      "rule_id": "bf492ef0-a5d1-5c76-b3ab-2ddbe93418bc",
       "example_type": "exception",
-      "text": "The agent controlled the budget.",
+      "text": "It was quite good news for the whole team.",
       "correction": null,
-      "note": "Stress is on -trol, so double."
-    },
-    {
-      "id": "43f564e0-0e76-51d0-a523-e1824004a83d",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "correct",
-      "text": "Please watch the luggage while I pay.",
-      "correction": null,
-      "note": "Short vowel a: use tch."
-    },
-    {
-      "id": "1b7eb5af-0c2a-55f6-b02d-05d1a77204da",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "correct",
-      "text": "He wants to catch the early train.",
-      "correction": null,
-      "note": "Short vowel a: use tch."
-    },
-    {
-      "id": "f15da0f1-3af3-548e-837e-525a1e21b351",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "correct",
-      "text": "The bridge over the river is old.",
-      "correction": null,
-      "note": "Short vowel i: use dge."
-    },
-    {
-      "id": "3315d2eb-35be-5c8d-961a-f1d345fe8e61",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "correct",
-      "text": "We ate lunch on the beach.",
-      "correction": null,
-      "note": "Long vowel sound (ea): use ch."
-    },
-    {
-      "id": "73987dc1-a1b3-5dfe-81a8-88b51dc21d47",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "correct",
-      "text": "I cook dinner in a tiny kitchen.",
-      "correction": null,
-      "note": "Short vowel i: use tch."
-    },
-    {
-      "id": "bf0e826a-b9ce-533b-9475-1582280b45ab",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "correct",
-      "text": "The teacher will teach us new words.",
-      "correction": null,
-      "note": "Long vowel sound: use ch."
-    },
-    {
-      "id": "d4fbd698-4056-544f-9127-9bcf4bcf4d80",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "correct",
-      "text": "What is the age limit for this course?",
-      "correction": null,
-      "note": "Long vowel a: use ge."
-    },
-    {
-      "id": "94e8ad0c-4804-57bd-bf8b-6c216ed9d897",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "correct",
-      "text": "The judge listened to both sides.",
-      "correction": null,
-      "note": "Short vowel u: use dge."
-    },
-    {
-      "id": "6f0512d2-464b-5c2b-adc0-5c8a0c6a0225",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "correct",
-      "text": "She wore a badge with her name.",
-      "correction": null,
-      "note": "Short vowel a: use dge."
-    },
-    {
-      "id": "a62818be-9d6f-5c6c-841a-c4e409fea480",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "correct",
-      "text": "The hotel room has a huge window.",
-      "correction": null,
-      "note": "Long vowel u: use ge."
-    },
-    {
-      "id": "e443db23-54cb-5de1-a0ab-013942ef89ac",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "correct",
-      "text": "We watched a tennis match on Sunday.",
-      "correction": null,
-      "note": "Short vowel a: use tch."
-    },
-    {
-      "id": "eb3e06c4-7435-55fd-ac2b-d049703472b5",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "incorrect",
-      "text": "We wachted the football game together.",
-      "correction": "We watched the football game together.",
-      "note": "Short vowel a: use tch."
-    },
-    {
-      "id": "b58e7dda-974e-5f68-b021-1a8fdd5ac590",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "incorrect",
-      "text": "The dog tried to cach the ball.",
-      "correction": "The dog tried to catch the ball.",
-      "note": "Short vowel a: use tch."
-    },
-    {
-      "id": "6c8fed88-a3b8-5c76-b270-c1c8db844a21",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "incorrect",
-      "text": "They walked over the bridg after lunch.",
-      "correction": "They walked over the bridge after lunch.",
-      "note": "Short vowel i: use dge."
-    },
-    {
-      "id": "afca431b-ca85-5ed8-8989-477d22e9a0ac",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "incorrect",
-      "text": "She works in a small kichen at home.",
-      "correction": "She works in a small kitchen at home.",
-      "note": "Short vowel i: use tch."
-    },
-    {
-      "id": "82081e75-9187-5210-a9dd-0f291e41dcbc",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "incorrect",
-      "text": "The techer explained the exercise again.",
-      "correction": "The teacher explained the exercise again.",
-      "note": "Long vowel sound: use ch."
-    },
-    {
-      "id": "5afde46c-b86d-5184-bf8d-99a87de60005",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "incorrect",
-      "text": "What is the ag limit for the course?",
-      "correction": "What is the age limit for the course?",
-      "note": "Long vowel a: use ge."
-    },
-    {
-      "id": "4e66647e-9068-57f7-9992-d50f1d215a2b",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "incorrect",
-      "text": "The judg gave a clear answer.",
-      "correction": "The judge gave a clear answer.",
-      "note": "Short vowel u: use dge."
-    },
-    {
-      "id": "5f964a75-0a63-5745-9c07-ef25fe6eb52c",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "incorrect",
-      "text": "He showed me his name badg.",
-      "correction": "He showed me his name badge.",
-      "note": "Short vowel a: use dge."
-    },
-    {
-      "id": "f6f694b8-6d42-55b9-ad11-09d1c02e9927",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "incorrect",
-      "text": "The room has a hug window.",
-      "correction": "The room has a huge window.",
-      "note": "Long vowel u: use ge."
-    },
-    {
-      "id": "0279a3e5-1ae3-5350-87e7-9162ee542251",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "incorrect",
-      "text": "We watched a tennis mach on Sunday.",
-      "correction": "We watched a tennis match on Sunday.",
-      "note": "Short vowel a: use tch."
-    },
-    {
-      "id": "9d6a2287-398b-58e3-8731-7899efd29dbf",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "incorrect",
-      "text": "We had a picnic on the bech.",
-      "correction": "We had a picnic on the beach.",
-      "note": "Long vowel sound (ea): use ch."
-    },
-    {
-      "id": "2eb6b6b3-adb3-5aff-b6a3-6f4fff130e19",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "exception",
-      "text": "We have much to do today.",
-      "correction": null,
-      "note": "Short vowel u, but much ends in ch, not tch."
-    },
-    {
-      "id": "5f010ee6-cd3e-5b1b-b191-e0c294a6786c",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "exception",
-      "text": "It was such a nice day.",
-      "correction": null,
-      "note": "Short vowel u, but such ends in ch, not tch."
-    },
-    {
-      "id": "a25d5cca-fe5b-52fa-b7f6-358282516fb7",
-      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
-      "example_type": "exception",
-      "text": "Which bus goes to the airport?",
-      "correction": null,
-      "note": "Short vowel i, but which ends in ch, not tch."
-    },
-    {
-      "id": "599c731b-006b-5601-94ae-62e0d6a5ed25",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "correct",
-      "text": "She cut the bread with a sharp knife.",
-      "correction": null,
-      "note": "Silent k before n."
-    },
-    {
-      "id": "c0dd6a76-b425-5620-8c7e-c1706ce95c6e",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "correct",
-      "text": "I need to write a short email.",
-      "correction": null,
-      "note": "Silent w before r."
-    },
-    {
-      "id": "b398145f-6284-5ea9-a0ec-75ada6a1057f",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "correct",
-      "text": "Please knock before you enter the office.",
-      "correction": null,
-      "note": "Silent k before n."
-    },
-    {
-      "id": "9a0639bc-ae4d-5ec3-b544-90804f3e57de",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "correct",
-      "text": "He gave the wrong answer in class.",
-      "correction": null,
-      "note": "Silent w in wrong and answer."
-    },
-    {
-      "id": "0e6fd7e5-12af-529f-b5f9-088326451cf6",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "correct",
-      "text": "The waiter wrapped the leftover pizza.",
-      "correction": null,
-      "note": "Silent w before r."
-    },
-    {
-      "id": "1b5faefe-bd0c-573f-9fc5-3fee80d4b02e",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "correct",
-      "text": "Do you know the way to the station?",
-      "correction": null,
-      "note": "Silent k before n."
-    },
-    {
-      "id": "82e2e0e5-ea5d-5618-b00d-02eb5e3ee53a",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "correct",
-      "text": "My wrist hurts after the gym.",
-      "correction": null,
-      "note": "Silent w before r."
-    },
-    {
-      "id": "bfe00a91-db9f-5777-b552-c8e0bbd9aa44",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "correct",
-      "text": "She knitted a warm scarf for winter.",
-      "correction": null,
-      "note": "Silent k before n."
-    },
-    {
-      "id": "8539df81-a93d-5802-a334-d8694da54733",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "correct",
-      "text": "His knee hurts when he climbs stairs.",
-      "correction": null,
-      "note": "Silent k before n."
-    },
-    {
-      "id": "ad858f7f-6b67-546c-8227-07187bea41e2",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "correct",
-      "text": "Who wrote this report for the manager?",
-      "correction": null,
-      "note": "Silent w before r."
-    },
-    {
-      "id": "9b941dba-60d3-5510-bc21-a6e5abe0e4e9",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "correct",
-      "text": "The knot on my luggage strap came loose.",
-      "correction": null,
-      "note": "Silent k before n."
-    },
-    {
-      "id": "810af302-9b86-5845-b2d2-e1c7afffd11a",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "incorrect",
-      "text": "She cut the cheese with a nife.",
-      "correction": "She cut the cheese with a knife.",
-      "note": "Write the silent k."
-    },
-    {
-      "id": "4e819ecc-4a52-5dd0-ab41-0151a506fd62",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "incorrect",
-      "text": "Please nock on the door first.",
-      "correction": "Please knock on the door first.",
-      "note": "Write the silent k."
-    },
-    {
-      "id": "c12a6437-560b-5339-8d10-454a7b1fa39e",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "incorrect",
-      "text": "He took the rong train to Vienna.",
-      "correction": "He took the wrong train to Vienna.",
-      "note": "Write the silent w."
-    },
-    {
-      "id": "4ed2822b-19f7-5c88-b8a4-19aacbed188a",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "incorrect",
-      "text": "My nee hurts after the long hike.",
-      "correction": "My knee hurts after the long hike.",
-      "note": "Write the silent k."
-    },
-    {
-      "id": "1fb37f54-8981-550e-b1a7-3830166804ef",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "incorrect",
-      "text": "Can you anser this question for me?",
-      "correction": "Can you answer this question for me?",
-      "note": "Write the silent w."
-    },
-    {
-      "id": "9d716bfa-a1b2-5d32-990e-c1125bedd284",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "incorrect",
-      "text": "She is riting a message to her boss.",
-      "correction": "She is writing a message to her boss.",
-      "note": "Write the silent w."
-    },
-    {
-      "id": "f9f693c6-265e-50bb-b333-838a9e523978",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "incorrect",
-      "text": "I want to now the price of the ticket.",
-      "correction": "I want to know the price of the ticket.",
-      "note": "Know has a silent k."
-    },
-    {
-      "id": "e9799949-5e60-5382-992e-3484de6a7c00",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "incorrect",
-      "text": "The waiter rapped the sandwich in paper.",
-      "correction": "The waiter wrapped the sandwich in paper.",
-      "note": "Wrap has a silent w."
-    },
-    {
-      "id": "85239047-6fc7-509b-95e0-bc93ccb9a6db",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "incorrect",
-      "text": "My sister nits scarves for her friends.",
-      "correction": "My sister knits scarves for her friends.",
-      "note": "Write the silent k."
-    },
-    {
-      "id": "492bf270-2f65-5e7b-9b72-e5222e6bab12",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "incorrect",
-      "text": "He broke his rist while skiing.",
-      "correction": "He broke his wrist while skiing.",
-      "note": "Write the silent w."
-    },
-    {
-      "id": "eb3c35dd-706b-51d9-bea3-59cc7ca2ebed",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "incorrect",
-      "text": "She tied a strong not on the rope.",
-      "correction": "She tied a strong knot on the rope.",
-      "note": "Knot has a silent k."
-    },
-    {
-      "id": "52f138d9-8a99-5f63-809e-9957fc430b32",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "exception",
-      "text": "Who is waiting outside the door?",
-      "correction": null,
-      "note": "In who, w is silent after wh."
-    },
-    {
-      "id": "224dd18f-9fbb-5044-bccc-34c2eaf2b9b8",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "exception",
-      "text": "Two tickets to the museum, please.",
-      "correction": null,
-      "note": "Silent w in two, not before r."
-    },
-    {
-      "id": "8c1a8010-cebf-54df-94f1-9699253bf22c",
-      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
-      "example_type": "exception",
-      "text": "The soldier drew his sword.",
-      "correction": null,
-      "note": "Silent w in the middle of a word."
-    },
-    {
-      "id": "b5284b8e-7d92-591f-a8f4-427577140177",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "correct",
-      "text": "I have no doubt about the plan.",
-      "correction": null,
-      "note": "Silent b before t."
-    },
-    {
-      "id": "26548c47-ebb2-5a6c-b737-ce8a0a0bdea1",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "correct",
-      "text": "They climb the hill every weekend.",
-      "correction": null,
-      "note": "Silent b after m."
-    },
-    {
-      "id": "8455cab2-76ee-5505-a459-9ccd433d8cfc",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "correct",
-      "text": "The meeting lasts one hour.",
-      "correction": null,
-      "note": "Silent h at the start."
-    },
-    {
-      "id": "dfb3561b-1e93-56b3-abd9-3bcc07ecf292",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "correct",
-      "text": "Please sign the contract at the bottom.",
-      "correction": null,
-      "note": "Silent g before n."
-    },
-    {
-      "id": "8fec6343-1849-5807-a799-527ec343da2a",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "correct",
-      "text": "He is an honest and reliable driver.",
-      "correction": null,
-      "note": "Silent h at the start."
-    },
-    {
-      "id": "74a2944a-74ca-5192-a15a-28a1b1c2e540",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "correct",
-      "text": "Listen carefully to the instructions.",
-      "correction": null,
-      "note": "Silent t in -sten."
-    },
-    {
-      "id": "2ae28e93-358e-5870-abbe-15b6355ba43e",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "correct",
-      "text": "The old castle is open to visitors.",
-      "correction": null,
-      "note": "Silent t in -stle."
-    },
-    {
-      "id": "0b074763-0a67-5998-a9a4-b36abfa031d6",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "correct",
-      "text": "She works for a foreign company.",
-      "correction": null,
-      "note": "Silent g before n."
-    },
-    {
-      "id": "8154255b-5c6c-5802-86b1-eb194280bbb3",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "correct",
-      "text": "Don't forget to comb your hair.",
-      "correction": null,
-      "note": "Silent b after m."
-    },
-    {
-      "id": "2cc3565e-c075-5545-a9fd-0fa74be4f238",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "correct",
-      "text": "She will design the new office layout.",
-      "correction": null,
-      "note": "Silent g before n."
-    },
-    {
-      "id": "26c0cbb3-5e91-57f4-9d09-c0d847ecebd4",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "correct",
-      "text": "She paid off her debt last year.",
-      "correction": null,
-      "note": "Silent b before t."
-    },
-    {
-      "id": "80fb6b56-2b01-53cf-88bd-5e1ab70de319",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "incorrect",
-      "text": "I have no dout about his skills.",
-      "correction": "I have no doubt about his skills.",
-      "note": "Write the silent b."
-    },
-    {
-      "id": "31f2a8d0-b605-53cd-8787-2cb0c7cd2610",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "incorrect",
-      "text": "We clim the mountain every summer.",
-      "correction": "We climb the mountain every summer.",
-      "note": "Write the silent b."
-    },
-    {
-      "id": "330f2b75-5f89-5d1b-a664-874f95508c4d",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "incorrect",
-      "text": "The train arrives in an our.",
-      "correction": "The train arrives in an hour.",
-      "note": "Write the silent h."
-    },
-    {
-      "id": "6d8f1994-d0e2-5092-9c31-a1c29473bda1",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "incorrect",
-      "text": "I lisen to music while I cook.",
-      "correction": "I listen to music while I cook.",
-      "note": "Write the silent t."
-    },
-    {
-      "id": "fc8abe79-e951-5462-9522-5dca946a3645",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "incorrect",
-      "text": "The shop is next to the old casle.",
-      "correction": "The shop is next to the old castle.",
-      "note": "Write the silent t."
-    },
-    {
-      "id": "862b80ec-b657-5326-92df-732a7ed54403",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "incorrect",
-      "text": "Please sine the form here.",
-      "correction": "Please sign the form here.",
-      "note": "Write the silent g."
-    },
-    {
-      "id": "a11e0e67-2388-5864-ba39-beef688c500f",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "incorrect",
-      "text": "He is an onest man.",
-      "correction": "He is an honest man.",
-      "note": "Write the silent h."
-    },
-    {
-      "id": "51bd4fdd-e09d-549c-be89-f4c5a97581e6",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "incorrect",
-      "text": "She learns a forein language online.",
-      "correction": "She learns a foreign language online.",
-      "note": "Write the silent g."
-    },
-    {
-      "id": "33bd80bd-8478-5f45-af13-16426ab64523",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "incorrect",
-      "text": "He worked hard to pay his det.",
-      "correction": "He worked hard to pay his debt.",
-      "note": "Write the silent b."
-    },
-    {
-      "id": "255c096d-0d98-5507-afc2-01b9e74b7b8d",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "incorrect",
-      "text": "The architect will desine a new school.",
-      "correction": "The architect will design a new school.",
-      "note": "Write the silent g."
-    },
-    {
-      "id": "51337231-e466-5603-ac20-3b47f1a1fe45",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "incorrect",
-      "text": "I need to com my hair.",
-      "correction": "I need to comb my hair.",
-      "note": "Write the silent b."
-    },
-    {
-      "id": "ac5de546-45ad-5e91-8d98-cb179bc2acf0",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "exception",
-      "text": "Honey from this farm is delicious.",
-      "correction": null,
-      "note": "The h in honey is pronounced."
-    },
-    {
-      "id": "552395f1-4e5f-5b29-b74d-3a48adbd542a",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "exception",
-      "text": "Add your signature at the bottom.",
-      "correction": null,
-      "note": "The g in signature is pronounced."
-    },
-    {
-      "id": "bcabc69f-7799-5076-a403-d9e61b84d597",
-      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
-      "example_type": "exception",
-      "text": "Her hobby is cooking Italian food.",
-      "correction": null,
-      "note": "The h in hobby is pronounced."
-    },
-    {
-      "id": "e557de5c-45f1-5a4a-8292-45b499f06a39",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "correct",
-      "text": "She studied economics at a Slovak university.",
-      "correction": null,
-      "note": "Consonant + y: y becomes i."
-    },
-    {
-      "id": "70e870cb-e486-5a58-81c7-e217949a539a",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "correct",
-      "text": "We played football after the lesson.",
-      "correction": null,
-      "note": "Vowel + y: keep y."
-    },
-    {
-      "id": "722602a0-9dcd-528e-b852-ec333f52261a",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "correct",
-      "text": "He carried two heavy boxes upstairs.",
-      "correction": null,
-      "note": "Consonant + y: y becomes i."
-    },
-    {
-      "id": "9ae0afcc-7a0c-5896-bfa4-954a4312d09f",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "correct",
-      "text": "They enjoyed the dinner at a local restaurant.",
-      "correction": null,
-      "note": "Vowel + y: keep y."
-    },
-    {
-      "id": "485a8d42-f302-5aed-85fa-b283a7fef12a",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "correct",
-      "text": "I tried the soup at the new cafe.",
-      "correction": null,
-      "note": "Consonant + y: y becomes i."
-    },
-    {
-      "id": "41126f3a-fc2a-5ec7-8ae0-084206bc2f5b",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "correct",
-      "text": "The tourists stayed in a cheap hostel.",
-      "correction": null,
-      "note": "Vowel + y: keep y."
-    },
-    {
-      "id": "f378632b-cd3d-579a-ab34-9522e5e4ac71",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "correct",
-      "text": "She replied to the client's email quickly.",
-      "correction": null,
-      "note": "Consonant + y: y becomes i."
-    },
-    {
-      "id": "8cf2b831-42d3-55ee-882e-ad9e4990050c",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "correct",
-      "text": "The storm delayed our flight to Rome.",
-      "correction": null,
-      "note": "Vowel + y: keep y."
-    },
-    {
-      "id": "adccb9c1-22f3-54d6-8a9c-e559c419baa7",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "correct",
-      "text": "He worried about the exam results.",
-      "correction": null,
-      "note": "Consonant + y: y becomes i."
-    },
-    {
-      "id": "28981f55-9c92-5046-9e06-50e265fbfc07",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "correct",
-      "text": "The cook fried the eggs in butter.",
-      "correction": null,
-      "note": "Consonant + y: y becomes i."
-    },
-    {
-      "id": "5f7b1ba9-60dd-5bc3-8444-c36206a06f65",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "correct",
-      "text": "She copied the notes from the board.",
-      "correction": null,
-      "note": "Consonant + y: y becomes i."
-    },
-    {
-      "id": "03034e4e-372a-5c37-b431-307bd75abe7a",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "incorrect",
-      "text": "He studyed logistics for three years.",
-      "correction": "He studied logistics for three years.",
-      "note": "Change y to i after a consonant."
-    },
-    {
-      "id": "24b34a3a-b10c-58c9-bba1-79bc905d2d06",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "incorrect",
-      "text": "We playied cards on the train.",
-      "correction": "We played cards on the train.",
-      "note": "Keep y after a vowel."
-    },
-    {
-      "id": "762e3fc8-d2cd-5287-a52d-d9a399afb5ce",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "incorrect",
-      "text": "She carryed the shopping bags home.",
-      "correction": "She carried the shopping bags home.",
-      "note": "Change y to i after a consonant."
-    },
-    {
-      "id": "5d1fda3f-c81c-5b60-9f5c-83890cc657cf",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "incorrect",
-      "text": "They enjoied the trip to the mountains.",
-      "correction": "They enjoyed the trip to the mountains.",
-      "note": "Keep y after a vowel."
-    },
-    {
-      "id": "45411d70-9dd1-52bf-8d60-81a943785cf5",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "incorrect",
-      "text": "I tryed a new recipe yesterday.",
-      "correction": "I tried a new recipe yesterday.",
-      "note": "Change y to i after a consonant."
-    },
-    {
-      "id": "f4a7c66a-af21-580b-a80a-6c7c9d9a366f",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "incorrect",
-      "text": "The guests stayied for two nights.",
-      "correction": "The guests stayed for two nights.",
-      "note": "Keep y; do not add i."
-    },
-    {
-      "id": "8faf84fb-676f-5a7f-a69a-8f2123086f1f",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "incorrect",
-      "text": "He replyed to the message at noon.",
-      "correction": "He replied to the message at noon.",
-      "note": "Change y to i after a consonant."
-    },
-    {
-      "id": "27fe7d4f-4733-5ab5-aeba-328fc6ee16fb",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "incorrect",
-      "text": "The rain delaied the bus again.",
-      "correction": "The rain delayed the bus again.",
-      "note": "Keep y after a vowel."
-    },
-    {
-      "id": "3a0e773c-f8a7-53d1-a913-83a67c273488",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "incorrect",
-      "text": "She worryed about the long drive.",
-      "correction": "She worried about the long drive.",
-      "note": "Change y to i after a consonant."
-    },
-    {
-      "id": "7a6a0c05-d3c1-5bc3-8c58-d3c86205f184",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "incorrect",
-      "text": "My dad fryed the fish for lunch.",
-      "correction": "My dad fried the fish for lunch.",
-      "note": "Change y to i after a consonant."
-    },
-    {
-      "id": "ad9aa5e9-1a99-5075-b5e8-36929ca0dbde",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "incorrect",
-      "text": "I copyed the address into my phone.",
-      "correction": "I copied the address into my phone.",
-      "note": "Change y to i after a consonant."
-    },
-    {
-      "id": "0a0ceb83-2778-5fd4-8c0e-acade921eab9",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "exception",
-      "text": "He paid the bill in cash.",
-      "correction": null,
-      "note": "Irregular: pay becomes paid, not payed."
-    },
-    {
-      "id": "172fd2b9-8ad8-5f83-a5fc-9aa30db68cba",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "exception",
-      "text": "She said hello to everyone.",
-      "correction": null,
-      "note": "Irregular: say becomes said."
-    },
-    {
-      "id": "c617de77-a82e-5b4d-b9aa-aacbdf822f78",
-      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
-      "example_type": "exception",
-      "text": "They laid the table for dinner.",
-      "correction": null,
-      "note": "Irregular: lay becomes laid."
-    },
-    {
-      "id": "e276a776-3b59-5af7-899b-7ab028bc5d9e",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "correct",
-      "text": "The flowers are dying without enough water.",
-      "correction": null,
-      "note": "die → dying."
-    },
-    {
-      "id": "872905ec-477a-5a2c-9620-9ca21f6ad660",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "correct",
-      "text": "He is lying on the sofa now.",
-      "correction": null,
-      "note": "lie → lying."
-    },
-    {
-      "id": "260960d9-caa2-5a49-8678-695053abf0e5",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "correct",
-      "text": "She is tying her shoelaces before the run.",
-      "correction": null,
-      "note": "tie → tying."
-    },
-    {
-      "id": "9ec916f5-f42b-5f76-a46e-3d6ce1e4f482",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "correct",
-      "text": "My phone battery is dying again.",
-      "correction": null,
-      "note": "die → dying."
-    },
-    {
-      "id": "975651fc-39bc-5bd1-b9c7-fa13d933be81",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "correct",
-      "text": "Stop lying to your manager about deadlines.",
-      "correction": null,
-      "note": "lie → lying, also for untruths."
-    },
-    {
-      "id": "15856fa4-7a23-5179-b354-7f7bfed549f9",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "correct",
-      "text": "The waiter is tying an apron around his waist.",
-      "correction": null,
-      "note": "tie → tying."
-    },
-    {
-      "id": "f37795a9-e7ac-55df-b13f-e5b9b87f30c0",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "correct",
-      "text": "They are lying on the beach in Croatia.",
-      "correction": null,
-      "note": "lie → lying."
-    },
-    {
-      "id": "3b5baef8-83b9-503c-9a71-964dd41c1414",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "correct",
-      "text": "He is tying the boxes with strong string.",
-      "correction": null,
-      "note": "tie → tying."
-    },
-    {
-      "id": "441f4377-aad6-54f3-b7f2-b63da39f3184",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "correct",
-      "text": "The plant is dying because of the cold.",
-      "correction": null,
-      "note": "die → dying."
-    },
-    {
-      "id": "7a0b4c94-976e-5811-9570-b765c234d109",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "correct",
-      "text": "Some papers are lying on my desk.",
-      "correction": null,
-      "note": "lie → lying."
-    },
-    {
-      "id": "a58768e9-8c65-5d22-864b-b7feaf532fc9",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "correct",
-      "text": "She is untying the knot in her scarf.",
-      "correction": null,
-      "note": "untie → untying."
-    },
-    {
-      "id": "c1b1b774-5d99-5dbf-a528-9f15a71bff0d",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "incorrect",
-      "text": "The plants are dieing in the heat.",
-      "correction": "The plants are dying in the heat.",
-      "note": "Change ie to y."
-    },
-    {
-      "id": "e3b0f6f2-dcc2-55fd-99d4-5d554d727620",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "incorrect",
-      "text": "He is lieing on the bed.",
-      "correction": "He is lying on the bed.",
-      "note": "Change ie to y."
-    },
-    {
-      "id": "b54c9d91-6ed1-5eba-bbcf-5662fbfff44b",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "incorrect",
-      "text": "She is tieing her scarf in the hall.",
-      "correction": "She is tying her scarf in the hall.",
-      "note": "Change ie to y."
-    },
-    {
-      "id": "0dcd8944-57af-5390-8a57-3acc1e9dd5cc",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "incorrect",
-      "text": "The fish are dieing in the river.",
-      "correction": "The fish are dying in the river.",
-      "note": "Change ie to y."
-    },
-    {
-      "id": "52ae4cac-3095-55ee-969b-c5c7fa84c440",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "incorrect",
-      "text": "Why are you lieing to me?",
-      "correction": "Why are you lying to me?",
-      "note": "Change ie to y."
-    },
-    {
-      "id": "a5ff50f6-0353-5799-80ba-8fc9c3dae50b",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "incorrect",
-      "text": "He is tieing a ribbon on the gift.",
-      "correction": "He is tying a ribbon on the gift.",
-      "note": "Change ie to y."
-    },
-    {
-      "id": "0826cd87-006a-5a70-8873-d41171760dd9",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "incorrect",
-      "text": "The cat is lieing in the sun.",
-      "correction": "The cat is lying in the sun.",
-      "note": "Change ie to y."
-    },
-    {
-      "id": "d3952e4c-ee53-5476-afe9-8b3d2be10a37",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "incorrect",
-      "text": "My old laptop is dieing slowly.",
-      "correction": "My old laptop is dying slowly.",
-      "note": "Change ie to y."
-    },
-    {
-      "id": "f5861356-3135-5568-a8c7-ff87c98e07c7",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "incorrect",
-      "text": "They are lieing about the price.",
-      "correction": "They are lying about the price.",
-      "note": "Change ie to y."
-    },
-    {
-      "id": "5d3b73d3-5d96-5baa-8e65-57abcbadd9bd",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "incorrect",
-      "text": "She is untieing the rope at the dock.",
-      "correction": "She is untying the rope at the dock.",
-      "note": "Change ie to y."
-    },
-    {
-      "id": "c35171e8-30bc-5c74-ae79-beb005ac424f",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "incorrect",
-      "text": "The driver is tieing the load to the truck.",
-      "correction": "The driver is tying the load to the truck.",
-      "note": "Change ie to y."
-    },
-    {
-      "id": "dccd4748-eee3-5e44-95a6-e3189394b194",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "exception",
-      "text": "She is dyeing her hair red.",
-      "correction": null,
-      "note": "Dye keeps its e; it differs from die."
-    },
-    {
-      "id": "98b987a2-33dd-5b6b-be66-04fb2371653c",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "exception",
-      "text": "We are seeing the sights today.",
-      "correction": null,
-      "note": "Verbs ending in ee keep both e letters."
-    },
-    {
-      "id": "8c3fadda-92f7-50f1-81af-2646895085ce",
-      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
-      "example_type": "exception",
-      "text": "They are agreeing on a fair price.",
-      "correction": null,
-      "note": "Verbs ending in ee keep both e letters."
-    },
-    {
-      "id": "7cb36c6d-a8c2-5d59-9089-5f1d0a66cf31",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "correct",
-      "text": "Our house is near the city park.",
-      "correction": null,
-      "note": "ou often says /aʊ/ in house."
-    },
-    {
-      "id": "51003654-33b1-5bca-b0c3-af16e22dc8cd",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "correct",
-      "text": "How do you get to the airport?",
-      "correction": null,
-      "note": "ow often says /aʊ/ in how."
-    },
-    {
-      "id": "077e7587-b27e-53cb-acbb-8e4d3da6baa8",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "correct",
-      "text": "The course starts in September.",
-      "correction": null,
-      "note": "au often says /ɔː/ in course."
-    },
-    {
-      "id": "ca84bdf4-e397-59b4-9871-2dad12ca7230",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "correct",
-      "text": "We saw a beautiful sunset yesterday.",
-      "correction": null,
-      "note": "aw says /ɔː/ in saw."
-    },
-    {
-      "id": "ee30733e-c7b9-5d21-9a1f-12a224ae96ee",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "correct",
-      "text": "The mouse ran behind the sofa.",
-      "correction": null,
-      "note": "ou says /aʊ/ in mouse."
-    },
-    {
-      "id": "763e7296-f35a-530c-b60a-e164337a437c",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "correct",
-      "text": "She found her keys in her coat.",
-      "correction": null,
-      "note": "ou says /aʊ/ in found."
-    },
-    {
-      "id": "08e1dc07-4e4f-55fc-8fe4-daa6aedf81b5",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "correct",
-      "text": "The cow is standing near the fence.",
-      "correction": null,
-      "note": "ow says /aʊ/ in cow."
-    },
-    {
-      "id": "5dbdecbf-7863-5365-a241-2a58257eb53e",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "correct",
-      "text": "The author wrote a book about travel.",
-      "correction": null,
-      "note": "au says /ɔː/ in author."
-    },
-    {
-      "id": "c9bed9e3-46b2-561f-889d-bcc5d8d75f74",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "correct",
-      "text": "She wore a brown dress to the party.",
-      "correction": null,
-      "note": "ow says /aʊ/ in brown."
-    },
-    {
-      "id": "1291373d-4a3e-5dca-b9eb-1ec63f717b97",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "correct",
-      "text": "They bought fresh bread at the market.",
-      "correction": null,
-      "note": "ou says /ɔː/ in bought."
-    },
-    {
-      "id": "ddc6af97-02e8-52d4-a8fb-f379cfac0b1d",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "correct",
-      "text": "The lawn needs water in summer.",
-      "correction": null,
-      "note": "aw says /ɔː/ in lawn."
-    },
-    {
-      "id": "49a98350-2674-5049-bdbb-d44eaee9f6f4",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "incorrect",
-      "text": "Our howse is near the city park.",
-      "correction": "Our house is near the city park.",
-      "note": "Use ou in house."
-    },
-    {
-      "id": "c9e01745-59ad-5189-b386-4ea04882e2f9",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "incorrect",
-      "text": "They sat on the grownd.",
-      "correction": "They sat on the ground.",
-      "note": "Use ou in ground."
-    },
-    {
-      "id": "b74f2f87-289a-5f37-9c89-ce8de311d81c",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "incorrect",
-      "text": "The corse starts in September.",
-      "correction": "The course starts in September.",
-      "note": "Use au in course."
-    },
-    {
-      "id": "66a41f79-98fc-55e3-8f3b-089ea10dd6ad",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "incorrect",
-      "text": "The baby crauled across the floor.",
-      "correction": "The baby crawled across the floor.",
-      "note": "Use aw in crawl."
-    },
-    {
-      "id": "6af9c197-2ce2-5bd8-8624-4cc978c51955",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "incorrect",
-      "text": "The mous ran behind the sofa.",
-      "correction": "The mouse ran behind the sofa.",
-      "note": "Use ou in mouse."
-    },
-    {
-      "id": "ce594654-b5ab-521d-8576-2ceb937156ce",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "incorrect",
-      "text": "I take a shouer every morning.",
-      "correction": "I take a shower every morning.",
-      "note": "Use ow in shower."
-    },
-    {
-      "id": "d609bbe4-14d5-5a7e-a85c-d158df6b5afc",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "incorrect",
-      "text": "Dark clawds covered the sky.",
-      "correction": "Dark clouds covered the sky.",
-      "note": "Use ou in clouds."
-    },
-    {
-      "id": "93e1a751-99d8-5d9c-abc3-8c2b3d1f4662",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "incorrect",
-      "text": "The auther wrote a book about travel.",
-      "correction": "The author wrote a book about travel.",
-      "note": "Use au in author."
-    },
-    {
-      "id": "57ae311c-549a-52db-a355-deac85453428",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "incorrect",
-      "text": "He drew a map of the old tawn.",
-      "correction": "He drew a map of the old town.",
-      "note": "Use ow in town."
-    },
-    {
-      "id": "6420893b-b476-5b1a-a2db-02263aed5f7e",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "incorrect",
-      "text": "They baught fresh bread at the market.",
-      "correction": "They bought fresh bread at the market.",
-      "note": "Use ou in bought."
-    },
-    {
-      "id": "e6e6685c-c54e-5ad6-9b90-e27216eee416",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "incorrect",
-      "text": "The laun needs water in summer.",
-      "correction": "The lawn needs water in summer.",
-      "note": "Use aw in lawn."
-    },
-    {
-      "id": "e8ae38e5-e141-54dd-bdd7-70e0953763cb",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "exception",
-      "text": "The soup is hot and tasty.",
-      "correction": null,
-      "note": "ou says /uː/ in soup."
-    },
-    {
-      "id": "e6689d04-c3fe-54fd-813f-aa2b1c5a8e99",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "exception",
-      "text": "You should take an umbrella.",
-      "correction": null,
-      "note": "ou says /ʊ/ in should."
-    },
-    {
-      "id": "e9922f01-766f-57de-acf6-3d0f50dc0a95",
-      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
-      "example_type": "exception",
-      "text": "The daughter is learning to drive.",
-      "correction": null,
-      "note": "au says /ɔː/ in daughter."
+      "note": "uncountable noun: no article after quite"
     },
     {
       "id": "a65c701d-f17e-59aa-992c-2e6aea39a3e8",
@@ -20070,6 +18898,1606 @@
       "text": "Our foreign supplier called today.",
       "correction": null,
       "note": "Foreign has ei, but not after c."
+    },
+    {
+      "id": "e381685a-02cc-555b-97f4-fce724e26d0d",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "correct",
+      "text": "The bus stopped outside the station.",
+      "correction": null,
+      "note": "One-syllable word: stop → stopped."
+    },
+    {
+      "id": "62adac0c-a7c6-5ba9-9a20-4a582faa5c7b",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "correct",
+      "text": "She is planning a trip to Spain.",
+      "correction": null,
+      "note": "plan + ing: double the n."
+    },
+    {
+      "id": "9c756aef-c1c4-52ee-ae9f-020e1b52e1d1",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "correct",
+      "text": "The company is beginning a new project.",
+      "correction": null,
+      "note": "Stress on last syllable: begin → beginning."
+    },
+    {
+      "id": "0b4ad0ae-e8bf-5766-98e3-986ead457a21",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "correct",
+      "text": "He admitted his mistake to the manager.",
+      "correction": null,
+      "note": "Stressed ending: admit → admitted."
+    },
+    {
+      "id": "474d6772-e57e-554b-9936-915cae17977f",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "correct",
+      "text": "The chef chopped onions for the soup.",
+      "correction": null,
+      "note": "chop + ed: double the p."
+    },
+    {
+      "id": "3c0ad118-a845-5fac-88d0-c44030064986",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "correct",
+      "text": "They are shopping for fresh vegetables.",
+      "correction": null,
+      "note": "shop + ing: double the p."
+    },
+    {
+      "id": "a6957055-bcde-5ad9-8033-eb3c103a22cc",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "correct",
+      "text": "My brother is getting a new laptop.",
+      "correction": null,
+      "note": "get + ing: double the t."
+    },
+    {
+      "id": "49d48573-5b79-5048-b309-e82cc608a0c2",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "correct",
+      "text": "The student referred to her notes.",
+      "correction": null,
+      "note": "Stress on -fer: refer → referred."
+    },
+    {
+      "id": "58c5bf5e-d6e3-57ce-9521-3156e3b48005",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "correct",
+      "text": "The waiter dropped a plate in the kitchen.",
+      "correction": null,
+      "note": "drop + ed: double the p."
+    },
+    {
+      "id": "7dd7b198-fbcd-5cdc-a9cd-8c5d647ab718",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "correct",
+      "text": "This hotel is bigger than the old one.",
+      "correction": null,
+      "note": "big + er: double the g."
+    },
+    {
+      "id": "c2e79e01-b1bb-57cd-883e-c8104ac329ab",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "correct",
+      "text": "She regretted missing the last train.",
+      "correction": null,
+      "note": "Stressed ending: regret → regretted."
+    },
+    {
+      "id": "f70e4abe-207a-59a9-b45c-7d6a9377d7b5",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "incorrect",
+      "text": "The taxi stoped at the hotel.",
+      "correction": "The taxi stopped at the hotel.",
+      "note": "Double the p before -ed."
+    },
+    {
+      "id": "93c812bb-8371-55df-b97d-b082900579c1",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "incorrect",
+      "text": "I am runing late for work.",
+      "correction": "I am running late for work.",
+      "note": "Double the n before -ing."
+    },
+    {
+      "id": "4fb7f66e-cd74-551e-9734-ea69a9dcc2e4",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "incorrect",
+      "text": "She planed her holiday in July.",
+      "correction": "She planned her holiday in July.",
+      "note": "Double the n before -ed."
+    },
+    {
+      "id": "54d75411-850f-529b-bb18-b9f8e58f2eca",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "incorrect",
+      "text": "He is swiming in the lake every summer.",
+      "correction": "He is swimming in the lake every summer.",
+      "note": "Double the m before -ing."
+    },
+    {
+      "id": "18dec9c2-0fd3-5c93-afcc-86d84835ab5b",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "incorrect",
+      "text": "We shoped at the market yesterday.",
+      "correction": "We shopped at the market yesterday.",
+      "note": "Double the p before -ed."
+    },
+    {
+      "id": "7954bf5d-c33e-5c75-9f03-bc8e115f80d6",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "incorrect",
+      "text": "The lesson is begining at nine o'clock.",
+      "correction": "The lesson is beginning at nine o'clock.",
+      "note": "Stressed -gin: double the n."
+    },
+    {
+      "id": "584cea59-dec2-5a6a-800d-f0c3c0ac2f52",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "incorrect",
+      "text": "My sister is biger than me.",
+      "correction": "My sister is bigger than me.",
+      "note": "Double the g before -er."
+    },
+    {
+      "id": "32d236bf-8538-50c9-8477-b8199f07f0d9",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "incorrect",
+      "text": "He is cuting the bread for lunch.",
+      "correction": "He is cutting the bread for lunch.",
+      "note": "Double the t before -ing."
+    },
+    {
+      "id": "be5055cc-ca78-5596-abf5-40ecb55b4369",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "incorrect",
+      "text": "He admited he was late for class.",
+      "correction": "He admitted he was late for class.",
+      "note": "Stressed -mit: double the t."
+    },
+    {
+      "id": "6790e5cd-fda4-512a-a875-50e32b9de419",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "incorrect",
+      "text": "The rabbit hoped across the garden.",
+      "correction": "The rabbit hopped across the garden.",
+      "note": "Double the p; hoped is another word."
+    },
+    {
+      "id": "1a06b8dd-e30f-5ee0-9fc8-e6346fe20b5e",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "incorrect",
+      "text": "She is geting a new passport.",
+      "correction": "She is getting a new passport.",
+      "note": "Double the t before -ing."
+    },
+    {
+      "id": "b6056de5-6ebc-57ba-87a8-8ec613453bca",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "exception",
+      "text": "The mechanic fixed the car yesterday.",
+      "correction": null,
+      "note": "Never double x."
+    },
+    {
+      "id": "f5b504a4-3d77-5e46-96c0-1ee4791fdfdf",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "exception",
+      "text": "They are showing the results today.",
+      "correction": null,
+      "note": "Never double w."
+    },
+    {
+      "id": "ea36937b-4ee9-5100-aa56-2ba67daa0112",
+      "rule_id": "a986f83f-aab7-54c7-bb18-52ac61f564ef",
+      "example_type": "exception",
+      "text": "She enjoyed the long train ride.",
+      "correction": null,
+      "note": "Never double y."
+    },
+    {
+      "id": "a99d5663-ed52-5f5e-af96-0f16c0e4c26b",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "correct",
+      "text": "She visited her grandparents last summer.",
+      "correction": null,
+      "note": "Stress is on VIS, so no doubling."
+    },
+    {
+      "id": "22680f54-a943-5214-b73f-126b2e1fb78b",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "correct",
+      "text": "The shop opened at eight o'clock.",
+      "correction": null,
+      "note": "Stress is on O, so no doubling."
+    },
+    {
+      "id": "7798756c-7a02-549e-a202-9b7ebbb192c0",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "correct",
+      "text": "We are listening to a podcast.",
+      "correction": null,
+      "note": "Unstressed -ten: no doubling."
+    },
+    {
+      "id": "f5144218-a51b-55c7-9e12-8057aedf5afa",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "correct",
+      "text": "The waiter offered us a free dessert.",
+      "correction": null,
+      "note": "Stress is on OF, so no doubling."
+    },
+    {
+      "id": "9aaf2e2d-d16f-5910-95cc-d379572f6550",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "correct",
+      "text": "He is entering the contest tomorrow.",
+      "correction": null,
+      "note": "Unstressed -ter: no doubling."
+    },
+    {
+      "id": "ea9c4d21-dc2e-506f-8bd6-09a8d269716e",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "correct",
+      "text": "They finished the project before Friday.",
+      "correction": null,
+      "note": "Unstressed -ish: no doubling."
+    },
+    {
+      "id": "0925049b-cf19-5120-949a-282ebd85d8df",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "correct",
+      "text": "My cousin worked at a bakery.",
+      "correction": null,
+      "note": "Word ends in two consonants: rk."
+    },
+    {
+      "id": "455c8bb3-3af8-574f-ae11-03b45d309d5f",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "correct",
+      "text": "The guide waited for us outside.",
+      "correction": null,
+      "note": "Two vowels before t: no doubling."
+    },
+    {
+      "id": "8c125fc9-04a3-5619-ae3b-5da07ede7552",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "correct",
+      "text": "She is learning Slovak at university.",
+      "correction": null,
+      "note": "Ends in two consonants: rn."
+    },
+    {
+      "id": "02b8219c-4a57-5352-b442-fd1b0fe5b7b4",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "correct",
+      "text": "We developed a new filing system.",
+      "correction": null,
+      "note": "Stress is on -vel, not -op."
+    },
+    {
+      "id": "61491d8d-28a8-57f3-81c3-ac752d76fa80",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "correct",
+      "text": "Tom is repairing his bike in the garage.",
+      "correction": null,
+      "note": "Two vowels before r: no doubling."
+    },
+    {
+      "id": "de11f23c-67d4-5fc7-9ce3-afc91e680277",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "incorrect",
+      "text": "We visitted the castle in May.",
+      "correction": "We visited the castle in May.",
+      "note": "Unstressed ending: do not double t."
+    },
+    {
+      "id": "64e03c00-640c-5e7d-8b10-a95324564a7d",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "incorrect",
+      "text": "The bank openned at nine.",
+      "correction": "The bank opened at nine.",
+      "note": "Unstressed ending: do not double n."
+    },
+    {
+      "id": "1c620e52-78ef-5fc3-a004-4b51738130cf",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "incorrect",
+      "text": "She is listenning to music.",
+      "correction": "She is listening to music.",
+      "note": "Unstressed ending: do not double n."
+    },
+    {
+      "id": "dfa3258f-3354-5eab-a6c9-c57e3b8ee9eb",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "incorrect",
+      "text": "He offerred me a good job.",
+      "correction": "He offered me a good job.",
+      "note": "Stress is on OF: do not double r."
+    },
+    {
+      "id": "133187aa-44ab-52ec-a363-afe3aa3a7c9c",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "incorrect",
+      "text": "They are enterring the building.",
+      "correction": "They are entering the building.",
+      "note": "Unstressed ending: do not double r."
+    },
+    {
+      "id": "efb1194b-1ce5-5a08-bbd8-2e35928a47c3",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "incorrect",
+      "text": "I workked in a hotel last year.",
+      "correction": "I worked in a hotel last year.",
+      "note": "Ends in two consonants: no doubling."
+    },
+    {
+      "id": "c5f25224-4d13-513a-acb2-fdb408c796d2",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "incorrect",
+      "text": "The train is waitting at platform two.",
+      "correction": "The train is waiting at platform two.",
+      "note": "Two vowels before t: no doubling."
+    },
+    {
+      "id": "48a6c4a9-28a0-503b-b812-6a551cadb707",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "incorrect",
+      "text": "We developped a small app together.",
+      "correction": "We developed a small app together.",
+      "note": "Stress is not on the last syllable."
+    },
+    {
+      "id": "8dd589ac-d3ff-5bb5-a431-fc78c79751b9",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "incorrect",
+      "text": "She helpped her mother cook dinner.",
+      "correction": "She helped her mother cook dinner.",
+      "note": "Ends in lp: no doubling."
+    },
+    {
+      "id": "d459925d-00e4-5e6e-a67e-4cc58bcf8f67",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "incorrect",
+      "text": "The soup is cookking on the stove.",
+      "correction": "The soup is cooking on the stove.",
+      "note": "Two vowels before k: no doubling."
+    },
+    {
+      "id": "a6f127bb-51f8-598f-9f8f-f5ad6680f6eb",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "incorrect",
+      "text": "He repairred the old printer.",
+      "correction": "He repaired the old printer.",
+      "note": "Two vowels before r: no doubling."
+    },
+    {
+      "id": "2eae23d9-0b3d-5cc6-a949-04acecb1b86c",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "exception",
+      "text": "The report was submitted on Monday.",
+      "correction": null,
+      "note": "Stress is on -mit, so double."
+    },
+    {
+      "id": "d5aaee09-59b3-5219-be93-431bc80140e6",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "exception",
+      "text": "She preferred tea to coffee.",
+      "correction": null,
+      "note": "Stress is on -fer, so double."
+    },
+    {
+      "id": "ff28af12-1a00-5807-9cff-e27e2b201655",
+      "rule_id": "b1f167ca-3a71-550f-bbfd-76aa7ed19af0",
+      "example_type": "exception",
+      "text": "The agent controlled the budget.",
+      "correction": null,
+      "note": "Stress is on -trol, so double."
+    },
+    {
+      "id": "43f564e0-0e76-51d0-a523-e1824004a83d",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "correct",
+      "text": "Please watch the luggage while I pay.",
+      "correction": null,
+      "note": "Short vowel a: use tch."
+    },
+    {
+      "id": "1b7eb5af-0c2a-55f6-b02d-05d1a77204da",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "correct",
+      "text": "He wants to catch the early train.",
+      "correction": null,
+      "note": "Short vowel a: use tch."
+    },
+    {
+      "id": "f15da0f1-3af3-548e-837e-525a1e21b351",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "correct",
+      "text": "The bridge over the river is old.",
+      "correction": null,
+      "note": "Short vowel i: use dge."
+    },
+    {
+      "id": "3315d2eb-35be-5c8d-961a-f1d345fe8e61",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "correct",
+      "text": "We ate lunch on the beach.",
+      "correction": null,
+      "note": "Long vowel sound (ea): use ch."
+    },
+    {
+      "id": "73987dc1-a1b3-5dfe-81a8-88b51dc21d47",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "correct",
+      "text": "I cook dinner in a tiny kitchen.",
+      "correction": null,
+      "note": "Short vowel i: use tch."
+    },
+    {
+      "id": "bf0e826a-b9ce-533b-9475-1582280b45ab",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "correct",
+      "text": "The teacher will teach us new words.",
+      "correction": null,
+      "note": "Long vowel sound: use ch."
+    },
+    {
+      "id": "d4fbd698-4056-544f-9127-9bcf4bcf4d80",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "correct",
+      "text": "What is the age limit for this course?",
+      "correction": null,
+      "note": "Long vowel a: use ge."
+    },
+    {
+      "id": "94e8ad0c-4804-57bd-bf8b-6c216ed9d897",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "correct",
+      "text": "The judge listened to both sides.",
+      "correction": null,
+      "note": "Short vowel u: use dge."
+    },
+    {
+      "id": "6f0512d2-464b-5c2b-adc0-5c8a0c6a0225",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "correct",
+      "text": "She wore a badge with her name.",
+      "correction": null,
+      "note": "Short vowel a: use dge."
+    },
+    {
+      "id": "a62818be-9d6f-5c6c-841a-c4e409fea480",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "correct",
+      "text": "The hotel room has a huge window.",
+      "correction": null,
+      "note": "Long vowel u: use ge."
+    },
+    {
+      "id": "e443db23-54cb-5de1-a0ab-013942ef89ac",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "correct",
+      "text": "We watched a tennis match on Sunday.",
+      "correction": null,
+      "note": "Short vowel a: use tch."
+    },
+    {
+      "id": "eb3e06c4-7435-55fd-ac2b-d049703472b5",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "incorrect",
+      "text": "We wachted the football game together.",
+      "correction": "We watched the football game together.",
+      "note": "Short vowel a: use tch."
+    },
+    {
+      "id": "b58e7dda-974e-5f68-b021-1a8fdd5ac590",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "incorrect",
+      "text": "The dog tried to cach the ball.",
+      "correction": "The dog tried to catch the ball.",
+      "note": "Short vowel a: use tch."
+    },
+    {
+      "id": "6c8fed88-a3b8-5c76-b270-c1c8db844a21",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "incorrect",
+      "text": "They walked over the bridg after lunch.",
+      "correction": "They walked over the bridge after lunch.",
+      "note": "Short vowel i: use dge."
+    },
+    {
+      "id": "afca431b-ca85-5ed8-8989-477d22e9a0ac",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "incorrect",
+      "text": "She works in a small kichen at home.",
+      "correction": "She works in a small kitchen at home.",
+      "note": "Short vowel i: use tch."
+    },
+    {
+      "id": "82081e75-9187-5210-a9dd-0f291e41dcbc",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "incorrect",
+      "text": "The techer explained the exercise again.",
+      "correction": "The teacher explained the exercise again.",
+      "note": "Long vowel sound: use ch."
+    },
+    {
+      "id": "5afde46c-b86d-5184-bf8d-99a87de60005",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "incorrect",
+      "text": "What is the ag limit for the course?",
+      "correction": "What is the age limit for the course?",
+      "note": "Long vowel a: use ge."
+    },
+    {
+      "id": "4e66647e-9068-57f7-9992-d50f1d215a2b",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "incorrect",
+      "text": "The judg gave a clear answer.",
+      "correction": "The judge gave a clear answer.",
+      "note": "Short vowel u: use dge."
+    },
+    {
+      "id": "5f964a75-0a63-5745-9c07-ef25fe6eb52c",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "incorrect",
+      "text": "He showed me his name badg.",
+      "correction": "He showed me his name badge.",
+      "note": "Short vowel a: use dge."
+    },
+    {
+      "id": "f6f694b8-6d42-55b9-ad11-09d1c02e9927",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "incorrect",
+      "text": "The room has a hug window.",
+      "correction": "The room has a huge window.",
+      "note": "Long vowel u: use ge."
+    },
+    {
+      "id": "0279a3e5-1ae3-5350-87e7-9162ee542251",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "incorrect",
+      "text": "We watched a tennis mach on Sunday.",
+      "correction": "We watched a tennis match on Sunday.",
+      "note": "Short vowel a: use tch."
+    },
+    {
+      "id": "9d6a2287-398b-58e3-8731-7899efd29dbf",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "incorrect",
+      "text": "We had a picnic on the bech.",
+      "correction": "We had a picnic on the beach.",
+      "note": "Long vowel sound (ea): use ch."
+    },
+    {
+      "id": "2eb6b6b3-adb3-5aff-b6a3-6f4fff130e19",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "exception",
+      "text": "We have much to do today.",
+      "correction": null,
+      "note": "Short vowel u, but much ends in ch, not tch."
+    },
+    {
+      "id": "5f010ee6-cd3e-5b1b-b191-e0c294a6786c",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "exception",
+      "text": "It was such a nice day.",
+      "correction": null,
+      "note": "Short vowel u, but such ends in ch, not tch."
+    },
+    {
+      "id": "a25d5cca-fe5b-52fa-b7f6-358282516fb7",
+      "rule_id": "9deba5cf-ddea-5758-a837-0b9c64195fe0",
+      "example_type": "exception",
+      "text": "Which bus goes to the airport?",
+      "correction": null,
+      "note": "Short vowel i, but which ends in ch, not tch."
+    },
+    {
+      "id": "599c731b-006b-5601-94ae-62e0d6a5ed25",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "correct",
+      "text": "She cut the bread with a sharp knife.",
+      "correction": null,
+      "note": "Silent k before n."
+    },
+    {
+      "id": "c0dd6a76-b425-5620-8c7e-c1706ce95c6e",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "correct",
+      "text": "I need to write a short email.",
+      "correction": null,
+      "note": "Silent w before r."
+    },
+    {
+      "id": "b398145f-6284-5ea9-a0ec-75ada6a1057f",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "correct",
+      "text": "Please knock before you enter the office.",
+      "correction": null,
+      "note": "Silent k before n."
+    },
+    {
+      "id": "9a0639bc-ae4d-5ec3-b544-90804f3e57de",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "correct",
+      "text": "He gave the wrong answer in class.",
+      "correction": null,
+      "note": "Silent w in wrong and answer."
+    },
+    {
+      "id": "0e6fd7e5-12af-529f-b5f9-088326451cf6",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "correct",
+      "text": "The waiter wrapped the leftover pizza.",
+      "correction": null,
+      "note": "Silent w before r."
+    },
+    {
+      "id": "1b5faefe-bd0c-573f-9fc5-3fee80d4b02e",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "correct",
+      "text": "Do you know the way to the station?",
+      "correction": null,
+      "note": "Silent k before n."
+    },
+    {
+      "id": "82e2e0e5-ea5d-5618-b00d-02eb5e3ee53a",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "correct",
+      "text": "My wrist hurts after the gym.",
+      "correction": null,
+      "note": "Silent w before r."
+    },
+    {
+      "id": "bfe00a91-db9f-5777-b552-c8e0bbd9aa44",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "correct",
+      "text": "She knitted a warm scarf for winter.",
+      "correction": null,
+      "note": "Silent k before n."
+    },
+    {
+      "id": "8539df81-a93d-5802-a334-d8694da54733",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "correct",
+      "text": "His knee hurts when he climbs stairs.",
+      "correction": null,
+      "note": "Silent k before n."
+    },
+    {
+      "id": "ad858f7f-6b67-546c-8227-07187bea41e2",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "correct",
+      "text": "Who wrote this report for the manager?",
+      "correction": null,
+      "note": "Silent w before r."
+    },
+    {
+      "id": "9b941dba-60d3-5510-bc21-a6e5abe0e4e9",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "correct",
+      "text": "The knot on my luggage strap came loose.",
+      "correction": null,
+      "note": "Silent k before n."
+    },
+    {
+      "id": "810af302-9b86-5845-b2d2-e1c7afffd11a",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "incorrect",
+      "text": "She cut the cheese with a nife.",
+      "correction": "She cut the cheese with a knife.",
+      "note": "Write the silent k."
+    },
+    {
+      "id": "4e819ecc-4a52-5dd0-ab41-0151a506fd62",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "incorrect",
+      "text": "Please nock on the door first.",
+      "correction": "Please knock on the door first.",
+      "note": "Write the silent k."
+    },
+    {
+      "id": "c12a6437-560b-5339-8d10-454a7b1fa39e",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "incorrect",
+      "text": "He took the rong train to Vienna.",
+      "correction": "He took the wrong train to Vienna.",
+      "note": "Write the silent w."
+    },
+    {
+      "id": "4ed2822b-19f7-5c88-b8a4-19aacbed188a",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "incorrect",
+      "text": "My nee hurts after the long hike.",
+      "correction": "My knee hurts after the long hike.",
+      "note": "Write the silent k."
+    },
+    {
+      "id": "1fb37f54-8981-550e-b1a7-3830166804ef",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "incorrect",
+      "text": "Can you anser this question for me?",
+      "correction": "Can you answer this question for me?",
+      "note": "Write the silent w."
+    },
+    {
+      "id": "9d716bfa-a1b2-5d32-990e-c1125bedd284",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "incorrect",
+      "text": "She is riting a message to her boss.",
+      "correction": "She is writing a message to her boss.",
+      "note": "Write the silent w."
+    },
+    {
+      "id": "f9f693c6-265e-50bb-b333-838a9e523978",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "incorrect",
+      "text": "I want to now the price of the ticket.",
+      "correction": "I want to know the price of the ticket.",
+      "note": "Know has a silent k."
+    },
+    {
+      "id": "e9799949-5e60-5382-992e-3484de6a7c00",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "incorrect",
+      "text": "The waiter rapped the sandwich in paper.",
+      "correction": "The waiter wrapped the sandwich in paper.",
+      "note": "Wrap has a silent w."
+    },
+    {
+      "id": "85239047-6fc7-509b-95e0-bc93ccb9a6db",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "incorrect",
+      "text": "My sister nits scarves for her friends.",
+      "correction": "My sister knits scarves for her friends.",
+      "note": "Write the silent k."
+    },
+    {
+      "id": "492bf270-2f65-5e7b-9b72-e5222e6bab12",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "incorrect",
+      "text": "He broke his rist while skiing.",
+      "correction": "He broke his wrist while skiing.",
+      "note": "Write the silent w."
+    },
+    {
+      "id": "eb3c35dd-706b-51d9-bea3-59cc7ca2ebed",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "incorrect",
+      "text": "She tied a strong not on the rope.",
+      "correction": "She tied a strong knot on the rope.",
+      "note": "Knot has a silent k."
+    },
+    {
+      "id": "52f138d9-8a99-5f63-809e-9957fc430b32",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "exception",
+      "text": "Who is waiting outside the door?",
+      "correction": null,
+      "note": "In who, w is silent after wh."
+    },
+    {
+      "id": "224dd18f-9fbb-5044-bccc-34c2eaf2b9b8",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "exception",
+      "text": "Two tickets to the museum, please.",
+      "correction": null,
+      "note": "Silent w in two, not before r."
+    },
+    {
+      "id": "8c1a8010-cebf-54df-94f1-9699253bf22c",
+      "rule_id": "d58743c9-b4f8-5bc5-9c9e-35576d8f817e",
+      "example_type": "exception",
+      "text": "The soldier drew his sword.",
+      "correction": null,
+      "note": "Silent w in the middle of a word."
+    },
+    {
+      "id": "b5284b8e-7d92-591f-a8f4-427577140177",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "correct",
+      "text": "I have no doubt about the plan.",
+      "correction": null,
+      "note": "Silent b before t."
+    },
+    {
+      "id": "26548c47-ebb2-5a6c-b737-ce8a0a0bdea1",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "correct",
+      "text": "They climb the hill every weekend.",
+      "correction": null,
+      "note": "Silent b after m."
+    },
+    {
+      "id": "8455cab2-76ee-5505-a459-9ccd433d8cfc",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "correct",
+      "text": "The meeting lasts one hour.",
+      "correction": null,
+      "note": "Silent h at the start."
+    },
+    {
+      "id": "dfb3561b-1e93-56b3-abd9-3bcc07ecf292",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "correct",
+      "text": "Please sign the contract at the bottom.",
+      "correction": null,
+      "note": "Silent g before n."
+    },
+    {
+      "id": "8fec6343-1849-5807-a799-527ec343da2a",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "correct",
+      "text": "He is an honest and reliable driver.",
+      "correction": null,
+      "note": "Silent h at the start."
+    },
+    {
+      "id": "74a2944a-74ca-5192-a15a-28a1b1c2e540",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "correct",
+      "text": "Listen carefully to the instructions.",
+      "correction": null,
+      "note": "Silent t in -sten."
+    },
+    {
+      "id": "2ae28e93-358e-5870-abbe-15b6355ba43e",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "correct",
+      "text": "The old castle is open to visitors.",
+      "correction": null,
+      "note": "Silent t in -stle."
+    },
+    {
+      "id": "0b074763-0a67-5998-a9a4-b36abfa031d6",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "correct",
+      "text": "She works for a foreign company.",
+      "correction": null,
+      "note": "Silent g before n."
+    },
+    {
+      "id": "8154255b-5c6c-5802-86b1-eb194280bbb3",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "correct",
+      "text": "Don't forget to comb your hair.",
+      "correction": null,
+      "note": "Silent b after m."
+    },
+    {
+      "id": "2cc3565e-c075-5545-a9fd-0fa74be4f238",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "correct",
+      "text": "She will design the new office layout.",
+      "correction": null,
+      "note": "Silent g before n."
+    },
+    {
+      "id": "26c0cbb3-5e91-57f4-9d09-c0d847ecebd4",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "correct",
+      "text": "She paid off her debt last year.",
+      "correction": null,
+      "note": "Silent b before t."
+    },
+    {
+      "id": "80fb6b56-2b01-53cf-88bd-5e1ab70de319",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "incorrect",
+      "text": "I have no dout about his skills.",
+      "correction": "I have no doubt about his skills.",
+      "note": "Write the silent b."
+    },
+    {
+      "id": "31f2a8d0-b605-53cd-8787-2cb0c7cd2610",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "incorrect",
+      "text": "We clim the mountain every summer.",
+      "correction": "We climb the mountain every summer.",
+      "note": "Write the silent b."
+    },
+    {
+      "id": "330f2b75-5f89-5d1b-a664-874f95508c4d",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "incorrect",
+      "text": "The train arrives in an our.",
+      "correction": "The train arrives in an hour.",
+      "note": "Write the silent h."
+    },
+    {
+      "id": "6d8f1994-d0e2-5092-9c31-a1c29473bda1",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "incorrect",
+      "text": "I lisen to music while I cook.",
+      "correction": "I listen to music while I cook.",
+      "note": "Write the silent t."
+    },
+    {
+      "id": "fc8abe79-e951-5462-9522-5dca946a3645",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "incorrect",
+      "text": "The shop is next to the old casle.",
+      "correction": "The shop is next to the old castle.",
+      "note": "Write the silent t."
+    },
+    {
+      "id": "862b80ec-b657-5326-92df-732a7ed54403",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "incorrect",
+      "text": "Please sine the form here.",
+      "correction": "Please sign the form here.",
+      "note": "Write the silent g."
+    },
+    {
+      "id": "a11e0e67-2388-5864-ba39-beef688c500f",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "incorrect",
+      "text": "He is an onest man.",
+      "correction": "He is an honest man.",
+      "note": "Write the silent h."
+    },
+    {
+      "id": "51bd4fdd-e09d-549c-be89-f4c5a97581e6",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "incorrect",
+      "text": "She learns a forein language online.",
+      "correction": "She learns a foreign language online.",
+      "note": "Write the silent g."
+    },
+    {
+      "id": "33bd80bd-8478-5f45-af13-16426ab64523",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "incorrect",
+      "text": "He worked hard to pay his det.",
+      "correction": "He worked hard to pay his debt.",
+      "note": "Write the silent b."
+    },
+    {
+      "id": "255c096d-0d98-5507-afc2-01b9e74b7b8d",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "incorrect",
+      "text": "The architect will desine a new school.",
+      "correction": "The architect will design a new school.",
+      "note": "Write the silent g."
+    },
+    {
+      "id": "51337231-e466-5603-ac20-3b47f1a1fe45",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "incorrect",
+      "text": "I need to com my hair.",
+      "correction": "I need to comb my hair.",
+      "note": "Write the silent b."
+    },
+    {
+      "id": "ac5de546-45ad-5e91-8d98-cb179bc2acf0",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "exception",
+      "text": "Honey from this farm is delicious.",
+      "correction": null,
+      "note": "The h in honey is pronounced."
+    },
+    {
+      "id": "552395f1-4e5f-5b29-b74d-3a48adbd542a",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "exception",
+      "text": "Add your signature at the bottom.",
+      "correction": null,
+      "note": "The g in signature is pronounced."
+    },
+    {
+      "id": "bcabc69f-7799-5076-a403-d9e61b84d597",
+      "rule_id": "ee974e76-1bb2-5358-a736-9141bf6d9d92",
+      "example_type": "exception",
+      "text": "Her hobby is cooking Italian food.",
+      "correction": null,
+      "note": "The h in hobby is pronounced."
+    },
+    {
+      "id": "e557de5c-45f1-5a4a-8292-45b499f06a39",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "correct",
+      "text": "She studied economics at a Slovak university.",
+      "correction": null,
+      "note": "Consonant + y: y becomes i."
+    },
+    {
+      "id": "70e870cb-e486-5a58-81c7-e217949a539a",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "correct",
+      "text": "We played football after the lesson.",
+      "correction": null,
+      "note": "Vowel + y: keep y."
+    },
+    {
+      "id": "722602a0-9dcd-528e-b852-ec333f52261a",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "correct",
+      "text": "He carried two heavy boxes upstairs.",
+      "correction": null,
+      "note": "Consonant + y: y becomes i."
+    },
+    {
+      "id": "9ae0afcc-7a0c-5896-bfa4-954a4312d09f",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "correct",
+      "text": "They enjoyed the dinner at a local restaurant.",
+      "correction": null,
+      "note": "Vowel + y: keep y."
+    },
+    {
+      "id": "485a8d42-f302-5aed-85fa-b283a7fef12a",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "correct",
+      "text": "I tried the soup at the new cafe.",
+      "correction": null,
+      "note": "Consonant + y: y becomes i."
+    },
+    {
+      "id": "41126f3a-fc2a-5ec7-8ae0-084206bc2f5b",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "correct",
+      "text": "The tourists stayed in a cheap hostel.",
+      "correction": null,
+      "note": "Vowel + y: keep y."
+    },
+    {
+      "id": "f378632b-cd3d-579a-ab34-9522e5e4ac71",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "correct",
+      "text": "She replied to the client's email quickly.",
+      "correction": null,
+      "note": "Consonant + y: y becomes i."
+    },
+    {
+      "id": "8cf2b831-42d3-55ee-882e-ad9e4990050c",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "correct",
+      "text": "The storm delayed our flight to Rome.",
+      "correction": null,
+      "note": "Vowel + y: keep y."
+    },
+    {
+      "id": "adccb9c1-22f3-54d6-8a9c-e559c419baa7",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "correct",
+      "text": "He worried about the exam results.",
+      "correction": null,
+      "note": "Consonant + y: y becomes i."
+    },
+    {
+      "id": "28981f55-9c92-5046-9e06-50e265fbfc07",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "correct",
+      "text": "The cook fried the eggs in butter.",
+      "correction": null,
+      "note": "Consonant + y: y becomes i."
+    },
+    {
+      "id": "5f7b1ba9-60dd-5bc3-8444-c36206a06f65",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "correct",
+      "text": "She copied the notes from the board.",
+      "correction": null,
+      "note": "Consonant + y: y becomes i."
+    },
+    {
+      "id": "03034e4e-372a-5c37-b431-307bd75abe7a",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "incorrect",
+      "text": "He studyed logistics for three years.",
+      "correction": "He studied logistics for three years.",
+      "note": "Change y to i after a consonant."
+    },
+    {
+      "id": "24b34a3a-b10c-58c9-bba1-79bc905d2d06",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "incorrect",
+      "text": "We playied cards on the train.",
+      "correction": "We played cards on the train.",
+      "note": "Keep y after a vowel."
+    },
+    {
+      "id": "762e3fc8-d2cd-5287-a52d-d9a399afb5ce",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "incorrect",
+      "text": "She carryed the shopping bags home.",
+      "correction": "She carried the shopping bags home.",
+      "note": "Change y to i after a consonant."
+    },
+    {
+      "id": "5d1fda3f-c81c-5b60-9f5c-83890cc657cf",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "incorrect",
+      "text": "They enjoied the trip to the mountains.",
+      "correction": "They enjoyed the trip to the mountains.",
+      "note": "Keep y after a vowel."
+    },
+    {
+      "id": "45411d70-9dd1-52bf-8d60-81a943785cf5",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "incorrect",
+      "text": "I tryed a new recipe yesterday.",
+      "correction": "I tried a new recipe yesterday.",
+      "note": "Change y to i after a consonant."
+    },
+    {
+      "id": "f4a7c66a-af21-580b-a80a-6c7c9d9a366f",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "incorrect",
+      "text": "The guests stayied for two nights.",
+      "correction": "The guests stayed for two nights.",
+      "note": "Keep y; do not add i."
+    },
+    {
+      "id": "8faf84fb-676f-5a7f-a69a-8f2123086f1f",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "incorrect",
+      "text": "He replyed to the message at noon.",
+      "correction": "He replied to the message at noon.",
+      "note": "Change y to i after a consonant."
+    },
+    {
+      "id": "27fe7d4f-4733-5ab5-aeba-328fc6ee16fb",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "incorrect",
+      "text": "The rain delaied the bus again.",
+      "correction": "The rain delayed the bus again.",
+      "note": "Keep y after a vowel."
+    },
+    {
+      "id": "3a0e773c-f8a7-53d1-a913-83a67c273488",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "incorrect",
+      "text": "She worryed about the long drive.",
+      "correction": "She worried about the long drive.",
+      "note": "Change y to i after a consonant."
+    },
+    {
+      "id": "7a6a0c05-d3c1-5bc3-8c58-d3c86205f184",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "incorrect",
+      "text": "My dad fryed the fish for lunch.",
+      "correction": "My dad fried the fish for lunch.",
+      "note": "Change y to i after a consonant."
+    },
+    {
+      "id": "ad9aa5e9-1a99-5075-b5e8-36929ca0dbde",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "incorrect",
+      "text": "I copyed the address into my phone.",
+      "correction": "I copied the address into my phone.",
+      "note": "Change y to i after a consonant."
+    },
+    {
+      "id": "0a0ceb83-2778-5fd4-8c0e-acade921eab9",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "exception",
+      "text": "He paid the bill in cash.",
+      "correction": null,
+      "note": "Irregular: pay becomes paid, not payed."
+    },
+    {
+      "id": "172fd2b9-8ad8-5f83-a5fc-9aa30db68cba",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "exception",
+      "text": "She said hello to everyone.",
+      "correction": null,
+      "note": "Irregular: say becomes said."
+    },
+    {
+      "id": "c617de77-a82e-5b4d-b9aa-aacbdf822f78",
+      "rule_id": "7a8d81e6-9838-5c30-a732-c5373787c207",
+      "example_type": "exception",
+      "text": "They laid the table for dinner.",
+      "correction": null,
+      "note": "Irregular: lay becomes laid."
+    },
+    {
+      "id": "e276a776-3b59-5af7-899b-7ab028bc5d9e",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "correct",
+      "text": "The flowers are dying without enough water.",
+      "correction": null,
+      "note": "die → dying."
+    },
+    {
+      "id": "872905ec-477a-5a2c-9620-9ca21f6ad660",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "correct",
+      "text": "He is lying on the sofa now.",
+      "correction": null,
+      "note": "lie → lying."
+    },
+    {
+      "id": "260960d9-caa2-5a49-8678-695053abf0e5",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "correct",
+      "text": "She is tying her shoelaces before the run.",
+      "correction": null,
+      "note": "tie → tying."
+    },
+    {
+      "id": "9ec916f5-f42b-5f76-a46e-3d6ce1e4f482",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "correct",
+      "text": "My phone battery is dying again.",
+      "correction": null,
+      "note": "die → dying."
+    },
+    {
+      "id": "975651fc-39bc-5bd1-b9c7-fa13d933be81",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "correct",
+      "text": "Stop lying to your manager about deadlines.",
+      "correction": null,
+      "note": "lie → lying, also for untruths."
+    },
+    {
+      "id": "15856fa4-7a23-5179-b354-7f7bfed549f9",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "correct",
+      "text": "The waiter is tying an apron around his waist.",
+      "correction": null,
+      "note": "tie → tying."
+    },
+    {
+      "id": "f37795a9-e7ac-55df-b13f-e5b9b87f30c0",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "correct",
+      "text": "They are lying on the beach in Croatia.",
+      "correction": null,
+      "note": "lie → lying."
+    },
+    {
+      "id": "3b5baef8-83b9-503c-9a71-964dd41c1414",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "correct",
+      "text": "He is tying the boxes with strong string.",
+      "correction": null,
+      "note": "tie → tying."
+    },
+    {
+      "id": "441f4377-aad6-54f3-b7f2-b63da39f3184",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "correct",
+      "text": "The plant is dying because of the cold.",
+      "correction": null,
+      "note": "die → dying."
+    },
+    {
+      "id": "7a0b4c94-976e-5811-9570-b765c234d109",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "correct",
+      "text": "Some papers are lying on my desk.",
+      "correction": null,
+      "note": "lie → lying."
+    },
+    {
+      "id": "a58768e9-8c65-5d22-864b-b7feaf532fc9",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "correct",
+      "text": "She is untying the knot in her scarf.",
+      "correction": null,
+      "note": "untie → untying."
+    },
+    {
+      "id": "c1b1b774-5d99-5dbf-a528-9f15a71bff0d",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "incorrect",
+      "text": "The plants are dieing in the heat.",
+      "correction": "The plants are dying in the heat.",
+      "note": "Change ie to y."
+    },
+    {
+      "id": "e3b0f6f2-dcc2-55fd-99d4-5d554d727620",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "incorrect",
+      "text": "He is lieing on the bed.",
+      "correction": "He is lying on the bed.",
+      "note": "Change ie to y."
+    },
+    {
+      "id": "b54c9d91-6ed1-5eba-bbcf-5662fbfff44b",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "incorrect",
+      "text": "She is tieing her scarf in the hall.",
+      "correction": "She is tying her scarf in the hall.",
+      "note": "Change ie to y."
+    },
+    {
+      "id": "0dcd8944-57af-5390-8a57-3acc1e9dd5cc",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "incorrect",
+      "text": "The fish are dieing in the river.",
+      "correction": "The fish are dying in the river.",
+      "note": "Change ie to y."
+    },
+    {
+      "id": "52ae4cac-3095-55ee-969b-c5c7fa84c440",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "incorrect",
+      "text": "Why are you lieing to me?",
+      "correction": "Why are you lying to me?",
+      "note": "Change ie to y."
+    },
+    {
+      "id": "a5ff50f6-0353-5799-80ba-8fc9c3dae50b",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "incorrect",
+      "text": "He is tieing a ribbon on the gift.",
+      "correction": "He is tying a ribbon on the gift.",
+      "note": "Change ie to y."
+    },
+    {
+      "id": "0826cd87-006a-5a70-8873-d41171760dd9",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "incorrect",
+      "text": "The cat is lieing in the sun.",
+      "correction": "The cat is lying in the sun.",
+      "note": "Change ie to y."
+    },
+    {
+      "id": "d3952e4c-ee53-5476-afe9-8b3d2be10a37",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "incorrect",
+      "text": "My old laptop is dieing slowly.",
+      "correction": "My old laptop is dying slowly.",
+      "note": "Change ie to y."
+    },
+    {
+      "id": "f5861356-3135-5568-a8c7-ff87c98e07c7",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "incorrect",
+      "text": "They are lieing about the price.",
+      "correction": "They are lying about the price.",
+      "note": "Change ie to y."
+    },
+    {
+      "id": "5d3b73d3-5d96-5baa-8e65-57abcbadd9bd",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "incorrect",
+      "text": "She is untieing the rope at the dock.",
+      "correction": "She is untying the rope at the dock.",
+      "note": "Change ie to y."
+    },
+    {
+      "id": "c35171e8-30bc-5c74-ae79-beb005ac424f",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "incorrect",
+      "text": "The driver is tieing the load to the truck.",
+      "correction": "The driver is tying the load to the truck.",
+      "note": "Change ie to y."
+    },
+    {
+      "id": "dccd4748-eee3-5e44-95a6-e3189394b194",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "exception",
+      "text": "She is dyeing her hair red.",
+      "correction": null,
+      "note": "Dye keeps its e; it differs from die."
+    },
+    {
+      "id": "98b987a2-33dd-5b6b-be66-04fb2371653c",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "exception",
+      "text": "We are seeing the sights today.",
+      "correction": null,
+      "note": "Verbs ending in ee keep both e letters."
+    },
+    {
+      "id": "8c3fadda-92f7-50f1-81af-2646895085ce",
+      "rule_id": "2d93fade-1889-534a-a1bf-d73fe3f2d710",
+      "example_type": "exception",
+      "text": "They are agreeing on a fair price.",
+      "correction": null,
+      "note": "Verbs ending in ee keep both e letters."
+    },
+    {
+      "id": "7cb36c6d-a8c2-5d59-9089-5f1d0a66cf31",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "correct",
+      "text": "Our house is near the city park.",
+      "correction": null,
+      "note": "ou often says /aʊ/ in house."
+    },
+    {
+      "id": "51003654-33b1-5bca-b0c3-af16e22dc8cd",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "correct",
+      "text": "How do you get to the airport?",
+      "correction": null,
+      "note": "ow often says /aʊ/ in how."
+    },
+    {
+      "id": "077e7587-b27e-53cb-acbb-8e4d3da6baa8",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "correct",
+      "text": "The course starts in September.",
+      "correction": null,
+      "note": "au often says /ɔː/ in course."
+    },
+    {
+      "id": "ca84bdf4-e397-59b4-9871-2dad12ca7230",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "correct",
+      "text": "We saw a beautiful sunset yesterday.",
+      "correction": null,
+      "note": "aw says /ɔː/ in saw."
+    },
+    {
+      "id": "ee30733e-c7b9-5d21-9a1f-12a224ae96ee",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "correct",
+      "text": "The mouse ran behind the sofa.",
+      "correction": null,
+      "note": "ou says /aʊ/ in mouse."
+    },
+    {
+      "id": "763e7296-f35a-530c-b60a-e164337a437c",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "correct",
+      "text": "She found her keys in her coat.",
+      "correction": null,
+      "note": "ou says /aʊ/ in found."
+    },
+    {
+      "id": "08e1dc07-4e4f-55fc-8fe4-daa6aedf81b5",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "correct",
+      "text": "The cow is standing near the fence.",
+      "correction": null,
+      "note": "ow says /aʊ/ in cow."
+    },
+    {
+      "id": "5dbdecbf-7863-5365-a241-2a58257eb53e",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "correct",
+      "text": "The author wrote a book about travel.",
+      "correction": null,
+      "note": "au says /ɔː/ in author."
+    },
+    {
+      "id": "c9bed9e3-46b2-561f-889d-bcc5d8d75f74",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "correct",
+      "text": "She wore a brown dress to the party.",
+      "correction": null,
+      "note": "ow says /aʊ/ in brown."
+    },
+    {
+      "id": "1291373d-4a3e-5dca-b9eb-1ec63f717b97",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "correct",
+      "text": "They bought fresh bread at the market.",
+      "correction": null,
+      "note": "ou says /ɔː/ in bought."
+    },
+    {
+      "id": "ddc6af97-02e8-52d4-a8fb-f379cfac0b1d",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "correct",
+      "text": "The lawn needs water in summer.",
+      "correction": null,
+      "note": "aw says /ɔː/ in lawn."
+    },
+    {
+      "id": "49a98350-2674-5049-bdbb-d44eaee9f6f4",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "incorrect",
+      "text": "Our howse is near the city park.",
+      "correction": "Our house is near the city park.",
+      "note": "Use ou in house."
+    },
+    {
+      "id": "c9e01745-59ad-5189-b386-4ea04882e2f9",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "incorrect",
+      "text": "They sat on the grownd.",
+      "correction": "They sat on the ground.",
+      "note": "Use ou in ground."
+    },
+    {
+      "id": "b74f2f87-289a-5f37-9c89-ce8de311d81c",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "incorrect",
+      "text": "The corse starts in September.",
+      "correction": "The course starts in September.",
+      "note": "Use au in course."
+    },
+    {
+      "id": "66a41f79-98fc-55e3-8f3b-089ea10dd6ad",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "incorrect",
+      "text": "The baby crauled across the floor.",
+      "correction": "The baby crawled across the floor.",
+      "note": "Use aw in crawl."
+    },
+    {
+      "id": "6af9c197-2ce2-5bd8-8624-4cc978c51955",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "incorrect",
+      "text": "The mous ran behind the sofa.",
+      "correction": "The mouse ran behind the sofa.",
+      "note": "Use ou in mouse."
+    },
+    {
+      "id": "ce594654-b5ab-521d-8576-2ceb937156ce",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "incorrect",
+      "text": "I take a shouer every morning.",
+      "correction": "I take a shower every morning.",
+      "note": "Use ow in shower."
+    },
+    {
+      "id": "d609bbe4-14d5-5a7e-a85c-d158df6b5afc",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "incorrect",
+      "text": "Dark clawds covered the sky.",
+      "correction": "Dark clouds covered the sky.",
+      "note": "Use ou in clouds."
+    },
+    {
+      "id": "93e1a751-99d8-5d9c-abc3-8c2b3d1f4662",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "incorrect",
+      "text": "The auther wrote a book about travel.",
+      "correction": "The author wrote a book about travel.",
+      "note": "Use au in author."
+    },
+    {
+      "id": "57ae311c-549a-52db-a355-deac85453428",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "incorrect",
+      "text": "He drew a map of the old tawn.",
+      "correction": "He drew a map of the old town.",
+      "note": "Use ow in town."
+    },
+    {
+      "id": "6420893b-b476-5b1a-a2db-02263aed5f7e",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "incorrect",
+      "text": "They baught fresh bread at the market.",
+      "correction": "They bought fresh bread at the market.",
+      "note": "Use ou in bought."
+    },
+    {
+      "id": "e6e6685c-c54e-5ad6-9b90-e27216eee416",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "incorrect",
+      "text": "The laun needs water in summer.",
+      "correction": "The lawn needs water in summer.",
+      "note": "Use aw in lawn."
+    },
+    {
+      "id": "e8ae38e5-e141-54dd-bdd7-70e0953763cb",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "exception",
+      "text": "The soup is hot and tasty.",
+      "correction": null,
+      "note": "ou says /uː/ in soup."
+    },
+    {
+      "id": "e6689d04-c3fe-54fd-813f-aa2b1c5a8e99",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "exception",
+      "text": "You should take an umbrella.",
+      "correction": null,
+      "note": "ou says /ʊ/ in should."
+    },
+    {
+      "id": "e9922f01-766f-57de-acf6-3d0f50dc0a95",
+      "rule_id": "c58339f3-3bc2-58ea-9651-e5b28aaf2967",
+      "example_type": "exception",
+      "text": "The daughter is learning to drive.",
+      "correction": null,
+      "note": "au says /ɔː/ in daughter."
     }
   ]
 }
