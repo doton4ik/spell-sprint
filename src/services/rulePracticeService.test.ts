@@ -30,7 +30,7 @@ describe('exercises that ship with the app', () => {
   })
 
   it('every article rule has its own exercises, each with exactly one right answer among the choices', () => {
-    expect(Object.keys(bundled).length).toBeGreaterThanOrEqual(8)
+    expect(Object.keys(bundled).length).toBeGreaterThanOrEqual(2) // a-or-an and the merged articles rule (a-or-the)
     for (const exercises of Object.values(bundled)) {
       expect(exercises.length).toBeGreaterThanOrEqual(8)
       for (const exercise of exercises) expect(exercise.choices).toContain(exercise.answer)

@@ -221,12 +221,10 @@
       "metadata": {
         "set": "articles-v1"
       }
-    }
-  ],
-  "52f0d52a-a054-549c-9322-e8dddc5fc8af": [
+    },
     {
       "id": "ebd71b5a-8c05-5914-b326-32f94c08e0c2",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "___ sun rises in the east.",
       "answer": "the",
@@ -237,7 +235,7 @@
     },
     {
       "id": "412726ff-afc7-5829-93ab-58b1c7d9939a",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "She is ___ best student in the class.",
       "answer": "the",
@@ -248,7 +246,7 @@
     },
     {
       "id": "5dba2168-5ff4-512d-82dc-083097b9ba53",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "It is ___ first day of the course.",
       "answer": "the",
@@ -259,7 +257,7 @@
     },
     {
       "id": "81157031-95cb-5b6b-939f-409a5d880434",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "He lives on ___ second floor.",
       "answer": "the",
@@ -270,7 +268,7 @@
     },
     {
       "id": "381b60a3-e851-5388-9862-2cefd8134cc0",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "This is ___ most beautiful city I know.",
       "answer": "the",
@@ -281,7 +279,7 @@
     },
     {
       "id": "0f598d7e-b047-5456-ac11-b2b4f255c3e8",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "Many people use ___ Internet every day.",
       "answer": "the",
@@ -292,7 +290,7 @@
     },
     {
       "id": "bcdc7cab-4eee-55c0-8c24-bb5e2ab5fcd9",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "She is ___ only person who knows the code.",
       "answer": "the",
@@ -303,7 +301,7 @@
     },
     {
       "id": "e679e6a4-8ebb-587a-9b13-3b25259a19d5",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "What is ___ highest mountain in Europe?",
       "answer": "the",
@@ -314,7 +312,7 @@
     },
     {
       "id": "157703e0-2a58-5ec5-8a46-3afd70f76420",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "She is ___ better writer than me.",
       "answer": "a",
@@ -325,7 +323,7 @@
     },
     {
       "id": "475b8535-26ab-5f17-9610-afd330354ee6",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "He ate ___ last piece of cake.",
       "answer": "the",
@@ -333,12 +331,10 @@
       "metadata": {
         "set": "articles-v1"
       }
-    }
-  ],
-  "07d93c96-9aab-5b07-94ef-eca1d223d89c": [
+    },
     {
       "id": "c2e06dd5-33ab-55ad-8770-8add39d68331",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "I love ___ music.",
       "answer": "no article",
@@ -349,7 +345,7 @@
     },
     {
       "id": "d25e4f3f-45fe-5dbb-8253-5a6c675c82dd",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "___ cats are independent animals.",
       "answer": "no article",
@@ -360,7 +356,7 @@
     },
     {
       "id": "a3a7c083-0862-58f4-991b-64e963e62cfe",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "___ life is not easy.",
       "answer": "no article",
@@ -371,7 +367,7 @@
     },
     {
       "id": "01266eb5-e89b-5dff-8b56-42fa0ba48158",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "She drinks ___ water every morning.",
       "answer": "no article",
@@ -382,7 +378,7 @@
     },
     {
       "id": "66eee0e4-24fe-513f-9055-5f2e4924a612",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "___ honesty is very important in business.",
       "answer": "no article",
@@ -393,7 +389,7 @@
     },
     {
       "id": "a7cced88-ec79-5adb-b955-aa3f4dfa5e4d",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "I like ___ apples.",
       "answer": "no article",
@@ -404,7 +400,7 @@
     },
     {
       "id": "7755acbd-88bb-5301-a04a-7a1090831511",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "___ music at the party was too loud.",
       "answer": "the",
@@ -415,7 +411,7 @@
     },
     {
       "id": "3341e535-32d4-5efd-a330-81e4785780bb",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "___ children need love and attention.",
       "answer": "no article",
@@ -426,7 +422,7 @@
     },
     {
       "id": "99b19b0a-d3c3-5c83-a56d-2d56aab573e8",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "Be careful: ___ water in this bottle is dirty.",
       "answer": "the",
@@ -437,7 +433,7 @@
     },
     {
       "id": "ad322d0e-bacd-5028-a4df-47fc962c9d22",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "Do you like ___ coffee?",
       "answer": "no article",
@@ -445,12 +441,10 @@
       "metadata": {
         "set": "articles-v1"
       }
-    }
-  ],
-  "b9895f4b-2982-5d7a-b1b0-9612c15756f4": [
+    },
     {
       "id": "84beab7f-6f52-558f-a6cf-60e4c2cbeb55",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "I usually have ___ breakfast at seven.",
       "answer": "no article",
@@ -461,7 +455,7 @@
     },
     {
       "id": "fe57cd01-e281-50fb-9978-2f85e394e504",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "She speaks ___ French and Spanish.",
       "answer": "no article",
@@ -472,7 +466,7 @@
     },
     {
       "id": "bff628a0-728c-5e77-8fb0-ecf2315c57c9",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "We play ___ football on Sundays.",
       "answer": "no article",
@@ -483,7 +477,7 @@
     },
     {
       "id": "2184e229-2a88-5ecf-949b-2d12f24a167f",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "I live in ___ Paris.",
       "answer": "no article",
@@ -494,7 +488,7 @@
     },
     {
       "id": "27e90bf6-d92f-56c3-9ba8-aff4f0cec678",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "We had ___ wonderful lunch at the beach.",
       "answer": "a",
@@ -505,7 +499,7 @@
     },
     {
       "id": "08832623-2a2b-50ae-b6f6-e3e3a683ec5b",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "He plays ___ chess very well.",
       "answer": "no article",
@@ -516,7 +510,7 @@
     },
     {
       "id": "316da339-a9cf-52ce-a448-ef3ef28bb1cb",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "My friend works in ___ Canada.",
       "answer": "no article",
@@ -527,7 +521,7 @@
     },
     {
       "id": "b839b157-5927-5b2d-8935-f980717d16fc",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "___ Spanish is easy for her.",
       "answer": "no article",
@@ -538,7 +532,7 @@
     },
     {
       "id": "8b500a1d-9982-5e1f-87d0-b89c5b8b039b",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "We had ___ lunch at noon.",
       "answer": "no article",
@@ -549,7 +543,7 @@
     },
     {
       "id": "fa635871-8ef3-5b73-bd03-5e15878e1c41",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "___ Mr Brown is my English teacher.",
       "answer": "no article",
@@ -557,12 +551,10 @@
       "metadata": {
         "set": "articles-v1"
       }
-    }
-  ],
-  "7d7a320f-a7d0-5df4-9ad0-cc11d2752524": [
+    },
     {
       "id": "d8e09c4f-0ee7-5ea6-abd9-c7618f9412c6",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "We crossed ___ Atlantic Ocean by ship.",
       "answer": "the",
@@ -573,7 +565,7 @@
     },
     {
       "id": "cb5c9d3a-7326-527c-a59e-08478dcdfd31",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "She lives in ___ United States.",
       "answer": "the",
@@ -584,7 +576,7 @@
     },
     {
       "id": "42faea20-deb5-537d-8c41-90c59f5ad133",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "He climbed ___ Mount Everest.",
       "answer": "no article",
@@ -595,7 +587,7 @@
     },
     {
       "id": "dec1632a-2d10-5e15-b5a1-d6a47c122c84",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "___ Alps are popular for skiing.",
       "answer": "the",
@@ -606,7 +598,7 @@
     },
     {
       "id": "e3fc2b99-314e-5e68-b9f6-abeb7dd98bda",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "We flew over ___ Pacific.",
       "answer": "the",
@@ -617,7 +609,7 @@
     },
     {
       "id": "43b1473c-96db-5c3f-a69a-ae14e72116fe",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "They visited ___ Netherlands last year.",
       "answer": "the",
@@ -628,7 +620,7 @@
     },
     {
       "id": "f9f3da07-2c82-5a81-9e1e-8dc2558cae6a",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "___ Lake Geneva is very deep.",
       "answer": "no article",
@@ -639,7 +631,7 @@
     },
     {
       "id": "c13b83e9-d145-558f-94c4-b380777a3357",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "The longest river in Europe is ___ Volga.",
       "answer": "the",
@@ -650,7 +642,7 @@
     },
     {
       "id": "6175609c-6491-5794-90a8-c077f4d8f663",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "I want to visit ___ Japan.",
       "answer": "no article",
@@ -661,7 +653,7 @@
     },
     {
       "id": "f3ddb12d-a29a-5451-b675-ffc9319a3972",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "He lives in ___ United Kingdom.",
       "answer": "the",
@@ -669,12 +661,10 @@
       "metadata": {
         "set": "articles-v1"
       }
-    }
-  ],
-  "844da00f-5777-576f-ad36-9a7a1dd4dd59": [
+    },
     {
       "id": "9a55c40b-bdf8-57f1-bccb-a8f943987a16",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "My son is a pupil. He goes to ___ school every morning.",
       "answer": "no article",
@@ -685,7 +675,7 @@
     },
     {
       "id": "cf8e9082-db6b-5542-b40a-674c7239a4f3",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "I go to ___ work at eight.",
       "answer": "no article",
@@ -696,7 +686,7 @@
     },
     {
       "id": "b4b31685-eb1a-5228-b5b6-c820ef7addd3",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "She stays in ___ bed when she is ill.",
       "answer": "no article",
@@ -707,7 +697,7 @@
     },
     {
       "id": "ff0c4b6b-c031-5229-92a5-150db2464b24",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "We travelled to Rome by ___ train.",
       "answer": "no article",
@@ -718,7 +708,7 @@
     },
     {
       "id": "b49bda2e-9914-53bd-b319-72f1b517cd14",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "I am visiting his teacher. I am going to ___ school to speak to her.",
       "answer": "the",
@@ -729,7 +719,7 @@
     },
     {
       "id": "8b2a74ca-b63d-5265-9aba-873d1bb0626c",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "He is at ___ home now.",
       "answer": "no article",
@@ -740,7 +730,7 @@
     },
     {
       "id": "cc5c691a-674d-5812-9e6c-309a13d02435",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "I always listen to ___ radio in the car.",
       "answer": "the",
@@ -751,7 +741,7 @@
     },
     {
       "id": "cb045148-5478-55c9-be90-d4f4c8453867",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "We watched ___ TV all evening.",
       "answer": "no article",
@@ -762,7 +752,7 @@
     },
     {
       "id": "fcc8b3f2-7510-502d-94b6-d24d57d63041",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "It is very cold at ___ night here.",
       "answer": "no article",
@@ -773,7 +763,7 @@
     },
     {
       "id": "1e5ece28-4d60-5ea6-88d0-9c58d53762ee",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "He is going to ___ bed early tonight.",
       "answer": "no article",
@@ -781,12 +771,10 @@
       "metadata": {
         "set": "articles-v1"
       }
-    }
-  ],
-  "fe8cd0fc-3329-5f6c-b932-353212cc3d00": [
+    },
     {
       "id": "c4df7f20-157b-5e9e-b967-4ca44e19a8e3",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "My mother is ___ engineer.",
       "answer": "an",
@@ -797,7 +785,7 @@
     },
     {
       "id": "5e394305-ac9a-5b94-b80d-b45afa731790",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "He works as ___ waiter.",
       "answer": "a",
@@ -808,7 +796,7 @@
     },
     {
       "id": "af29546f-4947-57c2-b185-41dc20e41f31",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "She goes to the gym twice ___ week.",
       "answer": "a",
@@ -819,7 +807,7 @@
     },
     {
       "id": "2fae79a9-3b30-5381-ae8a-aa8e57381a15",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "Don't worry. We still have ___ few days left.",
       "answer": "a",
@@ -830,7 +818,7 @@
     },
     {
       "id": "bb4634d1-1911-5ce4-9919-eaeace56a00b",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "What ___ beautiful day!",
       "answer": "a",
@@ -841,7 +829,7 @@
     },
     {
       "id": "14696f78-2071-573d-887c-d773d82b8c21",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "She is such ___ kind person.",
       "answer": "a",
@@ -852,7 +840,7 @@
     },
     {
       "id": "5463755f-19fe-5240-9a94-363fcfe875ad",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "There is ___ little milk left, enough for our tea.",
       "answer": "a",
@@ -863,7 +851,7 @@
     },
     {
       "id": "39105453-e10f-584e-9fd4-8d5f689cf139",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "It takes half ___ hour to get there.",
       "answer": "an",
@@ -874,7 +862,7 @@
     },
     {
       "id": "77011ee6-b1b5-56d1-85ed-4aa70d9004d6",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "He earns twelve pounds ___ hour.",
       "answer": "an",
@@ -885,13 +873,365 @@
     },
     {
       "id": "836a50b7-6502-554f-9ec9-16f1305848d0",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "exercise_type": "multiple_choice",
       "prompt": "My neighbour is ___ pilot.",
       "answer": "a",
       "choices": ["a", "an", "the", "no article"],
       "metadata": {
         "set": "articles-v1"
+      }
+    },
+    {
+      "id": "92c800e5-9a98-5681-ae4b-ff166ebfdcd2",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "___ moon looks very bright tonight.",
+      "answer": "The",
+      "choices": ["A", "The", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "f2b3ca47-47e8-5ab0-8688-1aac97d996fb",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "She is ___ tallest girl in our class.",
+      "answer": "the",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "2ee8da4b-9783-5865-a7a5-df939838e5b1",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "We stayed in a hotel. ___ hotel was very clean.",
+      "answer": "the",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "b460212e-f3d9-5c34-a569-5c7c32f2fb07",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "My uncle is ___ only owner of this cafe.",
+      "answer": "the",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "f925eb30-87cf-55e4-9c57-28759f5f00f6",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "___ doctor you met yesterday works in my clinic.",
+      "answer": "The",
+      "choices": ["A", "The", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "fc69bb99-e40d-5bc7-8dc3-640094609421",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "Please close ___ window; it is cold in here.",
+      "answer": "the",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "0ceb6301-a92b-55bd-943a-15ec97d13015",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "He is ___ head teacher of our school.",
+      "answer": "the",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "3d59492e-a705-52c5-9348-e0f0b7dc7c75",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "Who is ___ best player in your team?",
+      "answer": "the",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "8c4cbd01-824b-5aaf-b2c3-8fe3f6779d36",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "Can you pass me ___ salt, please?",
+      "answer": "the",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "34bab6bf-7c05-5a87-a4a5-ce9717983926",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "I read ___ book you gave me, and I liked it.",
+      "answer": "the",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "9390375f-c0f8-5372-8f08-91ca0243da17",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "Look at ___ sky! It is full of stars.",
+      "answer": "the",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "bb8caf98-be07-5914-b092-9e6c7e2ee8b7",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "She is ___ youngest member of the club.",
+      "answer": "the",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "a1e4966d-0d6a-5d55-b938-e1f08b80cdff",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "This is ___ first time I have seen snow.",
+      "answer": "the",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "857a914f-df23-58e1-9e07-18347977a9e3",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "___ honesty is important in every job.",
+      "answer": "no article",
+      "choices": ["A", "The", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "84bd1870-34cf-5643-8043-8cf75c6ff01a",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "___ Doctor Brown will see you now.",
+      "answer": "no article",
+      "choices": ["A", "The", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "d0e7e489-bc3c-502b-90cc-fbd7f16520a9",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "We have ___ lunch at one o'clock.",
+      "answer": "no article",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "dcf584d0-562b-58ba-ac40-0a6613bac94a",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "I usually go to ___ work by bus.",
+      "answer": "no article",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "fee710c6-90bb-5592-84fe-1fc10f63bb6a",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "My brother plays ___ basketball after school.",
+      "answer": "no article",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "6409b3ea-660f-543c-96d6-741699bf1064",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "___ English is spoken all over the world.",
+      "answer": "no article",
+      "choices": ["An", "The", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "a2ef3f50-7ea8-527a-b79a-ad5152b3e4da",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "She speaks ___ Spanish and Italian.",
+      "answer": "no article",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "657e7061-779a-5da4-b0be-a01dfa3a4dcf",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "He is in ___ bed with a cold.",
+      "answer": "no article",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "0ab45214-b26d-59bd-b0f9-62fcd60836ec",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "We travelled to ___ Italy last summer.",
+      "answer": "no article",
+      "choices": ["an", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "ec512611-e66d-5f44-a0be-337dab1434f2",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "Everyone needs ___ love and friendship.",
+      "answer": "no article",
+      "choices": ["a", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "795647d4-bd70-5f61-b02f-c5af3f303de7",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "___ Professor Green teaches us history.",
+      "answer": "no article",
+      "choices": ["A", "The", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "a63c2350-07c1-5718-9ecb-4a46b6c44b55",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "I need ___ advice about my homework.",
+      "answer": "no article",
+      "choices": ["an", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "147d58de-68ff-516b-8701-cfb9d8511d6b",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "___ Mount Everest is the highest mountain in the world.",
+      "answer": "no article",
+      "choices": ["A", "The", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "8f00fc04-e077-50a7-ba21-70dccad7f18a",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "She works as ___ nurse.",
+      "answer": "a",
+      "choices": ["a", "an", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "b8a9a6f7-0744-513a-9d9b-7d5a8095c0c5",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "He works as ___ electrician.",
+      "answer": "an",
+      "choices": ["a", "an", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "31e9bac5-3986-5c21-a205-915e2f77c7e1",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "My sister wants to be ___ vet.",
+      "answer": "a",
+      "choices": ["a", "an", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "52a8667c-6e76-5fd3-9aff-8031b4f6b6b2",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "I would like to be ___ astronaut one day.",
+      "answer": "an",
+      "choices": ["a", "an", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "dc1216db-695c-5eb9-80d9-09f5ed573185",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "She visits her grandmother twice ___ month.",
+      "answer": "a",
+      "choices": ["a", "an", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
+      }
+    },
+    {
+      "id": "aef999ce-401a-5be1-b05b-1d6d10aef86c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "exercise_type": "multiple_choice",
+      "prompt": "My cousin is ___ dentist, and he works in London.",
+      "answer": "a",
+      "choices": ["a", "an", "the", "no article"],
+      "metadata": {
+        "set": "articles-merge-v1"
       }
     }
   ]

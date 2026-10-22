@@ -510,12 +510,12 @@
     {
       "id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "slug": "a-or-the",
-      "title": "A or the: new or already known?",
+      "title": "Articles: the, a / an or no article",
       "category": "english_grammar",
       "rule_type": "language_rule",
-      "short_explanation": "Use a / an when you mention something for the first time or mean any one of its kind. Use the when the listener already knows which one: it was mentioned before, it is clear from the situation, or there is only one.",
-      "tts_text": "Use a for something new, and the for something already known.",
-      "mnemonic": "A: any one, new. The: that one, we both know it.",
+      "short_explanation": "Ask: do we both know which one? Yes, or there is only one (the sun, the best, the Thames, the manager of this shop): the. No, just one of many, or what someone is (She is a nurse; twice a week): a / an. In general, or a name, language, sport, meal, routine place or title (I like music; Doctor Brown; go to school; by bus): no article.",
+      "tts_text": "Use the when we both know which one. Use a or an for any one, or for a job. Use no article for things in general, names, languages, meals and routine places.",
+      "mnemonic": "Known or only one: the. Any one, or a job: a. In general, names, titles: nothing.",
       "source": "built-in",
       "visibility": "public",
       "is_active": true,
@@ -532,8 +532,10 @@
       "mnemonic": "Only one? The. Best, first, last, only? The.",
       "source": "built-in",
       "visibility": "public",
-      "is_active": true,
-      "metadata": {}
+      "is_active": false,
+      "metadata": {
+        "merged_into": "a-or-the"
+      }
     },
     {
       "id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
@@ -546,8 +548,10 @@
       "mnemonic": "In general: nothing. Specific: the.",
       "source": "built-in",
       "visibility": "public",
-      "is_active": true,
-      "metadata": {}
+      "is_active": false,
+      "metadata": {
+        "merged_into": "a-or-the"
+      }
     },
     {
       "id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
@@ -560,8 +564,10 @@
       "mnemonic": "Names, languages, games and meals walk alone.",
       "source": "built-in",
       "visibility": "public",
-      "is_active": true,
-      "metadata": {}
+      "is_active": false,
+      "metadata": {
+        "merged_into": "a-or-the"
+      }
     },
     {
       "id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
@@ -574,8 +580,10 @@
       "mnemonic": "Water and groups take the. Single places walk alone.",
       "source": "built-in",
       "visibility": "public",
-      "is_active": true,
-      "metadata": {}
+      "is_active": false,
+      "metadata": {
+        "merged_into": "a-or-the"
+      }
     },
     {
       "id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
@@ -588,8 +596,10 @@
       "mnemonic": "Normal use: no article. A particular building: the.",
       "source": "built-in",
       "visibility": "public",
-      "is_active": true,
-      "metadata": {}
+      "is_active": false,
+      "metadata": {
+        "merged_into": "a-or-the"
+      }
     },
     {
       "id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
@@ -602,8 +612,10 @@
       "mnemonic": "A job, a week, a few, a little: the little word a is needed.",
       "source": "built-in",
       "visibility": "public",
-      "is_active": true,
-      "metadata": {}
+      "is_active": false,
+      "metadata": {
+        "merged_into": "a-or-the"
+      }
     },
     {
       "id": "2ddfb6cf-243b-59c9-9b95-7cbc1812d9e7",
@@ -2341,7 +2353,7 @@
     },
     {
       "id": "4f6f408b-9d9f-552d-b2b1-703b948828b0",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "The sun rises in the east.",
       "correction": null,
@@ -2349,7 +2361,7 @@
     },
     {
       "id": "bb7e5ea1-05fc-5242-a716-5d803a08c9d9",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "She is the best student in the class.",
       "correction": null,
@@ -2357,7 +2369,7 @@
     },
     {
       "id": "eeeed710-4191-5658-bffc-75f9c1f301e3",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "It is the first day of the course.",
       "correction": null,
@@ -2365,7 +2377,7 @@
     },
     {
       "id": "a92e7037-1cd2-596d-b402-f938937d1934",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "He is best player in the team.",
       "correction": "He is the best player in the team.",
@@ -2373,7 +2385,7 @@
     },
     {
       "id": "b95313c3-a5f8-55a8-a316-12bbed273fba",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "She is the better writer than me.",
       "correction": "She is a better writer than me.",
@@ -2381,7 +2393,7 @@
     },
     {
       "id": "c5d7c508-246e-5f78-af33-b2e735bd1122",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "exception",
       "text": "most people",
       "correction": null,
@@ -2389,7 +2401,7 @@
     },
     {
       "id": "3ebdc522-aaca-51ba-90aa-7fac7883dcbd",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "I love music.",
       "correction": null,
@@ -2397,7 +2409,7 @@
     },
     {
       "id": "79ac28b4-9c7f-50e7-b3a5-0ecd5c9ec8eb",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "Children need love and attention.",
       "correction": null,
@@ -2405,7 +2417,7 @@
     },
     {
       "id": "5d158786-3793-5a9b-b35b-2cf8f1406c51",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "The music at the party was too loud.",
       "correction": null,
@@ -2413,7 +2425,7 @@
     },
     {
       "id": "8811fe43-951c-52bf-b7cc-94cedf9f1281",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "The life is not easy.",
       "correction": "Life is not easy.",
@@ -2421,7 +2433,7 @@
     },
     {
       "id": "48ca1b67-7248-55cb-8af0-a64d9820310b",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "I like the apples.",
       "correction": "I like apples.",
@@ -2429,7 +2441,7 @@
     },
     {
       "id": "64ffba48-7560-5a87-8045-a40024727a59",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "exception",
       "text": "a cat / cats / the cat",
       "correction": null,
@@ -2437,7 +2449,7 @@
     },
     {
       "id": "e3613248-6bf6-5209-805f-646cf0f79d22",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "I usually have breakfast at seven.",
       "correction": null,
@@ -2445,7 +2457,7 @@
     },
     {
       "id": "bfb7bae1-0843-51b2-b14f-9a3118b312a7",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "She speaks French and Spanish.",
       "correction": null,
@@ -2453,7 +2465,7 @@
     },
     {
       "id": "34d27558-3358-5d0e-8861-09da39705c50",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "We had a wonderful lunch at the beach.",
       "correction": null,
@@ -2461,7 +2473,7 @@
     },
     {
       "id": "55e286ed-bb08-541d-aaf6-46992530f913",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "I live in the Paris.",
       "correction": "I live in Paris.",
@@ -2469,7 +2481,7 @@
     },
     {
       "id": "7f912e70-2d19-5f6c-a0b3-54e7e1e226fd",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "He plays the chess very well.",
       "correction": "He plays chess very well.",
@@ -2477,7 +2489,7 @@
     },
     {
       "id": "3f081a79-7ca5-59a7-870f-86de3e26576a",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "exception",
       "text": "the Browns",
       "correction": null,
@@ -2485,7 +2497,7 @@
     },
     {
       "id": "431b9927-0f19-53eb-8e38-d3476d729590",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "We crossed the Atlantic Ocean by ship.",
       "correction": null,
@@ -2493,7 +2505,7 @@
     },
     {
       "id": "81ec18f6-23b7-550e-b76e-2517dfc333be",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "The Alps are popular for skiing.",
       "correction": null,
@@ -2501,7 +2513,7 @@
     },
     {
       "id": "341baef6-9e98-5646-a6fc-8476e90a8ac7",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "She lives in the United States.",
       "correction": null,
@@ -2509,7 +2521,7 @@
     },
     {
       "id": "7d6171a0-4639-55b8-a4f7-49d64378a9c0",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "I want to visit the Japan.",
       "correction": "I want to visit Japan.",
@@ -2517,7 +2529,7 @@
     },
     {
       "id": "392501ab-bcc9-55e2-90b1-12acad495525",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "He climbed the Mount Everest.",
       "correction": "He climbed Mount Everest.",
@@ -2525,7 +2537,7 @@
     },
     {
       "id": "344ae441-7541-57db-8878-edf47abc61b9",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "exception",
       "text": "Lake Geneva",
       "correction": null,
@@ -2533,7 +2545,7 @@
     },
     {
       "id": "80362d08-5310-5122-a30f-61fb43b32cec",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "My son goes to school every morning.",
       "correction": null,
@@ -2541,7 +2553,7 @@
     },
     {
       "id": "1a7b7182-e6f0-55e9-a955-dab62b433f1e",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "We travelled to Rome by train.",
       "correction": null,
@@ -2549,7 +2561,7 @@
     },
     {
       "id": "4a76acf0-e21d-5963-8511-53f69c3033d4",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "I am going to the school to speak to his teacher.",
       "correction": null,
@@ -2557,7 +2569,7 @@
     },
     {
       "id": "343cb320-5c99-5832-b44b-f406551d5b8e",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "I go to the work at eight.",
       "correction": "I go to work at eight.",
@@ -2565,7 +2577,7 @@
     },
     {
       "id": "893f033b-1d2a-5c08-b995-94563d3cc680",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "She stays in the bed when she is ill.",
       "correction": "She stays in bed when she is ill.",
@@ -2573,7 +2585,7 @@
     },
     {
       "id": "799a3018-5854-59c1-a7ce-cb37e1decdad",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "exception",
       "text": "I listen to the radio. We watched TV.",
       "correction": null,
@@ -2581,7 +2593,7 @@
     },
     {
       "id": "b405bd83-115b-5eb9-a938-149328ca78dc",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "My mother is an engineer.",
       "correction": null,
@@ -2589,7 +2601,7 @@
     },
     {
       "id": "ee6dc32f-46dd-5a53-bd93-0fecadf85297",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "She goes to the gym twice a week.",
       "correction": null,
@@ -2597,7 +2609,7 @@
     },
     {
       "id": "8b23b7a7-59d5-5706-9934-47d8f2c17466",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "What a beautiful day!",
       "correction": null,
@@ -2605,7 +2617,7 @@
     },
     {
       "id": "58ecae54-9115-5584-8f04-f491132ebfd4",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "He works as waiter.",
       "correction": "He works as a waiter.",
@@ -2613,7 +2625,7 @@
     },
     {
       "id": "e3c51247-7f92-526a-94e6-6c61fe109362",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "It takes half hour.",
       "correction": "It takes half an hour.",
@@ -2621,7 +2633,7 @@
     },
     {
       "id": "9e38c268-9141-5274-9958-c005405c925a",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "exception",
       "text": "Few people came. / A few people came.",
       "correction": null,
@@ -3445,7 +3457,7 @@
     },
     {
       "id": "57813c94-784b-5f83-9e27-f48d0a5cd0e4",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "My brother is a dentist.",
       "correction": null,
@@ -3453,7 +3465,7 @@
     },
     {
       "id": "069adb38-a7d3-5996-b216-862117220019",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "She phones her mother three times a week.",
       "correction": null,
@@ -3461,7 +3473,7 @@
     },
     {
       "id": "b0779373-06e4-59c4-8fd2-4d68104d0fa5",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "He is dentist.",
       "correction": "He is a dentist.",
@@ -3469,7 +3481,7 @@
     },
     {
       "id": "583ee09e-1378-57aa-bf2d-45446fe70231",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "Dogs are loyal animals.",
       "correction": null,
@@ -3477,7 +3489,7 @@
     },
     {
       "id": "2a284d10-a078-502a-95bc-42478b9139a1",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "Honesty matters more than money.",
       "correction": null,
@@ -3485,7 +3497,7 @@
     },
     {
       "id": "1b7746d7-2421-5f37-9f2e-09caa539022f",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "I am afraid of the spiders.",
       "correction": "I am afraid of spiders.",
@@ -3493,7 +3505,7 @@
     },
     {
       "id": "a0e69cf6-b0d4-57d5-82fc-0d1a9143790c",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "We play tennis every Saturday.",
       "correction": null,
@@ -3501,7 +3513,7 @@
     },
     {
       "id": "dad7586d-d68f-50a5-a9ec-2ce4a951af8a",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "Dinner is at eight.",
       "correction": null,
@@ -3509,7 +3521,7 @@
     },
     {
       "id": "8d59722c-2c8b-5809-94ca-4be3d559304d",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "The Maria is my sister.",
       "correction": "Maria is my sister.",
@@ -3517,7 +3529,7 @@
     },
     {
       "id": "99bafe04-ff2c-5dbf-8384-a09ae8551d26",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "He goes to bed at ten.",
       "correction": null,
@@ -3525,7 +3537,7 @@
     },
     {
       "id": "f5c80d9b-2753-5de7-94dd-5aa5c764b423",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "He went to the school to talk to his son's teacher.",
       "correction": null,
@@ -3533,7 +3545,7 @@
     },
     {
       "id": "87805ec4-2b08-5f05-b877-566d8f63c2f3",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "We went home by the bus.",
       "correction": "We went home by bus.",
@@ -3541,7 +3553,7 @@
     },
     {
       "id": "121af292-86da-52c9-9a7b-012588fe4662",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "The Danube flows through several countries.",
       "correction": null,
@@ -3549,7 +3561,7 @@
     },
     {
       "id": "b80d7928-4395-54ca-b6b0-a09abe9c8e5f",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "She has never visited Spain.",
       "correction": null,
@@ -3557,7 +3569,7 @@
     },
     {
       "id": "55db8c72-aac5-5b26-921e-138e0efef220",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "We flew to the Italy.",
       "correction": "We flew to Italy.",
@@ -3565,7 +3577,7 @@
     },
     {
       "id": "854e5880-7fd5-5efd-94bc-d8b231dcdb08",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "The Earth goes around the Sun.",
       "correction": null,
@@ -3573,7 +3585,7 @@
     },
     {
       "id": "55477b90-518d-5fec-8d10-692c12860aa4",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "This is the best day of my life.",
       "correction": null,
@@ -3581,7 +3593,7 @@
     },
     {
       "id": "cd09664f-dd26-55d7-acc5-18460fad6328",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "She is most talented singer here.",
       "correction": "She is the most talented singer here.",
@@ -15293,7 +15305,7 @@
     },
     {
       "id": "03f8ff8b-0b02-52ef-bc75-d02476e86779",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "She is the best player in our team.",
       "correction": null,
@@ -15301,7 +15313,7 @@
     },
     {
       "id": "244574fa-446d-5fff-a613-1a108065ffcb",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "This is the first time I have been to Paris.",
       "correction": null,
@@ -15309,7 +15321,7 @@
     },
     {
       "id": "ba4aa102-2195-576b-8572-1770c2ed476c",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "We live on the second floor.",
       "correction": null,
@@ -15317,7 +15329,7 @@
     },
     {
       "id": "eb760ad2-6824-52cf-83e0-3728c78b1519",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "What is the most beautiful city in the world?",
       "correction": null,
@@ -15325,7 +15337,7 @@
     },
     {
       "id": "d1b1d7f2-51c0-57a8-913e-64697bbb41de",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "Look at the moon tonight!",
       "correction": null,
@@ -15333,7 +15345,7 @@
     },
     {
       "id": "27d71160-c896-51b4-8ac1-8442df851b6a",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "He was the last person to leave.",
       "correction": null,
@@ -15341,7 +15353,7 @@
     },
     {
       "id": "7a6847a9-6597-57bd-b7a1-ea6f912867a9",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "I have the same phone as you.",
       "correction": null,
@@ -15349,7 +15361,7 @@
     },
     {
       "id": "72da8a34-b0b9-59de-9274-09507052b717",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "Sun is shining today.",
       "correction": "The sun is shining today.",
@@ -15357,7 +15369,7 @@
     },
     {
       "id": "0cba9e6b-485c-516e-b1a3-813ac6f22922",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "He is tallest boy in his class.",
       "correction": "He is the tallest boy in his class.",
@@ -15365,7 +15377,7 @@
     },
     {
       "id": "de3da931-29c6-5b03-b6cc-44f1047d606d",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "Maths is hardest subject for me.",
       "correction": "Maths is the hardest subject for me.",
@@ -15373,7 +15385,7 @@
     },
     {
       "id": "a052fc1c-db19-58ce-84f6-fbf6efb03148",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "Take a next train to Leeds.",
       "correction": "Take the next train to Leeds.",
@@ -15381,7 +15393,7 @@
     },
     {
       "id": "b4e15ec3-9b45-5f4d-b4a9-dcece9e4aeed",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "We watched moon rise over the sea.",
       "correction": "We watched the moon rise over the sea.",
@@ -15389,7 +15401,7 @@
     },
     {
       "id": "42f2400e-f45b-5d26-af2d-c56229c88a20",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "They live in a same street.",
       "correction": "They live in the same street.",
@@ -15397,7 +15409,7 @@
     },
     {
       "id": "f6bd54d7-482c-5762-9246-5c691fc6e9ae",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "She is a best singer in town.",
       "correction": "She is the best singer in town.",
@@ -15405,7 +15417,7 @@
     },
     {
       "id": "29fdf808-7ff7-56e7-a440-e97798648bc8",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "Internet makes life easier.",
       "correction": "The Internet makes life easier.",
@@ -15413,7 +15425,7 @@
     },
     {
       "id": "5250e0ba-a90f-5c14-943e-0456775ff5ad",
-      "rule_id": "52f0d52a-a054-549c-9322-e8dddc5fc8af",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "He was an only person who knew.",
       "correction": "He was the only person who knew.",
@@ -15421,7 +15433,7 @@
     },
     {
       "id": "62bfee29-f1ef-5458-bec6-42f59f25dedb",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "Honesty is important in any friendship.",
       "correction": null,
@@ -15429,7 +15441,7 @@
     },
     {
       "id": "cc2b7e38-dd96-5b1b-9b54-d91530914499",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "Water is essential for life.",
       "correction": null,
@@ -15437,7 +15449,7 @@
     },
     {
       "id": "c97fa7f0-b63c-5fb8-acf6-df28555097c5",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "Money cannot buy happiness.",
       "correction": null,
@@ -15445,7 +15457,7 @@
     },
     {
       "id": "f9a8fb75-21e7-5c00-a551-e00fc9b166b1",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "Rice is popular in many countries.",
       "correction": null,
@@ -15453,7 +15465,7 @@
     },
     {
       "id": "8bad24d8-9342-55c9-b52b-148d49da2f8b",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "The water in this lake is very cold.",
       "correction": null,
@@ -15461,7 +15473,7 @@
     },
     {
       "id": "3351d68b-678f-5795-b379-9f111405b7b6",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "I prefer tea to coffee.",
       "correction": null,
@@ -15469,7 +15481,7 @@
     },
     {
       "id": "9e019150-de27-550c-ac52-0590b9ab20d6",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "The books on my desk are new.",
       "correction": null,
@@ -15477,7 +15489,7 @@
     },
     {
       "id": "0c3ee0de-8cdd-5b17-ada6-2c9322a700e6",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "The dogs are loyal animals.",
       "correction": "Dogs are loyal animals.",
@@ -15485,7 +15497,7 @@
     },
     {
       "id": "5c6b4a42-5329-51b4-baa9-5193e5972656",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "The honesty is important.",
       "correction": "Honesty is important.",
@@ -15493,7 +15505,7 @@
     },
     {
       "id": "121dbbe9-85c8-55bf-95c7-8d4170ed73cf",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "The life is short.",
       "correction": "Life is short.",
@@ -15501,7 +15513,7 @@
     },
     {
       "id": "3848c8b2-d681-5b7c-8495-182b21a6c98e",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "The water is essential for all animals.",
       "correction": "Water is essential for all animals.",
@@ -15509,7 +15521,7 @@
     },
     {
       "id": "4522fb5a-3fcd-5998-93cc-5dfd234b13e0",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "He is afraid of the spiders.",
       "correction": "He is afraid of spiders.",
@@ -15517,7 +15529,7 @@
     },
     {
       "id": "3e4818ab-5e2e-5b26-b737-5d85407dfae5",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "A rice is popular in Asia.",
       "correction": "Rice is popular in Asia.",
@@ -15525,7 +15537,7 @@
     },
     {
       "id": "25232e3c-0990-5341-b750-66f0a167aa1d",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "The time is precious.",
       "correction": "Time is precious.",
@@ -15533,7 +15545,7 @@
     },
     {
       "id": "8b7f329a-55f5-5d3e-8160-b1a4a4e972e3",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "She hates the violence.",
       "correction": "She hates violence.",
@@ -15541,7 +15553,7 @@
     },
     {
       "id": "161364a0-a838-5a81-9a05-2a3b38ad66d4",
-      "rule_id": "07d93c96-9aab-5b07-94ef-eca1d223d89c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "I prefer the tea to the coffee.",
       "correction": "I prefer tea to coffee.",
@@ -15549,7 +15561,7 @@
     },
     {
       "id": "6d162ed3-203f-516d-b538-35d01ccdb8a5",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "She speaks Spanish and French.",
       "correction": null,
@@ -15557,7 +15569,7 @@
     },
     {
       "id": "247e1552-398a-5f9c-9609-c30efb00e673",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "He plays tennis on Sundays.",
       "correction": null,
@@ -15565,7 +15577,7 @@
     },
     {
       "id": "8dbc8456-83cc-55ee-92e6-1717b5a7399d",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "We had a wonderful dinner at the hotel.",
       "correction": null,
@@ -15573,7 +15585,7 @@
     },
     {
       "id": "5de4a1c1-4d2e-54b0-81c9-847ba18b9b25",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "My cousin lives in Berlin.",
       "correction": null,
@@ -15581,7 +15593,7 @@
     },
     {
       "id": "2eb7230a-8193-5317-a4ad-e673a8f9e948",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "I eat breakfast at seven.",
       "correction": null,
@@ -15589,7 +15601,7 @@
     },
     {
       "id": "bd704b06-5cda-5f46-92f2-e6bd9f8977ed",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "Anna is learning Italian.",
       "correction": null,
@@ -15597,7 +15609,7 @@
     },
     {
       "id": "571db12b-e883-51e1-b518-993131c0ce8d",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "Canada is a very big country.",
       "correction": null,
@@ -15605,7 +15617,7 @@
     },
     {
       "id": "4ba61c56-9cb1-57bd-9c83-22d6755c5e8c",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "After lunch we went for a walk.",
       "correction": null,
@@ -15613,7 +15625,7 @@
     },
     {
       "id": "ed0b0a65-a1b3-5414-8b2c-18c8e15f7b21",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "She speaks the Spanish very well.",
       "correction": "She speaks Spanish very well.",
@@ -15621,7 +15633,7 @@
     },
     {
       "id": "0e63ec62-76db-57d4-9c35-031367209f90",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "He plays the tennis every week.",
       "correction": "He plays tennis every week.",
@@ -15629,7 +15641,7 @@
     },
     {
       "id": "ac4f43be-d8ca-55e9-8270-668502506d08",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "We had lovely breakfast at the hotel.",
       "correction": "We had a lovely breakfast at the hotel.",
@@ -15637,7 +15649,7 @@
     },
     {
       "id": "77bb2bd8-f04e-5199-bbd4-b1951c3eded3",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "I had the lunch with my sister.",
       "correction": "I had lunch with my sister.",
@@ -15645,7 +15657,7 @@
     },
     {
       "id": "62a6d4f8-e5a9-5f1f-975b-01e24d5bcf23",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "The Canada is a big country.",
       "correction": "Canada is a big country.",
@@ -15653,7 +15665,7 @@
     },
     {
       "id": "55bc9f9f-efb3-5ed4-bfbe-72f0710cc54c",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "My brother loves the football.",
       "correction": "My brother loves football.",
@@ -15661,7 +15673,7 @@
     },
     {
       "id": "d3734f17-a083-5a55-97e9-49d39352417f",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "She cooked big dinner for everyone.",
       "correction": "She cooked a big dinner for everyone.",
@@ -15669,7 +15681,7 @@
     },
     {
       "id": "c61735ef-2ddb-5448-a3a6-7b64d5fb31c1",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "I am learning the English.",
       "correction": "I am learning English.",
@@ -15677,7 +15689,7 @@
     },
     {
       "id": "846cc7d3-f71c-5c13-aff9-02aebec06429",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "He works in the Berlin.",
       "correction": "He works in Berlin.",
@@ -15685,7 +15697,7 @@
     },
     {
       "id": "c4f6917f-9408-584a-a18f-9868fed3d5bb",
-      "rule_id": "b9895f4b-2982-5d7a-b1b0-9612c15756f4",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "We had an dinner at eight.",
       "correction": "We had dinner at eight.",
@@ -15693,7 +15705,7 @@
     },
     {
       "id": "b8cd34ad-c229-5464-83f9-55d6637e62b9",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "The Nile is the longest river in Africa.",
       "correction": null,
@@ -15701,7 +15713,7 @@
     },
     {
       "id": "d92ea3d4-a45a-5da9-a6b0-7c8a42dee17a",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "We sailed across the Black Sea.",
       "correction": null,
@@ -15709,7 +15721,7 @@
     },
     {
       "id": "529ecb6c-2efd-5380-adbc-4f781dbb5107",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "The Netherlands is a flat country.",
       "correction": null,
@@ -15717,7 +15729,7 @@
     },
     {
       "id": "87f28aee-4d97-57c5-91eb-75ce27bd21d6",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "She climbed Mount Fuji last summer.",
       "correction": null,
@@ -15725,7 +15737,7 @@
     },
     {
       "id": "1ff9abf1-d632-55a0-8a88-a32c64fcb41c",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "The Rocky Mountains are in North America.",
       "correction": null,
@@ -15733,7 +15745,7 @@
     },
     {
       "id": "618488e2-9f89-5138-9fda-6964125137c5",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "Switzerland is famous for its lakes.",
       "correction": null,
@@ -15741,7 +15753,7 @@
     },
     {
       "id": "64c59852-88ad-539c-9fc2-708abc41b853",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "They live near the Thames.",
       "correction": null,
@@ -15749,7 +15761,7 @@
     },
     {
       "id": "0d7725c5-8e99-50b2-b502-ed16b6578755",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "We swam in Lake Baikal.",
       "correction": null,
@@ -15757,7 +15769,7 @@
     },
     {
       "id": "81a4edc4-869a-528b-81bc-06695369445d",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "We sailed across Black Sea.",
       "correction": "We sailed across the Black Sea.",
@@ -15765,7 +15777,7 @@
     },
     {
       "id": "fd60db3c-c352-52a7-a55f-d815443c1676",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "Nile flows through Egypt.",
       "correction": "The Nile flows through Egypt.",
@@ -15773,7 +15785,7 @@
     },
     {
       "id": "c1ddb440-a41c-50f9-9fac-bcb7c43abebc",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "I want to visit the India.",
       "correction": "I want to visit India.",
@@ -15781,7 +15793,7 @@
     },
     {
       "id": "92b7a809-08a1-5937-b073-133a97def463",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "Alps are very beautiful in winter.",
       "correction": "The Alps are very beautiful in winter.",
@@ -15789,7 +15801,7 @@
     },
     {
       "id": "6fae92d5-faf1-547a-b868-17715be4c33d",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "She lives in Philippines.",
       "correction": "She lives in the Philippines.",
@@ -15797,7 +15809,7 @@
     },
     {
       "id": "354fbe22-14e2-57c8-8473-abe5271ce943",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "He studies at the Oxford.",
       "correction": "He studies at Oxford.",
@@ -15805,7 +15817,7 @@
     },
     {
       "id": "ebd8b513-50e7-5731-973a-6338a22ab341",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "We flew over Pacific Ocean.",
       "correction": "We flew over the Pacific Ocean.",
@@ -15813,7 +15825,7 @@
     },
     {
       "id": "0429282e-7c78-52bc-a2b6-e803d8267398",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "They climbed the Mount Elbrus.",
       "correction": "They climbed Mount Elbrus.",
@@ -15821,7 +15833,7 @@
     },
     {
       "id": "aa840ed1-1eb6-5c4d-bc46-2af5ba9db5ed",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "My uncle works in United Kingdom.",
       "correction": "My uncle works in the United Kingdom.",
@@ -15829,7 +15841,7 @@
     },
     {
       "id": "95871640-a5f5-5d1d-b97d-153feb58617b",
-      "rule_id": "7d7a320f-a7d0-5df4-9ad0-cc11d2752524",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "The Lake Michigan is very big.",
       "correction": "Lake Michigan is very big.",
@@ -15837,7 +15849,7 @@
     },
     {
       "id": "5e5c8b93-2e9b-59b7-b769-bde8efb5a1db",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "The children are at school now.",
       "correction": null,
@@ -15845,7 +15857,7 @@
     },
     {
       "id": "e1c06fb0-cb6e-5ff2-8729-372ed07593ef",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "He goes to work by bus.",
       "correction": null,
@@ -15853,7 +15865,7 @@
     },
     {
       "id": "2979ed5c-d18d-562e-9d65-58b6c3b26919",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "I go to bed at eleven.",
       "correction": null,
@@ -15861,7 +15873,7 @@
     },
     {
       "id": "c370756f-ba01-5dca-b53e-10f39f971a99",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "She is at home today.",
       "correction": null,
@@ -15869,7 +15881,7 @@
     },
     {
       "id": "6946d23c-1278-5b93-942e-d74d4e93dcbb",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "We went to the school to see the headmaster.",
       "correction": null,
@@ -15877,7 +15889,7 @@
     },
     {
       "id": "6507b763-649c-5375-9dd5-04d6d5eebab7",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "My father works at night.",
       "correction": null,
@@ -15885,7 +15897,7 @@
     },
     {
       "id": "6a663ea0-2202-5283-b58f-2f1462589b92",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "We travelled by train.",
       "correction": null,
@@ -15893,7 +15905,7 @@
     },
     {
       "id": "8d6be325-f429-56f4-a71c-30c175ed358c",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "How do I get to the station?",
       "correction": null,
@@ -15901,7 +15913,7 @@
     },
     {
       "id": "35c3d870-d36e-52ca-8dce-a2be0198e0a8",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "The children are at the school now.",
       "correction": "The children are at school now.",
@@ -15909,7 +15921,7 @@
     },
     {
       "id": "17ec7379-6806-5b4c-856d-839046d32c67",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "He goes to the work by bus.",
       "correction": "He goes to work by bus.",
@@ -15917,7 +15929,7 @@
     },
     {
       "id": "a8e9bd2f-99b9-50db-ae5b-281a158d0865",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "I go to the bed at eleven.",
       "correction": "I go to bed at eleven.",
@@ -15925,7 +15937,7 @@
     },
     {
       "id": "2ed54e96-05a7-5378-9207-48e84b765b9b",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "She is at the home today.",
       "correction": "She is at home today.",
@@ -15933,7 +15945,7 @@
     },
     {
       "id": "2ca49f6f-eed1-569d-ab35-c4df1c5329fd",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "We travelled by a train.",
       "correction": "We travelled by train.",
@@ -15941,7 +15953,7 @@
     },
     {
       "id": "571cd62e-b67b-52eb-aa6f-d970dcc24b8f",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "They came by the plane.",
       "correction": "They came by plane.",
@@ -15949,7 +15961,7 @@
     },
     {
       "id": "d08a0fa2-488a-5493-872f-a0265f235f13",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "He left the home at eight.",
       "correction": "He left home at eight.",
@@ -15957,7 +15969,7 @@
     },
     {
       "id": "18fd2dfe-26b6-5903-842b-128fa537e708",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "My sister goes to the school every day.",
       "correction": "My sister goes to school every day.",
@@ -15965,7 +15977,7 @@
     },
     {
       "id": "0ca731fe-00a1-5e37-b286-3b6bfecd922c",
-      "rule_id": "844da00f-5777-576f-ad36-9a7a1dd4dd59",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "I am going to school to speak to her teacher.",
       "correction": "I am going to the school to speak to her teacher.",
@@ -15973,7 +15985,7 @@
     },
     {
       "id": "4bb59469-b648-5ba1-8b44-f6cc16a65ed2",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "She is a teacher in a small school.",
       "correction": null,
@@ -15981,7 +15993,7 @@
     },
     {
       "id": "97ccb780-4de9-5edf-be93-959e77046443",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "I go swimming twice a week.",
       "correction": null,
@@ -15989,7 +16001,7 @@
     },
     {
       "id": "e6492f88-205e-5978-b0e9-059d3fc11e67",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "We waited for half an hour.",
       "correction": null,
@@ -15997,7 +16009,7 @@
     },
     {
       "id": "57d8aabc-38ef-512e-aa7e-a47a92a2a7ae",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "He earns ten pounds an hour.",
       "correction": null,
@@ -16005,7 +16017,7 @@
     },
     {
       "id": "14d71af4-34d8-579a-ba46-6fd62bc9ef61",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "I have a few friends in London.",
       "correction": null,
@@ -16013,7 +16025,7 @@
     },
     {
       "id": "56d16ee6-1a2f-5c3e-a479-647dc9236e31",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "Would you like a little sugar?",
       "correction": null,
@@ -16021,7 +16033,7 @@
     },
     {
       "id": "f0d27cd3-e4df-5e09-abb4-ec4e902bbd4e",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "What a beautiful view!",
       "correction": null,
@@ -16029,7 +16041,7 @@
     },
     {
       "id": "877c2db8-c023-5d83-9599-23c1fa513f0a",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "correct",
       "text": "It was such a nice day.",
       "correction": null,
@@ -16037,7 +16049,7 @@
     },
     {
       "id": "5beb09d2-cc76-5ea0-9b31-6212a05fda30",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "He works as engineer.",
       "correction": "He works as an engineer.",
@@ -16045,7 +16057,7 @@
     },
     {
       "id": "fbeeb71e-254d-524d-88b7-decceb90c735",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "I phone my mother three times week.",
       "correction": "I phone my mother three times a week.",
@@ -16053,7 +16065,7 @@
     },
     {
       "id": "a102d4b1-c301-5c61-8af4-fdff7567d881",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "Wait for half hour, please.",
       "correction": "Wait for half an hour, please.",
@@ -16061,7 +16073,7 @@
     },
     {
       "id": "e52f13a6-464a-55d5-847b-df123739a130",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "She is nurse in a big hospital.",
       "correction": "She is a nurse in a big hospital.",
@@ -16069,7 +16081,7 @@
     },
     {
       "id": "2caa74ab-dbf1-5de7-bceb-af268c961c82",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "What beautiful view!",
       "correction": "What a beautiful view!",
@@ -16077,7 +16089,7 @@
     },
     {
       "id": "5092a95f-1e49-53fd-b75f-0a88891e9d4b",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "It was such nice day.",
       "correction": "It was such a nice day.",
@@ -16085,7 +16097,7 @@
     },
     {
       "id": "e27fa314-f2b5-5494-ac04-1680de947af0",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "He wants to be pilot.",
       "correction": "He wants to be a pilot.",
@@ -16093,7 +16105,7 @@
     },
     {
       "id": "b5816e2d-3637-5969-b715-8d9b07bc15bc",
-      "rule_id": "fe8cd0fc-3329-5f6c-b932-353212cc3d00",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
       "text": "There was lot of noise outside.",
       "correction": "There was a lot of noise outside.",
@@ -20498,6 +20510,190 @@
       "text": "The daughter is learning to drive.",
       "correction": null,
       "note": "au says /ɔː/ in daughter."
+    },
+    {
+      "id": "894a7a79-1fa6-5829-9f04-81926ea24db1",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "She works as a nurse at the local hospital.",
+      "correction": null,
+      "note": "what she is: a"
+    },
+    {
+      "id": "8d411c1c-b0c2-52e7-9205-c93354e6364e",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "The doctor who helped me was very kind.",
+      "correction": null,
+      "note": "one particular doctor: the"
+    },
+    {
+      "id": "cb09f754-dae8-5379-a041-69988f425651",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "My uncle is the only owner of this cafe.",
+      "correction": null,
+      "note": "only one owner: the"
+    },
+    {
+      "id": "2aa79a70-d8bd-5536-a85f-6bcf396cfdc7",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "Nurses work long hours in many countries.",
+      "correction": null,
+      "note": "jobs in general: no article"
+    },
+    {
+      "id": "8a11f47c-97ff-5398-88da-43c1f13ff993",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "Doctor Brown is on holiday until Monday.",
+      "correction": null,
+      "note": "title before a name: no article"
+    },
+    {
+      "id": "04c07a49-dcf8-5e4e-beb0-3b47c0664b2f",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "She is the best surgeon in the city.",
+      "correction": null,
+      "note": "superlative: the"
+    },
+    {
+      "id": "5c653d3a-c9dc-580c-9d6f-1ad1d7dfae80",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "He is a pilot, but his brother is a chef.",
+      "correction": null,
+      "note": "each job: a"
+    },
+    {
+      "id": "cefe73d3-037b-5ef8-838f-7712bfd45d31",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "I love coffee, but the coffee here is cold.",
+      "correction": null,
+      "note": "general: none; this coffee: the"
+    },
+    {
+      "id": "41ee8f56-0f20-5c41-a41a-e2eab875bf0c",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "We had breakfast at seven and then went to the market.",
+      "correction": null,
+      "note": "meal: none; one market: the"
+    },
+    {
+      "id": "01744215-6814-5f22-803d-ac215a7c0f97",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "Water is essential, but the water in this lake is dirty.",
+      "correction": null,
+      "note": "general: none; that lake: the"
+    },
+    {
+      "id": "0fccac36-b195-59fa-859f-2d8355b4cab9",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "correct",
+      "text": "He is the head teacher of our school.",
+      "correction": null,
+      "note": "one head teacher here: the"
+    },
+    {
+      "id": "341b9bf2-3484-5354-8564-de12080c4b87",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "exception",
+      "text": "We had a lovely breakfast at the hotel.",
+      "correction": null,
+      "note": "adjective + meal: a"
+    },
+    {
+      "id": "d6557846-8b1a-5d66-a935-6b7383cb9861",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "exception",
+      "text": "She plays the piano, but he plays football.",
+      "correction": null,
+      "note": "instrument: the; sport: none"
+    },
+    {
+      "id": "f850d3b9-076f-5a29-a749-ca8a19518674",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "exception",
+      "text": "I went to the school to talk to the head teacher.",
+      "correction": null,
+      "note": "the building, not studying: the"
+    },
+    {
+      "id": "90d621ba-9e4b-59d0-b2aa-e47213d37ffe",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "She works as the nurse.",
+      "correction": "She works as a nurse.",
+      "note": "what she is: a"
+    },
+    {
+      "id": "15c1e945-fe4c-56f9-b621-fc54e33b3a97",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "The Doctor Brown is waiting for you.",
+      "correction": "Doctor Brown is waiting for you.",
+      "note": "title + name: no article"
+    },
+    {
+      "id": "a3ffb840-49dd-55dd-a4d4-d7c38f76dbd0",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "She is a best student in the class.",
+      "correction": "She is the best student in the class.",
+      "note": "superlative: the"
+    },
+    {
+      "id": "7cde21b9-a10e-578a-afd9-ef6fffadef03",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "I had the breakfast at seven.",
+      "correction": "I had breakfast at seven.",
+      "note": "meal: no article"
+    },
+    {
+      "id": "476aa1ab-5117-5d24-b014-40192d98bd4b",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "He plays a football every Sunday.",
+      "correction": "He plays football every Sunday.",
+      "note": "sport: no article"
+    },
+    {
+      "id": "446346ea-b9cd-5c05-9862-d4a876ad1cb9",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "The life is not always easy.",
+      "correction": "Life is not always easy.",
+      "note": "in general: no article"
+    },
+    {
+      "id": "55bdfb54-755f-50c6-b80f-4a4675d8711b",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "Sun rises in the east.",
+      "correction": "The sun rises in the east.",
+      "note": "only one sun: the"
+    },
+    {
+      "id": "5364b549-6bca-5728-af75-573052b1161d",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "She went to a bed at ten.",
+      "correction": "She went to bed at ten.",
+      "note": "routine place: no article"
+    },
+    {
+      "id": "41ed1ed2-1c75-55a9-917c-7e4133526b2d",
+      "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
+      "example_type": "incorrect",
+      "text": "We travelled by the train.",
+      "correction": "We travelled by train.",
+      "note": "by + transport: no article"
     }
   ]
 }

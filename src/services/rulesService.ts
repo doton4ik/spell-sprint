@@ -44,9 +44,10 @@ function cachedLinks(): RuleWordLink[] {
 // Article mistakes come from Proofreading as "grammar:*" patterns, which are not rows of the database's
 // pattern table, so the rules that explain them are named here (see database/content-pack-3-articles.sql).
 export const PATTERN_RULE_SLUGS: Record<string, string[]> = {
-  'grammar:article': ['a-or-an', 'a-or-the', 'the-one-of-a-kind'],
-  'grammar:article-missing': ['a-or-the', 'a-with-jobs-and-quantities', 'a-or-an'],
-  'grammar:article-extra': ['no-article-in-general', 'no-article-names-meals-languages', 'the-geography', 'no-article-routine-places'],
+  // 'a-or-the' is the one rule for the / a / no article (the others were merged into it, see database/content-pack-11-merge-articles.sql).
+  'grammar:article': ['a-or-the', 'a-or-an'],
+  'grammar:article-missing': ['a-or-the', 'a-or-an'],
+  'grammar:article-extra': ['a-or-the'],
 }
 
 export const ERROR_TYPE_RULE_SLUGS: Record<string, string[]> = {
@@ -61,7 +62,7 @@ export async function getVisibleRules(): Promise<Rule[]> {
     const rows = await selectRows(null, 'rules', { is_active: true }, { order: 'title.asc' })
     return rows.map(toRule)
   } catch {
-    return (await bundled()).rules.map(toRule)
+    return (await bundled()).rules.filter((rule) => rule.is_active !== false).map(toRule)
   }
 }
 

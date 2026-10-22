@@ -4,7 +4,11 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs'
 
 const rules = JSON.parse(readFileSync('src/data/builtInRules.json', 'utf8'))
 const exercisesByRule = JSON.parse(readFileSync('src/data/builtInRuleExercises.json', 'utf8'))
-const sql = readFileSync('database/content-pack-3-articles.sql', 'utf8')
+const sql =
+  readFileSync('database/content-pack-3-articles.sql', 'utf8') + readFileSync('database/content-pack-11-merge-articles.sql', 'utf8')
+// Rules merged into another one (scripts/merge-article-rules.mjs): the more-practice packs still name them by slug.
+const articleMerge = JSON.parse(readFileSync('database/rules-import/article-merge.json', 'utf8'))
+const mergedInto = (slug) => (articleMerge.from.includes(slug) ? articleMerge.into : slug)
 const categories = new Set([...readFileSync('src/data/ruleCategories.ts', 'utf8').matchAll(/slug: '([a-z_]+)'/g)].map((match) => match[1]))
 const ruleTypes = new Set(['language_rule', 'exception', 'confusing_words', 'personal_note'])
 const exampleTypes = new Set(['correct', 'incorrect', 'exception'])
@@ -94,7 +98,7 @@ for (const [json, sqlBase, chunked] of morePacks) {
   const moreExamplesSql = allParts ?? readFileSync(`${sqlBase}-part1.sql`, 'utf8')
   const moreExercisesSql = allParts ?? readFileSync(`${sqlBase}-part2.sql`, 'utf8')
   for (const item of morePack.rules) {
-    const rule = rules.rules.find((entry) => entry.slug === item.slug)
+    const rule = rules.rules.find((entry) => entry.slug === mergedInto(item.slug))
     if (!rule) {
       fail(`more-practice pack: no rule "${item.slug}"`)
       continue
