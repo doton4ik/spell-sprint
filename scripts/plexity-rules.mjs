@@ -61,17 +61,11 @@ function prompts() {
   mkdirSync('research/plexity/prompts', { recursive: true })
   for (const name of readdirSync('research/plexity/prompts'))
     if (/^rules-.*\.md$/.test(name)) rmSync(`research/plexity/prompts/${name}`, { force: true })
-  const ARTICLES = new Set([
-    'a-or-an',
-    'a-or-the',
-    'the-one-of-a-kind',
-    'no-article-in-general',
-    'no-article-names-meals-languages',
-    'the-geography',
-    'no-article-routine-places',
-    'a-with-jobs-and-quantities',
-  ])
-  const groups = chunk(builtIn.rules, 2)
+  const ARTICLES = new Set(['a-or-an', 'a-or-the'])
+  const groups = chunk(
+    builtIn.rules.filter((rule) => rule.is_active !== false),
+    2,
+  ) // merged (inactive) rules get no prompts
   groups.forEach((group, index) => {
     const list = group
       .map((rule) => {

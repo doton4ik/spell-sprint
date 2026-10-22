@@ -26,7 +26,7 @@ where r.slug in ('the-one-of-a-kind', 'no-article-in-general', 'no-article-names
 
 update public.rules
 set title = 'Articles: the, a / an or no article',
-    short_explanation = 'Ask: do we both know which one? Yes, or there is only one (the sun, the best, the Thames, the manager of this shop): the. No, just one of many, or what someone is (She is a nurse; twice a week): a / an. In general, or a name, language, sport, meal, routine place or title (I like music; Doctor Brown; go to school; by bus): no article.',
+    short_explanation = 'Ask: do we both know which one? Yes, or there is only one (the sun, the best, the Thames, the manager of this shop): the. No, just one of many, or what someone is (She is a nurse; twice a week): a / an. In general, or a name, language, sport, meal, routine place or title (I like music; Doctor Brown; go to school; by bus): no article. A / an also in a few, a little, half an hour, such a, what a.',
     tts_text = 'Use the when we both know which one. Use a or an for any one, or for a job. Use no article for things in general, names, languages, meals and routine places.',
     mnemonic = 'Known or only one: the. Any one, or a job: a. In general, names, titles: nothing.',
     updated_at = now()
@@ -49,7 +49,7 @@ from (values
   ('341b9bf2-3484-5354-8564-de12080c4b87', 'exception', 'We had a lovely breakfast at the hotel.', null, 'adjective + meal: a'),
   ('d6557846-8b1a-5d66-a935-6b7383cb9861', 'exception', 'She plays the piano, but he plays football.', null, 'instrument: the; sport: none'),
   ('f850d3b9-076f-5a29-a749-ca8a19518674', 'exception', 'I went to the school to talk to the head teacher.', null, 'the building, not studying: the'),
-  ('90d621ba-9e4b-59d0-b2aa-e47213d37ffe', 'incorrect', 'She works as the nurse.', 'She works as a nurse.', 'what she is: a'),
+  ('48a8b34a-03dd-53aa-8f6a-6e9ecc2ae54f', 'incorrect', 'My sister is teacher in a primary school.', 'My sister is a teacher in a primary school.', 'what she is: a'),
   ('15c1e945-fe4c-56f9-b621-fc54e33b3a97', 'incorrect', 'The Doctor Brown is waiting for you.', 'Doctor Brown is waiting for you.', 'title + name: no article'),
   ('a3ffb840-49dd-55dd-a4d4-d7c38f76dbd0', 'incorrect', 'She is a best student in the class.', 'She is the best student in the class.', 'superlative: the'),
   ('7cde21b9-a10e-578a-afd9-ef6fffadef03', 'incorrect', 'I had the breakfast at seven.', 'I had breakfast at seven.', 'meal: no article'),

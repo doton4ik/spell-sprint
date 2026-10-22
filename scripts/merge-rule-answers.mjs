@@ -7,6 +7,9 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 
 
 const rules = JSON.parse(readFileSync('src/data/builtInRules.json', 'utf8'))
 const bundled = JSON.parse(readFileSync('src/data/builtInRuleExercises.json', 'utf8'))
+// Article rules merged into one (scripts/merge-article-rules.mjs): answers and earlier packs written for a merged slug now belong to the umbrella rule.
+const articleMerge = JSON.parse(readFileSync('database/rules-import/article-merge.json', 'utf8'))
+const mergedInto = (slug) => (articleMerge.from.includes(slug) ? articleMerge.into : slug)
 const batch = Number(process.argv[process.argv.indexOf('--pack') + 1]) || 3
 const earlier = [
   'database/rules-import/more-practice-pack.json',
@@ -53,7 +56,7 @@ for (const name of files) {
     continue
   }
   for (const data of list) {
-    const rule = rules.rules.find((item) => item.slug === data.slug)
+    const rule = rules.rules.find((item) => item.slug === mergedInto(data.slug))
     if (!rule) {
       problems.push(`${name}: unknown slug "${data.slug}"`)
       continue
@@ -76,7 +79,7 @@ for (const { rule, examples, exercises } of bySlug.values()) {
   const knownExercises = new Set([
     ...(bundled[rule.id] ?? []).map((item) => norm(item.prompt)),
     ...earlier.flatMap((pack) =>
-      pack.rules.filter((item) => item.slug === rule.slug).flatMap((item) => item.exercises.map((e) => norm(e.prompt))),
+      pack.rules.filter((item) => mergedInto(item.slug) === rule.slug).flatMap((item) => item.exercises.map((e) => norm(e.prompt))),
     ),
   ])
   const seen = new Set()

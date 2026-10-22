@@ -513,7 +513,7 @@
       "title": "Articles: the, a / an or no article",
       "category": "english_grammar",
       "rule_type": "language_rule",
-      "short_explanation": "Ask: do we both know which one? Yes, or there is only one (the sun, the best, the Thames, the manager of this shop): the. No, just one of many, or what someone is (She is a nurse; twice a week): a / an. In general, or a name, language, sport, meal, routine place or title (I like music; Doctor Brown; go to school; by bus): no article.",
+      "short_explanation": "Ask: do we both know which one? Yes, or there is only one (the sun, the best, the Thames, the manager of this shop): the. No, just one of many, or what someone is (She is a nurse; twice a week): a / an. In general, or a name, language, sport, meal, routine place or title (I like music; Doctor Brown; go to school; by bus): no article. A / an also in a few, a little, half an hour, such a, what a.",
       "tts_text": "Use the when we both know which one. Use a or an for any one, or for a job. Use no article for things in general, names, languages, meals and routine places.",
       "mnemonic": "Known or only one: the. Any one, or a job: a. In general, names, titles: nothing.",
       "source": "built-in",
@@ -20624,11 +20624,11 @@
       "note": "the building, not studying: the"
     },
     {
-      "id": "90d621ba-9e4b-59d0-b2aa-e47213d37ffe",
+      "id": "48a8b34a-03dd-53aa-8f6a-6e9ecc2ae54f",
       "rule_id": "d284d7c3-a1c6-54f9-a509-e0b0b095d54a",
       "example_type": "incorrect",
-      "text": "She works as the nurse.",
-      "correction": "She works as a nurse.",
+      "text": "My sister is teacher in a primary school.",
+      "correction": "My sister is a teacher in a primary school.",
       "note": "what she is: a"
     },
     {

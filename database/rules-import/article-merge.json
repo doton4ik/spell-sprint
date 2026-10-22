@@ -15,7 +15,7 @@
     "mnemonic": "A: any one, new. The: that one, we both know it."
   },
   "title": "Articles: the, a / an or no article",
-  "short_explanation": "Ask: do we both know which one? Yes, or there is only one (the sun, the best, the Thames, the manager of this shop): the. No, just one of many, or what someone is (She is a nurse; twice a week): a / an. In general, or a name, language, sport, meal, routine place or title (I like music; Doctor Brown; go to school; by bus): no article.",
+  "short_explanation": "Ask: do we both know which one? Yes, or there is only one (the sun, the best, the Thames, the manager of this shop): the. No, just one of many, or what someone is (She is a nurse; twice a week): a / an. In general, or a name, language, sport, meal, routine place or title (I like music; Doctor Brown; go to school; by bus): no article. A / an also in a few, a little, half an hour, such a, what a.",
   "tts_text": "Use the when we both know which one. Use a or an for any one, or for a job. Use no article for things in general, names, languages, meals and routine places.",
   "mnemonic": "Known or only one: the. Any one, or a job: a. In general, names, titles: nothing.",
   "examples": [
@@ -33,7 +33,7 @@
     { "type": "exception", "text": "We had a lovely breakfast at the hotel.", "note": "adjective + meal: a" },
     { "type": "exception", "text": "She plays the piano, but he plays football.", "note": "instrument: the; sport: none" },
     { "type": "exception", "text": "I went to the school to talk to the head teacher.", "note": "the building, not studying: the" },
-    { "type": "incorrect", "text": "She works as the nurse.", "correction": "She works as a nurse.", "note": "what she is: a" },
+    { "type": "incorrect", "text": "My sister is teacher in a primary school.", "correction": "My sister is a teacher in a primary school.", "note": "what she is: a" },
     { "type": "incorrect", "text": "The Doctor Brown is waiting for you.", "correction": "Doctor Brown is waiting for you.", "note": "title + name: no article" },
     { "type": "incorrect", "text": "She is a best student in the class.", "correction": "She is the best student in the class.", "note": "superlative: the" },
     { "type": "incorrect", "text": "I had the breakfast at seven.", "correction": "I had breakfast at seven.", "note": "meal: no article" },
