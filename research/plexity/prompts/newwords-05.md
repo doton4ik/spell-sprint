@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-05.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Transport" (transport).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Travel and Hotels" (travel).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 41 NEW words for the topic **Transport**: cars, buses, trains, driving, public transport.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 46 NEW words for the topic **Travel and Hotels**: holidays, booking, hotels, sightseeing, luggage.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,23 +16,23 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 41 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 46 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Cars and Driving"],
+["...","...","noun","B1","...","...","Travel Planning"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 41 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 46 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Cars and Driving
-- Public Transport
-- Trains and Stations
-- Bikes and Walking
-- Roads and Traffic
+- Travel Planning
+- Hotels and Booking
+- At the Destination
+- Sightseeing and Tours
+- Luggage and Packing
 
-## Already in this topic (49 words, do not repeat)
-accident, aeroplane, bicycle, bike, boat, brake, bus, bus stop, cab, car, catch, commute, crash, cyclist, delay, driving licence, escalator, fare, ferry, hike, journey, lane, miss, motorway, park, parking, passenger, petrol, plane, platform, route, rush hour, ship, speed, station, taxi, ticket, tour, track, traffic, train, tram, travel, traveller, trip, truck, underground, walking, wheel
+## Already in this topic (44 words, do not repeat)
+abroad, accommodation, adventure, architecture, backpack, beach, brochure, camp, camping, campsite, castle, cathedral, check in, check out, coast, crowd, cruise, currency, destination, excursion, exhibition, gallery, guest, guidebook, holiday, hostel, itinerary, jet lag, landmark, local, monument, museum, pack, picnic, postcard, reservation, seaside, sightseeing, souvenir, tent, tour guide, tourist, unpack, visitor

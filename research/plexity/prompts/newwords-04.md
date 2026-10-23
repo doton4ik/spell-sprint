@@ -1,13 +1,12 @@
 # NEW, SEPARATE TASK (newwords-04.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Ideas and Society" (ideas).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Transport" (transport).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 7 NEW words for the topic **Ideas and Society**: opinions, society, reasons, choices, abstract everyday words.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 21 NEW words for the topic **Transport**: cars, buses, trains, driving, public transport.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
 - Every word must be new: it must NOT be in the list "Already in this topic" below (check each word, also other forms of it: "tidy" vs "tidying").
 - Useful for a Russian-speaking learner: words they will meet and want to use in this topic; useful and common first, interesting later.
-- Topic note: Abstract everyday nouns for talking about society and opinions (e.g. "policy", "attitude", "democracy", "evidence", "trend"). Mostly nouns; common, not academic jargon.
 - Levels (CEFR, by the Oxford 3000/5000 lists and the word's frequency): A2 basic, B1 intermediate, B2 upper-intermediate, C1 advanced. No A1 or C2: give A1 words A2 and C2 words C1. Aim for roughly: A2 20%, B1 40%, B2 30%, C1 10% (professional topics: B1 20%, B2 50%, C1 30%).
 - translation: the main Russian translation (one or two words, commonly used for that meaning; if a second meaning matters, add it after a comma, max 2).
 - pos: noun, verb, adjective, adverb, phrase or phrasal verb.
@@ -17,24 +16,23 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 7 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 21 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Opinions and Arguments"],
+["...","...","noun","B1","...","...","Cars and Driving"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 7 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 21 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Opinions and Arguments
-- Society and Politics
-- Law and Rules
-- Reasons and Results
-- Choices and Change
-- Media and Culture
+- Cars and Driving
+- Public Transport
+- Trains and Stations
+- Bikes and Walking
+- Roads and Traffic
 
-## Already in this topic (73 words, do not repeat)
-achievement, alternative, amount, authority, belief, benefit, burglar, ceremony, chance, choice, citizenship, civilization, condition, conflict, crime, criminal, crisis, culture, decision, decline, democracy, difference, economy, election, equality, existence, forbidden, growth, identity, improvement, justice, law, legal, majority, minority, movement, myth, occasion, opinion, opportunity, opposition, option, permit, policy, politician, politics, possibility, prejudice, president, prison, prisoner, progress, protest, proverb, punishment, purpose, reason, regulation, religion, republic, respect, security, situation, society, suspect, theft, theory, tradition, trend, union, victim, victory, violence
+## Already in this topic (69 words, do not repeat)
+accident, aeroplane, aircraft, bicycle, bike, boat, brake, bus, bus stop, cab, car, caravan, catch, commute, crash, cyclist, delay, driving licence, escalator, expedition, fare, ferry, ferryboat, getaway, helicopter, hike, journey, lane, miss, motorbike, motorist, motorway, navigation, navy, park, parking, passenger, pedal, petrol, plane, platform, rocket, route, rush hour, scooter, ship, speed, station, steering wheel, stopover, taxi, ticket, tour, track, traffic, trailer, train, tram, transmission, travel, traveller, trek, trip, truck, underground, walking, warship, wheel, yacht

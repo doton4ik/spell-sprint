@@ -1,12 +1,13 @@
 # NEW, SEPARATE TASK (newwords-07.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "At the Airport" (airport).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Phrasal Verbs" (phrasal).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 52 NEW words for the topic **At the Airport**: flights, check-in, security, passport control.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 39 NEW words for the topic **Phrasal Verbs**: verb + particle (give up, look after, turn down).
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
 - Every word must be new: it must NOT be in the list "Already in this topic" below (check each word, also other forms of it: "tidy" vs "tidying").
 - Useful for a Russian-speaking learner: words they will meet and want to use in this topic; useful and common first, interesting later.
+- Topic note: Every entry is a phrasal verb (verb + particle, e.g. "give up", "look after", "turn down"), the commonest and most useful ones; one meaning per entry, the commonest. Do not repeat a verb+particle already listed, even with another meaning.
 - Levels (CEFR, by the Oxford 3000/5000 lists and the word's frequency): A2 basic, B1 intermediate, B2 upper-intermediate, C1 advanced. No A1 or C2: give A1 words A2 and C2 words C1. Aim for roughly: A2 20%, B1 40%, B2 30%, C1 10% (professional topics: B1 20%, B2 50%, C1 30%).
 - translation: the main Russian translation (one or two words, commonly used for that meaning; if a second meaning matters, add it after a comma, max 2).
 - pos: noun, verb, adjective, adverb, phrase or phrasal verb.
@@ -16,22 +17,24 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 52 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 39 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Check-in and Security"],
+["...","...","noun","B1","...","...","Everyday Phrasal Verbs"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 52 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 39 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Check-in and Security
-- On the Plane
-- Passport Control
-- Arrivals and Delays
+- Everyday Phrasal Verbs
+- Movement and Travel
+- Work and Study
+- Feelings and Relationships
+- Communication
+- Home and Daily Life
 
-## Already in this topic (38 words, do not repeat)
-airline, aisle, announcement, arrival, baggage claim, boarding, boarding pass, border, cabin crew, carousel, check-in desk, cockpit, connecting flight, crew, customs, customs officer, departure, departure lounge, emergency exit, flight, gate, immigration, jet, landing, layover, lifejacket, luggage, passport, passport control, pilot, runway, scanner, seatbelt, suitcase, terminal, trolley, turbulence, visa
+## Already in this topic (51 words, do not repeat)
+break down, bring up, call back, call off, carry on, catch up with, come across, come back, drop by, fall out with, figure out, fill in, find out, get along with, get off, get over, get up, give back, give up, go on, hang out, hold on, look after, look for, look forward to, look into, look up, pick up, plug in, put away, put off, put on, put up with, queue up, run into, run out of, set off, set up, show up, sort out, switch off, take after, take off, tidy up, try on, turn down, turn off, turn on, turn up, wake up, work out

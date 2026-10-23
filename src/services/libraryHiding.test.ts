@@ -30,9 +30,9 @@ describe('hiding a whole library', () => {
   })
 
   it('a word added to a hidden "My words" library is not left hidden', () => {
-    addMyWord({ word: 'zebra', translation: 'зебра', partOfSpeech: 'noun', definition: '', example: '', difficulty: 'easy', risk: 1 })
+    addMyWord({ word: 'quokka', translation: 'квокка', partOfSpeech: 'noun', definition: '', example: '', difficulty: 'easy', risk: 1 })
     setWordHidden(hideKey.library(MY_WORDS), true)
-    expect(getAllWords().some((word) => word.word === 'zebra')).toBe(false)
+    expect(getAllWords().some((word) => word.word === 'quokka')).toBe(false)
     addMyWord({ word: 'giraffe', translation: 'жираф', partOfSpeech: 'noun', definition: '', example: '', difficulty: 'easy', risk: 1 })
     expect(getAllWords().some((word) => word.word === 'giraffe')).toBe(true)
     expect(getHiddenWordIds().has(hideKey.library(MY_WORDS))).toBe(false)
