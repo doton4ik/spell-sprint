@@ -1,0 +1,148 @@
+{
+  "home": {
+    "Rooms and Furniture": ["kitchen", "bedroom", "bathroom", "furniture", "curtain", "staircase", "cupboard", "attic", "basement", "balcony", "garage", "ceiling", "hallway", "pillow", "blanket", "mirror", "sink"],
+    "Chores and Cleaning": ["laundry", "vacuum", "iron", "wipe", "fold", "sweep", "scrub", "dust", "rubbish", "recycling", "broom", "bucket", "hang", "sew"],
+    "Repairs and Tools": ["plumber", "electrician", "repair", "leak", "lock", "key"],
+    "Renting and Moving": ["rent", "landlord", "tenant"],
+    "Appliances and Utilities": ["appliance", "heating", "electricity", "dishwasher", "washing machine", "kettle", "microwave", "unplug", "doorbell"],
+    "Garden and Outdoors": ["fence", "chimney"]
+  },
+  "food": {
+    "Fruit and Vegetables": ["vegetable", "fruit", "cucumber", "cabbage", "mushroom", "garlic", "lettuce"],
+    "Meat, Fish and Dairy": ["sausage", "yoghurt"],
+    "Cooking and Kitchen": ["breakfast", "lunch", "dinner", "ingredient", "recipe", "boil", "chop", "fry", "seasoning", "pour", "stir", "rinse"],
+    "Café and Restaurant": ["delicious"],
+    "Baking and Sweets": ["bake", "flour", "dessert"]
+  },
+  "shopping": {
+    "Shops and Buying": ["stock", "complaint", "supermarket", "refund", "cashier", "customer", "bargain", "exchange", "sold out", "shopkeeper"],
+    "Prices and Paying": ["receipt", "discount", "afford", "expenses", "waste", "cash", "credit card", "debit card", "change", "price tag", "instalment", "surcharge", "voucher", "loyalty card", "till", "overpay", "coin", "purse", "wallet", "expensive", "cheap"],
+    "Banking and Savings": ["bank account", "withdraw", "deposit", "balance", "overdraft", "transfer", "savings account", "interest rate", "loan", "mortgage", "PIN code", "statement", "budget", "savings", "wage"],
+    "Debt and Taxes": ["debt", "tax", "insurance"],
+    "Online Shopping": ["delivery"]
+  },
+  "clothes": {
+    "Shoes and Accessories": ["scarf", "gloves", "necklace", "bracelet", "sunglasses", "umbrella", "belt", "earrings"],
+    "Fabrics and Fit": ["fitting room", "zip"]
+  },
+  "routine": {
+    "Days and Months": ["February", "Wednesday", "weekday", "fortnight"],
+    "Time of Day": ["alarm", "nap"],
+    "Daily Habits": ["shower", "toothbrush", "toothpaste", "towel", "routine", "habit", "oversleep", "relax"],
+    "Frequency and Duration": ["duration", "annual", "weekly", "nowadays", "recent", "meanwhile", "afterwards"],
+    "Planning and Deadlines": ["schedule", "timetable", "in advance", "on time", "beforehand"]
+  },
+  "family": {
+    "Relatives": ["relative", "grandparents", "sibling", "generation"],
+    "Friends and Partners": ["friendship"],
+    "Marriage and Life Events": ["marriage", "wedding", "divorce", "anniversary", "funeral", "celebrate", "bride", "groom", "honeymoon", "widow"],
+    "Children and Parenting": ["adopt"],
+    "Social Life": ["neighbour", "stranger"]
+  },
+  "feelings": {
+    "Positive Feelings": ["happy", "grateful", "confident", "proud", "relieved", "excited", "curious", "cheerful"],
+    "Negative Feelings": ["anxious", "embarrassed", "jealous", "disappointed", "exhausted", "lonely", "frustrated", "upset", "confused", "furious"],
+    "Character Traits": ["generous", "honest", "shy", "stubborn"],
+    "Behaviour and Manners": ["polite", "rude"]
+  },
+  "ideas": {
+    "Opinions and Arguments": ["opinion"],
+    "Society and Politics": ["society"],
+    "Reasons and Results": ["achievement", "reason", "purpose", "amount", "situation", "difference", "condition", "existence"],
+    "Choices and Change": ["opportunity", "choice", "chance", "decision"],
+    "Media and Culture": ["culture", "tradition"]
+  },
+  "city": {
+    "Places in Town": ["neighbourhood", "district", "suburb"],
+    "Buildings and Streets": ["skyscraper", "avenue", "fountain", "statue", "bench", "roundabout", "junction", "pedestrian", "traffic lights", "cross", "subway"],
+    "Directions": ["directions", "get lost", "straight on", "opposite", "signpost"]
+  },
+  "transport": {
+    "Public Transport": ["ticket", "fare", "delay", "commute", "passenger", "bus stop", "tram", "ferry", "taxi", "journey", "route", "catch", "miss"],
+    "Trains and Stations": ["station", "platform", "underground"],
+    "Roads and Traffic": ["rush hour", "traffic", "motorway", "lane"],
+    "Cars and Driving": ["park", "parking"],
+    "Bikes and Walking": ["cyclist"]
+  },
+  "travel": {
+    "Hotels and Booking": ["guest", "check in", "check out"],
+    "At the Destination": ["jet lag", "currency"],
+    "Luggage and Packing": ["unpack"]
+  },
+  "airport": {
+    "Check-in and Security": ["luggage", "suitcase", "trolley", "check-in desk", "boarding pass", "boarding", "gate", "terminal", "departure lounge", "scanner", "airline", "departure"],
+    "On the Plane": ["flight"],
+    "Passport Control": ["border", "visa", "passport", "passport control", "immigration", "customs", "customs officer"],
+    "Arrivals and Delays": ["arrival", "baggage claim", "carousel", "connecting flight", "layover"]
+  },
+  "health": {
+    "Injuries and Emergencies": ["injury"],
+    "At the Doctor": ["appointment", "sick leave"],
+    "Body and Symptoms": ["allergic"]
+  },
+  "nature": {
+    "Environment and Climate": ["environment", "pollution", "recycle", "extinct", "endangered"],
+    "Plants and Trees": ["forest"],
+    "Landscape": ["mountain", "valley", "island", "cliff", "volcano", "earthquake", "ocean", "meadow"],
+    "Wild Animals": ["wildlife", "squirrel", "tail", "fur", "paw", "hunt", "bite", "migrate", "wild"],
+    "Birds, Insects and Sea Life": ["insect", "butterfly", "eagle", "feather"]
+  },
+  "school": {
+    "Learning and Research": ["research"],
+    "University Life": ["internship"]
+  },
+  "jobs": {
+    "Job Interview": ["recruitment"],
+    "Career Development": ["promotion", "resignation", "unemployed"],
+    "Salary and Contracts": ["contract", "shift", "payslip"],
+    "Professions": ["receptionist"]
+  },
+  "office": {
+    "At Work": ["colleague", "punctuality"],
+    "Meetings and Negotiation": ["postpone"]
+  },
+  "tech": {
+    "Devices and Hardware": ["technology", "device", "screen", "keyboard", "battery", "charger", "storage", "laptop", "printer", "router", "tablet", "cable", "speaker", "headphones", "wireless"],
+    "Software and Apps": ["software", "update", "install", "download", "folder", "icon", "settings", "cursor", "reminder"],
+    "Security and Privacy": ["password", "virus"]
+  },
+  "phrasal": {
+    "Home and Daily Life": ["tidy up", "put away", "plug in", "try on", "put on", "switch off"],
+    "Everyday Phrasal Verbs": ["queue up"],
+    "Feelings and Relationships": ["drop by", "hang out", "catch up with", "fall out with", "bring up", "look after"],
+    "Movement and Travel": ["get off"],
+    "Communication": ["call back"]
+  },
+  "actions": {
+    "Moving and Carrying": ["run errands", "knock", "hurry", "wander", "carry"],
+    "Thinking and Deciding": ["avoid", "consider", "decide", "prefer", "solve", "compare", "depend"],
+    "Saying and Asking": ["describe", "explain", "suggest", "mention", "greet"],
+    "Making and Changing": ["improve", "increase", "reduce"],
+    "Giving, Taking and Using": ["include", "provide", "require", "borrow", "lend"],
+    "Senses and Reactions": ["notice"]
+  },
+  "describing": {
+    "Quality and Colour": ["enjoyable", "exciting", "scary", "possible", "available", "similar", "certain"],
+    "Speed and Amount": ["crowded"],
+    "Age and Condition": ["lost"],
+    "Manner and Degree": ["especially", "actually"]
+  },
+  "misspelled": {
+    "Double Letters": ["accommodation", "occasionally", "necessary", "embarrass", "occurrence", "possession", "questionnaire", "millennium", "immediately", "misspell", "exaggerate"],
+    "Silent Letters": ["government", "environment", "knowledge", "rhythm", "answer", "conscience", "tongue", "guarantee"],
+    "ie and ei": ["receive", "achieve", "believe", "foreign", "weird", "neighbour", "height"],
+    "Endings -able and -ible": ["noticeable"],
+    "Other Tricky Words": ["separate", "restaurant", "library", "calendar", "grammar", "cemetery", "pronunciation", "privilege", "independent", "maintenance", "definitely", "sincerely", "humorous"]
+  },
+  "confusable": {
+    "Homophones": ["their", "there", "weather", "whether", "principal", "principle", "stationary", "stationery"],
+    "Similar Spelling": ["advice", "advise", "loose", "lose", "quiet", "quite", "lightning"],
+    "Similar Meaning": ["affect", "effect"]
+  },
+  "logistics": {
+    "Inventory Control": ["material", "goods movement"],
+    "Receiving and Storage": ["warehouse task", "inbound processing"],
+    "Order Fulfilment": ["outbound processing"],
+    "Documents and Contracts": ["purchase order", "material document"]
+  }
+}

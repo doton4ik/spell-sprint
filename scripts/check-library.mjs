@@ -126,7 +126,7 @@ for (const [id] of TOPICS) {
 }
 for (const id of Object.keys(SUBTOPICS)) if (!topicIds.has(id)) errors.push(`library-subtopics.mjs: "${id}" is not a topic`)
 for (const row of rows)
-  if (row.source.startsWith('plexity-newwords') && !(SUBTOPICS[row.topic_id] ?? []).includes(row.subtopic))
+  if (!(SUBTOPICS[row.topic_id] ?? []).includes(row.subtopic))
     fail(row, `subtopic "${row.subtopic}" is not in the list of topic "${row.topic_id}" (scripts/library-subtopics.mjs)`)
 
 if (notes.length) console.log(`${notes.length} note(s):\n  ${notes.slice(0, 30).join('\n  ')}${notes.length > 30 ? '\n  …' : ''}`)
