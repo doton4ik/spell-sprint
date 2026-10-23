@@ -1,12 +1,13 @@
 # NEW, SEPARATE TASK (newwords-12.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Transport" (transport).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Confusable Words" (confusable).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 41 NEW words for the topic **Transport**: cars, buses, trains, driving, public transport.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 33 NEW words for the topic **Confusable Words**: look-alike and sound-alike words (affect/effect, principal/principle).
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
 - Every word must be new: it must NOT be in the list "Already in this topic" below (check each word, also other forms of it: "tidy" vs "tidying").
 - Useful for a Russian-speaking learner: words they will meet and want to use in this topic; useful and common first, interesting later.
+- Topic note: Entries are words that learners confuse with a look-alike or sound-alike word (e.g. "complement", "lay", "council"). Write the word itself; put the word it is confused with in the definition after a semicolon: "to praise; not compliment... ". Do NOT add the partner word as a separate entry unless it is also not yet listed and also useful on its own.
 - Levels (CEFR, by the Oxford 3000/5000 lists and the word's frequency): A2 basic, B1 intermediate, B2 upper-intermediate, C1 advanced. No A1 or C2: give A1 words A2 and C2 words C1. Aim for roughly: A2 20%, B1 40%, B2 30%, C1 10% (professional topics: B1 20%, B2 50%, C1 30%).
 - translation: the main Russian translation (one or two words, commonly used for that meaning; if a second meaning matters, add it after a comma, max 2).
 - pos: noun, verb, adjective, adverb, phrase or phrasal verb.
@@ -16,23 +17,21 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 41 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 33 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Cars and Driving"],
+["...","...","noun","B1","...","...","Homophones"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 41 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 33 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Cars and Driving
-- Public Transport
-- Trains and Stations
-- Bikes and Walking
-- Roads and Traffic
+- Homophones
+- Similar Spelling
+- Similar Meaning
 
-## Already in this topic (49 words, do not repeat)
-accident, airplane, bicycle, bike, boat, brake, bus, bus stop, cab, car, catch, commute, crash, cyclist, delay, driver's licence, escalator, fare, ferry, hike, journey, lane, miss, motorway, park, parking, passenger, petrol, plane, platform, route, rush hour, ship, speed, station, taxi, ticket, tour, track, traffic, train, tram, travel, traveller, trip, truck, underground, walking, wheel
+## Already in this topic (17 words, do not repeat)
+advice, advise, affect, effect, lightning, loose, lose, principal, principle, quiet, quite, stationary, stationery, their, there, weather, whether

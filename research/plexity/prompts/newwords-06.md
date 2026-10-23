@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-06.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Phone and Messages" (phone).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Travel and Hotels" (travel).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 40 NEW words for the topic **Phone and Messages**: calls, texts, letters, e-mail, post.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 46 NEW words for the topic **Travel and Hotels**: holidays, booking, hotels, sightseeing, luggage.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,23 +16,23 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 40 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 46 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Calls"],
+["...","...","noun","B1","...","...","Travel Planning"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 40 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 46 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Calls
-- Texting and Online
-- Post and Letters
-- E-mail
-- Phone Basics
+- Travel Planning
+- Hotels and Booking
+- At the Destination
+- Sightseeing and Tours
+- Luggage and Packing
 
-## Already in this topic (40 words, do not repeat)
-address, block, call, caller, contact, conversation, dial, email, emoji, envelope, follower, forward, hang up, letter, log in, mail, message, mobile, mobile phone, mute, online, passcode, phone, post, reception, reply, ring, ringtone, screenshot, selfie, signal, silent, stamp, telephone, text, text message, unlock, unread, upload, voicemail
+## Already in this topic (44 words, do not repeat)
+abroad, accommodation, adventure, architecture, backpack, beach, brochure, camp, camping, campsite, castle, cathedral, check in, check out, coast, crowd, cruise, currency, destination, excursion, exhibition, gallery, guest, guidebook, holiday, hostel, itinerary, jet lag, landmark, local, monument, museum, pack, picnic, postcard, reservation, seaside, sightseeing, souvenir, tent, tour guide, tourist, unpack, visitor

@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-01.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Home and Housework" (home).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Clothes and Appearance" (clothes).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 19 NEW words for the topic **Home and Housework**: rooms, furniture, chores, cleaning, repairs, rent.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 8 NEW words for the topic **Clothes and Appearance**: clothes, shoes, fashion, how people look.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,24 +16,23 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 19 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 8 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Rooms and Furniture"],
+["...","...","noun","B1","...","...","Clothing Items"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 19 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 8 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Rooms and Furniture
-- Chores and Cleaning
-- Repairs and Tools
-- Renting and Moving
-- Appliances and Utilities
-- Garden and Outdoors
+- Clothing Items
+- Shoes and Accessories
+- Fashion and Style
+- Looks and Grooming
+- Fabrics and Fit
 
-## Already in this topic (71 words, do not repeat)
-appliance, armchair, attic, balcony, basement, bath, bathroom, bedroom, blanket, bookcase, broom, bucket, ceiling, chimney, cooker, cupboard, curtain, dining room, dishwasher, doorbell, drawer, drill, dust, electrician, electricity, fence, fold, fridge, furniture, garage, hallway, hang, heating, iron, kettle, key, kitchen, lamp, landlord, laundry, leak, living room, lock, microwave, mirror, oven, pillow, plumber, recycling, rent, repair, roof, rope, rubbish, screw, scrub, sew, shelf, sink, sofa, staircase, sweep, tap, tenant, toilet, tool, unplug, vacuum, washing machine, washing-up, wipe
+## Already in this topic (82 words, do not repeat)
+accessory, apron, bald, beard, belt, blouse, boot, bracelet, button, cap, casual, coat, collar, comb, curly, dress, earrings, elegant, fancy, fashion, fashionable, fit, fitting room, garment, glasses, gloves, gown, haircut, hairdresser, hairstyle, handbag, hat, helmet, jacket, jeans, jewellery, jumper, make-up, messy, moustache, naked, necklace, perfume, pocket, pullover, pyjamas, raincoat, razor, sandals, scarf, scruffy, shampoo, shave, shirt, shoe, silk, skirt, sleeve, slippers, soap, sock, style, stylish, suit, sunglasses, sweater, sweatshirt, swimsuit, t-shirt, tie, tights, tracksuit, trainers, trousers, umbrella, underpants, underwear, untidy, wear, well-dressed, wool, zip

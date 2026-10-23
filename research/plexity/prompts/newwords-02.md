@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-02.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Shopping and Money" (shopping).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Weather and Seasons" (weather).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 23 NEW words for the topic **Shopping and Money**: shops, prices, paying, banks, saving, spending, debt.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 10 NEW words for the topic **Weather and Seasons**: weather, seasons, climate, natural events.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,23 +16,22 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 23 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 10 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Shops and Buying"],
+["...","...","noun","B1","...","...","Weather and Seasons"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 23 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 10 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Shops and Buying
-- Prices and Paying
-- Banking and Savings
-- Debt and Taxes
-- Online Shopping
+- Weather and Seasons
+- Temperature and Climate
+- Storms and Natural Events
+- Describing Weather
 
-## Already in this topic (67 words, do not repeat)
-afford, balance, bank, bank account, bargain, bookshop, budget, cash, cashier, cent, change, cheap, cheque, coin, complaint, cost, credit, credit card, customer, debit card, debt, delivery, department store, deposit, discount, dollar, euro, exchange, expenses, expensive, fee, instalment, insurance, interest rate, loan, loyalty card, market, mortgage, overdraft, overpay, pay, pence, pin code, price, price tag, purse, receipt, refund, sale, savings, savings account, shop assistant, shopkeeper, shopping, sold out, statement, stock, supermarket, surcharge, tax, till, transfer, voucher, wage, wallet, waste, withdraw
+## Already in this topic (50 words, do not repeat)
+autumn, breeze, climate, cloud, cloudy, damp, daylight, drizzle, drought, flood, fog, foggy, forecast, freezing, frost, frozen, hail, humid, mild, misty, moisture, rain, rainbow, rainforest, rainy, shade, snow, snowstorm, snowy, spring, steam, storm, stormy, summer, sunlight, sunny, sunshine, temperature, thunder, thunderstorm, tide, tornado, tropical, warm, weather, weather forecast, wet, wind, windy, winter

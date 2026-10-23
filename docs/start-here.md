@@ -4,7 +4,7 @@
 задачи. Перед закрытием сессии всё закоммичено, поэтому `git log --oneline -20` показывает, на чём остановились.
 
 ## Что уже сделано (кратко)
-- **Библиотека:** 1673 слова (23 октября добавлено 709 слов уровня A2 из пробелов CEFR-J: `research/cefr/missing-words.csv`; ответы лежат в `research/plexity/answers/newwords/applied/`, файлы `newwords-self-<тема>-<n>.json` читает `merge-newwords.mjs`), 26 тем в 8 разделах, у каждого слова уровень A2–C1 (`src/data/libraryTopics.ts`, `scripts/library-topics.mjs`).
+- **Библиотека:** 2474 слова (23 октября добавлено 709 слов уровня A2 и 801 слово уровня B1 из пробелов CEFR-J: `research/cefr/missing-words.csv`; ответы лежат в `research/plexity/answers/newwords/applied/`, файлы `newwords-self-<тема>-<n>.json` читает `merge-newwords.mjs`), 26 тем в 8 разделах, у каждого слова уровень A2–C1 (`src/data/libraryTopics.ts`, `scripts/library-topics.mjs`).
 - **Проверка уровня:** формат Oxford/Cambridge, 30 вопросов и быстрая версия на 16, подуровни («upper B1»).
 - **Дизайн:** бумажный, единые отступы (`--page-*`), скрываемое меню, правая панель практики с разбором ответа.
 - **Правила:** 63 правила в базе, после запуска пака 11 активных 57 (6 правил про артикли слиты в `a-or-the`, `node scripts/merge-article-rules.mjs`; гонять его заново после `build-articles-pack` / `build-more-practice-pack`). Ответы ассистента для слитых slug `merge-rule-answers.mjs` сам направляет в `a-or-the`. Паки 6–10 применены в базе (63 правила, 2448 примеров и 3113 упражнений там сейчас); пак 8 добавил 8 новых правил, пак 9 ещё 12 (`node scripts/build-new-rules-pack.mjs 8|9` собирает SQL и офлайн-копию из `database/rules-import/`).

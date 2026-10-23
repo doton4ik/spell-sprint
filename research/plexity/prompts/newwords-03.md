@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-03.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Clothes and Appearance" (clothes).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Phone and Messages" (phone).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 28 NEW words for the topic **Clothes and Appearance**: clothes, shoes, fashion, how people look.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 28 NEW words for the topic **Phone and Messages**: calls, texts, letters, e-mail, post.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -20,7 +20,7 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 
 ```json
 [
-["...","...","noun","B1","...","...","Clothing Items"],
+["...","...","noun","B1","...","...","Calls"],
 ...
 ]
 ```
@@ -28,11 +28,11 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 Before you answer, check: exactly 28 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Clothing Items
-- Shoes and Accessories
-- Fashion and Style
-- Looks and Grooming
-- Fabrics and Fit
+- Calls
+- Texting and Online
+- Post and Letters
+- E-mail
+- Phone Basics
 
-## Already in this topic (62 words, do not repeat)
-apron, beard, belt, blouse, bracelet, button, cap, casual, coat, collar, comb, dress, earrings, elegant, fashion, fashionable, fit, fitting room, glasses, gloves, haircut, hairstyle, handbag, hat, jacket, jeans, jewellery, jumper, make-up, moustache, necklace, perfume, pocket, pyjamas, raincoat, sandals, scarf, scruffy, shampoo, shave, shirt, shoe, skirt, sleeve, slippers, soap, sock, style, suit, sunglasses, sweater, swimsuit, t-shirt, tie, tights, trainers, trousers, umbrella, underwear, wear, wool, zip
+## Already in this topic (52 words, do not repeat)
+address, announce, block, blog, blogger, call, caller, contact, conversation, dial, email, emoji, envelope, fax, follower, forward, hang up, letter, log in, loudspeaker, mail, message, message board, mobile, mobile phone, modem, mute, online, parcel, passcode, phone, post, postman, reception, reply, ring, ringtone, screenshot, selfie, signal, silent, social networking, stamp, telegram, telephone, text, text message, unlock, unread, upload, voicemail, webcam

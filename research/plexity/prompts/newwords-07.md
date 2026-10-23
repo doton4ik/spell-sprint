@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-07.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Family and Relationships" (family).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "At the Airport" (airport).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 17 NEW words for the topic **Family and Relationships**: relatives, friends, dating, marriage, life stages.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 52 NEW words for the topic **At the Airport**: flights, check-in, security, passport control.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,23 +16,22 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 17 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 52 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Relatives"],
+["...","...","noun","B1","...","...","Check-in and Security"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 17 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 52 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Relatives
-- Friends and Partners
-- Marriage and Life Events
-- Children and Parenting
-- Social Life
+- Check-in and Security
+- On the Plane
+- Passport Control
+- Arrivals and Delays
 
-## Already in this topic (73 words, do not repeat)
-acquaintance, adopt, adult, ancestor, anniversary, argue, aunt, baby, babysitter, birth, boyfriend, bride, brother, celebrate, child, childhood, cousin, dad, daughter, death, divorce, elderly, engaged, father, flatmate, friendship, funeral, generation, girlfriend, grandchild, granddaughter, grandfather, grandmother, grandparents, grandson, groom, honeymoon, host, hug, husband, kid, lover, marriage, marry, mother, mum, neighbour, nephew, niece, orphan, pal, parent, partner, penfriend, relationship, relative, reunion, sibling, sister, son, stepfather, stepmother, stranger, surname, sweetheart, teenager, toddler, trust, twins, uncle, wedding, widow, wife
+## Already in this topic (38 words, do not repeat)
+airline, aisle, announcement, arrival, baggage claim, boarding, boarding pass, border, cabin crew, carousel, check-in desk, cockpit, connecting flight, crew, customs, customs officer, departure, departure lounge, emergency exit, flight, gate, immigration, jet, landing, layover, lifejacket, luggage, passport, passport control, pilot, runway, scanner, seatbelt, suitcase, terminal, trolley, turbulence, visa

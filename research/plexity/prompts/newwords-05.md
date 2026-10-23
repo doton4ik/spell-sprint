@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-05.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Weather and Seasons" (weather).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Transport" (transport).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 24 NEW words for the topic **Weather and Seasons**: weather, seasons, climate, natural events.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 41 NEW words for the topic **Transport**: cars, buses, trains, driving, public transport.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,22 +16,23 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 24 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 41 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Weather and Seasons"],
+["...","...","noun","B1","...","...","Cars and Driving"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 24 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 41 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Weather and Seasons
-- Temperature and Climate
-- Storms and Natural Events
-- Describing Weather
+- Cars and Driving
+- Public Transport
+- Trains and Stations
+- Bikes and Walking
+- Roads and Traffic
 
-## Already in this topic (36 words, do not repeat)
-autumn, breeze, cloud, cloudy, daylight, drizzle, drought, flood, fog, foggy, forecast, freezing, frost, hail, humid, rain, rainbow, rainy, shade, snow, snowy, spring, storm, summer, sunlight, sunny, sunshine, temperature, thunder, thunderstorm, warm, weather, wet, wind, windy, winter
+## Already in this topic (49 words, do not repeat)
+accident, aeroplane, bicycle, bike, boat, brake, bus, bus stop, cab, car, catch, commute, crash, cyclist, delay, driving licence, escalator, fare, ferry, hike, journey, lane, miss, motorway, park, parking, passenger, petrol, plane, platform, route, rush hour, ship, speed, station, taxi, ticket, tour, track, traffic, train, tram, travel, traveller, trip, truck, underground, walking, wheel

@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-08.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Feelings and Character" (feelings).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Office and Business" (office).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 32 NEW words for the topic **Feelings and Character**: emotions, personality, behaviour.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 3 NEW words for the topic **Office and Business**: meetings, deadlines, e-mail at work, companies, management.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,23 +16,24 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 32 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 3 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Positive Feelings"],
+["...","...","noun","B1","...","...","At Work"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 32 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 3 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Positive Feelings
-- Negative Feelings
-- Character Traits
-- Behaviour and Manners
-- Mood and Reactions
+- At Work
+- Meetings and Negotiation
+- Professional Communication
+- Finance and Planning
+- Companies and Management
+- Office Equipment
 
-## Already in this topic (58 words, do not repeat)
-afraid, amused, angry, annoying, anxious, bored, brave, cheerful, clever, confident, confused, cry, curious, disappointed, dishonest, embarrassed, envy, excited, exhausted, fear, frightened, frustrated, furious, generous, gentle, glad, grateful, greedy, happiness, happy, honest, impatient, jealous, joy, kind, lazy, lonely, mood, nervous, panic, personality, pleased, polite, pride, proud, relieved, rude, sad, scream, shy, silly, stubborn, surprised, tired, unhappy, upset, wise, worried
+## Already in this topic (87 words, do not repeat)
+administration, advertisement, advertising, agency, agenda, agent, agreement, annual leave, assistance, assistant, average, bonus, boss, business, businessman, businesswoman, capacity, cash flow, chairman, challenge, chart, client, colleague, colleagues, comment, committee, communication, company, confirmation, contribution, customer satisfaction, deadline, deal, department, director, document, efficiency, effort, entry, facility, figure, format, invoice, management, manager, market demand, mission, negotiation, network, noticeboard, objective, offer, office, overtime, permission, photocopy, postpone, presentation, process, product, profit, profit margin, proposal, punctual, punctuality, report, request, requirement, resource, response, responsibility, revenue, scissors, session, signature, standard, status, strategy, supervisor, support, target, task, teamwork, technique, trade, workload, workplace

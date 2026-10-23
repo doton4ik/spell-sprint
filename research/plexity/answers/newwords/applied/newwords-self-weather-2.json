@@ -1,0 +1,17 @@
+[
+["rainfall","количество осадков","noun","B1","the amount of rain that falls in a place","The rainfall was very low last year.","Temperature and Climate"],
+["snowstorm","снежная буря","noun","B1","a storm with strong wind and heavy snow","The snowstorm closed the airport.","Storms and Natural Events"],
+["tornado","торнадо","noun","B1","a violent wind that spins very fast and destroys buildings","A tornado hit the small town.","Storms and Natural Events"],
+["tide","прилив и отлив","noun","B1","the regular rise and fall of the sea","The tide is coming in fast.","Storms and Natural Events"],
+["steam","пар","noun","B1","the hot gas that water becomes when it boils","Steam rose from the hot soup.","Describing Weather"],
+["moisture","влага","noun","B1","small amounts of water in the air or on a surface","The plants need moisture to grow.","Describing Weather"],
+["damp","сырой","adjective","B1","slightly wet, often in an unpleasant way","The walls of the cellar were damp.","Describing Weather"],
+["misty","туманный","adjective","B1","with a light fog that makes it hard to see","It was a cold, misty morning.","Describing Weather"],
+["stormy","штормовой","adjective","B1","with strong winds and heavy rain","The sea was stormy all night.","Describing Weather"],
+["tropical","тропический","adjective","B1","from or typical of the hottest parts of the world","We spent a week on a tropical island.","Temperature and Climate"],
+["frozen","замёрзший, замороженный","adjective","B1","made very cold so that it turns into ice","The lake was completely frozen.","Describing Weather"],
+["mild","мягкий (о погоде)","adjective","B1","not too hot or too cold","We had a mild winter this year.","Describing Weather"],
+["weather forecast","прогноз погоды","noun","B1","a report that says what the weather will be like","The weather forecast says it will rain tomorrow.","Weather and Seasons"],
+["climate","климат","noun","B1","the usual weather conditions of a place","The climate here is warm and dry.","Temperature and Climate"],
+["rainforest","тропический лес","noun","B1","a thick forest in a hot place with very heavy rain","Many rare animals live in the rainforest.","Temperature and Climate"]
+]
