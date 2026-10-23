@@ -11,21 +11,30 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - Levels (CEFR, by the Oxford 3000/5000 lists and the word's frequency): A2 basic, B1 intermediate, B2 upper-intermediate, C1 advanced. No A1 or C2: give A1 words A2 and C2 words C1. Aim for roughly: A2 20%, B1 40%, B2 30%, C1 10% (professional topics: B1 20%, B2 50%, C1 30%).
 - translation: the main Russian translation (one or two words, commonly used for that meaning; if a second meaning matters, add it after a comma, max 2).
 - pos: noun, verb, adjective, adverb, phrase or phrasal verb.
+- subtopic: the group of the topic the word belongs to. Copy EXACTLY ONE name from the list "Subtopics" below (same spelling, same capitals). Choose the best fit for the word's main meaning, and spread the words over the subtopics in a natural way (no subtopic should get more than about 40% of the words; every subtopic should get at least a few).
 - definition: one simple English definition of 6–14 words (B1 vocabulary, no use of the word itself).
 - example: ONE natural sentence of 6–14 words in everyday British English that shows the topic. The word appears in it EXACTLY as written in "word" (for a verb, write the base form in "word" and use that same form in the sentence: "tidy" → "I must tidy my room before dinner").
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example"]. Compact, no comments, no text before or after, exactly 39 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 39 entries.
 
 ```json
 [
-["...","...","noun","B1","...","..."],
+["...","...","noun","B1","...","...","Everyday Phrasal Verbs"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 39 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example.
+Before you answer, check: exactly 39 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+
+## Subtopics (the 7th field must be exactly one of these)
+- Everyday Phrasal Verbs
+- Movement and Travel
+- Work and Study
+- Feelings and Relationships
+- Communication
+- Home and Daily Life
 
 ## Already in this topic (51 words, do not repeat)
 break down, bring up, call back, call off, carry on, catch up with, come across, come back, drop by, fall out with, figure out, fill in, find out, get along with, get off, get over, get up, give back, give up, go on, hang out, hold on, look after, look for, look forward to, look into, look up, pick up, plug in, put away, put off, put on, put up with, queue up, run into, run out of, set off, set up, show up, sort out, switch off, take after, take off, tidy up, try on, turn down, turn off, turn on, turn up, wake up, work out

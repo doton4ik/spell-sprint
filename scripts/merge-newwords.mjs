@@ -5,6 +5,7 @@
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { parseCsv, serialiseCsv } from './csv-utils.mjs'
 import { LEVELS, TOPICS } from './library-topics.mjs'
+import { SUBTOPICS } from './library-subtopics.mjs'
 
 const csvFile = new URL('../src/data/spell-sprint-built-in-library.csv', import.meta.url)
 const original = readFileSync(csvFile, 'utf8')
@@ -74,11 +75,11 @@ for (const name of answerFiles) {
   let kept = 0
   for (const entry of entries) {
     // lines may be arrays or objects with the same field names
-    const [word, translation, pos, level, definition, example] = Array.isArray(entry)
+    const [word, translation, pos, level, definition, example, subtopicRaw] = Array.isArray(entry)
       ? entry
-      : [entry.word, entry.translation, entry.pos, entry.level, entry.definition, entry.example]
+      : [entry.word, entry.translation, entry.pos, entry.level, entry.definition, entry.example, entry.subtopic]
     const bad = (message) => problems.push(`${name} "${word}": ${message}`)
-    if ([word, translation, pos, level, definition, example].some((value) => typeof value !== 'string' || !value.trim())) {
+    if ([word, translation, pos, level, definition, example, subtopicRaw].some((value) => typeof value !== 'string' || !value.trim())) {
       bad('a field is empty')
       continue
     }
@@ -115,6 +116,12 @@ for (const name of answerFiles) {
       bad('the definition uses the word itself')
       continue
     }
+    // the subtopic must be one of the fixed names of the topic (spelling and capitals may differ, the name may not)
+    const subtopic = (SUBTOPICS[topic] ?? []).find((name) => name.toLowerCase() === subtopicRaw.trim().toLowerCase())
+    if (!subtopic) {
+      bad(`subtopic "${subtopicRaw}" is not in the list of ${topic}: ${(SUBTOPICS[topic] ?? []).join(' | ')}`)
+      continue
+    }
     const key = word.trim().toLowerCase()
     if (known.has(key)) {
       bad(`already in the library (${known.get(key)})`)
@@ -135,6 +142,7 @@ for (const name of answerFiles) {
       level: level.trim(),
       definition: definition.trim(),
       example: example.trim(),
+      subtopic,
       id,
     })
     kept++
@@ -144,6 +152,9 @@ for (const name of answerFiles) {
 
 console.log(`answers read: ${answerFiles.length} files; ${accepted.length} new words kept; ${problems.length} dropped or broken`)
 for (const line of perFile) console.log('  ' + line)
+const bySub = new Map()
+for (const item of accepted) bySub.set(`${item.topic} / ${item.subtopic}`, (bySub.get(`${item.topic} / ${item.subtopic}`) ?? 0) + 1)
+if (bySub.size) console.log('subtopics: ' + [...bySub].map(([name, count]) => `${name} ${count}`).join('; '))
 for (const message of problems.slice(0, 40)) console.log('DROPPED', message)
 if (problems.length > 40) console.log(`… and ${problems.length - 40} more`)
 
@@ -157,7 +168,7 @@ if (process.argv.includes('--apply')) {
     set('translation', item.translation)
     set('topic_id', item.topic)
     set('topic', topicName[item.topic])
-    set('subtopic', 'More words')
+    set('subtopic', item.subtopic)
     set('difficulty', difficulty[item.level])
     set('risk', item.word.length >= 9 ? '4' : '3')
     set('example', item.example)

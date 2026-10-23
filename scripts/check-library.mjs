@@ -6,6 +6,7 @@
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { TOPICS } from './library-topics.mjs'
+import { SUBTOPICS } from './library-subtopics.mjs'
 
 const root = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')
 const text = readFileSync(join(root, 'src/data/spell-sprint-built-in-library.csv'), 'utf8')
@@ -115,6 +116,18 @@ for (const [prompt, list] of byPrompt) {
   )
   if (!accepted) notes.push(`"${prompt}" is the prompt of ${words.join(' / ')} — add them as alternatives or make the translations differ`)
 }
+
+// The fixed subtopics (scripts/library-subtopics.mjs): every topic has its list, and words added by the new-words
+// pipeline use a name from the list of their own topic.
+for (const [id] of TOPICS) {
+  const names = SUBTOPICS[id] ?? []
+  if (names.length < 3) errors.push(`topic "${id}" needs at least 3 subtopics in scripts/library-subtopics.mjs`)
+  if (new Set(names.map((name) => name.toLowerCase())).size !== names.length) errors.push(`topic "${id}": two subtopics have the same name`)
+}
+for (const id of Object.keys(SUBTOPICS)) if (!topicIds.has(id)) errors.push(`library-subtopics.mjs: "${id}" is not a topic`)
+for (const row of rows)
+  if (row.source.startsWith('plexity-newwords') && !(SUBTOPICS[row.topic_id] ?? []).includes(row.subtopic))
+    fail(row, `subtopic "${row.subtopic}" is not in the list of topic "${row.topic_id}" (scripts/library-subtopics.mjs)`)
 
 if (notes.length) console.log(`${notes.length} note(s):\n  ${notes.slice(0, 30).join('\n  ')}${notes.length > 30 ? '\n  …' : ''}`)
 if (errors.length) {
