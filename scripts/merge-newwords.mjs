@@ -72,6 +72,12 @@ for (const name of answerFiles) {
     problems.push(`${name}: not valid JSON (${error.message})`)
     continue
   }
+  if (entries.length && Array.isArray(entries[0]) && entries[0].length === 6) {
+    problems.push(
+      `${name}: answer in the OLD format (6 fields, no subtopic): ask again with the new prompt ${name.replace('.json', '.md')}`,
+    )
+    continue
+  }
   let kept = 0
   for (const entry of entries) {
     // lines may be arrays or objects with the same field names
