@@ -117,6 +117,84 @@
   width: 100%;
 }
 
+/* The paper look, like the panels of the pages: a surface card with a thin line, a serif title and the ink-blue accent
+   (amber stays for warnings and streaks). Only the dialog; the small inline report keeps its own style. */
+.word-report-overlay {
+  background: rgba(30, 24, 16, 0.48);
+}
+.word-report-overlay .word-report {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  gap: 16px;
+  padding: 24px;
+}
+.word-report-overlay .word-report__title {
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: calc(20px * var(--fs));
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  line-height: 1.25;
+}
+.word-report-overlay .word-report__title svg {
+  display: none;
+}
+.word-report-overlay .word-report__reasons {
+  gap: 8px;
+}
+.word-report-overlay .word-report__reason {
+  background: var(--surface);
+  border-color: var(--line-strong);
+  color: var(--ink-soft);
+  min-height: 36px;
+  padding: 7px 14px;
+}
+.word-report-overlay .word-report__reason:hover {
+  border-color: var(--accent);
+  color: var(--accent-text-strong);
+}
+.word-report-overlay .word-report__reason--on,
+.word-report-overlay .word-report__reason--on:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent-text-strong);
+}
+.word-report-overlay .word-report__comment {
+  background: var(--surface-soft);
+  border-color: var(--line-strong);
+  border-radius: 10px;
+  color: var(--ink);
+  padding: 12px 14px;
+}
+.word-report-overlay .word-report__hint {
+  color: var(--ink-muted);
+  font-size: calc(13px * var(--fs));
+}
+.word-report-overlay .word-report__actions {
+  gap: 12px;
+}
+.word-report-overlay .word-report--done {
+  background: var(--surface);
+  border-color: var(--line);
+}
+.word-report-overlay .word-report--done p {
+  font-size: calc(16px * var(--fs));
+}
+@media (max-width: 570px) {
+  .word-report-overlay {
+    padding-top: 8vh;
+  }
+  .word-report-overlay .word-report {
+    padding: 20px;
+  }
+  .word-report-overlay .word-report__reason,
+  .word-report-overlay .word-report__actions .check-button,
+  .word-report-overlay .word-report__actions .quiet-button {
+    min-height: 44px;
+  }
+}
+
 /* Report inside a sprint chip */
 .sprint-chip-report {
   background: none;
