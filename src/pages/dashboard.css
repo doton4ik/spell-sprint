@@ -1132,6 +1132,39 @@
 .header-streak--pending span {
   color: var(--ink-soft);
 }
+/* Phone: the ribbon is too tall to sit beside the title (it was laid over the subtitle), so it becomes a small tag
+   in the corner of the date line again. This block must stay after the ribbon rules above. */
+@media (max-width: 570px) {
+  .header-streak {
+    align-content: center;
+    border-radius: 999px;
+    clip-path: none;
+    column-gap: 6px;
+    grid-template-columns: auto auto auto;
+    min-width: 0;
+    padding: 3px 10px 3px 6px;
+    row-gap: 0;
+    text-align: left;
+  }
+  .header-streak span svg {
+    height: 14px;
+    width: 14px;
+  }
+  .header-streak strong {
+    align-self: center;
+    font-size: calc(15px * var(--fs));
+  }
+  .header-streak small {
+    align-self: center;
+    text-align: left;
+  }
+}
+/* Very small phones: a long date ("Wednesday, September 30") would run into the tag, so only the bolt and the number stay. */
+@media (max-width: 360px) {
+  .header-streak small {
+    display: none;
+  }
+}
 /* The three steps are numbered like chapters; "Step 1" stays in the page for screen readers. */
 .welcome {
   counter-reset: step;
