@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-08.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Family and Relationships" (family).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Feelings and Character" (feelings).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 49 NEW words for the topic **Family and Relationships**: relatives, friends, dating, marriage, life stages.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 32 NEW words for the topic **Feelings and Character**: emotions, personality, behaviour.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,23 +16,23 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 49 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 32 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Relatives"],
+["...","...","noun","B1","...","...","Positive Feelings"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 49 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 32 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Relatives
-- Friends and Partners
-- Marriage and Life Events
-- Children and Parenting
-- Social Life
+- Positive Feelings
+- Negative Feelings
+- Character Traits
+- Behaviour and Manners
+- Mood and Reactions
 
-## Already in this topic (41 words, do not repeat)
-acquaintance, adopt, adult, ancestor, anniversary, argue, aunt, babysitter, boyfriend, bride, celebrate, cousin, divorce, elderly, engaged, flatmate, friendship, funeral, generation, girlfriend, grandchild, grandparents, groom, honeymoon, marriage, neighbour, nephew, niece, relationship, relative, sibling, stepfather, stepmother, stranger, teenager, toddler, trust, twins, uncle, wedding, widow
+## Already in this topic (58 words, do not repeat)
+afraid, amused, angry, annoying, anxious, bored, brave, cheerful, clever, confident, confused, cry, curious, disappointed, dishonest, embarrassed, envy, excited, exhausted, fear, frightened, frustrated, furious, generous, gentle, glad, grateful, greedy, happiness, happy, honest, impatient, jealous, joy, kind, lazy, lonely, mood, nervous, panic, personality, pleased, polite, pride, proud, relieved, rude, sad, scream, shy, silly, stubborn, surprised, tired, unhappy, upset, wise, worried

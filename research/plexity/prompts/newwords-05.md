@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-05.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Daily Routine and Time" (routine).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Weather and Seasons" (weather).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 45 NEW words for the topic **Daily Routine and Time**: daily habits, days, dates, frequency, time expressions.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 24 NEW words for the topic **Weather and Seasons**: weather, seasons, climate, natural events.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,23 +16,22 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 45 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 24 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Days and Months"],
+["...","...","noun","B1","...","...","Weather and Seasons"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 45 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 24 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Days and Months
-- Time of Day
-- Daily Habits
-- Frequency and Duration
-- Planning and Deadlines
+- Weather and Seasons
+- Temperature and Climate
+- Storms and Natural Events
+- Describing Weather
 
-## Already in this topic (45 words, do not repeat)
-afterwards, alarm, annual, april, august, beforehand, century, dawn, decade, december, duration, era, february, fortnight, friday, habit, in advance, january, june, march, meanwhile, midnight, monday, nap, noon, nowadays, on time, oversleep, recent, relax, routine, saturday, schedule, september, shower, sunday, thursday, timetable, toothbrush, toothpaste, towel, tuesday, wednesday, weekday, weekly
+## Already in this topic (36 words, do not repeat)
+autumn, breeze, cloud, cloudy, daylight, drizzle, drought, flood, fog, foggy, forecast, freezing, frost, hail, humid, rain, rainbow, rainy, shade, snow, snowy, spring, storm, summer, sunlight, sunny, sunshine, temperature, thunder, thunderstorm, warm, weather, wet, wind, windy, winter

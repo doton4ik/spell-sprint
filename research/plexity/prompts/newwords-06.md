@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-06.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Weather and Seasons" (weather).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Phone and Messages" (phone).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 43 NEW words for the topic **Weather and Seasons**: weather, seasons, climate, natural events.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 40 NEW words for the topic **Phone and Messages**: calls, texts, letters, e-mail, post.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,22 +16,23 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 43 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 40 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Weather and Seasons"],
+["...","...","noun","B1","...","...","Calls"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 43 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 40 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Weather and Seasons
-- Temperature and Climate
-- Storms and Natural Events
-- Describing Weather
+- Calls
+- Texting and Online
+- Post and Letters
+- E-mail
+- Phone Basics
 
-## Already in this topic (17 words, do not repeat)
-autumn, breeze, drizzle, drought, flood, fog, forecast, freezing, frost, hail, humid, rainbow, spring, temperature, thunder, thunderstorm, weather
+## Already in this topic (40 words, do not repeat)
+address, block, call, caller, contact, conversation, dial, email, emoji, envelope, follower, forward, hang up, letter, log in, mail, message, mobile, mobile phone, mute, online, passcode, phone, post, reception, reply, ring, ringtone, screenshot, selfie, signal, silent, stamp, telephone, text, text message, unlock, unread, upload, voicemail

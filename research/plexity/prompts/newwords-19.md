@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-19.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Health and Body" (health).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Technology and Internet" (tech).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 54 NEW words for the topic **Health and Body**: body parts, illness, doctor, medicine, healthy living.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 24 NEW words for the topic **Technology and Internet**: computers, phones, apps, the web, social media, gadgets.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,24 +16,23 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 54 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 24 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Body and Symptoms"],
+["...","...","noun","B1","...","...","Devices and Hardware"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 54 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 24 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Body and Symptoms
-- At the Doctor
-- Medicine and Treatment
-- Healthy Living
-- Injuries and Emergencies
-- Mental Health
+- Devices and Hardware
+- Software and Apps
+- Online Life
+- Social Media
+- Security and Privacy
 
-## Already in this topic (36 words, do not repeat)
-allergic, allergy, ambulance, ankle, appointment, bandage, bruise, check-up, chest, cough, dentist, dizzy, elbow, fever, headache, injury, knee, nurse, painful, painkiller, pill, prescription, rash, recover, shoulder, sick leave, sneeze, sore, stomach, symptom, thermometer, throat, treatment, vaccine, wound, wrist
+## Already in this topic (66 words, do not repeat)
+account, attachment, backup, battery, browser, bulb, cable, camera, cassette, cd player, charger, click, code, computer, cursor, delete, device, digital camera, download, dvd, file, folder, gas, headphone, headphones, icon, install, internet, invent, invention, keyboard, laptop, machine, notification, password, pc, print, printer, privacy, radio, record, reminder, router, screen, search, search engine, settings, site, social media, software, spam, speaker, storage, subscribe, tablet, technology, television, tv, update, username, video, virus, web, web page, website, wireless

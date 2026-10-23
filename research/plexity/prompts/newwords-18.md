@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-18.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "At the Airport" (airport).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Office and Business" (office).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 52 NEW words for the topic **At the Airport**: flights, check-in, security, passport control.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 31 NEW words for the topic **Office and Business**: meetings, deadlines, e-mail at work, companies, management.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,22 +16,24 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 52 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 31 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Check-in and Security"],
+["...","...","noun","B1","...","...","At Work"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 52 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 31 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Check-in and Security
-- On the Plane
-- Passport Control
-- Arrivals and Delays
+- At Work
+- Meetings and Negotiation
+- Professional Communication
+- Finance and Planning
+- Companies and Management
+- Office Equipment
 
-## Already in this topic (38 words, do not repeat)
-airline, aisle, announcement, arrival, baggage claim, boarding, boarding pass, border, cabin crew, carousel, check-in desk, cockpit, connecting flight, crew, customs, customs officer, departure, departure lounge, emergency exit, flight, gate, immigration, jet, landing, layover, lifejacket, luggage, passport, passport control, pilot, runway, scanner, seatbelt, suitcase, terminal, trolley, turbulence, visa
+## Already in this topic (59 words, do not repeat)
+advertisement, advertising, agency, agent, agreement, annual leave, average, bonus, boss, business, businessman, businesswoman, cash flow, chairman, challenge, chart, client, colleague, colleagues, committee, communication, company, customer satisfaction, deadline, deal, department, director, effort, figure, invoice, manager, market demand, negotiation, offer, office, overtime, permission, postpone, presentation, product, profit, profit margin, punctual, punctuality, report, request, response, responsibility, revenue, scissors, strategy, supervisor, support, target, task, teamwork, trade, workload, workplace

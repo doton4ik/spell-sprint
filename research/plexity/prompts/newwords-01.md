@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-01.md)
 Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Home and Housework" (home).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 39 NEW words for the topic **Home and Housework**: rooms, furniture, chores, cleaning, repairs, rent.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 19 NEW words for the topic **Home and Housework**: rooms, furniture, chores, cleaning, repairs, rent.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,7 +16,7 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 39 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 19 entries.
 
 ```json
 [
@@ -25,7 +25,7 @@ ONE code block (three backticks + json). One entry per line: ["word","translatio
 ]
 ```
 
-Before you answer, check: exactly 39 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 19 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
 - Rooms and Furniture
@@ -35,5 +35,5 @@ Before you answer, check: exactly 39 entries; none appears in "Already in this t
 - Appliances and Utilities
 - Garden and Outdoors
 
-## Already in this topic (51 words, do not repeat)
-appliance, attic, balcony, basement, bathroom, bedroom, blanket, broom, bucket, ceiling, chimney, cupboard, curtain, dishwasher, doorbell, dust, electrician, electricity, fence, fold, furniture, garage, hallway, hang, heating, iron, kettle, key, kitchen, landlord, laundry, leak, lock, microwave, mirror, pillow, plumber, recycling, rent, repair, rubbish, scrub, sew, sink, staircase, sweep, tenant, unplug, vacuum, washing machine, wipe
+## Already in this topic (71 words, do not repeat)
+appliance, armchair, attic, balcony, basement, bath, bathroom, bedroom, blanket, bookcase, broom, bucket, ceiling, chimney, cooker, cupboard, curtain, dining room, dishwasher, doorbell, drawer, drill, dust, electrician, electricity, fence, fold, fridge, furniture, garage, hallway, hang, heating, iron, kettle, key, kitchen, lamp, landlord, laundry, leak, living room, lock, microwave, mirror, oven, pillow, plumber, recycling, rent, repair, roof, rope, rubbish, screw, scrub, sew, shelf, sink, sofa, staircase, sweep, tap, tenant, toilet, tool, unplug, vacuum, washing machine, washing-up, wipe

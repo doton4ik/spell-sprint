@@ -1,21 +1,18 @@
 // Prompts for the assistant: new words for each topic, so every topic reaches its target size.
-// Needs research/plexity/topic-map.json (node scripts/merge-topics.mjs --apply).
 // Writes research/plexity/prompts/newwords-NN.md. Run: node scripts/make-newword-prompts.mjs
 import { mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
+import { parseCsv } from './csv-utils.mjs'
 import { TOPICS } from './library-topics.mjs'
 import { SUBTOPICS } from './library-subtopics.mjs'
 
-const map = JSON.parse(readFileSync(new URL('../research/plexity/topic-map.json', import.meta.url), 'utf8'))
-const word = {}
-for (let n = 1; n <= 10; n++) {
-  const text = readFileSync(new URL(`../research/plexity/prompts/topics-${String(n).padStart(2, '0')}.md`, import.meta.url), 'utf8')
-  for (const line of text.split('\n')) {
-    const m = line.match(/^([a-z0-9-]+) \| (.+?) \((noun|verb|adjective|adverb|[a-z ]+)\) \|/)
-    if (m) word[m[1]] = m[2]
-  }
-}
+// The words each topic has NOW come from the library CSV, so a prompt never asks for a word that is already there.
+const library = parseCsv(readFileSync(new URL('../src/data/spell-sprint-built-in-library.csv', import.meta.url), 'utf8')).filter(
+  (row) => row.length > 1,
+)
+const topicCol = library[0].indexOf('topic_id')
+const wordCol = library[0].indexOf('word')
 const have = {}
-for (const [id, { topic }] of Object.entries(map)) (have[topic] ??= new Set()).add(word[id].toLowerCase())
+for (const row of library.slice(1)) (have[row[topicCol]] ??= new Set()).add(row[wordCol].toLowerCase())
 
 const TARGET = { logistics: 80, weather: 60, misspelled: 70, confusable: 50, phone: 80, ideas: 80 }
 const DEFAULT_TARGET = 90

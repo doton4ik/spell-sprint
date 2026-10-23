@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-17.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Travel and Hotels" (travel).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Jobs and Interviews" (jobs).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 60 NEW words for the topic **Travel and Hotels**: holidays, booking, hotels, sightseeing, luggage.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 15 NEW words for the topic **Jobs and Interviews**: professions, applying, CV, interview, salary, career.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,23 +16,23 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 60 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 15 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Travel Planning"],
+["...","...","noun","B1","...","...","Professions"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 60 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 15 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Travel Planning
-- Hotels and Booking
-- At the Destination
-- Sightseeing and Tours
-- Luggage and Packing
+- Professions
+- Job Interview
+- Career Development
+- Salary and Contracts
+- Skills and Qualifications
 
-## Already in this topic (30 words, do not repeat)
-abroad, accommodation, architecture, backpack, brochure, campsite, castle, cathedral, check in, check out, crowd, cruise, currency, destination, excursion, gallery, guest, guidebook, hostel, itinerary, jet lag, landmark, local, monument, museum, reservation, sightseeing, souvenir, tourist, unpack
+## Already in this topic (75 words, do not repeat)
+actor, ambition, applicant, apprentice, architect, astronaut, author, barber, body language, candidate, captain, chef, cleaner, clerk, contract, cook, cover letter, curriculum vitae, doctor, driver, editor, employee, employer, engineer, experience, eye contact, farmer, fisherman, footballer, guard, hire, hunter, interview, interviewer, job, job offer, lawyer, member, mentor, musician, occupation, painter, part-time, payslip, photographer, police officer, policeman, policewoman, promotion, psychologist, qualification, receptionist, recruitment, reference, reporter, resign, resignation, retire, sailor, scientist, secretary, shift, shortlist, singer, skill, soldier, staff, strength, unemployed, vacancy, waitress, weakness, worker, workshop, writer

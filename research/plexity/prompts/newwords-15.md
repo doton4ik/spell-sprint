@@ -1,13 +1,12 @@
 # NEW, SEPARATE TASK (newwords-15.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Transport" (transport), part 1 of 2.
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Health and Body" (health).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 34 NEW words for the topic **Transport**: cars, buses, trains, driving, public transport.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 17 NEW words for the topic **Health and Body**: body parts, illness, doctor, medicine, healthy living.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
 - Every word must be new: it must NOT be in the list "Already in this topic" below (check each word, also other forms of it: "tidy" vs "tidying").
 - Useful for a Russian-speaking learner: words they will meet and want to use in this topic; useful and common first, interesting later.
-- This topic is split into 2 tasks done in separate chats. In this part take the most common and useful words (mostly A2–B2).
 - Levels (CEFR, by the Oxford 3000/5000 lists and the word's frequency): A2 basic, B1 intermediate, B2 upper-intermediate, C1 advanced. No A1 or C2: give A1 words A2 and C2 words C1. Aim for roughly: A2 20%, B1 40%, B2 30%, C1 10% (professional topics: B1 20%, B2 50%, C1 30%).
 - translation: the main Russian translation (one or two words, commonly used for that meaning; if a second meaning matters, add it after a comma, max 2).
 - pos: noun, verb, adjective, adverb, phrase or phrasal verb.
@@ -17,23 +16,24 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 34 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 17 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Cars and Driving"],
+["...","...","noun","B1","...","...","Body and Symptoms"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 34 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 17 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Cars and Driving
-- Public Transport
-- Trains and Stations
-- Bikes and Walking
-- Roads and Traffic
+- Body and Symptoms
+- At the Doctor
+- Medicine and Treatment
+- Healthy Living
+- Injuries and Emergencies
+- Mental Health
 
-## Already in this topic (23 words, do not repeat)
-bus stop, catch, commute, cyclist, delay, fare, ferry, journey, lane, miss, motorway, park, parking, passenger, platform, route, rush hour, station, taxi, ticket, traffic, tram, underground
+## Already in this topic (73 words, do not repeat)
+allergic, allergy, ambulance, ankle, appointment, arm, bandage, belly, blood, bone, brain, bruise, check-up, cheek, chest, chin, cough, dentist, diet, dizzy, drug, ear, elbow, emergency, eye, face, fever, hair, hand, head, headache, health, healthy, heart, hurt, ill, injure, injury, knee, leg, lip, medicine, mouth, neck, nose, nurse, painful, painkiller, patient, pill, prescription, rash, recover, shoulder, sick, sick leave, sneeze, sore, stomach, stomachache, sweat, symptom, thermometer, throat, toe, tooth, toothache, treatment, vaccine, weight, wheelchair, wound, wrist

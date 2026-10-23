@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-03.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Shopping and Money" (shopping).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Clothes and Appearance" (clothes).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 40 NEW words for the topic **Shopping and Money**: shops, prices, paying, banks, saving, spending, debt.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 28 NEW words for the topic **Clothes and Appearance**: clothes, shoes, fashion, how people look.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,23 +16,23 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 40 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 28 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Shops and Buying"],
+["...","...","noun","B1","...","...","Clothing Items"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 40 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 28 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Shops and Buying
-- Prices and Paying
-- Banking and Savings
-- Debt and Taxes
-- Online Shopping
+- Clothing Items
+- Shoes and Accessories
+- Fashion and Style
+- Looks and Grooming
+- Fabrics and Fit
 
-## Already in this topic (50 words, do not repeat)
-afford, balance, bank account, bargain, budget, cash, cashier, change, cheap, coin, complaint, credit card, customer, debit card, debt, delivery, deposit, discount, exchange, expenses, expensive, instalment, insurance, interest rate, loan, loyalty card, mortgage, overdraft, overpay, pin code, price tag, purse, receipt, refund, savings, savings account, shopkeeper, sold out, statement, stock, supermarket, surcharge, tax, till, transfer, voucher, wage, wallet, waste, withdraw
+## Already in this topic (62 words, do not repeat)
+apron, beard, belt, blouse, bracelet, button, cap, casual, coat, collar, comb, dress, earrings, elegant, fashion, fashionable, fit, fitting room, glasses, gloves, haircut, hairstyle, handbag, hat, jacket, jeans, jewellery, jumper, make-up, moustache, necklace, perfume, pocket, pyjamas, raincoat, sandals, scarf, scruffy, shampoo, shave, shirt, shoe, skirt, sleeve, slippers, soap, sock, style, suit, sunglasses, sweater, swimsuit, t-shirt, tie, tights, trainers, trousers, umbrella, underwear, wear, wool, zip

@@ -1,7 +1,7 @@
 # NEW, SEPARATE TASK (newwords-02.md)
-Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Food and Cooking" (food).
+Ignore every earlier message in this chat and do not repeat earlier answers. This round is ONLY for the topic "Shopping and Money" (shopping).
 
-You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 52 NEW words for the topic **Food and Cooking**: meals, ingredients, cooking verbs, restaurants, drinks.
+You are adding words to the word list of an English-spelling app for Russian-speaking learners. Write EXACTLY 23 NEW words for the topic **Shopping and Money**: shops, prices, paying, banks, saving, spending, debt.
 
 ## Rules
 - British spelling. One entry per word; no proper names, no abbreviations, no very rare words, no offensive words.
@@ -16,24 +16,23 @@ You are adding words to the word list of an English-spelling app for Russian-spe
 - The example must be correct grammar, with no typos.
 
 ## Output format
-ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 52 entries.
+ONE code block (three backticks + json). One entry per line: ["word","translation","pos","level","definition","example","subtopic"]. Compact, no comments, no text before or after, exactly 23 entries.
 
 ```json
 [
-["...","...","noun","B1","...","...","Fruit and Vegetables"],
+["...","...","noun","B1","...","...","Shops and Buying"],
 ...
 ]
 ```
 
-Before you answer, check: exactly 52 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
+Before you answer, check: exactly 23 entries; none appears in "Already in this topic"; no word twice; every level is A2, B1, B2 or C1; the word appears in its own example; every subtopic is copied exactly from the list.
 
 ## Subtopics (the 7th field must be exactly one of these)
-- Fruit and Vegetables
-- Meat, Fish and Dairy
-- Cooking and Kitchen
-- Café and Restaurant
-- Drinks
-- Baking and Sweets
+- Shops and Buying
+- Prices and Paying
+- Banking and Savings
+- Debt and Taxes
+- Online Shopping
 
-## Already in this topic (38 words, do not repeat)
-bake, beverage, bill, biscuit, boil, breakfast, cabbage, chop, cucumber, delicious, dessert, dinner, flour, fruit, fry, garlic, ingredient, lettuce, lunch, menu, mushroom, order, portion, pour, recipe, reservation, rinse, sausage, seasoning, sparkling water, spicy, stir, takeaway, tip, vegetable, vegetarian, waiter, yoghurt
+## Already in this topic (67 words, do not repeat)
+afford, balance, bank, bank account, bargain, bookshop, budget, cash, cashier, cent, change, cheap, cheque, coin, complaint, cost, credit, credit card, customer, debit card, debt, delivery, department store, deposit, discount, dollar, euro, exchange, expenses, expensive, fee, instalment, insurance, interest rate, loan, loyalty card, market, mortgage, overdraft, overpay, pay, pence, pin code, price, price tag, purse, receipt, refund, sale, savings, savings account, shop assistant, shopkeeper, shopping, sold out, statement, stock, supermarket, surcharge, tax, till, transfer, voucher, wage, wallet, waste, withdraw
