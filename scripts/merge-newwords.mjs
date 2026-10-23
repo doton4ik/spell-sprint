@@ -25,7 +25,7 @@ const promptDir = new URL('../research/plexity/prompts/', import.meta.url)
 const answerDir = new URL('../research/plexity/answers/newwords/', import.meta.url)
 const answerFiles = existsSync(answerDir)
   ? readdirSync(answerDir)
-      .filter((name) => /^newwords-\d+\.json$/.test(name))
+      .filter((name) => /^newwords-(\d+|self-[a-z]+-\d+)\.json$/.test(name))
       .sort()
   : []
 
@@ -58,7 +58,8 @@ for (const name of answerFiles) {
   const prompt = existsSync(new URL(name.replace('.json', '.md'), promptDir))
     ? readFileSync(new URL(name.replace('.json', '.md'), promptDir), 'utf8')
     : ''
-  const topic = prompt.match(/for the topic "[^"]+" \(([a-z]+)\)/)?.[1]
+  // files written here (not by the assistant) carry the topic in the name: newwords-self-<topic>-<n>.json
+  const topic = name.match(/^newwords-self-([a-z]+)-/)?.[1] ?? prompt.match(/for the topic "[^"]+" \(([a-z]+)\)/)?.[1]
   const wanted = Number(prompt.match(/Write EXACTLY (\d+) NEW words/)?.[1] ?? 0)
   if (!topic || !topicName[topic]) {
     problems.push(`${name}: cannot tell the topic (is there a prompt file with the same number?)`)
