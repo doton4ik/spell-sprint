@@ -169,7 +169,10 @@ test('in a very short window the menu items do not run over each other', async (
 
 test('with the menu hidden the pages are centred and their titles still start at the same place', async ({ page }) => {
   await page.setViewportSize({ width: 1915, height: 870 })
-  const leftOf = async () => (await page.evaluate(`Math.round(document.querySelector('main h1').getBoundingClientRect().left)`)) as number
+  const leftOf = async () => {
+    await page.locator('main h1').first().waitFor() // the app appears once the word list has loaded
+    return (await page.evaluate(`Math.round(document.querySelector('main h1').getBoundingClientRect().left)`)) as number
+  }
   await page.goto('/#dashboard')
   const withMenu = await leftOf()
   await page.evaluate("localStorage.setItem('spell-sprint.menu-hidden', '1')")
