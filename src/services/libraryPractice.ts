@@ -6,6 +6,7 @@ import { russianAnswers } from './answerMatch'
 import { getAllWords, getEveryWord, getLibraries } from './libraryStorage'
 import { getMistakeEntries, getReviewEntries } from './learningData'
 import { getWordProgress } from './dailyPlan'
+import { learnerAbility, orderFreshWords } from './freshWords'
 import { loadServed, pickMistakes } from './mistakePicker'
 import { spellingDistractors } from './spellingDistractors'
 import { isRealOrRude } from './proofreadingEngine'
@@ -163,7 +164,11 @@ function shuffled<T>(items: T[]) {
 }
 export function wordsToLearn(words: LibraryWord[], limit?: number) {
   const progress = getWordProgress()
-  const fresh = shuffled(words.filter((word) => !progress.has(word.wordId)))
+  const fresh = orderFreshWords(
+    words.filter((word) => !progress.has(word.wordId)),
+    learnerAbility(),
+    () => Math.random(),
+  )
   return limit ? fresh.slice(0, limit) : fresh
 }
 export function wordsToRefresh(words: LibraryWord[], limit?: number) {

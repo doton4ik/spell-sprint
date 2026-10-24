@@ -5,6 +5,7 @@ import { libraryGroups } from './libraryGroups'
 import { getAllWords } from './libraryStorage'
 import { getPracticeAttempts } from './practiceStorage'
 import { localDayKey } from './dateKeys'
+import { learnerAbility, orderFreshWords } from './freshWords'
 
 export { localDayKey } from './dateKeys'
 
@@ -107,10 +108,12 @@ export function buildDailyPlan(size = PLAN_SIZE): DailyPlan {
     .sort(([, a], [, b]) => b.errors - a.errors)
     .map(([wordId]) => wordId)
   const today = localDayKey(new Date())
-  const fresh = words
-    .filter((word) => !stats.has(word.wordId) && !professionalTopics.has(word.topic))
-    .sort((a, b) => dayHash(today + a.wordId) - dayHash(today + b.wordId))
-    .map((word) => word.wordId)
+  // New words: the learner's level decides how often a word comes up (freshWords.ts); the order is fixed for the day.
+  const fresh = orderFreshWords(
+    words.filter((word) => !stats.has(word.wordId) && !professionalTopics.has(word.topic)),
+    learnerAbility(),
+    (word) => dayHash(today + word.wordId) / 2 ** 32,
+  ).map((word) => word.wordId)
 
   const freshQuota = Math.min(fresh.length, Math.max(NEW_WORDS_WHEN_BUSY, size - due.length - weak.length))
   const reviewRoom = size - freshQuota
