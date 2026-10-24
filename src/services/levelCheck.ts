@@ -355,7 +355,12 @@ export function recordCheckAnswer(item: LevelItem, answer: string, correct: bool
     return
   }
   const taskId = item.wordId ? `library-${item.wordId}-write-en` : item.id
-  const { confidence, nextReviewAt } = scheduleAfterAnswer({ wordId: item.wordId, taskId }, correct, false, 'write-en')
+  const { confidence, nextReviewAt } = scheduleAfterAnswer(
+    { wordId: item.wordId, taskId, library: 'Level check' },
+    correct,
+    false,
+    'write-en',
+  )
   const attempt: PracticeAttempt = {
     id: crypto.randomUUID(),
     taskId,

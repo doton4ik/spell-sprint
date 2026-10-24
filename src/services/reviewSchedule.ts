@@ -8,6 +8,17 @@ import { getPracticeAttempts } from './practiceStorage'
 export const REVIEW_INTERVALS = [1, 3, 7, 14, 30]
 export const MASTERED_DAYS = REVIEW_INTERVALS.length
 
+// A word that is written right the very first time it is seen, from memory and without help, is already known:
+// it starts with two good days "in the bank" (so the first review is in a week, then 14 days, then 30) and is not
+// asked every day. Level-check and proofreading answers never start it: they are not practice of that word.
+export const KNOWN_ON_SIGHT_DAYS = 2
+const countsForFirstSight = (attempt: Pick<PracticeAttempt, 'isCorrect' | 'hintUsed' | 'attemptMode' | 'library'>) =>
+  attempt.isCorrect &&
+  !attempt.hintUsed &&
+  (attempt.attemptMode === 'write-en' || attempt.attemptMode === 'fill-gap') &&
+  attempt.library !== 'Level check' &&
+  attempt.library !== 'Proofreading'
+
 const itemKey = (attempt: Pick<PracticeAttempt, 'wordId' | 'taskId'>) => attempt.wordId ?? attempt.taskId
 
 function addDays(from: Date, days: number) {
@@ -49,7 +60,7 @@ function countsAsGoodDay(
 
 // `confidence` on an attempt = successful review days since the last mistake (0–5).
 export function scheduleAfterAnswer(
-  item: Pick<PracticeAttempt, 'wordId' | 'taskId'>,
+  item: Pick<PracticeAttempt, 'wordId' | 'taskId'> & { library?: string },
   correct: boolean,
   hintUsed: boolean,
   mode?: PracticeMode,
@@ -64,6 +75,15 @@ export function scheduleAfterAnswer(
   const goodDays = new Set<string>()
   let plannedDay = ''
   let planned = ''
+  // The first practice of the word (level-check answers do not count) decides if it was known on sight; a later mistake cancels it.
+  const firstPractice = history.find((attempt) => attempt.library !== 'Level check')
+  const knownOnSight =
+    (firstPractice
+      ? countsForFirstSight(firstPractice)
+      : correct &&
+        !hintUsed &&
+        countsForFirstSight({ isCorrect: true, hintUsed: false, attemptMode: mode ?? 'write-en', library: item.library })) && !lastMistake
+  const bonus = knownOnSight ? KNOWN_ON_SIGHT_DAYS : 0
   for (const attempt of history) {
     const day = localDayKey(attempt.createdAt)
     if (attempt.createdAt > lastMistake && countsAsGoodDay(attempt, day, plannedDay, mistakeDay)) goodDays.add(day)
@@ -74,11 +94,14 @@ export function scheduleAfterAnswer(
   }
 
   // A wrong meaning brings the word back today, with its spelling progress kept.
-  if (!correct) return { confidence: mode === 'translate-ru' ? goodDays.size : 0, nextReviewAt: now.toISOString() }
+  if (!correct) return { confidence: mode === 'translate-ru' ? goodDays.size + bonus : 0, nextReviewAt: now.toISOString() }
   const tomorrow = addDays(now, 1)
   // Keeps the word's current review date (a known word is not pulled back), at least tomorrow.
-  const keepPlan = () => ({ confidence: goodDays.size, nextReviewAt: planned > tomorrow ? planned : tomorrow })
-  if (hintUsed || assistedMode(mode)) return { confidence: goodDays.size, nextReviewAt: tomorrow }
+  const keepPlan = () => ({
+    confidence: Math.min(goodDays.size + bonus, MASTERED_DAYS),
+    nextReviewAt: planned > tomorrow ? planned : tomorrow,
+  })
+  if (hintUsed || assistedMode(mode)) return { confidence: Math.min(goodDays.size + bonus, MASTERED_DAYS), nextReviewAt: tomorrow }
   if (recognitionOnly(mode)) return keepPlan()
   const today = localDayKey(now)
   if (today === mistakeDay) return { confidence: 0, nextReviewAt: tomorrow }
@@ -88,6 +111,6 @@ export function scheduleAfterAnswer(
   )
     return keepPlan()
   goodDays.add(today)
-  const days = Math.min(goodDays.size, MASTERED_DAYS)
+  const days = Math.min(goodDays.size + bonus, MASTERED_DAYS)
   return { confidence: days, nextReviewAt: addDays(now, REVIEW_INTERVALS[days - 1]) }
 }
