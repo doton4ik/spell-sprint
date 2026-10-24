@@ -154,14 +154,6 @@ function oncePerWord(tasks: PracticeTask[]) {
 // "New words": words the learner has never answered, in a random order. "Words I know": words already practised —
 // the ones whose review is due first, then those that keep going wrong, then the longest unseen — so a session
 // refreshes what can slip rather than repeating what was just done.
-function shuffled<T>(items: T[]) {
-  const copy = [...items]
-  for (let index = copy.length - 1; index > 0; index -= 1) {
-    const other = Math.floor(Math.random() * (index + 1))
-    ;[copy[index], copy[other]] = [copy[other], copy[index]]
-  }
-  return copy
-}
 export function wordsToLearn(words: LibraryWord[], limit?: number) {
   const progress = getWordProgress()
   const fresh = orderFreshWords(
