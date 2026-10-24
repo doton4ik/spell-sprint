@@ -136,7 +136,7 @@ export function AppShell({ children, activePage }: AppShellProps) {
             <div className="profile-avatar">{(profile.name.trim()[0] ?? 'S').toLocaleUpperCase()}</div>
             <div>
               <strong>{profile.name.trim() || 'Your profile'}</strong>
-              <span>Goal: {profile.dailyGoal} tasks a day</span>
+              <span>Plan: {profile.dailyMinutes} min a day</span>
             </div>
             <Icon name="chevron" size={17} />
           </a>
@@ -184,7 +184,7 @@ export function AppShell({ children, activePage }: AppShellProps) {
               <span className="profile-avatar">{(profile.name.trim()[0] ?? 'S').toLocaleUpperCase()}</span>
               <span>
                 <strong>{profile.name.trim() || 'Your profile'}</strong>
-                <small>Goal: {profile.dailyGoal} tasks a day · Settings</small>
+                <small>Plan: {profile.dailyMinutes} min a day · Settings</small>
               </span>
               <Icon name="settings" size={19} />
             </a>

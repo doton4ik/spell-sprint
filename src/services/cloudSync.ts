@@ -6,7 +6,7 @@ import { getStoredLevelChecks, mergeLevelChecks } from './levelCheck'
 import { flushMistakeOutbox, getOutboxSize } from './mistakeOutbox'
 import { flushWordReports } from './wordReports'
 import { flushFeedback } from './feedback'
-import { getProfile, saveProfile } from './profileStorage'
+import { getProfile, nearestMinutes, saveProfile } from './profileStorage'
 import { getLibraryPrefs, mergeLibraryPrefs } from './libraryPrefs'
 import { getPairAttempts, mergePairAttempts } from './pairs'
 import { getAllYellowCards, mergeYellowCards } from './yellowCards'
@@ -48,9 +48,23 @@ export async function restoreLearningData() {
   mergeLevelChecks(data.levelChecks)
   mergePairAttempts(data.pairAttempts)
   mergeYellowCards(data.yellowCards)
-  const profile = data.profile as { name?: unknown; dailyGoal?: unknown } | undefined
-  if (profile && !getProfile().name && typeof profile.name === 'string' && profile.name)
-    saveProfile({ name: profile.name, ...(typeof profile.dailyGoal === 'number' ? { dailyGoal: profile.dailyGoal } : {}) })
+  const profile = data.profile as { name?: unknown; dailyGoal?: unknown; dailyMinutes?: unknown; activities?: unknown } | undefined
+  if (profile && !getProfile().name && typeof profile.name === 'string' && profile.name) {
+    // An older snapshot has only a goal in tasks: half as many minutes (profileStorage picks the nearest option).
+    const minutes =
+      typeof profile.dailyMinutes === 'number'
+        ? profile.dailyMinutes
+        : typeof profile.dailyGoal === 'number'
+          ? profile.dailyGoal / 2
+          : undefined
+    saveProfile({
+      name: profile.name,
+      ...(minutes !== undefined ? { dailyMinutes: nearestMinutes(minutes) } : {}),
+      ...(profile.activities && typeof profile.activities === 'object'
+        ? { activities: profile.activities as Record<string, boolean> }
+        : {}),
+    })
+  }
   if (!loadDiagnosticResult() && data.diagnosticResult && typeof data.diagnosticResult === 'object')
     saveDiagnosticResult(data.diagnosticResult as Parameters<typeof saveDiagnosticResult>[0])
   mergeSprintRounds(data.sprintRounds)

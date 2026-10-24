@@ -1,4 +1,5 @@
 import { hiddenProofreadingTextIds } from '../data/proofreadingHidden'
+import { markProofreadingDone } from './proofreadingDone'
 import { proofreadingTexts as allProofreadingTexts, type ProofreadingLevel, type ProofreadingText } from '../data/proofreadingTexts'
 import type { PracticeAttempt } from '../types/practice'
 import { getPracticeAttempts, savePracticeAttempt } from './practiceStorage'
@@ -66,6 +67,7 @@ function libraryWordId(word: string) {
 }
 
 export function recordProofreading(text: ProofreadingText, result: ProofreadingResult) {
+  markProofreadingDone(text.id)
   for (const { slot, status, learnerText } of result.slots) {
     const spelling = slot.type === 'spelling' || slot.type === 'typo'
     const wordId = spelling ? libraryWordId(slot.correct[0]) : undefined

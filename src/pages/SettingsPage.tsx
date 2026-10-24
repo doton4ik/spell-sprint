@@ -30,7 +30,8 @@ import {
   type FontScale,
   type Theme,
 } from '../services/appearanceStorage'
-import { dailyGoalOptions, getProfile, saveProfile } from '../services/profileStorage'
+import { describePlan } from '../services/dailyChecklist'
+import { dailyMinutesOptions, getProfile, saveProfile, type DailyActivities } from '../services/profileStorage'
 import { getOutboxSize, subscribeToOutbox } from '../services/mistakeOutbox'
 import './settings.css'
 
@@ -368,8 +369,8 @@ export function SettingsPage() {
         </article>
         <article className="settings-card settings-card--compact">
           <p className="settings-card__eyebrow">Profile</p>
-          <h2>Name and daily goal</h2>
-          <p>Used for the greeting and for today's progress on the Dashboard. Stored on this device.</p>
+          <h2>Name and daily plan</h2>
+          <p>Used for the greeting and for today's plan on the Dashboard. Stored on this device.</p>
           <label>
             Your name
             <input
@@ -379,21 +380,44 @@ export function SettingsPage() {
               onChange={(event) => updateProfile({ name: event.target.value })}
             />
           </label>
-          <span className="settings-field-label">Tasks per day</span>
-          <div className="font-scale-options font-scale-options--goal" role="radiogroup" aria-label="Daily goal">
-            {dailyGoalOptions.map((goal) => (
+          <span className="settings-field-label">Time per day</span>
+          <div className="plan-options" role="radiogroup" aria-label="Time per day">
+            {dailyMinutesOptions.map((minutes) => (
               <button
                 type="button"
                 role="radio"
-                aria-checked={profile.dailyGoal === goal}
-                className={profile.dailyGoal === goal ? 'font-scale-option font-scale-option--active' : 'font-scale-option'}
-                onClick={() => updateProfile({ dailyGoal: goal })}
-                key={goal}
+                aria-checked={profile.dailyMinutes === minutes}
+                className={profile.dailyMinutes === minutes ? 'plan-option plan-option--active' : 'plan-option'}
+                onClick={() => updateProfile({ dailyMinutes: minutes })}
+                key={minutes}
               >
-                {goal}
+                <strong>{minutes} min</strong>
+                <span>{describePlan(minutes, profile.activities)}</span>
               </button>
             ))}
           </div>
+          <span className="settings-field-label">Include in the day</span>
+          <div className="plan-toggles">
+            {(
+              [
+                ['proofreading', 'Proofreading', 'from 10 min'],
+                ['pairs', 'Word pairs', 'from 15 min'],
+                ['dictation', 'Dictation', 'from 15 min'],
+                ['sprint', 'Sprint', 'from 30 min'],
+              ] as Array<[keyof DailyActivities, string, string]>
+            ).map(([key, label, note]) => (
+              <label className="plan-toggle" key={key}>
+                <input
+                  type="checkbox"
+                  checked={profile.activities[key]}
+                  onChange={(event) => updateProfile({ activities: { [key]: event.target.checked } })}
+                />
+                <span>{label}</span>
+                <small>{note}</small>
+              </label>
+            ))}
+          </div>
+          <p className="settings-note">Words are always in the plan. The Dashboard shows what is done today and what is left.</p>
         </article>
         <article className="settings-card settings-card--compact">
           <p className="settings-card__eyebrow">Appearance</p>

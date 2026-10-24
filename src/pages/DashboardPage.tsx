@@ -5,7 +5,8 @@ import { LibrarySetup } from '../components/libraries/LibrarySetup'
 import { isLibrarySetupDone } from '../services/libraryPrefs'
 import { MetricCard } from '../components/ui/MetricCard'
 import { SectionHeader } from '../components/ui/SectionHeader'
-import { buildDailyPlan, getStreak, getTodayCount, type DailyPlan } from '../services/dailyPlan'
+import { buildChecklist, STEP_INFO, type Checklist, type ChecklistStep } from '../services/dailyChecklist'
+import { buildDailyPlan, getStreak, type DailyPlan } from '../services/dailyPlan'
 import { getLearningAnalytics } from '../services/learningAnalytics'
 import { getLevelChecks, nextCheckDue } from '../services/levelCheck'
 import { getMistakeEntries, isDueToday, subscribeToLearningData } from '../services/learningData'
@@ -22,13 +23,20 @@ function greeting() {
   return hour < 5 ? 'Good night' : hour < 12 ? 'Good morning' : hour < 18 ? 'Good afternoon' : 'Good evening'
 }
 
-function startPlan(plan: DailyPlan, mode: PracticeMode) {
+function startPlan(plan: DailyPlan, mode: PracticeMode, count = plan.items.length) {
   setPendingPracticeSelection({
-    wordIds: plan.items.map((item) => item.word.wordId),
+    wordIds: plan.items.slice(0, Math.max(1, count)).map((item) => item.word.wordId),
     label: mode === 'listen-write' ? "Today's dictation" : "Today's session",
     mode,
   })
   window.location.hash = 'practice'
+}
+
+// Starts one step of today's plan: the words and the dictation use today's word list, the rest are their own pages.
+function startStep(step: ChecklistStep, plan: DailyPlan) {
+  if (step.id === 'words') startPlan(plan, 'write-en', step.left || step.target)
+  else if (step.id === 'dictation') startPlan(plan, 'listen-write', step.left || step.target)
+  else window.location.hash = STEP_INFO[step.id].href.slice(1)
 }
 
 export function DashboardPage() {
@@ -38,10 +46,10 @@ export function DashboardPage() {
   const analytics = useMemo(getLearningAnalytics, [revision])
   const plan = useMemo(() => buildDailyPlan(), [revision])
   const { streak, practisedToday } = useMemo(() => getStreak(), [revision])
-  const todayCount = useMemo(() => getTodayCount(), [revision])
+  const checklist = useMemo(() => buildChecklist(), [revision])
   const profile = useMemo(getProfile, [revision])
   const mistakesDue = useMemo(() => getMistakeEntries().filter(isDueToday).length, [revision])
-  const goalReached = todayCount >= profile.dailyGoal
+  const goalReached = checklist.allDone
 
   const { accuracy } = analytics
   const accuracyDelta = accuracy.percent !== null && accuracy.previousPercent !== null ? accuracy.percent - accuracy.previousPercent : null
@@ -78,9 +86,9 @@ export function DashboardPage() {
   ]
   const date = new Intl.DateTimeFormat('en', { weekday: 'long', month: 'long', day: 'numeric' }).format(new Date())
   const subtitle = goalReached
-    ? 'Daily goal reached. Anything extra today is a bonus.'
+    ? "Today's plan is done. Anything extra is a bonus."
     : practisedToday
-      ? `${profile.dailyGoal - todayCount} more tasks to reach today's goal.`
+      ? `${checklist.steps.filter((step) => step.status !== 'done').length} of ${checklist.steps.length} parts of today's plan left.`
       : streak
         ? `Practise today to keep your ${streak}-day streak going.`
         : 'A short focused session is the best way to start.'
@@ -114,7 +122,7 @@ export function DashboardPage() {
         {analytics.totalAttempts ? null : <Welcome />}
 
         <div className="dashboard-hero">
-          <TodayCard plan={plan} todayCount={todayCount} goal={profile.dailyGoal} />
+          <TodayCard plan={plan} checklist={checklist} />
           <section className="panel activity-panel">
             <SectionHeader eyebrow="This week" title="Daily progress">
               <span className="weekly-total">
@@ -135,7 +143,7 @@ export function DashboardPage() {
               ))}
             </div>
             <p className="chart-caption">
-              <span /> Your daily goal: {profile.dailyGoal} tasks · <a href="#settings">change</a>
+              <span /> Your plan: {profile.dailyMinutes} min a day · <a href="#settings">change</a>
             </p>
           </section>
         </div>
@@ -245,47 +253,31 @@ function LevelCheckNudge({ revision }: { revision: number }) {
   )
 }
 
-const reasonLabels = { due: 'to review', weak: 'keep slipping', new: 'new' } as const
+const reasonLabels = { due: 'to review', weak: 'keep slipping', new: 'new', extra: 'extra practice' } as const
 
-function TodayCard({ plan, todayCount, goal }: { plan: DailyPlan; todayCount: number; goal: number }) {
-  const percent = Math.min(100, Math.round((todayCount / goal) * 100))
-  const minutes = Math.max(2, Math.round(plan.items.length * 0.5))
-  const parts = (['due', 'weak', 'new'] as const)
-    .map((reason) => ({ reason, count: reason === 'due' ? plan.due : reason === 'weak' ? plan.weak : plan.fresh }))
+function stateText(step: ChecklistStep) {
+  if (step.status === 'done') return 'Done'
+  if (step.status === 'partly') return `${step.left} left`
+  return 'Not started'
+}
+
+// Today's plan in one card: every part of the day with what is done and what is left, and one primary button for the next part.
+function TodayCard({ plan, checklist }: { plan: DailyPlan; checklist: Checklist }) {
+  const { steps, next } = checklist
+  const wordsStep = steps[0]
+  const parts = (['due', 'weak', 'new', 'extra'] as const)
+    .map((reason) => ({
+      reason,
+      count: reason === 'due' ? plan.due : reason === 'weak' ? plan.weak : reason === 'new' ? plan.fresh : plan.extra,
+    }))
     .filter((part) => part.count > 0)
+  const noWords = plan.items.length === 0 && wordsStep.status !== 'done'
 
   return (
-    <section className="today-card" aria-label="Today's session">
+    <section className="today-card" aria-label="Today's plan">
       <div className="today-card__main">
-        <span className="recommendation-label">Today's session</span>
-        {plan.items.length ? (
-          <>
-            <h2>
-              {plan.items.length} words · about {minutes} min
-            </h2>
-            <div className="today-card__parts">
-              {parts.map((part) => (
-                <span className={`today-part today-part--${part.reason}`} key={part.reason}>
-                  {part.count} {reasonLabels[part.reason]}
-                </span>
-              ))}
-            </div>
-            <div className="today-card__words">
-              {plan.items.slice(0, 5).map((item) => (
-                <span key={item.word.wordId}>{item.word.word}</span>
-              ))}
-              {plan.items.length > 5 ? <span className="today-card__more">+{plan.items.length - 5}</span> : null}
-            </div>
-            <div className="today-card__actions">
-              <button className="today-button today-button--primary" type="button" onClick={() => startPlan(plan, 'write-en')}>
-                <Icon name="practice" size={17} /> Start
-              </button>
-              <button className="today-button" type="button" onClick={() => startPlan(plan, 'listen-write')}>
-                <Icon name="volume" size={17} /> Dictation
-              </button>
-            </div>
-          </>
-        ) : (
+        <span className="recommendation-label">Today's plan</span>
+        {noWords ? (
           <>
             <h2>Add some words to begin</h2>
             <p>Your libraries are empty. Import a CSV or open the built-in libraries.</p>
@@ -295,16 +287,62 @@ function TodayCard({ plan, todayCount, goal }: { plan: DailyPlan; todayCount: nu
               </a>
             </div>
           </>
+        ) : (
+          <>
+            <h2>{checklist.allDone ? 'Everything is done for today' : `${checklist.minutesDone} of ${checklist.minutes} min`}</h2>
+            <ul className="plan-list">
+              {steps.map((step) => {
+                const info = STEP_INFO[step.id]
+                return (
+                  <li className={`plan-step plan-step--${step.status}`} key={step.id}>
+                    <span className="plan-step__mark" aria-hidden="true">
+                      {step.status === 'done' ? '✓' : step.status === 'partly' ? '◐' : '○'}
+                    </span>
+                    <div className="plan-step__text">
+                      <strong>{step.title}</strong>
+                      <small>
+                        {step.done} of {step.target} {step.target === 1 ? info.one : info.many} · about {step.minutes} min
+                      </small>
+                      {step.id === 'words' && step.status !== 'done' && parts.length ? (
+                        <span className="plan-step__parts">
+                          {parts.map((part) => (
+                            <span className={`today-part today-part--${part.reason}`} key={part.reason}>
+                              {part.count} {reasonLabels[part.reason]}
+                            </span>
+                          ))}
+                        </span>
+                      ) : null}
+                    </div>
+                    <span className="plan-step__state">{stateText(step)}</span>
+                    {step.status !== 'done' ? (
+                      <button
+                        className={step === next ? 'today-button today-button--primary' : 'today-button today-button--quiet'}
+                        type="button"
+                        onClick={() => startStep(step, plan)}
+                      >
+                        {step.status === 'partly' ? 'Continue' : 'Start'}
+                      </button>
+                    ) : null}
+                  </li>
+                )
+              })}
+            </ul>
+            {checklist.allDone ? (
+              <p>
+                You can practise more any time: <a href="#practice">Practice</a>.
+              </p>
+            ) : null}
+          </>
         )}
       </div>
-      <div className="today-card__goal" aria-label={`${todayCount} of ${goal} tasks done today`}>
-        <div className="goal-ring" style={{ ['--goal' as string]: `${percent * 3.6}deg` }}>
+      <div className="today-card__goal" aria-label={`${checklist.minutesDone} of ${checklist.minutes} minutes of today's plan done`}>
+        <div className="goal-ring" style={{ ['--goal' as string]: `${checklist.percent * 3.6}deg` }}>
           <div>
-            <strong>{todayCount}</strong>
-            <small>of {goal}</small>
+            <strong>{checklist.percent}%</strong>
+            <small>of {checklist.minutes} min</small>
           </div>
         </div>
-        <span>{todayCount >= goal ? 'Goal reached ✓' : 'tasks today'}</span>
+        <span>{checklist.allDone ? 'Plan done ✓' : 'of today'}</span>
       </div>
     </section>
   )

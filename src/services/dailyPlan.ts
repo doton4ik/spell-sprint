@@ -6,6 +6,8 @@ import { getAllWords } from './libraryStorage'
 import { getPracticeAttempts } from './practiceStorage'
 import { localDayKey } from './dateKeys'
 import { learnerAbility, orderFreshWords } from './freshWords'
+import { freshCapFor, wordsTargetFor } from './dailyChecklist'
+import { getProfile } from './profileStorage'
 
 export { localDayKey } from './dateKeys'
 
@@ -34,11 +36,10 @@ export function getTodayCount(attempts: readonly PracticeAttempt[] = getPractice
   return attempts.filter((attempt) => localDayKey(attempt.createdAt) === today).length
 }
 
-export type PlanReason = 'due' | 'weak' | 'new'
+export type PlanReason = 'due' | 'weak' | 'new' | 'extra'
 export type PlanItem = { word: LibraryWord; reason: PlanReason }
-export type DailyPlan = { items: PlanItem[]; due: number; weak: number; fresh: number; dueTotal: number }
+export type DailyPlan = { items: PlanItem[]; due: number; weak: number; fresh: number; extra: number; dueTotal: number }
 
-export const PLAN_SIZE = 10
 const NEW_WORDS_WHEN_BUSY = 2 // even on a heavy review day, a couple of new words keep things moving
 const professionalTopics = new Set(libraryGroups.find((group) => group.id === 'professional')?.topics ?? [])
 
@@ -89,9 +90,14 @@ export function getWordProgress(): Map<string, WordProgress> {
   return progress
 }
 
-// Today's session: words whose review date has come (most overdue and most-missed first), then words
-// that keep going wrong, then a few new everyday words. Built from local practice history only.
-export function buildDailyPlan(size = PLAN_SIZE): DailyPlan {
+// Today's session: words whose review date has come (most overdue and most-missed first), then words that keep
+// going wrong, then a few new everyday words (at most `freshCap`, picked by the learner's level), then extra practice
+// of words seen before (the longest unseen first) when the day is longer than the reviews. The size and the cap come
+// from the minutes in the profile. Built from local practice history only.
+export function buildDailyPlan(
+  size = wordsTargetFor(getProfile().dailyMinutes, getProfile().activities),
+  freshCap = freshCapFor(getProfile().dailyMinutes),
+): DailyPlan {
   const words = getAllWords()
   const byId = new Map(words.map((word) => [word.wordId, word]))
   const stats = new Map([...getWordProgress()].filter(([wordId]) => byId.has(wordId)))
@@ -107,6 +113,7 @@ export function buildDailyPlan(size = PLAN_SIZE): DailyPlan {
     .filter(([wordId, entry]) => !dueSet.has(wordId) && entry.errors >= 2 && (entry.latest.confidence ?? 0) < 2)
     .sort(([, a], [, b]) => b.errors - a.errors)
     .map(([wordId]) => wordId)
+  const weakSet = new Set(weak)
   const today = localDayKey(new Date())
   // New words: the learner's level decides how often a word comes up (freshWords.ts); the order is fixed for the day.
   const fresh = orderFreshWords(
@@ -114,19 +121,33 @@ export function buildDailyPlan(size = PLAN_SIZE): DailyPlan {
     learnerAbility(),
     (word) => dayHash(today + word.wordId) / 2 ** 32,
   ).map((word) => word.wordId)
+  // Extra practice: words that are not due and not weak, longest unseen first (not the ones answered today).
+  const extra = [...stats.entries()]
+    .filter(([wordId, entry]) => !dueSet.has(wordId) && !weakSet.has(wordId) && localDayKey(entry.latest.createdAt) !== today)
+    .sort(([, a], [, b]) => a.latest.createdAt.localeCompare(b.latest.createdAt))
+    .map(([wordId]) => wordId)
 
-  const freshQuota = Math.min(fresh.length, Math.max(NEW_WORDS_WHEN_BUSY, size - due.length - weak.length))
+  const freshQuota = Math.min(fresh.length, freshCap, Math.max(NEW_WORDS_WHEN_BUSY, size - due.length - weak.length))
   const reviewRoom = size - freshQuota
   const pickedDue = due.slice(0, reviewRoom)
   const pickedWeak = weak.slice(0, reviewRoom - pickedDue.length)
-  const pickedFresh = fresh.slice(0, size - pickedDue.length - pickedWeak.length)
+  const pickedFresh = fresh.slice(0, Math.min(freshCap, size - pickedDue.length - pickedWeak.length))
+  const pickedExtra = extra.slice(0, size - pickedDue.length - pickedWeak.length - pickedFresh.length)
 
   const items: PlanItem[] = [
     ...pickedDue.map((wordId) => ({ word: byId.get(wordId)!, reason: 'due' as const })),
     ...pickedWeak.map((wordId) => ({ word: byId.get(wordId)!, reason: 'weak' as const })),
     ...pickedFresh.map((wordId) => ({ word: byId.get(wordId)!, reason: 'new' as const })),
+    ...pickedExtra.map((wordId) => ({ word: byId.get(wordId)!, reason: 'extra' as const })),
   ]
-  return { items, due: pickedDue.length, weak: pickedWeak.length, fresh: pickedFresh.length, dueTotal: due.length }
+  return {
+    items,
+    due: pickedDue.length,
+    weak: pickedWeak.length,
+    fresh: pickedFresh.length,
+    extra: pickedExtra.length,
+    dueTotal: due.length,
+  }
 }
 
 // Why this word is in the session, in the learner's terms. Worked out when the session starts, so

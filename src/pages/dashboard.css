@@ -1205,3 +1205,78 @@
   font-weight: 600;
   letter-spacing: -0.2px;
 }
+
+/* Today's plan: one row for every part of the day. Status is a mark AND a word, never colour alone. */
+.plan-list {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+}
+.plan-step {
+  align-items: center;
+  column-gap: 12px;
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) auto auto;
+}
+.plan-step__mark {
+  font-size: calc(18px * var(--fs));
+  line-height: 1;
+  text-align: center;
+}
+.plan-step__text {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.plan-step__text strong {
+  font-size: calc(15px * var(--fs));
+}
+.plan-step__text small {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: calc(13px * var(--fs));
+}
+.plan-step__parts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+.plan-step__state {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: calc(13px * var(--fs));
+  font-weight: 700;
+  text-align: right;
+}
+.plan-step--done .plan-step__text strong,
+.plan-step--done .plan-step__text small {
+  opacity: 0.8;
+}
+.today-button--quiet {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.35);
+  min-height: 36px;
+  padding: 0 14px;
+}
+.today-card .plan-list + p {
+  margin-top: 12px;
+}
+.today-card p a {
+  color: var(--on-accent);
+}
+@media (max-width: 570px) {
+  .plan-step {
+    grid-template-columns: 22px minmax(0, 1fr) auto;
+    row-gap: 6px;
+  }
+  .plan-step__state {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .plan-step .today-button {
+    grid-column: 2 / -1;
+    justify-self: start;
+    min-height: 44px;
+  }
+}
