@@ -1,8 +1,8 @@
 import { useMemo } from 'react'
 import type { TaskOutcome } from '../../hooks/usePracticeSession'
-import { getStreak, getTodayCount } from '../../services/dailyPlan'
+import { buildChecklist } from '../../services/dailyChecklist'
+import { getStreak } from '../../services/dailyPlan'
 import { getMistakeEntries, isDueToday } from '../../services/learningData'
-import { getProfile } from '../../services/profileStorage'
 import type { PracticeMode, PracticeTask } from '../../types/practice'
 
 type SessionRailsProps = {
@@ -29,8 +29,8 @@ export function SessionRails({ mode, taskIndex, tasks, outcomes, feedbackRef }: 
   // Today, beyond this session: the daily goal, what is waiting for review, the streak. Read again after every answer.
   const today = useMemo(
     () => ({
-      done: getTodayCount(),
-      goal: getProfile().dailyGoal,
+      done: buildChecklist().steps[0].done,
+      goal: buildChecklist().steps[0].target,
       due: getMistakeEntries().filter(isDueToday).length,
       streak: getStreak().streak,
     }),
@@ -83,7 +83,7 @@ export function SessionRails({ mode, taskIndex, tasks, outcomes, feedbackRef }: 
         <span className="session-rail__label">Today</span>
         <div className="session-rail__today">
           <strong>
-            {today.done} <small>of {today.goal} tasks</small>
+            {today.done} <small>of {today.goal} words today</small>
           </strong>
           <div className="session-rail__track">
             <div style={{ width: `${Math.min(100, (today.done / Math.max(1, today.goal)) * 100)}%` }} />

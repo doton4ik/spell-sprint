@@ -191,4 +191,11 @@ describe('a word that is known on sight', () => {
     expect(result.confidence).toBe(1)
     expect(daysUntil(result.nextReviewAt, day(8))).toBe(1)
   })
+  it('a correct dictation the next day does not pull a known word back to tomorrow', () => {
+    const first = scheduleAfterAnswer(item, true, false, 'write-en', day(0))
+    history(attempt(day(0), true, first))
+    const heard = scheduleAfterAnswer(item, true, false, 'listen-write', day(1))
+    expect(daysUntil(heard.nextReviewAt, day(0))).toBe(7)
+    expect(heard.confidence).toBe(3)
+  })
 })

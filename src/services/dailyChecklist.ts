@@ -69,6 +69,21 @@ export function describePlan(minutes: number, on: DailyActivities) {
 
 export type Counts = Record<StepId, number>
 
+// An answer to a word of the library counts as "words" (or "dictation"); proofreading and the level check have their own place.
+const ownAttempt = (attempt: PracticeAttempt) => attempt.library !== 'Proofreading' && attempt.library !== 'Level check'
+export const wordsDoneOn = (day: string, attempts: readonly PracticeAttempt[]) =>
+  attempts.filter((attempt) => localDayKey(attempt.createdAt) === day && ownAttempt(attempt) && attempt.attemptMode !== 'listen-write')
+    .length
+
+// The words answered today (newest first, without repeats): the dictation of the day when the word list of the plan is used up.
+export function wordIdsPractisedOn(day: string, limit: number, attempts: readonly PracticeAttempt[] = getPracticeAttempts()) {
+  const ids: string[] = []
+  for (const attempt of [...attempts].sort((a, b) => b.createdAt.localeCompare(a.createdAt)))
+    if (attempt.wordId && ownAttempt(attempt) && localDayKey(attempt.createdAt) === day && !ids.includes(attempt.wordId))
+      ids.push(attempt.wordId)
+  return ids.slice(0, limit)
+}
+
 // What was really done on a day, from data that already syncs between devices (practice answers, pair answers, sprint rounds).
 export function countDay(
   day: string,
@@ -80,10 +95,9 @@ export function countDay(
   },
 ): Counts {
   const today = data.attempts.filter((attempt) => localDayKey(attempt.createdAt) === day)
-  const own = (attempt: PracticeAttempt) => attempt.library !== 'Proofreading' && attempt.library !== 'Level check'
   return {
-    words: today.filter((attempt) => own(attempt) && attempt.attemptMode !== 'listen-write').length,
-    dictation: today.filter((attempt) => own(attempt) && attempt.attemptMode === 'listen-write').length,
+    words: wordsDoneOn(day, data.attempts),
+    dictation: today.filter((attempt) => ownAttempt(attempt) && attempt.attemptMode === 'listen-write').length,
     proofreading: data.proofreadingTexts,
     pairs: data.pairAnswers.filter((item) => localDayKey(item.createdAt) === day).length,
     sprint: data.sprintRounds.filter((round) => localDayKey(round.date) === day).length,
@@ -94,6 +108,7 @@ export type StepStatus = 'done' | 'partly' | 'todo'
 export type ChecklistStep = PlanStep & { done: number; left: number; status: StepStatus; title: string }
 export type Checklist = {
   steps: ChecklistStep[]
+  chosenMinutes: number // what the settings ask for; minutes can be less when the day has fewer words to offer
   minutes: number
   minutesDone: number
   percent: number
@@ -101,8 +116,20 @@ export type Checklist = {
   next: ChecklistStep | null // the first step that is not finished
 }
 
-export function buildChecklistFrom(profile: Pick<Profile, 'dailyMinutes' | 'activities'>, counts: Counts): Checklist {
-  const steps = planSteps(profile.dailyMinutes, profile.activities).map((step) => {
+// wordsAvailable: how many words the word list of the day can still offer. A day can offer fewer than the settings ask for
+// (the number of new words is capped and there may be nothing to review yet); the words step then ends when they are answered
+// instead of staying "N left" for ever. Nothing offered and nothing done (empty libraries) keeps the full target.
+export function buildChecklistFrom(
+  profile: Pick<Profile, 'dailyMinutes' | 'activities'>,
+  counts: Counts,
+  wordsAvailable?: number,
+): Checklist {
+  const steps = planSteps(profile.dailyMinutes, profile.activities).map((planned) => {
+    let step = planned
+    if (step.id === 'words' && wordsAvailable !== undefined && (wordsAvailable > 0 || counts.words > 0)) {
+      const target = Math.min(step.target, counts.words + wordsAvailable)
+      step = { ...step, target, minutes: round1(target * STEP_INFO.words.minutesEach) }
+    }
     const done = counts[step.id]
     const status: StepStatus = done >= step.target ? 'done' : done > 0 ? 'partly' : 'todo'
     return { ...step, done, left: Math.max(0, step.target - done), status, title: STEP_INFO[step.id].title }
@@ -111,6 +138,7 @@ export function buildChecklistFrom(profile: Pick<Profile, 'dailyMinutes' | 'acti
   const minutesDone = steps.reduce((sum, step) => sum + step.minutes * Math.min(1, step.done / step.target), 0)
   return {
     steps,
+    chosenMinutes: profile.dailyMinutes,
     minutes: round1(total),
     minutesDone: round1(minutesDone),
     percent: total ? Math.min(100, Math.round((minutesDone / total) * 100)) : 0,
@@ -119,17 +147,36 @@ export function buildChecklistFrom(profile: Pick<Profile, 'dailyMinutes' | 'acti
   }
 }
 
-export function buildChecklist(now = new Date()): Checklist {
-  const day = localDayKey(now)
-  const attempts = getPracticeAttempts()
-  const doneTexts = getProofreadingDone().filter((item) => localDayKey(item.createdAt) === day).length
+type DaySource = {
+  attempts: readonly PracticeAttempt[]
+  pairAnswers: readonly { createdAt: string }[]
+  sprintRounds: readonly { date: string }[]
+  proofreadingDone: readonly { createdAt: string }[]
+}
+
+export function readDaySource(): DaySource {
+  return {
+    attempts: getPracticeAttempts(),
+    pairAnswers: getPairAttempts(),
+    sprintRounds: getSprintRounds(),
+    proofreadingDone: getProofreadingDone(),
+  }
+}
+
+// The plan of one day with what was done on it. For a past day only the targets of today's settings are known.
+export function checklistForDay(day: string, source: DaySource, wordsAvailable?: number): Checklist {
+  const doneTexts = source.proofreadingDone.filter((item) => localDayKey(item.createdAt) === day).length
   // A proofreading text finished on another device leaves its answers here but not the "finished" note.
   const proofreadingTexts =
-    doneTexts || attempts.some((attempt) => attempt.library === 'Proofreading' && localDayKey(attempt.createdAt) === day)
+    doneTexts || source.attempts.some((attempt) => attempt.library === 'Proofreading' && localDayKey(attempt.createdAt) === day)
       ? Math.max(1, doneTexts)
       : 0
   return buildChecklistFrom(
     getProfile(),
-    countDay(day, { attempts, pairAnswers: getPairAttempts(), sprintRounds: getSprintRounds(), proofreadingTexts }),
+    countDay(day, { attempts: source.attempts, pairAnswers: source.pairAnswers, sprintRounds: source.sprintRounds, proofreadingTexts }),
+    wordsAvailable,
   )
 }
+
+export const buildChecklist = (wordsAvailable?: number, now = new Date()): Checklist =>
+  checklistForDay(localDayKey(now), readDaySource(), wordsAvailable)

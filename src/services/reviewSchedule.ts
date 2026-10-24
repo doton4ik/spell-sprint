@@ -101,7 +101,9 @@ export function scheduleAfterAnswer(
     confidence: Math.min(goodDays.size + bonus, MASTERED_DAYS),
     nextReviewAt: planned > tomorrow ? planned : tomorrow,
   })
-  if (hintUsed || assistedMode(mode)) return { confidence: Math.min(goodDays.size + bonus, MASTERED_DAYS), nextReviewAt: tomorrow }
+  if (hintUsed) return { confidence: Math.min(goodDays.size + bonus, MASTERED_DAYS), nextReviewAt: tomorrow }
+  // Dictation is help: no good day, but it must not pull a word that is planned for later (a known word) back to tomorrow.
+  if (assistedMode(mode)) return keepPlan()
   if (recognitionOnly(mode)) return keepPlan()
   const today = localDayKey(now)
   if (today === mistakeDay) return { confidence: 0, nextReviewAt: tomorrow }

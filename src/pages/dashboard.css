@@ -1280,3 +1280,9 @@
     min-height: 44px;
   }
 }
+
+.today-card .plan-note {
+  font-size: calc(13px * var(--fs));
+  margin: 0 0 12px;
+  max-width: 60ch;
+}

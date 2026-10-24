@@ -5,7 +5,8 @@ import { LibrarySetup } from '../components/libraries/LibrarySetup'
 import { isLibrarySetupDone } from '../services/libraryPrefs'
 import { MetricCard } from '../components/ui/MetricCard'
 import { SectionHeader } from '../components/ui/SectionHeader'
-import { buildChecklist, STEP_INFO, type Checklist, type ChecklistStep } from '../services/dailyChecklist'
+import { buildChecklist, STEP_INFO, wordIdsPractisedOn, type Checklist, type ChecklistStep } from '../services/dailyChecklist'
+import { localDayKey } from '../services/dateKeys'
 import { buildDailyPlan, getStreak, type DailyPlan } from '../services/dailyPlan'
 import { getLearningAnalytics } from '../services/learningAnalytics'
 import { getLevelChecks, nextCheckDue } from '../services/levelCheck'
@@ -24,8 +25,11 @@ function greeting() {
 }
 
 function startPlan(plan: DailyPlan, mode: PracticeMode, count = plan.items.length) {
+  const planned = plan.items.slice(0, Math.max(1, count)).map((item) => item.word.wordId)
+  // Dictation after the words of the plan are used up: the words practised today.
+  const wordIds = planned.length || mode !== 'listen-write' ? planned : wordIdsPractisedOn(localDayKey(new Date()), Math.max(1, count))
   setPendingPracticeSelection({
-    wordIds: plan.items.slice(0, Math.max(1, count)).map((item) => item.word.wordId),
+    wordIds,
     label: mode === 'listen-write' ? "Today's dictation" : "Today's session",
     mode,
   })
@@ -46,7 +50,7 @@ export function DashboardPage() {
   const analytics = useMemo(getLearningAnalytics, [revision])
   const plan = useMemo(() => buildDailyPlan(), [revision])
   const { streak, practisedToday } = useMemo(() => getStreak(), [revision])
-  const checklist = useMemo(() => buildChecklist(), [revision])
+  const checklist = useMemo(() => buildChecklist(plan.items.length), [revision, plan])
   const profile = useMemo(getProfile, [revision])
   const mistakesDue = useMemo(() => getMistakeEntries().filter(isDueToday).length, [revision])
   const goalReached = checklist.allDone
@@ -131,11 +135,11 @@ export function DashboardPage() {
             </SectionHeader>
             <div className="bar-chart" aria-label="Tasks completed this week">
               {analytics.daily.map((day) => (
-                <div className="bar-chart__day" key={day.label} title={`${day.completed} tasks`}>
+                <div className="bar-chart__day" key={day.label} title={`${day.completed} tasks · ${day.planPercent}% of the plan`}>
                   <div className="bar-chart__rail">
                     <div
-                      className={`bar-chart__bar${day.isToday ? ' bar-chart__bar--today' : ''}${day.completed >= day.target ? ' bar-chart__bar--goal' : ''}`}
-                      style={{ height: `${Math.min(100, (day.completed / day.target) * 100)}%` }}
+                      className={`bar-chart__bar${day.isToday ? ' bar-chart__bar--today' : ''}${day.planPercent >= 100 ? ' bar-chart__bar--goal' : ''}`}
+                      style={{ height: `${Math.min(100, day.planPercent)}%` }}
                     />
                   </div>
                   <span className={day.isToday ? 'today-label' : ''}>{day.label}</span>
@@ -290,6 +294,12 @@ function TodayCard({ plan, checklist }: { plan: DailyPlan; checklist: Checklist 
         ) : (
           <>
             <h2>{checklist.allDone ? 'Everything is done for today' : `${checklist.minutesDone} of ${checklist.minutes} min`}</h2>
+            {checklist.minutes < checklist.chosenMinutes - 1.5 && !checklist.allDone ? (
+              <p className="plan-note">
+                Your plan is {checklist.chosenMinutes} min. Today it is shorter: there are not enough words to review yet, and only a few
+                new words are added a day. It grows as you learn.
+              </p>
+            ) : null}
             <ul className="plan-list">
               {steps.map((step) => {
                 const info = STEP_INFO[step.id]

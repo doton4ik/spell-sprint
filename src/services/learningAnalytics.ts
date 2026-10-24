@@ -1,3 +1,4 @@
+import { checklistForDay, readDaySource } from './dailyChecklist'
 import { getPracticeAttempts } from './practiceStorage'
 import { getMistakeEntries, getReviewEntries } from './learningData'
 import { localDayKey } from './dateKeys'
@@ -10,7 +11,8 @@ export type AnalyticsTopic = {
   total: number
   status: 'Strong' | 'Developing' | 'Needs focus' | 'Preliminary'
 }
-export type DailyActivity = { label: string; completed: number; target: number; isToday?: boolean }
+// completed / target: answers and the goal in answers; planPercent: how much of that day's plan (minutes, all kinds of practice) was done.
+export type DailyActivity = { label: string; completed: number; target: number; planPercent: number; isToday?: boolean }
 export type AccuracyStat = { percent: number | null; correct: number; total: number; previousPercent: number | null; enoughData: boolean }
 
 // Below these counts a percentage says more about luck than about the learner.
@@ -70,6 +72,7 @@ export function getLearningAnalytics() {
     .slice(0, 5)
 
   const goal = getProfile().dailyGoal
+  const source = readDaySource()
   const daily: DailyActivity[] = Array.from({ length: 7 }, (_, index) => {
     const date = new Date()
     date.setHours(0, 0, 0, 0)
@@ -79,6 +82,7 @@ export function getLearningAnalytics() {
       label: titleForDay(date),
       completed: attempts.filter((item) => localDayKey(item.createdAt) === key).length,
       target: goal,
+      planPercent: checklistForDay(key, source).percent,
       isToday: index === 6,
     }
   })

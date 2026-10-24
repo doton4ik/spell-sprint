@@ -130,3 +130,103 @@ describe('data', () => {
     for (const minutes of dailyMinutesOptions) expect(planSteps(minutes, defaultActivities)[0].target).toBeGreaterThan(5)
   })
 })
+
+describe('a whole day', () => {
+  beforeEach(() => window.localStorage.clear())
+
+  const answer = async (wordId: string, correct = true, when = new Date()) => {
+    const { scheduleAfterAnswer } = await import('./reviewSchedule')
+    const { savePracticeAttempt } = await import('./practiceStorage')
+    const taskId = `library-${wordId}-write-en`
+    const { confidence, nextReviewAt } = scheduleAfterAnswer({ wordId, taskId }, correct, false, 'write-en', when)
+    savePracticeAttempt({
+      id: crypto.randomUUID(),
+      taskId,
+      taskType: 'translate-ru-en',
+      topic: 'General English',
+      wordId,
+      library: 'General English',
+      userAnswer: 'x',
+      correctAnswer: 'x',
+      isCorrect: correct,
+      wasSkipped: false,
+      wasAnswerRevealed: false,
+      hintUsed: false,
+      attemptMode: 'write-en',
+      errorType: 'unknown',
+      confidence,
+      nextReviewAt,
+      errorCategory: '',
+      needsReview: !correct,
+      createdAt: when.toISOString(),
+    } as PracticeAttempt)
+  }
+
+  it('new words never pass the cap in one day, and the words step ends when the day has nothing more to offer', async () => {
+    saveProfile({ dailyMinutes: 10, activities: { proofreading: false, pairs: false, dictation: false, sprint: false } })
+    const target = planSteps(10, getProfile().activities)[0].target
+    const seen = new Set<string>()
+    for (let round = 0; round < 6; round += 1) {
+      const plan = buildDailyPlan()
+      if (!plan.items.length) break
+      for (const item of plan.items) {
+        seen.add(item.word.wordId)
+        await answer(item.word.wordId)
+      }
+    }
+    expect(seen.size).toBeLessThanOrEqual(freshCapFor(10))
+    expect(seen.size).toBeGreaterThan(0)
+    const plan = buildDailyPlan()
+    expect(plan.items).toHaveLength(0)
+    const { buildChecklist } = await import('./dailyChecklist')
+    const checklist = buildChecklist(plan.items.length)
+    expect(checklist.steps[0].status).toBe('done')
+    expect(checklist.steps[0].target).toBeLessThan(target)
+    expect(checklist.allDone).toBe(true)
+  })
+
+  it('a word that was missed today comes back until it is right', async () => {
+    saveProfile({ dailyMinutes: 10, activities: { proofreading: false, pairs: false, dictation: false, sprint: false } })
+    const first = buildDailyPlan().items[0].word.wordId
+    await answer(first, false)
+    expect(buildDailyPlan().items.some((item) => item.word.wordId === first)).toBe(true)
+  })
+
+  it('extra practice leaves out words that are known and takes the shaky ones', async () => {
+    saveProfile({ dailyMinutes: 50, activities: { proofreading: false, pairs: false, dictation: false, sprint: false } })
+    const { getAllWords } = await import('./libraryStorage')
+    const [known, shaky] = getAllWords().slice(0, 2)
+    const yesterday = new Date(Date.now() - 86400000)
+    const later = (days: number) => new Date(Date.now() + days * 86400000).toISOString()
+    const { savePracticeAttempt } = await import('./practiceStorage')
+    for (const [word, confidence, nextReviewAt] of [
+      [known, 3, later(6)],
+      [shaky, 1, later(2)],
+    ] as const)
+      savePracticeAttempt({
+        id: crypto.randomUUID(),
+        taskId: `library-${word.wordId}-write-en`,
+        taskType: 'translate-ru-en',
+        topic: '',
+        wordId: word.wordId,
+        library: 'General English',
+        userAnswer: '',
+        correctAnswer: '',
+        isCorrect: true,
+        wasSkipped: false,
+        wasAnswerRevealed: false,
+        hintUsed: false,
+        attemptMode: 'write-en',
+        errorType: 'unknown',
+        confidence,
+        nextReviewAt,
+        errorCategory: '',
+        createdAt: yesterday.toISOString(),
+      } as PracticeAttempt)
+    const extras = buildDailyPlan()
+      .items.filter((item) => item.reason === 'extra')
+      .map((item) => item.word.wordId)
+    expect(extras).toContain(shaky.wordId)
+    expect(extras).not.toContain(known.wordId)
+  })
+})

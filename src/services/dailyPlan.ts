@@ -6,7 +6,7 @@ import { getAllWords } from './libraryStorage'
 import { getPracticeAttempts } from './practiceStorage'
 import { localDayKey } from './dateKeys'
 import { learnerAbility, orderFreshWords } from './freshWords'
-import { freshCapFor, wordsTargetFor } from './dailyChecklist'
+import { freshCapFor, wordsDoneOn, wordsTargetFor } from './dailyChecklist'
 import { getProfile } from './profileStorage'
 
 export { localDayKey } from './dateKeys'
@@ -94,6 +94,18 @@ export function getWordProgress(): Map<string, WordProgress> {
 // going wrong, then a few new everyday words (at most `freshCap`, picked by the learner's level), then extra practice
 // of words seen before (the longest unseen first) when the day is longer than the reviews. The size and the cap come
 // from the minutes in the profile. Built from local practice history only.
+// New words that were first practised today (level-check answers do not count): they use up the day's allowance of new words.
+export function wordsIntroducedToday(now = new Date()) {
+  const today = localDayKey(now)
+  const first = new Map<string, string>()
+  for (const attempt of getPracticeAttempts()) {
+    if (!attempt.wordId || attempt.library === 'Level check') continue
+    const seen = first.get(attempt.wordId)
+    if (!seen || attempt.createdAt < seen) first.set(attempt.wordId, attempt.createdAt)
+  }
+  return [...first.values()].filter((createdAt) => localDayKey(createdAt) === today).length
+}
+
 export function buildDailyPlan(
   size = wordsTargetFor(getProfile().dailyMinutes, getProfile().activities),
   freshCap = freshCapFor(getProfile().dailyMinutes),
@@ -101,6 +113,9 @@ export function buildDailyPlan(
   const words = getAllWords()
   const byId = new Map(words.map((word) => [word.wordId, word]))
   const stats = new Map([...getWordProgress()].filter(([wordId]) => byId.has(wordId)))
+  // The plan is what is LEFT of the day: answers already given today use up the size, and new words already met today use up the cap.
+  const remaining = Math.max(0, size - wordsDoneOn(localDayKey(new Date()), getPracticeAttempts()))
+  const freshLeft = Math.max(0, freshCap - wordsIntroducedToday())
 
   const due = [...stats.entries()]
     .filter(([, entry]) => entry.due)
@@ -121,18 +136,27 @@ export function buildDailyPlan(
     learnerAbility(),
     (word) => dayHash(today + word.wordId) / 2 ** 32,
   ).map((word) => word.wordId)
-  // Extra practice: words that are not due and not weak, longest unseen first (not the ones answered today).
+  // Extra practice: words that are not due and not weak and not yet known (a word known on sight has confidence 3 or more and
+  // must not come back), the shakiest first, then the longest unseen; not the ones answered today.
   const extra = [...stats.entries()]
-    .filter(([wordId, entry]) => !dueSet.has(wordId) && !weakSet.has(wordId) && localDayKey(entry.latest.createdAt) !== today)
-    .sort(([, a], [, b]) => a.latest.createdAt.localeCompare(b.latest.createdAt))
+    .filter(
+      ([wordId, entry]) =>
+        !dueSet.has(wordId) && !weakSet.has(wordId) && (entry.latest.confidence ?? 0) < 3 && localDayKey(entry.latest.createdAt) !== today,
+    )
+    .sort(
+      ([, a], [, b]) =>
+        (a.latest.confidence ?? 0) - (b.latest.confidence ?? 0) ||
+        b.errors - a.errors ||
+        a.latest.createdAt.localeCompare(b.latest.createdAt),
+    )
     .map(([wordId]) => wordId)
 
-  const freshQuota = Math.min(fresh.length, freshCap, Math.max(NEW_WORDS_WHEN_BUSY, size - due.length - weak.length))
-  const reviewRoom = size - freshQuota
+  const freshQuota = Math.min(fresh.length, freshLeft, Math.max(NEW_WORDS_WHEN_BUSY, remaining - due.length - weak.length))
+  const reviewRoom = Math.max(0, remaining - freshQuota)
   const pickedDue = due.slice(0, reviewRoom)
   const pickedWeak = weak.slice(0, reviewRoom - pickedDue.length)
-  const pickedFresh = fresh.slice(0, Math.min(freshCap, size - pickedDue.length - pickedWeak.length))
-  const pickedExtra = extra.slice(0, size - pickedDue.length - pickedWeak.length - pickedFresh.length)
+  const pickedFresh = fresh.slice(0, Math.min(freshLeft, remaining - pickedDue.length - pickedWeak.length))
+  const pickedExtra = extra.slice(0, remaining - pickedDue.length - pickedWeak.length - pickedFresh.length)
 
   const items: PlanItem[] = [
     ...pickedDue.map((wordId) => ({ word: byId.get(wordId)!, reason: 'due' as const })),
