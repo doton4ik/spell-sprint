@@ -2,6 +2,8 @@ import { getStreak } from '../services/dailyPlan'
 import { getLearningAnalytics } from '../services/learningAnalytics'
 import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
+import { DropPanel } from '../components/ui/DropPanel'
+import { InfoTip } from '../components/ui/InfoTip'
 import {
   backUpBeforeSignOut,
   getSyncStatus,
@@ -54,6 +56,13 @@ function friendlyAuthError(error: unknown) {
   return text || 'Could not complete the account request.'
 }
 
+const activityRows: Array<[keyof DailyActivities, string, string]> = [
+  ['proofreading', 'Proofreading', 'from 10 min'],
+  ['pairs', 'Word pairs', 'from 15 min'],
+  ['dictation', 'Dictation', 'from 15 min'],
+  ['sprint', 'Sprint', 'from 30 min'],
+]
+
 // Where you are, in a few numbers: a card in the third column (it was a rail beside the page).
 function SettingsGlance() {
   const stats = useMemo(() => ({ analytics: getLearningAnalytics(), streak: getStreak().streak }), [])
@@ -67,7 +76,9 @@ function SettingsGlance() {
   ]
   return (
     <article className="settings-card settings-glance">
-      <p className="settings-card__eyebrow">At a glance</p>
+      <div className="settings-card__head">
+        <h2>At a glance</h2>
+      </div>
       <dl>
         {rows.map(([name, value]) => (
           <div key={name}>
@@ -254,10 +265,19 @@ export function SettingsPage() {
       <section className="settings-grid">
         <div className="settings-col">
           <article className="settings-card">
-            <p className="settings-card__eyebrow">Account</p>
+            <div className="settings-card__head">
+              <h2>Account</h2>
+              {mode === 'reset' && !session ? null : (
+                <InfoTip>
+                  {session
+                    ? 'Your account is active on this device. Signing out backs up your progress and removes it from this device.'
+                    : 'Each learner gets a private account: progress, mistakes and libraries are visible only to you.'}
+                </InfoTip>
+              )}
+            </div>
             {session && settingPassword ? (
               <>
-                <h2>Set a new password</h2>
+                <strong className="settings-card__lead">Set a new password</strong>
                 <p>For {session.user.email ?? 'your account'}.</p>
                 <form onSubmit={saveNewPassword}>
                   <label>
@@ -281,8 +301,7 @@ export function SettingsPage() {
               </>
             ) : session ? (
               <>
-                <h2>{session.user.email ?? 'Signed-in learner'}</h2>
-                <p>Your account is active on this device. Signing out backs up your progress and removes it from this device.</p>
+                <strong className="settings-card__lead">{session.user.email ?? 'Signed-in learner'}</strong>
                 <button className="settings-link" type="button" disabled={busy} onClick={logout}>
                   Sign out
                 </button>{' '}
@@ -300,12 +319,10 @@ export function SettingsPage() {
               </>
             ) : (
               <>
-                <h2>{mode === 'sign-in' ? 'Sign in to sync' : mode === 'sign-up' ? 'Create your account' : 'Reset your password'}</h2>
-                <p>
-                  {mode === 'reset'
-                    ? 'Enter your email and we will send you a link to choose a new password.'
-                    : 'Each learner gets a private account: progress, mistakes and libraries are visible only to you.'}
-                </p>
+                <strong className="settings-card__lead">
+                  {mode === 'sign-in' ? 'Sign in to sync' : mode === 'sign-up' ? 'Create your account' : 'Reset your password'}
+                </strong>
+                {mode === 'reset' ? <p>Enter your email and we will send you a link to choose a new password.</p> : null}
                 <form onSubmit={submit}>
                   <label>
                     Email
@@ -352,12 +369,13 @@ export function SettingsPage() {
             )}
           </article>
           <article className="settings-card settings-card--sync">
-            <p className="settings-card__eyebrow">Cloud backup</p>
-            <h2>Sync learning history</h2>
-            <p>
-              Practice attempts, mistakes, review progress, saved rules and imported libraries sync automatically while you are signed in:
-              when the app opens, shortly after new answers, and when you leave the app.
-            </p>
+            <div className="settings-card__head">
+              <h2>Cloud backup</h2>
+              <InfoTip>
+                Practice attempts, mistakes, review progress, saved rules and imported libraries sync automatically while you are signed in:
+                when the app opens, shortly after new answers, and when you leave the app. Only your account can access this data.
+              </InfoTip>
+            </div>
             <button className="check-button" disabled={!session || busy} type="button" onClick={sync}>
               <Icon name="refresh" size={16} /> Sync now
             </button>{' '}
@@ -372,8 +390,8 @@ export function SettingsPage() {
                   : syncStatus.lastError
                     ? `Last sync failed: ${syncStatus.lastError}`
                     : syncStatus.lastSyncedAt
-                      ? `Last synced at ${new Intl.DateTimeFormat('en', { hour: 'numeric', minute: '2-digit' }).format(new Date(syncStatus.lastSyncedAt))}. Only your account can access this data.`
-                      : 'Only your signed-in account can access this data.'}
+                      ? `Last synced at ${new Intl.DateTimeFormat('en', { hour: 'numeric', minute: '2-digit' }).format(new Date(syncStatus.lastSyncedAt))}.`
+                      : 'Not synced yet.'}
             </small>
             {queuedMistakes ? (
               <small>
@@ -385,10 +403,14 @@ export function SettingsPage() {
         </div>
         <div className="settings-col">
           <article className="settings-card settings-card--compact">
-            <p className="settings-card__eyebrow">Profile</p>
-            <h2>Name and daily plan</h2>
-            <p>Used for the greeting and for today's plan on the Dashboard. Stored on this device.</p>
-            <label>
+            <div className="settings-card__head">
+              <h2>Profile</h2>
+              <InfoTip>
+                The name is used for the greeting on the Dashboard. The time per day and the kinds of practice set today’s plan. Words are
+                always in the plan; the Dashboard shows what is done today and what is left. All of this is stored on this device.
+              </InfoTip>
+            </div>
+            <label className="settings-name">
               Your name
               <input
                 value={profile.name}
@@ -397,53 +419,79 @@ export function SettingsPage() {
                 onChange={(event) => updateProfile({ name: event.target.value })}
               />
             </label>
-            <span className="settings-field-label">Time per day</span>
-            <div className="plan-options" role="radiogroup" aria-label="Time per day">
-              {dailyMinutesOptions.map((minutes) => (
-                <button
-                  type="button"
-                  role="radio"
-                  aria-checked={profile.dailyMinutes === minutes}
-                  className={profile.dailyMinutes === minutes ? 'plan-option plan-option--active' : 'plan-option'}
-                  onClick={() => updateProfile({ dailyMinutes: minutes })}
-                  key={minutes}
-                >
-                  <strong>{minutes} min</strong>
-                  <span>{describePlan(minutes, profile.activities)}</span>
-                </button>
-              ))}
+            <DropPanel label="Time per day" summary={<strong>{profile.dailyMinutes} min</strong>}>
+              {(close) => (
+                <div className="plan-options" role="radiogroup" aria-label="Time per day">
+                  {dailyMinutesOptions.map((minutes) => (
+                    <button
+                      type="button"
+                      role="radio"
+                      aria-checked={profile.dailyMinutes === minutes}
+                      className={profile.dailyMinutes === minutes ? 'plan-option plan-option--active' : 'plan-option'}
+                      onClick={() => {
+                        updateProfile({ dailyMinutes: minutes })
+                        close()
+                      }}
+                      key={minutes}
+                    >
+                      <strong>{minutes} min</strong>
+                      <span>{describePlan(minutes, profile.activities)}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </DropPanel>
+            <p className="settings-plan-line">{describePlan(profile.dailyMinutes, profile.activities)}</p>
+            <DropPanel
+              label="Include in the day"
+              summary={
+                activityRows
+                  .filter(([key]) => profile.activities[key])
+                  .map(([, label]) => label)
+                  .join(' · ') || 'Words only'
+              }
+            >
+              {() => (
+                <div className="plan-toggles">
+                  {activityRows.map(([key, label, note]) => (
+                    <label className="plan-toggle" key={key}>
+                      <input
+                        type="checkbox"
+                        checked={profile.activities[key]}
+                        onChange={(event) => updateProfile({ activities: { [key]: event.target.checked } })}
+                      />
+                      <span>{label}</span>
+                      <small>{note}</small>
+                    </label>
+                  ))}
+                </div>
+              )}
+            </DropPanel>
+          </article>
+          <article className="settings-card">
+            <div className="settings-card__head">
+              <h2>Pronunciation</h2>
+              <InfoTip>Practice uses your browser’s built-in speech synthesis. No audio files or external audio service are used.</InfoTip>
             </div>
-            <span className="settings-field-label">Include in the day</span>
-            <div className="plan-toggles">
-              {(
-                [
-                  ['proofreading', 'Proofreading', 'from 10 min'],
-                  ['pairs', 'Word pairs', 'from 15 min'],
-                  ['dictation', 'Dictation', 'from 15 min'],
-                  ['sprint', 'Sprint', 'from 30 min'],
-                ] as Array<[keyof DailyActivities, string, string]>
-              ).map(([key, label, note]) => (
-                <label className="plan-toggle" key={key}>
-                  <input
-                    type="checkbox"
-                    checked={profile.activities[key]}
-                    onChange={(event) => updateProfile({ activities: { [key]: event.target.checked } })}
-                  />
-                  <span>{label}</span>
-                  <small>{note}</small>
-                </label>
-              ))}
-            </div>
-            <p className="settings-note">Words are always in the plan. The Dashboard shows what is done today and what is left.</p>
+            <label>
+              English voice
+              <select value={speechLocale} onChange={(event) => setAccent(event.target.value as 'en-US' | 'en-GB')}>
+                <option value="en-US">American English (en-US)</option>
+                <option value="en-GB">British English (en-GB)</option>
+              </select>
+            </label>
           </article>
         </div>
         <div className="settings-col">
           <article className="settings-card settings-card--compact">
-            <p className="settings-card__eyebrow">Appearance</p>
-            <h2>Text size and theme</h2>
-            <p>
-              For every page. They apply immediately and are remembered on this device. “System” follows your device’s light or dark mode.
-            </p>
+            <div className="settings-card__head">
+              <h2>Appearance</h2>
+              <InfoTip>
+                Text size and theme apply to every page at once and are remembered on this device. “System” follows your device’s light or
+                dark mode.
+              </InfoTip>
+            </div>
+            <span className="settings-field-label">Text size</span>
             <div className="font-scale-options" role="radiogroup" aria-label="Text size">
               {fontScaleOptions.map((option) => (
                 <button
@@ -481,18 +529,6 @@ export function SettingsPage() {
               <span>размещение, жильё</span>
               <small>Example: The hotel offers free accommodation.</small>
             </div>
-          </article>
-          <article className="settings-card">
-            <p className="settings-card__eyebrow">Pronunciation</p>
-            <h2>English voice</h2>
-            <p>Practice uses your browser’s built-in speech synthesis. No audio files or external audio service are used.</p>
-            <label>
-              Voice variant
-              <select value={speechLocale} onChange={(event) => setAccent(event.target.value as 'en-US' | 'en-GB')}>
-                <option value="en-US">American English (en-US)</option>
-                <option value="en-GB">British English (en-GB)</option>
-              </select>
-            </label>
           </article>
           <SettingsGlance />
         </div>

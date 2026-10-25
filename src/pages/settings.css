@@ -362,3 +362,84 @@
     min-height: 44px;
   }
 }
+
+/* A card is a title with a "?" for the explanation; what the learner must read stays on the card. */
+.settings-card__head {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.settings-card__lead {
+  color: var(--ink);
+  display: block;
+  font-size: calc(16px * var(--fs));
+  margin: 0 0 12px;
+  overflow-wrap: anywhere;
+}
+.settings-card > .settings-name {
+  margin-bottom: 16px;
+}
+.settings-plan-line {
+  color: var(--ink-muted);
+  font-size: calc(13px * var(--fs));
+  line-height: 1.5;
+  margin: 8px 0 16px;
+}
+
+/* A choice that is one line until it is opened (components/ui/DropPanel.tsx). */
+.drop {
+  display: grid;
+  gap: 5px;
+  position: relative;
+}
+.settings-card .drop__button {
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  display: flex;
+  font-size: calc(15px * var(--fs));
+  gap: 12px;
+  justify-content: space-between;
+  min-height: 44px;
+  padding: 8px 12px;
+  text-align: left;
+  width: 100%;
+}
+.settings-card .drop__button:hover {
+  border-color: var(--accent-muted);
+}
+.settings-card .drop__button[aria-expanded='true'] {
+  border-color: var(--accent);
+}
+.drop__summary {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.drop__button svg {
+  color: var(--ink-faint);
+  flex: 0 0 auto;
+  transform: rotate(90deg);
+}
+.drop__button[aria-expanded='true'] svg {
+  transform: rotate(-90deg);
+}
+.drop__panel {
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  left: 0;
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 20;
+}
+.drop__panel .plan-options {
+  gap: 6px;
+}
