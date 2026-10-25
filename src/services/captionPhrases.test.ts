@@ -52,6 +52,35 @@ Lucky you! Do you not have work to do?
     expect(second.start).toBeGreaterThan(first.start)
     expect(first.end).toBeLessThanOrEqual(second.start + 0.5)
   })
+  it('drops lines that talk to the viewer of the video', () => {
+    const vtt = `WEBVTT
+
+00:00:01.000 --> 00:00:04.000
+Lovely to meet you, said the old man.
+
+00:00:05.000 --> 00:00:08.000
+Click here to learn eight different ways to say hello.
+
+00:00:09.000 --> 00:00:12.000
+And click here to subscribe to our channel.
+`
+    expect(makePhrases(parseVtt(vtt)).map((phrase) => phrase.text)).toEqual(['Lovely to meet you, said the old man.'])
+  })
+  it('cuts back a window that is much longer than the words', () => {
+    const vtt = `WEBVTT
+
+00:01:00.000 --> 00:01:12.000
+But what is his name, that is right.
+`
+    const [phrase] = makePhrases(parseVtt(vtt))
+    expect(phrase.trimmed).toBe(true)
+    expect(phrase.end - phrase.start).toBeLessThanOrEqual(8)
+    expect(phrase.start).toBeLessThanOrEqual(60)
+  })
+  it('leaves a normal window alone', () => {
+    const [phrase] = makePhrases(parseVtt('WEBVTT\n\n00:00:01.000 --> 00:00:04.000\nExcuse me, is this the train to Manchester?\n'))
+    expect(phrase.trimmed).toBeUndefined()
+  })
   it('keeps a line that automatic captions repeat only once', () => {
     const auto = `WEBVTT
 

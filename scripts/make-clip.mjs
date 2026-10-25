@@ -6,6 +6,8 @@
 // --from and --to (seconds) keep only the phrases inside that part of the video.
 //
 // With --file the captions come from a .vtt file you already have (the link only gives the video id).
+// If YouTube answers "confirm you are not a bot", sign in in your browser and add --browser chrome (or edge, firefox):
+// yt-dlp then reads that browser's cookies. Only do this on your own computer.
 //
 // Needs yt-dlp (pip install yt-dlp). Manual captions are preferred over the automatic ones. The text is
 // only a draft: read the phrases (and listen to the video) before it goes to learners.
@@ -54,6 +56,7 @@ if (option('file')) {
       'en.*,en',
       '--sub-format',
       'vtt',
+      ...(option('browser') ? ['--cookies-from-browser', option('browser')] : []),
       ...flags,
       '-o',
       join(dir, '%(id)s.%(ext)s'),
@@ -67,15 +70,15 @@ if (option('file')) {
       download(['--write-auto-subs'])
     }
   } catch (error) {
+    const lines = String(error.stderr || error.message)
+      .trim()
+      .split(/\r?\n/)
     if (error.code === 'ENOENT') console.error('yt-dlp is not installed. Install it with: pip install yt-dlp')
-    else
+    else if (/not a bot/i.test(lines.join(' ')))
       console.error(
-        String(error.stderr || error.message)
-          .trim()
-          .split(/\r?\n/)
-          .slice(-3)
-          .join(' | '),
+        'YouTube asks to confirm you are not a bot. Add --browser chrome (or edge, firefox) after signing in there, or download the .vtt yourself and use --file.',
       )
+    else console.error(lines.find((line) => line.startsWith('ERROR')) ?? lines.slice(-2).join(' | '))
     rmSync(dir, { recursive: true, force: true })
     process.exit(1)
   }
@@ -93,6 +96,7 @@ const all = makePhrases(cues, { minWords: Number(option('min', 5)), maxWords: Nu
 const from = Number(option('from', 0))
 const to = Number(option('to', Infinity))
 const phrases = all.filter((phrase) => phrase.start >= from - 0.5 && phrase.end <= to + 1)
+const flagged = phrases.filter((phrase) => phrase.trimmed).length
 if (!phrases.length) {
   console.error('No phrases came out of the captions.')
   process.exit(1)
@@ -105,7 +109,7 @@ const clip = {
   title: option('title', `Video ${id}`),
   level,
   source: { kind: 'youtube', videoId: id },
-  lines: phrases,
+  lines: phrases.map(({ text, start, end }) => ({ text, start, end })),
 }
 const at = clips.findIndex((entry) => entry.id === clip.id)
 if (at >= 0) clips[at] = clip
@@ -114,4 +118,7 @@ writeFileSync(dataFile, `${JSON.stringify(clips, null, 2)}\n`)
 
 console.log(`${manual ? 'Manual' : 'AUTOMATIC'} captions, ${phrases.length} phrases → src/data/listeningVideoClips.json (${clip.id})`)
 if (!manual) console.log('Automatic captions have mistakes and often no punctuation: check every phrase against the video.')
-phrases.forEach((phrase, i) => console.log(`${String(i + 1).padStart(2)}. [${phrase.start}–${phrase.end}] ${phrase.text}`))
+if (flagged) console.log(`${flagged} phrase(s) marked ~ had a window much longer than the words: their end was cut back, check them.`)
+phrases.forEach((phrase, i) =>
+  console.log(`${String(i + 1).padStart(2)}.${phrase.trimmed ? '~' : ' '}[${phrase.start}–${phrase.end}] ${phrase.text}`),
+)

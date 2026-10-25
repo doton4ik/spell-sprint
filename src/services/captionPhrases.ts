@@ -2,7 +2,8 @@
 // second it starts and ends at. Used by scripts/make-clip.mjs, which Node runs straight from this file:
 // keep it free of imports.
 export type Cue = { start: number; end: number; text: string }
-export type Phrase = { text: string; start: number; end: number }
+// trimmed: the caption stayed on screen much longer than the words take, so the end was cut back (worth a look)
+export type Phrase = { text: string; start: number; end: number; trimmed?: boolean }
 
 const entities: Record<string, string> = {
   '&amp;': '&',
@@ -72,9 +73,18 @@ function words(cues: Cue[]): Word[] {
   return result
 }
 
-export type PhraseOptions = { minWords?: number; maxWords?: number }
+export type PhraseOptions = { minWords?: number; maxWords?: number; maxSeconds?: number }
 
-export function makePhrases(cues: Cue[], { minWords = 5, maxWords = 14 }: PhraseOptions = {}): Phrase[] {
+// Lines that talk to the viewer of the video, not to the learner of the clip.
+export const isPromo = (text: string) =>
+  /\b(click (here|the link)|subscribe|next video|follow us|visit (our|the) website|thanks for watching|link in the description)\b/i.test(
+    text,
+  )
+
+// About how long a line takes to say: ~2.5 words a second and a breath.
+const spokenSeconds = (wordCount: number) => Math.min(Math.max(wordCount * 0.4 + 1, 3), 8)
+
+export function makePhrases(cues: Cue[], { minWords = 5, maxWords = 14, maxSeconds = 8 }: PhraseOptions = {}): Phrase[] {
   const stream = words(cues)
   const groups: Word[][] = []
   let group: Word[] = []
@@ -97,12 +107,20 @@ export function makePhrases(cues: Cue[], { minWords = 5, maxWords = 14 }: Phrase
     else merged.push([...next])
   }
   const phrases = merged
-    .filter((words) => words.length >= minWords)
-    .map((words) => ({
-      text: words.map((item) => item.word).join(' '),
-      start: Math.max(0, Math.round((words[0].start - 0.15) * 10) / 10),
-      end: Math.round((words[words.length - 1].end + 0.35) * 10) / 10,
-    }))
+    .filter((words) => words.length >= minWords && !isPromo(words.map((item) => item.word).join(' ')))
+    .map((words) => {
+      const start = Math.max(0, Math.round((words[0].start - 0.15) * 10) / 10)
+      const end = Math.round((words[words.length - 1].end + 0.35) * 10) / 10
+      // a window much longer than the words need plays silence or the next speaker: cut it back
+      return end - start > maxSeconds
+        ? {
+            text: words.map((item) => item.word).join(' '),
+            start,
+            end: Math.round((start + spokenSeconds(words.length)) * 10) / 10,
+            trimmed: true,
+          }
+        : { text: words.map((item) => item.word).join(' '), start, end }
+    })
   // a caption can stay on screen after the words are spoken: a phrase ends where the next one begins
   return phrases.map((phrase, i) => {
     const next = phrases[i + 1]
