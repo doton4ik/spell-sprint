@@ -24,6 +24,7 @@ import {
 import { loadPracticeSettings } from '../../services/practiceStorage'
 import { canSpeak, speakEnglish, stopSpeaking } from '../../services/speech'
 import { shuffled } from '../../services/spellingDistractors'
+import { useConfirm } from '../../hooks/useConfirm'
 
 const MAX_PLAYS = 3
 
@@ -42,6 +43,7 @@ export function CheckRunner({
   onQuit: () => void
   onFinish: (result: LevelCheckResult) => void
 }) {
+  const { ask, dialog } = useConfirm()
   // A check that is continued is quick when its saved plan is as short as the quick one.
   const quick = resume ? resume.plan.length <= QUICK_TOTAL : startQuick
   const [{ bank, plan }] = useState(() => {
@@ -125,6 +127,7 @@ export function CheckRunner({
   if (!item) return null
   return (
     <div className="level-page level-page--running" id="level-check">
+      {dialog}
       <div className="level-run__top">
         <span>
           Question {Math.min(step, total)} of {total}
@@ -132,8 +135,14 @@ export function CheckRunner({
         <button
           className="quiet-action"
           type="button"
-          onClick={() => {
-            if (window.confirm('Stop the check? Your progress is kept, so you can continue later.')) onQuit()
+          onClick={async () => {
+            const yes = await ask({
+              title: 'Stop the check?',
+              message: 'Your progress is kept, so you can continue later.',
+              confirmLabel: 'Stop',
+              cancelLabel: 'Keep going',
+            })
+            if (yes) onQuit()
           }}
         >
           Stop

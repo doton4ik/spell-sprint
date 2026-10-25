@@ -110,7 +110,7 @@
 }
 .settings-card input:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(29, 133, 119, 0.25);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 30%, transparent);
 }
 .settings-card form .check-button {
   justify-content: center;

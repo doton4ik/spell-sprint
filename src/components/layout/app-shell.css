@@ -264,6 +264,7 @@
   }
   .mobile-more {
     animation: more-rise 0.2s ease;
+    overscroll-behavior: contain;
     background: var(--surface, var(--surface));
     border-radius: 20px 22px 0 0;
     bottom: 0;

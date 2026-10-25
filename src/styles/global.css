@@ -86,9 +86,18 @@ button {
     transform: rotate(360deg);
   }
 }
+/* "Reduce motion" in the system: no sliding, spinning or smooth scrolling anywhere (the spinner keeps only its fade-in). */
 @media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
   .page-loading::after {
-    animation: page-loading-in 0.2s ease 0.3s both;
+    animation: page-loading-in 0.2s ease 0.3s both !important;
   }
 }
 

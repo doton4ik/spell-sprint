@@ -5,6 +5,8 @@ import { AddWordPanel } from '../components/libraries/AddWordPanel'
 import { LibrarySetup } from '../components/libraries/LibrarySetup'
 import { WordReportPanel } from '../components/WordReportPanel'
 import { Icon } from '../components/icons/Icon'
+import { useConfirm } from '../hooks/useConfirm'
+import { ModalOverlay } from '../components/ui/ModalOverlay'
 import { libraryGroups, wordsForGroup, type LibraryGroup } from '../services/libraryGroups'
 import { csvTemplate, deleteImportedLibrary, getEveryLibrary, getEveryWord, getLibraries, isBaseLibrary } from '../services/libraryStorage'
 import { getHiddenWordIds, getWordNote, hideKey, setPackEnabled, setWordHidden } from '../services/libraryPrefs'
@@ -40,15 +42,7 @@ function HideButton({ word, onHide }: { word: LibraryWord; onHide: (word: Librar
         <Icon name="flag" size={13} /> Report
       </button>
       {reporting ? (
-        <div
-          className="word-report-overlay"
-          role="dialog"
-          aria-modal="true"
-          aria-label={`Report “${word.word}”`}
-          onClick={(event) => {
-            if (event.target === event.currentTarget) setReporting(false)
-          }}
-        >
+        <ModalOverlay label={`Report “${word.word}”`} onClose={() => setReporting(false)}>
           <WordReportPanel
             word={{ wordId: word.wordId, word: word.word, translation: word.translation, library: word.library }}
             onCancel={() => setReporting(false)}
@@ -57,7 +51,7 @@ function HideButton({ word, onHide }: { word: LibraryWord; onHide: (word: Librar
               if (hide) onHide(word)
             }}
           />
-        </div>
+        </ModalOverlay>
       ) : null}
     </>
   )
@@ -118,6 +112,7 @@ export function LibrariesPage() {
   const [libraries, setLibraries] = useState(getLibraries)
   const [activeGroup, setActiveGroup] = useState<Tab>('everyday-life')
   const [notice, setNotice] = useState<{ text: string; undo?: () => void } | null>(null)
+  const { ask, dialog } = useConfirm()
   const [details, setDetails] = useState<Details | null>(null)
   const [query, setQuery] = useState('')
   const [tuning, setTuning] = useState(false)
@@ -201,10 +196,13 @@ export function LibrariesPage() {
     link.click()
     URL.revokeObjectURL(url)
   }
-  const remove = (library: WordLibrary) => {
-    if (
-      window.confirm(`Delete “${library.name}”? This removes this imported library from all your devices. Built-in words are not affected.`)
-    ) {
+  const remove = async (library: WordLibrary) => {
+    const yes = await ask({
+      title: `Delete “${library.name}”?`,
+      message: 'This removes this imported library from all your devices. Built-in words are not affected.',
+      confirmLabel: 'Delete library',
+    })
+    if (yes) {
       deleteImportedLibrary(library.id)
       refresh()
       setDetails(null)
@@ -238,23 +236,26 @@ export function LibrariesPage() {
   ) : null
   if (details)
     return (
-      <LibraryDetails
-        details={details}
-        ruleMap={ruleMap}
-        notice={noticeBar}
-        onBack={() => {
-          setDetails(null)
-          setNotice(null)
-        }}
-        onPractice={beginPractice}
-        onDelete={remove}
-        onHide={hideWord}
-        onRestore={(word) => {
-          setWordHidden(word.wordId, false)
-          setDetails({ ...details, words: details.words.filter((entry) => entry.wordId !== word.wordId) })
-          refresh()
-        }}
-      />
+      <>
+        <LibraryDetails
+          details={details}
+          ruleMap={ruleMap}
+          notice={noticeBar}
+          onBack={() => {
+            setDetails(null)
+            setNotice(null)
+          }}
+          onPractice={beginPractice}
+          onDelete={remove}
+          onHide={hideWord}
+          onRestore={(word) => {
+            setWordHidden(word.wordId, false)
+            setDetails({ ...details, words: details.words.filter((entry) => entry.wordId !== word.wordId) })
+            refresh()
+          }}
+        />
+        {dialog}
+      </>
     )
   return (
     <div className="libraries-page" id="libraries">
@@ -268,6 +269,7 @@ export function LibrariesPage() {
         </div>
       </header>
       {noticeBar}
+      {dialog}
       <label className="global-word-search">
         <Icon name="search" size={17} />
         <input

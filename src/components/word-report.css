@@ -105,6 +105,7 @@
   inset: 0;
   justify-content: center;
   overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 12vh 16px 24px;
   position: fixed;
   text-align: left;

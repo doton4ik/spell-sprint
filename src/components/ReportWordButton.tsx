@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Icon } from './icons/Icon'
 import { WordReportPanel, type ReportedWord } from './WordReportPanel'
+import { ModalOverlay } from './ui/ModalOverlay'
 import { setWordHidden } from '../services/libraryPrefs'
 
 // A small "Report" button for word lists (sprint results, review queue, my mistakes): opens the
@@ -29,15 +30,7 @@ export function ReportWordButton({
         <Icon name="flag" size={size} /> Report
       </button>
       {open ? (
-        <div
-          className="word-report-overlay"
-          role="dialog"
-          aria-modal="true"
-          aria-label={`Report “${word.word}”`}
-          onClick={(event) => {
-            if (event.target === event.currentTarget) setOpen(false)
-          }}
-        >
+        <ModalOverlay label={`Report “${word.word}”`} onClose={() => setOpen(false)}>
           <WordReportPanel
             word={word}
             onCancel={() => setOpen(false)}
@@ -49,7 +42,7 @@ export function ReportWordButton({
               }
             }}
           />
-        </div>
+        </ModalOverlay>
       ) : null}
     </>
   )

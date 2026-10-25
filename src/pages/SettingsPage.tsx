@@ -4,6 +4,7 @@ import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
 import { DropPanel } from '../components/ui/DropPanel'
 import { InfoTip } from '../components/ui/InfoTip'
+import { useConfirm } from '../hooks/useConfirm'
 import {
   backUpBeforeSignOut,
   getSyncStatus,
@@ -209,6 +210,7 @@ export function SettingsPage() {
   }
 
   // Learning data is removed from this device on sign-out, so the next person starts clean.
+  const { ask, dialog } = useConfirm()
   async function logout() {
     setBusy(true)
     setMessage('')
@@ -216,9 +218,13 @@ export function SettingsPage() {
       const backedUp = await backUpBeforeSignOut()
       if (
         !backedUp &&
-        !window.confirm(
-          'Your latest progress could not be backed up (no connection?). Sign out anyway? Progress that has not reached the cloud will be lost on this device.',
-        )
+        !(await ask({
+          title: 'Sign out anyway?',
+          message:
+            'Your latest progress could not be backed up (no connection?). Progress that has not reached the cloud will be lost on this device.',
+          confirmLabel: 'Sign out',
+          cancelLabel: 'Stay signed in',
+        }))
       ) {
         setMessage('Still signed in. Try again when you are online.')
         return
@@ -240,6 +246,7 @@ export function SettingsPage() {
 
   return (
     <div className="settings-page" id="settings">
+      {dialog}
       <header className="settings-header">
         <div>
           <h1>Your learning space</h1>

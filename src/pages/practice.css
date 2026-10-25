@@ -413,7 +413,7 @@
 .task-card input:focus,
 .task-card textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 4px rgba(40, 139, 125, 0.1);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 30%, transparent);
 }
 .task-card input:disabled,
 .task-card textarea:disabled {

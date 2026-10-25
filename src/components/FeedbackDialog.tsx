@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Icon } from './icons/Icon'
+import { ModalOverlay } from './ui/ModalOverlay'
 import { getCloudSession } from '../services/supabase'
 import {
   FEEDBACK_MAX,
@@ -30,18 +31,8 @@ export function FeedbackDialog({ onClose }: { onClose: () => void }) {
   const [result, setResult] = useState<SubmitResult>('saved')
   const field = useRef<HTMLTextAreaElement>(null)
 
-  // The parent passes a new onClose on every render; keeping it in a ref means focus is set once, when the dialog opens.
-  const close = useRef(onClose)
-  useEffect(() => {
-    close.current = onClose
-  })
   useEffect(() => {
     field.current?.focus()
-    const onKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') close.current()
-    }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
   }, [])
 
   async function send() {
@@ -52,15 +43,7 @@ export function FeedbackDialog({ onClose }: { onClose: () => void }) {
   }
 
   return (
-    <div
-      className="word-report-overlay"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Send feedback"
-      onClick={(event) => {
-        if (event.target === event.currentTarget) onClose()
-      }}
-    >
+    <ModalOverlay label="Send feedback" onClose={onClose}>
       {state === 'done' ? (
         <div className="word-report word-report--done" role="status">
           <p>
@@ -129,6 +112,6 @@ export function FeedbackDialog({ onClose }: { onClose: () => void }) {
           </div>
         </div>
       )}
-    </div>
+    </ModalOverlay>
   )
 }
