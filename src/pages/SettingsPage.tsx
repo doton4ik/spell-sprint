@@ -416,6 +416,8 @@ export function SettingsPage() {
                 value={profile.name}
                 maxLength={40}
                 placeholder="How should we greet you?"
+                autoComplete="off"
+                spellCheck={false}
                 onChange={(event) => updateProfile({ name: event.target.value })}
               />
             </label>

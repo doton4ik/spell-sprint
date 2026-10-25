@@ -10,6 +10,7 @@ type Player = {
   setPlaybackRate: (rate: number) => void
   getCurrentTime: () => number
   unloadModule: (name: string) => void
+  getIframe: () => HTMLIFrameElement
   destroy: () => void
 }
 type YT = { Player: new (element: HTMLElement, options: object) => Player }
@@ -88,6 +89,7 @@ export const YouTubePlayer = forwardRef<LinePlayer, { videoId: string; onFailed:
           events: {
             onReady: () => {
               isReady.current = true
+              player.current?.getIframe().setAttribute('title', 'Video of the clip')
               // the video's own captions would show the answer
               hideCaptions()
               const queued = waiting.current

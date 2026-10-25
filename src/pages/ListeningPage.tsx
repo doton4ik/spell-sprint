@@ -112,7 +112,7 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (a
   useEffect(() => {
     if (videoId && line.start !== undefined && line.end !== undefined) video.current?.playLine(line.start, line.end, 1)
     else speakEnglish(line.text, locale)
-    input.current?.focus()
+    if (window.matchMedia('(pointer: fine)').matches) input.current?.focus()
     const player = video.current
     return () => {
       stopSpeaking()
@@ -182,7 +182,7 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (a
               value={answer}
               readOnly={Boolean(result)}
               onChange={(event) => setAnswer(event.target.value)}
-              placeholder="Write the line you heard"
+              placeholder="Write the line you heard…"
               aria-label="The line you heard"
               autoComplete="off"
               autoCorrect="off"

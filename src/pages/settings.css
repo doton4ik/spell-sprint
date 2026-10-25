@@ -274,6 +274,7 @@
 }
 .settings-glance dd {
   color: var(--ink);
+  font-variant-numeric: tabular-nums;
   font-weight: 700;
   margin: 0;
 }
@@ -409,6 +410,7 @@
   min-height: 44px;
   padding: 8px 12px;
   text-align: left;
+  touch-action: manipulation;
   width: 100%;
 }
 .settings-card .drop__button:hover {
