@@ -15,9 +15,9 @@ function Rail({ children, label }: { children: ReactNode; label: string }) {
   )
 }
 
-function RailCard({ label, children }: { label: string; children: ReactNode }) {
+function RailCard({ label, children, className }: { label: string; children: ReactNode; className?: string }) {
   return (
-    <section className="rail-card">
+    <section className={className ? `rail-card ${className}` : 'rail-card'}>
       <span className="rail-card__label">{label}</span>
       {children}
     </section>
@@ -86,7 +86,7 @@ export function ProofreadingRail() {
 }
 
 // Pairs: how many pairs are new, being learned and learned, and how many are due.
-export function PairsRail() {
+export function PairsProgress() {
   const status = useMemo(() => {
     const all = pairStatuses()
     return {
@@ -98,13 +98,13 @@ export function PairsRail() {
   }, [])
   if (!status.learning && !status.mastered) return null
   return (
-    <Rail label="Pairs progress">
-      <RailCard label="Your pairs">
+    <RailCard label="Your pairs" className="pairs-progress">
+      <div className="pairs-progress__rows">
         <RailRow name="Learned" value={`${status.mastered} of ${status.total}`} />
         <RailRow name="Being learned" value={String(status.learning)} />
         <RailRow name="To repeat today" value={String(status.due)} />
-      </RailCard>
-    </Rail>
+      </div>
+    </RailCard>
   )
 }
 

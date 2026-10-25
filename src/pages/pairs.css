@@ -26,6 +26,14 @@
   margin-top: 22px;
   padding: 22px 24px;
 }
+.pairs-progress {
+  margin-top: 22px;
+}
+.pairs-progress__rows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 32px;
+}
 .pairs-stats {
   display: flex;
   gap: 30px;

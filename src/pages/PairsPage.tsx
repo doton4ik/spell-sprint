@@ -1,4 +1,4 @@
-import { PairsRail } from '../components/ui/PageRails'
+import { PairsProgress } from '../components/ui/PageRails'
 import { useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
 import { clearPairToOpen, pairStatuses, pairToOpen, recordPairAnswer, type PairStatus } from '../services/pairs'
@@ -46,11 +46,11 @@ export function PairsPage() {
     .slice(0, 6)
   return (
     <div className="pairs-page" id="pairs">
-      <PairsRail />
       <header className="pairs-header">
         <h1>Words that sound or look alike</h1>
         <p>their or there, lose or loose — choose the one that fits.</p>
       </header>
+      <PairsProgress />
       <section className="pairs-start">
         <div className="pairs-stats">
           <strong>
