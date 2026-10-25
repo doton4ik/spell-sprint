@@ -125,3 +125,15 @@
   color: var(--danger-text);
   text-decoration: underline wavy;
 }
+.listen-video {
+  aspect-ratio: 16 / 9;
+  background: var(--surface-muted);
+  border-radius: 12px;
+  margin-bottom: 16px;
+  max-width: 560px;
+  overflow: hidden;
+}
+.listen-video iframe {
+  height: 100%;
+  width: 100%;
+}

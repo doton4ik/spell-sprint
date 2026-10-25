@@ -1,0 +1,107 @@
+// Makes a listening-dictation clip from a YouTube link: downloads the captions (not the video) with yt-dlp,
+// cuts them into short phrases with their times and adds the clip to src/data/listeningVideoClips.json.
+//
+//   node scripts/make-clip.mjs <link or id> [--title "A short title"] [--level B1] [--min 5] [--max 14] [--file captions.vtt]
+//
+// With --file the captions come from a .vtt file you already have (the link only gives the video id).
+//
+// Needs yt-dlp (pip install yt-dlp). Manual captions are preferred over the automatic ones. The text is
+// only a draft: read the phrases (and listen to the video) before it goes to learners.
+import { execFileSync } from 'node:child_process'
+import { existsSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
+import { makePhrases, parseVtt, youtubeId } from '../src/services/captionPhrases.ts'
+
+const args = process.argv.slice(2)
+const option = (name, fallback) => {
+  const at = args.indexOf(`--${name}`)
+  return at >= 0 ? args[at + 1] : fallback
+}
+const input = args.find((arg, i) => !arg.startsWith('--') && !args[i - 1]?.startsWith('--'))
+const id = input && youtubeId(input)
+if (!id) {
+  console.error('Give a YouTube link or the 11-character video id.')
+  process.exit(1)
+}
+const level = option('level', 'B1')
+if (!['A2', 'B1', 'B2'].includes(level)) {
+  console.error('--level is A2, B1 or B2.')
+  process.exit(1)
+}
+
+let manual = true
+let cues
+if (option('file')) {
+  cues = parseVtt(readFileSync(option('file'), 'utf8'))
+} else {
+  const dir = mkdtempSync(join(tmpdir(), 'clip-'))
+  const download = (flags) =>
+    execFileSync(
+      'yt-dlp',
+      [
+        '--skip-download',
+        '--sub-langs',
+        'en.*,en',
+        '--sub-format',
+        'vtt',
+        ...flags,
+        '-o',
+        join(dir, '%(id)s.%(ext)s'),
+        `https://www.youtube.com/watch?v=${id}`,
+      ],
+      { stdio: ['ignore', 'pipe', 'pipe'] },
+    )
+  const found = () => readdirSync(dir).find((file) => file.endsWith('.vtt'))
+  try {
+    download(['--write-subs'])
+    if (!found()) {
+      manual = false
+      download(['--write-auto-subs'])
+    }
+  } catch (error) {
+    if (error.code === 'ENOENT') console.error('yt-dlp is not installed. Install it with: pip install yt-dlp')
+    else
+      console.error(
+        String(error.stderr || error.message)
+          .trim()
+          .split(/\r?\n/)
+          .slice(-3)
+          .join(' | '),
+      )
+    rmSync(dir, { recursive: true, force: true })
+    process.exit(1)
+  }
+  const file = found()
+  if (!file) {
+    console.error('This video has no English captions.')
+    rmSync(dir, { recursive: true, force: true })
+    process.exit(1)
+  }
+  cues = parseVtt(readFileSync(join(dir, file), 'utf8'))
+  rmSync(dir, { recursive: true, force: true })
+}
+
+const phrases = makePhrases(cues, { minWords: Number(option('min', 5)), maxWords: Number(option('max', 14)) })
+if (!phrases.length) {
+  console.error('No phrases came out of the captions.')
+  process.exit(1)
+}
+
+const dataFile = new URL('../src/data/listeningVideoClips.json', import.meta.url)
+const clips = existsSync(dataFile) ? JSON.parse(readFileSync(dataFile, 'utf8')) : []
+const clip = {
+  id: `video-${id}`,
+  title: option('title', `Video ${id}`),
+  level,
+  source: { kind: 'youtube', videoId: id },
+  lines: phrases,
+}
+const at = clips.findIndex((entry) => entry.id === clip.id)
+if (at >= 0) clips[at] = clip
+else clips.push(clip)
+writeFileSync(dataFile, `${JSON.stringify(clips, null, 2)}\n`)
+
+console.log(`${manual ? 'Manual' : 'AUTOMATIC'} captions, ${phrases.length} phrases → src/data/listeningVideoClips.json (${clip.id})`)
+if (!manual) console.log('Automatic captions have mistakes and often no punctuation: check every phrase against the video.')
+phrases.forEach((phrase, i) => console.log(`${String(i + 1).padStart(2)}. [${phrase.start}–${phrase.end}] ${phrase.text}`))

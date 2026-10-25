@@ -1,3 +1,5 @@
+import videoClips from './listeningVideoClips.json'
+
 // Short clips for listening dictation: the learner hears a line and writes it. Written by hand.
 // A clip is read by the browser voice ('voice'). A clip from a video ('youtube') has the same lines, each with
 // the second it starts and ends at, so the player can replay just that line.
@@ -11,7 +13,7 @@ export type ListeningClip = {
   lines: ListeningLine[]
 }
 
-export const listeningClips: ListeningClip[] = [
+const voiceClips: ListeningClip[] = [
   {
     id: 'clip-train-delay',
     title: 'A delayed train',
@@ -52,3 +54,6 @@ export const listeningClips: ListeningClip[] = [
     ],
   },
 ]
+
+// Clips made from a video by scripts/make-clip.mjs come after the hand-written ones.
+export const listeningClips: ListeningClip[] = [...voiceClips, ...(videoClips as ListeningClip[])]

@@ -1,0 +1,78 @@
+import { describe, expect, it } from 'vitest'
+import { makePhrases, parseVtt, youtubeId } from './captionPhrases'
+
+const manual = `WEBVTT
+
+00:00:01.000 --> 00:00:03.000
+Excuse me, is this the train
+to Manchester?
+
+00:00:03.500 --> 00:00:06.000
+[Music]
+Yes, but it is running twenty minutes late.
+
+00:00:06.500 --> 00:00:07.000
+Oh.
+`
+
+describe('parseVtt', () => {
+  it('reads times and text, and drops sound notes', () => {
+    const cues = parseVtt(manual)
+    expect(cues).toHaveLength(3)
+    expect(cues[0]).toEqual({ start: 1, end: 3, text: 'Excuse me, is this the train\nto Manchester?' })
+    expect(cues[1].text).toBe('Yes, but it is running twenty minutes late.')
+  })
+  it('reads short stamps and the tags of automatic captions', () => {
+    const cues = parseVtt('WEBVTT\n\n01:05.250 --> 01:07.000 align:start position:0%\nso<00:01:05.500><c> what</c><c> now</c>\n')
+    expect(cues).toEqual([{ start: 65.25, end: 67, text: 'so what now' }])
+  })
+})
+
+describe('makePhrases', () => {
+  it('cuts at the end of a sentence and gives each phrase its time', () => {
+    const phrases = makePhrases(parseVtt(manual))
+    expect(phrases.map((phrase) => phrase.text)).toEqual([
+      'Excuse me, is this the train to Manchester?',
+      'Yes, but it is running twenty minutes late.',
+    ])
+    expect(phrases[0].start).toBeLessThanOrEqual(1)
+    expect(phrases[0].end).toBeGreaterThanOrEqual(3)
+    expect(phrases[1].start).toBeGreaterThan(phrases[0].start)
+  })
+  it('keeps a line that automatic captions repeat only once', () => {
+    const auto = `WEBVTT
+
+00:00:00.000 --> 00:00:02.000
+we went to the shop
+
+00:00:02.000 --> 00:00:02.010
+we went to the shop
+
+00:00:02.010 --> 00:00:04.000
+we went to the shop
+and bought some bread today
+`
+    const phrases = makePhrases(parseVtt(auto), { maxWords: 20 })
+    expect(phrases).toHaveLength(1)
+    expect(phrases[0].text).toBe('we went to the shop and bought some bread today')
+  })
+  it('splits text without punctuation at the longest length', () => {
+    const long = Array.from({ length: 30 }, (_, i) => `word${i}`).join(' ')
+    const phrases = makePhrases([{ start: 0, end: 30, text: long }], { maxWords: 12 })
+    expect(phrases.every((phrase) => phrase.text.split(' ').length <= 12)).toBe(true)
+    expect(phrases.map((phrase) => phrase.text).join(' ')).toBe(long)
+  })
+})
+
+describe('youtubeId', () => {
+  it('finds the id in the usual links', () => {
+    expect(youtubeId('https://www.youtube.com/watch?v=abcDEF12345&t=5s')).toBe('abcDEF12345')
+    expect(youtubeId('https://youtu.be/abcDEF12345?si=x')).toBe('abcDEF12345')
+    expect(youtubeId('https://www.youtube.com/shorts/abcDEF12345')).toBe('abcDEF12345')
+    expect(youtubeId('abcDEF12345')).toBe('abcDEF12345')
+  })
+  it('refuses something that is not a video link', () => {
+    expect(youtubeId('https://example.com/watch')).toBeNull()
+    expect(youtubeId('hello')).toBeNull()
+  })
+})

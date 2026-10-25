@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
+import { YouTubePlayer, type LinePlayer } from '../components/listening/YouTubePlayer'
 import { defaultPracticeSettings } from '../data/practice'
 import { listeningClips, type ListeningClip } from '../data/listeningClips'
 import { checkLine, clipScore, type LineResult } from '../services/listening'
@@ -69,16 +70,27 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (r
   const [result, setResult] = useState<LineResult | null>(null)
   const [results, setResults] = useState<boolean[]>([])
   const input = useRef<HTMLInputElement>(null)
+  const video = useRef<LinePlayer>(null)
+  // a video that cannot be shown (blocked, removed, not allowed to be embedded) falls back to the voice
+  const [videoFailed, setVideoFailed] = useState(false)
   const line = clip.lines[index]
+  const videoId = clip.source.kind === 'youtube' && !videoFailed ? clip.source.videoId : null
   const locale = loadPracticeSettings(defaultPracticeSettings).speechLocale
-  const play = (slow: boolean) => speakEnglish(line.text, locale, slow ? 0.6 : 1)
+  const play = (slow: boolean) => {
+    if (videoId && line.start !== undefined && line.end !== undefined) video.current?.playLine(line.start, line.end, slow ? 0.5 : 1)
+    else speakEnglish(line.text, locale, slow ? 0.6 : 1)
+  }
 
-  // each new line is read once on its own; the cleanup stops a line that is still being read
+  // each new line is played once on its own; the cleanup stops a line that is still playing
   useEffect(() => {
-    speakEnglish(line.text, locale)
+    if (videoId && line.start !== undefined && line.end !== undefined) video.current?.playLine(line.start, line.end, 1)
+    else speakEnglish(line.text, locale)
     input.current?.focus()
-    return stopSpeaking
-  }, [line.text, locale])
+    return () => {
+      stopSpeaking()
+      video.current?.stop()
+    }
+  }, [line.text, line.start, line.end, locale, videoId])
 
   const check = () => {
     if (result) return
@@ -105,6 +117,7 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (r
         </span>
       </header>
       <section className="listen-card">
+        {videoId ? <YouTubePlayer ref={video} videoId={videoId} onFailed={() => setVideoFailed(true)} /> : null}
         <div className="listen-play">
           <button className="check-button" type="button" onClick={() => play(false)}>
             <Icon name="volume" size={18} /> Play
