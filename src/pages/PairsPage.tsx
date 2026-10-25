@@ -51,31 +51,48 @@ export function PairsPage() {
         <p>their or there, lose or loose — choose the one that fits.</p>
       </header>
       <section className="pairs-start">
-        <div className="pairs-stats">
-          <strong>
-            {statuses.length}
-            <small>pairs</small>
-          </strong>
-          <strong>
-            {mastered}
-            <small>learned</small>
-          </strong>
-          <strong>
-            {learning}
-            <small>being learned</small>
-          </strong>
-          <strong>
-            {due}
-            <small>to review today</small>
-          </strong>
+        <div className="pairs-start__main">
+          <div className="pairs-stats">
+            <strong>
+              {statuses.length}
+              <small>pairs</small>
+            </strong>
+            <strong>
+              {due}
+              <small>to review today</small>
+            </strong>
+            <strong>
+              {mastered}
+              <small>mastered</small>
+            </strong>
+          </div>
+          <button
+            className="check-button"
+            type="button"
+            onClick={() => setPhase({ kind: 'session', questions: buildPairSession(), label: 'Mixed pairs' })}
+          >
+            <Icon name="shuffle" size={16} /> Practise 10 sentences
+          </button>
         </div>
-        <button
-          className="check-button"
-          type="button"
-          onClick={() => setPhase({ kind: 'session', questions: buildPairSession(), label: 'Mixed pairs' })}
-        >
-          <Icon name="shuffle" size={16} /> Practise 10 sentences
-        </button>
+        {learning || mastered ? (
+          <div className="rail-card pairs-progress">
+            <span className="rail-card__label">Your pairs</span>
+            <p className="rail-row">
+              <span>Learned</span>
+              <strong>
+                {mastered} of {statuses.length}
+              </strong>
+            </p>
+            <p className="rail-row">
+              <span>Being learned</span>
+              <strong>{learning}</strong>
+            </p>
+            <p className="rail-row">
+              <span>To repeat today</span>
+              <strong>{due}</strong>
+            </p>
+          </div>
+        ) : null}
       </section>
       {tricky.length ? (
         <section className="pairs-group">

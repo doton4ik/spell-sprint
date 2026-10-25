@@ -26,6 +26,21 @@
   margin-top: 22px;
   padding: 22px 24px;
 }
+.pairs-start {
+  align-items: start;
+  display: grid;
+  gap: 20px 28px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 260px);
+}
+.pairs-progress {
+  background: var(--surface-soft);
+  box-shadow: none;
+}
+@media (max-width: 640px) {
+  .pairs-start {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 .pairs-stats {
   display: flex;
   flex-wrap: wrap;
