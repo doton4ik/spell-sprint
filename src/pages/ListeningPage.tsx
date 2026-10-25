@@ -147,79 +147,104 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (a
           {clip.title} · {index + 1} / {clip.lines.length}
         </span>
       </header>
-      <div className="listen-progress" aria-hidden="true">
-        <span style={{ width: `${(index / clip.lines.length) * 100}%` }} />
-      </div>
-      <section className="listen-card">
-        {videoId ? <YouTubePlayer ref={video} videoId={videoId} onFailed={() => setVideoFailed(true)} /> : null}
-        <div className="listen-play">
-          <button className="check-button" type="button" onClick={() => play(false)}>
-            <Icon name="volume" size={18} /> Play
-          </button>
-          <button className="template-button" type="button" onClick={() => play(true)}>
-            Slowly
-          </button>
-          {result ? null : (
-            <button className="template-button" type="button" onClick={() => setHint(true)} disabled={hint}>
-              Hint
+      <div className={`listen-stage${videoId ? ' listen-stage--video' : ''}`}>
+        {videoId ? (
+          <div className="listen-stage__video">
+            <YouTubePlayer ref={video} videoId={videoId} onFailed={() => setVideoFailed(true)} />
+          </div>
+        ) : null}
+        <section className="listen-card">
+          <div className="listen-play">
+            <button className="check-button" type="button" onClick={() => play(false)}>
+              <Icon name="volume" size={18} /> Play
             </button>
-          )}
-        </div>
-        {hint && !result ? <p className="listen-hint">{lineHint(line.text)}</p> : null}
-        <form
-          onSubmit={(event) => {
-            event.preventDefault()
-            if (result) next()
-            else if (answer.trim()) settle(false)
-          }}
-        >
-          <input
-            ref={input}
-            className="listen-input"
-            value={answer}
-            readOnly={Boolean(result)}
-            onChange={(event) => setAnswer(event.target.value)}
-            placeholder="Write the line you heard"
-            aria-label="The line you heard"
-            autoComplete="off"
-            autoCorrect="off"
-            spellCheck={false}
-          />
-          {result ? (
-            <div className={`listen-result listen-result--${result.correct ? 'good' : 'bad'}`} role="status">
-              <strong>{result.correct ? 'Right' : result.skipped ? 'Skipped' : 'Not quite'}</strong>
-              {result.correct ? null : (
-                <>
-                  {result.skipped ? null : (
-                    <p className="listen-yours">
-                      {result.given.length
-                        ? result.given.map((word, i) => (
-                            <span key={i} className={word.same ? '' : 'listen-word--wrong'}>
-                              {word.text}{' '}
-                            </span>
-                          ))
-                        : '—'}
-                    </p>
-                  )}
-                  <p className="listen-right">{line.text}</p>
-                </>
-              )}
-              <button className="next-button" type="submit">
-                {index + 1 >= clip.lines.length ? 'Finish' : 'Next line'}
+            <button className="template-button" type="button" onClick={() => play(true)}>
+              Slowly
+            </button>
+            {result ? null : (
+              <button className="template-button" type="button" onClick={() => setHint(true)} disabled={hint}>
+                Hint
               </button>
-            </div>
-          ) : (
-            <div className="listen-play">
-              <button className="check-button" type="submit" disabled={!answer.trim()}>
-                Check
-              </button>
-              <button className="quiet-button" type="button" onClick={() => settle(true)}>
-                Skip
-              </button>
-            </div>
-          )}
-        </form>
-      </section>
+            )}
+          </div>
+          {hint && !result ? <p className="listen-hint">{lineHint(line.text)}</p> : null}
+          <form
+            onSubmit={(event) => {
+              event.preventDefault()
+              if (result) next()
+              else if (answer.trim()) settle(false)
+            }}
+          >
+            <input
+              ref={input}
+              className="listen-input"
+              value={answer}
+              readOnly={Boolean(result)}
+              onChange={(event) => setAnswer(event.target.value)}
+              placeholder="Write the line you heard"
+              aria-label="The line you heard"
+              autoComplete="off"
+              autoCorrect="off"
+              spellCheck={false}
+            />
+            {result ? (
+              <div className={`listen-result listen-result--${result.correct ? 'good' : 'bad'}`} role="status">
+                <strong>{result.correct ? 'Right' : result.skipped ? 'Skipped' : 'Not quite'}</strong>
+                {result.correct ? null : (
+                  <>
+                    {result.skipped ? null : (
+                      <p className="listen-yours">
+                        {result.given.length
+                          ? result.given.map((word, i) => (
+                              <span key={i} className={word.same ? '' : 'listen-word--wrong'}>
+                                {word.text}{' '}
+                              </span>
+                            ))
+                          : '—'}
+                      </p>
+                    )}
+                    <p className="listen-right">{line.text}</p>
+                  </>
+                )}
+                <button className="next-button" type="submit">
+                  {index + 1 >= clip.lines.length ? 'Finish' : 'Next line'}
+                </button>
+              </div>
+            ) : (
+              <div className="listen-play">
+                <button className="check-button" type="submit" disabled={!answer.trim()}>
+                  Check
+                </button>
+                <button className="quiet-button" type="button" onClick={() => settle(true)}>
+                  Skip
+                </button>
+              </div>
+            )}
+          </form>
+        </section>
+      </div>
+      <ol className="listen-steps" aria-label="Lines of this clip">
+        {clip.lines.map((_, i) => {
+          const done = answered[i] ?? (i === index && result ? { correct: result.correct } : undefined)
+          const state = done ? (done.correct ? 'good' : 'bad') : i === index ? 'now' : 'todo'
+          return (
+            <li key={i} className={`listen-step listen-step--${state}`} aria-current={i === index ? 'step' : undefined}>
+              {state === 'good' ? '✓' : state === 'bad' ? '✗' : i + 1}
+              <span className="listen-step__sr">{state === 'good' ? ' right' : state === 'bad' ? ' missed' : ''}</span>
+            </li>
+          )
+        })}
+      </ol>
+      {answered.length ? (
+        <ul className="listen-done" aria-label="Lines done so far">
+          {answered.map((item, i) => (
+            <li key={i} className={item.correct ? 'listen-done--good' : 'listen-done--bad'}>
+              <span>{item.text}</span>
+              {item.correct ? null : <small>{item.skipped ? 'skipped' : `you wrote: ${item.given}`}</small>}
+            </li>
+          ))}
+        </ul>
+      ) : null}
     </div>
   )
 }

@@ -1,6 +1,4 @@
 import { useMemo, type ReactNode } from 'react'
-import { getStreak } from '../../services/dailyPlan'
-import { getLearningAnalytics } from '../../services/learningAnalytics'
 import { setPendingPracticeSelection } from '../../services/libraryPractice'
 import { pairStatuses } from '../../services/pairs'
 import { getPracticeAttempts } from '../../services/practiceStorage'
@@ -142,26 +140,6 @@ export function TopicsRail() {
             <strong>{topic.due}</strong>
           </button>
         ))}
-      </RailCard>
-    </Rail>
-  )
-}
-
-// Settings: where you are, in a few numbers.
-export function SettingsRail() {
-  const stats = useMemo(() => {
-    const analytics = getLearningAnalytics()
-    return { analytics, streak: getStreak().streak }
-  }, [])
-  if (!stats.analytics.totalAttempts) return null
-  const { accuracy } = stats.analytics
-  return (
-    <Rail label="At a glance">
-      <RailCard label="At a glance">
-        <RailRow name="Day streak" value={String(stats.streak)} />
-        <RailRow name="Answers so far" value={String(stats.analytics.totalAttempts)} />
-        <RailRow name="Words to master" value={String(stats.analytics.openMistakes)} />
-        {accuracy.percent !== null ? <RailRow name="Accuracy, 30 days" value={`${accuracy.percent}%`} /> : null}
       </RailCard>
     </Rail>
   )

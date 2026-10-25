@@ -1,6 +1,6 @@
 .listen-page {
   margin: 0;
-  max-width: 760px;
+  max-width: 1280px;
   padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
 }
 .listen-header h1 {
@@ -15,6 +15,7 @@
   font-size: calc(15px * var(--fs));
   line-height: 1.6;
   margin: 10px 0 0;
+  max-width: 620px;
 }
 .listen-note {
   color: var(--danger-text);
@@ -23,6 +24,7 @@
 .listen-clips {
   display: grid;
   gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   list-style: none;
   margin: 24px 0 0;
   padding: 0;
@@ -130,24 +132,11 @@
   background: var(--surface-muted);
   border-radius: 12px;
   margin-bottom: 16px;
-  max-width: 560px;
   overflow: hidden;
 }
 .listen-video iframe {
   height: 100%;
   width: 100%;
-}
-.listen-progress {
-  background: var(--surface-muted);
-  border-radius: 99px;
-  height: 4px;
-  margin-top: 12px;
-  overflow: hidden;
-}
-.listen-progress span {
-  background: var(--accent);
-  display: block;
-  height: 100%;
 }
 .listen-hint {
   color: var(--ink-muted);
@@ -174,6 +163,107 @@
   color: var(--ink);
 }
 .listen-transcript small {
+  color: var(--danger-text);
+  display: block;
+}
+
+/* The task: the video (when there is one) on the left, the answer on the right, the lines of the clip below. */
+.listen-stage {
+  align-items: start;
+  display: grid;
+  gap: 24px;
+  margin-top: 16px;
+}
+.listen-stage .listen-card {
+  margin-top: 0;
+}
+.listen-stage:not(.listen-stage--video) {
+  max-width: 720px;
+}
+@media (min-width: 900px) {
+  .listen-stage--video {
+    grid-template-columns: minmax(0, 1.3fr) minmax(320px, 1fr);
+  }
+}
+.listen-stage__video .listen-video {
+  margin-bottom: 0;
+}
+.listen-card .listen-input {
+  font-size: calc(18px * var(--fs));
+  min-height: 52px;
+}
+.listen-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+}
+.listen-step {
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink-muted);
+  display: flex;
+  font-size: calc(14px * var(--fs));
+  font-weight: 600;
+  height: 36px;
+  justify-content: center;
+  min-width: 36px;
+  padding: 0 8px;
+}
+.listen-step--now {
+  border-color: var(--accent);
+  color: var(--accent-text-strong);
+}
+.listen-step--good {
+  background: var(--good-soft);
+  border-color: var(--good-line);
+  color: var(--good-text);
+}
+.listen-step--bad {
+  background: var(--danger-soft);
+  border-color: var(--danger-line);
+  color: var(--danger-text);
+}
+.listen-step__sr {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+.listen-transcript {
+  max-width: 760px;
+}
+
+.listen-stage--video .listen-card {
+  padding: 28px;
+}
+.listen-done {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 24px 0 0;
+  max-width: 760px;
+  padding: 0;
+}
+.listen-done li {
+  color: var(--ink-muted);
+  font-size: calc(15px * var(--fs));
+  line-height: 1.5;
+}
+.listen-done--good span {
+  color: var(--good-text);
+}
+.listen-done--bad span {
+  color: var(--ink);
+}
+.listen-done small {
   color: var(--danger-text);
   display: block;
 }

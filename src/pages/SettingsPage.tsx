@@ -1,5 +1,6 @@
-import { SettingsRail } from '../components/ui/PageRails'
-import { FormEvent, useEffect, useState } from 'react'
+import { getStreak } from '../services/dailyPlan'
+import { getLearningAnalytics } from '../services/learningAnalytics'
+import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
 import {
   backUpBeforeSignOut,
@@ -51,6 +52,32 @@ function friendlyAuthError(error: unknown) {
     return 'Sign-in by email is switched off in Supabase (Authentication → Sign In / Providers → Email).'
   if (/failed to fetch|network/i.test(text)) return 'No connection to the server. Check the internet and try again.'
   return text || 'Could not complete the account request.'
+}
+
+// Where you are, in a few numbers: a card in the third column (it was a rail beside the page).
+function SettingsGlance() {
+  const stats = useMemo(() => ({ analytics: getLearningAnalytics(), streak: getStreak().streak }), [])
+  const { analytics, streak } = stats
+  if (!analytics.totalAttempts) return null
+  const rows: Array<[string, string]> = [
+    ['Day streak', String(streak)],
+    ['Answers so far', String(analytics.totalAttempts)],
+    ['Words to master', String(analytics.openMistakes)],
+    ...(analytics.accuracy.percent !== null ? ([['Accuracy, 30 days', `${analytics.accuracy.percent}%`]] as Array<[string, string]>) : []),
+  ]
+  return (
+    <article className="settings-card settings-glance">
+      <p className="settings-card__eyebrow">At a glance</p>
+      <dl>
+        {rows.map(([name, value]) => (
+          <div key={name}>
+            <dt>{name}</dt>
+            <dd>{value}</dd>
+          </div>
+        ))}
+      </dl>
+    </article>
+  )
 }
 
 export function SettingsPage() {
@@ -202,7 +229,6 @@ export function SettingsPage() {
 
   return (
     <div className="settings-page" id="settings">
-      <SettingsRail />
       <header className="settings-header">
         <div>
           <h1>Your learning space</h1>
@@ -226,243 +252,250 @@ export function SettingsPage() {
         </p>
       ) : null}
       <section className="settings-grid">
-        <article className="settings-card">
-          <p className="settings-card__eyebrow">Account</p>
-          {session && settingPassword ? (
-            <>
-              <h2>Set a new password</h2>
-              <p>For {session.user.email ?? 'your account'}.</p>
-              <form onSubmit={saveNewPassword}>
-                <label>
-                  New password
-                  <input
-                    required
-                    minLength={8}
-                    type="password"
-                    autoComplete="new-password"
-                    value={password}
-                    onChange={(event) => setPassword(event.target.value)}
-                  />
-                </label>
-                <button className="check-button" disabled={busy} type="submit">
-                  {busy ? 'Please wait…' : 'Save password'} <Icon name="arrow" size={16} />
-                </button>
-              </form>
-              <button className="settings-link" type="button" disabled={busy} onClick={() => setSettingPassword(false)}>
-                Cancel
-              </button>
-            </>
-          ) : session ? (
-            <>
-              <h2>{session.user.email ?? 'Signed-in learner'}</h2>
-              <p>Your account is active on this device. Signing out backs up your progress and removes it from this device.</p>
-              <button className="settings-link" type="button" disabled={busy} onClick={logout}>
-                Sign out
-              </button>{' '}
-              <button
-                className="settings-link"
-                type="button"
-                disabled={busy}
-                onClick={() => {
-                  setPassword('')
-                  setSettingPassword(true)
-                }}
-              >
-                Change password
-              </button>
-            </>
-          ) : (
-            <>
-              <h2>{mode === 'sign-in' ? 'Sign in to sync' : mode === 'sign-up' ? 'Create your account' : 'Reset your password'}</h2>
-              <p>
-                {mode === 'reset'
-                  ? 'Enter your email and we will send you a link to choose a new password.'
-                  : 'Each learner gets a private account: progress, mistakes and libraries are visible only to you.'}
-              </p>
-              <form onSubmit={submit}>
-                <label>
-                  Email
-                  <input required type="email" autoComplete="email" value={email} onChange={(event) => setEmail(event.target.value)} />
-                </label>
-                {mode !== 'reset' ? (
+        <div className="settings-col">
+          <article className="settings-card">
+            <p className="settings-card__eyebrow">Account</p>
+            {session && settingPassword ? (
+              <>
+                <h2>Set a new password</h2>
+                <p>For {session.user.email ?? 'your account'}.</p>
+                <form onSubmit={saveNewPassword}>
                   <label>
-                    Password
+                    New password
                     <input
                       required
-                      minLength={mode === 'sign-up' ? 8 : undefined}
+                      minLength={8}
                       type="password"
-                      autoComplete={mode === 'sign-up' ? 'new-password' : 'current-password'}
+                      autoComplete="new-password"
                       value={password}
                       onChange={(event) => setPassword(event.target.value)}
                     />
                   </label>
-                ) : null}
-                <button className="check-button" disabled={busy || !configured} type="submit">
-                  {busy ? 'Please wait…' : mode === 'sign-in' ? 'Sign in' : mode === 'sign-up' ? 'Create account' : 'Send reset link'}{' '}
-                  <Icon name="arrow" size={16} />
-                </button>
-              </form>
-              {mode === 'sign-up' ? (
-                <small>
-                  By creating an account you accept the <a href="#terms">terms of use</a> and the <a href="#privacy">privacy notice</a>.
-                </small>
-              ) : null}
-              <button className="settings-link" type="button" onClick={() => setMode(mode === 'sign-in' ? 'sign-up' : 'sign-in')}>
-                {mode === 'sign-in' ? 'Create a new account' : 'I already have an account'}
-              </button>
-              {mode === 'sign-in' && passwordResetByEmail ? (
-                <>
-                  {' '}
-                  <button className="settings-link" type="button" onClick={() => setMode('reset')}>
-                    Forgot password?
+                  <button className="check-button" disabled={busy} type="submit">
+                    {busy ? 'Please wait…' : 'Save password'} <Icon name="arrow" size={16} />
                   </button>
-                </>
-              ) : null}
-              {mode === 'sign-in' && !passwordResetByEmail ? (
-                <small>Forgot your password? Ask the person who invited you to the site.</small>
-              ) : null}
-            </>
-          )}
-        </article>
-        <article className="settings-card settings-card--sync">
-          <p className="settings-card__eyebrow">Cloud backup</p>
-          <h2>Sync learning history</h2>
-          <p>
-            Practice attempts, mistakes, review progress, saved rules and imported libraries sync automatically while you are signed in:
-            when the app opens, shortly after new answers, and when you leave the app.
-          </p>
-          <button className="check-button" disabled={!session || busy} type="button" onClick={sync}>
-            <Icon name="refresh" size={16} /> Sync now
-          </button>{' '}
-          <button className="settings-link" disabled={!session || busy} type="button" onClick={restore}>
-            Restore from cloud
-          </button>
-          <small>
-            {!session
-              ? 'Sign in first to enable cloud backup.'
-              : syncStatus.running
-                ? 'Syncing…'
-                : syncStatus.lastError
-                  ? `Last sync failed: ${syncStatus.lastError}`
-                  : syncStatus.lastSyncedAt
-                    ? `Last synced at ${new Intl.DateTimeFormat('en', { hour: 'numeric', minute: '2-digit' }).format(new Date(syncStatus.lastSyncedAt))}. Only your account can access this data.`
-                    : 'Only your signed-in account can access this data.'}
-          </small>
-          {queuedMistakes ? (
+                </form>
+                <button className="settings-link" type="button" disabled={busy} onClick={() => setSettingPassword(false)}>
+                  Cancel
+                </button>
+              </>
+            ) : session ? (
+              <>
+                <h2>{session.user.email ?? 'Signed-in learner'}</h2>
+                <p>Your account is active on this device. Signing out backs up your progress and removes it from this device.</p>
+                <button className="settings-link" type="button" disabled={busy} onClick={logout}>
+                  Sign out
+                </button>{' '}
+                <button
+                  className="settings-link"
+                  type="button"
+                  disabled={busy}
+                  onClick={() => {
+                    setPassword('')
+                    setSettingPassword(true)
+                  }}
+                >
+                  Change password
+                </button>
+              </>
+            ) : (
+              <>
+                <h2>{mode === 'sign-in' ? 'Sign in to sync' : mode === 'sign-up' ? 'Create your account' : 'Reset your password'}</h2>
+                <p>
+                  {mode === 'reset'
+                    ? 'Enter your email and we will send you a link to choose a new password.'
+                    : 'Each learner gets a private account: progress, mistakes and libraries are visible only to you.'}
+                </p>
+                <form onSubmit={submit}>
+                  <label>
+                    Email
+                    <input required type="email" autoComplete="email" value={email} onChange={(event) => setEmail(event.target.value)} />
+                  </label>
+                  {mode !== 'reset' ? (
+                    <label>
+                      Password
+                      <input
+                        required
+                        minLength={mode === 'sign-up' ? 8 : undefined}
+                        type="password"
+                        autoComplete={mode === 'sign-up' ? 'new-password' : 'current-password'}
+                        value={password}
+                        onChange={(event) => setPassword(event.target.value)}
+                      />
+                    </label>
+                  ) : null}
+                  <button className="check-button" disabled={busy || !configured} type="submit">
+                    {busy ? 'Please wait…' : mode === 'sign-in' ? 'Sign in' : mode === 'sign-up' ? 'Create account' : 'Send reset link'}{' '}
+                    <Icon name="arrow" size={16} />
+                  </button>
+                </form>
+                {mode === 'sign-up' ? (
+                  <small>
+                    By creating an account you accept the <a href="#terms">terms of use</a> and the <a href="#privacy">privacy notice</a>.
+                  </small>
+                ) : null}
+                <button className="settings-link" type="button" onClick={() => setMode(mode === 'sign-in' ? 'sign-up' : 'sign-in')}>
+                  {mode === 'sign-in' ? 'Create a new account' : 'I already have an account'}
+                </button>
+                {mode === 'sign-in' && passwordResetByEmail ? (
+                  <>
+                    {' '}
+                    <button className="settings-link" type="button" onClick={() => setMode('reset')}>
+                      Forgot password?
+                    </button>
+                  </>
+                ) : null}
+                {mode === 'sign-in' && !passwordResetByEmail ? (
+                  <small>Forgot your password? Ask the person who invited you to the site.</small>
+                ) : null}
+              </>
+            )}
+          </article>
+          <article className="settings-card settings-card--sync">
+            <p className="settings-card__eyebrow">Cloud backup</p>
+            <h2>Sync learning history</h2>
+            <p>
+              Practice attempts, mistakes, review progress, saved rules and imported libraries sync automatically while you are signed in:
+              when the app opens, shortly after new answers, and when you leave the app.
+            </p>
+            <button className="check-button" disabled={!session || busy} type="button" onClick={sync}>
+              <Icon name="refresh" size={16} /> Sync now
+            </button>{' '}
+            <button className="settings-link" disabled={!session || busy} type="button" onClick={restore}>
+              Restore from cloud
+            </button>
             <small>
-              {queuedMistakes} mistake{queuedMistakes === 1 ? ' is' : 's are'} waiting to reach Rules —{' '}
-              {session ? 'they are sent automatically when the connection allows.' : 'sign in to send them.'}
+              {!session
+                ? 'Sign in first to enable cloud backup.'
+                : syncStatus.running
+                  ? 'Syncing…'
+                  : syncStatus.lastError
+                    ? `Last sync failed: ${syncStatus.lastError}`
+                    : syncStatus.lastSyncedAt
+                      ? `Last synced at ${new Intl.DateTimeFormat('en', { hour: 'numeric', minute: '2-digit' }).format(new Date(syncStatus.lastSyncedAt))}. Only your account can access this data.`
+                      : 'Only your signed-in account can access this data.'}
             </small>
-          ) : null}
-        </article>
-        <article className="settings-card">
-          <p className="settings-card__eyebrow">Pronunciation</p>
-          <h2>English voice</h2>
-          <p>Practice uses your browser’s built-in speech synthesis. No audio files or external audio service are used.</p>
-          <label>
-            Voice variant
-            <select value={speechLocale} onChange={(event) => setAccent(event.target.value as 'en-US' | 'en-GB')}>
-              <option value="en-US">American English (en-US)</option>
-              <option value="en-GB">British English (en-GB)</option>
-            </select>
-          </label>
-        </article>
-        <article className="settings-card settings-card--compact">
-          <p className="settings-card__eyebrow">Profile</p>
-          <h2>Name and daily plan</h2>
-          <p>Used for the greeting and for today's plan on the Dashboard. Stored on this device.</p>
-          <label>
-            Your name
-            <input
-              value={profile.name}
-              maxLength={40}
-              placeholder="How should we greet you?"
-              onChange={(event) => updateProfile({ name: event.target.value })}
-            />
-          </label>
-          <span className="settings-field-label">Time per day</span>
-          <div className="plan-options" role="radiogroup" aria-label="Time per day">
-            {dailyMinutesOptions.map((minutes) => (
-              <button
-                type="button"
-                role="radio"
-                aria-checked={profile.dailyMinutes === minutes}
-                className={profile.dailyMinutes === minutes ? 'plan-option plan-option--active' : 'plan-option'}
-                onClick={() => updateProfile({ dailyMinutes: minutes })}
-                key={minutes}
-              >
-                <strong>{minutes} min</strong>
-                <span>{describePlan(minutes, profile.activities)}</span>
-              </button>
-            ))}
-          </div>
-          <span className="settings-field-label">Include in the day</span>
-          <div className="plan-toggles">
-            {(
-              [
-                ['proofreading', 'Proofreading', 'from 10 min'],
-                ['pairs', 'Word pairs', 'from 15 min'],
-                ['dictation', 'Dictation', 'from 15 min'],
-                ['sprint', 'Sprint', 'from 30 min'],
-              ] as Array<[keyof DailyActivities, string, string]>
-            ).map(([key, label, note]) => (
-              <label className="plan-toggle" key={key}>
-                <input
-                  type="checkbox"
-                  checked={profile.activities[key]}
-                  onChange={(event) => updateProfile({ activities: { [key]: event.target.checked } })}
-                />
-                <span>{label}</span>
-                <small>{note}</small>
-              </label>
-            ))}
-          </div>
-          <p className="settings-note">Words are always in the plan. The Dashboard shows what is done today and what is left.</p>
-        </article>
-        <article className="settings-card settings-card--compact">
-          <p className="settings-card__eyebrow">Appearance</p>
-          <h2>Text size and theme</h2>
-          <p>
-            For every page. They apply immediately and are remembered on this device. “System” follows your device’s light or dark mode.
-          </p>
-          <div className="font-scale-options" role="radiogroup" aria-label="Text size">
-            {fontScaleOptions.map((option) => (
-              <button
-                type="button"
-                role="radio"
-                aria-checked={fontScale === option.value}
-                className={fontScale === option.value ? 'font-scale-option font-scale-option--active' : 'font-scale-option'}
-                onClick={() => chooseFontScale(option.value)}
-                key={option.value}
-              >
-                {option.label}
-              </button>
-            ))}
-          </div>
-          <span className="settings-field-label">Theme</span>
-          <div className="font-scale-options font-scale-options--theme" role="radiogroup" aria-label="Theme">
-            {themeOptions.map((option) => (
-              <button
-                type="button"
-                role="radio"
-                aria-checked={theme === option.value}
-                className={theme === option.value ? 'font-scale-option font-scale-option--active' : 'font-scale-option'}
-                onClick={() => {
-                  setTheme(option.value)
-                  setThemeState(option.value)
-                }}
-                key={option.value}
-              >
-                {option.label}
-              </button>
-            ))}
-          </div>
-          <div className="font-scale-preview">
-            <strong>accommodation</strong>
-            <span>размещение, жильё</span>
-            <small>Example: The hotel offers free accommodation.</small>
-          </div>
-        </article>
+            {queuedMistakes ? (
+              <small>
+                {queuedMistakes} mistake{queuedMistakes === 1 ? ' is' : 's are'} waiting to reach Rules —{' '}
+                {session ? 'they are sent automatically when the connection allows.' : 'sign in to send them.'}
+              </small>
+            ) : null}
+          </article>
+        </div>
+        <div className="settings-col">
+          <article className="settings-card settings-card--compact">
+            <p className="settings-card__eyebrow">Profile</p>
+            <h2>Name and daily plan</h2>
+            <p>Used for the greeting and for today's plan on the Dashboard. Stored on this device.</p>
+            <label>
+              Your name
+              <input
+                value={profile.name}
+                maxLength={40}
+                placeholder="How should we greet you?"
+                onChange={(event) => updateProfile({ name: event.target.value })}
+              />
+            </label>
+            <span className="settings-field-label">Time per day</span>
+            <div className="plan-options" role="radiogroup" aria-label="Time per day">
+              {dailyMinutesOptions.map((minutes) => (
+                <button
+                  type="button"
+                  role="radio"
+                  aria-checked={profile.dailyMinutes === minutes}
+                  className={profile.dailyMinutes === minutes ? 'plan-option plan-option--active' : 'plan-option'}
+                  onClick={() => updateProfile({ dailyMinutes: minutes })}
+                  key={minutes}
+                >
+                  <strong>{minutes} min</strong>
+                  <span>{describePlan(minutes, profile.activities)}</span>
+                </button>
+              ))}
+            </div>
+            <span className="settings-field-label">Include in the day</span>
+            <div className="plan-toggles">
+              {(
+                [
+                  ['proofreading', 'Proofreading', 'from 10 min'],
+                  ['pairs', 'Word pairs', 'from 15 min'],
+                  ['dictation', 'Dictation', 'from 15 min'],
+                  ['sprint', 'Sprint', 'from 30 min'],
+                ] as Array<[keyof DailyActivities, string, string]>
+              ).map(([key, label, note]) => (
+                <label className="plan-toggle" key={key}>
+                  <input
+                    type="checkbox"
+                    checked={profile.activities[key]}
+                    onChange={(event) => updateProfile({ activities: { [key]: event.target.checked } })}
+                  />
+                  <span>{label}</span>
+                  <small>{note}</small>
+                </label>
+              ))}
+            </div>
+            <p className="settings-note">Words are always in the plan. The Dashboard shows what is done today and what is left.</p>
+          </article>
+        </div>
+        <div className="settings-col">
+          <article className="settings-card settings-card--compact">
+            <p className="settings-card__eyebrow">Appearance</p>
+            <h2>Text size and theme</h2>
+            <p>
+              For every page. They apply immediately and are remembered on this device. “System” follows your device’s light or dark mode.
+            </p>
+            <div className="font-scale-options" role="radiogroup" aria-label="Text size">
+              {fontScaleOptions.map((option) => (
+                <button
+                  type="button"
+                  role="radio"
+                  aria-checked={fontScale === option.value}
+                  className={fontScale === option.value ? 'font-scale-option font-scale-option--active' : 'font-scale-option'}
+                  onClick={() => chooseFontScale(option.value)}
+                  key={option.value}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
+            <span className="settings-field-label">Theme</span>
+            <div className="font-scale-options font-scale-options--theme" role="radiogroup" aria-label="Theme">
+              {themeOptions.map((option) => (
+                <button
+                  type="button"
+                  role="radio"
+                  aria-checked={theme === option.value}
+                  className={theme === option.value ? 'font-scale-option font-scale-option--active' : 'font-scale-option'}
+                  onClick={() => {
+                    setTheme(option.value)
+                    setThemeState(option.value)
+                  }}
+                  key={option.value}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
+            <div className="font-scale-preview">
+              <strong>accommodation</strong>
+              <span>размещение, жильё</span>
+              <small>Example: The hotel offers free accommodation.</small>
+            </div>
+          </article>
+          <article className="settings-card">
+            <p className="settings-card__eyebrow">Pronunciation</p>
+            <h2>English voice</h2>
+            <p>Practice uses your browser’s built-in speech synthesis. No audio files or external audio service are used.</p>
+            <label>
+              Voice variant
+              <select value={speechLocale} onChange={(event) => setAccent(event.target.value as 'en-US' | 'en-GB')}>
+                <option value="en-US">American English (en-US)</option>
+                <option value="en-GB">British English (en-GB)</option>
+              </select>
+            </label>
+          </article>
+          <SettingsGlance />
+        </div>
       </section>
       <p className="settings-legal">
         <a href="#privacy">Privacy</a> · <a href="#terms">Terms of use</a>

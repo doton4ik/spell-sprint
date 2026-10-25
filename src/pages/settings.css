@@ -42,16 +42,22 @@
   font-family: ui-monospace, monospace;
   padding: 2px 4px;
 }
-/* Two balanced columns: the cards of different heights fill them evenly, with no empty rows. */
+/* Three columns on a wide window, two on a laptop, one on a phone. Each column is its own stack, so a tall card
+   (the daily plan) never leaves a hole in the others. */
 .settings-grid {
-  column-count: 2;
-  column-gap: 18px;
+  align-items: start;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 28px;
 }
+.settings-col {
+  display: grid;
+  gap: 18px;
+}
 .settings-card {
-  break-inside: avoid;
   display: block;
-  margin: 0 0 18px;
+  margin: 0;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
@@ -140,7 +146,7 @@
     padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .settings-grid {
-    column-count: 1;
+    grid-template-columns: minmax(0, 1fr);
   }
   .settings-card {
     min-height: 0;
@@ -237,14 +243,37 @@
 .settings-link + .settings-link {
   margin-left: 16px;
 }
-.settings-grid {
-  column-fill: auto;
-}
-/* Account, backup and voice on the left; name and goal, text size and theme on the right: about the same height. */
-@media (min-width: 801px) {
-  .settings-card:nth-child(3) {
-    break-after: column;
+/* A laptop window: two columns, the third one goes under them in two columns of its own. */
+@media (min-width: 801px) and (max-width: 1199px) {
+  .settings-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .settings-col:last-child {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.settings-page {
+  max-width: 1240px;
+}
+.settings-glance dl {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+}
+.settings-glance dl div {
+  align-items: baseline;
+  display: flex;
+  font-size: calc(14px * var(--fs));
+  justify-content: space-between;
+}
+.settings-glance dt {
+  color: var(--ink-muted);
+}
+.settings-glance dd {
+  color: var(--ink);
+  font-weight: 700;
+  margin: 0;
 }
 
 .settings-legal {
