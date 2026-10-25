@@ -3,7 +3,7 @@ import './legal.css'
 // Plain-language privacy notice and terms. Written to match what the app really does (see src/services/cloudSync.ts,
 // errorLog.ts, supabase.ts); update them whenever the app starts storing or sending something new.
 // The contact address is set at build time (VITE_CONTACT_EMAIL) so it is never written into the code.
-const UPDATED = '13 October 2026'
+const UPDATED = '25 October 2026'
 const contact = (import.meta.env.VITE_CONTACT_EMAIL as string | undefined)?.trim()
 
 type Section = { title: string; body: Array<string | string[]> }
@@ -43,6 +43,7 @@ const privacy: Section[] = [
       [
         'Supabase: database and sign-in (the project runs in the EU, Stockholm)',
         'Netlify: hosting of the website',
+        'YouTube (Google): the Listening clips play in YouTube’s player (privacy-enhanced mode, youtube-nocookie.com). When you open a video clip, your browser contacts YouTube, which can see your IP address; see Google’s privacy policy',
         'Tatoeba: some example sentences come from tatoeba.org (licence CC BY 2.0 FR); they are bundled with the app, nothing is sent to Tatoeba when you use them',
       ],
     ],

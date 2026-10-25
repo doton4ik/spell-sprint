@@ -70,6 +70,7 @@ export function ListeningPage() {
       <header className="listen-header">
         <h1>Listening dictation</h1>
         <p>Listen to a line and write what you hear. You can replay it, or play it slowly.</p>
+        <p>Beta. Video clips belong to their authors (BBC Learning English, TED-Ed, Bob the Canadian) and play from YouTube.</p>
       </header>
       {canSpeak() ? null : <p className="listen-note">This browser cannot read text aloud, so the lines will be silent.</p>}
       <ul className="listen-clips">
