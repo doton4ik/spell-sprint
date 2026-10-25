@@ -45,6 +45,7 @@ const loaders = {
   Proofreading: () => import('./pages/ProofreadingPage'),
   Sprint: () => import('./pages/SprintPage'),
   Pairs: () => import('./pages/PairsPage'),
+  Listening: () => import('./pages/ListeningPage'),
   Privacy: () => import('./pages/LegalPage'),
 }
 const PracticePage = page(loaders.Practice, 'PracticePage')
@@ -57,6 +58,7 @@ const TopicsPage = page(loaders.Topics, 'TopicsPage')
 const ProofreadingPage = page(loaders.Proofreading, 'ProofreadingPage')
 const SprintPage = page(loaders.Sprint, 'SprintPage')
 const PairsPage = page(loaders.Pairs, 'PairsPage')
+const ListeningPage = page(loaders.Listening, 'ListeningPage')
 const PrivacyPage = page(loaders.Privacy, 'PrivacyPage')
 const TermsPage = page(loaders.Privacy, 'TermsPage')
 
@@ -81,6 +83,7 @@ const pages: Record<string, ComponentType> = {
   proofreading: ProofreadingPage,
   sprint: SprintPage,
   pairs: PairsPage,
+  listening: ListeningPage,
   privacy: PrivacyPage,
   terms: TermsPage,
 }

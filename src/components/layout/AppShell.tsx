@@ -27,6 +27,7 @@ const moreGroups: Array<{ title: string; items: Array<{ label: string; icon: Ico
       { label: 'Sprint', icon: 'bolt', note: '60-second speed round' },
       { label: 'Pairs', icon: 'shuffle', note: 'Words people mix up' },
       { label: 'Proofreading', icon: 'eye', note: 'Find mistakes in a text' },
+      { label: 'Listening', icon: 'volume', note: 'Write what you hear' },
       { label: 'Level Check', icon: 'analysis', note: 'Find your level' },
     ],
   },

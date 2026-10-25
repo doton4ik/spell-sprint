@@ -10,6 +10,7 @@ export const navigationItems: NavigationItem[] = [
   { label: 'Proofreading', icon: 'eye' },
   { label: 'Sprint', icon: 'bolt' },
   { label: 'Pairs', icon: 'shuffle' },
+  { label: 'Listening', icon: 'volume' },
   { label: 'Libraries', icon: 'library' },
 ]
 

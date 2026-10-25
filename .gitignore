@@ -22,6 +22,10 @@ research/tatoeba-examples.json
 research/tatoeba-examples.txt
 research/proof-sentences-review.txt
 
+# Working files: Perplexity answers/prompts and design comparisons (not part of the site)
+research/plexity/
+research/design-diff/
+
 # Playwright reports
 playwright-report/
 test-results/
