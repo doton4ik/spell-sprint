@@ -36,22 +36,27 @@ if (option('file')) {
   cues = parseVtt(readFileSync(option('file'), 'utf8'))
 } else {
   const dir = mkdtempSync(join(tmpdir(), 'clip-'))
+  // pip may not put the yt-dlp command on PATH: then it is run as a Python module
+  const run = (args) => {
+    try {
+      return execFileSync('yt-dlp', args, { stdio: ['ignore', 'pipe', 'pipe'] })
+    } catch (error) {
+      if (error.code !== 'ENOENT') throw error
+      return execFileSync('python', ['-m', 'yt_dlp', ...args], { stdio: ['ignore', 'pipe', 'pipe'] })
+    }
+  }
   const download = (flags) =>
-    execFileSync(
-      'yt-dlp',
-      [
-        '--skip-download',
-        '--sub-langs',
-        'en.*,en',
-        '--sub-format',
-        'vtt',
-        ...flags,
-        '-o',
-        join(dir, '%(id)s.%(ext)s'),
-        `https://www.youtube.com/watch?v=${id}`,
-      ],
-      { stdio: ['ignore', 'pipe', 'pipe'] },
-    )
+    run([
+      '--skip-download',
+      '--sub-langs',
+      'en.*,en',
+      '--sub-format',
+      'vtt',
+      ...flags,
+      '-o',
+      join(dir, '%(id)s.%(ext)s'),
+      `https://www.youtube.com/watch?v=${id}`,
+    ])
   const found = () => readdirSync(dir).find((file) => file.endsWith('.vtt'))
   try {
     download(['--write-subs'])
