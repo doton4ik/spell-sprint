@@ -1,7 +1,9 @@
 // Makes a listening-dictation clip from a YouTube link: downloads the captions (not the video) with yt-dlp,
 // cuts them into short phrases with their times and adds the clip to src/data/listeningVideoClips.json.
 //
-//   node scripts/make-clip.mjs <link or id> [--title "A short title"] [--level B1] [--min 5] [--max 14] [--file captions.vtt]
+//   node scripts/make-clip.mjs <link or id> [--title "A short title"] [--level B1] [--min 5] [--max 14] [--file captions.vtt] [--from 15] [--to 70]
+//
+// --from and --to (seconds) keep only the phrases inside that part of the video.
 //
 // With --file the captions come from a .vtt file you already have (the link only gives the video id).
 //
@@ -87,7 +89,10 @@ if (option('file')) {
   rmSync(dir, { recursive: true, force: true })
 }
 
-const phrases = makePhrases(cues, { minWords: Number(option('min', 5)), maxWords: Number(option('max', 14)) })
+const all = makePhrases(cues, { minWords: Number(option('min', 5)), maxWords: Number(option('max', 14)) })
+const from = Number(option('from', 0))
+const to = Number(option('to', Infinity))
+const phrases = all.filter((phrase) => phrase.start >= from - 0.5 && phrase.end <= to + 1)
 if (!phrases.length) {
   console.error('No phrases came out of the captions.')
   process.exit(1)

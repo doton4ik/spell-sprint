@@ -39,6 +39,19 @@ describe('makePhrases', () => {
     expect(phrases[0].end).toBeGreaterThanOrEqual(3)
     expect(phrases[1].start).toBeGreaterThan(phrases[0].start)
   })
+  it('does not let a phrase run into the next one', () => {
+    const vtt = `WEBVTT
+
+00:00:10.000 --> 00:00:20.000
+Oh, not much, just sitting around doing nothing.
+
+00:00:13.000 --> 00:00:18.000
+Lucky you! Do you not have work to do?
+`
+    const [first, second] = makePhrases(parseVtt(vtt))
+    expect(second.start).toBeGreaterThan(first.start)
+    expect(first.end).toBeLessThanOrEqual(second.start + 0.5)
+  })
   it('keeps a line that automatic captions repeat only once', () => {
     const auto = `WEBVTT
 

@@ -103,7 +103,13 @@ export function makePhrases(cues: Cue[], { minWords = 5, maxWords = 14 }: Phrase
       start: Math.max(0, Math.round((words[0].start - 0.15) * 10) / 10),
       end: Math.round((words[words.length - 1].end + 0.35) * 10) / 10,
     }))
-  return phrases
+  // a caption can stay on screen after the words are spoken: a phrase ends where the next one begins
+  return phrases.map((phrase, i) => {
+    const next = phrases[i + 1]
+    return next && next.start > phrase.start && next.start + 0.4 < phrase.end
+      ? { ...phrase, end: Math.round((next.start + 0.4) * 10) / 10 }
+      : phrase
+  })
 }
 
 // "https://youtu.be/ID", "https://www.youtube.com/watch?v=ID", "/shorts/ID", "/embed/ID" or the bare id.

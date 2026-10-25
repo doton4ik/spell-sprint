@@ -41,9 +41,17 @@ describe('listening clips', () => {
     for (const clip of listeningClips)
       for (const line of clip.lines) {
         expect(line.text.trim()).toBe(line.text)
-        expect(line.text).toMatch(/[.?!]$/)
+        // a hand-written line is a whole sentence; a phrase cut from a video may stop at a comma
+        if (clip.source.kind === 'voice') expect(line.text).toMatch(/[.?!]$/)
         expect(line.text.split(/\s+/).length).toBeGreaterThanOrEqual(5)
         expect(line.text.split(/\s+/).length).toBeLessThanOrEqual(14)
+      }
+  })
+  it('video lines have a start before their end', () => {
+    for (const clip of listeningClips.filter((entry) => entry.source.kind === 'youtube'))
+      for (const line of clip.lines) {
+        expect(line.start).toBeDefined()
+        expect(line.end).toBeGreaterThan(line.start ?? Infinity)
       }
   })
 })
