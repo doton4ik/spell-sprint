@@ -149,7 +149,9 @@ export function getMistakeEntries(): MistakeEntry[] {
         numberOfAttempts: attempts.length,
         numberOfErrors: failed.length,
         numberOfCorrectAnswers: attempts.filter((attempt) => attempt.isCorrect).length,
-        origin: ['Proofreading', 'Level check', 'Sprint'].includes(lastFailure.library ?? '') ? lastFailure.library : 'Practice',
+        origin: ['Proofreading', 'Level check', 'Sprint', 'Listening'].includes(lastFailure.library ?? '')
+          ? lastFailure.library
+          : 'Practice',
         // Quiet archive: no mistake for 30 days and the latest answer was right.
         archived: status !== 'mastered' && latest.isCorrect && Date.now() - new Date(lastFailure.createdAt).getTime() > ARCHIVE_AFTER_MS,
         lastMistakeAt: lastFailure.createdAt,
@@ -196,7 +198,7 @@ export function getEntryHistory(entry: MistakeEntry): HistoryItem[] {
     .filter((attempt) => (attempt.wordId ?? attempt.taskId) === entry.taskId)
     .map((attempt) => ({
       at: attempt.createdAt,
-      where: ['Proofreading', 'Level check', 'Sprint'].includes(attempt.library ?? '')
+      where: ['Proofreading', 'Level check', 'Sprint', 'Listening'].includes(attempt.library ?? '')
         ? attempt.library!
         : `Practice · ${modeNames[attempt.attemptMode] ?? attempt.attemptMode}`,
       typed: attempt.wasSkipped && !attempt.userAnswer ? 'Skipped' : attempt.userAnswer,

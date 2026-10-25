@@ -137,3 +137,43 @@
   height: 100%;
   width: 100%;
 }
+.listen-progress {
+  background: var(--surface-muted);
+  border-radius: 99px;
+  height: 4px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+.listen-progress span {
+  background: var(--accent);
+  display: block;
+  height: 100%;
+}
+.listen-hint {
+  color: var(--ink-muted);
+  font-family: var(--font-serif);
+  font-size: calc(17px * var(--fs));
+  letter-spacing: 1px;
+  margin: 14px 0 0;
+}
+.listen-transcript {
+  display: grid;
+  gap: 8px;
+  list-style: decimal;
+  margin: 24px 0 0;
+  padding-left: 22px;
+}
+.listen-transcript li {
+  font-size: calc(15px * var(--fs));
+  line-height: 1.5;
+}
+.listen-transcript--good {
+  color: var(--good-text);
+}
+.listen-transcript--bad span {
+  color: var(--ink);
+}
+.listen-transcript small {
+  color: var(--danger-text);
+  display: block;
+}

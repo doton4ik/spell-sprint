@@ -1,6 +1,7 @@
-import { describe, expect, it } from 'vitest'
+import { beforeEach, describe, expect, it } from 'vitest'
 import { listeningClips } from '../data/listeningClips'
-import { checkLine, clipScore } from './listening'
+import { checkLine, clipScore, getListeningProgress, lineHint, recordListeningAnswer, saveClipScore } from './listening'
+import { getPracticeAttempts } from './practiceStorage'
 
 describe('checkLine', () => {
   it('accepts the line with other case, punctuation and apostrophe', () => {
@@ -53,5 +54,49 @@ describe('listening clips', () => {
         expect(line.start).toBeDefined()
         expect(line.end).toBeGreaterThan(line.start ?? Infinity)
       }
+  })
+})
+
+describe('lineHint', () => {
+  it('shows the first letter and the length of every word, with the punctuation', () => {
+    expect(lineHint("It is a pity, isn't it?")).toBe('I· i· a p···, i···· i·?')
+  })
+})
+
+describe('saving answers', () => {
+  beforeEach(() => window.localStorage.clear())
+
+  it('saves a wrong line as a mistake of the Listening library', () => {
+    recordListeningAnswer({ id: 'clip-a', title: 'A' }, 2, 'The shop opens at nine.', 'The shop open at nine', {
+      correct: false,
+      skipped: false,
+      hintUsed: false,
+    })
+    const [attempt] = getPracticeAttempts()
+    expect(attempt).toMatchObject({
+      taskId: 'listen-clip-a-2',
+      library: 'Listening',
+      attemptMode: 'listen-write',
+      isCorrect: false,
+      needsReview: true,
+      correctAnswer: 'The shop opens at nine.',
+    })
+  })
+  it('saves a skipped line as a miss without an answer', () => {
+    recordListeningAnswer({ id: 'clip-a', title: 'A' }, 0, 'Hello there my friend.', '', { correct: false, skipped: true, hintUsed: false })
+    expect(getPracticeAttempts()[0]).toMatchObject({ wasSkipped: true, userAnswer: '', isCorrect: false })
+  })
+  it('a right line is not a mistake', () => {
+    recordListeningAnswer({ id: 'clip-a', title: 'A' }, 1, 'Hello there my friend.', 'hello there my friend', {
+      correct: true,
+      skipped: false,
+      hintUsed: false,
+    })
+    expect(getPracticeAttempts()[0]).toMatchObject({ isCorrect: true, needsReview: false })
+  })
+  it('keeps the best score of a clip', () => {
+    saveClipScore('clip-a', 60)
+    saveClipScore('clip-a', 40)
+    expect(getListeningProgress()['clip-a']).toEqual({ best: 60, last: 40, plays: 2 })
   })
 })

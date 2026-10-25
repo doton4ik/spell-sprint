@@ -3,12 +3,21 @@ import { Icon } from '../components/icons/Icon'
 import { YouTubePlayer, type LinePlayer } from '../components/listening/YouTubePlayer'
 import { defaultPracticeSettings } from '../data/practice'
 import { listeningClips, type ListeningClip } from '../data/listeningClips'
-import { checkLine, clipScore, type LineResult } from '../services/listening'
+import {
+  checkLine,
+  clipScore,
+  getListeningProgress,
+  lineHint,
+  recordListeningAnswer,
+  saveClipScore,
+  type LineResult,
+} from '../services/listening'
 import { loadPracticeSettings } from '../services/practiceStorage'
 import { canSpeak, speakEnglish, stopSpeaking } from '../services/speech'
 import './listening.css'
 
-type Phase = { kind: 'list' } | { kind: 'session'; clip: ListeningClip } | { kind: 'done'; clip: ListeningClip; results: boolean[] }
+type Answered = { text: string; given: string; correct: boolean; skipped: boolean }
+type Phase = { kind: 'list' } | { kind: 'session'; clip: ListeningClip } | { kind: 'done'; clip: ListeningClip; answered: Answered[] }
 
 export function ListeningPage() {
   const [phase, setPhase] = useState<Phase>({ kind: 'list' })
@@ -17,18 +26,23 @@ export function ListeningPage() {
     return (
       <Session
         clip={phase.clip}
-        onFinish={(results) => setPhase({ kind: 'done', clip: phase.clip, results })}
+        onFinish={(answered) => {
+          saveClipScore(phase.clip.id, clipScore(answered.map((item) => item.correct)))
+          setPhase({ kind: 'done', clip: phase.clip, answered })
+        }}
         onQuit={() => setPhase({ kind: 'list' })}
       />
     )
   if (phase.kind === 'done') {
-    const score = clipScore(phase.results)
+    const score = clipScore(phase.answered.map((item) => item.correct))
+    const wrong = phase.answered.filter((item) => !item.correct).length
     return (
       <div className="listen-page">
         <header className="listen-header">
           <h1>{score}%</h1>
           <p>
-            {phase.results.filter(Boolean).length} of {phase.results.length} lines written right in “{phase.clip.title}”.
+            {phase.answered.length - wrong} of {phase.answered.length} lines written right in “{phase.clip.title}”.
+            {wrong ? ' The lines you missed are in My Mistakes.' : ''}
           </p>
         </header>
         <div className="listen-actions">
@@ -39,9 +53,18 @@ export function ListeningPage() {
             All clips
           </button>
         </div>
+        <ol className="listen-transcript">
+          {phase.answered.map((item, i) => (
+            <li key={i} className={item.correct ? 'listen-transcript--good' : 'listen-transcript--bad'}>
+              <span>{item.text}</span>
+              {item.correct ? null : <small>{item.skipped ? 'skipped' : `you wrote: ${item.given}`}</small>}
+            </li>
+          ))}
+        </ol>
       </div>
     )
   }
+  const progress = getListeningProgress()
   return (
     <div className="listen-page" id="listening">
       <header className="listen-header">
@@ -55,7 +78,9 @@ export function ListeningPage() {
             <button type="button" className="listen-clip" onClick={() => setPhase({ kind: 'session', clip })}>
               <span className="listen-clip__level">{clip.level}</span>
               <strong>{clip.title}</strong>
-              <small>{clip.lines.length} lines</small>
+              <small>
+                {clip.lines.length} lines{progress[clip.id] ? ` · best ${progress[clip.id].best}%` : ''}
+              </small>
             </button>
           </li>
         ))}
@@ -64,11 +89,12 @@ export function ListeningPage() {
   )
 }
 
-function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (results: boolean[]) => void; onQuit: () => void }) {
+function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (answered: Answered[]) => void; onQuit: () => void }) {
   const [index, setIndex] = useState(0)
   const [answer, setAnswer] = useState('')
-  const [result, setResult] = useState<LineResult | null>(null)
-  const [results, setResults] = useState<boolean[]>([])
+  const [result, setResult] = useState<(LineResult & { skipped: boolean }) | null>(null)
+  const [hint, setHint] = useState(false)
+  const [answered, setAnswered] = useState<Answered[]>([])
   const input = useRef<HTMLInputElement>(null)
   const video = useRef<LinePlayer>(null)
   // a video that cannot be shown (blocked, removed, not allowed to be embedded) falls back to the voice
@@ -86,24 +112,29 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (r
     if (videoId && line.start !== undefined && line.end !== undefined) video.current?.playLine(line.start, line.end, 1)
     else speakEnglish(line.text, locale)
     input.current?.focus()
+    const player = video.current
     return () => {
       stopSpeaking()
-      video.current?.stop()
+      player?.stop()
     }
   }, [line.text, line.start, line.end, locale, videoId])
 
-  const check = () => {
+  // the answer is saved when it is checked, so a clip left half way keeps what was done
+  const settle = (skipped: boolean) => {
     if (result) return
-    setResult(checkLine(line.text, answer))
+    const checked = checkLine(line.text, skipped ? '' : answer)
+    setResult({ ...checked, skipped })
+    recordListeningAnswer(clip, index, line.text, skipped ? '' : answer, { correct: checked.correct, skipped, hintUsed: hint })
   }
   const next = () => {
     if (!result) return
-    const all = [...results, result.correct]
+    const all = [...answered, { text: line.text, given: answer.trim(), correct: result.correct, skipped: result.skipped }]
     if (index + 1 >= clip.lines.length) return onFinish(all)
-    setResults(all)
+    setAnswered(all)
     setIndex(index + 1)
     setAnswer('')
     setResult(null)
+    setHint(false)
   }
 
   return (
@@ -116,6 +147,9 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (r
           {clip.title} · {index + 1} / {clip.lines.length}
         </span>
       </header>
+      <div className="listen-progress" aria-hidden="true">
+        <span style={{ width: `${(index / clip.lines.length) * 100}%` }} />
+      </div>
       <section className="listen-card">
         {videoId ? <YouTubePlayer ref={video} videoId={videoId} onFailed={() => setVideoFailed(true)} /> : null}
         <div className="listen-play">
@@ -125,12 +159,18 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (r
           <button className="template-button" type="button" onClick={() => play(true)}>
             Slowly
           </button>
+          {result ? null : (
+            <button className="template-button" type="button" onClick={() => setHint(true)} disabled={hint}>
+              Hint
+            </button>
+          )}
         </div>
+        {hint && !result ? <p className="listen-hint">{lineHint(line.text)}</p> : null}
         <form
           onSubmit={(event) => {
             event.preventDefault()
             if (result) next()
-            else check()
+            else if (answer.trim()) settle(false)
           }}
         >
           <input
@@ -147,18 +187,20 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (r
           />
           {result ? (
             <div className={`listen-result listen-result--${result.correct ? 'good' : 'bad'}`} role="status">
-              <strong>{result.correct ? 'Right' : 'Not quite'}</strong>
+              <strong>{result.correct ? 'Right' : result.skipped ? 'Skipped' : 'Not quite'}</strong>
               {result.correct ? null : (
                 <>
-                  <p className="listen-yours">
-                    {result.given.length
-                      ? result.given.map((word, i) => (
-                          <span key={i} className={word.same ? '' : 'listen-word--wrong'}>
-                            {word.text}{' '}
-                          </span>
-                        ))
-                      : '—'}
-                  </p>
+                  {result.skipped ? null : (
+                    <p className="listen-yours">
+                      {result.given.length
+                        ? result.given.map((word, i) => (
+                            <span key={i} className={word.same ? '' : 'listen-word--wrong'}>
+                              {word.text}{' '}
+                            </span>
+                          ))
+                        : '—'}
+                    </p>
+                  )}
                   <p className="listen-right">{line.text}</p>
                 </>
               )}
@@ -167,9 +209,14 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (r
               </button>
             </div>
           ) : (
-            <button className="check-button" type="submit">
-              Check
-            </button>
+            <div className="listen-play">
+              <button className="check-button" type="submit" disabled={!answer.trim()}>
+                Check
+              </button>
+              <button className="quiet-button" type="button" onClick={() => settle(true)}>
+                Skip
+              </button>
+            </div>
           )}
         </form>
       </section>

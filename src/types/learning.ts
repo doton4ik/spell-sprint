@@ -27,7 +27,7 @@ export type MistakeEntry = {
   memoryCue?: string
   riskLevel?: 'low' | 'medium' | 'high'
   source?: 'practice' | 'personal-baseline'
-  origin?: string // Practice, Proofreading, Level check, Sprint or Pairs
+  origin?: string // Practice, Proofreading, Level check, Sprint, Listening or Pairs
   lastMistakeAt?: string
   archived?: boolean // no mistake for 30 days and right since: kept quietly, out of the way
   pairId?: string // a mistake in a look-alike pair (Pairs page)
