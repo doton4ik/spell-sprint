@@ -1,4 +1,3 @@
-import { PairsProgress } from '../components/ui/PageRails'
 import { useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
 import { clearPairToOpen, pairStatuses, pairToOpen, recordPairAnswer, type PairStatus } from '../services/pairs'
@@ -40,6 +39,7 @@ export function PairsPage() {
   const statuses = pairStatuses()
   const due = statuses.filter((status) => status.due && status.state !== 'new').length
   const mastered = statuses.filter((status) => status.state === 'mastered').length
+  const learning = statuses.filter((status) => status.state === 'learning').length
   const tricky = statuses
     .filter((status) => status.errors > 0)
     .sort((a, b) => b.errors - a.errors)
@@ -50,7 +50,6 @@ export function PairsPage() {
         <h1>Words that sound or look alike</h1>
         <p>their or there, lose or loose — choose the one that fits.</p>
       </header>
-      <PairsProgress />
       <section className="pairs-start">
         <div className="pairs-stats">
           <strong>
@@ -58,12 +57,16 @@ export function PairsPage() {
             <small>pairs</small>
           </strong>
           <strong>
-            {due}
-            <small>to review today</small>
+            {mastered}
+            <small>learned</small>
           </strong>
           <strong>
-            {mastered}
-            <small>mastered</small>
+            {learning}
+            <small>being learned</small>
+          </strong>
+          <strong>
+            {due}
+            <small>to review today</small>
           </strong>
         </div>
         <button

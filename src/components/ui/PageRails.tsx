@@ -1,6 +1,5 @@
 import { useMemo, type ReactNode } from 'react'
 import { setPendingPracticeSelection } from '../../services/libraryPractice'
-import { pairStatuses } from '../../services/pairs'
 import { getPracticeAttempts } from '../../services/practiceStorage'
 import { getSprintRounds } from '../../services/sprint'
 import { getTopicStats } from '../../services/topicStats'
@@ -15,9 +14,9 @@ function Rail({ children, label }: { children: ReactNode; label: string }) {
   )
 }
 
-function RailCard({ label, children, className }: { label: string; children: ReactNode; className?: string }) {
+function RailCard({ label, children }: { label: string; children: ReactNode }) {
   return (
-    <section className={className ? `rail-card ${className}` : 'rail-card'}>
+    <section className="rail-card">
       <span className="rail-card__label">{label}</span>
       {children}
     </section>
@@ -82,29 +81,6 @@ export function ProofreadingRail() {
         ))}
       </RailCard>
     </Rail>
-  )
-}
-
-// Pairs: how many pairs are new, being learned and learned, and how many are due.
-export function PairsProgress() {
-  const status = useMemo(() => {
-    const all = pairStatuses()
-    return {
-      total: all.length,
-      learning: all.filter((item) => item.state === 'learning').length,
-      mastered: all.filter((item) => item.state === 'mastered').length,
-      due: all.filter((item) => item.due && item.state !== 'new').length,
-    }
-  }, [])
-  if (!status.learning && !status.mastered) return null
-  return (
-    <RailCard label="Your pairs" className="pairs-progress">
-      <div className="pairs-progress__rows">
-        <RailRow name="Learned" value={`${status.mastered} of ${status.total}`} />
-        <RailRow name="Being learned" value={String(status.learning)} />
-        <RailRow name="To repeat today" value={String(status.due)} />
-      </div>
-    </RailCard>
   )
 }
 
