@@ -3,6 +3,7 @@ import { Icon } from '../components/icons/Icon'
 import { clearPairToOpen, pairStatuses, pairToOpen, recordPairAnswer, type PairStatus } from '../services/pairs'
 import { buildPairSession, pairQuestions, type PairQuestion } from '../services/pairSession'
 import './pairs.css'
+import { PairsRail } from '../components/ui/PageRails'
 
 type Phase =
   | { kind: 'list' }
@@ -46,6 +47,7 @@ export function PairsPage() {
     .slice(0, 6)
   return (
     <div className="pairs-page" id="pairs">
+      <PairsRail />
       <header className="pairs-header">
         <h1>Words that sound or look alike</h1>
         <p>their or there, lose or loose — choose the one that fits.</p>

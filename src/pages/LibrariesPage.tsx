@@ -16,6 +16,7 @@ import { getAllRuleWordLinks, getVisibleRules, setPendingRuleFocus } from '../se
 import { partOfSpeechOptions, type LibraryDifficulty, type LibraryWord, type WordLibrary } from '../types/library'
 import type { Rule } from '../types/rules'
 import './libraries.css'
+import { LibrariesRail } from '../components/ui/PageRails'
 
 type Details = { title: string; description: string; words: LibraryWord[]; library?: WordLibrary; restorable?: boolean }
 type Tab = LibraryGroup['id'] | 'packs'
@@ -259,6 +260,7 @@ export function LibrariesPage() {
     )
   return (
     <div className="libraries-page" id="libraries">
+      <LibrariesRail />
       <header className="libraries-header">
         <div>
           <h1>Libraries</h1>

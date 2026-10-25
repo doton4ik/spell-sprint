@@ -15,6 +15,7 @@ import {
 import type { MistakeEvent, Rule, RuleType, UserRuleProgress } from '../types/rules'
 import './learning.css'
 import './rules.css'
+import { RulesRail } from '../components/ui/PageRails'
 
 // One unclassified mistake with its two ways out: attach it to a rule that already exists, or
 // start a new private rule from it.
@@ -214,6 +215,7 @@ export function RulesPage() {
 
   return (
     <div className="learning-page" id="rules">
+      <RulesRail />
       <header className="learning-header">
         <div>
           <h1>Rules that stick</h1>

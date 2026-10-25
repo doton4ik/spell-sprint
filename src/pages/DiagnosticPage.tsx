@@ -26,6 +26,7 @@ import {
 import { subscribeToLearningData } from '../services/learningData'
 import { setPendingPracticeSelection } from '../services/libraryPractice'
 import './level-check.css'
+import { LevelRail } from '../components/ui/PageRails'
 
 const skills = skillOrder
 const levelNames = ['A2', 'B1', 'B2', 'C1']
@@ -103,6 +104,7 @@ function HomeView({
   const { due, date } = nextCheckDue(checks)
   return (
     <div className="level-page" id="level-check">
+      <LevelRail />
       <section className="level-hero">
         <div>
           <h1>Where is your English now?</h1>

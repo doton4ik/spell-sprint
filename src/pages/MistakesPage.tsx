@@ -12,6 +12,7 @@ import type { ErrorFamily, LearningStatus, MistakeEntry } from '../types/learnin
 import { MistakePatternsView } from '../components/mistakes/MistakePatternsView'
 import './learning.css'
 import './rules.css'
+import { MistakesRail } from '../components/ui/PageRails'
 
 const families: Array<'All' | ErrorFamily> = ['All', 'Spelling', 'Grammar', 'Vocabulary']
 const DAY = 86400000
@@ -285,6 +286,7 @@ export function MistakesPage() {
 
   return (
     <div className="learning-page" id="my-mistakes">
+      <MistakesRail />
       <header className="learning-header">
         <div>
           <h1>My mistakes</h1>

@@ -39,6 +39,13 @@
   color: var(--accent-text-strong);
   font-weight: 600;
 }
+.rail-row--note,
+.rail-note {
+  color: var(--ink-muted);
+  font-size: calc(13px * var(--fs));
+  line-height: 1.5;
+  margin: 0;
+}
 .rail-row--button {
   cursor: pointer;
   width: 100%;
@@ -51,7 +58,10 @@
 .pairs-page,
 .proof-page,
 .topics-page,
-.settings-page {
+.settings-page,
+.libraries-page,
+.learning-page,
+.level-page {
   position: relative;
 }
 /* The page starts at the same left edge as every other page and its rail sits beside it; when the window is narrower the page
@@ -67,25 +77,45 @@
 .settings-page {
   --page-w: 1100px;
 }
+.libraries-page,
+.learning-page {
+  --page-w: 1330px;
+}
+.level-page {
+  --page-w: 900px;
+}
 @media (min-width: 1200px) {
   .sprint-page:has(> .page-rail),
   .pairs-page:has(> .page-rail),
   .proof-page:has(> .page-rail),
   .topics-page:has(> .page-rail),
-  .settings-page:has(> .page-rail) {
+  .settings-page:has(> .page-rail),
+  .libraries-page:has(> .page-rail),
+  .learning-page:has(> .page-rail),
+  .level-page:has(> .page-rail) {
     margin-left: 0;
     margin-right: 0;
     max-width: none;
     width: min(var(--page-w), 100% - 228px);
   }
   .page-rail {
-    display: grid;
+    display: block;
   }
 }
 .page-rail {
-  gap: 14px;
+  bottom: 0;
   left: calc(100% - 32px);
   position: absolute;
   top: 49px;
   width: 260px;
+}
+/* The rail column is as tall as the page; the cards inside ride along while the page scrolls, so the margin is never empty.
+   If the cards are taller than the window they scroll inside, so their bottom can still be reached. */
+.page-rail__stick {
+  display: grid;
+  gap: 14px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  position: sticky;
+  top: 24px;
 }
