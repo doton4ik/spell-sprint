@@ -96,7 +96,7 @@
 }
 .mistake-answer s {
   color: var(--danger-text);
-  text-decoration-color: #e2ada7;
+  text-decoration-color: var(--danger-line);
 }
 .mistake-answer strong {
   color: var(--accent-text);

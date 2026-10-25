@@ -549,7 +549,7 @@
 
 /* Today's session: the plan built from due, weak and new words, with the daily goal ring. */
 .today-card :focus-visible {
-  outline-color: #fff;
+  outline-color: var(--on-accent);
 }
 .today-card {
   align-items: center;

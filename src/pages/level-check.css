@@ -139,7 +139,7 @@
 }
 .level-chart__axis {
   fill: var(--ink-muted);
-  font-size: 11px;
+  font-size: calc(11px * var(--fs));
 }
 .level-chart__line polyline {
   stroke-width: 2.5;

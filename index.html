@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f5f0e6" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f5f0e6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#16130f" media="(prefers-color-scheme: dark)" />
     <meta name="description" content="Spell Sprint — your calm workspace for improving English." />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="icon" href="/icons/spell-sprint-icon.svg" type="image/svg+xml" />
@@ -18,10 +20,19 @@
         margin: 40vh 16px 0;
         text-align: center;
       }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #16130f;
+        }
+        .boot-screen {
+          color: #a79d8d;
+        }
+      }
     </style>
   </head>
   <body>
     <div id="root"><p class="boot-screen">Spell Sprint</p></div>
+    <noscript>Spell Sprint needs JavaScript. Please turn it on in your browser.</noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -236,7 +236,7 @@
     border: 2px solid var(--line);
     border-radius: 999px;
     color: var(--on-accent);
-    font-size: 10px;
+    font-size: calc(10px * var(--fs));
     font-weight: 700;
     left: calc(50% + 6px);
     line-height: 1;
@@ -255,7 +255,7 @@
   /* "More": a sheet that rises from the bottom, above the tab bar. */
   .mobile-more__backdrop {
     animation: more-fade 0.15s ease;
-    background: rgba(20, 35, 31, 0.35);
+    background: var(--backdrop);
     border: 0;
     display: block;
     inset: 0;
@@ -268,7 +268,7 @@
     background: var(--surface, var(--surface));
     border-radius: 20px 22px 0 0;
     bottom: 0;
-    box-shadow: 0 -10px 30px rgba(20, 35, 31, 0.14);
+    box-shadow: 0 -10px 30px color-mix(in srgb, var(--ink) 14%, transparent);
     display: grid;
     gap: 14px;
     left: 0;
@@ -413,7 +413,7 @@
   background: transparent;
   border: 0;
   color: inherit;
-  font-size: 18px;
+  font-size: calc(18px * var(--fs));
   line-height: 1;
   padding: 0 4px;
 }

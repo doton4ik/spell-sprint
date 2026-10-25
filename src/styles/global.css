@@ -52,6 +52,40 @@ button {
   cursor: pointer;
 }
 
+/* Text for screen readers only (a symbol such as ✓ or ✗ needs a word beside it). */
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Digits keep one width, so counters and timers do not jitter. */
+:is(
+  .metric-card__value,
+  .weekly-total,
+  .topic-row__count,
+  .rule-runner__count,
+  .proof-counter,
+  .proof-score,
+  .session-progress,
+  .session-stat,
+  .sprint-hero__clock,
+  .sprint-stats,
+  .pairs-stats,
+  .library-total,
+  .search-results__count,
+  .rules-progress__stat,
+  .header-streak,
+  .plan-step__state
+) {
+  font-variant-numeric: tabular-nums;
+}
+
 /* Keyboard focus is always visible; mouse clicks do not show the ring. */
 :where(button, a, input, select, textarea, [role='radio']):focus-visible {
   outline: 2px solid var(--accent);

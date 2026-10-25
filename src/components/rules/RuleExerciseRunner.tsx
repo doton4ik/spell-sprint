@@ -129,6 +129,7 @@ export function RuleExerciseRunner({ items, loop, showRuleTitle, onProgress, onF
             value={answer}
             onChange={(event) => setAnswer(event.target.value)}
             placeholder="Type your answer"
+            aria-label="Your answer"
             autoFocus
           />
           <button className="check-button" type="submit" disabled={!answer.trim()}>

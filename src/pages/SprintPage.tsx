@@ -276,7 +276,8 @@ function SprintRun({ words, onFinish }: { words: LibraryWord[]; onFinish: (round
           />
           {miss ? (
             <p className="sprint-miss" role="status">
-              ✗ <strong>{miss}</strong>
+              <span aria-hidden="true">✗</span> <span className="sr-only">Missed: </span>
+              <strong>{miss}</strong>
             </p>
           ) : (
             <button className="check-button" type="submit" disabled={!typed.trim()}>

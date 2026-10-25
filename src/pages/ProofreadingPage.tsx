@@ -535,7 +535,12 @@ function ResultView({
         <ul>
           {result.slots.map(({ slot, status, learnerText }) => (
             <li className={`proof-explain__item proof-explain__item--${status}`} key={slot.id}>
-              <span className="proof-explain__status">{status === 'fixed' ? '✓' : status === 'wrong-fix' ? '~' : '✗'}</span>
+              <span className="proof-explain__status">
+                {status === 'fixed' ? '✓' : status === 'wrong-fix' ? '~' : '✗'}
+                <span className="sr-only">
+                  {status === 'fixed' ? ' Fixed' : status === 'wrong-fix' ? ' Changed, but not right' : ' Missed'}
+                </span>
+              </span>
               <div>
                 <p>
                   <s>{slot.shown}</s> → <b>{slot.correct.join(' / ')}</b>

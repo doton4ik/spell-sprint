@@ -100,7 +100,7 @@
 /* In Libraries the panel opens over the page, so it is never squeezed into the narrow word column. */
 .word-report-overlay {
   align-items: flex-start;
-  background: rgba(16, 32, 29, 0.42);
+  background: var(--backdrop);
   display: flex;
   inset: 0;
   justify-content: center;
@@ -121,7 +121,7 @@
 /* The paper look, like the panels of the pages: a surface card with a thin line, a serif title and the ink-blue accent
    (amber stays for warnings and streaks). Only the dialog; the small inline report keeps its own style. */
 .word-report-overlay {
-  background: rgba(30, 24, 16, 0.48);
+  background: var(--backdrop);
 }
 .word-report-overlay .word-report {
   background: var(--surface);

@@ -234,6 +234,7 @@ export function CheckRunner({
                 kind === 'dictation' ? 'Type what you hear…' : item.skill === 'grammar' ? 'Write the answer…' : 'Type your answer…'
               }
               disabled={Boolean(feedback)}
+              aria-label="Your answer"
               autoFocus
               key={item.id}
             />

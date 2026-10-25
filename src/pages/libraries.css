@@ -1102,7 +1102,7 @@
   border: 0;
   color: var(--ink-muted, var(--ink-soft));
   cursor: pointer;
-  font-size: 18px;
+  font-size: calc(18px * var(--fs));
   line-height: 1;
   padding: 6px;
   position: absolute;

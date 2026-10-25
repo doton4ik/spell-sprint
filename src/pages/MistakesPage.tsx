@@ -55,6 +55,7 @@ function History({ entry }: { entry: MistakeEntry }) {
           <span className="mistake-history__mark" aria-hidden="true">
             {item.yellow ? '' : item.correct ? '✓' : '✗'}
           </span>
+          <span className="sr-only">{item.yellow ? 'Typo: ' : item.correct ? 'Right: ' : 'Wrong: '}</span>
           <strong>{item.correct ? entry.correctAnswer : item.typed || '—'}</strong>
           <span>
             {item.yellow ? 'yellow card · ' : ''}

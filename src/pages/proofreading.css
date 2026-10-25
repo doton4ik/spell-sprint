@@ -534,7 +534,7 @@
 }
 .proof-add-word {
   align-items: flex-start;
-  background: rgba(16, 32, 29, 0.42);
+  background: var(--backdrop);
   display: flex;
   inset: 0;
   justify-content: center;
