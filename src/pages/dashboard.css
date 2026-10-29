@@ -667,18 +667,18 @@
   background: conic-gradient(var(--on-accent) var(--goal), rgba(255, 255, 255, 0.2) 0);
   border-radius: 50%;
   display: grid;
-  height: 112px;
+  height: calc(112px * var(--fs));
   place-items: center;
-  width: 112px;
+  width: calc(112px * var(--fs));
 }
 .goal-ring > div {
   align-content: center;
   background: var(--accent-dark);
   border-radius: 50%;
   display: grid;
-  height: 88px;
+  height: calc(88px * var(--fs));
   justify-items: center;
-  width: 88px;
+  width: calc(88px * var(--fs));
 }
 .goal-ring strong {
   font-size: calc(28px * var(--fs));
@@ -728,12 +728,12 @@
     justify-content: flex-start;
   }
   .goal-ring {
-    height: 64px;
-    width: 64px;
+    height: calc(64px * var(--fs));
+    width: calc(64px * var(--fs));
   }
   .goal-ring > div {
-    height: 50px;
-    width: 50px;
+    height: calc(50px * var(--fs));
+    width: calc(50px * var(--fs));
   }
   .goal-ring strong {
     font-size: calc(18px * var(--fs));

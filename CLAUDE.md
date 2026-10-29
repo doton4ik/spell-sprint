@@ -68,7 +68,8 @@ This project runs with Sonnet as the main model, Opus as the advisor and Haiku f
   Palette (paper design, 14 Oct 2026): warm paper and ink; `--accent*` = ink blue (brand, links, the main button, the current page);
   `--good*` = sage green, ONLY for right / done / mastered; `--danger*` = mistakes; headings and the word to translate use `--font-serif`
   (system book serif, no font files).
-  Every font size is `calc(Npx * var(--fs))`.
+  Every font size is `calc(Npx * var(--fs))`. The size of anything that holds text (a ring, a circle, a badge, a fixed-size box) must scale the same way,
+  `calc(Npx * var(--fs))`, so the text stays inside it at 200%. Media-query breakpoints are scaled by `--fs` at run time (`appearanceStorage.ts`).
 - Content checks: `scripts/check-*.mjs` (part of `pnpm check`).
 
 ## Gotchas
