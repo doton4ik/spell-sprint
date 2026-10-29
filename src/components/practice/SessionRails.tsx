@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, type ReactNode } from 'react'
 import type { TaskOutcome } from '../../hooks/usePracticeSession'
 import { buildChecklist } from '../../services/dailyChecklist'
 import { getStreak } from '../../services/dailyPlan'
@@ -11,6 +11,7 @@ type SessionRailsProps = {
   tasks: PracticeTask[]
   outcomes: Record<string, TaskOutcome>
   feedbackRef?: (element: HTMLDivElement | null) => void // the answer feedback is drawn here on wide screens
+  setup?: ReactNode // the session settings (set, mode, size), always open in the panel on desktop
 }
 
 const MAX_MAP_TASKS = 40
@@ -25,7 +26,7 @@ function pairOf(task: PracticeTask, mode: PracticeMode) {
 
 // Wide screens only (CSS): one quiet panel beside the task with the session map and the words missed
 // so far. The same things as the slim bar above the task, never hints.
-export function SessionRails({ mode, taskIndex, tasks, outcomes, feedbackRef }: SessionRailsProps) {
+export function SessionRails({ mode, taskIndex, tasks, outcomes, feedbackRef, setup }: SessionRailsProps) {
   // Today, beyond this session: the daily goal, what is waiting for review, the streak. Read again after every answer.
   const today = useMemo(
     () => ({
@@ -44,6 +45,12 @@ export function SessionRails({ mode, taskIndex, tasks, outcomes, feedbackRef }: 
 
   return (
     <aside className="session-rail" aria-label="Session">
+      {setup ? (
+        <div className="session-rail__block session-rail__setup">
+          <span className="session-rail__label">Session</span>
+          {setup}
+        </div>
+      ) : null}
       <div className="session-rail__feedback" ref={feedbackRef} />
       <div className="session-rail__head">
         <strong>

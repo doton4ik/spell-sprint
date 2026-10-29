@@ -1592,3 +1592,55 @@
   font-family: var(--font-serif);
   font-size: max(18px, calc(20px * var(--fs)));
 }
+
+/* Desktop: the task on the left, one panel on the right from the same top edge. The panel holds the session settings (always
+   open), the progress, the words missed and, on wide screens, the feedback on the answer. */
+@media (min-width: 1200px) {
+  .practice-page:has(.session-rail) {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 1240px;
+    width: 100%;
+  }
+  .practice-page:has(.session-rail) .practice-workspace {
+    align-items: start;
+    gap: 14px 32px;
+    grid-template-columns: minmax(0, 1fr) 340px;
+  }
+  .practice-page:has(.session-rail) .practice-workspace > :not(.session-rail) {
+    grid-column: 1;
+  }
+  .practice-page:has(.session-rail) .session-rail {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    left: auto;
+    position: static;
+    top: auto;
+    width: auto;
+  }
+  .session-rail__setup .practice-filters {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+  }
+  .session-rail__setup .practice-select select {
+    width: 100%;
+  }
+}
+@media (min-width: 1700px) {
+  .practice-page:has(.session-rail) {
+    max-width: 1420px;
+  }
+  .practice-page:has(.session-rail) .practice-workspace {
+    grid-template-columns: minmax(0, 1fr) 380px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1479px) {
+  .session-rail .session-rail__block--today {
+    display: block;
+  }
+}
+
+.practice-setup[hidden] {
+  display: none;
+}

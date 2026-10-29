@@ -1,23 +1,25 @@
-// Text size preference. It sets one CSS variable (--fs) on <html>; every font size in the
+// Text size preference: a slider from 85% to 200%. It sets one CSS variable (--fs) on <html>; every font size in the
 // stylesheets is written as calc(Npx * var(--fs)), so one setting scales the whole app evenly.
-export type FontScale = 'compact' | 'default' | 'large' | 'xlarge'
+export type FontScale = number // percent
 
-export const fontScaleOptions: Array<{ value: FontScale; label: string; factor: number }> = [
-  { value: 'compact', label: 'Compact', factor: 0.92 },
-  { value: 'default', label: 'Default', factor: 1 },
-  { value: 'large', label: 'Large', factor: 1.15 },
-  { value: 'xlarge', label: 'Extra large', factor: 1.3 },
-]
+export const FONT_SCALE_MIN = 85
+export const FONT_SCALE_MAX = 200
+export const FONT_SCALE_STEP = 5
 
 const KEY = 'spell-sprint.font-scale'
-const isFontScale = (value: unknown): value is FontScale => fontScaleOptions.some((option) => option.value === value)
+// The four named sizes of the earlier version are still read.
+const legacy: Record<string, number> = { compact: 92, default: 100, large: 115, xlarge: 130 }
+export const clampFontScale = (value: number) =>
+  Math.min(FONT_SCALE_MAX, Math.max(FONT_SCALE_MIN, Math.round(value / FONT_SCALE_STEP) * FONT_SCALE_STEP))
 
 export function getFontScale(): FontScale {
   try {
     const stored = window.localStorage.getItem(KEY)
-    return isFontScale(stored) ? stored : 'default'
+    if (stored && stored in legacy) return legacy[stored]
+    const value = Number(stored)
+    return stored && Number.isFinite(value) ? clampFontScale(value) : 100
   } catch {
-    return 'default'
+    return 100
   }
 }
 
@@ -29,7 +31,7 @@ export function screenFactor(width: number) {
 
 let watching = false
 export function applyFontScale(scale: FontScale = getFontScale()) {
-  const factor = fontScaleOptions.find((option) => option.value === scale)?.factor ?? 1
+  const factor = clampFontScale(scale) / 100
   document.documentElement.style.setProperty('--fs', String(Math.round(factor * screenFactor(window.innerWidth) * 1000) / 1000))
   // The window can be resized or moved to another screen: the size follows it.
   if (!watching) {
@@ -40,7 +42,7 @@ export function applyFontScale(scale: FontScale = getFontScale()) {
 
 export function setFontScale(scale: FontScale) {
   try {
-    window.localStorage.setItem(KEY, scale)
+    window.localStorage.setItem(KEY, String(clampFontScale(scale)))
   } catch {
     /* the choice still applies for this visit */
   }

@@ -605,3 +605,10 @@
     bottom: calc(60px + env(safe-area-inset-bottom));
   }
 }
+
+/* Desktop: the page is wider (still on the common left edge), so the list of texts fills the screen instead of leaving a blank half. */
+@media (min-width: 1200px) {
+  .proof-page {
+    max-width: 1240px;
+  }
+}

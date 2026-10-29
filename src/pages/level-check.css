@@ -949,3 +949,13 @@
 .level-passage--short {
   margin-bottom: -4px;
 }
+
+/* Desktop: more room for the cards; a running test stays a narrow column. */
+@media (min-width: 1200px) {
+  .level-page {
+    max-width: 1140px;
+  }
+  .level-page--running {
+    max-width: 820px;
+  }
+}

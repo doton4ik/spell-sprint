@@ -434,3 +434,10 @@
 .topic-dot--preliminary {
   background: var(--accent-muted);
 }
+
+/* Desktop: a little wider. */
+@media (min-width: 1200px) {
+  .topics-page {
+    max-width: 1240px;
+  }
+}

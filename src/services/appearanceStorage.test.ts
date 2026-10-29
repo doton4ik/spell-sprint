@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { applyFontScale, screenFactor, setFontScale } from './appearanceStorage'
+import { applyFontScale, clampFontScale, getFontScale, screenFactor, setFontScale } from './appearanceStorage'
 
 beforeEach(() => {
   window.localStorage.clear()
@@ -17,9 +17,19 @@ describe('the text size follows the screen width', () => {
 
   it('puts the learner’s own choice on top of it', () => {
     const width = window.innerWidth
-    applyFontScale('default')
+    applyFontScale(100)
     expect(Number(document.documentElement.style.getPropertyValue('--fs'))).toBeCloseTo(screenFactor(width), 3)
-    setFontScale('large')
+    setFontScale(115)
     expect(Number(document.documentElement.style.getPropertyValue('--fs'))).toBeCloseTo(1.15 * screenFactor(width), 3)
+  })
+
+  it('is a slider from 85% to 200% and still reads the old named sizes', () => {
+    expect(clampFontScale(10)).toBe(85)
+    expect(clampFontScale(500)).toBe(200)
+    expect(clampFontScale(152)).toBe(150)
+    window.localStorage.setItem('spell-sprint.font-scale', 'xlarge')
+    expect(getFontScale()).toBe(130)
+    setFontScale(200)
+    expect(getFontScale()).toBe(200)
   })
 })

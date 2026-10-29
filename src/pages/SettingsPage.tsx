@@ -25,7 +25,9 @@ import {
 import { loadPracticeSettings, savePracticeSettings } from '../services/practiceStorage'
 import { defaultPracticeSettings } from '../data/practice'
 import {
-  fontScaleOptions,
+  FONT_SCALE_MAX,
+  FONT_SCALE_MIN,
+  FONT_SCALE_STEP,
   getFontScale,
   getTheme,
   setFontScale,
@@ -501,19 +503,22 @@ export function SettingsPage() {
               </InfoTip>
             </div>
             <span className="settings-field-label">Text size</span>
-            <div className="font-scale-options" role="radiogroup" aria-label="Text size">
-              {fontScaleOptions.map((option) => (
-                <button
-                  type="button"
-                  role="radio"
-                  aria-checked={fontScale === option.value}
-                  className={fontScale === option.value ? 'font-scale-option font-scale-option--active' : 'font-scale-option'}
-                  onClick={() => chooseFontScale(option.value)}
-                  key={option.value}
-                >
-                  {option.label}
-                </button>
-              ))}
+            <div className="font-slider">
+              <span aria-hidden="true">A</span>
+              <input
+                type="range"
+                min={FONT_SCALE_MIN}
+                max={FONT_SCALE_MAX}
+                step={FONT_SCALE_STEP}
+                value={fontScale}
+                onChange={(event) => chooseFontScale(Number(event.target.value))}
+                aria-label="Text size"
+                aria-valuetext={`${fontScale}%`}
+              />
+              <span aria-hidden="true" className="font-slider__big">
+                A
+              </span>
+              <output>{fontScale}%</output>
             </div>
             <span className="settings-field-label">Theme</span>
             <div className="font-scale-options font-scale-options--theme" role="radiogroup" aria-label="Theme">

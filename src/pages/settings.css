@@ -48,7 +48,7 @@
   align-items: start;
   display: grid;
   gap: 18px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(280px * var(--fs))), 1fr));
   margin-top: 28px;
 }
 .settings-col {
@@ -189,6 +189,32 @@
   background: var(--accent-soft);
   border-color: var(--accent);
   color: var(--accent-text-strong);
+}
+.font-slider {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+.font-slider input {
+  accent-color: var(--accent);
+  flex: 1;
+  height: 28px;
+  min-width: 0;
+}
+.font-slider span {
+  color: var(--ink-muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+.font-slider .font-slider__big {
+  font-size: 24px;
+}
+.font-slider output {
+  color: var(--ink);
+  font-size: calc(14px * var(--fs));
+  font-weight: 700;
+  min-width: 3.5ch;
+  text-align: right;
 }
 .font-scale-preview {
   background: var(--surface-soft);
