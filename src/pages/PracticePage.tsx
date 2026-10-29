@@ -4,6 +4,7 @@ import { PracticeSettings } from '../components/practice/PracticeSettings'
 import { SessionRails } from '../components/practice/SessionRails'
 import { SessionSidebar } from '../components/practice/SessionSidebar'
 import { TaskCard } from '../components/practice/TaskCard'
+import { useMinWidth } from '../hooks/useMinWidth'
 import { usePracticeSession } from '../hooks/usePracticeSession'
 import {
   clearPendingPracticeSelection,
@@ -44,21 +45,9 @@ const modeLabels: Record<PracticeMode, string> = {
 export function PracticePage() {
   // On a wide screen the answer feedback is shown in the side panel; the panel gives the card a place to draw it.
   const [feedbackSlot, setFeedbackSlot] = useState<HTMLElement | null>(null)
-  const [wideRail, setWideRail] = useState(() => window.matchMedia('(min-width: 1480px)').matches)
-  useEffect(() => {
-    const query = window.matchMedia('(min-width: 1480px)')
-    const update = () => setWideRail(query.matches)
-    query.addEventListener('change', update)
-    return () => query.removeEventListener('change', update)
-  }, [])
+  const wideRail = useMinWidth(1480)
   // From 1200 px the session setup lives in the side panel and is always open.
-  const [sidePanel, setSidePanel] = useState(() => window.matchMedia('(min-width: 1200px)').matches)
-  useEffect(() => {
-    const query = window.matchMedia('(min-width: 1200px)')
-    const update = () => setSidePanel(query.matches)
-    query.addEventListener('change', update)
-    return () => query.removeEventListener('change', update)
-  }, [])
+  const sidePanel = useMinWidth(1200)
   const options = useMemo(getPracticeOptions, [])
   const [pendingSelection, setPendingSelection] = useState(consumePendingPracticeSelection)
   const [scope, setScope] = useState<PracticeScope>('all')

@@ -29,14 +29,76 @@ export function screenFactor(width: number) {
   return width >= 2200 ? 1.2 : width >= 1700 ? 1.1 : width >= 1400 ? 1.05 : 1
 }
 
+// A larger text size must lay the page out like a smaller window, as browser zoom does: at 180% a 1900 px screen is
+// about 1050 px wide, so side panels leave and grids lose columns. Every width/height in a media query of the
+// stylesheets is multiplied by the text size (a breakpoint of 800px becomes 1440px at 180%), and the same factor is
+// exposed to scripts through `currentTextFactor` and the "text-size-change" event.
+let textFactor = 1
+export const currentTextFactor = () => textFactor
+const originalMedia = new WeakMap<CSSMediaRule, string>()
+const appliedFactor = new WeakMap<CSSMediaRule, number>()
+
+function scaleRules(rules: CSSRuleList, factor: number) {
+  for (const rule of Array.from(rules)) {
+    if (rule instanceof CSSMediaRule) {
+      if (!originalMedia.has(rule)) originalMedia.set(rule, rule.media.mediaText)
+      if (appliedFactor.get(rule) !== factor) {
+        const scaled = (originalMedia.get(rule) ?? '').replace(
+          /(\d+(?:\.\d+)?)px/g,
+          (_, value) => `${Math.round(Number(value) * factor * 100) / 100}px`,
+        )
+        if (scaled && scaled !== rule.media.mediaText) rule.media.mediaText = scaled
+        appliedFactor.set(rule, factor)
+      }
+    }
+    const inner = (rule as CSSGroupingRule).cssRules
+    if (inner?.length) scaleRules(inner, factor)
+  }
+}
+
+function scaleMediaQueries() {
+  for (const sheet of Array.from(document.styleSheets)) {
+    try {
+      scaleRules(sheet.cssRules, textFactor)
+    } catch {
+      /* a sheet from another site cannot be read: it keeps its own breakpoints */
+    }
+  }
+}
+
 let watching = false
+let scheduled = false
+const scheduleScale = () => {
+  if (scheduled) return
+  scheduled = true
+  requestAnimationFrame(() => {
+    scheduled = false
+    scaleMediaQueries()
+  })
+}
+
 export function applyFontScale(scale: FontScale = getFontScale()) {
-  const factor = clampFontScale(scale) / 100
-  document.documentElement.style.setProperty('--fs', String(Math.round(factor * screenFactor(window.innerWidth) * 1000) / 1000))
+  const factor = Math.round((clampFontScale(scale) / 100) * screenFactor(window.innerWidth) * 1000) / 1000
+  document.documentElement.style.setProperty('--fs', String(factor))
+  const changed = factor !== textFactor
+  textFactor = factor
+  if (changed) {
+    scaleMediaQueries()
+    window.dispatchEvent(new Event('text-size-change'))
+  }
   // The window can be resized or moved to another screen: the size follows it.
   if (!watching) {
     watching = true
     window.addEventListener('resize', () => applyFontScale())
+    // Pages are loaded as they are opened, and their stylesheets join the document later.
+    new MutationObserver((records) => {
+      for (const record of records)
+        for (const node of Array.from(record.addedNodes)) {
+          if (node instanceof HTMLLinkElement) node.addEventListener('load', scheduleScale)
+          if (node instanceof HTMLLinkElement || node instanceof HTMLStyleElement) scheduleScale()
+        }
+    }).observe(document.head, { childList: true })
+    window.addEventListener('load', scheduleScale)
   }
 }
 

@@ -486,8 +486,8 @@
   .sidebar .nav-link {
     box-sizing: border-box;
     flex: 0 0 auto;
-    height: var(--nav-h);
-    min-height: 0;
+    height: auto;
+    min-height: var(--nav-h); /* large text makes the row taller; the menu scrolls */
   }
   .main-nav,
   .sidebar-bottom {

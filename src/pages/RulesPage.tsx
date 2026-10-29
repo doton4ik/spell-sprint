@@ -1,3 +1,4 @@
+import { useMinWidth } from '../hooks/useMinWidth'
 import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
 import { RuleDetail, type RuleTab } from '../components/rules/RuleDetail'
@@ -99,7 +100,7 @@ export function RulesPage() {
   const [selectedRuleId, setSelectedRuleId] = useState<string | null>(null)
   const [initialTab, setInitialTab] = useState<RuleTab>('rule')
   // Wide screens show the list and the selected rule side by side; narrow ones show one at a time.
-  const [wide, setWide] = useState(() => window.matchMedia('(min-width: 901px)').matches)
+  const wide = useMinWidth(901)
   const [showUnclassified, setShowUnclassified] = useState(false)
   const [progressByRule, setProgressByRule] = useState<Map<string, UserRuleProgress>>(new Map())
 
@@ -120,13 +121,6 @@ export function RulesPage() {
   function updateProgress(progress: UserRuleProgress) {
     setProgressByRule((current) => new Map(current).set(progress.ruleId, progress))
   }
-
-  useEffect(() => {
-    const query = window.matchMedia('(min-width: 901px)')
-    const update = () => setWide(query.matches)
-    query.addEventListener('change', update)
-    return () => query.removeEventListener('change', update)
-  }, [])
 
   useEffect(() => {
     void refresh().then((ruleRows) => {

@@ -10,7 +10,7 @@ Deployed on Netlify from GitHub `doton4ik/spell-sprint`, branch `main`.
 - Write content yourself (words, examples, texts); don't hand it off to another assistant.
 - Before a big or unclear task, say the plan in a few lines; for "делай" just do it.
 - Starting fresh? Read `docs/start-here.md`: the state of the work, what waits for the user, the commands for every job. The user watches the usage
-  limits: no Opus / subagents / full e2e on small tasks, short answers.
+  limits: no Opus / subagents / e2e, short answers.
 
 ## Three models: Sonnet builds, Haiku explores, Opus reviews
 
@@ -33,8 +33,8 @@ This project runs with Sonnet as the main model, Opus as the advisor and Haiku f
 - You commit (clear message, what changed and why). The user runs `git push` — never push yourself.
 - Netlify build minutes are limited: batch work into few pushes. Changes outside the site
   (research/, database/, scripts/, docs) don't trigger a build (`ignore` rule in `netlify.toml`).
-- Before saying "done": `pnpm check` must pass; for UI or flow changes also `pnpm test:e2e`
-  (builds, then Playwright on desktop and phone). If something fails, say so and fix it.
+- Before saying "done": `pnpm check` must pass. Do NOT run `pnpm test:e2e` yourself: the user runs it (for UI or flow
+  changes say that it is worth running). If something fails, say so and fix it.
 
 ## Safety (always)
 
