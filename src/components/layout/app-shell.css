@@ -487,12 +487,12 @@
     box-sizing: border-box;
     flex: 0 0 auto;
     height: auto;
-    min-height: var(--nav-h); /* large text makes the row taller; the menu scrolls */
+    min-height: max(var(--nav-h), calc(28px * var(--fs))); /* large text: roomier rows, the menu scrolls */
   }
   .main-nav,
   .sidebar-bottom {
     display: grid;
-    gap: 4px;
+    gap: calc(4px * var(--fs));
   }
   .sidebar-bottom {
     margin-top: auto;
