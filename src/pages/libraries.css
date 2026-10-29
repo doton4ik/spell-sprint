@@ -321,7 +321,7 @@
 .library-groups {
   display: grid;
   gap: 18px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(calc(300px * var(--fs)), 1fr));
 }
 .group-card,
 .details-browser,
@@ -1187,5 +1187,14 @@
     column-gap: 40px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* The tabs wrap onto a second row instead of hiding behind a scrollbar (phones keep the swipe row). */
+@media (min-width: 571px) {
+  .library-tabs {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    row-gap: 4px;
   }
 }

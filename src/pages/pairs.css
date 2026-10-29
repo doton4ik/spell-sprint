@@ -72,7 +72,7 @@
 .pairs-grid {
   display: grid;
   gap: 8px;
-  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(calc(148px * var(--fs)), 1fr));
 }
 .pair-chip {
   background: var(--surface);
@@ -238,4 +238,10 @@
   color: var(--accent-text-strong);
   font-weight: 600;
   padding: 0 4px;
+}
+
+@media (min-width: 1200px) {
+  .pairs-page {
+    max-width: 1180px;
+  }
 }

@@ -42,20 +42,20 @@
   font-family: ui-monospace, monospace;
   padding: 2px 4px;
 }
-/* Three columns on a wide window, two on a laptop, one on a phone. Each column is its own stack, so a tall card
-   (the daily plan) never leaves a hole in the others. */
+/* The cards flow down balanced columns; the column width grows with the text size, so large text gets fewer, wider
+   columns (3 → 2 → 1) instead of squeezed ones. */
 .settings-grid {
-  align-items: start;
-  display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(280px * var(--fs))), 1fr));
+  column-gap: 18px;
+  column-width: calc(300px * var(--fs));
   margin-top: 28px;
 }
 .settings-col {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: minmax(0, 1fr);
-  min-width: 0;
+  display: contents;
+}
+.settings-grid .settings-card,
+.settings-grid > .settings-col > * {
+  break-inside: avoid;
+  margin: 0 0 18px;
 }
 .settings-card {
   display: block;
@@ -148,7 +148,8 @@
     padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
   }
   .settings-grid {
-    grid-template-columns: minmax(0, 1fr);
+    column-width: auto;
+    columns: 1;
   }
   .settings-card {
     min-height: 0;
@@ -270,16 +271,6 @@
 
 .settings-link + .settings-link {
   margin-left: 16px;
-}
-/* A laptop window: two columns, the third one goes under them in two columns of its own. */
-@media (min-width: 801px) and (max-width: 1199px) {
-  .settings-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .settings-col:last-child {
-    grid-column: 1 / -1;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 .settings-page {
   max-width: 1240px;

@@ -8,6 +8,7 @@ import { Icon } from '../components/icons/Icon'
 import { useConfirm } from '../hooks/useConfirm'
 import { ModalOverlay } from '../components/ui/ModalOverlay'
 import { libraryGroups, wordsForGroup, type LibraryGroup } from '../services/libraryGroups'
+import { libraryTopics } from '../data/libraryTopics'
 import { csvTemplate, deleteImportedLibrary, getEveryLibrary, getEveryWord, getLibraries, isBaseLibrary } from '../services/libraryStorage'
 import { getHiddenWordIds, getWordNote, hideKey, setPackEnabled, setWordHidden } from '../services/libraryPrefs'
 import { libraryPacks, type LibraryPack } from '../data/libraryPacks'
@@ -122,7 +123,23 @@ export function LibrariesPage() {
   const allWords = useMemo(() => uniqueWords(libraries.flatMap((library) => library.words)), [libraries])
   const totalWords = allWords.length
   const selectedGroup = libraryGroups.find((group) => group.id === activeGroup)
-  const cards = activeGroup === 'all' ? groups.filter((group) => !group.personal) : selectedGroup ? [selectedGroup] : []
+  // A section tab shows its topics as separate cards (one card for a whole section was only a button to the same list).
+  const sectionHidden = selectedGroup ? getHiddenWordIds().has(hideKey.group(selectedGroup.id)) : false
+  const topicCards: LibraryGroup[] =
+    selectedGroup && !selectedGroup.personal && selectedGroup.id !== 'all' && !sectionHidden
+      ? libraryTopics
+          .filter((topic) => topic.section === selectedGroup.id)
+          .map((topic) => ({ id: selectedGroup.id, name: topic.name, description: topic.about, topics: [topic.name] }))
+      : []
+  const cards =
+    activeGroup === 'all'
+      ? groups.filter((group) => !group.personal)
+      : topicCards.length > 1
+        ? topicCards
+        : selectedGroup
+          ? [selectedGroup]
+          : []
+  const showingTopics = cards === topicCards
   const refresh = () => setLibraries(getLibraries())
   const hideWord = (word: LibraryWord) => {
     setWordHidden(word.wordId, true)
@@ -401,7 +418,8 @@ export function LibrariesPage() {
                 <GroupCard
                   group={group}
                   libraries={libraries}
-                  hidden={getHiddenWordIds().has(hideKey.group(group.id))}
+                  asTopic={showingTopics}
+                  hidden={!showingTopics && getHiddenWordIds().has(hideKey.group(group.id))}
                   onSetHidden={(hide) => setLibraryHidden(hideKey.group(group.id), group.name, hide)}
                   onOpen={openGroup}
                   onPractice={beginPractice}
@@ -420,6 +438,7 @@ function GroupCard({
   group,
   libraries,
   hidden,
+  asTopic,
   onSetHidden,
   onOpen,
   onPractice,
@@ -427,6 +446,7 @@ function GroupCard({
   group: LibraryGroup
   libraries: WordLibrary[]
   hidden: boolean
+  asTopic?: boolean // a card for one topic of a section: it has no Hide of its own
   onSetHidden: (hide: boolean) => void
   onOpen: (group: LibraryGroup) => void
   onPractice: (words: LibraryWord[], label: string) => void
@@ -450,7 +470,7 @@ function GroupCard({
     )
   return (
     <article className="group-card">
-      <span className="group-card__eyebrow">Vocabulary group</span>
+      <span className="group-card__eyebrow">{asTopic ? 'Topic' : 'Vocabulary group'}</span>
       <h2>{group.name}</h2>
       <p>{group.description}</p>
       <div className="group-card__stats">
@@ -458,10 +478,12 @@ function GroupCard({
           {words.length}
           <small>words</small>
         </strong>
-        <strong>
-          {topics.size}
-          <small>topics</small>
-        </strong>
+        {asTopic ? null : (
+          <strong>
+            {topics.size}
+            <small>topics</small>
+          </strong>
+        )}
       </div>
       <div className="group-card__examples">
         {examples.map((word) => (
@@ -475,7 +497,7 @@ function GroupCard({
         <button className="outline-action" type="button" onClick={() => onPractice(words, group.name)}>
           Practise
         </button>
-        {group.id === 'professional' ? null : (
+        {group.id === 'professional' || asTopic ? null : (
           <button className="quiet-button" type="button" onClick={() => onSetHidden(true)}>
             Hide
           </button>

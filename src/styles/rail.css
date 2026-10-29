@@ -67,22 +67,22 @@
 /* The page starts at the same left edge as every other page and its rail sits beside it; when the window is narrower the page
    gets a little narrower, so the rail stays. Below 1200px (a narrow window or a high zoom) the rail goes. */
 .sprint-page {
-  --page-w: 780px;
+  --page-w: 900px;
 }
 .pairs-page,
 .proof-page {
-  --page-w: 900px;
+  --page-w: 1180px;
 }
 .topics-page,
 .settings-page {
-  --page-w: 1100px;
+  --page-w: 1240px;
 }
 .libraries-page,
 .learning-page {
   --page-w: 1330px;
 }
 .level-page {
-  --page-w: 900px;
+  --page-w: 1100px;
 }
 @media (min-width: 1200px) {
   .sprint-page:has(> .page-rail),
