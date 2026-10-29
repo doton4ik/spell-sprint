@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { englishSection, parseTranslations } from './wordLookup'
+import { englishSection, hasCyrillic, parseRussianCandidates, parseTranslations } from './wordLookup'
 
 describe('parseTranslations', () => {
   it('reads a plain translation table and removes stress marks', () => {
@@ -49,5 +49,26 @@ describe('englishSection', () => {
   it('cuts the English part out of an entry', () => {
     expect(englishSection('==French==\nx\n==English==\nenglish text\n==German==\ny')).toContain('english text')
     expect(englishSection('==French==\nx')).toBe('')
+  })
+})
+
+describe('Russian input', () => {
+  it('detects Cyrillic letters', () => {
+    expect(hasCyrillic('удача')).toBe(true)
+    expect(hasCyrillic('ёж')).toBe(true)
+    expect(hasCyrillic('fortune')).toBe(false)
+  })
+
+  it('takes English words from the definitions of a Russian entry and skips inflected forms', () => {
+    const page = [
+      '==Russian==',
+      '===Noun===',
+      '# {{lb|ru|colloquial}} [[luck]], [[good fortune]]',
+      '# [[success]]',
+      '==Ukrainian==',
+      '# [[other]]',
+    ].join('\n')
+    expect(parseRussianCandidates(page).map((item) => item.english)).toEqual(['luck', 'good fortune', 'success'])
+    expect(parseRussianCandidates('==Russian==\n===Noun===\n# {{inflection of|ru|удача||gen|s}} [[luck]]')).toEqual([])
   })
 })

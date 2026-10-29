@@ -160,6 +160,68 @@ export async function lookupWord(input: string): Promise<LookupResult> {
   }
 }
 
+export const hasCyrillic = (value: string) => /[а-яё]/i.test(value)
+
+export type RussianCandidate = { english: string; partOfSpeech: string; gloss: string }
+
+// The English words that the definitions of a Russian entry link to: "# [[fortune]], [[luck]]" → fortune, luck.
+export function parseRussianCandidates(wikitext: string): RussianCandidate[] {
+  const start = wikitext.search(/^==\s*Russian\s*==\s*$/m)
+  if (start < 0) return []
+  const rest = wikitext.slice(start + 1)
+  const end = rest.search(/^==[^=]/m)
+  const section = end < 0 ? rest : rest.slice(0, end)
+  const found: RussianCandidate[] = []
+  let partOfSpeech = ''
+  for (const line of section.split('\n')) {
+    const heading = POS.exec(line)
+    if (heading) partOfSpeech = heading[1].toLocaleLowerCase()
+    if (!/^#(?![:*#])/.test(line)) continue
+    if (/form of|inflection of|alternative|misspelling|obsolete|archaic|dated/i.test(line)) continue
+    const text = line.replace(/\{\{[^{}]*\}\}/g, '')
+    const words = [...text.matchAll(/\[\[([^\]|#:]+)(?:\|[^\]]*)?\]\]/g)].map((match) => match[1].trim().toLocaleLowerCase())
+    for (const english of words) {
+      if (!/^[a-z][a-z' -]{1,30}$/.test(english) || found.some((item) => item.english === english)) continue
+      found.push({
+        english,
+        partOfSpeech,
+        gloss: text
+          .replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g, '$1')
+          .replace(/^#\s*/, '')
+          .trim(),
+      })
+    }
+  }
+  return found
+}
+
+export type RussianLookupResult =
+  { status: 'found'; candidates: RussianCandidate[] } | { status: 'not-found' } | { status: 'unavailable'; message: string }
+
+// A Russian word → English words it can mean (from the Russian entry on the English Wiktionary).
+export async function lookupRussianWord(input: string): Promise<RussianLookupResult> {
+  const word = input.trim().toLocaleLowerCase()
+  if (!word) return { status: 'not-found' }
+  const controller = new AbortController()
+  const timer = window.setTimeout(() => controller.abort(), TIMEOUT_MS)
+  try {
+    const page = await wikitext(word, controller.signal).catch((error) => {
+      if ((error as { status?: number }).status === 404) return null
+      throw error
+    })
+    const candidates = page ? parseRussianCandidates(page).slice(0, 8) : []
+    return candidates.length ? { status: 'found', candidates } : { status: 'not-found' }
+  } catch (error) {
+    const aborted = (error as Error).name === 'AbortError'
+    return {
+      status: 'unavailable',
+      message: aborted ? 'The dictionary is taking too long to answer.' : 'The dictionary could not be reached.',
+    }
+  } finally {
+    window.clearTimeout(timer)
+  }
+}
+
 // Spelling difficulty and risk, guessed from the letters (the app's own scale: easy / medium / hard, 1–5).
 export function guessDifficulty(word: string): { difficulty: 'easy' | 'medium' | 'hard'; risk: number } {
   const traps = [

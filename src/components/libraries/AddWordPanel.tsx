@@ -2,11 +2,23 @@ import { useEffect, useState, type FormEvent } from 'react'
 import { noAutocorrect } from '../noAutocorrect'
 import { Icon } from '../icons/Icon'
 import { addMyWord, getEveryWord, getAllWords, MY_WORDS, myWordId } from '../../services/libraryStorage'
-import { guessDifficulty, lookupWord, type LookupSense } from '../../services/wordLookup'
+import {
+  guessDifficulty,
+  hasCyrillic,
+  lookupRussianWord,
+  lookupWord,
+  type LookupSense,
+  type RussianCandidate,
+} from '../../services/wordLookup'
 import { partOfSpeechOptions } from '../../types/library'
 import '../../pages/libraries.css'
 
-type Step = { kind: 'idle' } | { kind: 'loading' } | { kind: 'senses'; senses: LookupSense[] } | { kind: 'missing'; message: string }
+type Step =
+  | { kind: 'idle' }
+  | { kind: 'loading' }
+  | { kind: 'senses'; senses: LookupSense[] }
+  | { kind: 'candidates'; candidates: RussianCandidate[] }
+  | { kind: 'missing'; message: string }
 type Draft = { word: string; translation: string; partOfSpeech: string; definition: string; example: string }
 
 // Type a word → pick the meaning you want → check the translation and example → it joins "My words".
@@ -33,13 +45,26 @@ export function AddWordPanel({
     if (initialWord?.trim()) void search()
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-  async function search(event?: FormEvent) {
+  async function search(event?: FormEvent, override?: string) {
     event?.preventDefault()
-    const word = query.trim()
+    const word = (override ?? query).trim()
     if (!word) return
     setDraft(null)
     setSaved(null)
     setStep({ kind: 'loading' })
+    if (hasCyrillic(word)) {
+      const found = await lookupRussianWord(word)
+      if (found.status === 'found') setStep({ kind: 'candidates', candidates: found.candidates })
+      else
+        setStep({
+          kind: 'missing',
+          message:
+            found.status === 'unavailable'
+              ? `${found.message} You can still add the word yourself.`
+              : `The dictionary has no English words for “${word}”. You can add it yourself.`,
+        })
+      return
+    }
     const result = await lookupWord(word)
     if (result.status === 'found') setStep({ kind: 'senses', senses: result.senses })
     else
@@ -52,10 +77,12 @@ export function AddWordPanel({
       })
   }
 
+  // Typed in Russian: the typed word is the translation and the English spelling is left for the learner.
+  const russianTyped = hasCyrillic(query)
   const choose = (sense: LookupSense | null) =>
     setDraft({
-      word: query.trim().toLocaleLowerCase(),
-      translation: sense ? sense.translations.slice(0, 3).join(', ') : '',
+      word: russianTyped ? '' : query.trim().toLocaleLowerCase(),
+      translation: sense ? sense.translations.slice(0, 3).join(', ') : russianTyped ? query.trim() : '',
       partOfSpeech: sense?.partOfSpeech || 'noun',
       definition: sense?.definition ?? '',
       example: sense?.example ?? '',
@@ -94,7 +121,7 @@ export function AddWordPanel({
         <p>
           {initialWord
             ? `Pick the meaning you need — the word goes to “${MY_WORDS}” and into practice. Check the spelling first: the text may have a mistake in it.`
-            : `Type a word — the dictionary suggests its meanings with Russian translations. Pick the one you need; it goes to “${MY_WORDS}” and into practice.`}
+            : `Type a word in English or in Russian — the dictionary suggests its meanings. Pick the one you need; it goes to “${MY_WORDS}” and into practice.`}
         </p>
       </div>
       <form className="add-word__search" onSubmit={search}>
@@ -106,8 +133,8 @@ export function AddWordPanel({
             if (step.kind !== 'loading') setStep({ kind: 'idle' })
             setDraft(null)
           }}
-          placeholder="e.g. fortune"
-          aria-label="English word"
+          placeholder="e.g. fortune or удача"
+          aria-label="English or Russian word"
         />
         <button className="check-button" type="submit" disabled={!query.trim() || step.kind === 'loading'}>
           {step.kind === 'loading' ? 'Looking up…' : 'Look up'}
@@ -154,6 +181,30 @@ export function AddWordPanel({
             None of these — I will write it myself
           </button>
           <p className="add-word__credit">Translations and definitions: Wiktionary (CC BY-SA).</p>
+        </div>
+      ) : null}
+
+      {step.kind === 'candidates' && !draft ? (
+        <div className="add-word__senses">
+          <p className="add-word__label">Which English word do you want to learn?</p>
+          {step.candidates.map((item) => (
+            <button
+              type="button"
+              className="add-word__sense"
+              key={item.english}
+              onClick={() => {
+                setQuery(item.english)
+                void search(undefined, item.english)
+              }}
+            >
+              <small>{item.partOfSpeech || 'meaning'}</small>
+              <strong>{item.english}</strong>
+              <span>{item.gloss}</span>
+            </button>
+          ))}
+          <button type="button" className="add-word__manual" onClick={() => choose(null)}>
+            None of these — I will write it myself
+          </button>
         </div>
       ) : null}
 
