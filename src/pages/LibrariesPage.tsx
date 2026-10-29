@@ -367,7 +367,7 @@ export function LibrariesPage() {
                 type="button"
                 className={activeGroup === group.id ? 'library-tabs__active' : ''}
                 onClick={() => setActiveGroup(group.id)}
-                key={group.id}
+                key={`${group.id}:${group.name}`}
               >
                 {group.name}
               </button>
@@ -423,7 +423,7 @@ export function LibrariesPage() {
                   onSetHidden={(hide) => setLibraryHidden(hideKey.group(group.id), group.name, hide)}
                   onOpen={openGroup}
                   onPractice={beginPractice}
-                  key={group.id}
+                  key={`${group.id}:${group.name}`}
                 />
               ))}
             </section>
