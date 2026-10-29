@@ -335,3 +335,8 @@
     font-size: calc(24px * var(--fs));
   }
 }
+
+/* The title already says "60 seconds": the stats and the button take the whole card. */
+.sprint-hero {
+  grid-template-columns: minmax(0, 1fr);
+}

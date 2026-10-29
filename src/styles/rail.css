@@ -119,3 +119,18 @@
   position: sticky;
   top: 24px;
 }
+
+/* Without the side panel (a narrow window, or large text, which counts as a narrow window) the page is centred. */
+@media (max-width: 1199px) {
+  .page-content .sprint-page,
+  .page-content .pairs-page,
+  .page-content .proof-page,
+  .page-content .topics-page,
+  .page-content .settings-page,
+  .page-content .libraries-page,
+  .page-content .level-page,
+  .page-content .listen-page {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

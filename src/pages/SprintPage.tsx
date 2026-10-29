@@ -63,10 +63,6 @@ export function SprintPage() {
         <p>Type the English word. No hints, no second tries.</p>
       </header>
       <section className="sprint-hero">
-        <div className="sprint-hero__clock" aria-hidden="true">
-          <strong>60</strong>
-          <span>seconds</span>
-        </div>
         <div className="sprint-hero__main">
           <div className="sprint-stats">
             <div>
