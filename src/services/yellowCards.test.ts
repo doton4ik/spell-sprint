@@ -1,5 +1,13 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { addYellowCard, dismissYellowCard, getAllYellowCards, getYellowCards, mergeYellowCards } from './yellowCards'
+import {
+  addYellowCard,
+  dismissAllYellowCards,
+  dismissYellowCard,
+  getAllYellowCards,
+  getYellowCards,
+  isRealSlip,
+  mergeYellowCards,
+} from './yellowCards'
 
 const card = (word: string, shown = `${word}x`) => ({ word, shown, source: 'proofreading' as const, where: 'A text' })
 
@@ -31,10 +39,34 @@ describe('yellow cards', () => {
     const [local] = getAllYellowCards()
     const added = mergeYellowCards([
       { ...local, escalated: true },
-      { id: 'other', word: 'quiet', shown: 'queit', source: 'sprint', where: 'Sprint', at: '2026-10-08T10:00:00.000Z' },
+      { id: 'other', word: 'quiet', shown: 'queit', source: 'sprint', where: 'Sprint', at: new Date().toISOString() },
       { broken: true },
     ])
     expect(added).toBe(1)
     expect(getYellowCards().map((item) => item.word)).toEqual(['quiet'])
+  })
+  it('a slip needs real typing: not empty, not one letter, not a word cut off by the clock', () => {
+    expect(isRealSlip('traceability', 'e')).toBe(false)
+    expect(isRealSlip('traceability', '')).toBe(false)
+    expect(isRealSlip('traceability', '—')).toBe(false)
+    expect(isRealSlip('traceability', 'trace')).toBe(false)
+    expect(isRealSlip('traceability', 'tracability')).toBe(true)
+    expect(isRealSlip('behind', 'behend')).toBe(true)
+  })
+  it('old sprint junk stays hidden, and cards older than two weeks disappear', () => {
+    const old = new Date(Date.now() - 15 * 86_400_000).toISOString()
+    mergeYellowCards([
+      { id: 'junk', word: 'traceability', shown: 'e', source: 'sprint', where: 'Sprint', at: new Date().toISOString() },
+      { id: 'old', word: 'quiet', shown: 'queit', source: 'proofreading', where: 'A text', at: old },
+      { id: 'fresh', word: 'behind', shown: 'behend', source: 'proofreading', where: 'A text', at: new Date().toISOString() },
+    ])
+    expect(getYellowCards().map((item) => item.id)).toEqual(['fresh'])
+    expect(addYellowCard(card('quiet', 'queit'))).toBe('yellow') // the expired card does not make a red one
+  })
+  it('clear all closes every open card', () => {
+    addYellowCard(card('because'))
+    addYellowCard(card('friendly'))
+    dismissAllYellowCards()
+    expect(getYellowCards()).toEqual([])
   })
 })

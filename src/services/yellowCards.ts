@@ -45,17 +45,41 @@ function isCard(value: unknown): value is YellowCard {
   )
 }
 
+/** A yellow card is a keepsake for two weeks; an older one stops counting (and is no longer shown). */
+export const YELLOW_DAYS = 14
+
+/** A slip worth a card: something typed that is close to the word. Nothing, one letter or a word cut off by the clock is not. */
+export function isRealSlip(word: string, typed: string): boolean {
+  const slip = typed.trim().toLocaleLowerCase()
+  const right = word.trim().toLocaleLowerCase()
+  if (slip.length < 2 || slip === '—' || slip === right) return false
+  return !right.startsWith(slip) // cut off, not misspelt
+}
+
+const isOpen = (card: YellowCard, now: number) =>
+  !card.escalated &&
+  now - new Date(card.at).getTime() < YELLOW_DAYS * 86_400_000 &&
+  (card.source !== 'sprint' || isRealSlip(card.word, card.shown)) // junk from older versions stays hidden
+
 /** Open yellow cards, newest first. */
 export function getYellowCards(): YellowCard[] {
+  const now = Date.now()
   return read()
-    .filter((card) => !card.escalated)
+    .filter((card) => isOpen(card, now))
     .sort((a, b) => b.at.localeCompare(a.at))
+}
+
+/** The learner clears the whole list. */
+export function dismissAllYellowCards() {
+  const open = new Set(getYellowCards().map((card) => card.id))
+  write(read().map((card) => (open.has(card.id) ? { ...card, escalated: true } : card)))
 }
 
 /** Adds a card; returns 'red' when the same word already had an open card (both are closed then). */
 export function addYellowCard(card: Omit<YellowCard, 'id' | 'at' | 'escalated'>): 'yellow' | 'red' {
   const cards = read()
-  const earlier = cards.find((item) => !item.escalated && sameWord(item.word, card.word))
+  const now = Date.now()
+  const earlier = cards.find((item) => isOpen(item, now) && sameWord(item.word, card.word))
   const added: YellowCard = { ...card, id: crypto.randomUUID(), at: new Date().toISOString(), escalated: Boolean(earlier) }
   write([...cards.map((item) => (earlier && item.id === earlier.id ? { ...item, escalated: true } : item)), added])
   return earlier ? 'red' : 'yellow'

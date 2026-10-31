@@ -7,7 +7,7 @@ import { getAllWords } from './libraryStorage'
 import { getPracticeAttempts } from './practiceStorage'
 import { recognitionOnly, scheduleAfterAnswer } from './reviewSchedule'
 import { savePracticeAttempt } from './practiceStorage'
-import { addYellowCard } from './yellowCards'
+import { addYellowCard, isRealSlip } from './yellowCards'
 import { comparable } from './answerMatch'
 import { hasOpenMistake } from './learningData'
 
@@ -125,8 +125,8 @@ export function slowWords(answers: SprintAnswer[]) {
 
 export function recordSprintMiss(word: LibraryWord, typed: string) {
   if (hasOpenMistake(word.word)) return // already in My Mistakes
-  if (addYellowCard({ word: word.word, shown: typed.trim() || '—', wordId: word.wordId, source: 'sprint', where: 'Sprint' }) === 'yellow')
-    return
+  if (!isRealSlip(word.word, typed)) return // nothing typed, one letter, or cut off when the time ran out
+  if (addYellowCard({ word: word.word, shown: typed.trim(), wordId: word.wordId, source: 'sprint', where: 'Sprint' }) === 'yellow') return
   const taskId = `library-${word.wordId}-write-en`
   const { confidence, nextReviewAt } = scheduleAfterAnswer({ wordId: word.wordId, taskId }, false, false, 'write-en')
   savePracticeAttempt({

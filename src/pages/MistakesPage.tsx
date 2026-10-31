@@ -7,7 +7,7 @@ import { openPairOnPairsPage } from '../services/pairs'
 import { setPendingPracticeSelection, usableMistakeEntries, wordsToRefresh } from '../services/libraryPractice'
 import { getAllWords } from '../services/libraryStorage'
 import { loadServed, mistakeKey, pickMistakes } from '../services/mistakePicker'
-import { dismissYellowCard, getYellowCards, type YellowCard } from '../services/yellowCards'
+import { dismissAllYellowCards, dismissYellowCard, getYellowCards, type YellowCard } from '../services/yellowCards'
 import type { ErrorFamily, LearningStatus, MistakeEntry } from '../types/learning'
 import { MistakePatternsView } from '../components/mistakes/MistakePatternsView'
 import './learning.css'
@@ -408,8 +408,11 @@ export function MistakesPage() {
                         <h2 id="mistakes-group-yellow">
                           <span className="yellow-card" aria-hidden="true" /> Yellow cards <small>{yellowCards.length}</small>
                         </h2>
-                        <p>Possible typos. They are not counted as mistakes.</p>
+                        <p>Possible typos. They are not counted as mistakes and disappear after two weeks.</p>
                       </div>
+                      <button className="quiet-action" type="button" onClick={dismissAllYellowCards}>
+                        <Icon name="check" size={13} /> Clear all
+                      </button>
                     </header>
                     <div className="mistake-list">
                       {yellowCards.map((card) => (
