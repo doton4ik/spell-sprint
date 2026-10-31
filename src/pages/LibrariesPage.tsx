@@ -18,6 +18,8 @@ import { partOfSpeechOptions, type LibraryDifficulty, type LibraryWord, type Wor
 import type { Rule } from '../types/rules'
 import './libraries.css'
 import { LibrariesRail } from '../components/ui/PageRails'
+import { LibraryViewFilterPanel } from '../components/libraries/LibraryViewFilterPanel'
+import { filterShownWords, getViewFilter, isViewFilterActive, saveViewFilter, type LibraryViewFilter } from '../services/libraryViewFilter'
 
 type Details = { title: string; description: string; words: LibraryWord[]; library?: WordLibrary; restorable?: boolean }
 type Tab = LibraryGroup['id'] | 'packs'
@@ -120,7 +122,15 @@ export function LibrariesPage() {
   const [tuning, setTuning] = useState(false)
   const ruleMap = useWordRuleMap()
   const groups = libraryGroups.filter((group) => group.id !== 'all')
-  const allWords = useMemo(() => uniqueWords(libraries.flatMap((library) => library.words)), [libraries])
+  const [viewFilter, setViewFilterState] = useState(getViewFilter)
+  const setViewFilter = (next: LibraryViewFilter) => {
+    setViewFilterState(next)
+    saveViewFilter(next)
+  }
+  const allWords = useMemo(
+    () => filterShownWords(uniqueWords(libraries.flatMap((library) => library.words)), viewFilter),
+    [libraries, viewFilter],
+  )
   const totalWords = allWords.length
   const selectedGroup = libraryGroups.find((group) => group.id === activeGroup)
   // A section tab shows its topics as separate cards (one card for a whole section was only a button to the same list).
@@ -257,6 +267,8 @@ export function LibrariesPage() {
       <>
         <LibraryDetails
           details={details}
+          viewFilter={viewFilter}
+          onViewFilter={setViewFilter}
           ruleMap={ruleMap}
           notice={noticeBar}
           onBack={() => {
@@ -289,6 +301,7 @@ export function LibrariesPage() {
       </header>
       {noticeBar}
       {dialog}
+      <LibraryViewFilterPanel filter={viewFilter} onChange={setViewFilter} />
       <label className="global-word-search">
         <Icon name="search" size={17} />
         <input
@@ -418,6 +431,7 @@ export function LibrariesPage() {
                 <GroupCard
                   group={group}
                   libraries={libraries}
+                  viewFilter={viewFilter}
                   asTopic={showingTopics}
                   hidden={!showingTopics && getHiddenWordIds().has(hideKey.group(group.id))}
                   onSetHidden={(hide) => setLibraryHidden(hideKey.group(group.id), group.name, hide)}
@@ -437,6 +451,7 @@ export function LibrariesPage() {
 function GroupCard({
   group,
   libraries,
+  viewFilter,
   hidden,
   asTopic,
   onSetHidden,
@@ -445,6 +460,7 @@ function GroupCard({
 }: {
   group: LibraryGroup
   libraries: WordLibrary[]
+  viewFilter: LibraryViewFilter
   hidden: boolean
   asTopic?: boolean // a card for one topic of a section: it has no Hide of its own
   onSetHidden: (hide: boolean) => void
@@ -452,9 +468,12 @@ function GroupCard({
   onPractice: (words: LibraryWord[], label: string) => void
 }) {
   // A hidden group has no words among the active libraries: count them from the base library.
-  const words = wordsForGroup(group, hidden ? getEveryLibrary().filter(isBaseLibrary) : libraries)
+  const allGroupWords = wordsForGroup(group, hidden ? getEveryLibrary().filter(isBaseLibrary) : libraries)
+  const words = hidden ? allGroupWords : filterShownWords(allGroupWords, viewFilter)
   const topics = new Set(words.map((word) => word.topic))
   const examples = words.slice(0, 5)
+  // Everything in this card is switched off in the view filter: leave the card out.
+  if (!hidden && isViewFilterActive(viewFilter) && words.length === 0 && allGroupWords.length > 0) return null
   if (hidden)
     return (
       <article className="group-card group-card--hidden">
@@ -575,7 +594,9 @@ function MyLibraries({
 }
 
 function LibraryDetails({
-  details,
+  details: rawDetails,
+  viewFilter,
+  onViewFilter,
   ruleMap,
   notice,
   onBack,
@@ -585,6 +606,8 @@ function LibraryDetails({
   onRestore,
 }: {
   details: Details
+  viewFilter: LibraryViewFilter
+  onViewFilter: (filter: LibraryViewFilter) => void
   ruleMap: Map<string, Rule[]>
   notice: React.ReactNode
   onBack: () => void
@@ -593,6 +616,11 @@ function LibraryDetails({
   onHide: (word: LibraryWord) => void
   onRestore: (word: LibraryWord) => void
 }) {
+  // The view filter only trims the lists; the page of hidden words always shows all of them.
+  const details = useMemo(
+    () => (rawDetails.restorable ? rawDetails : { ...rawDetails, words: filterShownWords(rawDetails.words, viewFilter) }),
+    [rawDetails, viewFilter],
+  )
   const [topic, setTopic] = useState('All')
   const [subtopic, setSubtopic] = useState('All')
   const [level, setLevel] = useState('All')
@@ -639,6 +667,7 @@ function LibraryDetails({
         ← Back to Libraries
       </button>
       {notice}
+      {rawDetails.restorable ? null : <LibraryViewFilterPanel filter={viewFilter} onChange={onViewFilter} />}
       <header className="libraries-header">
         <div>
           <p className="eyebrow">Library details</p>
