@@ -151,6 +151,18 @@ export function LibrariesPage() {
           : []
   const showingTopics = cards === topicCards
   const refresh = () => setLibraries(getLibraries())
+  // "Delete" on a topic card: the topic leaves the Library lists; bring it back with Undo or in the filter panel.
+  const deleteTopic = (name: string) => {
+    const before = viewFilter
+    setViewFilter({ ...before, topics: [...new Set([...before.topics, name])] })
+    setNotice({
+      text: `“${name}” is removed from the Library lists. Bring it back in “Show or hide levels and topics”.`,
+      undo: () => {
+        setViewFilter(before)
+        setNotice(null)
+      },
+    })
+  }
   const hideWord = (word: LibraryWord) => {
     setWordHidden(word.wordId, true)
     refresh()
@@ -433,6 +445,7 @@ export function LibrariesPage() {
                   libraries={libraries}
                   viewFilter={viewFilter}
                   asTopic={showingTopics}
+                  onDeleteTopic={showingTopics ? () => deleteTopic(group.name) : undefined}
                   hidden={!showingTopics && getHiddenWordIds().has(hideKey.group(group.id))}
                   onSetHidden={(hide) => setLibraryHidden(hideKey.group(group.id), group.name, hide)}
                   onOpen={openGroup}
@@ -454,6 +467,7 @@ function GroupCard({
   viewFilter,
   hidden,
   asTopic,
+  onDeleteTopic,
   onSetHidden,
   onOpen,
   onPractice,
@@ -463,6 +477,7 @@ function GroupCard({
   viewFilter: LibraryViewFilter
   hidden: boolean
   asTopic?: boolean // a card for one topic of a section: it has no Hide of its own
+  onDeleteTopic?: () => void // takes the topic out of the Library lists (the words stay in the app)
   onSetHidden: (hide: boolean) => void
   onOpen: (group: LibraryGroup) => void
   onPractice: (words: LibraryWord[], label: string) => void
@@ -516,6 +531,11 @@ function GroupCard({
         <button className="outline-action" type="button" onClick={() => onPractice(words, group.name)}>
           Practise
         </button>
+        {asTopic && onDeleteTopic ? (
+          <button className="quiet-button" type="button" onClick={onDeleteTopic}>
+            Delete
+          </button>
+        ) : null}
         {group.id === 'professional' || asTopic ? null : (
           <button className="quiet-button" type="button" onClick={() => onSetHidden(true)}>
             Hide
