@@ -37,6 +37,9 @@ function loadApi() {
   return apiReady
 }
 
+// the end times come from caption cues, which finish a little before the speaker does: a short tail keeps the last words
+const END_TAIL = 0.8
+
 export type LinePlayer = { playLine: (start: number, end: number, rate: number) => void; stop: () => void }
 
 export const YouTubePlayer = forwardRef<LinePlayer, { videoId: string; onFailed: () => void }>(function YouTubePlayer(
@@ -67,7 +70,7 @@ export const YouTubePlayer = forwardRef<LinePlayer, { videoId: string; onFailed:
         current.seekTo(start, true)
         current.playVideo()
         timer.current = window.setInterval(() => {
-          if (current.getCurrentTime() >= end) stop()
+          if (current.getCurrentTime() >= end + END_TAIL) stop()
         }, 100)
       }
       if (isReady.current) run()
