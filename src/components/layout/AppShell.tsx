@@ -4,6 +4,7 @@ import { navigationItems } from '../../data/dashboard'
 import { getMistakeEntries, isDueToday, subscribeToLearningData } from '../../services/learningData'
 import { getProfile, subscribeToProfile } from '../../services/profileStorage'
 import type { IconName } from '../../types/dashboard'
+import { ThemeToggle } from './ThemeToggle'
 import { Icon } from '../icons/Icon'
 import { FeedbackDialog } from '../FeedbackDialog'
 import { BrandMark } from './BrandMark'
@@ -129,6 +130,7 @@ export function AppShell({ children, activePage }: AppShellProps) {
             <Icon name="settings" size={19} />
             <span>Settings</span>
           </a>
+          <ThemeToggle className="nav-link nav-link--button" />
           <button className="nav-link nav-link--button" type="button" onClick={() => setFeedbackOpen(true)}>
             <Icon name="lightbulb" size={19} />
             <span>Feedback</span>
@@ -212,6 +214,7 @@ export function AppShell({ children, activePage }: AppShellProps) {
                 </div>
               </section>
             ))}
+            <ThemeToggle className="mobile-more__feedback" />
             <button
               className="mobile-more__feedback"
               type="button"

@@ -134,6 +134,13 @@ const paths: Record<IconName, ReactNode> = {
       <path d="M5 4h11l-2 4 2 4H5" />
     </>
   ),
+  sun: (
+    <>
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" />
+    </>
+  ),
+  moon: <path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.2 8.2 0 1 0 10.2 10.2Z" />,
   more: (
     <>
       <circle cx="5" cy="12" r="1.4" />

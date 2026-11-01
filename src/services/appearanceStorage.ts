@@ -136,6 +136,14 @@ export function applyTheme(theme: Theme = getTheme()) {
   else document.documentElement.dataset.theme = theme
 }
 
+/** The theme in use right now: the saved choice, or the device's light / dark mode when it is "system". */
+export function isDarkTheme(theme: Theme = getTheme()) {
+  if (theme !== 'system') return theme === 'dark'
+  return typeof window.matchMedia === 'function' && window.matchMedia('(prefers-color-scheme: dark)').matches
+}
+
+export const THEME_EVENT = 'spell-sprint:theme-change'
+
 export function setTheme(theme: Theme) {
   try {
     window.localStorage.setItem(THEME_KEY, theme)
@@ -143,4 +151,5 @@ export function setTheme(theme: Theme) {
     /* the choice still applies for this visit */
   }
   applyTheme(theme)
+  window.dispatchEvent(new Event(THEME_EVENT))
 }

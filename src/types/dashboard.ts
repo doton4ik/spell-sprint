@@ -7,6 +7,8 @@ export type NavigationItem = {
 
 export type IconName =
   | 'dashboard'
+  | 'sun'
+  | 'moon'
   | 'practice'
   | 'mistakes'
   | 'rules'

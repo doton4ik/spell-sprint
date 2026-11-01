@@ -32,6 +32,7 @@ import {
   getTheme,
   setFontScale,
   setTheme,
+  THEME_EVENT,
   themeOptions,
   type FontScale,
   type Theme,
@@ -108,6 +109,11 @@ export function SettingsPage() {
   const [profile, setProfileState] = useState(getProfile)
   const configured = isSupabaseConfigured()
   const [syncStatus, setSyncStatus] = useState(getSyncStatus)
+  useEffect(() => {
+    const update = () => setThemeState(getTheme())
+    window.addEventListener(THEME_EVENT, update)
+    return () => window.removeEventListener(THEME_EVENT, update)
+  }, [])
   useEffect(() => subscribeToSyncStatus(() => setSyncStatus(getSyncStatus())), [])
   const [queuedMistakes, setQueuedMistakes] = useState(getOutboxSize)
   useEffect(() => subscribeToOutbox(() => setQueuedMistakes(getOutboxSize())), [])
