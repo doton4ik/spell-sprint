@@ -5,6 +5,11 @@
 //
 // --from and --to (seconds) keep only the phrases inside that part of the video.
 //
+// When the speech tools are installed (.asr/venv: pip install faster-whisper imageio-ffmpeg yt-dlp) the lines are made from
+// the SOUND instead of the captions: the audio is downloaded, scripts/transcribe.py gives every word its time, and the
+// lines are cut at sentence ends and pauses. This is accurate; captions are only a fallback (--captions forces them).
+// Rebuilding a clip that is already in the data file keeps its title, level and window unless you pass them.
+//
 // With --file the captions come from a .vtt file you already have (the link only gives the video id).
 // If YouTube answers "confirm you are not a bot", sign in in your browser and add --browser chrome (or edge, firefox):
 // yt-dlp then reads that browser's cookies. Only do this on your own computer.
@@ -12,10 +17,12 @@
 // Needs yt-dlp (pip install yt-dlp). Manual captions are preferred over the automatic ones. The text is
 // only a draft: read the phrases (and listen to the video) before it goes to learners.
 import { execFileSync } from 'node:child_process'
-import { existsSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { makePhrases, parseVtt, youtubeId } from '../src/services/captionPhrases.ts'
+import { makeWordLines } from '../src/services/wordPhrases.ts'
 
 const args = process.argv.slice(2)
 const option = (name, fallback) => {
@@ -32,6 +39,69 @@ const level = option('level', 'B1')
 if (!['A2', 'B1', 'B2'].includes(level)) {
   console.error('--level is A2, B1 or B2.')
   process.exit(1)
+}
+
+const dataFile = new URL('../src/data/listeningVideoClips.json', import.meta.url)
+const clips = existsSync(dataFile) ? JSON.parse(readFileSync(dataFile, 'utf8')) : []
+const python = fileURLToPath(new URL('../.asr/venv/Scripts/python.exe', import.meta.url))
+if (!args.includes('--captions') && !option('file') && existsSync(python)) {
+  const old = clips.find((entry) => entry.id === `video-${id}`)
+  const work = fileURLToPath(new URL('../.asr/work/', import.meta.url))
+  mkdirSync(work, { recursive: true })
+  const wav = join(work, `${id}.wav`)
+  const json = join(work, `${id}.json`)
+  const env = { ...process.env, PYTHONIOENCODING: 'utf-8' }
+  if (!existsSync(json)) {
+    if (!existsSync(wav)) {
+      const ffmpeg = execFileSync(python, ['-c', 'import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())'], { env }).toString().trim()
+      const flags = [
+        '-x',
+        '--audio-format',
+        'wav',
+        '--ffmpeg-location',
+        ffmpeg,
+        ...(option('browser') ? ['--cookies-from-browser', option('browser')] : []),
+        '-o',
+        join(work, `${id}.%(ext)s`),
+        `https://www.youtube.com/watch?v=${id}`,
+      ]
+      console.log('Downloading the sound…')
+      execFileSync(python, ['-m', 'yt_dlp', ...flags], { env, stdio: 'inherit' })
+    }
+    console.log('Recognising the speech (the first time the model is downloaded; a few minutes)…')
+    execFileSync(python, [fileURLToPath(new URL('./transcribe.py', import.meta.url)), wav, json, option('model', 'small')], {
+      env,
+      stdio: 'inherit',
+    })
+  }
+  const words = JSON.parse(readFileSync(json, 'utf8'))
+  const from = Number(option('from', old?.lines[0]?.start !== undefined ? Math.max(0, old.lines[0].start - 1) : 0))
+  const to = Number(option('to', old?.lines.at(-1)?.end !== undefined ? old.lines.at(-1).end + 1 : Infinity))
+  const lines = makeWordLines(words, { minWords: Number(option('min', 5)), maxWords: Number(option('max', 16)), from, to })
+  if (!lines.length) {
+    console.error('No lines came out of the speech.')
+    process.exit(1)
+  }
+  const clip = {
+    id: `video-${id}`,
+    title: option('title', old?.title ?? `Video ${id}`),
+    level: option('level', old?.level ?? 'B1'),
+    source: { kind: 'youtube', videoId: id },
+    lines,
+  }
+  const at = clips.findIndex((entry) => entry.id === clip.id)
+  if (at >= 0) clips[at] = clip
+  else clips.push(clip)
+  writeFileSync(
+    dataFile,
+    `${JSON.stringify(clips, null, 2)}
+`,
+  )
+  console.log(
+    `Speech recognised, ${lines.length} lines → src/data/listeningVideoClips.json (${clip.id}). The text is a draft: listen and fix wrong words.`,
+  )
+  lines.forEach((line, i) => console.log(`${String(i + 1).padStart(2)}. [${line.start}–${line.end}] ${line.text}`))
+  process.exit(0)
 }
 
 let manual = true
@@ -102,8 +172,6 @@ if (!phrases.length) {
   process.exit(1)
 }
 
-const dataFile = new URL('../src/data/listeningVideoClips.json', import.meta.url)
-const clips = existsSync(dataFile) ? JSON.parse(readFileSync(dataFile, 'utf8')) : []
 const clip = {
   id: `video-${id}`,
   title: option('title', `Video ${id}`),

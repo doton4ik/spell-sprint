@@ -37,85 +37,96 @@ function loadApi() {
   return apiReady
 }
 
-// the end times come from caption cues, which finish a little before the speaker does: a short tail keeps the last words
-const END_TAIL = 0.8
-
 export type LinePlayer = { playLine: (start: number, end: number, rate: number) => void; stop: () => void }
 
-export const YouTubePlayer = forwardRef<LinePlayer, { videoId: string; onFailed: () => void }>(function YouTubePlayer(
-  { videoId, onFailed },
-  ref,
-) {
-  const host = useRef<HTMLDivElement>(null)
-  const player = useRef<Player | null>(null)
-  const isReady = useRef(false)
-  const waiting = useRef<Array<() => void>>([])
-  const timer = useRef<number | undefined>(undefined)
+export const YouTubePlayer = forwardRef<LinePlayer, { videoId: string; onFailed: () => void; onTime?: (seconds: number) => void }>(
+  function YouTubePlayer({ videoId, onFailed, onTime }, ref) {
+    const host = useRef<HTMLDivElement>(null)
+    const player = useRef<Player | null>(null)
+    const isReady = useRef(false)
+    const waiting = useRef<Array<() => void>>([])
+    const timer = useRef<number | undefined>(undefined)
+    // the page hears the playing time (and -1 when the line stops) to light up the word being said
+    const tick = useRef(onTime)
+    tick.current = onTime
 
-  const hideCaptions = () => {
-    for (const module of ['captions', 'cc']) player.current?.unloadModule(module)
-  }
-  const stop = () => {
-    window.clearInterval(timer.current)
-    player.current?.pauseVideo()
-  }
-  useImperativeHandle(ref, () => ({
-    stop,
-    playLine(start, end, rate) {
-      const run = () => {
-        const current = player.current
-        if (!current) return
-        window.clearInterval(timer.current)
-        current.setPlaybackRate(rate)
-        current.seekTo(start, true)
-        current.playVideo()
-        timer.current = window.setInterval(() => {
-          if (current.getCurrentTime() >= end + END_TAIL) stop()
-        }, 100)
-      }
-      if (isReady.current) run()
-      else waiting.current.push(run)
-    },
-  }))
-
-  useEffect(() => {
-    let cancelled = false
-    loadApi()
-      .then((YT) => {
-        if (cancelled || !host.current) return
-        const element = document.createElement('div')
-        host.current.append(element)
-        player.current = new YT.Player(element, {
-          host: 'https://www.youtube-nocookie.com',
-          videoId,
-          playerVars: { playsinline: 1, rel: 0, modestbranding: 1, controls: 0, disablekb: 1, fs: 0, iv_load_policy: 3, cc_load_policy: 0 },
-          events: {
-            onReady: () => {
-              isReady.current = true
-              player.current?.getIframe().setAttribute('title', 'Video of the clip')
-              // the video's own captions would show the answer
-              hideCaptions()
-              const queued = waiting.current
-              waiting.current = []
-              queued.forEach((run) => run())
-            },
-            // the captions module loads when playback starts: turn it off again then
-            onStateChange: () => hideCaptions(),
-            onError: () => onFailed(),
-          },
-        })
-      })
-      .catch(() => onFailed())
-    return () => {
-      cancelled = true
-      window.clearInterval(timer.current)
-      player.current?.destroy()
-      player.current = null
-      isReady.current = false
+    const hideCaptions = () => {
+      for (const module of ['captions', 'cc']) player.current?.unloadModule(module)
     }
-    // the player belongs to one video; a new video mounts a new component
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [videoId])
+    const stop = () => {
+      window.clearInterval(timer.current)
+      player.current?.pauseVideo()
+      tick.current?.(-1)
+    }
+    useImperativeHandle(ref, () => ({
+      stop,
+      playLine(start, end, rate) {
+        const run = () => {
+          const current = player.current
+          if (!current) return
+          window.clearInterval(timer.current)
+          current.setPlaybackRate(rate)
+          current.seekTo(start, true)
+          current.playVideo()
+          timer.current = window.setInterval(() => {
+            const now = current.getCurrentTime()
+            if (now >= end) stop()
+            else tick.current?.(now)
+          }, 100)
+        }
+        if (isReady.current) run()
+        else waiting.current.push(run)
+      },
+    }))
 
-  return <div className="listen-video" ref={host} />
-})
+    useEffect(() => {
+      let cancelled = false
+      loadApi()
+        .then((YT) => {
+          if (cancelled || !host.current) return
+          const element = document.createElement('div')
+          host.current.append(element)
+          player.current = new YT.Player(element, {
+            host: 'https://www.youtube-nocookie.com',
+            videoId,
+            playerVars: {
+              playsinline: 1,
+              rel: 0,
+              modestbranding: 1,
+              controls: 0,
+              disablekb: 1,
+              fs: 0,
+              iv_load_policy: 3,
+              cc_load_policy: 0,
+            },
+            events: {
+              onReady: () => {
+                isReady.current = true
+                player.current?.getIframe().setAttribute('title', 'Video of the clip')
+                // the video's own captions would show the answer
+                hideCaptions()
+                const queued = waiting.current
+                waiting.current = []
+                queued.forEach((run) => run())
+              },
+              // the captions module loads when playback starts: turn it off again then
+              onStateChange: () => hideCaptions(),
+              onError: () => onFailed(),
+            },
+          })
+        })
+        .catch(() => onFailed())
+      return () => {
+        cancelled = true
+        window.clearInterval(timer.current)
+        player.current?.destroy()
+        player.current = null
+        isReady.current = false
+      }
+      // the player belongs to one video; a new video mounts a new component
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [videoId])
+
+    return <div className="listen-video" ref={host} />
+  },
+)

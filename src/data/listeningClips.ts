@@ -3,7 +3,8 @@ import videoClips from './listeningVideoClips.json'
 // Short clips for listening dictation: the learner hears a line and writes it. Written by hand.
 // A clip is read by the browser voice ('voice'). A clip from a video ('youtube') has the same lines, each with
 // the second it starts and ends at, so the player can replay just that line.
-export type ListeningLine = { text: string; start?: number; end?: number }
+// wordStarts: the second each word of the text starts at (video lines), so the hint can light up the word being said
+export type ListeningLine = { text: string; start?: number; end?: number; wordStarts?: number[] }
 export type ListeningSource = { kind: 'voice' } | { kind: 'youtube'; videoId: string }
 export type ListeningClip = {
   id: string // fixed: never change it

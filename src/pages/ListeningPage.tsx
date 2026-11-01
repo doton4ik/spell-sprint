@@ -13,6 +13,7 @@ import {
   type LineResult,
 } from '../services/listening'
 import { loadPracticeSettings } from '../services/practiceStorage'
+import { wordAt } from '../services/wordPhrases'
 import { canSpeak, speakEnglish, stopSpeaking } from '../services/speech'
 import './listening.css'
 
@@ -97,6 +98,8 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (a
   const [hint, setHint] = useState(false)
   // the picture of a video often carries the line as on-screen text: it stays covered until the line is checked and the learner asks
   const [showVideo, setShowVideo] = useState(false)
+  // the word of the line being said right now (-1: none), lit up in the hint
+  const [spoken, setSpoken] = useState(-1)
   const [answered, setAnswered] = useState<Answered[]>([])
   const input = useRef<HTMLInputElement>(null)
   const video = useRef<LinePlayer>(null)
@@ -154,7 +157,12 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (a
       <div className={`listen-stage${videoId ? ' listen-stage--video' : ''}`}>
         {videoId ? (
           <div className="listen-stage__video">
-            <YouTubePlayer ref={video} videoId={videoId} onFailed={() => setVideoFailed(true)} />
+            <YouTubePlayer
+              ref={video}
+              videoId={videoId}
+              onFailed={() => setVideoFailed(true)}
+              onTime={(seconds) => setSpoken(seconds < 0 || !line.wordStarts ? -1 : wordAt(line.wordStarts, seconds))}
+            />
             {showVideo ? null : (
               <div className="listen-video-cover">
                 <p>
@@ -185,7 +193,17 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (a
               </button>
             )}
           </div>
-          {hint && !result ? <p className="listen-hint">{lineHint(line.text)}</p> : null}
+          {hint && !result ? (
+            <p className="listen-hint">
+              {lineHint(line.text)
+                .split(' ')
+                .map((word, i) => (
+                  <span key={i} className={i === spoken ? 'listen-hint__word listen-hint__word--now' : 'listen-hint__word'}>
+                    {word}{' '}
+                  </span>
+                ))}
+            </p>
+          ) : null}
           <form
             onSubmit={(event) => {
               event.preventDefault()

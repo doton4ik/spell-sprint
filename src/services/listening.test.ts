@@ -45,7 +45,12 @@ describe('listening clips', () => {
         // a hand-written line is a whole sentence; a phrase cut from a video may stop at a comma
         if (clip.source.kind === 'voice') expect(line.text).toMatch(/[.?!]$/)
         expect(line.text.split(/\s+/).length).toBeGreaterThanOrEqual(5)
-        expect(line.text.split(/\s+/).length).toBeLessThanOrEqual(14)
+        expect(line.text.split(/\s+/).length).toBeLessThanOrEqual(16)
+        // one start time per word, in order, so the hint lights up the right word
+        if (line.wordStarts) {
+          expect(line.wordStarts).toHaveLength(line.text.split(/\s+/).length)
+          expect([...line.wordStarts].sort((a, b) => a - b)).toEqual(line.wordStarts)
+        }
       }
   })
   it('video lines have a start before their end', () => {

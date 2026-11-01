@@ -31,3 +31,6 @@ research/design-diff/
 # Playwright reports
 playwright-report/
 test-results/
+
+# local speech-recognition tools for scripts/make-clip (not part of the app)
+.asr/

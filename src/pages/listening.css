@@ -145,6 +145,15 @@
   letter-spacing: 1px;
   margin: 14px 0 0;
 }
+.listen-hint__word {
+  border-radius: 4px;
+  padding: 1px 3px;
+  margin: 0 -3px;
+}
+.listen-hint__word--now {
+  background: var(--accent-soft);
+  color: var(--accent-text-strong);
+}
 .listen-transcript {
   display: grid;
   gap: 8px;
