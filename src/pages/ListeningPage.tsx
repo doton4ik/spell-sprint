@@ -95,6 +95,8 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (a
   const [answer, setAnswer] = useState('')
   const [result, setResult] = useState<(LineResult & { skipped: boolean }) | null>(null)
   const [hint, setHint] = useState(false)
+  // the picture of a video often carries the line as on-screen text: it stays covered until the line is checked and the learner asks
+  const [showVideo, setShowVideo] = useState(false)
   const [answered, setAnswered] = useState<Answered[]>([])
   const input = useRef<HTMLInputElement>(null)
   const video = useRef<LinePlayer>(null)
@@ -136,6 +138,7 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (a
     setAnswer('')
     setResult(null)
     setHint(false)
+    setShowVideo(false)
   }
 
   return (
@@ -152,6 +155,20 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (a
         {videoId ? (
           <div className="listen-stage__video">
             <YouTubePlayer ref={video} videoId={videoId} onFailed={() => setVideoFailed(true)} />
+            {showVideo ? null : (
+              <div className="listen-video-cover">
+                <p>
+                  {result
+                    ? 'The picture is hidden so that you listen instead of read.'
+                    : 'Listen: the picture is hidden until you check the line.'}
+                </p>
+                {result ? (
+                  <button className="template-button" type="button" onClick={() => setShowVideo(true)}>
+                    Show video
+                  </button>
+                ) : null}
+              </div>
+            )}
           </div>
         ) : null}
         <section className="listen-card">

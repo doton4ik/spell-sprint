@@ -185,8 +185,31 @@
     grid-template-columns: minmax(0, 1.3fr) minmax(320px, 1fr);
   }
 }
+.listen-stage__video {
+  position: relative;
+}
 .listen-stage__video .listen-video {
   margin-bottom: 0;
+}
+/* an opaque cover over the picture: on-screen captions must not give the answer away before the line is checked */
+.listen-video-cover {
+  align-content: center;
+  background: var(--surface-muted);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  display: grid;
+  gap: 16px;
+  inset: 0;
+  justify-items: center;
+  padding: 24px;
+  position: absolute;
+  text-align: center;
+}
+.listen-video-cover p {
+  color: var(--ink-muted);
+  font-size: calc(15px * var(--fs));
+  margin: 0;
+  max-width: 32ch;
 }
 .listen-card .listen-input {
   font-size: calc(18px * var(--fs));
