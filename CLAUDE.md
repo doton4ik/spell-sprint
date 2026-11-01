@@ -4,6 +4,13 @@ English-spelling trainer for Russian-speaking learners. React 19, Vite 8, TypeSc
 pnpm 11. Hash routing; data is local-first in localStorage with a cloud snapshot (`src/services/cloudSync.ts`).
 Deployed on Netlify from GitHub `doton4ik/spell-sprint`, branch `main`.
 
+## MOST IMPORTANT: choose the model by how hard the task is (the user's own rule, never forget it)
+
+- Simple task (find files, read, list, run a check, mechanical edit) → **Haiku** (subagent).
+- Ordinary task (write code, content, tests, commit) → **Sonnet** (the main model).
+- Hard task (design, a plan, a stuck bug, final review, anything risky) → **Opus** (the advisor, or an Opus subagent).
+- Decide yourself and do not ask the user; say in one line what you delegated. Every rule below follows from this one, and the usage limits still apply: do not use a bigger model than the task needs.
+
 ## Talking to the user
 
 - The user is a student and writes in Russian. Answer in Russian; keep code, commands and file names in English.
