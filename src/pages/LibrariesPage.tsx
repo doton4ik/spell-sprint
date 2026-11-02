@@ -568,7 +568,7 @@ function GroupCard({
   const allGroupWords = wordsForGroup(group, hidden ? getEveryLibrary().filter(isBaseLibrary) : libraries)
   const words = hidden ? allGroupWords : filterShownWords(allGroupWords, viewFilter)
   const topics = new Set(words.map((word) => word.topic))
-  const examples = words.slice(0, 5)
+  const examples = words.slice(0, 3)
   // Everything in this card is switched off in the view filter: leave the card out.
   if (!hidden && isViewFilterActive(viewFilter) && words.length === 0 && allGroupWords.length > 0) return null
   if (hidden)
