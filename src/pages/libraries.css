@@ -1300,3 +1300,30 @@
     min-height: 44px;
   }
 }
+
+.search-add {
+  align-items: center;
+  background: var(--surface);
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 16px;
+}
+.search-add p {
+  color: var(--ink-muted);
+  font-size: calc(14px * var(--fs));
+  margin: 0;
+}
+.word-row__filtered {
+  color: var(--ink-muted);
+  font-size: calc(12px * var(--fs));
+  font-style: italic;
+}
+.search-results__count + .word-list,
+.word-list + .search-results__count {
+  margin-top: 8px;
+}

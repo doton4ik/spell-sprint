@@ -1,10 +1,11 @@
 import { cefrLevels } from '../data/libraryTopics'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { ImportLibraryPanel } from '../components/libraries/ImportLibraryPanel'
 import { AddWordPanel } from '../components/libraries/AddWordPanel'
 import { LibrarySetup } from '../components/libraries/LibrarySetup'
 import { WordReportPanel } from '../components/WordReportPanel'
 import { Icon } from '../components/icons/Icon'
+import { noAutocorrect } from '../components/noAutocorrect'
 import { useConfirm } from '../hooks/useConfirm'
 import { ModalOverlay } from '../components/ui/ModalOverlay'
 import { libraryGroups, wordsForGroup, type LibraryGroup } from '../services/libraryGroups'
@@ -18,8 +19,16 @@ import { partOfSpeechOptions, type LibraryDifficulty, type LibraryWord, type Wor
 import type { Rule } from '../types/rules'
 import './libraries.css'
 import { LibrariesRail } from '../components/ui/PageRails'
+import { buildWordIndex, searchWords, type WordHit } from '../services/wordSearch'
 import { LibraryViewFilterPanel } from '../components/libraries/LibraryViewFilterPanel'
-import { filterShownWords, getViewFilter, isViewFilterActive, saveViewFilter, type LibraryViewFilter } from '../services/libraryViewFilter'
+import {
+  filterShownWords,
+  getViewFilter,
+  isWordShown,
+  isViewFilterActive,
+  saveViewFilter,
+  type LibraryViewFilter,
+} from '../services/libraryViewFilter'
 
 type Details = { title: string; description: string; words: LibraryWord[]; library?: WordLibrary; restorable?: boolean }
 type Tab = LibraryGroup['id'] | 'packs'
@@ -119,6 +128,8 @@ export function LibrariesPage() {
   const { ask, dialog } = useConfirm()
   const [details, setDetails] = useState<Details | null>(null)
   const [query, setQuery] = useState('')
+  const [adding, setAdding] = useState<string | null>(null)
+  const searchInput = useRef<HTMLInputElement>(null)
   const [tuning, setTuning] = useState(false)
   const ruleMap = useWordRuleMap()
   const groups = libraryGroups.filter((group) => group.id !== 'all')
@@ -253,13 +264,16 @@ export function LibrariesPage() {
     if (library) openLibrary(library)
   }
 
-  const trimmedQuery = query.trim().toLocaleLowerCase()
-  const searchResults = useMemo(() => {
-    if (trimmedQuery.length < 2) return []
-    return allWords
-      .filter((word) => `${word.word} ${word.translation} ${word.topic} ${word.subtopic}`.toLocaleLowerCase().includes(trimmedQuery))
-      .slice(0, 60)
-  }, [allWords, trimmedQuery])
+  // One box finds a word (even misspelled) or offers to add it. It looks in every word of the active libraries, also
+  // those switched off by the view filter, and says so on the row.
+  const trimmedQuery = query.trim()
+  const wordIndex = useMemo(() => buildWordIndex(uniqueWords(libraries.flatMap((library) => library.words))), [libraries])
+  const search = useMemo(() => searchWords(wordIndex, trimmedQuery), [wordIndex, trimmedQuery])
+  const focusSearch = () => {
+    setActiveGroup((group) => (group === 'my-libraries' ? 'everyday-life' : group))
+    searchInput.current?.focus()
+    searchInput.current?.scrollIntoView({ block: 'center' })
+  }
 
   const noticeBar = notice ? (
     <p className="library-notice" role="status">
@@ -302,6 +316,20 @@ export function LibrariesPage() {
   return (
     <div className="libraries-page" id="libraries">
       <LibrariesRail />
+      <label className="global-word-search">
+        <Icon name="search" size={17} />
+        <input
+          ref={searchInput}
+          {...noAutocorrect}
+          value={query}
+          onChange={(event) => {
+            setQuery(event.target.value)
+            setAdding(null)
+          }}
+          placeholder="Find a word, or type a new one to add it…"
+          aria-label="Find a word in the libraries or add a new one"
+        />
+      </label>
       <header className="libraries-header">
         <div>
           <h1>Libraries</h1>
@@ -314,47 +342,64 @@ export function LibrariesPage() {
       {noticeBar}
       {dialog}
       <LibraryViewFilterPanel filter={viewFilter} onChange={setViewFilter} />
-      <label className="global-word-search">
-        <Icon name="search" size={17} />
-        <input
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-          placeholder="Search any word, translation, or topic across all libraries…"
+      {adding !== null ? (
+        <AddWordPanel
+          key={adding}
+          initialWord={adding}
+          onAdded={refresh}
+          onPractise={(wordId, word) => {
+            setPendingPracticeSelection({ wordIds: [wordId], label: word })
+            window.location.hash = 'practice'
+          }}
+          onClose={() => {
+            setAdding(null)
+            setQuery('')
+          }}
         />
-      </label>
-      {trimmedQuery.length >= 2 ? (
+      ) : trimmedQuery.length >= 2 ? (
         <section className="search-results">
-          <p className="search-results__count">
-            {searchResults.length} result{searchResults.length === 1 ? '' : 's'} for “{query.trim()}”
-          </p>
-          {searchResults.length === 0 ? (
-            <p className="no-words">No words match this search.</p>
-          ) : (
-            <div className="word-list">
-              {searchResults.map((word) => (
-                <article className="word-row" key={word.wordId}>
-                  <div>
-                    <h3>{word.word}</h3>
-                    <p>{word.translation}</p>
-                    {word.example ? <small>{word.example}</small> : null}
-                    <WordNoteLine wordId={word.wordId} />
-                    <RuleChips rules={ruleMap.get(word.wordId)} />
-                  </div>
-                  <aside>
-                    <span>{word.topic}</span>
-                    {word.subtopic ? <span>{word.subtopic}</span> : null}
-                    <div className="word-row__actions">
-                      <button className="quiet-action" type="button" onClick={() => openWordsLibrary(word)}>
-                        Open library
-                      </button>
-                      <button className="quiet-action" type="button" onClick={() => beginPractice([word], word.word)}>
-                        <Icon name="practice" size={13} /> Practise
-                      </button>
-                      <HideButton word={word} onHide={hideWord} />
-                    </div>
-                  </aside>
-                </article>
-              ))}
+          {search.matches.length ? <p className="search-results__count">In the libraries</p> : null}
+          <div className="word-list">
+            {search.matches.map((hit) => (
+              <SearchRow
+                hit={hit}
+                filter={viewFilter}
+                ruleMap={ruleMap}
+                onOpen={openWordsLibrary}
+                onPractise={beginPractice}
+                onHide={hideWord}
+                key={hit.word.wordId}
+              />
+            ))}
+          </div>
+          {search.close.length ? (
+            <>
+              <p className="search-results__count">Did you mean…</p>
+              <div className="word-list">
+                {search.close.map((hit) => (
+                  <SearchRow
+                    hit={hit}
+                    filter={viewFilter}
+                    ruleMap={ruleMap}
+                    onOpen={openWordsLibrary}
+                    onPractise={beginPractice}
+                    onHide={hideWord}
+                    key={hit.word.wordId}
+                  />
+                ))}
+              </div>
+            </>
+          ) : null}
+          {search.hasExact ? null : (
+            <div className="search-add">
+              <p>
+                {search.matches.length || search.close.length
+                  ? 'Not the word you typed? Spell it as you meant it and add it yourself.'
+                  : 'No word like this in the libraries.'}
+              </p>
+              <button className="check-button" type="button" onClick={() => setAdding(trimmedQuery)}>
+                Add “{trimmedQuery}” to my words
+              </button>
             </div>
           )}
         </section>
@@ -364,14 +409,8 @@ export function LibrariesPage() {
             <button className="check-button" type="button" onClick={() => beginPractice(allWords, 'All libraries')}>
               <Icon name="practice" size={17} /> Practise all words
             </button>
-            <button className="template-button" type="button" onClick={() => setActiveGroup('my-libraries')}>
+            <button className="template-button" type="button" onClick={focusSearch}>
               Add a word
-            </button>
-            <button className="template-button" type="button" onClick={() => setActiveGroup('my-libraries')}>
-              Import CSV
-            </button>
-            <button className="template-button" type="button" onClick={downloadTemplate}>
-              CSV template
             </button>
             <button className="template-button" type="button" onClick={() => setTuning((open) => !open)}>
               Tune my library
@@ -405,13 +444,11 @@ export function LibrariesPage() {
             <PackList libraries={libraries} onToggle={togglePack} onPreview={previewPack} />
           ) : activeGroup === 'my-libraries' ? (
             <>
-              <AddWordPanel
-                onAdded={refresh}
-                onPractise={(wordId, word) => {
-                  setPendingPracticeSelection({ wordIds: [wordId], label: word })
-                  window.location.hash = 'practice'
-                }}
-              />
+              <div className="libraries-actions">
+                <button className="template-button" type="button" onClick={downloadTemplate}>
+                  CSV template
+                </button>
+              </div>
               <MyLibraries
                 libraries={getEveryLibrary().filter((library) => library.source === 'imported')}
                 hiddenKeys={getHiddenWordIds()}
@@ -458,6 +495,49 @@ export function LibrariesPage() {
         </>
       )}
     </div>
+  )
+}
+
+function SearchRow({
+  hit,
+  filter,
+  ruleMap,
+  onOpen,
+  onPractise,
+  onHide,
+}: {
+  hit: WordHit
+  filter: LibraryViewFilter
+  ruleMap: Map<string, Rule[]>
+  onOpen: (word: LibraryWord) => void
+  onPractise: (words: LibraryWord[], label: string) => void
+  onHide: (word: LibraryWord) => void
+}) {
+  const word = hit.word
+  return (
+    <article className="word-row">
+      <div>
+        <h3>{word.word}</h3>
+        <p>{word.translation}</p>
+        {word.example ? <small>{word.example}</small> : null}
+        <WordNoteLine wordId={word.wordId} />
+        <RuleChips rules={ruleMap.get(word.wordId)} />
+      </div>
+      <aside>
+        <span>{word.topic}</span>
+        {word.subtopic ? <span>{word.subtopic}</span> : null}
+        {isWordShown(word, filter) ? null : <span className="word-row__filtered">hidden in the lists by your filter</span>}
+        <div className="word-row__actions">
+          <button className="quiet-action" type="button" onClick={() => onOpen(word)}>
+            Open library
+          </button>
+          <button className="quiet-action" type="button" onClick={() => onPractise([word], word.word)}>
+            <Icon name="practice" size={13} /> Practise
+          </button>
+          <HideButton word={word} onHide={onHide} />
+        </div>
+      </aside>
+    </article>
   )
 }
 
