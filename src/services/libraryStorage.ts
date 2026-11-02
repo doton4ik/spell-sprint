@@ -266,10 +266,19 @@ export function myWordId(word: string) {
   return stableWordId('my-words', 'Added words', word)
 }
 
+// One entry per meaning: a word added again with the same translation is updated; with another translation
+// ("fortune" = удача, then "fortune" = состояние) it becomes a second entry with its own id and history.
+export function myMeaningId(word: string, translation: string) {
+  return stableWordId('my-words', 'Added words', `${word.trim().toLocaleLowerCase()} | ${translation.trim().toLocaleLowerCase()}`)
+}
+
 // Adds the word to "My words" (created on first use), or updates it if it is already there.
 export function addMyWord(fields: MyWordFields) {
   const libraries = getImportedLibraries()
-  const wordId = myWordId(fields.word)
+  const sameTranslation = (a: string, b: string) => a.trim().toLocaleLowerCase() === b.trim().toLocaleLowerCase()
+  const firstId = myWordId(fields.word)
+  const first = libraries.find((item) => item.name === MY_WORDS)?.words.find((word) => word.wordId === firstId)
+  const wordId = first && !sameTranslation(first.translation, fields.translation) ? myMeaningId(fields.word, fields.translation) : firstId
   const entry: LibraryWord = {
     id: wordId,
     wordId,

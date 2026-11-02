@@ -1,8 +1,8 @@
 // Checks the built-in library CSV: `pnpm check:library`.
 // Errors (exit code 1): missing fields, duplicate ids, stray spaces, wrong alphabet, one word with two
 // different translations, broken extra-example sources, values longer than the app expects.
-// Notes (no failure): an example that does not contain its word, two words with the same Russian prompt
-// that do not accept each other as an answer.
+// Also errors: two words with the same Russian prompt that do not accept each other as an answer.
+// Notes (no failure): an example that does not contain its word.
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { TOPICS } from './library-topics.mjs'
@@ -114,7 +114,7 @@ for (const [prompt, list] of byPrompt) {
           .includes(word),
     ),
   )
-  if (!accepted) notes.push(`"${prompt}" is the prompt of ${words.join(' / ')} — add them as alternatives or make the translations differ`)
+  if (!accepted) errors.push(`"${prompt}" is the prompt of ${words.join(' / ')} — add them as alternatives or make the translations differ`)
 }
 
 // The fixed subtopics (scripts/library-subtopics.mjs): every topic has its list, and words added by the new-words
