@@ -568,7 +568,6 @@ function GroupCard({
   const allGroupWords = wordsForGroup(group, hidden ? getEveryLibrary().filter(isBaseLibrary) : libraries)
   const words = hidden ? allGroupWords : filterShownWords(allGroupWords, viewFilter)
   const topics = new Set(words.map((word) => word.topic))
-  const examples = words.slice(0, 3)
   // Everything in this card is switched off in the view filter: leave the card out.
   if (!hidden && isViewFilterActive(viewFilter) && words.length === 0 && allGroupWords.length > 0) return null
   if (hidden)
@@ -588,7 +587,7 @@ function GroupCard({
     <article className="group-card">
       <span className="group-card__eyebrow">{asTopic ? 'Topic' : 'Vocabulary group'}</span>
       <h2>{group.name}</h2>
-      <p>{group.description}</p>
+      {asTopic ? null : <p>{group.description}</p>}
       <div className="group-card__stats">
         <strong>
           {words.length}
@@ -600,11 +599,6 @@ function GroupCard({
             <small>topics</small>
           </strong>
         )}
-      </div>
-      <div className="group-card__examples">
-        {examples.map((word) => (
-          <span key={word.wordId}>{word.word}</span>
-        ))}
       </div>
       <div className="group-card__actions">
         <button className="outline-action" type="button" onClick={() => onOpen(group)}>
