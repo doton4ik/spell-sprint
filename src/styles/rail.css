@@ -96,7 +96,7 @@
     margin-left: 0;
     margin-right: 0;
     max-width: none;
-    width: min(var(--page-w), 100% - 228px);
+    width: min(var(--page-w), 100% - 252px);
   }
   .page-rail {
     display: block;

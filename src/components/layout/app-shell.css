@@ -548,7 +548,7 @@
   padding-left: max(0px, calc((100% - 1330px) / 2));
 }
 
-/* Menu hidden, page with a rail beside it: the rail hangs 228px past the page, so the centring must leave room for it,
+/* Menu hidden, page with a rail beside it: the rail hangs 228px past (plus a 24px gap on the screen edge) the page, so the centring must leave room for it,
    otherwise part of the rail leaves the screen and a horizontal scrollbar appears. */
 @media (min-width: 1200px) {
   .app-shell--menu-hidden
@@ -556,6 +556,6 @@
     :is(.learning-page, .level-page, .topics-page, .proof-page, .sprint-page, .pairs-page, .libraries-page, .settings-page):has(
       > .page-rail
     ) {
-    margin-left: max(0px, min((100% - 1330px) / 2, 100% - 1558px));
+    margin-left: max(0px, min((100% - 1330px) / 2, 100% - 1582px));
   }
 }
