@@ -2,14 +2,19 @@ import { cefrLevels, librarySections, libraryTopics } from '../../data/libraryTo
 import { emptyViewFilter, isViewFilterActive, toggleInList, type LibraryViewFilter } from '../../services/libraryViewFilter'
 
 // Switches levels, sections and topics on and off for the Library lists. Checked = shown.
+export function ViewFilterToggle({ filter, open, onToggle }: { filter: LibraryViewFilter; open: boolean; onToggle: () => void }) {
+  return (
+    <button className="template-button" type="button" aria-expanded={open} onClick={onToggle}>
+      Levels and topics{isViewFilterActive(filter) ? ' · on' : ''}
+    </button>
+  )
+}
+
 export function LibraryViewFilterPanel({ filter, onChange }: { filter: LibraryViewFilter; onChange: (filter: LibraryViewFilter) => void }) {
   const active = isViewFilterActive(filter)
   return (
-    <details className="view-filter">
-      <summary>
-        Show or hide levels and topics
-        {active ? <span className="view-filter__badge">filter on</span> : null}
-      </summary>
+    <section className="view-filter" aria-label="Show or hide levels and topics">
+      <h2 className="view-filter__title">Show or hide levels and topics</h2>
       <div className="view-filter__body">
         <div className="view-filter__row">
           <span className="view-filter__label">Levels</span>
@@ -63,6 +68,6 @@ export function LibraryViewFilterPanel({ filter, onChange }: { filter: LibraryVi
           Show everything again
         </button>
       </div>
-    </details>
+    </section>
   )
 }

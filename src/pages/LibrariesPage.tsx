@@ -20,7 +20,7 @@ import type { Rule } from '../types/rules'
 import './libraries.css'
 import { LibrariesRail } from '../components/ui/PageRails'
 import { buildWordIndex, searchWords, type WordHit } from '../services/wordSearch'
-import { LibraryViewFilterPanel } from '../components/libraries/LibraryViewFilterPanel'
+import { LibraryViewFilterPanel, ViewFilterToggle } from '../components/libraries/LibraryViewFilterPanel'
 import {
   filterShownWords,
   getViewFilter,
@@ -131,6 +131,7 @@ export function LibrariesPage() {
   const [adding, setAdding] = useState<string | null>(null)
   const searchInput = useRef<HTMLInputElement>(null)
   const [tuning, setTuning] = useState(false)
+  const [filterOpen, setFilterOpen] = useState(false)
   const ruleMap = useWordRuleMap()
   const groups = libraryGroups.filter((group) => group.id !== 'all')
   const [viewFilter, setViewFilterState] = useState(getViewFilter)
@@ -341,7 +342,6 @@ export function LibrariesPage() {
       </header>
       {noticeBar}
       {dialog}
-      <LibraryViewFilterPanel filter={viewFilter} onChange={setViewFilter} />
       {adding !== null ? (
         <AddWordPanel
           key={adding}
@@ -415,7 +415,9 @@ export function LibrariesPage() {
             <button className="template-button" type="button" onClick={() => setTuning((open) => !open)}>
               Tune my library
             </button>
+            <ViewFilterToggle filter={viewFilter} open={filterOpen} onToggle={() => setFilterOpen((open) => !open)} />
           </div>
+          {filterOpen ? <LibraryViewFilterPanel filter={viewFilter} onChange={setViewFilter} /> : null}
           {tuning ? (
             <LibrarySetup
               title="Tune my library"
@@ -728,6 +730,7 @@ function LibraryDetails({
   const [partOfSpeech, setPartOfSpeech] = useState('All')
   const [search, setSearch] = useState('')
   const [filtersOpen, setFiltersOpen] = useState(false)
+  const [viewOpen, setViewOpen] = useState(false)
   const topics = options(details.words.map((word) => word.topic))
   const subtopics = options(details.words.filter((word) => topic === 'All' || word.topic === topic).map((word) => word.subtopic))
   const visible = details.words.filter(
@@ -767,7 +770,6 @@ function LibraryDetails({
         ← Back to Libraries
       </button>
       {notice}
-      {rawDetails.restorable ? null : <LibraryViewFilterPanel filter={viewFilter} onChange={onViewFilter} />}
       <header className="libraries-header">
         <div>
           <p className="eyebrow">Library details</p>
@@ -785,12 +787,16 @@ function LibraryDetails({
             Start practice
           </button>
         )}
+        {rawDetails.restorable ? null : (
+          <ViewFilterToggle filter={viewFilter} open={viewOpen} onToggle={() => setViewOpen((open) => !open)} />
+        )}
         {details.library?.source === 'imported' ? (
           <button className="quiet-button" type="button" onClick={() => onDelete(details.library!)}>
             Delete library
           </button>
         ) : null}
       </div>
+      {viewOpen && !rawDetails.restorable ? <LibraryViewFilterPanel filter={viewFilter} onChange={onViewFilter} /> : null}
       <section className="details-browser">
         <div className="details-browser__top">
           <div>
