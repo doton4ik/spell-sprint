@@ -96,8 +96,6 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (a
   const [answer, setAnswer] = useState('')
   const [result, setResult] = useState<(LineResult & { skipped: boolean }) | null>(null)
   const [hint, setHint] = useState(false)
-  // the picture of a video often carries the line as on-screen text: it stays covered until the line is checked and the learner asks
-  const [showVideo, setShowVideo] = useState(false)
   // the word of the line being said right now (-1: none), lit up in the hint
   const [spoken, setSpoken] = useState(-1)
   const [answered, setAnswered] = useState<Answered[]>([])
@@ -141,7 +139,6 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (a
     setAnswer('')
     setResult(null)
     setHint(false)
-    setShowVideo(false)
   }
 
   return (
@@ -163,20 +160,6 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (a
               onFailed={() => setVideoFailed(true)}
               onTime={(seconds) => setSpoken(seconds < 0 || !line.wordStarts ? -1 : wordAt(line.wordStarts, seconds))}
             />
-            {showVideo ? null : (
-              <div className="listen-video-cover">
-                <p>
-                  {result
-                    ? 'The picture is hidden so that you listen instead of read.'
-                    : 'Listen: the picture is hidden until you check the line.'}
-                </p>
-                {result ? (
-                  <button className="template-button" type="button" onClick={() => setShowVideo(true)}>
-                    Show video
-                  </button>
-                ) : null}
-              </div>
-            )}
           </div>
         ) : null}
         <section className="listen-card">
