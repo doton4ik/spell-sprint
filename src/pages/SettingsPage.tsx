@@ -39,6 +39,7 @@ import {
   type Theme,
 } from '../services/appearanceStorage'
 import { describePlan } from '../services/dailyChecklist'
+import { applyReminder, getReminder, remindersAvailable } from '../services/reminders'
 import { dailyMinutesOptions, getProfile, saveProfile, type DailyActivities } from '../services/profileStorage'
 import { getOutboxSize, subscribeToOutbox } from '../services/mistakeOutbox'
 import './settings.css'
@@ -108,6 +109,7 @@ export function SettingsPage() {
   const [fontScale, setFontScaleState] = useState<FontScale>(getFontScale)
   const [theme, setThemeState] = useState<Theme>(getTheme)
   const [profile, setProfileState] = useState(getProfile)
+  const [reminder, setReminderState] = useState(getReminder)
   const configured = isSupabaseConfigured()
   const [syncStatus, setSyncStatus] = useState(getSyncStatus)
   useEffect(() => {
@@ -270,6 +272,14 @@ export function SettingsPage() {
       setMessage(error instanceof Error ? error.message : 'Could not delete the account. Try again.')
     } finally {
       setBusy(false)
+    }
+  }
+  async function changeReminder(next: typeof reminder) {
+    setReminderState(next)
+    const allowed = await applyReminder(next)
+    if (!allowed) {
+      setReminderState({ ...next, enabled: false })
+      setMessage('Notifications are off for Spell Sprint. Allow them in your phone settings to get reminders.')
     }
   }
   function setAccent(locale: 'en-US' | 'en-GB') {
@@ -444,6 +454,34 @@ export function SettingsPage() {
               </small>
             ) : null}
           </article>
+          {remindersAvailable() ? (
+            <article className="settings-card">
+              <div className="settings-card__head">
+                <h2>Daily reminder</h2>
+                <InfoTip>
+                  A notification on this phone at the time you choose. It is skipped on a day when your plan is already done.
+                </InfoTip>
+              </div>
+              <label className="plan-toggle">
+                <input
+                  type="checkbox"
+                  checked={reminder.enabled}
+                  onChange={(event) => void changeReminder({ ...reminder, enabled: event.target.checked })}
+                />
+                <span>Remind me to practise</span>
+              </label>
+              {reminder.enabled ? (
+                <label>
+                  Time
+                  <input
+                    type="time"
+                    value={reminder.time}
+                    onChange={(event) => event.target.value && void changeReminder({ ...reminder, time: event.target.value })}
+                  />
+                </label>
+              ) : null}
+            </article>
+          ) : null}
         </div>
         <div className="settings-col">
           <article className="settings-card settings-card--compact">

@@ -19,9 +19,14 @@
     "format:check": "prettier --check .",
     "test:e2e": "pnpm build && playwright test",
     "check:rules": "node scripts/check-rules.mjs",
-    "backup": "node scripts/backup.mjs"
+    "backup": "node scripts/backup.mjs",
+    "app:sync": "pnpm build && cap sync",
+    "app:icons": "node scripts/make-icons.mjs && capacitor-assets generate --iconBackgroundColor '#2d4f80' --iconBackgroundColorDark '#2d4f80' --splashBackgroundColor '#f5f0e6' --splashBackgroundColorDark '#14110d' && git checkout public/manifest.webmanifest public/icons/spell-sprint-icon.svg && node -e \"require('fs').rmSync('icons',{recursive:true,force:true})\""
   },
   "dependencies": {
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/core": "^8.6.0",
+    "@capacitor/local-notifications": "^8.3.1",
     "@vitejs/plugin-react": "^6.0.5",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
@@ -29,6 +34,10 @@
     "vite": "^8.2.1"
   },
   "devDependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/assets": "^4.0.0",
+    "@capacitor/cli": "^8.6.0",
+    "@capacitor/ios": "^8.6.0",
     "@playwright/test": "^1.63.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",

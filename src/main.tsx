@@ -6,6 +6,7 @@ import { clearLegacyServiceWorkers } from './pwa/registerServiceWorker'
 import { applyFontScale, applyTheme } from './services/appearanceStorage'
 import { startAutoSync } from './services/cloudSync'
 import { captureAuthRedirect } from './services/supabase'
+import { startReminders } from './services/reminders'
 import { startErrorLog } from './services/errorLog'
 import './styles/global.css'
 
@@ -27,6 +28,7 @@ builtInLoading.then(
     )
     void clearLegacyServiceWorkers()
     startAutoSync()
+    void startReminders()
   },
   () => {
     root.render(
