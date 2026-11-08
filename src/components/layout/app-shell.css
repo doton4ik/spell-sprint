@@ -472,7 +472,7 @@
   font-family: var(--font-serif);
 }
 
-/* The side bar always fits: every menu item (the main ones and Settings / Feedback) has the same height, taken from the
+/* The side bar always fits (the divisor is the number of rows, the offset the rest of its height; measure again when a row is added): every menu item (the main ones and Settings / Feedback) has the same height, taken from the
    height of the window (between 36 and 64 px), and the same gap. A very short window (a high browser zoom) scrolls the side
    bar instead of letting the items run over each other. */
 .sidebar {
@@ -481,7 +481,7 @@
 }
 @media (min-width: 801px) {
   .sidebar {
-    --nav-h: clamp(36px, calc((100vh - 225px) / 13), 64px);
+    --nav-h: clamp(36px, calc((100vh - 216px) / 14), 64px);
   }
   .sidebar .nav-link {
     box-sizing: border-box;
@@ -500,7 +500,7 @@
 }
 @media (min-width: 801px) and (max-height: 960px) {
   .sidebar {
-    --nav-h: clamp(36px, calc((100vh - 205px) / 13), 64px);
+    --nav-h: clamp(36px, calc((100vh - 208px) / 14), 64px);
     padding-top: 20px;
   }
   .brand {
