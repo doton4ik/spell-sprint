@@ -9,6 +9,7 @@ import {
   backUpBeforeSignOut,
   getSyncStatus,
   restoreLearningData,
+  deleteAccountAndClearDevice,
   signOutAndClearDevice,
   subscribeToSyncStatus,
   syncNow,
@@ -246,6 +247,31 @@ export function SettingsPage() {
       setBusy(false)
     }
   }
+  async function removeAccount() {
+    if (
+      !(await ask({
+        title: 'Delete your account?',
+        message:
+          'Your account, progress, mistakes and saved libraries will be deleted for good, on this device and in the cloud. This cannot be undone.',
+        confirmLabel: 'Delete account',
+        cancelLabel: 'Keep my account',
+      }))
+    )
+      return
+    setBusy(true)
+    setMessage('')
+    try {
+      await deleteAccountAndClearDevice()
+      setSession(null)
+      setSettingPassword(false)
+      setProfileState(getProfile())
+      setMessage('Your account and all its data were deleted.')
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : 'Could not delete the account. Try again.')
+    } finally {
+      setBusy(false)
+    }
+  }
   function setAccent(locale: 'en-US' | 'en-GB') {
     setSpeechLocale(locale)
     savePracticeSettings({ ...loadPracticeSettings(defaultPracticeSettings), speechLocale: locale })
@@ -330,6 +356,9 @@ export function SettingsPage() {
                   }}
                 >
                   Change password
+                </button>{' '}
+                <button className="settings-link" type="button" disabled={busy} onClick={removeAccount}>
+                  Delete account
                 </button>
               </>
             ) : (

@@ -51,7 +51,7 @@ const privacy: Section[] = [
   {
     title: 'Keeping and deleting your data',
     body: [
-      'Signing out backs up your progress and removes it from the device. Your cloud copy stays until you ask for it to be deleted. Deleting your account and cloud data is done on request; see the contact below. You can also ask for a copy of your data.',
+      'Signing out backs up your progress and removes it from the device. Your cloud copy stays until you delete your account. You can do that yourself in Settings → Account → Delete account: your account and all its cloud data are removed for good. You can also ask for a copy of your data; see the contact below.',
       'Error reports are kept only as long as they are needed to fix the problem.',
     ],
   },

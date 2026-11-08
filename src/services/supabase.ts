@@ -158,6 +158,20 @@ export async function signOut() {
   storeSession(null)
 }
 
+// Deletes the signed-in learner's account and all their cloud data (database/delete-account.sql).
+export async function deleteAccount() {
+  const session = await getActiveCloudSession()
+  if (!session) throw new Error('Sign in again to delete your account.')
+  try {
+    await request('/rest/v1/rpc/delete_my_account', { method: 'POST', headers: headers(session.access_token), body: '{}' })
+  } catch (error) {
+    if ((error as { status?: number }).status === 404)
+      throw new Error('Account deletion is not set up on the server yet. Write to the address on the Privacy page.')
+    throw error
+  }
+  storeSession(null)
+}
+
 // A request as the signed-in learner (RLS applies), with an already-verified session so a multi-step
 // operation (e.g. recording one mistake against several rules) does not re-verify per call.
 export async function supabaseAuthedFetch(session: SupabaseSession, path: string, init: RequestInit = {}) {

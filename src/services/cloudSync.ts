@@ -12,7 +12,15 @@ import { getPairAttempts, mergePairAttempts } from './pairs'
 import { getAllYellowCards, mergeYellowCards } from './yellowCards'
 import { getSprintRounds, mergeSprintRounds } from './sprint'
 import { clearPersonalData } from './deviceData'
-import { getActiveCloudSession, getCloudSession, loadCloudSnapshot, loadCloudSnapshotVersion, saveCloudSnapshot, signOut } from './supabase'
+import {
+  deleteAccount,
+  getActiveCloudSession,
+  getCloudSession,
+  loadCloudSnapshot,
+  loadCloudSnapshotVersion,
+  saveCloudSnapshot,
+  signOut,
+} from './supabase'
 
 type Snapshot = {
   yellowCards?: unknown
@@ -232,6 +240,13 @@ export async function backUpBeforeSignOut() {
   await syncNow()
   await flushMistakeOutbox()
   return !lastError && getOutboxSize() === 0
+}
+
+// Deletes the account in the cloud first; the device is cleared only if that worked.
+export async function deleteAccountAndClearDevice() {
+  window.clearTimeout(timer)
+  await deleteAccount()
+  clearPersonalData()
 }
 
 export async function signOutAndClearDevice() {
