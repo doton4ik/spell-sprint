@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { tableQuery } from './supabase'
+import { authParamsFromAppLink, tableQuery } from './supabase'
 
 describe('tableQuery', () => {
   it('turns filters into encoded PostgREST conditions', () => {
@@ -18,5 +18,30 @@ describe('tableQuery', () => {
     expect(tableQuery('rules', { created_by: null, slug: undefined }, { onConflict: 'user_id,rule_id' })).toBe(
       '/rest/v1/rules?created_by=is.null&on_conflict=user_id,rule_id',
     )
+  })
+})
+
+describe('authParamsFromAppLink', () => {
+  it('reads the tokens of a link that opens the app', () => {
+    const params = authParamsFromAppLink('spellsprint://auth#access_token=a1&refresh_token=r1&type=recovery')
+    expect(params?.get('access_token')).toBe('a1')
+    expect(params?.get('refresh_token')).toBe('r1')
+    expect(params?.get('type')).toBe('recovery')
+  })
+
+  it('reads an error link', () => {
+    expect(authParamsFromAppLink('spellsprint://auth#error=access_denied&error_description=Link+expired')?.get('error_description')).toBe(
+      'Link expired',
+    )
+  })
+
+  it('ignores other addresses and links without data', () => {
+    expect(authParamsFromAppLink('https://evil.example/#access_token=a&refresh_token=r')).toBeNull()
+    expect(authParamsFromAppLink('spellsprint://auth')).toBeNull()
+    expect(authParamsFromAppLink('spellsprint://auth#foo=bar')).toBeNull()
+  })
+
+  it('accepts the scheme in any letter case', () => {
+    expect(authParamsFromAppLink('SpellSprint://auth#access_token=a&refresh_token=r')).not.toBeNull()
   })
 })

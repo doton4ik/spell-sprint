@@ -1,3 +1,4 @@
+import { Capacitor } from '@capacitor/core'
 import { claimDeviceData } from './deviceData'
 import { safeSetItem } from './safeStorage'
 import type { Insert, Json, Row, TableName } from '../types/database'
@@ -97,7 +98,11 @@ export async function signIn(email: string, password: string) {
 
 // Links in Supabase emails (confirm the address, reset the password) return here. The address must be
 // listed under Authentication → URL Configuration → Redirect URLs, otherwise Supabase uses the Site URL.
+// In the store apps the email link must open the app, so it uses the app's own address (a custom URL scheme). It has to be
+// listed in Supabase → Authentication → URL Configuration → Redirect URLs (docs/launch-setup.md).
+export const APP_LINK_SCHEME = 'spellsprint://'
 function redirectTo() {
+  if (Capacitor.isNativePlatform()) return encodeURIComponent(`${APP_LINK_SCHEME}auth`)
   return encodeURIComponent(`${window.location.origin}${window.location.pathname}`)
 }
 
@@ -125,13 +130,12 @@ export async function updatePassword(password: string) {
 export type AuthRedirect = { kind: 'signed-in' | 'recovery' } | { kind: 'error'; message: string }
 let pendingRedirect: Promise<AuthRedirect> | null = null
 
-export function captureAuthRedirect() {
-  const params = new URLSearchParams(window.location.hash.slice(1))
+export const AUTH_REDIRECT_EVENT = 'spell-sprint:auth-redirect'
+
+function startRedirect(params: URLSearchParams) {
   const accessToken = params.get('access_token')
   const refreshToken = params.get('refresh_token')
   const error = params.get('error_description') ?? params.get('error')
-  if (!accessToken && !error) return
-  window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}#settings`)
   pendingRedirect = (async (): Promise<AuthRedirect> => {
     if (error || !accessToken || !refreshToken) return { kind: 'error', message: error ?? 'The link is incomplete. Request a new one.' }
     try {
@@ -142,6 +146,42 @@ export function captureAuthRedirect() {
       return { kind: 'error', message: 'This link has expired or was already used. Request a new one.' }
     }
   })()
+}
+
+export function captureAuthRedirect() {
+  const params = new URLSearchParams(window.location.hash.slice(1))
+  if (!params.get('access_token') && !(params.get('error_description') ?? params.get('error'))) return
+  window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}#settings`)
+  startRedirect(params)
+}
+
+/** The data of a link that opened the app (spellsprint://auth#access_token=…), or null for any other address. */
+export function authParamsFromAppLink(link: string): URLSearchParams | null {
+  if (!link.toLowerCase().startsWith(APP_LINK_SCHEME)) return null
+  const hash = link.indexOf('#')
+  const params = new URLSearchParams(hash < 0 ? '' : link.slice(hash + 1))
+  return params.get('access_token') || params.get('error_description') || params.get('error') ? params : null
+}
+
+function handleAppLink(link: string) {
+  const params = authParamsFromAppLink(link)
+  if (!params) return
+  startRedirect(params)
+  window.location.hash = '#settings'
+  window.dispatchEvent(new Event(AUTH_REDIRECT_EVENT)) // Settings may already be open: it picks the result up
+}
+
+/** In the store apps: handles the link that started the app and any link opened while it runs. */
+export async function startAppLinks() {
+  if (!Capacitor.isNativePlatform()) return
+  try {
+    const { App } = await import('@capacitor/app')
+    await App.addListener('appUrlOpen', (event) => handleAppLink(event.url))
+    const launch = await App.getLaunchUrl()
+    if (launch?.url) handleAppLink(launch.url)
+  } catch {
+    // The app still works without deep links: the learner can sign in with the password.
+  }
 }
 
 // Returns the result once; later calls get null.

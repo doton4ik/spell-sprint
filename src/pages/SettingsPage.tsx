@@ -21,6 +21,7 @@ import {
   signIn,
   signUp,
   takeAuthRedirect,
+  AUTH_REDIRECT_EVENT,
   updatePassword,
 } from '../services/supabase'
 import { loadPracticeSettings, savePracticeSettings } from '../services/practiceStorage'
@@ -122,20 +123,24 @@ export function SettingsPage() {
   useEffect(() => subscribeToOutbox(() => setQueuedMistakes(getOutboxSize())), [])
   // Opened from a link in a Supabase email (address confirmed, or password reset requested).
   useEffect(() => {
-    void takeAuthRedirect()?.then(async (result) => {
-      if (result.kind === 'error') {
-        setMessage(result.message)
-        return
-      }
-      setSession(getCloudSession())
-      if (result.kind === 'recovery') {
-        setSettingPassword(true)
-        setMessage('Choose a new password for your account.')
-        return
-      }
-      setMessage('Email confirmed — you are signed in. Syncing runs automatically.')
-      await syncNow()
-    })
+    const consume = () =>
+      void takeAuthRedirect()?.then(async (result) => {
+        if (result.kind === 'error') {
+          setMessage(result.message)
+          return
+        }
+        setSession(getCloudSession())
+        if (result.kind === 'recovery') {
+          setSettingPassword(true)
+          setMessage('Choose a new password for your account.')
+          return
+        }
+        setMessage('Email confirmed — you are signed in. Syncing runs automatically.')
+        await syncNow()
+      })
+    consume()
+    window.addEventListener(AUTH_REDIRECT_EVENT, consume) // a link opened while the app is already running
+    return () => window.removeEventListener(AUTH_REDIRECT_EVENT, consume)
   }, [])
   function updateProfile(patch: Parameters<typeof saveProfile>[0]) {
     setProfileState(saveProfile(patch))

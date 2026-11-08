@@ -5,7 +5,7 @@ import App from './App'
 import { clearLegacyServiceWorkers } from './pwa/registerServiceWorker'
 import { applyFontScale, applyTheme } from './services/appearanceStorage'
 import { startAutoSync } from './services/cloudSync'
-import { captureAuthRedirect } from './services/supabase'
+import { captureAuthRedirect, startAppLinks } from './services/supabase'
 import { startReminders } from './services/reminders'
 import { startErrorLog } from './services/errorLog'
 import './styles/global.css'
@@ -14,6 +14,7 @@ startErrorLog()
 applyFontScale()
 applyTheme()
 captureAuthRedirect()
+void startAppLinks()
 
 const root = createRoot(document.getElementById('root')!)
 
