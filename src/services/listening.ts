@@ -3,6 +3,7 @@ import { savePracticeAttempt } from './practiceStorage'
 import { scheduleAfterAnswer } from './reviewSchedule'
 import type { PracticeAttempt } from '../types/practice'
 import { diffWords, type DiffWord } from './sentenceDiff'
+import { americanSpelling, inOneSpelling } from './spellingVariants'
 
 // One written line of a listening dictation, checked against the line that was heard.
 export type LineResult = {
@@ -14,8 +15,10 @@ export type LineResult = {
 export function checkLine(expected: string, given: string): LineResult {
   // an empty answer is a miss; nothing is compared, every word of the right line is shown as missed
   if (!given.trim()) return { correct: false, expected: expected.split(/\s+/).map((text) => ({ text, same: false })), given: [] }
-  const { expected: shownExpected, given: shownGiven } = diffWords(expected, given)
-  return { correct: sameText(expected, given), expected: shownExpected, given: shownGiven }
+  // British and American spellings are the same word when heard ("colour" / "color"): either is right
+  const { expected: shownExpected, given: shownGiven } = diffWords(expected, given, americanSpelling)
+  const correct = sameText(expected, given) || sameText(inOneSpelling(expected), inOneSpelling(given))
+  return { correct, expected: shownExpected, given: shownGiven }
 }
 
 // Score of a finished clip, as a whole percent.

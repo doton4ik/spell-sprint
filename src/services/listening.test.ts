@@ -157,3 +157,87 @@ describe('missedWords', () => {
     expect(lastListenedClipId([])).toBeNull()
   })
 })
+
+describe('checkLine: what was heard can be written in more than one way', () => {
+  it('accepts British and American spelling of the same word', () => {
+    expect(
+      checkLine("That's what we'll be discussing in this programme.", 'That is what we will be discussing in this program').correct,
+    ).toBe(true)
+    expect(checkLine('Maybe about a litre?', 'maybe about a liter').correct).toBe(true)
+    expect(checkLine('Many people are obsessed with maximizing choice.', 'Many people are obsessed with maximising choice').correct).toBe(
+      true,
+    )
+    expect(checkLine('I just need to practise more.', 'I just need to practice more').correct).toBe(true)
+    expect(checkLine("It's okay to make mistakes.", 'its ok to make mistakes').correct).toBe(false) // "its" is still a mistake
+    expect(checkLine("It's okay to make mistakes.", "It's OK to make mistakes").correct).toBe(true)
+  })
+  it('does not mark the other spelling when something else is wrong', () => {
+    const result = checkLine('I eat fruit and yogurt for breakfast.', 'I eat fruit and yoghurt for brekfast')
+    expect(result.correct).toBe(false)
+    expect(result.given.filter((word) => !word.same).map((word) => word.text)).toEqual(['brekfast'])
+  })
+  it('still rejects a misspelling that only looks like the other spelling', () => {
+    expect(checkLine('What a surprise that was.', 'What a surprize that was').correct).toBe(false)
+    expect(checkLine('The colour is nice.', 'The colr is nice').correct).toBe(false)
+  })
+  it('accepts any number in digits or in words', () => {
+    expect(
+      checkLine('Lions, for example, can sleep up to 20 hours a day.', 'lions for example can sleep up to twenty hours a day').correct,
+    ).toBe(true)
+    expect(
+      checkLine('On average, users stuck with a single task for 40 seconds,', 'On average users stuck with a single task for forty seconds')
+        .correct,
+    ).toBe(true)
+    expect(
+      checkLine('down from 75 seconds measured just five years earlier.', 'down from seventy-five seconds measured just 5 years earlier')
+        .correct,
+    ).toBe(true)
+    expect(
+      checkLine('and it says you can do 50 kilometers an hour maximum.', 'and it says you can do fifty kilometres an hour maximum').correct,
+    ).toBe(true)
+    expect(checkLine('for 40 seconds,', 'for fourteen seconds').correct).toBe(false)
+  })
+})
+
+describe('video clips', () => {
+  const video = listeningClips.filter((clip) => clip.source.kind === 'youtube')
+  it('have clean text: no dashes, brackets, stray spaces or doubled words', () => {
+    for (const clip of video)
+      for (const line of clip.lines) {
+        expect(line.text, `${clip.id}: ${line.text}`).not.toMatch(/[—–[\]()]|\s[,.;:!?]|\s{2,}/)
+        expect(line.text, `${clip.id}: ${line.text}`).toMatch(/[.?!,;:]$/)
+        const words = line.text
+          .toLowerCase()
+          .replace(/[^a-z' ]/g, '')
+          .split(' ')
+        // "that that" and "had had" can be right; the recognition doubled words like "and And"
+        const doubled = words.filter((word, i) => word === words[i + 1] && !['that', 'had'].includes(word))
+        expect(doubled, `${clip.id}: ${line.text}`).toEqual([])
+      }
+  })
+  it('a line lasts between one and twelve seconds and lines follow each other', () => {
+    for (const clip of video) {
+      let before = -1
+      for (const line of clip.lines) {
+        const seconds = (line.end ?? 0) - (line.start ?? 0)
+        expect(seconds, `${clip.id}: ${line.text}`).toBeGreaterThan(1)
+        expect(seconds, `${clip.id}: ${line.text}`).toBeLessThanOrEqual(12)
+        expect(line.start, `${clip.id}: ${line.text}`).toBeGreaterThan(before)
+        before = line.start ?? 0
+      }
+    }
+  })
+  it('a second part comes right after the first part of the same video', () => {
+    const ids = listeningClips.map((clip) => clip.id)
+    for (const id of ids.filter((entry) => entry.endsWith('-2') && ids.includes(entry.slice(0, -2))))
+      expect(ids.indexOf(id)).toBe(ids.indexOf(id.slice(0, -2)) + 1)
+  })
+  it('there are clips of every level, read by a voice and from a video', () => {
+    for (const level of ['A2', 'B1', 'B2'])
+      for (const kind of ['voice', 'youtube'])
+        expect(
+          listeningClips.filter((clip) => clip.level === level && clip.source.kind === kind).length,
+          `${level} ${kind}`,
+        ).toBeGreaterThanOrEqual(3)
+  })
+})

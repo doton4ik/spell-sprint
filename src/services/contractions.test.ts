@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { sameText, variants } from './contractions'
+import { numbersAsDigits, sameText, variants } from './contractions'
 
 describe('contractions', () => {
   it('a contraction is the same as its long form', () => {
@@ -53,5 +53,51 @@ describe('numbers', () => {
   it('a different number is a different sentence', () => {
     expect(sameText('She has 3 cats', 'She has two cats')).toBe(false)
     expect(sameText('about 12 years', 'about ten years')).toBe(false)
+  })
+  // every list is one number written in all the ways a learner may write it
+  const same: Array<[string, string[]]> = [
+    ['for 40 seconds', ['for forty seconds', 'for 40 seconds.']],
+    ['down from 75 seconds', ['down from seventy-five seconds', 'down from seventy five seconds']],
+    ['up to 20 hours a day', ['up to twenty hours a day']],
+    ['about 100 people', ['about a hundred people', 'about one hundred people']],
+    ['350 pages', ['three hundred and fifty pages', 'three hundred fifty pages']],
+    ['between 2,000 and 3,000 words', ['between 2000 and 3000 words', 'between two thousand and three thousand words']],
+    ['20,000 words', ['20000 words', 'twenty thousand words', '20 thousand words']],
+    ['in 2016', ['in twenty sixteen', 'in two thousand and sixteen', 'in two thousand sixteen']],
+    ['in 1999', ['in nineteen ninety-nine', 'in nineteen ninety nine']],
+    ['in 2025', ['in twenty twenty-five']],
+    ['5,000,000 people', ['five million people', '5 million people']],
+    ['1,250,000', ['one million two hundred and fifty thousand']],
+    ['2,345', ['two thousand three hundred and forty-five']],
+    ['21 days', ['twenty-one days', 'twenty one days']],
+  ]
+  it.each(same)('"%s" is the same in digits and in words', (digits, written) => {
+    for (const text of written) {
+      expect(sameText(digits, text), text).toBe(true)
+      expect(sameText(text, digits), text).toBe(true)
+    }
+  })
+  it('numbers that only sound alike or are next to each other stay different', () => {
+    expect(sameText('for 40 seconds', 'for fourteen seconds')).toBe(false)
+    expect(sameText('for forty seconds', 'for fifty seconds')).toBe(false)
+    expect(sameText('2,000 words', 'two thousand and one words')).toBe(false)
+    expect(sameText('a hundred people', 'hundred people')).toBe(false)
+    expect(sameText('from ten to five', 'from 105')).toBe(false)
+    expect(sameText('one two three', '123')).toBe(false)
+    expect(sameText('I have a book', 'I have one book')).toBe(false)
+  })
+  it('words around a number are left alone', () => {
+    expect(numbersAsDigits('i counted to a hundred and you left'.split(' '))).toEqual(['i', 'counted', 'to', '100', 'and', 'you', 'left'])
+    expect(numbersAsDigits('hundreds of people came'.split(' '))).toEqual(['hundreds', 'of', 'people', 'came'])
+    expect(numbersAsDigits('the one constructor'.split(' '))).toEqual(['the', '1', 'constructor'])
+    expect(numbersAsDigits('no one knows'.split(' '))).toEqual(['no', '1', 'knows'])
+  })
+})
+
+describe('dashes', () => {
+  it('a long dash separates words like a hyphen or a space', () => {
+    expect(sameText('The researchers — oh, a new photo!', 'the researchers oh a new photo')).toBe(true)
+    expect(sameText('They measured—what was that?', 'They measured what was that')).toBe(true)
+    expect(sameText('pages 10–12', 'pages 10 12')).toBe(true)
   })
 })

@@ -51,3 +51,32 @@ describe('diffWords with contractions', () => {
     expect(marked(result.given)).toEqual(["won't"])
   })
 })
+
+describe('diffWords with numbers', () => {
+  it('a number is the same in digits and in words, however many words it takes', () => {
+    const result = diffWords(
+      'Users stuck with a task for 40 seconds, down from 75.',
+      'users stuck with a task for forty seconds down from seventy five',
+    )
+    expect(marked(result.given)).toEqual([])
+    expect(marked(result.expected)).toEqual([])
+  })
+  it('marks every written word of a wrong number, and nothing else', () => {
+    const result = diffWords('It costs 75 pounds.', 'It costs seventy four pounds')
+    expect(marked(result.given)).toEqual(['seventy', 'four'])
+    expect(marked(result.expected)).toEqual(['75'])
+  })
+  it('a hyphenated number is one word', () => {
+    const result = diffWords('twenty-one days', '21 days')
+    expect(marked(result.given)).toEqual([])
+  })
+})
+
+describe('diffWords with one more reading of a word', () => {
+  it('two spellings the caller calls equal are not marked', () => {
+    const canon = (word: string) => (word === 'programme' ? 'program' : word)
+    const result = diffWords('in this programme, as usual', 'in this program as usal', canon)
+    expect(marked(result.given)).toEqual(['usal'])
+    expect(marked(result.expected)).toEqual(['usual'])
+  })
+})
