@@ -6,7 +6,8 @@
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- src public index.html package.json pnpm-lock.yaml pnpm-workspace.yaml vite.config.ts tsconfig.json tsconfig.app.json tsconfig.node.json netlify.toml"
 
 [build.environment]
-  NODE_VERSION = "22"
+  # The same version as CI (.github/workflows/ci.yml), so the site is built with what the checks ran on.
+  NODE_VERSION = "24"
 
 # Security headers for every page.
 # CSP: the app loads only its own files and talks only to Supabase (sign-in, sync, reports).
@@ -21,6 +22,13 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
     Cross-Origin-Opener-Policy = "same-origin"
+
+# Files in /assets have a hash of their content in the name (Vite), so a changed file gets a new name:
+# the browser can keep them for a year without asking the server again.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
 # The service worker must always be fresh, so an update reaches everyone.
 [[headers]]
