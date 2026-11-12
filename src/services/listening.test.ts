@@ -1,6 +1,16 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 import { listeningClips } from '../data/listeningClips'
-import { checkLine, clipScore, getListeningProgress, lineHint, recordListeningAnswer, saveClipScore } from './listening'
+import {
+  checkLine,
+  clipScore,
+  getListeningProgress,
+  lastListenedClipId,
+  lineHint,
+  missedWords,
+  recordListeningAnswer,
+  saveClipScore,
+} from './listening'
+import type { PracticeAttempt } from '../types/practice'
 import { getPracticeAttempts } from './practiceStorage'
 
 describe('checkLine', () => {
@@ -103,5 +113,28 @@ describe('saving answers', () => {
     saveClipScore('clip-a', 60)
     saveClipScore('clip-a', 40)
     expect(getListeningProgress()['clip-a']).toEqual({ best: 60, last: 40, plays: 2 })
+  })
+})
+
+describe('missedWords', () => {
+  const attempt = (taskId: string, correctAnswer: string, userAnswer: string, createdAt: string, extra = {}) =>
+    ({ taskId, correctAnswer, userAnswer, createdAt, isCorrect: false, wasSkipped: false, ...extra }) as PracticeAttempt
+  it('counts the words missed in wrong lines, most often first, and ignores short words and skipped lines', () => {
+    const list = [
+      attempt('listen-video-abc-1', 'I was really nervous today.', 'I was realy nervus today.', '2026-11-01T10:00:00Z'),
+      attempt('listen-video-abc-4', 'It was really hard.', 'It was relly hard.', '2026-11-02T10:00:00Z'),
+      attempt('listen-video-xyz-2', 'She went home.', '', '2026-11-02T11:00:00Z', { wasSkipped: true }),
+      attempt('listen-video-xyz-3', 'He is here.', 'He is here.', '2026-11-02T12:00:00Z', { isCorrect: true }),
+      attempt('spell-1', 'Something else entirely.', 'Somethin', '2026-11-02T12:00:00Z'),
+    ]
+    const result = missedWords(list)
+    expect(result[0]).toMatchObject({ word: 'really', count: 2, clipId: 'video-abc', text: 'It was really hard.' })
+    expect(result.map((item) => item.word)).toContain('nervous')
+    expect(result.map((item) => item.word)).not.toContain('went')
+  })
+  it('finds the clip listened to last', () => {
+    const list = [attempt('listen-a-0', 'x', 'y', '2026-11-01T10:00:00Z'), attempt('listen-video-b-12', 'x', 'y', '2026-11-03T10:00:00Z')]
+    expect(lastListenedClipId(list)).toBe('video-b')
+    expect(lastListenedClipId([])).toBeNull()
   })
 })

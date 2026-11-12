@@ -7,12 +7,14 @@ import {
   checkLine,
   clipScore,
   getListeningProgress,
+  lastListenedClipId,
   lineHint,
+  missedWords,
   recordListeningAnswer,
   saveClipScore,
   type LineResult,
 } from '../services/listening'
-import { loadPracticeSettings } from '../services/practiceStorage'
+import { getPracticeAttempts, loadPracticeSettings } from '../services/practiceStorage'
 import { wordAt } from '../services/wordPhrases'
 import { canSpeak, speakEnglish, stopSpeaking } from '../services/speech'
 import './listening.css'
@@ -65,7 +67,25 @@ export function ListeningPage() {
       </div>
     )
   }
+  return <ClipList onPick={(clip) => setPhase({ kind: 'session', clip })} />
+}
+
+const levels = ['all', 'A2', 'B1', 'B2'] as const
+const groups = [
+  { kind: 'youtube', title: 'Video clips', note: 'a real speaker; the line is replayed from the video' },
+  { kind: 'voice', title: 'Voice clips', note: 'written sentences read by the browser voice' },
+] as const
+
+function ClipList({ onPick }: { onPick: (clip: ListeningClip) => void }) {
+  const [level, setLevel] = useState<(typeof levels)[number]>('all')
   const progress = getListeningProgress()
+  const shown = listeningClips.filter((clip) => level === 'all' || clip.level === level)
+  const done = listeningClips.filter((clip) => progress[clip.id]).length
+  const best = listeningClips.filter((clip) => progress[clip.id]).map((clip) => progress[clip.id].best)
+  const average = best.length ? Math.round(best.reduce((sum, value) => sum + value, 0) / best.length) : null
+  const attempts = getPracticeAttempts()
+  const missed = missedWords(attempts)
+  const lastClip = listeningClips.find((clip) => clip.id === lastListenedClipId(attempts))
   return (
     <div className="listen-page" id="listening">
       <header className="listen-header">
@@ -74,19 +94,85 @@ export function ListeningPage() {
         <p>Beta. Video clips belong to their authors (BBC Learning English, TED-Ed, Bob the Canadian) and play from YouTube.</p>
       </header>
       {canSpeak() ? null : <p className="listen-note">This browser cannot read text aloud, so the lines will be silent.</p>}
-      <ul className="listen-clips">
-        {listeningClips.map((clip) => (
-          <li key={clip.id}>
-            <button type="button" className="listen-clip" onClick={() => setPhase({ kind: 'session', clip })}>
-              <span className="listen-clip__level">{clip.level}</span>
-              <strong>{clip.title}</strong>
-              <small>
-                {clip.lines.length} lines{progress[clip.id] ? ` · best ${progress[clip.id].best}%` : ''}
-              </small>
+      <div className="listen-toolbar">
+        <div className="listen-filter" role="group" aria-label="Level">
+          {levels.map((item) => (
+            <button
+              key={item}
+              type="button"
+              className={item === level ? 'listen-filter__item listen-filter__item--on' : 'listen-filter__item'}
+              aria-pressed={item === level}
+              onClick={() => setLevel(item)}
+            >
+              {item === 'all' ? 'All levels' : item}
             </button>
-          </li>
-        ))}
-      </ul>
+          ))}
+        </div>
+        <span className="listen-toolbar__count">
+          {done} of {listeningClips.length} clips tried
+        </span>
+      </div>
+      <div className="listen-layout">
+        <div>
+          {groups.map((group) => {
+            const clips = shown.filter((clip) => clip.source.kind === group.kind)
+            if (!clips.length) return null
+            return (
+              <section key={group.kind} className="listen-group">
+                <h2>
+                  {group.title} <small>{group.note}</small>
+                </h2>
+                <ul className="listen-clips">
+                  {clips.map((clip) => (
+                    <li key={clip.id}>
+                      <button type="button" className="listen-clip" onClick={() => onPick(clip)}>
+                        <span className="listen-clip__level">{clip.level}</span>
+                        <strong>{clip.title}</strong>
+                        <small>
+                          {clip.lines.length} lines{progress[clip.id] ? ` · best ${progress[clip.id].best}%` : ' · not tried yet'}
+                        </small>
+                        <span className="listen-clip__bar" aria-hidden="true">
+                          <span style={{ width: `${progress[clip.id]?.best ?? 0}%` }} />
+                        </span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )
+          })}
+          {shown.length ? null : <p className="listen-note">No clips of this level yet.</p>}
+        </div>
+        <aside className="listen-side" aria-label="Your dictation">
+          <h2>Your dictation</h2>
+          <p className="listen-side__stat">
+            <strong>{done}</strong> of {listeningClips.length} clips tried{average === null ? '' : ` · best ${average}% on average`}
+          </p>
+          {lastClip ? (
+            <button type="button" className="template-button" onClick={() => onPick(lastClip)}>
+              Continue: {lastClip.title}
+            </button>
+          ) : null}
+          <h3>Words you often miss</h3>
+          {missed.length ? (
+            <ul className="listen-missed">
+              {missed.map((item) => {
+                const clip = listeningClips.find((entry) => entry.id === item.clipId)
+                return (
+                  <li key={item.word}>
+                    <button type="button" disabled={!clip} onClick={() => clip && onPick(clip)} title={item.text}>
+                      <strong>{item.word}</strong>
+                      <small>×{item.count}</small>
+                    </button>
+                  </li>
+                )
+              })}
+            </ul>
+          ) : (
+            <p className="listen-side__empty">Write a few lines wrong and the words you missed will collect here.</p>
+          )}
+        </aside>
+      </div>
     </div>
   )
 }

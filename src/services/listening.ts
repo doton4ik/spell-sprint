@@ -2,6 +2,7 @@ import { sameText } from './contractions'
 import { savePracticeAttempt } from './practiceStorage'
 import { scheduleAfterAnswer } from './reviewSchedule'
 import { safeSetItem } from './safeStorage'
+import type { PracticeAttempt } from '../types/practice'
 import { diffWords, type DiffWord } from './sentenceDiff'
 
 // One written line of a listening dictation, checked against the line that was heard.
@@ -93,4 +94,45 @@ export function lineHint(text: string) {
         : `${word[0]}${'·'.repeat(Math.max(letters.length - 1, 1))}${word.match(/[^A-Za-z0-9']+$/)?.[0] ?? ''}`
     })
     .join(' ')
+}
+
+// ---- Words missed in dictation -------------------------------------------------------------------
+
+export type MissedWord = { word: string; count: number; clipId: string; text: string }
+
+// "listen-video-abc-3" → the clip id "video-abc"
+const clipOfTask = (taskId: string) => taskId.replace(/^listen-/, '').replace(/-\d+$/, '')
+const plain = (word: string) => word.toLowerCase().replace(/^[^a-z0-9']+|[^a-z0-9']+$/g, '')
+
+// The words of the lines written wrong (not skipped) that were most often missed, with the clip and the line they
+// were missed in last. Short function words ("a", "the", "to") are left out: they say little.
+export function missedWords(attempts: readonly PracticeAttempt[], limit = 8): MissedWord[] {
+  const found = new Map<string, MissedWord & { at: string }>()
+  for (const attempt of attempts) {
+    if (!attempt.taskId.startsWith('listen-') || attempt.isCorrect || attempt.wasSkipped || !attempt.userAnswer) continue
+    for (const part of diffWords(attempt.correctAnswer, attempt.userAnswer).expected) {
+      const word = plain(part.text)
+      if (part.same || word.length < 4) continue
+      const before = found.get(word)
+      const newer = !before || attempt.createdAt > before.at
+      found.set(word, {
+        word,
+        count: (before?.count ?? 0) + 1,
+        clipId: newer ? clipOfTask(attempt.taskId) : before.clipId,
+        text: newer ? attempt.correctAnswer : before.text,
+        at: newer ? attempt.createdAt : before.at,
+      })
+    }
+  }
+  return [...found.values()]
+    .sort((a, b) => b.count - a.count || b.at.localeCompare(a.at))
+    .slice(0, limit)
+    .map(({ word, count, clipId, text }) => ({ word, count, clipId, text }))
+}
+
+// The clip a dictation answer was saved for last, if any
+export function lastListenedClipId(attempts: readonly PracticeAttempt[]) {
+  let last: PracticeAttempt | undefined
+  for (const attempt of attempts) if (attempt.taskId.startsWith('listen-') && (!last || attempt.createdAt > last.createdAt)) last = attempt
+  return last ? clipOfTask(last.taskId) : null
 }

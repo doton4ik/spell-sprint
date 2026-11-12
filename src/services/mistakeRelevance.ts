@@ -13,6 +13,9 @@ export function relevanceCheck() {
   const words = new Set(getEveryWord().map((word) => word.wordId))
   const hidden = getHiddenWordIds()
   return (attempt: Pick<PracticeAttempt, 'wordId' | 'taskId'>) => {
+    // Listening dictation lines (listen-<clip>-<n>) are whole sentences, not words to learn: they stay in the log
+    // (progress, "words missed in dictation") but never become a mistake or a review card.
+    if (!attempt.wordId && attempt.taskId.startsWith('listen-')) return false
     if (attempt.wordId) return words.has(attempt.wordId) && !hidden.has(attempt.wordId)
     if (retiredTaskIds.has(attempt.taskId) || hidden.has(`task:${attempt.taskId}`)) return false
     // Proofreading: proof-<text id>-<type>-<word>; mistakes in a retired text are skipped.
