@@ -19,6 +19,12 @@ const PERSONAL_KEYS = [
   'spell-sprint.yellow-cards',
   'spell-sprint.diagnostic-result',
   'spell-sprint.profile',
+  'spell-sprint.listening-progress',
+  'spell-sprint.proofreading-done',
+  'spell-sprint.proof-sentences-seen',
+  'spell-sprint.level-check-run',
+  'spell-sprint.mistake-served',
+  'spell-sprint.feedback',
   'spell-sprint.pending-practice-selection',
   'spell-sprint.pending-rule-focus',
 ]

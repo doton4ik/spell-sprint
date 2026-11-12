@@ -1,7 +1,6 @@
 import { sameText } from './contractions'
 import { savePracticeAttempt } from './practiceStorage'
 import { scheduleAfterAnswer } from './reviewSchedule'
-import { safeSetItem } from './safeStorage'
 import type { PracticeAttempt } from '../types/practice'
 import { diffWords, type DiffWord } from './sentenceDiff'
 
@@ -60,28 +59,9 @@ export function recordListeningAnswer(
   })
 }
 
-// ---- Progress on this device --------------------------------------------------------------------
+// ---- Progress on this device (stored in listeningProgress.ts) ----------------------------------
 
-const PROGRESS_KEY = 'spell-sprint.listening-progress'
-export type ClipProgress = { best: number; last: number; plays: number }
-
-export function getListeningProgress(): Record<string, ClipProgress> {
-  try {
-    const stored = window.localStorage.getItem(PROGRESS_KEY)
-    return stored ? (JSON.parse(stored) as Record<string, ClipProgress>) : {}
-  } catch {
-    return {}
-  }
-}
-
-export function saveClipScore(clipId: string, score: number) {
-  const all = getListeningProgress()
-  const before = all[clipId]
-  safeSetItem(
-    PROGRESS_KEY,
-    JSON.stringify({ ...all, [clipId]: { best: Math.max(before?.best ?? 0, score), last: score, plays: (before?.plays ?? 0) + 1 } }),
-  )
-}
+export { getListeningProgress, mergeListeningProgress, saveClipScore, type ClipProgress } from './listeningProgress'
 
 // The shape of a line as a hint: the first letter of every word, the rest as dots ("Th… is… a… pity.").
 export function lineHint(text: string) {

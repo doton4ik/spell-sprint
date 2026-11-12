@@ -6,6 +6,7 @@ import {
   getListeningProgress,
   lastListenedClipId,
   lineHint,
+  mergeListeningProgress,
   missedWords,
   recordListeningAnswer,
   saveClipScore,
@@ -113,6 +114,24 @@ describe('saving answers', () => {
     saveClipScore('clip-a', 60)
     saveClipScore('clip-a', 40)
     expect(getListeningProgress()['clip-a']).toEqual({ best: 60, last: 40, plays: 2 })
+  })
+})
+
+describe('merging progress from another device', () => {
+  beforeEach(() => window.localStorage.clear())
+  it('keeps the best score and the larger number of plays; the last score comes from the device that played more', () => {
+    saveClipScore('clip-a', 80)
+    saveClipScore('clip-a', 50) // here: best 80, last 50, plays 2
+    mergeListeningProgress({ 'clip-a': { best: 70, last: 70, plays: 1 }, 'clip-b': { best: 40, last: 40, plays: 5 } })
+    expect(getListeningProgress()).toEqual({ 'clip-a': { best: 80, last: 50, plays: 2 }, 'clip-b': { best: 40, last: 40, plays: 5 } })
+    mergeListeningProgress({ 'clip-a': { best: 95, last: 95, plays: 4 } })
+    expect(getListeningProgress()['clip-a']).toEqual({ best: 95, last: 95, plays: 4 })
+  })
+  it('ignores what is not progress', () => {
+    saveClipScore('clip-a', 80)
+    for (const value of [null, 'text', [1, 2], { 'clip-a': null }, { 'clip-a': { best: '100', last: 1, plays: 1 } }])
+      mergeListeningProgress(value)
+    expect(getListeningProgress()).toEqual({ 'clip-a': { best: 80, last: 80, plays: 1 } })
   })
 })
 

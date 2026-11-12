@@ -1,5 +1,6 @@
 import { builtInLibraries } from '../data/libraries'
 import { sanitizeWord } from './validate'
+import { safeSetItem } from './safeStorage'
 import { libraryPacks, packForLibrary } from '../data/libraryPacks'
 import { libraryGroups } from './libraryGroups'
 import { getHiddenWordIds, getLibraryPrefs, hideKey, getRemovedKeys, initialisePacks, setRemoved, setWordHidden } from './libraryPrefs'
@@ -237,9 +238,9 @@ export function getTopicNames() {
 }
 const LIBRARIES_UPDATED_EVENT = 'spell-sprint:learning-updated'
 // Replaces the imported libraries on this device (used by the CSV import and its undo).
+// A full or blocked storage must not crash the page: safeSetItem logs it and the app shows its notice.
 export function saveImportedLibraries(libraries: WordLibrary[]) {
-  window.localStorage.setItem(CUSTOM_LIBRARIES_KEY, JSON.stringify(libraries))
-  window.dispatchEvent(new Event(LIBRARIES_UPDATED_EVENT))
+  if (safeSetItem(CUSTOM_LIBRARIES_KEY, JSON.stringify(libraries))) window.dispatchEvent(new Event(LIBRARIES_UPDATED_EVENT))
 }
 export function deleteImportedLibrary(id: string) {
   const libraries = getImportedLibraries()

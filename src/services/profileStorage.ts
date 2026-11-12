@@ -6,7 +6,9 @@ const PROFILE_UPDATED_EVENT = 'spell-sprint:profile-updated'
 export type DailyActivities = { dictation: boolean; proofreading: boolean; pairs: boolean; sprint: boolean }
 // dailyGoal = tasks (answers) a day, always derived from dailyMinutes (about two answers a minute): old code and the
 // weekly chart still read it.
-export type Profile = { name: string; dailyGoal: number; dailyMinutes: number; activities: DailyActivities }
+// updatedAt = when the learner last changed the profile on any device (ISO time). Cloud sync keeps the newer profile;
+// a profile saved before this field existed has none and counts as the oldest.
+export type Profile = { name: string; dailyGoal: number; dailyMinutes: number; activities: DailyActivities; updatedAt?: string }
 export const dailyMinutesOptions = [5, 10, 15, 30, 50]
 export const TASKS_PER_MINUTE = 2
 export const defaultActivities: DailyActivities = { dictation: true, proofreading: true, pairs: true, sprint: true }
@@ -40,13 +42,19 @@ export function getProfile(): Profile {
       dailyMinutes,
       dailyGoal: dailyMinutes * TASKS_PER_MINUTE,
       activities: activitiesFrom(stored.activities),
+      ...(typeof stored.updatedAt === 'string' && stored.updatedAt ? { updatedAt: stored.updatedAt } : {}),
     }
   } catch {
     return defaults
   }
 }
 
-export function saveProfile(patch: Partial<Pick<Profile, 'name' | 'dailyMinutes'>> & { activities?: Partial<DailyActivities> }) {
+// updatedAt: now for a change made here. Cloud sync passes the time of the profile it takes from another device
+// ('' for an old cloud profile without a time), so a copied profile does not look newer than its source.
+export function saveProfile(
+  patch: Partial<Pick<Profile, 'name' | 'dailyMinutes'>> & { activities?: Partial<DailyActivities> },
+  updatedAt = new Date().toISOString(),
+) {
   const current = getProfile()
   const dailyMinutes =
     patch.dailyMinutes !== undefined && dailyMinutesOptions.includes(patch.dailyMinutes) ? patch.dailyMinutes : current.dailyMinutes
@@ -55,6 +63,7 @@ export function saveProfile(patch: Partial<Pick<Profile, 'name' | 'dailyMinutes'
     dailyMinutes,
     dailyGoal: dailyMinutes * TASKS_PER_MINUTE,
     activities: { ...current.activities, ...patch.activities },
+    ...(updatedAt ? { updatedAt } : {}),
   }
   try {
     window.localStorage.setItem(PROFILE_KEY, JSON.stringify(next))

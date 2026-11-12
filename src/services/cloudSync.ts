@@ -11,6 +11,8 @@ import { getLibraryPrefs, mergeLibraryPrefs } from './libraryPrefs'
 import { getPairAttempts, mergePairAttempts } from './pairs'
 import { getAllYellowCards, mergeYellowCards } from './yellowCards'
 import { getSprintRounds, mergeSprintRounds } from './sprint'
+import { getListeningProgress, mergeListeningProgress } from './listeningProgress'
+import { getProofreadingDone, mergeProofreadingDone } from './proofreadingDone'
 import { clearPersonalData } from './deviceData'
 import {
   deleteAccount,
@@ -34,6 +36,8 @@ type Snapshot = {
   libraryPrefs?: unknown
   pairAttempts?: unknown
   sprintRounds?: unknown
+  listeningProgress?: unknown
+  proofreadingDone?: unknown
 }
 
 // Merges the cloud copy into this device. It only adds missing data and never deletes local data.
@@ -56,29 +60,47 @@ export async function restoreLearningData() {
   mergeLevelChecks(data.levelChecks)
   mergePairAttempts(data.pairAttempts)
   mergeYellowCards(data.yellowCards)
-  const profile = data.profile as { name?: unknown; dailyGoal?: unknown; dailyMinutes?: unknown; activities?: unknown } | undefined
-  if (profile && !getProfile().name && typeof profile.name === 'string' && profile.name) {
-    // An older snapshot has only a goal in tasks: half as many minutes (profileStorage picks the nearest option).
-    const minutes =
-      typeof profile.dailyMinutes === 'number'
-        ? profile.dailyMinutes
-        : typeof profile.dailyGoal === 'number'
-          ? profile.dailyGoal / 2
-          : undefined
-    saveProfile({
-      name: profile.name,
-      ...(minutes !== undefined ? { dailyMinutes: nearestMinutes(minutes) } : {}),
-      ...(profile.activities && typeof profile.activities === 'object'
-        ? { activities: profile.activities as Record<string, boolean> }
-        : {}),
-    })
-  }
+  mergeProfile(data.profile)
   if (!loadDiagnosticResult() && data.diagnosticResult && typeof data.diagnosticResult === 'object')
     saveDiagnosticResult(data.diagnosticResult as Parameters<typeof saveDiagnosticResult>[0])
   mergeSprintRounds(data.sprintRounds)
+  mergeListeningProgress(data.listeningProgress)
+  mergeProofreadingDone(data.proofreadingDone)
   // Only now: if any merge above failed, the version stays old and the next sync pulls again.
   writeSyncState({ ...readSyncState(), version: snapshot.updatedAt })
   return { found: true, attempts }
+}
+
+// The profile (name, minutes a day, kinds of practice) is one small record, so the newer one wins as a whole:
+// a change made in Settings on one device reaches the others. A profile saved before the time was stored has no
+// time and counts as the oldest; then the old rule applies (the cloud profile is taken only if this device has no name).
+function mergeProfile(value: unknown) {
+  if (!value || typeof value !== 'object') return
+  const remote = value as { name?: unknown; dailyGoal?: unknown; dailyMinutes?: unknown; activities?: unknown; updatedAt?: unknown }
+  if (typeof remote.name !== 'string') return
+  const local = getProfile()
+  const remoteAt = typeof remote.updatedAt === 'string' ? remote.updatedAt : ''
+  const remoteIsNewer = remoteAt > (local.updatedAt ?? '')
+  if (remoteIsNewer || (!local.updatedAt && !local.name && remote.name)) {
+    // An older snapshot has only a goal in tasks: half as many minutes (profileStorage picks the nearest option).
+    const minutes =
+      typeof remote.dailyMinutes === 'number'
+        ? remote.dailyMinutes
+        : typeof remote.dailyGoal === 'number'
+          ? remote.dailyGoal / 2
+          : undefined
+    saveProfile(
+      {
+        name: remote.name,
+        ...(minutes !== undefined ? { dailyMinutes: nearestMinutes(minutes) } : {}),
+        ...(remote.activities && typeof remote.activities === 'object' ? { activities: remote.activities as Record<string, boolean> } : {}),
+      },
+      remoteAt,
+    )
+  } else if (!local.name && remote.name) {
+    // The settings here are newer (changed before signing in), only the name is missing.
+    saveProfile({ name: remote.name })
+  }
 }
 
 // The backup holds the whole history (up to a few MB), so a sync downloads it only when another
@@ -138,6 +160,8 @@ async function pullThenPush() {
     pairAttempts: getPairAttempts(),
     yellowCards: getAllYellowCards(),
     sprintRounds: getSprintRounds(),
+    listeningProgress: getListeningProgress(),
+    proofreadingDone: getProofreadingDone(),
   }
   const uploaded = fingerprint(JSON.stringify(payload))
   const state = readSyncState()
@@ -223,6 +247,7 @@ export function startAutoSync() {
   }
   window.addEventListener('spell-sprint:practice-updated', onLocalChange)
   window.addEventListener('spell-sprint:learning-updated', onLocalChange)
+  window.addEventListener('spell-sprint:profile-updated', onLocalChange) // a change in Settings reaches the other devices too
   document.addEventListener('visibilitychange', () => {
     if (!getCloudSession()) return
     // Leaving: push right away. Coming back: pull what other devices added in the meantime.
