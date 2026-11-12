@@ -5,7 +5,7 @@ import { getPracticeAttempts, mergePracticeAttempts } from './practiceStorage'
 import { getStoredLevelChecks, mergeLevelChecks } from './levelCheck'
 import { flushMistakeOutbox, getOutboxSize } from './mistakeOutbox'
 import { flushWordReports } from './wordReports'
-import { flushFeedback } from './feedback'
+import { feedbackWaiting, flushFeedback } from './feedback'
 import { getProfile, nearestMinutes, saveProfile } from './profileStorage'
 import { getLibraryPrefs, mergeLibraryPrefs } from './libraryPrefs'
 import { getPairAttempts, mergePairAttempts } from './pairs'
@@ -97,8 +97,9 @@ function mergeProfile(value: unknown) {
       },
       remoteAt,
     )
-  } else if (!local.name && remote.name) {
-    // The settings here are newer (changed before signing in), only the name is missing.
+  } else if (!local.name && remote.name && readSyncState().version === null) {
+    // First sync of this device: the settings here are newer (changed before signing in), only the name is missing.
+    // Later an empty name with a newer time means the learner cleared it, and it stays cleared.
     saveProfile({ name: remote.name })
   }
 }
@@ -264,7 +265,8 @@ export function startAutoSync() {
 export async function backUpBeforeSignOut() {
   await syncNow()
   await flushMistakeOutbox()
-  return !lastError && getOutboxSize() === 0
+  await flushFeedback() // unsent feedback is removed with the rest of the learner's data, so it must go out first
+  return !lastError && getOutboxSize() === 0 && feedbackWaiting() === 0
 }
 
 // Deletes the account in the cloud first; the device is cleared only if that worked.

@@ -45,10 +45,19 @@ describe('profile', () => {
     const stop = subscribeToProfile(heard)
     saveProfile({ name: 'Max' })
     stop()
+    expect(getProfile().updatedAt).toBe('2026-11-12T08:00:00.000Z')
+    // a second change in the same millisecond is still later than the first
     saveProfile({ name: 'Maxim' })
     vi.useRealTimers()
     expect(heard).toHaveBeenCalledTimes(1)
-    expect(getProfile().updatedAt).toBe('2026-11-12T08:00:00.000Z')
+    expect(getProfile().updatedAt).toBe('2026-11-12T08:00:00.001Z')
+  })
+  it('a change is always later than the time the profile has, even when that time is ahead of this clock', () => {
+    const ahead = new Date(Date.now() + 24 * 3600 * 1000).toISOString()
+    saveProfile({ name: 'Max' }, ahead)
+    saveProfile({ dailyMinutes: 30 })
+    expect(getProfile().updatedAt! > ahead).toBe(true)
+    expect(Date.parse(getProfile().updatedAt!) - Date.parse(ahead)).toBe(1)
   })
   it('keeps the time it is given (a profile copied from another device), and none for an empty time', () => {
     saveProfile({ name: 'Max' }, '2026-11-01T10:00:00.000Z')

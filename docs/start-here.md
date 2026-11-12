@@ -1,4 +1,4 @@
-# Как начать новую сессию (состояние на 19 октября 2026)
+# Как начать новую сессию (состояние на 12 ноября 2026)
 
 Новую сессию можно открывать на каждую задачу: проект помнит всё сам (`CLAUDE.md`, git, эти файлы). В первой фразе достаточно одной строки
 задачи. Перед закрытием сессии всё закоммичено, поэтому `git log --oneline -20` показывает, на чём остановились.
@@ -11,7 +11,10 @@
 
 - **План дня (23 октября):** время в день 5/10/15/30/50 мин и переключатели занятий в Settings (`profileStorage.ts`: `dailyMinutes`, `activities`; `dailyGoal` в заданиях выводится из минут). `dailyChecklist.ts` задаёт цели (слова всегда первые, остальное не больше ~55% минут) и считает сделанное за сегодня; на главной карточка «Today's plan» (Done / N left / Not started). Новые слова: лимит в день по длине дня, порядок по уровню из теста (`freshWords.ts`); слово, написанное правильно с первого раза без подсказки, идёт по быстрому графику 7 → 14 → 30 дней (`reviewSchedule.ts`).
 
+- **Синхронизация и порядок в коде (12 ноября):** профиль хранит время изменения (`updatedAt`), на всех устройствах побеждает более новый (`mergeProfile` в `cloudSync.ts`); изменение в Settings само запускает синхронизацию. В облачную копию добавлены прогресс Listening (`listeningProgress.ts`) и законченные тексты Proofreading (`proofreadingDone.ts`). При входе под другим аккаунтом стирается весь личный прогресс (`deviceData.ts`; новый личный ключ добавлять туда и в `deviceData.test.ts`). `LibrariesPage.tsx` разбита на части в `src/components/libraries/` (959 → 405 строк), переход «выбрать слова и открыть Practice» теперь одна функция `openPracticeWith()` в `libraryPractice.ts`. Netlify: кеш `/assets` на год, Node 24 как в CI. Функции слияния (`merge*`) пишут в хранилище без `try` намеренно: ошибка останавливает синхронизацию, и неполные данные не затирают облако.
+
 ## Что ждёт пользователя (не делается из Claude Code)
+0. **Запустить `database/delete-account.sql` и `database/feedback.sql`** (по `database/README.md` ещё не запущены): без первого не работает Settings → Delete account (нужно для магазинов приложений), без второго отзывы ждут на устройстве. После правок 12 ноября стоит прогнать `pnpm test:e2e` (менялась страница Libraries).
 1. **Запустить `database/content-pack-11-merge-articles.sql`** в SQL Editor (откат: `content-pack-11-undo.sql`): 6 правил про артикли сливаются в `a-or-the` («Articles: the, a / an or no article»), старые правила выключаются, а не удаляются. До запуска приложение онлайн показывает старые правила, офлайн-копия уже новая.
    Остальное в базе совпадало с кодом на 20 октября. Следующий SQL появится, когда будут новые правила: `node scripts/build-new-rules-pack.mjs N` собирает пак из `database/rules-import/`.
 2. `pnpm test:e2e` в своём терминале (в песочнице Claude часть тестов падает из-за сети, см. ниже) и `git push`, если есть незапушенные коммиты.
@@ -23,7 +26,11 @@
    что примет), затем `--apply`, `pnpm check`. Промпты пересобираются из текущего CSV (`node scripts/make-newword-prompts.mjs`; 23 октября осталось 23 задания, 701 слово до цели по темам). Каждое слово приходит с седьмым полем «subtopic» из фиксированного списка темы (`scripts/library-subtopics.mjs`); `merge-newwords.mjs` пропускает только имена из списка (регистр не важен) и пишет их в CSV, а `pnpm check:library` следит за этим. Новая подтема: добавить в список и снова `node scripts/make-newword-prompts.mjs`. Старые 964 слова пересортированы по тем же спискам (23 октября: `research/plexity/subtopic-map.json`, `node scripts/apply-subtopic-map.mjs [--write]`; меняется только колонка `subtopic`), поэтому `check:library` требует подтему из списка у каждого слова. Opus просматривает выборку перед коммитом.
 2. **Размер бандла (сделано 19 октября).** Первый чанк `index.js` был 607 КБ (197 КБ gzip), стал 334 КБ (110 КБ gzip): тексты пар (`pairDrills.ts`) и банк проверки уровня теперь грузятся только со своими страницами. Первый экран читает лёгкие `src/data/pairIndex.ts` и `levelItemKindsData.ts`. Слова библиотеки (CSV) грузятся отдельным чанком `builtInLibraryData-*.js` (23 октября, при 3856 словах: 973 КБ, 242 КБ gzip): `main.tsx` ждёт `loadBuiltInLibraries()` (`src/data/libraries.ts`) и показывает заставку, затем рисует приложение; общий чанк `Icon-*.js` снова около 58 КБ. Тесты грузят слова через `src/test-setup.ts` и `mistakeGuides.ts` (26 КБ). **После добавления новой пары:** `node scripts/build-pair-index.mjs`. **После изменения вопросов проверки уровня:** `UPDATE_LEVEL_KINDS=1 pnpm exec vitest run src/data/levelItemKindsGenerate.test.ts && pnpm exec prettier --write src/data/levelItemKindsData.ts` (тесты подскажут, если список устарел).
 3. **Чистка кода** (нужно подтверждение пользователя на удаление в `src/`): файлы без импортов `src/components/libraries/LibraryCard.tsx`,
-   `src/data/personalMistakes.ts`; около 40 неиспользуемых экспортов; одноразовые SQL `content-pack-2-part1…4.sql`.
+   `src/data/personalMistakes.ts` (12 ноября проверено: ссылок на них нет; вместе с `LibraryCard` уходят классы `library-card*`, `library-icon`,
+   `library-source*`, `library-topic`, `library-word-list` в `src/pages/libraries.css`); около 40 неиспользуемых экспортов; одноразовые SQL
+   `content-pack-2-part1…4.sql`.
+   **Офлайн в браузере:** `public/sw.js` лежит в проекте, но `main.tsx` только удаляет service worker (`clearLegacyServiceWorkers`). Решить: вернуть
+   офлайн или убрать файл и правило `/sw.js` в `netlify.toml`.
 4. **Идеи из `research/competitors.md`:** «заморозка» серии, слова ниже вашего уровня как «уже знаю».
 
 ## Как возобновить каждую задачу (команды)

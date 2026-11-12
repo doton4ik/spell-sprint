@@ -100,6 +100,32 @@ describe('the profile: the newer one wins', () => {
     await restoreLearningData()
     expect(getProfile()).toMatchObject({ name: 'Max', dailyMinutes: 50 })
   })
+  it('a name cleared here after the first sync stays cleared (the older cloud name does not come back)', async () => {
+    window.localStorage.setItem('spell-sprint.sync-state', JSON.stringify({ version: 'v0', uploaded: '' }))
+    saveProfile({ name: '' }, newer)
+    cloud({ profile: { name: 'Max', dailyMinutes: 10, updatedAt: older } })
+    await restoreLearningData()
+    expect(getProfile()).toMatchObject({ name: '', updatedAt: newer })
+  })
+  it('a change made here after taking a profile from a device whose clock runs ahead is still the newer one', async () => {
+    const ahead = new Date(Date.now() + 24 * 3600 * 1000).toISOString()
+    cloud({ profile: { name: 'Max', dailyMinutes: 10, updatedAt: ahead } })
+    await restoreLearningData()
+    saveProfile({ dailyMinutes: 30 })
+    cloud({ profile: { name: 'Max', dailyMinutes: 10, updatedAt: ahead } })
+    await restoreLearningData()
+    expect(getProfile().dailyMinutes).toBe(30)
+    expect(getProfile().updatedAt! > ahead).toBe(true)
+  })
+  it('does not remember the cloud version when the progress cannot be stored (storage full)', async () => {
+    cloud({ listeningProgress: { 'clip-a': { best: 90, last: 40, plays: 3 } } })
+    const setItem = vi.spyOn(window.localStorage, 'setItem').mockImplementation(() => {
+      throw new Error('QuotaExceededError')
+    })
+    await expect(restoreLearningData()).rejects.toThrow()
+    setItem.mockRestore()
+    expect(syncedVersion()).toBeNull()
+  })
   it('ignores a broken profile', async () => {
     saveProfile({ name: 'Max' }, older)
     for (const profile of ['text', null, { name: 5, updatedAt: newer }, { updatedAt: newer }]) {

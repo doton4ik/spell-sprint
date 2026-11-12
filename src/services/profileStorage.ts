@@ -49,13 +49,22 @@ export function getProfile(): Profile {
   }
 }
 
-// updatedAt: now for a change made here. Cloud sync passes the time of the profile it takes from another device
-// ('' for an old cloud profile without a time), so a copied profile does not look newer than its source.
+// The time of a change made here: now, but always later than the time the profile already has. Another device's
+// clock may run ahead; without this a change made here after taking its profile would look older and be undone.
+function changeTime(previous: string | undefined) {
+  const now = new Date().toISOString()
+  const before = previous ? Date.parse(previous) : Number.NaN
+  return Number.isFinite(before) && previous! >= now ? new Date(before + 1).toISOString() : now
+}
+
+// updatedAt: leave it out for a change made here. Cloud sync passes the time of the profile it takes from another
+// device ('' for an old cloud profile without a time), so a copied profile does not look newer than its source.
 export function saveProfile(
   patch: Partial<Pick<Profile, 'name' | 'dailyMinutes'>> & { activities?: Partial<DailyActivities> },
-  updatedAt = new Date().toISOString(),
+  copiedAt?: string,
 ) {
   const current = getProfile()
+  const updatedAt = copiedAt ?? changeTime(current.updatedAt)
   const dailyMinutes =
     patch.dailyMinutes !== undefined && dailyMinutesOptions.includes(patch.dailyMinutes) ? patch.dailyMinutes : current.dailyMinutes
   const next: Profile = {
