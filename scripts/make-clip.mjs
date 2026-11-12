@@ -41,6 +41,16 @@ if (!['A2', 'B1', 'B2'].includes(level)) {
   process.exit(1)
 }
 
+// A clip whose lines were chosen and checked by hand (research/listening/, built by scripts/build-clips.mjs) is not
+// cut again automatically: that would replace the checked text with the raw recognition.
+if (existsSync(new URL(`../research/listening/video-${id}.json`, import.meta.url)) && !args.includes('--force')) {
+  console.error(
+    `video-${id} has hand-checked lines in research/listening/. Edit that file and run "node scripts/build-clips.mjs",\n` +
+      'or add --force to cut the clip again from the recognised speech (the next build-clips run will put the checked lines back).',
+  )
+  process.exit(1)
+}
+
 const dataFile = new URL('../src/data/listeningVideoClips.json', import.meta.url)
 const clips = existsSync(dataFile) ? JSON.parse(readFileSync(dataFile, 'utf8')) : []
 const python = fileURLToPath(new URL('../.asr/venv/Scripts/python.exe', import.meta.url))

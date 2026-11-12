@@ -9,22 +9,10 @@
     },
     "lines": [
       {
-        "text": "I'm Beth. And I'm Neil.",
-        "start": 13.1,
-        "end": 15.2,
-        "wordStarts": [13.28, 13.48, 13.96, 14.22, 14.64]
-      },
-      {
-        "text": "Phew, I've spent a day in meetings,",
+        "text": "Phew, I've spent a day in meetings, then shopping, then collecting the kids from school.",
         "start": 15,
-        "end": 17.4,
-        "wordStarts": [15.16, 15.66, 15.86, 16.1, 16.38, 16.52, 16.72]
-      },
-      {
-        "text": "then shopping, then collecting the kids from school.",
-        "start": 17.7,
         "end": 20.9,
-        "wordStarts": [17.82, 18.04, 18.96, 19.1, 19.52, 19.8, 20.04, 20.26]
+        "wordStarts": [15.16, 15.66, 15.86, 16.1, 16.38, 16.52, 16.72, 17.82, 18.04, 18.96, 19.1, 19.52, 19.8, 20.04, 20.26]
       },
       {
         "text": "I'm exhausted, Beth. What have you been doing today?",
@@ -33,16 +21,10 @@
         "wordStarts": [20.74, 20.92, 21.66, 22.34, 22.6, 22.7, 22.8, 22.98, 23.16]
       },
       {
-        "text": "Not much. Just sitting around, doing nothing,",
+        "text": "Not much. Just sitting around, doing nothing, relaxing and kicking back.",
         "start": 23.9,
-        "end": 27.3,
-        "wordStarts": [24.06, 24.58, 25.08, 25.26, 25.78, 26.52, 26.7]
-      },
-      {
-        "text": "relaxing and kicking back. Lucky you.",
-        "start": 27.5,
-        "end": 30.4,
-        "wordStarts": [27.68, 28.24, 28.52, 28.74, 29.38, 29.8]
+        "end": 29.3,
+        "wordStarts": [24.06, 24.58, 25.08, 25.26, 25.78, 26.52, 26.7, 27.68, 28.24, 28.52, 28.74]
       },
       {
         "text": "Don't you have any work to do?",
@@ -93,16 +75,155 @@
         "wordStarts": [56.68, 56.94, 57.14, 57.44, 58, 58.48, 58.9, 59.18]
       },
       {
-        "text": "And if it's good enough for animals, wood being lazy work for humans too.",
+        "text": "And if it's good enough for animals, would being lazy work for humans too?",
         "start": 59.7,
         "end": 65.1,
         "wordStarts": [59.8, 60.6, 60.8, 61, 61.12, 61.32, 61.56, 62.3, 62.58, 62.94, 63.42, 63.84, 64.04, 64.42]
       },
       {
-        "text": "That's what we'll be discussing in this programme and, as usual,",
-        "start": 65.1,
-        "end": 68.9,
-        "wordStarts": [65.3, 65.68, 65.8, 66.02, 66.14, 66.52, 66.86, 67.02, 67.42, 68.04, 68.22]
+        "text": "But first, let me work up the energy to ask you a question, Neil.",
+        "start": 72.4,
+        "end": 77.1,
+        "wordStarts": [72.58, 72.88, 73.64, 73.92, 74.1, 74.4, 74.7, 74.84, 75.2, 75.46, 75.8, 75.98, 76.12, 76.64]
+      },
+      {
+        "text": "Of course, some animals have a reputation for lounging about.",
+        "start": 77.2,
+        "end": 81.5,
+        "wordStarts": [77.34, 77.46, 77.88, 78.2, 78.66, 79.12, 79.24, 79.82, 80.3, 80.96]
+      },
+      {
+        "text": "Lions, for example, can sleep up to 20 hours a day.",
+        "start": 81.7,
+        "end": 86.1,
+        "wordStarts": [81.84, 82.44, 82.58, 83.36, 83.5, 83.78, 84.08, 84.28, 84.74, 85.12, 85.38]
+      },
+      {
+        "text": "But what is the slowest moving animal on Earth?",
+        "start": 85.6,
+        "end": 89.9,
+        "wordStarts": [85.76, 86.38, 86.68, 86.94, 87.12, 87.92, 88.28, 88.76, 89.16]
+      },
+      {
+        "text": "Now, it's no surprise that lazy lions love relaxing,",
+        "start": 106.8,
+        "end": 111,
+        "wordStarts": [106.9, 107.36, 107.66, 107.92, 108.4, 108.84, 109.32, 109.8, 110.16]
+      },
+      {
+        "text": "but even animals with reputations for being busy spend time doing nothing.",
+        "start": 110.6,
+        "end": 116.8,
+        "wordStarts": [110.72, 111.12, 111.76, 112.32, 112.62, 113.48, 113.8, 114.02, 114.42, 114.92, 115.42, 115.96]
+      }
+    ]
+  },
+  {
+    "id": "video-Y681hXWwhQY-2",
+    "title": "BBC 6 Minute English: doing nothing, part 2",
+    "level": "B2",
+    "source": {
+      "kind": "youtube",
+      "videoId": "Y681hXWwhQY"
+    },
+    "lines": [
+      {
+        "text": "We think ants are industrious or hardworking.",
+        "start": 165.8,
+        "end": 169.4,
+        "wordStarts": [165.96, 166.4, 166.66, 167.02, 167.24, 168.14, 168.34]
+      },
+      {
+        "text": "Then why are so many of them inactive?",
+        "start": 177.2,
+        "end": 179.7,
+        "wordStarts": [177.32, 177.54, 177.84, 178.06, 178.34, 178.58, 178.74, 178.92]
+      },
+      {
+        "text": "But could it simply be that they don't work because they don't need to?",
+        "start": 187.6,
+        "end": 192.2,
+        "wordStarts": [187.78, 188.04, 188.5, 188.7, 189.1, 189.36, 189.58, 189.72, 190.12, 190.46, 190.92, 191.16, 191.48, 191.7]
+      },
+      {
+        "text": "Would you get out of bed on Monday morning if you didn't have to?",
+        "start": 192.4,
+        "end": 196.3,
+        "wordStarts": [192.54, 192.74, 193, 193.22, 193.44, 193.62, 193.86, 194.18, 194.58, 194.94, 195.22, 195.34, 195.6, 195.8]
+      },
+      {
+        "text": "Maybe the ants can teach us a thing or two about relaxing.",
+        "start": 196,
+        "end": 199.9,
+        "wordStarts": [196.2, 196.58, 196.78, 197.1, 197.32, 197.62, 197.92, 198.14, 198.38, 198.5, 198.74, 199.04]
+      },
+      {
+        "text": "Boredom is the mother of invention, an idea based on the famous proverb,",
+        "start": 262.2,
+        "end": 267.3,
+        "wordStarts": [262.38, 262.88, 263.08, 263.24, 263.56, 263.82, 264.88, 265.02, 265.34, 265.84, 266.1, 266.24, 266.52]
+      },
+      {
+        "text": "an idiom meaning that if you really need to do something,",
+        "start": 270.1,
+        "end": 273.9,
+        "wordStarts": [270.2, 270.34, 270.86, 271.16, 271.52, 271.76, 272.02, 272.42, 272.74, 273, 273.16]
+      },
+      {
+        "text": "you will think of a way of doing it.",
+        "start": 273.7,
+        "end": 275.9,
+        "wordStarts": [273.86, 274.12, 274.28, 274.58, 274.74, 274.84, 275, 275.16, 275.34]
+      },
+      {
+        "text": "Instead of fearing boredom, we can open up to its benefits by switching off,",
+        "start": 275.8,
+        "end": 281.2,
+        "wordStarts": [275.9, 276.2, 276.46, 276.92, 277.62, 277.74, 277.96, 278.3, 278.58, 278.74, 278.9, 279.36, 279.76, 280.38]
+      },
+      {
+        "text": "I think now is a good time to reveal the answer to my question,",
+        "start": 291.2,
+        "end": 294.9,
+        "wordStarts": [291.32, 291.52, 291.72, 292.06, 292.2, 292.32, 292.54, 292.88, 293.08, 293.4, 293.58, 293.82, 294, 294.14]
+      },
+      {
+        "text": "since we have nothing else to do.",
+        "start": 294.7,
+        "end": 296.6,
+        "wordStarts": [294.8, 295.12, 295.32, 295.48, 295.76, 295.98, 296.18]
+      },
+      {
+        "text": "Okay, let's recap the vocabulary we've learnt from this programme, starting with the phrase kicking back,",
+        "start": 316.1,
+        "end": 322.6,
+        "wordStarts": [
+          316.24, 316.88, 317.2, 317.58, 317.8, 318.32, 318.84, 319.06, 319.28, 319.44, 320.08, 320.4, 320.66, 320.74, 321.06, 321.8
+        ]
+      },
+      {
+        "text": "The adjective industrious means hard working.",
+        "start": 326,
+        "end": 329.3,
+        "wordStarts": [326.1, 326.36, 326.86, 327.98, 328.22, 328.62]
+      },
+      {
+        "text": "Someone who is productive is able to produce a lot,",
+        "start": 336.6,
+        "end": 340.1,
+        "wordStarts": [336.78, 337.06, 337.4, 337.58, 338.06, 338.4, 338.7, 338.9, 339.2, 339.5]
+      },
+      {
+        "text": "for the amount of resources they use.",
+        "start": 339.6,
+        "end": 342.4,
+        "wordStarts": [339.78, 340.38, 340.46, 340.7, 340.88, 341.32, 341.66]
+      },
+      {
+        "text": "And finally, to switch off means to stop worrying or thinking about something and relax.",
+        "start": 350.4,
+        "end": 356.6,
+        "wordStarts": [350.52, 350.84, 351.5, 351.58, 351.92, 352.28, 352.54, 352.78, 353.08, 353.6, 354.02, 354.4, 354.68, 355.14, 355.84]
       }
     ]
   },
@@ -116,22 +237,10 @@
     },
     "lines": [
       {
-        "text": "Easy English Conversations. Hello, what's your name?",
-        "start": 2.2,
-        "end": 8.4,
-        "wordStarts": [2.32, 3, 3.4, 6.64, 7.42, 7.72, 7.86]
-      },
-      {
         "text": "Hi, I'm Tim. What's your name?",
         "start": 9,
         "end": 13.7,
         "wordStarts": [9.2, 10.04, 10.2, 12.32, 12.96, 13.1]
-      },
-      {
-        "text": "Hello, I'm Shan. What's your name?",
-        "start": 13.7,
-        "end": 17.2,
-        "wordStarts": [13.86, 14.74, 15, 16.04, 16.48, 16.62]
       },
       {
         "text": "My name's Tim. It's nice to meet you.",
@@ -146,58 +255,22 @@
         "wordStarts": [19.9, 20.22, 20.54, 20.76, 20.98]
       },
       {
-        "text": "Hello, how's it going? Hi.",
-        "start": 22,
-        "end": 25.1,
-        "wordStarts": [22.14, 23.04, 23.32, 23.4, 24.34]
-      },
-      {
         "text": "Hey, what are your names?",
         "start": 25.3,
         "end": 28.1,
         "wordStarts": [25.44, 26.56, 27.16, 27.26, 27.4]
       },
       {
-        "text": "I'm Tim. And I'm Shan.",
-        "start": 28.3,
-        "end": 30.7,
-        "wordStarts": [28.46, 28.92, 29.52, 29.64, 29.96]
-      },
-      {
-        "text": "What's your name? My name's Georgie.",
-        "start": 30.9,
-        "end": 34,
-        "wordStarts": [31.02, 31.36, 31.52, 32.5, 32.76, 33.18]
-      },
-      {
-        "text": "Nice to meet you. Yeah, great to meet you too.",
-        "start": 33.7,
+        "text": "Yeah, great to meet you too.",
+        "start": 34.3,
         "end": 36.8,
-        "wordStarts": [33.8, 33.98, 34.16, 34.3, 34.48, 35.42, 35.62, 35.82, 35.98, 36.14]
+        "wordStarts": [34.48, 35.42, 35.62, 35.82, 35.98, 36.14]
       },
       {
-        "text": "Hello. Hiya. Hey. Hi. What's your name?",
-        "start": 37.7,
-        "end": 42.5,
-        "wordStarts": [37.82, 39.1, 40.12, 40.84, 41.5, 41.76, 41.9]
-      },
-      {
-        "text": "I'm Booli. What's your name?",
-        "start": 43.2,
-        "end": 45.5,
-        "wordStarts": [43.3, 43.6, 44.5, 44.78, 44.9]
-      },
-      {
-        "text": "I'm Georgie. Nice to meet you Georgie.",
-        "start": 45.4,
+        "text": "Nice to meet you Georgie.",
+        "start": 47.3,
         "end": 49.3,
-        "wordStarts": [45.52, 45.8, 47.44, 47.78, 47.98, 48.14, 48.42]
-      },
-      {
-        "text": "Where are they from? I'm from...",
-        "start": 53.3,
-        "end": 56.6,
-        "wordStarts": [53.45, 53.67, 53.85, 54.01, 55.15, 55.65]
+        "wordStarts": [47.44, 47.78, 47.98, 48.14, 48.42]
       },
       {
         "text": "And where do they live?",
@@ -206,70 +279,16 @@
         "wordStarts": [56.29, 56.99, 57.37, 57.53, 57.73]
       },
       {
-        "text": "I live... Find out in the next video.",
-        "start": 58.5,
+        "text": "Find out in the next video.",
+        "start": 59.6,
         "end": 61.8,
-        "wordStarts": [58.63, 58.99, 59.73, 60.15, 60.39, 60.69, 60.81, 61.15]
-      },
-      {
-        "text": "What's his name? His name's Tim.",
-        "start": 65.2,
-        "end": 68.3,
-        "wordStarts": [65.34, 66, 66.12, 67.02, 67.28, 67.7]
+        "wordStarts": [59.73, 60.15, 60.39, 60.69, 60.81, 61.15]
       },
       {
         "text": "Lovely to meet you Tim.",
         "start": 68.5,
         "end": 70.2,
         "wordStarts": [68.64, 69.08, 69.3, 69.52, 69.7]
-      },
-      {
-        "text": "now what's her name her name's Sean oh",
-        "start": 69.8,
-        "end": 75.7,
-        "wordStarts": [69.94, 71.14, 72.02, 72.14, 72.56, 73, 73.44, 73.72]
-      },
-      {
-        "text": "she's Sean hello Sean hello nice to meet",
-        "start": 75.2,
-        "end": 80.4,
-        "wordStarts": [75.38, 76.24, 76.7, 77.62, 78.1, 78.78, 79.7, 79.94]
-      },
-      {
-        "text": "you great to meet you too so I'm",
-        "start": 79.9,
-        "end": 83.8,
-        "wordStarts": [80.08, 80.32, 80.66, 80.88, 81.02, 81.2, 81.52, 82.46]
-      },
-      {
-        "text": "bully her names Sean her names Georgie and",
-        "start": 83.4,
-        "end": 89.6,
-        "wordStarts": [83.5, 83.86, 84.92, 85.28, 85.96, 87.3, 87.74, 88.6]
-      },
-      {
-        "text": "his names Tim that's right oh hello what's your name I'm Sean nice to meet you",
-        "start": 89.2,
-        "end": 102.3,
-        "wordStarts": [89.34, 89.66, 90.08, 90.68, 91.4, 91.76, 92.88, 93.3, 94.46, 94.62, 94.98, 99.9, 100.24, 101.12, 101.38, 101.54]
-      },
-      {
-        "text": "her names Georgie. His names Tim.",
-        "start": 107,
-        "end": 114.4,
-        "wordStarts": [107.18, 108.06, 108.6, 112.48, 112.84, 113.36]
-      },
-      {
-        "text": "But what's his name? That's right.",
-        "start": 115.5,
-        "end": 124.8,
-        "wordStarts": [115.62, 116.04, 116.5, 116.84, 123.96, 124.22]
-      },
-      {
-        "text": "Bye bully. Goodbye. Bye. Bye.",
-        "start": 127,
-        "end": 131.5,
-        "wordStarts": [127.1, 127.38, 128.42, 129.62, 130.86]
       }
     ]
   },
@@ -283,70 +302,34 @@
     },
     "lines": [
       {
-        "text": "I went to the doctor at the end",
-        "start": 6.2,
-        "end": 8.2,
-        "wordStarts": [6.31, 6.57, 6.71, 6.87, 6.97, 7.31, 7.65, 7.77]
+        "text": "So I finally went to the doctor and asked what was going on.",
+        "start": 0,
+        "end": 6.3,
+        "wordStarts": [0.05, 0.61, 0.93, 1.77, 2.13, 2.45, 2.65, 3.03, 3.99, 4.67, 5.19, 5.39, 5.63]
       },
       {
-        "text": "of last week and the doctor said that",
-        "start": 7.8,
-        "end": 10.7,
-        "wordStarts": [7.93, 8.03, 8.31, 8.55, 9.47, 9.57, 9.87, 10.17]
+        "text": "So I went to the doctor at the end of last week,",
+        "start": 5.8,
+        "end": 8.9,
+        "wordStarts": [5.95, 6.31, 6.57, 6.71, 6.87, 6.97, 7.31, 7.65, 7.77, 7.93, 8.03, 8.31]
       },
       {
-        "text": "I needed to take these antibiotics that I",
-        "start": 10.3,
-        "end": 15.5,
-        "wordStarts": [10.41, 10.57, 10.77, 11.01, 11.39, 12.49, 13.21, 15.05]
+        "text": "but they're like these little things that if you have a sore throat, you eat them.",
+        "start": 22.4,
+        "end": 27.2,
+        "wordStarts": [22.59, 23.31, 23.47, 23.67, 23.89, 24.15, 24.55, 24.85, 25.17, 25.29, 25.43, 25.55, 25.75, 26.13, 26.47, 26.75]
       },
       {
-        "text": "have a bacterial infection and I needed to get some throat lozenges.",
-        "start": 15.1,
-        "end": 20.7,
-        "wordStarts": [15.21, 15.35, 15.43, 16.01, 16.75, 17.59, 17.71, 17.91, 18.37, 19.17, 19.39, 19.77]
-      },
-      {
-        "text": "I don't know if you know what throat",
-        "start": 20.5,
-        "end": 22.1,
-        "wordStarts": [20.67, 20.83, 20.93, 21.05, 21.15, 21.25, 21.37, 21.51]
-      },
-      {
-        "text": "lozenges are but they're like these little things",
-        "start": 21.6,
-        "end": 24.9,
-        "wordStarts": [21.75, 22.21, 22.59, 23.31, 23.47, 23.67, 23.89, 24.15]
-      },
-      {
-        "text": "that if you have a sore throat you",
-        "start": 24.4,
-        "end": 26.8,
-        "wordStarts": [24.55, 24.85, 25.17, 25.29, 25.43, 25.55, 25.75, 26.13]
-      },
-      {
-        "text": "eat them and And then the doctor said, don't talk, which is really hard for me.",
-        "start": 26.3,
+        "text": "And then the doctor said, don't talk, which is really hard for me.",
+        "start": 27.7,
         "end": 32.9,
-        "wordStarts": [26.47, 26.75, 26.87, 27.81, 27.81, 27.95, 28.07, 28.37, 28.99, 29.43, 30.03, 31.39, 31.57, 31.81, 32.15, 32.39]
-      },
-      {
-        "text": "They didn't say don't talk.",
-        "start": 32.6,
-        "end": 34.6,
-        "wordStarts": [32.77, 33.11, 33.35, 33.63, 33.99]
+        "wordStarts": [27.81, 27.81, 27.95, 28.07, 28.37, 28.99, 29.43, 30.03, 31.39, 31.57, 31.81, 32.15, 32.39]
       },
       {
         "text": "They just said, avoid talking for long periods of time and avoid talking loudly.",
         "start": 34.3,
         "end": 40.9,
         "wordStarts": [34.43, 34.53, 34.77, 35.57, 35.97, 36.49, 36.83, 37.21, 37.61, 37.83, 38.31, 39.11, 39.43, 39.99]
-      },
-      {
-        "text": "So I don't know if you can hear it.",
-        "start": 40.7,
-        "end": 42.4,
-        "wordStarts": [40.85, 40.95, 41.05, 41.15, 41.29, 41.43, 41.53, 41.69, 41.91]
       },
       {
         "text": "I still have a little bit of a sore throat.",
@@ -367,22 +350,10 @@
         "wordStarts": [46.99, 47.17, 47.71, 47.93, 48.25, 48.91, 49.41, 49.53, 49.71, 49.91, 50.05]
       },
       {
-        "text": "So this isn't really an English lesson or can I turn it into one?",
-        "start": 50.8,
-        "end": 55.1,
-        "wordStarts": [50.95, 51.17, 51.39, 51.71, 51.97, 52.15, 52.39, 52.89, 53.59, 53.83, 53.97, 54.19, 54.33, 54.55]
-      },
-      {
-        "text": "Let's do that. I had a sore throat.",
-        "start": 54.8,
-        "end": 57.6,
-        "wordStarts": [54.97, 55.15, 55.31, 55.91, 56.35, 56.65, 56.77, 56.97]
-      },
-      {
-        "text": "So I made an appointment to see the doctor.",
-        "start": 57.2,
+        "text": "I had a sore throat. So I made an appointment to see the doctor.",
+        "start": 55.8,
         "end": 60.6,
-        "wordStarts": [57.33, 57.61, 57.87, 58.27, 58.85, 59.19, 59.73, 59.89, 60.01]
+        "wordStarts": [55.91, 56.35, 56.65, 56.77, 56.97, 57.33, 57.61, 57.87, 58.27, 58.85, 59.19, 59.73, 59.89, 60.01]
       },
       {
         "text": "I called the doctor's office because I needed a doctor's appointment.",
@@ -397,22 +368,119 @@
         "wordStarts": [63.97, 64.25, 64.43, 64.59, 64.71, 65.25, 65.71, 65.93, 66.03, 66.33, 66.93, 67.35, 67.67, 68.23, 68.75]
       },
       {
-        "text": "And then that's what the doctor does when they figure out what's wrong with you.",
-        "start": 70,
-        "end": 73.7,
-        "wordStarts": [70.11, 70.37, 70.59, 71.25, 71.35, 71.47, 71.73, 72.01, 72.17, 72.29, 72.65, 72.79, 73.01, 73.15, 73.29]
+        "text": "So I got a prescription and I needed to go to the drugstore.",
+        "start": 81.9,
+        "end": 86.3,
+        "wordStarts": [82.01, 82.45, 82.59, 82.77, 82.91, 83.51, 84.45, 84.55, 84.71, 84.93, 85.13, 85.31, 85.45]
       },
       {
-        "text": "They diagnosed. And then the doctor said the",
-        "start": 73.3,
-        "end": 76.6,
-        "wordStarts": [73.41, 73.51, 74.65, 74.73, 74.85, 74.95, 75.25, 75.69]
+        "text": "Pharmacy is another word for drugstore in Canada and the drugstore filled my prescription.",
+        "start": 86.3,
+        "end": 91.7,
+        "wordStarts": [86.45, 86.85, 87.25, 87.45, 87.71, 87.89, 88.33, 88.55, 88.87, 89.79, 89.93, 90.43, 90.71, 90.93]
+      }
+    ]
+  },
+  {
+    "id": "video-mOo909c50Ko-2",
+    "title": "Bob the Canadian: being sick, part 2",
+    "level": "A2",
+    "source": {
+      "kind": "youtube",
+      "videoId": "mOo909c50Ko"
+    },
+    "lines": [
+      {
+        "text": "So I think I'm on day three or something like that.",
+        "start": 101.3,
+        "end": 103.6,
+        "wordStarts": [101.41, 101.51, 101.57, 101.69, 101.89, 101.95, 102.15, 102.45, 102.63, 102.85, 103.03]
       },
       {
-        "text": "treatment what I needed to do is I needed to take",
-        "start": 76.1,
-        "end": 80.8,
-        "wordStarts": [76.27, 76.75, 77.77, 77.97, 78.23, 78.47, 78.65, 79.27, 79.39, 79.61, 79.97]
+        "text": "Let me see what else can I teach you.",
+        "start": 120.2,
+        "end": 122,
+        "wordStarts": [120.33, 120.39, 120.43, 120.57, 120.73, 120.93, 121.13, 121.23, 121.43]
+      },
+      {
+        "text": "I didn't take any days off work.",
+        "start": 121.9,
+        "end": 124.4,
+        "wordStarts": [122.05, 122.33, 122.61, 122.99, 123.35, 123.57, 123.83]
+      },
+      {
+        "text": "I haven't called in sick even though I'm not supposed to talk a lot.",
+        "start": 124,
+        "end": 128.3,
+        "wordStarts": [124.11, 124.25, 124.49, 124.83, 125.13, 125.45, 126.25, 126.43, 126.57, 126.77, 127.03, 127.31, 127.65, 127.85]
+      },
+      {
+        "text": "So are things getting better?",
+        "start": 153.5,
+        "end": 156,
+        "wordStarts": [153.61, 153.75, 154.59, 155.01, 155.35]
+      },
+      {
+        "text": "I think I'm getting a little bit better.",
+        "start": 162.5,
+        "end": 165,
+        "wordStarts": [162.67, 162.81, 163.23, 163.67, 163.87, 164.07, 164.23, 164.43]
+      },
+      {
+        "text": "I do have less energy than normal, which is probably because I'm fighting off an infection.",
+        "start": 165.1,
+        "end": 172.4,
+        "wordStarts": [
+          165.29, 165.59, 165.81, 166.31, 166.85, 167.45, 167.69, 168.23, 168.47, 168.65, 169.19, 169.79, 170.09, 170.49, 170.99, 171.69
+        ]
+      },
+      {
+        "text": "So I booked a doctor's appointment. I went to my doctor's appointment.",
+        "start": 192.9,
+        "end": 197,
+        "wordStarts": [193.01, 193.19, 193.87, 194.43, 194.73, 195.09, 195.43, 195.51, 195.67, 195.85, 195.97, 196.39]
+      },
+      {
+        "text": "The doctor prescribed some drugs or some medication.",
+        "start": 196.6,
+        "end": 200.8,
+        "wordStarts": [196.77, 196.85, 197.13, 198.03, 198.77, 199.23, 199.53, 199.81]
+      },
+      {
+        "text": "I would just say some antibiotics or pills.",
+        "start": 202.5,
+        "end": 205.5,
+        "wordStarts": [202.61, 203.05, 203.17, 203.37, 203.55, 203.79, 204.29, 204.81]
+      },
+      {
+        "text": "I went to the drugstore or pharmacy and had the prescription filled.",
+        "start": 205.6,
+        "end": 209.8,
+        "wordStarts": [205.77, 206.17, 206.41, 206.85, 207.15, 207.59, 207.81, 208.01, 208.25, 208.41, 208.53, 208.85]
+      },
+      {
+        "text": "What else can you do for a sore throat?",
+        "start": 247.8,
+        "end": 249.6,
+        "wordStarts": [247.95, 248.03, 248.23, 248.43, 248.51, 248.67, 248.85, 248.99, 249.09]
+      },
+      {
+        "text": "I probably should be drinking tea with honey.",
+        "start": 249.3,
+        "end": 251.6,
+        "wordStarts": [249.45, 249.53, 249.83, 250.01, 250.17, 250.47, 250.87, 251.11]
+      },
+      {
+        "text": "I haven't been doing that but I will start.",
+        "start": 251.9,
+        "end": 254.2,
+        "wordStarts": [252.03, 252.31, 252.53, 252.69, 252.85, 253.11, 253.31, 253.59, 253.71]
+      },
+      {
+        "text": "I'll get back to things when I can.",
+        "start": 267.1,
+        "end": 269.1,
+        "wordStarts": [267.21, 267.47, 267.59, 267.83, 267.99, 268.21, 268.49, 268.65]
       }
     ]
   },
@@ -426,88 +494,22 @@
     },
     "lines": [
       {
-        "text": "Hey Bob the Canadian here, welcome to this video about roads,",
-        "start": 12.8,
-        "end": 16.8,
-        "wordStarts": [12.96, 13.4, 13.62, 13.82, 14.04, 14.46, 14.66, 14.88, 15.08, 15.4, 15.78]
+        "text": "Welcome to this video about roads, streets, and highways.",
+        "start": 14.3,
+        "end": 18.6,
+        "wordStarts": [14.46, 14.66, 14.88, 15.08, 15.4, 15.78, 17.1, 17.78, 17.82]
       },
       {
-        "text": "streets, and highways. This is your first time here.",
-        "start": 17,
-        "end": 20.6,
-        "wordStarts": [17.1, 17.78, 17.82, 18.98, 19.26, 19.48, 19.6, 19.84, 20.12]
-      },
-      {
-        "text": "and the small bell icon so that you can be notified when I upload videos.",
-        "start": 22.6,
-        "end": 28.4,
-        "wordStarts": [22.74, 22.92, 23.1, 23.52, 24.02, 24.82, 25.68, 25.84, 26, 26.18, 26.32, 26.8, 27.18, 27.32, 27.62]
-      },
-      {
-        "text": "Give me a thumbs up if this video",
-        "start": 28,
-        "end": 30.8,
-        "wordStarts": [28.18, 28.34, 28.5, 28.62, 28.88, 29.32, 29.94, 30.14]
-      },
-      {
-        "text": "is helping you learn English and don't forget",
-        "start": 30.3,
-        "end": 32.6,
-        "wordStarts": [30.46, 30.66, 31.02, 31.24, 31.44, 31.74, 31.92, 32.12]
-      },
-      {
-        "text": "to scroll down into the description to look",
-        "start": 32.2,
-        "end": 36.3,
-        "wordStarts": [32.34, 32.58, 32.98, 33.58, 34.58, 34.8, 35.3, 35.84]
-      },
-      {
-        "text": "for free bonus material to help you practice",
-        "start": 35.8,
-        "end": 39,
-        "wordStarts": [35.98, 36.18, 36.58, 37, 37.52, 37.82, 38.08, 38.28]
-      },
-      {
-        "text": "the English that we're going over in this video.",
-        "start": 38.6,
-        "end": 42,
-        "wordStarts": [38.74, 39.48, 39.74, 40.04, 40.22, 40.44, 40.86, 41.2, 41.36]
-      },
-      {
-        "text": "Well hey welcome to this video we're going to talk a little bit about roads,",
-        "start": 42.2,
-        "end": 46.2,
-        "wordStarts": [42.3, 42.52, 42.66, 42.96, 43.18, 43.36, 43.68, 43.9, 44.08, 44.24, 44.5, 44.7, 44.84, 45.02, 45.34]
-      },
-      {
-        "text": "streets and highways today and some of the things that you will find beside them.",
-        "start": 46.2,
-        "end": 51.1,
-        "wordStarts": [46.3, 46.86, 47.28, 47.72, 48.14, 48.52, 48.8, 48.94, 49.08, 49.34, 49.56, 49.7, 49.82, 50.1, 50.46]
-      },
-      {
-        "text": "This road here is a paved road that",
+        "text": "This road here is a paved road, that means the surface of the road is hard,",
         "start": 50.8,
-        "end": 54.2,
-        "wordStarts": [50.98, 51.24, 51.56, 51.9, 52.78, 52.96, 53.42, 53.72]
-      },
-      {
-        "text": "means the surface of the road is hard",
-        "start": 53.8,
         "end": 56.2,
-        "wordStarts": [53.92, 54.16, 54.42, 54.84, 55.08, 55.18, 55.36, 55.5]
+        "wordStarts": [50.98, 51.24, 51.56, 51.9, 52.78, 52.96, 53.42, 53.72, 53.92, 54.16, 54.42, 54.84, 55.08, 55.18, 55.36, 55.5]
       },
       {
-        "text": "and that means that cars can go a",
-        "start": 55.7,
-        "end": 58.8,
-        "wordStarts": [55.86, 56.9, 57.1, 57.3, 57.58, 57.94, 58.18, 58.34]
-      },
-      {
-        "text": "lot faster and it's just easier to drive on.",
-        "start": 58.3,
+        "text": "cars can go a lot faster and it's just easier to drive on.",
+        "start": 57.4,
         "end": 61.9,
-        "wordStarts": [58.46, 58.64, 59.24, 59.96, 60.08, 60.22, 60.64, 60.9, 61.28]
+        "wordStarts": [57.58, 57.94, 58.18, 58.34, 58.46, 58.64, 59.24, 59.96, 60.08, 60.22, 60.64, 60.9, 61.28]
       },
       {
         "text": "And this part right here is called the shoulder of the road.",
@@ -516,46 +518,193 @@
         "wordStarts": [61.76, 61.98, 62.24, 62.62, 62.88, 63.58, 64.28, 64.62, 64.84, 65.34, 66.18, 66.32]
       },
       {
-        "text": "So when you pull off the road you",
+        "text": "When you pull off the road, you can go on to the shoulder of the road.",
         "start": 66.6,
-        "end": 69.2,
-        "wordStarts": [66.7, 66.8, 66.96, 67.06, 67.54, 67.94, 68.22, 68.56]
-      },
-      {
-        "text": "can go on to the shoulder of the road.",
-        "start": 68.7,
         "end": 71.1,
-        "wordStarts": [68.86, 69.02, 69.18, 69.36, 69.48, 69.64, 70.12, 70.42, 70.56]
+        "wordStarts": [66.8, 66.96, 67.06, 67.54, 67.94, 68.22, 68.56, 68.86, 69.02, 69.18, 69.36, 69.48, 69.64, 70.12, 70.42, 70.56]
       },
       {
-        "text": "This part over here, it's kind of a little hard to see,",
+        "text": "This part over here, it's kind of a little hard to see, is called the ditch.",
         "start": 71,
-        "end": 74.7,
-        "wordStarts": [71.18, 71.5, 71.82, 72.02, 72.5, 73.02, 73.22, 73.34, 73.42, 73.6, 73.9, 74.12]
+        "end": 76.6,
+        "wordStarts": [71.18, 71.5, 71.82, 72.02, 72.5, 73.02, 73.22, 73.34, 73.42, 73.6, 73.9, 74.12, 74.94, 75.3, 75.6, 75.86]
       },
       {
-        "text": "is called the ditch. And the ditch is",
-        "start": 74.8,
-        "end": 78.2,
-        "wordStarts": [74.94, 75.3, 75.6, 75.86, 77.04, 77.26, 77.38, 77.72]
+        "text": "And the ditch is where, when it rains, all the water would run off the road,",
+        "start": 76.9,
+        "end": 81.6,
+        "wordStarts": [77.04, 77.26, 77.38, 77.72, 77.88, 78.16, 78.84, 78.98, 79.36, 79.66, 79.82, 80.22, 80.42, 80.64, 80.82, 81]
       },
       {
-        "text": "where when it rains all the water would",
-        "start": 77.7,
-        "end": 80.7,
-        "wordStarts": [77.88, 78.16, 78.84, 78.98, 79.36, 79.66, 79.82, 80.22]
-      },
-      {
-        "text": "run off the road into the ditch to keep the road nice and dry.",
-        "start": 80.3,
+        "text": "into the ditch to keep the road nice and dry.",
+        "start": 81.2,
         "end": 84.2,
-        "wordStarts": [80.42, 80.64, 80.82, 81, 81.34, 81.86, 82.1, 82.4, 82.6, 82.8, 82.96, 83.2, 83.44, 83.66]
+        "wordStarts": [81.34, 81.86, 82.1, 82.4, 82.6, 82.8, 82.96, 83.2, 83.44, 83.66]
       },
       {
-        "text": "The road behind me is what we would call a",
+        "text": "The road behind me is what we would call a gravel road or a dirt road.",
         "start": 84.1,
-        "end": 87.3,
-        "wordStarts": [84.26, 84.5, 84.8, 85.14, 85.58, 86.04, 86.22, 86.4, 86.54, 86.82]
+        "end": 89.6,
+        "wordStarts": [84.26, 84.5, 84.8, 85.14, 85.58, 86.04, 86.22, 86.4, 86.54, 86.82, 86.98, 87.42, 87.98, 88.42, 88.58, 88.92]
+      },
+      {
+        "text": "A paved road, like we saw, has a hard surface.",
+        "start": 90,
+        "end": 93.7,
+        "wordStarts": [90.16, 90.32, 90.76, 91.46, 91.66, 91.86, 92.2, 92.38, 92.54, 92.9]
+      },
+      {
+        "text": "A gravel road has all of these little stones.",
+        "start": 93.8,
+        "end": 99.9,
+        "wordStarts": [93.9, 94.02, 94.4, 94.8, 95.16, 98.21, 98.35, 98.51, 98.81]
+      },
+      {
+        "text": "I'll hold them up to the camera.",
+        "start": 99.6,
+        "end": 101.4,
+        "wordStarts": [99.79, 99.91, 100.11, 100.25, 100.39, 100.55, 100.63]
+      },
+      {
+        "text": "Behind me, you'll see a stop sign.",
+        "start": 108.3,
+        "end": 111.5,
+        "wordStarts": [108.47, 108.85, 109.65, 109.87, 110.11, 110.21, 110.55]
+      },
+      {
+        "text": "This is a red sign with the word stop in it.",
+        "start": 111.6,
+        "end": 115.2,
+        "wordStarts": [111.75, 111.95, 112.09, 112.21, 112.51, 113.11, 113.57, 113.75, 113.93, 114.39, 114.69]
+      },
+      {
+        "text": "And it has eight sides. It's an octagon.",
+        "start": 114.8,
+        "end": 119.2,
+        "wordStarts": [114.93, 115.37, 115.53, 116.01, 116.57, 117.67, 118.05, 118.17]
+      }
+    ]
+  },
+  {
+    "id": "video-0D53hS9KYy0-2",
+    "title": "Bob the Canadian: on the road, part 2",
+    "level": "A2",
+    "source": {
+      "kind": "youtube",
+      "videoId": "0D53hS9KYy0"
+    },
+    "lines": [
+      {
+        "text": "So the intersection behind me here is called a four-way stop or an all-way stop.",
+        "start": 124.8,
+        "end": 130.3,
+        "wordStarts": [
+          124.99, 125.41, 125.57, 126.05, 126.47, 126.75, 127.78, 128.05, 128.05, 128.29, 128.45, 128.67, 128.89, 129.29, 129.85
+        ]
+      },
+      {
+        "text": "What that means is that whoever stops first at the intersection gets to go next.",
+        "start": 134.8,
+        "end": 142,
+        "wordStarts": [
+          134.99, 135.35, 135.59, 135.91, 136.11, 136.37, 136.85, 137.59, 138.23, 138.91, 139.05, 139.69, 140.61, 140.91, 141.11
+        ]
+      },
+      {
+        "text": "So everyone needs to take turns going through this intersection.",
+        "start": 141.5,
+        "end": 146.6,
+        "wordStarts": [141.67, 142.15, 142.45, 142.93, 143.17, 143.49, 144.23, 145.15, 145.41, 145.67]
+      },
+      {
+        "text": "Red lights mean stop and green lights mean go.",
+        "start": 162.1,
+        "end": 167.4,
+        "wordStarts": [162.23, 162.69, 163.19, 163.57, 164.03, 164.99, 165.33, 165.81, 166.59]
+      },
+      {
+        "text": "When that light comes on, it means there's a train coming.",
+        "start": 198.7,
+        "end": 202.2,
+        "wordStarts": [198.8, 199.16, 199.36, 199.58, 199.9, 200.28, 200.58, 200.82, 201.18, 201.3, 201.5]
+      },
+      {
+        "text": "I think I'm just in time to see this. Let's watch the train go by.",
+        "start": 202.2,
+        "end": 206.6,
+        "wordStarts": [202.32, 202.46, 202.62, 202.86, 203.06, 203.24, 203.5, 203.72, 203.96, 204.7, 205.1, 205.34, 205.6, 205.84, 206.04]
+      },
+      {
+        "text": "So that's why when that light's going, you should not cross the railroad track.",
+        "start": 229.1,
+        "end": 234.6,
+        "wordStarts": [229.27, 229.49, 229.87, 230.17, 230.47, 230.73, 231.09, 231.41, 231.87, 232.15, 232.47, 232.99, 233.41, 233.75]
+      },
+      {
+        "text": "On the sides of the road you will see speed limit signs,",
+        "start": 242.5,
+        "end": 247.4,
+        "wordStarts": [242.65, 243.33, 243.49, 243.87, 244.07, 244.23, 244.71, 245.41, 245.55, 245.85, 246.35, 246.65]
+      },
+      {
+        "text": "which tell you how fast you can drive your vehicle.",
+        "start": 247,
+        "end": 251.3,
+        "wordStarts": [247.11, 247.65, 248.07, 248.41, 249.11, 249.63, 249.85, 250.01, 250.29, 250.49]
+      },
+      {
+        "text": "This is a speed limit sign from a city or town,",
+        "start": 251.3,
+        "end": 255.7,
+        "wordStarts": [251.47, 252.07, 252.25, 252.41, 252.61, 252.93, 253.35, 253.67, 253.87, 254.21, 254.83]
+      },
+      {
+        "text": "and it says you can do 50 kilometers an hour maximum.",
+        "start": 255.2,
+        "end": 259.8,
+        "wordStarts": [255.37, 256.15, 256.29, 256.61, 256.85, 256.99, 257.15, 257.63, 258.01, 258.49, 258.75]
+      },
+      {
+        "text": "It says you can do 80 kilometers an hour max,",
+        "start": 263.7,
+        "end": 267.4,
+        "wordStarts": [263.89, 264.21, 264.51, 264.77, 264.93, 265.09, 265.57, 265.97, 266.43, 266.61]
+      },
+      {
+        "text": "and if you go any faster, you might get a ticket.",
+        "start": 267,
+        "end": 270.3,
+        "wordStarts": [267.13, 267.65, 267.79, 267.91, 268.09, 268.25, 268.85, 269.19, 269.37, 269.59, 269.77]
+      },
+      {
+        "text": "A guardrail stops vehicles from going off the road if they lose control.",
+        "start": 288.8,
+        "end": 295.4,
+        "wordStarts": [288.95, 289.25, 290.05, 290.79, 291.45, 292.15, 292.55, 292.93, 293.13, 293.45, 293.71, 293.89, 294.31]
+      },
+      {
+        "text": "This is a place for pedestrians to walk.",
+        "start": 363.1,
+        "end": 366.8,
+        "wordStarts": [363.23, 363.87, 364.01, 364.11, 364.37, 364.69, 365.41, 366.03]
+      },
+      {
+        "text": "Pedestrians are people who are walking along the sidewalk.",
+        "start": 366.8,
+        "end": 371.5,
+        "wordStarts": [366.99, 367.41, 367.67, 368.07, 368.37, 368.53, 369.09, 369.95, 370.47]
+      },
+      {
+        "text": "Sometimes you'll even find a bike lane.",
+        "start": 371.7,
+        "end": 374.6,
+        "wordStarts": [371.87, 372.51, 372.91, 373.11, 373.41, 373.55, 373.97]
+      },
+      {
+        "text": "This is a six lane highway. It has three lanes going in either direction.",
+        "start": 425.8,
+        "end": 432.8,
+        "wordStarts": [425.99, 426.49, 426.91, 427.15, 427.41, 427.73, 428.95, 429.39, 429.67, 430.01, 430.61, 431.07, 431.37, 431.75]
       }
     ]
   },
@@ -569,10 +718,10 @@
     },
     "lines": [
       {
-        "text": "water bottles with them to make sure they drink enough.",
-        "start": 16.2,
+        "text": "Nowadays, I often see people carrying water bottles with them to make sure they drink enough.",
+        "start": 13.9,
         "end": 19.6,
-        "wordStarts": [16.32, 16.82, 17.18, 17.46, 17.66, 18, 18.18, 18.46, 18.64, 19]
+        "wordStarts": [14.02, 14.72, 14.92, 15.2, 15.42, 15.78, 16.32, 16.82, 17.18, 17.46, 17.66, 18, 18.18, 18.46, 18.64, 19]
       },
       {
         "text": "How much water do you drink a day, Phil?",
@@ -587,10 +736,10 @@
         "wordStarts": [22.5, 22.94, 23.12, 24.52, 25.12, 25.54, 25.82]
       },
       {
-        "text": "OK. Do you know how much water you should drink a day?",
-        "start": 26.4,
+        "text": "Do you know how much water you should drink a day?",
+        "start": 27.2,
         "end": 30.8,
-        "wordStarts": [26.54, 27.38, 27.7, 27.86, 28.02, 28.26, 28.5, 28.96, 29.26, 29.68, 30.14, 30.3]
+        "wordStarts": [27.38, 27.7, 27.86, 28.02, 28.26, 28.5, 28.96, 29.26, 29.68, 30.14, 30.3]
       },
       {
         "text": "I think it's probably about two litres.",
@@ -629,22 +778,10 @@
         "wordStarts": [49.88, 50.18, 50.3, 50.54, 50.66, 51.12, 51.42, 51.58, 52.22, 52.48, 52.78, 53, 53.46, 53.74, 54.26, 54.62]
       },
       {
-        "text": "And speaking of vocabulary, remember you can download",
-        "start": 55,
-        "end": 58.2,
-        "wordStarts": [55.18, 55.48, 55.82, 56.06, 56.76, 56.96, 57.26, 57.44]
-      },
-      {
-        "text": "all the new words and phrases from this",
-        "start": 57.8,
-        "end": 60.2,
-        "wordStarts": [57.9, 58.4, 58.6, 58.76, 59.04, 59.2, 59.46, 59.76]
-      },
-      {
-        "text": "Great, but first I have a question for you, Phil.",
-        "start": 67.3,
+        "text": "But first I have a question for you, Phil.",
+        "start": 68,
         "end": 71,
-        "wordStarts": [67.42, 68.18, 68.38, 68.84, 69.16, 69.44, 69.54, 69.88, 70.28, 70.6]
+        "wordStarts": [68.18, 68.38, 68.84, 69.16, 69.44, 69.54, 69.88, 70.28, 70.6]
       },
       {
         "text": "I mentioned that over half the human body consists of water,",
@@ -659,10 +796,137 @@
         "wordStarts": [75.82, 76.12, 76.4, 76.54, 76.8, 77.24, 77.7, 78.14, 78.46, 78.8, 79]
       },
       {
-        "text": "But how much? Which is our blood A.",
-        "start": 79.6,
-        "end": 82.8,
-        "wordStarts": [79.7, 79.94, 80.18, 80.54, 80.62, 81.22, 81.5, 81.84]
+        "text": "Okay, I will reveal the correct answer later in the programme.",
+        "start": 93.8,
+        "end": 98.2,
+        "wordStarts": [93.96, 94.74, 95.22, 95.48, 95.84, 96.06, 96.28, 96.76, 97.1, 97.36, 97.46]
+      },
+      {
+        "text": "Our blood needs water so it can carry nutrients to the body's cells and organs.",
+        "start": 98.4,
+        "end": 103.8,
+        "wordStarts": [98.6, 98.74, 99.02, 99.46, 99.88, 100.26, 100.4, 100.52, 100.84, 101.46, 101.74, 101.86, 102.34, 102.64, 103.06]
+      },
+      {
+        "text": "The amount recommended is often given as two litres a day, but why?",
+        "start": 104,
+        "end": 108.8,
+        "wordStarts": [104.18, 104.36, 104.6, 105.22, 105.62, 105.92, 106.2, 106.4, 106.66, 106.9, 107.22, 107.88, 108.12]
+      }
+    ]
+  },
+  {
+    "id": "video-7F1iJZr-p4E-2",
+    "title": "BBC 6 Minute English: drinking water, part 2",
+    "level": "B1",
+    "source": {
+      "kind": "youtube",
+      "videoId": "7F1iJZr-p4E"
+    },
+    "lines": [
+      {
+        "text": "Nevertheless, the idea of drinking two litres a day,",
+        "start": 142.1,
+        "end": 145.8,
+        "wordStarts": [142.26, 143.12, 143.14, 143.52, 143.74, 144.06, 144.54, 144.86, 145.24]
+      },
+      {
+        "text": "has taken grip on many governments around the world.",
+        "start": 145.4,
+        "end": 149.4,
+        "wordStarts": [145.52, 146.1, 146.46, 146.82, 147.14, 147.62, 148.1, 148.48, 148.72]
+      },
+      {
+        "text": "When you say an idea has taken grip on something,",
+        "start": 149.6,
+        "end": 152.4,
+        "wordStarts": [149.74, 149.94, 150.06, 150.2, 150.32, 150.56, 150.82, 151.14, 151.52, 151.78]
+      },
+      {
+        "text": "you mean it's taken control of it?",
+        "start": 152.5,
+        "end": 154.8,
+        "wordStarts": [152.7, 152.92, 153.02, 153.28, 153.54, 154.16, 154.4]
+      },
+      {
+        "text": "He uses the phrase pretty much to mean almost.",
+        "start": 162.6,
+        "end": 166.3,
+        "wordStarts": [162.74, 162.9, 163.18, 163.44, 163.74, 164.38, 164.84, 165.22, 165.46]
+      },
+      {
+        "text": "The number of exactly two litres isn't based on scientific fact.",
+        "start": 179.9,
+        "end": 184.6,
+        "wordStarts": [180.08, 180.28, 180.5, 180.7, 181.14, 181.64, 182.08, 182.72, 183.04, 183.28, 183.78]
+      },
+      {
+        "text": "It's more of a ballpark figure.",
+        "start": 184.7,
+        "end": 187.1,
+        "wordStarts": [184.84, 185.22, 185.38, 185.54, 185.64, 186.48]
+      },
+      {
+        "text": "A number which is a guess but which you still believe is approximately correct.",
+        "start": 187.3,
+        "end": 192.1,
+        "wordStarts": [187.44, 187.56, 187.8, 188.1, 188.24, 188.36, 188.72, 189.4, 189.6, 189.72, 190.02, 190.36, 190.58, 191.16]
+      },
+      {
+        "text": "Actually, the amount of water in our bodies is changing all the time.",
+        "start": 192.3,
+        "end": 196.8,
+        "wordStarts": [192.46, 193.18, 193.3, 193.66, 193.86, 194.14, 194.4, 194.54, 194.84, 195.12, 195.58, 196, 196.18]
+      },
+      {
+        "text": "And that mainly depends on your size.",
+        "start": 211.7,
+        "end": 213.9,
+        "wordStarts": [211.8, 211.94, 212.08, 212.46, 212.92, 213.2, 213.32]
+      },
+      {
+        "text": "But what happens when we drink less than we should?",
+        "start": 213.5,
+        "end": 217.7,
+        "wordStarts": [213.64, 214.7, 214.94, 215.38, 215.64, 215.78, 216.04, 216.54, 217, 217.1]
+      },
+      {
+        "text": "She mentions feeling tired, having a headache or a dry mouth as symptoms of dehydration.",
+        "start": 261.1,
+        "end": 267.5,
+        "wordStarts": [
+          261.22, 261.32, 261.66, 261.94, 262.98, 263.24, 263.44, 263.66, 264.12, 264.26, 264.54, 264.92, 265.42, 265.88, 266.16
+        ]
+      },
+      {
+        "text": "Speaking of which, Phil, it's time to reveal the answer to my question.",
+        "start": 284.8,
+        "end": 289.1,
+        "wordStarts": [284.96, 285.46, 285.72, 286.1, 286.4, 286.64, 286.82, 286.96, 287.3, 287.52, 287.92, 288.18, 288.32]
+      },
+      {
+        "text": "What percentage of our blood is water?",
+        "start": 289.3,
+        "end": 292.4,
+        "wordStarts": [289.46, 289.62, 290.08, 290.56, 290.72, 291.02, 291.44]
+      },
+      {
+        "text": "If an idea takes grip on something, it takes control of it.",
+        "start": 312.3,
+        "end": 316.7,
+        "wordStarts": [312.44, 312.74, 312.86, 313.1, 313.5, 313.9, 314.18, 315.06, 315.26, 315.5, 316, 316.22]
+      },
+      {
+        "text": "The phrase pretty much means almost.",
+        "start": 317.4,
+        "end": 320.4,
+        "wordStarts": [317.5, 317.8, 318.18, 318.74, 319.16, 319.62]
+      },
+      {
+        "text": "A ballpark figure is a phrase meaning a number which is an acceptably accurate approximation.",
+        "start": 326.8,
+        "end": 333.9,
+        "wordStarts": [326.96, 327.56, 328.22, 328.58, 329.06, 329.22, 329.46, 329.76, 330.04, 330.42, 330.8, 330.98, 331.12, 332.04, 332.6]
       }
     ]
   },
@@ -675,12 +939,6 @@
       "videoId": "YAsDeXcYyTg"
     },
     "lines": [
-      {
-        "text": "Learning English. I'm Pippa. And I'm Beth.",
-        "start": 9.8,
-        "end": 12.9,
-        "wordStarts": [9.92, 10.3, 10.98, 11.24, 11.8, 12.04, 12.44]
-      },
       {
         "text": "Have you ever been scared of speaking in English?",
         "start": 13.2,
@@ -700,7 +958,7 @@
         "wordStarts": [23, 23.56, 24.06, 24.18, 24.4, 24.7, 24.86, 25.28, 25.98, 26.3, 26.42, 26.6]
       },
       {
-        "text": "Yes, I learned French when I was younger",
+        "text": "Yes, I learned French when I was younger,",
         "start": 27.4,
         "end": 31.2,
         "wordStarts": [27.56, 28.42, 28.8, 29.4, 29.8, 30.24, 30.44, 30.6]
@@ -718,46 +976,22 @@
         "wordStarts": [33.78, 34.06, 34.3, 34.5, 34.92, 35.4, 35.7, 35.86, 36.02, 36.4]
       },
       {
-        "text": "How about you? Yeah, I've always felt like that with Spanish.",
-        "start": 37.2,
+        "text": "Yeah, I've always felt like that with Spanish.",
+        "start": 38,
         "end": 40.6,
-        "wordStarts": [37.3, 37.46, 37.6, 38.14, 38.44, 38.68, 38.96, 39.38, 39.56, 39.76, 39.9]
+        "wordStarts": [38.14, 38.44, 38.68, 38.96, 39.38, 39.56, 39.76, 39.9]
       },
       {
-        "text": "I am scared to speak because I don't",
+        "text": "I am scared to speak because I don't want to make mistakes,",
         "start": 40.5,
-        "end": 43.9,
-        "wordStarts": [40.6, 40.9, 41.56, 41.8, 42.02, 42.28, 42.74, 43.5]
+        "end": 44.8,
+        "wordStarts": [40.6, 40.9, 41.56, 41.8, 42.02, 42.28, 42.74, 43.5, 43.6, 43.72, 43.86, 43.98]
       },
       {
-        "text": "want to make mistakes even though I know it's okay to make mistakes.",
-        "start": 43.5,
+        "text": "even though I know it's okay to make mistakes.",
+        "start": 44.3,
         "end": 47.5,
-        "wordStarts": [43.6, 43.72, 43.86, 43.98, 44.48, 45.14, 45.34, 45.44, 45.6, 45.88, 46.16, 46.64, 46.82]
-      },
-      {
-        "text": "Well, in this episode of Six Minute English,",
-        "start": 47.7,
-        "end": 50.7,
-        "wordStarts": [47.82, 48.38, 48.56, 48.78, 49.32, 49.6, 49.82, 50.04]
-      },
-      {
-        "text": "we'll be hearing about how to feel less",
-        "start": 50.5,
-        "end": 52.9,
-        "wordStarts": [50.6, 50.78, 50.9, 51.24, 51.56, 51.78, 51.96, 52.24]
-      },
-      {
-        "text": "nervous when you speak English and as usual",
-        "start": 52.5,
-        "end": 55.9,
-        "wordStarts": [52.64, 53.08, 53.5, 53.64, 53.82, 54.2, 55.04, 55.28]
-      },
-      {
-        "text": "we'll be learning some useful new words and phrases.",
-        "start": 55.5,
-        "end": 58.4,
-        "wordStarts": [55.6, 55.84, 55.96, 56.2, 56.44, 56.82, 57.14, 57.44, 57.7]
+        "wordStarts": [44.48, 45.14, 45.34, 45.44, 45.6, 45.88, 46.16, 46.64, 46.82]
       },
       {
         "text": "But first I have a question for you Pippa.",
@@ -766,28 +1000,113 @@
         "wordStarts": [64.76, 65.14, 65.62, 65.98, 66.24, 66.4, 66.8, 67.12, 67.36]
       },
       {
-        "text": "So English has around one million words but",
+        "text": "So English has around one million words,",
         "start": 68.2,
-        "end": 72.4,
-        "wordStarts": [68.38, 68.52, 68.88, 69.4, 69.84, 70.28, 70.74, 71.4]
+        "end": 71.7,
+        "wordStarts": [68.38, 68.52, 68.88, 69.4, 69.84, 70.28, 70.74]
       },
       {
-        "text": "on average how many words does a typical English speaker use in daily conversation?",
-        "start": 71.9,
+        "text": "but on average how many words does a typical English speaker use in daily conversation?",
+        "start": 71.3,
         "end": 79.1,
-        "wordStarts": [72.06, 72.72, 73.28, 73.94, 74.14, 74.6, 75, 75.28, 75.6, 76.14, 76.62, 76.98, 77.4, 77.9]
+        "wordStarts": [71.4, 72.06, 72.72, 73.28, 73.94, 74.14, 74.6, 75, 75.28, 75.6, 76.14, 76.62, 76.98, 77.4, 77.9]
       },
       {
-        "text": "Is it A between 2000 and 3000,",
-        "start": 79.4,
-        "end": 83.1,
-        "wordStarts": [79.6, 79.7, 79.88, 80.18, 80.82, 81.82, 82.34]
+        "text": "Okay, well we will find out later in the programme.",
+        "start": 95.7,
+        "end": 98.9,
+        "wordStarts": [95.88, 96.28, 96.52, 96.84, 97, 97.24, 97.46, 97.8, 98.12, 98.26]
       },
       {
-        "text": "B between 20 ,000 and 30 ,000,",
-        "start": 83.5,
-        "end": 87.9,
-        "wordStarts": [83.66, 84.18, 84.7, 85.26, 85.9, 86.22, 86.84]
+        "text": "Now, Pippa, you said you found it stressful speaking in French,",
+        "start": 99.5,
+        "end": 103.7,
+        "wordStarts": [99.64, 100.02, 100.5, 100.58, 100.78, 100.98, 101.22, 101.38, 101.92, 102.5, 102.9]
+      },
+      {
+        "text": "even though you are quite good at it.",
+        "start": 103.3,
+        "end": 106.2,
+        "wordStarts": [103.4, 103.9, 104.34, 104.92, 105.22, 105.38, 105.56, 105.72]
+      }
+    ]
+  },
+  {
+    "id": "video-YAsDeXcYyTg-2",
+    "title": "BBC 6 Minute English: scared to speak English, part 2",
+    "level": "B1",
+    "source": {
+      "kind": "youtube",
+      "videoId": "YAsDeXcYyTg"
+    },
+    "lines": [
+      {
+        "text": "The modifier pretty means quite or a bit.",
+        "start": 175.4,
+        "end": 178.6,
+        "wordStarts": [175.54, 175.7, 176.06, 176.66, 177.2, 177.56, 177.96, 178.1]
+      },
+      {
+        "text": "If you relate to a situation, you know what it feels like,",
+        "start": 184.1,
+        "end": 188.1,
+        "wordStarts": [184.28, 184.46, 184.58, 185.02, 185.2, 185.34, 186.26, 186.42, 186.6, 186.82, 186.96, 187.3]
+      },
+      {
+        "text": "usually because a similar thing has happened to you.",
+        "start": 188,
+        "end": 191.3,
+        "wordStarts": [188.1, 188.54, 188.92, 189.14, 189.48, 189.84, 190.12, 190.44, 190.68]
+      },
+      {
+        "text": "We can call this speaking anxiety.",
+        "start": 198.1,
+        "end": 200.5,
+        "wordStarts": [198.24, 198.48, 198.64, 198.82, 199.04, 199.48]
+      },
+      {
+        "text": "So, why do so many people have anxiety about speaking a foreign language?",
+        "start": 206.8,
+        "end": 213.1,
+        "wordStarts": [206.96, 208.24, 208.48, 208.74, 208.96, 209.18, 209.6, 209.96, 210.54, 211.16, 211.68, 212, 212.28]
+      },
+      {
+        "text": "Experts think it's connected to the beliefs we have about ourselves.",
+        "start": 213.7,
+        "end": 218,
+        "wordStarts": [213.82, 214.16, 214.36, 214.78, 215.04, 215.44, 215.56, 216.02, 216.36, 216.66, 216.96]
+      },
+      {
+        "text": "Irrational beliefs are beliefs that aren't based on things that are true.",
+        "start": 263,
+        "end": 266.9,
+        "wordStarts": [263.14, 263.72, 264.08, 264.46, 264.76, 265.08, 265.3, 265.58, 265.8, 266.04, 266.26, 266.34]
+      },
+      {
+        "text": "They come from inside your head, not from the people around you.",
+        "start": 281.8,
+        "end": 285.7,
+        "wordStarts": [281.96, 282.14, 282.42, 282.72, 283.26, 283.48, 283.78, 284.1, 284.34, 284.48, 284.76, 285.14]
+      },
+      {
+        "text": "But as we tell people all the time at BBC Learning English, mistakes are normal.",
+        "start": 301.5,
+        "end": 307,
+        "wordStarts": [
+          301.64, 301.88, 302.28, 302.44, 302.62, 302.92, 303.28, 303.42, 303.76, 304.02, 304.38, 304.82, 305.54, 305.82, 306.26
+        ]
+      },
+      {
+        "text": "You have to try to speak even though you make mistakes.",
+        "start": 307.1,
+        "end": 310.2,
+        "wordStarts": [307.22, 307.26, 307.5, 307.66, 307.9, 308.06, 308.34, 308.88, 309.16, 309.34, 309.48]
+      },
+      {
+        "text": "And mistakes can be a good thing.",
+        "start": 310.4,
+        "end": 312.3,
+        "wordStarts": [310.52, 310.6, 310.86, 311.2, 311.38, 311.6, 311.76]
       }
     ]
   },
@@ -801,10 +1120,10 @@
     },
     "lines": [
       {
-        "text": "or exams? War and climate change in the news?",
-        "start": 15.4,
+        "text": "Worrying about work or exams? War and climate change in the news?",
+        "start": 14.5,
         "end": 19.1,
-        "wordStarts": [15.58, 15.86, 16.9, 17.1, 17.36, 17.66, 18.02, 18.3, 18.4]
+        "wordStarts": [14.64, 15.04, 15.2, 15.58, 15.86, 16.9, 17.1, 17.36, 17.66, 18.02, 18.3, 18.4]
       },
       {
         "text": "It's no wonder that modern life is stressful.",
@@ -813,76 +1132,28 @@
         "wordStarts": [19.16, 19.52, 19.7, 20.12, 20.34, 20.58, 20.98, 21.16]
       },
       {
-        "text": "What makes you stress, Neil?",
-        "start": 22.2,
-        "end": 23.8,
-        "wordStarts": [22.32, 22.48, 22.74, 22.9, 23.34]
-      },
-      {
-        "text": "Oh, good question. I think not having enough",
-        "start": 23.6,
-        "end": 27.5,
-        "wordStarts": [23.72, 24.06, 24.18, 25.3, 25.66, 25.98, 26.32, 26.78]
-      },
-      {
-        "text": "time to do something that really makes me stressed out.",
-        "start": 27.1,
+        "text": "I think not having enough time to do something that really makes me stressed out.",
+        "start": 25.2,
         "end": 30.9,
-        "wordStarts": [27.22, 27.76, 27.96, 28.18, 28.56, 28.96, 29.32, 29.8, 30, 30.26]
+        "wordStarts": [25.3, 25.66, 25.98, 26.32, 26.78, 27.22, 27.76, 27.96, 28.18, 28.56, 28.96, 29.32, 29.8, 30, 30.26]
       },
       {
-        "text": "How about you? When I'm trying to do",
-        "start": 30.8,
-        "end": 34.5,
-        "wordStarts": [30.94, 31.04, 31.24, 32.18, 32.58, 33.42, 33.72, 33.98]
+        "text": "When I'm trying to do something that I've never tried before,",
+        "start": 32,
+        "end": 36.5,
+        "wordStarts": [32.18, 32.58, 33.42, 33.72, 33.98, 34.18, 34.56, 34.88, 35.08, 35.36, 35.8]
       },
       {
-        "text": "something that I've never tried before and I'm not very good at it,",
-        "start": 34,
-        "end": 38.3,
-        "wordStarts": [34.18, 34.56, 34.88, 35.08, 35.36, 35.8, 36.22, 36.82, 36.96, 37.1, 37.36, 37.6, 37.78]
-      },
-      {
-        "text": "that makes me feel really stressed.",
-        "start": 38,
+        "text": "and I'm not very good at it, that makes me feel really stressed.",
+        "start": 36.1,
         "end": 40.2,
-        "wordStarts": [38.14, 38.32, 38.6, 38.74, 38.98, 39.36]
+        "wordStarts": [36.22, 36.82, 36.96, 37.1, 37.36, 37.6, 37.78, 38.14, 38.32, 38.6, 38.74, 38.98, 39.36]
       },
       {
-        "text": "I find that stressful too.",
-        "start": 40.3,
-        "end": 42.3,
-        "wordStarts": [40.44, 40.84, 41.12, 41.26, 41.64]
-      },
-      {
-        "text": "And how do you cope with stressful situations, Nill?",
+        "text": "And how do you cope with stressful situations, Neil?",
         "start": 42.8,
-        "end": 45.8,
-        "wordStarts": [42.9, 43.16, 43.36, 43.52, 43.62, 43.9, 44.08, 44.46, 45.24]
-      },
-      {
-        "text": "Well I try to slow down,",
-        "start": 45.9,
-        "end": 48.8,
-        "wordStarts": [46.06, 46.32, 46.88, 47.28, 47.68, 48.16]
-      },
-      {
-        "text": "pause, take a breath and think that some",
-        "start": 49,
-        "end": 53,
-        "wordStarts": [49.18, 50.48, 50.68, 50.82, 51, 51.76, 52.06, 52.4]
-      },
-      {
-        "text": "point probably later today everything will be okay again.",
-        "start": 52.5,
-        "end": 56.3,
-        "wordStarts": [52.68, 53, 53.26, 53.72, 54.12, 55.02, 55.26, 55.42, 55.66]
-      },
-      {
-        "text": "How about you? Yeah same but in In my mind,",
-        "start": 56.5,
-        "end": 59.6,
-        "wordStarts": [56.62, 56.88, 57.08, 57.68, 57.92, 58.3, 58.66, 58.82, 58.82, 58.94]
+        "end": 45.4,
+        "wordStarts": [42.9, 43.16, 43.36, 43.52, 43.62, 43.62, 43.9, 44.08, 44.46]
       },
       {
         "text": "I'm telling myself that I will be better at what I'm doing,",
@@ -891,46 +1162,183 @@
         "wordStarts": [59.52, 59.66, 59.88, 60.4, 60.86, 61.48, 61.64, 61.8, 62.14, 62.4, 62.56, 62.72]
       },
       {
-        "text": "I just need to practice more.",
+        "text": "I just need to practise more.",
         "start": 63,
         "end": 64.8,
         "wordStarts": [63.16, 63.28, 63.48, 63.66, 63.78, 64.08]
       },
       {
-        "text": "Many young people who feel stressed about the",
+        "text": "Many young people who feel stressed about the modern world,",
         "start": 65.8,
-        "end": 68.7,
-        "wordStarts": [65.92, 66.16, 66.44, 66.78, 67.1, 67.36, 67.82, 68.16]
+        "end": 69.2,
+        "wordStarts": [65.92, 66.16, 66.44, 66.78, 67.1, 67.36, 67.82, 68.16, 68.36, 68.58]
       },
       {
-        "text": "modern world use the word overwhelm to describe their feelings.",
-        "start": 68.2,
+        "text": "use the word overwhelm to describe their feelings.",
+        "start": 68.8,
         "end": 72.2,
-        "wordStarts": [68.36, 68.58, 68.92, 69.3, 69.48, 69.7, 70.6, 70.74, 71.2, 71.42]
+        "wordStarts": [68.92, 69.3, 69.48, 69.7, 70.6, 70.74, 71.2, 71.42]
       },
       {
-        "text": "And overwhelm was also the topic of a",
-        "start": 72.3,
-        "end": 74.9,
-        "wordStarts": [72.48, 72.58, 73.34, 73.52, 73.9, 74.02, 74.32, 74.52]
+        "text": "Feeling overwhelmed and unable to cope with life can become chronic,",
+        "start": 98.7,
+        "end": 103.2,
+        "wordStarts": [98.86, 99.1, 99.82, 100.24, 100.58, 100.9, 101.14, 101.34, 101.62, 102.02, 102.38]
       },
       {
-        "text": "recent BBC World Service programme What in the World?",
-        "start": 74.5,
-        "end": 77.8,
-        "wordStarts": [74.64, 74.88, 75.36, 75.8, 76.14, 76.62, 76.98, 77.14, 77.24]
+        "text": "meaning that it lasts for a long time.",
+        "start": 103.2,
+        "end": 105.9,
+        "wordStarts": [103.32, 103.76, 104.08, 104.22, 104.6, 104.94, 105.08, 105.2]
       },
       {
-        "text": "Here's Ikra Faruk and Claudia Hammond.",
-        "start": 77.8,
-        "end": 80.9,
-        "wordStarts": [77.98, 78.48, 78.94, 79.38, 79.68, 80.04]
+        "text": "So, how can we manage the stress in our lives and feel happier and healthier?",
+        "start": 111.3,
+        "end": 116.4,
+        "wordStarts": [
+          111.42, 112.42, 112.64, 112.84, 112.94, 113.26, 113.46, 113.76, 113.94, 114.06, 114.42, 114.68, 114.92, 115.42, 115.68
+        ]
       },
       {
-        "text": "So overwhelm is an emotional state",
-        "start": 81,
-        "end": 83.4,
-        "wordStarts": [81.14, 81.38, 82.06, 82.3, 82.4, 82.72]
+        "text": "That's what we'll be discussing in this episode, along with some useful new words and phrases.",
+        "start": 116.6,
+        "end": 121.4,
+        "wordStarts": [
+          116.7, 116.94, 117.06, 117.26, 117.38, 117.76, 118.02, 118.24, 118.96, 119.22, 119.46, 119.64, 120.04, 120.26, 120.56, 120.74
+        ]
+      },
+      {
+        "text": "But before we start, I have a question for you, Neil.",
+        "start": 127.3,
+        "end": 130.6,
+        "wordStarts": [127.42, 127.66, 128.04, 128.32, 129.06, 129.2, 129.3, 129.4, 129.7, 130, 130.24]
+      },
+      {
+        "text": "One simple way of combating stress is taking time to rest.",
+        "start": 130.9,
+        "end": 135.2,
+        "wordStarts": [131.02, 131.28, 131.6, 131.94, 132.2, 132.68, 133.06, 133.48, 133.82, 134.24, 134.48]
+      },
+      {
+        "text": "I'm surprised, Neil, I know you love music and we'll find out the answer later.",
+        "start": 157.7,
+        "end": 162.7,
+        "wordStarts": [
+          157.86, 158.08, 158.72, 159.02, 159.12, 159.36, 159.54, 159.72, 160.46, 160.74, 160.92, 161.14, 161.34, 161.5, 161.78
+        ]
+      }
+    ]
+  },
+  {
+    "id": "video-QdE63sYqwd8-2",
+    "title": "BBC 6 Minute English: stress, part 2",
+    "level": "B2",
+    "source": {
+      "kind": "youtube",
+      "videoId": "QdE63sYqwd8"
+    },
+    "lines": [
+      {
+        "text": "It's normal to feel nerves before an exam.",
+        "start": 189.7,
+        "end": 192.6,
+        "wordStarts": [189.8, 190.1, 190.44, 190.7, 190.92, 191.38, 191.7, 191.94]
+      },
+      {
+        "text": "Nerves is an informal word for worry or anxiety.",
+        "start": 192.7,
+        "end": 196.4,
+        "wordStarts": [192.82, 193.22, 193.52, 193.66, 194.06, 194.48, 194.72, 195.06, 195.44]
+      },
+      {
+        "text": "But according to Claudia, nerves aren't necessarily bad.",
+        "start": 196.5,
+        "end": 199.9,
+        "wordStarts": [196.6, 196.76, 197.06, 197.28, 197.84, 198.12, 198.48, 199]
+      },
+      {
+        "text": "Yes, nerves can help concentrate the mind.",
+        "start": 199.5,
+        "end": 203.4,
+        "wordStarts": [199.6, 200.82, 201.08, 201.38, 201.68, 202.38, 202.7]
+      },
+      {
+        "text": "The phrase concentrate or sharpen the mind means to think more clearly about something.",
+        "start": 203.3,
+        "end": 208.6,
+        "wordStarts": [203.42, 203.58, 203.94, 204.6, 205.06, 205.4, 205.62, 206, 206.52, 206.74, 206.98, 207.2, 207.52, 207.86]
+      },
+      {
+        "text": "Claudia recommends other ways to reduce stress as well.",
+        "start": 214.8,
+        "end": 218.1,
+        "wordStarts": [214.9, 215.24, 215.84, 216.18, 216.5, 216.7, 216.94, 217.4, 217.56]
+      },
+      {
+        "text": "These include slowing down and accepting that it's okay to be good enough,",
+        "start": 218.3,
+        "end": 223.5,
+        "wordStarts": [218.46, 218.74, 219.2, 219.72, 220.22, 220.52, 220.92, 221.16, 221.38, 221.88, 222.18, 222.42, 222.82]
+      },
+      {
+        "text": "rather than always trying for perfection.",
+        "start": 223,
+        "end": 225.9,
+        "wordStarts": [223.16, 223.68, 224.02, 224.48, 224.94, 225.18]
+      },
+      {
+        "text": "Every day there will be something new to add to the list, so, why stress?",
+        "start": 279.1,
+        "end": 283.6,
+        "wordStarts": [279.22, 279.48, 279.8, 280.02, 280.14, 280.32, 280.58, 281.02, 281.24, 281.52, 281.7, 281.82, 282.14, 282.92, 282.92]
+      },
+      {
+        "text": "I think I'll try these techniques next time I feel stressed.",
+        "start": 285.8,
+        "end": 289,
+        "wordStarts": [285.9, 285.98, 286.14, 286.36, 286.54, 286.82, 287.3, 287.6, 287.94, 288.08, 288.26]
+      },
+      {
+        "text": "Okay, let's recap the vocabulary from this episode, beginning with the adjective chronic,",
+        "start": 313.1,
+        "end": 318.4,
+        "wordStarts": [313.2, 313.8, 314.12, 314.36, 314.54, 315.02, 315.46, 315.66, 316.44, 316.74, 317, 317.1, 317.52]
+      },
+      {
+        "text": "which means continuing for a long time.",
+        "start": 318.3,
+        "end": 321,
+        "wordStarts": [318.44, 318.62, 318.96, 319.5, 319.94, 320.08, 320.2]
+      },
+      {
+        "text": "Burnout is a feeling of physical or mental exhaustion caused by working too hard.",
+        "start": 320.9,
+        "end": 326.2,
+        "wordStarts": [321.08, 321.6, 321.88, 322.04, 322.28, 322.5, 322.84, 323.18, 323.48, 324.1, 324.5, 324.74, 325.12, 325.46]
+      },
+      {
+        "text": "If you say that a difficult situation sharpens or concentrates someone's mind,",
+        "start": 326.2,
+        "end": 331.5,
+        "wordStarts": [326.32, 326.44, 326.58, 326.84, 327.12, 327.22, 327.58, 328.2, 329.3, 329.52, 330.44, 330.96]
+      },
+      {
+        "text": "you mean that it makes them think clearly.",
+        "start": 331.4,
+        "end": 333.6,
+        "wordStarts": [331.5, 331.72, 331.94, 332.14, 332.24, 332.44, 332.66, 332.9]
+      },
+      {
+        "text": "Nerves are an informal word for worry or anxiety.",
+        "start": 333.6,
+        "end": 337.5,
+        "wordStarts": [333.78, 334.22, 334.54, 334.68, 335.12, 335.56, 335.84, 336.2, 336.54]
+      },
+      {
+        "text": "Of course, another way to beat stress is doing something you love.",
+        "start": 349.2,
+        "end": 352.9,
+        "wordStarts": [349.34, 349.5, 349.82, 350.08, 350.44, 350.64, 350.78, 351.12, 351.5, 351.76, 352.12, 352.36]
       }
     ]
   },
@@ -980,7 +1388,7 @@
         "wordStarts": [29.56, 29.76, 29.94, 30.1, 30.32, 30.5, 30.9, 31.22, 31.46, 31.72, 31.84, 32.06]
       },
       {
-        "text": "and is controlling our emotions even possible in the first place.",
+        "text": "and is controlling our emotions even possible in the first place?",
         "start": 32.7,
         "end": 37,
         "wordStarts": [32.82, 33, 33.18, 33.66, 34.1, 34.54, 35.2, 35.76, 36, 36.1, 36.34]
@@ -992,7 +1400,7 @@
         "wordStarts": [37.58, 37.76, 38.02, 38.22, 38.34, 38.64, 39.12, 39.66, 39.76, 40.3]
       },
       {
-        "text": "There are numerous strategies for regulating our emotions",
+        "text": "There are numerous strategies for regulating our emotions,",
         "start": 41.8,
         "end": 45.1,
         "wordStarts": [41.98, 42.1, 42.3, 42.74, 43.32, 43.68, 44.14, 44.4]
@@ -1004,34 +1412,159 @@
         "wordStarts": [44.76, 45.16, 45.36, 45.72, 46.06, 46.46, 46.72, 47.16, 47.86, 48.18, 48.5, 49]
       },
       {
-        "text": "Psychologists use this tool to identify where and",
-        "start": 50,
-        "end": 53.5,
-        "wordStarts": [50.18, 50.76, 51.26, 51.5, 51.78, 51.94, 52.44, 52.94]
-      },
-      {
-        "text": "how to intervene in the process that forms our emotions.",
-        "start": 53.1,
-        "end": 57,
-        "wordStarts": [53.22, 53.58, 53.84, 54.24, 54.68, 54.78, 55.1, 55.4, 55.84, 56.22]
-      },
-      {
-        "text": "That process has four steps.",
-        "start": 57.1,
-        "end": 59.7,
-        "wordStarts": [57.24, 57.52, 57.92, 58.42, 58.86]
-      },
-      {
-        "text": "First, we enter a situation,",
+        "text": "First, we enter a situation, real or imagined, and that draws our attention.",
         "start": 59.3,
-        "end": 62.1,
-        "wordStarts": [59.44, 60.48, 60.72, 61.02, 61.24]
+        "end": 65.8,
+        "wordStarts": [59.44, 60.48, 60.72, 61.02, 61.24, 62.28, 62.58, 62.82, 63.58, 63.74, 63.94, 64.34, 64.76]
       },
       {
-        "text": "real or imagined, and that draws our attention. Then we evaluate or",
-        "start": 62.1,
-        "end": 68,
-        "wordStarts": [62.28, 62.58, 62.82, 63.58, 63.74, 63.94, 64.34, 64.76, 66.18, 66.34, 66.54, 67.14]
+        "text": "Then we evaluate or appraise the situation and whether it helps or hinders our goals.",
+        "start": 66,
+        "end": 72.3,
+        "wordStarts": [66.18, 66.34, 66.54, 67.14, 67.68, 68.64, 68.86, 69.38, 70, 70.24, 70.36, 70.64, 70.96, 71.4, 71.62]
+      },
+      {
+        "text": "Finally, this appraisal leads to a set of changes in how we feel, think and behave,",
+        "start": 72.6,
+        "end": 77.9,
+        "wordStarts": [72.72, 73.46, 73.52, 74.06, 74.34, 74.58, 74.7, 74.9, 75.04, 75.42, 75.72, 75.92, 76.1, 76.76, 76.94, 77.26]
+      },
+      {
+        "text": "known as an emotional response.",
+        "start": 78.3,
+        "end": 81.2,
+        "wordStarts": [78.42, 78.7, 79.38, 79.56, 80.06]
+      },
+      {
+        "text": "Each step of this process offers an opportunity to consciously intervene and change our emotions,",
+        "start": 81.7,
+        "end": 88.7,
+        "wordStarts": [81.84, 82.24, 82.6, 82.82, 82.98, 83.44, 83.84, 84.14, 84.86, 85.24, 85.84, 86.52, 87.04, 87.5, 87.92]
+      },
+      {
+        "text": "and the process model outlines what strategies we might try at each phase.",
+        "start": 88.2,
+        "end": 93.7,
+        "wordStarts": [88.36, 89.08, 89.2, 89.56, 89.98, 90.58, 91.08, 91.6, 91.9, 92.14, 92.5, 92.82, 93.1]
+      }
+    ]
+  },
+  {
+    "id": "video-Uew5BbvmLks-2",
+    "title": "TED-Ed: manage your emotions, part 2",
+    "level": "B1",
+    "source": {
+      "kind": "youtube",
+      "videoId": "Uew5BbvmLks"
+    },
+    "lines": [
+      {
+        "text": "Your first strategy could be avoiding the situation altogether by skipping the party.",
+        "start": 101.2,
+        "end": 107.2,
+        "wordStarts": [101.32, 101.52, 101.78, 102.24, 102.5, 102.78, 103.56, 103.9, 104.58, 105.2, 105.82, 106.2, 106.5]
+      },
+      {
+        "text": "If that's proving difficult, you might want to shift your attention,",
+        "start": 115,
+        "end": 119,
+        "wordStarts": [115.18, 115.34, 115.6, 115.84, 116.64, 116.76, 116.92, 117.14, 117.4, 117.88, 118.2]
+      },
+      {
+        "text": "maybe by playing a game with your friends rather than focusing on your ex's new partner.",
+        "start": 119.2,
+        "end": 123.8,
+        "wordStarts": [
+          119.3, 119.46, 119.7, 119.94, 120.14, 120.36, 120.54, 120.66, 121.06, 121.36, 121.62, 121.98, 122.3, 122.44, 122.9, 123.1
+        ]
+      },
+      {
+        "text": "If none of these strategies work,",
+        "start": 135,
+        "end": 137,
+        "wordStarts": [135.2, 135.38, 135.56, 135.7, 135.84, 136.26]
+      },
+      {
+        "text": "you can always try tempering your emotional response after the fact.",
+        "start": 136.8,
+        "end": 141.7,
+        "wordStarts": [136.94, 137.04, 137.14, 137.46, 137.88, 138.92, 139.08, 139.52, 140.3, 140.84, 141.02]
+      },
+      {
+        "text": "But this can be tricky.",
+        "start": 141.8,
+        "end": 143.5,
+        "wordStarts": [141.9, 142.16, 142.44, 142.72, 142.86]
+      },
+      {
+        "text": "More sustainable strategies here include going for a long walk,",
+        "start": 155.3,
+        "end": 159.6,
+        "wordStarts": [155.44, 155.62, 156.16, 156.76, 157.18, 157.76, 158.22, 158.52, 158.72, 158.9]
+      },
+      {
+        "text": "taking slow, deep breaths, or talking with someone in your support system.",
+        "start": 159.4,
+        "end": 164.3,
+        "wordStarts": [159.56, 159.8, 160.62, 160.84, 161.64, 161.8, 162.08, 162.34, 162.64, 163.02, 163.2, 163.6]
+      },
+      {
+        "text": "While using all these strategies well takes practice,",
+        "start": 164.4,
+        "end": 167.7,
+        "wordStarts": [164.52, 164.74, 165.08, 165.38, 165.58, 166.06, 166.48, 166.86]
+      },
+      {
+        "text": "learning to notice your emotions and reflect on where they're coming from is half the battle,",
+        "start": 167.7,
+        "end": 172.8,
+        "wordStarts": [
+          167.84, 168.04, 168.3, 168.66, 168.92, 169.4, 169.72, 170.06, 170.34, 170.54, 170.78, 170.98, 171.36, 171.76, 172.02, 172.18
+        ]
+      },
+      {
+        "text": "and once you've truly internalized that you can regulate your emotions, doing so becomes much easier.",
+        "start": 172.7,
+        "end": 179.6,
+        "wordStarts": [
+          172.86, 173, 173.22, 173.52, 173.86, 174.9, 175.08, 175.24, 175.68, 176.32, 176.6, 177.56, 177.74, 178, 178.38, 178.84
+        ]
+      },
+      {
+        "text": "It's tempting to think we should always try to avoid sadness and frustration,",
+        "start": 189.1,
+        "end": 193.5,
+        "wordStarts": [189.26, 189.54, 189.8, 189.98, 190.1, 190.26, 190.38, 190.74, 191.06, 191.26, 191.56, 192.16, 192.68]
+      },
+      {
+        "text": "but no emotion is inherently good or bad,",
+        "start": 193.5,
+        "end": 197.2,
+        "wordStarts": [193.7, 193.94, 194.12, 194.56, 194.98, 195.54, 196.06, 196.48]
+      },
+      {
+        "text": "they're either helpful or unhelpful, depending on the situation.",
+        "start": 197,
+        "end": 201.5,
+        "wordStarts": [197.12, 197.62, 197.84, 198.2, 198.72, 199.76, 200.16, 200.5, 200.6]
+      },
+      {
+        "text": "Conversely, while it's unhealthy to regularly ignore your emotions,",
+        "start": 212.5,
+        "end": 216.7,
+        "wordStarts": [212.66, 213.54, 213.58, 213.84, 214.2, 214.6, 215.16, 215.66, 215.86]
+      },
+      {
+        "text": "forcing a smile to get through a one-time annoyance is perfectly reasonable.",
+        "start": 216.7,
+        "end": 221.4,
+        "wordStarts": [216.88, 217.2, 217.42, 217.78, 218.06, 218.22, 218.56, 218.8, 219.06, 219.72, 220.22, 220.6]
+      },
+      {
+        "text": "We hear a lot of mixed messages about emotions.",
+        "start": 221.8,
+        "end": 225.4,
+        "wordStarts": [221.9, 222.5, 222.74, 222.88, 223.08, 223.24, 223.54, 224.14, 224.62]
       }
     ]
   },
@@ -1045,16 +1578,16 @@
     },
     "lines": [
       {
-        "text": "You can't give a powerful new idea to",
+        "text": "You can't give a powerful new idea to an audience,",
         "start": 5.6,
-        "end": 9.1,
-        "wordStarts": [5.79, 6.69, 7.11, 7.25, 7.39, 7.83, 8.11, 8.57]
+        "end": 9.7,
+        "wordStarts": [5.79, 6.69, 7.11, 7.25, 7.39, 7.83, 8.11, 8.57, 8.77, 8.93]
       },
       {
-        "text": "an audience unless you can learn how to explain it.",
-        "start": 8.6,
+        "text": "unless you can learn how to explain it.",
+        "start": 9.2,
         "end": 12,
-        "wordStarts": [8.77, 8.93, 9.35, 9.79, 10.09, 10.27, 10.55, 10.81, 10.95, 11.37]
+        "wordStarts": [9.35, 9.79, 10.09, 10.27, 10.55, 10.81, 10.95, 11.37]
       },
       {
         "text": "Each step builds on what the listener already knows,",
@@ -1081,28 +1614,16 @@
         "wordStarts": [24.33, 25.03, 25.67, 26.09, 26.41, 26.57]
       },
       {
-        "text": "Persuasion means convincing an audience that their way of seeing something, their perspective,",
+        "text": "Persuasion means convincing an audience that their way of seeing something, their perspective, isn't quite right.",
         "start": 27.5,
-        "end": 32.8,
-        "wordStarts": [27.67, 28.31, 28.71, 29.17, 29.51, 29.83, 30.09, 30.29, 30.55, 30.69, 30.95, 31.67, 31.87]
+        "end": 35,
+        "wordStarts": [27.67, 28.31, 28.71, 29.17, 29.51, 29.83, 30.09, 30.29, 30.55, 30.69, 30.95, 31.67, 31.87, 33.41, 33.93, 34.23]
       },
       {
-        "text": "isn't quite right. That means taking down the",
-        "start": 33.3,
-        "end": 37,
-        "wordStarts": [33.41, 33.93, 34.23, 34.69, 35.57, 35.83, 36.25, 36.57]
-      },
-      {
-        "text": "parts of their thinking that aren't working and rebuilding something better.",
-        "start": 36.6,
+        "text": "That means taking down the parts of their thinking that aren't working and rebuilding something better.",
+        "start": 34.5,
         "end": 40.5,
-        "wordStarts": [36.71, 36.97, 37.09, 37.21, 37.49, 37.73, 38.01, 38.33, 38.79, 39.17, 39.69]
-      },
-      {
-        "text": "Psychologist Barry Schwartz gave a talk that changed the way his audience thinks about choice.",
-        "start": 40.8,
-        "end": 46.7,
-        "wordStarts": [40.97, 41.65, 42.15, 42.65, 42.99, 43.19, 43.43, 43.63, 44.01, 44.23, 44.41, 44.65, 45.05, 45.47, 45.85]
+        "wordStarts": [34.69, 35.57, 35.83, 36.25, 36.57, 36.71, 36.97, 37.09, 37.21, 37.49, 37.73, 38.01, 38.33, 38.79, 39.17, 39.69]
       },
       {
         "text": "Many people are obsessed with maximizing choice.",
@@ -1111,34 +1632,155 @@
         "wordStarts": [46.97, 47.27, 47.57, 47.81, 48.25, 48.67, 49.49]
       },
       {
-        "text": "Schwartz sees things differently. He gave a talk on what he calls the paradox of choice.",
-        "start": 50.2,
-        "end": 56.4,
-        "wordStarts": [50.31, 50.85, 51.33, 51.77, 53.07, 53.25, 53.47, 53.59, 53.85, 54.05, 54.21, 54.37, 54.67, 54.97, 55.39, 55.75]
-      },
-      {
-        "text": "Schwartz builds the surprising case that in many",
-        "start": 55.9,
-        "end": 59.9,
-        "wordStarts": [56.05, 57.03, 57.35, 57.61, 58.15, 58.65, 59.23, 59.37]
-      },
-      {
-        "text": "circumstances having too many choices actually makes people unhappy.",
-        "start": 59.4,
-        "end": 64.2,
-        "wordStarts": [59.57, 60.21, 60.69, 61.03, 61.29, 61.77, 62.53, 62.99, 63.33]
-      },
-      {
-        "text": "Author Elizabeth Gilbert did something similar.",
-        "start": 64.6,
-        "end": 67.8,
-        "wordStarts": [64.75, 65.29, 65.83, 66.27, 66.75, 67.07]
-      },
-      {
-        "text": "She showed how the power of storytelling can help",
+        "text": "She showed how the power of storytelling can help persuade an audience of a new idea.",
         "start": 67.8,
-        "end": 70.8,
-        "wordStarts": [67.91, 67.99, 68.31, 68.55, 68.63, 69.03, 69.21, 69.69, 70.25]
+        "end": 73.4,
+        "wordStarts": [67.91, 67.99, 68.31, 68.55, 68.63, 69.03, 69.21, 69.69, 70.25, 70.49, 71.03, 71.53, 71.93, 72.31, 72.43, 72.59]
+      },
+      {
+        "text": "Her goal was to change the way they thought about creative genius.",
+        "start": 73.6,
+        "end": 78.3,
+        "wordStarts": [73.77, 73.89, 74.29, 74.75, 74.95, 75.43, 75.73, 75.95, 76.17, 76.47, 76.83, 77.41]
+      },
+      {
+        "text": "Gilbert used her brilliance as a storyteller to persuade her audience of this idea.",
+        "start": 91.1,
+        "end": 97,
+        "wordStarts": [91.21, 91.51, 91.97, 92.19, 92.83, 93.09, 93.21, 93.93, 94.17, 94.71, 95.09, 95.67, 95.99, 96.19]
+      },
+      {
+        "text": "She also showed them the term genius was viewed differently in history.",
+        "start": 97.1,
+        "end": 101.8,
+        "wordStarts": [97.27, 97.53, 97.87, 98.23, 98.43, 98.61, 98.89, 99.41, 99.95, 100.25, 100.73, 101.07]
+      },
+      {
+        "text": "It wasn't always thought of as a thing a person was.",
+        "start": 101.9,
+        "end": 104.8,
+        "wordStarts": [102.01, 102.19, 102.43, 102.73, 102.99, 103.13, 103.25, 103.39, 103.57, 103.77, 104.07]
+      },
+      {
+        "text": "It used to be thought of as something that came to them.",
+        "start": 104.9,
+        "end": 108.5,
+        "wordStarts": [105.03, 105.21, 105.51, 105.69, 105.79, 106.01, 106.27, 106.53, 106.91, 107.25, 107.67, 107.93]
+      }
+    ]
+  },
+  {
+    "id": "video-G3hXvByzLHs-2",
+    "title": "TED-Ed: be more persuasive, part 2",
+    "level": "B2",
+    "source": {
+      "kind": "youtube",
+      "videoId": "G3hXvByzLHs"
+    },
+    "lines": [
+      {
+        "text": "If you're giving a talk that requires persuading an audience to see something differently,",
+        "start": 108.6,
+        "end": 113.2,
+        "wordStarts": [108.79, 108.97, 109.11, 109.29, 109.53, 109.77, 109.95, 110.37, 111.13, 111.35, 111.67, 111.99, 112.17, 112.49]
+      },
+      {
+        "text": "the key is to take the journey one step at a time.",
+        "start": 113.2,
+        "end": 116.9,
+        "wordStarts": [113.33, 113.47, 113.81, 114.07, 114.21, 114.47, 114.63, 115.03, 115.57, 115.89, 116.07, 116.15]
+      },
+      {
+        "text": "Prime your listener's mind for a change.",
+        "start": 116.8,
+        "end": 120.2,
+        "wordStarts": [116.99, 117.47, 117.83, 118.45, 118.81, 119.39, 119.59]
+      },
+      {
+        "text": "Once an audience has been primed, it's much easier to make your main argument,",
+        "start": 165.9,
+        "end": 170.8,
+        "wordStarts": [166.07, 166.55, 166.77, 167.03, 167.31, 167.47, 168.05, 168.23, 168.49, 168.99, 169.25, 169.51, 169.69, 169.93]
+      },
+      {
+        "text": "even if it contradicts an idea the audience held true.",
+        "start": 170.6,
+        "end": 174.1,
+        "wordStarts": [170.77, 171.11, 171.29, 171.39, 172.07, 172.17, 172.51, 172.71, 173.13, 173.41]
+      },
+      {
+        "text": "Another powerful tool is reason.",
+        "start": 174.8,
+        "end": 178.2,
+        "wordStarts": [174.97, 175.31, 176.25, 176.75, 177.39]
+      },
+      {
+        "text": "By using reasoning, you can show how and why something is true.",
+        "start": 178.6,
+        "end": 183.4,
+        "wordStarts": [178.77, 178.95, 179.35, 180.47, 180.57, 180.71, 181.03, 181.47, 181.77, 182.11, 182.51, 182.81]
+      },
+      {
+        "text": "Each true assumption leads to a conclusion that must then also be true.",
+        "start": 183.6,
+        "end": 189.5,
+        "wordStarts": [183.75, 184.03, 184.39, 184.85, 185.59, 185.89, 186.01, 186.49, 187.05, 187.33, 187.63, 188.19, 188.83]
+      },
+      {
+        "text": "Another kind of reasoned argument is the detective story.",
+        "start": 197.9,
+        "end": 202,
+        "wordStarts": [198.05, 198.35, 198.75, 199.01, 199.59, 199.87, 200.29, 200.53, 201.03]
+      },
+      {
+        "text": "Some of the most persuasive TED Talks are set up like detective stories.",
+        "start": 202.1,
+        "end": 206.6,
+        "wordStarts": [202.25, 202.43, 202.55, 202.65, 202.83, 203.59, 203.91, 204.23, 204.45, 204.75, 205.01, 205.27, 205.71]
+      },
+      {
+        "text": "You start with the big mystery,",
+        "start": 206.5,
+        "end": 208.4,
+        "wordStarts": [206.69, 206.83, 207.09, 207.29, 207.41, 207.63]
+      },
+      {
+        "text": "then travel the world of ideas in search of possible solutions to it,",
+        "start": 208.2,
+        "end": 212.3,
+        "wordStarts": [208.33, 208.51, 208.89, 209.07, 209.31, 209.49, 209.87, 210.15, 210.33, 210.53, 210.89, 211.45, 211.81]
+      },
+      {
+        "text": "ruling them out one by one, until there's only one solution left.",
+        "start": 212.2,
+        "end": 217.3,
+        "wordStarts": [212.35, 212.69, 212.93, 213.17, 213.53, 213.77, 214.31, 214.63, 214.95, 215.35, 215.93, 216.51]
+      },
+      {
+        "text": "It can sometimes be hard to make reason-based talks really exciting to listen to.",
+        "start": 271.8,
+        "end": 277.5,
+        "wordStarts": [271.97, 272.19, 272.35, 272.77, 273.03, 273.47, 273.69, 274.29, 274.55, 274.97, 275.47, 276.23, 276.67, 276.89]
+      },
+      {
+        "text": "Most people can be convinced by reason, but it doesn't always leave them feeling energized.",
+        "start": 277,
+        "end": 282.5,
+        "wordStarts": [
+          277.15, 278.13, 278.49, 278.71, 278.87, 279.33, 279.61, 280.15, 280.29, 280.41, 280.61, 280.87, 281.09, 281.25, 281.57
+        ]
+      },
+      {
+        "text": "So if you plan to use reason to persuade your audience,",
+        "start": 282.8,
+        "end": 285.8,
+        "wordStarts": [282.95, 283.05, 283.19, 283.27, 283.53, 283.73, 283.97, 284.37, 284.51, 284.83, 285.13]
+      },
+      {
+        "text": "you may have to pick up some other tools as well.",
+        "start": 285.7,
+        "end": 288.5,
+        "wordStarts": [285.85, 285.97, 286.15, 286.37, 286.49, 286.69, 286.83, 286.99, 287.25, 287.65, 287.83]
       }
     ]
   },
@@ -1152,40 +1794,10 @@
     },
     "lines": [
       {
-        "text": "2016, a group of researchers—oh,",
-        "start": 6.7,
-        "end": 10.3,
-        "wordStarts": [6.89, 8.07, 8.23, 8.41, 8.61]
-      },
-      {
-        "text": "a new photo! These researchers set out to measure—did I get that email?",
-        "start": 10.3,
-        "end": 14.9,
-        "wordStarts": [10.49, 10.67, 10.81, 11.69, 11.87, 12.41, 12.71, 12.91, 13.05, 13.93, 14.05, 14.19, 14.33]
-      },
-      {
-        "text": "They measured—what was that? Sorry.",
-        "start": 15.4,
-        "end": 18.4,
-        "wordStarts": [15.51, 15.69, 16.87, 16.95, 17.65]
-      },
-      {
-        "text": "The researchers set out to measure the length of,",
+        "text": "The researchers set out to measure the length of, well, our attention spans.",
         "start": 19.1,
-        "end": 21.7,
-        "wordStarts": [19.29, 19.43, 19.73, 20.15, 20.39, 20.51, 20.71, 20.87, 21.13]
-      },
-      {
-        "text": "well, our attention spans. Participants downloaded a program",
-        "start": 21.8,
-        "end": 27.2,
-        "wordStarts": [21.99, 23.13, 23.27, 23.61, 25.25, 25.83, 26.23, 26.53]
-      },
-      {
-        "text": "that tracked how long they stayed focused on a single computer application before switching to another.",
-        "start": 26.8,
-        "end": 32.8,
-        "wordStarts": [26.91, 27.25, 27.57, 27.83, 28.05, 28.21, 28.51, 28.89, 29.25, 29.37, 29.63, 30.07, 30.73, 31.41, 31.85, 32.15]
+        "end": 24.3,
+        "wordStarts": [19.29, 19.43, 19.73, 20.15, 20.39, 20.51, 20.71, 20.87, 21.13, 21.99, 23.13, 23.27, 23.61]
       },
       {
         "text": "On average, users stuck with a single task for 40 seconds,",
@@ -1212,28 +1824,173 @@
         "wordStarts": [48.01, 48.65, 48.83, 49.21, 49.89, 50.03, 50.35, 50.63, 50.85, 51.17, 51.45, 51.69, 52.19, 52.71, 53.01]
       },
       {
-        "text": "This can make finding focus for work, school",
-        "start": 53.7,
-        "end": 57.4,
-        "wordStarts": [53.85, 54.19, 54.37, 54.53, 54.85, 55.25, 55.95, 56.71]
+        "text": "Our brains are constantly receiving a flood of information,",
+        "start": 69.1,
+        "end": 72.6,
+        "wordStarts": [69.27, 69.37, 69.69, 69.91, 70.39, 71.03, 71.33, 71.61, 71.83]
       },
       {
-        "text": "and even the things we love feel almost impossible.",
-        "start": 56.9,
-        "end": 61.5,
-        "wordStarts": [57.09, 57.71, 57.97, 58.17, 58.37, 58.55, 58.91, 59.71, 60.59]
+        "text": "from sensory input to environmental cues to internal thoughts.",
+        "start": 72.6,
+        "end": 76.8,
+        "wordStarts": [72.75, 72.85, 73.27, 73.69, 74.01, 74.49, 75.07, 75.59, 76.01]
       },
       {
-        "text": "Thankfully, there are ways we can improve and better protect our attention spans,",
-        "start": 61.1,
-        "end": 66.4,
-        "wordStarts": [61.23, 62.63, 62.85, 63.13, 63.41, 63.61, 63.75, 64.19, 64.45, 64.67, 65.11, 65.31, 65.65]
+        "text": "Filtering through it all relies on several brain regions.",
+        "start": 77,
+        "end": 80.6,
+        "wordStarts": [77.17, 77.53, 77.77, 77.91, 78.15, 78.83, 79.21, 79.59, 79.89]
       },
       {
-        "text": "both online and off. Our brains are",
-        "start": 66.3,
-        "end": 70.2,
-        "wordStarts": [66.47, 66.67, 67.23, 67.85, 69.27, 69.37, 69.69]
+        "text": "The challenge of sustained attention is keeping that flashlight focused in one place.",
+        "start": 92.9,
+        "end": 98.5,
+        "wordStarts": [93.05, 93.19, 93.51, 93.77, 94.25, 94.81, 95.45, 95.75, 96.01, 96.43, 96.91, 97.53, 97.71]
+      },
+      {
+        "text": "This ability to constantly scan our environments and quickly refocus was key for human survival,",
+        "start": 114.8,
+        "end": 121.2,
+        "wordStarts": [
+          114.91, 115.27, 115.65, 115.95, 116.49, 116.93, 117.15, 117.63, 118.05, 118.35, 118.93, 119.39, 119.77, 120.15, 120.43
+        ]
+      },
+      {
+        "text": "so while frustrating, getting distracted is inevitable.",
+        "start": 121.5,
+        "end": 125.8,
+        "wordStarts": [121.67, 121.93, 122.41, 123.57, 123.73, 124.33, 125.01]
+      },
+      {
+        "text": "But no matter your starting point, there are ways to improve your ability to stay focused.",
+        "start": 133.8,
+        "end": 139.3,
+        "wordStarts": [
+          133.91, 134.61, 134.75, 134.97, 135.15, 135.47, 136.09, 136.27, 136.49, 136.79, 136.99, 137.39, 137.57, 137.93, 138.31, 138.53
+        ]
+      },
+      {
+        "text": "First, tasks that appropriately challenge you tend to hold your attention best.",
+        "start": 139.4,
+        "end": 144.8,
+        "wordStarts": [139.59, 140.45, 140.65, 140.85, 141.41, 141.99, 142.25, 142.91, 143.13, 143.41, 143.61, 143.97]
+      }
+    ]
+  },
+  {
+    "id": "video-N2uQWfV6Jr4-2",
+    "title": "TED-Ed: attention span, part 2",
+    "level": "B2",
+    "source": {
+      "kind": "youtube",
+      "videoId": "N2uQWfV6Jr4"
+    },
+    "lines": [
+      {
+        "text": "Of course, we don't always have a choice in what needs to get done.",
+        "start": 152.8,
+        "end": 156.7,
+        "wordStarts": [152.93, 153.05, 153.73, 153.87, 154.07, 154.41, 154.59, 154.65, 155.01, 155.39, 155.55, 155.81, 155.97, 156.09]
+      },
+      {
+        "text": "In these situations, it's helpful to remember,",
+        "start": 156.7,
+        "end": 159.5,
+        "wordStarts": [156.85, 157.03, 157.21, 158.23, 158.43, 158.67, 158.87]
+      },
+      {
+        "text": "that if focusing feels like work, that's because it is.",
+        "start": 159.1,
+        "end": 163.4,
+        "wordStarts": [159.21, 159.77, 159.91, 160.25, 160.77, 161.07, 161.73, 162.07, 162.31, 162.73]
+      },
+      {
+        "text": "In fact, some researchers theorize that attention is a limited resource.",
+        "start": 163.6,
+        "end": 168.7,
+        "wordStarts": [163.77, 163.91, 164.53, 164.87, 165.41, 166.09, 166.43, 166.81, 167.27, 167.41, 167.71]
+      },
+      {
+        "text": "When you start focusing on something, this resource is at its highest,",
+        "start": 169.2,
+        "end": 173.3,
+        "wordStarts": [169.33, 169.49, 169.61, 169.83, 170.21, 170.49, 171.29, 171.51, 171.95, 172.25, 172.45, 172.61]
+      },
+      {
+        "text": "but it depletes over time, leading to more mistakes and increasing the chance you'll be distracted.",
+        "start": 173.2,
+        "end": 179,
+        "wordStarts": [
+          173.39, 173.55, 173.69, 174.13, 174.33, 175.23, 175.43, 175.67, 175.83, 176.23, 176.65, 177.01, 177.25, 177.61, 178.05, 178.17
+        ]
+      },
+      {
+        "text": "Multitasking only increases the demand for this resource, exhausting attentional stores more quickly.",
+        "start": 179.4,
+        "end": 185.9,
+        "wordStarts": [179.51, 180.19, 180.73, 181.41, 181.79, 182.15, 182.35, 182.51, 183.31, 183.89, 184.51, 184.91, 185.25]
+      },
+      {
+        "text": "That's why focusing on one task and intentionally building in breaks can be helpful.",
+        "start": 186.1,
+        "end": 190.8,
+        "wordStarts": [186.29, 186.53, 186.65, 187.01, 187.31, 187.53, 187.99, 188.21, 188.73, 189.11, 189.31, 189.55, 190.07, 190.19]
+      },
+      {
+        "text": "And this strategy may be extra beneficial when studying or practicing a new skill.",
+        "start": 198.5,
+        "end": 204.1,
+        "wordStarts": [198.61, 198.77, 198.97, 199.43, 199.87, 200.05, 200.53, 201.18, 201.53, 201.95, 202.47, 202.97, 203.25, 203.43]
+      },
+      {
+        "text": "During breaks, our minds replay the neural activity patterns of what you just learned,",
+        "start": 204.3,
+        "end": 209.5,
+        "wordStarts": [204.45, 204.67, 205.39, 205.51, 205.87, 206.29, 206.61, 206.89, 207.31, 207.89, 208.25, 208.39, 208.53, 208.79]
+      },
+      {
+        "text": "helping to solidify the memory for the long term.",
+        "start": 209.3,
+        "end": 212.2,
+        "wordStarts": [209.43, 209.71, 209.93, 210.45, 210.61, 210.95, 211.29, 211.41, 211.65]
+      },
+      {
+        "text": "So activities that reduce stress, like exercising, chatting with friends or getting a good night's sleep,",
+        "start": 220.5,
+        "end": 228,
+        "wordStarts": [
+          220.67, 221.73, 222.11, 222.49, 222.73, 223.49, 223.83, 224.89, 225.27, 225.51, 225.85, 226.31, 226.53, 226.75, 226.93, 227.39
+        ]
+      },
+      {
+        "text": "also make it easier to stay focused.",
+        "start": 228,
+        "end": 230.8,
+        "wordStarts": [228.17, 228.65, 229.07, 229.19, 229.57, 229.85, 230.07]
+      },
+      {
+        "text": "Another effective strategy is mindfulness meditation.",
+        "start": 243,
+        "end": 246.4,
+        "wordStarts": [243.11, 243.37, 243.89, 244.51, 245.05, 245.43]
+      },
+      {
+        "text": "It's impossible to remove every distraction.",
+        "start": 268.4,
+        "end": 271.1,
+        "wordStarts": [268.53, 268.79, 269.19, 269.49, 269.81, 270.27]
+      },
+      {
+        "text": "The distractions on our screens are designed to grab and hold attention.",
+        "start": 282,
+        "end": 286.1,
+        "wordStarts": [282.11, 282.23, 282.61, 282.85, 282.99, 283.41, 283.63, 283.95, 284.23, 284.55, 284.83, 285.29]
+      },
+      {
+        "text": "So remember to be kind to yourself.",
+        "start": 286.8,
+        "end": 289.2,
+        "wordStarts": [286.91, 287.19, 287.75, 288.05, 288.19, 288.39, 288.59]
       }
     ]
   },
@@ -1247,58 +2004,34 @@
     },
     "lines": [
       {
-        "text": "Hello, Sean. Hi, Billy. How are you?",
-        "start": 9.6,
-        "end": 13.7,
-        "wordStarts": [9.76, 10.62, 11.56, 12.28, 12.86, 13.04, 13.16]
-      },
-      {
-        "text": "I'm well. Thanks. Are you?",
-        "start": 13.8,
-        "end": 16.2,
-        "wordStarts": [13.94, 14.18, 14.68, 15.42, 15.66]
-      },
-      {
         "text": "I'm good, too. What do you do every day?",
         "start": 16.4,
         "end": 20.5,
         "wordStarts": [16.52, 16.94, 17.32, 18.56, 19.02, 19.14, 19.24, 19.54, 19.88]
       },
       {
-        "text": "I wake up, I eat breakfast,",
+        "text": "I wake up, I eat breakfast, I go jogging,",
         "start": 20.7,
-        "end": 25.4,
-        "wordStarts": [20.84, 21.22, 21.44, 23.83, 24.41, 24.59]
+        "end": 28.8,
+        "wordStarts": [20.84, 21.22, 21.44, 23.83, 24.41, 24.59, 26.89, 27.53, 27.77]
       },
       {
-        "text": "I go jogging, I get the bus to work,",
-        "start": 26.7,
-        "end": 33.2,
-        "wordStarts": [26.89, 27.53, 27.77, 30.34, 31.08, 31.26, 31.46, 31.86, 32.58]
-      },
-      {
-        "text": "I read a book on the bus,",
-        "start": 35,
+        "text": "I get the bus to work, I read a book on the bus,",
+        "start": 30.2,
         "end": 37.6,
-        "wordStarts": [35.11, 35.71, 35.95, 36.11, 36.43, 36.75, 36.87]
+        "wordStarts": [30.34, 31.08, 31.26, 31.46, 31.86, 32.58, 35.11, 35.71, 35.95, 36.11, 36.43, 36.75, 36.87]
       },
       {
-        "text": "I eat lunch After I finish work, I swim in the sea.",
+        "text": "I eat lunch. After I finish work, I swim in the sea.",
         "start": 39.9,
         "end": 47.4,
         "wordStarts": [40.02, 40.36, 40.52, 43.2, 44.28, 44.54, 44.82, 45.74, 45.98, 46.4, 46.68, 46.82]
       },
       {
-        "text": "I eat dinner. I have a shower.",
+        "text": "I eat dinner, I have a shower, then I go to sleep.",
         "start": 49.7,
-        "end": 54.1,
-        "wordStarts": [49.8, 49.9, 50.04, 52.94, 53.02, 53.3, 53.44]
-      },
-      {
-        "text": "Then I go to sleep.",
-        "start": 55.9,
         "end": 58.1,
-        "wordStarts": [56, 56.54, 56.94, 57.18, 57.42]
+        "wordStarts": [49.8, 49.9, 50.04, 52.94, 53.02, 53.3, 53.44, 56, 56.54, 56.94, 57.18, 57.42]
       },
       {
         "text": "How about you? What do you do every day?",
@@ -1307,16 +2040,135 @@
         "wordStarts": [59.76, 59.94, 60.16, 61.18, 61.42, 61.64, 61.86, 62.08, 62.46]
       },
       {
-        "text": "I wake up. I have a shower.",
+        "text": "I wake up, I have a shower, I eat breakfast,",
         "start": 63.3,
-        "end": 67.7,
-        "wordStarts": [63.42, 63.52, 63.76, 66.03, 66.65, 66.85, 66.95]
+        "end": 70.6,
+        "wordStarts": [63.42, 63.52, 63.76, 66.03, 66.65, 66.85, 66.95, 69.09, 69.77, 70.09]
       },
       {
-        "text": "I eat breakfast. I drive to work. I listen to a",
-        "start": 68.9,
-        "end": 77.6,
-        "wordStarts": [69.09, 69.77, 70.09, 73.13, 73.33, 73.77, 74.11, 74.91, 75.29, 76.87, 77.11]
+        "text": "I drive to work. I listen to a podcast.",
+        "start": 73,
+        "end": 78,
+        "wordStarts": [73.13, 73.33, 73.77, 74.11, 74.91, 75.29, 76.87, 77.11, 77.27]
+      },
+      {
+        "text": "I eat lunch, after work I go to the park,",
+        "start": 83.4,
+        "end": 88.3,
+        "wordStarts": [83.59, 83.63, 83.97, 84.73, 86.39, 86.77, 87.27, 87.49, 87.65, 87.75]
+      },
+      {
+        "text": "I go home and cook dinner. After dinner I play video games.",
+        "start": 89.8,
+        "end": 97.2,
+        "wordStarts": [89.98, 90.64, 90.82, 91.22, 91.68, 91.9, 94.38, 94.92, 95.16, 95.8, 96.06, 96.48]
+      },
+      {
+        "text": "Lastly, I go to sleep.",
+        "start": 98.8,
+        "end": 101.5,
+        "wordStarts": [98.95, 99.71, 100.45, 100.71, 100.89]
+      }
+    ]
+  },
+  {
+    "id": "video-bq6GBbh3uhU-2",
+    "title": "BBC Easy English: daily routine, part 2",
+    "level": "A2",
+    "source": {
+      "kind": "youtube",
+      "videoId": "bq6GBbh3uhU"
+    },
+    "lines": [
+      {
+        "text": "What do you do every day?",
+        "start": 118.3,
+        "end": 120.3,
+        "wordStarts": [118.42, 118.94, 119.04, 119.22, 119.4, 119.68]
+      },
+      {
+        "text": "I wake up, I eat breakfast, I have a shower,",
+        "start": 120.9,
+        "end": 131.3,
+        "wordStarts": [121.08, 121.6, 122.14, 124.94, 125.54, 126.1, 129.22, 130.06, 130.44, 130.68]
+      },
+      {
+        "text": "I walk to work, I listen to music,",
+        "start": 133.7,
+        "end": 141,
+        "wordStarts": [133.82, 134.46, 135.04, 135.56, 138.3, 138.94, 139.56, 140.14]
+      },
+      {
+        "text": "I eat lunch, I go home and watch a film.",
+        "start": 143.2,
+        "end": 151.1,
+        "wordStarts": [143.32, 144.18, 144.92, 145.34, 148.22, 148.52, 149.04, 149.42, 149.92, 150.28]
+      },
+      {
+        "text": "I eat dinner. Then I read a book and go to sleep.",
+        "start": 153.9,
+        "end": 163.8,
+        "wordStarts": [154.07, 154.59, 155.49, 158.21, 158.75, 159.73, 160.37, 160.57, 160.89, 161.93, 162.99, 163.19]
+      },
+      {
+        "text": "I wake up, I have a shower, I eat breakfast,",
+        "start": 172.8,
+        "end": 181,
+        "wordStarts": [172.91, 173.19, 173.39, 175.63, 176.41, 176.59, 176.71, 179.35, 179.97, 180.21]
+      },
+      {
+        "text": "I get the train to work. I read the news on the train.",
+        "start": 183.3,
+        "end": 189.7,
+        "wordStarts": [183.45, 183.87, 184.03, 184.21, 184.55, 184.79, 187.5, 187.96, 188.14, 188.28, 188.62, 188.96, 189.06]
+      },
+      {
+        "text": "I eat lunch. After I finish work, I do some exercise.",
+        "start": 191.5,
+        "end": 198.9,
+        "wordStarts": [191.63, 192.17, 192.37, 195.64, 196.24, 196.42, 196.64, 197.58, 197.74, 197.86, 198.08]
+      },
+      {
+        "text": "I eat dinner and then I go to sleep.",
+        "start": 201.3,
+        "end": 206.8,
+        "wordStarts": [201.46, 201.58, 201.8, 202.14, 204.95, 205.31, 205.69, 205.95, 206.17]
+      },
+      {
+        "text": "What about you? What do you do every day?",
+        "start": 208.1,
+        "end": 211.3,
+        "wordStarts": [208.21, 208.37, 208.59, 209.45, 209.69, 209.91, 210.21, 210.43, 210.75]
+      },
+      {
+        "text": "What do you eat for breakfast, Tim?",
+        "start": 245.3,
+        "end": 247.6,
+        "wordStarts": [245.4, 245.6, 245.8, 246, 246.28, 246.46, 247.16]
+      },
+      {
+        "text": "I eat toast for breakfast.",
+        "start": 248,
+        "end": 251.2,
+        "wordStarts": [248.1, 248.78, 249.28, 250.12, 250.54]
+      },
+      {
+        "text": "I eat cereal for breakfast.",
+        "start": 256.6,
+        "end": 259,
+        "wordStarts": [256.7, 256.96, 257.34, 257.94, 258.36]
+      },
+      {
+        "text": "I eat fruit and yogurt for breakfast.",
+        "start": 262.2,
+        "end": 264.9,
+        "wordStarts": [262.36, 262.68, 262.88, 263.22, 263.64, 263.88, 264.22]
+      },
+      {
+        "text": "I eat porridge for breakfast.",
+        "start": 267.6,
+        "end": 269.6,
+        "wordStarts": [267.74, 268, 268.28, 268.56, 268.96]
       }
     ]
   }
