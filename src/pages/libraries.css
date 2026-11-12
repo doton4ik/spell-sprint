@@ -111,101 +111,6 @@
   background: var(--danger-soft);
   color: var(--danger-text);
 }
-.library-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-  min-height: 300px;
-  padding: 21px;
-}
-.library-card__top {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-}
-.library-icon {
-  align-items: center;
-  background: var(--accent-soft);
-  border-radius: 8px;
-  color: var(--accent-text);
-  display: inline-flex;
-  height: 33px;
-  justify-content: center;
-  width: 33px;
-}
-.library-source {
-  border-radius: 6px;
-  font-size: calc(12px * var(--fs));
-  font-weight: 700;
-  padding: 4px 6px;
-}
-.library-source--built-in {
-  background: var(--surface-muted);
-  color: var(--ink-muted);
-}
-.library-source--imported {
-  background: var(--surface-muted);
-  color: var(--ink-soft);
-}
-.library-topic {
-  color: var(--accent-text);
-  font-size: calc(12px * var(--fs));
-  font-weight: 700;
-  margin-top: 17px;
-  text-transform: uppercase;
-}
-.library-card h2 {
-  color: var(--ink);
-  font-size: calc(18px * var(--fs));
-  letter-spacing: -0.4px;
-  margin: 5px 0;
-}
-.library-card > p {
-  color: var(--ink-muted);
-  font-size: calc(12px * var(--fs));
-  margin: 0;
-}
-.library-word-list {
-  border-bottom: 1px solid var(--line);
-  border-top: 1px solid var(--line);
-  display: grid;
-  gap: 8px;
-  grid-template-columns: 1fr 1fr;
-  margin: 17px 0 13px;
-  padding: 12px 0;
-}
-.library-word-list span {
-  display: grid;
-  gap: 2px;
-  overflow: hidden;
-}
-.library-word-list strong {
-  color: var(--ink-soft);
-  font-size: calc(12px * var(--fs));
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.library-word-list small {
-  color: var(--ink-muted);
-  font-size: calc(12px * var(--fs));
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.library-card a {
-  align-items: center;
-  color: var(--accent-text);
-  display: inline-flex;
-  font-size: calc(12px * var(--fs));
-  font-weight: 700;
-  gap: 5px;
-  margin-top: auto;
-  width: fit-content;
-}
 .library-select {
   display: grid;
   gap: 3px;
@@ -270,9 +175,6 @@
   .library-select select {
     font-size: max(16px, calc(16px * var(--fs)));
     min-height: 44px;
-  }
-  .library-card {
-    min-height: 270px;
   }
 }
 .libraries-actions,
