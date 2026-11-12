@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Icon } from '../icons/Icon'
-import { libraryPacks } from '../../data/libraryPacks'
+import { libraryPacks, wordsOfPack } from '../../data/libraryPacks'
 import { libraryGroups, wordsForGroup } from '../../services/libraryGroups'
 import { getHiddenWordIds, hideKey, isPackEnabled, markLibrarySetupDone, setPackEnabled, setWordHidden } from '../../services/libraryPrefs'
 import { getEveryLibrary, isBaseLibrary } from '../../services/libraryStorage'
@@ -65,11 +65,7 @@ export function LibrarySetup({ onDone, title = 'Set up your library' }: { onDone
           )
         })}
         {libraryPacks.map((pack) => {
-          const count = new Set(
-            everyLibrary
-              .filter((library) => pack.libraries.includes(library.name))
-              .flatMap((library) => library.words.map((word) => word.wordId)),
-          ).size
+          const count = wordsOfPack(pack, everyLibrary).length
           return (
             <label className="library-setup__option" key={pack.id}>
               <input type="checkbox" checked={packs.has(pack.id)} onChange={() => setPacks(flip(packs, pack.id))} />

@@ -16,7 +16,7 @@ import { libraryGroups, wordsForGroup, type LibraryGroup } from '../services/lib
 import { libraryTopics } from '../data/libraryTopics'
 import { csvTemplate, deleteImportedLibrary, getEveryLibrary, getLibraries } from '../services/libraryStorage'
 import { getHiddenWordIds, hideKey, setPackEnabled, setWordHidden } from '../services/libraryPrefs'
-import type { LibraryPack } from '../data/libraryPacks'
+import { wordsOfPack, type LibraryPack } from '../data/libraryPacks'
 import { openPracticeWith } from '../services/libraryPractice'
 import type { LibraryWord, WordLibrary } from '../types/library'
 import './libraries.css'
@@ -127,11 +127,7 @@ export function LibrariesPage() {
     setDetails({
       title: pack.name,
       description: pack.description,
-      words: uniqueWords(
-        getEveryLibrary()
-          .filter((library) => pack.libraries.includes(library.name))
-          .flatMap((library) => library.words),
-      ),
+      words: wordsOfPack(pack, getEveryLibrary()),
     })
   const openGroup = (group: LibraryGroup) =>
     setDetails({ title: group.name, description: group.description, words: wordsForGroup(group, libraries) })

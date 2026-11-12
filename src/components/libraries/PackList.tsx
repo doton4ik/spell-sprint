@@ -1,7 +1,7 @@
-import { libraryPacks, type LibraryPack } from '../../data/libraryPacks'
+import { libraryPacks, wordsOfPack, type LibraryPack } from '../../data/libraryPacks'
+import { isPackEnabled } from '../../services/libraryPrefs'
 import { getEveryLibrary } from '../../services/libraryStorage'
 import type { WordLibrary } from '../../types/library'
-import { uniqueWords } from './libraryHelpers'
 
 export function PackList({
   libraries,
@@ -17,13 +17,14 @@ export function PackList({
   return (
     <section className="pack-list">
       <p className="pack-list__intro">
-        The base library covers everyday English. Add a pack when you need the words of a special field: its words join practice, the daily
-        plan and Topics. Removing a pack keeps your history.
+        The base library covers everyday English. Add a pack when you need the words of a special field, or the rare words most learners
+        leave for later: its words join practice, the daily plan and Topics. Removing a pack keeps your history.
       </p>
       {libraryPacks.map((pack) => {
-        const words = uniqueWords(every.filter((library) => pack.libraries.includes(library.name)).flatMap((library) => library.words))
+        const words = wordsOfPack(pack, every)
         if (!words.length) return null
-        const on = pack.libraries.some((name) => activeNames.has(name))
+        // a pack of single words has no library of its own to look for: its switch says whether it is on
+        const on = pack.wordIds ? isPackEnabled(pack.id) : pack.libraries.some((name) => activeNames.has(name))
         return (
           <article className={`pack-card${on ? ' pack-card--on' : ''}`} key={pack.id}>
             <div>

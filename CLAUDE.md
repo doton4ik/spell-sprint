@@ -66,7 +66,7 @@ This project runs with Sonnet as the main model, Opus as the advisor and Haiku f
   `proofreadingEngine.ts`, `pairs.ts`, `yellowCards.ts`, `rulesService.ts` (falls back to `data/builtInRules.json`).
 - `src/data/` — content: `spell-sprint-built-in-library.csv` (every word has a topic, a `level` A2–C1 and a stable `word_id`: never change an id),
   `libraryTopics.ts` (the 26 topics and the 8 sections; the same list is in `scripts/library-topics.mjs`, a test keeps them equal),
-  `libraryPacks.ts` (the one optional pack, Logistics and Trade), `proofreadingTexts.ts`, `pairDrills.ts`,
+  `libraryPacks.ts` (optional packs: Logistics and Trade is a whole topic; Rare and bookish words is a list of word ids, off until the learner adds it), `proofreadingTexts.ts`, `pairDrills.ts`,
   `wordAliases.ts` (one id for a word in two libraries), `libraryTaxonomy.ts`; the level check bank is `levelCheck*.ts`
   (`levelCheckBank.ts` joins `Deep`, `Usage`, `Short`, `Cloze`, `Reading`; retired questions stay so old results can be read).
 - Level check: `services/levelCheck.ts` (plan, adaptive choice, scoring v2, quick check of 16 questions), `components/level/`, `pages/DiagnosticPage.tsx`.

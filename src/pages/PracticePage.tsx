@@ -20,7 +20,7 @@ import { markServed } from '../services/mistakePicker'
 import type { PracticeMode } from '../types/practice'
 import './practice.css'
 import { setPackEnabled, setWordHidden } from '../services/libraryPrefs'
-import { packForLibrary } from '../data/libraryPacks'
+import { packForLibrary, packForWord } from '../data/libraryPacks'
 import { getEveryWord } from '../services/libraryStorage'
 import { answerHint as describeAnswer } from '../services/answerHint'
 
@@ -113,7 +113,8 @@ export function PracticePage() {
           library: currentWord?.library ?? current.library ?? 'Practice tasks',
         }
       : null
-  const currentPack = currentWord?.source === 'built-in' ? packForLibrary(currentWord.library) : undefined
+  const currentPack =
+    currentWord?.source === 'built-in' ? (packForLibrary(currentWord.library) ?? packForWord(currentWord.wordId)) : undefined
   const reasons = useMemo(() => {
     const progress = getWordProgress()
     return new Map(session.sessionTasks.map((task) => [task.id, reasonForWord(task.wordId ? progress.get(task.wordId) : undefined)]))

@@ -222,11 +222,19 @@ export function getLibraries(): WordLibrary[] {
   if (!getLibraryPrefs().packsInitialised) initialisePacks(packsInUse())
   const hidden = getHiddenWordIds()
   const hiddenTopics = new Set(libraryGroups.filter((group) => hidden.has(hideKey.group(group.id))).flatMap((group) => group.topics))
+  // single words that belong to a pack ("Rare and bookish words") are studied only when that pack is switched on
+  const packs = getLibraryPrefs().packs
+  const notChosen = new Set(libraryPacks.filter((pack) => packs[pack.id]?.on !== true).flatMap((pack) => pack.wordIds ?? []))
   return getEveryLibrary()
     .filter((library) => isLibraryActive(library) && !hidden.has(hideKey.library(library.name)))
     .map((library) => ({
       ...library,
-      words: library.words.filter((word) => !hidden.has(word.wordId) && !(isBaseLibrary(library) && hiddenTopics.has(word.topic))),
+      words: library.words.filter(
+        (word) =>
+          !hidden.has(word.wordId) &&
+          !(isBaseLibrary(library) && hiddenTopics.has(word.topic)) &&
+          !(library.source === 'built-in' && notChosen.has(word.wordId)),
+      ),
     }))
     .filter((library) => library.words.length)
 }
