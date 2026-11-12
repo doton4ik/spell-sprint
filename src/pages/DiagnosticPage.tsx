@@ -24,7 +24,7 @@ import {
   type SavedRun,
 } from '../services/levelCheck'
 import { subscribeToLearningData } from '../services/learningData'
-import { setPendingPracticeSelection } from '../services/libraryPractice'
+import { openPracticeWith } from '../services/libraryPractice'
 import './level-check.css'
 import { LevelRail } from '../components/ui/PageRails'
 
@@ -284,12 +284,11 @@ function startPractice(step: PlanStep) {
     return
   }
   if (!step.action.words?.length) return
-  setPendingPracticeSelection({
+  openPracticeWith({
     wordIds: step.action.words.map((word) => word.wordId),
     label: step.action.practiceLabel ?? step.title,
     mode: step.action.mode ?? 'write-en',
   })
-  window.location.hash = 'practice'
 }
 
 function ResultView({

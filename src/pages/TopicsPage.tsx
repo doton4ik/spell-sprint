@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Icon } from '../components/icons/Icon'
 import { subscribeToLearningData } from '../services/learningData'
 import { libraryGroups } from '../services/libraryGroups'
-import { setPendingPracticeSelection } from '../services/libraryPractice'
+import { openPracticeWith } from '../services/libraryPractice'
 import { getTopicStats, pickPracticeWords, topicStatusLabels, type TopicStats } from '../services/topicStats'
 import type { LibraryWord } from '../types/library'
 import './topics.css'
@@ -18,8 +18,7 @@ const groupNames: Record<string, string> = {
 const groupOrder = [...libraryGroups.filter((group) => !group.personal && group.id !== 'all').map((group) => group.id), 'other']
 
 function practise(words: LibraryWord[], label: string) {
-  setPendingPracticeSelection({ wordIds: pickPracticeWords(words).map((word) => word.wordId), label, mode: 'write-en' })
-  window.location.hash = 'practice'
+  openPracticeWith({ wordIds: pickPracticeWords(words).map((word) => word.wordId), label, mode: 'write-en' })
 }
 
 function sortTopics(topics: TopicStats[], sort: Sort) {

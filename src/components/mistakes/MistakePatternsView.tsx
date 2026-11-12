@@ -3,7 +3,7 @@ import { Icon } from '../icons/Icon'
 import { AnswerDiff } from '../practice/AnswerDiff'
 import { guideFor } from '../../data/mistakeGuides'
 import { loadErrorCatalog, type ErrorCatalog } from '../../services/errorPatternService'
-import { setPendingPracticeSelection } from '../../services/libraryPractice'
+import { openPracticeWith } from '../../services/libraryPractice'
 import { getMistakePatterns, isHabit, type MistakePattern } from '../../services/mistakePatterns'
 import { getVisibleRules, PATTERN_RULE_SLUGS, setPendingRuleFocus } from '../../services/rulesService'
 import type { Rule } from '../../types/rules'
@@ -238,8 +238,7 @@ function ProblemCard({ pattern, rules }: { pattern: MistakePattern; rules: Rule[
             type="button"
             className="quiet-button"
             onClick={() => {
-              setPendingPracticeSelection({ wordIds: pattern.wordIds, label: `Problem: ${pattern.label}`, mode: 'write-en' })
-              window.location.hash = 'practice'
+              openPracticeWith({ wordIds: pattern.wordIds, label: `Problem: ${pattern.label}`, mode: 'write-en' })
             }}
           >
             <Icon name="practice" size={15} /> Practise these words

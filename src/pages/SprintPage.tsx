@@ -4,7 +4,7 @@ import { noAutocorrect } from '../components/noAutocorrect'
 import { ReportWordButton } from '../components/ReportWordButton'
 import { Icon } from '../components/icons/Icon'
 import { InfoTip } from '../components/ui/InfoTip'
-import { setPendingPracticeSelection } from '../services/libraryPractice'
+import { openPracticeWith } from '../services/libraryPractice'
 import { recordSprintMiss } from '../services/sprint'
 import {
   bestSprint,
@@ -291,12 +291,11 @@ function SprintResult({ round, previousBest, onAgain }: { round: SprintRound; pr
   const slow = slowWords(round.answers)
   const record = round.correct > previousBest && round.correct > 0
   const practise = () => {
-    setPendingPracticeSelection({
+    openPracticeWith({
       wordIds: [...new Set([...misses, ...slow].map((answer) => answer.wordId))],
       label: 'Sprint: words to practise',
       mode: 'write-en',
     })
-    window.location.hash = 'practice'
   }
   const perWord = round.correct
     ? Math.round(

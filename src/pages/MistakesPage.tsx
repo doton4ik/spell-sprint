@@ -4,7 +4,7 @@ import { Icon } from '../components/icons/Icon'
 import { AnswerDiff } from '../components/practice/AnswerDiff'
 import { getEntryHistory, getMistakeEntries, isDueToday, subscribeToLearningData } from '../services/learningData'
 import { openPairOnPairsPage } from '../services/pairs'
-import { setPendingPracticeSelection, usableMistakeEntries, wordsToRefresh } from '../services/libraryPractice'
+import { openPracticeWith, usableMistakeEntries, wordsToRefresh } from '../services/libraryPractice'
 import { getAllWords } from '../services/libraryStorage'
 import { loadServed, mistakeKey, pickMistakes } from '../services/mistakePicker'
 import { dismissAllYellowCards, dismissYellowCard, getYellowCards, type YellowCard } from '../services/yellowCards'
@@ -101,8 +101,8 @@ function practise(entries: MistakeEntry[], label: string, size: number) {
       if (!taken.has(word.wordId)) wordIds.push(word.wordId)
     }
   }
-  if (wordIds.length) setPendingPracticeSelection({ wordIds, label, mode: 'write-en', kind: 'mistakes' })
-  window.location.hash = 'practice'
+  if (wordIds.length) openPracticeWith({ wordIds, label, mode: 'write-en', kind: 'mistakes' })
+  else window.location.hash = 'practice'
 }
 
 // A pair mistake shows the whole sentence with the right word in bold, so the choice is seen in its context.

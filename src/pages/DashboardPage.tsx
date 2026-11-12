@@ -11,7 +11,7 @@ import { buildDailyPlan, getStreak, type DailyPlan } from '../services/dailyPlan
 import { getLearningAnalytics } from '../services/learningAnalytics'
 import { getLevelChecks, nextCheckDue } from '../services/levelCheck'
 import { getMistakeEntries, isDueToday, subscribeToLearningData } from '../services/learningData'
-import { setPendingPracticeSelection } from '../services/libraryPractice'
+import { openPracticeWith } from '../services/libraryPractice'
 import { getProfile, subscribeToProfile } from '../services/profileStorage'
 import { getAllUserRuleProgress } from '../services/rulePracticeService'
 import { getCloudSession } from '../services/supabase'
@@ -28,12 +28,11 @@ function startPlan(plan: DailyPlan, mode: PracticeMode, count = plan.items.lengt
   const planned = plan.items.slice(0, Math.max(1, count)).map((item) => item.word.wordId)
   // Dictation after the words of the plan are used up: the words practised today.
   const wordIds = planned.length || mode !== 'listen-write' ? planned : wordIdsPractisedOn(localDayKey(new Date()), Math.max(1, count))
-  setPendingPracticeSelection({
+  openPracticeWith({
     wordIds,
     label: mode === 'listen-write' ? "Today's dictation" : "Today's session",
     mode,
   })
-  window.location.hash = 'practice'
 }
 
 // Starts one step of today's plan: the words and the dictation use today's word list, the rest are their own pages.

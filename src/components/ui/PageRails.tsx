@@ -1,6 +1,6 @@
 import { useMemo, type ReactNode } from 'react'
 import { cefrLevels } from '../../data/libraryTopics'
-import { setPendingPracticeSelection } from '../../services/libraryPractice'
+import { openPracticeWith } from '../../services/libraryPractice'
 import { getAllWords } from '../../services/libraryStorage'
 import { getMistakeEntries, getRuleReviewIds, isDueToday } from '../../services/learningData'
 import { pairStatuses } from '../../services/pairs'
@@ -108,12 +108,11 @@ export function TopicsRail() {
             type="button"
             key={topic.topic}
             onClick={() => {
-              setPendingPracticeSelection({
+              openPracticeWith({
                 wordIds: topic.words.map((word) => word.wordId),
                 label: `Topic: ${topic.topic}`,
                 mode: 'write-en',
               })
-              window.location.hash = 'practice'
             }}
           >
             <span>{topic.topic}</span>

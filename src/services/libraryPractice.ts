@@ -230,6 +230,11 @@ export type PendingPracticeSelection = { wordIds: string[]; label: string; mode?
 export function setPendingPracticeSelection(selection: PendingPracticeSelection) {
   window.sessionStorage.setItem(PENDING_SELECTION_KEY, JSON.stringify(selection))
 }
+/** Stores what to practise and opens the Practice page. */
+export function openPracticeWith(selection: PendingPracticeSelection) {
+  setPendingPracticeSelection(selection)
+  window.location.hash = 'practice'
+}
 export function consumePendingPracticeSelection(): PendingPracticeSelection | null {
   try {
     const value = window.sessionStorage.getItem(PENDING_SELECTION_KEY)
