@@ -7,6 +7,7 @@ import {
   hasCyrillic,
   lookupRussianWord,
   lookupWord,
+  type LookupMeaning,
   type LookupSense,
   type RussianCandidate,
 } from '../../services/wordLookup'
@@ -17,6 +18,8 @@ type Step =
   | { kind: 'idle' }
   | { kind: 'loading' }
   | { kind: 'senses'; senses: LookupSense[] }
+  // the dictionary explains the word in English but has no Russian for it ("hook up"): the learner writes the translation
+  | { kind: 'meanings'; meanings: LookupMeaning[] }
   | { kind: 'candidates'; candidates: RussianCandidate[] }
   | { kind: 'missing'; message: string }
 type Draft = { word: string; translation: string; partOfSpeech: string; definition: string; example: string }
@@ -67,6 +70,7 @@ export function AddWordPanel({
     }
     const result = await lookupWord(word)
     if (result.status === 'found') setStep({ kind: 'senses', senses: result.senses })
+    else if (result.status === 'no-translation') setStep({ kind: 'meanings', meanings: result.meanings })
     else
       setStep({
         kind: 'missing',
@@ -87,6 +91,20 @@ export function AddWordPanel({
       definition: sense?.definition ?? '',
       example: sense?.example ?? '',
     })
+
+  // A meaning without a translation: the definition and example are filled in, the Russian is left for the learner.
+  // Several words ("hook up") are a phrase, whatever the dictionary calls them.
+  const chooseMeaning = (meaning: LookupMeaning) => {
+    const word = query.trim().toLocaleLowerCase()
+    const known = (partOfSpeechOptions as readonly string[]).includes(meaning.partOfSpeech)
+    setDraft({
+      word,
+      translation: '',
+      partOfSpeech: word.includes(' ') ? 'phrase' : known ? meaning.partOfSpeech : 'noun',
+      definition: meaning.definition,
+      example: meaning.example,
+    })
+  }
 
   function save(event: FormEvent) {
     event.preventDefault()
@@ -168,9 +186,7 @@ export function AddWordPanel({
           <p className="add-word__label">Which meaning do you want to learn?</p>
           {step.senses.map((sense, index) => (
             <button type="button" className="add-word__sense" onClick={() => choose(sense)} key={index}>
-              <small>
-                {sense.partOfSpeech || 'meaning'} · {sense.gloss}
-              </small>
+              <small>{[sense.partOfSpeech || 'meaning', sense.gloss].filter(Boolean).join(' · ')}</small>
               <strong>{sense.translations.slice(0, 4).join(', ')}</strong>
               {sense.definition && sense.definition.toLocaleLowerCase() !== sense.gloss.toLocaleLowerCase() ? (
                 <span>{sense.definition}</span>
@@ -181,6 +197,26 @@ export function AddWordPanel({
             None of these — I will write it myself
           </button>
           <p className="add-word__credit">Translations and definitions: Wiktionary (CC BY-SA).</p>
+        </div>
+      ) : null}
+
+      {step.kind === 'meanings' && !draft ? (
+        <div className="add-word__senses">
+          <p className="add-word__label">
+            The dictionary has no Russian translation for “{query.trim()}”, only its meaning in English. Pick the meaning you need and write
+            the translation yourself.
+          </p>
+          {step.meanings.map((meaning, index) => (
+            <button type="button" className="add-word__sense" onClick={() => chooseMeaning(meaning)} key={index}>
+              <small>{meaning.partOfSpeech || 'meaning'}</small>
+              <strong>{meaning.definition}</strong>
+              {meaning.example ? <span>{meaning.example}</span> : null}
+            </button>
+          ))}
+          <button type="button" className="add-word__manual" onClick={() => choose(null)}>
+            None of these — I will write it myself
+          </button>
+          <p className="add-word__credit">Definitions: Wiktionary (CC BY-SA).</p>
         </div>
       ) : null}
 

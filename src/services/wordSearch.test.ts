@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import type { LibraryWord } from '../types/library'
 import { getEveryWord } from './libraryStorage'
-import { buildWordIndex, editDistance, searchWords, trigrams } from './wordSearch'
+import { buildWordIndex, editDistance, queryBaseForms, searchWords, trigrams } from './wordSearch'
 
 const make = (word: string, translation = 'перевод') => ({ wordId: word, word, translation }) as LibraryWord
 const small = buildWordIndex(
@@ -69,5 +69,51 @@ describe('the real library', () => {
     const start = performance.now()
     for (let round = 0; round < 20; round++) searchWords(index, 'acomodation')
     expect((performance.now() - start) / 20).toBeLessThan(40)
+  })
+})
+
+describe('phrases and forms of a word', () => {
+  const index = buildWordIndex(
+    ['hook up', 'look forward to', 'check-in', 'study', 'stop', 'make', 'go', 'child', 'leave', 'run', 'use', "o'clock"].map((word) =>
+      make(word),
+    ),
+  )
+  const top = (typed: string) => searchWords(index, typed).matches[0]
+
+  it('finds a phrase typed with other spacing, case or a hyphen', () => {
+    for (const typed of ['hook up', '  Hook   Up ', 'hook-up', 'HOOK UP'])
+      expect(searchWords(index, typed), typed).toMatchObject({ hasExact: true, matches: [{ kind: 'exact', word: { word: 'hook up' } }] })
+    expect(top('check in')).toMatchObject({ kind: 'exact', word: { word: 'check-in' } })
+    expect(top('o’clock')).toMatchObject({ kind: 'exact', word: { word: "o'clock" } })
+  })
+  it('finds the word a typed form comes from', () => {
+    const forms: Array<[string, string]> = [
+      ['hooked up', 'hook up'],
+      ['hooking up', 'hook up'],
+      ['hooks up', 'hook up'],
+      ['looking forward to', 'look forward to'],
+      ['studies', 'study'],
+      ['studied', 'study'],
+      ['stopped', 'stop'],
+      ['stopping', 'stop'],
+      ['making', 'make'],
+      ['made', 'make'],
+      ['went', 'go'],
+      ['gone', 'go'],
+      ['children', 'child'],
+      ['running', 'run'],
+      ['used', 'use'],
+      ['uses', 'use'],
+    ]
+    for (const [typed, word] of forms) expect(top(typed), typed).toMatchObject({ kind: 'form', word: { word } })
+  })
+  it('a form is not the word itself: it can still be added as typed', () => {
+    expect(searchWords(index, 'studies').hasExact).toBe(false)
+    expect(searchWords(index, 'study').hasExact).toBe(true)
+  })
+  it('does not guess a form from a word that only ends like one', () => {
+    expect(queryBaseForms('bus')).toEqual(['bu'])
+    expect(searchWords(index, 'bus').matches).toEqual([])
+    expect(queryBaseForms('go')).toEqual([])
   })
 })

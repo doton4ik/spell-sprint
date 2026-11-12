@@ -12,6 +12,9 @@ export type LookupSense = {
 }
 
 const API = 'https://en.wiktionary.org/w/api.php'
+// The Russian Wiktionary describes English words in Russian. It is asked only when the English one has no Russian
+// translation for the word (many phrasal verbs: "give up").
+const API_RU = 'https://ru.wiktionary.org/w/api.php'
 const REST = 'https://en.wiktionary.org/api/rest_v1/page/definition/'
 const TIMEOUT_MS = 8000
 
@@ -106,21 +109,93 @@ export function matchDefinition(rest: RestDefinitions | null, word: string, part
   return { definition: best.definition || gloss.charAt(0).toLocaleUpperCase() + gloss.slice(1), example: best.example }
 }
 
+// An English word on the Russian Wiktionary: its meanings are lists of Russian words.
+//   = {{-en-}} =  …  ==== Значение ====
+//   # [[бросать]] ([[бросить]]), [[отбрасывать]] {{пример|Nicky is thinking of giving up her job.|перевод=…}}
+export function parseRussianWiktionary(wikitext: string): Array<Pick<LookupSense, 'partOfSpeech' | 'translations' | 'example'>> {
+  const start = wikitext.search(/^=\s*\{\{-en-\}\}\s*=\s*$/m)
+  if (start < 0) return []
+  const rest = wikitext.slice(start + 1)
+  const end = rest.search(/^=\s*\{\{-[a-z-]+-\}\}\s*=\s*$/m)
+  const section = end < 0 ? rest : rest.slice(0, end)
+  const partOfSpeech = /\{\{phrase\b/.test(section)
+    ? 'phrase'
+    : /\{\{(verb|гл) en\b/.test(section)
+      ? 'verb'
+      : /\{\{(сущ|noun) en\b/.test(section)
+        ? 'noun'
+        : /\{\{(прил|adj) en\b/.test(section)
+          ? 'adjective'
+          : /\{\{(нареч|adv) en\b/.test(section)
+            ? 'adverb'
+            : ''
+  const meaning = /^={4}\s*Значение\s*={4}\s*$/m.exec(section)
+  if (!meaning) return []
+  const after = section.slice(meaning.index + meaning[0].length)
+  const stop = after.search(/^=/m)
+  const senses: Array<Pick<LookupSense, 'partOfSpeech' | 'translations' | 'example'>> = []
+  // an example may be written on the next line: join the lines of one meaning first
+  for (const item of (stop < 0 ? after : after.slice(0, stop)).split(/\n(?=#)/)) {
+    if (!/^#(?![:*#])/.test(item)) continue
+    const example = (/\{\{пример\|([^|{}]*)/.exec(item)?.[1] ?? '').replace(/\s+/g, ' ').trim()
+    let text = item.replace(/^#\s*/, '')
+    // templates (labels, the example) carry no translation; nested ones need a second pass
+    for (let pass = 0; pass < 3; pass += 1) text = text.replace(/\{\{[^{}]*\}\}/g, '')
+    const linked = [...text.matchAll(/\[\[([^\]|#]+)(?:\|([^\]]*))?\]\]/g)].map((match) => (match[2] ?? match[1]).trim())
+    const plain = text
+      .replace(/\[\[|\]\]/g, '')
+      .split(/[,;()]/)
+      .map((part) => part.trim())
+    const translations = [...new Set((linked.length ? linked : plain).map(stripStress).filter((word) => /^[а-яё][а-яё -]*$/i.test(word)))]
+    if (translations.length) senses.push({ partOfSpeech, translations, example: /[a-z]/i.test(example) ? example : '' })
+  }
+  return senses
+}
+
 async function getJson(url: string, signal: AbortSignal) {
   const response = await fetch(url, { signal })
   if (!response.ok) throw Object.assign(new Error(`Wiktionary answered ${response.status}`), { status: response.status })
   return response.json()
 }
 
-async function wikitext(page: string, signal: AbortSignal): Promise<string | null> {
-  const data = await getJson(`${API}?action=parse&page=${encodeURIComponent(page)}&prop=wikitext&format=json&redirects=1&origin=*`, signal)
+async function wikitext(page: string, signal: AbortSignal, api = API): Promise<string | null> {
+  const data = await getJson(`${api}?action=parse&page=${encodeURIComponent(page)}&prop=wikitext&format=json&redirects=1&origin=*`, signal)
   return data?.parse?.wikitext?.['*'] ?? null
 }
 
-export type LookupResult = { status: 'found'; senses: LookupSense[] } | { status: 'not-found' } | { status: 'unavailable'; message: string }
+// What the English definitions say when no Russian translation was found anywhere: the learner reads the meaning and
+// writes the translation.
+export type LookupMeaning = { partOfSpeech: string; definition: string; example: string }
+export function englishMeanings(rest: RestDefinitions | null, limit = 4): LookupMeaning[] {
+  const meanings: LookupMeaning[] = []
+  for (const entry of rest?.en ?? [])
+    for (const item of entry.definitions) {
+      const definition = stripHtml(item.definition)
+      if (
+        !definition ||
+        /^\(?(obsolete|archaic|dated|rare)\b/i.test(definition) ||
+        /\b(form|plural|participle|tense) of\b/i.test(definition)
+      )
+        continue
+      const example = (item.examples ?? []).map(stripHtml).find((text) => text.split(' ').length >= 4 && text.split(' ').length <= 22) ?? ''
+      meanings.push({ partOfSpeech: entry.partOfSpeech.toLocaleLowerCase(), definition, example })
+      if (meanings.length >= limit) return meanings
+    }
+  return meanings
+}
+
+export type LookupResult =
+  | { status: 'found'; senses: LookupSense[] }
+  // the dictionary knows the word but has no Russian for it: the meanings are in English
+  | { status: 'no-translation'; meanings: LookupMeaning[] }
+  | { status: 'not-found' }
+  | { status: 'unavailable'; message: string }
+
+// A phrase is one page: "hook up" is the page hook_up.
+const restTitle = (word: string) => encodeURIComponent(word.replace(/ /g, '_'))
 
 export async function lookupWord(input: string): Promise<LookupResult> {
-  const word = input.trim().toLocaleLowerCase()
+  const word = input.trim().toLocaleLowerCase().replace(/\s+/g, ' ')
   if (!word) return { status: 'not-found' }
   const controller = new AbortController()
   const timer = window.setTimeout(() => controller.abort(), TIMEOUT_MS)
@@ -129,10 +204,8 @@ export async function lookupWord(input: string): Promise<LookupResult> {
       if ((error as { status?: number }).status === 404) return null
       throw error
     })
-    if (!page) return { status: 'not-found' }
-    let section = englishSection(page)
-    if (!section) return { status: 'not-found' }
-    let senses = parseTranslations(section)
+    const section = page ? englishSection(page) : ''
+    let senses = section ? parseTranslations(section) : []
     // Long entries keep their main translations on a separate page, "love/translations"; the entry itself may hold only a stray
     // table (love: "zero"), so the subpage is read whenever it exists and its meanings come first.
     if (/translation subpage|\/translations/.test(section)) {
@@ -143,8 +216,33 @@ export async function lookupWord(input: string): Promise<LookupResult> {
         senses = [...fromSubpage, ...senses.filter((sense) => !seen.has(`${sense.partOfSpeech}|${sense.gloss}`))]
       }
     }
-    if (!senses.length) return { status: 'not-found' }
-    const rest = (await getJson(`${REST}${encodeURIComponent(word)}`, controller.signal).catch(() => null)) as RestDefinitions | null
+    const rest = section
+      ? ((await getJson(`${REST}${restTitle(word)}`, controller.signal).catch(() => null)) as RestDefinitions | null)
+      : null
+    if (!senses.length) {
+      // No Russian in the English Wiktionary (or no such page there): the Russian one may describe the word.
+      const russianPage = await wikitext(word, controller.signal, API_RU).catch(() => null)
+      const fromRussian = russianPage ? parseRussianWiktionary(russianPage) : []
+      if (fromRussian.length) {
+        const meanings = englishMeanings(rest, 8)
+        return {
+          status: 'found',
+          senses: fromRussian.slice(0, 8).map((sense, index) => {
+            // the meanings of the two dictionaries are not in the same order: an English definition is added only
+            // when there is exactly one of each, so it cannot describe another meaning
+            const only = fromRussian.length === 1 && meanings.length === 1 ? meanings[0] : null
+            return {
+              ...sense,
+              gloss: '',
+              definition: only?.definition ?? '',
+              example: sense.example || (index === 0 ? (only?.example ?? '') : ''),
+            }
+          }),
+        }
+      }
+      const meanings = englishMeanings(rest)
+      return meanings.length ? { status: 'no-translation', meanings } : { status: 'not-found' }
+    }
     return {
       status: 'found',
       senses: senses.slice(0, 8).map((sense) => ({ ...sense, ...matchDefinition(rest, word, sense.partOfSpeech, sense.gloss) })),

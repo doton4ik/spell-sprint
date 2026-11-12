@@ -299,10 +299,10 @@ export function LibrariesPage() {
               <p>
                 {search.matches.length || search.close.length
                   ? 'Not the word you typed? Spell it as you meant it and add it yourself.'
-                  : 'No word like this in the libraries.'}
+                  : 'No word like this in the libraries. The dictionary can translate it.'}
               </p>
               <button className="check-button" type="button" onClick={() => setAdding(trimmedQuery)}>
-                Add “{trimmedQuery}” to my words
+                Look up “{trimmedQuery}” and add it to my words
               </button>
             </div>
           )}
