@@ -55,6 +55,31 @@ const labels = {
   'choose-spelling': 'Choose correct spelling',
   'fill-gap': 'Fill the gap',
 }
+// The word's second example: one more context to understand the meaning from. A sentence from Tatoeba carries its
+// credit (CC BY 2.0 FR); one written for the app does not need it.
+function SecondExample({ task, className }: { task: PracticeTask; className: string }) {
+  if (!task.extraExample || task.extraExample === task.example) return null
+  return (
+    <p className={className} lang="en">
+      {task.extraExample}{' '}
+      {task.extraExampleSource === 'written' ? null : (
+        <a
+          href={
+            task.extraExampleSource?.startsWith('tatoeba:')
+              ? `https://tatoeba.org/en/sentences/show/${task.extraExampleSource.slice(8)}`
+              : 'https://tatoeba.org'
+          }
+          target="_blank"
+          rel="noreferrer"
+          title="Sentence from Tatoeba, CC BY 2.0 FR"
+        >
+          Tatoeba
+        </a>
+      )}
+    </p>
+  )
+}
+
 function hintFor(answer: string, step: number) {
   const words = answer.split(/\s+/)
   if (step === 1) return `First letter: ${words.map((word) => word[0]).join(' ')}`
@@ -182,6 +207,7 @@ export function TaskCard({
               {task.example}
             </p>
           ) : null}
+          <SecondExample task={task} className="meet-word__example" />
           {task.rule && !isDefaultRule ? (
             <p className="related-rule">
               <Icon name="lightbulb" size={16} /> {task.rule}
@@ -397,27 +423,8 @@ export function TaskCard({
                 <p className="task-feedback__note">Counted as right. Thanks — we will check this translation and add it to the list.</p>
               ) : null}
               {others.length ? <p className="task-feedback__note">Also correct: {others.join(', ')}</p> : null}
-              {task.example ? (
-                <p className="task-feedback__example">{task.example}</p>
-              ) : task.extraExample ? (
-                <p className="task-feedback__example">
-                  {task.extraExample}{' '}
-                  {task.extraExampleSource === 'written' ? null : (
-                    <a
-                      href={
-                        task.extraExampleSource?.startsWith('tatoeba:')
-                          ? `https://tatoeba.org/en/sentences/show/${task.extraExampleSource.slice(8)}`
-                          : 'https://tatoeba.org'
-                      }
-                      target="_blank"
-                      rel="noreferrer"
-                      title="Sentence from Tatoeba, CC BY 2.0 FR"
-                    >
-                      Tatoeba
-                    </a>
-                  )}
-                </p>
-              ) : null}
+              {task.example ? <p className="task-feedback__example">{task.example}</p> : null}
+              <SecondExample task={task} className="task-feedback__example" />
             </div>
           ) : null}
           {result !== 'idle' && task.wordId ? <WordTip wordId={task.wordId} wrong={!correct} key={task.wordId} /> : null}

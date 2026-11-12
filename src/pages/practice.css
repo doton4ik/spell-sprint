@@ -1323,8 +1323,10 @@
 .task-feedback__example {
   font-size: calc(14px * var(--fs));
 }
-.task-feedback__example a {
+.task-feedback__example a,
+.meet-word__example a {
   color: inherit;
+  font-style: normal;
   font-size: calc(12px * var(--fs));
   opacity: 0.7;
   text-decoration: underline;
