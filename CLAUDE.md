@@ -17,7 +17,8 @@ Deployed on Netlify from GitHub `doton4ik/spell-sprint`, branch `main`.
 - Write content yourself (words, examples, texts); don't hand it off to another assistant.
 - Before a big or unclear task, say the plan in a few lines; for "делай" just do it.
 - Starting fresh? Read `docs/start-here.md`: the state of the work, what waits for the user, the commands for every job. The user watches the usage
-  limits: no Opus / subagents / e2e, short answers.
+  limits: short answers, no e2e, no Opus on small tasks. Subagents are the opposite: ALWAYS use them when a piece of work can be delegated
+  (the user's rule, 13 Nov 2026), on the cheapest model that fits.
 
 ## Three models: Sonnet builds, Haiku explores, Opus reviews
 
