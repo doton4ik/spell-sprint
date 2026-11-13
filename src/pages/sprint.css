@@ -17,6 +17,7 @@
   margin: 10px 0 0;
 }
 
+.sprint-hero,
 .sprint-summary,
 .sprint-card {
   background: var(--surface);
@@ -26,200 +27,193 @@
   margin-top: 24px;
   padding: 24px;
 }
+
+/* ---- Start screen: one card. Left: the record and the button. Right: the last sprints. ---- */
 .sprint-hero {
-  align-items: center;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
   display: grid;
-  gap: 26px;
-  grid-template-columns: auto minmax(0, 1fr);
-  margin-top: 24px;
-  padding: 24px;
-}
-.sprint-hero__clock {
-  align-items: center;
-  background: var(--accent-soft);
-  border: 6px solid var(--accent);
-  border-radius: 50%;
-  color: var(--accent-text-strong);
-  display: flex;
-  flex-direction: column;
-  height: 128px;
-  justify-content: center;
-  width: 128px;
-}
-.sprint-hero__clock strong {
-  font-size: calc(44px * var(--fs));
-  letter-spacing: -2px;
-  line-height: 1;
-}
-.sprint-hero__clock span {
-  font-size: calc(12px * var(--fs));
-  font-weight: 700;
-  text-transform: uppercase;
+  gap: 32px;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
 }
 .sprint-hero__main {
-  display: grid;
-  gap: 18px;
-}
-.sprint-stats {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-.sprint-stats > div {
-  background: var(--surface-soft);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 12px 14px;
-}
-.sprint-stats strong {
-  color: var(--accent-text-strong);
-  display: block;
-  font-size: calc(24px * var(--fs));
-  line-height: 1.1;
-}
-.sprint-stats small {
-  align-items: center;
-  color: var(--ink-muted);
   display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+/* The small labels of both columns: the same line, the same size. */
+.sprint-record small,
+.sprint-history h2,
+.sprint-how h2 {
+  color: var(--ink-muted);
   font-size: calc(12px * var(--fs));
-  font-weight: 600;
-  gap: 6px;
-  margin-top: 2px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+  margin: 0;
+  text-transform: uppercase;
 }
-.sprint-history {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  margin-top: 14px;
-  padding: 20px 24px 18px;
+.sprint-record {
+  align-items: baseline;
+  column-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
 }
-.sprint-history h2 {
+.sprint-record small {
+  flex-basis: 100%;
+}
+/* The one large thing on the screen. */
+.sprint-record strong {
   color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: calc(44px * var(--fs));
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1.15;
+}
+.sprint-record .sprint-record__none {
+  font-size: calc(24px * var(--fs));
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+.sprint-record span {
+  color: var(--ink-soft);
   font-size: calc(16px * var(--fs));
-  margin: 0 0 14px;
+}
+.sprint-facts {
+  color: var(--ink-muted);
+  display: grid;
+  font-size: calc(13px * var(--fs));
+  gap: 2px;
+  line-height: 1.5;
+  margin: 8px 0 24px;
+}
+.sprint-facts span {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+}
+.sprint-start {
+  margin-top: auto;
+  min-height: 48px;
+}
+
+.sprint-history,
+.sprint-how {
+  min-width: 0;
+}
+/* The dates under the bars end on the same line as the button on the left. */
+.sprint-history {
+  display: flex;
+  flex-direction: column;
 }
 .sprint-history ol {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: auto 0 0;
+  padding: 12px 0 0;
 }
 .sprint-history li {
   align-items: center;
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   min-width: 0;
 }
+/* The number sits on top of its bar; the tallest bar is 100px. */
 .sprint-history__track {
-  align-items: flex-end;
   display: flex;
-  flex: none;
-  height: 110px;
+  flex-direction: column;
+  gap: 4px;
+  height: calc(104px + 16px * var(--fs));
+  justify-content: flex-end;
   width: 100%;
+}
+.sprint-history__track strong {
+  color: var(--ink-soft);
+  font-size: calc(13px * var(--fs));
+  font-weight: 600;
+  line-height: calc(16px * var(--fs));
+  text-align: center;
 }
 .sprint-history__bar {
-  background: linear-gradient(to top, var(--accent), var(--accent-muted));
-  border-radius: 8px 8px 4px 4px;
+  background: color-mix(in srgb, var(--accent) 70%, var(--surface));
+  border-radius: 6px 6px 2px 2px;
   display: block;
-  width: 100%;
+  flex: none;
+  height: max(4px, calc(100px * var(--share)));
 }
-.sprint-history li strong {
+/* A sprint that equals the record: full ink blue and a bold number. */
+.sprint-history__best .sprint-history__bar {
+  background: var(--accent);
+}
+.sprint-history__best .sprint-history__track strong {
   color: var(--ink);
-  font-size: calc(13px * var(--fs));
+  font-weight: 700;
 }
 .sprint-history li small {
   color: var(--ink-muted);
   font-size: calc(12px * var(--fs));
+  white-space: nowrap;
 }
-.sprint-flow {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  list-style: none;
-  margin: 14px 0 0;
-  padding: 0;
-}
-.sprint-flow li {
-  align-items: center;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 14px;
+.sprint-how ol {
   color: var(--ink-soft);
-  display: flex;
+  display: grid;
   font-size: calc(14px * var(--fs));
-  font-weight: 600;
-  gap: 10px;
-  padding: 14px;
-}
-.sprint-flow li span {
-  align-items: center;
-  background: var(--accent-soft);
-  border-radius: 10px;
-  color: var(--accent-text);
-  display: inline-flex;
-  flex: none;
-  height: 34px;
-  justify-content: center;
-  width: 34px;
-}
-@media (max-width: 570px) {
-  .sprint-hero {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    padding: 18px;
-  }
-  .sprint-hero__main {
-    justify-self: stretch;
-  }
-  .sprint-flow {
-    grid-template-columns: 1fr;
-  }
-  .sprint-history {
-    padding: 16px;
-  }
-}
-.sprint-hint {
-  color: var(--ink-muted);
-  font-size: calc(13px * var(--fs));
+  gap: 8px;
   line-height: 1.5;
-  margin: 16px 0;
+  margin: 12px 0 0;
+  max-width: 44ch;
+  padding-left: 1.3em;
 }
-.sprint-start {
-  min-height: 48px;
+.sprint-how li::marker {
+  color: var(--ink-muted);
+  font-weight: 600;
 }
+@media (max-width: 640px) {
+  .sprint-hero {
+    gap: 24px;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 20px;
+  }
+  .sprint-history ol {
+    gap: 6px;
+  }
+}
+
+/* ---- The sprint itself: the clock on top, the word is the hero ---- */
 .sprint-bar {
   align-items: center;
   display: flex;
   gap: 12px;
 }
 .sprint-clock {
-  color: var(--accent-text-strong);
+  color: var(--ink);
+  font-family: var(--font-serif);
   font-size: calc(28px * var(--fs));
   font-variant-numeric: tabular-nums;
-  font-weight: 700;
-  min-width: 72px;
+  font-weight: 600;
+  line-height: 1.15;
+  min-width: calc(64px * var(--fs));
 }
 .sprint-clock--low {
   color: var(--danger-text);
 }
+/* Right answers so far: the only green on this screen. */
 .sprint-score {
   align-items: center;
-  background: var(--accent-soft);
+  background: var(--good-soft);
+  border: 1px solid var(--good-line);
   border-radius: 999px;
-  color: var(--accent-text-strong);
+  color: var(--good-text);
   display: inline-flex;
+  font-size: calc(14px * var(--fs));
+  font-variant-numeric: tabular-nums;
   font-weight: 700;
   gap: 5px;
   margin-right: auto;
-  padding: 5px 11px;
+  padding: 4px 12px;
 }
 .sprint-progress {
   background: var(--surface-strong);
@@ -236,8 +230,9 @@
 }
 .sprint-card {
   display: grid;
-  gap: 14px;
+  gap: 16px;
   justify-items: center;
+  padding: 40px 24px;
   text-align: center;
 }
 .sprint-pos {
@@ -247,19 +242,26 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
+/* The word to translate: book serif, the largest text here. */
 .sprint-card h2 {
   color: var(--ink);
-  font-size: calc(28px * var(--fs));
-  margin: 0;
+  font-family: var(--font-serif);
+  font-size: calc(44px * var(--fs));
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin: -8px 0 8px;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
 }
 .sprint-card input {
   background: var(--surface);
   border: 1px solid var(--line-strong);
-  border-radius: 10px;
+  border-radius: 12px;
   color: var(--ink);
   font-size: max(18px, calc(20px * var(--fs)));
   max-width: 420px;
-  min-height: 52px;
+  min-height: 56px;
   outline: none;
   padding: 10px 14px;
   text-align: center;
@@ -269,34 +271,84 @@
   border-color: var(--accent);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 30%, transparent);
 }
-.sprint-card .check-button {
-  min-height: 46px;
+/* The button and the "missed" line are as wide as the answer box and take the same place, so nothing jumps. */
+.sprint-card .check-button,
+.sprint-miss {
+  max-width: 420px;
+  min-height: 48px;
+  width: 100%;
 }
 .sprint-miss {
+  align-items: center;
+  background: var(--danger-soft);
+  border: 1px solid var(--danger-line);
+  border-radius: 12px;
   color: var(--danger-text);
+  display: flex;
   font-size: calc(18px * var(--fs));
+  gap: 8px;
+  justify-content: center;
   margin: 0;
-  min-height: 46px;
+  padding: 8px 14px;
 }
 .sprint-miss strong {
   color: var(--ink);
+  overflow-wrap: anywhere;
 }
 .sprint-paused {
   color: var(--ink-muted);
   margin: 0;
 }
+
+/* ---- Result ---- */
+.sprint-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 40px;
+}
+.sprint-stats strong {
+  color: var(--ink);
+  display: block;
+  font-family: var(--font-serif);
+  font-size: calc(28px * var(--fs));
+  font-weight: 600;
+  line-height: 1.15;
+}
+.sprint-stats small {
+  color: var(--ink-muted);
+  display: block;
+  font-size: calc(13px * var(--fs));
+  margin-top: 2px;
+}
+.sprint-stat--good strong {
+  color: var(--good-text);
+}
+.sprint-stat--wrong strong {
+  color: var(--danger-text);
+}
+.sprint-hint {
+  color: var(--ink-muted);
+  font-size: calc(13px * var(--fs));
+  line-height: 1.5;
+  margin: 0 0 12px;
+  max-width: 65ch;
+}
 .sprint-list {
   border-top: 1px solid var(--line);
-  margin-top: 18px;
-  padding-top: 14px;
+  margin-top: 20px;
+  padding-top: 16px;
 }
 .sprint-list h2 {
   color: var(--ink);
   font-size: calc(16px * var(--fs));
   margin: 0 0 8px;
 }
-.sprint-list p {
+.sprint-list p:not(.sprint-hint) {
+  align-items: center;
   color: var(--ink-soft);
+  column-gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
   margin: 4px 0;
 }
 .sprint-list s {
@@ -305,7 +357,7 @@
 .sprint-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
+  gap: 8px;
 }
 .sprint-chips span {
   background: var(--surface-muted);
@@ -317,10 +369,10 @@
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  margin-top: 20px;
+  margin-top: 24px;
 }
 .sprint-actions button {
-  min-height: 46px;
+  min-height: 48px;
 }
 .sprint-page .sprint-text-button {
   font-size: calc(13px * var(--fs));
@@ -328,15 +380,11 @@
   padding: 11px 13px;
 }
 @media (max-width: 800px) {
-  .sprint-page {
-    padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
+  .sprint-card {
+    padding: 28px 16px;
   }
   .sprint-card h2 {
-    font-size: calc(24px * var(--fs));
+    font-size: calc(28px * var(--fs));
+    margin: -4px 0 4px;
   }
-}
-
-/* The title already says "60 seconds": the stats and the button take the whole card. */
-.sprint-hero {
-  grid-template-columns: minmax(0, 1fr);
 }

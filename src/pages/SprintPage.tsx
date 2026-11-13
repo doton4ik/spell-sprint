@@ -1,5 +1,5 @@
 import { SprintRail } from '../components/ui/PageRails'
-import { useEffect, useRef, useState, type FormEvent } from 'react'
+import { useEffect, useRef, useState, type CSSProperties, type FormEvent } from 'react'
 import { noAutocorrect } from '../components/noAutocorrect'
 import { ReportWordButton } from '../components/ReportWordButton'
 import { Icon } from '../components/icons/Icon'
@@ -55,6 +55,14 @@ export function SprintPage() {
   const recent = allRounds.slice(0, 8).reverse()
   const top = Math.max(1, ...recent.map((round) => round.correct))
   const poolIsSmall = pool.fromHistory < MIN_SPRINT_WORDS
+  // The month is written once, under the first bar and where it changes: eight full dates do not fit on a phone.
+  const dates = recent.map((round) => new Date(round.date))
+  const dateLabel = (index: number) => {
+    const date = dates[index]
+    const before = dates[index - 1]
+    const sameMonth = before && before.getMonth() === date.getMonth() && before.getFullYear() === date.getFullYear()
+    return date.toLocaleDateString('en', sameMonth ? { day: 'numeric' } : { day: 'numeric', month: 'short' })
+  }
   return (
     <div className="sprint-page" id="sprint">
       <SprintRail />
@@ -62,71 +70,63 @@ export function SprintPage() {
         <h1>60 seconds, as many words as you can</h1>
         <p>Type the English word. No hints, no second tries.</p>
       </header>
+      {/* One card: the record and the button, and beside them the last sprints (or, before the first one, how it goes). */}
       <section className="sprint-hero">
         <div className="sprint-hero__main">
-          <div className="sprint-stats">
-            <div>
-              <strong>{best || '—'}</strong>
-              <small>your record</small>
-            </div>
-            <div>
-              <strong>{allRounds.length}</strong>
-              <small>sprints so far</small>
-            </div>
-            <div>
-              <strong>{pool.fromHistory}</strong>
-              <small>
-                your words
-                {poolIsSmall ? (
-                  <InfoTip label="About your words">
-                    Until you have typed more words correctly, the sprint adds easy words from the base library.
-                  </InfoTip>
-                ) : null}
-              </small>
-            </div>
-          </div>
+          <p className="sprint-record">
+            <small>Your record</small>
+            {best ? (
+              <>
+                <strong>{best}</strong>
+                <span>{`word${best === 1 ? '' : 's'} in a minute`}</span>
+              </>
+            ) : (
+              <strong className="sprint-record__none">Not set yet</strong>
+            )}
+          </p>
+          <p className="sprint-facts">
+            {allRounds.length ? <span>{`${allRounds.length} sprint${allRounds.length === 1 ? '' : 's'} so far`}</span> : null}
+            {poolIsSmall ? (
+              <span>
+                Easy starter words for now
+                <InfoTip label="About the words">
+                  Until you have typed more words correctly, the sprint adds easy words from the base library.
+                </InfoTip>
+              </span>
+            ) : (
+              <span>{pool.fromHistory} of your words in play</span>
+            )}
+          </p>
           <button className="check-button sprint-start" type="button" onClick={() => setPhase({ kind: 'running' })}>
             <Icon name="bolt" size={17} /> Start the sprint
           </button>
         </div>
+        {recent.length ? (
+          <div className="sprint-history" role="group" aria-label="Your last sprints">
+            <h2>Last sprints</h2>
+            <ol>
+              {recent.map((round, index) => (
+                <li key={round.date} className={round.correct === best && best > 0 ? 'sprint-history__best' : undefined}>
+                  <span className="sprint-history__track">
+                    <strong>{round.correct}</strong>
+                    <span className="sprint-history__bar" style={{ '--share': round.correct / top } as CSSProperties} />
+                  </span>
+                  <small>{dateLabel(index)}</small>
+                </li>
+              ))}
+            </ol>
+          </div>
+        ) : (
+          <div className="sprint-how">
+            <h2>How a sprint goes</h2>
+            <ol>
+              <li>A Russian word appears.</li>
+              <li>Type it in English and press Enter.</li>
+              <li>A miss shows the right spelling for a second. The clock keeps running.</li>
+            </ol>
+          </div>
+        )}
       </section>
-      {recent.length ? (
-        <section className="sprint-history" aria-label="Your last sprints">
-          <h2>Last sprints</h2>
-          <ol>
-            {recent.map((round) => (
-              <li key={round.date}>
-                <span className="sprint-history__track">
-                  <span className="sprint-history__bar" style={{ height: `${Math.max(6, (round.correct / top) * 100)}%` }} />
-                </span>
-                <strong>{round.correct}</strong>
-                <small>{new Date(round.date).toLocaleDateString('en', { day: 'numeric', month: 'short' })}</small>
-              </li>
-            ))}
-          </ol>
-        </section>
-      ) : (
-        <ol className="sprint-flow" aria-label="How a sprint works">
-          <li>
-            <span>
-              <Icon name="eye" size={18} />
-            </span>
-            Russian word
-          </li>
-          <li>
-            <span>
-              <Icon name="practice" size={18} />
-            </span>
-            Type it in English
-          </li>
-          <li>
-            <span>
-              <Icon name="skip" size={18} />
-            </span>
-            Next one, fast
-          </li>
-        </ol>
-      )}
     </div>
   )
 }
@@ -320,18 +320,18 @@ function SprintResult({ round, previousBest, onAgain }: { round: SprintRound; pr
       </header>
       <section className="sprint-summary">
         <div className="sprint-stats">
-          <strong>
-            {round.correct}
+          <div className="sprint-stat--good">
+            <strong>{round.correct}</strong>
             <small>correct</small>
-          </strong>
-          <strong>
-            {round.misses}
+          </div>
+          <div className={round.misses ? 'sprint-stat--wrong' : undefined}>
+            <strong>{round.misses}</strong>
             <small>wrong</small>
-          </strong>
-          <strong>
-            {slow.length}
+          </div>
+          <div>
+            <strong>{slow.length}</strong>
             <small>slow to type</small>
-          </strong>
+          </div>
         </div>
         {misses.length ? (
           <div className="sprint-list">
