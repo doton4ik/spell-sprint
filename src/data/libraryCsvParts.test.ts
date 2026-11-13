@@ -112,6 +112,21 @@ describe('splitLibraryCsv', () => {
   })
 })
 
+describe('a row that would break the order', () => {
+  it('a row with texts but no word is refused: it would vanish from the core and shift every later text', () => {
+    const csv =
+      'word_id,word,definition,extra_example,extra_example_source\na,apple,a fruit,I ate an apple.,written\n,,a lost text,,\nb,bread,food,We bake bread.,written'
+    expect(() => splitLibraryCsv(csv)).toThrow(/Row 3/)
+  })
+  it('a word without any text is fine', () => {
+    const csv = 'word_id,word,definition,extra_example,extra_example_source\na,apple,,,\nb,bread,food,,'
+    expect(parseLibraryTexts(splitLibraryCsv(csv).texts)).toEqual([
+      ['', '', ''],
+      ['food', '', ''],
+    ])
+  })
+})
+
 describe('parseLibraryTexts', () => {
   it('reads one entry per line and keeps empty fields', () => {
     expect(parseLibraryTexts('a\tb\tc\n\t\t\nx\t\tz')).toEqual([

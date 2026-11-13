@@ -105,7 +105,12 @@ function App() {
   const [route, setRoute] = useState(getRoute)
 
   useEffect(() => {
-    const updateRoute = () => setRoute(getRoute())
+    const updateRoute = () => {
+      // If the definitions could not be fetched earlier (offline), every change of page asks again: a page that is
+      // already loaded is not loaded a second time, so withWordTexts alone would never retry. Does nothing once they are here.
+      void loadWordTexts().catch(() => undefined)
+      setRoute(getRoute())
+    }
     window.addEventListener('hashchange', updateRoute)
     whenIdle(prefetchPages)
     return () => window.removeEventListener('hashchange', updateRoute)

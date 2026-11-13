@@ -17,6 +17,10 @@ export function splitLibraryCsv(csv: string): { core: string; texts: string } {
   const missing = TEXT_COLUMNS.filter((_, index) => textAt[index] < 0)
   if (missing.length) throw new Error(`The word list has no column ${missing.join(', ')}`)
   const coreAt = header.map((_, index) => index).filter((index) => !textAt.includes(index))
+  // a row with texts but nothing else would vanish from the core (an empty line is skipped when it is read) and
+  // stay in the texts: every later word would get its neighbour's definition
+  const empty = rows.findIndex((row) => coreAt.every((index) => !row[index]))
+  if (empty >= 0) throw new Error(`Row ${empty + 2} of the word list has texts but no word`)
   const core = [header, ...rows].map((row) => coreAt.map((index) => csvCell(row[index] ?? '')).join(',')).join('\n')
   const texts = rows
     .map((row) =>
