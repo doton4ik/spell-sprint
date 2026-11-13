@@ -781,17 +781,36 @@
 .dictation-controls {
   align-items: stretch;
   display: flex;
+  flex: 1;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 6px;
+  min-width: 0;
 }
+/* Side by side while Play keeps room for its text; on a narrow card "Slower" moves under it and takes the whole line
+   (the 999 : 1 growth gives Play nearly all the spare width when they share a line). */
 .dictation-controls .dictation-play {
-  flex: 1;
+  flex: 999 1 calc(220px * var(--fs));
   margin-top: 0;
   min-width: 0;
   width: auto;
 }
-.dictation-slow {
-  flex-shrink: 0;
+/* the same frame as the Play button, so it reads as a second button and not as a caption */
+.dictation-controls .dictation-slow {
+  background: var(--surface);
+  border: 1px solid var(--accent-line);
+  border-radius: 12px;
+  color: var(--accent-text);
+  flex: 1 0 auto;
+  font-size: calc(14px * var(--fs));
+  font-weight: 600;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  text-align: center;
+}
+.dictation-controls .dictation-slow:hover {
+  background: var(--accent-soft);
 }
 .dictation-play {
   align-items: center;
