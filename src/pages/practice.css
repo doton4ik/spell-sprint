@@ -777,7 +777,22 @@
   }
 }
 
-/* Dictation: a large replay button in place of the written prompt. */
+/* Dictation: a large replay button in place of the written prompt, with a smaller "Slower" replay beside it. */
+.dictation-controls {
+  align-items: stretch;
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+.dictation-controls .dictation-play {
+  flex: 1;
+  margin-top: 0;
+  min-width: 0;
+  width: auto;
+}
+.dictation-slow {
+  flex-shrink: 0;
+}
 .dictation-play {
   align-items: center;
   background: var(--surface);

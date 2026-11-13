@@ -194,7 +194,7 @@ function Session({ clip, onFinish, onQuit }: { clip: ListeningClip; onFinish: (a
   const locale = loadPracticeSettings(defaultPracticeSettings).speechLocale
   const play = (slow: boolean) => {
     if (videoId && line.start !== undefined && line.end !== undefined) video.current?.playLine(line.start, line.end, slow ? 0.5 : 1)
-    else speakEnglish(line.text, locale, slow ? 0.6 : 1)
+    else speakEnglish(line.text, locale, { slow })
   }
 
   // each new line is played once on its own; the cleanup stops a line that is still playing

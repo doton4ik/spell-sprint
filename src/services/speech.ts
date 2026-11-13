@@ -1,3 +1,5 @@
+import { getProfile, type Profile, type SpeechSpeed } from './profileStorage'
+
 export function canSpeak() {
   return typeof window !== 'undefined' && 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window
 }
@@ -32,11 +34,25 @@ export function stopSpeaking() {
   if (canSpeak()) window.speechSynthesis.cancel()
 }
 
-export function speakEnglish(text: string, locale: 'en-US' | 'en-GB', rate = 1) {
+// How fast words are read: the learner's choice in Settings (a profile field), one table for every screen.
+export const speechRates: Record<SpeechSpeed, number> = { slow: 0.75, normal: 1, fast: 1.15 }
+
+export function speechRate(profile: Pick<Profile, 'speechSpeed'> = getProfile()) {
+  return speechRates[profile.speechSpeed] ?? 1
+}
+
+// A "slower" replay: clearly slower than the chosen speed, but never below what a voice can still pronounce clearly.
+export const SLOW_FACTOR = 0.7
+export const SLOW_FLOOR = 0.5
+export function slowSpeechRate(profile: Pick<Profile, 'speechSpeed'> = getProfile()) {
+  return Math.max(SLOW_FLOOR, Math.round(speechRate(profile) * SLOW_FACTOR * 100) / 100)
+}
+
+export function speakEnglish(text: string, locale: 'en-US' | 'en-GB', options: { slow?: boolean } = {}) {
   if (!canSpeak()) return { ok: false, fallback: false }
   const utterance = new SpeechSynthesisUtterance(text)
   utterance.lang = locale
-  utterance.rate = rate
+  utterance.rate = options.slow ? slowSpeechRate() : speechRate()
   const { voice, exact } = pickVoice(locale)
   if (voice) utterance.voice = voice
   window.speechSynthesis.cancel()

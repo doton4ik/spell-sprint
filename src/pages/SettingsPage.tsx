@@ -41,7 +41,7 @@ import {
 } from '../services/appearanceStorage'
 import { describePlan } from '../services/dailyChecklist'
 import { applyReminder, getReminder, remindersAvailable } from '../services/reminders'
-import { dailyMinutesOptions, getProfile, saveProfile, type DailyActivities } from '../services/profileStorage'
+import { dailyMinutesOptions, getProfile, saveProfile, type DailyActivities, type SpeechSpeed } from '../services/profileStorage'
 import { getOutboxSize, subscribeToOutbox } from '../services/mistakeOutbox'
 import './settings.css'
 
@@ -567,6 +567,14 @@ export function SettingsPage() {
               <select value={speechLocale} onChange={(event) => setAccent(event.target.value as 'en-US' | 'en-GB')}>
                 <option value="en-US">American English (en-US)</option>
                 <option value="en-GB">British English (en-GB)</option>
+              </select>
+            </label>
+            <label>
+              Reading speed
+              <select value={profile.speechSpeed} onChange={(event) => updateProfile({ speechSpeed: event.target.value as SpeechSpeed })}>
+                <option value="slow">Slow</option>
+                <option value="normal">Normal</option>
+                <option value="fast">Fast</option>
               </select>
             </label>
           </article>

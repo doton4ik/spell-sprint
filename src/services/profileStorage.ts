@@ -8,11 +8,28 @@ export type DailyActivities = { dictation: boolean; proofreading: boolean; pairs
 // weekly chart still read it.
 // updatedAt = when the learner last changed the profile on any device (ISO time). Cloud sync keeps the newer profile;
 // a profile saved before this field existed has none and counts as the oldest.
-export type Profile = { name: string; dailyGoal: number; dailyMinutes: number; activities: DailyActivities; updatedAt?: string }
+// speechSpeed = how fast words are read aloud (speech.ts maps it to a rate); a profile without it reads as 'normal'.
+export type SpeechSpeed = 'slow' | 'normal' | 'fast'
+export const speechSpeedOptions: SpeechSpeed[] = ['slow', 'normal', 'fast']
+export const isSpeechSpeed = (value: unknown): value is SpeechSpeed => speechSpeedOptions.includes(value as SpeechSpeed)
+export type Profile = {
+  name: string
+  dailyGoal: number
+  dailyMinutes: number
+  activities: DailyActivities
+  speechSpeed: SpeechSpeed
+  updatedAt?: string
+}
 export const dailyMinutesOptions = [5, 10, 15, 30, 50]
 export const TASKS_PER_MINUTE = 2
 export const defaultActivities: DailyActivities = { dictation: true, proofreading: true, pairs: true, sprint: true }
-const defaults: Profile = { name: '', dailyGoal: 10 * TASKS_PER_MINUTE, dailyMinutes: 10, activities: defaultActivities }
+const defaults: Profile = {
+  name: '',
+  dailyGoal: 10 * TASKS_PER_MINUTE,
+  dailyMinutes: 10,
+  activities: defaultActivities,
+  speechSpeed: 'normal',
+}
 
 export const nearestMinutes = (minutes: number) =>
   dailyMinutesOptions.reduce(
@@ -42,6 +59,7 @@ export function getProfile(): Profile {
       dailyMinutes,
       dailyGoal: dailyMinutes * TASKS_PER_MINUTE,
       activities: activitiesFrom(stored.activities),
+      speechSpeed: isSpeechSpeed(stored.speechSpeed) ? stored.speechSpeed : defaults.speechSpeed,
       ...(typeof stored.updatedAt === 'string' && stored.updatedAt ? { updatedAt: stored.updatedAt } : {}),
     }
   } catch {
@@ -60,7 +78,7 @@ function changeTime(previous: string | undefined) {
 // updatedAt: leave it out for a change made here. Cloud sync passes the time of the profile it takes from another
 // device ('' for an old cloud profile without a time), so a copied profile does not look newer than its source.
 export function saveProfile(
-  patch: Partial<Pick<Profile, 'name' | 'dailyMinutes'>> & { activities?: Partial<DailyActivities> },
+  patch: Partial<Pick<Profile, 'name' | 'dailyMinutes' | 'speechSpeed'>> & { activities?: Partial<DailyActivities> },
   copiedAt?: string,
 ) {
   const current = getProfile()
@@ -72,6 +90,7 @@ export function saveProfile(
     dailyMinutes,
     dailyGoal: dailyMinutes * TASKS_PER_MINUTE,
     activities: { ...current.activities, ...patch.activities },
+    speechSpeed: isSpeechSpeed(patch.speechSpeed) ? patch.speechSpeed : current.speechSpeed,
     ...(updatedAt ? { updatedAt } : {}),
   }
   try {

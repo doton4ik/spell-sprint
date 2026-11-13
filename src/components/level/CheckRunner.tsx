@@ -120,7 +120,7 @@ export function CheckRunner({
 
   function listen(slow: boolean) {
     if (!item || plays >= MAX_PLAYS) return
-    speakEnglish(item.prompt, loadPracticeSettings(defaultPracticeSettings).speechLocale, slow ? 0.7 : 1)
+    speakEnglish(item.prompt, loadPracticeSettings(defaultPracticeSettings).speechLocale, { slow })
     setPlays(plays + 1)
   }
 

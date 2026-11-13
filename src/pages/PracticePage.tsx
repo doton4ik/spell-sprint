@@ -87,8 +87,8 @@ export function PracticePage() {
         </select>
       </label>
     )
-  function playAudio() {
-    const playback = speakEnglish(session.currentTask.answer, session.settings.speechLocale)
+  function playAudio(slow = false) {
+    const playback = speakEnglish(session.currentTask.answer, session.settings.speechLocale, { slow })
     setAudioMessage(
       !playback.ok
         ? 'Speech is not available in this browser. You can continue practising without audio.'
@@ -292,6 +292,10 @@ export function PracticePage() {
           onPlayAudio={() => {
             session.markAudioUsed()
             playAudio()
+          }}
+          onPlaySlow={() => {
+            session.markAudioUsed()
+            playAudio(true)
           }}
           onSkip={session.skip}
           onNext={session.advance}

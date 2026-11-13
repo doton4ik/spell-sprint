@@ -12,7 +12,23 @@ describe('profile', () => {
       dailyMinutes: 10,
       dailyGoal: 20,
       activities: { dictation: true, proofreading: true, pairs: true, sprint: true },
+      speechSpeed: 'normal',
     })
+  })
+  it('reads an old profile without a reading speed as normal, and ignores a broken value', () => {
+    window.localStorage.setItem(KEY, JSON.stringify({ name: 'Max', dailyMinutes: 15 }))
+    expect(getProfile().speechSpeed).toBe('normal')
+    window.localStorage.setItem(KEY, JSON.stringify({ name: 'Max', speechSpeed: 'turbo' }))
+    expect(getProfile().speechSpeed).toBe('normal')
+  })
+  it('keeps the reading speed after saving and after other changes', () => {
+    saveProfile({ speechSpeed: 'slow' })
+    expect(getProfile().speechSpeed).toBe('slow')
+    saveProfile({ name: 'Max' })
+    expect(getProfile().speechSpeed).toBe('slow')
+    saveProfile({ speechSpeed: 'nonsense' as never })
+    expect(getProfile().speechSpeed).toBe('slow')
+    expect(JSON.parse(window.localStorage.getItem(KEY)!).speechSpeed).toBe('slow')
   })
   it('falls back to the defaults when the stored value is broken', () => {
     window.localStorage.setItem(KEY, '{not json')

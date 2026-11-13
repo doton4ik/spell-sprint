@@ -26,6 +26,7 @@ type TaskCardProps = {
   onShowAnswer: () => void
   onHint: () => void
   onPlayAudio: () => void
+  onPlaySlow?: () => void
   audioUsed?: boolean
   onSkip: () => void
   onNext: () => void
@@ -105,6 +106,7 @@ export function TaskCard({
   onShowAnswer,
   onHint,
   onPlayAudio,
+  onPlaySlow,
   audioUsed,
   onSkip,
   onNext,
@@ -298,13 +300,20 @@ export function TaskCard({
       {mode === 'listen-write' ? (
         <div className="task-prompt">
           <span className="prompt-label">Listen</span>
-          <button className="dictation-play" type="button" onClick={onPlayAudio}>
-            <Icon name="volume" size={22} />
-            <span>
-              <strong>Play the word</strong>
-              <small>Listen, then type what you hear.</small>
-            </span>
-          </button>
+          <div className="dictation-controls">
+            <button className="dictation-play" type="button" onClick={onPlayAudio}>
+              <Icon name="volume" size={22} />
+              <span>
+                <strong>Play the word</strong>
+                <small>Listen, then type what you hear.</small>
+              </span>
+            </button>
+            {onPlaySlow ? (
+              <button className="quiet-button dictation-slow" type="button" onClick={onPlaySlow}>
+                Slower
+              </button>
+            ) : null}
+          </div>
         </div>
       ) : (
         <div className={`task-prompt task-prompt--${mode}`}>

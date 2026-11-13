@@ -70,6 +70,15 @@ describe('the profile: the newer one wins', () => {
     expect(getProfile()).toMatchObject({ name: 'Maxim', dailyMinutes: 30, dailyGoal: 60, updatedAt: newer })
     expect(getProfile().activities).toMatchObject({ sprint: false, pairs: true })
   })
+  it('takes the reading speed with a newer profile, and keeps its own when the cloud profile has none', async () => {
+    saveProfile({ name: 'Max', speechSpeed: 'slow' }, older)
+    cloud({ profile: { name: 'Max', dailyMinutes: 10, updatedAt: newer } })
+    await restoreLearningData()
+    expect(getProfile().speechSpeed).toBe('slow')
+    cloud({ profile: { name: 'Max', dailyMinutes: 10, speechSpeed: 'fast', updatedAt: '2026-11-07T10:00:00.000Z' } })
+    await restoreLearningData()
+    expect(getProfile().speechSpeed).toBe('fast')
+  })
   it('keeps the profile of this device when it was changed later', async () => {
     saveProfile({ name: 'Max', dailyMinutes: 10 }, newer)
     cloud({ profile: { name: 'Maxim', dailyMinutes: 30, updatedAt: older } })

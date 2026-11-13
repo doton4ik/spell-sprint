@@ -6,7 +6,7 @@ import { getStoredLevelChecks, mergeLevelChecks } from './levelCheck'
 import { flushMistakeOutbox, getOutboxSize } from './mistakeOutbox'
 import { flushWordReports } from './wordReports'
 import { feedbackWaiting, flushFeedback } from './feedback'
-import { getProfile, nearestMinutes, saveProfile } from './profileStorage'
+import { getProfile, isSpeechSpeed, nearestMinutes, saveProfile } from './profileStorage'
 import { getLibraryPrefs, mergeLibraryPrefs } from './libraryPrefs'
 import { getPairAttempts, mergePairAttempts } from './pairs'
 import { getAllYellowCards, mergeYellowCards } from './yellowCards'
@@ -76,7 +76,14 @@ export async function restoreLearningData() {
 // time and counts as the oldest; then the old rule applies (the cloud profile is taken only if this device has no name).
 function mergeProfile(value: unknown) {
   if (!value || typeof value !== 'object') return
-  const remote = value as { name?: unknown; dailyGoal?: unknown; dailyMinutes?: unknown; activities?: unknown; updatedAt?: unknown }
+  const remote = value as {
+    name?: unknown
+    dailyGoal?: unknown
+    dailyMinutes?: unknown
+    activities?: unknown
+    speechSpeed?: unknown
+    updatedAt?: unknown
+  }
   if (typeof remote.name !== 'string') return
   const local = getProfile()
   const remoteAt = typeof remote.updatedAt === 'string' ? remote.updatedAt : ''
@@ -94,6 +101,8 @@ function mergeProfile(value: unknown) {
         name: remote.name,
         ...(minutes !== undefined ? { dailyMinutes: nearestMinutes(minutes) } : {}),
         ...(remote.activities && typeof remote.activities === 'object' ? { activities: remote.activities as Record<string, boolean> } : {}),
+        // A snapshot from an older version has no speed: this device keeps its own.
+        ...(isSpeechSpeed(remote.speechSpeed) ? { speechSpeed: remote.speechSpeed } : {}),
       },
       remoteAt,
     )
