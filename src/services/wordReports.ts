@@ -1,4 +1,5 @@
 import { getActiveCloudSession, insertRows, isSupabaseConfigured } from './supabase'
+import { safeSetItem } from './safeStorage'
 
 // Learners flag built-in words that should not be in the library (database/word-reports.sql).
 // A report is saved on the device first and sent when there is a signed-in session, like the
@@ -34,11 +35,7 @@ function read(): WordReport[] {
   }
 }
 function write(items: WordReport[]) {
-  try {
-    window.localStorage.setItem(KEY, JSON.stringify(items.slice(-200)))
-  } catch {
-    /* storage blocked */
-  }
+  safeSetItem(KEY, JSON.stringify(items.slice(-200)))
 }
 
 export const isWordReported = (wordId: string) => read().some((item) => item.wordId === wordId)
@@ -57,6 +54,8 @@ let flushing: Promise<void> | null = null
 export function flushWordReports() {
   if (flushing) return flushing
   flushing = (async () => {
+    // Wait one tick: an early return below must not clear `flushing` before it is set (it would stay set for good).
+    await Promise.resolve()
     try {
       const pending = read().filter((item) => !item.sent)
       if (!isSupabaseConfigured() || !pending.length) return

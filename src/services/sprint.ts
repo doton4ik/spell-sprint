@@ -3,6 +3,7 @@
 // in My Mistakes (yellowCards.ts); the same word missed a second time becomes a real mistake.
 // Rounds are part of the cloud backup (cloudSync.ts) and merged by their start time.
 import type { LibraryWord } from '../types/library'
+import { safeSetItem } from './safeStorage'
 import { getAllWords } from './libraryStorage'
 import { getPracticeAttempts } from './practiceStorage'
 import { recognitionOnly, scheduleAfterAnswer } from './reviewSchedule'
@@ -64,11 +65,8 @@ export function getSprintRounds(): SprintRound[] {
   }
 }
 export function saveSprintRound(round: SprintRound) {
-  try {
-    window.localStorage.setItem(ROUNDS_KEY, JSON.stringify([round, ...getSprintRounds()].slice(0, MAX_ROUNDS)))
-  } catch {
-    /* the result is still shown */
-  }
+  // A failed save is reported (safeSetItem shows the notice); the result is still shown.
+  safeSetItem(ROUNDS_KEY, JSON.stringify([round, ...getSprintRounds()].slice(0, MAX_ROUNDS)))
 }
 // Adds rounds from another device (matched by their start time); broken records are dropped.
 export function mergeSprintRounds(raw: unknown) {

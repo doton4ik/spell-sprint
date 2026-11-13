@@ -4,6 +4,7 @@
 import { pairIndex, type PairIndexEntry } from '../data/pairIndex'
 import { localDayKey } from './dateKeys'
 import { REVIEW_INTERVALS, MASTERED_DAYS } from './reviewSchedule'
+import { safeSetItem } from './safeStorage'
 
 const KEY = 'spell-sprint.pair-attempts'
 const UPDATED_EVENT = 'spell-sprint:learning-updated'
@@ -45,11 +46,8 @@ export function getPairAttempts(): PairAttempt[] {
   }
 }
 function save(attempts: PairAttempt[]) {
-  try {
-    window.localStorage.setItem(KEY, JSON.stringify(attempts.sort((a, b) => b.createdAt.localeCompare(a.createdAt)).slice(0, MAX_ATTEMPTS)))
-  } catch {
-    /* the session still goes on */
-  }
+  // A failed save is reported (safeSetItem shows the notice); the session still goes on.
+  safeSetItem(KEY, JSON.stringify(attempts.sort((a, b) => b.createdAt.localeCompare(a.createdAt)).slice(0, MAX_ATTEMPTS)))
   window.dispatchEvent(new Event(UPDATED_EVENT))
 }
 

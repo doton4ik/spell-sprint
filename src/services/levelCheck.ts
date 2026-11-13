@@ -1,4 +1,5 @@
 import type { ItemKind, LevelItem, Skill } from '../data/levelCheckBank'
+import { safeSetItem } from './safeStorage'
 import { skillLabels } from '../data/levelCheckLabels'
 import { levelItemKinds } from '../data/levelItemKinds'
 import { getAllWords } from './libraryStorage'
@@ -449,14 +450,7 @@ function rescored(check: LevelCheckResult): LevelCheckResult {
 export const getLevelChecks = (): LevelCheckResult[] => getStoredLevelChecks().map(rescored)
 
 function writeChecks(checks: LevelCheckResult[]) {
-  try {
-    window.localStorage.setItem(
-      HISTORY_KEY,
-      JSON.stringify(checks.sort((a, b) => b.completedAt.localeCompare(a.completedAt)).slice(0, MAX_HISTORY)),
-    )
-  } catch {
-    /* storage full or blocked */
-  }
+  safeSetItem(HISTORY_KEY, JSON.stringify(checks.sort((a, b) => b.completedAt.localeCompare(a.completedAt)).slice(0, MAX_HISTORY)))
   window.dispatchEvent(new Event('spell-sprint:learning-updated'))
 }
 

@@ -76,6 +76,8 @@ let flushing: Promise<void> | null = null
 export function flushErrors() {
   if (flushing) return flushing
   flushing = (async () => {
+    // Wait one tick: an early return below must not clear `flushing` before it is set (it would stay set for good).
+    await Promise.resolve()
     try {
       // A developer's own machine (the dev server) does not send: it would fill the table with half-saved edits.
       if (version === 'dev') return

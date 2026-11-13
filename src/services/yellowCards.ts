@@ -2,6 +2,8 @@
 // someone else's text (Proofreading), or a word mistyped against the clock (Sprint). Neither is the same
 // as misspelling a word in calm practice, so it is not counted as a mistake: My Mistakes shows it in its own list, and nothing else (accuracy, review dates,
 // patterns) changes. The same word missed a second time is a red card — a real mistake.
+import { safeSetItem } from './safeStorage'
+
 export type YellowCard = {
   id: string
   word: string // the correct word
@@ -26,11 +28,7 @@ function read(): YellowCard[] {
   }
 }
 function write(cards: YellowCard[]) {
-  try {
-    window.localStorage.setItem(KEY, JSON.stringify(cards.slice(-MAX)))
-  } catch {
-    /* storage full or blocked */
-  }
+  safeSetItem(KEY, JSON.stringify(cards.slice(-MAX)))
   window.dispatchEvent(new Event(EVENT))
 }
 const sameWord = (a: string, b: string) => a.toLocaleLowerCase() === b.toLocaleLowerCase()

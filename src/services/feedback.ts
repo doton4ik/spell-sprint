@@ -1,4 +1,5 @@
 import { getActiveCloudSession, insertRows, isSupabaseConfigured } from './supabase'
+import { safeSetItem } from './safeStorage'
 
 // Learners tell us what is broken, what to improve or what is wrong in the content (database/feedback.sql).
 // Like word reports, a message is saved on the device first and sent when there is a signed-in session;
@@ -40,11 +41,7 @@ function read(): FeedbackItem[] {
   }
 }
 function write(items: FeedbackItem[]) {
-  try {
-    window.localStorage.setItem(KEY, JSON.stringify(items.slice(-MAX_STORED)))
-  } catch {
-    /* storage blocked */
-  }
+  safeSetItem(KEY, JSON.stringify(items.slice(-MAX_STORED)))
 }
 
 const kindIds = new Set<string>(feedbackKinds.map((kind) => kind.id))
@@ -81,6 +78,8 @@ let flushing: Promise<void> | null = null
 export function flushFeedback() {
   if (flushing) return flushing
   flushing = (async () => {
+    // Wait one tick: an early return below must not clear `flushing` before it is set (it would stay set for good).
+    await Promise.resolve()
     try {
       const pending = read().filter((item) => !item.sent)
       if (!pending.length || !isSupabaseConfigured()) return

@@ -1,5 +1,6 @@
 import { insertRows, selectRows, type SupabaseSession } from './supabase'
 import type { RulePriority, RuleStatus } from '../types/rules'
+import { localDayKey } from './dateKeys'
 
 // Shared read/write helpers for user_rule_progress, used by both the general-test mistake
 // pipeline (mistakeService.ts) and the in-card mini-practice pipeline (rulePracticeService.ts),
@@ -15,7 +16,7 @@ export type ProgressRow = {
 }
 
 export function today() {
-  return new Date().toISOString().slice(0, 10) // 'YYYY-MM-DD', used for the 5-distinct-days mastered rule
+  return localDayKey(new Date()) // 'YYYY-MM-DD' of the learner's own calendar day (not UTC), used for the 5-distinct-days mastered rule
 }
 
 export async function getProgressRow(session: SupabaseSession, ruleId: string): Promise<ProgressRow | null> {

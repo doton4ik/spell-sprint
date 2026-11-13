@@ -1,4 +1,5 @@
 import type { PracticeAttempt } from '../types/practice'
+import { safeSetItem } from './safeStorage'
 import { sendMistake } from './mistakeService'
 import { getActiveCloudSession, isSupabaseConfigured } from './supabase'
 
@@ -31,11 +32,7 @@ function read(): PracticeAttempt[] {
   }
 }
 function write(items: PracticeAttempt[]) {
-  try {
-    window.localStorage.setItem(OUTBOX_KEY, JSON.stringify(items.slice(-MAX_QUEUED)))
-  } catch {
-    /* storage blocked: nothing more we can do */
-  }
+  safeSetItem(OUTBOX_KEY, JSON.stringify(items.slice(-MAX_QUEUED)))
   window.dispatchEvent(new Event(OUTBOX_EVENT))
 }
 
@@ -61,6 +58,8 @@ let flushing: Promise<number> | null = null
 export function flushMistakeOutbox(): Promise<number> {
   if (flushing) return flushing
   flushing = (async () => {
+    // Wait one tick: an early return below must not clear `flushing` before it is set (it would stay set for good).
+    await Promise.resolve()
     let sent = 0
     try {
       if (!isSupabaseConfigured() || !read().length) return 0
