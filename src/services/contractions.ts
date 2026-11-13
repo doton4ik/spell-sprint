@@ -8,6 +8,7 @@ export const plain = (value: string) =>
     .trim()
     .toLocaleLowerCase()
     .replace(/[’‘`]/g, "'")
+    .replace(/(\d):(?=\d)/g, '$1 ') // a time: "10:15" is ten fifteen, two numbers
     .replace(/[.!?,;:"“”()]+/g, '')
     .replace(/[-–—]/g, ' ')
     .replace(/\s+/g, ' ')
@@ -57,7 +58,7 @@ export function expandWord(word: string): string[][] {
   if (/^\d{1,2}$/.test(word) && Number(word) < NUMBER_WORDS.length) return [[NUMBER_WORDS[Number(word)]], [word]]
   const number = NUMBER_WORDS.indexOf(word)
   if (number >= 0) return [[word], [String(number)]]
-  if (IRREGULAR[word]) return IRREGULAR[word]
+  if (Object.hasOwn(IRREGULAR, word)) return IRREGULAR[word] // own keys only: "constructor" is an ordinary word
   if (word.endsWith("n't") && word.length > 3) return [[word.slice(0, -3), 'not']]
   if (word.endsWith("'re") && word.length > 3) return [[word.slice(0, -3), 'are']]
   if (word.endsWith("'m") && word.length > 2) return [[word.slice(0, -2), 'am']]
@@ -73,8 +74,13 @@ export function expandWord(word: string): string[][] {
 }
 
 // ---- Numbers of any size --------------------------------------------------------------------------
-// "forty", "40"; "seventy-five", "75"; "two thousand", "2,000", "2000"; "a hundred and ten", "110"; a year said in two
-// halves, "twenty sixteen", "2016". A run of number words is read as one number and compared as digits.
+// "forty", "40"; "seventy-five", "75"; "two thousand", "2,000", "2000"; "a hundred and ten", "110". A run of number
+// words is read as one number and compared as digits.
+// A year or a time is said in two halves ("twenty sixteen", "ten fifteen"), so four digits are compared as two halves:
+// "2016" is "20 16", the same as "twenty sixteen" and as "two thousand and sixteen". Two numbers that only stand next
+// to each other ("thirteen, fourteen") stay two numbers.
+const halves = (digits: string) =>
+  /^\d{4}$/.test(digits) && Number(digits.slice(2)) >= 10 ? `${Number(digits.slice(0, 2))} ${Number(digits.slice(2))}` : digits
 const TENS = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
 const SCALE_OF: Record<string, number> = { thousand: 1000, million: 1000000 }
 // 0 for a word that is not "thousand" or "million" (an own-key check: "constructor" is not a scale)
@@ -108,15 +114,15 @@ function numberAt(words: string[], at: number): [string, number] | null {
   } else if (/^\d+$/.test(first) && (words[i + 1] === 'hundred' || scale(words[i + 1]) > 0)) {
     current = Number(first)
     i += 1
+  } else if (/^\d+$/.test(first)) {
+    // digits on their own: only a year or a time changes ("2016" -> "20 16")
+    return halves(first) === first ? null : [halves(first), 1]
   } else {
     const start = belowHundred(words, i)
     if (!start) return null
     current = start[0]
     i += start[1]
     any = true
-    // a year said in two halves: "nineteen ninety", "twenty sixteen", "twenty twenty five"
-    const second = current >= 10 ? belowHundred(words, i) : null
-    if (second && second[0] >= 10) return [String(current * 100 + second[0]), i + second[1] - at]
   }
   for (;;) {
     const word = words[i]
@@ -149,12 +155,14 @@ function numberAt(words: string[], at: number): [string, number] | null {
       break
     } else break
   }
-  return any ? [String(total + current), i - at] : null
+  return any ? [halves(String(total + current)), i - at] : null
 }
 
-// Where the numbers written in words are: the first and last word of each and its digits.
+// Where the numbers are: the first and last word of each and its digits (two halves, "20 16", for a year or a time).
+// A typed answer is short; a very long text is left as it is rather than parsed.
 export function numberRuns(words: string[]): Array<{ from: number; to: number; digits: string }> {
   const runs: Array<{ from: number; to: number; digits: string }> = []
+  if (words.length > 300) return runs
   for (let i = 0; i < words.length; i += 1) {
     const found = numberAt(words, i)
     if (!found) continue
@@ -181,7 +189,7 @@ const MAX_VARIANTS = 32
 export function variants(text: string): string[] {
   let result: string[][] = [[]]
   for (const word of numbersAsDigits(plain(text).split(' ').filter(Boolean))) {
-    const options = /^\d+$/.test(word) ? [[word]] : expandWord(word)
+    const options = /^[\d ]+$/.test(word) ? [[word]] : expandWord(word)
     const next: string[][] = []
     for (const base of result) for (const option of options) next.push([...base, ...option])
     result = next.length > MAX_VARIANTS ? next.slice(0, MAX_VARIANTS) : next

@@ -199,6 +199,13 @@ export async function lookupWord(input: string): Promise<LookupResult> {
   if (!word) return { status: 'not-found' }
   const controller = new AbortController()
   const timer = window.setTimeout(() => controller.abort(), TIMEOUT_MS)
+  // A further request (a subpage, the definitions, the second dictionary) may fail without spoiling the answer, but a
+  // timeout is a timeout: the learner is told the dictionary is slow, not that the word has no translation.
+  const optional = <T>(request: Promise<T>) =>
+    request.catch((error: unknown) => {
+      if (controller.signal.aborted) throw error
+      return null
+    })
   try {
     const page = await wikitext(word, controller.signal).catch((error) => {
       if ((error as { status?: number }).status === 404) return null
@@ -209,19 +216,17 @@ export async function lookupWord(input: string): Promise<LookupResult> {
     // Long entries keep their main translations on a separate page, "love/translations"; the entry itself may hold only a stray
     // table (love: "zero"), so the subpage is read whenever it exists and its meanings come first.
     if (/translation subpage|\/translations/.test(section)) {
-      const subpage = await wikitext(`${word}/translations`, controller.signal).catch(() => null)
+      const subpage = await optional(wikitext(`${word}/translations`, controller.signal))
       if (subpage) {
         const fromSubpage = parseTranslations(englishSection(subpage) || subpage)
         const seen = new Set(fromSubpage.map((sense) => `${sense.partOfSpeech}|${sense.gloss}`))
         senses = [...fromSubpage, ...senses.filter((sense) => !seen.has(`${sense.partOfSpeech}|${sense.gloss}`))]
       }
     }
-    const rest = section
-      ? ((await getJson(`${REST}${restTitle(word)}`, controller.signal).catch(() => null)) as RestDefinitions | null)
-      : null
+    const rest = section ? ((await optional(getJson(`${REST}${restTitle(word)}`, controller.signal))) as RestDefinitions | null) : null
     if (!senses.length) {
       // No Russian in the English Wiktionary (or no such page there): the Russian one may describe the word.
-      const russianPage = await wikitext(word, controller.signal, API_RU).catch(() => null)
+      const russianPage = await optional(wikitext(word, controller.signal, API_RU))
       const fromRussian = russianPage ? parseRussianWiktionary(russianPage) : []
       if (fromRussian.length) {
         const meanings = englishMeanings(rest, 8)

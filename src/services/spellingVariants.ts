@@ -27,6 +27,27 @@ const OUR = [
   'vigour',
 ]
 
+const OUR_ENDINGS = [
+  '',
+  's',
+  'ed',
+  'ing',
+  'ings',
+  'ful',
+  'fully',
+  'less',
+  'able',
+  'ably',
+  'ite',
+  'ites',
+  'er',
+  'ers',
+  'hood',
+  'hoods',
+  'ly',
+  'al',
+]
+
 // organise -> organize, with the endings below (organised, organising, organisation, organiser)
 const ISE = [
   'apologis',
@@ -205,7 +226,8 @@ export function americanSpelling(word: string): string {
   const base = cut ? word.slice(0, cut) : word
   const tail = cut ? word.slice(cut) : ''
   if (Object.hasOwn(WORDS, base)) return WORDS[base] + tail
-  const our = OUR.find((stem) => base.startsWith(stem))
+  // only with an ending both spellings share: "humourous" is a misspelling of "humorous", not a British form
+  const our = OUR.find((stem) => base.startsWith(stem) && OUR_ENDINGS.includes(base.slice(stem.length)))
   if (our) return `${our.slice(0, -3)}or${base.slice(our.length)}${tail}`
   for (const [stems, endings] of [
     [ISE, ISE_ENDINGS],

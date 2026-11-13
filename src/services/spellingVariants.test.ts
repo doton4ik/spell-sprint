@@ -75,3 +75,25 @@ describe('British and American spellings', () => {
     expect(inOneSpelling('Nothing to change here.')).toBe('Nothing to change here.')
   })
 })
+
+describe('after review: only real British forms change', () => {
+  it('a misspelling built on a British stem stays a misspelling', () => {
+    for (const word of ['humourous', 'vigourous', 'rigourous', 'labourious', 'colourr', 'favouritism'])
+      expect(americanSpelling(word), word).toBe(word)
+  })
+  it('the forms both spellings share still change', () => {
+    const pairs: Array<[string, string]> = [
+      ['colours', 'colors'],
+      ['coloured', 'colored'],
+      ['colourless', 'colorless'],
+      ['favourites', 'favorites'],
+      ['favourable', 'favorable'],
+      ['neighbouring', 'neighboring'],
+      ['neighbourly', 'neighborly'],
+      ['honourable', 'honorable'],
+      ['labourer', 'laborer'],
+      ['behavioural', 'behavioral'],
+    ]
+    for (const [british, american] of pairs) expect(americanSpelling(british), british).toBe(american)
+  })
+})

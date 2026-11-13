@@ -101,3 +101,43 @@ describe('dashes', () => {
     expect(sameText('pages 10–12', 'pages 10 12')).toBe(true)
   })
 })
+
+describe('after review: years, times and odd words', () => {
+  it('a year or a time is two halves, however it is written', () => {
+    const same: Array<[string, string]> = [
+      ['at 10:15', 'at ten fifteen'],
+      ['at 3:30', 'at three thirty'],
+      ['at 5:10', 'at five ten'],
+      ['at 9:15', 'at nine fifteen'],
+      ['in 2016', 'in twenty sixteen'],
+      ['in two thousand and sixteen', 'in twenty sixteen'],
+      ['in 2020', 'in twenty twenty'],
+      ['in 1999', 'in nineteen ninety-nine'],
+      ['in 1500', 'in fifteen hundred'],
+      ['in 2005', 'in two thousand and five'],
+    ]
+    for (const [a, b] of same) {
+      expect(sameText(a, b), `${a} | ${b}`).toBe(true)
+      expect(sameText(b, a), `${b} | ${a}`).toBe(true)
+    }
+  })
+  it('two numbers next to each other are still two numbers', () => {
+    expect(sameText('I was thirteen, fourteen', 'I was 13, 14')).toBe(true)
+    expect(sameText('ten twenty-dollar bills', '10 twenty dollar bills')).toBe(true)
+    expect(numbersAsDigits('i was thirteen fourteen'.split(' '))).toEqual(['i', 'was', '13', '14'])
+    expect(sameText('in 2016', 'in 2061')).toBe(false)
+    expect(sameText('at 10:15', 'at 10:50')).toBe(false)
+    expect(sameText('at 3:30', 'at 330 metres')).toBe(false)
+  })
+  it('words that are also property names of every object are ordinary words', () => {
+    for (const word of ['constructor', '__proto__', 'toString', 'hasOwnProperty', 'valueOf']) {
+      expect(sameText(`The ${word} is here.`, `the ${word} is here`), word).toBe(true)
+      expect(sameText(`The ${word} is here.`, 'the other is here'), word).toBe(false)
+    }
+    expect(sameText('one constructor, two thousand constructor', '1 constructor 2000 constructor')).toBe(true)
+  })
+  it('a very long text is compared as it is, without parsing numbers, and does not hang', () => {
+    const long = Array.from({ length: 1000 }, () => 'two thousand').join(' ')
+    expect(sameText(long, long)).toBe(true)
+  })
+})

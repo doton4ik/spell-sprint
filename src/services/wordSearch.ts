@@ -115,7 +115,30 @@ const IRREGULAR: Record<string, string> = {
 
 // The words a typed form may come from: "studies" → study, "stopped" → stop, "making" → make, "went" → go.
 // They are guesses; a guess counts only when the library really has that word.
+// Words that only look like a form of another word: "news" is not "new", "evening" is not "even".
+const NOT_A_FORM = new Set([
+  'news',
+  'goods',
+  'clothes',
+  'species',
+  'series',
+  'means',
+  'shed',
+  'seed',
+  'feed',
+  'need',
+  'evening',
+  'morning',
+  'during',
+  'ceiling',
+  'nothing',
+  'something',
+  'anything',
+  'everything',
+])
+
 function baseForms(word: string): string[] {
+  if (NOT_A_FORM.has(word)) return []
   const found: string[] = []
   if (Object.hasOwn(IRREGULAR, word)) found.push(IRREGULAR[word])
   const cut = (ending: string, ...replacements: string[]) => {
@@ -202,6 +225,8 @@ export function searchWords(index: WordIndex, rawQuery: string, limit = 30, clos
     result.matches.push({ word: entry.word, kind, score })
     if (kind === 'exact') result.hasExact = true
   })
+  // the typed word itself is in the libraries: it is not a form of something else ("meeting" is there, so no "meet")
+  if (result.hasExact) result.matches = result.matches.filter((hit) => hit.kind !== 'form')
   result.matches.sort((a, b) => b.score - a.score || a.word.word.length - b.word.word.length)
   result.matches = result.matches.slice(0, limit)
   if (result.hasExact) return result

@@ -200,3 +200,52 @@ describe('lookupWord: which dictionary answers', () => {
     expect(await lookupWord('fortune')).toMatchObject({ status: 'unavailable' })
   })
 })
+
+describe('after review: a slow dictionary is not a missing word', () => {
+  afterEach(() => {
+    vi.useRealTimers()
+    vi.unstubAllGlobals()
+  })
+  it('says the dictionary is slow when a later request runs out of time', async () => {
+    vi.useFakeTimers()
+    vi.stubGlobal(
+      'fetch',
+      vi.fn((input: string, init?: { signal?: AbortSignal }) => {
+        const url = new URL(input)
+        // the first page answers at once (no Russian in it); every later request never answers
+        if (url.hostname === 'en.wiktionary.org' && url.pathname.endsWith('api.php'))
+          return Promise.resolve({
+            ok: true,
+            status: 200,
+            json: async () => ({ parse: { wikitext: { '*': '==English==\n===Verb===\n' } } }),
+          })
+        return new Promise((_, reject) => {
+          init?.signal?.addEventListener('abort', () => reject(Object.assign(new Error('aborted'), { name: 'AbortError' })))
+        })
+      }),
+    )
+    const pending = lookupWord('hook up')
+    await vi.advanceTimersByTimeAsync(9000)
+    expect(await pending).toEqual({ status: 'unavailable', message: 'The dictionary is taking too long to answer.' })
+  })
+  it('still answers when a later request fails for another reason', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async (input: string) => {
+        const url = new URL(input)
+        if (url.hostname === 'en.wiktionary.org' && url.pathname.endsWith('api.php'))
+          return {
+            ok: true,
+            status: 200,
+            json: async () => ({
+              parse: {
+                wikitext: { '*': '==English==\n===Noun===\n{{trans-top|good luck}}\n* Russian: {{t+|ru|удача}}\n{{trans-bottom}}' },
+              },
+            }),
+          }
+        throw new TypeError('Failed to fetch')
+      }),
+    )
+    expect(await lookupWord('fortune')).toMatchObject({ status: 'found', senses: [{ translations: ['удача'] }] })
+  })
+})

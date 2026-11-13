@@ -23,7 +23,9 @@ function parts(sentence: string, canon: (word: string) => string) {
   let at = 0
   for (const run of numberRuns(single.map((item) => item.word))) {
     for (const item of single.slice(at, run.from)) flat.push({ owners: [item.owner], word: canon(item.word) })
-    flat.push({ owners: single.slice(run.from, run.to + 1).map((item) => item.owner), word: run.digits })
+    // a year or a time is two halves ("20 16"): each half is compared, all the written words own both
+    const owners = single.slice(run.from, run.to + 1).map((item) => item.owner)
+    for (const digits of run.digits.split(' ')) flat.push({ owners, word: digits })
     at = run.to + 1
   }
   for (const item of single.slice(at)) flat.push({ owners: [item.owner], word: canon(item.word) })

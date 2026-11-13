@@ -117,3 +117,21 @@ describe('phrases and forms of a word', () => {
     expect(queryBaseForms('go')).toEqual([])
   })
 })
+
+describe('after review: words that only look like a form', () => {
+  const index = buildWordIndex(
+    ['new', 'good', 'cloth', 'even', 'see', 'fee', 'she', 'meet', 'meeting', 'evening'].map((word) => make(word)),
+  )
+  it('does not offer another word for one that only ends like a form', () => {
+    for (const typed of ['news', 'goods', 'clothes', 'seed', 'feed', 'shed'])
+      expect(
+        searchWords(index, typed).matches.filter((hit) => hit.kind === 'form'),
+        typed,
+      ).toEqual([])
+  })
+  it('a word that is in the libraries itself is not shown as a form of another', () => {
+    expect(searchWords(index, 'meeting').matches.map((hit) => [hit.word.word, hit.kind])).toEqual([['meeting', 'exact']])
+    expect(searchWords(index, 'evening').matches.map((hit) => [hit.word.word, hit.kind])).toEqual([['evening', 'exact']])
+    expect(searchWords(index, 'meets').matches[0]).toMatchObject({ kind: 'form', word: { word: 'meet' } })
+  })
+})

@@ -80,3 +80,20 @@ describe('diffWords with one more reading of a word', () => {
     expect(marked(result.expected)).toEqual(['usual'])
   })
 })
+
+describe('after review', () => {
+  it('a year typed as digits and said in two halves is not marked', () => {
+    const result = diffWords('It happened in 2016, I think.', 'it happened in twenty sixteen i thnk')
+    expect(marked(result.given)).toEqual(['thnk'])
+    expect(marked(result.expected)).toEqual(['think.'])
+  })
+  it('a wrong half of a year marks the whole year', () => {
+    const result = diffWords('in 2016', 'in twenty seventeen')
+    expect(marked(result.expected)).toEqual(['2016'])
+    expect(marked(result.given)).toEqual(['seventeen'])
+  })
+  it('does not break on words that are property names of every object', () => {
+    const result = diffWords('The constructor is here.', 'the constructor is there')
+    expect(marked(result.given)).toEqual(['there'])
+  })
+})
