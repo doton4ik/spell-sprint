@@ -20,8 +20,16 @@ export function libraryCsvParts(): Plugin {
   }
 }
 
+// Folders that are not part of the site: the dev server does not watch them. Without this it follows every file under
+// the project (.asr alone is the speech-recognition tools, thousands of files), which makes a cold `pnpm dev` slow.
+const NOT_THE_SITE = ['.asr', '.arena', 'arena-skill', 'android', 'ios', 'research', 'database', 'sources', 'docs', 'e2e']
+
 // The app version shown in error reports: the Netlify commit, or "dev" locally.
 export default defineConfig({
   plugins: [libraryCsvParts(), react()],
   define: { __APP_VERSION__: JSON.stringify(process.env.COMMIT_REF?.slice(0, 7) ?? 'dev') },
+  // By default every .html under the project is an entry for the dependency scan; android/ and ios/ hold copies of
+  // the built site, so their index.html was scanned too. The app has one entry.
+  optimizeDeps: { entries: ['index.html'] },
+  server: { watch: { ignored: NOT_THE_SITE.map((folder) => `**/${folder}/**`) } },
 })
