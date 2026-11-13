@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect, useState, type ComponentType } from 'react'
 import { AppShell } from './components/layout/AppShell'
 import { DashboardPage } from './pages/DashboardPage'
 import { ErrorBoundary } from './components/ErrorBoundary'
+import { loadWordTexts } from './data/libraries'
 
 // Every page except the dashboard is its own file, loaded when it is first opened: the first visit
 // downloads much less. If a page file is missing (a new version was deployed while the tab was open),
@@ -34,15 +35,23 @@ function page<T extends Record<string, unknown>>(load: () => Promise<T>, name: k
   })
 }
 
+// The definitions and second examples of the words are a later download (data/libraries.ts). A page that shows or
+// uses them opens when they are here. If they cannot be fetched the page still opens, with words that have no
+// definition; the next page asks again.
+const withWordTexts =
+  <T,>(load: () => Promise<T>) =>
+  () =>
+    Promise.all([load(), loadWordTexts().catch(() => undefined)]).then(([module]) => module)
+
 const loaders = {
-  Practice: () => import('./pages/PracticePage'),
-  Mistakes: () => import('./pages/MistakesPage'),
+  Practice: withWordTexts(() => import('./pages/PracticePage')),
+  Mistakes: withWordTexts(() => import('./pages/MistakesPage')),
   Rules: () => import('./pages/RulesPage'),
-  Libraries: () => import('./pages/LibrariesPage'),
+  Libraries: withWordTexts(() => import('./pages/LibrariesPage')),
   Diagnostic: () => import('./pages/DiagnosticPage'),
   Settings: () => import('./pages/SettingsPage'),
   Topics: () => import('./pages/TopicsPage'),
-  Proofreading: () => import('./pages/ProofreadingPage'),
+  Proofreading: withWordTexts(() => import('./pages/ProofreadingPage')),
   Sprint: () => import('./pages/SprintPage'),
   Pairs: () => import('./pages/PairsPage'),
   Listening: () => import('./pages/ListeningPage'),

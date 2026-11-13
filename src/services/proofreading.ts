@@ -1,3 +1,4 @@
+import { wordTextsRevision } from '../data/libraries'
 import { hiddenProofreadingTextIds } from '../data/proofreadingHidden'
 import { markProofreadingDone } from './proofreadingDone'
 import { proofreadingTexts as allProofreadingTexts, type ProofreadingLevel, type ProofreadingText } from '../data/proofreadingTexts'
@@ -117,10 +118,13 @@ export function recordProofreading(text: ProofreadingText, result: ProofreadingR
 // also tell the engine which letter strings are real words, so a slip never makes another real word.
 // Every word the app knows to be real: library words, their examples and definitions, and every
 // proofreading text. A slip that lands on one of these ("cheap" → "chap") is not used.
+// Built again when the definitions arrive (they are a later download: wordTextsRevision in data/libraries.ts).
 let knownCache: Set<string> | null = null
+let knownTexts = -1
 function knownWords() {
-  if (knownCache) return knownCache
+  if (knownCache && knownTexts === wordTextsRevision) return knownCache
   const words = (value: string | undefined) => (value ?? '').toLocaleLowerCase().match(/[a-z]+/g) ?? []
+  knownTexts = wordTextsRevision
   knownCache = new Set([
     ...getEveryWord().flatMap((word) => [...words(word.word), ...words(word.example), ...words(word.definition)]),
     ...allProofreadingTexts.flatMap((text) => words(cleanText(text))),

@@ -1,4 +1,4 @@
-import { builtInLibraries } from '../data/libraries'
+import { builtInLibraries, wordTextsRevision } from '../data/libraries'
 import { sanitizeWord } from './validate'
 import { safeSetItem } from './safeStorage'
 import { libraryPacks, packForLibrary } from '../data/libraryPacks'
@@ -168,7 +168,9 @@ export function mergeImportedLibraries(incoming: WordLibrary[]) {
 // (history, past mistakes), never to choose what the learner practises.
 // Built every time a word is looked up (history, mistakes, reports), so the result is kept until the
 // learner's own libraries change in storage. Shared: copy before changing.
-let everyCache: { raw: string | null; libraries: WordLibrary[]; words: LibraryWord[] } | null = null
+// The words here are copies (resolveLibraries), so the list is also built again when the built-in words get their
+// definitions and second examples, which arrive a moment after the words (wordTextsRevision in data/libraries.ts).
+let everyCache: { raw: string | null; texts: number; libraries: WordLibrary[]; words: LibraryWord[] } | null = null
 function everything() {
   let raw: string | null = null
   try {
@@ -176,7 +178,7 @@ function everything() {
   } catch {
     /* storage blocked */
   }
-  if (!everyCache || everyCache.raw !== raw) {
+  if (!everyCache || everyCache.raw !== raw || everyCache.texts !== wordTextsRevision) {
     const libraries = resolveLibraries([...builtInLibraries, ...getImportedLibraries()])
     // getImportedLibraries may have saved a repaired list; key the cache by what is stored now.
     try {
@@ -184,7 +186,7 @@ function everything() {
     } catch {
       /* storage blocked */
     }
-    everyCache = { raw, libraries, words: uniqueWords(libraries.flatMap((library) => library.words)) }
+    everyCache = { raw, texts: wordTextsRevision, libraries, words: uniqueWords(libraries.flatMap((library) => library.words)) }
   }
   return everyCache
 }

@@ -1,4 +1,4 @@
-import builtInCsv from './spell-sprint-built-in-library.csv?raw'
+import builtInCsv from './spell-sprint-built-in-library.csv?core'
 import { canonicalTopic, libraryKindForName } from './libraryTaxonomy'
 import { parseCsvRows } from '../services/csv'
 import { isCefrLevel } from './libraryTopics'
@@ -31,9 +31,8 @@ function builtInWord(row: Record<string, string>): LibraryWord {
     risk: Number(row.risk),
     rule: row.rule || undefined,
     example: row.example || undefined,
-    extraExample: row.extra_example || undefined,
-    extraExampleSource: row.extra_example_source || undefined,
-    definition: row.definition || undefined,
+    // definition, extraExample and extraExampleSource are not in this part of the file: they are a second download,
+    // put into these same objects when it arrives (loadWordTexts in libraries.ts)
     alternatives: alternativesOf(row.alternatives),
     partOfSpeech: normalisePartOfSpeech(row.part_of_speech),
     level: isCefrLevel(row.level) ? row.level : undefined,
@@ -42,11 +41,15 @@ function builtInWord(row: Record<string, string>): LibraryWord {
   }
 }
 
+// Every built-in word in the order of the file: the texts that come later are matched to the words by this order.
+export const builtInWordRows: LibraryWord[] = parseRows(builtInCsv).map(builtInWord)
+
 // The built-in words, parsed from the CSV. Loaded on its own (see libraries.ts) so the CSV is a separate download.
 export const builtInLibraries: WordLibrary[] = Object.entries(
-  parseRows(builtInCsv)
-    .map(builtInWord)
-    .reduce<Record<string, LibraryWord[]>>((groups, word) => ({ ...groups, [word.library]: [...(groups[word.library] ?? []), word] }), {}),
+  builtInWordRows.reduce<Record<string, LibraryWord[]>>(
+    (groups, word) => ({ ...groups, [word.library]: [...(groups[word.library] ?? []), word] }),
+    {},
+  ),
 ).map(([name, words]) => ({
   id: name
     .toLocaleLowerCase()
